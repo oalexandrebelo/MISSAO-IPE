@@ -73,6 +73,11 @@ test('layout não transborda em três larguras e todos os links locais resolvem'
   }
   const anchors = await page.locator('a[href^="#"]').evaluateAll(items => items.map(a => a.getAttribute('href')!));
   for (const href of new Set(anchors)) expect(await page.locator(href).count()).toBeGreaterThan(0);
+  // Focusing a control in a short viewport must scroll the document, never the clipped hero.
+  await page.setViewportSize({width:976,height:510}); await page.goto('/');
+  const motionControl = page.getByRole('button',{name:'Ativar animações',exact:true});
+  await motionControl.scrollIntoViewIfNeeded(); await motionControl.focus();
+  expect(await page.locator('.hero').evaluate(el=>el.scrollTop)).toBe(0);
   await page.goto('/creditos/'); await expect(page.getByRole('heading',{level:1})).toContainText('Uma missão');
 });
 

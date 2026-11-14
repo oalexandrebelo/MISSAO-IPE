@@ -52,4 +52,4 @@ Semente e Raízes representam os dois cenários existentes; progressão, Copa e 
 
 Não foi atribuída nota Awwwards, certificação WCAG ou resultado de Core Web Vitals de campo. Os testes automáticos, a inspeção visual e as medidas de implementação são evidências delimitadas. Testes com jogadores e tecnologias assistivas continuam como trabalho de produto previsto na timeline.
 
-As ambiguidades e as 16 decisões principais estão registradas em `DECISOES.md`; movimentos em `MOTION-SPEC.md`; oportunidades de assets em `ASSETS-OPORTUNIDADES.md`.
+As ambiguidades e as 17 decisões principais estão registradas em `DECISOES.md`; movimentos em `MOTION-SPEC.md`; oportunidades de assets em `ASSETS-OPORTUNIDADES.md`. A revisão final também verificou o enquadramento ao focar controles em viewport baixo; o hero usa `overflow: clip` para impedir deslocamento interno inesperado.

@@ -19,3 +19,5 @@ Data: 14/11/2026, horário de referência America/Sao_Paulo. Execução individu
 15. **Escopo de publicação.** A solicitação atual autoriza a branch e a PR. A prévia Vercel usa o projeto específico `projeto-ipe-lp`. A substituição da página principal depende da integração da PR; a entrega não faz merge automático.
 
 16. **Ajustes após QA real.** Foram corrigidos contraste da jornada e nomes acessíveis dos controles. A leitura por palavra começa em opacidade 0,52 para preservar legibilidade; espaços explícitos nas quebras impedem palavras unidas no nome acessível gerado pelo SplitText. A navegação lateral tem fundo discreto para manter o marcador legível sobre a seção clara. Na Vercel, o preset Next.js fica sem override de Output Directory, conforme a integração de exportação estática.
+
+17. **Foco em viewport baixo.** A revisão com redimensionamento e pausa identificou que `overflow: hidden` permitia deslocar internamente o hero ao focar seus controles. O recorte usa `overflow: clip`, que mantém o enquadramento. A suíte verifica que focar o controle em 976×510 não desloca o scroll interno do hero.
