@@ -21,6 +21,7 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/32-CAMPANHA-QUATRO-NIVEIS.md', target: 'docs/32-CAMPANHA-QUATRO-NIVEIS.md', title: 'Campanha didática · quatro níveis', description: 'Progressão jogável, PRD, PRT, Mermaid, schema, pesquisa, pitch e handoff próprios.' },
   { source: 'docs/31-TRES-MISSOES-CIENTIFICAS-R14.md', target: 'docs/31-TRES-MISSOES-CIENTIFICAS-R14.md', title: 'Três missões científicas · R14', description: 'Jornadas jogáveis, quatro segmentos, replay 3D, contratos e continuidade para dois devs.' },
   { source: 'docs/30-ATIVOS-NASA-IMPLEMENTADOS.md', target: 'docs/30-ATIVOS-NASA-IMPLEMENTADOS.md', title: 'Modelos NASA implementados', description: 'Quatro modelos locais, procedência, otimização, carregamento e limites científicos.' },
   { source: 'docs/29-GAME-DESIGN-3D.md', target: 'docs/29-GAME-DESIGN-3D.md', title: 'Game Design · missão em 3D', description: 'Proposta de experiência, quatro segmentos, revisão causal, cinco cenas e entregas para dois desenvolvedores.' },
@@ -188,6 +189,13 @@ try {
     }
   }
   if (!entries.some(entry => entry.path === 'lab/index.html')) throw new Error('Compile o beta com npm --prefix experiments/mission-design-lab run build.');
+  for (const source of await tree('experiments/four-level-campaign/dist')) {
+    const rel = source.slice('experiments/four-level-campaign/dist/'.length);
+    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|prisma|mmd|pptx)$/.test(rel)) {
+      await copy(source, `campanha/${rel}`, 'four-level-campaign-runtime');
+    }
+  }
+  if (!entries.some(entry => entry.path === 'campanha/index.html')) throw new Error('Compile a campanha de quatro níveis antes da distribuição.');
   // Only the current runtime asset classes are admitted. Source maps remain outside the public site.
   for (const source of await tree('dist')) {
     const rel = source.slice('dist/'.length);
@@ -247,11 +255,11 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R14-scientific-missions', version: '0.5.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R14-scientific-missions-plus-four-level-campaign', version: '0.5.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,
-    routeEntrypoints: ['/', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
+    routeEntrypoints: ['/', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
     curation: 'Explicit allowlist of runtime assets, public documents, historical artifacts reviewed by coordination, scientific sources, licenses and field-projected evidence.',
     excludedClasses: ['raw static-analysis report', 'repository-sources', 'personal attachments and poster references', 'environment and credential files', 'source maps', 'private repository code', 'node_modules', 'git and Vercel local state'],
     eligibility: 'Pre-event specific development preserved; temporal eligibility and official Resources unresolved.',
@@ -265,7 +273,7 @@ try {
   await rename(stage, output);
   const receipt = { generatedAt: now, command: `node scripts/build-beta-site.mjs${allowIncomplete ? ' --allow-incomplete' : ''}`, output: 'site/', publicationReady: manifest.publicationReady, fileCount: entries.length + 1, bytes: entries.reduce((sum, file) => sum + file.bytes, 0) + Buffer.byteLength(manifestBytes), manifest: { path: 'site/publication-manifest.json', bytes: Buffer.byteLength(manifestBytes), sha256: digest(manifestBytes) }, entries, omissions, limitations: ['Static build only; does not publish to a remote service', 'No real-browser inspection or restriction bypass', 'Public projections are not complete internal receipts', 'Release target is planned, not a completed qualification'] };
   const preservedRuntimes = [];
-  for (const entry of entries.filter(item => ['game-runtime', 'mission-lab-runtime', 'portable-game', 'presentation-runtime'].includes(item.category))) {
+  for (const entry of entries.filter(item => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime'].includes(item.category))) {
     const originalSha256 = digest(await readFile(safePath(root, entry.source)));
     const publishedSha256 = digest(await readFile(safePath(output, entry.path)));
     if (originalSha256 !== publishedSha256 || publishedSha256 !== entry.sha256) throw new Error(`Runtime não preservado: ${entry.path}`);

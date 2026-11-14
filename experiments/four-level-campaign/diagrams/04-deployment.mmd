@@ -1,0 +1,17 @@
+flowchart TD
+  subgraph Delivery["Distribuição do beta estático"]
+    Repo["Repositório GitHub"] --> Checks["Testes de domínio e UI"]
+    Checks --> Build["TypeScript e Vite build"]
+    Assets["Dados e documentação pública"] --> Build
+    Build --> Dist["dist com assets preservados"]
+    Dist --> Host["Hospedagem estática Vercel"]
+    Host --> Browser["Navegador: UI, Worker e motor"]
+    Browser --> Local["IndexedDB, diário e progresso local"]
+  end
+  subgraph Future["Proposta futura: cloud opcional"]
+    Api["API com autenticação e owner"] --> Validate["Validar, recalcular e deduplicar"]
+    Validate --> Prisma["Prisma 7.10.1 no servidor"]
+    Prisma --> Db["PostgreSQL com políticas testadas"]
+    Retention["Expurgo por retenção"] --> Db
+  end
+  Browser -.->|"Sync opcional ainda não implementado"| Api

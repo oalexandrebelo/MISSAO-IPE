@@ -1,0 +1,19 @@
+flowchart TD
+  subgraph Scientific["Arquivo científico histórico"]
+    Sources["Respostas, recibos e metadados"] --> Pack["Seis registros e hash do pacote"]
+  end
+  subgraph Browser["Execução local no navegador"]
+    Choices["Configuração e cenário"] --> Frozen["Entrada congelada e validada"]
+    Frozen --> Engine["Motor determinístico"]
+    Engine --> Result["Resultado completo e validado"]
+    Result --> Report["Relatório e gate do nível"]
+    Result --> Canonical["JSON canônico e hashes"]
+    Canonical --> Store["IndexedDB: snapshot imutável"]
+    Canonical --> Export["Replay exportado"]
+    Imported["Replay importado"] --> Parser["Parser estrito e limites"]
+    Parser --> Identity["Conferir versões e hashes"]
+    Identity --> Engine
+    Result --> Compare["Comparar com alegação importada"]
+    Identity --> Compare
+  end
+  Pack --> Engine

@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/campanha",
+      "destination": "/campanha/index.html",
+      "permanent": false
+    },
+    {
       "source": "/game",
       "destination": "/game/index.html",
       "permanent": false
@@ -101,6 +106,6 @@
   ],
   "framework": null,
   "buildCommand": "npm run build:release",
-  "installCommand": "npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund",
+  "installCommand": "npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund",
   "outputDirectory": "site"
 }
