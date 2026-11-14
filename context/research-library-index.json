@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T22:03:07.016Z",
+  "generatedAt": "2026-11-14T22:05:44.737Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 92,
+  "documentCount": 93,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -29,12 +29,12 @@
     {
       "source": "PUBLICADO.md",
       "id": "doc-publicado-md",
-      "title": "Publicação PROJETO IPÊ — R14",
+      "title": "Publicação PROJETO IPÊ — campanha de quatro níveis",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 5018,
-      "originalSha256": "70ae611eda83bde4f2bf6e686786e34124635e0c52ea049da1b60d7d8af8f2f3",
-      "projectedSha256": "70ae611eda83bde4f2bf6e686786e34124635e0c52ea049da1b60d7d8af8f2f3",
+      "originalBytes": 7283,
+      "originalSha256": "6c64c2bc258f37b4575edbe3d7dfec796bd361463ade8cd0e943aff7f08007e8",
+      "projectedSha256": "6c64c2bc258f37b4575edbe3d7dfec796bd361463ade8cd0e943aff7f08007e8",
       "redactions": 0
     },
     {
@@ -43,9 +43,9 @@
       "title": "PROJETO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 8566,
-      "originalSha256": "b1cb42ebf0cf87f63f5d65fd8441cde8269b3af06bd39567561d592270993aff",
-      "projectedSha256": "b1cb42ebf0cf87f63f5d65fd8441cde8269b3af06bd39567561d592270993aff",
+      "originalBytes": 9526,
+      "originalSha256": "2f0a87873965e5f49a1bfcafe6f0c984a5f92f1ccbd09400c1fc976dc0ace4fd",
+      "projectedSha256": "2f0a87873965e5f49a1bfcafe6f0c984a5f92f1ccbd09400c1fc976dc0ace4fd",
       "redactions": 0
     },
     {
@@ -390,6 +390,17 @@
       "redactions": 0
     },
     {
+      "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+      "id": "doc-docs-32-campanha-quatro-niveis-md",
+      "title": "Campanha didática de quatro níveis — PROJETO-IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 4091,
+      "originalSha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
+      "projectedSha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
+      "redactions": 0
+    },
+    {
       "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
       "id": "doc-docs-32-guia-didatico-missoes-3d-md",
       "title": "32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica",
@@ -417,9 +428,9 @@
       "title": "34 — Continuidade para dois devs: escolhas visíveis na nave",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 9086,
-      "originalSha256": "32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f",
-      "projectedSha256": "32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f",
+      "originalBytes": 10083,
+      "originalSha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
+      "projectedSha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
       "redactions": 0
     },
     {
@@ -1020,13 +1031,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 1900173,
-      "sha256": "72e95ec74614a12ca5ce3af0615a99886dd3007a202d0d81ff13fdaf5b29f2e5"
+      "bytes": 1911415,
+      "sha256": "892501d4a96736c2d462fc8bf479e0e48b1c69645823e4250b0d39c9c6481a03"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1532145,
-      "sha256": "927a71388f678e652b302cb16f4ec3f85ff4070c1a798baf2bc14866a706e71e"
+      "bytes": 1540712,
+      "sha256": "e2b4e7c8851c140d1bede8f826f00c8472cd617a2044b8978fe252d60f1d4341"
     }
   ]
 }

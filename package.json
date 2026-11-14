@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Missão Ipê BETA: jogo, apresentação, contexto integral, cronograma interativo e arquitetura rastreável.",
   "scripts": {
-    "build:release": "npm --prefix experiments/mission-design-lab run build && node scripts/build-beta-site.mjs && node scripts/prepare-vercel-static.mjs",
+    "build:release": "npm --prefix experiments/mission-design-lab run build && npm --prefix experiments/four-level-campaign run verify && node scripts/build-beta-site.mjs && node scripts/prepare-vercel-static.mjs",
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "test": "node --experimental-strip-types --test tests/*.test.mts",

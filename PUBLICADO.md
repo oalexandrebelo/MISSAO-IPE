@@ -1,4 +1,25 @@
-# Publicação PROJETO IPÊ — R14
+# Publicação PROJETO IPÊ — campanha de quatro níveis
+
+A campanha didática foi publicada em **14/11/2026**, em uma área própria que preserva a edição R14.
+
+- [Jogar os quatro níveis](https://projeto-ipe.vercel.app/campanha/index.html)
+- [Mapa interativo para estudar e apresentar](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html#niveis)
+- [PRD, PRT, pesquisa, Mermaid, Prisma, pitch e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html)
+- [Pitch editável de dez slides](https://projeto-ipe.vercel.app/campanha/apresentacao/PROJETO-IPE-Pitch.pptx)
+- [Recibo desta publicação e limites da verificação](experiments/four-level-campaign/evidence/production-smoke-2026-11-14.json)
+- [Código e documentação da campanha](experiments/four-level-campaign/README.md)
+
+Implementação: `ab66a424df505a627a611877fce5d8a4364c8be1`. Ajuste de rotas observado em produção: `f30ca994098262b75a86b25784b78657c34c0db5`. Implantação conferida: `dpl_DHsVtWQurf2w9do6bhcnXdD84aJT`, estado **READY**. O `release.json` público confirmou o mesmo SHA e ambiente de produção.
+
+A inspeção na URL pública confirmou entrada na campanha, conclusão do nível 1 com 6/6 registros e liberação do nível 2, mapa interativo com seleção dos quatro níveis, documentação de 21 capítulos e download do PowerPoint idêntico ao arquivo validado. O ambiente apresentou a alternativa 2D; esta verificação não qualifica a renderização 3D. Os quatro níveis completos também passaram pela suíte DOM: 120 testes de domínio e 14 de interface.
+
+Os acessos por diretório de apresentação e pesquisa agora redirecionam para `index.html`, preservando assets e links relativos com a normalização de barras da Vercel. As capturas desta publicação estão em `experiments/four-level-campaign/evidence/publication/`. O recibo é posterior à implantação inspecionada; seu push pode gerar uma nova implantação documental. A identidade de qualquer build está em [release.json](https://projeto-ipe.vercel.app/campanha/release.json).
+
+A edição R14 permanece disponível abaixo. As duas experiências têm contratos próprios; a futura consolidação deve comparar regras, dados e schemas antes de compartilhar persistência.
+
+---
+
+## Publicação PROJETO IPÊ — R14
 
 Publicado e conferido em **14/11/2026**: três missões científicas, cenas 3D ligadas aos eventos, quatro modelos NASA, revisão local em equipe e a marca SVG original enviada pelo autor.
 
@@ -37,3 +58,4 @@ Os novos registros de Bennu e Telescópio são **sintéticos**, identificados na
 Recibos: [revisão local R14](evidence/revision-r14.json), [publicação R14](evidence/production-r14.json), [histórico R13](evidence/production-r13.json).
 
 Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não foram medidos FPS nem desempenho em dispositivo físico; primeiro acesso offline continua sem ensaio. Recursos NASA não representam endosso institucional, qualificação de voo ou elegibilidade no desafio.
+

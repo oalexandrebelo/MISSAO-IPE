@@ -21,10 +21,10 @@ const checks = [];
 const observations = {};
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const slash = value => value.split(path.sep).join('/');
-const textExtensions = new Set(['.html', '.js', '.mjs', '.css', '.json', '.md', '.txt', '.mmd', '.svg', '.py']);
+const textExtensions = new Set(['.html', '.js', '.mjs', '.css', '.json', '.md', '.txt', '.mmd', '.prisma', '.svg', '.py']);
 const safeResearchEvidence = new Set(['research/evidence/validate-evi3-research.py', 'research/evidence/evi3-validation.json', 'research/evidence/resources-retrieval-20261114.json']);
 const expectedData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
-const mimeByExtension = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain', '.mmd': 'text/plain', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.webp': 'image/webp', '.glb': 'model/gltf-binary', '.wasm': 'application/wasm' };
+const mimeByExtension = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain', '.mmd': 'text/plain', '.prisma': 'text/plain', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.webp': 'image/webp', '.glb': 'model/gltf-binary', '.wasm': 'application/wasm' };
 let files = [];
 const bytesByFile = new Map();
 const documents = new Map();
@@ -206,6 +206,9 @@ async function run() {
     assert.equal(manifest.project, 'PROJETO-IPE');
     assert.equal(manifest.files.length, manifest.fileCount);
     assert.deepEqual(manifest.files.map(file => file.path).sort(), files.filter(file => file !== 'publication-manifest.json').sort());
+    for (const filename of ['lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json']) {
+      assert.ok(bytesByFile.has(filename), `Entrega integrada ausente: ${filename}`);
+    }
     for (const file of manifest.files) {
       assert.ok(!file.path.startsWith('/') && !file.path.split('/').includes('..'));
       const bytes = bytesByFile.get(file.path);
@@ -255,7 +258,7 @@ async function run() {
     assert.match(document.title, /IPÊ/i);
     for (const pattern of [/beta/i, /Cerrado/i, /planejad|propost/i, /NASA/, /elegibilidade/i]) assert.match(text, pattern);
     const destinations = [...document.querySelectorAll('a[href]')].map(link => new URL(link.getAttribute('href'), 'https://beta.invalid/').pathname);
-    for (const href of ['/lab/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html']) assert.ok(destinations.includes(href), `Destino principal ausente: ${href}`);
+    for (const href of ['/lab/index.html', '/campanha/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html']) assert.ok(destinations.includes(href), `Destino principal ausente: ${href}`);
     assert.equal(document.querySelectorAll('form').length, 0, 'Portal não deve introduzir coleta de dados nesta rodada');
     assert.match(document.querySelector('.brand img')?.getAttribute('src') || '', /projeto-ipe-logo-on-light\.svg$/);
     const logo = new JSDOM(bytesByFile.get('brand/projeto-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
@@ -293,9 +296,11 @@ async function run() {
     observations.visualCollection = { images: media.images.length, local: true, integrity: true };
   });
 
-  await check('imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/', async () => {
-    const modules = files.filter(filename => /^(?:game|lab)\/assets\/[^/]+\.js$/.test(filename));
+  await check('imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/', async () => {
+    const runtimeRoots = ['game', 'lab', 'campanha'];
+    const modules = files.filter(filename => /^(?:game|lab|campanha)\/assets\/[^/]+\.js$/.test(filename));
     assert.ok(modules.length >= 3);
+    for (const runtime of runtimeRoots) assert.ok(modules.some(filename => filename.startsWith(`${runtime}/assets/`)), `JavaScript compilado ausente: ${runtime}`);
     const api = new API({ cwd: root });
     const snapshot = api.updateSnapshot({ openFiles: modules.map(filename => path.join(site, filename)) });
     try {
@@ -310,24 +315,30 @@ async function run() {
     } finally { snapshot.dispose(); api.close(); }
     const worker = gameDependencies.find(dependency => /mission\.worker-[^/]+\.js$/.test(dependency.target || ''));
     assert.ok(worker, 'Worker compilado não foi identificado no grafo de new URL/import');
-    assert.ok(gameDependencies.some(dependency => /^lab\/assets\/mission\.worker-/.test(dependency.target || '')), 'Worker do beta atual ausente');
-    assert.ok(gameDependencies.every(dependency => /^(?:game|lab)\//.test(dependency.target || '')));
+    for (const runtime of runtimeRoots) assert.ok(gameDependencies.some(dependency => dependency.source.startsWith(`${runtime}/`) && new RegExp(`^${runtime}/assets/mission\\.worker-[^/]+\\.js$`).test(dependency.target || '')), `Worker compilado ausente: ${runtime}`);
+    for (const dependency of gameDependencies) {
+      assert.ok(runtimeRoots.includes(dependency.source.split('/')[0]));
+      assert.equal(dependency.target?.split('/')[0], dependency.source.split('/')[0], `Dependência cruza aplicações: ${dependency.source} → ${dependency.target}`);
+    }
     observations.gameModuleGraph = { modules: modules.length, worker: worker.target, dependencies: gameDependencies };
   });
 
   await check('runtime, apresentação e dados preservam os artefatos já verificados', async () => {
     const preserved = [];
-    for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'portable-game', 'presentation-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
+    for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
       const original = await readFile(path.join(root, file.source));
       assert.equal(digest(bytesByFile.get(file.path)), digest(original), `Cópia alterou artefato: ${file.path}`);
       preserved.push({ path: file.path, source: file.source, sha256: digest(original) });
     }
+    for (const runtime of ['lab', 'campanha']) assert.ok(preserved.some(file => file.path === `${runtime}/index.html`), `Runtime não incluído na conferência de preservação: ${runtime}`);
     const presentationReceipt = JSON.parse(await readFile(path.join(root, 'evidence/presentation-qa.json'), 'utf8'));
     assert.equal(digest(bytesByFile.get('presentation/Missao_Ipe_Apresentacao.html')), presentationReceipt.observations.artifact.sha256);
     for (const name of expectedData) {
       assert.ok(bytesByFile.has(`game/data/${name}`));
       assert.ok(bytesByFile.has(`public/data/${name}`));
       assert.equal(digest(bytesByFile.get(`game/data/${name}`)), digest(bytesByFile.get(`public/data/${name}`)));
+      assert.ok(bytesByFile.has(`campanha/data/${name}`));
+      assert.equal(digest(bytesByFile.get(`campanha/data/${name}`)), digest(bytesByFile.get(`public/data/${name}`)), `Dado científico divergente na campanha: ${name}`);
     }
     observations.preservedArtifacts = preserved;
     observations.scientificFilesPerLocation = expectedData.length;
@@ -352,7 +363,9 @@ async function run() {
   await check('configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos', async () => {
     assert.equal(vercel.outputDirectory, 'site');
     assert.equal(vercel.buildCommand, 'npm run build:release');
-    assert.equal(vercel.installCommand, 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund');
+    assert.equal(vercel.installCommand, 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund');
+    assert.equal(vercel.cleanUrls, false);
+    assert.equal(vercel.trailingSlash, false);
     const common = Object.fromEntries(vercel.headers.find(rule => rule.source === '/(.*)').headers.map(header => [header.key.toLowerCase(), header.value]));
     assert.equal(common['x-content-type-options'], 'nosniff');
     assert.equal(common['x-frame-options'], 'DENY');
@@ -438,20 +451,32 @@ async function run() {
       assert.equal(response.status, 200, `HEAD de link falhou: ${requestPath}`);
       assert.equal((await response.arrayBuffer()).byteLength, 0);
     }
-    const common = observations.configuredHeaders?.common;
-    assert.ok(common);
-    const response = await fetchLocal('/game/index.html', { method: 'HEAD' });
-    for (const [name, value] of Object.entries(common)) {
-      if (name === 'cache-control') continue; // The local server deliberately uses no-store; production cache is a separate route policy.
-      assert.equal(response.headers.get(name), value, `Cabeçalho local divergente: ${name}`);
+    // Inspect configured headers independently, even if an earlier CSP assertion failed.
+    const commonRule = vercel.headers.find(rule => rule.source === '/(.*)');
+    assert.ok(commonRule, 'Cabeçalhos comuns não configurados');
+    const common = Object.fromEntries(commonRule.headers.map(header => [header.key.toLowerCase(), header.value]));
+    for (const route of ['/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html']) {
+      const response = await fetchLocal(route, { method: 'HEAD' });
+      assert.equal(response.status, 200, `HEAD da aplicação falhou: ${route}`);
+      assert.equal((await response.arrayBuffer()).byteLength, 0);
+      for (const [name, value] of Object.entries(common)) {
+        if (name === 'cache-control') continue; // The local server deliberately uses no-store; production cache is a separate route policy.
+        assert.equal(response.headers.get(name), value, `Cabeçalho local divergente: ${route} · ${name}`);
+      }
     }
+    for (const source of ['/campanha', '/campanha/research', '/campanha/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && redirect.destination === `${source}/index.html` && redirect.permanent === false), `Redirecionamento explícito da campanha ausente: ${source}`);
     const redirects = [];
     for (const redirect of vercel.redirects) {
       const result = await fetchLocal(redirect.source);
       assert.equal(result.status, 307);
       assert.equal(result.headers.get('location'), redirect.destination);
+      const head = await fetchLocal(redirect.source, { method: 'HEAD' });
+      assert.equal(head.status, 307);
+      assert.equal(head.headers.get('location'), redirect.destination);
+      assert.equal((await head.arrayBuffer()).byteLength, 0);
       const destination = await fetchLocal(redirect.destination, { method: 'HEAD' });
       assert.equal(destination.status, 200);
+      assert.equal((await destination.arrayBuffer()).byteLength, 0);
       redirects.push({ source: redirect.source, destination: redirect.destination, status: result.status });
     }
     observations.httpRoutes = { linkedRoutesChecked: paths.length, redirects, cacheLimit: 'Local server uses no-store. Production asset-cache rule is inspected, not exercised here.' };

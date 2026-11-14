@@ -50,5 +50,19 @@
     "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
     "docs/34-HANDOFF-IMERSAO-3D-R15.md"
   ],
-  "publication": "Consult evidence/production-r15.json and PUBLICADO.md; this local receipt alone is not deployment proof."
+  "publication": "Consult evidence/production-r15.json and PUBLICADO.md; this local receipt alone is not deployment proof.",
+  "integration": {
+    "preservedRemoteCommit": "29fcc46",
+    "experience": "Four-level campaign at /campanha/index.html; R15 lab at /lab/index.html",
+    "campaignDomain": {
+      "passed": 120,
+      "failed": 0
+    },
+    "campaignUiDOM": {
+      "passed": 14,
+      "failed": 0
+    },
+    "campaignBuild": "passed",
+    "note": "Merged parallel publication without altering campaign source rules; shared delivery checks updated to cover both entrypoints."
+  }
 }

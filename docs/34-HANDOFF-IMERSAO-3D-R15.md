@@ -90,3 +90,9 @@ Cooperação continua local, no mesmo dispositivo. Bennu e Telescópio mantêm d
 ## 8. Evidência desta revisão
 
 Na R15 passaram 140 testes de domínio, 26 de interface DOM, 24 de contexto e 17 de distribuição/HTTP, além de TypeScript e compilação. No navegador foram conferidas as peças dos três casos, escolha incompatível, inspeção direta, separação pelo teclado, alternativa 2D e viewport de 390 px. O ensaio Bennu viável terminou 6/6. O [recibo local R15](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/revision-r15.json) delimita essas verificações; a publicação é comprovada separadamente em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md).
+
+## 9. Campanha paralela preservada
+
+Durante a publicação, foram incorporados os commits de uma frente paralela até `29fcc46`, que acrescentam `experiments/four-level-campaign/` e a rota `/campanha/index.html`. O laboratório R15 continua em `/lab/index.html`. A campanha tem seu próprio catálogo, progresso, testes, documentação e build; a montagem configurável desta revisão pertence ao laboratório de três missões. Não compartilhar persistência entre as experiências sem comparar seus contratos. O build de publicação agora compila ambas e preserva os redirecionamentos, o mapa, o pitch e a pesquisa da campanha. Consulte [o handoff dessa frente](32-CAMPANHA-QUATRO-NIVEIS.md).
+
+Na integração foram executados também os 120 testes de domínio e 14 de interface da campanha, com compilação aprovada. A checagem compartilhada de distribuição inclui os dois aplicativos. Os resultados da campanha não são somados à cobertura do laboratório como se fossem a mesma base.

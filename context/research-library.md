@@ -56,11 +56,32 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 ---
 
-# Publicação PROJETO IPÊ — R14
+# Publicação PROJETO IPÊ — campanha de quatro níveis
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `70ae611eda83bde4f2bf6e686786e34124635e0c52ea049da1b60d7d8af8f2f3` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `6c64c2bc258f37b4575edbe3d7dfec796bd361463ade8cd0e943aff7f08007e8` · Ajustes de caminhos privados: 0
 
-# Publicação PROJETO IPÊ — R14
+# Publicação PROJETO IPÊ — campanha de quatro níveis
+
+A campanha didática foi publicada em **14/11/2026**, em uma área própria que preserva a edição R14.
+
+- [Jogar os quatro níveis](https://projeto-ipe.vercel.app/campanha/index.html)
+- [Mapa interativo para estudar e apresentar](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html#niveis)
+- [PRD, PRT, pesquisa, Mermaid, Prisma, pitch e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html)
+- [Pitch editável de dez slides](https://projeto-ipe.vercel.app/campanha/apresentacao/PROJETO-IPE-Pitch.pptx)
+- [Recibo desta publicação e limites da verificação](experiments/four-level-campaign/evidence/production-smoke-2026-11-14.json)
+- [Código e documentação da campanha](experiments/four-level-campaign/README.md)
+
+Implementação: `ab66a424df505a627a611877fce5d8a4364c8be1`. Ajuste de rotas observado em produção: `f30ca994098262b75a86b25784b78657c34c0db5`. Implantação conferida: `dpl_DHsVtWQurf2w9do6bhcnXdD84aJT`, estado **READY**. O `release.json` público confirmou o mesmo SHA e ambiente de produção.
+
+A inspeção na URL pública confirmou entrada na campanha, conclusão do nível 1 com 6/6 registros e liberação do nível 2, mapa interativo com seleção dos quatro níveis, documentação de 21 capítulos e download do PowerPoint idêntico ao arquivo validado. O ambiente apresentou a alternativa 2D; esta verificação não qualifica a renderização 3D. Os quatro níveis completos também passaram pela suíte DOM: 120 testes de domínio e 14 de interface.
+
+Os acessos por diretório de apresentação e pesquisa agora redirecionam para `index.html`, preservando assets e links relativos com a normalização de barras da Vercel. As capturas desta publicação estão em `experiments/four-level-campaign/evidence/publication/`. O recibo é posterior à implantação inspecionada; seu push pode gerar uma nova implantação documental. A identidade de qualquer build está em [release.json](https://projeto-ipe.vercel.app/campanha/release.json).
+
+A edição R14 permanece disponível abaixo. As duas experiências têm contratos próprios; a futura consolidação deve comparar regras, dados e schemas antes de compartilhar persistência.
+
+---
+
+## Publicação PROJETO IPÊ — R14
 
 Publicado e conferido em **14/11/2026**: três missões científicas, cenas 3D ligadas aos eventos, quatro modelos NASA, revisão local em equipe e a marca SVG original enviada pelo autor.
 
@@ -101,11 +122,12 @@ Recibos: [revisão local R14](evidence/revision-r14.json), [publicação R14](ev
 Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não foram medidos FPS nem desempenho em dispositivo físico; primeiro acesso offline continua sem ensaio. Recursos NASA não representam endosso institucional, qualificação de voo ou elegibilidade no desafio.
 
 
+
 ---
 
 # PROJETO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `b1cb42ebf0cf87f63f5d65fd8441cde8269b3af06bd39567561d592270993aff` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `2f0a87873965e5f49a1bfcafe6f0c984a5f92f1ccbd09400c1fc976dc0ace4fd` · Ajustes de caminhos privados: 0
 
 # PROJETO IPÊ — Ciência que chega
 
@@ -116,6 +138,12 @@ Jogo educativo de engenharia de missões espaciais com três casos científicos:
 **Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/34-HANDOFF-IMERSAO-3D-R15.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+
+## Campanha didática de quatro níveis
+
+Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
+
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R15. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -4254,6 +4282,62 @@ GMAT, SPICE, Horizons e APIs de missão não estão integrados ao novo cálculo.
 
 ---
 
+# Campanha didática de quatro níveis — PROJETO-IPÊ
+
+Fonte: `docs/32-CAMPANHA-QUATRO-NIVEIS.md` · SHA-256 original: `bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece` · Ajustes de caminhos privados: 0
+
+# Campanha didática de quatro níveis — PROJETO-IPÊ
+
+Esta integração acrescenta uma sequência jogável do caso Cerrado em `/campanha/index.html`, com código próprio em `experiments/four-level-campaign/`. A edição R14, com Cerrado, Bennu e Telescópio, continua em `/lab/index.html`. Os contratos das experiências são separados.
+
+## Acessos
+
+- [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html)
+- [Mapa interativo e notas de apresentação](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html)
+- [Pitch editável de dez slides](https://projeto-ipe.vercel.app/campanha/apresentacao/PROJETO-IPE-Pitch.pptx)
+- [Documentação e pesquisa completas](https://projeto-ipe.vercel.app/campanha/research/index.html)
+- [Código, PRD, PRT e handoff](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/four-level-campaign)
+
+## Progressão
+
+| Nível | Pessoa fictícia | Objetivo adicional ao sucesso 6/6 |
+|---|---|---|
+| Primeiro sinal | Lina Duarte | Entregar os seis registros em contatos longos |
+| Memória em disputa | Caio Mendes | Manter 512 Mbit de memória |
+| Janela estreita | Joana Costa | Contatos curtos e preservação das bandas R/NIR |
+| Ciência que chega | Ravi Almeida | Contatos curtos e custo de até 78 créditos |
+
+O nível final começa com um projeto que já entrega 6/6 por 84 créditos. Seu objetivo é economizar mantendo a ciência. O motor precisa indicar sucesso; seis registros recebidos não dispensam as restrições de engenharia. Os níveis são liberados por tentativa própria, com previsão e recálculo. Replay e histórico não concedem progresso. Reflexão é opcional, sem nota automática.
+
+A busca contextual avalia as 64 configurações e encontra 17 / 6 / 1 / 2 soluções elegíveis. Ela preserva os requisitos do briefing. A dificuldade cresce pela autonomia e pelo raciocínio, não por uma regra de aumento obrigatório do número de mudanças.
+
+## Conteúdo e stack
+
+A pasta contém PRD, Plano de Requisitos Técnicos, storytelling, 14 oportunidades, handoff, arquitetura, seis fontes Mermaid e schema Prisma com 12 modelos. A documentação HTML reúne 21 documentos, 160 URLs externas e 20 equações. O mapa tem sete capítulos e notas; o pitch oferece versões de 30 s, 90 s, 3 min e dez slides editáveis.
+
+React 19.3.1, TypeScript 7.0.2, Vite 8.3.8, Node 24, Three.js 0.187.0, R3F 9.8.2 e Drei 10.7.9. Motor 0.1.1-rd, catálogo ipe-64-v1, campanha ipe-campaign-v1. Persistência local; Prisma/PostgreSQL permanecem proposta de evolução, sem banco conectado.
+
+## Verificação desta integração
+
+A suíte própria passou com **120 testes de domínio e integridade e 14 testes de interface**. Build e TypeScript passaram. Prisma 7.10.1 validou os 12 modelos; Mermaid 11.14.0 aceitou os seis diagramas. O pitch teve dez slides renderizados e inspecionados pelo runtime de autoria. Após a integração, a checagem estática verificou 430 referências internas, arquivos e âncoras sob `/campanha/`, sem erros.
+
+Os testes DOM usam jsdom e fake-indexeddb. Não demonstram GPU, aprendizagem, acessibilidade completa ou durabilidade do armazenamento. A inspeção local de navegador desta rodada encontrou bloqueio de URL; os registros históricos permanecem identificados. O recibo de publicação deve registrar separadamente commit e estado remoto verificado.
+
+## Reprodução
+
+```bash
+npm --prefix experiments/four-level-campaign ci
+npm --prefix experiments/four-level-campaign run verify
+npm --prefix experiments/four-level-campaign run dev
+```
+
+O build da distribuição compila as duas aplicações. O empacotador copia apenas extensões públicas permitidas da campanha para `site/campanha/`, registra hashes e inclui os scripts inline na política CSP. Source maps, dependências, configuração de hospedagem anterior e variáveis de ambiente não são publicados.
+
+Personagens, nave e catálogo operacional são didáticos. Os seis registros MODIS e sua procedência são históricos e reais. Nenhum endosso institucional, estudo humano ou qualificação de voo é declarado.
+
+
+---
+
 # 32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica
 
 Fonte: `docs/32-GUIA-DIDATICO-MISSOES-3D.md` · SHA-256 original: `a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522` · Ajustes de caminhos privados: 0
@@ -4724,7 +4808,7 @@ Integração NASA de trajetória, novas observações reais de Bennu/espectros, 
 
 # 34 — Continuidade para dois devs: escolhas visíveis na nave
 
-Fonte: `docs/34-HANDOFF-IMERSAO-3D-R15.md` · SHA-256 original: `32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f` · Ajustes de caminhos privados: 0
+Fonte: `docs/34-HANDOFF-IMERSAO-3D-R15.md` · SHA-256 original: `a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd` · Ajustes de caminhos privados: 0
 
 # 34 — Continuidade para dois devs: escolhas visíveis na nave
 
@@ -4818,6 +4902,12 @@ Cooperação continua local, no mesmo dispositivo. Bennu e Telescópio mantêm d
 ## 8. Evidência desta revisão
 
 Na R15 passaram 140 testes de domínio, 26 de interface DOM, 24 de contexto e 17 de distribuição/HTTP, além de TypeScript e compilação. No navegador foram conferidas as peças dos três casos, escolha incompatível, inspeção direta, separação pelo teclado, alternativa 2D e viewport de 390 px. O ensaio Bennu viável terminou 6/6. O [recibo local R15](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/revision-r15.json) delimita essas verificações; a publicação é comprovada separadamente em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md).
+
+## 9. Campanha paralela preservada
+
+Durante a publicação, foram incorporados os commits de uma frente paralela até `29fcc46`, que acrescentam `experiments/four-level-campaign/` e a rota `/campanha/index.html`. O laboratório R15 continua em `/lab/index.html`. A campanha tem seu próprio catálogo, progresso, testes, documentação e build; a montagem configurável desta revisão pertence ao laboratório de três missões. Não compartilhar persistência entre as experiências sem comparar seus contratos. O build de publicação agora compila ambas e preserva os redirecionamentos, o mapa, o pitch e a pesquisa da campanha. Consulte [o handoff dessa frente](32-CAMPANHA-QUATRO-NIVEIS.md).
+
+Na integração foram executados também os 120 testes de domínio e 14 de interface da campanha, com compilação aprovada. A checagem compartilhada de distribuição inclui os dois aplicativos. Os resultados da campanha não são somados à cobertura do laboratório como se fossem a mesma base.
 
 
 ---

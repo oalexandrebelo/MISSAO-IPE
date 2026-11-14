@@ -1,0 +1,108 @@
+/* The illustration owns its presentation; mission controls and calculations stay in HTML. */
+.scene.scene-orbit {
+  --orbit-ink: #dce5e7;
+  --orbit-muted: #91a0a8;
+  --orbit-lime: #d5f894;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 540px;
+  height: 540px;
+  color: var(--orbit-ink);
+  background: radial-gradient(ellipse at 43% 42%, #14202a 0%, #0c131d 42%, #0a0e14 75%);
+  border: 1px solid #26303a;
+  border-radius: 8px;
+  box-shadow: inset 0 0 80px #02040738;
+}
+.scene.scene-orbit .orbit-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(#899dba06 1px, transparent 1px), linear-gradient(90deg, #899dba06 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse, #0009, transparent 77%);
+  pointer-events: none;
+}
+.scene.scene-orbit .orbit-corner { position: absolute; z-index: 2; width: 13px; height: 13px; pointer-events: none; opacity: .5; }
+.scene.scene-orbit .orbit-corner-tl { top: 0; left: 0; border-top: 1px solid #b6c3ba; border-left: 1px solid #b6c3ba; }
+.scene.scene-orbit .orbit-corner-br { bottom: 0; right: 0; border-bottom: 1px solid #b6c3ba; border-right: 1px solid #b6c3ba; }
+.scene.scene-orbit .orbit-topline { position: absolute; z-index: 3; inset: 8px 14px auto 21px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.scene.scene-orbit .orbit-eyebrow { display: flex; align-items: center; gap: 8px; font-family: var(--mono, monospace); font-size: 9px; font-weight: 500; letter-spacing: 1px; line-height: 1.4; white-space: nowrap; color: #aebdc3; }
+.scene.scene-orbit .orbit-eyebrow i { display: block; width: 5px; height: 5px; border-radius: 50%; background: #d5f894; box-shadow: 0 0 9px #d5f89430; }
+.scene.scene-orbit .orbit-display-tools { display: flex; gap: 2px; }
+.scene.scene-orbit .orbit-tool { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 9px; border: 1px solid transparent; border-radius: 4px; color: #aab8c0; background: transparent; font-family: var(--mono, monospace); font-size: 9px; font-weight: 400; line-height: 1; white-space: nowrap; transition: color .15s, background-color .15s; }
+.scene.scene-orbit .orbit-tool:hover:not(:disabled) { color: #e0f2d6; background: #d5f89409; border-color: #d5f89420; }
+.scene.scene-orbit .orbit-tool:disabled { cursor: default; opacity: .48; }
+.scene.scene-orbit button:focus-visible { outline: 2px solid #d5f894; outline-offset: 2px; }
+.scene.scene-orbit .orbit-render { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.scene.scene-orbit .orbital-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.scene.scene-orbit .orbital-canvas canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: pan-y; }
+.scene.scene-orbit .orbit-flat { position: absolute; inset: 0; pointer-events: none; }
+.scene.scene-orbit .orbit-flat svg { width: 100%; height: 100%; display: block; }
+.scene.scene-orbit .orbit-flat-orbit { inset: -25px -28px 13px; }
+.scene.scene-orbit .orbit-map-label { position: absolute; z-index: 2; left: 55%; top: 58%; display: flex; align-items: center; gap: 9px; pointer-events: none; color: #d8e4c7; text-shadow: 0 1px 8px #000; font: 8px/1.45 var(--mono, monospace); letter-spacing: .75px; }
+.scene.scene-orbit .orbit-map-label small { display: block; margin-top: 4px; font-size: 7px; color: #8da3a4; letter-spacing: .6px; }
+.scene.scene-orbit .orbit-map-cross { position: relative; display: block; width: 24px; height: 24px; border: 1px solid #d5f89469; border-radius: 50%; }
+.scene.scene-orbit .orbit-map-cross::before { content: ''; position: absolute; top: 10px; left: 10px; width: 3px; height: 3px; border-radius: 50%; background: #d5f894; }
+.scene.scene-orbit .orbit-map-cross::after { content: ''; position: absolute; left: -32px; top: 11px; width: 31px; height: 1px; background: linear-gradient(90deg, transparent, #d5f89455); }
+.scene.scene-orbit .orbit-bottom { position: absolute; z-index: 3; inset: auto 21px 16px; }
+.scene.scene-orbit .orbit-viewbar { display: flex; align-items: center; gap: 4px; width: fit-content; max-width: 100%; padding: 3px; border: 1px solid #37424b; border-radius: 5px; background: #0b111bea; }
+.scene.scene-orbit .orbit-view { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 39px; padding: 0 12px; color: #acbbc2; border: 1px solid transparent; border-radius: 3px; font-size: 11px; font-weight: 400; line-height: 1.2; white-space: nowrap; }
+.scene.scene-orbit .orbit-view > span { font: 8px var(--mono, monospace); color: #819399; }
+.scene.scene-orbit .orbit-view:hover { color: #e3eadb; background: #c8d6c807; }
+.scene.scene-orbit .orbit-view.is-active { color: #e5f5d4; background: #c3de9220; border-color: #c3de9229; }
+.scene.scene-orbit .orbit-view.is-active > span { color: #d5f894; }
+.scene.scene-orbit .orbit-explanation { min-height: 31px; max-width: 480px; padding-top: 10px; }
+.scene.scene-orbit .orbit-explanation p { color: #a4b1bb; font-size: 11px; line-height: 1.6; }
+.scene.scene-orbit .orbit-caption { display: flex; flex-wrap: wrap; column-gap: 10px; row-gap: 3px; margin: 8px 0 0; color: #7d8d99; font-family: var(--mono, monospace); font-size: 8px; letter-spacing: .05px; line-height: 1.5; }
+.scene.scene-orbit .orbit-caption span:first-child:not(:only-child) { color: #c3d3b7; }
+.scene.scene-orbit .orbit-compact-note { margin: 5px 0 0; color: #99a9b3; font-size: 10px; line-height: 1.45; }
+.scene.scene-orbit .orbit-turn-controls { display: flex; border-left: 1px solid #34404a; margin-left: 3px; padding-left: 3px; }
+.scene.scene-orbit .orbit-turn { min-width: 36px; min-height: 39px; padding: 0 8px; }
+.scene.scene-orbit.scene-hangar { min-height: 320px; height: 320px; border-radius: 6px; background: radial-gradient(ellipse at 50% 42%, #17222c 0%, #0d151e 44%, #0a0f16 100%); }
+.scene.scene-orbit.scene-hangar .orbit-topline { top: 4px; left: 16px; right: 8px; }
+.scene.scene-orbit.scene-hangar .orbit-eyebrow { font-size: 8px; letter-spacing: .8px; }
+.scene.scene-orbit.scene-hangar .orbit-bottom { left: 15px; right: 15px; bottom: 10px; }
+.scene.scene-orbit.scene-hangar .orbit-viewbar { padding: 2px; gap: 2px; }
+.scene.scene-orbit.scene-hangar .orbit-view { padding: 0 9px; font-size: 10px; min-height: 36px; gap: 6px; }
+.scene.scene-orbit.scene-hangar .orbit-caption { font-size: 7px; margin-top: 4px; }
+.scene.scene-orbit.scene-hangar .orbit-turn { min-height: 36px; min-width: 34px; }
+.scene.scene-orbit .orbit-hangar-mark { position: absolute; right: 22px; bottom: 110px; z-index: -1; font-size: 71px; font-weight: 500; letter-spacing: -5px; line-height: .8; color: #d1d9d5; opacity: .035; pointer-events: none; }
+.scene.scene-orbit .orbit-hangar-mark > span { display: block; margin-top: 4px; font-size: 24px; letter-spacing: 4px; text-align: right; }
+.scene.scene-orbit .orbit-part-label { position: absolute; z-index: 2; display: flex; gap: 7px; align-items: center; color: #8da4ab; font: 7px/1.5 var(--mono, monospace); letter-spacing: .65px; pointer-events: none; }
+.scene.scene-orbit .orbit-part-label > span { display: block; height: 1px; width: 26px; background: #819f9a5e; }
+.scene.scene-orbit .orbit-part-panel { left: 5%; top: 31%; }
+.scene.scene-orbit .orbit-part-battery { right: 4%; top: 60%; }
+.scene.scene-orbit.scene-compact:not(.scene-hangar) { min-height: 370px; height: 370px; }
+.scene.scene-orbit.scene-compact:not(.scene-hangar) .orbit-map-label { display: none; }
+@media (min-width: 1500px) { .scene.scene-orbit:not(.scene-hangar):not(.scene-compact) { height: 580px; min-height: 580px; } }
+@media (max-width: 600px) {
+  .scene.scene-orbit { height: 500px; min-height: 500px; }
+  .scene.scene-orbit .orbit-topline { left: 15px; right: 7px; }
+  .scene.scene-orbit .orbit-eyebrow { font-size: 8px; letter-spacing: .7px; }
+  .scene.scene-orbit .orbit-tool { font-size: 8px; padding: 0 7px; gap: 5px; }
+  .scene.scene-orbit .orbit-bottom { left: 15px; right: 15px; bottom: 13px; }
+  .scene.scene-orbit .orbit-view { padding: 0 10px; font-size: 10px; }
+  .scene.scene-orbit .orbit-explanation p { max-width: 360px; font-size: 10px; }
+  .scene.scene-orbit .orbit-caption { font-size: 7px; }
+  .scene.scene-orbit .orbit-map-label { left: 53%; top: 57%; font-size: 7px; }
+  .scene.scene-orbit .orbit-map-label small { font-size: 6px; }
+  .scene.scene-orbit.scene-hangar { min-height: 320px; height: 320px; }
+}
+@media (max-width: 400px) {
+  .scene.scene-orbit { height: 460px; min-height: 460px; }
+  .scene.scene-orbit .orbit-eyebrow { font-size: 7px; letter-spacing: .35px; }
+  .scene.scene-orbit .orbit-tool { padding: 0 6px; font-size: 7px; }
+  .scene.scene-orbit .orbit-tool > svg { width: 12px; height: 12px; }
+  .scene.scene-orbit .orbit-view { padding: 0 8px; font-size: 10px; gap: 6px; }
+  .scene.scene-orbit .orbit-view > span { font-size: 7px; }
+  .scene.scene-orbit .orbit-map-label { left: 48%; }
+  .scene.scene-orbit .orbit-part-label { display: none; }
+  .scene.scene-orbit.scene-hangar .orbit-view { gap: 4px; padding: 0 6px; font-size: 9px; }
+  .scene.scene-orbit.scene-hangar .orbit-turn { min-width: 29px; padding: 0 6px; }
+  .scene.scene-orbit.scene-hangar .orbit-bottom { left: 10px; right: 10px; }
+  .scene.scene-orbit.scene-hangar .orbit-compact-note { font-size: 9px; }
+  .scene.scene-orbit.scene-hangar .orbit-caption { font-size: 6.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .scene.scene-orbit *, .scene.scene-orbit *::before, .scene.scene-orbit *::after { animation: none !important; transition: none !important; } }

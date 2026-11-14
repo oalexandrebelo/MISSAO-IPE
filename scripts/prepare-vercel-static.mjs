@@ -16,7 +16,7 @@ async function walk(folder) {
 }
 await walk(site);
 files.sort();
-const required = ['index.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
+const required = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
 for (const file of required) await readFile(resolve(site, file));
 const inlineHashes = new Set();
 let executableScripts = 0;
@@ -43,6 +43,9 @@ const routeConfig = {
   cleanUrls: false,
   trailingSlash: false,
   redirects: [
+    { source: '/campanha/research', destination: '/campanha/research/index.html', permanent: false },
+    { source: '/campanha/apresentacao', destination: '/campanha/apresentacao/index.html', permanent: false },
+    { source: '/campanha', destination: '/campanha/index.html', permanent: false },
     { source: '/game', destination: '/game/index.html', permanent: false },
     { source: '/jogar', destination: '/lab/index.html', permanent: false },
     { source: '/lab', destination: '/lab/index.html', permanent: false },
@@ -67,7 +70,7 @@ const routeConfig = {
     { source: '/game/assets/(.*)', headers: [ { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' } ] }
   ]
 };
-const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund', outputDirectory: 'site' };
+const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund', outputDirectory: 'site' };
 await writeFile(resolve(root, 'vercel.json'), JSON.stringify(config, null, 2) + '\n');
 await mkdir(resolve(root, '.vercel'), { recursive: true });
 const staticConfigPath = resolve(root, '.vercel/deploy-config.json');

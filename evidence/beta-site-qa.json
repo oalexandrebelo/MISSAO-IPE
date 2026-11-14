@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-14T22:03:10.702Z",
-  "finishedAt": "2026-11-14T22:03:12.316Z",
+  "startedAt": "2026-11-14T22:07:00.505Z",
+  "finishedAt": "2026-11-14T22:07:03.007Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -9,8 +9,8 @@
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 33663,
-    "sha256": "9ed2d4b24fffe628d2005da03e919f2845a0f325d800e431ff16c21fd4083608"
+    "bytes": 36455,
+    "sha256": "353578459e05d6148887d6c697bc71cfb915040f56e62e79b6b959c192d8ff8c"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,18 +24,18 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "8b9b4fd46ee6e6dd2afd2c0867bb59f6b39c79c37b2782b69bacfffefe432db7"
+        "sha256": "7cd61504524944922f11c2d6145eb547506a465171207a69c4f8d2775c7c4f6b"
       },
       "vercelConfig": {
         "path": "vercel.json",
-        "sha256": "51145cd880a125d79cc71ca659c0a6fc64da556ca488e07e039b4ee213edf441"
+        "sha256": "4f54107ae58d68ba45596161dfefa92dbf5ff04af948a818ac45c109cae9a115"
       }
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 221,
-      "manifestedFiles": 220,
-      "bytes": 24205558,
+      "fileCount": 279,
+      "manifestedFiles": 278,
+      "bytes": 27479859,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 196,
+      "inspectedFiles": 248,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 1283,
-      "uniqueTargets": 143,
+      "count": 1735,
+      "uniqueTargets": 187,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -201,6 +201,2956 @@
           "source": "architecture/index.html",
           "target": "index.html",
           "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "conteudo"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html?view=campaign",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "pesquisa"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "problema"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "niveis"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "motor"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "stack"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "evidencia"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "oportunidades"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "requestPath": "/campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "niveis"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html?view=campaign",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html?view=lab",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/galeria.html",
+          "requestPath": "/campanha/research/galeria.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html?view=campaign",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "requestPath": "/campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/presentation.js",
+          "requestPath": "/campanha/apresentacao/presentation.js",
+          "kind": "script"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/assets/briefing-desktop.jpg",
+          "requestPath": "/campanha/research/assets/briefing-desktop.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/research/assets/retorno-cientifico.jpg",
+          "requestPath": "/campanha/research/assets/retorno-cientifico.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/apresentacao/index.html",
+          "target": "campanha/apresentacao/style.css",
+          "requestPath": "/campanha/apresentacao/style.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "campanha/index.html",
+          "target": "campanha/assets/index-BrzQQ6mI.js",
+          "requestPath": "/campanha/assets/index-BrzQQ6mI.js",
+          "kind": "script"
+        },
+        {
+          "source": "campanha/index.html",
+          "target": "campanha/assets/index-BwTlPwHE.css",
+          "requestPath": "/campanha/assets/index-BwTlPwHE.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "campanha/research/galeria.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador"
+        },
+        {
+          "source": "campanha/research/galeria.html",
+          "target": "campanha/research/assets/briefing-desktop.jpg",
+          "requestPath": "/campanha/research/assets/briefing-desktop.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/research/galeria.html",
+          "target": "campanha/research/assets/briefing-mobile.jpg",
+          "requestPath": "/campanha/research/assets/briefing-mobile.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/research/galeria.html",
+          "target": "campanha/research/assets/laboratorio.jpg",
+          "requestPath": "/campanha/research/assets/laboratorio.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/research/galeria.html",
+          "target": "campanha/research/assets/retorno-cientifico.jpg",
+          "requestPath": "/campanha/research/assets/retorno-cientifico.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/research/galeria.html",
+          "target": "campanha/research/assets/retorno-mobile.jpg",
+          "requestPath": "/campanha/research/assets/retorno-mobile.jpg",
+          "kind": "img"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conteudo"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/QA-BETA-0.5.md",
+          "requestPath": "/campanha/research/originals/QA-BETA-0.5.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-dominio-e-integridade"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-jornada-react"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-contratos-tecnicos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-build-e-documentacao-publica"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-observacao-visual"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-publicacao-e-inspecao-publica"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta-limites-de-evidencia"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/PRD.md",
+          "requestPath": "/campanha/research/originals/PRD.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-1-produto-e-problema"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-2-publico-e-hipoteses"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-3-contrato-cientifico-e-operacional"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-4-campanha-de-quatro-niveis"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-5-escopo-do-beta-e-fronteira-do-roadmap"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-6-jornada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-7-requisitos-e-aceite"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-8-acessibilidade-e-qualidade-de-uso"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-9-dados-e-analytics-propostos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-10-validacao-e-decisao-de-liberacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-11-riscos-e-respostas-de-produto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd-12-origem-referencias-e-decisoes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/PRT.md",
+          "requestPath": "/campanha/research/originals/PRT.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-1-escopo-de-entrega"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-2-contrato-dos-quatro-niveis"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-3-requisitos-funcionais-e-criterios-de-aceite"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-4-requisitos-numericos-e-cientificos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-5-requisitos-nao-funcionais"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-6-contratos-de-dados-e-seguranca"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-7-estrategia-de-verificacao-e-gates-de-entrega"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-8-riscos-tecnicos-e-respostas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt-9-handoff-tecnico"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/STORYTELLING-4-NIVEIS.md",
+          "requestPath": "/campanha/research/originals/STORYTELLING-4-NIVEIS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-1-arco-da-campanha"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-2-personagens-e-linguagem"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-3-regras-comuns-de-progressao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-4-nivel-1-primeiro-sinal"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-5-nivel-2-memoria-em-disputa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-6-nivel-3-janela-estreita"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-7-nivel-4-ciencia-que-chega"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-8-configuracoes-e-resultados-para-integracao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-9-aceite-narrativo-e-pedagogico"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling-10-referencias-e-alcance"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
+          "requestPath": "/campanha/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-1-decisao-principal"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-2-o-que-foi-consultado"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-3-evidencia-externa-e-interpretacao-de-produto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-4-oportunidades-incorporadas-ao-contrato-do-beta"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-5-novas-oportunidades-para-o-proximo-ciclo"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-6-decisoes-que-evitam-conclusoes-indevidas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-7-verificacao-numerica-realizada-nesta-frente"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-8-perguntas-para-uma-pesquisa-futura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights-9-registro-de-fontes-primarias"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/ARQUITETURA.md",
+          "requestPath": "/campanha/research/originals/ARQUITETURA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-1-limite-de-cada-camada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-2-stack-e-compatibilidade"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-3-contratos-de-execucao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-4-calculo-recursos-e-proveniencia"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-5-concorrencia-e-falhas-locais"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-6-importacao-como-fronteira-de-confianca"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-7-modelo-cloud-proposto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-8-decisoes-arquiteturais"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura-9-publicacao-e-gates-de-evolucao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/FLOWCHARTS.md",
+          "requestPath": "/campanha/research/originals/FLOWCHARTS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-1-jornada-do-jogador"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-2-estados-de-uma-tentativa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-3-dados-simulacao-e-replay"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-4-distribuicao-e-evolucao-opcional"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-5-modelo-de-conteudo-e-proveniencia"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-6-modelo-de-atividade-pseudonima"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos-como-manter-os-diagramas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/diagrams/01-user-flow.mmd",
+          "requestPath": "/campanha/kit/diagrams/01-user-flow.mmd",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/diagrams/02-game-state.mmd",
+          "requestPath": "/campanha/kit/diagrams/02-game-state.mmd",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/diagrams/03-data-flow.mmd",
+          "requestPath": "/campanha/kit/diagrams/03-data-flow.mmd",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/diagrams/04-deployment.mmd",
+          "requestPath": "/campanha/kit/diagrams/04-deployment.mmd",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/diagrams/05-er-content.mmd",
+          "requestPath": "/campanha/kit/diagrams/05-er-content.mmd",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/diagrams/06-er-player.mmd",
+          "requestPath": "/campanha/kit/diagrams/06-er-player.mmd",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/PRISMA-README.md",
+          "requestPath": "/campanha/research/originals/PRISMA-README.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-validar-sem-banco"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-doze-modelos-e-suas-responsabilidades"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-relacao-com-o-beta-local"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-identidade-replay-e-imutabilidade"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-unidades-e-precisao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-invariantes-que-ainda-exigem-implementacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-protocolo-de-sincronizacao-proposto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-minimizacao-e-retencao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-configuracao-futura-fora-do-build-do-beta"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma-referencias-oficiais"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/HANDOFF.md",
+          "requestPath": "/campanha/research/originals/HANDOFF.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-1-o-que-esta-sendo-entregue"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-2-inicio-em-uma-maquina-nova"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-3-estrutura-para-manutencao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-4-contratos-que-precisam-sobreviver-ao-proximo-ciclo"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-5-persistencia-e-recuperacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-6-runbook-de-demonstracao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-7-verificacao-e-publicacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-8-decisoes-consolidadas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-9-proximos-trabalhos-e-decisao-de-aceite"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff-10-fontes-e-direitos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "requestPath": "/campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fluxos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/kit/schema.prisma",
+          "requestPath": "/campanha/kit/schema.prisma",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-beta"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/PITCH.md",
+          "requestPath": "/campanha/research/originals/PITCH.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-1-a-frase-que-organiza-a-conversa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-2-pitch-de-30-segundos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-3-pitch-de-90-segundos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-4-pitch-de-tres-minutos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-5-roteiro-de-dez-slides"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-6-demonstracao-em-ate-tres-minutos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-7-perguntas-dificeis-e-respostas-honestas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-8-plano-de-ensaio-para-ab"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "pitch-9-fontes-para-estudar-e-citar"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "requestPath": "/campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prd"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/galeria.html",
+          "requestPath": "/campanha/research/galeria.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "pesquisa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "problema"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "pesquisa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "storytelling"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "niveis"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "niveis"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "motor"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "arquitetura"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prisma"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "stack"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "prt"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "handoff"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "evidencia"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "insights"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "oportunidades"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/apresentacao/index.html",
+          "requestPath": "/campanha/apresentacao/index.html",
+          "kind": "navigation",
+          "fragment": "oportunidades"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/REFINAMENTO-NASA-R10.md",
+          "requestPath": "/campanha/research/originals/REFINAMENTO-NASA-R10.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-1-a-oportunidade-principal"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-2-auditoria-das-referencias-e-suas-revisoes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-3-refinamentos-de-produto-desta-rodada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-4-risco-como-incorporar-sem-fabricar-certeza"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-5-oportunidades-priorizadas-para-evolucao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-6-como-conduzir-a-demonstracao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "refinamento-7-procedencia-e-limites"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/refinamento-conops.md",
+          "requestPath": "/campanha/research/originals/refinamento-conops.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-decisao-recomendada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-top-3-melhorias-rapidas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-evidencia-primaria-versao-localizacao-e-alcance"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-conops-leve-proposto-para-o-projeto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-stakeholders-sem-criar-parceiros-ficticios"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-cenarios-que-o-conops-deve-distinguir"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-cadeia-missao-requisito-verificacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-oportunidades-futuras-depois-do-pacote-atual"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "conops-pontos-a-conferir-antes-de-aplicar"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/refinamento-requisitos.md",
+          "requestPath": "/campanha/research/originals/refinamento-requisitos.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos-as-tres-melhorias-de-maior-retorno"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos-auditoria-das-versoes-e-dos-tres-links-solicitados"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos-ciclo-de-vida-o-que-os-documentos-apoiam"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos-risco-margens-e-decisoes-sem-alterar-o-motor"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos-limites-de-implementacao-para-a-proxima-frente"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "requisitos-fontes-consultadas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/refinamento-risco-ux.md",
+          "requestPath": "/campanha/research/originals/refinamento-risco-ux.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-1-achados-prioritarios"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-2-versoes-e-escopo-confirmados"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-3-o-que-as-classes-a-d-significam"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-4-garantia-evidencia-e-revisao-de-prontidao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-5-tres-melhorias-minimas-para-os-componentes-atuais"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-6-tres-melhorias-futuras"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-7-linguagem-recomendada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "risco-8-fontes-primarias"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/PESQUISA-E-DECISOES-R9.md",
+          "requestPath": "/campanha/research/originals/PESQUISA-E-DECISOES-R9.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-1-decisao-de-produto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-2-o-que-o-desafio-oficial-sustenta"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-3-por-que-cerrado-leo-primeiro"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-4-fontes-nasa-aplicadas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-5-correcoes-das-premissas-do-briefing"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-6-o-jogo-que-esta-sendo-entregue"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-7-ux-orientada-por-nn-g"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-8-stack-e-repositorios"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-9-evolucao-priorizada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes-10-evidencia-e-leitura-completa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/a1-desafio.md",
+          "requestPath": "/campanha/research/originals/a1-desafio.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-1-conclusao-para-decisao-de-produto"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-2-o-que-foi-efetivamente-verificado-sobre-2026"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-3-obrigacao-sugestao-e-decisao-nossa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-4-recursos-localizados-e-acesso-aos-destinos-primarios"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-5-nasa-systems-engineering-handbook-aplicacao-didatica"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-6-basics-of-space-flight-o-que-aproveitar-e-o-que-atualizar"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-7-dados-abertos-adequados-a-missao-ipe"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-8-mvp-concreto-recomendado"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-9-mapa-de-aderencia-e-evidencia-de-demonstracao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "desafio-10-lacunas-e-proximos-passos-objetivos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "decisoes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/a2-fisica.md",
+          "requestPath": "/campanha/research/originals/a2-fisica.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-1-correcoes-que-realmente-importam"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-2-natureza-dos-numeros-e-rastreabilidade"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-3-kepler-e-a-referencia-leo-a-500-km"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-4-energia-por-tempo-w-wh-sombra-e-bateria"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-5-contatos-friis-e-taxa-de-dados"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-6-latencia-memoria-e-ciencia-entregue"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-7-delta-v-propelente-e-extensao-lunar"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-8-mmrtg-o-que-e-fato-e-o-que-e-modelo"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-9-margens-evitar-falsa-autoridade"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-10-motor-temporal-futuro-sem-substituir-a-agenda-atual"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-11-bibliotecas-e-repositorios-validados"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-12-extensao-marte"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-13-fontes-primarias-consultadas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f23"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f16"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f02"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f03"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f04"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f05"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f06"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f07"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f08"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f09"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f10"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f12"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f13"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f14"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f15"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f17"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f18"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f19"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f20"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f21"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f22"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f24"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f25"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f26"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f28"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f29"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f26"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "fisica-source-f30"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/a3-ux-tecnologia.md",
+          "requestPath": "/campanha/research/originals/a3-ux-tecnologia.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-1-evidencia-de-ux-e-aplicacao-concreta"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-2-tutorial-ritmo-e-aprendizado"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-3-acessibilidade-como-parte-da-interface-principal"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-4-avaliacao-dos-seis-repositorios-indicados"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-5-efemerides-orbitas-e-otimizacao-sao-responsabilidades-diferentes"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-6-arquitetura-proposta-para-implementacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-7-relatorio-causal-e-comparacao-de-tentativas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-8-criterios-de-aceite-e-validacao-focada"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-9-prioridade-de-implementacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-fontes-primarias-consultadas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s01"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s03"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s05"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s06"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s07"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s08"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s09"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s11"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s12"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s05"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s13"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s14"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s16"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s17"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s18"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s19"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s20"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s21"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s22"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s23"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s15"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s24"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s25"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s26"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s27"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s29"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s31"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s33"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s34"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "ux-tecnologia-source-s35"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/GUIA-DIDATICO-R9.md",
+          "requestPath": "/campanha/research/originals/GUIA-DIDATICO-R9.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-preparacao-do-facilitador"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-roteiro-de-12-minutos-com-extensao-opcional-ate-15"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-resultados-que-o-facilitador-pode-conferir"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-a-configuracao-testemunha-e-sua-explicacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-contrafactuais-opcionais"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-uma-extensao-de-fisica-de-tres-minutos"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-o-que-o-dado-permite-dizer"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-observacao-de-aprendizagem-e-acesso"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "guia-fontes-e-rastreabilidade"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/QA-R9.md",
+          "requestPath": "/campanha/research/originals/QA-R9.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-escopo-e-ambiente"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-matriz-de-execucao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-resultado-numerico-de-todo-o-catalogo"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-proveniencia-achado-e-correcao-verificavel"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-revisao-dimensional-e-de-dominio-do-laboratorio"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-ui-estado-armazenamento-e-rotina-assincrona"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-verificacoes-manuais-ainda-necessarias"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-fontes-e-material-consultado"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-registro-final-de-integracao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/originals/QA-NAVEGADOR-R9.md",
+          "requestPath": "/campanha/research/originals/QA-NAVEGADOR-R9.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador-resultado-observado"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador-laboratorio"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador-responsividade-e-correcoes-encontradas"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador-limites-desta-verificacao"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa-navegador-refinamento-r10-conops-requisitos-e-retorno-cientifico"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/index.html",
+          "requestPath": "/campanha/research/index.html",
+          "kind": "navigation",
+          "fragment": "qa"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/research/galeria.html",
+          "requestPath": "/campanha/research/galeria.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "campanha/research/index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/",
           "kind": "navigation"
         },
         {
@@ -710,6 +3660,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-32-campanha-quatro-niveis-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
         },
         {
@@ -1138,6 +4095,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-campanha-quatro-niveis-md"
         },
         {
           "source": "context/research-library.html",
@@ -1642,6 +4606,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-30-ativos-nasa-implementados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-campanha-quatro-niveis-md"
         },
         {
           "source": "context/research-library.html",
@@ -4316,6 +7287,91 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "requestPath": "/docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+          "requestPath": "/docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
           "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
           "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
@@ -4622,6 +7678,12 @@
           "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
           "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
           "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+          "requestPath": "/docs/32-CAMPANHA-QUATRO-NIVEIS.md",
           "kind": "navigation"
         },
         {
@@ -5279,6 +8341,18 @@
         },
         {
           "source": "docs/index.html",
+          "target": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "requestPath": "/docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+          "requestPath": "/docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
           "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
           "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
           "kind": "navigation"
@@ -5868,6 +8942,12 @@
           "requestPath": "/index.html",
           "kind": "navigation",
           "fragment": "plano"
+        },
+        {
+          "source": "index.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html",
+          "kind": "navigation"
         },
         {
           "source": "index.html",
@@ -8261,6 +11341,24 @@
           "kind": "css-resource"
         },
         {
+          "source": "campanha/assets/OrbitalScene-OhTu6p_-.js",
+          "target": "campanha/assets/index-BrzQQ6mI.js",
+          "requestPath": "/campanha/assets/index-BrzQQ6mI.js",
+          "kind": "module-import"
+        },
+        {
+          "source": "campanha/assets/index-BrzQQ6mI.js",
+          "target": "campanha/assets/mission.worker-m4WSgatj.js",
+          "requestPath": "/campanha/assets/mission.worker-m4WSgatj.js",
+          "kind": "module-url"
+        },
+        {
+          "source": "campanha/assets/index-BrzQQ6mI.js",
+          "target": "campanha/assets/OrbitalScene-OhTu6p_-.js",
+          "requestPath": "/campanha/assets/OrbitalScene-OhTu6p_-.js",
+          "kind": "dynamic-import"
+        },
+        {
           "source": "game/assets/OrbitalScene-B0I9aE-1.js",
           "target": "game/assets/index-DYhpvtlV.js",
           "requestPath": "/game/assets/index-DYhpvtlV.js",
@@ -8376,9 +11474,27 @@
       "integrity": true
     },
     "gameModuleGraph": {
-      "modules": 12,
-      "worker": "game/assets/mission.worker-m4WSgatj.js",
+      "modules": 15,
+      "worker": "campanha/assets/mission.worker-m4WSgatj.js",
       "dependencies": [
+        {
+          "source": "campanha/assets/OrbitalScene-OhTu6p_-.js",
+          "specifier": "./index-BrzQQ6mI.js",
+          "target": "campanha/assets/index-BrzQQ6mI.js",
+          "kind": "module-import"
+        },
+        {
+          "source": "campanha/assets/index-BrzQQ6mI.js",
+          "specifier": "mission.worker-m4WSgatj.js",
+          "target": "campanha/assets/mission.worker-m4WSgatj.js",
+          "kind": "module-url"
+        },
+        {
+          "source": "campanha/assets/index-BrzQQ6mI.js",
+          "specifier": "./OrbitalScene-OhTu6p_-.js",
+          "target": "campanha/assets/OrbitalScene-OhTu6p_-.js",
+          "kind": "dynamic-import"
+        },
         {
           "source": "game/assets/OrbitalScene-B0I9aE-1.js",
           "specifier": "./index-DYhpvtlV.js",
@@ -8490,6 +11606,286 @@
       ]
     },
     "preservedArtifacts": [
+      {
+        "path": "campanha/apresentacao/index.html",
+        "source": "experiments/four-level-campaign/dist/apresentacao/index.html",
+        "sha256": "5b254bed40e07dda99e938d6968ac68cb4aa6aa63e3c2a8357560da48b916286"
+      },
+      {
+        "path": "campanha/apresentacao/presentation.js",
+        "source": "experiments/four-level-campaign/dist/apresentacao/presentation.js",
+        "sha256": "4736f81b75a69e0eac3149639588c88097fad1048f6347e1bed99854037837ae"
+      },
+      {
+        "path": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+        "source": "experiments/four-level-campaign/dist/apresentacao/PROJETO-IPE-Pitch.pptx",
+        "sha256": "01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11"
+      },
+      {
+        "path": "campanha/apresentacao/style.css",
+        "source": "experiments/four-level-campaign/dist/apresentacao/style.css",
+        "sha256": "1ede1a9bce47b1bbb9cd0e437bb28457e990d9e3c8e5bdfa1c6f5a5d93baa14b"
+      },
+      {
+        "path": "campanha/assets/index-BrzQQ6mI.js",
+        "source": "experiments/four-level-campaign/dist/assets/index-BrzQQ6mI.js",
+        "sha256": "3e8daa41144123a48ca774ce493afb85fe6241fab153550e16765d0c17898d74"
+      },
+      {
+        "path": "campanha/assets/index-BwTlPwHE.css",
+        "source": "experiments/four-level-campaign/dist/assets/index-BwTlPwHE.css",
+        "sha256": "4ea4810a520de84094523e2c2885df9444c0aae3ef3148e0956d2dd06998ea82"
+      },
+      {
+        "path": "campanha/assets/mission.worker-m4WSgatj.js",
+        "source": "experiments/four-level-campaign/dist/assets/mission.worker-m4WSgatj.js",
+        "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
+      },
+      {
+        "path": "campanha/assets/OrbitalScene-OhTu6p_-.js",
+        "source": "experiments/four-level-campaign/dist/assets/OrbitalScene-OhTu6p_-.js",
+        "sha256": "ee5723920d1f27fe3ec64f3cb37faed7de140466c58257f765a72e2e7f33a45f"
+      },
+      {
+        "path": "campanha/data/cmr-mod13q1-granule-2.json",
+        "source": "experiments/four-level-campaign/dist/data/cmr-mod13q1-granule-2.json",
+        "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b"
+      },
+      {
+        "path": "campanha/data/cmr-mod13q1-granules.json",
+        "source": "experiments/four-level-campaign/dist/data/cmr-mod13q1-granules.json",
+        "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f"
+      },
+      {
+        "path": "campanha/data/mod13q1-A-raw.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-A-raw.json",
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+      },
+      {
+        "path": "campanha/data/mod13q1-A-retrieval.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-A-retrieval.json",
+        "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f"
+      },
+      {
+        "path": "campanha/data/mod13q1-B-raw.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-B-raw.json",
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+      },
+      {
+        "path": "campanha/data/mod13q1-B-retrieval.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-B-retrieval.json",
+        "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b"
+      },
+      {
+        "path": "campanha/data/mod13q1-bands.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-bands.json",
+        "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303"
+      },
+      {
+        "path": "campanha/data/mod13q1-C-raw.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-C-raw.json",
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+      },
+      {
+        "path": "campanha/data/mod13q1-C-retrieval.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-C-retrieval.json",
+        "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e"
+      },
+      {
+        "path": "campanha/data/mod13q1-research-pack.json",
+        "source": "experiments/four-level-campaign/dist/data/mod13q1-research-pack.json",
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+      },
+      {
+        "path": "campanha/index.html",
+        "source": "experiments/four-level-campaign/dist/index.html",
+        "sha256": "71b1b009ddcf07d9346a26230f039bea758facbf221599be651c108205f3d3c2"
+      },
+      {
+        "path": "campanha/kit/diagrams/01-user-flow.mmd",
+        "source": "experiments/four-level-campaign/dist/kit/diagrams/01-user-flow.mmd",
+        "sha256": "a93c63940bcc082751187f3c195d36a28377c0112e24abe0d868e17a2c1f4450"
+      },
+      {
+        "path": "campanha/kit/diagrams/02-game-state.mmd",
+        "source": "experiments/four-level-campaign/dist/kit/diagrams/02-game-state.mmd",
+        "sha256": "6e3f7395dc8b0f6bebf8bea918bfcbf6e0ea040f1085ca5653501b1ad5512592"
+      },
+      {
+        "path": "campanha/kit/diagrams/03-data-flow.mmd",
+        "source": "experiments/four-level-campaign/dist/kit/diagrams/03-data-flow.mmd",
+        "sha256": "acd03273400e52b265231e21e754add4153ff4c807e4aeb8c0dc4dc5f87f7e9c"
+      },
+      {
+        "path": "campanha/kit/diagrams/04-deployment.mmd",
+        "source": "experiments/four-level-campaign/dist/kit/diagrams/04-deployment.mmd",
+        "sha256": "13368fd9b7447986dc02a02fdcb76d1337e68e363b4934d67ceb23a23c7d2d8b"
+      },
+      {
+        "path": "campanha/kit/diagrams/05-er-content.mmd",
+        "source": "experiments/four-level-campaign/dist/kit/diagrams/05-er-content.mmd",
+        "sha256": "dc69aae73d88b46795853fddec1b88ec44f351ff152dd3a6f551dcdfdd855387"
+      },
+      {
+        "path": "campanha/kit/diagrams/06-er-player.mmd",
+        "source": "experiments/four-level-campaign/dist/kit/diagrams/06-er-player.mmd",
+        "sha256": "9df96ac6d925015e64823c3563b657294fa5d342975f45141b1b3b4f64549c40"
+      },
+      {
+        "path": "campanha/kit/schema.prisma",
+        "source": "experiments/four-level-campaign/dist/kit/schema.prisma",
+        "sha256": "94febcdc03d58830da102d1af5a3f270e2b5120b9c64338b815094509302c521"
+      },
+      {
+        "path": "campanha/release.json",
+        "source": "experiments/four-level-campaign/dist/release.json",
+        "sha256": "1f56f1ffc668f9a1dc8275f33bfc7603ee5471bb0478bf58f2c458e0974ebd96"
+      },
+      {
+        "path": "campanha/research/assets/briefing-desktop.jpg",
+        "source": "experiments/four-level-campaign/dist/research/assets/briefing-desktop.jpg",
+        "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1"
+      },
+      {
+        "path": "campanha/research/assets/briefing-mobile.jpg",
+        "source": "experiments/four-level-campaign/dist/research/assets/briefing-mobile.jpg",
+        "sha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545"
+      },
+      {
+        "path": "campanha/research/assets/laboratorio.jpg",
+        "source": "experiments/four-level-campaign/dist/research/assets/laboratorio.jpg",
+        "sha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64"
+      },
+      {
+        "path": "campanha/research/assets/retorno-cientifico.jpg",
+        "source": "experiments/four-level-campaign/dist/research/assets/retorno-cientifico.jpg",
+        "sha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44"
+      },
+      {
+        "path": "campanha/research/assets/retorno-mobile.jpg",
+        "source": "experiments/four-level-campaign/dist/research/assets/retorno-mobile.jpg",
+        "sha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce"
+      },
+      {
+        "path": "campanha/research/galeria.html",
+        "source": "experiments/four-level-campaign/dist/research/galeria.html",
+        "sha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9"
+      },
+      {
+        "path": "campanha/research/index.html",
+        "source": "experiments/four-level-campaign/dist/research/index.html",
+        "sha256": "de19ec411920c80a0b53cc10a0b79c07aa750261a68eceb638c0f3fcc20872a4"
+      },
+      {
+        "path": "campanha/research/manifest.json",
+        "source": "experiments/four-level-campaign/dist/research/manifest.json",
+        "sha256": "e165a85416e0d3aead85b5b10912f339c78aa267a5726e9a8a26ab6e4ac678b8"
+      },
+      {
+        "path": "campanha/research/originals/a1-desafio.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/a1-desafio.md",
+        "sha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d"
+      },
+      {
+        "path": "campanha/research/originals/a2-fisica.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/a2-fisica.md",
+        "sha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c"
+      },
+      {
+        "path": "campanha/research/originals/a3-ux-tecnologia.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/a3-ux-tecnologia.md",
+        "sha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb"
+      },
+      {
+        "path": "campanha/research/originals/ARQUITETURA.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/ARQUITETURA.md",
+        "sha256": "47ecd3deb0297d4a1fafe78496ec7e869ea9b7a3e94ce6edd53f34102bf2b9d0"
+      },
+      {
+        "path": "campanha/research/originals/FLOWCHARTS.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/FLOWCHARTS.md",
+        "sha256": "ef71683e2a35e6a758cb1b674749ebc39691245f8dfa0c37b106e6e49f9a9d37"
+      },
+      {
+        "path": "campanha/research/originals/GUIA-DIDATICO-R9.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/GUIA-DIDATICO-R9.md",
+        "sha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3"
+      },
+      {
+        "path": "campanha/research/originals/HANDOFF.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/HANDOFF.md",
+        "sha256": "2287e81ea57cbf4093fa53a28599afec045d996441967b0d70e06a2ed44dbcaf"
+      },
+      {
+        "path": "campanha/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
+        "sha256": "130ad02bd0ed5a4bafa17a3d726bb661f9726091c24b0784ade332ab5e00f344"
+      },
+      {
+        "path": "campanha/research/originals/PESQUISA-E-DECISOES-R9.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/PESQUISA-E-DECISOES-R9.md",
+        "sha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222"
+      },
+      {
+        "path": "campanha/research/originals/PITCH.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/PITCH.md",
+        "sha256": "a75b16018519b016dcdca46c555f07935574eed9e7cf351d8e03b1a82efaa65a"
+      },
+      {
+        "path": "campanha/research/originals/PRD.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/PRD.md",
+        "sha256": "88e76cd3f38ef4eaa1fff0476485d7c75428a258f865905166c3652178fd9d17"
+      },
+      {
+        "path": "campanha/research/originals/PRISMA-README.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/PRISMA-README.md",
+        "sha256": "5d46a919d1dac19f943288e1d6e60987ee44b594db4a2b2c59f7499f2260b08a"
+      },
+      {
+        "path": "campanha/research/originals/PRT.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/PRT.md",
+        "sha256": "98cd93c67ecfef8a0e16e3998ccca20a5907a231c9e0c11234adae73499e3ee5"
+      },
+      {
+        "path": "campanha/research/originals/QA-BETA-0.5.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/QA-BETA-0.5.md",
+        "sha256": "3fa57051ecd0ad1e3060ee1d14dc61b16af1ff72677b3287ac3f6b70775b6d4b"
+      },
+      {
+        "path": "campanha/research/originals/QA-NAVEGADOR-R9.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/QA-NAVEGADOR-R9.md",
+        "sha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788"
+      },
+      {
+        "path": "campanha/research/originals/QA-R9.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/QA-R9.md",
+        "sha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc"
+      },
+      {
+        "path": "campanha/research/originals/refinamento-conops.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/refinamento-conops.md",
+        "sha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a"
+      },
+      {
+        "path": "campanha/research/originals/REFINAMENTO-NASA-R10.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/REFINAMENTO-NASA-R10.md",
+        "sha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9"
+      },
+      {
+        "path": "campanha/research/originals/refinamento-requisitos.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/refinamento-requisitos.md",
+        "sha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94"
+      },
+      {
+        "path": "campanha/research/originals/refinamento-risco-ux.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/refinamento-risco-ux.md",
+        "sha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea"
+      },
+      {
+        "path": "campanha/research/originals/STORYTELLING-4-NIVEIS.md",
+        "source": "experiments/four-level-campaign/dist/research/originals/STORYTELLING-4-NIVEIS.md",
+        "sha256": "e163896899193cfae7a83d6c7d06110c2bebbe2743cfe0cab7069229e37670e4"
+      },
       {
         "path": "examples/01-long-base.json",
         "source": "examples/01-long-base.json",
@@ -9047,7 +12443,7 @@
         "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
         "cache-control": "public, max-age=0, must-revalidate"
       },
-      "checkedInlineScripts": 10,
+      "checkedInlineScripts": 11,
       "assetCacheRule": {
         "source": "/game/assets/(.*)",
         "headers": [
@@ -9136,6 +12532,398 @@
         "contentType": "image/svg+xml"
       },
       {
+        "path": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+        "status": 200,
+        "bytes": 207658,
+        "sha256": "01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11",
+        "contentType": "application/octet-stream"
+      },
+      {
+        "path": "campanha/apresentacao/index.html",
+        "status": 200,
+        "bytes": 26618,
+        "sha256": "5b254bed40e07dda99e938d6968ac68cb4aa6aa63e3c2a8357560da48b916286",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "campanha/apresentacao/presentation.js",
+        "status": 200,
+        "bytes": 6719,
+        "sha256": "4736f81b75a69e0eac3149639588c88097fad1048f6347e1bed99854037837ae",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "campanha/apresentacao/style.css",
+        "status": 200,
+        "bytes": 24564,
+        "sha256": "1ede1a9bce47b1bbb9cd0e437bb28457e990d9e3c8e5bdfa1c6f5a5d93baa14b",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "campanha/assets/OrbitalScene-OhTu6p_-.js",
+        "status": 200,
+        "bytes": 934287,
+        "sha256": "ee5723920d1f27fe3ec64f3cb37faed7de140466c58257f765a72e2e7f33a45f",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "campanha/assets/index-BrzQQ6mI.js",
+        "status": 200,
+        "bytes": 430665,
+        "sha256": "3e8daa41144123a48ca774ce493afb85fe6241fab153550e16765d0c17898d74",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "campanha/assets/index-BwTlPwHE.css",
+        "status": 200,
+        "bytes": 148219,
+        "sha256": "4ea4810a520de84094523e2c2885df9444c0aae3ef3148e0956d2dd06998ea82",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "campanha/assets/mission.worker-m4WSgatj.js",
+        "status": 200,
+        "bytes": 20166,
+        "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/cmr-mod13q1-granule-2.json",
+        "status": 200,
+        "bytes": 5720,
+        "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/cmr-mod13q1-granules.json",
+        "status": 200,
+        "bytes": 5719,
+        "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-A-raw.json",
+        "status": 200,
+        "bytes": 4232,
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-A-retrieval.json",
+        "status": 200,
+        "bytes": 6162,
+        "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-B-raw.json",
+        "status": 200,
+        "bytes": 4232,
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-B-retrieval.json",
+        "status": 200,
+        "bytes": 6162,
+        "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-C-raw.json",
+        "status": 200,
+        "bytes": 4232,
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-C-retrieval.json",
+        "status": 200,
+        "bytes": 6162,
+        "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-bands.json",
+        "status": 200,
+        "bytes": 2366,
+        "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/data/mod13q1-research-pack.json",
+        "status": 200,
+        "bytes": 5942,
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/index.html",
+        "status": 200,
+        "bytes": 823,
+        "sha256": "71b1b009ddcf07d9346a26230f039bea758facbf221599be651c108205f3d3c2",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/diagrams/01-user-flow.mmd",
+        "status": 200,
+        "bytes": 852,
+        "sha256": "a93c63940bcc082751187f3c195d36a28377c0112e24abe0d868e17a2c1f4450",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/diagrams/02-game-state.mmd",
+        "status": 200,
+        "bytes": 1326,
+        "sha256": "6e3f7395dc8b0f6bebf8bea918bfcbf6e0ea040f1085ca5653501b1ad5512592",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/diagrams/03-data-flow.mmd",
+        "status": 200,
+        "bytes": 869,
+        "sha256": "acd03273400e52b265231e21e754add4153ff4c807e4aeb8c0dc4dc5f87f7e9c",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/diagrams/04-deployment.mmd",
+        "status": 200,
+        "bytes": 830,
+        "sha256": "13368fd9b7447986dc02a02fdcb76d1337e68e363b4934d67ceb23a23c7d2d8b",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/diagrams/05-er-content.mmd",
+        "status": 200,
+        "bytes": 596,
+        "sha256": "dc69aae73d88b46795853fddec1b88ec44f351ff152dd3a6f551dcdfdd855387",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/diagrams/06-er-player.mmd",
+        "status": 200,
+        "bytes": 1135,
+        "sha256": "9df96ac6d925015e64823c3563b657294fa5d342975f45141b1b3b4f64549c40",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/kit/schema.prisma",
+        "status": 200,
+        "bytes": 14472,
+        "sha256": "94febcdc03d58830da102d1af5a3f270e2b5120b9c64338b815094509302c521",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/release.json",
+        "status": 200,
+        "bytes": 326,
+        "sha256": "1f56f1ffc668f9a1dc8275f33bfc7603ee5471bb0478bf58f2c458e0974ebd96",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/assets/briefing-desktop.jpg",
+        "status": 200,
+        "bytes": 95217,
+        "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "campanha/research/assets/briefing-mobile.jpg",
+        "status": 200,
+        "bytes": 58629,
+        "sha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "campanha/research/assets/laboratorio.jpg",
+        "status": 200,
+        "bytes": 90299,
+        "sha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "campanha/research/assets/retorno-cientifico.jpg",
+        "status": 200,
+        "bytes": 89187,
+        "sha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "campanha/research/assets/retorno-mobile.jpg",
+        "status": 200,
+        "bytes": 68865,
+        "sha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "campanha/research/galeria.html",
+        "status": 200,
+        "bytes": 12191,
+        "sha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/index.html",
+        "status": 200,
+        "bytes": 539863,
+        "sha256": "de19ec411920c80a0b53cc10a0b79c07aa750261a68eceb638c0f3fcc20872a4",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/manifest.json",
+        "status": 200,
+        "bytes": 16594,
+        "sha256": "e165a85416e0d3aead85b5b10912f339c78aa267a5726e9a8a26ab6e4ac678b8",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/ARQUITETURA.md",
+        "status": 200,
+        "bytes": 16135,
+        "sha256": "47ecd3deb0297d4a1fafe78496ec7e869ea9b7a3e94ce6edd53f34102bf2b9d0",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/FLOWCHARTS.md",
+        "status": 200,
+        "bytes": 9640,
+        "sha256": "ef71683e2a35e6a758cb1b674749ebc39691245f8dfa0c37b106e6e49f9a9d37",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/GUIA-DIDATICO-R9.md",
+        "status": 200,
+        "bytes": 13690,
+        "sha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/HANDOFF.md",
+        "status": 200,
+        "bytes": 19603,
+        "sha256": "2287e81ea57cbf4093fa53a28599afec045d996441967b0d70e06a2ed44dbcaf",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
+        "status": 200,
+        "bytes": 17031,
+        "sha256": "130ad02bd0ed5a4bafa17a3d726bb661f9726091c24b0784ade332ab5e00f344",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/PESQUISA-E-DECISOES-R9.md",
+        "status": 200,
+        "bytes": 15716,
+        "sha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/PITCH.md",
+        "status": 200,
+        "bytes": 23458,
+        "sha256": "a75b16018519b016dcdca46c555f07935574eed9e7cf351d8e03b1a82efaa65a",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/PRD.md",
+        "status": 200,
+        "bytes": 23277,
+        "sha256": "88e76cd3f38ef4eaa1fff0476485d7c75428a258f865905166c3652178fd9d17",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/PRISMA-README.md",
+        "status": 200,
+        "bytes": 15429,
+        "sha256": "5d46a919d1dac19f943288e1d6e60987ee44b594db4a2b2c59f7499f2260b08a",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/PRT.md",
+        "status": 200,
+        "bytes": 17810,
+        "sha256": "98cd93c67ecfef8a0e16e3998ccca20a5907a231c9e0c11234adae73499e3ee5",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/QA-BETA-0.5.md",
+        "status": 200,
+        "bytes": 5189,
+        "sha256": "3fa57051ecd0ad1e3060ee1d14dc61b16af1ff72677b3287ac3f6b70775b6d4b",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/QA-NAVEGADOR-R9.md",
+        "status": 200,
+        "bytes": 7503,
+        "sha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/QA-R9.md",
+        "status": 200,
+        "bytes": 19149,
+        "sha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/REFINAMENTO-NASA-R10.md",
+        "status": 200,
+        "bytes": 14646,
+        "sha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/STORYTELLING-4-NIVEIS.md",
+        "status": 200,
+        "bytes": 21554,
+        "sha256": "e163896899193cfae7a83d6c7d06110c2bebbe2743cfe0cab7069229e37670e4",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/a1-desafio.md",
+        "status": 200,
+        "bytes": 23667,
+        "sha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/a2-fisica.md",
+        "status": 200,
+        "bytes": 30374,
+        "sha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/a3-ux-tecnologia.md",
+        "status": 200,
+        "bytes": 26249,
+        "sha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/refinamento-conops.md",
+        "status": 200,
+        "bytes": 19091,
+        "sha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/refinamento-requisitos.md",
+        "status": 200,
+        "bytes": 13529,
+        "sha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "campanha/research/originals/refinamento-risco-ux.md",
+        "status": 200,
+        "bytes": 20372,
+        "sha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "context/index.html",
         "status": 200,
         "bytes": 135909,
@@ -9152,22 +12940,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 47593,
-        "sha256": "0aa422be949f03b7e30b7c7dba1a7de61655da5b6353a6e1a0d6dcfe93ade2fe",
+        "bytes": 48124,
+        "sha256": "764725980af31b8b1ba5cf29d77186a11786cd927c4988bd97bd31dbdc1cae37",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 1900173,
-        "sha256": "72e95ec74614a12ca5ce3af0615a99886dd3007a202d0d81ff13fdaf5b29f2e5",
+        "bytes": 1911415,
+        "sha256": "892501d4a96736c2d462fc8bf479e0e48b1c69645823e4250b0d39c9c6481a03",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1532145,
-        "sha256": "927a71388f678e652b302cb16f4ec3f85ff4070c1a798baf2bc14866a706e71e",
+        "bytes": 1540712,
+        "sha256": "e2b4e7c8851c140d1bede8f826f00c8472cd617a2044b8978fe252d60f1d4341",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -9437,6 +13225,20 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+        "status": 200,
+        "bytes": 6308,
+        "sha256": "3a1d31fe4da03e39e8fdfd6f9f79511e64ae6408504f9233b8eb868301a3f23d",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+        "status": 200,
+        "bytes": 4091,
+        "sha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
         "status": 200,
         "bytes": 46185,
@@ -9467,15 +13269,15 @@
       {
         "path": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
         "status": 200,
-        "bytes": 11818,
-        "sha256": "4ce231ab3d4538f7ac4326b6d3a8a898fcfa7454e59ce98aaee6cfa1060cb9cf",
+        "bytes": 12887,
+        "sha256": "788ce4fd849d58fff394e9295f8cb15c1170bec02455bb80859c606184a5f660",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
         "status": 200,
-        "bytes": 9086,
-        "sha256": "32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f",
+        "bytes": 10083,
+        "sha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -9537,8 +13339,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 10106,
-        "sha256": "0065edf2c15e6df271e9873ab499fe0dab3213d51233d61c41a90d378efb716b",
+        "bytes": 10390,
+        "sha256": "196fef6187ed28866df2ed1f9a5b93ca8144205026f4d88b59696c32667730df",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -9782,8 +13584,8 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 58617,
-        "sha256": "408678fe56546d11ecbcdbd6e5a22a28dd66283b62ac3f41c2a71c002de05995",
+        "bytes": 58698,
+        "sha256": "9b8579302176cfa4daeef3b4049b9ebaf109ad811bed4d4f62a5091593386bd7",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -10524,8 +14326,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 93332,
-        "sha256": "8b9b4fd46ee6e6dd2afd2c0867bb59f6b39c79c37b2782b69bacfffefe432db7",
+        "bytes": 119452,
+        "sha256": "7cd61504524944922f11c2d6145eb547506a465171207a69c4f8d2775c7c4f6b",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -10621,8 +14423,23 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 159,
+      "linkedRoutesChecked": 209,
       "redirects": [
+        {
+          "source": "/campanha/research",
+          "destination": "/campanha/research/index.html",
+          "status": 307
+        },
+        {
+          "source": "/campanha/apresentacao",
+          "destination": "/campanha/apresentacao/index.html",
+          "status": 307
+        },
+        {
+          "source": "/campanha",
+          "destination": "/campanha/index.html",
+          "status": 307
+        },
         {
           "source": "/game",
           "destination": "/game/index.html",
@@ -10721,87 +14538,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 12.835
+      "durationMs": 11.372
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.267
+      "durationMs": 0.294
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 59.914
+      "durationMs": 63.904
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.431
+      "durationMs": 3.84
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 83.468
+      "durationMs": 88.386
     },
     {
       "name": "todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas",
       "status": "passed",
-      "durationMs": 676.053
+      "durationMs": 1038.239
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.459
+      "durationMs": 0.782
     },
     {
-      "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/",
+      "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 368.121
+      "durationMs": 600.524
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 40.888
+      "durationMs": 62.845
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.075
+      "durationMs": 2.196
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 49.849
+      "durationMs": 86.93
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 4.98
+      "durationMs": 6.023
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 63.525
+      "durationMs": 65.811
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 128.419
+      "durationMs": 227.881
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 43.882
+      "durationMs": 105.343
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.019
+      "durationMs": 1.432
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 33.033
+      "durationMs": 54.286
     }
   ]
 }

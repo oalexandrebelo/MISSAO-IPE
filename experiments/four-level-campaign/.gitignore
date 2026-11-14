@@ -1,0 +1,26 @@
+node_modules
+*.sqlite*
+*.db*
+.env*
+!.env.example
+playwright-report/
+test-results/
+site/
+.vercel/
+output/packages/
+__pycache__/
+
+.site-build-r6/
+
+# Lossless archives are versioned; these original forms are restored locally.
+evidence/ab-r3a-analysis.json
+recovery/*.bundle
+recovery/*.tmp
+
+# Standalone build output is packaged for deployment.
+/dist/
+/public/qa-mobile.html
+/public/release.json
+/public/research/
+/public/kit/
+/.test-ui-cache/
