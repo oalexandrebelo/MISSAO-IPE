@@ -1,0 +1,61 @@
+erDiagram
+  direction TB
+  Player ||--o{ Session : owns
+  Session ||--o{ Project : freezes
+  Project ||--o{ Prediction : records
+  Project ||--o{ Run : executes
+  Project ||--o{ Decision : logs
+  Prediction o|--o| Run : precedes
+  Run o|--o{ Decision : supports
+  Run ||--o{ Reflection : inspires
+  Player ||--o{ LearningProgress : has
+  Run o|--o{ LearningProgress : supports
+
+  Player {
+    uuid id PK
+    string pseudonym
+    datetime expiresAt
+  }
+  Session {
+    uuid id PK
+    uuid playerId FK
+    uuid campaignId FK
+  }
+  Project {
+    uuid id PK
+    uuid sessionId FK
+    uuid levelId FK
+    int version
+    json configSnapshot
+  }
+  Run {
+    uuid id PK
+    uuid projectId FK
+    string contentId
+    string inputHash
+    string resultHash
+    string replayHash
+  }
+  Prediction {
+    uuid id PK
+    uuid projectId FK
+    string target
+  }
+  Decision {
+    uuid id PK
+    uuid projectId FK
+    uuid runId FK
+    string kind
+  }
+  Reflection {
+    uuid id PK
+    uuid runId FK
+    string eventId
+  }
+  LearningProgress {
+    uuid id PK
+    uuid playerId FK
+    uuid levelId FK
+    uuid supportingRunId FK
+    string status
+  }

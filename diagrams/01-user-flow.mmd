@@ -1,0 +1,18 @@
+flowchart TD
+  Start["Abrir Missão Ipê"] --> Levels["Escolher nível disponível"]
+  Levels --> Brief["Ler objetivo e limites"]
+  Brief --> Design["Configurar seis subsistemas"]
+  Design --> Predict["Registrar previsão e justificativa"]
+  Predict --> Run["Executar projeto congelado"]
+  Run --> Report["Investigar resultado e eventos"]
+  Report --> Science{"Motor indica sucesso?"}
+  Science -->|"Falha ou inválido"| Explain["Explicar causa e redesenhar"]
+  Explain --> Design
+  Science -->|"Sim, com 6/6"| Gate{"Critério do nível atendido?"}
+  Gate -->|"Não"| Explain
+  Gate -->|"Sim"| Reflect["Registrar reflexão opcional"]
+  Reflect --> Next{"Há outro nível?"}
+  Next -->|"Sim"| Levels
+  Next -->|"Não"| Finish["Revisar a campanha"]
+  Report --> Export["Exportar replay ou comparar"]
+  Start --> Lab["Explorar laboratório independente"]

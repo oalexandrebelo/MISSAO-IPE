@@ -1,0 +1,35 @@
+erDiagram
+  direction TB
+  Campaign ||--o{ Level : contains
+  Dataset ||--o{ Level : pins
+  Dataset ||--o{ Evidence : documents
+
+  Campaign {
+    uuid id PK
+    string slug
+    int version
+    string contentHash
+  }
+  Level {
+    uuid id PK
+    uuid campaignId FK
+    uuid datasetId FK
+    string key
+    int version
+    string scenarioId
+    json criterionSnapshot
+  }
+  Dataset {
+    uuid id PK
+    string key
+    int version
+    string packHash UK
+    json manifest
+  }
+  Evidence {
+    uuid id PK
+    uuid datasetId FK
+    string sourceUrl
+    string contentHash
+    datetime retrievedAt
+  }

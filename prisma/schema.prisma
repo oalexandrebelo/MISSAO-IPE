@@ -1,0 +1,368 @@
+// PROPOSTA CLOUD OPCIONAL. O beta executa e persiste localmente em IndexedDB.
+// Alvo explícito: Prisma ORM 7.10.1 + PostgreSQL. Não usar prisma@latest.
+// Não contém URL, migração, autenticação ou política RLS implementadas.
+// Imutabilidade e invariantes semânticas exigem o serviço e SQL descritos no README.
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../server/generated/prisma"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  RETIRED
+}
+
+enum PlayerStatus {
+  ACTIVE
+  DELETION_PENDING
+}
+
+enum SessionStatus {
+  OPEN
+  COMPLETED
+  ABANDONED
+}
+
+enum RunOutcome {
+  SUCCESS @map("success")
+  FAILURE @map("failure")
+  INVALID @map("invalid")
+}
+
+enum RunOrigin {
+  OWN_EXECUTION
+  REPLAY_IMPORT
+  LOCAL_ARCHIVE
+}
+
+enum PredictionTarget {
+  ENERGY   @map("energy")
+  PEAK     @map("peak")
+  MEMORY   @map("memory")
+  CONTACT  @map("contact")
+  ENVELOPE @map("envelope")
+  NONE     @map("none")
+}
+
+enum DecisionKind {
+  COMPONENT_CHANGED
+  SCENARIO_CHANGED
+  RUN_COMPLETED
+  RUN_CANCELLED
+  RUN_ERROR
+  HELP_REQUESTED
+  REDESIGN_APPLIED
+  REPLAY_IMPORTED
+}
+
+enum EvidenceKind {
+  SOURCE_RESPONSE
+  RETRIEVAL_RECEIPT
+  METADATA
+  PRODUCT_GUIDE
+}
+
+enum EvidenceStatus {
+  PRESERVED
+  LINK_ONLY
+}
+
+enum ProgressStatus {
+  LOCKED
+  AVAILABLE
+  IN_PROGRESS
+  COMPLETED
+}
+
+// Uma linha representa uma revisão publicada do conteúdo, não uma conta/tenant.
+model Campaign {
+  id          String        @id @default(uuid()) @db.Uuid
+  slug        String        @db.VarChar(80)
+  version     Int
+  title       String        @db.VarChar(160)
+  status      ContentStatus @default(DRAFT)
+  contentHash String        @db.Char(64)
+  content     Json          @db.JsonB
+  createdAt   DateTime      @default(now()) @db.Timestamptz(3)
+  publishedAt DateTime?     @db.Timestamptz(3)
+  levels      Level[]
+  sessions    Session[]
+
+  @@unique([slug, version])
+  @@index([status, slug])
+}
+
+// O cenário continua long-contact ou short-contact; o gate didático é adicional.
+// criterionSnapshot guarda critérios declarativos, nunca código executável.
+model Level {
+  id                String             @id @default(uuid()) @db.Uuid
+  campaignId        String             @db.Uuid
+  key               String             @db.VarChar(40)
+  version           Int
+  ordinal           Int
+  title             String             @db.VarChar(160)
+  status            ContentStatus      @default(DRAFT)
+  scenarioId        String             @db.VarChar(40)
+  engineVersion     String             @db.VarChar(64)
+  catalogVersion    String             @db.VarChar(64)
+  datasetId         String             @db.Uuid
+  requiredRecords   Int                @default(6)
+  contentHash       String             @db.Char(64)
+  initialConfig     Json               @db.JsonB
+  criterionSnapshot Json               @db.JsonB
+  content           Json               @db.JsonB
+  createdAt         DateTime           @default(now()) @db.Timestamptz(3)
+  campaign          Campaign           @relation(fields: [campaignId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+  dataset           Dataset            @relation(fields: [datasetId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+  projects          Project[]
+  progress          LearningProgress[]
+
+  @@unique([campaignId, key, version])
+  @@unique([campaignId, ordinal, version])
+  @@unique([id, campaignId])
+  @@index([datasetId])
+}
+
+// Arquivo científico histórico. As coordenadas dos pixels não são do jogador.
+model Dataset {
+  id                      String     @id @default(uuid()) @db.Uuid
+  key                     String     @db.VarChar(80)
+  version                 Int
+  product                 String     @db.VarChar(80)
+  collection              String     @db.VarChar(32)
+  packHash                String     @unique @db.Char(64)
+  canonicalizationVersion String     @db.VarChar(32)
+  recordCount             Int
+  temporalStart           DateTime   @db.Date
+  temporalEnd             DateTime   @db.Date
+  manifest                Json       @db.JsonB
+  attribution             String     @db.Text
+  createdAt               DateTime   @default(now()) @db.Timestamptz(3)
+  evidence                Evidence[]
+  levels                  Level[]
+  runs                    Run[]
+
+  @@unique([key, version])
+}
+
+// PRESERVED exige assetPath + contentHash + byteLength no validador de ingestão.
+// LINK_ONLY registra referência consultada sem alegar preservação de seus bytes.
+model Evidence {
+  id             String         @id @default(uuid()) @db.Uuid
+  datasetId      String         @db.Uuid
+  sourceKey      String         @db.VarChar(120)
+  kind           EvidenceKind
+  status         EvidenceStatus
+  sourceUrl      String         @db.Text
+  title          String         @db.VarChar(240)
+  sourceRevision String?        @db.VarChar(80)
+  sourceDate     DateTime?      @db.Date
+  retrievedAt    DateTime       @db.Timestamptz(3)
+  assetPath      String?        @db.Text
+  contentHash    String?        @db.Char(64)
+  byteLength     BigInt?
+  provenance     Json           @db.JsonB
+  createdAt      DateTime       @default(now()) @db.Timestamptz(3)
+  dataset        Dataset        @relation(fields: [datasetId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+
+  @@unique([datasetId, sourceKey])
+  @@index([contentHash])
+}
+
+// Identidade pseudônima opcional; não é uma credencial de autorização.
+// Sem nome civil, e-mail, data de nascimento, turma, escola, IP ou geolocalização.
+model Player {
+  id                String             @id @default(uuid()) @db.Uuid
+  clientIdentityKey String             @unique @db.Uuid
+  pseudonym         String             @db.VarChar(32)
+  status            PlayerStatus       @default(ACTIVE)
+  retentionVersion  String             @db.VarChar(32)
+  createdAt         DateTime           @default(now()) @db.Timestamptz(3)
+  expiresAt         DateTime           @db.Timestamptz(3)
+  sessions          Session[]
+  progress          LearningProgress[]
+
+  @@index([expiresAt])
+}
+
+model Session {
+  id               String        @id @default(uuid()) @db.Uuid
+  playerId         String        @db.Uuid
+  campaignId       String        @db.Uuid
+  clientSessionKey String        @db.Uuid
+  status           SessionStatus @default(OPEN)
+  startedAt        DateTime      @db.Timestamptz(3)
+  receivedAt       DateTime      @default(now()) @db.Timestamptz(3)
+  endedAt          DateTime?     @db.Timestamptz(3)
+  expiresAt        DateTime      @db.Timestamptz(3)
+  player           Player        @relation(fields: [playerId], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  campaign         Campaign      @relation(fields: [campaignId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+  projects         Project[]
+
+  @@unique([playerId, clientSessionKey])
+  @@unique([id, campaignId])
+  @@index([campaignId])
+  @@index([playerId, startedAt])
+  @@index([expiresAt])
+}
+
+// Revisão imutável de um projeto do jogador; editar cria version + 1.
+// As duas FKs compostas impedem cruzar sessão e nível de campanhas diferentes.
+model Project {
+  id               String       @id @default(uuid()) @db.Uuid
+  sessionId        String       @db.Uuid
+  campaignId       String       @db.Uuid
+  levelId          String       @db.Uuid
+  clientProjectKey String       @db.Uuid
+  version          Int
+  scenarioId       String       @db.VarChar(40)
+  configSnapshot   Json         @db.JsonB
+  configHash       String       @db.Char(64)
+  createdAt        DateTime     @default(now()) @db.Timestamptz(3)
+  session          Session      @relation(fields: [sessionId, campaignId], references: [id, campaignId], onDelete: Cascade, onUpdate: Restrict)
+  level            Level        @relation(fields: [levelId, campaignId], references: [id, campaignId], onDelete: Restrict, onUpdate: Restrict)
+  predictions      Prediction[]
+  runs             Run[]
+  decisions        Decision[]
+
+  @@unique([sessionId, clientProjectKey, version])
+  @@index([levelId, campaignId])
+}
+
+// Conteúdo científico imutável após validação/reexecução na ingestão futura.
+// contentId pode repetir em tentativas diferentes; clientRunKey evita retry duplo.
+// Canonical text é a autoridade. Decimal/BigInt são projeções para consultas.
+model Run {
+  id                      String             @id @default(uuid()) @db.Uuid
+  projectId               String             @db.Uuid
+  clientRunKey            String             @db.Uuid
+  contentId               String             @db.VarChar(68)
+  origin                  RunOrigin
+  predictionId            String?            @db.Uuid
+  datasetId               String             @db.Uuid
+  scenarioId              String             @db.VarChar(40)
+  engineVersion           String             @db.VarChar(64)
+  catalogVersion          String             @db.VarChar(64)
+  resultSchemaVersion     Int
+  replaySchemaVersion     Int
+  canonicalizationVersion String             @db.VarChar(32)
+  sciencePackHash         String             @db.Char(64)
+  inputHash               String             @db.Char(64)
+  resultHash              String             @db.Char(64)
+  replayHash              String             @db.Char(64)
+  traceIncluded           Boolean
+  configSnapshot          Json               @db.JsonB
+  inputCanonical          String             @db.Text
+  resultCanonical         String             @db.Text
+  replayCanonical         String             @db.Text
+  outcome                 RunOutcome
+  completedAtS            Int
+  massKg                  Decimal            @db.Decimal(8, 3)
+  credits                 Int
+  initialEnergyWh         Decimal            @db.Decimal(24, 12)
+  finalEnergyWh           Decimal            @db.Decimal(24, 12)
+  minEnergyWh             Decimal            @db.Decimal(24, 12)
+  reserveWh               Decimal            @db.Decimal(24, 12)
+  generatedBits           BigInt
+  downlinkedBits          BigInt
+  lostBits                BigInt
+  queueBits               BigInt
+  deliveredRecords        Int
+  requiredRecords         Int
+  recordedAt              DateTime           @db.Timestamptz(3)
+  verifiedAt              DateTime           @default(now()) @db.Timestamptz(3)
+  project                 Project            @relation(fields: [projectId], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  prediction              Prediction?        @relation(fields: [predictionId, projectId], references: [id, projectId], onDelete: NoAction, onUpdate: NoAction)
+  dataset                 Dataset            @relation(fields: [datasetId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+  decisions               Decision[]
+  reflections             Reflection[]
+  supportedProgress       LearningProgress[]
+
+  @@unique([projectId, clientRunKey])
+  @@unique([predictionId, projectId])
+  @@unique([id, projectId])
+  @@index([contentId])
+  @@index([inputHash, resultHash])
+  @@index([datasetId])
+}
+
+// Uma previsão antecede a tentativa própria. Texto livre fica ausente por padrão
+// na proposta de sync; quando explicitamente incluído tem limite de 2.000 chars.
+model Prediction {
+  id             String           @id @default(uuid()) @db.Uuid
+  projectId      String           @db.Uuid
+  clientEventKey String           @db.Uuid
+  target         PredictionTarget
+  rationale      String?          @db.VarChar(2000)
+  recordedAt     DateTime         @db.Timestamptz(3)
+  receivedAt     DateTime         @default(now()) @db.Timestamptz(3)
+  project        Project          @relation(fields: [projectId], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  run            Run?
+
+  @@unique([projectId, clientEventKey])
+  @@unique([id, projectId])
+}
+
+// Log append-only de decisões; payload aceita somente campos de um DTO fechado.
+model Decision {
+  id             String       @id @default(uuid()) @db.Uuid
+  projectId      String       @db.Uuid
+  clientEventKey String       @db.Uuid
+  runId          String?      @db.Uuid
+  kind           DecisionKind
+  payload        Json?        @db.JsonB
+  recordedAt     DateTime     @db.Timestamptz(3)
+  receivedAt     DateTime     @default(now()) @db.Timestamptz(3)
+  project        Project      @relation(fields: [projectId], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  run            Run?         @relation(fields: [runId, projectId], references: [id, projectId], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([projectId, clientEventKey])
+  @@index([runId, projectId])
+}
+
+// Reflexão sobre um resultado concreto. eventId aponta para um evento no replay;
+// sua existência é verificada pelo serviço, pois não há tabela de eventos do motor.
+model Reflection {
+  id             String   @id @default(uuid()) @db.Uuid
+  runId          String   @db.Uuid
+  clientEventKey String   @db.Uuid
+  eventId        String?  @db.VarChar(120)
+  text           String?  @db.VarChar(2000)
+  conceptKey     String?  @db.VarChar(80)
+  recordedAt     DateTime @db.Timestamptz(3)
+  receivedAt     DateTime @default(now()) @db.Timestamptz(3)
+  run            Run      @relation(fields: [runId], references: [id], onDelete: Cascade, onUpdate: Restrict)
+
+  @@unique([runId, clientEventKey])
+}
+
+// Projeção recalculável de gates do jogo; COMPLETED não comprova aprendizagem.
+model LearningProgress {
+  id              String         @id @default(uuid()) @db.Uuid
+  playerId        String         @db.Uuid
+  levelId         String         @db.Uuid
+  status          ProgressStatus @default(LOCKED)
+  ruleVersion     String         @db.VarChar(64)
+  supportingRunId String?        @db.Uuid
+  revision        Int            @default(0)
+  evidence        Json           @db.JsonB
+  completedAt     DateTime?      @db.Timestamptz(3)
+  createdAt       DateTime       @default(now()) @db.Timestamptz(3)
+  updatedAt       DateTime       @updatedAt @db.Timestamptz(3)
+  expiresAt       DateTime       @db.Timestamptz(3)
+  player          Player         @relation(fields: [playerId], references: [id], onDelete: Cascade, onUpdate: Restrict)
+  level           Level          @relation(fields: [levelId], references: [id], onDelete: Restrict, onUpdate: Restrict)
+  supportingRun   Run?           @relation(fields: [supportingRunId], references: [id], onDelete: SetNull, onUpdate: Restrict)
+
+  @@unique([playerId, levelId])
+  @@index([levelId])
+  @@index([supportingRunId])
+  @@index([expiresAt])
+}

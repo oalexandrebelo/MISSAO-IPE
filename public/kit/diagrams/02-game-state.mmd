@@ -1,0 +1,32 @@
+stateDiagram-v2
+  direction TB
+  [*] --> Briefing
+  Briefing --> Editing: entrar no hangar
+  Editing --> Ready: previsão e justificativa válidas
+  Ready --> Editing: alterar projeto ou cenário
+  Ready --> Running: congelar entrada e executar
+  Running --> Editing: cancelar e descartar resposta pendente
+  Running --> Error: erro de execução
+  Error --> Editing: revisar ou tentar novamente
+  Running --> Result: receber e validar resultado
+  Result --> Failed: outcome failure
+  Result --> Invalid: outcome invalid
+  Result --> Successful: outcome success
+  Failed --> Editing: redesenhar
+  Invalid --> Editing: corrigir envelope
+  Successful --> LevelPending: critério adicional não atendido
+  Successful --> LevelComplete: tentativa própria e critério atendido
+  LevelPending --> Editing: revisar projeto
+  LevelComplete --> Editing: próximo nível ou nova tentativa
+  LevelComplete --> [*]
+
+  state "Projeto editável" as Editing
+  state "Pronto para executar" as Ready
+  state "Execução em andamento" as Running
+  state "Resultado imutável" as Result
+  state "Falha científica" as Failed
+  state "Projeto inválido" as Invalid
+  state "Sucesso científico" as Successful
+  state "Objetivo do nível pendente" as LevelPending
+  state "Nível concluído" as LevelComplete
+  state "Erro recuperável" as Error

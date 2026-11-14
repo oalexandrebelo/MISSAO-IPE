@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-11-14T17:59:40.835Z",
+  "finishedAt": "2026-11-14T17:59:43.071Z",
+  "command": "node scripts/test-ui.mjs",
+  "node": "v24.22.1",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "environment": "jsdom; simulated DOM, not a browser",
+  "engine": "real core engine and catalog search; no score or physics mocks",
+  "storage": "fake-indexeddb; not browser durability",
+  "unavailableApis": [
+    "WebGL context returns null",
+    "scrollTo no-op",
+    "HTMLDialogElement showModal/close open-attribute shim"
+  ],
+  "limitations": [
+    "No real Worker execution",
+    "No browser rendering, layout, focus trap or accessibility-tree validation",
+    "No GPU/FPS measurement",
+    "No cold offline browser validation"
+  ]
+}
