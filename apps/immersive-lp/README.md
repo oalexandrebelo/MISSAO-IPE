@@ -19,7 +19,7 @@ pnpm build
 pnpm start
 ```
 
-`pnpm build` gera `out/`, uma distribuição estática completa. `pnpm start` a serve em `http://localhost:4177`. Um servidor HTTP estático é necessário; abrir o HTML por `file://` não é suportado. A configuração Vercel fica nesta pasta; configure **Root Directory = apps/immersive-lp**, Node 24, install `pnpm install --frozen-lockfile`, build `pnpm build`, output `out`. O app não precisa de banco, API key ou variáveis secretas. `NEXT_PUBLIC_SITE_URL` pode ajustar a base de metadados antes da compilação.
+`pnpm build` gera `out/`, uma distribuição estática completa. `pnpm start` a serve em `http://localhost:4177`. Um servidor HTTP estático é necessário; abrir o HTML por `file://` não é suportado. Na Vercel, configure **Root Directory = apps/immersive-lp**, preset **Next.js**, Node 24, install `pnpm install --frozen-lockfile`, build `pnpm build` e mantenha **Output Directory sem override**: o adaptador Next.js identifica a exportação. Em hospedagem estática genérica, publique o conteúdo de `out/`. O app não precisa de banco, API key ou variáveis secretas. `NEXT_PUBLIC_SITE_URL` pode ajustar a base de metadados antes da compilação.
 
 Por padrão, `next/font/google` obtém as fontes durante o build e as serve localmente ao visitante. Para reconstruir sem consultar Google Fonts, depois de instalar as dependências:
 

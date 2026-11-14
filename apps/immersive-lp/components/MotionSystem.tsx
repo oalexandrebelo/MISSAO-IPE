@@ -106,9 +106,9 @@ export function ExperienceControls() {
     } catch { setAudioError('Áudio indisponível neste navegador.'); }
   }
   return <div className="experience-controls">
-    <button type="button" onClick={() => void toggleSound()} aria-pressed={sound} aria-label={sound ? 'Desativar som ambiente' : 'Ativar som ambiente'}><Icon name={sound ? 'sound' : 'mute'} /><span>Som {sound ? 'on' : 'off'}</span></button>
+    <button type="button" onClick={() => void toggleSound()} aria-pressed={sound} aria-label={sound ? 'Silenciar som ambiente' : 'Ativar som ambiente'}><Icon name={sound ? 'sound' : 'mute'} /><span>{sound ? 'Silenciar' : 'Ativar som'}</span></button>
     <span className="control-divider" />
-    <button type="button" onClick={toggle} aria-pressed={!enabled} aria-label={enabled ? 'Pausar animações' : 'Ativar animações'}><Icon name={enabled ? 'pause' : 'play'} /><span>{enabled ? 'Pausar' : 'Animar'}</span></button>
+    <button type="button" onClick={toggle} aria-pressed={!enabled} aria-label={enabled ? 'Pausar animações' : 'Ativar animações'}><Icon name={enabled ? 'pause' : 'play'} /><span>{enabled ? 'Pausar' : 'Ativar'}</span></button>
     <span className="sr-only" role="status">{audioError}</span>
   </div>;
 }
