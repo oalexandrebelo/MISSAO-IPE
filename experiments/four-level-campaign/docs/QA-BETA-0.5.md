@@ -46,6 +46,14 @@ A inspeção local desta rodada foi interrompida pela política de URL do navega
 
 A revisão de contraste dos novos painéis usou os valores CSS efetivos navy/lime: texto secundário sobre navy 7,52:1 e sobre o fundo de sucesso 6,47:1. Esse cálculo cobre essas combinações, sem estabelecer conformidade WCAG para toda a aplicação.
 
+## Publicação e inspeção pública
+
+A campanha foi publicada em `/campanha/index.html`, preservando o R14 em `/lab/index.html`. A implantação `dpl_DHsVtWQurf2w9do6bhcnXdD84aJT` ficou READY no commit `f30ca994098262b75a86b25784b78657c34c0db5`; o recibo público de versão confirmou esse SHA.
+
+Na URL pública, o primeiro nível executou com 6/6 registros válidos e liberou o nível 2. O mapa carregou estilos e scripts, navegou até o capítulo de níveis e selecionou o nível 4. A documentação exibiu 21 documentos e 160 referências. O PowerPoint baixado pelo mapa é idêntico ao arquivo local validado, SHA-256 `01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11`.
+
+O ambiente apresentou a alternativa 2D. Esta inspeção pública não comprova 3D, todos os dispositivos ou a jornada completa fora do teste DOM. O problema observado de normalização de barra nas URLs de diretório foi corrigido com redirecionamentos explícitos para `index.html`. A checagem estática das rotas verificou 430 referências, sem erros. [Recibo completo e capturas](../evidence/production-smoke-2026-11-14.json).
+
 ## Limites de evidência
 
 Não houve estudo com participantes, teste de transferência de aprendizagem, validação de voo, auditoria WCAG completa, medição de 60 FPS ou teste de recarga offline a frio. A conclusão de um capítulo é uma evidência de atendimento das regras do modelo, não uma medida automática de compreensão do jogador.

@@ -1,0 +1,65 @@
+{
+  "recordedAtUtc": "2026-11-14T21:45:20.242092+00:00",
+  "project": "PROJETO-IPE",
+  "scope": "Campaign production smoke check; historical R14 preserved",
+  "implementationCommit": "ab66a424df505a627a611877fce5d8a4364c8be1",
+  "inspectedProductionCommit": "f30ca994098262b75a86b25784b78657c34c0db5",
+  "deploymentId": "dpl_DHsVtWQurf2w9do6bhcnXdD84aJT",
+  "deploymentState": "READY",
+  "productionAlias": "https://projeto-ipe.vercel.app",
+  "releaseJsonMatchedCommit": true,
+  "browserObserved": [
+    "Campaign opened without a sign-in prompt",
+    "Four levels visible; only level 1 initially unlocked",
+    "Own prediction and rationale accepted before launch",
+    "Level 1 execution returned success, six valid complete records, 1080 Mbit, 3.05 kg and 71 credits",
+    "Campaign progressed to 1/4 and unlocked level 2",
+    "Presentation directory URL redirected to explicit index.html after routing fix",
+    "Presentation navigation and level 4 tab selection worked with styles and scripts active",
+    "Research directory URL redirected to explicit index.html; 21 documents and 160 references visible",
+    "PPTX downloaded through the presentation link"
+  ],
+  "download": {
+    "path": "public/apresentacao/PROJETO-IPE-Pitch.pptx",
+    "bytes": 207658,
+    "sha256": "01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11",
+    "byteIdenticalToValidatedLocalDeck": true
+  },
+  "automatedLocal": {
+    "domainTests": 120,
+    "uiTests": 14,
+    "staticRouteReferences": 430,
+    "staticRouteErrors": 0,
+    "prismaModelsValidated": 12,
+    "mermaidDiagramsParsed": 6
+  },
+  "initialGitTreeVerification": {
+    "publishedOrUpdatedFiles": 147,
+    "matchingBlobHashes": 147,
+    "priorUntouchedFilesPreserved": 498,
+    "totalFilesAfterIntegration": 645
+  },
+  "screenshots": [
+    {
+      "path": "evidence/publication/projeto-ipe-campanha-publicada.jpg",
+      "bytes": 131297,
+      "sha256": "ca0ede5866f7ad93deaaae11394ae22ffc599b5c1446a15eb65d3c1f84eeb8d5"
+    },
+    {
+      "path": "evidence/publication/projeto-ipe-missao-publicada.jpg",
+      "bytes": 78429,
+      "sha256": "eae32273d8404332ed14ef08b4d26697b7d1ec1b3cfde0060a8e9a7e52c1af6d"
+    },
+    {
+      "path": "evidence/publication/projeto-ipe-mapa-publicado.jpg",
+      "bytes": 99428,
+      "sha256": "ae981dd42358f7a44e8fc4f34bf93e29c44b8e0eacde8c6cef9686e28864f32a"
+    }
+  ],
+  "limits": [
+    "Browser smoke completed level 1, not the full four-level journey; the full journey was checked in jsdom.",
+    "The browser displayed the functional 2D fallback; 3D rendering and device performance were not qualified.",
+    "No participant learning study, full WCAG audit or native PowerPoint inspection.",
+    "This receipt certifies the inspected commit and deployment; a documentation-only follow-up can trigger another deployment."
+  ]
+}
