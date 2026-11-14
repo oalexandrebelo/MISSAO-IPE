@@ -8,7 +8,7 @@
 | Hero e rolagem | Deslocamento vertical 13%, rotação 6° | ScrollTrigger scrub 1 | Sem parallax |
 | Mouse | Terra segue até 24×18 px | quickTo, ponteiro fino e viewport >=900 | Sem listener |
 | Botões principais | Atração discreta de 10%/16% | quickTo + pointerenter/move/leave | Sem deslocamento |
-| Manifesto | Palavras ganham opacidade durante leitura | SplitText + ScrollTrigger | Todas visíveis |
+| Manifesto | Palavras passam de opacidade 0,52 a 1 durante leitura | SplitText + ScrollTrigger | Todas visíveis |
 | Fluxo da ciência | Linha conectando observar/projetar/entregar | DrawSVGPlugin, 2 s | SVG estático |
 | Seções | Entrada única de 36 px, 0,95 s | ScrollTrigger | Conteúdo estático |
 | Timeline | Troca de painel em 0,45 s | CSS, estado React, ARIA tabs | Troca imediata |

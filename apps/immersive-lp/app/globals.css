@@ -75,7 +75,7 @@ section[id] { scroll-margin-top:100px; }
 .mobile-menu nav a span { font:11px var(--font-sans); color:var(--muted); }
 .mobile-menu nav a svg { margin-left:auto; }
 .mobile-menu-inner>p { margin-top:40px; color:var(--muted); }
-.chapter-rail { position:fixed; top:44%; right:20px; z-index:45; display:flex; flex-direction:column; gap:1px; }
+.chapter-rail { position:fixed; top:44%; right:20px; z-index:45; display:flex; flex-direction:column; gap:1px; padding:4px 1px; border-radius:20px; background:rgba(8,13,16,.86); }
 .chapter-rail a { width:24px; height:33px; display:flex; align-items:center; justify-content:center; position:relative; }
 .rail-dot { width:3px; height:3px; background:#afbbb8; border-radius:50%; transition:height .3s,background .3s; }
 .chapter-rail a[aria-current] .rail-dot { height:20px; border-radius:2px; background:var(--accent); }
@@ -427,7 +427,7 @@ summary::-webkit-details-marker { display:none; }
   .hero-orbit-scene { width:650px; height:650px; right:-295px; top:330px; }
   .hero-planet { width:77%; }
   .hero-orbits { top:-45px; }
-  .earth-tag { top:53%;left:40%;font-size:7px; }
+  .earth-tag { top:53%;left:22%;font-size:7px; }
   .earth-tag small { font-size:6px; }
   .orbital-caption { display:none; }
   .hero-actions { align-items:flex-start; flex-direction:column; margin-top:28px; gap:21px; }

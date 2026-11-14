@@ -39,7 +39,7 @@ export function MotionSystem({ children }: { children: ReactNode }) {
           gsap.from(el, { y: 36, opacity: 0, duration: .95, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 93%', once: true } });
         });
         const statement = SplitText.create('.mission-statement', { type: 'words', aria: 'auto' });
-        gsap.fromTo(statement.words, { opacity: .24 }, { opacity: 1, stagger: .12, ease: 'none', scrollTrigger: { trigger: '.mission-statement', start: 'top 80%', end: 'bottom 43%', scrub: .4 } });
+        gsap.fromTo(statement.words, { opacity: .52 }, { opacity: 1, stagger: .12, ease: 'none', scrollTrigger: { trigger: '.mission-statement', start: 'top 80%', end: 'bottom 43%', scrub: .4 } });
         disposers.push(() => statement.revert());
         gsap.from('.signal-path', { drawSVG: '0%', duration: 2, ease: 'power1.inOut', scrollTrigger: { trigger: '.signal-diagram', start: 'top 82%', once: true } });
         const orbiter = gsap.to('.orbit-satellite', { motionPath: { path: '#hero-orbit-path', align: '#hero-orbit-path', alignOrigin: [.5, .5], autoRotate: true }, duration: 42, repeat: -1, ease: 'none' });
