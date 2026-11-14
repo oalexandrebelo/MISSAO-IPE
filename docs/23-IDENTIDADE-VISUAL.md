@@ -20,6 +20,8 @@ A paleta permanece cobre `#B88965`, azul `#085D9D` e branco `#FDFDFD`; tons secu
 
 ## Aplicação e legibilidade
 
+`projeto-ipe-logo-on-light.svg` é a variante transparente para fundos claros. Ela muda somente o preenchimento da palavra “PROJETO” (`project-label`) de branco para azul profundo `#173c51`; os 104 paths do símbolo, a geometria, o circunflexo e as faixas cobre/azul permanecem iguais. A versão original continua apropriada para o beta escuro. Nenhuma das duas contém caixa ou camada de fundo; superfícies ao redor da imagem pertencem ao layout. A comparação XML confirmou essa única diferença de preenchimento, além do título e da descrição da variante.
+
 A marca horizontal foi preparada para fundos escuros, que preservam o branco de “PROJETO” e da órbita. Manter proporção 3:1 e usar dimensões explícitas no layout para evitar deslocamento durante o carregamento. A imagem pode ter `alt=""` quando o link ou botão já tiver o nome acessível apropriado; fora desse contexto, usar “Projeto Ipê”.
 
 O favicon usa o símbolo quadrado, nunca a composição horizontal comprimida. O símbolo fornecido é detalhado; em 16 px, ramos e circuitos deixam de ser distinguíveis. A miniatura conserva a silhueta e a paleta, sem prometer a leitura desses detalhes nessa escala.

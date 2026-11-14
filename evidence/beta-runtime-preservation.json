@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-14T19:04:12.093Z",
+  "generatedAt": "2026-11-14T19:37:11.997Z",
   "status": "passed",
   "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
-  "fileCount": 62,
+  "fileCount": 63,
   "allByteIdentical": true,
   "files": [
     {
@@ -150,6 +150,13 @@
       "output": "site/lab/assets/search-nJBL8qRn.js",
       "originalSha256": "5fdaab8cc087f424985efffac4ad0875a547b4cfbcc8df2f9fc53d31fd1d2dc4",
       "publishedSha256": "5fdaab8cc087f424985efffac4ad0875a547b4cfbcc8df2f9fc53d31fd1d2dc4",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo-on-light.svg",
+      "output": "site/lab/brand/projeto-ipe-logo-on-light.svg",
+      "originalSha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
+      "publishedSha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
       "byteIdentical": true
     },
     {

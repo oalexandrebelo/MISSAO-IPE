@@ -1,5 +1,7 @@
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
 
+**Direção de produto acrescentada na R13:** começar pela [revisão de Game Design 3D](29-GAME-DESIGN-3D.md) e pelo [catálogo NASA 3D](28-OPORTUNIDADES-NASA-3D.md). A prioridade proposta é conectar a reprodução dos eventos à cena existente e tornar o redesign visível, em uma missão completa do Cerrado. A divisão E0–E5 do novo Game Design orienta esse incremento; o mapa de código e os invariantes abaixo continuam aplicáveis. As novas cenas e integrações são propostas, não recursos já entregues no beta. O restante deste documento conserva o corte R12.
+
 **Edição documental R12 · corte: 14/11/2026 · beta 0.4.0-beta.2 · motor 0.1.1-rd · catálogo ipe-64-v1.**
 
 Este documento permite retomar o projeto sem confundir o runtime atual, os registros históricos e as propostas. Os caminhos de código são relativos à raiz do repositório público `PROJETO-IPE`; não dependem de uma pasta pessoal de máquina. A divisão entre Dev A e Dev B é uma sugestão de responsabilidade, a confirmar no início de cada rodada.

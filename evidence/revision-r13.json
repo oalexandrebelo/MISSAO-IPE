@@ -1,0 +1,72 @@
+{
+  "edition": "R13-visual-study",
+  "recordedAt": "2026-11-14T19:37:00.990054+00:00",
+  "scope": "Transparent header logo; interactive SVG and local NASA photography; game design study and NASA 3D catalog. Mission engine and beta gameplay unchanged.",
+  "documentation": {
+    "documents": 87,
+    "newGuides": [
+      "docs/27-ACERVO-VISUAL-NASA.md",
+      "docs/28-OPORTUNIDADES-NASA-3D.md",
+      "docs/29-GAME-DESIGN-3D.md"
+    ],
+    "gameDesignStudy": "game-design.html",
+    "nasa3DAssetsCataloged": 11,
+    "modelsIntegrated": 0
+  },
+  "validation": {
+    "build": "passed",
+    "contextChecks": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distributionChecks": {
+      "passed": 16,
+      "failed": 0
+    },
+    "domainAndBetaUiTests": "Not rerun in R13; engine and beta UI unchanged. Historical results retain their edition.",
+    "studyDomReview": "Delegated jsdom review: 4 segments, 3 qualitative comparisons, 5 proposed scenes, keyboard, ARIA, unique IDs and no exceptions. Not an independent GPU test."
+  },
+  "browser": {
+    "surfaces": [
+      "portal",
+      "research-library",
+      "game-design-study"
+    ],
+    "observedViewportWidths": [
+      1309,
+      354,
+      341
+    ],
+    "checks": [
+      "Logo variant without contrasting header background",
+      "Portal orbit selection and opt-in pause/play",
+      "Flow tabs and keyboard arrows",
+      "NASA gallery selection with loaded local image and source credits",
+      "Library notebook expansion and MODIS search with recovery",
+      "Game design segment selection and ArrowRight keyboard progression",
+      "Qualitative radio comparison",
+      "No global horizontal overflow on inspected narrow and desktop surfaces",
+      "No console errors observed on inspected pages"
+    ],
+    "limits": [
+      "Not full accessibility audit",
+      "No physical device test",
+      "No learning study",
+      "No cold-offline test",
+      "Proposed 3D scenes not implemented or GPU-tested"
+    ]
+  },
+  "media": {
+    "images": 6,
+    "bytes": 839655,
+    "manifest": "web/media/manifest.json",
+    "local": true
+  },
+  "brand": {
+    "lightVariant": "experiments/mission-design-lab/public/brand/projeto-ipe-logo-on-light.svg",
+    "paths": 108,
+    "originalSymbolPathsPreserved": 104,
+    "embeddedImages": 0
+  },
+  "publication": "See evidence/production-r13.json and PUBLICADO.md for deployment verification."
+}

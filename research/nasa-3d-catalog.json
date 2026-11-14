@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-14",
+  "status": "Curadoria e verificação de metadados; nenhuma integração 3D nova por esta pesquisa.",
+  "catalogSourceUrl": "https://science.nasa.gov/3d-resources/",
+  "officialMirrorUrl": "https://github.com/nasa/NASA-3D-Resources",
+  "rightsSourceUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "sizeThresholdBytes": 5000000,
+  "scope": "11 ativos; consultas às páginas e HEAD dos arquivos. Leitura parcial dos cabeçalhos de 9 GLBs, sem salvar modelos nem baixar pacotes completos.",
+  "verificationLimits": [
+    "HTTP 200 e Content-Length confirmam resposta e tamanho naquela data, não renderização ou física.",
+    "Leitura dos primeiros 131072 bytes por GLB confirmou versão e, quando coube, estrutura JSON.",
+    "Nenhum benchmark, revisão visual de 3D, validação glTF integral ou auditoria de marcas foi executado."
+  ],
+  "assets": [
+    {
+      "id": "cubesat-generic-2ru",
+      "title": "CubeSat – 2 RU Generic",
+      "pageUrl": "https://science.nasa.gov/3d-resources/cubesat-2-ru-generic/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/cubesat---2-ru-generic/CubeSat%20-%202%20RU%20Generic.glb",
+      "format": "GLB",
+      "bytes": 206108,
+      "credit": "NASA/Christopher R. Meaney",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "MVP-reference",
+      "useCase": "Inspeção de um CubeSat genérico como referência de escala e embalagem. A montagem configurável do Ipê deve ter geometria própria com peças identificáveis.",
+      "limitations": [
+        "Exige KHR_draco_mesh_compression.",
+        "Uma única malha não equivale a peças montáveis.",
+        "Sem animações embutidas; não representa hardware validado do Ipê."
+      ],
+      "header": {
+        "jsonChunkBytes": 12948,
+        "meshes": 1,
+        "nodes": 2,
+        "animations": 0,
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "icecube",
+      "title": "CubeSat – ICECube",
+      "pageUrl": "https://science.nasa.gov/3d-resources/cubesat-icecube/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/cubesat---icecube/CubeSat%20-%20ICECube.glb",
+      "format": "GLB",
+      "bytes": 309684,
+      "credit": "NASA/Christopher R. Meaney",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "MVP-reference",
+      "useCase": "Comparação entre plataforma, instrumento e objetivo científico em missão real de pequeno satélite.",
+      "limitations": [
+        "Exige KHR_draco_mesh_compression.",
+        "Não é sensor MODIS nem veículo Ipê.",
+        "Não inferir potência, massa ou desempenho a partir da malha."
+      ],
+      "header": {
+        "jsonChunkBytes": 26636,
+        "meshes": 6,
+        "nodes": 13,
+        "animations": 0,
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "earth",
+      "title": "Earth 3D Model Interactive",
+      "pageUrl": "https://science.nasa.gov/learn/heat/resource/earth-3d-model/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Earth_1_12756.glb",
+      "format": "GLB",
+      "bytes": 12916400,
+      "credit": "NASA (distribuição no portal NASA HEAT)",
+      "creditStatus": "specific_glb_author_not_explicit",
+      "sourceCreditNote": "A página credita NASA/JPL-Caltech ao interativo Eyes; isso não foi transferido automaticamente à autoria deste GLB.",
+      "priority": "MVP-after-optimization",
+      "useCase": "Globo de contexto para órbita, eclipse e visada. Comparar com esfera própria antes de importar o arquivo inteiro.",
+      "limitations": [
+        "12,92 MB: acima do orçamento inicial proposto.",
+        "Sem relevo local ou camada MOD13Q1 cientificamente georreferenciada.",
+        "Confirmar crédito específico do GLB antes de redistribuição."
+      ],
+      "header": {
+        "jsonChunkBytes": 1484,
+        "meshes": 1,
+        "nodes": 1,
+        "animations": 0,
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": false,
+      "implementedInIpe": false
+    },
+    {
+      "id": "earth-clouds",
+      "title": "Earth with Clouds 3D Model",
+      "pageUrl": "https://science.nasa.gov/resource/earth-with-clouds-3d-model/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/EarthClouds_1_12756.glb",
+      "format": "GLB",
+      "bytes": 18928336,
+      "credit": "NASA Visualization Technology Applications and Development (VTAD)",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "later",
+      "useCase": "Referência visual alternativa de Terra com nuvens para comparações de apresentação.",
+      "limitations": [
+        "18,93 MB: não carregar junto à entrada do jogo.",
+        "Nuvens visuais não são dados meteorológicos em tempo real.",
+        "Uma malha: não presumir camadas separadas de atmosfera e nuvens."
+      ],
+      "header": {
+        "jsonChunkBytes": 1488,
+        "meshes": 1,
+        "nodes": 1,
+        "animations": 0,
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": false,
+      "implementedInIpe": false
+    },
+    {
+      "id": "terra-satellite",
+      "title": "Terra",
+      "pageUrl": "https://science.nasa.gov/3d-resources/terra/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/terra/Terra.glb",
+      "format": "GLB",
+      "bytes": 2150600,
+      "credit": "NASA/Christian A. Lopez",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "MVP-reference-after-repair",
+      "useCase": "Explicar a origem orbital do MODIS e distinguir o satélite que coletou dados históricos da nave fictícia projetada pelo jogador.",
+      "limitations": [
+        "GLB contém duas referências externas TGA em caminhos relativos Windows.",
+        "O pacote não é autossuficiente para web/offline; recuperar e verificar texturas oficiais antes de usar.",
+        "Não transfere órbita, dimensões ou instrumentos Terra para Ipê."
+      ],
+      "header": {
+        "jsonChunkBytes": 17080,
+        "meshes": 22,
+        "nodes": 24,
+        "animations": 0,
+        "extensionsRequired": [],
+        "externalUris": [
+          "..\\Terra.fbm\\Side_Panels_TERRA.tga",
+          "..\\Terra.fbm\\solarpanels.tga"
+        ]
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "dsn-70m",
+      "title": "70 meter dish",
+      "pageUrl": "https://science.nasa.gov/3d-resources/70-meter-dish/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/70-meter-dish/70%20meter%20dish.glb",
+      "format": "GLB",
+      "bytes": 2216584,
+      "credit": "NASA/Ames Research Center",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "later",
+      "useCase": "Estudo interativo de visada e comunicação de espaço profundo; referência comparativa do segmento de solo.",
+      "limitations": [
+        "É antena DSN de 70 m, não estação de solo contratada pelo Ipê.",
+        "Uma malha e nenhuma animação: articulação de azimute/elevação não está demonstrada.",
+        "Modelo não fornece agenda, alcance operacional ou orçamento de enlace."
+      ],
+      "header": {
+        "jsonChunkBytes": 1692,
+        "meshes": 1,
+        "nodes": 3,
+        "animations": 0,
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "bennu-1999-rq36",
+      "title": "1999 RQ36 asteroid",
+      "pageUrl": "https://science.nasa.gov/3d-resources/1999-rq36-asteroid/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/1999-rq36-asteroid/1999%20RQ36%20asteroid.glb",
+      "format": "GLB",
+      "bytes": 329596,
+      "credit": "NASA/Christopher R. Meaney",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "later",
+      "useCase": "Objeto leve para demonstrar câmera orbital e apresentar uma futura campanha de pequenos corpos.",
+      "limitations": [
+        "Página usa designação histórica de Bennu.",
+        "Precisão, época e resolução científica da forma não foram demonstradas.",
+        "Não substitui modelo de forma PDS nem kernel SPICE para navegação."
+      ],
+      "header": {
+        "jsonChunkBytes": 1200,
+        "meshes": 1,
+        "nodes": 1,
+        "animations": 0,
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "saturn-v",
+      "title": "Saturn V",
+      "pageUrl": "https://science.nasa.gov/3d-resources/saturn-v/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/saturn-v/Saturn%20V.glb",
+      "format": "GLB",
+      "bytes": 927212,
+      "credit": "NASA/Michael D. Carbajal",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "later",
+      "useCase": "Referência histórica e estudo de organização de etapas/objetos em um GLB leve.",
+      "limitations": [
+        "Não é opção contemporânea de lançamento do Ipê.",
+        "23 animações constam do cabeçalho; significado e reprodução não foram validados.",
+        "Não fornece propulsão, curva de empuxo, custos ou separações fisicamente verificadas."
+      ],
+      "header": {
+        "jsonChunkBytes": 56456,
+        "meshes": 22,
+        "nodes": 23,
+        "animations": 23,
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": true
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "jwst-a",
+      "title": "James Webb Space Telescope (A)",
+      "pageUrl": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/james-webb-space-telescope-(a)/James%20Webb%20Space%20Telescope%20(A).glb",
+      "format": "GLB",
+      "bytes": 4710016,
+      "credit": "NASA/Goddard Space Flight Center",
+      "creditStatus": "explicit_on_asset_page",
+      "priority": "later",
+      "useCase": "Campanha futura de observatório: orientação, iluminação, instrumentos e escolha de alvo científico.",
+      "limitations": [
+        "Página preserva texto histórico anterior ao lançamento; não usar como cronograma atual.",
+        "Chunk JSON tem 1256896 bytes e excedeu a amostra; estrutura completa, extensões e texturas externas pendentes.",
+        "Peso menor que 5 MB não comprova desempenho móvel."
+      ],
+      "header": {
+        "jsonChunkBytes": 1256896,
+        "meshes": null,
+        "nodes": null,
+        "animations": null,
+        "extensionsRequired": null,
+        "externalUris": null
+      },
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": 206,
+        "headerBytesRead": 131072,
+        "glbVersion": 2,
+        "jsonChunkComplete": false
+      },
+      "under5MB": true,
+      "implementedInIpe": false
+    },
+    {
+      "id": "apollo11-terrain",
+      "title": "Apollo 11 – Landing Site",
+      "pageUrl": "https://science.nasa.gov/3d-resources/apollo-11-landing-site/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/printable/apollo-11---landing-site/Apollo%2011%20-%20Landing%20Site.stl",
+      "format": "STL",
+      "bytes": 7138484,
+      "credit": "NASA 3D Resources (distribuição; autor específico não indicado na página)",
+      "creditStatus": "specific_author_not_explicit",
+      "priority": "later",
+      "useCase": "Exemplo de relevo para aprender a distinguir escala horizontal e exagero vertical numa futura campanha lunar.",
+      "limitations": [
+        "Fonte descreve área 30×30km com exagero vertical 60×.",
+        "STL para impressão; não inclui materiais nem está pronto como cena web.",
+        "Não representa terreno do Cerrado nem deve usar escala científica sem correção explícita."
+      ],
+      "header": null,
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": null,
+        "headerBytesRead": 0,
+        "glbVersion": null,
+        "jsonChunkComplete": false
+      },
+      "under5MB": false,
+      "implementedInIpe": false
+    },
+    {
+      "id": "sls-printable",
+      "title": "Space Launch System (SLS)",
+      "pageUrl": "https://science.nasa.gov/3d-resources/space-launch-system-sls/",
+      "downloadUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/printable/space-launch-system-(sls)/Space%20Launch%20System%20(SLS).zip",
+      "format": "ZIP",
+      "bytes": 39941491,
+      "credit": "NASA 3D Resources (distribuição; autor específico não indicado na página)",
+      "creditStatus": "specific_author_not_explicit",
+      "priority": "later-not-selected",
+      "useCase": "Comparativo documental de lançadores; arquivo de impressão a avaliar somente se uma campanha justificar o custo.",
+      "limitations": [
+        "39,94 MB: excluído do primeiro corte web.",
+        "Conteúdo do ZIP não foi baixado nem inventariado; formatos internos não confirmados.",
+        "README trata de orientação/suporte de impressão, não de qualificação de voo."
+      ],
+      "readmeUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/printable/space-launch-system-(sls)/readme.txt",
+      "header": null,
+      "license": {
+        "basis": "NASA Images and Media Usage Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "assetSpecificSpdx": null,
+        "scope": "Referência educativa com créditos; marcas e material de terceiros exigem tratamento próprio. Não é licença do código do Ipê."
+      },
+      "verification": {
+        "checkedAt": "2026-11-14",
+        "pageRead": true,
+        "downloadHttpStatus": 200,
+        "bytesMethod": "HTTP HEAD Content-Length",
+        "fullDownloadSaved": false,
+        "browserRendered": false,
+        "headerRangeStatus": null,
+        "headerBytesRead": 0,
+        "glbVersion": null,
+        "jsonChunkComplete": false
+      },
+      "under5MB": false,
+      "implementedInIpe": false
+    }
+  ],
+  "supportingResources": [
+    {
+      "id": "gmat",
+      "title": "General Mission Analysis Tool R2026",
+      "url": "https://software.nasa.gov/software/GSC-19640-1",
+      "type": "software",
+      "useCase": "Gerar e confrontar cenários orbitais offline; exportar resultados com época/referencial/unidades para replay.",
+      "limitation": "Não instalado nem integrado; não é API REST pronta."
+    },
+    {
+      "id": "common-model-library",
+      "title": "Common Model Library",
+      "url": "https://github.com/nasa/cml",
+      "licenseUrl": "https://raw.githubusercontent.com/nasa/cml/main/LICENSE",
+      "type": "C++ simulation models",
+      "useCase": "Referência para decomposição de modelos de subsistemas e verificação.",
+      "limitation": "Compatível com Trick; licença NOSA 1.3. Não confundir com Concept Maturity Levels nem incluir como dependência web automática."
+    },
+    {
+      "id": "mdl",
+      "title": "Mission Design Lab",
+      "url": "https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab",
+      "type": "engineering process",
+      "useCase": "Organizar decisões entre disciplinas e comparar alternativas antes da revisão de missão.",
+      "limitation": "Fonte de método; usar o estudo não representa participação, acesso ou certificação NASA."
+    },
+    {
+      "id": "concept-maturity",
+      "title": "Concept Maturity Level Framework",
+      "url": "https://www.nasa.gov/ames-engineering/spaceflight-division/mission-design-center/about-our-studies/",
+      "type": "concept development framework",
+      "useCase": "Inspirar gates de evidência numa campanha educacional.",
+      "limitation": "Não atribuir CML oficial  ao Ipê sem avaliação; CML aqui é outra sigla que Common Model Library."
+    },
+    {
+      "id": "mission-viz",
+      "title": "Web-based Space Mission Visualization",
+      "url": "https://nasa.github.io/mission-viz/",
+      "repositoryUrl": "https://github.com/nasa/mission-viz",
+      "type": "educational visualization examples",
+      "useCase": "Referência para órbitas 3D, elipses e tabelas sincronizadas.",
+      "limitation": "Exemplos X3DOM/R; licença de cada parte não auditada nesta rodada; não importado."
+    },
+    {
+      "id": "cubesat101",
+      "title": "CubeSat 101 — revisão outubro 2017",
+      "url": "https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf",
+      "type": "guide",
+      "useCase": "Mapear desenvolvimento, interfaces, estação de solo, testes e operações para decisões do jogo.",
+      "limitation": "Não é catálogo atual de peças, preços ou requisitos universais 2026."
+    }
+  ]
+}

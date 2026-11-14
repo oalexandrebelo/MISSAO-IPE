@@ -2,7 +2,7 @@
 
 Jogo educativo de engenharia de missões espaciais. Projete um CubeSat fictício, formule uma hipótese, execute a missão e investigue como entregar seis registros históricos de vegetação do Cerrado dentro dos limites de massa, orçamento, energia, potência, memória e comunicação.
 
-**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R12, 14/11/2026.**
+**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R13, 14/11/2026.**
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
@@ -23,6 +23,10 @@ O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidên
 O beta oferece seis escolhas binárias, 64 configurações, dois cenários de contato, revisão pré-voo, diário de eventos, sete requisitos com evidência, comparação de tentativas, replay recalculado e laboratório de física. Dados históricos MOD13Q1.061 permanecem separados dos parâmetros didáticos da nave. A cena 3D não decide o resultado do motor.
 
 O portal tem seis etapas navegáveis, catálogo pesquisável de 13 fontes e quatro níveis narrativos propostos. Semente/Raízes reaproveitam os dois cenários existentes; Copa/Horizonte ainda são propostas. Novas integrações NASA/JPL não foram implementadas nesta edição.
+
+## Exploração visual
+
+A edição R13 remove os fundos da marca nos cabeçalhos claros e acrescenta diagramas SVG exploráveis e imagens oficiais NASA, hospedadas localmente. As cenas explicam conceitos; não são telemetria nem resultados do motor. O [acervo visual](docs/27-ACERVO-VISUAL-NASA.md) documenta créditos e origem.
 
 ## Código e documentação
 
@@ -69,7 +73,11 @@ npm run test:beta
 
 O registro R11 preserva 101 testes de domínio do beta, 9 de interface, 51 do motor clássico, 24 verificações da central, 15 da distribuição/HTTP e uma partida observada com 6/6 registros válidos. Na revisão visual/documental R12, foram executados novamente a compilação, os 9 testes de interface, as 24 verificações da central e as 15 da distribuição. Navegação, busca, filtros, SVG e leitura foram conferidos em navegador no computador e em tela estreita. Isso não substitui pesquisa de aprendizagem, auditoria completa de acessibilidade ou validação de voo.
 
+Na R13, passaram a compilação, 24 verificações da central e 16 da distribuição. Diagramas, galeria e estudo de Game Design foram conferidos em navegador com telas estreitas e amplas. O motor e a UI do beta não mudaram; suas suítes de domínio e interface não foram reexecutadas nesta revisão.
+
 ## Próximos passos
+
+A [revisão de Game Design 3D](docs/29-GAME-DESIGN-3D.md) define a próxima direção: conectar a cena à evidência da missão, acompanhar o registro da nave ao usuário científico e comparar visualmente o redesign. O [estudo interativo](https://projeto-ipe.vercel.app/game-design.html) apresenta os quatro segmentos e as cinco cenas propostas; o [catálogo NASA 3D](docs/28-OPORTUNIDADES-NASA-3D.md) registra ativos oficiais, formatos, pesos e limitações. O plano E0–E5 divide domínio/evidência e 3D/experiência entre dois desenvolvedores. A revisão publica o projeto dessa evolução, sem declarar as novas mecânicas como implementadas.
 
 1. Validar uso e aprendizado com jogadores.
 2. Refinar narrativa e fichas usando os materiais NASA.

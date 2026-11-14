@@ -27,7 +27,7 @@ Os documentos históricos podem mencionar caminhos e arquivos internos não dist
 
 # Atribuição, licenças e autoria assistida
 
-Fonte: `NOTICE.md` · SHA-256 original: `2c3e2d192ab582bc745c77358b258cd239f839f519af51ad93d2016b152f8b86` · Ajustes de caminhos privados: 0
+Fonte: `NOTICE.md` · SHA-256 original: `d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5` · Ajustes de caminhos privados: 0
 
 # Atribuição, licenças e autoria assistida
 
@@ -51,58 +51,69 @@ Os cartazes em references/user foram fornecidos por AB e preservados como refer�
 
 R12 — identidade e tipografia: símbolo SVG fornecido pelo responsável, assinatura horizontal convertida em contornos vetoriais a partir da marca fornecida. Fontes Bricolage Grotesque e Plus Jakarta Sans provenientes do Google Fonts, sob SIL Open Font License 1.1, com licenças e proveniência em experiments/mission-design-lab/public/fonts/. Materiais SmartCity em references/estudos/ são referências históricas de outro projeto, com limites e transformações identificados.
 
+R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NASA, com créditos específicos, datas, URLs e hashes em web/media/manifest.json e docs/27-ACERVO-VISUAL-NASA.md. Variantes de tamanho servidas pela NASA foram preservadas sem edição local. Imagens não mostram a nave fictícia Ipê e não representam endosso. Diagramas SVG interativos são esquemas didáticos próprios, separados do motor da missão.
+
 
 ---
 
-# Publicação PROJETO IPÊ — R11
+# Publicação PROJETO IPÊ — R12
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `ec0f026a2213fc203a0fc3cb79fbf0b32254764c941bd12519bd6cfea12e1671` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `89d27b22a8c248948cd2d40845b2e2fd520165ff6cd834a10c4612b4c653c46d` · Ajustes de caminhos privados: 0
 
-# Publicação PROJETO IPÊ — R11
+# Publicação PROJETO IPÊ — R12
 
-Publicação confirmada em 14/11/2026, com a identidade visual fornecida para o PROJETO IPÊ.
+Publicação confirmada em **14/11/2026**. Marca horizontal em SVG real, revisão tipográfica, estudo interativo e contexto ampliado para dois desenvolvedores.
 
-- Portal interativo: <https://projeto-ipe.vercel.app/>
-- Simulador beta: <https://projeto-ipe.vercel.app/lab/index.html>
-- Pesquisa NASA: <https://projeto-ipe.vercel.app/docs/21-OPORTUNIDADES-NASA.html>
-- Plano de continuidade: <https://projeto-ipe.vercel.app/docs/22-PLANO-CONTINUIDADE.html>
-- Repositório: <https://github.com/oalexandrebelo/PROJETO-IPE>
+- [Portal público](https://projeto-ipe.vercel.app/)
+- [Estudo completo — 84 documentos](https://projeto-ipe.vercel.app/context/research-library.html)
+- [Guia para dois desenvolvedores](https://projeto-ipe.vercel.app/docs/25-HANDOFF-DOIS-DEVS.html)
+- [Oportunidades dos Estudos](https://projeto-ipe.vercel.app/docs/24-OPORTUNIDADES-ESTUDOS.html)
+- [Simulador beta](https://projeto-ipe.vercel.app/lab/index.html)
+- [Logo vetorial SVG](https://projeto-ipe.vercel.app/brand/projeto-ipe-logo.svg)
+- [Código e documentação no GitHub](https://github.com/oalexandrebelo/PROJETO-IPE)
 
 ## Versão publicada
 
-Beta `0.4.0-beta.2`, distribuição R11. Código publicado no commit `2adff7a17912d890d893ee604c081d4c798e5315`. Deployment Vercel `dpl_Efdhz3bFmzSDGCcAViVnmpqnLZQK`, confirmado como `READY`, com o domínio de produção acima atribuído. Este registro e a evidência abaixo são posteriores à compilação; não alteram o código publicado.
+Beta `0.4.0-beta.2`, distribuição `R12-study-handoff`. Commit de código publicado: `2363725448cc58cb1f790849bc8a555d266c529b`. Deployment Vercel: `dpl_2fXk1o5VeFqnstEiiVn9HMXCoyvP`, confirmado como `READY` com o domínio principal atribuído.
 
-O site de produção abre sem login, conforme autorização expressa do proprietário. A proteção de acesso continua habilitada para previews.
+O site de produção abre sem login. A configuração de proteção de previews foi preservada. Este registro e o recibo remoto são posteriores à compilação e não alteram o código publicado; o recibo compilado dentro da biblioteca conserva seu corte anterior e aponta para este documento corrente.
 
-## Verificação
+## O que mudou
 
-- Consulta sem cookies ou cabeçalhos de autenticação: manifesto acessível e seus 134 arquivos com HTTP 200, tamanho e SHA-256 conferidos, sem divergências. Os scripts embutidos também correspondem à política de segurança publicada.
-- Beta: 101 testes de domínio e 9 de interface aprovados; jogo clássico: 51 testes aprovados; contexto: 24 verificações aprovadas; distribuição: 15 verificações HTTP aprovadas.
-- Após aplicar a marca: compilação, 9 testes de interface e 15 verificações da distribuição executados novamente, com sucesso.
-- Navegador: missão local com 6/6 registros válidos, filtros e etapas interativos conferidos, visualização móvel sem rolagem horizontal. Logo conferida no portal público e no simulador local.
+- SVG horizontal com 108 paths: 104 paths do símbolo fornecido preservados e lettering convertido em contornos a partir da composição original. Sem bitmap incorporado ou dependência de fonte externa.
+- Bricolage Grotesque nos títulos e Plus Jakarta Sans nos textos, ambas locais, com licenças OFL e proveniência. As cinco famílias sugeridas foram avaliadas em [Tipografia](docs/26-TIPOGRAFIA.md).
+- Portal, central, biblioteca, páginas de documentação e cabeçalho do beta revisados. Biblioteca com busca, filtro atual/histórico, índice de seções, navegação entre documentos e download integral em Markdown.
+- 84 documentos no acervo: contratos das duas aplicações, PRD/PRT, pesquisa NASA, guias e evidências do beta, kit de apresentação, Estudos históricos e documentação de continuidade. Cópias geradas não entram duas vezes.
+- Handoff com mapa de arquivos, Dev A/B, coordenação, backlog, dependências e critérios de aceite. Os três Estudos fornecidos foram preservados em projeções históricas; suas instruções não se tornam ordens do Ipê.
 
-Evidência detalhada: [evidence/production-r11.json](evidence/production-r11.json).
+## Verificação desta revisão
 
-## Escopo entregue
+Compilação aprovada; **9 testes de interface, 24 verificações da central e 15 da distribuição/HTTP aprovados**. O motor não foi alterado; testes de domínio históricos não são apresentados como reexecução desta rodada.
 
-Portal com contexto, etapas e pesquisa de oportunidades NASA; simulador beta, jogo clássico, apresentação, arquitetura, biblioteca e código-fonte. O símbolo SVG preserva os desenhos e cores fornecidos; a assinatura horizontal usa o PNG original. A procedência está em [docs/23-IDENTIDADE-VISUAL.md](docs/23-IDENTIDADE-VISUAL.md).
+Verificação remota sem cookies ou autorização: manifesto acessível, **161 arquivos com HTTP 200 e SHA-256 correspondente**, scripts embutidos compatíveis com a política de segurança; índice público com 84 documentos. Nenhuma divergência encontrada.
 
-As novas integrações NASA são propostas documentadas. O beta usa os dados históricos já presentes no projeto; esta publicação não comprova novas integrações ao vivo, elegibilidade no desafio, estudo de aprendizagem ou auditoria completa de acessibilidade.
+Navegador: SVG, fontes, busca, filtros e navegação conferidos; leitura inspecionada em larguras de computador e celular, sem rolagem horizontal global nas superfícies observadas. A biblioteca pública abriu sem login, com a marca SVG e as fontes locais carregadas e sem erros de console observados.
 
-A origem e o tratamento dos materiais internos estão registrados em [GIT-PROVENIENCIA.md](GIT-PROVENIENCIA.md).
+- [Revisão local R12](evidence/revision-r12.json)
+- [Verificação da produção R12](evidence/production-r12.json)
+- [Registro histórico R11](evidence/production-r11.json)
+
+Não houve novo estudo de aprendizagem, auditoria completa de acessibilidade, teste de dispositivo físico ou ensaio offline a frio. As integrações NASA futuras continuam propostas; dados históricos e parâmetros didáticos permanecem identificados.
+
+Procedência da marca: [docs/23-IDENTIDADE-VISUAL.md](docs/23-IDENTIDADE-VISUAL.md). Procedência dos Estudos: [references/estudos/README.md](references/estudos/README.md). Origem pública do projeto: [GIT-PROVENIENCIA.md](GIT-PROVENIENCIA.md).
 
 
 ---
 
 # PROJETO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `74f29163c65ee9dd266fd122b1abff4620c10e99a8b81e1abee13f11d10cea72` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `14f36d8df97cac2a0872c1010b3e8727861a6064b83ef7dc4029f1c8432fe9f8` · Ajustes de caminhos privados: 0
 
 # PROJETO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais. Projete um CubeSat fictício, formule uma hipótese, execute a missão e investigue como entregar seis registros históricos de vegetação do Cerrado dentro dos limites de massa, orçamento, energia, potência, memória e comunicação.
 
-**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R12, 14/11/2026.**
+**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R13, 14/11/2026.**
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
@@ -123,6 +134,10 @@ O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidên
 O beta oferece seis escolhas binárias, 64 configurações, dois cenários de contato, revisão pré-voo, diário de eventos, sete requisitos com evidência, comparação de tentativas, replay recalculado e laboratório de física. Dados históricos MOD13Q1.061 permanecem separados dos parâmetros didáticos da nave. A cena 3D não decide o resultado do motor.
 
 O portal tem seis etapas navegáveis, catálogo pesquisável de 13 fontes e quatro níveis narrativos propostos. Semente/Raízes reaproveitam os dois cenários existentes; Copa/Horizonte ainda são propostas. Novas integrações NASA/JPL não foram implementadas nesta edição.
+
+## Exploração visual
+
+A edição R13 remove os fundos da marca nos cabeçalhos claros e acrescenta diagramas SVG exploráveis e imagens oficiais NASA, hospedadas localmente. As cenas explicam conceitos; não são telemetria nem resultados do motor. O [acervo visual](docs/27-ACERVO-VISUAL-NASA.md) documenta créditos e origem.
 
 ## Código e documentação
 
@@ -169,7 +184,11 @@ npm run test:beta
 
 O registro R11 preserva 101 testes de domínio do beta, 9 de interface, 51 do motor clássico, 24 verificações da central, 15 da distribuição/HTTP e uma partida observada com 6/6 registros válidos. Na revisão visual/documental R12, foram executados novamente a compilação, os 9 testes de interface, as 24 verificações da central e as 15 da distribuição. Navegação, busca, filtros, SVG e leitura foram conferidos em navegador no computador e em tela estreita. Isso não substitui pesquisa de aprendizagem, auditoria completa de acessibilidade ou validação de voo.
 
+Na R13, passaram a compilação, 24 verificações da central e 16 da distribuição. Diagramas, galeria e estudo de Game Design foram conferidos em navegador com telas estreitas e amplas. O motor e a UI do beta não mudaram; suas suítes de domínio e interface não foram reexecutadas nesta revisão.
+
 ## Próximos passos
+
+A [revisão de Game Design 3D](docs/29-GAME-DESIGN-3D.md) define a próxima direção: conectar a cena à evidência da missão, acompanhar o registro da nave ao usuário científico e comparar visualmente o redesign. O [estudo interativo](https://projeto-ipe.vercel.app/game-design.html) apresenta os quatro segmentos e as cinco cenas propostas; o [catálogo NASA 3D](docs/28-OPORTUNIDADES-NASA-3D.md) registra ativos oficiais, formatos, pesos e limitações. O plano E0–E5 divide domínio/evidência e 3D/experiência entre dois desenvolvedores. A revisão publica o projeto dessa evolução, sem declarar as novas mecânicas como implementadas.
 
 1. Validar uso e aprendizado com jogadores.
 2. Refinar narrativa e fichas usando os materiais NASA.
@@ -3120,7 +3139,7 @@ Depois: APIs oficiais → coleta sequencial no servidor ou processo editorial �
 
 # Identidade visual — PROJETO IPÊ
 
-Fonte: `docs/23-IDENTIDADE-VISUAL.md` · SHA-256 original: `42af5f0bc7f487a03e533300f23559cb0d4ee10da3f45b164af076c86bd45b2f` · Ajustes de caminhos privados: 0
+Fonte: `docs/23-IDENTIDADE-VISUAL.md` · SHA-256 original: `0c650c92ba9ac065bf69dd3e5a357983b1cd55b02c07e3a693d16580c48ca2f5` · Ajustes de caminhos privados: 0
 
 # Identidade visual — PROJETO IPÊ
 
@@ -3143,6 +3162,8 @@ Isso é uma reconstrução vetorial a partir de uma referência raster pequena, 
 A paleta permanece cobre `#B88965`, azul `#085D9D` e branco `#FDFDFD`; tons secundários do símbolo original foram preservados. Os contornos reconstruídos não reproduzem cada pixel de antialiasing do PNG, e não há alegação de identidade binária entre os dois formatos.
 
 ## Aplicação e legibilidade
+
+`projeto-ipe-logo-on-light.svg` é a variante transparente para fundos claros. Ela muda somente o preenchimento da palavra “PROJETO” (`project-label`) de branco para azul profundo `#173c51`; os 104 paths do símbolo, a geometria, o circunflexo e as faixas cobre/azul permanecem iguais. A versão original continua apropriada para o beta escuro. Nenhuma das duas contém caixa ou camada de fundo; superfícies ao redor da imagem pertencem ao layout. A comparação XML confirmou essa única diferença de preenchimento, além do título e da descrição da variante.
 
 A marca horizontal foi preparada para fundos escuros, que preservam o branco de “PROJETO” e da órbita. Manter proporção 3:1 e usar dimensões explícitas no layout para evitar deslocamento durante o carregamento. A imagem pode ter `alt=""` quando o link ou botão já tiver o nome acessível apropriado; fora desse contexto, usar “Projeto Ipê”.
 
@@ -3281,9 +3302,11 @@ O plano de trabalho, os arquivos e os critérios de integração estão no [hand
 
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
 
-Fonte: `docs/25-HANDOFF-DOIS-DEVS.md` · SHA-256 original: `204a2fc034070d4aa88675bddb7dffb3715ceae787c41b5190136cbcb617c771` · Ajustes de caminhos privados: 0
+Fonte: `docs/25-HANDOFF-DOIS-DEVS.md` · SHA-256 original: `d746edfd300212cefeb8aec63958396f463f0b13795c67a6bff1970971c72004` · Ajustes de caminhos privados: 0
 
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
+
+**Direção de produto acrescentada na R13:** começar pela [revisão de Game Design 3D](29-GAME-DESIGN-3D.md) e pelo [catálogo NASA 3D](28-OPORTUNIDADES-NASA-3D.md). A prioridade proposta é conectar a reprodução dos eventos à cena existente e tornar o redesign visível, em uma missão completa do Cerrado. A divisão E0–E5 do novo Game Design orienta esse incremento; o mapa de código e os invariantes abaixo continuam aplicáveis. As novas cenas e integrações são propostas, não recursos já entregues no beta. O restante deste documento conserva o corte R12.
 
 **Edição documental R12 · corte: 14/11/2026 · beta 0.4.0-beta.2 · motor 0.1.1-rd · catálogo ipe-64-v1.**
 
@@ -3544,6 +3567,351 @@ O subconjunto latino contempla o português, incluindo **á, à, â, ã, é, ê,
 As duas famílias usam **SIL Open Font License 1.1**, com os avisos integrais preservados junto aos binários. Os arquivos foram distribuídos sem modificar os binários baixados. O uso e a redistribuição junto à aplicação devem manter esses avisos e as demais condições da licença. Fontes não podem ser vendidas isoladamente.
 
 Fontes oficiais das licenças: [Bricolage Grotesque](https://github.com/google/fonts/blob/main/ofl/bricolagegrotesque/OFL.txt) e [Plus Jakarta Sans](https://github.com/google/fonts/blob/main/ofl/plusjakartasans/OFL.txt). Nenhum pacote npm ou Python foi acrescentado para fornecer essas fontes.
+
+
+---
+
+# Acervo visual NASA — contexto, procedência e limites
+
+Fonte: `docs/27-ACERVO-VISUAL-NASA.md` · SHA-256 original: `b3f37533cf86510ab15756470875d3c9b4ead070576347362dd353494df1ea4e` · Ajustes de caminhos privados: 0
+
+# Acervo visual NASA — contexto, procedência e limites
+
+**Corte documental: 14 de novembro de 2026.** Seis imagens históricas de fontes oficiais compõem um acervo educativo para o portal e o estudo do projeto Ipê. Nenhuma mostra uma nave Ipê real, comprova parceria com a NASA ou altera o escopo do beta: CubeSat fictício dedicado ao Cerrado. As imagens de comunicação, Sol e Bennu apoiam estudos de extensões futuras.
+
+## Inventário verificável
+
+Os seis arquivos JPEG somam **839.655 bytes (aproximadamente 0,84 MB)**. Cada um tem menos de 223 KB. As variantes foram fornecidas pelos servidores oficiais da NASA; não houve recorte, retoque, geração, compressão ou conversão local. A variante da Terra tem 720 pixels por lado; as demais têm entre 1.000 e 1.024 pixels de largura. O conjunto preserva proporções e conteúdo das variantes selecionadas.
+
+| Fonte oficial e tema | Data da imagem | Arquivo em `web/media/` | Dimensões | Bytes |
+| --- | --- | --- | --- | ---: |
+| [Brasil central observado por MODIS](https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/) | 2000-10-19 | `cerrado-terra-modis.jpg` | 1000 × 823 | 173985 |
+| [A Terra vista pelo EPIC](https://science.nasa.gov/earth/earth-observatory/an-epic-new-view-of-earth-86257/) | 2015-07-06 | `terra-espaco.jpg` | 720 × 720 | 84122 |
+| [CubeSats reais após a liberação](https://www.nasa.gov/image-article/trio-of-cubesats-are-deployed-outside-international-space-station/) | 2022-08-12 | `cubesats-iss.jpg` | 1024 × 683 | 69467 |
+| [Antenas da rede de espaço profundo](https://science.nasa.gov/photojournal/dawn-in-the-apollo-valley/) | 2012-01-11 | `dsn-goldstone.jpg` | 1024 × 682 | 82038 |
+| [Atividade solar observada pelo SDO](https://science.nasa.gov/science-research/heliophysics/how-nasa-tracked-the-most-intense-solar-storm-in-decades/) | 2024-05-11 | `sol-sdo.jpg` | 1024 × 1024 | 207346 |
+| [Bennu observado pela OSIRIS-REx](https://science.nasa.gov/resource/bennu-mosaic/) | 2018-12-02 | `bennu-osiris-rex.jpg` | 1024 × 968 | 222697 |
+
+O [manifesto de procedência](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/web/media/manifest.json) registra por imagem: identificador, arquivo, título, texto alternativo, legenda, crédito, missão, página de origem, URL exata da variante baixada, data da observação, publicação da fonte, dimensões, tamanho, SHA-256 e fundamento de reutilização. Os créditos completos permanecem no manifesto e devem acompanhar a exibição. No site, o mesmo conjunto é disponibilizado em `/media/`.
+
+`sourceDate` representa a aquisição/observação, não a data de download. `sourcePublishedAt` registra a publicação da página. A coleta e a revisão ocorreram em 2026-11-14. Datas inseridas nos caminhos de migração dos sites não substituem as datas científicas.
+
+## Contexto de cada imagem
+
+### Brasil central: a observação que fundamenta o tema
+
+A cena de 19/10/2000 foi obtida pelo MODIS a bordo do Terra. A página descreve áreas do Cerrado, Amazônia, agricultura e fumaça. O crédito completo nomeia os três responsáveis pela imagem e a equipe científica MODIS; está preservado literalmente no manifesto. [Fonte: Central Brazil](https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/).
+
+Uso no Ipê: mostrar por que observar vegetação do espaço é relevante. A cena ampla não é um dos seis registros MOD13Q1 utilizados no beta, não delimita a área de estudo do jogo e não demonstra condições atuais. Não extrair NDVI nem resultados ambientais dessa ilustração.
+
+### Terra: escala planetária
+
+A imagem de 06/07/2015 reúne bandas vermelha, verde e azul do EPIC, instrumento do DSCOVR. Crédito: equipe DSCOVR EPIC, conforme a fonte. [Fonte: An EPIC New View of Earth](https://science.nasa.gov/earth/earth-observatory/an-epic-new-view-of-earth-86257/).
+
+Uso no Ipê: introduzir sensores e a diferença entre escalas de observação. DSCOVR observa de muito mais longe que uma órbita baixa; a imagem não representa a posição ou o campo de visão da nave fictícia.
+
+### CubeSats: referência de hardware real
+
+A fotografia `iss067e255675` mostra TUMnanoSAT, FUTABA e HSU-SAT1 após liberação junto ao módulo Kibo da ISS, em 12/08/2022. Crédito: NASA. O registro do catálogo identifica o centro JSC, sem nomear fotógrafo. [Página da imagem](https://www.nasa.gov/image-article/trio-of-cubesats-are-deployed-outside-international-space-station/) e [metadados NASA](https://images-api.nasa.gov/search?nasa_id=iss067e255675).
+
+Uso no Ipê: explicar o formato de pequenos satélites e abrir a conversa sobre painéis, energia e comunicação. A foto não valida massa, órbita, componentes, lançamento ou desempenho do projeto.
+
+### DSN: comunicação exige infraestrutura
+
+A fotografia PIA17793 registra antenas de 34 metros em Goldstone em 11/01/2012. Crédito: NASA/JPL-Caltech. [Fonte: Dawn in the Apollo Valley](https://science.nasa.gov/photojournal/dawn-in-the-apollo-valley/).
+
+Uso no estudo: ilustrar comunicação com missões distantes. A fotografia não informa ocupação atual; um feed público da DSN tampouco concede reserva de antena. Não vincular essa infraestrutura ao orçamento de comunicação do CubeSat Ipê sem uma proposta técnica própria.
+
+### Sol: observação e evento precisam de contexto
+
+A imagem SDO registra atividade associada à erupção X5.8 de maio de 2024, em ultravioleta extremo representado em cores. Crédito exibido na fonte: NASA SDO. O arquivo indica 01:22 UTC de 11/05; a legenda situa o pico às 21:23 EDT de 10/05, ou 01:23 UTC de 11/05. Não confundir o instante da imagem com o do pico. [Fonte NASA Science](https://science.nasa.gov/science-research/heliophysics/how-nasa-tracked-the-most-intense-solar-storm-in-decades/).
+
+Uso no estudo: apresentar clima espacial e decisões operacionais. É um registro histórico; não é alerta em tempo real nem prova de dano a uma nave. Um futuro evento de jogo precisará separar observação, modelo de risco e regra pedagógica.
+
+### Bennu: uma campanha futura possível
+
+O mosaico reúne 12 imagens PolyCam da OSIRIS-REx adquiridas em 02/12/2018, a cerca de 24 km do asteroide. Crédito: NASA/Goddard/University of Arizona. [Fonte: Bennu Mosaic](https://science.nasa.gov/resource/bennu-mosaic/).
+
+Uso no estudo: ilustrar a futura campanha de pequenos corpos proposta no projeto. Não implica que SBDB, Mission Design ou Horizons já estejam integrados. A extensão continua dependente da validação da campanha Cerrado; a imagem não é mapa científico com escala utilizável para navegação.
+
+## Reutilização e apresentação
+
+O fundamento consultado são as [NASA Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/): uso educativo/informativo factual, com reconhecimento da fonte e sem sugerir endosso. A NASA também publica material protegido de terceiros; a permissão geral não transfere esses direitos. Não foi encontrada indicação de restrição de copyright de terceiros nas seis páginas selecionadas. Isso não transforma todo material hospedado pela NASA em licença irrestrita, nem apaga créditos de instituições parceiras.
+
+A seleção não contém retratos de pessoas nem usa logotipos NASA como marca do Ipê. Preservar créditos, origem e caráter histórico. A licença do código do projeto não relicencia essas imagens. Para uso comercial promocional, produtos ou alterações futuras, reavaliar as regras aplicáveis ao uso específico.
+
+## Contrato para os dois desenvolvedores
+
+- Consumir `images` do manifesto; `file` e `filename` são o mesmo basename, sem diretórios. Os identificadores estáveis são `cerrado`, `terra`, `cubesats`, `dsn`, `sol` e `bennu`.
+- Mostrar legenda, crédito e link para a fonte; a ficha de estudo pode exibir `mission`, `sourceDate` e `limitation`. Texto alternativo descreve o conteúdo visual; não deve virar uma lista de palavras-chave.
+- Reservar largura e altura antes do carregamento e usar carregamento tardio fora da primeira tela. Não depender do domínio NASA para abrir a galeria: as cópias locais permitem a apresentação sem novas consultas externas.
+- Manter a imagem completa disponível na visualização ampliada. Se a miniatura tiver enquadramento visual por CSS, ela não deve esconder detalhes na consulta completa nem sugerir uma nova observação científica.
+- Ao substituir um arquivo, revisar fonte, crédito, data e limites; recalcular bytes, dimensões e SHA-256. Os hashes comprovam integridade dos bytes coletados, não validade científica nem imutabilidade futura da URL externa.
+
+A verificação deste acervo incluiu abertura visual dos seis arquivos e conferência de formato JPEG, dimensões, tamanhos e hashes. Nenhuma API científica nova foi implementada por esta entrega. A disponibilidade pública final depende do recibo de publicação do projeto; a presença destes arquivos no repositório, isoladamente, não prova um deploy.
+
+
+---
+
+# Oportunidades NASA 3D para o projeto Ipê
+
+Fonte: `docs/28-OPORTUNIDADES-NASA-3D.md` · SHA-256 original: `96f0114d470b17ec2dc9bf3fcc0a70417f9a022585609c22cf12ebb719481bf2` · Ajustes de caminhos privados: 0
+
+# Oportunidades NASA 3D para o projeto Ipê
+
+**Pesquisa verificada em 14 de novembro de 2026. Estado: proposta de design e catálogo técnico; nenhuma integração 3D nova foi implementada por este estudo.**
+
+A oportunidade mais forte é tornar o projeto de missão manipulável: o jogador monta uma configuração, vê como ela processa os arquivos históricos do Cerrado, acompanha os recursos durante a órbita e compara duas decisões no mesmo instante. O 3D deve tornar visíveis as causas do resultado. O beta atual e seus dados continuam como base verificável; a proposta amplia a experiência depois de validar essa base.
+
+O [NASA 3D Resources](https://science.nasa.gov/3d-resources/) fornece modelos de referência e um [espelho oficial no GitHub](https://github.com/nasa/NASA-3D-Resources). Esta curadoria selecionou **11 ativos**, confirmou os downloads por cabeçalhos HTTP e leu parcialmente nove GLBs. **Sete GLBs têm menos de 5.000.000 bytes**, mas tamanho e extensão de arquivo não bastam para aprovar uma integração.
+
+## Uma direção de experiência para o Game Design
+
+Proposta: organizar uma missão educativa curta em cinco momentos conectados. A equipe deve testar sua duração e clareza com jogadores; ainda não há evidência de aprendizagem ou diversão desta proposta.
+
+| Momento | Interação espacial | Consequência que precisa ficar clara | Evidência ao final |
+| --- | --- | --- | --- |
+| Montar | Girar a nave, selecionar subsistemas, destacar posição e volume ocupado | Uma troca altera recursos do mesmo modelo de missão | Configuração e orçamento antes/depois |
+| Planejar | Manipular a linha do tempo e inspecionar órbita, iluminação e direção do sensor | Nem todo instante serve igualmente para observar, recarregar e transmitir | Agenda com restrições e premissas |
+| Operar | Acompanhar processamento e transmissão numa cena com tempo controlável | Produzir arquivos processados ocupa memória; entregar ciência depende da cadeia completa | Eventos de processamento e entrega rastreáveis |
+| Comparar | Sobrepor dois replays sincronizados após mudar uma única decisão | A diferença visual corresponde à diferença calculada pelo motor | Resultado A/B reproduzível |
+| Explicar | Selecionar um dado entregue e abrir sua origem, contexto e limite | A nave e as decisões são simuladas; o conjunto científico possui proveniência própria | Relatório de missão com fonte e hipótese |
+
+O diferencial proposto está na comparação causal. Uma pessoa deve poder apontar na cena onde sua escolha mudou a missão e explicar o resultado com os mesmos números do relatório. Isso é uma hipótese de produto a validar, não uma alegação de novidade mundial.
+
+A nave Ipê precisa de geometria própria se houver montagem, peças intercambiáveis, pontos de seleção e estados de implantação. Um modelo NASA pode funcionar como referência identificada no hangar. O catálogo não comprova que suas malhas correspondam a peças removíveis, massas reais, interfaces elétricas ou superfícies de colisão.
+
+## Catálogo curado e disponibilidade
+
+Tamanhos abaixo são bytes exatos informados por `Content-Length` em respostas HTTP 200. Para GLB, a leitura parcial confirmou assinatura `glTF`, versão 2 e tamanho total no cabeçalho. Páginas e URLs de download, créditos, prioridades e limites estão no [catálogo JSON](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/research/nasa-3d-catalog.json).
+
+| Ativo e página oficial | Formato escolhido | Bytes | Prioridade | Resultado técnico |
+| --- | --- | ---: | --- | --- |
+| [CubeSat – 2 RU Generic](https://science.nasa.gov/3d-resources/cubesat-2-ru-generic/) | GLB | 206108 | MVP: referência | Draco obrigatório; 1 malha, sem animações |
+| [CubeSat – ICECube](https://science.nasa.gov/3d-resources/cubesat-icecube/) | GLB | 309684 | MVP: referência | Draco obrigatório; 6 malhas, sem animações |
+| [Earth 3D Model Interactive](https://science.nasa.gov/learn/heat/resource/earth-3d-model/) | GLB | 12916400 | MVP: otimizar | 12,92 MB; autoria do GLB não explicitada |
+| [Earth with Clouds 3D Model](https://science.nasa.gov/resource/earth-with-clouds-3d-model/) | GLB | 18928336 | Depois | 18,93 MB; uma malha |
+| [Terra](https://science.nasa.gov/3d-resources/terra/) | GLB | 2150600 | MVP: reparar pacote | 2 texturas TGA externas; pacote incompleto |
+| [70 meter dish](https://science.nasa.gov/3d-resources/70-meter-dish/) | GLB | 2216584 | Depois | Autocontido; 1 malha; sem animações |
+| [1999 RQ36 asteroid](https://science.nasa.gov/3d-resources/1999-rq36-asteroid/) | GLB | 329596 | Depois | Autocontido; forma histórica sem precisão demonstrada |
+| [Saturn V](https://science.nasa.gov/3d-resources/saturn-v/) | GLB | 927212 | Depois | Autocontido; 23 animações ainda não reproduzidas |
+| [James Webb Space Telescope (A)](https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/) | GLB | 4710016 | Depois | JSON maior que a amostra; estrutura pendente |
+| [Apollo 11 – Landing Site](https://science.nasa.gov/3d-resources/apollo-11-landing-site/) | STL | 7138484 | Depois | Impressão; exagero vertical 60× |
+| [Space Launch System (SLS)](https://science.nasa.gov/3d-resources/space-launch-system-sls/) | ZIP | 39941491 | Depois; não selecionado | ZIP não inventariado; excluído da primeira carga |
+
+**MVP** significa utilidade potencial para a campanha Cerrado; não indica aprovação para produção. **Depois** identifica material para uma campanha ou sala de estudos futura. O SLS foi registrado como alternativa pesada, sem baixar seu ZIP. O arquivo de terreno lunar não é um modelo do Cerrado.
+
+### O que a inspeção dos arquivos revelou
+
+- **CubeSat genérico e IceCube:** os cabeçalhos exigem `KHR_draco_mesh_compression`. O carregador precisa de suporte compatível e do decodificador disponível localmente, caso o objetivo seja funcionar offline. Não há animações prontas. A malha única do modelo genérico limita montagem por peças.
+- **Terra:** o GLB inclui caminhos relativos para `Side_Panels_TERRA.tga` e `solarpanels.tga`, em uma pasta externa. O peso de 2,15 MB não inclui necessariamente um pacote utilizável. Recuperação das texturas e reparo de referências são trabalho futuro. Mostrar Terra seria útil para explicar quem mediu o MODIS; a nave não deve ser rebatizada como Ipê.
+- **Antena, Bennu e Saturn V:** os cabeçalhos não declaram extensões obrigatórias nem arquivos externos. São candidatos simples para um ensaio de carregamento isolado. A antena de 70 m pertence ao contexto DSN; não é a estação de solo do CubeSat. Bennu usa um modelo sob a designação histórica 1999 RQ36. Saturn V é referência histórica, sem vínculo com lançamento do Ipê.
+- **JWST:** 4,71 MB no transporte, mas seu bloco JSON tem 1.256.896 bytes. A amostra de 131.072 bytes confirmou o cabeçalho, não a estrutura completa. Não declarar suporte a materiais, animações, extensões ou desempenho até concluir a inspeção.
+- **Planeta Terra, sem e com nuvens:** 12,92 MB e 18,93 MB. A primeira implementação pode usar uma esfera própria e uma textura aprovada, com orçamento explícito. Camadas científicas precisam de mapeamento geográfico próprio; uma textura bonita não resolve georreferenciamento.
+
+Estas inspeções não renderizaram os modelos, não verificaram triângulos/VRAM nem mediram tempo de carregamento. Não foram salvos modelos completos no projeto. A semântica das 23 animações do Saturn V permanece pendente.
+
+## Créditos, escala e direitos
+
+O catálogo conserva a autoria explícita de cada página quando disponível: Christopher R. Meaney nos dois CubeSats e no asteroide; Christian A. Lopez em Terra; Ames Research Center na antena; Michael D. Carbajal em Saturn V; Goddard Space Flight Center em JWST; VTAD em Terra com nuvens, todos com o prefixo NASA presente nas fontes. Para o GLB Earth da página HEAT, o terreno Apollo e o pacote SLS, a autoria específica não foi estabelecida; o catálogo indica essa lacuna em vez de inventar crédito.
+
+A base de reutilização é a [política de imagens e mídia NASA](https://www.nasa.gov/nasa-brand-center/images-and-media/), que inclui recursos de modelos tridimensionais. Manter reconhecimento da fonte, identificar alterações e evitar aparência de endosso. Marcas, insígnias, colaboradores e material de terceiros exigem tratamento próprio. A licença do código do Ipê não relicencia automaticamente modelos ou texturas.
+
+Verificar inscrições e logos existentes no próprio modelo antes de uma integração visual. Escala, eixos e origem também devem ser medidos: GLB é um formato de representação, não um certificado de engenharia. No terreno Apollo 11, a própria fonte informa exagero vertical de **60 vezes**; apresentá-lo como relevo em escala real distorceria o estudo.
+
+As páginas do hub preservam descrições antigas. A ficha JWST ainda cita uma previsão de lançamento de 2018. A data de publicação/migração de um asset não atualiza a narrativa científica nem o cronograma da missão.
+
+## Recursos NASA que podem orientar a mecânica
+
+| Recurso primário | Aplicação concreta proposta | Limite de uso |
+| --- | --- | --- |
+| [GMAT R2026](https://software.nasa.gov/software/GSC-19640-1) | Produzir cenários orbitais de referência fora do navegador e confrontar resultados do motor com épocas, unidades e referenciais documentados | Não é API REST já integrada; instalar ou automatizar exigirá uma tarefa própria |
+| [Common Model Library](https://github.com/nasa/cml) e [licença](https://raw.githubusercontent.com/nasa/cml/main/LICENSE) | Estudar contratos de subsistemas e sua verificação | Modelos C++ compatíveis com Trick; NOSA 1.3; não é biblioteca de arte 3D nem dependência web imediata |
+| [Mission Design Lab](https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab) | Transformar a revisão de missão em comparação de alternativas entre energia, comunicação, voo, custo e operação | Referência de processo; não significa que a NASA analisou ou certificou o projeto |
+| [Concept Maturity Levels](https://www.nasa.gov/ames-engineering/spaceflight-division/mission-design-center/about-our-studies/) | Inspirar etapas educativas que exigem evidência antes de avançar | Outra expansão da sigla CML; não atribuir nível oficial à nave fictícia |
+| [Mission Visualization](https://nasa.github.io/mission-viz/) | Aprender formas de apresentar elipses, órbitas tridimensionais e tabelas sincronizadas | Exemplos X3DOM/R; código e licenças específicas não foram auditados para incorporação |
+| [CubeSat 101, revisão outubro de 2017](https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf) | Organizar interfaces, estação de solo, testes, preparação e operações como decisões jogáveis | Guia histórico; valores e requisitos não são catálogo atual de peças ou regras universais de 2026 |
+
+Uma separação útil é manter **simulação**, **visualização** e **evidência** em contratos distintos: o motor produz os estados; a cena os representa; a ficha científica informa origem e premissas. Alterar a câmera, resolução visual ou qualidade gráfica não deve mudar o resultado da missão.
+
+## Ordem de execução e critérios de aceite
+
+1. **Definir a decisão central.** Escolher uma mudança que o beta já consiga calcular e especificar o resultado esperado antes de montar a cena. Aceite: replay A/B determinístico, mesma condição inicial, única escolha alterada e diferenças explicadas.
+2. **Construir uma cena pequena.** Uma Terra de contexto, uma nave Ipê identificada e a linha do tempo. Aceite: processar e transmitir refletem os eventos do motor; pausar controla somente a reprodução; a geometria não cria resultados independentes.
+3. **Ensaiar um ativo oficial isolado.** Baixar somente o candidato escolhido, registrar hash e licença, verificar extensões, materiais, eixos, escala e referências externas. Aceite: carregar sem rede após os arquivos locais estarem disponíveis e mostrar crédito. O critério de 5 MB é uma triagem, não uma meta suficiente de desempenho.
+4. **Medir em condições reais.** Registrar dispositivo, navegador, tamanho transferido, tempo até interação e fluidez. Definir um orçamento de qualidade antes de expandir a cena. Aceite proposto: controles responsivos em aparelho alvo e qualidade reduzida selecionável, comprovados por medição.
+5. **Garantir a mesma missão fora do canvas.** Seleção por teclado, foco visível, resumo textual, pausa, redução de movimento e controles equivalentes. Aceite: concluir as mesmas decisões e consultar os mesmos dados com a representação textual.
+6. **Validar entendimento.** Observar jogadores explicando a consequência de uma escolha e distinguindo dado NASA, hipótese didática e referência visual. Registrar problemas antes de adicionar Bennu, telescópios ou campanhas lunares.
+
+A integração não depende de incorporar todos os ativos. O catálogo torna as escolhas futuras concretas e auditáveis; o primeiro avanço deve provar que a representação 3D ajuda a compreender a missão e mantém os resultados verificáveis.
+
+
+---
+
+# 29 — Game Design: a missão termina quando a ciência chega
+
+Fonte: `docs/29-GAME-DESIGN-3D.md` · SHA-256 original: `aebcbb0646845467c526e7f175bb2d26071a2f0a919614cd069394232fb12689` · Ajustes de caminhos privados: 0
+
+# 29 — Game Design: a missão termina quando a ciência chega
+
+**Revisão R13 · 14/11/2026 · proposta de evolução sobre o beta 0.4.0-beta.2.**
+
+[Explorar a proposta interativa](https://projeto-ipe.vercel.app/game-design.html) · [Jogar a base atual](https://projeto-ipe.vercel.app/lab/index.html) · [Acervo NASA 3D](28-OPORTUNIDADES-NASA-3D.md) · [Handoff da dupla](25-HANDOFF-DOIS-DEVS.md).
+
+## 1. Proposta e diferencial
+
+**PROJETO IPÊ é um jogo de engenharia de missões em que você constrói uma nave para responder a uma pergunta científica, acompanha o caminho dos dados e redesenha a missão quando a ciência não chega.**
+
+O propósito vem antes da peça. A pergunta inicial é sobre vegetação do Cerrado; o jogador precisa entregar seis registros históricos válidos, respeitando os limites do projeto. A experiência desejada conecta cinco cenas 3D: uma mesa científica, o hangar, a integração ao lançamento, a órbita e a estação de recepção. O mesmo registro acompanha essa viagem: pedido, processado, armazenado, recebido e validado.
+
+O diferencial proposto é a **revisão causal da missão**. Ao encontrar uma falha, o jogador volta ao instante relevante, vê qual componente e recurso estavam envolvidos, declara uma hipótese, altera uma escolha e compara a nova tentativa. A cena mostra a evidência produzida pelo motor. Cada tentativa conserva seu projeto e suas entradas.
+
+Essa combinação é uma hipótese de diferenciação do Ipê, ainda a avaliar com jogadores; não é uma alegação de novidade mundial. Uma animação convincente ajuda a compreender, mas não comprova que uma missão é viável.
+
+## 2. O que já existe e o que esta revisão propõe
+
+| Capacidade | Base implementada | Próxima evolução proposta |
+|---|---|---|
+| Ciência | Seis registros Terra/MODIS históricos, validação e retorno científico | Mesa de descoberta 3D com os mesmos registros e suas limitações |
+| Projeto | Seis escolhas binárias, 64 configurações por cenário | Inspeção de peças com requisito, unidade e efeito esperado |
+| 3D | Terra conceitual, CubeSat configurável, vistas de câmera e alternativa SVG 2D | Seleção de subsistemas, vista explodida e cena guiada pelo resultado |
+| Operação | Motor determinístico, diário de eventos, energia, memória e contatos | Linha do tempo que destaca restrições observadas e recursos envolvidos na nave e no solo |
+| Redesign | Hipótese, execução, comparação, busca de alternativas e replay | Comparação visual A/B sincronizada pelo mesmo instante da missão |
+| Lançamento | Limites didáticos de massa/custo; não há veículo selecionável | Explicação visual da integração e, em etapa posterior, contrato próprio de lançamento |
+| Recursos NASA | Registros científicos, referências e seis fotografias locais | Curadoria de modelos e texturas com procedência; adoção por ativo |
+
+A página interativa desta revisão é um **estudo de experiência**, com esquemas SVG e comparação qualitativa. Ela não implementa as cinco novas cenas, não altera a pontuação e não executa GMAT. O jogo atual continua sendo a referência para resultados numéricos.
+
+## 3. Quatro segmentos, uma cadeia de decisões
+
+A apresentação NASA [Design and Develop Science Missions](https://ntrs.nasa.gov/citations/20250002492) orienta a leitura da missão como um sistema completo. A aplicação abaixo é uma proposta de game design do Ipê.
+
+| Segmento | Pergunta do jogador | Interação 3D desejada | Consequência verificável |
+|---|---|---|---|
+| Usuário científico | Que evidência preciso receber? | Selecionar um registro na mesa do Cerrado e ler sua procedência | Só registros integralmente recebidos e válidos contribuem para o objetivo |
+| Espaço | Que nave consegue executar o plano? | Inspecionar painel, bateria, processamento, memória e rádio no hangar | Alterações usam os totais e resultados do motor existente |
+| Lançamento | Este projeto cabe no envelope da missão? | Inspecionar o satélite no volume de integração; confirmar requisitos antes da transição | Na primeira entrega, usar apenas limites já modelados; escolha de lançador requer novos dados e regras |
+| Solo | Como a ciência chega às pessoas? | Ver contato disponível, fila e recepção dos registros | A estação apresenta os contatos didáticos e os bits recebidos; não reserva uma antena real |
+
+O segmento de usuário abre e fecha a experiência. Não basta mostrar um foguete decolando: o jogador deve terminar capaz de explicar o que foi recebido e por que uma mudança ajudou ou prejudicou a missão.
+
+## 4. Jornada de uma partida
+
+1. **Entender.** Um pedido científico apresenta a pergunta, os seis registros e o critério de sucesso. Um exemplo mostra a diferença entre arquivo recebido e evidência válida.
+2. **Construir.** No hangar, escolher componentes por botões e fichas; a geometria acompanha a configuração. Inspecionar uma peça revela W, Wh, capacidade ou taxa com unidade explícita.
+3. **Prever.** Registrar a hipótese antes da execução. O pré-voo aponta restrições, sem revelar automaticamente a solução.
+4. **Preparar o lançamento.** Mostrar a checagem de integração e a transição para a missão. No primeiro recorte, esta etapa é uma representação dos requisitos existentes, sem física de subida inventada.
+5. **Executar.** Assistir ou avançar por eventos. Pausar, voltar e escolher um instante não recalculam a missão nem mudam seu resultado.
+6. **Investigar.** Selecionar um evento de perda ou atraso e seguir o registro entre processamento, memória e recepção. Texto e diagrama apresentam a mesma restrição observada; a comparação ajuda a investigar a hipótese causal.
+7. **Redesenhar e comparar.** Alterar preferencialmente uma escolha, formular nova hipótese e executar outra tentativa. Comparar ciência válida e margens de recursos sob o mesmo cenário.
+
+Meta de produto para uma demonstração: tornar esse ciclo legível em poucos minutos, sem exigir domínio prévio de astrodinâmica. O tempo real de uso deve ser medido; não está estabelecido nesta revisão.
+
+## 5. Onde o 3D tem função
+
+| Cena proposta | O que o jogador deve perceber | Reuso e fonte | Primeira entrega |
+|---|---|---|---|
+| Mesa científica | Os registros têm local, data, qualidade e origem | Dados MOD13Q1 preservados; fotografia NASA como contexto | Globo com pontos e ficha fora do canvas; nenhuma superfície inventada como medição |
+| Hangar | Cada peça tem uma função e compromissos | CubeSat procedural existente; CubeSat 101 e estado da arte como referências | Foco por subsistema e configuração visível; vista explodida opcional |
+| Integração/lançamento | Restrições precisam ser atendidas antes da partida | Envelope didático existente; modelos NASA selecionados no catálogo | Breve cena de integração com botão para pular |
+| Órbita operacional | O tempo e os recursos limitam a missão | Cena R3F existente, eventos e séries do motor | Pausa/seleção de evento e estados de energia, processamento e memória |
+| Recepção e descoberta | Transmitir, receber e validar são etapas diferentes | Contatos simulados e retorno científico existente | Destaque da estação e do registro que chega; retorno à mesa científica |
+
+O objetivo é usar 3D em toda a **experiência espacial**, mantendo leitura, unidades, fontes e decisões acessíveis em HTML. O usuário pode completar a partida com teclado e representação 2D. Evitar textos pequenos presos ao modelo, decisões dependentes de arrastar ou informação transmitida somente por cor.
+
+Cada cena deve oferecer uma câmera inicial útil, seleção por botões, reposição da câmera, pausa e preferência por movimento reduzido. Não executar vários canvases pesados em paralelo: a comparação pode reutilizar uma cena com alternância A/B e gráficos comuns.
+
+### Linguagem visual
+
+Manter a identidade Ipê: cobre para construção, azul para comunicação, papel claro para estudo e fundo espacial para operação. A marca vetorial permanece sem caixa no cabeçalho claro. Bricolage Grotesque organiza títulos e Plus Jakarta Sans sustenta leitura e controles, com arquivos locais. As fotografias têm legenda e crédito; um modelo de uma missão NASA aparece identificado como referência, não como projeto original do Ipê.
+
+Os modos de visualização devem informar sua fidelidade: **conceitual**, **resultado do motor didático** ou **trajetória de referência importada**. São camadas distintas. A aparência realista de um GLB não fornece massa, potência, trajetória ou desempenho de engenharia.
+
+## 6. Mecânicas e equilíbrio
+
+**Condição atual de sucesso:** seis registros válidos e atendimento às restrições da missão. Preservar esse contrato; não acrescentar um score secreto ou pontuação calculada na cena.
+
+**Conflitos produtivos:** capacidade versus massa/custo, transmissão versus disponibilidade de energia, processamento versus volume de dados, memória versus duração do contato. A explicação precisa vir dos eventos registrados e das unidades corretas; não concluir causalidade apenas porque dois indicadores mudaram juntos.
+
+**Progressão sugerida:** primeiro aprender a cadeia de dados no cenário de contatos longos; depois enfrentar contatos curtos; por fim comparar projetos. Semente e Raízes podem nomear esses percursos já fundamentados. Campanhas sobre tempestades solares, asteroides e telescópios são expansões com objetivos próprios, posteriores ao ciclo completo do Cerrado.
+
+**Ajuda gradual:** começar com uma pergunta orientadora; depois indicar um evento; só então oferecer uma alternativa explicada pelo motor. Registrar se a comparação usou ajuda, sem apresentar esse registro como certificado de aprendizagem.
+
+**Sem sorte oculta no recorte inicial:** o cenário e as entradas ficam conhecidos e preservados. Eventos solares futuros devem usar snapshot identificado, regras explícitas e possibilidade de repetir a partida.
+
+## 7. Ferramentas NASA como oportunidade concreta
+
+| Recurso oficial | Uso recomendado no Ipê | Limite e prioridade |
+|---|---|---|
+| [NASA 3D Resources](https://science.nasa.gov/3d-resources/) | Modelos, texturas e referências para cenas; catálogo com URLs, créditos, formato e tamanho | P0: curar ativos da missão escolhida. Download gratuito não equivale a licença genérica para qualquer marca ou conteúdo terceiro |
+| [CubeSat 101](https://www.nasa.gov/wp-content/uploads/2017/03/nasa_csli_cubesat_101_508.pdf) | Dar contexto às fichas e ao percurso conceito–integração–operação | P0: conteúdo educativo; não usar medidas de um modelo visual como requisitos reais |
+| [Mission Design Lab](https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab) | Inspirar revisões de conceito e comparação de alternativas | P0: método de trabalho; não é API nem serviço integrado ao jogo |
+| [CMLs no Mission Design Center](https://www.nasa.gov/ames-engineering/spaceflight-division/mission-design-center/about-our-studies/) | Organizar o estudo: ideia, viabilidade inicial, alternativas e projeto de referência | P0: progressão didática inspirada nos níveis iniciais; não emitir classificação CML oficial |
+| [NASA Mission Viz](https://github.com/nasa/mission-viz) | Estudar exemplos e tutoriais de representação orbital | P1: referência de visualização; não pressupor um endpoint de trajetórias prontas |
+| [GMAT](https://software.nasa.gov/software/GSC-19640-1) | Gerar uma trajetória de referência fora do navegador e comparar com o modelo didático | P1: software de análise, não API REST de tempo real. Executar e validar antes de anunciar integração |
+| [Build It Yourself / Scope It Out](https://science.nasa.gov/mission/webb/game-scope-it-out/) | Aprender como objetivos científicos restringem instrumentos e óptica | P1: estudar progressão; não copiar arte, código ou toda a estrutura do jogo |
+| [SPICE e ferramentas de missão](https://www.nasa.gov/smallsat-institute/space-mission-design-tools/) | Futuras geometrias e orientação com kernels e referenciais declarados | P2: exige contrato de época, unidade, referencial e procedência |
+| [JPL Mission Design](https://ssd-api.jpl.nasa.gov/doc/mdesign.html), Horizons e SBDB | Campanha futura de pequenos corpos com decisões de janela e energia | P2: escopo próprio; Mission Design não é um projetista universal para todos os planetas |
+| [DONKI](https://ccmc.gsfc.nasa.gov/tools/DONKI/) | Desafio futuro com evento solar histórico e escolha de proteção/segurança | P2: transformar ocorrência em mecânica exige um modelo explícito; registro de CME não prova dano a uma nave |
+
+As descrições da página do desafio enviadas pelo usuário foram usadas como briefing. O endereço oficial do desafio não pôde ser lido integralmente nesta consulta; as fontes acima foram procuradas individualmente. Recursos encontrados não confirmam inscrição, elegibilidade nem situação atual do evento.
+
+## 8. Contrato entre simulação, cena e dados
+
+O motor existente continua sendo a única fonte de resultados. A futura camada de apresentação recebe configuração preservada, cenário, resultado e instante selecionado. Ela deriva qual peça destacar e qual restrição e recurso explicar; não substitui equações ou cria eventos de sucesso.
+
+A inspeção do código encontrou um ponto de integração preciso: `MissionControl.tsx` já reproduz a série `trace`; `Scene.tsx` aparece no briefing e no hangar, e seus consumidores atuais não passam o progresso da missão. O canvas também não aceita seleção direta de peças. Portanto, o primeiro ganho é conectar esses estados existentes, antes de acrescentar uma nova simulação.
+
+Para o replay visual, Dev A deve primeiro definir um mapeamento dos campos existentes de resultado para tempo, eventos, energia, memória, transmissão e validação. Dev B implementa a cena sobre esse contrato. Se um estado não está registrado ou não pode ser derivado com fidelidade, a interface mostra ausência de informação.
+
+Casos de aceite do adaptador: no eclipse, geração e bateria refletem o estado registrado; o enlace aparece apenas durante transmissão efetiva; um registro parcial continua incompleto ao fechar o contato; o par científico só fica disponível após as duas entregas válidas. Ao voltar na linha do tempo, não antecipar dados ou eventos futuros. Usar estados discretos do motor e identificar qualquer interpolação apenas visual.
+
+A comparação A/B sincroniza por `timeS`, nunca pelo índice da `trace`: tentativas podem ter fronteiras temporais diferentes. O adaptador deve documentar se apresenta o estado anterior ou posterior à transição e conservar todos os eventos daquele horário. `appendTrace` substitui pontos com tempo igual, enquanto `events` pode manter vários eventos; uma amostra não deve apagar essa sequência.
+
+Trajetórias GMAT/SPICE futuras precisam declarar: ferramenta e versão, arquivo de entrada, época, unidade, referencial, passo temporal, hipóteses e hash. O consumidor rejeita unidades ou referenciais incompatíveis. Interpolação visual deve ser identificada e não alimentar regras de missão sem validação específica.
+
+APIs externas entram por coleta controlada, com cache e snapshots; chaves ficam fora do cliente. A missão demonstrada deve funcionar com os dados locais publicados. Antes de prometer operação offline, testar também a recarga e o primeiro acesso sem rede.
+
+## 9. Ativos 3D e desempenho
+
+Usar o [catálogo curado](28-OPORTUNIDADES-NASA-3D.md), sem importar o acervo inteiro. Priorizar Earth/terreno como contexto e nave procedural como projeto interativo. Uma antena de espaço profundo é referência de uma expansão; não substituir a estação didática LEO pela DSN como se fossem equivalentes.
+
+Para cada ativo adotado: guardar URL oficial, autoria, condições de uso, arquivo original, data de obtenção, hash, tamanho, e registrar alterações de materiais/escala/geometria. Modelos STL voltados à impressão podem precisar de conversão, materiais e redução de geometria; não supor que todos são GLB prontos para web.
+
+Metas propostas, ainda não medidas: cena essencial sob demanda; até 5 MB adicionais comprimidos para o primeiro pacote 3D; texturas iniciais até 2K; resolução de renderização limitada conforme dispositivo; tentar 30 quadros/s estáveis no dispositivo móvel escolhido para ensaio. Se a medição falhar, reduzir geometria/textura/efeitos e manter alternativa 2D. Um limite de bytes não garante fluidez.
+
+Evitar pós-processamento e partículas sem função de leitura. Suspender renderização contínua quando não houver movimento ou quando a cena estiver fora de vista. Preservar geometria procedural para partes que mudam com as escolhas; não trocar um hangar funcional por uma nave pronta e indivisível.
+
+## 10. Plano para dois desenvolvedores
+
+Sequência por entregas, sem inventar prazo ou velocidade da dupla. Antes de iniciar, ambos confirmam o commit-base, um responsável por arquivo compartilhado e o cenário de demonstração.
+
+| Entrega | Dev A — domínio e evidência | Dev B — 3D e experiência | Aceite para integrar |
+|---|---|---|---|
+| E0 — referência | Reproduzir resultados longo/curto/redesign e congelar entradas | Reproduzir navegação, hangar e alternativa 2D | Mesma versão e casos de referência, sem alteração de resultado |
+| E1 — uma causa visível | Mapear um evento real e seus recursos; documentar o contrato | Selecionar o evento, focar a peça e mostrar causa/unidade | Evento e números iguais ao motor; teclado e 2D equivalentes |
+| E2 — redesign visível | Preservar tentativas e calcular comparação A/B no mesmo cenário | Alternar duas configurações e destacar a diferença | A cena nunca apresenta resultado antigo como projeto novo |
+| E3 — missão completa | Revisar requisitos e estado de cada registro | Integrar mesa, hangar, transição de lançamento, órbita e solo | Cadeia completa; cenas propostas identificadas até serem implementadas |
+| E4 — um ativo NASA | Verificar procedência e consistência do recurso adotado | Otimizar e integrar o ativo, medir dispositivo alvo | Crédito, tamanho, fallback e ausência de regressão documentados |
+| E5 — apresentação | Conferir fatos, hipóteses e resultados da demonstração | Ensaiar roteiro e observar jogadores | Uma pessoa explica a causa da falha e a melhoria; relatar achados sem generalizar |
+
+Na primeira rodada, concluir E0–E2 antes de ampliar o número de cenas. Isso entrega um diferencial observável sobre a base atual. E3–E4 ampliam presença espacial com o contrato estável. GMAT e novas campanhas entram depois da demonstração completa; não bloqueiam o núcleo educativo.
+
+Arquivos: Dev A assume `experiments/mission-design-lab/src/core/`, `src/lab/` e testes de domínio; Dev B assume `src/ui/`, `src/ui/OrbitalScene.tsx`, `src/ui/Scene.tsx`, estilos, testes de interface e ativos. `src/App.tsx`, contratos e versão têm um editor por vez. Consultar o [handoff](25-HANDOFF-DOIS-DEVS.md) para o mapa completo.
+
+## 11. Critérios de avaliação e roteiro de apresentação
+
+1. O jogador identifica o objetivo científico antes de escolher peças.
+2. Uma escolha muda a configuração visual e a ficha correta, sem resultado paralelo.
+3. Uma falha é explicada por evento e unidade, com caminho do registro visível.
+4. Uma nova tentativa usa sua própria hipótese e suas próprias entradas.
+5. A comparação mantém ciência válida, restrições e origem dos dados legíveis.
+6. O percurso essencial funciona por teclado, sem arrastar o canvas e com alternativa 2D.
+7. Ativos NASA têm crédito e função pedagógica; limites do modelo estão próximos da visualização.
+
+**Pitch proposto:** “Projetar uma missão é fazer a ciência chegar. No Ipê, você constrói um CubeSat, acompanha os dados do Cerrado e descobre por que uma escolha falhou. Volta à evidência, muda o projeto e vê a diferença. O espaço em 3D torna visível a engenharia que conecta uma pergunta científica à sua resposta.”
+
+Na demonstração, mostrar objetivo → projeto → falha explicada → uma mudança → resultado comparado → dado com procedência. Usar somente casos reproduzidos na versão apresentada. A revisão R13 publica esta especificação e seu estudo interativo; o aceite das novas mecânicas depende das próximas entregas e de verificações próprias.
 
 
 ---

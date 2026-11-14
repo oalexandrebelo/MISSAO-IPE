@@ -257,7 +257,7 @@ async function run() {
     const destinations = [...document.querySelectorAll('a[href]')].map(link => new URL(link.getAttribute('href'), 'https://beta.invalid/').pathname);
     for (const href of ['/lab/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html']) assert.ok(destinations.includes(href), `Destino principal ausente: ${href}`);
     assert.equal(document.querySelectorAll('form').length, 0, 'Portal não deve introduzir coleta de dados nesta rodada');
-    assert.match(document.querySelector('.brand img')?.getAttribute('src') || '', /projeto-ipe-logo\.svg$/);
+    assert.match(document.querySelector('.brand img')?.getAttribute('src') || '', /projeto-ipe-logo-on-light\.svg$/);
     const logo = new JSDOM(bytesByFile.get('brand/projeto-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
     assert.ok(logo.querySelectorAll('path').length > 0, 'Marca vetorial sem contornos');
     assert.equal(logo.querySelectorAll('image,foreignObject,script').length, 0, 'Marca deve ser SVG real sem bitmap ou código incorporado');
@@ -276,6 +276,21 @@ async function run() {
     }
     for (const filename of files.filter(file => file.endsWith('.css'))) inspectCss(filename, bytesByFile.get(filename).toString('utf8'));
     observations.localReferences = { count: references.length, uniqueTargets: new Set(references.map(reference => reference.target)).size, entries: references };
+  });
+
+  await check('acervo visual publica imagens locais com crédito, dimensões e integridade', async () => {
+    const media = JSON.parse(bytesByFile.get('media/manifest.json'));
+    assert.ok(media.images.length >= 4, 'Acervo visual incompleto');
+    for (const image of media.images) {
+      assert.match(image.file, /^[a-z0-9-]+\.(?:jpg|jpeg|png|webp)$/i);
+      const bytes = bytesByFile.get(`media/${image.file}`);
+      assert.ok(bytes, `Imagem ausente: ${image.file}`);
+      assert.equal(digest(bytes), image.sha256, `Imagem alterada sem atualizar procedência: ${image.file}`);
+      assert.ok(image.alt && image.caption && image.credit && image.sourceUrl);
+      assert.ok(Number.isInteger(image.width) && image.width > 0 && Number.isInteger(image.height) && image.height > 0);
+    }
+    assert.doesNotMatch(bytesByFile.get('mission-visuals.js').toString('utf8'), /__IPE_NASA_MEDIA__/);
+    observations.visualCollection = { images: media.images.length, local: true, integrity: true };
   });
 
   await check('imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/', async () => {

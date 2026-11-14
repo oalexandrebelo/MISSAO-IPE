@@ -1,16 +1,16 @@
 {
-  "startedAt": "2026-11-14T19:04:12.863Z",
-  "finishedAt": "2026-11-14T19:04:14.437Z",
+  "startedAt": "2026-11-14T19:37:20.812Z",
+  "finishedAt": "2026-11-14T19:37:22.497Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
-  "checksPassed": 15,
+  "checksPassed": 16,
   "checksFailed": 0,
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 31047,
-    "sha256": "5a8310ed3c155d35eb9e8d6e4d03d06435af41c1bd09423df0d8488e684d6de3"
+    "bytes": 32057,
+    "sha256": "c96313210c8665750e3161f87c1340c5af333f7810782872f837458db01a220e"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "910bd408f4dbe486997ff714db512fbfea2ea9d2055223326851c679593b14bc"
+        "sha256": "9436e4f3ce30711705d5a7da3fc0632c2f3d59805d525b6efb4f32fce4e7d4bb"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 162,
-      "manifestedFiles": 161,
-      "bytes": 12464320,
+      "fileCount": 183,
+      "manifestedFiles": 182,
+      "bytes": 13728319,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 150,
+      "inspectedFiles": 165,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 1011,
-      "uniqueTargets": 116,
+      "count": 1109,
+      "uniqueTargets": 127,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -371,8 +371,8 @@
         },
         {
           "source": "context/index.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -416,6 +416,12 @@
           "source": "context/research-library.html",
           "target": "lab/index.html",
           "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
           "kind": "navigation"
         },
         {
@@ -657,6 +663,27 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-27-acervo-visual-nasa-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-28-oportunidades-nasa-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-29-game-design-3d-md"
         },
         {
           "source": "context/research-library.html",
@@ -1041,7 +1068,21 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-23-identidade-visual-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
         },
         {
           "source": "context/research-library.html",
@@ -1063,6 +1104,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-publicado-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-27-acervo-visual-nasa-md"
         },
         {
           "source": "context/research-library.html",
@@ -1140,6 +1188,20 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-git-proveniencia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-29-game-design-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-28-oportunidades-nasa-3d-md"
         },
         {
           "source": "context/research-library.html",
@@ -1230,6 +1292,20 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-29-game-design-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-28-oportunidades-nasa-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-22-plano-continuidade-md"
         },
         {
@@ -1308,6 +1384,34 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-28-oportunidades-nasa-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-28-oportunidades-nasa-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
         },
         {
           "source": "context/research-library.html",
@@ -1444,14 +1548,26 @@
         },
         {
           "source": "context/research-library.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "mission-visuals.js",
+          "requestPath": "/mission-visuals.js",
+          "kind": "script"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
           "source": "context/research-library.html",
           "target": "fonts/fonts.css",
           "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "mission-visuals.css",
+          "requestPath": "/mission-visuals.css",
           "kind": "link-stylesheet"
         },
         {
@@ -1547,8 +1663,8 @@
         },
         {
           "source": "docs/09-VERIFICACAO.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -1650,8 +1766,8 @@
         },
         {
           "source": "docs/13-ARQUITETURA-ARCHIFY.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -1741,8 +1857,8 @@
         },
         {
           "source": "docs/14-BETA-DEPLOY.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -1826,8 +1942,8 @@
         },
         {
           "source": "docs/15-PLANO-RELEASE.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -1911,8 +2027,8 @@
         },
         {
           "source": "docs/16-OPORTUNIDADES-BETA.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -2506,8 +2622,8 @@
         },
         {
           "source": "docs/18-CONTEXTO-COMPLETO.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -2591,8 +2707,8 @@
         },
         {
           "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -2694,8 +2810,8 @@
         },
         {
           "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -2791,8 +2907,8 @@
         },
         {
           "source": "docs/21-OPORTUNIDADES-NASA.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -2900,8 +3016,8 @@
         },
         {
           "source": "docs/22-PLANO-CONTINUIDADE.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -2991,8 +3107,8 @@
         },
         {
           "source": "docs/23-IDENTIDADE-VISUAL.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3118,8 +3234,8 @@
         },
         {
           "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3175,6 +3291,18 @@
           "source": "docs/25-HANDOFF-DOIS-DEVS.html",
           "target": "docs/index.html",
           "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/29-GAME-DESIGN-3D.md",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.md",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.md",
           "kind": "navigation"
         },
         {
@@ -3287,8 +3415,8 @@
         },
         {
           "source": "docs/25-HANDOFF-DOIS-DEVS.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3372,8 +3500,8 @@
         },
         {
           "source": "docs/26-TIPOGRAFIA.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3390,6 +3518,285 @@
         },
         {
           "source": "docs/26-TIPOGRAFIA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "docs/27-ACERVO-VISUAL-NASA.html",
+          "requestPath": "/docs/27-ACERVO-VISUAL-NASA.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "docs/27-ACERVO-VISUAL-NASA.md",
+          "requestPath": "/docs/27-ACERVO-VISUAL-NASA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/27-ACERVO-VISUAL-NASA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.md",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/29-GAME-DESIGN-3D.html",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.md",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.md",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/29-GAME-DESIGN-3D.md",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/29-GAME-DESIGN-3D.html",
           "target": "documentation.css",
           "requestPath": "/documentation.css",
           "kind": "link-stylesheet"
@@ -3493,8 +3900,8 @@
         },
         {
           "source": "docs/AUTORIA-E-IA.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3614,8 +4021,8 @@
         },
         {
           "source": "docs/COMO-USAR.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3723,8 +4130,8 @@
         },
         {
           "source": "docs/ESTADO-PUBLICO.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3832,8 +4239,8 @@
         },
         {
           "source": "docs/ORIGEM-DOS-DADOS.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -3901,6 +4308,42 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/29-GAME-DESIGN-3D.html",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/29-GAME-DESIGN-3D.md",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.md",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/27-ACERVO-VISUAL-NASA.html",
+          "requestPath": "/docs/27-ACERVO-VISUAL-NASA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/27-ACERVO-VISUAL-NASA.md",
+          "requestPath": "/docs/27-ACERVO-VISUAL-NASA.md",
           "kind": "navigation"
         },
         {
@@ -4193,8 +4636,8 @@
         },
         {
           "source": "docs/index.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -4213,6 +4656,149 @@
           "source": "docs/index.html",
           "target": "documentation.css",
           "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation",
+          "fragment": "main"
+        },
+        {
+          "source": "game-design.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation",
+          "fragment": "comparar"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation",
+          "fragment": "cenas"
+        },
+        {
+          "source": "game-design.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "game-design.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "docs/29-GAME-DESIGN-3D.html",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.html",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "docs/29-GAME-DESIGN-3D.html",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "docs/29-GAME-DESIGN-3D.html",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "docs/27-ACERVO-VISUAL-NASA.html",
+          "requestPath": "/docs/27-ACERVO-VISUAL-NASA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.js",
+          "requestPath": "/game-design.js",
+          "kind": "script"
+        },
+        {
+          "source": "game-design.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "game-design.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "game-design.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "game-design.html",
+          "target": "game-design.css",
+          "requestPath": "/game-design.css",
           "kind": "link-stylesheet"
         },
         {
@@ -4360,6 +4946,18 @@
         },
         {
           "source": "index.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "docs/29-GAME-DESIGN-3D.html",
+          "requestPath": "/docs/29-GAME-DESIGN-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
           "target": "docs/25-HANDOFF-DOIS-DEVS.html",
           "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
@@ -4402,8 +5000,14 @@
         },
         {
           "source": "index.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "mission-visuals.js",
+          "requestPath": "/mission-visuals.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -4416,6 +5020,12 @@
           "source": "index.html",
           "target": "fonts/fonts.css",
           "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "index.html",
+          "target": "mission-visuals.css",
+          "requestPath": "/mission-visuals.css",
           "kind": "link-stylesheet"
         },
         {
@@ -6141,8 +6751,8 @@
         },
         {
           "source": "presentation/PITCH_EN_7_SLIDES.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -6238,8 +6848,8 @@
         },
         {
           "source": "presentation/README_APRESENTADOR.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -6329,8 +6939,8 @@
         },
         {
           "source": "presentation/ROTEIRO_PT_EN.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -6432,8 +7042,8 @@
         },
         {
           "source": "research/01-regras-ciencia.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -6517,8 +7127,8 @@
         },
         {
           "source": "research/11-revisao-spaceapps-apresentacao.html",
-          "target": "brand/projeto-ipe-logo.svg",
-          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
           "kind": "img"
         },
         {
@@ -6624,6 +7234,11 @@
           "kind": "module-import"
         }
       ]
+    },
+    "visualCollection": {
+      "images": 6,
+      "local": true,
+      "integrity": true
     },
     "gameModuleGraph": {
       "modules": 8,
@@ -6811,6 +7426,11 @@
         "path": "lab/assets/search-nJBL8qRn.js",
         "source": "experiments/mission-design-lab/dist/assets/search-nJBL8qRn.js",
         "sha256": "5fdaab8cc087f424985efffac4ad0875a547b4cfbcc8df2f9fc53d31fd1d2dc4"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-logo-on-light.svg",
+        "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo-on-light.svg",
+        "sha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df"
       },
       {
         "path": "lab/brand/projeto-ipe-logo.png",
@@ -7138,8 +7758,8 @@
       {
         "path": "NOTICE.md",
         "status": 200,
-        "bytes": 3629,
-        "sha256": "2c3e2d192ab582bc745c77358b258cd239f839f519af51ad93d2016b152f8b86",
+        "bytes": 4064,
+        "sha256": "d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -7162,6 +7782,13 @@
         "bytes": 165126,
         "sha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
         "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "brand/projeto-ipe-logo-on-light.svg",
+        "status": 200,
+        "bytes": 46175,
+        "sha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
+        "contentType": "image/svg+xml"
       },
       {
         "path": "brand/projeto-ipe-logo.png",
@@ -7187,8 +7814,8 @@
       {
         "path": "context/index.html",
         "status": 200,
-        "bytes": 135589,
-        "sha256": "9fc825dac589f364e3f3dacdd9cfa177d063fb8c7f116850873f4299660f6e4f",
+        "bytes": 135758,
+        "sha256": "aac73e4577ba3b1a749afd21dfd3f178a576f930d66a4b034ca764c85736c47d",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7201,29 +7828,29 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 43492,
-        "sha256": "bbe9d2d0dbb084e281c2f0e57befd214414083b03f0a7cd5b328c0d4b30b4031",
+        "bytes": 44987,
+        "sha256": "f8111d10bd0f7fdb06cb24f85b08b560cc2e195a33064899b96a6916f617b1f6",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 1702523,
-        "sha256": "2d2908ef3660043fd06385be0a4b1e159aa53e2f7395cd14e7531c37441d3e54",
+        "bytes": 1762879,
+        "sha256": "1ed438f56b9d94f41eb2fab28eb47d5ddd32304800c4cc857ced5c8a1ce0fbcd",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1371660,
-        "sha256": "c27ff8d07a69552ee847ab9b99f3d256c87659cee64709dfa4bf154fd3ad7637",
+        "bytes": 1419460,
+        "sha256": "9c4b5b4565bd085020ee56ea0f8b4e561727f2ea4cca0600fd6614d5ede0becb",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/09-VERIFICACAO.html",
         "status": 200,
-        "bytes": 5218,
-        "sha256": "3db775ad044f40d946d2f279fef0078234983cb22d5857d85094b9e006112b2b",
+        "bytes": 5227,
+        "sha256": "bfcbaf5bb8700d2ec3a8526c2b56e047a5c8973d6f34c476b4dd72927878e1cf",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7236,8 +7863,8 @@
       {
         "path": "docs/13-ARQUITETURA-ARCHIFY.html",
         "status": 200,
-        "bytes": 14830,
-        "sha256": "c0e041f867f400859ce00cdb0da6c72225021231f2dd307968a9e56dedf1677a",
+        "bytes": 14839,
+        "sha256": "d405b326e312596ea5e9ebd660e10cc86e634ff2a2371e59cf8165a10445ac97",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7250,8 +7877,8 @@
       {
         "path": "docs/14-BETA-DEPLOY.html",
         "status": 200,
-        "bytes": 9034,
-        "sha256": "0c3b4ddaaec9cdbcada5e034a329b72745ee68b0cbc4c51a88a4ade96bee0515",
+        "bytes": 9043,
+        "sha256": "c72972c28ab0e3adffd91aac534df2cf567400bf3250b047db364e5b41993caf",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7264,8 +7891,8 @@
       {
         "path": "docs/15-PLANO-RELEASE.html",
         "status": 200,
-        "bytes": 17366,
-        "sha256": "d7e082b65c94fb2cfba90526120ec2780f0ea6d2f46c076b42976ee4cca3528f",
+        "bytes": 17375,
+        "sha256": "a9c8a1185563438d6039b8602bf81a0ef942352f808e3b3f4b08c36293e462b8",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7278,8 +7905,8 @@
       {
         "path": "docs/16-OPORTUNIDADES-BETA.html",
         "status": 200,
-        "bytes": 13741,
-        "sha256": "b8774a953f845903fd2abc196e1e3d29b2aa3c89b42ebdfa0b5c5e6c52a20792",
+        "bytes": 13750,
+        "sha256": "0b3f13838e6883f98c46fb43c5ea9d465e8e441ddb9359208e29f7e2e2fa1601",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7292,8 +7919,8 @@
       {
         "path": "docs/18-CONTEXTO-COMPLETO.html",
         "status": 200,
-        "bytes": 82751,
-        "sha256": "a283d70cd63d9a103f8786fced1356682509768b0f816f8e132b116d00256b1a",
+        "bytes": 82760,
+        "sha256": "7cfd6b9e475c21dbe4a662b18e763bde60dc3e7b9ec16353149a4022ea848f71",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7306,8 +7933,8 @@
       {
         "path": "docs/19-REVISAO-EVIDENCIAS-R8.html",
         "status": 200,
-        "bytes": 16851,
-        "sha256": "34c7f5dcc38a5d6902943c29e949c4f63968ce24c25aa30318c9dda87ced0735",
+        "bytes": 16860,
+        "sha256": "62de4f71c17f8f888fad62f3a2a8bae456ea540c958e0170dee4e3bbd0e33403",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7320,8 +7947,8 @@
       {
         "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
         "status": 200,
-        "bytes": 12646,
-        "sha256": "427bfbd94e230cc665f49f823293e1108ee0fce394d9b1d09c722185f4bbf7a7",
+        "bytes": 12655,
+        "sha256": "5ccd8262b667aefbc19fd730da66b808eee270bb1a917dbc516e607efe698f47",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7334,8 +7961,8 @@
       {
         "path": "docs/21-OPORTUNIDADES-NASA.html",
         "status": 200,
-        "bytes": 22585,
-        "sha256": "cc277a74ce27dd0d4a76ba84de91f64fc14d4da2f14b4ecea34e03d66aae4151",
+        "bytes": 22594,
+        "sha256": "4aab0b3dd9650be8a1c95c769819edfc58547f10e86844a3c194b4574675189a",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7348,8 +7975,8 @@
       {
         "path": "docs/22-PLANO-CONTINUIDADE.html",
         "status": 200,
-        "bytes": 9245,
-        "sha256": "5ec74b81ac5a4db2f2b3890260cd6eaa03a177ea78320e01ab1d815613f5af92",
+        "bytes": 9254,
+        "sha256": "9398fa9f2098a7e0af4b3a39217c758bcd98edc3a4efe16857421eb25e8915f2",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7362,22 +7989,22 @@
       {
         "path": "docs/23-IDENTIDADE-VISUAL.html",
         "status": 200,
-        "bytes": 6080,
-        "sha256": "e9db47c68f96c950ed9e743a8373f8547f6b2e729276d719aa0dfb1f6b73f406",
+        "bytes": 6699,
+        "sha256": "dd05db89f97ec9811353b21ad8a20dc8e3b761c89c0340bf95ee44c99134434e",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/23-IDENTIDADE-VISUAL.md",
         "status": 200,
-        "bytes": 4037,
-        "sha256": "42af5f0bc7f487a03e533300f23559cb0d4ee10da3f45b164af076c86bd45b2f",
+        "bytes": 4608,
+        "sha256": "0c650c92ba9ac065bf69dd3e5a357983b1cd55b02c07e3a693d16580c48ca2f5",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/24-OPORTUNIDADES-ESTUDOS.html",
         "status": 200,
-        "bytes": 18388,
-        "sha256": "351195440e84fa3f40388c7b114d70337c0980bd7666cdab43943d0a2383c8c8",
+        "bytes": 18397,
+        "sha256": "50061a7350f10ebbebfe216322985a6e78e31cfe1014e3736111e798e1cbf42b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7390,22 +8017,22 @@
       {
         "path": "docs/25-HANDOFF-DOIS-DEVS.html",
         "status": 200,
-        "bytes": 35572,
-        "sha256": "a427a046ec1a76014505cd2ef7e54d2aae33e1277d981558c02e33c989244dd9",
+        "bytes": 36198,
+        "sha256": "b1aafa6513cca1d83cbd2a8c2c0d712ff0bd93966dd33e11e8cbf272017811e5",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/25-HANDOFF-DOIS-DEVS.md",
         "status": 200,
-        "bytes": 28278,
-        "sha256": "204a2fc034070d4aa88675bddb7dffb3715ceae787c41b5190136cbcb617c771",
+        "bytes": 28854,
+        "sha256": "d746edfd300212cefeb8aec63958396f463f0b13795c67a6bff1970971c72004",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/26-TIPOGRAFIA.html",
         "status": 200,
-        "bytes": 8420,
-        "sha256": "c0ee53bcaa9f0ea01fcbe66a0e16c3be4f931a23095b103a221b39765e973d10",
+        "bytes": 8429,
+        "sha256": "9cda8f32cab5eca8a3ce5865ed40dc6587958c3451790e540183018e5c29a334",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7416,10 +8043,52 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/27-ACERVO-VISUAL-NASA.html",
+        "status": 200,
+        "bytes": 11993,
+        "sha256": "33c1658d615fc2726b768f402c82c0e39b66e5f62f2d3b835ca37c7ddb8901fd",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/27-ACERVO-VISUAL-NASA.md",
+        "status": 200,
+        "bytes": 9005,
+        "sha256": "b3f37533cf86510ab15756470875d3c9b4ead070576347362dd353494df1ea4e",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/28-OPORTUNIDADES-NASA-3D.html",
+        "status": 200,
+        "bytes": 17263,
+        "sha256": "53d12aad488afe25e7bf5b189371dce2ec5ce96820651b74af25197c678b3b8a",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/28-OPORTUNIDADES-NASA-3D.md",
+        "status": 200,
+        "bytes": 13289,
+        "sha256": "96f0114d470b17ec2dc9bf3fcc0a70417f9a022585609c22cf12ebb719481bf2",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/29-GAME-DESIGN-3D.html",
+        "status": 200,
+        "bytes": 24887,
+        "sha256": "260e63886b285814f44f5faa6a869c287f2fce508a06a82110e650cd02c53143",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/29-GAME-DESIGN-3D.md",
+        "status": 200,
+        "bytes": 20605,
+        "sha256": "aebcbb0646845467c526e7f175bb2d26071a2f0a919614cd069394232fb12689",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/AUTORIA-E-IA.html",
         "status": 200,
-        "bytes": 3323,
-        "sha256": "8fc47c6f9547bc7a59bebc5f5e8c0395de0a1daed0f6f78917053c65d9e89e76",
+        "bytes": 3332,
+        "sha256": "12e82e695e03d580e19a16b63f8320795f93d0c23c42ef442145b88d7154e006",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7432,8 +8101,8 @@
       {
         "path": "docs/COMO-USAR.html",
         "status": 200,
-        "bytes": 3804,
-        "sha256": "74f6db9117e3714ce01b9f228391e857592de075d4a4d8ba5fc28aee6855893b",
+        "bytes": 3813,
+        "sha256": "ebd830cf61cfd9d9fe69ed50118c35cec5193766ff88e3eda12e3bb30e8cef89",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7446,8 +8115,8 @@
       {
         "path": "docs/ESTADO-PUBLICO.html",
         "status": 200,
-        "bytes": 5285,
-        "sha256": "cdb0cf65fc73de6777cbfe8715e480f6b8a821e1399bd3580c56efa05daf6dd2",
+        "bytes": 5294,
+        "sha256": "1882efb42d2e6f0b320ac0039a2fb702a9722b80f6577c3ad203a038c59c03f0",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7460,8 +8129,8 @@
       {
         "path": "docs/ORIGEM-DOS-DADOS.html",
         "status": 200,
-        "bytes": 4612,
-        "sha256": "bfb5a7b82d6d49b9f88a631645c696666699d6ba92ca361d40dd3d0a4f645eb8",
+        "bytes": 4621,
+        "sha256": "ba4aae21b46b9528d9d5c9fbfcc9578ab949a577e0ffcc6701a215333027a5dd",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7474,15 +8143,15 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 7814,
-        "sha256": "9615064421522eb8808e5113103606fb5bb477baa7d9da8659e64ea5d3331aeb",
+        "bytes": 8634,
+        "sha256": "0cf679bd7eb8989c9228fe54b68b2dd01e86fb54419a51061d824461833d9179",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "documentation.css",
         "status": 200,
-        "bytes": 3854,
-        "sha256": "600491f8be79e5c49125b11ad3e762926192b71f04208c60ef7b30687d2687bc",
+        "bytes": 3827,
+        "sha256": "6bf5c3ef2cdfaca3f40ec38afbd485b050ca4090d43dd54f3300673f89330b0a",
         "contentType": "text/css; charset=utf-8"
       },
       {
@@ -7582,6 +8251,27 @@
         "bytes": 1442,
         "sha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
         "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "game-design.css",
+        "status": 200,
+        "bytes": 16102,
+        "sha256": "fddd980ec9bd9ecb57d86cc32bdda7e35aad2211f0219505111572786720cfca",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "game-design.html",
+        "status": 200,
+        "bytes": 19394,
+        "sha256": "64b50449ad3c9e096778fd3968a74ffdfa41cc61cef25d00f586afaeca392c32",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "game-design.js",
+        "status": 200,
+        "bytes": 7353,
+        "sha256": "f4e88a35c9d704f85e0599f0050852231f9c192fcf89a5c8ac3f3ca421b2ed39",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
         "path": "game/assets/OrbitalScene-B0I9aE-1.js",
@@ -7698,8 +8388,8 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 55605,
-        "sha256": "5eeab1149dd02bebf0ca956d7dc79758f403f98d122e54db3f6c1acc5bfabc45",
+        "bytes": 58279,
+        "sha256": "0ad8255555203c1a5f17fd4dfd38f38f2ebbf74ad587030ec03429ab31844db9",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -7736,6 +8426,13 @@
         "bytes": 1247,
         "sha256": "5fdaab8cc087f424985efffac4ad0875a547b4cfbcc8df2f9fc53d31fd1d2dc4",
         "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-logo-on-light.svg",
+        "status": 200,
+        "bytes": 46175,
+        "sha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
+        "contentType": "image/svg+xml"
       },
       {
         "path": "lab/brand/projeto-ipe-logo.png",
@@ -8039,6 +8736,69 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "media/bennu-osiris-rex.jpg",
+        "status": 200,
+        "bytes": 222697,
+        "sha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "media/cerrado-terra-modis.jpg",
+        "status": 200,
+        "bytes": 173985,
+        "sha256": "2643965bf8a2f6e536f4abd2ada8aa55e5052efe69ad6bc0c54abf6ff5842120",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "media/cubesats-iss.jpg",
+        "status": 200,
+        "bytes": 69467,
+        "sha256": "c1226fa2d43288dc5b78cf9584a8d3bf65f0c8fb4fb71c3f74c0296fa1fb8678",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "media/dsn-goldstone.jpg",
+        "status": 200,
+        "bytes": 82038,
+        "sha256": "a4c48d84a1f32391bd9308b122c24d4d5d2d61e4d934ae4497574e4c59a7f708",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "media/manifest.json",
+        "status": 200,
+        "bytes": 11229,
+        "sha256": "219ad860b2698b8571cc6797119470d6f2690fa9381e9a65f42e6155666ec6fe",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "media/sol-sdo.jpg",
+        "status": 200,
+        "bytes": 207346,
+        "sha256": "0dc21de757aa3e7e363ca7651fe187c5ff5d9c79b57e254320addf09e315c7a3",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "media/terra-espaco.jpg",
+        "status": 200,
+        "bytes": 84122,
+        "sha256": "f4de5a26a2d612be9d2c968f1f0b307e8af1372227df0855e4dc35257f1c5fe4",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "mission-visuals.css",
+        "status": 200,
+        "bytes": 9520,
+        "sha256": "b403519811cb35c67656bb9a5fc8db7225aae363bc63be390dc9202dd6a90a78",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "mission-visuals.js",
+        "status": 200,
+        "bytes": 22244,
+        "sha256": "4d62acbe4ff5c7e4d3b237c445ec112c556f7c33b3226089b91048c3049c985c",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
         "path": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
         "status": 200,
         "bytes": 475437,
@@ -8069,8 +8829,8 @@
       {
         "path": "presentation/PITCH_EN_7_SLIDES.html",
         "status": 200,
-        "bytes": 17442,
-        "sha256": "bbf3461cbe3d535e6b9ee2eda571435b4c8b6b91f1b7cda1835deb51ea1ef13f",
+        "bytes": 17451,
+        "sha256": "1142b6e3bfa9d9529fb497a541312482d66d04865af6604fffade441460fc5ec",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -8083,8 +8843,8 @@
       {
         "path": "presentation/README_APRESENTADOR.html",
         "status": 200,
-        "bytes": 11134,
-        "sha256": "868175f2dfcc65eab3f80fd04a8e1d456cc93c393f13246083468dee168e3539",
+        "bytes": 11143,
+        "sha256": "be0d0db7f8b88f2f3283d97752717a6810278942ece103d02cb0e4253e1985fa",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -8097,8 +8857,8 @@
       {
         "path": "presentation/ROTEIRO_PT_EN.html",
         "status": 200,
-        "bytes": 10309,
-        "sha256": "341585aec2ec11dbf32932b4f6532e77530705f55247453943ddf923163733f1",
+        "bytes": 10318,
+        "sha256": "1461148b5bf788ae2a0045176ba3388a3a8dfae48b1abcfbf49fc537b98cc28b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -8181,8 +8941,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 68128,
-        "sha256": "910bd408f4dbe486997ff714db512fbfea2ea9d2055223326851c679593b14bc",
+        "bytes": 76680,
+        "sha256": "9436e4f3ce30711705d5a7da3fc0632c2f3d59805d525b6efb4f32fce4e7d4bb",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -8216,8 +8976,8 @@
       {
         "path": "research/01-regras-ciencia.html",
         "status": 200,
-        "bytes": 27667,
-        "sha256": "97c6361ff22cc2225a93d8e33275bdc29252f531559286c42d2c20fa06df446c",
+        "bytes": 27676,
+        "sha256": "668fd5c94e5647edf609b0e2de1fb98afd0e417d2a3123b006557894e3120248",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -8230,8 +8990,8 @@
       {
         "path": "research/11-revisao-spaceapps-apresentacao.html",
         "status": 200,
-        "bytes": 18904,
-        "sha256": "d2c19a7979ceed3ad3485ff83bcc6fabaedb812410b9a714349bcf3661ae97e3",
+        "bytes": 18913,
+        "sha256": "122e0717695c9cbf50a7408cf296842091d4fd4e5f4c8a96cc87a0de548b9248",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -8261,10 +9021,17 @@
         "bytes": 4384,
         "sha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00",
         "contentType": "application/octet-stream"
+      },
+      {
+        "path": "research/nasa-3d-catalog.json",
+        "status": 200,
+        "bytes": 24255,
+        "sha256": "b4e19162531da2b4eba41426c8fd898a2626519f23699919f0d46026820658c2",
+        "contentType": "application/json; charset=utf-8"
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 126,
+      "linkedRoutesChecked": 137,
       "redirects": [
         {
           "source": "/game",
@@ -8364,77 +9131,82 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 4.976
+      "durationMs": 6.456
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.225
+      "durationMs": 0.259
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 41.504
+      "durationMs": 43.452
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 4.376
+      "durationMs": 2.283
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 77.973
+      "durationMs": 84.545
     },
     {
       "name": "todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas",
       "status": "passed",
-      "durationMs": 764.515
+      "durationMs": 818.888
+    },
+    {
+      "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
+      "status": "passed",
+      "durationMs": 0.499
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/",
       "status": "passed",
-      "durationMs": 308.446
+      "durationMs": 290.501
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 27.698
+      "durationMs": 39.123
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.967
+      "durationMs": 7.037
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 59.414
+      "durationMs": 81.808
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 62.33
+      "durationMs": 71.386
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 108.579
+      "durationMs": 127.675
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 52.998
+      "durationMs": 53.151
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.232
+      "durationMs": 1.04
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 27.09
+      "durationMs": 29.539
     }
   ]
 }

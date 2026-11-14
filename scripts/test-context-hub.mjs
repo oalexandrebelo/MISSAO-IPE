@@ -82,6 +82,7 @@ async function boot({ storage = {}, documentHtml = html, clock = data.project.as
       const localAssets = new Map([
         ['/fonts/fonts.css', ['fonts/fonts.css', 'text/css']],
         ['/brand/projeto-ipe-logo.svg', ['brand/projeto-ipe-logo.svg', 'image/svg+xml']],
+        ['/brand/projeto-ipe-logo-on-light.svg', ['brand/projeto-ipe-logo-on-light.svg', 'image/svg+xml']],
         ['/brand/projeto-ipe-symbol.svg', ['brand/projeto-ipe-symbol.svg', 'image/svg+xml']],
       ]);
       const asset = url.origin === 'https://ipe.test' && localAssets.get(url.pathname);

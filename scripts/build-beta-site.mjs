@@ -21,6 +21,9 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/29-GAME-DESIGN-3D.md', target: 'docs/29-GAME-DESIGN-3D.md', title: 'Game Design · missão em 3D', description: 'Proposta de experiência, quatro segmentos, revisão causal, cinco cenas e entregas para dois desenvolvedores.' },
+  { source: 'docs/28-OPORTUNIDADES-NASA-3D.md', target: 'docs/28-OPORTUNIDADES-NASA-3D.md', title: 'Oportunidades NASA 3D', description: 'Modelos oficiais selecionados, formatos, créditos, peso e limites técnicos de integração.' },
+  { source: 'docs/27-ACERVO-VISUAL-NASA.md', target: 'docs/27-ACERVO-VISUAL-NASA.md', title: 'Acervo visual NASA', description: 'Imagens oficiais, créditos, contexto e limites das ilustrações interativas.' },
   { source: 'docs/25-HANDOFF-DOIS-DEVS.md', target: 'docs/25-HANDOFF-DOIS-DEVS.md', title: 'Comece aqui · dois desenvolvedores', description: 'Estado comprovado, mapa do código, responsabilidades, sequência de trabalho e critérios de aceite.' },
   { source: 'docs/24-OPORTUNIDADES-ESTUDOS.md', target: 'docs/24-OPORTUNIDADES-ESTUDOS.md', title: 'Oportunidades dos Estudos', description: 'O que aproveitar de outros jogos educativos e como validar cada proposta no Ipê.' },
   { source: 'docs/23-IDENTIDADE-VISUAL.md', target: 'docs/23-IDENTIDADE-VISUAL.md', title: 'Marca e arquivos SVG', description: 'Origem da identidade, aplicação vetorial, paleta e arquivos editáveis.' },
@@ -139,7 +142,7 @@ function renderMarkdown(markdown) {
   return out.join('\n');
 }
 function page(title, content, { source, index = false } = {}) {
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · Projeto Ipê</title><link rel="icon" type="image/svg+xml" href="../brand/projeto-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="Projeto Ipê, início"><img src="../brand/projeto-ipe-logo.svg" width="300" height="100" alt="Projeto Ipê"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/25-HANDOFF-DOIS-DEVS.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>Projeto Ipê · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · Projeto Ipê</title><link rel="icon" type="image/svg+xml" href="../brand/projeto-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="Projeto Ipê, início"><img src="../brand/projeto-ipe-logo-on-light.svg" width="300" height="100" alt="Projeto Ipê"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/25-HANDOFF-DOIS-DEVS.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>Projeto Ipê · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
 }
 async function addMarkdown(entry, { index = true, category = 'public-document' } = {}) {
   if (!(await copy(entry.source, entry.target, category))) return;
@@ -155,9 +158,20 @@ await rm(stage, { recursive: true, force: true });
 await mkdir(stage, { recursive: true });
 try {
   await copy('web/index.html', 'index.html', 'public-portal');
+  for (const extension of ['html', 'css', 'js']) await copy(`web/game-design.${extension}`, `game-design.${extension}`, 'interactive-game-design-study');
+  await copy('research/nasa-3d-catalog.json', 'research/nasa-3d-catalog.json', 'official-3d-resource-catalog');
   await copy('web/documentation.css', 'documentation.css', 'documentation-style');
-  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo.png']) {
+  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo-on-light.svg', 'projeto-ipe-logo.png']) {
     await copy(`experiments/mission-design-lab/public/brand/${name}`, `brand/${name}`, 'project-brand');
+  }
+  await copy('web/mission-visuals.css', 'mission-visuals.css', 'interactive-visual-style');
+  const visualSource = await readFile(safePath(root, 'web/mission-visuals.js'), 'utf8');
+  const mediaSource = await readFile(safePath(root, 'web/media/manifest.json'), 'utf8');
+  const media = JSON.parse(mediaSource);
+  if (visualSource.split('__IPE_NASA_MEDIA__').length !== 2 || !Array.isArray(media.images)) throw new Error('Contrato do acervo visual inválido.');
+  await emit('mission-visuals.js', visualSource.replace('__IPE_NASA_MEDIA__', JSON.stringify(media)), { category: 'interactive-visual-runtime', source: 'web/mission-visuals.js', sourceSha256: digest(visualSource), dataSource: 'web/media/manifest.json', dataSha256: digest(mediaSource), transformation: 'local image metadata embedded at build time; no remote runtime dependency' });
+  for (const source of await tree('web/media')) {
+    if (/\.(?:jpg|jpeg|png|webp|json|txt|md)$/.test(source)) await copy(source, source.replace('web/', ''), 'official-visual-source');
   }
   for (const source of await tree('experiments/mission-design-lab/public/fonts')) {
     await copy(source, source.replace('experiments/mission-design-lab/public/', ''), 'local-font-and-license');
@@ -231,7 +245,7 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R12-study-handoff', version: '0.4.0-beta.2', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R13-visual-study', version: '0.4.0-beta.2', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T19:04:12.061Z",
+  "generatedAt": "2026-11-14T19:37:11.966Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 84,
+  "documentCount": 87,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -21,20 +21,20 @@
       "title": "Atribuição, licenças e autoria assistida",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 3629,
-      "originalSha256": "2c3e2d192ab582bc745c77358b258cd239f839f519af51ad93d2016b152f8b86",
-      "projectedSha256": "2c3e2d192ab582bc745c77358b258cd239f839f519af51ad93d2016b152f8b86",
+      "originalBytes": 4064,
+      "originalSha256": "d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5",
+      "projectedSha256": "d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5",
       "redactions": 0
     },
     {
       "source": "PUBLICADO.md",
       "id": "doc-publicado-md",
-      "title": "Publicação PROJETO IPÊ — R11",
+      "title": "Publicação PROJETO IPÊ — R12",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 2602,
-      "originalSha256": "ec0f026a2213fc203a0fc3cb79fbf0b32254764c941bd12519bd6cfea12e1671",
-      "projectedSha256": "ec0f026a2213fc203a0fc3cb79fbf0b32254764c941bd12519bd6cfea12e1671",
+      "originalBytes": 3957,
+      "originalSha256": "89d27b22a8c248948cd2d40845b2e2fd520165ff6cd834a10c4612b4c653c46d",
+      "projectedSha256": "89d27b22a8c248948cd2d40845b2e2fd520165ff6cd834a10c4612b4c653c46d",
       "redactions": 0
     },
     {
@@ -43,9 +43,9 @@
       "title": "PROJETO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 6007,
-      "originalSha256": "74f29163c65ee9dd266fd122b1abff4620c10e99a8b81e1abee13f11d10cea72",
-      "projectedSha256": "74f29163c65ee9dd266fd122b1abff4620c10e99a8b81e1abee13f11d10cea72",
+      "originalBytes": 7293,
+      "originalSha256": "14f36d8df97cac2a0872c1010b3e8727861a6064b83ef7dc4029f1c8432fe9f8",
+      "projectedSha256": "14f36d8df97cac2a0872c1010b3e8727861a6064b83ef7dc4029f1c8432fe9f8",
       "redactions": 0
     },
     {
@@ -296,9 +296,9 @@
       "title": "Identidade visual — PROJETO IPÊ",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 4037,
-      "originalSha256": "42af5f0bc7f487a03e533300f23559cb0d4ee10da3f45b164af076c86bd45b2f",
-      "projectedSha256": "42af5f0bc7f487a03e533300f23559cb0d4ee10da3f45b164af076c86bd45b2f",
+      "originalBytes": 4608,
+      "originalSha256": "0c650c92ba9ac065bf69dd3e5a357983b1cd55b02c07e3a693d16580c48ca2f5",
+      "projectedSha256": "0c650c92ba9ac065bf69dd3e5a357983b1cd55b02c07e3a693d16580c48ca2f5",
       "redactions": 0
     },
     {
@@ -318,9 +318,9 @@
       "title": "25 — Handoff do PROJETO IPÊ para dois desenvolvedores",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 28278,
-      "originalSha256": "204a2fc034070d4aa88675bddb7dffb3715ceae787c41b5190136cbcb617c771",
-      "projectedSha256": "204a2fc034070d4aa88675bddb7dffb3715ceae787c41b5190136cbcb617c771",
+      "originalBytes": 28854,
+      "originalSha256": "d746edfd300212cefeb8aec63958396f463f0b13795c67a6bff1970971c72004",
+      "projectedSha256": "d746edfd300212cefeb8aec63958396f463f0b13795c67a6bff1970971c72004",
       "redactions": 0
     },
     {
@@ -332,6 +332,39 @@
       "originalBytes": 5710,
       "originalSha256": "12578e565405f28b081e5f377df6e497d575439150929b5138d753ba1d4f1bb1",
       "projectedSha256": "12578e565405f28b081e5f377df6e497d575439150929b5138d753ba1d4f1bb1",
+      "redactions": 0
+    },
+    {
+      "source": "docs/27-ACERVO-VISUAL-NASA.md",
+      "id": "doc-docs-27-acervo-visual-nasa-md",
+      "title": "Acervo visual NASA — contexto, procedência e limites",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 9005,
+      "originalSha256": "b3f37533cf86510ab15756470875d3c9b4ead070576347362dd353494df1ea4e",
+      "projectedSha256": "b3f37533cf86510ab15756470875d3c9b4ead070576347362dd353494df1ea4e",
+      "redactions": 0
+    },
+    {
+      "source": "docs/28-OPORTUNIDADES-NASA-3D.md",
+      "id": "doc-docs-28-oportunidades-nasa-3d-md",
+      "title": "Oportunidades NASA 3D para o projeto Ipê",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 13289,
+      "originalSha256": "96f0114d470b17ec2dc9bf3fcc0a70417f9a022585609c22cf12ebb719481bf2",
+      "projectedSha256": "96f0114d470b17ec2dc9bf3fcc0a70417f9a022585609c22cf12ebb719481bf2",
+      "redactions": 0
+    },
+    {
+      "source": "docs/29-GAME-DESIGN-3D.md",
+      "id": "doc-docs-29-game-design-3d-md",
+      "title": "29 — Game Design: a missão termina quando a ciência chega",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 20605,
+      "originalSha256": "aebcbb0646845467c526e7f175bb2d26071a2f0a919614cd069394232fb12689",
+      "projectedSha256": "aebcbb0646845467c526e7f175bb2d26071a2f0a919614cd069394232fb12689",
       "redactions": 0
     },
     {
@@ -932,13 +965,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 1702523,
-      "sha256": "2d2908ef3660043fd06385be0a4b1e159aa53e2f7395cd14e7531c37441d3e54"
+      "bytes": 1762879,
+      "sha256": "1ed438f56b9d94f41eb2fab28eb47d5ddd32304800c4cc857ced5c8a1ce0fbcd"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1371660,
-      "sha256": "c27ff8d07a69552ee847ab9b99f3d256c87659cee64709dfa4bf154fd3ad7637"
+      "bytes": 1419460,
+      "sha256": "9c4b5b4565bd085020ee56ea0f8b4e561727f2ea4cca0600fd6614d5ede0becb"
     }
   ]
 }
