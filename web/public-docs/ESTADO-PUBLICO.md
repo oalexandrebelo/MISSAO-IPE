@@ -1,5 +1,19 @@
 # Missão Ipê BETA · estado público
 
+## Leitura atual — edição R14
+
+**14/11/2026 · implementação R14.** O [beta atual](../lab/index.html) reúne três casos científicos: Cerrado, Bennu e telescópio. A campanha do Cerrado usa seis registros históricos Terra/MODIS; as duas novas expedições usam observações sintéticas, identificadas como didáticas. Seus domínios permanecem separados. Consulte [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.html) para comportamento, versões, verificações e limites.
+
+A operação apresenta quatro segmentos: **Usuários, Lançamento, Espacial e Terrestre**. É possível revisar a missão individualmente ou com duas, três ou quatro pessoas no mesmo dispositivo. Em equipe, os quatro papéis precisam concluir a revisão antes da execução. Não há contas, salas online ou sincronização entre máquinas.
+
+Cenas 3D e a alternativa 2D acompanham estados e eventos do exercício. Os modelos locais NASA de CubeSat, DSN, Bennu e Webb são referências visuais, com procedência em [30 — Ativos NASA implementados](30-ATIVOS-NASA-IMPLEMENTADOS.html). Não fornecem os parâmetros físicos do jogo. A posição é ilustrativa; não há cálculo de transferência para Bennu ou L2, propagação orbital ou observação real pelo Webb.
+
+Este adendo descreve a edição de implementação. O [recibo atual no repositório](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) identifica a entrega efetivamente publicada e suas evidências. Aprendizagem, desempenho em dispositivo físico e elegibilidade competitiva exigem verificação própria.
+
+## Registro histórico R6 — beta clássico
+
+As seções abaixo preservam o estado e o planejamento da edição R6. Descrevem o [jogo clássico](../game/index.html) e seus materiais, não o conjunto de funcionalidades do beta R14. A meta de release registrada ao final continua sendo um registro histórico, não prova de entrega.
+
 **Edição pública R6, 14/11/2026.** Este portal reúne o jogo de pesquisa existente, a apresentação interativa e a arquitetura. O núcleo científico não recebe novas funcionalidades nesta rodada.
 
 ## O que está implementado

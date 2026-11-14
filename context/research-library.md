@@ -56,64 +56,69 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 ---
 
-# Publicação PROJETO IPÊ — R12
+# Publicação PROJETO IPÊ — R13
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `89d27b22a8c248948cd2d40845b2e2fd520165ff6cd834a10c4612b4c653c46d` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `90087835e5bc57babda07ba69099f8b4261d6710226f2e8114e6db06403518a3` · Ajustes de caminhos privados: 0
 
-# Publicação PROJETO IPÊ — R12
+# Publicação PROJETO IPÊ — R13
 
-Publicação confirmada em **14/11/2026**. Marca horizontal em SVG real, revisão tipográfica, estudo interativo e contexto ampliado para dois desenvolvedores.
+Edição publicada e conferida em **14/11/2026**: marca sem caixa nos cabeçalhos claros, SVGs interativos, seis imagens NASA, revisão do Game Design e catálogo de oportunidades 3D para dois desenvolvedores.
 
 - [Portal público](https://projeto-ipe.vercel.app/)
-- [Estudo completo — 84 documentos](https://projeto-ipe.vercel.app/context/research-library.html)
-- [Guia para dois desenvolvedores](https://projeto-ipe.vercel.app/docs/25-HANDOFF-DOIS-DEVS.html)
-- [Oportunidades dos Estudos](https://projeto-ipe.vercel.app/docs/24-OPORTUNIDADES-ESTUDOS.html)
+- [Game Design interativo](https://projeto-ipe.vercel.app/game-design.html)
+- [Game Design completo e plano da dupla](https://projeto-ipe.vercel.app/docs/29-GAME-DESIGN-3D.html)
+- [11 oportunidades NASA 3D](https://projeto-ipe.vercel.app/docs/28-OPORTUNIDADES-NASA-3D.html)
+- [Biblioteca — 87 documentos](https://projeto-ipe.vercel.app/context/research-library.html)
 - [Simulador beta](https://projeto-ipe.vercel.app/lab/index.html)
-- [Logo vetorial SVG](https://projeto-ipe.vercel.app/brand/projeto-ipe-logo.svg)
-- [Código e documentação no GitHub](https://github.com/oalexandrebelo/PROJETO-IPE)
+- [Logo SVG para cabeçalho claro](https://projeto-ipe.vercel.app/brand/projeto-ipe-logo-on-light.svg)
+- [Código e documentação](https://github.com/oalexandrebelo/PROJETO-IPE)
 
-## Versão publicada
+## Versão e registro da publicação
 
-Beta `0.4.0-beta.2`, distribuição `R12-study-handoff`. Commit de código publicado: `2363725448cc58cb1f790849bc8a555d266c529b`. Deployment Vercel: `dpl_2fXk1o5VeFqnstEiiVn9HMXCoyvP`, confirmado como `READY` com o domínio principal atribuído.
+Beta `0.4.0-beta.2`, distribuição `R13-visual-study`. Commit da revisão: `0dbbb17fecc31097557784c64b0a7679419da54c`. A primeira implantação conferida desta revisão foi `dpl_37zemSdLG5Rp3zFsy5CvU3cXNNmA`, em estado `READY`, com o domínio principal atribuído. O [recibo remoto R13](evidence/production-r13.json) registra essa implantação e o instante da conferência.
 
-O site de produção abre sem login. A configuração de proteção de previews foi preservada. Este registro e o recibo remoto são posteriores à compilação e não alteram o código publicado; o recibo compilado dentro da biblioteca conserva seu corte anterior e aponta para este documento corrente.
+O site abre publicamente, sem login. Este documento e o recibo são posteriores à primeira compilação da revisão. O Git conectado à Vercel pode gerar uma nova implantação ao publicar este registro; o recibo permanece evidência da implantação que identifica, sem pretender certificar um build posterior. A biblioteca compilada preserva o corte de seu build e aponta para este documento no GitHub.
 
-## O que mudou
+## Entregas desta edição
 
-- SVG horizontal com 108 paths: 104 paths do símbolo fornecido preservados e lettering convertido em contornos a partir da composição original. Sem bitmap incorporado ou dependência de fonte externa.
-- Bricolage Grotesque nos títulos e Plus Jakarta Sans nos textos, ambas locais, com licenças OFL e proveniência. As cinco famílias sugeridas foram avaliadas em [Tipografia](docs/26-TIPOGRAFIA.md).
-- Portal, central, biblioteca, páginas de documentação e cabeçalho do beta revisados. Biblioteca com busca, filtro atual/histórico, índice de seções, navegação entre documentos e download integral em Markdown.
-- 84 documentos no acervo: contratos das duas aplicações, PRD/PRT, pesquisa NASA, guias e evidências do beta, kit de apresentação, Estudos históricos e documentação de continuidade. Cópias geradas não entram duas vezes.
-- Handoff com mapa de arquivos, Dev A/B, coordenação, backlog, dependências e critérios de aceite. Os três Estudos fornecidos foram preservados em projeções históricas; suas instruções não se tornam ordens do Ipê.
+- Marca horizontal vetorial preservada: 108 paths, incluindo os 104 paths originais do símbolo. A variante clara muda a palavra PROJETO para azul e remove a necessidade de fundo escuro no cabeçalho. Sem imagem raster embutida.
+- Diagrama orbital com seleção de Terra, CubeSat e estação; animação opcional com pausa. Fluxo de dados explorável por mouse ou teclado. Preferência por movimento reduzido respeitada.
+- Galeria local com seis imagens oficiais, contexto, datas, créditos e fontes. Total das imagens: 839.655 bytes. [Procedência](docs/27-ACERVO-VISUAL-NASA.md).
+- Estudo de Game Design com quatro segmentos, três comparações qualitativas e cinco cenas 3D propostas. [Especificação](docs/29-GAME-DESIGN-3D.md) inclui jornada, contratos, aceites, pitch e divisão E0–E5 entre dois devs.
+- Catálogo de 11 recursos 3D oficiais: nove GLBs, sete deles abaixo de 5 MB, além de STL e ZIP. Créditos, tamanhos, Draco, arquivos externos e limites da inspeção declarados. [Catálogo JSON](research/nasa-3d-catalog.json).
+- Biblioteca ampliada para 87 documentos, mantendo busca, navegação e acervo histórico. Bricolage Grotesque e Plus Jakarta Sans continuam hospedadas localmente.
 
-## Verificação desta revisão
+O Game Design é uma proposta de evolução. A página de estudo usa diagramas SVG 2D; não representa cinco novas cenas 3D já implementadas. Nenhum GLB NASA foi incorporado ao runtime, GMAT não foi integrado e o motor da missão permaneceu inalterado.
 
-Compilação aprovada; **9 testes de interface, 24 verificações da central e 15 da distribuição/HTTP aprovados**. O motor não foi alterado; testes de domínio históricos não são apresentados como reexecução desta rodada.
+## Verificação
 
-Verificação remota sem cookies ou autorização: manifesto acessível, **161 arquivos com HTTP 200 e SHA-256 correspondente**, scripts embutidos compatíveis com a política de segurança; índice público com 84 documentos. Nenhuma divergência encontrada.
+Compilação aprovada; **24 verificações da central e 16 da distribuição/HTTP passaram**. Os testes de domínio e da UI do beta não foram reexecutados nesta rodada visual/documental; os registros anteriores conservam seu corte.
 
-Navegador: SVG, fontes, busca, filtros e navegação conferidos; leitura inspecionada em larguras de computador e celular, sem rolagem horizontal global nas superfícies observadas. A biblioteca pública abriu sem login, com a marca SVG e as fontes locais carregadas e sem erros de console observados.
+Verificação remota sem cookies ou autorização: **182 arquivos com HTTP 200 e SHA-256 correspondente**, scripts embutidos compatíveis com a política de segurança e índice público com 87 documentos. Nenhuma divergência no recibo da primeira implantação R13.
 
-- [Revisão local R12](evidence/revision-r12.json)
-- [Verificação da produção R12](evidence/production-r12.json)
-- [Registro histórico R11](evidence/production-r11.json)
+No navegador foram conferidos seleção e pausa do diagrama orbital, fluxo por teclado, galeria local, expansão do caderno visual, busca, segmentos do Game Design e comparação qualitativa. As superfícies observadas não apresentaram rolagem horizontal global em telas estreitas e amplas nem erros de console. A revisão DOM delegada conferiu estados ARIA e navegação dos controles; não equivale a teste de GPU ou auditoria completa de acessibilidade.
 
-Não houve novo estudo de aprendizagem, auditoria completa de acessibilidade, teste de dispositivo físico ou ensaio offline a frio. As integrações NASA futuras continuam propostas; dados históricos e parâmetros didáticos permanecem identificados.
+- [Revisão local R13](evidence/revision-r13.json)
+- [Verificação remota R13](evidence/production-r13.json)
+- [Histórico R12](evidence/production-r12.json)
+- [Histórico R11](evidence/production-r11.json)
 
-Procedência da marca: [docs/23-IDENTIDADE-VISUAL.md](docs/23-IDENTIDADE-VISUAL.md). Procedência dos Estudos: [references/estudos/README.md](references/estudos/README.md). Origem pública do projeto: [GIT-PROVENIENCIA.md](GIT-PROVENIENCIA.md).
+Não foram realizados estudo de aprendizagem, teste em dispositivo físico ou ensaio offline a frio. Inscrição e elegibilidade no desafio continuam exigindo confirmação. Referências e recursos NASA não representam endosso institucional.
 
 
 ---
 
 # PROJETO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `14f36d8df97cac2a0872c1010b3e8727861a6064b83ef7dc4029f1c8432fe9f8` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `a789cebe796c190af0f2cfac410492dcbde9249901c6b29421df64b5feb0fa5d` · Ajustes de caminhos privados: 0
 
 # PROJETO IPÊ — Ciência que chega
 
-Jogo educativo de engenharia de missões espaciais. Projete um CubeSat fictício, formule uma hipótese, execute a missão e investigue como entregar seis registros históricos de vegetação do Cerrado dentro dos limites de massa, orçamento, energia, potência, memória e comunicação.
+Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R13, 14/11/2026.**
+**Beta atual: 0.5.0-beta.1 · edição R14 · 14/11/2026.**
+
+**Entrada da R14:** [três missões e continuidade para dois devs](docs/31-TRES-MISSOES-CIENTIFICAS-R14.md) · [modelos NASA e créditos](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md).
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
@@ -131,19 +136,21 @@ O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidên
 
 ## O que existe
 
-O beta oferece seis escolhas binárias, 64 configurações, dois cenários de contato, revisão pré-voo, diário de eventos, sete requisitos com evidência, comparação de tentativas, replay recalculado e laboratório de física. Dados históricos MOD13Q1.061 permanecem separados dos parâmetros didáticos da nave. A cena 3D não decide o resultado do motor.
+O Cerrado preserva seu motor determinístico, 64 configurações por cenário, dados históricos MOD13Q1.061, replay verificável e busca de alternativas. Bennu e Telescópio acrescentam seis decisões de projeto: lançador, perfil orbital, instrumento, energia, contatos e vida operacional. Seus registros são sintéticos e claramente identificados.
 
-O portal tem seis etapas navegáveis, catálogo pesquisável de 13 fontes e quatro níveis narrativos propostos. Semente/Raízes reaproveitam os dois cenários existentes; Copa/Horizonte ainda são propostas. Novas integrações NASA/JPL não foram implementadas nesta edição.
+As três jornadas têm quatro segmentos — usuários, lançamento, espaço e solo — e cenas ligadas aos estados registrados. Voltar no tempo mostra apenas os dados disponíveis naquele instante. Bennu e Telescópio incluem requisitos, hipótese, execução, retorno científico, redesign, comparação A/B no mesmo segundo e projetos JSON exportáveis. O modo equipe distribui quatro papéis entre até quatro pessoas no mesmo dispositivo; não há sessão online sincronizada.
 
 ## Exploração visual
 
-A edição R13 remove os fundos da marca nos cabeçalhos claros e acrescenta diagramas SVG exploráveis e imagens oficiais NASA, hospedadas localmente. As cenas explicam conceitos; não são telemetria nem resultados do motor. O [acervo visual](docs/27-ACERVO-VISUAL-NASA.md) documenta créditos e origem.
+A marca usa o símbolo e lettering SVG enviados pelo autor, sem fundo. Quatro modelos oficiais NASA são locais: CubeSat genérico, antena DSN, Bennu e JWST. Bennu e JWST contextualizam as novas cenas; o acervo permite inspecionar os quatro modelos. O estado e os indicadores vêm do motor; uma malha não valida a engenharia. Os [créditos e limites](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md) distinguem geometria real, parâmetros didáticos e dados sintéticos.
+
+A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, trajetória de chegada, operação de antenas reais, multiplayer remoto e validação de aprendizagem permanecem futuros trabalhos. As duas ou três horas das novas missões representam somente operação após chegada.
 
 ## Código e documentação
 
 | Material | Local |
 | --- | --- |
-| Beta 0.4.0-beta.2 / R10 | `experiments/mission-design-lab/` |
+| Beta 0.5.0-beta.1 / R14 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -3139,7 +3146,7 @@ Depois: APIs oficiais → coleta sequencial no servidor ou processo editorial �
 
 # Identidade visual — PROJETO IPÊ
 
-Fonte: `docs/23-IDENTIDADE-VISUAL.md` · SHA-256 original: `0c650c92ba9ac065bf69dd3e5a357983b1cd55b02c07e3a693d16580c48ca2f5` · Ajustes de caminhos privados: 0
+Fonte: `docs/23-IDENTIDADE-VISUAL.md` · SHA-256 original: `a9cf6f8c2b212a7bdaa3829b412e223fdf6f9c04897b77b958806a72e777e9ec` · Ajustes de caminhos privados: 0
 
 # Identidade visual — PROJETO IPÊ
 
@@ -3179,6 +3186,43 @@ O favicon usa o símbolo quadrado, nunca a composição horizontal comprimida. O
 A aplicação seguiu as convenções de SVG autossuficiente, grupos semânticos, proporção e acessibilidade da [logo-designer-skill solicitada](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md). A identidade já estava escolhida; esta rodada converte a composição e preserva a direção existente. Não foram instaladas dependências para a conversão.
 
 As fontes da interface têm licenças próprias e estão documentadas em [Tipografia](26-TIPOGRAFIA.md). A licença das fontes não determina a titularidade do símbolo ou do lettering fornecido pelo responsável.
+
+## R14 — vetores originais recebidos e identidade atual
+
+**Atualização de 14/11/2026. Esta seção substitui, para os arquivos canônicos atuais, as descrições de composição e paleta das seções anteriores, mantidas como histórico da R12.** O responsável forneceu dois novos SVGs autênticos: `Vector.svg`, com o lettering completo, e `ARTE .svg`, com o símbolo. A composição atual usa diretamente suas curvas; o lettering reconstruído de PNG deixa de ser a fonte da marca do aplicativo e do portal.
+
+### Origem preservada
+
+| Arquivo recebido | Papel | Geometria original | Bytes | SHA-256 |
+| --- | --- | --- | ---: | --- |
+| `GAME-HACKATON/PROJETO_IPE/Vector.svg` | Lettering PROJETO IPÊ | 14 paths; 454 × 217 | 6907 | `85d0f8695854d4ae3285b74559e5d62367ea3c253f9cca12c42a9c87e183ddf2` |
+| `GAME-HACKATON/PROJETO_IPE/ARTE .svg` | Símbolo | 99 paths; 361 × 299 | 40510 | `b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d` |
+
+As cópias integrais estão em [originals/vector-original.svg](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/brand/originals/vector-original.svg) e [originals/arte-original.svg](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/brand/originals/arte-original.svg). Elas são idênticas em bytes aos arquivos recebidos. O espaço no nome original de `ARTE .svg` foi normalizado somente no nome da cópia pública; o conteúdo permaneceu intacto.
+
+Ambos os SVGs já eram transparentes. Não contêm bitmap, texto dependente de fonte, scripts, handlers, `foreignObject`, links externos, filtros, máscaras ou retângulo de fundo. Os brancos visíveis em algumas prévias são o suporte de exibição ou espaços vazios do desenho. Nenhuma camada branca precisou ser apagada.
+
+### Arquivos canônicos atuais
+
+| Arquivo em `experiments/mission-design-lab/public/brand/` | Uso | ViewBox | Proporção | Bytes |
+| --- | --- | --- | --- | ---: |
+| `projeto-ipe-logo.svg` | Composição em fundo escuro | `0 0 900 320` | 2,8125:1 | 47676 |
+| `projeto-ipe-logo-on-light.svg` | Composição em fundo claro | `0 0 900 320` | 2,8125:1 | 47675 |
+| `projeto-ipe-symbol.svg` | Ícone/favicons | `0 0 361 361` | 1:1 | 40836 |
+
+A composição coloca o símbolo original em `translate(16 10.5)` e o lettering em `translate(420 51.5)`. São apenas posicionamentos, sem escala diferente por eixo. Os **113 paths** preservam exatamente seus atributos `d` e `fill`. No ícone, os 99 paths do símbolo recebem `translate(0 31)` para centralizar a arte 361 × 299 numa área quadrada; não há deformação para preencher o quadrado.
+
+A paleta principal agora é a dos arquivos fornecidos: **roxo `#905DC3`, amarelo `#ECA53C` e azul `#085D9D`**. Quatro cores secundárias do símbolo também foram preservadas. As variantes clara e escura usam as mesmas curvas e cores; apenas a descrição acessível distingue a aplicação. Não foi criada uma nova versão cromática da marca.
+
+Os canônicos não fixam `width`/`height`; usam `viewBox`, título, descrição e grupos semânticos `icon`/`wordmark`. O layout deve respeitar a proporção 900:320, com altura automática ou `object-fit: contain`. Não comprimir a composição no quadrado do favicon. Não há fonte externa ou necessidade de carregar o PNG para exibir a marca.
+
+### Conferência e continuidade
+
+A [prévia R14](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/brand/preview-r14.html) compara fundos claros e escuros e ícones em 128, 64, 32 e 16 px. Uma prancha SVG foi renderizada localmente e inspecionada. Nas menores dimensões, detalhes de ramos e circuitos perdem definição; a geometria foi preservada, sem inventar uma marca simplificada. A inspeção do arquivo não substitui conferir o header responsivo na interface integrada.
+
+A [proveniência R14](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/brand/brand-provenance-r14.json) registra os hashes dos originais e dos três canônicos, contagens e transformações. As três versões canônicas anteriores estão em `brand/history/pre-r14-*.svg`; o PNG antigo permanece apenas como referência histórica.
+
+Foi lida diretamente a [logo-designer-skill solicitada](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md), ausente nas pastas locais consultadas. Aplicaram-se suas convenções de vetores autossuficientes, grupos semânticos, proporção responsiva e revisão em tamanhos pequenos. A identidade e os arquivos já estavam escolhidos pelo responsável, portanto não foram gerados conceitos alternativos nem instaladas dependências. A licença da skill não atribui uma nova licença ou autoria aos desenhos fornecidos.
 
 
 ---
@@ -3302,9 +3346,12 @@ O plano de trabalho, os arquivos e os critérios de integração estão no [hand
 
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
 
-Fonte: `docs/25-HANDOFF-DOIS-DEVS.md` · SHA-256 original: `d746edfd300212cefeb8aec63958396f463f0b13795c67a6bff1970971c72004` · Ajustes de caminhos privados: 0
+Fonte: `docs/25-HANDOFF-DOIS-DEVS.md` · SHA-256 original: `7b0437d8516846781e0a27317e385f68a7bc1c8a787060c32a178a06e4a93c5f` · Ajustes de caminhos privados: 0
 
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
+
+**Entrada atual R14 · beta 0.5.0-beta.1:** leia primeiro [Três missões científicas e handoff da dupla](31-TRES-MISSOES-CIENTIFICAS-R14.md). Estão implementados Cerrado, Bennu e Telescópio, cena orientada por eventos, quatro segmentos, revisão local de equipe e modelos NASA locais. [Ativos e limites](30-ATIVOS-NASA-IMPLEMENTADOS.md). A proposta R13 e o inventário R12 abaixo são históricos; use o documento 31 para o mapa atual e [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) para o recibo.
+
 
 **Direção de produto acrescentada na R13:** começar pela [revisão de Game Design 3D](29-GAME-DESIGN-3D.md) e pelo [catálogo NASA 3D](28-OPORTUNIDADES-NASA-3D.md). A prioridade proposta é conectar a reprodução dos eventos à cena existente e tornar o redesign visível, em uma missão completa do Cerrado. A divisão E0–E5 do novo Game Design orienta esse incremento; o mapa de código e os invariantes abaixo continuam aplicáveis. As novas cenas e integrações são propostas, não recursos já entregues no beta. O restante deste documento conserva o corte R12.
 
@@ -3750,9 +3797,12 @@ A integração não depende de incorporar todos os ativos. O catálogo torna as 
 
 # 29 — Game Design: a missão termina quando a ciência chega
 
-Fonte: `docs/29-GAME-DESIGN-3D.md` · SHA-256 original: `aebcbb0646845467c526e7f175bb2d26071a2f0a919614cd069394232fb12689` · Ajustes de caminhos privados: 0
+Fonte: `docs/29-GAME-DESIGN-3D.md` · SHA-256 original: `40e098afe8bb369faad18fe57ff3e45659aa23b84d358054b192322c39292246` · Ajustes de caminhos privados: 0
 
 # 29 — Game Design: a missão termina quando a ciência chega
+
+**Implementação R14:** a [entrega das três missões](31-TRES-MISSOES-CIENTIFICAS-R14.md) concretiza a reprodução temporal na cena, os quatro segmentos, Bennu/Telescópio com narrativa e revisão de equipe local. [Quatro modelos NASA](30-ATIVOS-NASA-IMPLEMENTADOS.md) foram integrados como referências. As cinco cenas e demais ideias abaixo conservam o desenho original R13; nem toda proposta virou funcionalidade.
+
 
 **Revisão R13 · 14/11/2026 · proposta de evolução sobre o beta 0.4.0-beta.2.**
 
@@ -3916,6 +3966,292 @@ Na demonstração, mostrar objetivo → projeto → falha explicada → uma muda
 
 ---
 
+# Ativos NASA incorporados ao laboratório 3D
+
+Fonte: `docs/30-ATIVOS-NASA-IMPLEMENTADOS.md` · SHA-256 original: `e5102bb87323e3a02602dba33a574ea6b245076e8564e3bad632ad33a0b45250` · Ajustes de caminhos privados: 0
+
+# Ativos NASA incorporados ao laboratório 3D
+
+**R14 · verificação em 14 de novembro de 2026.** Este documento registra quatro modelos originais baixados, o decodificador local e a inspeção geométrica. A renderização no navegador e a publicação pertencem à verificação da interface e aos recibos da entrega; não foram demonstradas pela inspeção descrita aqui.
+
+## Pacote local
+
+Os modelos estão em `experiments/mission-design-lab/public/models/nasa/`. Todos são GLB 2, foram recebidos com HTTP 200 e MIME `model/gltf-binary` e não contêm referências a arquivos externos. Somam **7.462.304 bytes**. O decodificador e seus avisos somam **779.715 bytes**, reutilizados da dependência Three.js já instalada, sem instalar pacotes.
+
+| Modelo e fonte oficial | Arquivo | Bytes | Triângulos decodificados | Primitivas | Decodificador exigido |
+| --- | --- | ---: | ---: | ---: | --- |
+| [CubeSat – 2 RU Generic](https://science.nasa.gov/3d-resources/cubesat-2-ru-generic/) | `cubesat-generic-2ru.glb` | 206108 | 36896 | 18 | Draco local |
+| [70 meter dish](https://science.nasa.gov/3d-resources/70-meter-dish/) | `dsn-70m.glb` | 2216584 | 14852 | 1 | Nenhum |
+| [1999 RQ36 asteroid](https://science.nasa.gov/3d-resources/1999-rq36-asteroid/) | `bennu-1999-rq36.glb` | 329596 | 18240 | 1 | Nenhum |
+| [James Webb Space Telescope (A)](https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/) | `jwst-a.glb` | 4710016 | 493785 | 1657 | Draco local |
+
+O [manifesto](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/models/nasa/manifest.json) contém fontes, URLs originais de download, créditos, datas, MIME, tamanho, SHA-256, extensões, limites e estado de verificação por modelo. O [resultado da inspeção](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/models/nasa/inspection.json) registra os limites geométricos após aplicar as transformações internas dos nós.
+
+Créditos preservados:
+
+- Antena de 70 m: **NASA/Ames Research Center**.
+- CubeSat genérico e asteroide 1999 RQ36: **NASA/Christopher R. Meaney**.
+- James Webb Space Telescope (A): **NASA/Goddard Space Flight Center**.
+
+## O que foi efetivamente conferido
+
+Os quatro GLBs foram baixados integralmente e mantidos sem alterações. A inspeção confirmou assinatura e versão, comprimento total, limites dos blocos binários, ausência de URIs externas e hashes. A cena geométrica foi carregada pelo `GLTFLoader` do Three.js 0.187.0 em Node.
+
+O CubeSat e o JWST exigem `KHR_draco_mesh_compression`. Para a inspeção Node, um adaptador síncrono utilizou o decodificador JavaScript existente para descomprimir as geometrias; isso permitiu contar triângulos e calcular limites. Esse ensaio não testa Web Workers, WebAssembly ou desempenho do navegador.
+
+A antena contém uma textura WebP e seu fallback JPEG incorporados ao GLB. As assinaturas dos dois formatos foram verificadas e o JPEG foi inspecionado visualmente após extração temporária. O carregamento de imagens foi desativado apenas na inspeção Node; o GLB original continua com ambas as imagens. Os outros três modelos não possuem texturas externas nem incorporadas.
+
+Os arquivos originais não foram simplificados, reexportados, rotacionados ou remodelados. A otimização de apresentação abaixo trabalha sobre geometrias carregadas em memória. O exame não certifica unidades físicas, fidelidade de materiais, orientação operacional, capacidade de subsistemas ou precisão científica da forma.
+
+## Carregamento e normalização
+
+Usar o caminho relativo à base do aplicativo: `models/nasa/<arquivo>.glb`. O decodificador está em `models/nasa/draco/`:
+
+- `draco_wasm_wrapper.js`: wrapper do decoder WebAssembly.
+- `draco_decoder.wasm`: binário WebAssembly.
+- `draco_decoder.js`: alternativa JavaScript.
+
+O `DRACOLoader` deve apontar para esse diretório local. Servir `.glb` como `model/gltf-binary`, `.wasm` como `application/wasm` e `.js` como JavaScript. Se a aplicação usar uma política CSP, verificar autorização para o Worker criado por blob e para a execução WebAssembly, conforme a configuração real. Não depender de CDN durante a apresentação.
+
+A publicação R14 usa permissões específicas para esses recursos locais: `script-src 'self' 'wasm-unsafe-eval'` permite a decodificação WebAssembly; `worker-src 'self' blob:` permite o Worker Draco; `connect-src 'self' blob:` permite que o `ImageBitmapLoader` leia a textura incorporada da antena por `fetch(blob:…)`; `img-src 'self' data: blob:` cobre as imagens locais e incorporadas. Autorizar somente `img-src blob:` não atende à leitura feita por `fetch`. O gerador é `scripts/prepare-vercel-static.mjs`; conferir a política efetivamente servida após gerar o pacote. Não há dependência de CDN ou domínio externo para carregar os quatro modelos.
+
+O GLB da antena mantém o WebP e o JPEG originais; não foi acrescentado um plugin que os substitua. O componente só informa carregamento completo após receber a cena, e exige que o material da antena tenha sua textura. Se o recurso falhar, apresenta um esquema 2D próprio identificado como alternativa. Ao voltar de 2D para 3D, o estado de carregamento é renovado; selecionar novamente o mesmo modelo já ativo conserva seu estado. Na desmontagem, geometrias, materiais e texturas compartilhados são liberados uma vez, e imagens `ImageBitmap` são fechadas explicitamente.
+
+
+Os limites no manifesto já incluem as transformações dos nós do arquivo. Para centralizar, adicionar um grupo de apresentação com deslocamento igual ao negativo de `bounds.center`; aplicar a escala em um grupo pai. `presentationScaleForMaxDimension2` adapta a maior dimensão para duas unidades de cena. Esse procedimento é visual e não afirma que uma unidade corresponde a um metro.
+
+| Modelo | Centro após transformações internas | Tamanho X × Y × Z | Escala para maior lado = 2 |
+| --- | --- | --- | ---: |
+| CubeSat – 2 RU Generic | -0.00415, 0.29923, 0.01697 | 5.38582, 5.00154, 2.21394 | 0.37134580 |
+| 70 meter dish | 0.00000, 26.35000, -0.15001 | 91.56534, 85.53871, 91.31534 | 0.02184233 |
+| 1999 RQ36 asteroid | -17.46924, -0.81879, -4.23529 | 1350.70605, 1301.63757, 1309.63391 | 0.00148071 |
+| James Webb Space Telescope (A) | -3.97684, 5.24364, -0.00001 | 27.39710, 12.00455, 14.77337 | 0.07300043 |
+
+O sistema de coordenadas glTF é destro, com +Y para cima; conservar as transformações originais antes de medir ou centralizar. A antena já possui rotação em um nó raiz. Não adicionar uma segunda correção de eixo sem inspeção visual.
+
+O JWST tem **1.657 primitivas e 493.785 triângulos** após decodificação. Seu tamanho de download não representa sozinho o custo de renderização. Carregar apenas ao entrar no caso do observatório, medir fluidez e memória no aparelho alvo e evitar sombras ou pós-processamento caros até essa medição. O CubeSat possui uma malha glTF com 18 primitivas de material; isso não comprova 18 peças funcionais ou desmontáveis. Nenhum dos quatro arquivos contém animações.
+
+## Otimização do JWST para apresentação
+
+A geometria do JWST foi agrupada por material e por atributos compatíveis depois de aplicar as transformações dos nós. A prova em Node reduziu **1.657 primitivas para 54**, mantendo **493.785 triângulos**, **508.474 vértices** e os mesmos **46 objetos de material**. Isso reduz em aproximadamente **96,7%** o número potencial de submissões de desenho por passe opaco; chamadas reais da GPU e fluidez ainda devem ser medidas no navegador.
+
+Foram corrigidas 99 transformações refletidas, invertendo a ordem dos índices do triângulo quando o determinante da matriz era negativo. Sem isso, aplicar a matriz à geometria poderia inverter a face aparente. A maior diferença de posição causada pela representação float32 ficou abaixo de 0,000001; a diferença máxima dos limites foi 0,000000414, em coordenadas do próprio modelo. Não houve redução de triângulos nem alteração intencional da forma. A prova não certifica precisão física.
+
+Um GLB derivado foi exportado temporariamente para avaliar a alternativa. Ele ficou com **19.727.348 bytes**, pois o exportador existente não aplica Draco, contra **4.710.016 bytes** do original. Esse derivado **não foi incluído no pacote público**. A solução escolhida conserva o original comprimido e faz a união em memória após o carregamento, antes da centralização e escala de apresentação. Não há um arquivo público `jwst-a-web.glb`.
+
+A função foi integrada em [OrbitalScene.tsx](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/ui/OrbitalScene.tsx), exclusivamente para `jwst-a.glb`, antes de calcular a centralização. A função real desse arquivo foi extraída e verificada em Node: 54 meshes, 493.785 triângulos e os mesmos 46 materiais. Ela devolve um grupo novo, mantém os materiais e descarta as geometrias substituídas. Deve receber a cena recém-carregada de propriedade exclusiva do componente, evitando descartar geometrias de um clone compartilhado em cache. O ensaio, hashes e tolerâncias estão em [optimization.json](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/public/models/nasa/optimization.json). O arquivo comprova a operação geométrica em Node; integração visual e chamadas medidas pertencem ao teste do aplicativo.
+
+## Uso nos três casos científicos
+
+**Cerrado:** o CubeSat genérico é referência de representação de um pequeno satélite. A nave Ipê continua uma construção didática própria. A configuração, o motor, as séries MODIS e os números do jogo não são derivados da malha NASA.
+
+**Bennu:** o modelo histórico 1999 RQ36 permite inspecionar um asteroide no caso didático. A fonte científica independente é a [visão geral da OSIRIS-REx](https://science.nasa.gov/mission/osiris-rex/): a missão mapeou a superfície para selecionar um sítio, coletou material em 20/10/2020 e entregou amostras à Terra em 24/09/2023. Setores, objetivos, parâmetros e métricas criados para o jogo devem ser identificados como didáticos. O modelo não substitui uma forma científica PDS nem prova precisão geográfica, pouso ou coleta real.
+
+**Observatório:** o modelo JWST é referência visual para escolhas de observação científica. A [descrição dos instrumentos Webb](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) explica a escolha de alvo e modo de observação e o uso de imagens e espectros infravermelhos. Uma curva ou pontuação sintética no jogo não é observação real do JWST nem descoberta de bioassinatura. A narrativa antiga da página do modelo não deve ser usada como cronograma atual.
+
+A antena DSN permanece uma referência de comunicação de espaço profundo. Ela não concede acesso à rede, agenda de antenas ou infraestrutura de solo ao projeto Ipê. Essas distinções devem acompanhar o modelo e o relatório do caso.
+
+## Proveniência e licenças
+
+Os ativos NASA seguem as [NASA Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/), com finalidade educativa, crédito e ausência de endosso. A política inclui modelos tridimensionais, preserva o tratamento de marcas e distingue material de terceiros. Não usar logotipos NASA como identidade do Ipê nem transferir a licença do código automaticamente aos modelos.
+
+O Draco possui licença Apache 2.0. Os arquivos de distribuição foram copiados sem mudanças de `three@0.187.0`, pasta `examples/jsm/libs/draco/gltf/`. O pacote mantém `LICENSE-DRACO.txt`, obtido do [repositório oficial Draco](https://github.com/google/draco/blob/main/LICENSE), o aviso MIT do Three.js e o README original dos decodificadores. Seus hashes também constam no manifesto.
+
+A evidência aqui cobre os bytes locais e a leitura geométrica. Aprovação visual, navegação por teclado, comportamento sem rede, processamento WebAssembly/Worker, MIME efetivamente servido e desempenho do aplicativo precisam aparecer nos testes da entrega integrada. O estado público final deve ser consultado no recibo de publicação do projeto.
+
+
+---
+
+# 31 — Três missões científicas: implementação e continuidade R14
+
+Fonte: `docs/31-TRES-MISSOES-CIENTIFICAS-R14.md` · SHA-256 original: `dd18a53a6d09d37146d08200216f25a9d7422dc87dfd165d8881ac1b3009b547` · Ajustes de caminhos privados: 0
+
+# 31 — Três missões científicas: implementação e continuidade R14
+
+**14/11/2026 · implementação R14 · beta 0.5.0-beta.1.** O guia descreve o código e seus limites. A verificação integrada está em `evidence/revision-r14.json`; a publicação identificada por commit e implantação está em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md).
+
+O Ipê conecta uma necessidade científica a escolhas de engenharia e à evidência efetivamente recebida. A R14 mantém a campanha do Cerrado e acrescenta duas expedições independentes, Bennu e telescópio. Os três casos aparecem no briefing, com histórias próprias, quatro segmentos de missão e apresentação 3D/2D. O modelo numérico continua separado da aparência da cena.
+
+## 1. Três perguntas, três tipos de evidência
+
+| Caso e entrada no briefing | Pedido científico e conflito | Dados usados | Retorno e limite |
+| --- | --- | --- | --- |
+| **Cerrado** — “Projetar missão do Cerrado” | Comparar a vegetação de três pontos próximos a Rio Verde em dois períodos. Bandas ou índice a bordo, energia e contatos disputam recursos. | Seis registros históricos reais Terra/MODIS, MOD13Q1 Collection 061. Os compostos começam em 28/08/2024 e 13/09/2024. | Comparar somente pares integralmente recebidos e válidos. Dado ausente não vira zero; uma diferença de NDVI não identifica sozinha chuva, manejo ou outra causa. |
+| **Bennu** — “Explorar missão Bennu” | Uma equipe fictícia pede dois registros de cada região A, B e C para um levantamento de morfologia. O instrumento precisa atender à pergunta, além de caber na missão. | Seis observações **sintéticas**, com variável de rugosidade didática em unidades arbitrárias. O modelo NASA oferece geometria de referência do alvo. | Receber seis registros feitos com a câmera. Os valores não são medições NASA, mapa operacional ou avaliação de local de pouso. |
+| **Telescópio** — “Projetar telescópio científico” | Uma equipe fictícia quer comparar três faixas infravermelhas em duas exposições. Uma imagem não substitui o instrumento exigido para o espectro. | Seis valores **sintéticos** de fluxo relativo, nas faixas didáticas de 1,2, 2,0 e 3,5 µm. O Webb é referência visual. | Receber seis registros feitos com o espectrômetro. As diferenças não demonstram água, atmosfera, vida nem desempenho real do Webb. |
+
+O CubeSat do Cerrado processa e transporta arquivos históricos; não adquire novas observações MODIS durante os 180 minutos. Nos dois novos casos, cada registro traz `goal`, `syntheticLabel`, `value` e `unit`. Não há NDVI aplicado a asteroides ou espectros.
+
+As histórias estão em `src/ui/MissionStories.tsx`. As perguntas, referências e dados das expedições estão em `src/lab/scientific-expeditions.ts`. Os dados históricos e seus recibos permanecem em `src/data/` e `public/data/` do beta.
+
+## 2. Da necessidade ao retorno
+
+Bennu e telescópio possuem seis etapas explícitas em `ScientificExpedition.tsx`:
+
+| Etapa na interface | Implementação atual |
+| --- | --- |
+| **Necessidade** | História do pedido, cena do alvo, origem dos dados e limites. “Definir esta missão científica” abre os requisitos. |
+| **Requisitos** | Critérios de usuários, lançamento, espaço e solo. “Projetar a arquitetura” abre as escolhas. |
+| **Projeto** | Seis seletores; totais de massa, orçamento, bateria e memória; salvar, restaurar, importar e exportar projeto. |
+| **Verificação** | Pré-voo de instrumento, compatibilidade lançamento/perfil, massa e orçamento. Hipótese com pelo menos oito caracteres e revisão local da equipe antes de executar. Não antecipa o resultado operacional. |
+| **Operação** | Resultado calculado, estados registrados, quatro segmentos, eventos e linha do tempo. Selecionar evento muda o instante inspecionado; reproduzir não recalcula a missão. |
+| **Retorno científico** | Valores somente de registros recebidos integralmente e compatíveis; requisitos finais, hipótese preservada, reflexão e exportação do relatório. Nova tentativa permite comparação A/B. |
+
+O Cerrado conserva sua navegação **Briefing → Projetar → Sala de missão**, além do laboratório de física. A necessidade e o plano aparecem no briefing; projeto, hipótese e revisão prévia ficam na bancada; operação, eventos, requisitos e retorno científico ficam na sala. Não se deve documentar as seis abas das expedições como uma mudança já feita na navegação do Cerrado.
+
+Os quatro segmentos são selecionáveis na operação:
+
+- **Usuários:** pergunta e registros científicos disponíveis naquele instante.
+- **Lançamento:** envelope de integração; nas expedições, compatibilidade das escolhas de lançador e perfil.
+- **Espacial:** instrumento, energia, memória e modos operacionais calculados.
+- **Terrestre:** contato, transmissão e recepção. A estação operacional é uma representação própria; a antena DSN oficial é um ativo separado do acervo de referência.
+
+O processo se inspira em revisões de engenharia de sistemas. A aplicação não atribui certificação nem nível CML oficial.
+
+## 3. O que o 3D implementa
+
+`Scene.tsx` recebe um mundo (`earth`, `bennu` ou `telescope`), segmento e estado visual. `OrbitalScene.tsx` apresenta Terra/CubeSat procedurais, volume de integração, estação terrestre própria, indicadores de recursos e enlace condicionado à transmissão. Os modelos locais de Bennu e Webb contextualizam os novos casos. O briefing também abre um acervo com CubeSat NASA, Bennu, DSN e Webb, fontes e créditos.
+
+Na campanha do Cerrado, a montagem procedural acompanha as escolhas de componentes. Nas novas expedições, os seletores alteram o domínio e seus indicadores; não há conversão das seis escolhas em uma montagem detalhada de peças do modelo NASA. O Webb não se transforma no equipamento parametrizado pelo jogo.
+
+A cena tem representação SVG 2D alternativa, controles HTML, preferência por movimento reduzido e tratamento de indisponibilidade de WebGL. Na reconstrução de uma execução, os recursos são dirigidos pelo resultado registrado; a posição continua ilustrativa, sem escala e sem propagação orbital. Vistas e câmera não alimentam o motor.
+
+O pacote local e a otimização em memória do Webb estão documentados em [30 — Ativos NASA implementados](30-ATIVOS-NASA-IMPLEMENTADOS.md). Essa inspeção de arquivos e geometria não comprova fluidez, acessibilidade completa ou comportamento em GPU móvel. Não há afirmação de FPS validado neste documento.
+
+## 4. Seis escolhas das novas expedições
+
+Cada chave possui duas opções: **64 configurações por expedição**, 128 no conjunto. São catálogos finitos e inteiramente didáticos.
+
+| Chave / rótulo da interface | Opções e efeitos atuais |
+| --- | --- |
+| `launch` / **Veículo de lançamento** | Compacto: máximo 3 kg e 80 créditos; só admite perfil `near`. Científico: máximo 4,2 kg e 115 créditos; admite ambos. Não calcula C3, empuxo ou subida. |
+| `orbit` / **Perfil orbital** | Bennu: “Sobrevoo próximo” ou “Órbita de levantamento”. Telescópio: “Órbita terrestre conceitual (LEO)” ou “L2 conceitual”. Muda agendas de iluminação, observação e contato; `far` exige lançador científico. |
+| `instrument` / **Instrumento científico** | Câmera: 120 Mbit por registro, carga total de 22 W por 60 s. Espectrômetro: 180 Mbit, carga total de 30 W por 60 s. Só câmera atende Bennu; só espectrômetro atende o telescópio. |
+| `power` / **Energia e plataforma** | Compacta: 6 Wh, painel de 10 W, descarga máxima de 18 W. Ampliada: 24 Wh, painel de 22 W, descarga máxima de 35 W. |
+| `ground` / **Comunicação com o solo** | Duas janelas de 120 s ou duas de 500 s. Taxa útil fixa de 1,2 Mbit/s e carga total de rádio de 16 W. A opção não muda a taxa. |
+| `duration` / **Vida operacional do recorte** | Duas horas (7.200 s) ou três (10.800 s). A duração curta pode encerrar antes das últimas observações e do contato final. O requisito permanece seis registros. |
+
+As horas representam **operação após chegada ao destino**, não o tempo para alcançar Bennu ou L2. “Vida operacional” é o recorte do exercício; não modela degradação de anos, radiação acumulada ou vida útil certificada.
+
+### Premissas e agendas
+
+A estrutura fixa pesa 1,2 kg e custa 15 créditos. A memória tem 720 Mbit. A espera consome 5 W. A bateria inicia em 80% da capacidade. A massa da estação terrestre não é somada à massa da nave. As massas e os custos de cada opção estão no catálogo e entram no pré-voo pela mesma função usada na execução.
+
+No perfil próximo, os seis trabalhos começam em 600, 1.200, 1.800, 6.600, 7.200 e 7.800 s; no distante, em 900, 1.500, 2.100, 6.900, 7.500 e 8.100 s. Cada trabalho dura 60 s. São três regiões ou faixas, observadas em dois grupos. Um trabalho não produz um registro antes de terminar.
+
+O perfil próximo usa luz em `[0,2700)`, `[4500,8100)` e `[9900,10800)`. No distante de Bennu, a luz ocorre em `[0,2400)`, `[7200,7800)` e `[10200,10800)`; no L2 conceitual do telescópio, em `[0,10800)`. Essas agendas são hipóteses do exercício, não efemérides calculadas.
+
+Contatos próximos curtos começam em 5.400 e 9.000 s; os ampliados, em 5.100 e 9.000 s. No perfil distante, começam em 5.700 e 9.600 s. A duração vem da escolha de solo. Intervalos incluem o início e excluem o fim. A agenda planejada contém a terceira hora mesmo quando a vida escolhida encerra na segunda: a execução para no horizonte escolhido.
+
+### Balanços e condição de sucesso
+
+O novo domínio usa frações exatas para relógio e energia em **W·s**, convertidas para Wh na saída; mantém contagens inteiras de bits. A eficiência é explicitamente ideal, 100%, sem perdas de conversão. Excedente de energia com bateria cheia é registrado como descarte. Isso difere das eficiências do motor do Cerrado e não deve ser misturado com elas.
+
+Um lote só entra completo na memória. Se não couber, perde-se o lote novo. O envio segue FIFO e pode deixar um registro parcialmente recebido. Recepção integral e instrumento compatível são condições distintas. Um registro incompatível não satisfaz o objetivo mesmo que todos os seus bits cheguem.
+
+Demanda acima do pico de descarga encerra antes de executar o intervalo; bateria esgotada encerra na fronteira calculada. A execução conserva os bits já recebidos. Os contratos verificam geração = recepção + perdas + fila e fechamento exato de energia.
+
+O resultado é `invalid` para incompatibilidade estática de instrumento/perfil ou violação de massa/orçamento; `failure` para condições operacionais ou entrega não atendidas; `success` apenas quando todas as condições e os seis registros válidos são atendidos. O pré-voo não prova sozinho a operação completa. Um projeto incompatível pode ser executado para inspecionar suas restrições.
+
+## 5. Estado visual, persistência e versões
+
+| Contrato | Comportamento atual |
+| --- | --- |
+| Cerrado | `getMissionVisualState(result, timeS, eventId?)` projeta o `MissionResult` existente. Não modifica catálogo, simulação, Worker, persistência ou replay desse caso. |
+| Novas expedições | `getExpeditionChoices`, `getExpeditionPreflight`, `simulateExpedition` e `getExpeditionVisualState` ficam em módulo independente. Reutilizam a aritmética exata existente e os tipos de evento/trace; não passam pelo motor fechado do Cerrado. |
+| Tempo | O adaptador escolhe o último ponto com horário menor ou igual ao solicitado. `sourceStateTimeS` revela a amostra; não há interpolação de recursos. Comparações usam segundos, nunca índices de amostras. |
+| Eventos | Todos os eventos simultâneos são preservados na ordem original. Seleção de evento futuro não antecipa informação. Foco identifica um subsistema envolvido; não prova causa única. |
+| Ciência | `deliveredRecordIds` contém apenas registros completos e válidos entregues até aquele instante. O relatório final é identificado como final; não altera a informação da cena ao retroceder. |
+| Ausência de trace | `available:false`; leituras e horário de origem ficam `null`. Não substituir por totais finais nem tratar falta de informação como medição zero. |
+
+Nas novas expedições, as tentativas, hipóteses e revisões ficam na memória da sessão do componente. As duas últimas podem ser comparadas. **Sair da expedição ou recarregar não preserva automaticamente esse histórico.** Salvar projeto grava escolhas e hipótese em `localStorage`; importar projeto verifica a estrutura e exige nova execução. Exportar relatório guarda o resultado, hipótese, reflexão e contexto da equipe em JSON. Esse relatório não é um replay verificado por hash do motor do Cerrado.
+
+O novo domínio exporta `EXPEDITION_MODEL_VERSION=ipe-expeditions-r14-v1` e registra essa identidade em `result.modelVersion`. O formato de projeto é `ipe-scientific-design-v1`; o de relatório, `ipe-scientific-report-v1`. Esses sufixos de formato são distintos da versão do modelo. O commit da entrega também deve identificar o código usado. Importar projeto executa as escolhas no modelo atual; importação e reprodução verificada de relatórios entre versões ainda não existem.
+
+O pacote do beta inspecionado declara `0.5.0-beta.1`. O motor anterior continua com `ENGINE_VERSION=0.1.1-rd`, `CATALOG_VERSION=ipe-64-v1` e schema de resultado 1. R14 é o identificador documental desta rodada, não uma mudança presumida nesses números.
+
+## 6. Individual ou equipe local
+
+`CrewReview.tsx` oferece **Individual**, **2 pessoas**, **3 pessoas** e **4 pessoas**, no mesmo dispositivo. Os quatro papéis são:
+
+1. Ciência e usuários: registros e instrumento respondem à pergunta?
+2. Nave e recursos: energia, memória e carga útil funcionam juntas?
+3. Lançamento e trajetória: massa, destino e orçamento são compatíveis?
+4. Solo e operações: os dados cabem nos contatos e no prazo?
+
+Com menos de quatro participantes, a interface distribui os papéis de forma cíclica. No modo individual, uma pessoa reúne os quatro papéis. Em equipe, as quatro revisões precisam estar marcadas para executar. Alterar escolhas, hipótese ou número de participantes invalida as revisões anteriores; no Cerrado, cenário, previsão e justificativa também participam dessa identificação.
+
+É colaboração presencial/local: não há contas, sala online, sincronização remota, validação da identidade de participantes ou comunicação entre máquinas. As expedições guardam número de participantes e papéis revisados junto da tentativa e no relatório exportado. Isso registra uma declaração de revisão, não comprova aprendizagem ou participação independente.
+
+## 7. Roteiro de uso e configurações de referência
+
+No briefing, abrir um dos três cartões científicos. Para Bennu ou telescópio: **Definir esta missão científica → Projetar a arquitetura → Revisar para executar**; escrever hipótese, escolher o modo de participação e concluir as revisões necessárias; usar **Executar missão científica**. Em operação, selecionar um evento e trocar entre Usuários/Lançamento/Espacial/Terrestre. Abrir **Interpretar o retorno científico**, registrar análise e **Criar uma nova tentativa**.
+
+Estas configurações novas foram executadas nos testes delimitados desta rodada:
+
+| Seletor | Bennu viável | Telescópio viável |
+| --- | --- | --- |
+| Veículo de lançamento | Lançador compacto | Lançador científico |
+| Perfil orbital | Sobrevoo próximo | L2 conceitual |
+| Instrumento científico | Câmera de superfície | Espectrômetro infravermelho |
+| Energia e plataforma | Energia ampliada | Energia ampliada |
+| Comunicação com o solo | Contatos ampliados | Contatos ampliados |
+| Vida operacional do recorte | Vida operacional: 3 horas | Vida operacional: 3 horas |
+| Resultado do domínio | 6/6; sucesso; 2,9 kg; 77 créditos | 6/6; sucesso; 3,2 kg; 105 créditos |
+
+Equivalentes para testes e integração:
+
+```ts
+const bennu = {
+  launch: 'compact', orbit: 'near', duration: 'full',
+  instrument: 'camera', power: 'extended', ground: 'extended',
+};
+const telescope = {
+  launch: 'science', orbit: 'far', duration: 'full',
+  instrument: 'spectrometer', power: 'extended', ground: 'extended',
+};
+```
+
+Os padrões iniciais foram escolhidos para permitir investigação: Bennu recebe 2/6 e falha na entrega; o telescópio encerra aos 600 s por pico de potência e recebe 0/6. Não usar a configuração viável como descoberta obrigatória do jogador: ela é referência de engenharia e QA.
+
+Para o Cerrado, os casos de referência já existentes são base em contatos longos 6/6, base em contatos curtos 2/6 e redesign com bateria grande + processamento de índice 6/6. São referências do contrato anterior; esta redação não registra nova execução da suíte completa desse caso.
+
+## 8. Continuidade para dois desenvolvedores
+
+| Responsável | Arquivos e responsabilidade | Próxima verificação concreta |
+| --- | --- | --- |
+| Dev A — domínio e integridade | `src/lab/mission-visual-state.ts`, `scientific-expeditions.ts` e testes correspondentes. Motor/contratos antigos somente com necessidade explícita e análise de compatibilidade. | Preservar os resultados de referência, os 64 projetos por novo caso, unidades e balanços; versionar futuras mudanças do novo modelo antes de importar resultados antigos. |
+| Dev B — experiência e apresentação | `src/ui/ScientificExpedition.tsx`, `CrewReview.tsx`, `MissionStories.tsx`, `MissionSegments.tsx`, `Scene.tsx`, `OrbitalScene.tsx`, `NASAReferenceScene.tsx`, estilos e jornadas UI. | Exercitar seis etapas, hipóteses, resets de equipe, edição após resultado, retorno indisponível, A/B e fallback; medir o custo dos modelos em navegador real. |
+| Integração coordenada | `App.tsx`, manifests, documentação e scripts de distribuição, com um editor/integrador por vez. | Garantir que o build inclua modelos/decoder/licenças e que links, MIME/CSP e caminhos funcionem no destino; registrar recibo próprio antes de afirmar publicação. |
+
+Próximos trabalhos: medir em dispositivos físicos, testar leitor de tela e aprendizagem, verificar primeiro acesso sem rede e definir compatibilidade de relatórios entre versões. Os três casos foram executados em navegador com WebGL; importação, revisão de equipe e comparação têm testes DOM. Isso não substitui os ensaios com participantes e equipamento alvo.
+
+Comandos a partir da raiz do repositório público, com Node 24 ou superior e dependências dos lockfiles presentes:
+
+```sh
+npm --prefix experiments/mission-design-lab run dev
+node --experimental-strip-types --test experiments/mission-design-lab/tests/mission-visual-state.test.mts experiments/mission-design-lab/tests/scientific-expeditions.test.mts
+npm --prefix experiments/mission-design-lab run verify
+npm run build:release
+npm run test:context
+npm run test:beta
+```
+
+`verify` do beta inclui domínio, UI em jsdom e build. `build:release` monta a distribuição e prepara Vercel, mas não publica. O clássico da raiz possui comandos e motor próprios; seu `build` não substitui o build do beta. Consultar [25 — Handoff de dois devs](25-HANDOFF-DOIS-DEVS.md) para o mapa geral.
+
+## 9. Evidência delimitada e limites restantes
+
+- **13 testes de `mission-visual-state.test.mts` passaram**: retenção do ponto anterior, fronteiras, timestamps fracionários, recepção parcial, término, eventos simultâneos, ausência de trace, foco e entrega sem antecipação. TypeScript focado passou.
+- **15 testes de `scientific-expeditions.test.mts` passaram**: identidade explícita do modelo, objetivos e fixtures distintos, pré-voo, instrumentos, duração, órbitas, configurações viáveis, determinismo/imutabilidade, término por potência e por esgotamento, projeção temporal e conservação nas **128 configurações**. TypeScript focado passou.
+- A verificação posterior dos quatro casos padrão/viável das expedições confirmou os números da seção 7. Esses resultados cobrem o domínio, não a jornada completa da interface.
+- Verificação integrada: **129 testes de domínio e 17 de interface passaram**, com TypeScript e build aprovados. As regressões incluem comparação depois de reduzir a duração e replay sem amostras temporais.
+- No navegador local, os três casos foram executados; carregamento WebGL, quatro modelos e textura DSN foram inspecionados. A revisão em largura de celular é emulação de viewport. O recibo R14 delimita as verificações e a publicação. Nenhum ensaio representa estudo de aprendizagem, leitor de tela, dispositivo físico, estação real ou trajetória espacial.
+
+GMAT, SPICE, Horizons e APIs de missão não estão integrados ao novo cálculo. A geometria NASA não fornece massa, potência, contato ou precisão física. Não existe propagação orbital, transferência para Bennu/L2, óptica ou criogenia do Webb. A operação offline a frio e o primeiro acesso sem rede precisam de verificação própria. Uso de recursos NASA, bom resultado no jogo e aprovação de testes não estabelecem endosso, qualificação de voo ou elegibilidade competitiva.
+
+
+---
+
 # Atribuição, licenças e autoria assistida
 
 Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0
@@ -4003,9 +4339,12 @@ A versão 0.4.0-beta.2 acrescenta ConOps didático, revisão pré-voo, requisito
 
 # Missão Ipê — laboratório de missões R9–R10
 
-Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `3f661b1c7f897e251f692384777c872a1a8e8bfb219566f6fd3f83c555a2339e` · Ajustes de caminhos privados: 0
+Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `20c19f0138ef4e6cf357ab18b7aeb9b1eb7f084e4df011bdb2a171cc3a3a10c5` · Ajustes de caminhos privados: 0
 
 # Missão Ipê — laboratório de missões R9–R10
+
+**Atualização R14 · 0.5.0-beta.1:** [guia atual das três missões](../../docs/31-TRES-MISSOES-CIENTIFICAS-R14.md), [modelos NASA e créditos](../../docs/30-ATIVOS-NASA-IMPLEMENTADOS.md), [recibo público](../../PUBLICADO.md). Novo domínio isolado em `src/lab/scientific-expeditions.ts`, cenas temporais e duas jornadas científicas; Cerrado mantém suas regras e persistência. Execute `npm run verify` neste diretório. O texto abaixo conserva os cortes anteriores.
+
 
 **Ciência que chega.** Aplicação educacional para projetar um CubeSat fictício, executar uma missão determinística, investigar seus eventos e testar um novo projeto. A rodada R9 combina a campanha de entrega de dados históricos do Cerrado com um laboratório independente de física.
 
@@ -14112,9 +14451,27 @@ As marcas NASA, Space Apps e de outras instituições não são usadas como endo
 
 # Como usar a BETA
 
-Fonte: `web/public-docs/COMO-USAR.md` · SHA-256 original: `3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26` · Ajustes de caminhos privados: 0
+Fonte: `web/public-docs/COMO-USAR.md` · SHA-256 original: `2bc99e96910e566f1d42e8b3823fbdc0297f2a1c09281fa3ac25ac1ef484157c` · Ajustes de caminhos privados: 0
 
 # Como usar a BETA
+
+## Beta atual — edição R14
+
+Abra o [beta atual](../lab/index.html) e escolha **Cerrado**, **Bennu** ou **Telescópio** no briefing. Leia a pergunta científica e a origem dos dados: Cerrado usa arquivos históricos Terra/MODIS; Bennu e telescópio usam observações sintéticas do exercício.
+
+- **Cerrado:** siga Briefing → Projetar → Sala de missão. Configure a nave, registre sua hipótese e revise antes de executar.
+- **Bennu ou telescópio:** percorra Necessidade → Requisitos → Projeto → Verificação → Operação → Retorno científico. Escolha as seis opções, escreva uma hipótese e execute após a revisão.
+- **Participação:** use o modo individual ou reúna duas, três ou quatro pessoas no mesmo dispositivo. Em equipe, conclua as quatro revisões de papéis. Alterar escolhas, hipótese ou participantes exige nova revisão; não há colaboração remota.
+- **Operação:** selecione eventos e instantes; alterne entre Usuários, Lançamento, Espacial e Terrestre. A cena mostra o estado registrado. Reproduzir a linha do tempo não recalcula a missão.
+- **Retorno:** interprete os registros recebidos integralmente e válidos. Nos dois novos casos, registre sua reflexão, exporte o relatório e crie uma nova tentativa para comparar os resultados.
+
+Nas novas expedições, **salve o projeto e exporte os relatórios antes de sair**. As tentativas e comparações ficam na sessão: sair ou recarregar não preserva automaticamente esse histórico. O projeto salvo guarda escolhas e hipótese no navegador; importá-lo exige executar novamente. O relatório exportado não é um replay verificado do motor clássico.
+
+Os modelos NASA são referências visuais, e a posição é ilustrativa. A alternativa 2D permite acompanhar a cena sem WebGL. O pacote portátil clássico descrito abaixo não contém as novas expedições. O [guia de implementação R14](31-TRES-MISSOES-CIENTIFICAS-R14.html) detalha os percursos, os limites e a continuidade.
+
+## Materiais clássicos
+
+As seções seguintes descrevem o jogo clássico, sua apresentação e o pacote portátil. Esses materiais preservam suas próprias versões; o ponto de entrada para os três casos atuais é o beta indicado acima.
 
 ## Jogo
 
@@ -14147,9 +14504,23 @@ O [PDF de base R4](../output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf) e o [es
 
 # Missão Ipê BETA · estado público
 
-Fonte: `web/public-docs/ESTADO-PUBLICO.md` · SHA-256 original: `d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb` · Ajustes de caminhos privados: 0
+Fonte: `web/public-docs/ESTADO-PUBLICO.md` · SHA-256 original: `7083049b2a637c7305426c02db568e74a616fcb883e7accaaa0854eafb2ede9c` · Ajustes de caminhos privados: 0
 
 # Missão Ipê BETA · estado público
+
+## Leitura atual — edição R14
+
+**14/11/2026 · implementação R14.** O [beta atual](../lab/index.html) reúne três casos científicos: Cerrado, Bennu e telescópio. A campanha do Cerrado usa seis registros históricos Terra/MODIS; as duas novas expedições usam observações sintéticas, identificadas como didáticas. Seus domínios permanecem separados. Consulte [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.html) para comportamento, versões, verificações e limites.
+
+A operação apresenta quatro segmentos: **Usuários, Lançamento, Espacial e Terrestre**. É possível revisar a missão individualmente ou com duas, três ou quatro pessoas no mesmo dispositivo. Em equipe, os quatro papéis precisam concluir a revisão antes da execução. Não há contas, salas online ou sincronização entre máquinas.
+
+Cenas 3D e a alternativa 2D acompanham estados e eventos do exercício. Os modelos locais NASA de CubeSat, DSN, Bennu e Webb são referências visuais, com procedência em [30 — Ativos NASA implementados](30-ATIVOS-NASA-IMPLEMENTADOS.html). Não fornecem os parâmetros físicos do jogo. A posição é ilustrativa; não há cálculo de transferência para Bennu ou L2, propagação orbital ou observação real pelo Webb.
+
+Este adendo descreve a edição de implementação. O [recibo atual no repositório](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) identifica a entrega efetivamente publicada e suas evidências. Aprendizagem, desempenho em dispositivo físico e elegibilidade competitiva exigem verificação própria.
+
+## Registro histórico R6 — beta clássico
+
+As seções abaixo preservam o estado e o planejamento da edição R6. Descrevem o [jogo clássico](../game/index.html) e seus materiais, não o conjunto de funcionalidades do beta R14. A meta de release registrada ao final continua sendo um registro histórico, não prova de entrega.
 
 **Edição pública R6, 14/11/2026.** Este portal reúne o jogo de pesquisa existente, a apresentação interativa e a arquitetura. O núcleo científico não recebe novas funcionalidades nesta rodada.
 

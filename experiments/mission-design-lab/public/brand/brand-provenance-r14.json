@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "edition": "R14",
+  "reviewedAt": "2026-11-14",
+  "status": "Vetores originais do responsável preservados em composição para o aplicativo e portal.",
+  "sources": [
+    {
+      "sourceRelativePath": "GAME-HACKATON/PROJETO_IPE/Vector.svg",
+      "file": "originals/vector-original.svg",
+      "role": "Lettering PROJETO IPÊ",
+      "bytes": 6907,
+      "sha256": "85d0f8695854d4ae3285b74559e5d62367ea3c253f9cca12c42a9c87e183ddf2",
+      "viewBox": "0 0 454 217",
+      "pathCount": 14,
+      "bitmaps": 0,
+      "externalFonts": false,
+      "externalReferences": false,
+      "scripts": false,
+      "backgroundElement": false,
+      "byteIdenticalToSupplied": true
+    },
+    {
+      "sourceRelativePath": "GAME-HACKATON/PROJETO_IPE/ARTE .svg",
+      "file": "originals/arte-original.svg",
+      "role": "Símbolo com árvore, órbita, foguetes e controle",
+      "bytes": 40510,
+      "sha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d",
+      "viewBox": "0 0 361 299",
+      "pathCount": 99,
+      "bitmaps": 0,
+      "externalFonts": false,
+      "externalReferences": false,
+      "scripts": false,
+      "backgroundElement": false,
+      "byteIdenticalToSupplied": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "projeto-ipe-logo.svg",
+      "bytes": 47676,
+      "sha256": "32377a37d746201ff32c6f01cb124a1e65d6d68798fe0600c34390e3fc9381cd",
+      "viewBox": "0 0 900 320",
+      "aspectRatio": 2.8125,
+      "pathCount": 113,
+      "externalFonts": false,
+      "bitmap": false,
+      "backgroundElement": false,
+      "geometryPreserved": true,
+      "palettePreserved": true
+    },
+    {
+      "file": "projeto-ipe-logo-on-light.svg",
+      "bytes": 47675,
+      "sha256": "72439ae936ee895f45ded827fdd5edf10ddbb5fdc498a6e77db4966a3fcd6776",
+      "viewBox": "0 0 900 320",
+      "aspectRatio": 2.8125,
+      "pathCount": 113,
+      "externalFonts": false,
+      "bitmap": false,
+      "backgroundElement": false,
+      "geometryPreserved": true,
+      "palettePreserved": true
+    },
+    {
+      "file": "projeto-ipe-symbol.svg",
+      "bytes": 40836,
+      "sha256": "4cb1b84a04c3a34c96ae56943511342dc995dff90eae100ec2c26e6751ac7218",
+      "viewBox": "0 0 361 361",
+      "aspectRatio": 1,
+      "pathCount": 99,
+      "externalFonts": false,
+      "bitmap": false,
+      "backgroundElement": false,
+      "geometryPreserved": true,
+      "palettePreserved": true
+    }
+  ],
+  "palette": [
+    "#905DC3",
+    "#ECA53C",
+    "#085D9D"
+  ],
+  "secondaryColors": [
+    "#8A807C",
+    "#E8BC92",
+    "#406C8E",
+    "#022542"
+  ],
+  "transformations": [
+    "Cópias integrais dos dois SVGs recebidos preservadas em originals/.",
+    "Composição horizontal: ARTE em translate(16,10.5); Vector em translate(420,51.5); viewBox 0 0 900 320.",
+    "Símbolo: paths ARTE em translate(0,31), viewBox 0 0 361 361; sem deformar a proporção original 361:299.",
+    "Removidas dimensões fixas apenas dos canônicos; adicionados título, descrição acessível e grupos semânticos icon/wordmark.",
+    "Nenhum path ou preenchimento original foi alterado; não havia fundo branco a remover.",
+    "Variantes para fundo claro/escuro preservam a mesma paleta; diferenças apenas nas descrições acessíveis.",
+    "Arquivos canônicos anteriores preservados em history/pre-r14-*.svg; PNG anterior continua como referência histórica."
+  ],
+  "validation": {
+    "xml": "passed",
+    "sourcePathsAndFills": "99+14 preservados integralmente",
+    "lightAndDarkVisualReview": "Prancha SVG renderizada localmente com Quick Look e inspecionada",
+    "faviconSizesReviewed": [
+      128,
+      64,
+      32,
+      16
+    ],
+    "smallSizeLimitation": "Detalhes internos deixam de ser legíveis em 16–32 px; silhueta/paleta preservadas sem redesenho.",
+    "browserIntegratedReview": "A confirmar na aplicação integrada."
+  },
+  "skill": {
+    "url": "https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md",
+    "source": "Upstream lido; skill não encontrada nas pastas locais consultadas.",
+    "applied": "SVG autossuficiente, paths, grupos semânticos, viewBox responsivo e revisão claro/escuro e tamanhos pequenos; identidade já fornecida, sem explorar novas marcas.",
+    "installedDependencies": false
+  },
+  "rights": "Marca fornecida pelo responsável para uso no projeto. Nenhuma nova licença pública ou autoria independente foi atribuída aos desenhos."
+}

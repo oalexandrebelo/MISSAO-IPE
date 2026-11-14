@@ -1,5 +1,23 @@
 # Como usar a BETA
 
+## Beta atual — edição R14
+
+Abra o [beta atual](../lab/index.html) e escolha **Cerrado**, **Bennu** ou **Telescópio** no briefing. Leia a pergunta científica e a origem dos dados: Cerrado usa arquivos históricos Terra/MODIS; Bennu e telescópio usam observações sintéticas do exercício.
+
+- **Cerrado:** siga Briefing → Projetar → Sala de missão. Configure a nave, registre sua hipótese e revise antes de executar.
+- **Bennu ou telescópio:** percorra Necessidade → Requisitos → Projeto → Verificação → Operação → Retorno científico. Escolha as seis opções, escreva uma hipótese e execute após a revisão.
+- **Participação:** use o modo individual ou reúna duas, três ou quatro pessoas no mesmo dispositivo. Em equipe, conclua as quatro revisões de papéis. Alterar escolhas, hipótese ou participantes exige nova revisão; não há colaboração remota.
+- **Operação:** selecione eventos e instantes; alterne entre Usuários, Lançamento, Espacial e Terrestre. A cena mostra o estado registrado. Reproduzir a linha do tempo não recalcula a missão.
+- **Retorno:** interprete os registros recebidos integralmente e válidos. Nos dois novos casos, registre sua reflexão, exporte o relatório e crie uma nova tentativa para comparar os resultados.
+
+Nas novas expedições, **salve o projeto e exporte os relatórios antes de sair**. As tentativas e comparações ficam na sessão: sair ou recarregar não preserva automaticamente esse histórico. O projeto salvo guarda escolhas e hipótese no navegador; importá-lo exige executar novamente. O relatório exportado não é um replay verificado do motor clássico.
+
+Os modelos NASA são referências visuais, e a posição é ilustrativa. A alternativa 2D permite acompanhar a cena sem WebGL. O pacote portátil clássico descrito abaixo não contém as novas expedições. O [guia de implementação R14](31-TRES-MISSOES-CIENTIFICAS-R14.html) detalha os percursos, os limites e a continuidade.
+
+## Materiais clássicos
+
+As seções seguintes descrevem o jogo clássico, sua apresentação e o pacote portátil. Esses materiais preservam suas próprias versões; o ponto de entrada para os três casos atuais é o beta indicado acima.
+
 ## Jogo
 
 Abra o [jogo](../game/index.html), escolha a condição e configure seis decisões. Registre uma previsão, execute e inspecione o resultado e seus eventos. Alterar escolhas exige uma nova execução. O objetivo inclui seis registros utilizáveis e todas as restrições do modelo.

@@ -1,5 +1,8 @@
 # Missão Ipê — laboratório de missões R9–R10
 
+**Atualização R14 · 0.5.0-beta.1:** [guia atual das três missões](../../docs/31-TRES-MISSOES-CIENTIFICAS-R14.md), [modelos NASA e créditos](../../docs/30-ATIVOS-NASA-IMPLEMENTADOS.md), [recibo público](../../PUBLICADO.md). Novo domínio isolado em `src/lab/scientific-expeditions.ts`, cenas temporais e duas jornadas científicas; Cerrado mantém suas regras e persistência. Execute `npm run verify` neste diretório. O texto abaixo conserva os cortes anteriores.
+
+
 **Ciência que chega.** Aplicação educacional para projetar um CubeSat fictício, executar uma missão determinística, investigar seus eventos e testar um novo projeto. A rodada R9 combina a campanha de entrega de dados históricos do Cerrado com um laboratório independente de física.
 
 Entrega standalone experimental **0.4.0-beta.2** · motor da campanha **0.1.1-rd** · catálogo **ipe-64-v1** · revisão **R10, 14/11/2026**.

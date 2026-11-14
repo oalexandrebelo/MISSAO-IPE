@@ -1,0 +1,60 @@
+{
+  "revision": "R14",
+  "version": "0.5.0-beta.1",
+  "verifiedAt": "2026-11-14T20:23:41.340639+00:00",
+  "status": "local-checks-passed",
+  "scope": "Three scientific missions, event-driven 3D, NASA geometry and supplied SVG identity",
+  "checks": {
+    "domain": {
+      "passed": 129,
+      "failed": 0
+    },
+    "uiDOM": {
+      "passed": 17,
+      "failed": 0
+    },
+    "typescript": "passed",
+    "viteBuild": "passed",
+    "context": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distributionHTTP": {
+      "passed": 17,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "environment": "ChatGPT in-app browser, local release on loopback",
+    "missions": [
+      "Cerrado default long: 6/6",
+      "Bennu extended power and contacts: 6/6; contact state at5100s and final at10800s",
+      "Telescope science launcher, far profile, extended power and contacts: 6/6; six synthetic values visible only in final return"
+    ],
+    "models": [
+      "DSN70m: geometry and embedded texture observed after local blob CSP fix",
+      "CubeSat2RU: loaded via local Draco",
+      "JWST: geometry loaded via local Draco",
+      "Bennu: scientific case scene loaded"
+    ],
+    "viewport": "390px viewport: no document-wide horizontal overflow; new SVG header legible",
+    "limitations": [
+      "No FPS/performance benchmark",
+      "No physical mobile device",
+      "No cold offline first-load test",
+      "No remote multiplayer",
+      "No real trajectory/GMAT or NASA operational connection"
+    ]
+  },
+  "logo": {
+    "source": "User supplied Vector.svg and ARTE .svg",
+    "canonicalAspectRatio": "900:320",
+    "transparent": true,
+    "letteringPaths": 14,
+    "symbolPaths": 99,
+    "provenance": "experiments/mission-design-lab/public/brand/brand-provenance-r14.json"
+  },
+  "models": "experiments/mission-design-lab/public/models/nasa/manifest.json",
+  "documentation": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+  "publication": "Consult evidence/production-r14.json and PUBLICADO.md after remote verification; this receipt alone is not deployment proof."
+}

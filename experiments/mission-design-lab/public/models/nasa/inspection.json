@@ -1,0 +1,158 @@
+{
+  "checkedAt": "2026-11-14",
+  "method": "Local Node geometry inspection; not a browser render or scientific validation",
+  "models": [
+    {
+      "id": "dsn-70m",
+      "nodeParsePassed": true,
+      "threeVersion": "187",
+      "parseMethod": "GLTFLoader (embedded image decoding bypassed for Node geometry inspection)",
+      "browserRendered": false,
+      "texturesDecoded": false,
+      "meshes": 1,
+      "primitives": 1,
+      "vertices": 44556,
+      "triangles": 14852,
+      "bounds": {
+        "min": [
+          -45.78266907,
+          -16.41935483,
+          -45.80768034
+        ],
+        "max": [
+          45.78266907,
+          69.11935349,
+          45.50765586
+        ],
+        "size": [
+          91.56533813,
+          85.53870832,
+          91.3153362
+        ],
+        "center": [
+          0,
+          26.34999933,
+          -0.15001224
+        ],
+        "boundingSphereRadius": 77.5235003,
+        "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+        "units": "Authored glTF coordinates; physical scale not validated",
+        "presentationScaleForMaxDimension2": 0.02184233
+      }
+    },
+    {
+      "id": "bennu-1999-rq36",
+      "nodeParsePassed": true,
+      "threeVersion": "187",
+      "parseMethod": "GLTFLoader (embedded image decoding bypassed for Node geometry inspection)",
+      "browserRendered": false,
+      "texturesDecoded": false,
+      "meshes": 1,
+      "primitives": 1,
+      "vertices": 9122,
+      "triangles": 18240,
+      "bounds": {
+        "min": [
+          -692.82226563,
+          -651.63757324,
+          -659.05224609
+        ],
+        "max": [
+          657.88378906,
+          650,
+          650.58166504
+        ],
+        "size": [
+          1350.70605469,
+          1301.63757324,
+          1309.63391113
+        ],
+        "center": [
+          -17.46923828,
+          -0.81878662,
+          -4.23529053
+        ],
+        "boundingSphereRadius": 1143.87588918,
+        "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+        "units": "Authored glTF coordinates; physical scale not validated",
+        "presentationScaleForMaxDimension2": 0.00148071
+      }
+    },
+    {
+      "id": "cubesat-generic-2ru",
+      "nodeParsePassed": true,
+      "threeVersion": "187",
+      "parseMethod": "GLTFLoader + existing Draco JS decoder via Node synchronous adapter",
+      "browserRendered": false,
+      "texturesDecoded": false,
+      "meshes": 18,
+      "primitives": 18,
+      "vertices": 110688,
+      "triangles": 36896,
+      "bounds": {
+        "min": [
+          -2.69705772,
+          -2.20154047,
+          -1.09000003
+        ],
+        "max": [
+          2.6887579,
+          2.79999995,
+          1.12393725
+        ],
+        "size": [
+          5.38581562,
+          5.00154042,
+          2.21393728
+        ],
+        "center": [
+          -0.00414991,
+          0.29922974,
+          0.01696861
+        ],
+        "boundingSphereRadius": 3.83809636,
+        "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+        "units": "Authored glTF coordinates; physical scale not validated",
+        "presentationScaleForMaxDimension2": 0.3713458
+      }
+    },
+    {
+      "id": "jwst-a",
+      "nodeParsePassed": true,
+      "threeVersion": "187",
+      "parseMethod": "GLTFLoader + existing Draco JS decoder via Node synchronous adapter",
+      "browserRendered": false,
+      "texturesDecoded": false,
+      "meshes": 1657,
+      "primitives": 1657,
+      "vertices": 508474,
+      "triangles": 493785,
+      "bounds": {
+        "min": [
+          -17.67538792,
+          -0.75863077,
+          -7.38669076
+        ],
+        "max": [
+          9.72171116,
+          11.24591809,
+          7.38667997
+        ],
+        "size": [
+          27.39709908,
+          12.00454886,
+          14.77337073
+        ],
+        "center": [
+          -3.97683838,
+          5.24364366,
+          -0.00000539
+        ],
+        "boundingSphereRadius": 16.68054791,
+        "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+        "units": "Authored glTF coordinates; physical scale not validated",
+        "presentationScaleForMaxDimension2": 0.07300043
+      }
+    }
+  ]
+}

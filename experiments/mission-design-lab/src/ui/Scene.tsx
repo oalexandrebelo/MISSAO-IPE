@@ -1,5 +1,6 @@
 import { Component, lazy, Suspense, useCallback, useEffect, useId, useRef, useState } from 'react';
 import type { ReactNode, RefObject } from 'react';
+import type { MissionVisualState } from '../lab/mission-visual-state.ts';
 import type { MissionConfig } from '../core/contracts.ts';
 import { CATALOG, CONFIG_KEYS, DEFAULT_CONFIG } from '../core/catalog.ts';
 import { Icon } from './Icon.tsx';
@@ -9,7 +10,9 @@ import './scene-orbit.css';
 const OrbitalScene = lazy(() => import('./OrbitalScene.tsx'));
 export type SceneFocus = 'science' | 'satellite' | 'ground';
 export type SceneVariant = 'orbit' | 'hangar';
-export interface SceneProps { compact?: boolean; progress?: number; config?: MissionConfig; variant?: SceneVariant; }
+export type MissionWorld = 'earth' | 'bennu' | 'telescope';
+export type MissionSegment = 'space' | 'ground' | 'launch' | 'user';
+export interface SceneProps { compact?: boolean; progress?: number; config?: MissionConfig; variant?: SceneVariant; visualState?: MissionVisualState; segment?: MissionSegment; world?: MissionWorld; scienceRecordCount?: number; }
 
 const ORBIT_VIEWS: readonly { id: SceneFocus; number: string; name: string; text: string }[] = [
   { id: 'science', number: '01', name: 'O Cerrado', text: 'A pergunta científica parte de seis registros históricos de vegetação Terra/MODIS.' },
@@ -29,7 +32,7 @@ class SceneBoundary extends Component<{ children: ReactNode; fallback: ReactNode
   render() { return this.state.failed ? this.props.fallback : this.props.children; }
 }
 
-function canRenderWebGL(): boolean {
+export function canRenderWebGL(): boolean {
   if (typeof window === 'undefined' || typeof document === 'undefined') return false;
   // Check before importing R3F. Blocked contexts and jsdom get the SVG equivalent.
   try {
@@ -74,12 +77,12 @@ function globePath(points: readonly (readonly [number, number])[]) {
   }).join(' ') + 'Z';
 }
 
-function FlatSatellite({ large, config, focus }: { large: boolean; config: MissionConfig; focus: SceneFocus }) {
+function FlatSatellite({ large, config, focus, visualState }: { large: boolean; config: MissionConfig; focus: SceneFocus; visualState?: MissionVisualState }) {
   const panelWidth = config.panel === 'standard' ? 126 : 88;
   const batteryHeight = config.battery === 'large' ? 150 : 126;
   const tilt = focus === 'science' ? 0 : focus === 'ground' ? -28 : -15;
   return <g transform={large ? `translate(360 250) rotate(${tilt}) scale(1.1)` : 'translate(535 173) rotate(-19) scale(.45)'}>
-    <path d={`M${-panelWidth - 56} -45h${panelWidth}v89h-${panelWidth}z M56 -45h${panelWidth}v89H56z`} fill="#1d4054" stroke="#9aadb2" strokeWidth="3" />
+    <path d={`M${-panelWidth - 56} -45h${panelWidth}v89h-${panelWidth}z M56 -45h${panelWidth}v89H56z`} fill={visualState ? visualState.illuminated ? "#315c79" : "#101a28" : "#1d4054"} stroke={visualState?.focusSubsystem === "panel" ? "#f0bf82" : "#9aadb2"} strokeWidth="3" />
     {[-1, 1].map(side => <g key={side}>
       {[1, 2, 3, 4].map(column => <path key={column} d={`M${side * (56 + column * panelWidth / 5)} -44V44`} stroke="#88a4b2" strokeWidth="1" opacity=".65" />)}
       {[-15, 15].map(row => <path key={row} d={`M${side * 56} ${row}h${side * panelWidth}`} stroke="#88a4b2" strokeWidth="1" opacity=".65" />)}
@@ -95,9 +98,13 @@ function FlatSatellite({ large, config, focus }: { large: boolean; config: Missi
     <circle cx="0" cy="12" r="10" fill="#365d77" stroke="#68889a" strokeWidth="2" /><circle cx="-3" cy="8" r="3" fill="#c8e0eb" />
     <path d="M0 -67v-35" stroke="#ced5d5" strokeWidth="3" />
     {config.radio === 'fast' ? <path d="M-30 -108Q0 -72 30 -108Z" fill="#b2c0bd" stroke="#e0e4d5" strokeWidth="2" /> : <path d="M0 -100l-26 -14m26 14 26 -14" stroke="#d5e2d0" strokeWidth="2" />}
-    <rect x="-22" y="-54" width="44" height="20" rx="2" fill={config.processing === 'index' ? '#aac875' : '#6d7e85'} />
-    <rect x="39" y="-14" width="9" height={config.buffer === 'large' ? 40 : 21} rx="1" fill="#6e8586" stroke="#aebcb7" strokeWidth="1" />
-    <circle cx="25" cy="-45" r="3" fill="#d5f894" />
+    <rect x="-22" y="-54" width="44" height="20" rx="2" fill={visualState?.mode?.includes("processing") ? "#efb77b" : config.processing === 'index' ? '#aac875' : '#6d7e85'} />
+    <rect x="39" y="-14" width="9" height={config.buffer === 'large' ? 40 : 21} rx="1" fill={visualState?.focusSubsystem === "buffer" ? "#edbd88" : "#6e8586"} stroke="#aebcb7" strokeWidth="1" />
+    <circle cx="25" cy="-45" r="3" fill={visualState?.transmitting ? '#a9e8ff' : '#d5f894'} />
+    {visualState?.available ? <g>
+      <rect x="-22" y="44" width="44" height="6" fill="#182b35" /><rect x="-22" y="44" width={44 * (visualState.energyFraction ?? 0)} height="6" fill="#a8d5a0" />
+      <rect x="39" y="-14" width="9" height={(config.buffer === 'large' ? 40 : 21) * (visualState.queueFraction ?? 0)} fill="#efbd86" />
+    </g> : null}
   </g>;
 }
 
@@ -135,7 +142,48 @@ function FlatScene({ variant, config, focus }: { variant: SceneVariant; config: 
   </svg></div>;
 }
 
-export function Scene({ compact = false, progress = 0, config = DEFAULT_CONFIG, variant = 'orbit' }: SceneProps) {
+const SEGMENT_NAMES: Record<MissionSegment, string> = { user: 'USUÁRIO CIENTÍFICO', launch: 'INTEGRAÇÃO / LANÇAMENTO', space: 'SEGMENTO ESPACIAL', ground: 'SEGMENTO DE SOLO' };
+const SUBSYSTEM_NAMES = { panel: 'Painéis solares', battery: 'Bateria', processing: 'Processamento', buffer: 'Memória', radio: 'Rádio' };
+function formatValue(value: number | null, unit: string) { return value === null ? 'Sem estado registrado' : `${value.toLocaleString('pt-BR', { maximumFractionDigits: 2 })} ${unit}`; }
+
+function FlatMissionScene({ config, focus, segment, visualState, world, scienceRecordCount }: { config: MissionConfig; focus: SceneFocus; segment: MissionSegment; visualState?: MissionVisualState; world: MissionWorld; scienceRecordCount: number }) {
+  const progress = visualState?.progress ?? 0;
+  const angle = .93 + progress * Math.PI * 2;
+  const satelliteX = 350 + Math.cos(angle) * 180;
+  const satelliteY = 205 - Math.sin(angle) * 85;
+  const received = visualState?.deliveredRecordIds.length ?? 0;
+  return <div className="orbit-flat" aria-hidden="true"><svg viewBox="0 0 720 500">
+    {world !== 'earth' && segment !== 'ground' ? <><g transform="translate(360 235)">{world === 'bennu' ? <path d="M-140-50L-70-145L60-155L145-55L155 70L50 140L-90 120L-155 30Z" fill="#6d6a65" stroke="#b2a89c" strokeWidth="3"/> : <><path d="M-135 65L-20-70L110-40L155 65L0 140Z" fill="#7991a1" stroke="#bacbd5"/><path d="M-55-45L-25-95H35L65-45L35 8H-25Z" fill="#dbb773" stroke="#f0d6aa" strokeWidth="4"/><path d="M5-95V8M-40-70L50-20M50-70L-40-20" stroke="#b29558"/></>}</g>{segment==='launch'?<rect x="160" y="40" width="400" height="350" fill="none" stroke="#8db7cc" strokeDasharray="5 8"/>:null}<text x="360" y="435" textAnchor="middle" fill="#bdcbd6" fontSize="14">Referência {world==='bennu'?'Bennu':'JWST'} · esquema 2D próprio, sem escala</text></> : <>
+    {segment === 'launch' ? <>
+      <path d="M183 100H525V360H183ZM183 100L228 65H570V325L525 360M525 100L570 65M570 325H228L183 360M228 65V325" fill="none" stroke="#87a6b8" strokeWidth="1" strokeDasharray="4 7" />
+      <FlatSatellite large config={config} focus={focus} visualState={visualState} />
+      <text x="360" y="410" textAnchor="middle" fill="#a8bbc6" fontSize="14">Volume de integração conceitual · sem dimensões de voo</text>
+    </> : segment === 'ground' ? <>
+      <path d="M80 354H643" stroke="#577183"/><g transform="translate(280 260)"><path d="M-64-48Q-64 40 34 40Z" fill="#92a8b5" stroke="#d5e6e8" strokeWidth="3"/><path d="M-15 2L18-35M-20 36V92M-64 94H27" stroke="#c9d7dd" strokeWidth="7"/><circle cx="20" cy="-37" r="6" fill="#efbb87"/></g>
+      <g transform="translate(-40 -70) scale(1.1)"><FlatSatellite large={false} config={config} focus={focus} visualState={visualState}/></g>
+      {visualState?.transmitting ? <path d="M535 118L304 231" stroke="#a4e5ff" strokeWidth="3" strokeDasharray="7 9"/> : null}
+      <text x="360" y="395" textAnchor="middle" fill="#b8c8d2" fontSize="15">Estação didática · {received} registro(s) válido(s) recebido(s)</text>
+    </> : <>
+      <g transform={segment === 'user' ? 'translate(32 -70) scale(.95)' : 'translate(-35 130) scale(.55)'}><circle cx="340" cy="302" r="198" fill="#173b50" stroke="#5f8297"/>{CONTINENTS.slice(0,4).map((c,i)=><path key={i} d={globePath(c)} fill="#658c86" opacity=".8"/>)}<circle cx="384" cy="363" r="12" fill="#efc085"/><circle cx="384" cy="363" r="24" fill="none" stroke="#efc085"/></g>
+      {segment === 'space' ? <><ellipse cx="350" cy="205" rx="180" ry="85" fill="none" stroke="#6a8594" strokeDasharray="3 7"/><g transform={`translate(${satelliteX} ${satelliteY}) scale(.72) translate(-360 -250)`}><FlatSatellite large config={config} focus={focus} visualState={visualState}/></g>{visualState?.transmitting ? <path d={`M${satelliteX} ${satelliteY}L205 355`} stroke="#a4e5ff" strokeDasharray="6 7" strokeWidth="2"/> : null}</> : <g transform="translate(250 365)">{Array.from({length:scienceRecordCount},(_,i)=><rect key={i} x={i*38} width="26" height="35" rx="3" fill={i<received ? '#b9d8a7' : '#253e4d'} stroke="#a8bdc8"/>)}<text x="108" y="62" textAnchor="middle" fill="#bccdd5" fontSize="14">{received} / {scienceRecordCount} registros válidos recebidos</text></g>}
+    </>}
+    </>}
+  </svg></div>;
+}
+
+function RecordedState({ state, scienceRecordCount }: { state: MissionVisualState; scienceRecordCount: number }) {
+  return <div className="orbit-recorded-state" aria-label="Estado registrado da missão">
+    <div className="orbit-state-heading"><strong>Instante {formatValue(state.timeS, 's')}</strong><span>{state.available ? `Último estado: ${formatValue(state.sourceStateTimeS, 's')}` : 'Nenhum estado do motor disponível'}</span></div>
+    {state.available ? <><div className="orbit-resource-grid">
+      <div><span>Bateria</span><strong>{formatValue(state.energyWh, 'Wh')}</strong><meter min="0" max="1" value={state.energyFraction ?? 0} aria-label="Fração de energia na bateria"/></div>
+      <div><span>Memória ocupada</span><strong>{formatValue(state.queueBits === null ? null : state.queueBits / 1000000, 'Mbit')}</strong><meter min="0" max="1" value={state.queueFraction ?? 0} aria-label="Fração de ocupação da memória"/></div>
+      <div><span>Geração / consumo</span><strong>{formatValue(state.solarW, 'W')} / {formatValue(state.loadW, 'W')}</strong><small>{state.illuminated ? 'Trecho iluminado' : 'Eclipse na agenda'}</small></div>
+      <div><span>Recepção em solo</span><strong>{state.deliveredRecordIds.length} / {scienceRecordCount} registros válidos</strong><small>{state.transmitting ? 'Transmissão registrada' : state.contactAvailable ? 'Contato disponível · sem transmissão' : 'Sem contato neste instante'}</small></div>
+    </div><p className="orbit-state-note">{state.focusSubsystem ? `Destaque: ${SUBSYSTEM_NAMES[state.focusSubsystem]}. ` : ''}O estado é mantido até o próximo ponto registrado; não há interpolação de recursos. A posição orbital é ilustrativa.</p></> : <p className="orbit-state-note">Sem valores inventados: execute uma configuração válida para inspecionar seus estados. A geometria continua apenas conceitual.</p>}
+  </div>;
+}
+
+export function Scene({ compact = false, progress = 0, config = DEFAULT_CONFIG, variant = 'orbit', visualState, segment, world = 'earth', scienceRecordCount = 6 }: SceneProps) {
   const host = useRef<HTMLElement>(null);
   const [mode, setMode] = useState<'3d' | '2d'>('3d');
   const [checked, setChecked] = useState(false);
@@ -147,32 +195,37 @@ export function Scene({ compact = false, progress = 0, config = DEFAULT_CONFIG, 
   const descriptionId = useId();
   const useFallback = useCallback(() => { setUnavailable(true); setMode('2d'); }, []);
   useEffect(() => { if (!canRenderWebGL()) useFallback(); setChecked(true); }, [useFallback]);
-  const views = variant === 'hangar' ? HANGAR_VIEWS : ORBIT_VIEWS;
+  const views = world !== 'earth' ? [{ id: 'science' as const, number: '01', name: 'Ciência', text: '' }, { id: 'satellite' as const, number: '02', name: 'Nave didática', text: '' }, { id: 'ground' as const, number: '03', name: 'Solo', text: '' }] : variant === 'hangar' ? HANGAR_VIEWS : ORBIT_VIEWS;
   const selected = views.find(item => item.id === focus) ?? views[0]!;
-  const animating = !paused && !reducedMotion && active && mode === '3d';
-  const fallback = <FlatScene variant={variant} config={config} focus={focus} />;
-  const configDescription = CONFIG_KEYS.map(key => CATALOG[key].find(choice => choice.id === config[key])?.label).filter(Boolean).join('; ');
-  const motionPaused = paused || reducedMotion || mode === '2d';
+  const selectedText = world === 'earth' ? selected.text : `${world === 'bennu' ? 'Bennu' : 'JWST'}: modelo NASA de referência para uma missão didática fictícia. Recursos e entregas vêm do caso selecionado; a geometria não calcula a missão.`;
+  const recorded = visualState !== undefined;
+  const activeSegment = segment ?? 'space';
+  const animating = !recorded && !segment && !paused && !reducedMotion && active && mode === '3d';
+  const fallback = recorded || segment || world !== 'earth' ? <FlatMissionScene config={config} focus={focus} segment={activeSegment} visualState={visualState} world={world} scienceRecordCount={scienceRecordCount}/> : <FlatScene variant={variant} config={config} focus={focus} />;
+  const configDescription = world !== 'earth' ? 'Os indicadores usam o estado do caso selecionado' : CONFIG_KEYS.map(key => CATALOG[key].find(choice => choice.id === config[key])?.label).filter(Boolean).join('; ');
+  const motionPaused = recorded || !!segment || paused || reducedMotion || mode === '2d';
 
-  return <section ref={host} className={`scene scene-orbit scene-${variant} ${compact ? 'scene-compact' : ''}`} aria-label={variant === 'hangar' ? 'Modelo visual do CubeSat' : 'Modelo visual da missão'} aria-describedby={descriptionId} data-visual-mode={checked && mode === '3d' ? '3d' : '2d'}>
+  return <section ref={host} className={`scene scene-orbit scene-${variant} ${compact ? 'scene-compact' : ''} ${recorded ? 'scene-recorded' : ''}`} aria-label={world === 'earth' && variant === 'hangar' ? 'Modelo visual do CubeSat' : 'Modelo visual da missão'} aria-describedby={descriptionId} data-visual-mode={checked && mode === '3d' ? '3d' : '2d'} data-mission-world={world} data-state-time={visualState?.timeS} data-focus-subsystem={visualState?.focusSubsystem ?? undefined}>
     <div className="orbit-grid" aria-hidden="true" /><div className="orbit-corner orbit-corner-tl" aria-hidden="true" /><div className="orbit-corner orbit-corner-br" aria-hidden="true" />
-    <div className="orbit-topline"><span className="orbit-eyebrow"><i />{variant === 'hangar' ? 'IPÊ–01 / SEU PROJETO' : 'MISSÃO IPÊ / TERRA'}</span><div className="orbit-display-tools">
-      <button type="button" className="orbit-tool" onClick={() => setPaused(value => !value)} aria-label={motionPaused ? 'Retomar animação ilustrativa' : 'Pausar animação ilustrativa'} aria-pressed={motionPaused} disabled={mode === '2d' || reducedMotion} title={reducedMotion ? 'Movimento reduzido acompanha sua preferência do dispositivo' : undefined}><Icon name={motionPaused ? 'play' : 'pause'} size={13} /><span>{motionPaused ? 'Pausada' : 'Pausar'}</span></button>
+    <div className="orbit-topline"><span className="orbit-eyebrow"><i />{segment ? SEGMENT_NAMES[segment] : world === 'bennu' ? 'MISSÃO DIDÁTICA / BENNU' : world === 'telescope' ? 'OBSERVATÓRIO DIDÁTICO / REFERÊNCIA JWST' : variant === 'hangar' ? 'IPÊ–01 / SEU PROJETO' : 'MISSÃO IPÊ / TERRA'}</span><div className="orbit-display-tools">
+      <button type="button" className="orbit-tool" onClick={() => setPaused(value => !value)} aria-label={recorded || segment ? 'Visualização estática do instante selecionado' : motionPaused ? 'Retomar animação ilustrativa' : 'Pausar animação ilustrativa'} aria-pressed={motionPaused} disabled={recorded || !!segment || mode === '2d' || reducedMotion} title={reducedMotion ? 'Movimento reduzido acompanha sua preferência do dispositivo' : undefined}><Icon name={motionPaused ? 'play' : 'pause'} size={13} /><span>{recorded ? 'Tempo registrado' : segment ? 'Vista estática' : motionPaused ? 'Pausada' : 'Pausar'}</span></button>
       <button type="button" className="orbit-tool orbit-mode" onClick={() => setMode(value => value === '3d' ? '2d' : '3d')} aria-label={`Usar visualização ${mode === '3d' ? '2D' : '3D'}`} disabled={unavailable}><Icon name="layers" size={13} /><span>{unavailable ? '2D ativo' : mode === '3d' ? 'Ver em 2D' : 'Ver em 3D'}</span></button>
     </div></div>
-    <div className="orbit-render" aria-hidden="true">{checked && mode === '3d' ? <SceneBoundary fallback={fallback} onUnavailable={useFallback}><Suspense fallback={fallback}><OrbitalScene focus={focus} progress={progress} config={config} variant={variant} animating={animating} active={active} reducedMotion={reducedMotion} turn={turn} onUnavailable={useFallback} /></Suspense></SceneBoundary> : fallback}</div>
-    {variant === 'orbit' ? <div className="orbit-map-label" aria-hidden="true"><span className="orbit-map-cross" /><span>CERRADO BRASILEIRO<small>ÁREA DE INTERESSE</small></span></div> : <>
+    <div className="orbit-render" aria-hidden="true">{checked && mode === '3d' ? <SceneBoundary fallback={fallback} onUnavailable={useFallback}><Suspense fallback={fallback}><OrbitalScene focus={focus} progress={visualState?.progress ?? progress} visualState={visualState} segment={segment} world={world} scienceRecordCount={scienceRecordCount} config={config} variant={variant} animating={animating} active={active} reducedMotion={reducedMotion} turn={turn} onUnavailable={useFallback} /></Suspense></SceneBoundary> : fallback}</div>
+    {world === 'earth' && variant === 'orbit' && (!segment || segment === 'user') ? <div className="orbit-map-label" aria-hidden="true"><span className="orbit-map-cross" /><span>CERRADO BRASILEIRO<small>ÁREA DE INTERESSE</small></span></div> : world === 'earth' && variant === 'hangar' ? <>
       <span className="orbit-hangar-mark" aria-hidden="true">IPÊ<span>01</span></span>
       <div className="orbit-part-label orbit-part-panel" aria-hidden="true"><span />PAINÉIS {config.panel === 'standard' ? '18 W' : '12 W'}</div>
       <div className="orbit-part-label orbit-part-battery" aria-hidden="true">BATERIA {config.battery === 'large' ? '24 Wh' : '16 Wh'}<span /></div>
-    </>}
+    </> : null}
     <div className="orbit-bottom">
-      <div className="orbit-viewbar" role="group" aria-label={variant === 'hangar' ? 'Vistas do CubeSat' : 'Explore a missão'}>{views.map(item => <button key={item.id} type="button" className={`orbit-view ${focus === item.id ? 'is-active' : ''}`} aria-pressed={focus === item.id} onClick={() => { setFocus(item.id); setTurn(0); }}><span>{item.number}</span>{item.name}</button>)}
+      <div className="orbit-viewbar" role="group" aria-label={world === 'earth' && variant === 'hangar' ? 'Vistas do CubeSat' : 'Explore a missão'}>{views.map(item => <button key={item.id} type="button" className={`orbit-view ${focus === item.id ? 'is-active' : ''}`} aria-pressed={focus === item.id} onClick={() => { setFocus(item.id); setTurn(0); }}><span>{item.number}</span>{item.name}</button>)}
         {variant === 'hangar' ? <div className="orbit-turn-controls"><button className="orbit-tool orbit-turn" type="button" aria-label="Girar satélite para a esquerda" onClick={() => setTurn(value => value - Math.PI / 6)} disabled={mode === '2d'}><Icon name="back" size={15} /></button><button className="orbit-tool orbit-turn" type="button" aria-label="Girar satélite para a direita" onClick={() => setTurn(value => value + Math.PI / 6)} disabled={mode === '2d'}><Icon name="arrow" size={15} /></button></div> : null}
       </div>
-      {!compact ? <div className="orbit-explanation" aria-live="polite"><p>{selected.text}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selected.text}</p>}
-      <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>Ilustração sem escala · física calculada separadamente</span></p>
+      {!compact ? <div className="orbit-explanation" aria-live="polite"><p>{selectedText}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selectedText}</p>}
+      <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>{recorded ? 'Recursos do motor · posição ilustrativa sem escala' : 'Ilustração sem escala · física calculada separadamente'}</span></p>
     </div>
-    <p className="sr-only">{variant === 'hangar' ? 'CubeSat fictício com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat fictício. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
+    {visualState ? <RecordedState state={visualState} scienceRecordCount={scienceRecordCount}/> : null}
+    {world !== 'earth' ? <p className="orbit-model-credit">Referência visual NASA · {world === 'bennu' ? 'Bennu: Christopher R. Meaney' : 'JWST: Goddard Space Flight Center'}. Missão fictícia, sem escala física. <a href={world === 'bennu' ? 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' : 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/'} target="_blank" rel="noopener noreferrer">Fonte do modelo</a></p> : null}
+    <p className="sr-only">{world !== 'earth' ? `Modelo NASA de referência ${world === 'bennu' ? 'Bennu' : 'JWST'}, para missão científica fictícia. ` : variant === 'hangar' ? 'CubeSat fictício com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat fictício. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
   </section>;
 }

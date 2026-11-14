@@ -34,16 +34,12 @@ export function changedChoices(before: MissionConfig, after: MissionConfig): Con
   return CONFIG_KEYS.filter((key) => before[key] !== after[key]);
 }
 export function traceIndexAt(trace: readonly TracePoint[], at: number): number {
-  let nearest = 0;
-  let distance = Infinity;
+  let previous = 0;
   for (let index = 0; index < trace.length; index += 1) {
-    const point = trace[index];
-    if (point && Math.abs(point.timeS - at) < distance) {
-      nearest = index;
-      distance = Math.abs(point.timeS - at);
-    }
+    if (trace[index]!.timeS > at) break;
+    previous = index;
   }
-  return nearest;
+  return previous;
 }
 export function downloadText(text: string, name: string): void {
   const url = URL.createObjectURL(new Blob([text], { type: 'application/json;charset=utf-8' }));

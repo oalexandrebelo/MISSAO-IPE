@@ -106,3 +106,60 @@
   .scene.scene-orbit.scene-hangar .orbit-caption { font-size: 6.5px; }
 }
 @media (prefers-reduced-motion: reduce) { .scene.scene-orbit *, .scene.scene-orbit *::before, .scene.scene-orbit *::after { animation: none !important; transition: none !important; } }
+
+/* Recorded views read the engine projection; camera controls never advance it. */
+.scene.scene-orbit.scene-recorded { height:auto; min-height:0; }
+.scene.scene-orbit.scene-recorded .orbit-render { height:400px; bottom:auto; }
+.scene.scene-orbit.scene-recorded .orbit-bottom { position:relative; inset:auto; margin:390px 20px 0; }
+.scene.scene-orbit.scene-recorded .orbit-topline { flex-wrap:wrap; }
+.scene.scene-orbit.scene-recorded .orbit-eyebrow { font-size:10px; white-space:normal; }
+.scene.scene-orbit.scene-recorded .orbit-caption { font-size:10px; }
+.scene.scene-orbit.scene-recorded .orbit-compact-note,.scene.scene-orbit.scene-recorded .orbit-explanation p { font-size:13px; line-height:1.65; max-width:70ch; }
+.scene.scene-orbit.scene-recorded .orbit-map-label { top:240px; }
+.scene.scene-orbit .orbit-recorded-state { position:relative; margin:18px 20px 20px; padding-top:18px; border-top:1px solid #344958; }
+.scene.scene-orbit .orbit-state-heading { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; color:#d3e2eb; font-size:14px; }
+.scene.scene-orbit .orbit-state-heading>span { color:#a6bccb; font-size:12px; }
+.scene.scene-orbit .orbit-resource-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:18px; }
+.scene.scene-orbit .orbit-resource-grid>div { display:flex; flex-direction:column; gap:7px; min-width:0; }
+.scene.scene-orbit .orbit-resource-grid span { font-size:12px; color:#a7bdca; }
+.scene.scene-orbit .orbit-resource-grid strong { font-size:15px; font-weight:600; color:#e3edf2; }
+.scene.scene-orbit .orbit-resource-grid small { font-size:12px; color:#b5c9d5; }
+.scene.scene-orbit .orbit-resource-grid meter { width:100%; height:9px; accent-color:#b5d5a3; }
+.scene.scene-orbit .orbit-state-note { color:#a7bcc9; font-size:12px; line-height:1.7; margin:16px 0 0; max-width:75ch; }
+.scene.scene-orbit .orbit-model-credit { position:relative; margin:0 20px 20px; font-size:12px; line-height:1.6; color:#b6c9d5; }
+.scene.scene-orbit .orbit-model-credit a { color:#d2e8f5; text-decoration:underline; }
+.nasa-reference { border:1px solid #314755; border-radius:8px; overflow:hidden; background:#101a24; color:#deebf3; }
+.nasa-reference-heading { display:flex; justify-content:space-between; gap:24px; padding:24px; }
+.nasa-reference-heading>div { flex:1; }
+.nasa-reference-eyebrow { font-size:11px; color:#d8b185; letter-spacing:.08em; text-transform:uppercase; margin:0 0 9px; }
+.nasa-reference h3 { font:600 clamp(23px,3vw,32px)/1.2 'Bricolage Grotesque',sans-serif; margin:0; }
+.nasa-reference-heading>p { max-width:38ch; font-size:14px; line-height:1.8; color:#aebfca; margin:0; }
+.nasa-reference-tabs,.nasa-reference-controls { display:flex; flex-wrap:wrap; gap:8px; padding:0 24px 18px; }
+.nasa-reference button { min-height:44px; padding:9px 14px; font:500 12px/1.4 'Plus Jakarta Sans',sans-serif; border:1px solid #456073; border-radius:4px; color:#d3e4ee; background:#1c2e3c; cursor:pointer; }
+.nasa-reference button:hover:not(:disabled) { background:#304a5d; }
+.nasa-reference button[aria-pressed="true"] { border-color:#ddb283; color:#ffdfba; background:#473a2b; }
+.nasa-reference button:disabled { opacity:.5; cursor:default; }
+.nasa-reference button:focus-visible { outline:3px solid #d9b186; outline-offset:3px; }
+.nasa-reference-stage { position:relative; height:420px; background:radial-gradient(ellipse at 50% 45%,#203849,#0a131c 74%); }
+.nasa-reference-stage .orbital-canvas { width:100%; height:100%; }
+.nasa-reference-diagram { width:100%; height:100%; display:block; }
+.nasa-model-status { position:absolute; top:12px; left:20px; right:20px; margin:0; color:#b8cbd8; font-size:11px; pointer-events:none; }
+.nasa-reference-controls { padding-top:18px; }
+.nasa-reference-description { padding:8px 24px 24px; display:grid; grid-template-columns:2fr 1fr; gap:26px; }
+.nasa-reference-description h4 { margin:0 0 10px; font-size:18px; }
+.nasa-reference-description p { font-size:14px; color:#b9cad6; line-height:1.8; margin:0 0 12px; }
+.nasa-reference-credit strong { display:block; color:#e2c49d; font-weight:600; }
+.nasa-reference a { color:#d7eaf7; text-decoration:underline; text-underline-offset:3px; }
+@media(max-width:600px) {
+  .scene.scene-orbit.scene-recorded .orbit-render { height:350px; }
+  .scene.scene-orbit.scene-recorded .orbit-bottom { margin-top:345px; }
+  .scene.scene-orbit.scene-recorded .orbit-viewbar { flex-wrap:wrap; }
+  .scene.scene-orbit .orbit-resource-grid { gap:16px 12px; }
+  .scene.scene-orbit .orbit-resource-grid strong { font-size:14px; }
+  .nasa-reference-heading { display:block; padding:20px; }
+  .nasa-reference-heading>p { max-width:none; margin-top:14px; }
+  .nasa-reference-stage { height:330px; }
+  .nasa-reference-tabs,.nasa-reference-controls { padding-left:20px; padding-right:20px; }
+  .nasa-reference-description { grid-template-columns:1fr; padding:5px 20px 20px; gap:8px; }
+}
+@media(prefers-reduced-motion:reduce) { .nasa-reference *, .nasa-reference *::before, .nasa-reference *::after { animation:none!important; transition:none!important; } }

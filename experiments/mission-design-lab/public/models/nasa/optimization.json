@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-14",
+  "modelId": "jwst-a",
+  "sourceFile": "jwst-a.glb",
+  "sourceSha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750",
+  "sourceBytes": 4710016,
+  "method": "Apply authored world matrices, reverse winding for reflected transforms, group by identical material and attribute layout, and merge geometries without simplifying triangles.",
+  "originalPrimitives": 1657,
+  "mergedPrimitives": 54,
+  "primitiveReductionPercent": 96.7411,
+  "materialsBefore": 46,
+  "materialsAfter": 46,
+  "materialObjectsPreserved": true,
+  "trianglesBefore": 493785,
+  "trianglesAfter": 493785,
+  "verticesAfter": 508474,
+  "reflectedTransformsCorrected": 99,
+  "maxPositionFloatError": 9.532885094643007e-07,
+  "boundingBoxMaxDelta": 4.138867808478608e-07,
+  "comparisonTolerance": 1e-05,
+  "coordinateUnits": "Authored glTF coordinates; not a physical accuracy claim.",
+  "nodeVerificationPassed": true,
+  "browserDrawCallsMeasured": false,
+  "drawCallEstimate": {
+    "before": 1657,
+    "after": 54,
+    "scope": "Potential visible primitive submissions per opaque pass; actual renderer calls, shadows and culling must be measured in browser."
+  },
+  "selectedDistribution": "Keep the original Draco GLB; merge in memory after load, before presentation normalization.",
+  "runtimeIntegrationStatus": "Integrated in OrbitalScene.tsx; extracted production-source function passed Node geometry comparison.",
+  "exportCandidate": {
+    "filename": "jwst-a-web.glb",
+    "bytes": 19727348,
+    "sha256": "d934ecd7aa4899b57bce97da870af64e4e003196230f623cad420c46b990c94d",
+    "compressed": false,
+    "distributed": false,
+    "reasonNotDistributed": "Uncompressed export increases download from 4710016 to 19727348 bytes; retaining compressed source avoids this increase."
+  },
+  "implementationNotes": [
+    "Only apply to the freshly loaded JWST scene, not a shared cached clone.",
+    "Dispose replaced geometries only after successful merge; retain original material objects.",
+    "Original GLB bytes and SHA256 remain unchanged.",
+    "No simplification, decimation, texture change or additional dependency."
+  ],
+  "integratedFunctionValidation": {
+    "sourceFile": "experiments/mission-design-lab/src/ui/OrbitalScene.tsx",
+    "function": "mergeJWSTForDisplay",
+    "functionSha256": "18f3d9559ec3c4616bd64501af369773663c31191faaa9f14679e073c42b1503",
+    "before": 1657,
+    "after": 54,
+    "triangles": 493785,
+    "materials": 46,
+    "boundsMaxDelta": 4.138867808478608e-07,
+    "accepted": true,
+    "browserMeasured": false
+  }
+}

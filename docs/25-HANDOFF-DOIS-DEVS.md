@@ -1,5 +1,8 @@
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
 
+**Entrada atual R14 · beta 0.5.0-beta.1:** leia primeiro [Três missões científicas e handoff da dupla](31-TRES-MISSOES-CIENTIFICAS-R14.md). Estão implementados Cerrado, Bennu e Telescópio, cena orientada por eventos, quatro segmentos, revisão local de equipe e modelos NASA locais. [Ativos e limites](30-ATIVOS-NASA-IMPLEMENTADOS.md). A proposta R13 e o inventário R12 abaixo são históricos; use o documento 31 para o mapa atual e [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) para o recibo.
+
+
 **Direção de produto acrescentada na R13:** começar pela [revisão de Game Design 3D](29-GAME-DESIGN-3D.md) e pelo [catálogo NASA 3D](28-OPORTUNIDADES-NASA-3D.md). A prioridade proposta é conectar a reprodução dos eventos à cena existente e tornar o redesign visível, em uma missão completa do Cerrado. A divisão E0–E5 do novo Game Design orienta esse incremento; o mapa de código e os invariantes abaixo continuam aplicáveis. As novas cenas e integrações são propostas, não recursos já entregues no beta. O restante deste documento conserva o corte R12.
 
 **Edição documental R12 · corte: 14/11/2026 · beta 0.4.0-beta.2 · motor 0.1.1-rd · catálogo ipe-64-v1.**

@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-11-14",
+  "status": "Pacote de ativos locais preparado; renderização no navegador e publicação são verificações distintas.",
+  "basePath": "models/nasa/",
+  "rightsSourceUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "totalModelBytes": 7462304,
+  "models": [
+    {
+      "id": "cubesat-generic-2ru",
+      "title": "CubeSat – 2 RU Generic",
+      "file": "cubesat-generic-2ru.glb",
+      "runtimePath": "models/nasa/cubesat-generic-2ru.glb",
+      "format": "GLB",
+      "mimeType": "model/gltf-binary",
+      "bytes": 206108,
+      "sha256": "30633496ef3aea790ec00782772757c78744ccaf08c9322eca380a6c4ad57ec9",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/cubesat-2-ru-generic/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/cubesat---2-ru-generic/CubeSat%20-%202%20RU%20Generic.glb",
+      "credit": "NASA/Christopher R. Meaney",
+      "retrievedAt": "2026-11-14",
+      "sourceAssetDate": "2025-03-26",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuseBasis": "Referência educativa conforme NASA Images and Media Usage Guidelines; crédito preservado e sem endosso.",
+      "status": "downloaded-original-and-node-geometry-parsed",
+      "description": "Inspeção de um CubeSat genérico como referência de escala e embalagem. A montagem configurável do Ipê deve ter geometria própria com peças identificáveis.",
+      "limitations": [
+        "Modelo genérico NASA de referência; não representa hardware validado do Ipê.",
+        "Requer Draco local; uma malha glTF contém 18 primitivas de material, sem peças ou animações certificadas.",
+        "Escala física e interfaces de subsistemas não validadas."
+      ],
+      "transformations": "Nenhuma alteração no arquivo GLB original. Normalização de apresentação deve ocorrer em wrappers de cena, mantendo a geometria fonte.",
+      "glb": {
+        "version": 2,
+        "meshes": 1,
+        "nodes": 2,
+        "animations": 0,
+        "primitives": 18,
+        "materials": 18,
+        "embeddedImages": 0,
+        "imageMimeTypes": [],
+        "extensionsUsed": [
+          "KHR_draco_mesh_compression"
+        ],
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "externalUris": []
+      },
+      "inspection": {
+        "id": "cubesat-generic-2ru",
+        "nodeParsePassed": true,
+        "threeVersion": "187",
+        "parseMethod": "GLTFLoader + existing Draco JS decoder via Node synchronous adapter",
+        "browserRendered": false,
+        "texturesDecoded": false,
+        "meshes": 18,
+        "primitives": 18,
+        "vertices": 110688,
+        "triangles": 36896,
+        "bounds": {
+          "min": [
+            -2.69705772,
+            -2.20154047,
+            -1.09000003
+          ],
+          "max": [
+            2.6887579,
+            2.79999995,
+            1.12393725
+          ],
+          "size": [
+            5.38581562,
+            5.00154042,
+            2.21393728
+          ],
+          "center": [
+            -0.00414991,
+            0.29922974,
+            0.01696861
+          ],
+          "boundingSphereRadius": 3.83809636,
+          "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+          "units": "Authored glTF coordinates; physical scale not validated",
+          "presentationScaleForMaxDimension2": 0.3713458
+        }
+      },
+      "browserRendered": false,
+      "browserVerification": "Não verificado por este pacote de ativos; acompanhar recibos de UI da entrega."
+    },
+    {
+      "id": "dsn-70m",
+      "title": "70 meter dish",
+      "file": "dsn-70m.glb",
+      "runtimePath": "models/nasa/dsn-70m.glb",
+      "format": "GLB",
+      "mimeType": "model/gltf-binary",
+      "bytes": 2216584,
+      "sha256": "36ff56a7a2bfd1c278f6f4774d32128d5931f2c22fe58241d00ee7d1815634bb",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/70-meter-dish/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/70-meter-dish/70%20meter%20dish.glb",
+      "credit": "NASA/Ames Research Center",
+      "retrievedAt": "2026-11-14",
+      "sourceAssetDate": "2025-02-21",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuseBasis": "Referência educativa conforme NASA Images and Media Usage Guidelines; crédito preservado e sem endosso.",
+      "status": "downloaded-original-and-node-geometry-parsed",
+      "description": "Estudo interativo de visada e comunicação de espaço profundo; referência comparativa do segmento de solo.",
+      "limitations": [
+        "É antena DSN de 70 m, não estação de solo contratada pelo Ipê.",
+        "Uma malha e nenhuma animação: articulação de azimute/elevação não está demonstrada.",
+        "Modelo não fornece agenda, alcance operacional ou orçamento de enlace."
+      ],
+      "transformations": "Nenhuma alteração no arquivo GLB original. Normalização de apresentação deve ocorrer em wrappers de cena, mantendo a geometria fonte.",
+      "glb": {
+        "version": 2,
+        "meshes": 1,
+        "nodes": 3,
+        "animations": 0,
+        "primitives": 1,
+        "materials": 1,
+        "embeddedImages": 2,
+        "imageMimeTypes": [
+          "image/webp",
+          "image/jpeg"
+        ],
+        "extensionsUsed": [
+          "EXT_texture_webp"
+        ],
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "inspection": {
+        "id": "dsn-70m",
+        "nodeParsePassed": true,
+        "threeVersion": "187",
+        "parseMethod": "GLTFLoader (embedded image decoding bypassed for Node geometry inspection)",
+        "browserRendered": false,
+        "texturesDecoded": false,
+        "meshes": 1,
+        "primitives": 1,
+        "vertices": 44556,
+        "triangles": 14852,
+        "bounds": {
+          "min": [
+            -45.78266907,
+            -16.41935483,
+            -45.80768034
+          ],
+          "max": [
+            45.78266907,
+            69.11935349,
+            45.50765586
+          ],
+          "size": [
+            91.56533813,
+            85.53870832,
+            91.3153362
+          ],
+          "center": [
+            0,
+            26.34999933,
+            -0.15001224
+          ],
+          "boundingSphereRadius": 77.5235003,
+          "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+          "units": "Authored glTF coordinates; physical scale not validated",
+          "presentationScaleForMaxDimension2": 0.02184233
+        }
+      },
+      "browserRendered": false,
+      "browserVerification": "Não verificado por este pacote de ativos; acompanhar recibos de UI da entrega."
+    },
+    {
+      "id": "bennu-1999-rq36",
+      "title": "1999 RQ36 asteroid",
+      "file": "bennu-1999-rq36.glb",
+      "runtimePath": "models/nasa/bennu-1999-rq36.glb",
+      "format": "GLB",
+      "mimeType": "model/gltf-binary",
+      "bytes": 329596,
+      "sha256": "644af15678447df90c2d9e85674809c7fc70f439e0865418aa6618a8483b7958",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/1999-rq36-asteroid/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/1999-rq36-asteroid/1999%20RQ36%20asteroid.glb",
+      "credit": "NASA/Christopher R. Meaney",
+      "retrievedAt": "2026-11-14",
+      "sourceAssetDate": "2025-02-21",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuseBasis": "Referência educativa conforme NASA Images and Media Usage Guidelines; crédito preservado e sem endosso.",
+      "status": "downloaded-original-and-node-geometry-parsed",
+      "description": "Modelo histórico de referência para um caso didático de mapeamento de asteroide; setores e resultados do jogo são simulações próprias.",
+      "limitations": [
+        "Página usa designação histórica de Bennu.",
+        "Precisão, época e resolução científica da forma não foram demonstradas.",
+        "Não substitui modelo de forma PDS nem kernel SPICE para navegação."
+      ],
+      "transformations": "Nenhuma alteração no arquivo GLB original. Normalização de apresentação deve ocorrer em wrappers de cena, mantendo a geometria fonte.",
+      "glb": {
+        "version": 2,
+        "meshes": 1,
+        "nodes": 1,
+        "animations": 0,
+        "primitives": 1,
+        "materials": 2,
+        "embeddedImages": 0,
+        "imageMimeTypes": [],
+        "extensionsUsed": [],
+        "extensionsRequired": [],
+        "externalUris": []
+      },
+      "inspection": {
+        "id": "bennu-1999-rq36",
+        "nodeParsePassed": true,
+        "threeVersion": "187",
+        "parseMethod": "GLTFLoader (embedded image decoding bypassed for Node geometry inspection)",
+        "browserRendered": false,
+        "texturesDecoded": false,
+        "meshes": 1,
+        "primitives": 1,
+        "vertices": 9122,
+        "triangles": 18240,
+        "bounds": {
+          "min": [
+            -692.82226563,
+            -651.63757324,
+            -659.05224609
+          ],
+          "max": [
+            657.88378906,
+            650,
+            650.58166504
+          ],
+          "size": [
+            1350.70605469,
+            1301.63757324,
+            1309.63391113
+          ],
+          "center": [
+            -17.46923828,
+            -0.81878662,
+            -4.23529053
+          ],
+          "boundingSphereRadius": 1143.87588918,
+          "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+          "units": "Authored glTF coordinates; physical scale not validated",
+          "presentationScaleForMaxDimension2": 0.00148071
+        }
+      },
+      "browserRendered": false,
+      "browserVerification": "Não verificado por este pacote de ativos; acompanhar recibos de UI da entrega."
+    },
+    {
+      "id": "jwst-a",
+      "title": "James Webb Space Telescope (A)",
+      "file": "jwst-a.glb",
+      "runtimePath": "models/nasa/jwst-a.glb",
+      "format": "GLB",
+      "mimeType": "model/gltf-binary",
+      "bytes": 4710016,
+      "sha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/james-webb-space-telescope-(a)/James%20Webb%20Space%20Telescope%20(A).glb",
+      "credit": "NASA/Goddard Space Flight Center",
+      "retrievedAt": "2026-11-14",
+      "sourceAssetDate": "2025-04-09",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuseBasis": "Referência educativa conforme NASA Images and Media Usage Guidelines; crédito preservado e sem endosso.",
+      "status": "downloaded-original-and-node-geometry-parsed",
+      "description": "Representação de referência para um caso didático de observatório científico; distingue escolha de alvo e modo de observação dos dados reais do JWST.",
+      "limitations": [
+        "Representação de referência do JWST; o caso didático não opera o observatório real.",
+        "Requer o decodificador Draco local.",
+        "493785 triângulos e 1657 primitivas: carregar sob demanda e medir no dispositivo alvo.",
+        "Nenhuma animação está embutida; não representa dados científicos coletados pelo jogador."
+      ],
+      "transformations": "Nenhuma alteração no arquivo GLB original. Normalização de apresentação deve ocorrer em wrappers de cena, mantendo a geometria fonte.",
+      "glb": {
+        "version": 2,
+        "meshes": 1600,
+        "nodes": 1882,
+        "animations": 0,
+        "primitives": 1657,
+        "materials": 46,
+        "embeddedImages": 0,
+        "imageMimeTypes": [],
+        "extensionsUsed": [
+          "KHR_draco_mesh_compression"
+        ],
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "externalUris": []
+      },
+      "inspection": {
+        "id": "jwst-a",
+        "nodeParsePassed": true,
+        "threeVersion": "187",
+        "parseMethod": "GLTFLoader + existing Draco JS decoder via Node synchronous adapter",
+        "browserRendered": false,
+        "texturesDecoded": false,
+        "meshes": 1657,
+        "primitives": 1657,
+        "vertices": 508474,
+        "triangles": 493785,
+        "bounds": {
+          "min": [
+            -17.67538792,
+            -0.75863077,
+            -7.38669076
+          ],
+          "max": [
+            9.72171116,
+            11.24591809,
+            7.38667997
+          ],
+          "size": [
+            27.39709908,
+            12.00454886,
+            14.77337073
+          ],
+          "center": [
+            -3.97683838,
+            5.24364366,
+            -5.39e-06
+          ],
+          "boundingSphereRadius": 16.68054791,
+          "coordinateSystem": "glTF right-handed, +Y up; authored node transforms applied",
+          "units": "Authored glTF coordinates; physical scale not validated",
+          "presentationScaleForMaxDimension2": 0.07300043
+        }
+      },
+      "browserRendered": false,
+      "browserVerification": "Não verificado por este pacote de ativos; acompanhar recibos de UI da entrega.",
+      "runtimeOptimization": {
+        "method": "Merge by material and compatible attribute layout in memory",
+        "evidenceFile": "optimization.json",
+        "originalPrimitives": 1657,
+        "mergedPrimitives": 54,
+        "trianglesPreserved": 493785,
+        "sourceFileUnchanged": true,
+        "derivativeGlbDistributed": false,
+        "browserMeasured": false,
+        "integratedInSource": true,
+        "integratedFunctionNodeVerified": true,
+        "integratedFunctionSha256": "18f3d9559ec3c4616bd64501af369773663c31191faaa9f14679e073c42b1503"
+      }
+    }
+  ],
+  "decoder": {
+    "name": "Draco glTF decoder",
+    "localPath": "models/nasa/draco/",
+    "fromDependency": "three@0.187.0",
+    "sourcePath": "node_modules/three/examples/jsm/libs/draco/gltf/",
+    "sourceUrl": "https://github.com/mrdoob/three.js/tree/r187/examples/jsm/libs/draco",
+    "license": "Apache-2.0 (Draco); MIT notice of Three.js retained",
+    "licenseSourceUrl": "https://raw.githubusercontent.com/google/draco/main/LICENSE",
+    "licenseFiles": [
+      "draco/LICENSE-DRACO.txt",
+      "draco/THREE-LICENSE.txt",
+      "draco/README-upstream.md"
+    ],
+    "transformation": "Arquivos do decodificador copiados sem alterações da dependência já instalada; nenhuma instalação nova.",
+    "files": [
+      {
+        "file": "draco/LICENSE-DRACO.txt",
+        "bytes": 13898,
+        "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
+        "mimeType": "text/plain"
+      },
+      {
+        "file": "draco/README-upstream.md",
+        "bytes": 1395,
+        "sha256": "839850a67c93f6b26d3cc038a45bd8289e3cfdf15531e69339e8eb1282b4eb76",
+        "mimeType": "text/plain"
+      },
+      {
+        "file": "draco/THREE-LICENSE.txt",
+        "bytes": 1081,
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+        "mimeType": "text/plain"
+      },
+      {
+        "file": "draco/draco_decoder.js",
+        "bytes": 512465,
+        "sha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
+        "mimeType": "application/javascript"
+      },
+      {
+        "file": "draco/draco_decoder.wasm",
+        "bytes": 192420,
+        "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+        "mimeType": "application/wasm"
+      },
+      {
+        "file": "draco/draco_wasm_wrapper.js",
+        "bytes": 58456,
+        "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
+        "mimeType": "application/javascript"
+      }
+    ]
+  },
+  "scientificContext": [
+    {
+      "id": "bennu",
+      "title": "OSIRIS-REx mission overview",
+      "sourceUrl": "https://science.nasa.gov/mission/osiris-rex/",
+      "verifiedAt": "2026-11-14",
+      "supportedContext": "Levantamentos mapearam a superfície para escolher o local de coleta; coleta em 20/10/2020 e entrega de amostras à Terra em 24/09/2023.",
+      "gameBoundary": "Resultados, setorizações, metas e pontuações novos são didáticos; o modelo de forma não demonstra precisão científica ou observação inédita."
+    },
+    {
+      "id": "jwst",
+      "title": "Webb’s Scientific Instruments",
+      "sourceUrl": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/",
+      "verifiedAt": "2026-11-14",
+      "supportedContext": "Planejar observações envolve escolher alvo e modo; instrumentos registram imagens e espectros no infravermelho.",
+      "gameBoundary": "Não apresentar sinais sintéticos como observações reais, bioassinaturas confirmadas ou operação do JWST."
+    }
+  ],
+  "verificationScope": [
+    "Quatro arquivos originais baixados de assets.science.nasa.gov com HTTP 200 e MIME model/gltf-binary.",
+    "SHA256, cabeçalhos GLB, extensão dos buffers e ausência de URIs externas conferidos.",
+    "Geometria carregada com Three.GLTFLoader em Node; imagem DSN ignorada nessa etapa e Draco decodificado com adaptador síncrono do decoder JS existente.",
+    "JPEG da textura DSN extraído temporariamente e inspecionado visualmente; WebP/JPEG incorporados têm assinaturas válidas.",
+    "Nenhuma renderização 3D no navegador ou validação científica nesta inspeção."
+  ]
+}

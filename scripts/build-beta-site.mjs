@@ -21,6 +21,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/31-TRES-MISSOES-CIENTIFICAS-R14.md', target: 'docs/31-TRES-MISSOES-CIENTIFICAS-R14.md', title: 'Três missões científicas · R14', description: 'Jornadas jogáveis, quatro segmentos, replay 3D, contratos e continuidade para dois devs.' },
+  { source: 'docs/30-ATIVOS-NASA-IMPLEMENTADOS.md', target: 'docs/30-ATIVOS-NASA-IMPLEMENTADOS.md', title: 'Modelos NASA implementados', description: 'Quatro modelos locais, procedência, otimização, carregamento e limites científicos.' },
   { source: 'docs/29-GAME-DESIGN-3D.md', target: 'docs/29-GAME-DESIGN-3D.md', title: 'Game Design · missão em 3D', description: 'Proposta de experiência, quatro segmentos, revisão causal, cinco cenas e entregas para dois desenvolvedores.' },
   { source: 'docs/28-OPORTUNIDADES-NASA-3D.md', target: 'docs/28-OPORTUNIDADES-NASA-3D.md', title: 'Oportunidades NASA 3D', description: 'Modelos oficiais selecionados, formatos, créditos, peso e limites técnicos de integração.' },
   { source: 'docs/27-ACERVO-VISUAL-NASA.md', target: 'docs/27-ACERVO-VISUAL-NASA.md', title: 'Acervo visual NASA', description: 'Imagens oficiais, créditos, contexto e limites das ilustrações interativas.' },
@@ -142,7 +144,7 @@ function renderMarkdown(markdown) {
   return out.join('\n');
 }
 function page(title, content, { source, index = false } = {}) {
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · Projeto Ipê</title><link rel="icon" type="image/svg+xml" href="../brand/projeto-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="Projeto Ipê, início"><img src="../brand/projeto-ipe-logo-on-light.svg" width="300" height="100" alt="Projeto Ipê"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/25-HANDOFF-DOIS-DEVS.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>Projeto Ipê · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · Projeto Ipê</title><link rel="icon" type="image/svg+xml" href="../brand/projeto-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="Projeto Ipê, início"><img src="../brand/projeto-ipe-logo-on-light.svg" width="900" height="320" alt="Projeto Ipê"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/25-HANDOFF-DOIS-DEVS.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>Projeto Ipê · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
 }
 async function addMarkdown(entry, { index = true, category = 'public-document' } = {}) {
   if (!(await copy(entry.source, entry.target, category))) return;
@@ -181,7 +183,7 @@ try {
   }
   for (const source of await tree('experiments/mission-design-lab/dist')) {
     const rel = source.slice('experiments/mission-design-lab/dist/'.length);
-    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb)$/.test(rel)) {
+    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb|wasm)$/.test(rel)) {
       await copy(source, `lab/${rel}`, 'mission-lab-runtime');
     }
   }
@@ -245,7 +247,7 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R13-visual-study', version: '0.4.0-beta.2', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R14-scientific-missions', version: '0.5.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,

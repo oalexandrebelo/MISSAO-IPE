@@ -24,7 +24,7 @@ const slash = value => value.split(path.sep).join('/');
 const textExtensions = new Set(['.html', '.js', '.mjs', '.css', '.json', '.md', '.txt', '.mmd', '.svg', '.py']);
 const safeResearchEvidence = new Set(['research/evidence/validate-evi3-research.py', 'research/evidence/evi3-validation.json', 'research/evidence/resources-retrieval-20261114.json']);
 const expectedData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
-const mimeByExtension = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain', '.mmd': 'text/plain', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2' };
+const mimeByExtension = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain', '.mmd': 'text/plain', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.webp': 'image/webp', '.glb': 'model/gltf-binary', '.wasm': 'application/wasm' };
 let files = [];
 const bytesByFile = new Map();
 const documents = new Map();
@@ -361,7 +361,8 @@ async function run() {
     assert.ok(csp);
     const scriptDirective = csp.split(';').find(part => part.trim().startsWith('script-src '));
     assert.ok(scriptDirective?.includes("'self'"));
-    assert.doesNotMatch(scriptDirective, /unsafe-inline|unsafe-eval|https?:/);
+    assert.doesNotMatch(scriptDirective, /'unsafe-inline'|'unsafe-eval'|https?:/);
+    assert.ok(scriptDirective.includes("'wasm-unsafe-eval'"), 'Draco local requer compilação WebAssembly; eval JavaScript continua bloqueado');
     assert.match(csp, /script-src-attr\s+'none'/);
     assert.match(csp, /worker-src\s+'self'/);
     assert.match(csp, /object-src\s+'none'/);
@@ -377,6 +378,32 @@ async function run() {
       }
     }
     observations.configuredHeaders = { common, checkedInlineScripts: checkedScripts, assetCacheRule: vercel.headers.find(rule => rule.source === '/game/assets/(.*)'), limitation: 'Static configuration and local server. Does not prove Vercel applied these headers or a browser enforced CSP.' };
+  });
+
+  await check('modelos NASA e decodificador local preservam bytes, créditos e referências', async () => {
+    const base = 'lab/models/nasa/';
+    const assets = JSON.parse(bytesByFile.get(`${base}manifest.json`).toString());
+    assert.equal(assets.models.length, 4);
+    let total = 0;
+    for (const asset of [...assets.models, ...assets.decoder.files]) {
+      const bytes = bytesByFile.get(base + asset.file);
+      assert.ok(bytes, `Ativo local ausente: ${asset.file}`);
+      assert.equal(bytes.length, asset.bytes);
+      assert.equal(digest(bytes), asset.sha256);
+      if (asset.file.endsWith('.glb')) {
+        assert.equal(bytes.toString('ascii', 0, 4), 'glTF');
+        assert.equal(bytes.readUInt32LE(4), 2);
+        assert.equal(bytes.readUInt32LE(8), bytes.length);
+        assert.match(asset.sourceUrl, /^https:\/\/science\.nasa\.gov\//);
+        assert.ok(asset.credit);
+        const jsonLength = bytes.readUInt32LE(12);
+        const gltf = JSON.parse(bytes.toString('utf8', 20, 20 + jsonLength));
+        assert.ok([...(gltf.buffers || []), ...(gltf.images || [])].every(item => !item.uri), 'GLB deve ser autocontido');
+        total += bytes.length;
+      }
+    }
+    assert.equal(total, assets.totalModelBytes);
+    observations.nasaAssets = { models: 4, modelBytes: total, decoderFiles: assets.decoder.files.length, browserRendered: false };
   });
 
   await check('servidor de release inicia apenas em loopback para os testes HTTP', async () => {

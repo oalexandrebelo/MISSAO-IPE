@@ -1,25 +1,37 @@
+import { lazy, Suspense, useState } from 'react';
 import { SCENARIOS } from '../core/catalog.ts';
 import type { ScenarioId } from '../core/contracts.ts';
 import { Icon } from './Icon.tsx';
 import { Scene } from './Scene.tsx';
 import { MissionConcept } from './MissionConcept.tsx';
+import { MissionStory } from './MissionStories.tsx';
+import type { ExpeditionId } from '../lab/scientific-expeditions.ts';
 import { minutes } from './format.ts';
 
-export function Observatory({ onChoose, onSources, onLab, completed }: { onChoose: (id: ScenarioId) => void; onSources: () => void; onLab: () => void; completed: ReadonlySet<ScenarioId> }) {
+const NASAReferenceScene = lazy(() => import('./NASAReferenceScene.tsx').then(module => ({ default: module.NASAReferenceScene })));
+export function Observatory({ onChoose, onSources, onLab, completed, onExpedition }: { onChoose: (id: ScenarioId) => void; onSources: () => void; onLab: () => void; completed: ReadonlySet<ScenarioId>; onExpedition: (id: ExpeditionId) => void }) {
+  const [showModels, setShowModels] = useState(false);
   return <>
-    <div className="mission-kicker"><span><i /> CENTRO DE PROJETO DE MISSÕES</span><span>BRASIL · TERRA · ÓRBITA BAIXA</span></div>
+    <div className="mission-kicker"><span><i /> CENTRO DE PROJETO DE MISSÕES</span><span>TERRA · BENNU · TELESCÓPIO</span></div>
     <div className="observatory-hero">
       <section className="hero-copy">
         <p className="eyebrow"><span className="eyebrow-line" /> SUA PRIMEIRA MISSÃO COMEÇA AQUI</p>
         <h1>O espaço é grande.<br />Seus recursos,<br /><em>limitados.</em></h1>
         <p className="hero-lead">Projete uma missão. Faça a ciência chegar.</p>
-        <p className="hero-description">Monte seu CubeSat, equilibre seis sistemas e entregue dados sobre o Cerrado. No caminho, descubra o que cada decisão custa — e o que ela torna possível.</p>
+        <p className="hero-description">Escolha uma pergunta científica. Projete a missão, negocie recursos e acompanhe o que chega ao solo. Três casos conectam lançamento, nave, operações e pessoas que precisam dos dados.</p>
         <div className="hero-actions"><button className="button button-primary hero-button" type="button" onClick={() => onChoose('long-contact')}>Começar a missão <Icon name="arrow" /></button><button className="button button-secondary" type="button" onClick={onLab}><Icon name="spark" size={17} /> Explorar a física</button></div>
         <div className="hero-footnote"><span><Icon name="globe" size={16} /> Dados históricos NASA</span><span><Icon name="satellite" size={16} /> Engenharia na prática</span><span><Icon name="play" size={14} /> No seu ritmo</span></div>
       </section>
       <div className="hero-observatory"><Scene /><div className="orbit-caption-bar"><span><i /> IPÊ-01 <small>CUBESAT EDUCACIONAL</small></span><span>TERRA <small>VISUALIZAÇÃO CONCEITUAL</small></span></div></div>
     </div>
     <div className="mission-spec-strip" aria-label="Objetivos e limites da missão"><div><span>OBJETIVO CIENTÍFICO</span><strong>06 <small>registros válidos na Terra</small></strong></div><div><span>MASSA MÁXIMA</span><strong>3,6 <small>kg</small></strong></div><div><span>ORÇAMENTO</span><strong>86 <small>créditos</small></strong></div><div><span>HORIZONTE SIMULADO</span><strong>180 <small>minutos</small></strong></div></div>
+    <section aria-labelledby="science-cases-title"><div className="section-heading"><div><p className="eyebrow">TRÊS MISSÕES CIENTÍFICAS JOGÁVEIS</p><h2 id="science-cases-title">Cada pergunta pede uma missão.</h2></div><span className="section-note">Do propósito ao retorno científico, individualmente ou em equipe local.</span></div><div className="science-case-grid">
+      <article className="science-case-card"><div className="case-illustration" aria-hidden="true"><svg viewBox="0 0 220 120"><circle cx="100" cy="60" r="46" fill="#335847" stroke="currentColor"/><path d="M74 22l22 20 29 2-9 22-25 12-10-26-16-5M89 78l14 26 11-12 4-24" fill="#b9bb8b"/><ellipse cx="105" cy="60" rx="88" ry="30" fill="none" stroke="currentColor" transform="rotate(-25 105 60)"/><rect x="175" y="20" width="13" height="22" fill="currentColor"/></svg></div><p className="eyebrow">CASO 01 · ECOLOGIA</p><h3>O Cerrado entre duas datas.</h3><p>Uma equipe precisa das duas observações de cada local. Processe os arquivos históricos Terra/MODIS e descubra por que uma informação ausente não pode virar uma conclusão.</p><p className="case-source">Dados históricos reais · nave e recursos didáticos</p><button className="button button-secondary" type="button" onClick={() => onChoose('long-contact')}>Projetar missão do Cerrado <Icon name="arrow" size={17} /></button></article>
+      <article className="science-case-card"><div className="case-illustration" aria-hidden="true"><svg viewBox="0 0 220 120"><path d="M103 10l38 18 22 29-15 29-44 23-42-26-8-33 22-25z" fill="#675d51" stroke="currentColor"/><path d="M103 10l6 43 54 4M54 50l55 3-5 56M62 83l47-30 39 33M76 25l33 28 32-25" fill="none" stroke="currentColor" opacity=".6"/><ellipse cx="110" cy="65" rx="96" ry="34" fill="none" stroke="#87acb9" transform="rotate(-20 110 65)"/></svg></div><p className="eyebrow">CASO 02 · GEOLOGIA PLANETÁRIA</p><h3>Antes de tocar Bennu.</h3><p>Organize um levantamento de superfície. O instrumento, o perfil de aproximação e o contato precisam entregar observações suficientes para a equipe de cartografia.</p><p className="case-source">Modelo NASA · observações e recursos sintéticos</p><button className="button button-primary" type="button" onClick={() => onExpedition('bennu')}>Explorar missão Bennu <Icon name="arrow" size={17} /></button></article>
+      <article className="science-case-card"><div className="case-illustration" aria-hidden="true"><svg viewBox="0 0 220 120"><path d="M103 12l42 24v49l-42 24-43-24V36z" fill="#b29557" stroke="currentColor"/><path d="M103 12v97M60 36l85 49M145 36L60 85M81 24v73m43-73v73M60 61h85" fill="none" stroke="#f3dba2"/><path d="M39 83L175 100 107 118z" fill="#8b98a6" stroke="currentColor"/></svg></div><p className="eyebrow">CASO 03 · ASTRONOMIA</p><h3>A luz tem uma história.</h3><p>Projete um observatório para comparar faixas do infravermelho. Descubra por que o melhor retrato pode não ser a evidência pedida pela ciência.</p><p className="case-source">Modelo NASA do Webb · espectro sintético</p><button className="button button-primary" type="button" onClick={() => onExpedition('telescope')}>Projetar telescópio científico <Icon name="arrow" size={17} /></button></article>
+    </div></section>
+    <MissionStory id="cerrado" />
+    <section className="expedition-section" aria-labelledby="model-library-title"><p className="eyebrow">ENGENHARIA EM TRÊS DIMENSÕES</p><h2 id="model-library-title">Modelos oficiais. Perguntas próprias.</h2><p>Explore CubeSat, Bennu, a antena DSN e o Webb com fontes e créditos. O modelo visual não fornece os parâmetros da simulação.</p><button className="button button-secondary" type="button" aria-expanded={showModels} onClick={() => setShowModels(!showModels)}>{showModels ? 'Fechar acervo de modelos' : 'Explorar modelos NASA em 3D'}</button>{showModels ? <Suspense fallback={<p>Preparando o acervo 3D…</p>}><NASAReferenceScene /></Suspense> : null}</section>
     <MissionConcept onSources={onSources} />
     <section className="conditions-section" aria-labelledby="conditions-title">
       <div className="section-heading"><div><p className="eyebrow">ESCOLHA O SEU DESAFIO</p><h2 id="conditions-title">A mesma ciência. Novas decisões.</h2></div><span className="section-note">Comece pelo cenário 01. Leve o que aprendeu para o 02.</span></div>

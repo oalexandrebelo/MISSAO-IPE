@@ -1,5 +1,8 @@
 # 29 — Game Design: a missão termina quando a ciência chega
 
+**Implementação R14:** a [entrega das três missões](31-TRES-MISSOES-CIENTIFICAS-R14.md) concretiza a reprodução temporal na cena, os quatro segmentos, Bennu/Telescópio com narrativa e revisão de equipe local. [Quatro modelos NASA](30-ATIVOS-NASA-IMPLEMENTADOS.md) foram integrados como referências. As cinco cenas e demais ideias abaixo conservam o desenho original R13; nem toda proposta virou funcionalidade.
+
+
 **Revisão R13 · 14/11/2026 · proposta de evolução sobre o beta 0.4.0-beta.2.**
 
 [Explorar a proposta interativa](https://projeto-ipe.vercel.app/game-design.html) · [Jogar a base atual](https://projeto-ipe.vercel.app/lab/index.html) · [Acervo NASA 3D](28-OPORTUNIDADES-NASA-3D.md) · [Handoff da dupla](25-HANDOFF-DOIS-DEVS.md).
