@@ -1,0 +1,81 @@
+{
+  "edition": "R12-study-handoff",
+  "recordedAt": "2026-11-14T19:04:41.841386+00:00",
+  "scope": "Visual identity, typography, study layout and developer handoff; mission domain unchanged",
+  "documentation": {
+    "documents": 84,
+    "studies": 3,
+    "newGuides": [
+      "docs/23-IDENTIDADE-VISUAL.md",
+      "docs/24-OPORTUNIDADES-ESTUDOS.md",
+      "docs/25-HANDOFF-DOIS-DEVS.md",
+      "docs/26-TIPOGRAFIA.md"
+    ]
+  },
+  "validation": {
+    "build": "passed",
+    "uiTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "contextChecks": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distributionChecks": {
+      "passed": 15,
+      "failed": 0
+    },
+    "domainTests": "Not rerun in R12; unchanged domain baseline in R11"
+  },
+  "browser": {
+    "surfaces": [
+      "portal",
+      "research-library",
+      "developer handoff",
+      "mission lab"
+    ],
+    "viewportRequests": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "observedViewportWidths": [
+      1309,
+      354,
+      1163
+    ],
+    "checks": [
+      "Local SVG image paths in all inspected headers",
+      "Plus Jakarta Sans body and Bricolage Grotesque headings",
+      "No global horizontal overflow on inspected surfaces",
+      "Search empty state and matching results",
+      "Current edition filter",
+      "In-document navigation to Dev A/B section",
+      "No console errors observed"
+    ],
+    "limits": [
+      "Not a full accessibility audit",
+      "No physical device testing",
+      "No new learning study",
+      "No cold-offline test"
+    ]
+  },
+  "brand": {
+    "path": "experiments/mission-design-lab/public/brand/projeto-ipe-logo.svg",
+    "vectorPaths": 108,
+    "preservedSymbolPaths": 104,
+    "embeddedImages": 0,
+    "externalFontDependencies": 0
+  },
+  "publication": "See production-r12.json and PUBLICADO.md for remote verification after deployment"
+}

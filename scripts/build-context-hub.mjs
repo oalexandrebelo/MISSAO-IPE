@@ -93,5 +93,6 @@ console.log(JSON.stringify({
   tasks: data.tasks.length,
   sources: data.sources.length,
   chapters: data.chapters.length,
-  standalone: true,
+  embeddedDataAndLogic: true,
+  localDesignAssets: ['fonts/fonts.css', 'brand/projeto-ipe-logo.svg', 'brand/projeto-ipe-symbol.svg'],
 }, null, 2));

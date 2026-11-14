@@ -95,3 +95,7 @@ Os testes DOM verificam comportamento funcional delimitado. Não provam legibili
 A candidatura ao Space Apps continua separada da publicação de P&D. A orientação sobre trabalho anterior ao início oficial e a qualificação dos Resources precisam ser resolvidas por quem cuida da candidatura. A central não envia projeto, não contata organizadores e não registra aprovação institucional.
 
 O cronograma é um instrumento de execução. A aceitação final exige uma pessoa responsável, uma versão identificada e evidência compatível com a alegação feita.
+
+## Atualização visual R12 — 14/11/2026
+
+O conteúdo e a lógica da central continuam incorporados ao HTML. A marca SVG e as duas famílias tipográficas agora são arquivos locais da distribuição, sem CDN de fontes. Para transportar a apresentação visual completa, use a pasta `site/`; copiar somente o HTML preserva o texto e as interações, mas depende de fontes de sistema e não inclui a marca. O cronograma histórico conserva suas datas e estados; o guia de continuidade para dois desenvolvedores é a entrada do trabalho atual.

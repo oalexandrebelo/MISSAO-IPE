@@ -4,6 +4,188 @@ Base documental integral da Missão Ipê. Esta edição reúne os documentos dis
 
 ---
 
+# Procedência da edição pública — PROJETO IPÊ
+
+Fonte: `GIT-PROVENIENCIA.md` · SHA-256 original: `a8411222d3cad3609c74bce54125a4ff32962e53b97616ee21078f1755090c77` · Ajustes de caminhos privados: 0
+
+# Procedência da edição pública — PROJETO IPÊ
+
+Recuperado de `oalexandrebelo/AB-NASA-TEAM-IPE`, branch `feat/mission-design-lab`, commit `7dc3cf734d63a2620bb68adb16990cc2f4a21f66`, em 14/11/2026. O código R10 (beta 0.4.0-beta.2), o jogo clássico e os materiais documentais foram reunidos à edição R11 do portal e à pesquisa atualizada de APIs.
+
+O repositório público `oalexandrebelo/PROJETO-IPE` preserva seu commit inicial `b19ad0caa1711485a1139234d6958fa2ab9be212` e recebe uma importação de arquivos com histórico próprio. O histórico privado não foi importado ou sobrescrito.
+
+Foram preservados código, testes, dados científicos, documentação, pesquisa, apresentações, diagramas, licenças e scripts de reprodução. Foram excluídos bundles de recuperação e histórico privado, relatório bruto comprimido de análise, anexos pessoais, estado da hospedagem anterior e source maps. Esses materiais permanecem no repositório privado original e não são necessários ao build público.
+
+Três prefixos de caminho local em `research/evidence/evi3-validation.json` foram substituídos por marcador neutro, preservando nomes dos arquivos, estrutura, valores científicos e hashes de origem. O recibo de exportação está em `evidence/public-export-r11.json`.
+
+Os documentos históricos podem mencionar caminhos e arquivos internos não distribuídos nesta edição. `scripts/recover-archives.mjs` é ferramenta histórica: sua execução requer os arquivos do repositório privado. A recuperação não é necessária para executar o produto.
+
+`site/publication-manifest.json`, gerado pelo build, registra hashes de cada artefato efetivamente servido. `PUBLICADO.md` registra o estado remoto verificado. Hashes e resultados históricos são identificados por sua edição, sem presumir identidade entre commits de repositórios diferentes.
+
+
+---
+
+# Atribuição, licenças e autoria assistida
+
+Fonte: `NOTICE.md` · SHA-256 original: `2c3e2d192ab582bc745c77358b258cd239f839f519af51ad93d2016b152f8b86` · Ajustes de caminhos privados: 0
+
+# Atribuição, licenças e autoria assistida
+
+Missão Ipê — Ciência que chega. Protótipo de P&D para AB / Hackatur–Zer0Slop, 2026. Código original desta entrega sob Apache-2.0, com cópia em LICENSE. A licença é uma escolha de distribuição deste pacote de pesquisa; não determina elegibilidade NASA. Nenhum repositório privado AB foi publicado ou relicenciado.
+
+Assistência por IA: pesquisa, arquitetura, documentação, implementação e testes assistidos por dez frentes Astra 6 / max e coordenação. Os papéis e pareceres estão registrados em research. O fato de um agente produzir código ou parecer não substitui execução, revisão humana ou qualificação institucional.
+
+Bibliotecas de runtime distribuídas compiladas: React, ReactDOM, Scheduler e Three.js, MIT, com avisos em licenses. As versões exatas e integridades de instalação estão em package-lock.json. Dependências de build/teste têm licenças próprias no inventário da entrega; não estão empacotadas como node_modules.
+
+Dados NASA: MOD13Q1 Collection 061 / DOI 10.5067/MODIS/MOD13Q1.061; subset ORNL DAAC, metadados de bandas e CMR preservados em public/data. Coordenadas são posições solicitadas ao serviço, não garantia de centro de pixel. Datas dos registros: 2024; recuperação:14/11/2026. Consultar os avisos do fornecedor para qualquer redistribuição ampliada. Na identidade visual autoral e no jogo não foram usados logotipos NASA, Kapsch ou assets proprietários.
+
+Referências internas: cena Three/OrbitControls e práticas de descarte do AB-SMC1TY foram inspecionadas como referência; o diorama desta entrega foi escrito para o protótipo. AB-ET3TIV informou práticas de auditoria; AB-R3A/REA executou inspeção estática no escopo registrado. Não há um motor Astra offline embarcado no jogo ou no AB-R3A.
+
+Referência de interação: Kapsch Experience, seleção espacial por hotspots; sem cópia de identidade ou arquivos. Referência de processo: github/spec-kit, MIT, protocolo documental aplicado sem instalar a CLI. Comparáveis de competição foram pesquisados, sem incorporação de seu código.
+
+Desenvolvimento específico começou antes das 09h BRT de 14/11/2026. Datas reais devem ser preservadas. Não existe aprovação NASA observada para aproveitamento desse trabalho na competição. Fontes, inspiração, licença e autoria não equivalem a endosso ou certificação.
+
+Rodada R5 de apresentação: três agentes GPT-6 Astra, esforço max, realizaram revisão de fontes, criação do HTML e verificação/handoff, com coordenação principal. A declaração específica está em kit/AI-USAGE.md e evidence/ai-usage-r5.json. O jogo e seus builds foram preservados; a apresentação incorpora o mesmo núcleo para sua demonstração.
+
+Os cartazes em references/user foram fornecidos por AB e preservados como referências contextuais sem alteração dos bytes. Marcas, direitos e autoria dos cartazes pertencem aos titulares originais. A licença Apache-2.0 do código original não relicencia esses materiais. Sua presença não representa endosso NASA, Space Apps, Kapsch ou dos organizadores locais.
+
+R12 — identidade e tipografia: símbolo SVG fornecido pelo responsável, assinatura horizontal convertida em contornos vetoriais a partir da marca fornecida. Fontes Bricolage Grotesque e Plus Jakarta Sans provenientes do Google Fonts, sob SIL Open Font License 1.1, com licenças e proveniência em experiments/mission-design-lab/public/fonts/. Materiais SmartCity em references/estudos/ são referências históricas de outro projeto, com limites e transformações identificados.
+
+
+---
+
+# Publicação PROJETO IPÊ — R11
+
+Fonte: `PUBLICADO.md` · SHA-256 original: `ec0f026a2213fc203a0fc3cb79fbf0b32254764c941bd12519bd6cfea12e1671` · Ajustes de caminhos privados: 0
+
+# Publicação PROJETO IPÊ — R11
+
+Publicação confirmada em 14/11/2026, com a identidade visual fornecida para o PROJETO IPÊ.
+
+- Portal interativo: <https://projeto-ipe.vercel.app/>
+- Simulador beta: <https://projeto-ipe.vercel.app/lab/index.html>
+- Pesquisa NASA: <https://projeto-ipe.vercel.app/docs/21-OPORTUNIDADES-NASA.html>
+- Plano de continuidade: <https://projeto-ipe.vercel.app/docs/22-PLANO-CONTINUIDADE.html>
+- Repositório: <https://github.com/oalexandrebelo/PROJETO-IPE>
+
+## Versão publicada
+
+Beta `0.4.0-beta.2`, distribuição R11. Código publicado no commit `2adff7a17912d890d893ee604c081d4c798e5315`. Deployment Vercel `dpl_Efdhz3bFmzSDGCcAViVnmpqnLZQK`, confirmado como `READY`, com o domínio de produção acima atribuído. Este registro e a evidência abaixo são posteriores à compilação; não alteram o código publicado.
+
+O site de produção abre sem login, conforme autorização expressa do proprietário. A proteção de acesso continua habilitada para previews.
+
+## Verificação
+
+- Consulta sem cookies ou cabeçalhos de autenticação: manifesto acessível e seus 134 arquivos com HTTP 200, tamanho e SHA-256 conferidos, sem divergências. Os scripts embutidos também correspondem à política de segurança publicada.
+- Beta: 101 testes de domínio e 9 de interface aprovados; jogo clássico: 51 testes aprovados; contexto: 24 verificações aprovadas; distribuição: 15 verificações HTTP aprovadas.
+- Após aplicar a marca: compilação, 9 testes de interface e 15 verificações da distribuição executados novamente, com sucesso.
+- Navegador: missão local com 6/6 registros válidos, filtros e etapas interativos conferidos, visualização móvel sem rolagem horizontal. Logo conferida no portal público e no simulador local.
+
+Evidência detalhada: [evidence/production-r11.json](evidence/production-r11.json).
+
+## Escopo entregue
+
+Portal com contexto, etapas e pesquisa de oportunidades NASA; simulador beta, jogo clássico, apresentação, arquitetura, biblioteca e código-fonte. O símbolo SVG preserva os desenhos e cores fornecidos; a assinatura horizontal usa o PNG original. A procedência está em [docs/23-IDENTIDADE-VISUAL.md](docs/23-IDENTIDADE-VISUAL.md).
+
+As novas integrações NASA são propostas documentadas. O beta usa os dados históricos já presentes no projeto; esta publicação não comprova novas integrações ao vivo, elegibilidade no desafio, estudo de aprendizagem ou auditoria completa de acessibilidade.
+
+A origem e o tratamento dos materiais internos estão registrados em [GIT-PROVENIENCIA.md](GIT-PROVENIENCIA.md).
+
+
+---
+
+# PROJETO IPÊ — Ciência que chega
+
+Fonte: `README.md` · SHA-256 original: `74f29163c65ee9dd266fd122b1abff4620c10e99a8b81e1abee13f11d10cea72` · Ajustes de caminhos privados: 0
+
+# PROJETO IPÊ — Ciência que chega
+
+Jogo educativo de engenharia de missões espaciais. Projete um CubeSat fictício, formule uma hipótese, execute a missão e investigue como entregar seis registros históricos de vegetação do Cerrado dentro dos limites de massa, orçamento, energia, potência, memória e comunicação.
+
+**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R12, 14/11/2026.**
+
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+
+## Explorar
+
+- [Portal interativo: contexto, etapas e fontes NASA](https://projeto-ipe.vercel.app/)
+- [Jogar o beta atual](https://projeto-ipe.vercel.app/lab/index.html)
+- [Contexto e cronograma detalhados](https://projeto-ipe.vercel.app/context/index.html)
+- [Biblioteca integral](https://projeto-ipe.vercel.app/context/research-library.html)
+- [Apresentação e pitch](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
+- [Documentação pública](https://projeto-ipe.vercel.app/docs/index.html)
+- [Jogo clássico preservado](https://projeto-ipe.vercel.app/game/index.html)
+
+O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidências históricas não comprovam uma nova publicação por si só.
+
+## O que existe
+
+O beta oferece seis escolhas binárias, 64 configurações, dois cenários de contato, revisão pré-voo, diário de eventos, sete requisitos com evidência, comparação de tentativas, replay recalculado e laboratório de física. Dados históricos MOD13Q1.061 permanecem separados dos parâmetros didáticos da nave. A cena 3D não decide o resultado do motor.
+
+O portal tem seis etapas navegáveis, catálogo pesquisável de 13 fontes e quatro níveis narrativos propostos. Semente/Raízes reaproveitam os dois cenários existentes; Copa/Horizonte ainda são propostas. Novas integrações NASA/JPL não foram implementadas nesta edição.
+
+## Código e documentação
+
+| Material | Local |
+| --- | --- |
+| Beta 0.4.0-beta.2 / R10 | `experiments/mission-design-lab/` |
+| Portal HTML interativo | `web/index.html` |
+| PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
+| Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
+| Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
+| Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
+| Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
+| Entrada da equipe de dois devs | [Handoff](docs/25-HANDOFF-DOIS-DEVS.md) |
+| Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
+| Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
+| Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
+
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada nesta edição.
+
+## Executar e compilar
+
+Requer Node 24. Instalação e compilação da distribuição completa:
+
+```bash
+npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund
+npm run build:release
+npm run start:beta
+```
+
+Abra `http://127.0.0.1:4175/`. Para desenvolver o beta: `npm --prefix experiments/mission-design-lab run dev`. O arquivo `portable/Missao_Ipe_Local.html` é a alternativa autocontida do jogo clássico.
+
+O build compila o beta para `/lab/`, preserva a versão clássica em `/game/`, monta apenas os materiais públicos em `site/` e calcula os hashes de scripts para a política CSP. O `dist/` da raiz é o runtime clássico preservado; alterações em `src/` da raiz exigem recompilação própria.
+
+## Verificar
+
+```bash
+npm ci --ignore-scripts --no-audit --no-fund
+npm test
+npm --prefix experiments/mission-design-lab run verify
+npm run build:release
+npm run test:context
+npm run test:beta
+```
+
+O registro R11 preserva 101 testes de domínio do beta, 9 de interface, 51 do motor clássico, 24 verificações da central, 15 da distribuição/HTTP e uma partida observada com 6/6 registros válidos. Na revisão visual/documental R12, foram executados novamente a compilação, os 9 testes de interface, as 24 verificações da central e as 15 da distribuição. Navegação, busca, filtros, SVG e leitura foram conferidos em navegador no computador e em tela estreita. Isso não substitui pesquisa de aprendizagem, auditoria completa de acessibilidade ou validação de voo.
+
+## Próximos passos
+
+1. Validar uso e aprendizado com jogadores.
+2. Refinar narrativa e fichas usando os materiais NASA.
+3. Preparar coleta sequencial e snapshots com procedência.
+4. Validar uma campanha de pequenos corpos com SBDB, Mission Design e Horizons.
+5. Ensaiar a apresentação e confirmar regulamento/elegibilidade do desafio.
+
+A documentação histórica mantém seus cortes originais. O handoff para dois desenvolvedores e o plano de continuidade são as referências da evolução atual. Os materiais SmartCity são referências de outro projeto; seu código ilustrativo, regras de concurso e resultados não se transferem para o Ipê. Nenhuma tarefa futura foi agendada automaticamente.
+
+## Licenças e atribuições
+
+Código original sob Apache-2.0; dependências e materiais de terceiros conservam suas licenças em `licenses/`, nos diretórios vendor e em [NOTICE.md](NOTICE.md). Assistência de IA em pesquisa, programação e redação está declarada. Referências NASA não significam endosso institucional. Condições oficiais de participação e elegibilidade ainda requerem confirmação.
+
+
+---
+
 # 01 — Dossiê de decisão: Missão Ipê — Ciência que chega
 
 Fonte: `docs/01-DOSSIE-DECISAO.md` · SHA-256 original: `e4b0d44ddd8705da34166ed4564cb6d4748eda5d0c21e1a455aaaad75a9575c6` · Ajustes de caminhos privados: 0
@@ -2612,7 +2794,7 @@ Links de guias recuperados da publicação GO #2028, mas sem corpo acessível ne
 
 # Central de contexto e cronograma — R8
 
-Fonte: `docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md` · SHA-256 original: `e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e` · Ajustes de caminhos privados: 0
+Fonte: `docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md` · SHA-256 original: `078806af108969d52f57752828a2369e943caeea2e224454e97dc7bda61c7693` · Ajustes de caminhos privados: 0
 
 # Central de contexto e cronograma — R8
 
@@ -2711,6 +2893,10 @@ Os testes DOM verificam comportamento funcional delimitado. Não provam legibili
 A candidatura ao Space Apps continua separada da publicação de P&D. A orientação sobre trabalho anterior ao início oficial e a qualificação dos Resources precisam ser resolvidas por quem cuida da candidatura. A central não envia projeto, não contata organizadores e não registra aprovação institucional.
 
 O cronograma é um instrumento de execução. A aceitação final exige uma pessoa responsável, uma versão identificada e evidência compatível com a alegação feita.
+
+## Atualização visual R12 — 14/11/2026
+
+O conteúdo e a lógica da central continuam incorporados ao HTML. A marca SVG e as duas famílias tipográficas agora são arquivos locais da distribuição, sem CDN de fontes. Para transportar a apresentação visual completa, use a pasta `site/`; copiar somente o HTML preserva o texto e as interações, mas depende de fontes de sistema e não inclui a marca. O cronograma histórico conserva suas datas e estados; o guia de continuidade para dois desenvolvedores é a entrada do trabalho atual.
 
 
 ---
@@ -2934,23 +3120,2701 @@ Depois: APIs oficiais → coleta sequencial no servidor ou processo editorial �
 
 # Identidade visual — PROJETO IPÊ
 
-Fonte: `docs/23-IDENTIDADE-VISUAL.md` · SHA-256 original: `bb98fbc098cc35f7624ac0e318be72d626435b3df1ed800e219ee7f6b85df8fb` · Ajustes de caminhos privados: 0
+Fonte: `docs/23-IDENTIDADE-VISUAL.md` · SHA-256 original: `42af5f0bc7f487a03e533300f23559cb0d4ee10da3f45b164af076c86bd45b2f` · Ajustes de caminhos privados: 0
 
 # Identidade visual — PROJETO IPÊ
 
-Aplicação da identidade fornecida pelo responsável em 14/11/2026.
+Atualização de 14/11/2026: a composição horizontal passa a ter um **SVG vetorial autossuficiente**, sem imagem raster incorporada e sem dependência de fonte instalada.
 
-- `arte.svg` e `arteFULL.svg` recebidos são idênticos e contêm somente o símbolo (viewBox 0 0 104 104).
-- `experiments/mission-design-lab/public/brand/projeto-ipe-symbol.svg` preserva todos os 104 paths e suas cores. Foram removidas somente as dimensões fixas do elemento raiz e adicionados título, descrição e grupo semântico.
-- `projeto-ipe-logo.png` preserva integralmente a composição horizontal fornecida, 300 × 100, com transparência. Não foi apresentada como uma composição vetorial.
-- Cabeçalhos usam a composição sobre fundo escuro, sem distorção; o ícone da aba usa o símbolo quadrado em SVG.
-- Originais enviados pelo usuário não foram sobrescritos.
+## Origem e arquivos
 
-A aplicação seguiu as orientações de SVG autocontido, proporções, acessibilidade e integração da [logo-designer-skill](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md). Não foram criados conceitos alternativos, pois a identidade já foi escolhida pelo responsável.
+- Os arquivos recebidos `arte.svg` e `arteFULL.svg` são idênticos e contêm somente o símbolo, com `viewBox="0 0 104 104"`. SHA-256: `af507645399111bf01fdae9d88ba9963dcf4aaeccef0dc59511688c96135bd4c`.
+- `experiments/mission-design-lab/public/brand/projeto-ipe-symbol.svg` conserva os 104 paths, as cores e as proporções originais. Título, descrição e grupo semântico identificam o símbolo; as dimensões fixas da raiz foram removidas.
+- `projeto-ipe-logo.svg` é a composição horizontal vetorial, com `viewBox="0 0 300 100"`, título, descrição e grupos `icon` e `wordmark`. O símbolo conserva seus 104 paths originais; a translação apenas o posiciona na composição.
+- `projeto-ipe-logo.png` permanece como referência original recebida, 300 × 100 e com transparência, não como dependência do SVG. SHA-256: `470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f`.
+- Os arquivos originais fornecidos pelo responsável não foram sobrescritos.
 
-SHA-256 dos SVGs originais: `af507645399111bf01fdae9d88ba9963dcf4aaeccef0dc59511688c96135bd4c`.
+## Como o lettering virou vetor
 
-SHA-256 do PNG original e publicado: `470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f`.
+O SVG recebido não contém o nome horizontal. Para preservar o desenho escolhido, os contornos de **PROJETO IPÊ** foram extraídos da transparência do PNG fornecido, mantendo posição, espaçamento, recortes internos e circunflexo. O contorno usa o limiar alfa 128/255 e simplificação geométrica de até 0,55 unidade no plano original de 300 × 100.
+
+Isso é uma reconstrução vetorial a partir de uma referência raster pequena, não a recuperação de curvas tipográficas originais desconhecidas. O resultado usa paths preenchidos, sem `<image>`, `<text>`, base64, fonte do sistema ou arquivo externo. A faixa azul usa um recorte vetorial local. Não foi substituído o lettering por uma terceira família de fontes.
+
+A paleta permanece cobre `#B88965`, azul `#085D9D` e branco `#FDFDFD`; tons secundários do símbolo original foram preservados. Os contornos reconstruídos não reproduzem cada pixel de antialiasing do PNG, e não há alegação de identidade binária entre os dois formatos.
+
+## Aplicação e legibilidade
+
+A marca horizontal foi preparada para fundos escuros, que preservam o branco de “PROJETO” e da órbita. Manter proporção 3:1 e usar dimensões explícitas no layout para evitar deslocamento durante o carregamento. A imagem pode ter `alt=""` quando o link ou botão já tiver o nome acessível apropriado; fora desse contexto, usar “Projeto Ipê”.
+
+O favicon usa o símbolo quadrado, nunca a composição horizontal comprimida. O símbolo fornecido é detalhado; em 16 px, ramos e circuitos deixam de ser distinguíveis. A miniatura conserva a silhueta e a paleta, sem prometer a leitura desses detalhes nessa escala.
+
+## Verificações desta edição
+
+- XML válido; ausência de scripts, handlers, referências externas, fontes e raster no SVG horizontal.
+- Comparação dos 104 atributos `d` e `fill` do símbolo com o SVG recebido: preservados.
+- Renderização local do SVG para inspeção do nome, acento, recortes, proporção e divisão cobre/azul. Essa conferência do arquivo não substitui a revisão da interface integrada em navegador.
+- A fonte científica e o motor do jogo não são alterados pela identidade visual.
+
+A aplicação seguiu as convenções de SVG autossuficiente, grupos semânticos, proporção e acessibilidade da [logo-designer-skill solicitada](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md). A identidade já estava escolhida; esta rodada converte a composição e preserva a direção existente. Não foram instaladas dependências para a conversão.
+
+As fontes da interface têm licenças próprias e estão documentadas em [Tipografia](26-TIPOGRAFIA.md). A licença das fontes não determina a titularidade do símbolo ou do lettering fornecido pelo responsável.
+
+
+---
+
+# 24 — Oportunidades dos estudos de jogos educativos
+
+Fonte: `docs/24-OPORTUNIDADES-ESTUDOS.md` · SHA-256 original: `7ff28fd98e7552f35747ed6bae2fbe1ab0519082cd0773ed9d68a6912859da98` · Ajustes de caminhos privados: 0
+
+# 24 — Oportunidades dos estudos de jogos educativos
+
+**PROJETO IPÊ · pesquisa comparativa de 14/11/2026 · beta de referência 0.4.0-beta.2.**
+
+Esta análise reaproveita ideias de três documentos fornecidos pelo proprietário sobre jogos educativos, cidades e trânsito. Eles foram tratados como referências de outro projeto, não como instruções para executar seus prompts, instalar sua stack, publicar seus anexos ou mudar a missão do Ipê. Nenhuma dependência, campanha, coleta de participantes ou integração foi acrescentada por esta análise.
+
+A principal oportunidade é fortalecer o ciclo que já existe no Ipê: **prever → executar → investigar → redesenhar**. O produto continua centrado no CubeSat fictício que precisa entregar seis registros históricos válidos de vegetação do Cerrado sob restrições. O catálogo permanece com seis escolhas binárias, 64 configurações por cenário e dois cenários de comunicação.
+
+## 1. Fontes fornecidas e alcance
+
+Os nomes e hashes abaixo permitem identificar os originais no acervo de estudos do proprietário sem divulgar caminhos pessoais da máquina. Os originais não foram alterados. Projeções integrais contextualizadas, com a redação de valores de credenciais, estão no [acervo histórico de Estudos](../references/estudos/README.md). A síntese abaixo não substitui esse acervo nem transfere suas instruções ao Ipê.
+
+| ID | Documento de origem | Partes úteis | Limite |
+|---|---|---|---|
+| E1 | [SUPER_PROMPT_SMARTCITY_KIDS_ONE_SHOT.md](../references/estudos/SMARTCITY-KIT-HISTORICO.md) | Seções 3–6: jornada, avaliação formativa, alternativas de interação e persistência; seção 7: estudar versus incorporar; seção 8: piloto e evidência; anexos: contratos e exemplos | Kit de especificação para outro produto, datado de 28/09/2026. Seus comandos, público, missões e requisitos não se tornam requisitos do Ipê |
+| E2 | [Dossiê técnico de jogos, cidades e trânsito](../references/estudos/SMARTCITY-DOSSIE-HISTORICO.md) | Seções 2 e 6: referências de jogos e simulações; seções 7–8: separar modelo, apresentação e explicação | Catálogo de referências, com afirmações amplas que exigem nova verificação antes de reutilização factual ou adoção de código |
+| E3 | [VALIDACAO.md](../references/estudos/SMARTCITY-VALIDACAO-HISTORICA.md) | Distinção entre teste de núcleo, checagem estrutural, aplicativo e observação em campo | Relato de validação do kit em 28/09/2026. Não é evidência do Ipê e não foi reexecutado nesta análise |
+
+Identidade dos arquivos consultados:
+
+- E1 — 201.797 bytes; SHA-256 `8fb2083f75e146cb63150d56a0e6fb8fadd565a20ab1d0941bba80ac61f05b8c`.
+- E2 — 39.040 bytes; SHA-256 `1ebde4d8edda4b364e638575febdca9541fe40b2e37514ecf11996a46449e058`.
+- E3 — 2.995 bytes; SHA-256 `4a98c6c4ca15163759225bdcdf12dc932428be1bc55a5d67d7e810ff07b4c21e`.
+
+E1 inclui um exemplo de conexão de banco explicitamente fictício e um contato institucional ligado ao projeto de trânsito. Esses trechos não são necessários ao Ipê e foram excluídos desta síntese. Na projeção integral, o valor da conexão fictícia foi removido e o contato institucional histórico foi preservado como fonte, sem envio de mensagem. Uma busca limitada por chaves privadas, padrões de tokens GitHub e chaves AWS não encontrou correspondências nos três originais; isso não equivale a uma auditoria universal de segredos. Não publicar respostas individuais, contatos ou arquivos de ambiente para ampliar a biblioteca.
+
+## 2. O que o Ipê já oferece
+
+O beta contém hipóteses antes da execução, motor determinístico, cenas conceituais separadas do cálculo, revisão pré-voo, requisitos com evidência, comparação de tentativas, replay validado e recalculado, persistência no navegador, alternativa 2D e laboratório independente de física. Esses pontos estão descritos no README do beta e nos documentos R9–R10, além de possuírem fontes em [experiments/mission-design-lab/src/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/).
+
+Consequentemente, as ideias de E1/E2 sobre separar regras da animação, fornecer feedback e registrar versões são principalmente **critérios para preservar e melhorar**, não justificativas para criar um segundo motor, outra camada de estado ou um serviço de pontuação.
+
+A leitura dos estudos não demonstrou que uma reformulação ampla seja necessária. Também não demonstrou aprendizagem, adesão ou adequação a uma faixa etária específica. Esses resultados dependem de observação com o público real.
+
+## 3. Oportunidades priorizadas
+
+Impacto e esforço são avaliações de planejamento, ainda não medições. Os critérios de aceite abaixo são propostas concretas para a equipe avaliar.
+
+| ID / prioridade | Ideia e fonte | Aplicação ao Ipê | Impacto / esforço | Aceite verificável |
+|---|---|---|---|---|
+| O-E01 / P0 | Feedback ligado à causa e reexperimentação — E1 §§3.1, 3.3; E2 §6 | Refinar o debrief para ligar escolha, evento, restrição e nova hipótese, usando o resultado real do motor | Alto / baixo a médio | Pessoa localiza a causa do 2/6 no contato curto; mensagem aponta evento e unidade; não confunde energia com potência |
+| O-E02 / P0 | Uma tarefa significativa completa antes de expandir catálogo — E1 §2 | Ensaiar briefing → hipótese → missão → diagnóstico → redesenho → comparação | Alto / baixo | Jornada executada em navegador identificado; ajudas e falhas registradas; nenhum passo depende de uma tela futura |
+| O-E03 / P0 | Alternativa guiada com objetivo equivalente — E1 §§3.2, 6, 8.1 | Melhorar orientação por texto e teclado aproveitando os controles DOM existentes | Alto / médio | Mesma configuração, ciência e critérios de sucesso com mouse ou teclado; cena 3D e som não são requisitos para decidir |
+| O-E04 / P0 | Separar demonstração de evidência de campo — E1 §8; E3 | Manter registros de teste separados de sessões observadas; explicar alcance de cada recibo | Alto / baixo | Relatório distingue testes, demonstração e observação; ausência de participante não aparece como zero aprendizagem |
+| O-E05 / P1 | Progressão por conceito, sem recompensa por permanência — E1 §3.6 | Desenvolver Semente/Raízes como orientação ao redor dos cenários existentes | Médio a alto / médio | Marcos dependem de ações demonstráveis; pedir ajuda/pausar não reduz resultado; não anunciar Copa/Horizonte como implementados |
+| O-E06 / P1 | Claims com fonte, natureza e revisão — E1 §4 e anexo C | Relacionar explicações a fato NASA, dado histórico ou simplificação didática | Alto / médio | Cada afirmação técnica nova tem origem e corte; alteração de hipótese não modifica retrospectivamente replay antigo |
+| O-E07 / P1 | Offline demonstrado, não presumido — E1 §5.6; E3 | Primeiro medir o que o beta atual faz após perda de rede; só depois decidir se precisa de cache adicional | Médio a alto / médio | Distinguir sessão carregada, recarga offline e primeiro acesso sem cache; registrar quais funcionam; não exibir “pronto offline” sem comprovação |
+| O-E08 / P1 | Preparação para dispositivo compartilhado — E1 §§3.2, 5.6 | Revisar aviso de salvamento, importação, exportação e início de nova investigação | Médio / médio | Usuário entende o que permanece no navegador; falha de armazenamento não apaga silenciosamente resultado; exclusão afeta somente dados do Ipê |
+| O-E09 / P1 | Medir compreensão e transferência — E1 §§3.5, 8.2–8.3 | Usar o guia didático existente e uma nova situação controlada após o redesign | Alto / médio, com pessoas | Registrar tarefa, versão, ajuda e explicação; não inferir eficácia causal ou população a partir de pequena amostra de conveniência |
+| O-E10 / P2 | Idioma anunciado corresponde ao conteúdo — E1 §5.5 | Avaliar inglês integral se o público ou a apresentação exigir | Médio / médio a alto | Incluir mensagens de erro, unidades, rótulos acessíveis e fontes; nenhum seletor sugere tradução completa inexistente |
+
+O-E01–04 devem ser avaliadas antes de novas campanhas. Não há obrigação de implementar todos os itens: corrigir o bloqueio observado na tarefa tem prioridade sobre aumentar a lista de funções.
+
+## 4. Aplicação concreta sem trocar a stack
+
+### Debrief e comparação
+
+A interface já dispõe de `RequirementsReview.tsx`, `ScienceReturn.tsx`, `MissionControl.tsx` e `CompareDialog.tsx`. A evolução deve consumir os modelos existentes em [src/lab/requirements-review.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/lab/requirements-review.ts) e [src/lab/science-return.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/lab/science-return.ts), evitando recalcular ciência dentro de componentes visuais.
+
+Uma pergunta de revisão útil seria: “Qual evento limita esta tentativa e que mudança você pretende testar?”. Ela pode aproveitar o diário existente em [src/ui/learning.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/ui/learning.ts). O comprimento mínimo de uma justificativa, um clique em “entendi” ou uma pontuação não comprova que a pessoa compreendeu a causa.
+
+Comparar duas tentativas com várias mudanças ou cenários diferentes não isola uma variável. Conservar o aviso de comparação e a possibilidade de contrafactual controlado prevista no guia R9. Não esconder falhas para tornar a narrativa mais fluida.
+
+### Orientação e acessibilidade
+
+E1 sugere faixas infantis e três adaptações; isso pertence ao SmartCity Kids. No Ipê, a proposta é graduar a quantidade de orientação sem inferir idade, capacidade ou condição pessoal. Começar com uma ação clara, um objetivo e as unidades essenciais pode ajudar qualquer iniciante.
+
+A equivalência deve ser funcional: escolher componentes, registrar hipótese, executar, investigar e exportar por controles semânticos. A alternativa DOM já existe; a próxima tarefa é conferir foco, teclado, zoom e telas menores no navegador real. Testes jsdom não demonstram uso com leitor de tela ou renderização WebGL.
+
+### Conteúdo e proveniência
+
+O padrão de claims de E1 pode ser adaptado de forma mínima, primeiro na documentação e nos dados editoriais existentes. Não é necessário introduzir banco ou workflow editorial remoto. Para cada novo texto: afirmação, natureza, fonte, data e limitação.
+
+Exemplo do Ipê: os seis registros MOD13Q1.061 são históricos; a agenda de 180 minutos, massas, potências e créditos da nave são hipóteses do exercício. A renderização do CubeSat e o laboratório de órbita não transformam essas hipóteses em uma missão orbital validada.
+
+### Persistência e operação local
+
+O beta já possui IndexedDB, diário local e importação validada. Inspecionar o comportamento existente antes de adicionar bibliotecas, contas ou sincronização. Hashes ajudam a detectar alteração; não provam autoria de uma pessoa nem tornam resultados importados dados válidos de pesquisa.
+
+O laboratório documenta que a recarga offline a frio ainda não foi estabelecida por sua suíte. O primeiro incremento útil é um ensaio de perda de rede e um contrato claro de disponibilidade. PWA, fila de sincronização e backend institucional são opções futuras condicionadas a uma necessidade demonstrada.
+
+## 5. O que estudar, o que não transportar
+
+E2 reúne referências como PhET, GCompris, A/B Street, OpenTTD e Mindustry. Elas podem orientar perguntas sobre feedback, modularidade e visualização de consequências. Não houve nesta rodada uma auditoria atual de seus códigos ou licenças; os rótulos de licença do dossiê não autorizam cópia de código, arte ou marcas.
+
+| Elemento dos estudos | Decisão para o Ipê | Motivo |
+|---|---|---|
+| Separação entre regra, cena e observação | Preservar a implementação existente | O motor já é independente da visualização |
+| Phaser, Cocos, Godot, Luanti ou outro motor | Não adotar nesta rodada | Não foi identificado requisito que justifique substituir React/Three/R3F e ampliar manutenção |
+| SUMO, CARLA, CityFlow, FIWARE e mapas urbanos | Fora do recorte | Modelos e dados de trânsito não resolvem o objetivo científico atual |
+| Schema Prisma de 23 modelos do kit | Não copiar | O Ipê não tem demanda estabelecida de escola multiusuário; seu próprio Prisma já é uma proposta separada |
+| Moedas, economia cosmética e cidade que muda | Não importar literalmente | O progresso relevante é a explicação e o redesenho da missão, não uma nova economia |
+| Telemetria de todas as decisões | Não implementar por analogia | A observação pode começar com registros mínimos locais; instrumentação remota exige finalidade concreta |
+| LLM tutor e agentes simulados | Manter fora da decisão científica | Não há necessidade demonstrada; classificação e resultado do motor permanecem determinísticos |
+| Remotion e vídeo | Somente se houver necessidade do material final | A apresentação existente e um roteiro verificável podem atender à demonstração sem outra ferramenta |
+| Regras, prazo e elegibilidade SENATRAN | Não transferir ao Space Apps | São certames e fontes diferentes; não fazem prova sobre NASA |
+| Resultados de estudantes citados no kit | Não transportar como resultados do Ipê | E1/E3 distinguem propostas e evidência; nenhum estudo de aprendizagem do Ipê foi realizado por esta análise |
+
+## 6. Limites de evidência dos originais
+
+E3 relata 16 testes de referência e 16 verificações estáticas para o kit de trânsito. Também declara ausência de aplicativo final, E2E de navegador, banco validado, participantes e resultados de campo. Portanto, esses números não ampliam a contagem de testes do Ipê e não provam a eficácia das ideias aqui propostas.
+
+E1 contém comandos executivos e instruções de implantação destinados a outro agente. Foram considerados conteúdo documental, sem execução. E2 inclui afirmações sobre ferramentas, licenças e modelos; qualquer adoção futura requer inspeção do repositório original, versão concreta, licença por componente e teste pequeno. Não copiar uma lista extensa de dependências para obter uma aparência de robustez.
+
+## 7. Próxima ação recomendada
+
+Os dois desenvolvedores devem começar por uma jornada existente, com o guia didático R9: contato longo 6/6, contato curto 2/6 e redesenho dentro do catálogo. Um observa barreiras de interação; o outro confere se a explicação corresponde ao motor e às unidades. Registrar o que ocorreu, corrigir o problema delimitado e repetir somente o trecho afetado.
+
+O plano de trabalho, os arquivos e os critérios de integração estão no [handoff para dois desenvolvedores](25-HANDOFF-DOIS-DEVS.md). A evolução NASA permanece no [estudo de oportunidades](21-OPORTUNIDADES-NASA.md) e no [plano de continuidade](22-PLANO-CONTINUIDADE.md). Campanhas futuras são posteriores à validação da tarefa atual.
+
+
+---
+
+# 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
+
+Fonte: `docs/25-HANDOFF-DOIS-DEVS.md` · SHA-256 original: `204a2fc034070d4aa88675bddb7dffb3715ceae787c41b5190136cbcb617c771` · Ajustes de caminhos privados: 0
+
+# 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
+
+**Edição documental R12 · corte: 14/11/2026 · beta 0.4.0-beta.2 · motor 0.1.1-rd · catálogo ipe-64-v1.**
+
+Este documento permite retomar o projeto sem confundir o runtime atual, os registros históricos e as propostas. Os caminhos de código são relativos à raiz do repositório público `PROJETO-IPE`; não dependem de uma pasta pessoal de máquina. A divisão entre Dev A e Dev B é uma sugestão de responsabilidade, a confirmar no início de cada rodada.
+
+A edição R12 amplia o contexto e a biblioteca de continuidade. O recibo atual de publicação deve ser consultado em [PUBLICADO.md no repositório](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md). Esta edição documental, isoladamente, não declara o deployment R12 concluído.
+
+## 1. Objetivo e primeira leitura
+
+O Ipê ensina engenharia de sistemas espaciais pela sequência **prever → executar → investigar → redesenhar**. O desafio atual é entregar **seis registros históricos válidos de vegetação do Cerrado** dentro das restrições de uma nave fictícia. Não é um simulador de voo qualificado, uma coleta MODIS feita pelo CubeSat nem uma campanha de asteroides já implementada.
+
+Ler nesta ordem:
+
+1. [README.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/README.md) e [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md): entrada e recibo de publicação correntes. O [recibo R11](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/production-r11.json) permanece como histórico; a publicação R12 receberá seu próprio `evidence/production-r12.json` após o deployment e sua verificação.
+2. [Plano de continuidade](22-PLANO-CONTINUIDADE.md): estado do produto e próximos passos.
+3. [experiments/mission-design-lab/README.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/README.md) e `docs/GUIA-DIDATICO-R9.md` dentro desse diretório: como executar e demonstrar o beta atual.
+4. [experiments/mission-design-lab/docs/REFINAMENTO-NASA-R10.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/docs/REFINAMENTO-NASA-R10.md): refinamentos de pré-voo, requisitos, retorno científico e limites das referências NASA.
+5. [Oportunidades NASA](21-OPORTUNIDADES-NASA.md) e [oportunidades dos Estudos](24-OPORTUNIDADES-ESTUDOS.md): propostas, sem adoção automática de ferramentas ou campanhas.
+6. PRD, PRT e contexto histórico: [PRD](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/docs/02-PRD.md), [PRT](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/docs/03-PRT.md), [contexto](18-CONTEXTO-COMPLETO.md) e [revisão de evidências](19-REVISAO-EVIDENCIAS-R8.md).
+
+Documentos R6–R10 preservam seu corte. Uma frase antiga sobre publicação pendente não substitui o recibo posterior; uma proposta antiga de funcionalidade também não comprova implementação atual.
+
+## 2. Estado comprovado, documentado e proposto
+
+| Área | Estado no corte consultado | Fonte e alcance |
+|---|---|---|
+| Produto principal | Beta 0.4.0-beta.2 em `/lab/index.html`; clássico preservado em `/game/index.html` | `package.json`, README e fontes do beta |
+| Catálogo e cenários | Seis escolhas binárias, 64 configurações por cenário; contatos longos e curtos | [src/core/catalog.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/catalog.ts), `search.ts` e testes, no beta |
+| Regras | Motor determinístico, ciência válida após recepção integral, orçamento e recursos | [src/core/engine.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/engine.ts), `science.ts`, `power.ts`, `exact.ts` |
+| Interface | Briefing, hangar, hipótese, pré-voo, diário de eventos, requisitos, comparação e retorno científico | [src/App.tsx](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/App.tsx), [src/ui/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/ui/) e modelos em [src/lab/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/lab/) |
+| Persistência/replay | Navegador; importação estrita, hashes e recálculo pelo motor | [src/persistence/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/persistence/); hash não certifica autoria ou aprendizagem |
+| Cena e laboratório | Cena 3D conceitual com alternativa 2D; física exploratória independente | [src/ui/Scene.tsx](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/ui/Scene.tsx), `OrbitalScene.tsx`, [src/lab/physics.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/lab/physics.ts) |
+| Publicação R11 — histórico | Recibo registra produção pública, 134 arquivos conferidos e ausência de divergências | [evidence/production-r11.json](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/production-r11.json), verificado em 14/11/2026 às 18:44:04 UTC; não comprova a publicação R12 |
+| Contexto R12 | Biblioteca ampliada com estado, documentação do beta, Estudos completos e handoff | Cobertura e hashes no índice gerado após o build; recibo remoto corrente em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) |
+| Testes registrados | 101 de domínio do beta, 9 de UI, 51 do clássico, 24 verificações da central e 15 da distribuição | Registro R11 e documentos de QA; reexecutar o conjunto pertinente após alteração |
+| Observação de navegador | Recibo descreve partida 6/6, interações do portal e inspeção móvel | Evidência delimitada ao ambiente observado; não representa auditoria geral de acessibilidade ou desempenho |
+| Semente/Raízes | Nomes narrativos propostos sobre os dois cenários existentes | Não há quatro níveis desbloqueáveis implementados |
+| Copa/Horizonte | Planejados | DONKI e campanha de pequenos corpos ainda não integrados |
+| Contas, backend, Prisma, multiplayer | Não implementados na experiência atual | Prisma é contrato de evolução; jogo funciona sem banco remoto |
+| Aprendizagem, acessibilidade completa e recarga offline a frio | Não estabelecidas | Exigem protocolos e evidências próprios; não inferir a partir do número de testes |
+| Candidatura Space Apps | Elegibilidade e Resources ainda exigem confirmação | Publicação do produto não equivale a inscrição ou aceite oficial |
+
+A publicação R11 identifica o commit `2adff7a17912d890d893ee604c081d4c798e5315`. Alterações posteriores devem receber seu próprio commit e recibo; este texto não deve reaproveitar esse SHA para uma edição diferente.
+
+## 3. Invariantes que orientam qualquer alteração
+
+- O sucesso exige 6/6 registros válidos e atendimento às restrições. Contar seis registros em um projeto inválido não torna a missão bem-sucedida.
+- Os dados são históricos Terra/MODIS, MOD13Q1 Collection 061, de três locais próximos a Rio Verde, com compostos iniciados em 28/08 e 13/09/2024. A nave simula processamento e transporte desses arquivos.
+- A agenda de 180 minutos, envelope de 3,6 kg/86 créditos e parâmetros de componentes são didáticos. Não descrevem uma missão real homologada.
+- Potência em W, energia em Wh, memória e transmissão são conceitos diferentes. Não trocar unidades ou causa da falha para simplificar a narrativa.
+- A cena não determina o resultado. Os controles do laboratório de física não mudam os contatos, componentes ou ciência da campanha.
+- Uma tentativa conserva suas entradas. Editar o projeto exige nova hipótese e execução; resultado antigo não deve parecer pertencer à configuração nova.
+- Busca de alternativas e replay usam o motor. Não criar score, resultado de missão ou classificação científica paralelos na interface.
+- Manter limites visíveis: testes automáticos, demonstração, observação e estudo de aprendizagem são evidências diferentes.
+
+## 4. Mapa de fontes e código
+
+O diretório principal do beta é [experiments/mission-design-lab/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/), apesar do nome histórico “experiments”. A raiz também contém uma aplicação clássica. Confirmar o alvo antes de editar arquivos com nomes iguais.
+
+| Caminho | Responsabilidade | Verificação relacionada |
+|---|---|---|
+| [experiments/mission-design-lab/src/core/contracts.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/contracts.ts) | Tipos, versões e contrato de entradas/resultados | Testes de domínio e consumidores de Worker/replay |
+| [experiments/mission-design-lab/src/core/catalog.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/catalog.ts) | Componentes, cenário, configuração padrão e totais | [tests/engine.test.mts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/tests/engine.test.mts), `adversarial.test.mts` |
+| [experiments/mission-design-lab/src/core/engine.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/engine.ts) | Simulação da campanha | Motor, ciência e oracle dos testes |
+| [experiments/mission-design-lab/src/core/science.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/science.ts), `power.ts`, `exact.ts` | Validação científica, potência e aritmética | Domínio e casos adversariais |
+| [experiments/mission-design-lab/src/core/search.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/search.ts) | Enumeração do catálogo e alternativas | Busca completa e distância de alterações |
+| [experiments/mission-design-lab/src/data/science-data.ts](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/data/science-data.ts) e `public/data/` | Registros compilados e arquivos científicos preservados | Proveniência, hashes, qualidade e interpretação |
+| [experiments/mission-design-lab/src/workers/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/workers/) | Trabalho assíncrono, validação, cancelamento e fallback | Contratos de resposta e navegador com Worker real |
+| [experiments/mission-design-lab/src/persistence/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/persistence/) | IndexedDB, identidade, JSON estrito, importação e replay | `persistence.test.mts`, `replay.test.mts` |
+| [experiments/mission-design-lab/src/lab/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/lab/) | Pré-voo, requisitos, retorno científico e física independente | Testes correspondentes em [tests/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/tests/) |
+| [experiments/mission-design-lab/src/ui/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/ui/) | Componentes visuais, texto e interação | [tests-ui/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/tests-ui/), roteiro de navegador e revisão de conteúdo |
+| [experiments/mission-design-lab/src/App.tsx](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/App.tsx) | Navegação, estado da tentativa e coordenação | Jornada React; arquivo compartilhado sob coordenação |
+| [web/index.html](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/web/index.html) | Portal de entrada, contexto, oportunidades e etapas | Navegação, responsividade e links finais |
+| [context/project-context.json](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/context/project-context.json), [context/schedule.json](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/context/schedule.json) | Conteúdo editorial e planejamento | [scripts/test-context-hub.mjs](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/scripts/test-context-hub.mjs) |
+| [context/index.template.html](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/context/index.template.html) | Interface da central | Build da central e teste DOM |
+| [scripts/build-research-library.mjs](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/scripts/build-research-library.mjs) | Biblioteca documental e índice de hashes | Inclusão, corte, projeção pública e busca |
+| [scripts/build-beta-site.mjs](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/scripts/build-beta-site.mjs), `prepare-vercel-static.mjs` | Árvore pública curada e preparação para hospedagem | [scripts/test-beta-site.mjs](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/scripts/test-beta-site.mjs), manifesto e HTTP |
+| [src/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/src/), [tests/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/tests/), `dist/` da raiz | Jogo clássico preservado | Testes/build próprios; não são o beta `/lab/` |
+| [prisma/schema.prisma](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/prisma/schema.prisma) | Contrato futuro de dados | Não há banco implantado a validar como se existisse |
+| [presentation/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/presentation/), [architecture/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/architecture/), [research/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/research/) | Pitch, mapa e pesquisas | Inspecionar corte e fonte antes de atualizar afirmações |
+
+`site/`, os HTML gerados em [context/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/context/), a biblioteca compilada e os diretórios `dist/` são saídas de geradores. Alterar sua fonte e reconstruir; editar apenas a saída cria divergência no próximo build.
+
+## 5. Divisão sugerida entre Dev A e Dev B
+
+| Responsável | Ownership principal | Entregas iniciais |
+|---|---|---|
+| Dev A — motor, ciência e integridade | No beta: [src/core/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/core/), [src/data/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/data/), [src/workers/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/workers/), [src/persistence/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/persistence/), [src/lab/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/lab/), [tests/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/tests/); curadoria de `public/data/` | Confirmar baseline, explicar casos testemunha, revisar unidades e preservar contratos/replay |
+| Dev B — experiência, conteúdo e distribuição | No beta: [src/ui/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/src/ui/), CSS e [tests-ui/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/tests-ui/); fora dele: [web/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/web/), [context/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/context/), documentação, apresentação e scripts de distribuição | Ensaiar jornada, corrigir barreiras observadas, consolidar biblioteca e verificar publicação estática |
+| Compartilhado, um editor por vez | [src/App.tsx](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/App.tsx), contratos consumidos pelas duas frentes, `package.json`, lockfiles, versões, manifestos e recibo final | Negociar alteração antes de editar; Dev A define o contrato de domínio, Dev B adapta a interface; uma pessoa integra a release |
+
+Esses papéis não exigem duas reimplementações. Dev B reutiliza os modelos do Dev A; Dev A não muda texto/fluxo incidentalmente ao corrigir o motor. Mudanças apenas visuais não devem modificar o contrato científico.
+
+A divisão pode ser invertida conforme experiência da dupla. O importante é registrar dono do arquivo e critério de integração antes de trabalho paralelo.
+
+## 6. Backlog inicial executável
+
+| ID / prioridade | Responsável | Tarefa | Dependência | Aceite |
+|---|---|---|---|---|
+| H01 / P0 | A + B | Reproduzir a versão de partida e registrar ambiente/commit | Checkout e Node compatível | Build e testes pertinentes executados; falhas registradas com saída real; nenhum resultado histórico apresentado como execução nova |
+| H02 / P0 | B, com A revisando causas | Ensaiar a jornada do guia R9: longo → curto → redesign → comparação | H01 | 6/6 → 2/6 → 6/6 nos casos documentados, dentro dos limites; hipótese própria preservada; registro de ajuda e bloqueios |
+| H03 / P0 | B | Conferir teclado, foco, zoom 200%, tela estreita e fallback 2D | H01 | Objetivos essenciais completos sem arrastar, som ou manipulação do canvas; correção delimitada dos problemas encontrados |
+| H04 / P0 | A | Conferir importação, versões e resultado imutável | H01 | Replay compatível recalculado; inválido recusado; mudar configuração não reutiliza resultado; falha de armazenamento comunicada |
+| H05 / P0 | B + revisor A | Conferir o contexto consolidado na R12 e registrar decisões da próxima rodada | Biblioteca e handoff R12 | Índice, fontes e links conferidos; dono, objetivo e aceite da próxima tarefa registrados; cortes históricos preservados |
+| H06 / P1 | B + responsável pelo produto | Observar uso com pessoas usando protocolo existente | H02–H03 | Sessões reais separadas de testes; registrar explicação, ajuda e limites; não exigir dado pessoal para a tarefa |
+| H07 / P1 | A + B | Refinar um diagnóstico frequente e uma ficha de engenharia | H06 e fonte selecionada | Mensagem usa evento/unidade corretos; fato NASA separado de hipótese; verificar compreensão do trecho alterado |
+| H08 / P1 | A mede; B comunica | Determinar contrato offline do beta | H01 | Testar perda de rede, sessão carregada, recarga e primeiro acesso; documentar resultado antes de propor cache/PWA |
+| H09 / P2 | A, com B definindo narrativa | Especificar snapshots para futura campanha | Validação da campanha atual e contrato de dados aprovado | Proveniência, unidades, erros, ausência de dado e replay definidos; nenhuma chamada JPL concorrente |
+| H10 / P2 | A + B | Prototipar campanha limitada de pequenos corpos | H09 e revisão científica | Objetivo novo explícito, poucos alvos compatíveis, critério próprio e regressão do CubeSat; não rebatizar demonstração como missão validada |
+
+H06 depende de disponibilidade de participantes e decisões do responsável pelo produto. Enquanto isso, a dupla pode concluir H01–H05 e o ensaio técnico H08. Não inventar participantes ou resultados para destravar a próxima etapa.
+
+## 7. Comandos existentes e o que cada um comprova
+
+Requer Node 24 ou superior segundo os manifests; usar versões fixadas pelos lockfiles. Os comandos abaixo foram conferidos nos scripts existentes, mas **não foram reexecutados durante a redação deste handoff**. Instalação depende de rede ou cache disponível.
+
+Na raiz do repositório, para instalar as duas árvores de dependências já existentes:
+
+```bash
+npm ci --ignore-scripts --no-audit --no-fund
+npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund
+```
+
+Para desenvolver e verificar o beta:
+
+```bash
+npm --prefix experiments/mission-design-lab run dev
+npm --prefix experiments/mission-design-lab test
+npm --prefix experiments/mission-design-lab run test:ui
+npm --prefix experiments/mission-design-lab run verify
+```
+
+`verify` do beta executa domínio, UI em jsdom e build com verificação de tipos. O build também regenera a pesquisa pública do beta. Após `verify` passar, não repetir testes idênticos sem mudança ou dúvida nova; seguir para o ensaio de navegador que eles não cobrem.
+
+Para montar e inspecionar a distribuição completa:
+
+```bash
+npm run build:release
+npm run test:context
+npm run test:beta
+npm run start:beta
+```
+
+O servidor da distribuição usa `http://127.0.0.1:4175/`. `build:release` compila o beta, monta `site/` e prepara os arquivos Vercel. `test:context` verifica a central em ambiente simulado; `test:beta` verifica a distribuição/HTTP. Esses comandos não publicam na Vercel nem comprovam produção.
+
+Se a alteração atingir a aplicação clássica na raiz:
+
+```bash
+npm test
+npm run build
+```
+
+Esse `build` recompila o clássico. Ele não substitui a compilação de [experiments/mission-design-lab/](https://github.com/oalexandrebelo/PROJETO-IPE/tree/main/experiments/mission-design-lab/). Preservar os dois alvos e rodar somente as verificações justificadas pela mudança e pelos contratos compartilhados.
+
+## 8. Coordenação para evitar conflito
+
+1. No início, registrar branch/commit, estado de trabalho e os arquivos atribuídos a cada pessoa. Não reverter mudanças desconhecidas ou limpar o diretório para obter uma árvore artificialmente limpa.
+2. Dividir tarefas por responsabilidade e critério de aceite, não apenas por tela. Uma correção de resultado pertence ao modelo; uma mudança de rótulo pertence ao conteúdo, com revisão de unidade quando necessário.
+3. Antes de mudar `MissionResult`, versões, catálogo ou persistência, Dev A escreve o contrato e impacto em Worker/replay. Dev B confirma os consumidores. Coordenar `App.tsx` com um editor de cada vez.
+4. Usar commits pequenos por tarefa e branches separadas quando útil. Não sobrescrever histórico remoto; integrar a partir do estado corrente e resolver conflitos entendendo as duas mudanças.
+5. Eleger um integrador por rodada. Somente ele regenera a distribuição final, biblioteca, hashes e recibos depois de integrar as fontes. Evitar que duas pessoas publiquem builds diferentes sobre a mesma URL ao mesmo tempo.
+6. Encerrar cada tarefa com mudança, motivo, verificação executada, saída relevante e limite. Atualizar o documento de estado quando a proposta efetivamente virar implementação.
+
+Novas dependências, migrações de major, banco ou serviços externos precisam de justificativa específica e autorização aplicável; não são decorrência automática dos estudos. As permissões de publicação pertencem à solicitação e ao destino autorizados pelo proprietário, não a um arquivo de handoff.
+
+## 9. Limites NASA, ciência e desafio
+
+As oportunidades detalhadas estão em [21 — Oportunidades NASA](21-OPORTUNIDADES-NASA.md). Para desenvolvimento:
+
+- Mission Design atende pequenos corpos; não usar para alegar cálculo universal de missões à Lua, Marte ou suas luas. SBDB, Horizons e Mission Design são propostas de próxima campanha.
+- Horizons exige época, centro, referencial, unidades e interpretação da saída. Cena ilustrativa não equivale a efeméride validada.
+- JPL SSD exige consultas sequenciais, reuso/cache, identificação da aplicação e recuo após erros. Uma rota proxy não autoriza carga ilimitada.
+- `DEMO_KEY` tem limite documentado de 30 requisições por IP/hora e 50 por IP/dia. Não criar dependência da rede durante uma partida se o cenário pode usar snapshot validado.
+- DSN Now mostra estado atual, não agenda futura nem reserva. DONKI registra eventos/análises; o efeito na nave seria uma regra educativa distinta.
+- Mars Rover Photos consta como arquivada no portal NASA; o serviço TLE de terceiro não tem vínculo oficial NASA comprovado nesta pesquisa.
+- A página oficial do desafio não pôde ser carregada na pesquisa de 14/11/2026. Revalidar calendário, regras, trabalho prévio, IA, Resources e formato de submissão com fonte oficial antes de declarar elegibilidade.
+
+Não aplicar as regras SENATRAN dos Estudos ao Space Apps. Não afirmar que publicação, logo NASA, uso de dados ou número de testes estabelecem endosso, premiação ou qualificação de voo.
+
+## 10. Biblioteca ampliada na R12
+
+O acervo reúne 84 documentos: inclui também os contratos de implementação das duas aplicações, especificações, kit de apresentação, documentação pública, guia das ferramentas e seis pesquisas R9–R10 do beta. Cópias geradas não entram duas vezes; licenças de terceiros permanecem nos diretórios próprios. O índice gerado registra as fontes e os hashes de cada edição.
+
+O [gerador da biblioteca](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/scripts/build-research-library.mjs) foi ampliado para reunir o contexto de produto e de continuidade. A cobertura configurada inclui:
+
+- Documentos de produto em `docs/`, pesquisas técnicas, pesquisas iniciais, histórico, apresentação e anexo textual, preservando os cortes de cada fonte.
+- Estado e distribuição: [README.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/README.md), [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md), [GIT-PROVENIENCIA.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/GIT-PROVENIENCIA.md) e [NOTICE.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/NOTICE.md).
+- README do beta e seus cinco documentos: `GUIA-DIDATICO-R9.md`, `PESQUISA-E-DECISOES-R9.md`, `QA-R9.md`, `QA-NAVEGADOR-R9.md` e `REFINAMENTO-NASA-R10.md`. O caderno próprio em `/lab/research/` continua disponível como organização adicional.
+- Seis materiais relacionados à análise dos Estudos: as três projeções históricas integrais, seu [índice de procedência](../references/estudos/README.md), a [síntese de oportunidades](24-OPORTUNIDADES-ESTUDOS.md) e este handoff. Cabeçalhos, hashes e redações distinguem o acervo de outro projeto das instruções do Ipê.
+
+A distribuição R12 também seleciona páginas individuais de [identidade visual](23-IDENTIDADE-VISUAL.md), [oportunidades dos Estudos](24-OPORTUNIDADES-ESTUDOS.md), [handoff](25-HANDOFF-DOIS-DEVS.md) e [tipografia](26-TIPOGRAFIA.md). A síntese não substitui os documentos integrais nem converte referências em funcionalidades implementadas.
+
+Depois de cada build, o [índice gerado da biblioteca](../context/research-library-index.json) é a evidência da cobertura efetivamente empacotada: traz data de geração, fontes, identidades e hashes. Conferir esse índice e a [biblioteca navegável](../context/research-library.html), em vez de inferir inclusão apenas porque um arquivo existe no repositório. O `PUBLICADO.md` incorporado a um build conserva o corte daquele empacotamento; o recibo corrente deve ser consultado no repositório, inclusive quando for produzido depois do build.
+
+As projeções dos Estudos preservam os corpos históricos com contexto e redação de credencial de exemplo. Os originais pessoais não foram alterados. Nenhum ZIP, log, imagem ou aplicação apenas mencionado nos textos foi inventado ou anexado. Relatórios brutos, arquivos de ambiente, histórico privado e dados de participantes permanecem fora da seleção pública.
+
+## 11. Fechamento de uma rodada
+
+Uma rodada está pronta para revisão quando a dupla consegue apontar: problema resolvido; arquivos e contratos afetados; teste ou observação pertinente; fonte dos números; limitações restantes; commit que será publicado; e versão do pacote resultante.
+
+Depois de uma publicação autorizada, verificar as rotas públicas, o carregamento do beta e a correspondência do manifesto, registrando o deployment e o commit de origem. Atualizar [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) com evidência nova; conservar o recibo anterior como histórico. Não declarar produção concluída apenas porque o build passou.
+
+A primeira continuidade recomendada é **H01–H05: reproduzir, ensaiar, corrigir barreiras reais e conferir o contexto consolidado antes de registrar a próxima decisão**. O trabalho posterior deve seguir o que essa verificação revelar, preservando a missão atual.
+
+
+---
+
+# Tipografia — PROJETO IPÊ
+
+Fonte: `docs/26-TIPOGRAFIA.md` · SHA-256 original: `12578e565405f28b081e5f377df6e497d575439150929b5138d753ba1d4f1bb1` · Ajustes de caminhos privados: 0
+
+# Tipografia — PROJETO IPÊ
+
+Decisão de 14/11/2026: **Bricolage Grotesque para títulos** e **Plus Jakarta Sans para textos e controles**. Duas famílias variáveis, servidas pelo próprio projeto, com `font-display: swap`. A escolha é uma decisão de composição e hierarquia visual; não representa resultado de pesquisa com jogadores.
+
+## Comparação das cinco famílias solicitadas
+
+| Família | Características documentadas e avaliação para o projeto | Decisão |
+| --- | --- | --- |
+| [Plus Jakarta Sans](https://github.com/google/fonts/blob/main/ofl/plusjakartasans/DESCRIPTION.en_us.html) | Geométrica, com altura-x elevada e contraformas abertas. Adequada para instruções, formulários e leitura contínua; a descrição oficial destaca legibilidade em diferentes tamanhos. | Corpo e controles. |
+| [Outfit](https://github.com/google/fonts/blob/main/ofl/outfit/DESCRIPTION.en_us.html) | Geométrica, criada como extensão de uma identidade de marca. Forma coesa para interfaces; neste projeto competiria pelo mesmo papel de Jakarta sem acrescentar uma função necessária. | Avaliada, não carregada. |
+| [Space Grotesk](https://github.com/google/fonts/blob/main/ofl/spacegrotesk/DESCRIPTION.en_us.html) | Sans proporcional derivada da Space Mono, com detalhes técnicos e recursos de números. A referência espacial é pertinente, mas o título não precisa repetir o aspecto técnico dos indicadores. | Avaliada, não carregada. |
+| [Syne](https://github.com/google/fonts/blob/main/ofl/syne/DESCRIPTION.en_us.html) | A família explora combinações atípicas; pesos mais fortes também ficam mais largos. Expressiva para títulos, mas demanda mais cuidado em títulos longos e telas estreitas. | Avaliada, não carregada. |
+| [Bricolage Grotesque](https://github.com/google/fonts/blob/main/ofl/bricolagegrotesque/DESCRIPTION.en_us.html) | Combina referências grotescas e oferece tamanhos ópticos. Tem personalidade suficiente para a abertura e os títulos, com ajuste óptico apropriado à escala usada. | Títulos e chamadas. |
+
+As descrições acima foram conferidas no repositório oficial Google Fonts. A comparação de adequação à interface é uma interpretação de design; não é um ranking universal das famílias.
+
+## Papéis e uso
+
+- **Texto, instruções e tabelas:** Plus Jakarta Sans 400; 500 para ênfase leve e 600–700 para rótulos e ações.
+- **Títulos e chamadas:** Bricolage Grotesque 500–700, com `font-optical-sizing: auto`. Evitar comprimir letras para caber; permitir quebra adequada em telas pequenas.
+- **Números e códigos:** conservar os recursos monoespaçados locais já usados onde alinhamento técnico é necessário. Não baixar uma terceira família.
+- **Marca:** o lettering “PROJETO IPÊ” está convertido em paths no SVG; não usa essas fontes nem depende delas para aparecer.
+
+O CSS declara somente estilo normal e pesos 400–700. Não solicitar pesos fora desse intervalo como se fossem parte deste contrato. Itálico não foi baixado; evite depender de itálico sintético para transmitir informação.
+
+## Arquivos locais e reprodução
+
+A única origem versionada está em `experiments/mission-design-lab/public/fonts/`:
+
+| Arquivo | Função | Tamanho |
+| --- | --- | --- |
+| `fonts.css` | Dois blocos `@font-face`, URLs relativas locais e `font-display: swap`. | Texto CSS |
+| `BricolageGrotesque-latin-variable.woff2` | Família dos títulos; pesos variáveis e eixo óptico. | 76.868 bytes |
+| `PlusJakartaSans-latin-variable.woff2` | Família de texto e controles; pesos variáveis. | 27.272 bytes |
+| `BricolageGrotesque-OFL.txt` | Licença original da Bricolage Grotesque. | Texto integral |
+| `PlusJakartaSans-OFL.txt` | Licença original da Plus Jakarta Sans. | Texto integral |
+| `manifest.json` | URLs de origem, data de coleta, tamanhos e SHA-256. | JSON |
+
+O Vite copia essa pasta para a distribuição do beta. A publicação do portal reutiliza a mesma pasta de origem; não há necessidade de manter duas cópias versionadas dos binários. Os caminhos de integração no site dependem de sua montagem: `/lab/fonts/fonts.css` no beta e `/fonts/fonts.css` no portal quando copiado pelo distribuidor.
+
+Os arquivos WOFF2 foram baixados de `fonts.gstatic.com`, a partir da resposta oficial do [Google Fonts CSS API](https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap). O navegador do visitante não precisa consultar Google Fonts: o CSS local referencia somente os arquivos locais.
+
+O subconjunto latino contempla o português, incluindo **á, à, â, ã, é, ê, í, ó, ô, õ, ú, ç** e as respectivas maiúsculas. A cobertura dos arquivos foi inspecionada com a ferramenta local de fontes; os textos da interface usam os acentos pré-compostos cobertos por esse subconjunto. Caracteres fora da cobertura recorrem à família de fallback. A verificação visual final deve observar “Missão”, “Ciência”, “órbita”, “PROJETO IPÊ” e números nas telas reais.
+
+## Licenças
+
+As duas famílias usam **SIL Open Font License 1.1**, com os avisos integrais preservados junto aos binários. Os arquivos foram distribuídos sem modificar os binários baixados. O uso e a redistribuição junto à aplicação devem manter esses avisos e as demais condições da licença. Fontes não podem ser vendidas isoladamente.
+
+Fontes oficiais das licenças: [Bricolage Grotesque](https://github.com/google/fonts/blob/main/ofl/bricolagegrotesque/OFL.txt) e [Plus Jakarta Sans](https://github.com/google/fonts/blob/main/ofl/plusjakartasans/OFL.txt). Nenhum pacote npm ou Python foi acrescentado para fornecer essas fontes.
+
+
+---
+
+# Atribuição, licenças e autoria assistida
+
+Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0
+
+# Atribuição, licenças e autoria assistida
+
+Missão Ipê — Ciência que chega. Protótipo de P&D para AB / Hackatur–Zer0Slop, 2026. Código original desta entrega sob Apache-2.0, com cópia em LICENSE. A licença é uma escolha de distribuição deste pacote de pesquisa; não determina elegibilidade NASA. Nenhum repositório privado AB foi publicado ou relicenciado.
+
+Assistência por IA: pesquisa, arquitetura, documentação, implementação e testes assistidos por dez frentes Astra 6 / max e coordenação. Os papéis e pareceres estão registrados em research. O fato de um agente produzir código ou parecer não substitui execução, revisão humana ou qualificação institucional.
+
+Bibliotecas de runtime distribuídas compiladas: React, ReactDOM, Scheduler e Three.js, MIT, com avisos em licenses. As versões exatas e integridades de instalação estão em package-lock.json. Dependências de build/teste têm licenças próprias no inventário da entrega; não estão empacotadas como node_modules.
+
+Dados NASA: MOD13Q1 Collection 061 / DOI 10.5067/MODIS/MOD13Q1.061; subset ORNL DAAC, metadados de bandas e CMR preservados em public/data. Coordenadas são posições solicitadas ao serviço, não garantia de centro de pixel. Datas dos registros: 2024; recuperação:14/11/2026. Consultar os avisos do fornecedor para qualquer redistribuição ampliada. Na identidade visual autoral e no jogo não foram usados logotipos NASA, Kapsch ou assets proprietários.
+
+Referências internas: cena Three/OrbitControls e práticas de descarte do AB-SMC1TY foram inspecionadas como referência; o diorama desta entrega foi escrito para o protótipo. AB-ET3TIV informou práticas de auditoria; AB-R3A/REA executou inspeção estática no escopo registrado. Não há um motor Astra offline embarcado no jogo ou no AB-R3A.
+
+Referência de interação: Kapsch Experience, seleção espacial por hotspots; sem cópia de identidade ou arquivos. Referência de processo: github/spec-kit, MIT, protocolo documental aplicado sem instalar a CLI. Comparáveis de competição foram pesquisados, sem incorporação de seu código.
+
+Desenvolvimento específico começou antes das 09h BRT de 14/11/2026. Datas reais devem ser preservadas. Não existe aprovação NASA observada para aproveitamento desse trabalho na competição. Fontes, inspiração, licença e autoria não equivalem a endosso ou certificação.
+
+Rodada R5 de apresentação: três agentes GPT-6 Astra, esforço max, realizaram revisão de fontes, criação do HTML e verificação/handoff, com coordenação principal. A declaração específica está em kit/AI-USAGE.md e evidence/ai-usage-r5.json. O jogo e seus builds foram preservados; a apresentação incorpora o mesmo núcleo para sua demonstração.
+
+Os cartazes em references/user foram fornecidos por AB e preservados como referências contextuais sem alteração dos bytes. Marcas, direitos e autoria dos cartazes pertencem aos titulares originais. A licença Apache-2.0 do código original não relicencia esses materiais. Sua presença não representa endosso NASA, Space Apps, Kapsch ou dos organizadores locais.
+
+## Complemento R9 — aplicação standalone 0.4.0-beta.1
+
+Esta rodada acrescenta a interface de laboratório de missões, uma cena React Three Fiber com alternativa 2D, comparação de execuções, modelos físicos independentes e documentação R9. Sua integração prevista é `experiments/mission-design-lab/` no repositório de origem, preservando o portal e os avisos históricos acima. Menções históricas a kits, apresentações, cartazes e relatórios descrevem a distribuição anterior; não afirmam que todos esses arquivos fazem parte desta aplicação standalone.
+
+A rodada R9 foi assistida por seis frentes Astra 6 / max, além da coordenação: três de pesquisa, uma do laboratório de física, uma da cena 3D/2D e uma de QA/didática. Os resultados executados e as limitações estão em `docs/QA-R9.md`. Assistência de IA não equivale a revisão humana, certificação institucional ou evidência de aprendizagem.
+
+Dependências adicionais da apresentação, conferidas em 14/11/2026:
+
+| Pacote | Versão instalada | Licença declarada | Evidência consultada |
+|---|---|---|---|
+| `@react-three/fiber` | 9.8.2 | MIT | `node_modules/@react-three/fiber/package.json`; aviso de copyright e texto MIT no [LICENSE upstream](https://github.com/pmndrs/react-three-fiber/blob/master/LICENSE). O pacote instalado nesta revisão não continha um arquivo LICENSE próprio. |
+| `@react-three/drei` | 10.7.9 | MIT | `node_modules/@react-three/drei/package.json` e `node_modules/@react-three/drei/LICENSE`. |
+
+Os metadados do lockfile registram as versões e integridades. Esta tabela cobre as duas adições diretas da cena; dependências transitivas conservam seus próprios termos. O aviso abaixo preserva os textos MIT consultados e suas atribuições, sem transferi-los para a licença Apache-2.0 do código original.
+
+A documentação HTML pública é gerada por `scripts/build-research.mjs` com **Marked 17.0.5**, distribuído localmente em `scripts/vendor/marked/`; não há uma nova dependência npm para esse gerador. O cabeçalho preserva Copyright (c) 2018-2026, MarkedJS, e Copyright (c) 2011-2018, Christopher Jeffrey, sob MIT. O arquivo [scripts/vendor/marked/LICENSE.md](scripts/vendor/marked/LICENSE.md) foi conferido e mantém também os avisos específicos de Markdown / John Gruber. Conservar esse arquivo completo junto à cópia local. Essa ferramenta converte os documentos do projeto em HTML; não participa do motor científico.
+
+### React Three Fiber
+
+MIT License
+
+Copyright (c) 2019-2025 Poimandres
+
+Fonte do aviso: repositório upstream consultado em 14/11/2026. A declaração MIT da versão instalada 9.8.2 foi conferida no seu `package.json`.
+
+### Drei
+
+MIT License
+
+Copyright (c) 2020 react-spring
+
+Fonte do aviso: arquivo LICENSE distribuído com `@react-three/drei` 10.7.9.
+
+### Texto de permissão MIT, aplicável separadamente aos dois avisos acima
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+## Complemento R10 — refinamento de método
+
+A versão 0.4.0-beta.2 acrescenta ConOps didático, revisão pré-voo, requisitos ligados aos eventos reais e interpretação dos pares científicos entregues. As mesmas seis frentes Astra 6 / max participaram em duas ondas e foram reutilizadas na análise das referências adicionais. A NPR 8705.4B fundamenta a distinção entre classes de risco e probabilidades; nenhuma classificação NASA foi atribuída à missão fictícia. A revisão científica e as verificações executadas estão em docs/REFINAMENTO-NASA-R10.md e docs/QA-NAVEGADOR-R9.md. O motor e o catálogo não foram alterados por esse refinamento.
+
+
+---
+
+# Missão Ipê — laboratório de missões R9–R10
+
+Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `3f661b1c7f897e251f692384777c872a1a8e8bfb219566f6fd3f83c555a2339e` · Ajustes de caminhos privados: 0
+
+# Missão Ipê — laboratório de missões R9–R10
+
+**Ciência que chega.** Aplicação educacional para projetar um CubeSat fictício, executar uma missão determinística, investigar seus eventos e testar um novo projeto. A rodada R9 combina a campanha de entrega de dados históricos do Cerrado com um laboratório independente de física.
+
+Entrega standalone experimental **0.4.0-beta.2** · motor da campanha **0.1.1-rd** · catálogo **ipe-64-v1** · revisão **R10, 14/11/2026**.
+
+## Começar
+
+Requer **Node.js 24 ou superior** e npm. As versões de dependências são fixadas em `package-lock.json`; `npm ci` precisa de acesso ao registro npm ou de um cache que contenha os pacotes.
+
+```bash
+npm ci
+npm run dev
+```
+
+Abra o endereço local informado pelo Vite no terminal. A aplicação inicia no briefing, permite entrar no hangar e oferece **Explorar a física** como experiência separada.
+
+| Comando | Finalidade |
+|---|---|
+| `npm ci` | Instalar as dependências a partir do lockfile. |
+| `npm run dev` | Iniciar o servidor de desenvolvimento Vite. |
+| `npm run build` | Verificar os tipos e gerar a aplicação estática em `dist/`. |
+| `npm test` | Executar testes do motor, ciência, replay, armazenamento, proveniência e laboratório de física. |
+| `npm run test:ui` | Executar o fluxo React em jsdom, com o motor real e a alternativa sem WebGL. |
+| `npm run verify` | Executar, nesta ordem, `test`, `test:ui` e `build`. |
+| `npm run preview` | Servir localmente o build de `dist/` para inspeção. Execute `npm run build` antes. |
+
+Para conferir a entrega completa e inspecionar o build:
+
+```bash
+npm run verify
+npm run preview
+```
+
+O resultado de um build local não registra uma publicação. Para distribuir a aplicação, sirva o conteúdo de `dist/` por HTTP(S), preservando seus caminhos relativos e os arquivos científicos copiados de `public/`.
+
+A documentação pública em `public/research/` é regenerada automaticamente por `npm run build`; também pode ser atualizada por `npm run build:research`. O gerador usa a cópia local de Marked em `scripts/vendor/marked/`, sem acrescentar uma dependência npm à aplicação.
+
+## A campanha
+
+O objetivo é entregar **6 de 6 registros científicos válidos**, respeitando todas as condições do motor, até o fim de **180 minutos simulados**. O envelope do projeto é de **3,6 kg e 86 créditos**. Um contador 6/6 não representa sucesso quando o projeto viola massa, orçamento ou outra condição.
+
+O jogador escolhe duas opções em cada um de seis sistemas: bateria, painel solar, processamento, rádio, memória e política de transmissão. Isso forma **64 configurações**. Os cenários têm os mesmos registros e as mesmas escolhas, com duas janelas de contato de dez minutos ou duas de quatro minutos. A configuração inicial entrega 6/6 no cenário longo e 2/6 no curto, permitindo investigar o efeito do tempo de comunicação.
+
+A sequência de uso é **prever → executar → investigar → redesenhar**. A previsão e a justificativa são registradas antes da execução. O relatório apresenta estados de energia, fila, dados transmitidos e eventos de restrição; reproduzir ou pausar essa vista percorre resultados já calculados. A consulta às alternativas é liberada após uma tentativa própria no cenário e avalia o catálogo inteiro. Aplicar uma alternativa cria um novo projeto que exige previsão e execução.
+
+## O que esta entrega oferece
+
+- **Briefing e hangar:** seis subsistemas, comparação das opções, massa, orçamento e explicações de compromissos entre recursos.
+- **Cena conceitual em React Three Fiber:** Terra e CubeSat, vistas por botões, pausa e alternativa 2D quando WebGL está indisponível; a montagem acompanha escolhas do projeto.
+- **Relatório causal:** registros completos, dados em fila ou perdidos, energia e eventos emitidos pelo motor. Estados de sucesso, falha e projeto inválido permanecem distintos.
+- **Comparação de execuções:** métricas e escolhas lado a lado, com aviso quando os cenários diferem ou várias escolhas impedem isolar uma única causa.
+- **Caderno local:** rascunho e execuções em IndexedDB, diário de decisões em `localStorage`, importação e exportação de replay com validação e recálculo.
+- **Proveniência acessível:** pacote histórico, recibos, datas, bandas e referências científicas; hashes conferem a identidade dos arquivos preservados.
+- **Laboratório independente:** órbita circular terrestre e eclipse ideal, geração solar, capacidade de bateria para eclipse, equação ideal de foguete e enlace de rádio por Friis com latência de propagação.
+
+As escolhas, controles e resultados científicos estão no DOM, fora do canvas. A cena e sua velocidade visual não alimentam os cálculos da campanha. Movimento reduzido e visibilidade da página são considerados pela apresentação; a verificação com tecnologias assistivas permanece parte da QA de navegador.
+
+## Dados, hipóteses e limites
+
+Os seis registros vêm de **Terra/MODIS, MOD13Q1 Collection 061**, obtidos como subconjuntos de três locais próximos a Rio Verde. Os compostos históricos começam em 28/08/2024 e 13/09/2024. A campanha simula processamento e transporte de arquivos já existentes; não afirma que o CubeSat adquiriu observações MODIS durante os 180 minutos.
+
+Massas, potências, capacidades, agendas e créditos do catálogo são parâmetros didáticos. A regra de sucesso permanece 6/6. O motor distingue potência instantânea de energia armazenada, conserva bits e energia e só concede um registro científico após recepção completa e validação de qualidade.
+
+A campanha **não oferece lançamento, órbita ou Δv configuráveis**. A cena é ilustrativa, sem representar posição, altitude ou cobertura operacional reais. O laboratório usa modelos idealizados próprios; seus controles não alteram os componentes, os contatos ou o resultado da campanha. Friis sozinho não determina bitrate ou disponibilidade de estação; a equação ideal de foguete não constitui uma trajetória de lançamento.
+
+O funcionamento científico é local e usa o pacote de dados incluído. Persistência depende das permissões e da disponibilidade do armazenamento deste navegador. Falhas de armazenamento são comunicadas e o resultado permanece disponível na sessão. **Recarga offline a frio não foi estabelecida pela suíte automatizada.**
+
+Este é um protótipo de P&D. Testes aprovados, dados NASA e uma partida bem-sucedida não demonstram aprendizagem, conformidade WCAG completa, validação de voo ou endosso institucional. A elegibilidade competitiva e a leitura integral dos recursos oficiais do desafio mantêm os limites documentados na pesquisa.
+
+## Arquitetura
+
+Aplicação cliente em **React + TypeScript + Vite**, com Three.js, React Three Fiber e Drei na apresentação. Não há serviço de backend necessário para executar a campanha.
+
+| Caminho | Responsabilidade |
+|---|---|
+| [`src/core/`](src/core/) | Contratos, catálogo, aritmética racional, fluxo de potência, validação científica, motor determinístico e busca exaustiva. |
+| [`src/data/`](src/data/) | Seis registros científicos compilados e identidade do pacote histórico. |
+| [`src/workers/`](src/workers/) | Execução assíncrona, cancelamento, identificação e validação das respostas; caminho local alternativo usa o mesmo motor. |
+| [`src/persistence/`](src/persistence/) | IndexedDB, snapshots, controle de revisão, JSON estrito, hashes e replay recalculado. |
+| [`src/ui/`](src/ui/) | Briefing, hangar, relatório, comparação, fontes, cenas 3D/2D e interface do laboratório. |
+| [`src/lab/physics.ts`](src/lab/physics.ts) | Modelos escalares independentes de órbita, solar, bateria, foguete e rádio; unidades fazem parte dos contratos. |
+| [`src/App.tsx`](src/App.tsx) | Navegação, edição, previsão, ciclo das tentativas e coordenação de estado assíncrono. |
+| [`public/data/`](public/data/) | Respostas históricas de ORNL DAAC, recibos, metadados CMR e pacote científico preservados. |
+| [`tests/`](tests/) | Verificações de domínio, oracle independente, adversariais, persistência, replay, física e proveniência. |
+| [`tests-ui/`](tests-ui/) | Jornadas React em DOM simulado. |
+| [`docs/`](docs/) | Pesquisa, decisões, protocolo didático e evidência de QA desta rodada. |
+| `scripts/build-research.mjs` e `scripts/vendor/marked/` | Geração da documentação HTML pública a partir dos textos da rodada, usando uma cópia local do conversor Markdown. |
+
+O motor da campanha não importa React, Three.js ou o laboratório. A busca, o Worker e o replay usam a mesma entrada fechada da simulação. Um resultado executado preserva suas entradas; editar o projeto exige nova execução para produzir outro resultado.
+
+## Verificação e documentação
+
+Na verificação integrada R10 de **14/11/2026**, com Node v24.22.1, passaram **101 testes de domínio, física, proveniência e interpretação dos resultados, além de 9 testes UI**. A rodada inclui 30 novos testes dos refinamentos de pré-voo, requisitos e retorno científico. O build executa a verificação estrita de TypeScript. O teste UI percorreu o caso longo 6/6, o curto 2/6, a busca 64/64 e o redesign que volta a 6/6, além de importação e falha de armazenamento. As asserções anteriores foram preservadas.
+
+O ambiente UI é **jsdom com `fake-indexeddb`**, sem GPU ou Worker real. A rota de fallback 2D foi exercitada; esses resultados não validam renderização 3D, foco modal real, teclado em navegador, leitor de tela, desempenho ou durabilidade de armazenamento. O relatório de QA separa o executado do não rodado.
+
+| Documento | Conteúdo |
+|---|---|
+| [QA R9](docs/QA-R9.md) | Resultados de testes, varredura 64 × 2, integridade científica, revisão física, achados e limites da verificação. |
+| [Guia didático R9](docs/GUIA-DIDATICO-R9.md) | Atividade de 10–15 minutos, previsões, contrafactuais, resultados esperados e observação da aprendizagem. |
+| [Pesquisa e decisões R9](docs/PESQUISA-E-DECISOES-R9.md) | Fontes, escopo do desafio, decisões de produto, princípios científicos e recomendações de evolução. |
+
+## Origem e integração
+
+Esta aplicação foi construída a partir da base de `main` do repositório **[oalexandrebelo/AB-NASA-TEAM-IPE](https://github.com/oalexandrebelo/AB-NASA-TEAM-IPE)**, commit **`73162276b46227e8965eed2b91a7dc8edae70b96`**. A origem identifica o ponto de recuperação; as mudanças desta rodada são posteriores a esse commit.
+
+O destino previsto para integração é **`experiments/mission-design-lab/`**, como experimento standalone no repositório de origem. O portal, a apresentação, o contexto e os demais materiais anteriores devem ser preservados. Este README descreve a aplicação R9–R10 e seus comandos próprios. A integração e a publicação precisam de registros próprios; sua conclusão não é presumida por este documento.
+
+## Licenças e autoria
+
+O código original conserva [Apache-2.0](LICENSE). React, ReactDOM, Three.js, React Three Fiber e Drei mantêm suas licenças e atribuições próprias. Consulte [NOTICE.md](NOTICE.md), [`licenses/`](licenses/) e os metadados dos pacotes instalados. `package-lock.json` registra versões e integridades da instalação.
+
+A assistência de IA em pesquisa, implementação, documentação e testes está declarada nos avisos. Dados e referências NASA mantêm sua procedência e não implicam endosso ao protótipo.
+
+## Verificação visual da rodada
+
+A inspeção manual, as correções de responsividade e seus limites estão em [QA-NAVEGADOR-R9](docs/QA-NAVEGADOR-R9.md). As capturas registram o fallback 2D observado no navegador de QA.
+
+## Refinamento com referências NASA — rodada 10
+
+A rodada 10 acrescenta plano da missão (ConOps), revisão prévia das condições operacionais, matriz de requisitos com evidências, distinção entre operação prevista e violações, comparação de folgas e retorno científico dos pares de NDVI recebidos. O motor e o catálogo permanecem na mesma versão.
+
+A auditoria de NPR 7123.1D, NPR 7120.5F / NID 7120.148, NPR 7120.8A e NPR 8705.4B, os limites de aplicação e as oportunidades priorizadas estão em [REFINAMENTO-NASA-R10](docs/REFINAMENTO-NASA-R10.md). O comando `npm run build` regenera o caderno de pesquisa antes da compilação.
+
+Versão online: https://missao-ipe-orbit.alexandrebelo.chatgpt.site
+
+
+---
+
+# Missão Ipê — roteiro de investigação em 10–15 minutos
+
+Fonte: `experiments/mission-design-lab/docs/GUIA-DIDATICO-R9.md` · SHA-256 original: `e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3` · Ajustes de caminhos privados: 0
+
+# Missão Ipê — roteiro de investigação em 10–15 minutos
+
+Revisão R9, 14 de novembro de 2026. Roteiro para a campanha `ipe-64-v1`, motor `0.1.1-rd`. Os resultados abaixo foram recalculados com Node v24.22.1; são resultados do modelo educacional, não previsões de um satélite real.
+
+O objetivo é entregar **6 de 6 registros científicos válidos**, respeitando as condições do motor, até o fim de 180 minutos simulados. O envelope é de **3,6 kg e 86 créditos**. Entregar seis registros com um projeto fora do envelope não significa missão cumprida. A proposta exploratória de 4/6 presente na pesquisa A1 não foi adotada.
+
+## Preparação do facilitador
+
+Use uma sessão sem rascunho anterior, ou confira as seis escolhas da configuração inicial na tabela. Uma sessão existente pode recuperar um projeto salvo. A atividade pode ser individual ou feita por uma pequena equipe que discute o mesmo projeto; o roteiro não pressupõe multiplayer online.
+
+| Sistema | Configuração inicial | Identificador do motor |
+|---|---|---|
+| Bateria | 16 Wh, descarga máxima de 20 W | `small` |
+| Painel | 18 W nominais | `standard` |
+| Processamento | BANDAS R/NIR, 180 Mbit por lote | `bands` |
+| Rádio | Econômico, 960.000 bit/s úteis | `economy` |
+| Memória | 1.536 Mbit | `large` |
+| Política | Todos os contatos | `every-contact` |
+
+Explique três limites em linguagem simples antes de começar. Os seis registros são dados históricos de Terra/MODIS; o CubeSat fictício processa e transporta arquivos do exercício. O relógio de 180 minutos é uma agenda didática e não comprime duas datas de observação real em três horas. A campanha possui seis decisões de catálogo: **não permite configurar lançamento, órbita ou Δv**. A cena 3D ilustra a missão; o laboratório de física explora modelos separados e não muda o resultado da campanha.
+
+Não antecipe a configuração vencedora. A sequência é previsão → execução → investigação → redesign. Use a busca de alternativas depois de uma tentativa própria, quando a pessoa já formulou uma explicação.
+
+## Roteiro de 12 minutos, com extensão opcional até 15
+
+| Tempo | Ação da pessoa | Intervenção curta do facilitador | Evidência a observar |
+|---|---|---|---|
+| 0–2 min | Lê objetivo e limites; entra no hangar; confere configuração inicial no contato longo. | “O que precisa chegar à Terra para a missão contar como cumprida?” | Identifica 6/6, massa, créditos e diferença entre arquivo histórico e simulação. |
+| 2–3 min | Seleciona **Minha previsão** e escreve o motivo em **Por quê?**; executa. | “Faça uma previsão antes de olhar o resultado.” | Hipótese vinculada a uma escolha ou recurso, não apenas “vai dar certo”. |
+| 3–5 min | Confere 6/6; explora estados e eventos; pausa ou avança na reprodução. | “Produzir um lote, guardá-lo e recebê-lo na Terra são a mesma coisa?” | Distingue dados gerados, transmitidos, em fila e registros completos. |
+| 5–7 min | Usa **Tentar com contato curto** mantendo as seis escolhas; registra nova previsão e executa. | “Só a duração do contato mudou. Que resultado você espera?” | Obtém 2/6 e procura a restrição de entrega, sem concluir que faltou energia. |
+| 7–9 min | Relaciona volume, taxa e tempo; escolhe um redesign; prevê e executa novamente. | “Mais bateria cria mais segundos de comunicação? Menos dados pode exigir mais potência?” | Formula uma cadeia causal verificável; reconhece a diferença entre W e Wh. |
+| 9–11 min | Se necessário, consulta alternativas; aplica uma opção como novo projeto; registra nova previsão e executa. | “O que significa ‘menos mudanças’ nesta busca?” | Obtém 6/6 com a configuração testemunha e entende o critério de distância no catálogo. |
+| 11–12 min | Escreve uma reflexão citando um evento ou comparação; exporta o replay ou diário se desejar. | “Qual evidência mudou sua explicação? Que outra configuração valeria testar?” | Conecta escolha → mecanismo → resultado e reconhece limites do modelo. |
+| 12–15 min, opcional | Faz um contrafactual controlado ou abre **Explorar a física**. | Escolha apenas um dos exercícios abaixo. | Transfere a explicação para outro caso sem atribuir ao laboratório alterações na campanha. |
+
+O formulário exige uma hipótese e pelo menos oito caracteres de justificativa. Esse limite é uma condição de interação, não uma medida de qualidade da explicação. Não trate o cumprimento do formulário, a vitória ou a consulta à solução como demonstração de aprendizagem.
+
+## Resultados que o facilitador pode conferir
+
+| Caso executado | Registros válidos entregues | Dados gerados | Dados transmitidos | Dados em fila | Massa | Créditos | Menor energia |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Inicial, contato longo | 6/6 | 1.080 Mbit | 1.080 Mbit | 0 Mbit | 3,05 kg | 71 | 8,4149 Wh |
+| Inicial, contato curto | 2/6 | 1.080 Mbit | 460,8 Mbit | 619,2 Mbit | 3,05 kg | 71 | 9,9236 Wh |
+| Bateria maior apenas, contato curto | 2/6 | 1.080 Mbit | 460,8 Mbit | 619,2 Mbit | 3,45 kg | 78 | 17,9236 Wh |
+| Bateria maior + ÍNDICE, contato curto | 6/6 | 360 Mbit | 360 Mbit | 0 Mbit | 3,50 kg | 84 | 18,1693 Wh |
+
+Mbit significa milhão de bits, usando unidades decimais. A taxa do rádio já é serviço útil; não desconte uma segunda vez um overhead inventado. A reserva da bateria inicial é 2,4 Wh; a reserva da bateria maior é 3,6 Wh.
+
+No cenário curto inicial, duas janelas de 240 segundos a 960.000 bit/s oferecem 460,8 Mbit de serviço. Cada registro em BANDAS exige 180 Mbit. Assim, dois registros são recebidos por completo; 100,8 Mbit de um terceiro registro não bastam para conceder mais um resultado científico. O restante permanece em fila. A menor energia de 9,9236 Wh fica acima da reserva de 2,4 Wh: a falha observada é de entrega, não de esgotamento da bateria.
+
+## A configuração testemunha e sua explicação
+
+Uma busca completa das 64 configurações no contato curto encontrou **9 projetos bem-sucedidos, 49 falhas operacionais e 6 projetos inválidos**, com zero casos indeterminados. A distância mínima em relação à configuração inicial é **duas escolhas**, com uma única testemunha nessa distância:
+
+```json
+{
+  "battery": "large",
+  "panel": "standard",
+  "processing": "index",
+  "radio": "economy",
+  "buffer": "large",
+  "policy": "every-contact"
+}
+```
+
+ÍNDICE reduz os seis lotes de 1.080 para 360 Mbit, de modo que cabem no serviço de contato disponível. A troca aumenta a carga durante processamento de 26 para 38 W. Sob o fator de geração do cenário, o painel de 18 W fornece 9,9 W nessa operação. A bateria precisa fornecer `(38 − 9,9) / 0,95 ≈ 29,58 W`: a opção de 16 Wh permite apenas 20 W, enquanto a opção de 24 Wh permite 35 W. A opção de bateria muda capacidade **e** limite de potência; neste contrafactual, é o limite de potência que elimina a falha de pico.
+
+Somente trocar para ÍNDICE termina a execução por pico no instante de 600 s, antes da produção do primeiro lote. Somente trocar a bateria mantém a insuficiência de serviço de comunicação e entrega 2/6. É a combinação que atende às condições desse caso. Os valores históricos de NDVI e a política científica são os mesmos nas duas rotas de processamento.
+
+“Menos mudanças” significa menor número de escolhas diferentes, sob o mesmo cenário e objetivo. Não significa menor preço, menor massa ou projeto ótimo fora deste catálogo. Por exemplo, bateria maior + painel compacto + ÍNDICE + memória compacta, mantendo rádio econômico e todos os contatos, também entrega 6/6 no cenário curto por 75 créditos e 3,10 kg, mas exige quatro escolhas diferentes da inicial.
+
+## Contrafactuais opcionais
+
+Escolha um exercício e mantenha o restante fixo. Peça uma previsão antes de executar e uma explicação apoiada nos eventos depois.
+
+| Alteração em relação à inicial | Cenário | Resultado do motor | Pergunta para investigação |
+|---|---|---|---|
+| Rádio rápido apenas | Longo ou curto | 0/6; falha de pico no primeiro contato, a 5.400 s | “Por que uma bateria com energia ainda disponível pode não alimentar o rádio?” A demanda é `26 / 0,95 ≈ 27,37 W`, superior ao limite de 20 W. |
+| Memória compacta apenas | Longo | 2/6; 720 Mbit perdidos por falta de espaço | “Por que um contato longo não recupera lotes que já foram descartados?” Os seis trabalhos precedem o primeiro contato. |
+| Último contato apenas | Longo | 3/6; 576 Mbit transmitidos, 504 Mbit em fila | “Quanto serviço foi abandonado ao ignorar a primeira janela?” |
+| Painel compacto apenas | Longo ou curto | 0/6; falha de pico a 600 s | “Como a geração solar afeta a potência exigida da bateria?” A demanda é `(26 − 6,6) / 0,95 ≈ 20,42 W`, pouco acima do limite. |
+| Bateria maior apenas | Longo | 6/6; passa de 71 para 78 créditos e de 3,05 para 3,45 kg | “Que recurso mudou sem aumentar o número de resultados?” |
+
+Falha de pico encerra a operação neste motor. Não a apresente como um modo seguro que depois retoma a coleta, pois essa recuperação não é modelada.
+
+## Uma extensão de física de três minutos
+
+O laboratório é independente da campanha. Selecione uma relação, altere uma variável e observe a mudança. Voltar ao hangar deve preservar o projeto; os valores do laboratório não passam a ser novos componentes do catálogo.
+
+| Experiência | Previsão que pode ser testada | Hipótese necessária |
+|---|---|---|
+| Dobrar a área do painel | Dobra a potência elétrica | Mesma eficiência, incidência e distância ao Sol; painel iluminado. |
+| Dobrar a distância ao Sol | Reduz a geração a um quarto | Mesmo painel e ângulo; modelo ideal sem atmosfera ou degradação. |
+| Aumentar a altitude LEO | Aumenta o período e reduz a velocidade circular | Órbita circular de dois corpos; não são passagens reais por Rio Verde. |
+| Dobrar a distância de rádio | Soma cerca de 6,02 dB à perda e dobra a latência de propagação | Campo distante, ganhos fixos e linha de visada; não certifica bitrate. |
+| Aumentar massa seca com mesmo propelente e Isp | Reduz o Δv ideal | Mesmo estágio; sem perdas de gravidade, arrasto ou queima finita. |
+
+O laboratório usa raio terrestre médio arredondado de 6.371 km. Um cálculo de referência que usa raio equatorial de 6.378,1366 km fornece números ligeiramente diferentes; compare hipóteses antes de atribuir a diferença a erro de fórmula.
+
+## O que o dado permite dizer
+
+Os seis registros são três pixels selecionados e duas datas de composição MOD13Q1.061. Os compostos começam em 28/08/2024 e 13/09/2024; os dias de observação preservados no pacote são 01/09/2024 e 23/09/2024. O NDVI é calculado com vermelho e infravermelho próximo e passa por uma política de qualidade declarada. Não descreva esse conjunto como amostra representativa de todo o Cerrado.
+
+O jogo altera a disponibilidade e a entrega dos registros. Ele não altera os valores históricos e não demonstra que uma mudança de NDVI foi causada por fogo, desmatamento, seca, produtividade ou saúde da vegetação. Um hash confere identidade dos bytes; sozinho, não autentica a origem nem valida uma interpretação científica.
+
+## Observação de aprendizagem e acesso
+
+Registre separadamente comportamento e interpretação. “Encontrou o evento de pico e citou o limite de 20 W” é observação. “Aprendeu engenharia espacial” é uma conclusão que este roteiro não comprova. Para uma avaliação posterior, recolha previsão, explicação após execução e resposta a um caso novo; analise erros e autocorreções, além do sucesso da missão.
+
+O fluxo principal deve ser possível por controles HTML: botões, seleção de subsistema, opções, campos, eventos e linha do tempo. A alternativa 2D deve preservar escolhas e resultados. O facilitador pode usar essa vista desde o início. A presença desses controles e os testes DOM não equivalem a uma auditoria de teclado, leitor de tela, contraste ou WCAG em navegador real.
+
+## Fontes e rastreabilidade
+
+- Implementação auditada: `src/core/catalog.ts`, `src/core/engine.ts`, `src/core/science.ts`, `src/core/search.ts`, `src/data/science-data.ts`, `src/lab/physics.ts` e dados preservados em `public/data/`.
+- MODIS, [MOD13 Collection 6.1 User Guide](https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf), versão 3.10, setembro de 2019: produto, NDVI, escalas e campos de qualidade. Consultado nesta revisão em 14/11/2026.
+- ORNL DAAC, [documentação do serviço de subconjuntos](https://modis.ornl.gov/data/modis_webservice.html): origem do serviço declarada nos recibos. Os hashes e os valores dos arquivos já preservados foram conferidos localmente; esta revisão não repetiu a aquisição remota.
+- JPL, [Astrodynamic Parameters](https://ssd.jpl.nasa.gov/astro_par.html): parâmetro gravitacional terrestre e velocidade da luz, consultado em 14/11/2026.
+- NASA Glenn, [Ideal Rocket Equation](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/): relação ideal entre massas, Isp e Δv, consultada em 14/11/2026.
+- W3C, [WCAG 2.2](https://www.w3.org/TR/WCAG22/): referência para a futura auditoria de acesso, consultada em 14/11/2026. Não constitui certificação deste protótipo.
+- Sínteses de pesquisa fornecidas à revisão: `a1-desafio.md`, `a2-fisica.md` e `a3-ux-tecnologia.md`, de 14/11/2026. Recomendações pedagógicas foram confrontadas com o comportamento efetivamente calculado; o limiar proposto de 4/6 não substitui o contrato 6/6.
+
+
+---
+
+# Missão Ipê — jogo de projeto de missão espacial
+
+Fonte: `experiments/mission-design-lab/docs/PESQUISA-E-DECISOES-R9.md` · SHA-256 original: `aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222` · Ajustes de caminhos privados: 0
+
+# Missão Ipê — jogo de projeto de missão espacial
+
+Pesquisa e decisões da rodada 9 · 14 de novembro de 2026 · português do Brasil.
+
+## 1. Decisão de produto
+
+O tema escolhido por AB é **Space Mission Design Game**, do NASA Space Apps Challenge 2026. A campanha inicial será **Missão Ipê — Ciência que chega**: projetar um CubeSat educacional que precisa entregar seis registros científicos válidos ao solo, dentro de limites de massa, orçamento, energia, potência, memória e tempo de contato.
+
+O jogador não ganha por selecionar o componente mais caro ou por assistir ao lançamento. Precisa fazer sistemas interdependentes funcionarem juntos. A pergunta de produto é: **como tornar visível a consequência de uma escolha de engenharia, para que a pessoa possa prever, executar, investigar e redesenhar?**
+
+A campanha principal foi preservada depois de inspecionar o repositório existente `oalexandrebelo/AB-NASA-TEAM-IPE`, no commit `73162276b46227e8965eed2b91a7dc8edae70b96`. O contrato `ipe-64-v1` e o motor `0.1.1-rd` já ofereciam dois cenários e conservação auditável de recursos. Recomeçar esse motor não era necessário para produzir a nova interface. A rodada evolui a experiência e acrescenta modelos de física separados.
+
+**Critério de sucesso preservado: 6/6 registros válidos entregues e nenhuma restrição de missão violada.** A hipótese de aceitar 4/6 mencionada no parecer A1 não foi adotada. Um contador 6/6 não basta quando massa, orçamento ou outra restrição tornam a configuração inválida.
+
+## 2. O que o desafio oficial sustenta
+
+A URL da aba Resources fornecida pelo usuário retornou erros de recuperação nesta rodada. O resumo institucional do desafio foi confirmado no bloco **About the Challenge** de uma página oficial de equipe, separando-o da descrição autoral da equipe: https://www.spaceappschallenge.org/2026/find-a-team/missionforge/ . Ele sustenta projeto, gestão e simulação de uma missão completa, com decisões de engenharia, recursos limitados e consequências sobre o resultado.
+
+O texto integral reproduzido no evento HackAthlone ajudou a localizar referências, mas não substitui a autoridade do original: https://hackathlone.com/challenges/space-mission-design-game . A associação exata dos nove recursos dessa reprodução à aba oficial permanece pendente. Não foram inventados requisitos obrigatórios de multiplayer, realidade virtual ou uso de IA. O desafio de VR de 2023 é uma referência histórica distinta.
+
+O beta cobre o percurso objetivo → configuração → revisão → operação simulada → ciência recebida → explicação → novo projeto. A seleção livre de lançador, instrumento e órbita permanece para evolução: no catálogo atual, esses elementos são fixos. Isso deve ser apresentado como recorte explícito, não como cobertura integral de todos os exemplos do enunciado.
+
+## 3. Por que Cerrado / LEO primeiro
+
+O Cerrado aproxima a missão da equipe e do público de Rio Verde. A tarefa tem finalidade científica reconhecível: obter índices de vegetação válidos. A órbita terrestre permite estudar energia, eclipses, armazenamento e contatos sem introduzir simultaneamente captura planetária, múltiplos estágios e propulsão de baixo empuxo.
+
+O recorte torna a consequência verificável: dois cenários mudam o tempo de contato mantendo os arquivos científicos e as opções. A configuração inicial entrega 6/6 no contato longo e apenas 2/6 no curto. O jogador pode investigar o limite de comunicação, perceber que processar a bordo reduz os dados e descobrir que esse processamento exige mais potência da bateria.
+
+A campanha não afirma que o CubeSat fictício adquiriu os dados históricos. Os seis registros Terra/MODIS já existem. O motor usa representações didáticas de processamento e transporte para ensinar o caminho entre informação produzida e resultado disponível na Terra.
+
+## 4. Fontes NASA aplicadas
+
+| Fonte | Uso no produto | Limite |
+|---|---|---|
+| [Design and Develop Science Missions — NTRS 20250002492](https://ntrs.nasa.gov/citations/20250002492) | Estrutura da missão, necessidades científicas, requisitos e segmentos | Apresentação conceitual; não catálogo de peças |
+| [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/) | Objetivo, ConOps, alternativas, verificação, operação e rastreabilidade | Orientação; não certificação do jogo |
+| [CubeSat 101](https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf) | Contexto de missão pequena, interfaces, preparação e operação | Guia com contexto e data próprios |
+| [NASA SmallSat SoA — Power](https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/) | Relações entre painéis, incidência, distância, baterias, eclipses e degradação | Valores do catálogo do jogo são hipóteses didáticas |
+| [NASA SmallSat SoA — Communications](https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/) | Relação entre antena, potência, taxa, apontamento e segmento de solo | Ganho ou frequência isolados não garantem taxa |
+| [ORNL DAAC / TESViS](https://modis.ornl.gov/data/modis_webservice.html) | Dados históricos com consultas e arquivos de procedência | O beta não depende de consulta online durante a partida |
+| [MOD13 User Guide V6.1](https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf) | Bandas, escalas, datas e máscaras de qualidade | NDVI isolado não demonstra produtividade agrícola ou diagnóstico ecológico |
+| [JPL constantes astrodinâmicas](https://ssd.jpl.nasa.gov/astro_par.html) | Referência para os modelos de órbita do laboratório | Órbita de dois corpos; não solução operacional da campanha |
+
+MOD13Q1 V061 é um produto de composição temporal de 16 dias, com resolução nominal de 250 m. O pacote preserva datas dos registros, bandas vermelha e infravermelha próxima, índice de referência e QA. Ele não é uma sequência de imagens instantâneas produzidas pelo satélite do jogo.
+
+Os JSON de origem, recibos e pacote estão em `public/data`. A restauração local foi comparada com os hashes de blobs do repositório. A revisão A6 identificou e permitiu corrigir um LF excedente introduzido pelo transporte dos arquivos. Os recibos e hashes de origem foram preservados; não foram modificados para aceitar arquivos divergentes.
+
+## 5. Correções das premissas do briefing
+
+### Delta-v e lançamento
+
+Tsiolkovsky usa `Δv = Isp × g0 × ln(m0/mf)`, com logaritmo natural e `g0 = 9,80665 m/s²`. Esse g0 é uma referência de definição do impulso específico; não muda para a gravidade local da Lua. Deve-se separar o serviço de lançamento das manobras realizadas pela própria nave. Valores de uma tabela Terra/LEO/Marte não são requisitos universais sem definir origem, destino, captura, janela, perdas e veículo.
+
+Alto Isp não significa alto empuxo. A equação ideal não produz automaticamente duração de manobra ou trajetória de uma propulsão elétrica. O laboratório mostra a capacidade ideal de Δv e declara essas limitações.
+
+### Energia solar e bateria
+
+Há duas entradas diferentes: irradiância incidente em W/m² ou potência elétrica nominal de um painel. Para a primeira, aplicar área, eficiência e orientação. Para a segunda, não multiplicar novamente pela eficiência já incorporada ao nominal.
+
+O laboratório usa `P = 1361 × A × η × cos(θ) / R²`, com R em UA, incidência medida em relação à normal e conversão aplicada uma vez. A campanha usa potências elétricas nominais de 12 e 18 W e fatores operacionais declarados. Energia em Wh é a integral da potência com o tempo em horas; potência máxima de descarga e capacidade energética são limites distintos.
+
+### Comunicação
+
+Friis descreve potência recebida no modelo ideal, não uma taxa de dados automaticamente. Com ganhos em dBi mantidos fixos, aumentar frequência aumenta a perda em espaço livre. Se a abertura física das antenas for mantida fixa, seus ganhos variam com frequência; é outra comparação. Taxa exige considerar ruído, modulação, codificação, Eb/N0, perdas e margem.
+
+O laboratório mantém ganhos fixos, calcula perda, potência recebida e latência de luz e informa que não calcula bitrate. No jogo, taxas úteis de serviço são parâmetros didáticos de 960 kbit/s ou 2,4 Mbit/s.
+
+### Custos, margens, massa e MMRTG
+
+Preços de lançamento, capacidades máximas e contratos não são intercambiáveis. Não foi construída uma tabela de preços atuais com os números do briefing. O beta usa créditos claramente identificados como economia de jogo.
+
+Faixas de distribuição de massa e margem não são regras universais. Uma margem precisa especificar sua base: percentual da estimativa ou da alocação. A revisão não converteu 20–25% em uma suposta obrigação NASA aplicável a toda missão.
+
+O MMRTG tem referências NASA/JPL para aproximadamente 110 W elétricos iniciais e 45 kg, mas degradação total e custo não são constantes universais de catálogo. O MMRTG não foi inserido como opção plausível dentro do CubeSat de 3,6 kg.
+
+## 6. O jogo que está sendo entregue
+
+### Campanha
+
+As seis decisões são bateria, painel solar, processamento, rádio, memória e plano de transmissão. Cada decisão tem duas opções; são 64 configurações. Há dois cenários com duas janelas cada: 600 s por janela ou 240 s. A missão didática tem horizonte de 10.800 s, envelope de 3,6 kg e 86 créditos.
+
+O resultado considera conservação dos bits, fila FIFO, lotes completos, transmissão parcial, saturação da memória, geração solar, perdas de conversão, carga limitada, potência de descarga, reserva e energia mínima. Os seis registros precisam chegar completos e passar pela validação científica. A busca exaustiva conta configurações inválidas e não atribui certificado de mínimo a uma execução incompleta.
+
+O relógio do motor é independente do frame de renderização. Pausar a imagem ou percorrer os estados do relatório não muda a missão já calculada. Isso é essencial para permitir comparação justa entre tentativas.
+
+### Interface e aprendizado
+
+O briefing apresenta objetivo e limites. O hangar mostra a montagem 3D e as opções de um subsistema por vez. Os outros sistemas permanecem reconhecíveis na navegação, com a escolha ativa. Massa, orçamento e capacidades são atualizados pelo projeto selecionado.
+
+Antes de executar, a pessoa registra uma hipótese e uma justificativa. Alterar um componente invalida a seleção da hipótese, preservando a justificativa para revisão. O relatório mostra estado geral, dados completos, curva de energia e eventos. A comparação de duas execuções evidencia mudanças de configuração e alerta quando os cenários diferem.
+
+A ajuda de catálogo aparece após a própria tentativa e explica o mínimo de escolhas alteradas dentro das 64 opções. Ela não se apresenta como inteligência artificial nem como diagnóstico causal universal. A proposta educativa é investigar relações de sistema, não memorizar uma combinação vencedora.
+
+### Laboratório de física
+
+Quatro experiências independentes permitem variar: altitude LEO; área, eficiência, incidência e distância solar; massa seca, propelente e Isp; potência, frequência e distância do enlace. Resultados e diagramas mudam imediatamente. Cada modelo tem unidades, hipóteses e fontes.
+
+O laboratório não configura a campanha. Ele serve para aprofundamento didático e prepara a expansão futura. Dados reais de efemérides, janelas de lançamento, órbitas perturbadas ou captura lunar não foram implicitamente acrescentados ao motor por existir um globo 3D.
+
+## 7. UX orientada por NN/g
+
+Foram consultadas [as dez heurísticas](https://www.nngroup.com/articles/ten-usability-heuristics/), [divulgação progressiva](https://www.nngroup.com/articles/progressive-disclosure/), [reconhecimento e lembrança](https://www.nngroup.com/articles/recognition-and-recall/) e [heurísticas em aplicações complexas](https://www.nngroup.com/articles/usability-heuristics-complex-applications/).
+
+As decisões de interface são aplicações nossas desses princípios: estado e limites visíveis, controle do ritmo, linguagem comum, escolhas nativas fora do canvas, fonte disponível junto do dado, recuperação por novo projeto e comparação de resultados. Não há endosso NN/g nem estudo de usabilidade com participantes concluído.
+
+O modo 2D preserva os controles e resultados. O 3D é complementar, com detecção de indisponibilidade, movimento reduzido e controles de visualização. A verificação por teclado e em larguras menores complementa os testes de DOM; não constitui certificação de conformidade WCAG.
+
+## 8. Stack e repositórios
+
+Vite, React 19, TypeScript strict, Three.js, R3F 9 e Drei formam a implementação. O motor continua isolado e pode rodar em Worker. IndexedDB guarda execuções e rascunhos; replay importado é validado e recalculado. CSS local com tokens preserva a identidade da experiência. Não foi necessário adicionar um backend, autenticação ou LLM para resolver números de engenharia.
+
+Astronomy Engine é apropriado a posições e eventos astronômicos, não a calcular sozinho um plano completo de Δv. Satellite.js atende propagação SGP4/SDP4 com elementos apropriados a satélites terrestres; não é substituto para trajetórias interplanetárias. MuSCAT é MATLAB; CML é C++/Trick/JEOD. Eles são referências arquiteturais futuras.
+
+O parecer A3 separa licenças de código e assets. Planetarium não apresentou licença na raiz consultada. Earth-moon-solar declara MIT para código, CC BY 4.0 em texturas e CC BY-SA 4.0 em dados HYG. CML usa NOSA 1.3; MuSCAT usa Apache-2.0. Esta rodada criou geometrias próprias; não copiou esses projetos ou sua coleção de assets.
+
+## 9. Evolução priorizada
+
+1. Fechar a revisão humana do desafio integral e a associação de uma fonte da aba Resources ao uso demonstrado; preservar autoria, datas e declaração de IA.
+2. Realizar sessões com jogadores do público: entender a meta, identificar restrição, explicar mudança, transferir a estratégia ao cenário curto. Medir compreensão antes/depois com tarefas distintas e registrar erros; não confundir conclusão com aprendizado.
+3. Integrar escolha de órbita, lançador e instrumento em contrato versionado, com compatibilidades e agendas completas. Comparar resultados com referências independentes antes de mudar o catálogo.
+4. Adicionar campanha lunar com transferência, captura, comunicação, eclipse e ciência própria. Separar modelos impulsivos de baixo empuxo.
+5. Expandir para Marte com efemérides e solucionador de trajetórias apropriado, latência e plano de operações. Cada camada deve trazer decisão útil, hipótese explícita e verificação.
+6. Só depois acrescentar cenários estocásticos com semente registrada, colaboração de equipe, missões autorais e progressão persistente.
+
+## 10. Evidência e leitura completa
+
+As pesquisas integrais estão em `research/round9/a1-desafio.md`, `a2-fisica.md` e `a3-ux-tecnologia.md`. O guia de demonstração e a revisão independente estão em `docs/GUIA-DIDATICO-R9.md` e `docs/QA-R9.md`. Os recibos de execução ficam em `evidence/`.
+
+Preservar a diferença entre revisão documental, teste numérico, DOM simulado, inspeção visual no navegador e uso real por participantes. Nenhuma dessas evidências substitui todas as outras. Desenvolvimento assistido por IA; nenhuma afiliação ou validação institucional da NASA ou da NN/g é inferida.
+
+
+---
+
+# QA de navegador — Missão Ipê R9
+
+Fonte: `experiments/mission-design-lab/docs/QA-NAVEGADOR-R9.md` · SHA-256 original: `f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788` · Ajustes de caminhos privados: 0
+
+# QA de navegador — Missão Ipê R9
+
+Data: 14/11/2026. Verificação manual da coordenação no Chrome do ambiente de prévia, depois da integração das seis frentes. Esta verificação complementa [QA-R9](QA-R9.md).
+
+## Resultado observado
+
+- Abertura, hangar e sala de missão renderizados e operados no navegador.
+- Configuração inicial: cenário longo terminou em **6/6**, 1.080 Mbit recebidos, 3,05 kg, 71 créditos.
+- Mesma configuração no cenário curto: **2/6**, 460,8 Mbit recebidos e 619,2 Mbit na fila.
+- Consulta pelo botão da interface: **64/64** combinações, 9 viáveis, 6 inválidas e 49 falhas; menor distância de **2** escolhas.
+- Aplicação do projeto sugerido exigiu uma nova previsão antes de executar. Bateria 24 Wh + ÍNDICE chegou a **6/6**, 360 Mbit recebidos, fila zerada, 3,50 kg e 84 créditos no cenário curto.
+- Comparação abriu com as duas execuções recentes, mostrou cenários e escolhas, e diferenciou massa, créditos, energia mínima e quantidades de dados. Quando as condições diferem, o diálogo informa a limitação da comparação.
+- Escape fechou o diálogo. Após a correção de foco, `document.activeElement` voltou ao botão **Comparar missões**.
+- O caderno manteve execuções após recargas durante desenvolvimento; abrir um resultado preservado reproduziu seus indicadores. Isso não constitui garantia de durabilidade em todos os navegadores.
+
+## Laboratório
+
+Os controles foram operados pelo teclado e seus resultados visíveis mudaram:
+
+| Ação | Resposta observada |
+| --- | --- |
+| Altitude de 500 para 510 km | Período de 94,5 para 94,7 min |
+| Distância solar de 1,0 para 5,2 AU, demais entradas constantes | Potência elétrica de 95,9 para 3,5 W |
+| Propelente de 1,0 para 1,1 kg | Δv ideal de 481 para 524 m/s |
+| Distância entre antenas de 800 para 900 km | Latência de ida de 2,67 para 3,00 ms e potência recebida de −97,4 para −98,4 dBm |
+| Restaurar valores iniciais | Entradas e resultados voltaram aos valores padrão |
+
+A análise numérica independente e os testes das equações estão em QA-R9. O laboratório não altera a configuração da campanha.
+
+## Responsividade e correções encontradas
+
+A composição foi inspecionada também em um iframe de **390 × 844 px**. Devido à barra de rolagem, a área útil medida foi de 375 px. Isso verifica regras CSS em viewport estreito; não substitui teste em aparelho físico.
+
+Foram corrigidos durante a inspeção:
+
+1. Duas legendas ocupavam o mesmo espaço no hangar: removida a legenda duplicada.
+2. O título da abertura mantinha `white-space: nowrap` e uma regra antiga ocultava a primeira quebra: o título passou a caber e a separar suas frases.
+3. O seletor de cenário herdava fundo claro e orientação horizontal no texto secundário: corrigidos fundo e empilhamento.
+4. A tabela de comparação herdava cabeçalho claro com contraste insuficiente: aplicado o tema escuro e aumentado o texto.
+5. Escape não devolvia o foco ao acionador do diálogo: restauração explícita implementada e observada.
+6. As regras técnicas apareciam como expressões de código: o painel agora apresenta critérios em linguagem natural e unidades. Identificadores continuam disponíveis em uma seção expansível.
+
+Depois das correções, abertura, hangar e formulário apresentaram **scrollWidth = clientWidth = 375 px** na área útil móvel. O formulário foi preenchido e habilitou a execução. As capturas estão em [evidence/ui](../evidence/ui).
+
+## Limites desta verificação
+
+O navegador selecionado exibiu o equivalente **2D** após a tentativa de inicializar WebGL2. A cena R3F foi compilada e o caminho de fallback permaneceu operacional. **A aparência e o desempenho da cena 3D não foram validados nesta sessão.**
+
+Não foram realizados estudo com participantes, auditoria completa WCAG, teste com leitor de tela, ensaio em celular físico, medição de FPS ou teste de recarga offline. Movimento reduzido e suspensão da animação têm implementação revisada, mas não foram alternados pelas preferências do sistema neste navegador.
+
+As mensagens de erro observadas no console pertenciam à extensão do ambiente; a consulta filtrada pela origem local da aplicação não retornou erros naquele momento. Não se declara ausência universal de erros.
+
+
+## Refinamento R10 — ConOps, requisitos e retorno científico
+
+Nova verificação em 14/11/2026, após integrar as referências adicionais fornecidas por AB.
+
+- O briefing apresenta destinatário fictício, pergunta sobre a vegetação, entrega esperada, condições previstas e caminho dos arquivos até o solo.
+- A revisão pré-voo inicia fechada. No projeto inicial com contato curto, a UI mostrou 1.080 Mbit previstos, teto de transmissão de 460,8 Mbit, memória de 1.536 Mbit, demanda de pico de 16,95 W e limite de descarga de 20 W. A energia acumulada permanece dependente da execução.
+- A hipótese de transmissão foi registrada pela interface e executada: 2/6 registros, 460,8 Mbit recebidos, 619,2 Mbit em fila e mínimo de 9,92 Wh.
+- A comparação científica dessa tentativa exibiu somente o par completo do ponto A: **1 de 3** comparações. B manteve uma recepção parcial; B/C não receberam valores NDVI ou diferenças preenchidos a partir do arquivo de origem.
+- O resultado preservado da configuração bateria 24 Wh + ÍNDICE mostrou **3 de 3** comparações e 6/6 registros, 360 Mbit, 3,50 kg e 84 créditos. A tabela usa os valores NDVI do resultado executado, antes de arredondar as diferenças.
+- A matriz separou limites de projeto, operação e entrega. No projeto curto inicial, os dois primeiros grupos foram atendidos e a entrega não foi atendida. O resultado global continuou sendo **Missão não cumprida**.
+- O botão de evidência de entrega selecionou o evento real de insuficiência, posicionou a linha do tempo e moveu o foco para `evidence-title`.
+- A revisão independente identificou uma redação ambígua em R06. Foi corrigida para **Qualidade dos dados de origem**, com explicação explícita de pré-validação do arquivo histórico. Esse requisito não atesta recepção ou cálculo do índice no solo.
+- Abertura, relatório e revisão pré-voo foram novamente operados no iframe de 390 × 844 px. A página manteve **375 px de clientWidth e scrollWidth**. As tabelas mantêm rolagem própria: ciência 560 px dentro de 309 px; requisitos 790 px dentro de 301 px. O foco e a seta direita moveram a tabela científica sem alargar a página.
+- O texto da tabela científica em tela estreita foi aumentado, com uma indicação de rolagem. O layout evita reduzir os valores numéricos para caberem em quatro colunas estreitas.
+
+Capturas adicionais: `retorno-cientifico.jpg` e `retorno-mobile.jpg`, disponíveis na galeria de evidências.
+
+### Verificação automatizada do conjunto integrado
+
+- **101/101 testes de domínio e integridade passaram**, incluindo os 30 testes novos de pré-voo, requisitos e retorno científico. Nenhum teste foi pulado.
+- **9/9 testes de interface passaram**, preservando o percurso de previsão, execução, consulta, novo projeto, importação e falhas de armazenamento.
+- O veredito e as versões do motor e do catálogo permanecem os mesmos da base. O refinamento acrescenta interpretação e visualização, sem alterar as condições de sucesso.
+- Permanecem os limites descritos acima: esta sessão não demonstra aprendizagem com participantes, desempenho 3D nem conformidade WCAG completa.
+
+
+---
+
+# Missão Ipê — registro factual de QA R9
+
+Fonte: `experiments/mission-design-lab/docs/QA-R9.md` · SHA-256 original: `d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc` · Ajustes de caminhos privados: 0
+
+# Missão Ipê — registro factual de QA R9
+
+Data: 14/11/2026. Revisão independente A6. Projeto: `missao-ipe-orbit`, origem informada `oalexandrebelo/AB-NASA-TEAM-IPE`, base recuperada `73162276b46227e8965eed2b91a7dc8edae70b96`. Este documento descreve verificações locais; não declara publicação, homologação de voo, certificação WCAG ou aprendizagem demonstrada.
+
+## Escopo e ambiente
+
+Revisados o motor fechado, as seis escolhas do catálogo, os dois cenários, o pacote científico preservado, o fluxo de previsão e redesign, persistência, ponte assíncrona, testes existentes e as funções do laboratório de física. A pesquisa A1/A2/A3 foi lida como subsídio, sem tratar propostas como comportamento implementado.
+
+- Node executado: **v24.22.1**.
+- Motor da campanha: `0.1.1-rd`; catálogo: `ipe-64-v1`; esquema do resultado: `1`.
+- Requisito científico preservado: **6/6 registros válidos**, com as demais restrições do motor. A proposta exploratória A1 de 4/6 não foi adotada.
+- A campanha não calcula lançamento, propagação orbital ajustável ou Δv. A cena é ilustrativa. O módulo `src/lab/physics.ts` é independente e não modifica a configuração nem o ledger da campanha.
+- Nenhum arquivo de implementação ou dependência foi editado por A6. Foram adicionados dois contratos de proveniência em `tests/ux-contract.test.mts` porque uma divergência real de bytes foi encontrada. As asserções anteriores foram preservadas.
+
+## Matriz de execução
+
+| Verificação | Situação nesta revisão | Evidência e limite |
+|---|---|---|
+| Varredura direta de 64 configurações × 2 cenários | **Executada; 128 resultados decididos** | Mesmo motor usado pelo produto; zero indeterminados. Não substitui o oracle independente já presente na suíte. |
+| `npm test` | **Executado; 71/71 passaram** | Inclui 51 testes anteriores, 18 testes do laboratório e dois contratos novos de proveniência. A suíte cobre oracle de 1 segundo, fronteiras, ciência, replay, armazenamento e protocolo Worker simulado. |
+| Hashes e valores dos dados preservados | **Executados; passaram após restauração** | Pacote e três respostas brutas coincidem byte a byte com os recibos; seis registros correspondem às bandas, QA, NDVI e dia do ano retidos. Não houve nova aquisição remota por A6. |
+| Revisão numérica independente do laboratório | **Executada; 18 relações e 14 rejeições de domínio passaram** | Fórmulas escalares e testes metamórficos em Node; sem alegação de validação de navegação. |
+| `npx tsc --noEmit` | **Executado; passou na rodada final** | A falha transitória de props `variant/config` durante a integração foi resolvida pela atualização de `Scene`. Comando final retornou código 0. |
+| `npm run test:ui` | **Executado; 9/9 passaram** | Aplicação React e motor reais em jsdom; não houve alteração de testes, asserções ou adapters de ambiente. A rota sem WebGL foi exercitada. |
+| Navegador real, layout, teclado e árvore de acessibilidade | **Não rodados por A6** | Coordenação mantém a única infraestrutura de navegador e fará essa inspeção separadamente. |
+| WebGL real, perda de contexto, desempenho GPU/FPS | **Não rodados por A6** | O teste DOM força contexto indisponível; isso só verifica a rota de fallback. |
+| Navegador offline após recarga a frio | **Não rodado por A6** | Cálculo local e ausência de API em runtime não provam cache, instalação ou recarga offline. |
+| Estudos com participantes e aprendizagem | **Não rodados** | O guia fornece um protocolo; não apresenta resultados de pesquisa empírica. |
+
+## Resultado numérico de todo o catálogo
+
+| Cenário | Avaliadas | Sucesso | Falha | Inválidas | Indeterminadas | Distância mínima da configuração inicial |
+|---|---:|---:|---:|---:|---:|---:|
+| `long-contact` | 64 | 17 | 41 | 6 | 0 | 0 |
+| `short-contact` | 64 | 9 | 49 | 6 | 0 | 2 |
+
+Sucesso requer o estado `outcome === 'success'`, não apenas o contador 6/6. Há seis projetos inválidos no cenário longo que ainda calculam seis registros entregues. No curto, cinco dos seis inválidos entregam seis registros e um entrega três. O envelope não é compensado por ciência entregue.
+
+| Execução de referência | Resultado | Massa | Créditos | Gerados | Transmitidos | Em fila | Menor energia | Reserva |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| Inicial, longo | sucesso, 6/6 | 3,05 kg | 71 | 1.080 Mbit | 1.080 Mbit | 0 | 8,414868 Wh | 2,4 Wh |
+| Inicial, curto | falha, 2/6 | 3,05 kg | 71 | 1.080 Mbit | 460,8 Mbit | 619,2 Mbit | 9,923640 Wh | 2,4 Wh |
+| Testemunha mínima, curto | sucesso, 6/6 | 3,50 kg | 84 | 360 Mbit | 360 Mbit | 0 | 18,169254 Wh | 3,6 Wh |
+
+A testemunha mínima é única a distância 2: `large / standard / index / economy / large / every-contact`, na ordem bateria / painel / processamento / rádio / memória / política. Em relação à inicial, muda bateria e processamento. Cada execução de referência tem residual de conservação de energia zero. A suíte completa verifica conservação de bits e energia em todo o domínio.
+
+As seis alternativas de distância 1 no cenário curto falham:
+
+| Única troca | Entregues | Evidência do motor |
+|---|---:|---|
+| Bateria maior | 2/6 | Mesma capacidade de serviço dos contatos; fila final de 619,2 Mbit. |
+| Painel compacto | 0/6 | Pico de potência a 600 s; aproximadamente 20,42 W exigidos da bateria, limite de 20 W. |
+| ÍNDICE | 0/6 | Pico de potência a 600 s; aproximadamente 29,58 W exigidos, limite de 20 W. |
+| Rádio rápido | 0/6 | Pico de potência no contato a 5.400 s; aproximadamente 27,37 W exigidos, limite de 20 W. |
+| Memória compacta | 2/6 | 720 Mbit perdidos por falta de espaço; nova produção é descartada inteira. |
+| Último contato | 1/6 | Apenas 230,4 Mbit transmitidos; 849,6 Mbit em fila. |
+
+“Distância mínima” é o número de escolhas diferentes dentro das 64 combinações. Não é menor custo, menor massa ou ótimo contínuo. O guia inclui um projeto curto de 75 créditos e 3,10 kg, viável a distância 4, para tornar o critério explícito.
+
+## Proveniência: achado e correção verificável
+
+**Achado inicial:** os três arquivos `mod13q1-{A,B,C}-raw.json` tinham 4.233 bytes, mas seus recibos declaravam 4.232. O pacote `mod13q1-research-pack.json` também não correspondia ao hash publicado pela aplicação. Os quatro terminavam com um LF extra após o conteúdo recuperado.
+
+Uma verificação sem modificar os arquivos demonstrou que remover somente o último byte de cada um restaurava exatamente os hashes esperados. A coordenação restaurou os bytes usando também o SHA do blob upstream como condição, sem reescrever recibos nem trocar o hash científico. Os dois testes novos passaram em seguida.
+
+| Arquivo | SHA-256 conferido após restauração |
+|---|---|
+| `mod13q1-A-raw.json` | `ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47` |
+| `mod13q1-B-raw.json` | `94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10` |
+| `mod13q1-C-raw.json` | `1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6` |
+| `mod13q1-research-pack.json` | `6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e` |
+
+Os seis registros passam a política declarada de QA e a comparação entre NDVI reconstruído e produto. Os subconjuntos retidos têm um pixel por local e data; esta verificação não introduziu uma agregação espacial. As observações de 01/09 e 23/09/2024 foram conferidas contra os campos de dia do ano do serviço.
+
+O pacote histórico possui status `RESEARCH_ONLY_NOT_GAME_DATA_CONTRACT`; o contrato fechado da campanha está nos tipos, registros compilados, política científica e versões do motor. Preservar essa distinção. Hashes verificam identidade, não autenticidade de quem forneceu um arquivo. A amostra de três locais escolhidos não representa toda a região e não permite atribuição causal de mudanças de vegetação.
+
+## Revisão dimensional e de domínio do laboratório
+
+Foram conferidas as cinco funções de `src/lab/physics.ts` sem importá-las no motor da campanha. `EngineeringLab.tsx` declara hipóteses de uso. Os resultados abaixo empregam as entradas do teste independente, não necessariamente os valores iniciais da interface.
+
+| Função e caso | Resultado conferido | Hipóteses / limite |
+|---|---|---|
+| `circularLeo(500)` | raio 6.871 km; velocidade 7,616560746 km/s; período 5.668,144414 s; eclipse 2.141,523158 s | Terra esférica com raio médio arredondado de 6.371 km, dois corpos, órbita circular, sombra cilíndrica e β = 0. |
+| Solar, 0,05 m², eficiência 0,30, incidência 0°, 1 au | 68,05 W incidentes; 20,415 W elétricos | Eficiência aplicada uma vez. Não é o painel nominal em W do catálogo. |
+| Eclipse, 10 W por 360 s, reserva 20% | 1 Wh no barramento; 1,052631579 Wh retirados; capacidade mínima 1,315789474 Wh | Bateria cheia ao entrar no eclipse; rendimento de descarga 95%; reserva sobre a capacidade nominal. Não prova recarga no ciclo. |
+| Foguete, 10 kg secos + 10 kg propelente, Isp 300 s | Δv ideal 2.039,235539 m/s | Logaritmo natural, g₀ = 9,80665 m/s²; todo o propelente consumido; sem perdas ou trajetória de lançamento. |
+| Rádio, 2 W RF, 2,2 GHz, 1.000 km | FSPL 159,296236838 dB; −103,285936882 dBm; 3,335640952 ms de propagação unidirecional | Ganhos fixos de 3/20 dBi, espaço livre, campo distante e antenas alinhadas. Não calcula C/N₀, Eb/N₀, disponibilidade de estação ou bitrate. |
+
+Relações verificadas: período cresce com altitude; fração de eclipse menor que meia órbita no domínio; dobro da área dobra a potência; dobro da distância ao Sol reduz potência a um quarto; incidência 90° produz zero; 10 W × 360 s = 1 Wh; eficiência e reserva não criam energia; propelente zero produz Δv zero; maior massa seca reduz Δv para mesmo propelente; dobrar distância de rádio soma 6,0206 dB à perda, reduz potência recebida a um quarto e dobra latência; dobrar potência RF acrescenta 3,0103 dB ao recebido.
+
+As 14 entradas inválidas incluem altitude fora de 200–2.000 km, NaN, área negativa, eficiência acima de um, incidência acima de 90°, distância solar zero, reserva igual a um, duração negativa, massa seca zero, propelente negativo e entradas não positivas do rádio. Foram rejeitadas explicitamente. A relação de potência recebida foi comparada com tolerância relativa de escala de ponto flutuante, não por igualdade bit a bit de fórmulas logarítmicas equivalentes.
+
+Não há bloqueador dimensional identificado nessas funções. O valor LEO difere ligeiramente da tabela A2 porque aquela pesquisa adotou raio equatorial de 6.378,1366 km; a implementação declara o raio médio arredondado. Essa diferença de hipótese não é erro aritmético. Não usar os tempos do laboratório como agenda de contato de Rio Verde.
+
+## UI, estado, armazenamento e rotina assíncrona
+
+**Constatado por leitura de código:** a configuração de cada execução é copiada antes do cálculo. `requestId` e `AbortController` invalidam trabalho antigo; o cliente Worker valida envelope, identidade de configuração/cenário e resultado, termina o Worker ao resolver, e tem um limite de 15 segundos que gera erro técnico, sem classificar uma missão. O caminho sem Worker usa o mesmo motor.
+
+O resultado anterior é preservado quando um replay inválido falha antes de aplicar nova entrada. Importação válida é recalculada e não conta como previsão própria. A busca exige tentativa própria no cenário. Aplicar uma alternativa cria um novo projeto e limpa a previsão, sem promovê-la automaticamente a resultado executado. Os testes DOM existentes exercitaram esses contratos na rodada R9 com a cena R3F integrada.
+
+O IndexedDB salva snapshots, usa transação concluída como confirmação, confere integridade de leituras e controla conflito de revisão do rascunho. A suíte executada inclui escritas concorrentes, falha de quota, abort após sucesso de request, corrupção e preservação do rascunho. `fake-indexeddb` reproduz o contrato da API para testes; não demonstra durabilidade real de um navegador ou entre dispositivos. O diário em `localStorage` é relato local, não evidência inviolável.
+
+A navegação usa botões, o catálogo usa `fieldset` e rádios, e o formulário usa rótulos explícitos. A mudança de vista tenta focar o elemento principal. Os diálogos usam `<dialog>` nativo. Isso é evidência de implementação semântica, não execução de teclado real. A animação do relatório percorre estados já calculados e não recalcula ciência.
+
+**Recomendações comunicadas e estado ao fechar a rodada:**
+
+1. **Atendida na implementação:** a tela de fontes recebeu links para pacote, recibo A, ORNL e guia MOD13. O link adicional `./research/index.html` ainda precisava de arquivo/rota final na árvore pública quando inspecionado; sua entrega foi sinalizada à coordenação.
+2. **Atendida na implementação:** `chooseComponent` limpa uma previsão já selecionada, preserva a justificativa e anuncia que a hipótese deve ser revista. Isso impede executar silenciosamente com a mesma seleção após uma troca de peça. Esse novo ramo foi conferido por leitura; não possui caso dedicado na suíte DOM existente.
+3. **Atendida no texto do produto:** o cabeçalho declara “SIMULAÇÃO LOCAL” e a tela de fontes “Local no navegador”. Recarga offline continua fora do que A6 verificou.
+4. **Preservada e conferida:** o estado geral vem de `outcome`, inclusive em projetos inválidos que entregam 6/6.
+
+A coordenação adicionou `CompareDialog` durante a revisão. A leitura confirmou rótulos dos seletores A/B, tabela de escolhas e métricas, indicação textual de opções alteradas, aviso quando os cenários diferem e ressalva sobre múltiplas mudanças. A suíte DOM existente passou com essa integração, mas não abre e opera esse novo diálogo; sua interação e apresentação devem ser conferidas no navegador.
+
+## Verificações manuais ainda necessárias
+
+Estas são tarefas de validação pendentes por A6, não falhas observadas:
+
+- Completar observatório → hangar → previsão → execução → relatório → redesign usando somente teclado; conferir foco visível, ordem e retorno do foco após fechar diálogos.
+- Conferir controles principais em 320 CSS px, zoom de 200% e 400%, sem ocultar ações de execução, cancelamento ou navegação.
+- Testar leitor de tela, nome/estado de cada controle, mudanças de status sem anúncios excessivos e equivalência do conteúdo científico fora do canvas.
+- Testar preferência de movimento reduzido, pausa, retorno de aba oculta e alternância 2D/3D sem alterar projeto ou resultado.
+- Verificar WebGL indisponível e perda de contexto em navegador real; conferir performance em dispositivo alvo, carga inicial e erro de asset.
+- Testar falha real de armazenamento, importação/exportação de arquivo, tentativa concorrente em abas e Worker em navegador.
+- Confirmar o significado de “offline” no artefato distribuído, incluindo recarga sem rede. Não inferir esse comportamento dos testes Node.
+- Avaliar compreensão com participantes usando o roteiro didático. Não confundir completar a missão com aprender o mecanismo.
+
+## Fontes e material consultado
+
+Evidência primária de comportamento: código e testes do repositório, respostas preservadas de ORNL DAAC e recibos em `public/data/`. As três frentes de pesquisa foram fornecidas em `research/a1-desafio.md`, `research/a2-fisica.md` e `research/a3-ux-tecnologia.md` do workspace de pesquisa. A1 registra que não conseguiu abrir integralmente a página específica do desafio 2026; esta revisão não transforma essa limitação em uma leitura verificada.
+
+Fontes externas reabertas nesta revisão em 14/11/2026:
+
+- [MOD13 Collection 6.1 User Guide](https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf), versão 3.10, setembro de 2019: produto e campos científicos.
+- [JPL Astrodynamic Parameters](https://ssd.jpl.nasa.gov/astro_par.html): μ terrestre de DE440 e velocidade da luz.
+- [NASA Glenn — Ideal Rocket Equation](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/): relação ideal de Δv.
+- [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/): referência de critérios de acesso, sem auditoria completa nem declaração de conformidade.
+
+Outras referências rastreáveis usadas pelas frentes de pesquisa: [ORNL MODIS Web Service](https://modis.ornl.gov/data/modis_webservice.html), [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/), [NASA Small Spacecraft Power](https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/) e [NASA Small Spacecraft Communications](https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/). A6 não realizou uma nova consulta remota a todas elas.
+
+## Registro final de integração
+
+Rodada final executada em **14/11/2026, aproximadamente 16:07 UTC**, depois da integração dos arquivos R3F e do laboratório:
+
+| Comando | Resultado |
+|---|---|
+| `npm test` | 71 testes, 71 aprovados, zero falhas/cancelamentos/skips; saída 0. |
+| `npm run test:ui` | 9 testes, 9 aprovados, zero falhas/cancelamentos/skips; saída 0. |
+| `npx tsc --noEmit` | Sem erros de TypeScript; saída 0. |
+
+A suíte UI exercitou previsão obrigatória, execução inicial longa 6/6, transferência curta 2/6, busca de 64/64 com distância mínima 2, preservação após replay inválido, aplicação de testemunha como projeto ainda não executado, nova previsão e resultado 6/6. Também verificou importação sem tentativa própria e resultado/exportação preservados quando `IndexedDB` e `localStorage` falham. O fallback “3D indisponível · equivalente 2D ativo” foi alcançado pelo ambiente sem contexto, sem mock de física.
+
+Evidência escrita pelo runner: `evidence/ui-dom-test.tap` e `evidence/ui-dom-test.json`. O relatório JSON registra início às `2026-11-14T16:07:05.781Z`, fim às `2026-11-14T16:07:07.512Z`, Node v24.22.1, contexto jsdom e limites. O shim de `<dialog>` só alterna o atributo `open`; ele não exercita foco modal real. Worker real, durabilidade de navegador, layout, árvore de acessibilidade, GPU e recarga offline não foram simulados como se tivessem sido verificados.
+
+Houve um aviso não bloqueador de depreciação `THREE_CJS_DEPRECATED` no ambiente Node por `require("three")` em dependência. Não houve falha relacionada ao aviso. Nenhuma alteração em `tests-ui/` foi necessária.
+
+**Bloqueadores de domínio encontrados e resolvidos:** a divergência de bytes da proveniência foi restaurada e protegida por testes; a incompatibilidade transitória de props foi resolvida. **Bloqueadores de domínio/compilação pendentes ao fechar esta rodada: nenhum observado.** A inspeção de navegador é uma frente separada da coordenação; A6 não a realizou nem a substitui por uma declaração de acessibilidade. Antes de divulgar links de fontes, confirmar que a rota de pesquisa está presente no artefato final.
+
+
+---
+
+# Refinamento do jogo a partir das referências NASA
+
+Fonte: `experiments/mission-design-lab/docs/REFINAMENTO-NASA-R10.md` · SHA-256 original: `fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9` · Ajustes de caminhos privados: 0
+
+# Refinamento do jogo a partir das referências NASA
+
+Rodada 10 · 14 de novembro de 2026 · Missão Ipê / Space Mission Design Game.
+
+## 1. A oportunidade principal
+
+As referências enviadas por AB reforçam um caminho de produto: **cada escolha de engenharia precisa responder a uma necessidade da missão e produzir uma consequência verificável**. Isso orienta a evolução do beta: explicitar para quem os dados servem, antecipar limites, verificar requisitos e mostrar o retorno científico realmente disponível.
+
+Nossa interpretação de design é que essa cadeia ensina mais do que acrescentar componentes sem finalidade ou uma sequência longa de aprovações formais. A interface mantém a entrada rápida no jogo, com detalhes técnicos acessíveis quando ajudam a decidir. O contrato da campanha continua sendo entregar **6/6 registros completos e válidos**, respeitando todas as demais restrições.
+
+O [Appendix S do Systems Engineering Handbook](https://www.nasa.gov/reference/appendix-s-concept-of-operations-annotated-outline/) organiza objetivos, usuários, operadores, interfaces, modos e cenários nominais e fora do nominal. O [currículo NTRS 20210021839](https://ntrs.nasa.gov/citations/20210021839) conecta conceito de operações, requisitos, alternativas, realização e verificação. Essas estruturas foram adaptadas ao tamanho de um jogo educacional; não representam uma revisão formal de projeto NASA.
+
+## 2. Auditoria das referências e suas revisões
+
+Consulta documental em 14/11/2026. Os links originais foram abertos e suas indicações de revisão foram conferidas.
+
+| Referência indicada | Estado encontrado | Aplicação apropriada |
+| --- | --- | --- |
+| NASA SP-2016-6105 Rev. 2 | [Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/), edição Rev. 2; Appendix S disponível como seção | Estruturar o raciocínio de missão, interfaces, alternativas e evidência |
+| Concept of Operations, Appendix S | [Estrutura anotada](https://www.nasa.gov/reference/appendix-s-concept-of-operations-annotated-outline/), incluindo §§3.1–3.4 e 6.1–6.2 | Plano de missão curto, com finalidade, atores e operação prevista |
+| NPR 7123.1D | [Change 2](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=main), efetiva em 05/07/2023, expiração indicada em 05/07/2028 | Requisitos mensuráveis, rastreabilidade, verificação e validação |
+| NPR 7120.5, descrita como F, URL com 5E | O [endereço fornecido](https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=7120&s=5E) resolve para **7120.5F, Change 4**, com indicação expressa de consultar **NID 7120.148** | Ciclo de projeto, decisões e configuração; preservar a referência à diretiva interina |
+| NID 7120.148 | A capa do PDF conserva expiração original em 09/12/2025; o [catálogo oficial NODIS](https://nodis3.gsfc.nasa.gov/OPD/OPD_list.cfm?dir=asc&moduleInputs=NID&sort=opr) registra extensão até **01/08/2027** | Registrar a prorrogação, evitando concluir que a diretiva está vencida apenas pela capa |
+| NPR 7120.8A | [Revalidada com Change 5](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=main), expiração indicada em 14/09/2028 | Distinguir desenvolvimento de tecnologia e pesquisa do gerenciamento de missão operacional |
+| NPR 8705.4B | [Risk Classification for NASA Payloads](https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=8705&s=4B), efetiva em 01/11/2024, expiração indicada em 31/10/2032 | Explicar tolerância a risco e expectativas de garantia, respeitando seu escopo |
+| NASA Science / Learn | [Science Activation](https://science.nasa.gov/learn/) | Aproximar a experiência de perguntas científicas, dados autênticos e recursos educacionais |
+| NTRS 20210021839 | [Currículo publicado em 11/10/2021](https://ntrs.nasa.gov/citations/20210021839), arquivo de 20/09/2021 | Referência didática de engenharia de sistemas, especialmente o trade-off de armazenamento em LEO |
+
+As NPRs possuem escopo institucional próprio. A [NPR 8705.4B, Preface](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=Preface) aplica-se a programas/projetos robóticos geridos sob 7120.5 e exclui, de sua aplicação direta, os geridos sob 7120.8, embora estes possam adotar objetivos de garantia em sua documentação. O jogo usa essas referências como base de estudo e adaptação pedagógica.
+
+## 3. Refinamentos de produto desta rodada
+
+### Plano da missão: começar pela necessidade
+
+O destinatário narrativo é uma equipe fictícia que estuda vegetação no Cerrado. A pergunta é comparar o NDVI entre dois períodos em três pontos do pacote. O jogador projeta o processamento e a entrega dos arquivos históricos por um CubeSat fictício.
+
+A ficha de missão apresenta a cadeia de operações: preparar o projeto, processar os arquivos, armazenar entre contatos, transmitir e verificar o que chegou ao solo. O limite de 180 minutos pertence ao relógio da simulação; as datas dos dados pertencem ao arquivo histórico.
+
+Essa ficha aplica o raciocínio do ConOps em linguagem de jogo. A informação necessária para compreender a missão aparece antes das opções de subsistema. A estrutura detalhada fica no caderno de pesquisa.
+
+### Revisão prévia: contas necessárias, com alcance declarado
+
+Antes da execução, a pessoa pode abrir uma revisão do plano operacional. Ela compara o volume dos lotes com o teto de transmissão permitido pela política escolhida, o acúmulo antes do primeiro contato com a capacidade de memória e a potência requerida com a descarga máxima da bateria.
+
+Uma conta favorável nessa revisão não garante a entrega. Por exemplo, o teto de comunicação supõe serviço útil durante o tempo disponível; a operação ainda depende de energia, memória, produção dos lotes e continuidade. A integração temporal da energia fica explicitamente para a execução.
+
+A memória é analisada em relação à agenda. Neste catálogo, os trabalhos terminam antes do primeiro contato. Essa propriedade permite explicar o acúmulo prévio, mas não cria uma regra geral de que toda missão precise guardar todos os dados ao mesmo tempo.
+
+O [exemplo de armazenamento no currículo NASA](https://ntrs.nasa.gov/api/citations/20210021839/downloads/SE-Curriculum-Intro.2021-09-20.pdf), página impressa 12, trata justamente da necessidade de guardar dados entre contatos de um satélite LEO e dos compromissos com massa, potência, tamanho e custo. Essa é a ligação mais direta entre as novas referências e o mecanismo do jogo.
+
+### Requisitos: mostrar o que foi demonstrado
+
+O relatório acrescenta uma matriz com requisito, valor observado, limite e evidência. Massa e créditos são verificações da configuração executada. Reserva, potência e memória dependem da operação. A qualidade dos dados de origem e a entrega completam a análise. A primeira é a pré-validação do arquivo histórico usado pelos lotes produzidos; ela não comprova o cálculo de NDVI no solo nem a recepção completa. Somente registros efetivamente entregues e válidos alimentam a comparação científica.
+
+Os estados distinguem **atendido**, **não atendido** e **não concluído**. Se a missão termina antes do horizonte, a ausência de um alerta não demonstra que aquele requisito seria satisfeito até o fim. Uma falha já registrada continua sendo falha; o encerramento precoce não apaga a evidência.
+
+O relatório também separa os limites do projeto, a conclusão da operação e a meta científica. Uma configuração pode entregar seis registros e ainda ser inválida por massa ou custo. O resultado geral continua vindo do motor, sem ser redefinido pela interface.
+
+A [NPR 7123.1D, Appendix A](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=AppendixA) distingue verificação dos requisitos e validação do propósito em relação às expectativas e ao conceito de operações. No produto, verificamos as regras da simulação; a utilidade educacional ainda exige avaliação com o público.
+
+### Retorno científico: usar apenas o que chegou
+
+Os resultados agora permitem comparar os dois registros de cada ponto quando ambos foram recebidos integralmente e passaram pela verificação científica. Uma recepção parcial não habilita o valor ausente. A variação só aparece com o par completo.
+
+Os valores vêm do resultado executado. Isso respeita a diferença de representação entre transmitir bandas para calcular o NDVI no solo e transmitir o índice processado a bordo. As datas de observação são identificadas separadamente do início do composto MOD13Q1.
+
+No cenário curto inicial, o par A chega completo, enquanto os pares B e C permanecem incompletos. Portanto, uma comparação temporal fica disponível e duas aguardam dados. Isso dá significado ao retorno científico: a engenharia determina quais perguntas podem ser examinadas com a informação efetivamente recebida.
+
+A variação de NDVI entre duas observações é descritiva. Não estabelece, sozinha, causa de mudança, seca, incêndio ou desmatamento, e três pontos não representam todo o bioma. O [MOD13 User Guide V6.1](https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf) continua sendo a referência de produto e qualidade.
+
+### Operação prevista e folgas
+
+Eclipse, término de contato e espera entre janelas são condições previstas pela agenda. Uma violação de potência, energia ou memória é um resultado distinto que exige investigação. A interface passa a nomear essa diferença. O estado de encerramento do motor não é apresentado como um modo seguro com capacidade de recuperação que não foi modelada.
+
+A comparação entre missões acrescenta folga de massa, créditos restantes e energia mínima acima da reserva. Esses números ajudam a discutir o custo de uma solução. Eles são diferenças dentro do modelo e não probabilidades de sucesso em voo.
+
+## 4. Risco: como incorporar sem fabricar certeza
+
+As classes A–D de 8705.4B expressam tolerância a risco e expectativas de garantia. O [Appendix C](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=AppendixC) orienta considerar conjuntamente prioridade, duração, complexidade e custo. Nenhum fator isolado determina automaticamente a classe.
+
+Por isso, esta rodada não transforma classe A–D em fácil/difícil ou em percentuais arbitrários de falha. Também não transforma 9 configurações viáveis entre 64 em chance de sucesso de 14,1%. A enumeração descreve um catálogo finito sob hipóteses fixas; probabilidade exigiria um modelo de incerteza justificado.
+
+A adaptação atual trabalha com condições conhecidas, restrições calculadas, evidências disponíveis e aspectos que ainda precisam de investigação. Isso permite raciocinar sobre risco sem prometer uma avaliação de garantia de missão real.
+
+## 5. Oportunidades priorizadas para evolução
+
+| Prioridade | Oportunidade | Valor para o jogo | Evidência necessária antes de apresentar como validada |
+| --- | --- | --- | --- |
+| Agora | ConOps curto, revisão prévia, requisitos e retorno científico | Conectar propósito, decisão e consequência | QA de fluxo, coerência com o motor e clareza com jogadores |
+| Próxima | Sessões com estudantes e educadores | Identificar onde a pessoa confunde potência, energia, memória e ciência útil | Tarefas de transferência, explicações antes/depois e observação de erros |
+| Próxima | Instrumentos e objetivos científicos alternativos | Tornar a escolha de payload uma decisão de missão | Dados, resolução, cobertura, qualidade e recursos de cada instrumento |
+| Próxima | Órbita e agenda de contatos configuráveis | Transformar geometria e segmento de solo em decisões jogáveis | Propagação adequada, horizonte, eclipses e visibilidade comparados com referência independente |
+| Depois | Contingências em contrato separado | Ensinar detectar, escolher resposta e recuperar operação | Modos explícitos, duração, efeitos, recursos e critério de recuperação; nenhuma falha aleatória sem explicação |
+| Depois | Plano didático de garantia inspirado na AIM | Escolher verificações e acompanhar que evidências faltam | Custo/tempo de verificação e rastreabilidade; sem equivaler a certificação NASA |
+| Depois | Incerteza, sensibilidade e Monte Carlo | Comparar robustez de alternativas | Distribuições justificadas, dependências, semente, métricas e limites de interpretação |
+| Depois | Campanha lunar e, em seguida, interplanetária | Expandir para propulsão, captura, latência e janela | Modelos de trajetória apropriados e distinção entre manobras impulsivas e baixo empuxo |
+
+O critério para priorizar uma nova mecânica é ela criar uma decisão explicável e observável. Uma nova variável deve ter significado, unidade, fonte, hipótese e forma de verificação.
+
+## 6. Como conduzir a demonstração
+
+1. Ler o plano da missão e formular a pergunta científica.
+2. Projetar a configuração inicial e abrir a revisão prévia.
+3. Registrar hipótese; executar o cenário longo e observar seis registros recebidos.
+4. Executar o mesmo projeto com contatos curtos; verificar o limite de transmissão, os registros na fila e as comparações científicas possíveis.
+5. Relacionar o resultado a um requisito e a um evento, antes de consultar alternativas.
+6. Aplicar o redesign mínimo, registrar nova previsão e executar.
+7. Comparar a entrega, as folgas e os pares de NDVI disponíveis; explicar o compromisso entre processamento a bordo e potência da bateria.
+
+Esse roteiro propõe uma atividade. Concluir a missão ou selecionar uma combinação vencedora, isoladamente, não comprova aprendizagem.
+
+## 7. Procedência e limites
+
+Os três pareceres integrais desta rodada estão em `research/round10/refinamento-conops.md`, `refinamento-requisitos.md` e `refinamento-risco-ux.md`. O caderno também mantém a pesquisa anterior para tornar as decisões rastreáveis.
+
+O motor `0.1.1-rd`, o catálogo `ipe-64-v1`, os seis registros históricos, o objetivo 6/6 e os dois cenários foram preservados. Os refinamentos acrescentam apresentação, análise dos resultados e explicações. O laboratório de física permanece separado da campanha.
+
+Esta experiência foi desenvolvida com assistência de IA. Não há validação de voo, certificação NASA, endosso NN/g ou estudo de aprendizagem concluído. As verificações automatizadas e visuais têm alcance descrito nos respectivos registros de QA.
+
+
+---
+
+# Refinamento ConOps — Missão Ipê 6/6
+
+Fonte: `experiments/mission-design-lab/research/round10/refinamento-conops.md` · SHA-256 original: `fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a` · Ajustes de caminhos privados: 0
+
+# Refinamento ConOps — Missão Ipê 6/6
+
+Pesquisa de 14/11/2026. Escopo: oportunidades de refinamento baseadas em fontes primárias NASA, sem editar o site durante o empacotamento. Continuidade: Missão Ipê, campanha LEO/Cerrado, seis escolhas binárias e seis resultados históricos MOD13Q1. O direcionamento desta rodada fixa a meta 6/6; a hipótese de calibração 4/6 da pesquisa inicial não deve ser aplicada a esta versão.
+
+## Decisão recomendada
+
+O maior ganho imediato é explicitar a lógica que já existe: para quem a missão trabalha, o que deve entregar, em quais condições opera e como cada escolha contribuiu para o resultado. Isso pode ser feito com texto contextual, estados derivados e relatório, mantendo catálogo, dados e motor determinístico.
+
+As referências estudadas orientam este desenho. Elas não representam aprovação, certificação nem demonstração de conformidade do jogo com processos da NASA.
+
+## Top 3 melhorias rápidas
+
+| Prioridade | Mudança proposta | Onde aparece | Critério de aceitação |
+|---|---|---|---|
+| 1 | Uma abertura de missão com destinatário, pergunta científica, meta 6/6 e limites | Antes das escolhas; resumo persistente no planejamento | A pessoa consegue dizer o que precisa entregar e para quem antes de escolher hardware |
+| 2 | Narrar a operação por causa e efeito, distinguindo condição prevista de anomalia | Replay e eventos da missão | Cada perda ou atraso tem causa ligada ao modelo; eclipse ou ausência prevista de contato não aparecem automaticamente como defeito |
+| 3 | Fechar com três avaliações independentes e evidência | Revisão e relatório final | A interface separa projeto viável, operação concluída e meta científica atingida; explica o gargalo e permite voltar à escolha responsável |
+
+### 1. Abertura: dar significado ao 6/6
+
+Texto proposto, para ajustar aos nomes e critérios reais do motor:
+
+> Você lidera uma missão de observação do Cerrado. Projete o satélite para que seis resultados cheguem à equipe que estuda a vegetação de Rio Verde. Equilibre os recursos da nave e acompanhe o caminho dos dados até o solo.
+
+Complemento de precisão:
+
+> A campanha usa referências históricas Terra/MODIS. As escolhas simulam a capacidade da missão de entregar os resultados; não alteram as medições originais.
+
+Uma linha responde à pergunta científica: “Como a vegetação varia entre os períodos históricos apresentados?”. Essa é uma pergunta de exploração, não uma conclusão causal sobre seca, incêndio ou desmatamento.
+
+Aplicação proposta: uma ficha com quatro campos curtos — **Quem usa**, **Pergunta**, **Entrega: 6/6**, **Limites**. Os limites devem vir do modelo atual. Evitar valores ou obrigações novas criadas apenas para preencher a interface.
+
+Base documental: Appendix S §§1.1.1, 3.1 e 3.2; SEH §4.1. A adaptação da NASA para uma ficha curta é nossa decisão de UX.
+
+### 2. Operação: deixar o gargalo compreensível
+
+O currículo NASA oferece um exemplo particularmente próximo: um satélite LEO precisa armazenar dados porque não mantém contato contínuo com estações; o armazenamento disputa recursos da nave. Essa relação pode aparecer no replay com uma frase por evento, sempre derivada do motor.
+
+Exemplos de microcopy proposta, usar somente onde o estado real corresponder:
+
+- **Sem contato previsto:** “Os dados permanecem a bordo até a próxima janela de transmissão.”
+- **Memória insuficiente:** “Esta coleta não foi armazenada porque a memória disponível era menor que o volume necessário.”
+- **Enlace limitado:** “A janela terminou antes de transmitir todos os dados armazenados.”
+- **Eclipse previsto:** “A nave está sem iluminação solar e depende da energia armazenada.”
+- **Modo de proteção, se implementado:** “A coleta foi suspensa para preservar a operação da nave.”
+
+Formato de cada evento: **o que aconteceu → qual recurso mudou → qual resultado foi afetado**. Uma ação “Ver decisão relacionada” pode levar ao componente ou escolha que realmente causou o efeito.
+
+Não atribuir uma causa só porque ela parece plausível. Se o motor calcula apenas um balanço agregado, dizer “capacidade estimada insuficiente nesta simulação”, sem inventar instante de pane, sequência de comandos ou recuperação física.
+
+Base documental: currículo NTRS 20210021839, §2.4, página impressa 12; Appendix S §§3.4, 6.1 e 6.2. A classificação de cada evento da Missão Ipê depende do comportamento implementado, não da presença de um ícone de alerta.
+
+### 3. Resultado: três perguntas, três estados
+
+| Avaliação | Pergunta que responde | Exemplos de evidência |
+|---|---|---|
+| Projeto viável | A configuração respeitou os limites do modelo? | Massa/capacidade; custo/orçamento; compatibilidade existente |
+| Operação concluída | A sequência simulada chegou ao fim conforme suas regras? | Etapas concluídas; ocorrência terminal, caso exista |
+| Meta 6/6 atingida | Os seis resultados exigidos foram entregues? | IDs únicos e contador já calculado pelo motor |
+
+Uma operação concluída com 4/6 entregas pode ter projeto viável e meta não atingida. A interface deve explicar isso sem trocar o nome da meta nem tratar tudo como “missão explodiu”. A nave pode sobreviver e ainda assim deixar de cumprir o objetivo.
+
+O relatório deve destacar primeiro o resultado principal, depois a causa dominante e a escolha relacionada. Comparar com outra configuração usando o mesmo cenário permite examinar causalidade. Não prometer que uma mudança isolada resolverá o problema sem recalcular a alternativa.
+
+Base documental: SEH §5.3 distingue conformidade com requisitos; §5.4 trata adequação ao uso. No jogo, esses conceitos inspiram a separação dos resultados; não equivalem a uma validação de missão espacial real.
+
+## Evidência primária: versão, localização e alcance
+
+### NASA Systems Engineering Handbook
+
+Página: https://www.nasa.gov/reference/systems-engineering-handbook/
+
+PDF: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf
+
+Versão documental: **NASA/SP-2016-6105 Rev2**, substitui Rev1 de 2007. A data de atualização de uma página web não deve ser usada como uma nova revisão técnica. O prefácio informa que o handbook é orientação de boas práticas, não diretiva.
+
+Trechos consultados para esta proposta:
+
+| Localização | O que sustenta | Aplicação nossa |
+|---|---|---|
+| §4.1; abertura do capítulo 4 | Expectativas, objetivos, restrições e critérios de sucesso antecedem e orientam o desenho | Explicitar o pedido científico antes da montagem |
+| §4.2.1.2.2–3 | Diferencia função e desempenho; pede racional e contexto dos requisitos | Cada limite ou meta precisa de razão compreensível |
+| §4.2.1.2.4 | Requisitos devem ser coerentes com missão, ConOps e sucesso | Contador 6/6 e critérios finais têm de corresponder ao objetivo prometido |
+| §5.3 e §5.4 | Verificação e validação respondem a perguntas diferentes | Separar viabilidade da configuração da entrega da missão |
+| Appendix D | Recomenda identificar requisitos e sua fonte, planejando como verificá-los | Uma pequena matriz interna orienta a revisão e o relatório |
+
+URLs dos capítulos:
+
+- https://www.nasa.gov/reference/4-0-system-design-processes/
+- https://www.nasa.gov/reference/5-0-product-realization/
+- https://www.nasa.gov/reference/appendix-d-requirements-verification-matrix/
+
+### Appendix S: Concept of Operations Annotated Outline
+
+Página: https://www.nasa.gov/reference/appendix-s-concept-of-operations-annotated-outline/
+
+Versão: integra o Handbook Rev2. **Páginas impressas 251–253**, correspondentes às páginas 261–263 do PDF contado a partir de 1. A página impressa 254 inicia Appendix T. A extração HTML desta sessão ficou parcial; o conteúdo restante foi conferido no PDF oficial.
+
+Resumo dos trechos, mantido curto: o roteiro admite adaptação ao tipo, porte e complexidade do projeto. §§1.1 e 1.2 cobrem motivação, premissas e escopo; §§3.1–3.4 conectam expectativas, elementos, pessoas, interfaces e modos; §§4–5 tratam ambiente e suporte; §6 pede cenários rastreáveis; §§6.1–6.2 distinguem funcionamento esperado de falhas, baixo desempenho, condições inesperadas ou erro humano; §7.3 relaciona sucesso a perguntas científicas e lacunas de conhecimento.
+
+Trecho curto decisivo: “cover both nominal and off-nominal conditions”. Ele sustenta tratar falhas e degradação de modo explícito, não exigir aleatoriedade ou complexidade extra.
+
+### Currículo NASA — NTRS 20210021839
+
+Registro: https://ntrs.nasa.gov/citations/20210021839
+
+PDF: https://ntrs.nasa.gov/api/citations/20210021839/downloads/SE-Curriculum-Intro.2021-09-20.pdf
+
+Metadados: autores Kenneth Freeman e Gilena A. Monroe, Ames Research Center; publicação em **11/10/2021**; arquivo identificado por **20/09/2021**; 27 páginas; material curricular para estudantes. O registro exibe o título “System Engineering Curriculum Into”, enquanto o PDF abre com “Systems Engineering Curriculum”.
+
+O currículo foi adaptado do Handbook e desenvolve um exemplo de satélite/instrumento para detecção de incêndios. §§2.3 e 3 mostram a passagem de operação imaginada a requisitos, projeto, integração, testes e uso. A página impressa 12 apresenta o trade-off de armazenar dados entre contatos, sob limites de massa, potência, tamanho e custo. As atividades pedem aos estudantes formular poucos requisitos e explorar alternativas. As páginas 15–19 aproximam necessidades de stakeholders, conceito e requisitos derivados.
+
+Limite: o exemplo é de detecção térmica de incêndio. Não importar sua operação noturna ou seu instrumento como se fossem propriedades do NDVI/MOD13Q1 da campanha. A oportunidade é adaptar o raciocínio de engenharia, preservando a diferença científica.
+
+### NASA Science Activation / Learn
+
+Portal: https://science.nasa.gov/learn/
+
+Dados: https://science.nasa.gov/learn/entry-points-to-nasa-data/
+
+Aprendizagem digital: https://science.nasa.gov/learn/digital/
+
+São páginas de programa/catálogo, sem revisão técnica numerada indicada. SciAct oferece recursos para diferentes públicos, participação em ciência e conteúdo educativo revisado. O catálogo de dados organiza ferramentas também por nível de habilidade. Para Terra, lista entradas como My NASA Data, NEO, Eyes on Earth e Worldview.
+
+Aplicação proposta: oferecer aprofundamento opcional depois da partida — origem do dado, explicação do indicador e uma ferramenta para explorar outros períodos. A existência dessas páginas não demonstra eficácia pedagógica da Missão Ipê e não autoriza afirmar parceria com o programa.
+
+## ConOps leve proposto para o projeto
+
+Este texto é uma definição proposta do produto, não uma reprodução do documento NASA.
+
+**Necessidade:** aprender como decisões de engenharia tornam possível entregar dados científicos, com referência local ao Cerrado.
+
+**Objetivo científico da história:** explorar variações de vegetação entre os períodos históricos de Rio Verde representados na campanha.
+
+**Objetivo jogável:** configurar uma missão que entregue os seis resultados exigidos pelo cenário, respeitando as regras do catálogo atual.
+
+**Objetivo educativo:** ao final, a pessoa consegue explicar uma cadeia causal entre escolha, recurso e entrega científica; distingue observação histórica de simulação.
+
+**Sistema:** jogador/equipe, nave didática, instrumentos e recursos abstratos, sequência de operação, estação/recepção e destinatário científico. A interface apresenta o funcionamento; o catálogo define as escolhas e o motor determina resultados.
+
+**Premissas:** cenário histórico fixado; mesmos inputs produzem os mesmos outputs; parâmetros didáticos identificados; duração da partida não equivale à duração física dos compostos de 16 dias; a animação orbital não deve sugerir fidelidade superior à do modelo.
+
+**Limites:** este refinamento não muda valores históricos, parâmetros, catálogo ou condição de vitória. Operação de missão espacial real, licenciamento e engenharia de lançamento real ficam fora do escopo pedagógico.
+
+**Início e término:** começa na compreensão do pedido científico e termina na avaliação do resultado, proveniência e possibilidade de comparar outra configuração. A decolagem é uma etapa.
+
+## Stakeholders sem criar parceiros fictícios
+
+| Papel | Natureza | Necessidade a representar |
+|---|---|---|
+| Jogador iniciante | Usuário real a validar | Entender as opções e corrigir uma escolha sem conhecimento prévio avançado |
+| Professor/facilitador | Público potencial, ainda precisa de validação | Observar aprendizagem e conduzir discussão curta |
+| Equipe que estuda a vegetação | Papel da narrativa, não organização real parceira | Receber resultados identificáveis e úteis para a pergunta científica |
+| Controle da missão | Papel da narrativa e função do sistema | Manter operação e explicar o estado da nave |
+| Equipe de desenvolvimento | Responsável real pelo produto | Preservar dados, regras e resultados reproduzíveis |
+
+Não usar nome ou logotipo de organização como destinatária real sem vínculo existente. O jogador pode operar sozinho; papéis diferentes podem orientar cooperação na mesma tela, sem alegar multiplayer.
+
+## Cenários que o ConOps deve distinguir
+
+| Cenário proposto | Classificação | Informação essencial para o jogador | Limite de implementação |
+|---|---|---|---|
+| Coletar, armazenar e transmitir em contato previsto | Nominal | Dado segue etapas antes de chegar | Expor estados existentes; não inventar telemetria |
+| Esperar contato | Nominal quando planejado | Guardar dados faz parte da missão | Ausência de contato não implica falha de rádio |
+| Eclipse conhecido | Nominal quando previsto | Reserva de energia permite atravessar o período | Só mostrar duração/consumo se o modelo os fornecer |
+| Meta não cumprida por capacidade insuficiente | Resultado de configuração inadequada | Identificar gargalo e contrafactual calculado | Evitar transformar todo trade-off ruim em pane física |
+| Energia menor que a prevista ou rádio que falha | Anormal, se houver evento correspondente | Detecção, efeito, recuperação ou condição terminal | É expansão futura se não existe no motor |
+| Dado rejeitado pela regra científica de qualidade | Controle de qualidade previsto | Explicar por que não serve para determinada análise | QA deve vir do dado/regra real; upgrade de rádio não melhora QA histórica |
+
+Não é necessário introduzir eventos aleatórios para representar cenários anormais. Um modo de treino separado pode usar um evento reproduzível e identificado. Não alterar o cenário principal para fabricar drama durante o empacotamento.
+
+## Cadeia missão → requisito → verificação
+
+Matriz proposta para uso interno. Os identificadores são nossos e não pertencem à NASA.
+
+| Missão/necessidade | Requisito candidato do jogo | Evidência/verificação | Limite |
+|---|---|---|---|
+| Entregar a meta | R-SCI-01: contabilizar os seis resultados conforme a definição atual do motor | Comparar IDs únicos entregues com IDs exigidos | Não introduzir outro critério de sucesso pela UI |
+| Entender o resultado | R-EXP-01: todo resultado incompleto apresenta uma causa baseada no cálculo | Conferir relatório contra estados e regras da configuração | Explicação é inválida se não houver evidência no motor |
+| Configurar missão viável | R-CFG-01: avaliação usa os limites atuais de massa, custo e compatibilidade | Casos conhecidos abaixo, no limite e acima | Sem inferir capacidade física real a partir de unidade didática |
+| Preservar referência científica | R-DAT-01: valores e proveniência permanecem idênticos entre configurações | Comparar registros científicos antes/depois da simulação | Entrega simulada muda; observação histórica não |
+| Permitir comparação | R-REP-01: mesma configuração e versão de cenário produzem o mesmo resultado | Comparar execuções e versões | Um cenário novo recebe identificação própria |
+| Não confundir etapas | R-STS-01: apresentar capturado/transmitido/entregue somente conforme os estados existentes | Conferir contadores e mensagens na mesma execução | Se o motor não distingue etapas, declarar o grau de abstração |
+
+Essas verificações avaliam o software/modelo segundo seu contrato. A validação educativa é separada: observar usuários compreendendo a meta, identificando um gargalo e escolhendo uma alteração justificável. Uma suíte técnica aprovada não demonstra, sozinha, que o jogo ensina.
+
+## Oportunidades futuras, depois do pacote atual
+
+1. **Comparação orientada.** Guardar duas configurações no mesmo cenário e perguntar qual atende a meta com menor uso de um recurso. Mostrar alternativas viáveis sem impor uma única solução universal.
+2. **Treino de recuperação.** Campanha curta com perda de uma janela ou capacidade reduzida. A pessoa identifica impacto e escolhe uma resposta dentro de regras documentadas. Começar com um único evento reproduzível.
+3. **Debrief para educadores.** Três perguntas: o que você previu, o que aconteceu, que evidência sustenta sua próxima escolha. Proposta nossa, a validar com usuários; não atribuir o método como requisito NASA.
+4. **Exploração científica.** Ao concluir, abrir origem da observação e recurso de aprendizagem adequado ao nível. Comparar períodos preservando contexto e QA, sem converter diferença de NDVI em diagnóstico automático.
+5. **Fim de missão.** Introduzir descarte/encerramento e arquivo de resultados em uma campanha futura. Sem inventar uma manobra real se o modelo só simula operação simplificada.
+
+## Pontos a conferir antes de aplicar
+
+- No retorno científico, comparar somente os registros recebidos, ordenar por período e manter localização/unidade comparáveis. Com menos de dois registros, apresentar o dado disponível sem calcular variação temporal. Ausências devem permanecer visíveis; não completar a série com dados não entregues nem concluir causa da variação. Ao comparar partidas, identificar quando os subconjuntos de datas recebidas diferem.
+- Confirmar se 6/6 significa apenas entregues ou entregues e aprovados cientificamente; não alterar a definição por texto.
+- Conferir se os seis registros já têm QA auditada. Se não têm, não declarar qualidade científica validada.
+- Ler estados e causas efetivamente emitidos pelo motor antes de gerar narrativa de operação.
+- Manter as escolhas e todos os resultados atuais reproduzíveis; mudanças de regras exigem versão própria.
+- Apresentar Handbook e currículo como referências utilizadas no desenho educativo. Não usar “NASA compliant”, “NASA approved” ou equivalentes.
+
+Nenhum arquivo do site foi alterado nesta frente.
+
+
+---
+
+# Refinamento por requisitos — Missão Ipê
+
+Fonte: `experiments/mission-design-lab/research/round10/refinamento-requisitos.md` · SHA-256 original: `6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94` · Ajustes de caminhos privados: 0
+
+# Refinamento por requisitos — Missão Ipê
+
+Pesquisa de fontes primárias realizada em 14/11/2026. Escopo: propostas de interface, avaliação e rastreabilidade sobre o core determinístico existente, sem alterar catálogo, 64 combinações, agenda, fórmulas, pontuação ou comportamento operacional. Nenhum arquivo do site foi editado.
+
+## As três melhorias de maior retorno
+
+### 1. Mostrar um contrato de missão mensurável
+
+Antes da simulação, apresentar objetivo, critérios de sucesso e restrições já existentes, em linguagem de jogo. Depois, preencher as mesmas linhas com o resultado e a evidência. Exemplo de estrutura, reutilizando os limites atuais:
+
+| Item | Critério | Evidência após execução |
+|---|---|---|
+| Ciência recebida | Ciência entregue ≥ meta vigente | Valor entregue, unidade e instante da última entrega |
+| Orçamento | Custo da configuração ≤ orçamento vigente | Total e folga em créditos |
+| Massa | Massa selecionada ≤ limite vigente | Total e folga em kg |
+| Energia | Respeitar o limite operacional já usado pelo core | Menor estado de carga e momento do evento limitante, se expostos |
+
+Cada requisito recebe identificador curto, finalidade, regra de avaliação, unidade e estado: ainda não avaliado, atendido, não atendido ou não concluído. Encerramento precoce deve preservar falhas já demonstradas e deixar não concluídos apenas os critérios cuja evidência necessária não foi produzida; não transformar a ausência de medição em aprovação ou falha automática. “Ver evidência” leva ao evento/resultado correspondente; não precisa acrescentar um formulário para o jogador.
+
+**Base documental:** NPR 7123.1D §3.2.3.2 pede requisitos quantitativos, mensuráveis, verificáveis e rastreáveis; §3.2.12 trata gestão e rastreabilidade. É a inspiração metodológica, não uma obrigação institucional da Missão Ipê [R05].
+
+**Aceitação de produto proposta:** todos os critérios exibidos usam exatamente os limites e resultados atuais; nenhuma linha recebe “atendido” antes da avaliação; a configuração e o mesmo cenário produzem os mesmos resultados antes e depois desta camada.
+
+### 2. Transformar o debrief em evidência + interpretação
+
+Organizar o pós-missão em duas perguntas distintas, sem chamar ambas de “validação NASA”:
+
+- **O projeto cumpriu os critérios?** Resultado calculado para cada requisito, com a causa dos limites: orçamento, massa, energia, armazenamento ou comunicação, conforme as saídas já disponíveis.
+- **O resultado atende ao objetivo desta missão?** Explicação do que efetivamente chegou à Terra e do que faltou. Expor a diferença entre coletar e entregar, destacando um gargalo e uma mudança possível.
+
+No texto auxiliar, explicar que verificação confronta requisitos, enquanto validação confronta finalidade e uso pretendido. A NPR 7123.1D distingue esses processos e também distingue validação do produto de validação dos próprios requisitos [R06].
+
+**Duas camadas que não podem ser confundidas:** os testes determinísticos verificam o software e os critérios simulados; para validar o jogo como produto educacional, é necessário observar jogadores realizando a tarefa. Testes passando não demonstram que as pessoas aprenderam. Uma rodada de pesquisa pode avaliar se o participante consegue explicar um compromisso entre ciência, comunicação e energia, sem ajuda. Essa validação continua “planejada” até haver evidência.
+
+**Aceitação proposta:** o debrief apresenta evidência numérica e interpretação sem inventar telemetria; um resultado que coletou dados mas não os entregou não recebe texto de sucesso científico; a interface não afirma validação educacional já realizada.
+
+### 3. Comparar alternativas com folgas e motivo da escolha
+
+Permitir fixar duas configurações existentes e comparar os resultados sob o mesmo cenário. Mostrar ciência entregue, custo, massa e indicadores operacionais já produzidos. Acrescentar uma explicação factual do ganho e da perda: “esta opção entrega mais ciência e usa mais créditos”, com números reais.
+
+Folga de orçamento = limite − total; folga de massa = limite − massa. Para energia, preferir a diferença entre mínimo observado e limite operacional, se esses campos existem, em vez de inventar uma média. Percentuais precisam declarar denominador. Não introduzir taxa de falha probabilística ou ranking “NASA” sem modelo.
+
+O processo de análise de decisões da NPR 7123.1D considera critérios, alternativas, análise, seleção e incertezas [R05]. O Apêndice G considera margens e recursos de massa, potência e memória nas revisões, sem prescrever nessas passagens uma porcentagem única [R08]. A NPR 7120.8A diferencia meta desejada e limiar mínimo para seus parâmetros de desempenho [R09].
+
+**Aceitação proposta:** comparar sob o mesmo cenário; evitar premiar uma alternativa por uma restrição que a outra não recebeu; preservar o score existente; “melhor” deve sempre apontar o critério considerado. Um projeto dominado pode ser identificado por critérios explícitos, sem substituir o objetivo do jogador por um peso oculto.
+
+## Auditoria das versões e dos três links solicitados
+
+Todos os endereços fornecidos foram abertos diretamente pela web.
+
+| Referência solicitada | Resultado observado em 14/11/2026 | Responsabilidade institucional e histórico |
+|---|---|---|
+| NPR 7123.1D | Página informa **Updated w/Change 2**, efetiva desde 05/07/2023, expiração em 05/07/2028 | Office of the Chief Engineer. O prefácio cancela NPR 7123.1C, de 14/02/2020 [R01, R04]. |
+| NPR 7120.5, descrita F, URL com 5E | O endereço resolve para **NPR 7120.5F w/Change 4**, efetiva desde 03/08/2021, expiração mostrada em 03/02/2027 | Associate Administrator. A página encaminha expressamente para **NID 7120.148** como texto com requisitos mais recentes. Revisão E é antecedente substituída; não rotular o conteúdo aberto como E [R02, R10]. |
+| NPR 7120.8A | Página informa **Revalidated w/change 5**, efetiva desde 14/09/2018, expiração em 14/09/2028 | Associate Administrator. Cancela NPR 7120.8 de 05/02/2008. Change 5, de 27/10/2023, atualizou a declaração de aplicabilidade [R03, R11, R12]. |
+
+**Correção importante sobre a diretiva provisória:** a capa do PDF NID 7120.148 mostra vigência a partir de 09/12/2024 e expiração original em 09/12/2025. O catálogo oficial NODIS informa que a expiração foi prorrogada para **01/08/2027**. Portanto, não diagnosticar a NID como vencida com base só na capa. Citar o catálogo juntamente com o PDF [R07, R13].
+
+As páginas informam que as diretivas não vinculam o público salvo autorização legal ou incorporação contratual. Os prefácios delimitam NASA, centros e situações contratuais. A 7123.1D prevê adaptação proporcional ao tipo, porte e complexidade; isso não cria processo formal de aprovação NASA para o jogo [R04]. A 7120.8A rege atividades de pesquisa e tecnologia da NASA e possui critérios próprios para casos geridos pela 7120.5; não é uma norma universal para todo protótipo [R11].
+
+Texto editorial recomendado: **“Práticas de engenharia de sistemas adaptadas para esta simulação educacional.”** Na área de referências, identificar documento, revisão, mudança e data de consulta. Não usar “certificado”, “aprovado para voo”, “NASA compliant” ou o fato de os testes passarem como equivalentes a uma revisão institucional.
+
+## Ciclo de vida: o que os documentos apoiam
+
+A figura 2-5 da NID 7120.148 foi inspecionada visualmente. Para projetos de voo, apresenta **Pre-Phase A**, seguida de fases A a F: conceito, definição preliminar, projeto/fabricação, integração/testes/lançamento, operações e encerramento. **“Fase 0” não é o rótulo dessa figura.** KDP 0 aparece em ciclos de programas, e não deve ser confundido com uma fase inicial universal de qualquer projeto [R07, R14].
+
+A NPR 7123.1D §5.1.5 vincula revisões à maturidade das evidências e aos critérios de entrada, não simplesmente à passagem do calendário. O mesmo capítulo explica que o ciclo depende da natureza do programa/projeto [R15].
+
+Adaptação recomendada para o jogo, sem acrescentar bloqueios burocráticos:
+
+| Momento do jogo | Ação do jogador | Evidência mostrada |
+|---|---|---|
+| Definir a missão | Entender objetivo e limites | Contrato de missão |
+| Comparar projetos | Escolher configuração e examinar compromissos | Dois projetos no mesmo cenário |
+| Executar | Observar o funcionamento da configuração | Eventos e métricas existentes |
+| Revisar | Explicar o resultado e decidir uma mudança | Debrief, requisitos e diferença entre tentativas |
+
+Esses quatro momentos são uma síntese didática nossa, não uma reprodução das fases NASA nem uma revisão formal MCR/SRR/PDR/CDR/FRR. Se for desejado usar “Fase 0” como nome de onboarding, explicitar que é nomenclatura do jogo. Para reduzir jargão, a interface principal pode ficar com verbos e manter a correspondência conceitual na área “Como foi pensado”.
+
+## Risco, margens e decisões sem alterar o motor
+
+Separar três situações:
+
+1. **Resultado conhecido:** a execução ultrapassou um limite; mostrar evento e consequência.
+2. **Folga pequena:** há pouca distância entre resultado e limite no cenário calculado; mostrar a quantidade sem convertê-la em probabilidade.
+3. **Incerteza fora do modelo:** condições físicas e operacionais reais não representadas; tratar na explicação metodológica, não sortear falhas para aparentar realismo.
+
+Uma reserva escolhida pelo jogo é didática e deve ser identificada assim. “10% de folga” não significa “90% de confiabilidade”. Não copiar valores de margens ou regras de autorização institucional para o score.
+
+As comparações podem reutilizar os 64 resultados determinísticos já verificáveis. Um histórico pequeno pode guardar ID da configuração, cenário, versão do conjunto de regras, métricas e explicação do jogador. Isso permite repetir e comparar sem criar um novo simulador.
+
+## Limites de implementação para a próxima frente
+
+- Adicionar apenas leitura, apresentação, rastreabilidade e comparação sobre as saídas existentes.
+- Conservar o mesmo catálogo, agenda, 64 combinações e semântica de ciência entregue.
+- Não recalibrar pontuação silenciosamente para fazer novas telas parecerem úteis.
+- Não exibir uma métrica que o core não calcula como se fosse medida. Se falta um campo, restringir a primeira entrega ao que já existe.
+- Fazer uma verificação de regressão dos resultados antes/depois; os testes e o oracle já existentes são a referência. Testes novos devem cobrir a camada de critérios/comparação quando ela adicionar lógica.
+- Não abrir uma nova frente de física, compliance de voo ou aprovação formal. Nenhuma dessas três melhorias precisa disso.
+
+## Fontes consultadas
+
+As referências R01–R03 são precisamente os links solicitados. As demais resolvem versão, contexto e trechos específicos. As URLs permitem conferir a versão e o contexto de cada documento.
+
+| ID | Fonte primária | Data de consulta |
+|---|---|---|
+| R01 | NPR 7123.1D, página principal: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=main | 14/11/2026 |
+| R02 | URL fornecida 7120.5E, resolução para F: https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=7120&s=5E | 14/11/2026 |
+| R03 | NPR 7120.8A, página principal: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=main | 14/11/2026 |
+| R04 | NPR 7123.1D, Preface P.2/P.6: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=Preface | 14/11/2026 |
+| R05 | NPR 7123.1D, §3.2.3, §3.2.12, §3.2.18: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=Chapter3 | 14/11/2026 |
+| R06 | NPR 7123.1D, Appendix A, Validation/Verification: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=AppendixA | 14/11/2026 |
+| R07 | NID 7120.148, PDF, capa e figura 2-5 página 23: https://nodis3.gsfc.nasa.gov/OPD_Docs/NID_7120_148_.pdf | 14/11/2026 |
+| R08 | NPR 7123.1D, Appendix G, margens e revisões: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=AppendixG | 14/11/2026 |
+| R09 | NPR 7120.8A, §4.2.7.7, meta/limiar de KPP: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=Chapter4 | 14/11/2026 |
+| R10 | NPR 7120.5F, prefácio e aplicabilidade: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_005F_&page_name=Preface | 14/11/2026 |
+| R11 | NPR 7120.8A, prefácio e cancelamento: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=Preface | 14/11/2026 |
+| R12 | NPR 7120.8A, Change Log: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=ChangeLog | 14/11/2026 |
+| R13 | Catálogo NODIS de NIDs, extensão até 01/08/2027: https://nodis3.gsfc.nasa.gov/OPD/OPD_list.cfm?dir=asc&moduleInputs=NID&sort=opr | 14/11/2026 |
+| R14 | NPR 7120.5F, Chapter2, distinção ciclos de programa/projeto: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_005F_&page_name=Chapter2 | 14/11/2026 |
+| R15 | NPR 7123.1D, §5.1, revisões por maturidade: https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_&page_name=Chapter5 | 14/11/2026 |
+
+
+---
+
+# Refinamento de risco, garantia e UX — Missão Ipê
+
+Fonte: `experiments/mission-design-lab/research/round10/refinamento-risco-ux.md` · SHA-256 original: `89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea` · Ajustes de caminhos privados: 0
+
+# Refinamento de risco, garantia e UX — Missão Ipê
+
+Pesquisa primária e revisão pontual de componentes em 14/11/2026. Este parecer propõe evolução didática da interface; não altera o checkout, o motor, o catálogo de 64 combinações ou o requisito de 6/6 registros válidos com todas as restrições atendidas. Não constitui classificação oficial de missão, conformidade com diretivas NASA ou homologação de voo.
+
+**Prioridade imediata de implementação:** revisão prévia determinística de contato, memória e potência, apresentada como condições necessárias. Um teto de transmissão pode usar a duração das janelas permitidas pela política multiplicada pela taxa útil do catálogo: se for insuficiente para o volume necessário, há um impedimento; se for suficiente, energia, disponibilidade dos lotes e sequência ainda precisam ser simuladas. Para memória, capacidade menor que um lote é impeditiva, mas não é necessário guardar todos os dados da missão simultaneamente se há contatos intermediários. Para potência, comparar a demanda das operações relevantes com a descarga disponível sob as condições declaradas. **Passar nesses filtros não garante 6/6 nem estima probabilidade de sucesso.** Não criar um selo NASA nem substituir a execução do motor por esses filtros.
+
+## 1. Achados prioritários
+
+1. **NPR 8705.4B é a revisão publicada atualmente identificada no NODIS**, efetiva em 01/11/2024, com expiração indicada em 31/10/2032. Ela substituiu a revisão A. A comunicação da OSMA sobre planos para uma futura revisão C não equivale à publicação dessa revisão. [R01, R02, R14, R15]
+2. **Classe de risco não é probabilidade de falha.** A classificação declara a tolerância dos responsáveis ao risco e orienta o nível de escrutínio e atividades de garantia. Um resultado do jogo também não estima confiabilidade de hardware. [R04]
+3. **Classe D não significa ausência de segurança.** A diretiva diferencia expectativas de garantia, mas mantém requisitos institucionais que não variam com a classe. A abordagem é proporcional à missão, não uma autorização geral para desconsiderar segurança. [R06]
+4. **A aplicabilidade precisa ser preservada.** A NPR 8705.4B se aplica a programas/projetos robóticos NASA geridos sob NPR 7120.5, inclusive cargas robóticas em veículos humanos. Não se aplica automaticamente a veículos humanos, sistemas de lançamento ou projetos sob NPR 7120.8. Estes últimos podem adotar objetivos do apêndice D. [R02]
+5. **Há uma atualização importante em 7120.5:** a página da NPR 7120.5F, Change 4, orienta usar NID 7120.148. O PDF ainda mostra expiração em 09/12/2025, mas o catálogo oficial registra extensão até **01/08/2027**. Capa e catálogo devem ser citados juntos; não concluir que a NID expirou pela capa isolada. [R08–R10]
+6. **Aprendizado e missão cumprida são resultados diferentes.** O jogo pode reconhecer uma investigação bem sustentada sem transformar 2/6 ou 4/6 em sucesso da campanha. A NPR 7120.8A oferece um paralelo útil: em pesquisa, demonstrar que uma hipótese não é viável pode ser um resultado válido, conforme o objetivo declarado. Isso não redefine os objetivos de uma missão operacional. [R13]
+
+## 2. Versões e escopo confirmados
+
+| Referência | Situação observada na fonte primária | Uso correto no projeto |
+|---|---|---|
+| NPR 8705.4B | NODIS: efetiva 01/11/2024; expira 31/10/2032. | Referência de classificação e planejamento de Safety and Mission Assurance — SMA. |
+| NPR 7120.5F, Change 4 | NODIS: efetiva 03/08/2021; expira 03/02/2027. Página indica a NID 7120.148 para requisitos mais recentes. | Referência de gestão de programas/projetos de voo, considerada junto da diretiva interina. |
+| NID 7120.148 | Efetiva 09/12/2024. Capa conserva 09/12/2025; catálogo NODIS estende a expiração a 01/08/2027. | Registrar a extensão e o documento-base; não ocultar a diferença de metadados. |
+| NPR 7120.8A, revalidada com Change 5 | NODIS: efetiva 14/09/2018; expira 14/09/2028. | Referência de pesquisa e tecnologia, com limites de aplicabilidade próprios. |
+
+Fontes: [R01, R08–R11, R15].
+
+NPR 7120.8 não é uma versão simplificada livremente escolhida de 7120.5. Seu prefácio descreve circunstâncias nas quais atividades de pesquisa e tecnologia são geridas sob 7120.5, incluindo dependência direta de um programa de voo e outras condições. A decisão depende de governança e aplicabilidade; não decorre apenas de ser pequeno, educacional ou um CubeSat. [R12]
+
+Para o beta independente, apresentar essas fontes como referências de engenharia e ensino. Não etiquetar a Missão Ipê como “NASA Classe D” por ser um CubeSat, ter custo didático baixo ou possuir poucas escolhas.
+
+## 3. O que as classes A–D significam
+
+| Classe na NPR 8705.4B | Tolerância descrita | Implicação para leitura didática |
+|---|---|---|
+| A | A menor tolerância, orientada por objetivos técnicos. | Exigir mais confiança e evidência não elimina todas as incertezas. |
+| B | Baixa tolerância; objetivos técnicos predominam sobre restrições programáticas. | Comparar alternativas com expectativas de garantia adequadas à missão. |
+| C | Tolerância moderada; objetivos técnicos ainda predominam. | Discutir quais objetivos precisam de evidência e quais limitações são aceitas. |
+| D | Alta tolerância; restrições programáticas pesam mais. | A aceitação de risco precisa ser explícita; não equivale a desligar requisitos de segurança. |
+
+O enquadramento é designado e documentado pela Mission Directorate, com justificativa, até o marco KDP B; não é calculado a partir de uma única característica. [R03]
+
+O apêndice C trata prioridade, duração, complexidade e custo de ciclo de vida de forma conjunta. Seus exemplos mostram que duração curta não determina classe D e duração longa não determina classe A. Uma régua automática “massa/preço → classe NASA” ensinaria uma regra que a própria fonte rejeita. [R05]
+
+A definição de risco combina **cenário que pode prejudicar um objetivo, sua possibilidade de ocorrência e suas consequências**, com consideração das incertezas. A possibilidade pode ser expressa qualitativa ou quantitativamente; a classificação A–D não fornece um percentual universal. [R04]
+
+Consequências para a interface, por inferência de produto:
+
+- Não mostrar “Classe D = 40% de chance de falha”, “Classe A = 99% de sucesso” ou “baixo risco” calculado somente por margem de bateria.
+- A quantidade de configurações bem-sucedidas entre as 64 é uma contagem de alternativas discretas sob uma condição fixa, **não uma distribuição de falhas físicas**. Não convertê-la em “chance de sucesso da nave”.
+- Margem de massa, saldo de créditos e energia acima da reserva são folgas calculadas; não são estimativas de confiabilidade, segurança ou robustez probabilística.
+- Um limite violado no motor é um resultado da simulação sob suas hipóteses. Uma incerteza não modelada não deve receber verde por ausência de erro.
+
+## 4. Garantia, evidência e revisão de prontidão
+
+A revisão B organiza objetivos de garantia e admite abordagens apropriadas à missão. O apêndice D contempla confiabilidade, tolerância a falhas, verificação ambiental, cobertura de telemetria e gestão de riscos. A consideração de contingências e a análise de alternativas fazem parte desse contexto. Alguns objetivos institucionais, como proteção planetária, detritos orbitais e segurança nuclear, não são reduzidos por escolher uma classe de maior tolerância. [R06]
+
+A Assurance Implementation Matrix — AIM — documenta objetivos, implementação planejada e abordagens alternativas, apoiando acordo inicial entre responsáveis. Ela não é apenas uma lista de caixas marcadas depois de construir o sistema. [R07] O capítulo 3 inclui operação e atividades pré-voo no planejamento de garantia e prevê apresentação das diferenças em relação ao plano nos marcos de revisão. [R03]
+
+Na NID 7120.148, a revisão de prontidão para lançamento avalia sistemas de solo, hardware e software. A SMSR prepara gestores para decisões de prosseguir ou não em atividades significativas. [R09] **Aplicação didática proposta:** a revisão no hangar deve reunir objetivo, limites, evidências e pendências antes do ensaio; não emitir um certificado de prontidão real.
+
+Uma decisão pedagógica pode ter quatro campos: “objetivo ameaçado”, “evidência observada”, “mudança proposta” e “como conferir”. O primeiro remete ao contrato da campanha; o segundo, a um evento ou resultado; os demais, ao próximo experimento. Isso torna o raciocínio revisável sem imitar toda a burocracia de um programa espacial.
+
+## 5. Três melhorias mínimas para os componentes atuais
+
+As propostas abaixo são incrementais. A leitura local confirmou que a UI já possui hipótese prévia, avisos de potência, eventos com critério/valor/limite, diário, comparação e mensagens contra atribuição causal indevida. Não é necessário reconstruir esses mecanismos.
+
+### 1 — Revisão pré-voo didática com estado da evidência
+
+**Onde:** `src/ui/Workbench.tsx`, no painel `project-dossier` existente.
+
+**Mudança:** organizar a revisão em três grupos curtos e sempre identificados por texto:
+
+| Grupo | Conteúdo usando dados existentes | Texto sugerido |
+|---|---|---|
+| Verificado nesta configuração | Massa, créditos e o aviso de pico já calculado. Mostrar valor e limite. | “Massa e orçamento conferidos. A execução ainda precisa verificar a entrega.” |
+| A verificar na execução | Energia ao longo do tempo, memória, transmissão e recepção científica. | “A hipótese será confrontada com os eventos da missão.” |
+| Fora deste modelo | Falhas aleatórias de hardware, radiação, redundância e confiabilidade. | “Esta simulação não estima probabilidade de falha.” |
+
+O aviso atual `peakRisk` representa uma comparação de demanda com limite; apresentar “Demanda prevista acima do limite de descarga”, com `demandW` e `maxDischargeW`, é mais preciso do que sugerir uma probabilidade. Não produzir um estado global “apto ao voo” só porque massa e créditos cabem.
+
+**Esforço mínimo:** apresentação, rótulos e estados derivados de `getConfigTotals`, cenário e catálogo existentes. Não antecipar uma execução silenciosa para revelar a solução antes da previsão do jogador. Não acrescentar caixas obrigatórias de “aceito o risco”. Uma troca de componente atualiza imediatamente os dados; execução antiga não é evidência válida para o projeto alterado.
+
+**Critério de aceite:** uma configuração dentro do envelope ainda mostra pendências; uma fora do envelope mantém o caminho de verificação já existente e explica a restrição; nenhuma mudança de visual ou texto altera o resultado do motor.
+
+### 2 — Distinguir operação nominal de ocorrência que exige investigação
+
+**Onde:** `src/ui/MissionControl.tsx`, em `TRACE_MODES`, painel de eventos e evidência selecionada.
+
+**Mudança:** acrescentar uma classificação descritiva dos eventos, sem modificar severidade ou lógica do motor:
+
+| Evidência existente | Categoria de UI | Interpretação correta |
+|---|---|---|
+| Início/fim de luz ou contato, processamento, fila vazia | “Sequência prevista” | Eclipse e fim de contato fazem parte da agenda; não são automaticamente falhas. |
+| `MASS_LIMIT`, `BUDGET_LIMIT` | “Restrição do projeto” | Uma incompatibilidade de configuração não é acidente em voo. |
+| `PEAK_POWER`, `ENERGY_DEPLETED`, `RESERVE_BREACH`, `BUFFER_OVERFLOW` | “Limite registrado” | Investigar valor, limite, instante e efeitos registrados, preservando as diferenças entre aviso e erro. |
+| `DELIVERY_SHORTFALL`, resultado global | “Objetivo não atendido” | A entrega final não identifica sozinha uma causa única. |
+
+Acrescentar abaixo da evidência: “Qual ação você testaria na próxima tentativa?”. O botão já existente de localizar na linha do tempo e a reflexão vinculada a `eventId` continuam sendo o caminho de investigação.
+
+**Limite fundamental:** o motor atual tem `idle`, `processing`, `transmitting`, `terminated` e `complete`; não há um modo operacional de contingência/autorreparo demonstrado. Não renomear `terminated` para “modo seguro”, não animar recuperação inexistente e não chamar o cenário de contato curto de falha aleatória. No beta, a resposta a uma ocorrência é a investigação e o redesign de uma nova tentativa.
+
+**Esforço mínimo:** mapa estático de descrições por código e microtexto. Preservar mensagens, valores, regras e cores já vinculadas à severidade.
+
+**Critério de aceite:** o jogador distingue um eclipse previsto de energia esgotada e sabe se está inspecionando uma execução encerrada ou preparando outra. Pausa/reprodução continuam sem alterar ciência ou energia.
+
+### 3 — Comparar folgas e evidências, sem um “índice de risco” inventado
+
+**Onde:** `src/ui/CompareDialog.tsx` e os textos de busca/reflexão em `src/ui/MissionControl.tsx`.
+
+**Mudança:** acrescentar à tabela existente três leituras simples: margem de massa `limite − massa`, saldo `orçamento − créditos` e energia mínima acima da reserva `minEnergyWh − reserveWh`. Rotular valores negativos como limite excedido, não como porcentagem de risco. Usar os valores exatos existentes para decidir o estado; arredondamento é só apresentação.
+
+Expor `engineVersion` e `catalogVersion` nas duas execuções e sinalizar diferenças antes de sugerir comparação direta. Manter o aviso atual quando cenários diferem ou múltiplas escolhas mudaram. No resumo da busca finita, acrescentar: “A contagem descreve o catálogo neste cenário; não estima a probabilidade de uma falha real.”
+
+Na reflexão existente, o prompt pode ser mais específico: “Eu testaria __ para proteger __. O evento __ mostra __. Vou comparar __.” Não é necessário mudar o esquema persistido: o campo de texto e o `eventId` já existem.
+
+**Esforço mínimo:** linhas de tabela, operações de diferença de grandezas já calculadas e textos. Nenhum ajuste em procura de alternativas, estado `outcome` ou critério de mínimo.
+
+**Critério de aceite:** duas execuções 6/6 podem revelar folgas diferentes; seis registros com envelope violado continuam mostrando projeto inválido; a UI não promove uma alternativa a “mais segura” sem declarar o que comparou.
+
+## 6. Três melhorias futuras
+
+### 1 — Laboratório de contingências com contrato próprio
+
+Criar um cenário separado, com máquina de modos explícita: operação nominal, detecção, proteção, recuperação e retomada quando permitida. Definir gatilhos, cargas desligadas, preservação de dados, prioridade de comunicação, condições de saída e consequências temporais. Começar com injeção determinística de uma ocorrência identificada, por exemplo perda de uma oportunidade de contato; documentar o instante e permitir comparar o mesmo ensaio com duas respostas.
+
+Adicionar semente somente quando houver aleatoriedade de fato. O painel deve mostrar “evento injetado para o exercício”, evitando atribuir uma frequência NASA inventada. Não inserir esse comportamento retrospectivamente no contrato `ipe-64-v1`.
+
+### 2 — Plano didático de garantia e revisão por evidências
+
+Introduzir uma atividade inspirada na AIM: para cada objetivo, registrar evidência planejada, resultado do teste, limitação conhecida e ação. Perfis fictícios de tolerância ajudam a discutir quanto investir em análise, ensaio e contingência, com custos/tempo de jogo declarados. Uma biblioteca explica A–D por exemplos e consideração conjunta de contexto; não classifica automaticamente a missão do jogador.
+
+Na revisão, diferenciar “teste planejado”, “teste executado” e “evidência insuficiente”. Um controle visual marcado não substitui um resultado. A consequência educativa pode ser a qualidade da justificativa, separada do cumprimento da campanha e sem selo de conformidade NASA.
+
+### 3 — Análise de incerteza com hipóteses verificáveis
+
+Somente depois de definir distribuições, dependências, limites e justificativas, criar conjuntos de execuções para estudar dispersão e sensibilidade. Mostrar tamanho da amostra, sementes, modelo e intervalo de incerteza da estimativa. Separar incerteza sobre parâmetros de eventos aleatórios e evitar tratar componentes como independentes sem justificativa.
+
+Permitir comparar decisões sob as mesmas realizações do cenário. A probabilidade resultante será condicional ao modelo e às hipóteses, não uma propriedade universal de uma classe NASA. Antes dessa modelagem, manter a apresentação determinística atual, com folgas e limites explícitos.
+
+## 7. Linguagem recomendada
+
+| Evitar | Preferir |
+|---|---|
+| “Classe D: alto risco de falha” como propriedade calculada | “Classe D: maior tolerância a risco no enquadramento NASA; não é uma probabilidade.” |
+| “Pré-voo aprovado pela NASA” | “Revisão didática do projeto.” |
+| “Risco zero” | “Nenhuma restrição deste modelo foi violada nesta execução.” |
+| “Modo seguro ativado” sem comportamento implementado | “Operação encerrada pelo modelo; consulte o evento e redesenhe.” |
+| “9 de 64: 14% de chance de sucesso” | “9 configurações atendem aos critérios neste cenário.” |
+| “Falhou, mas passa com 4/6” | “Missão não cumprida. A investigação pode orientar o próximo projeto.” |
+
+Estas são recomendações autorais de UX derivadas da leitura das fontes e dos componentes, não prescrições de interface feitas pela NASA.
+
+## 8. Fontes primárias
+
+| ID | Documento e local relevante |
+|---|---|
+| R01 | [NPR 8705.4B — índice e datas](https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=8705&s=4B) |
+| R02 | [NPR 8705.4B — Preface, P.1/P.2/P.6](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=Preface) |
+| R03 | [NPR 8705.4B — Chapter 3, classificação e implementação](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=Chapter3) |
+| R04 | [NPR 8705.4B — Appendix A, Risk / Risk classification](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=AppendixA) |
+| R05 | [NPR 8705.4B — Appendix C, considerações holísticas](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=AppendixC) |
+| R06 | [NPR 8705.4B — Appendix D, objetivos e expectativas](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=AppendixD) |
+| R07 | [NPR 8705.4B — Appendix E, AIM](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_8705_004B_&page_name=AppendixE) |
+| R08 | [NPR 7120.5F — Change 4 e orientação para NID 7120.148](https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=7120&s=5F) |
+| R09 | [NID 7120.148 — PDF, capa e tabela 2-6](https://nodis3.gsfc.nasa.gov/OPD_Docs/NID_7120_148_.pdf) |
+| R10 | [NODIS — catálogo NID, extensão da 7120.148 a 01/08/2027](https://nodis3.gsfc.nasa.gov/OPD/OPD_list.cfm?dir=asc&moduleInputs=NID&sort=opr) |
+| R11 | [NPR 7120.8A — índice, revalidação e Change 5](https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=7120&s=8A) |
+| R12 | [NPR 7120.8A — Preface, aplicabilidade](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=Preface) |
+| R13 | [NPR 7120.8A — Chapter 4, 4.2.11.3 e tabela 4-7](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_008A_&page_name=Chapter4) |
+| R14 | [OSMA — lançamento da NPR 8705.4B, 02/12/2024](https://sma.nasa.gov/news/articles/newsitem/2024/12/02/npr-8705-4b-risk-classification-for-nasa-payloads-formally-released-agencywide) |
+| R15 | [NODIS — lista atual de diretivas NASA](https://nodis3.gsfc.nasa.gov/Rpt_current_directives.cfm) |
+
+Material local lido para propostas de integração: `src/ui/Workbench.tsx`, `src/ui/MissionControl.tsx`, `src/ui/CompareDialog.tsx`, `src/ui/learning.ts` e `src/core/contracts.ts`. Leitura de código não equivale a ensaio de navegador. Nenhuma nova suíte ou navegador foi executado nesta pesquisa.
+
+
+---
+
+# A1 — Desafio oficial, referências NASA e escopo didático
+
+Fonte: `experiments/mission-design-lab/research/round9/a1-desafio.md` · SHA-256 original: `1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d` · Ajustes de caminhos privados: 0
+
+# A1 — Desafio oficial, referências NASA e escopo didático
+
+Pesquisa realizada em 14 de novembro de 2026. Contexto recebido do agente coordenador: existe uma base real no repositório privado AB-NASA-TEAM-IPE, versão 0.3.0-beta.1, denominada Missão Ipê. Ela utiliza seis resultados históricos MOD13Q1 de Rio Verde, um catálogo de seis escolhas binárias `ipe-64-v1` e simulação determinística. Não inspecionei o código nem os seis registros; estas informações sobre a implementação vieram do coordenador.
+
+## 1. Conclusão para decisão de produto
+
+Recomendo preservar a Missão Ipê / Cerrado como campanha inicial. O tema de observação terrestre permite demonstrar, em uma partida curta, os quatro segmentos de uma missão científica: lançamento, nave, solo e pessoas que usam os resultados. A nova interface pode tornar visível o percurso objetivo → configuração → revisão → operação → ciência entregue → comparação de decisões. A Lua é uma expansão coerente, depois de o ciclo terrestre ser demonstrável.
+
+O núcleo verificado do desafio 2026 é criar um jogo interativo para projetar, gerir e simular uma missão espacial completa, tornando perceptíveis escolhas de engenharia, recursos limitados e suas consequências. Isso favorece uma missão pequena e completa. Uma montagem de nave sem operação e sem avaliação de resultados deixaria de demonstrar parte desse núcleo.
+
+## 2. O que foi efetivamente verificado sobre 2026
+
+URL solicitada: https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources
+
+Nesta pesquisa, a ferramenta web não conseguiu abrir a página específica: houve `DisabledError`, timeout e URL inacessível, inclusive ao testar a URL canônica, a variante sem `www` e a aba `details`. Isso não prova que a página inexista. Sua existência temática em 2026 é corroborada por páginas oficiais do Space Apps de equipes que exibem a seção institucional **About the Challenge** e nomeiam **Space Mission Design Game**.
+
+Fontes oficiais com o resumo:
+
+- https://www.spaceappschallenge.org/2026/find-a-team/project_morazan/
+- https://www.spaceappschallenge.org/2026/find-a-team/missionforge/
+- https://www.spaceappschallenge.org/2026/find-a-team/los-marcianos/
+
+É importante distinguir a descrição escrita pelas equipes do bloco institucional do desafio. A confirmação acima usa o segundo. Um trecho curto desse bloco: “design, manage, and simulate a complete space mission”. O resumo menciona objetivos, desenho da nave, instrumentos, lançadores, orçamento, potência, massa, comunicações e restrições orbitais.
+
+O calendário de 2026 também é confirmado diretamente por NASA e Space Apps: evento em 14–15/11/2026, tema The Next Frontier; o cronograma oficial informa divulgação dos enunciados em 28/10/2026.
+
+- NASA: https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/
+- PDF oficial: https://assets.spaceappschallenge.org/media/documents/2026_NASA_Space_Apps_Registration_Recruitment.pdf
+
+**Limite desta auditoria:** não atribuir a mim a leitura integral da aba oficial de recursos. O coordenador informou que o projeto já tinha um gate Resources aberto; uma evidência anterior válida pode completar esta lacuna, mas não foi reproduzida por esta frente.
+
+## 3. Obrigação, sugestão e decisão nossa
+
+| Item | Classificação e evidência | Consequência para o MVP |
+|---|---|---|
+| Jogo interativo | Núcleo confirmado no resumo oficial 2026 | Escolhas precisam mudar um resultado observável |
+| Projetar, gerir e simular missão completa | Núcleo confirmado no resumo oficial | Mostrar concepção, preparação, operação e resultado científico |
+| Restrições e recursos limitados | Núcleo confirmado no resumo oficial | Orçamento, massa, energia e capacidade de entregar dados precisam ter consequências |
+| Tornar compreensíveis as consequências | Núcleo confirmado no resumo oficial | Explicar causa, efeito e possibilidade de revisão |
+| Até quatro participantes | Consta como possibilidade na reprodução de um evento local; não confirmado por leitura direta do original | Não transformar multiplayer online em bloqueio artificial de MVP |
+| Múltiplos cenários, ranking, eventos aleatórios, sandbox | Sugestões na reprodução local, não núcleo confirmado | Adiar se não ajudarem o ciclo principal |
+| VR/3D obrigatório | Não encontrado no núcleo 2026 confirmado | Não herdar obrigação de desafio antigo |
+| IA generativa, blockchain, Supabase, OAuth, realtime | Não encontrados como exigência nas fontes oficiais consultadas | Só incluir por necessidade concreta de produto |
+| Campanha Cerrado, seis escolhas, seis resultados e determinismo | Contexto do projeto informado pelo coordenador | Preservar a base e verificar a aderência do fluxo |
+
+Uma reprodução extensa foi localizada no evento local HackAthlone: https://hackathlone.com/challenges/space-mission-design-game . Ela indica nove recursos e apresenta colaboração e outras funcionalidades em linguagem opcional. Usei essa página para localizar os destinos primários abaixo, não como autoridade técnica nem substituto da página oficial. A obrigatoriedade detalhada continua sujeita ao original.
+
+## 4. Recursos localizados e acesso aos destinos primários
+
+A associação destes nove itens à aba do desafio vem da reprodução local. O conteúdo técnico dos destinos NASA/JPL/CSA foi verificado separadamente, salvo indicação explícita.
+
+| Recurso | URL canônica/destino | Uso recomendado e limite |
+|---|---|---|
+| Design and Develop Science Missions | https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf | Slides NASA, 25 páginas. Estruturam missão em lançamento, espaço, solo e usuário. Excelente base para o fluxo e para “ciência que chega”. Não é tabela de valores de componentes. |
+| GMAT R2025a | https://software.nasa.gov/software/GSC-19468-1 | Catálogo oficial confirma software aberto para design, otimização e navegação, de LEO a espaço profundo. Usar como referência de validação futura; não é necessário embarcar seu motor numa primeira interface. |
+| Concept Maturity Levels | https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299 | Preprint JPL de 2013. Descreve maturação incremental de conceitos, sobretudo CML 1–4 antes da formulação. Inspirar progressão de decisões; evitar chamar um conceito de “certificado NASA”. |
+| Mission Design Lab | https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab/ | Confirma trabalho colaborativo e integração de requisitos, alternativas, massa, potência, dados, risco e custo. Sustenta a ideia de comparar configurações, não apenas maximizar peças. |
+| Mission Viz | https://nasa.github.io/mission-viz/ | Destino acessível, mas a extração mostrou apenas a estrutura mínima da aplicação. Não auditei suas funcionalidades interativas. |
+| Build It Yourself: Satellite! | https://science.nasa.gov/mission/webb/game-build-it-yourself/ | Precedente NASA: ciência direciona escolhas; opções incompatíveis são explicitadas; revisão antes do lançamento; progressão por níveis. A página declara limitações de acessibilidade e de telas pequenas: não copiar essas limitações. |
+| CubeSat 101 | https://www3.nasa.gov/sites/default/files/atoms/files/nasa_csli_cubesat_101_508.pdf | Guia NASA de 96 páginas acessível. Útil para ConOps, integração, testes, interfaces, preparação e operação. Os requisitos de um lançamento real dependem da missão e de sua documentação específica. |
+| Visualize a Space Mission Using Virtual Reality | https://www.spaceappschallenge.org/2023/challenges/visualize-a-space-mission-using-virtual-reality/ | Link de 2023; a página específica também falhou nesta consulta. O título foi confirmado em lista oficial de evento 2023. É precedente histórico, não o enunciado 2026. |
+| Digital Games and Activities — CSA | https://www.asc-csa.gc.ca/eng/youth-educators/digital-games-and-activities.asp | Destino oficial da agência canadense acessível. Referência de experiências educativas, não requisito funcional do MVP. |
+
+Fonte oficial que distingue os anos: https://www.spaceappschallenge.org/2023/ registra o evento de 7–8/10/2023 e seu tema Explore Open Science Together. A lista https://www.spaceappschallenge.org/2023/locations/shah-alam/ inclui o desafio de VR. Não foi encontrado motivo para transportar VR para uma obrigação de 2026.
+
+## 5. NASA Systems Engineering Handbook: aplicação didática
+
+Fonte central: https://www.nasa.gov/reference/systems-engineering-handbook/
+
+PDF oficial: https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf
+
+O documento é NASA/SP-2016-6105 Rev2. O próprio prefácio o caracteriza como orientação de boas práticas, sem transformá-lo em diretiva. Não apresentar o jogo como execução integral ou certificação desse handbook.
+
+| Conceito consultado | Tradução para o jogo | Evidência observável |
+|---|---|---|
+| Ciclo de vida inclui operação e encerramento | Partida não termina na decolagem | Tela de operação seguida de resultado, lições e encerramento |
+| ConOps conecta necessidades, cenários e arquitetura | Começar com o objetivo de quem receberá os dados | Meta escrita antes de escolher componentes |
+| Cenários nominais e degradados | Mostrar eclipse, capacidade limitada e eventual modo seguro de forma prevista | Linha do tempo explica por que uma observação não foi realizada |
+| Verificação contra requisitos | Revisão pré-voo com critérios específicos | Massa compatível, orçamento válido, capacidade de energia e dados verificáveis |
+| Validação do propósito de uso | Avaliar se dados úteis chegaram ao destinatário | Resultado final distingue capturado, armazenado, transmitido e útil |
+| Rastreabilidade e registro | Manter escolhas, parâmetros, fonte e resultado juntos | Relatório de missão reproduzível |
+
+Capítulos primários consultados:
+
+- Ciclo de vida: https://www.nasa.gov/reference/3-0-nasa-program-project-life-cycle/ . A fase de operação envolve realização dos objetivos, obtenção e análise dos dados, resolução de anomalias e relatórios. O encerramento contempla destinação do sistema e arquivamento.
+- Design: https://www.nasa.gov/reference/4-0-system-design-processes/ . ConOps deve considerar o uso do sistema, decisões, interfaces e situações relevantes, inclusive degradadas, desde cedo.
+- Realização: https://www.nasa.gov/reference/5-0-product-realization/ . A distinção entre verificação de requisitos e validação de expectativas é importante. A NASA inclui seres humanos e interfaces na validação; também trata limitações dos modelos como possível origem de resultados inadequados.
+
+Aplicação proposta, não prescrição NASA: traduzir esses conceitos em linguagem comum, com “Objetivo”, “Projeto”, “Revisão”, “Operação” e “Resultados”. Siglas como PDR, CDR e CML podem ficar no conteúdo opcional de aprofundamento.
+
+## 6. Basics of Space Flight: o que aproveitar e o que atualizar
+
+Portal atual: https://science.nasa.gov/learn/basics-of-space-flight/
+
+O material originou-se no JPL e hoje está hospedado em NASA Science. Sua apresentação diz que é amplo e introdutório, voltado a compreender como as áreas de uma missão se relacionam. Serve à alfabetização científica do jogo, não a validar sozinho um simulador de engenharia.
+
+Fontes e uso:
+
+- Missão e fases: https://science.nasa.gov/learn/basics-of-space-flight/chapter7-1/ . Apoia o percurso de uma ideia até projeto e desenvolvimento.
+- Telecom: https://science.nasa.gov/learn/basics-of-space-flight/chapter10-1/ . Explica comunicação, taxas e multiplexação. Aplicação: dado gerado não equivale a dado recebido; parte da capacidade serve a funções de engenharia.
+- Sistemas a bordo: https://science.nasa.gov/learn/basics-of-space-flight/chapter11-1/ . Relaciona estrutura, controle, processamento e proteção da nave. Aplicação: modo seguro preserva a missão com impacto temporário na ciência.
+- Energia: https://science.nasa.gov/learn/basics-of-space-flight/chapter11-3/ . A relação geração, consumo, armazenamento e eclipse é útil. Não importar como valores de CubeSat seus exemplos de naves interplanetárias.
+- Instrumentos: https://science.nasa.gov/learn/basics-of-space-flight/chapter12-1/ . Fonte para explicar por que instrumentos diferentes respondem a perguntas científicas diferentes.
+
+**Achado de qualidade:** o tutorial contém exemplos e afirmações tecnológicas antigas. O capítulo de energia ainda usa números históricos e um trecho que limita a praticabilidade solar para além de Marte. Juno demonstra energia solar em Júpiter, como descreve https://science.nasa.gov/mission/juno/ . Portanto, reutilizar princípios e revisar afirmações quantitativas ou de tecnologia.
+
+Fonte adicional atualizada, muito útil ao catálogo: https://www.nasa.gov/smallsat-institute/sst-soa/ . A edição disponível é a de 2026; o resumo diz cobrir tecnologias públicas até abril de 2026. O capítulo de energia está em https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/ . É uma revisão tecnológica, com informações agregadas; valores específicos de hardware ainda devem ser rastreados às condições e à fonte original. Para o jogo, separar dados de referência de parâmetros didáticos calibrados.
+
+## 7. Dados abertos adequados à Missão Ipê
+
+### Base preferida: manter MOD13Q1 histórico
+
+Earthdata Search: https://search.earthdata.nasa.gov/search?q=MOD13Q1
+
+Catálogo USGS/LP DAAC: https://lpdaac.usgs.gov/products/mod13q1v061/ — a abertura direta retornou 403 nesta sessão, portanto os fatos abaixo foram confirmados nas entradas Earthdata/CMR.
+
+Registro CMR de distribuição INPE: https://cmr.earthdata.nasa.gov/search/concepts/C3560374404-INPE.html . Atenção: essa distribuição tem sua própria extensão temporal; não usar a última data dela como prova de encerramento do produto global.
+
+MOD13Q1 V061 é um produto Terra/MODIS nível 3, em grade, com resolução nominal de 250 m e composição de 16 dias. Inclui NDVI e EVI, camadas de qualidade e informações auxiliares. A composição seleciona observações segundo critérios de qualidade; não é uma única imagem instantânea. A série MOD13 é Terra, enquanto MYD13 corresponde a Aqua.
+
+Implicações de produto e de fidelidade:
+
+1. Mostrar “Referência histórica Terra/MODIS”, período do composto, localização, produto e versão.
+2. Não dizer que o CubeSat Ipê real mediu esses seis resultados. A nave é parte da simulação educativa; os dados vieram da missão NASA.
+3. A escolha do jogador muda a entrega, o armazenamento e a disponibilidade dos resultados simulados; não muda os valores históricos de NDVI.
+4. Não representar seis compostos como seis fotos tiradas em seis órbitas reais. A duração de uma rodada pode ser pedagógica, identificada dessa forma.
+5. Não atribuir automaticamente uma queda de NDVI a desmatamento, fogo ou seca. O indicador necessita contexto, série temporal, qualidade e análise para uma interpretação causal.
+6. Preservar valores ausentes e baixa qualidade; não transformá-los silenciosamente em zero ou “vegetação ruim”.
+
+Fundamento do indicador: https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/ e https://science.nasa.gov/earth/earth-observatory/global-vegetation-8622/ . NDVI usa a diferença normalizada entre infravermelho próximo e vermelho. Na explicação ao jogador: instrumentos precisam captar as faixas adequadas; uma câmera RGB simples não entrega automaticamente essa capacidade.
+
+Limite físico importante: https://science.nasa.gov/mission/aqua/modis/ descreve MODIS como instrumento de 36 bandas, com massa de 229 kg. Usar seus produtos como referência científica não significa que o instrumento caiba em um CubeSat. “Inspirado em observação multiespectral” é mais fiel que “réplica de MODIS”.
+
+### Acesso programático e proveniência
+
+Documentação oficial ORNL DAAC/TESViS:
+
+- https://modis.ornl.gov/data.html
+- https://modis.ornl.gov/data/modis_webservice.html
+- https://modis.ornl.gov/rst/globalsubset_ui/
+
+O serviço documenta consultas de produtos, bandas, datas e subconjuntos por localização. O endpoint `/rst/api/v1/MOD13Q1/subset` aceita latitude, longitude, intervalo e área; os exemplos mostram JSON e CSV. A documentação apresenta limite de dez datas por pedido síncrono, suficiente para um pacote de seis resultados se as datas estiverem cobertas. Não executei a extração dos seis registros existentes.
+
+Para cada resultado empacotado, recomenda-se registrar: produto, coleção/versão, bandas, coordenadas e área, datas do composto e da obtenção, valor bruto, fator de escala, valor final, regra de QA, método de agregação e URL da consulta. Os exemplos ORNL documentam fator 0,0001 para EVI; conferir o metadado efetivamente retornado de cada banda antes de converter. Guias antigos V5/V6 não devem ser apresentados como se fossem a especificação completa V061.
+
+O jogo pode operar com um pacote histórico fixado e auditável, sem depender de API ao vivo durante a demonstração. Um link “Ver origem deste dado” leva à proveniência. Isso é uma decisão de robustez e clareza do projeto, não uma exigência formal da NASA.
+
+## 8. MVP concreto recomendado
+
+Nome de campanha: **Missão Ipê — Ciência que chega**.
+
+Papel: equipe que configura uma pequena missão de observação do Cerrado e precisa entregar resultados úteis a quem estuda a vegetação de Rio Verde.
+
+Missão curta: selecionar uma configuração, passar pela revisão, acompanhar uma simulação determinística de seis oportunidades didáticas e entregar a meta científica sem violar as restrições essenciais. Tempo de experiência proposto: 8–12 minutos na primeira partida, 2–4 minutos para revisar uma decisão e repetir.
+
+**Contrato de compatibilidade:** manter o catálogo `ipe-64-v1` e os resultados conhecidos até auditar o motor existente. Não renomear parâmetros científicos nem modificar limiares apenas para acomodar um layout. Se a nova interface fizer escolhas diferentes, tratá-las como nova versão de catálogo ou campanha.
+
+Loop proposto:
+
+1. **Entender a missão.** Uma pergunta científica, destinatário, seis referências históricas e uma meta visível. Explicar o que conta como resultado útil.
+2. **Projetar.** Apresentar as seis escolhas existentes progressivamente, com delta imediato de recursos e uma frase causal por opção. Mostrar limites e unidade de cada recurso.
+3. **Revisar.** Separar impedimentos de lançamento de margens apertadas. Explicar o problema e levar diretamente à escolha responsável. Uma configuração inviável é oportunidade de revisão, não tela terminal.
+4. **Operar.** Executar a mesma sequência para a mesma configuração. Permitir pausar e avançar etapas. Mostrar energia, memória, coleta e comunicação; explicar por que cada resultado foi ou não entregue.
+5. **Avaliar.** Exibir ciência capturada, ciência transmitida e ciência útil. Justificar sucesso ou falha por requisitos concretos. Relacionar cada consequência a uma decisão.
+6. **Experimentar.** Duplicar a configuração, alterar uma decisão e comparar o antes/depois sob o mesmo cenário. Isso ensina causalidade e trade-offs.
+
+Condição de vitória proposta para calibrar: entregar pelo menos quatro dos seis resultados úteis, manter orçamento e compatibilidade de lançamento e concluir a operação sem falha terminal de energia. Esse número é uma decisão inicial de design, **não requisito do desafio nem descrição verificada do motor atual**. Antes de adotá-lo, avaliar todas as 64 configurações: deve haver mais de um caminho viável, trocas reais e pelo menos uma falha instrutiva explicável.
+
+Condições de insucesso: chegar ao final abaixo da meta; perder a capacidade operacional crítica; ou não entregar observações por insuficiência de comunicação/armazenamento. Falha deve terminar com causa, efeito e uma sugestão ligada à configuração. Evitar explosão aleatória como justificativa sem vínculo com o modelo.
+
+Regras de modelagem propostas:
+
+- Separar potência instantânea (W) e energia armazenada (Wh).
+- Energia varia por geração menos consumo ao longo de um intervalo; dados armazenados variam por coleta menos transmissão.
+- Capacidade de lançamento e orçamento são restrições explícitas; não se resolvem com “pontos de ciência”.
+- Pontuação é secundária à entrega da meta. Evitar um único score opaco que permita compensar nave inviável com bônus.
+- Valores de componentes, janelas e custos devem estar identificados como reais documentados ou didáticos. Não nomear preços fictícios como cotações de fornecedores.
+- Se a órbita for só uma animação, dizer que é representação didática; não chamá-la de propagação orbital validada.
+
+Cooperação de escopo contido: dois a quatro participantes podem debater a mesma missão na mesma tela, distribuindo papéis de ciência, nave, comunicação e recursos. Isso preserva colaboração sem alegar multiplayer online. Realtime, salas e contas só entram quando houver necessidade demonstrada.
+
+## 9. Mapa de aderência e evidência de demonstração
+
+| Necessidade | Evidência no MVP | Verificação útil |
+|---|---|---|
+| Missão completa | Objetivo, projeto, revisão, operação e relatório final | A primeira partida alcança resultado sem mediação do apresentador |
+| Decisões de engenharia | Alterar uma escolha muda pelo menos um recurso e uma consequência relevante | Comparação A/B determinística sob mesmo cenário |
+| Recursos limitados | Valores, unidades, limites, saldo e causas visíveis | Conferir casos de limite e configurações inviáveis |
+| Integração entre subsistemas | Melhor instrumento pode exigir mais energia, memória e enlace | O relatório mostra a cadeia causal, se implementada no modelo |
+| Dados NASA | Cada referência histórica possui proveniência acessível | Datas, produto, escala e QA podem ser auditados |
+| Valor educativo | Explicação curta no ponto de decisão e no resultado | Pessoa consegue explicar por que entregou menos ciência |
+| Clareza de sucesso/falha | Meta visível antes e depois da simulação | Resultado bate com a regra publicada |
+| Repetição e aprendizagem | Duplicar, alterar e comparar | A pessoa consegue melhorar uma missão com base no feedback |
+
+## 10. Lacunas e próximos passos objetivos
+
+1. Recuperar/arquivar a página oficial integral de 2026 ou a evidência anterior do gate Resources para resolver a obrigatoriedade fina e a associação exata dos nove recursos.
+2. Auditar os seis resultados reais de Rio Verde: fonte, datas, QA, escala, agregação e rótulos da UI. Não foram lidos nesta frente.
+3. Ler as seis decisões e as condições atuais do motor `ipe-64-v1` antes de implementar a proposta de apresentação.
+4. Validar os 64 resultados existentes e os motivos de falha; não introduzir um threshold novo sem recalibrar e versionar.
+5. Separar simulação pedagógica de dados observados em todos os pontos que possam causar confusão.
+6. Usar Handbook, Basics e CubeSat 101 para conceitos; recorrer ao estado da arte 2026 e a fontes originais para valores contemporâneos.
+
+Nenhum código de aplicação foi modificado por esta frente.
+
+
+---
+
+# A2 — Auditoria de física e dados: Missão Ipê / Space Mission Design
+
+Fonte: `experiments/mission-design-lab/research/round9/a2-fisica.md` · SHA-256 original: `68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c` · Ajustes de caminhos privados: 0
+
+# A2 — Auditoria de física e dados: Missão Ipê / Space Mission Design
+
+Pesquisa: 14/11/2026. Entrega de pesquisa e especificação; nenhum motor de voo foi implementado.
+
+**Decisão após localizar o projeto existente:** preservar a campanha Missão Ipê, CubeSat LEO de observação do Cerrado, seu catálogo e sua agenda didática. A evolução física pode existir em um laboratório separado, com experiências de Kepler, Tsiolkovsky, energia e telecomunicações. Missão lunar polar é a segunda campanha; Marte é extensão posterior. Os números abaixo são referências para verificações e explicações, não previsões da agenda operacional atual.
+
+## 1. Correções que realmente importam
+
+| Premissa perigosa | Formulação defensável |
+|---|---|
+| O CubeSat deve possuir o delta-v da superfície até LEO | O serviço de lançamento entrega uma massa em uma órbita declarada. Só manobras posteriores à separação entram no orçamento de propelente do CubeSat. |
+| Existe um delta-v único para Lua ou Marte | O valor depende de órbita inicial/final, energia de lançamento, transferência, captura, aerofrenagem, correções, plano orbital e responsável por cada manobra. |
+| Hohmann da Terra à Lua resolve a missão lunar | Hohmann entre círculos do mesmo corpo é um problema de dois corpos. Para a Lua, uma aproximação por cônicas remendadas exige também velocidade relativa de chegada e captura lunar; fase e plano precisam de hipóteses explícitas. |
+| Potência do painel × eficiência da célula sempre | Se a ficha já informa potência elétrica em W ou W/m², a eficiência da célula já foi aplicada. Aplicá-la novamente reduz artificialmente a geração. |
+| W pode ser somado à bateria em Wh | Energia é a integral de potência no tempo; segundos exigem divisão por 3600. A sombra deve interromper a geração no instante correspondente. |
+| Banda X ou Ka é automaticamente melhor | Ganhos, aberturas, frequência, potência RF, temperatura de ruído, perdas e apontamento determinam o link. A frequência isolada não ordena antenas. |
+| Ciência coletada equivale a ciência entregue | Pontuar somente pacotes únicos completamente recebidos na Terra. Separar coleta, memória, transmissão, propagação e recepção. A base existente já segue essa direção. |
+| Margem NASA universal de 20% ou 30% | Há requisitos de programas/centros e fases específicas, com diferentes denominadores. Expor a convenção usada. |
+| Massa/custo de catálogo estimado é dado NASA | Marcar como parâmetro didático. Não atribuir precisão de aquisição a custo em créditos ou a estimativas sem produto/configuração. |
+| Dados MODIS significam MODIS dentro do CubeSat | São dados de referência que contextualizam a missão. O instrumento MODIS real tem aproximadamente 229 kg e 162,5 W de potência média orbital [F23]. |
+
+A NASA recomenda adequar a fidelidade do modelo à decisão de projeto e evitar complexidade excessiva na fase conceitual [F16]. Isso apoia um laboratório explicativo separado, sem substituir uma agenda didática coerente por uma promessa de previsão orbital.
+
+## 2. Natureza dos números e rastreabilidade
+
+Usar três classes em qualquer painel de dados:
+
+- **Referência física:** constante ou especificação publicada, com fonte, unidade, versão e contexto.
+- **Derivado:** resultado calculado de referências e hipóteses declaradas; mostrar equação e condições.
+- **Didático:** escolha de cenário, balanceamento, custo, qualidade de ciência, reserva, taxa de falha ou hardware fictício.
+
+Cada parâmetro deve carregar valor, unidade, classe, fonte, data de acesso, contexto e transformação aplicada. Uma eficiência retirada de ficha de célula não é automaticamente a eficiência do conjunto painel + cabos + regulador. Preservar valores originais de dados científicos; separar claramente campos reais de pesos de pontuação inventados.
+
+| Parâmetro | Valor de referência | Fonte e ressalva |
+|---|---:|---|
+| μ Terra | 398600,435507 km³/s² | JPL DE440 [F01]; multiplicar por 10⁹ se usar m³/s² |
+| μ Lua | 4902,800118 km³/s² | JPL DE440 [F01] |
+| μ Sol | 1,32712440041279419 × 10²⁰ m³/s² | JPL [F01] |
+| μ sistema Marte | 42828,375816 km³/s² | JPL [F01]; fonte diz sistema, não planeta isolado |
+| Raio equatorial Terra | 6378,1366 km | JPL [F02]; usar esfera com esse raio é uma simplificação |
+| Raio médio Lua | 1737,4 km | JPL [F03] |
+| Distância Terra–Lua de referência | 384400 km | NASA [F04]; não é distância instantânea |
+| c | 299792458 m/s | JPL/CODATA [F01] |
+| 1 au | 149597870700 m | JPL/IAU [F01] |
+| Dia sideral médio terrestre | 86164,09054 s | JPL [F01]; diferente de 24 horas |
+| Irradiância solar de referência a 1 au | 1361 W/m² | NASA [F05]; perpendicular aos raios, fora da atmosfera |
+| g₀ na definição de Isp | 9,80665 m/s² | aceleração padrão; não é gravidade local lunar |
+
+Recomendação de unidades internas: m, s, kg, rad, W, Wh, bit/s e byte. Evitar alternar km e m silenciosamente. O g₀ de Isp continua terrestre mesmo em manobras na Lua.
+
+## 3. Kepler e a referência LEO a 500 km
+
+Para órbita circular de raio r = R + h:
+
+$$v_c=\sqrt{\mu/r},\qquad n=\sqrt{\mu/r^3},\qquad T=2\pi\sqrt{r^3/\mu}.$$
+
+Para elipse:
+
+$$v^2=\mu(2/r-1/a),\qquad M(t)=M_0+n(t-t_0),\qquad E-e\sin E=M.$$
+
+Essas equações são de dois corpos; não incluir implicitamente arrasto, J₂, manobras ou perturbações lunares. Uma órbita polar tem i = 90°; isso não a torna automaticamente heliossíncrona [F06].
+
+**Resultados calculados independentemente para uma Terra esférica, h = 500 km, e = 0:**
+
+| Grandeza | Resultado |
+|---|---:|
+| Raio geocêntrico | 6878,1366 km |
+| Velocidade circular | 7,61261 km/s |
+| Período | 94,6163 min |
+| Eclipse máximo do modelo cilíndrico, β = 0° | 35,7537 min |
+| Trecho iluminado nesse caso | 58,8625 min |
+| β crítico sem eclipse | aproximadamente 68,0187° |
+
+β é o ângulo entre a direção do Sol e o plano orbital. Não é inclinação, latitude ou estação do ano. Para Sol distante e sombra cilíndrica:
+
+$$f_\mathrm{eclipse}=\frac{1}{\pi}\arccos\left(\frac{\sqrt{r^2-R^2}}{r\cos\beta}\right)$$
+
+quando |β| < arcsin(R/r); fora dessa condição, o eclipse é zero. Em β = 0, a expressão reduz a arcsin(R/r)/π. A NASA descreve a dependência de eclipse com β e altitude [F07].
+
+No passo de simulação, é mais útil testar geometria: com posição relativa r e direção unitária para o Sol s, há sombra cilíndrica quando r·s < 0 e a distância ao eixo de sombra, ||r − (r·s)s||, é menor que R. Usar um teste por corpo ocultador quando relevante.
+
+**Não transportar esses horários para a agenda original.** Eles são casos verificáveis do laboratório. Para prever passagens por Rio Verde seria necessário definir época, inclinação, nó ascendente, fase, estação e referencial. “Uma passagem de 8 minutos a cada órbita” não é uma propriedade geral de uma estação terrestre.
+
+## 4. Energia por tempo: W, Wh, sombra e bateria
+
+Duas formas corretas, mutuamente exclusivas, de representar o painel:
+
+$$P_\mathrm{solar}=S_0(1\mathrm{au}/d_\odot)^2 A_\mathrm{ativa}\eta_\mathrm{célula}
+\max(0,\hat n\cdot\hat s)\,k_\mathrm{demais}\,I_\mathrm{sol}$$
+
+ou, se a entrada já é potência elétrica nominal:
+
+$$P_\mathrm{solar}=P_{\mathrm{el,ref}}(d_\mathrm{ref}/d_\odot)^2
+\max(0,\hat n\cdot\hat s)\,k_\mathrm{relativo}\,I_\mathrm{sol}.$$
+
+Não aplicar η da célula na segunda forma. Registrar quais efeitos estão incluídos na ficha nominal para não repetir temperatura, radiação, regulador ou fator de preenchimento. A NASA apresenta células espaciais próximas de 30% e destaca ausência de geração em eclipse e degradação durante a missão [F08].
+
+Se Pnet = Pgeração − Pcarga, com Δt em segundos:
+
+$$E_{k+1}=E_k+\left[\eta_c\max(P_\mathrm{net},0)
+-\frac{\max(-P_\mathrm{net},0)}{\eta_d}\right]\Delta t/3600.$$
+
+Também limitar potência de carga/descarga, capacidade e SOC operacional. Se faltar energia durante um passo, calcular o instante da falta e desligar cargas conforme a política; simplesmente limitar E a zero depois de executar ciência cria energia fictícia. Excesso após bateria cheia é energia descartada, não capacidade adicional.
+
+O rádio consome potência elétrica DC; a potência irradiada RF é só uma parte dela. Se o catálogo informa consumo elétrico total do transmissor, não somar novamente seus watts de RF. Cargas incrementais devem ser distinguidas de modos que já incluem o consumo do barramento.
+
+**Caso didático de verificação, sem representar produto comercial:**
+
+| Entrada | Valor |
+|---|---:|
+| Área ativa do painel | 0,050 m² |
+| Eficiência da célula | 0,30 |
+| Fator restante de geração | 0,80 |
+| Apontamento em Sol | normal ao Sol, cosθ = 1 |
+| Barramento ligado | 5 W |
+| Instrumento, adicional | 14 W por 5 min |
+| Rádio DC, adicional | 10 W por 6 min |
+| Bateria | 20 Wh; SOC permitido 20% a 100% |
+| Eficiência carga/descarga | 0,95 em cada sentido |
+
+No caso LEO acima: potência solar = 16,332 W; geração bruta por órbita = 16,022 Wh; consumo desse perfil = 10,051 Wh. Eclipse só com barramento requer 3,136 Wh retirados da bateria; se contiver os seis minutos de rádio, 4,189 Wh. A bateria tem 16 Wh na faixa utilizável. Esses totais são verificações de escala; a integração temporal ainda decide SOC, recarga e limites de pico.
+
+Reduzir a área a 0,025 m² fornece somente 8,011 Wh brutos por órbita nesse mesmo caso: há déficit antes mesmo das perdas de recarga. Aumentar a bateria posterga a falha, mas não resolve um déficit energético recorrente.
+
+Os cinco minutos de instrumento e seis de rádio são um perfil de teste. A campanha só deve executar observações e downlinks permitidos por sua agenda ou geometria; não prometer sobrevoo do Cerrado a cada órbita.
+
+## 5. Contatos, Friis e taxa de dados
+
+Separar três condições: visada geométrica; serviço de estação disponível; link RF suficiente. Estar acima do horizonte não garante estação agendada, compatibilidade de rádio ou taxa máxima.
+
+Em uma esfera de raio R, satélite de raio r, elevação mínima ε:
+
+$$\rho=\sqrt{r^2-R^2\cos^2\epsilon}-R\sin\epsilon.$$
+
+Em LEO a 500 km, a distância inclinada varia de 500 km no zênite a 1695,09 km em elevação de 10°. Uma passagem exatamente sobre uma estação fixa, desprezando rotação terrestre, dura aproximadamente 7,383 min acima de 10°. Isso é um caso geométrico ideal, não duração universal de contato.
+
+Para computar a elevação, colocar estação e espaçonave no mesmo referencial: com u sendo a direção local vertical da estação e l a direção unitária estação→espaçonave, ε = arcsin(u·l). Na Lua, também testar a interseção do segmento de rádio com o corpo lunar. Estação na Terra ainda precisa satisfazer seu próprio horizonte.
+
+Friis, com ganhos lineares e perda multiplicativa L ≥ 1:
+
+$$P_r=P_t G_tG_r\left(\frac{c}{4\pi df}\right)^2/L.$$
+
+Em decibéis:
+
+$$L_\mathrm{FS}=20\log_{10}(4\pi df/c),$$
+$$P_r[\mathrm{dBW}]=P_t[\mathrm{dBW}]+G_t[\mathrm{dBi}]+G_r[\mathrm{dBi}]-L_\mathrm{FS}-L_\mathrm{outros}.$$
+
+$$N_0=10\log_{10}(k_BT_\mathrm{sys})\ [\mathrm{dBW/Hz}],$$
+$$C/N_0=P_r-N_0,\qquad E_b/N_0=C/N_0-10\log_{10}(R_b).$$
+
+O relatório JPL 90-27 explicita a relação de C/N₀ com EIRP, perda de espaço livre, G/T e constante de Boltzmann [F09]. A NASA detalha os compromissos de frequência, abertura, atmosfera e apontamento [F10–F11].
+
+Para uma abertura circular idealizada:
+
+$$G=\eta_\mathrm{ap}\left(\pi D/\lambda\right)^2.$$
+
+Logo: frequência maior aumenta a perda com ganhos fixos, mas também aumenta ganho para uma abertura física fixa. Esse é o motivo pelo qual “frequência mais alta perde mais” e “antena de mesmo tamanho ganha mais” podem ser verdadeiros ao mesmo tempo. Antena de maior ganho também exige melhor apontamento.
+
+Taxa permitida = menor entre capacidade do equipamento, limite da largura de banda/modulação e limite do orçamento de Eb/N₀. Não usar Shannon como taxa automaticamente alcançável; não usar o mesmo Eb/N₀ mínimo para todas as modulações/códigos como se fosse um fato.
+
+**Caso didático LEO para validar cálculos:** f = 2,2 GHz; Pt RF = 2 W; Gt = 2 dBi; Gr = 30 dBi; perdas agregadas = 3 dB; Tsys = 300 K; d = 1695,09 km. Resultado: FSPL = 163,880 dB; Pr = −131,870 dBW; C/N₀ = 71,958 dBHz. A 1 Mbit/s, Eb/N₀ = 11,958 dB. Se o código fictício exige 4 dB, a margem é 7,958 dB. Os 4 dB são parâmetro do exemplo, não requisito universal.
+
+Uma taxa bruta de 1 Mbit/s com eficiência de protocolo de 0,8 por 6 min transporta 36 MB decimais. Definir se a taxa já é líquida antes de aplicar overhead; não descontar codificação duas vezes. Bytes, bits, MB e MiB devem aparecer consistentemente.
+
+## 6. Latência, memória e ciência entregue
+
+$$t_\mathrm{prop}=d/c.$$
+
+Em LEO de 500 km, o tempo de propagação unidirecional no exemplo varia de 1,668 a 5,654 ms. A 384400 km, é 1,282 s. O número usual de 1,3 s lunar refere-se à propagação, não ao ciclo completo de operação; processamento, fila e disponibilidade de estação acrescentam tempo. NASA informa aproximadamente 3–22 min para comandos Terra–Marte conforme a geometria [F12].
+
+Contrato recomendado de pacote: ID único, origem, instante de aquisição, tamanho, bytes transmitidos, qualidade, valor de ciência, instante final de recepção. Estados distintos: coletado → armazenado → em transmissão → em propagação → recebido. Só conceder ciência na recepção completa; retransmissões não pontuam outra vez.
+
+Preservar memória finita, transferências parciais, interrupção de contato, política de descarte e tempo de emissão do último bit. O último bit chega após a duração da transmissão mais a propagação. Uma atividade enviada da Terra também só pode começar após chegada do comando, quando esse nível de detalhe estiver habilitado.
+
+Invariantes: bytes únicos entregues ≤ adquiridos; ciência entregue não diminui nem cresce por repetição do mesmo pacote; não transmitir sem contato/potência; memória nunca negativa nem acima da capacidade; só executar uma coleta quando suas condições são válidas.
+
+Para os seis registros MODIS existentes, conservar dados e procedência. Tratar uso em missão CubeSat como cenário educacional. Os limites do instrumento fictício e seu tamanho de arquivo não devem ser apresentados como características reais de MODIS. Visível/refletido depende de iluminação; sensores térmicos de emissão podem observar à noite. Não impor “somente de dia” a todo payload.
+
+## 7. Delta-v, propelente e extensão lunar
+
+Para um estágio com Isp constante e queima impulsiva ideal:
+
+$$\Delta v_\mathrm{cap}=I_{sp}g_0\ln(m_0/m_f),$$
+$$m_\mathrm{após}=m_\mathrm{antes}\exp[-\Delta v/(I_{sp}g_0)].$$
+
+A NASA apresenta essa relação e suas hipóteses [F13]. Usar logaritmo natural e massas do mesmo veículo/estágio; massa final inclui tudo que permanece a bordo, inclusive propelente reservado. Não deduzir um consumo percentual constante por manobra. Custos de gravidade/arrasto do lançador não desaparecem na equação ideal.
+
+Contrato do lançador: capacidade de massa e envelope, órbita/energia entregue, responsabilidade pelo estágio de transferência e preço didático ou cotação identificada. Para escape, C₃ = v∞²; tabelas de capacidade em LEO não podem ser reutilizadas como capacidade para Marte. Para transferências ligadas à Terra, C₃ entendido como duas vezes a energia específica pode ser negativo; não tirar raiz de C₃ negativo [F14].
+
+**Segunda campanha recomendada:** orbitador lunar polar a 100 km, começando após entrega em transferência translunar. Evita adicionar pouso, solo, navegação terminal e sobrevivência de um rover antes de estabilizar operações orbitais.
+
+Uma experiência educativa pode usar uma elipse terrestre com perigeu a 200 km e apogeu em 384400 km:
+
+$$a_t=(r_1+r_2)/2,\quad
+\Delta v_\mathrm{TLI}=\sqrt{\mu_E(2/r_1-1/a_t)}-\sqrt{\mu_E/r_1},$$
+$$t_t=\pi\sqrt{a_t^3/\mu_E}.$$
+
+Resultados: Δv TLI = 3,131 km/s; tempo = 4,978 dias. **Isso é uma aproximação de transferência mínima simplificada, não a trajetória de Apollo nem uma solução de encontro lunar validada.**
+
+Na aproximação coplanar e tangencial, velocidade relativa de chegada ≈ 0,832 km/s. Para captura diretamente em círculo lunar de 100 km:
+
+$$\Delta v_\mathrm{LOI}=\sqrt{v_\infty^2+2\mu_M/r_p}-\sqrt{\mu_M/r_p},$$
+
+resultando ≈ 0,822 km/s. Fase, plano de chegada e geometria favorável à órbita polar são hipóteses do cenário. Não adicionar gratuitamente uma rotação de plano de 90°. Uma alteração separada de plano em velocidade v custa 2v sin(Δi/2) no caso ideal.
+
+Separar no painel: serviço de lançamento/TLI; LOI da espaçonave; correções; manutenção; reserva. Correções e manutenção não receberam aqui valores “NASA”: se for necessário, selecionar uma reserva didática transparente. Exemplo de Isp = 320 s e requisito total de 1000 m/s demanda fração ideal de propelente de 27,29%; Isp e requisito são escolhas do exercício.
+
+Na órbita lunar de 100 km: v = 1,63350 km/s; T = 117,791 min; eclipse por sombra lunar em β = 0 = 46,469 min. **Também existem eclipses causados pela Terra.** Um documento NASA de ambientes inclui, para seu caso de 26/06/2029 e altitude lunar de 100 km, até 233 min sem fluxo solar [F15]. Não transformar esse caso em frequência universal, nem dimensionar uma missão longa só pelo eclipse de 46 min.
+
+Regiões polares de superfície não recebem Sol continuamente por definição: topografia cria iluminação prolongada e sombras permanentes [F17]. Isso não deve ser confundido com o eclipse de um orbitador. Para ciência lunar, uma câmera comum não revela automaticamente gelo em sombra permanente. O payload e sua condição de observação devem corresponder à tarefa científica.
+
+## 8. MMRTG: o que é fato, e o que é modelo
+
+- NASA/JPL documenta cerca de **110 W elétricos no início da missão**, aproximadamente **45 kg**, declínio de alguns por cento por ano e projeto para pelo menos 14 anos [F18]. A potência térmica é muito maior; não confundir W térmicos e elétricos.
+- Uma ficha de configuração mais antiga informa 43,6 kg e 1975 W térmicos [F19]. Não tratar 43,6 e 45 como uma contradição que exige “média”: versão/configuração/arredondamento precisam acompanhar o dado.
+- Pu-238 possui meia-vida de aproximadamente 87,7–88 anos [F20]. Isso descreve decaimento do combustível; **a saída elétrica também cai com envelhecimento dos conversores**.
+- NASA/TM-2019-219935 usa dados de Curiosity para discutir cerca de 4,8%/ano, incluindo aproximadamente 0,8% de decaimento e 4% de degradação termelétrica [F21]. Não apresentar 4,8% como taxa garantida universal para todo MMRTG.
+- Se o exercício adotar P(t) = 110 × 0,952ᵗ, rotular como modelo anual composto de referência histórica. Não multiplicar novamente pelo decaimento de Pu-238. Ele resulta em cerca de 55,25 W após 14 anos; somente a meia-vida daria 98,48 W, diferença educacional relevante.
+- Não há nesta pesquisa evidência para preço corrente universal por unidade. A solicitação NASA New Frontiers de 2016 apresentou custos para propostas de US$ 103 milhões para um MMRTG, US$ 133 milhões para dois e US$ 163 milhões para três, em dólares FY2015, com custos de aprovação incluídos [F22]. Isso demonstra contexto de programa e custos não lineares; não é tabela de varejo de 2026.
+
+MMRTG não é uma opção proporcional ao CubeSat LEO atual. Pode ser objeto de comparação no laboratório ou extensão de superfície/Marte. Não converter o catálogo existente em “hardware nuclear de 45 kg para o mesmo CubeSat”.
+
+## 9. Margens: evitar falsa autoridade
+
+O documento ARC-STD-8070.1 para sistemas classes C/D lista margens de massa seca por revisão: SRR 30%, PDR 20%, CDR 15% e SIR 5%, com condições para hardware de herança [F24]. Sua fórmula é:
+
+$$margem\%=100\frac{alocação-CBE}{alocação}.$$
+
+Isso não equivale a “adicionar 20% ao CBE”. Se CBE = 100 kg, uma margem de 20% da alocação exige 125 kg de alocação; adicionar 20% ao CBE resulta em 120 kg. Mostrar o denominador. Não generalizar margens de massa para potência, dados, propulsão ou custo.
+
+No jogo, separar “reserva escolhida no cenário” de “regra publicada para determinado programa”. Indicadores melhores: SOC mínimo, memória máxima ocupada, margem RF durante contato, propelente restante e capacidade do lançamento. Uma média positiva em W não prova sobrevivência no eclipse.
+
+## 10. Motor temporal futuro, sem substituir a agenda atual
+
+Uma arquitetura pequena e verificável:
+
+1. Relógio da simulação independente de animação; cenário e semente reprodutíveis.
+2. Provedor de eventos/geometria: agenda existente, ou órbita analítica para laboratório. Ambos entregam sol/sombra, alvos visíveis e contatos ao mesmo contrato.
+3. Máquina de modos: espera, coleta, transmissão, carga, proteção. Regras de simultaneidade e apontamento explícitas.
+4. Em cada passo: determinar eventos e modos válidos; calcular geração/cargas; limitar atividades pela energia disponível; integrar energia e bytes; agendar recepções; atualizar ciência apenas ao receber.
+5. Separar passos nos limites de contato, eclipse, conclusão de pacote e esgotamento de bateria. Passo inicial de 10 s é uma escolha de desempenho; validar contra 1 s.
+6. Registrar ledger de energia, bytes e eventos. Renderização lê o estado; FPS não altera resultado.
+
+Não é necessário integrar numericamente forças para ensinar Kepler: propagação analítica de dois corpos evita deriva. Se futuramente usar SGP4, não misturar elementos médios TLE com elementos osculadores de um Kepler simplificado, nem referencias TEME/J2000 sem conversão.
+
+**Testes de alto valor para o laboratório:**
+
+- r₁ = r₂ produz transferência Hohmann com Δv = 0.
+- Δv = 0 não consome propelente; aumentar massa seca reduz capacidade para o mesmo propelente; queima nunca consome massa seca.
+- Período e velocidade reproduzem as referências LEO/lunar acima.
+- β = 0 dá maior eclipse do modelo; acima do β crítico o eclipse é zero.
+- Painel fora do Sol ou voltado de costas gera zero; dobro da área dobra potência; dobro da distância ao Sol reduz potência a um quarto.
+- 10 W por 360 s = 1 Wh; carga/descarga com perdas não cria energia; trocar potência elétrica nominal por área/eficiência equivalente produz o mesmo resultado.
+- Dobrar distância do link aumenta FSPL em 6,0206 dB; dobrar potência RF aumenta potência recebida em 3,0103 dB; dobrar taxa reduz Eb/N₀ em 3,0103 dB.
+- Sem contato, sem transmissão; pacote parcial não pontua; retransmissão não duplica ciência; latência aumenta linearmente com distância.
+- Resultado em passos de 10 s converge ao de 1 s; mesmos eventos e decisões com FPS diferente.
+- Casos impossíveis falham com causa específica: energia, memória, massa, ausência de contato ou link insuficiente.
+
+O motor existente já tem testes próprios e oracle independente segundo a frente principal; estes são testes para o novo laboratório, não uma exigência de reescrever o que passou.
+
+## 11. Bibliotecas e repositórios validados
+
+| Projeto | Verificado | Uso apropriado |
+|---|---|---|
+| nasa/muscat | Repositório público NASA; MuSCAT, simulação de baixa fidelidade e autonomia; MATLAB, MICE/SPICE e arquivos auxiliares; Apache-2.0 [F25] | Referência de separação ambiente/subsistemas, múltiplas escalas de tempo e ciência. Não é pacote JS pronto. |
+| nasa/cml | Repositório público NASA; C++ para Trick/JEOD; licença NASA Open Source Agreement 1.3 [F26–F27] | Referência de modelos e verificação. Não confundir CML com catálogo de massas/custos. |
+| cosinekitty/astronomy | Projeto original Astronomy Engine; MIT; JavaScript/TypeScript entre implementações; precisão alvo de cerca de 1 minuto de arco [F28] | Direções aproximadas de Sol/Lua/planetas e eventos educacionais. O próprio autor diz que não basta para navegação de espaçonaves. |
+| shashwatak/satellite-js | Projeto original; MIT; SGP4/SDP4, TLE/OMM, transformações e utilidades [F29] | Visualização de satélites terrestres a partir de elementos apropriados. Não é propagador genérico de missões lunares/interplanetárias. |
+
+CML recomenda releases oficiais porque commits intermediários podem não ter verificação formal concluída; a maturidade é documentada por modelo [F26]. Usar código NASA não certifica automaticamente uma implementação derivada. Para o MVP, uma implementação pequena das equações do laboratório é mais simples que incorporar MATLAB/C++ ou compilar um simulador inteiro.
+
+## 12. Extensão Marte
+
+Manter a mesma camada de energia, contato, memória e ciência. Acrescentar geometria heliocêntrica, chegada/captura e interrupções de comunicação por conjunção solar quando essa fidelidade for desejada.
+
+O modelo circular coplanar com Terra a 1 au e Marte a 1,52371034 au [F30] produz transferência Hohmann de aproximadamente 258,87 dias; v∞ de saída terrestre ≈ 2,945 km/s; v∞ de chegada marciana ≈ 2,649 km/s. Não somar os dois como se fossem as queimas locais de saída/captura: cada uma depende da gravidade e da órbita junto ao planeta. Não prometer que 259 dias é a duração real de qualquer missão.
+
+Irradiância no raio orbital médio adotado ≈ 586,21 W/m², cerca de 43% da terrestre. Esse é fluxo fora da atmosfera; painéis em superfície também dependem de atmosfera, poeira, estação e ângulo. Latência deve vir de distância instantânea; Terra e Marte não permanecem a uma distância fixa. MMRTG se torna uma comparação útil, sem eliminar bateria para picos de carga.
+
+## 13. Fontes primárias consultadas
+
+Todas as fontes físicas são NASA/JPL. Os quatro repositórios foram consultados nos canais dos próprios mantenedores. Datas de pesquisa não substituem datas originais dos documentos.
+
+| ID | Fonte / URL | Data de consulta |
+|---|---|---|
+| F01 | JPL, Astrodynamic Parameters — https://ssd.jpl.nasa.gov/astro_par.html | 14/11/2026 |
+| F02 | JPL, Planetary Physical Parameters — https://ssd.jpl.nasa.gov/planets/phys_par.html | 14/11/2026 |
+| F03 | JPL, Satellite Physical Parameters — https://ssd.jpl.nasa.gov/sats/phys_par/sep.html | 14/11/2026 |
+| F04 | NASA, Moon Facts — https://science.nasa.gov/moon/facts/ | 14/11/2026 |
+| F05 | NASA GSFC, Solar Irradiance Science — https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science | 14/11/2026 |
+| F06 | NASA, Basics of Space Flight, Planetary Orbits — https://science.nasa.gov/learn/basics-of-space-flight/chapter5-1/ | 14/11/2026 |
+| F07 | NASA Thermal Control Engineering Guidebook — https://ntrs.nasa.gov/api/citations/20230013900/downloads/NASA%20Thermal%20Control%20Engineering%20Guidebook%20v4.pdf | 14/11/2026 |
+| F08 | NASA, Small Spacecraft Technology, Power — https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/ | 14/11/2026 |
+| F09 | JPL Publication 90-27, equação de C/N₀ — https://ntrs.nasa.gov/api/citations/19910002641/downloads/19910002641.pdf | 14/11/2026 |
+| F10 | NASA, Small Spacecraft Technology, Communications — https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/ | 14/11/2026 |
+| F11 | NASA, Ground Data Systems and Mission Operations — https://www.nasa.gov/smallsat-institute/sst-soa/ground-data-systems-and-mission-operations/ | 14/11/2026 |
+| F12 | NASA, Speaking Percy's Language — https://science.nasa.gov/blog/speaking-percys-language-how-to-talk-so-perseverance-will-listen/ | 14/11/2026 |
+| F13 | NASA Glenn, Ideal Rocket Equation — https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/ | 14/11/2026 |
+| F14 | JPL, NEO Deflection App Handbook, definição C₃ — https://cneos.jpl.nasa.gov/nda/nda_handbook_v6.pdf | 14/11/2026 |
+| F15 | NASA SLS-SPEC-159, eclipse lunar de referência — https://ntrs.nasa.gov/api/citations/20190027643/downloads/20190027643.pdf | 14/11/2026 |
+| F16 | NASA SSRI, Mission Simulation and Analysis — https://s3vi.ndc.nasa.gov/ssri-kb/topics/2/ | 14/11/2026 |
+| F17 | NASA, South Pole Illumination Map — https://science.nasa.gov/photojournal/south-pole-illumination-map/ | 14/11/2026 |
+| F18 | JPL, Perseverance Launch Press Kit, Power — https://www.jpl.nasa.gov/news/press_kits/mars_2020/launch/mission/spacecraft/power/ | 14/11/2026 |
+| F19 | NASA, Mars 2020 MMRTG presentation — https://www.nasa.gov/wp-content/uploads/2015/08/4_mars_2020_mmrtg.pdf | 14/11/2026 |
+| F20 | NASA, About Plutonium-238 — https://science.nasa.gov/planetary-science/programs/radioisotope-power-systems/about-plutonium-238/ | 14/11/2026 |
+| F21 | NASA/TM-2019-219935 — https://ntrs.nasa.gov/api/citations/20200000369/downloads/20200000369.pdf | 14/11/2026 |
+| F22 | NASA NF4, anúncio 07/11/2016 e tabela FY2015 — https://newfrontiers.larc.nasa.gov/NF4/announcements.html | 14/11/2026 |
+| F23 | NASA MODIS, Technical Specifications — https://modis.gsfc.nasa.gov/about/specifications.php | 14/11/2026 |
+| F24 | NASA ARC, Space Flight System Design and Environmental Test — https://www.nasa.gov/sites/default/files/atoms/files/std8070.1.pdf | 14/11/2026 |
+| F25 | NASA MuSCAT — https://github.com/nasa/muscat | 14/11/2026 |
+| F26 | NASA CML docs — https://nasa.github.io/cml/ | 14/11/2026 |
+| F27 | NASA CML license — https://github.com/nasa/cml/blob/main/LICENSE | 14/11/2026 |
+| F28 | Astronomy Engine — https://github.com/cosinekitty/astronomy | 14/11/2026 |
+| F29 | Satellite.js — https://github.com/shashwatak/satellite-js/blob/develop/README.md | 14/11/2026 |
+| F30 | JPL, Approximate Positions of the Planets — https://ssd.jpl.nasa.gov/planets/approx_pos.html | 14/11/2026 |
+| F31 | NASA, Basics of Space Flight, Trajectories — https://science.nasa.gov/learn/basics-of-space-flight/chapter4-1/ | 14/11/2026 |
+
+Fórmulas e resultados numéricos deste relatório foram recomputados localmente em Python, sem dependência dos valores exibidos pelo jogo. São casos de validação do modelo declarado.
+
+
+---
+
+# A3 — UX, acessibilidade, stack e repositórios para Missão Ipê
+
+Fonte: `experiments/mission-design-lab/research/round9/a3-ux-tecnologia.md` · SHA-256 original: `414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb` · Ajustes de caminhos privados: 0
+
+# A3 — UX, acessibilidade, stack e repositórios para Missão Ipê
+
+Pesquisa concluída em 14/11/2026. Escopo: referências primárias NN/g, W3C, documentação oficial e repositórios indicados. Avaliação documental: os projetos externos não foram instalados, executados ou auditados numericamente nesta frente.
+
+**Recomendação:** construir a nova experiência em Vite + React + TypeScript, com React Three Fiber para Terra e satélite, sobre o motor determinístico existente. A campanha Cerrado/LEO precisa primeiro de decisões legíveis, orçamento visível, diagnóstico contextual e comparação de tentativas. Não precisa adotar uma nova biblioteca de efemérides ou um simulador científico externo para justificar o 3D. Expansão lunar deve ser um módulo posterior com hipóteses e modelos próprios.
+
+Contexto informado pela coordenação, não revalidado nesta frente: repositório AB-NASA-TEAM-IPE; motor com 64 combinações, duas agendas didáticas e seis registros históricos NDVI Terra/MODIS. A arquitetura proposta preserva esse motor e trata a interface como consumidora dos seus resultados. Não apresentar a visualização como órbita calculada ou cobertura real se o motor ainda não produzir essa informação.
+
+## 1. Evidência de UX e aplicação concreta
+
+NN/g descreve as heurísticas como princípios gerais, não uma especificação pronta. São especialmente relevantes visibilidade de estado, correspondência com a linguagem do usuário, controle e liberdade, prevenção de erros, reconhecimento e recuperação. A divulgação progressiva recomenda expor as escolhas principais e oferecer parâmetros especializados sob demanda. A orientação de onboarding favorece ajuda contextual recuperável em vez de depender de uma apresentação inicial que o usuário precisa memorizar. Mensagens de erro devem ser visíveis, construtivas e preservar o trabalho. [S01–S04]
+
+As decisões abaixo são uma **proposta de produto aplicada a esses princípios**, não recomendações literais da NN/g nem resultados de teste com o público da Missão Ipê.
+
+| Momento | Interface recomendada | Comportamento verificável |
+|---|---|---|
+| Briefing | Uma missão com objetivo em linguagem comum: observar o Cerrado e cumprir as condições científicas disponíveis no cenário. Mostrar prazo, orçamento, critérios de sucesso e a procedência dos dados. | O jogador consegue dizer o que precisa entregar e quais limites existem antes de entrar no hangar. |
+| Hangar | Satélite 3D central; catálogo de componentes em DOM; painel de engenharia ao lado. Seleção do componente destaca a peça e abre sua ficha. | Toda operação 3D também existe em botão, lista ou campo. O clique seleciona; rotação da câmera não instala componentes acidentalmente. |
+| Orçamento | Barra fixa com gasto, limite e saldo; detalhamento acionável por categoria. No celular, o orçamento permanece fixo sem cobrir os botões. | Alterar uma escolha atualiza o saldo imediatamente e comunica a diferença. Valores numéricos e rótulos acompanham as cores. |
+| Trade-offs | A ficha apresenta efeito sobre massa, energia, armazenamento, comunicação e resultado científico, apenas quando essas relações existirem no motor. | Antes de substituir uma peça: valor atual, valor proposto e consequência. Nenhum benefício é sugerido se o modelo não o calcula. |
+| Planejamento | Agenda com blocos de observar, transmitir e recarregar, seguindo as duas agendas já suportadas. Um resumo explica por que as fases competem pelo mesmo recurso. | O usuário vê a escolha ativa, as restrições e o efeito previsto sem abrir uma enciclopédia. |
+| Validação | Problema junto da escolha responsável, com valor encontrado, limite e ação de correção. | “Armazenamento insuficiente: reveja a agenda ou escolha mais capacidade” só aparece se a causa for sustentada pelo motor. Um erro técnico é distinguido de missão inviável. |
+| Simulação | Iniciar, pausar, avançar para o próximo evento e rever etapas; indicador de tempo simulado separado da velocidade de reprodução. | Nenhuma decisão é exigida contra um cronômetro real. Pausar a animação não altera o resultado da execução. |
+| Debrief | Resultado geral, objetivos cumpridos, gargalo principal e evidências. Abrir o evento onde surgiu a restrição. | O texto aponta configuração → mecanismo modelado → efeito. Se o motor não provar a relação, usar “associado nesta execução”, não “causou”. |
+| Comparação | Duas tentativas com escolhas alteradas e diferenças de custo, restrições e resultado científico. Ação “usar esta configuração”. | Comparar o mesmo cenário e versão do modelo; registrar parâmetros e semente quando houver aleatoriedade. Evitar “melhor” sem declarar o critério. |
+
+O catálogo deve ajudar a reconhecer peças: nome curto, imagem ou miniatura, função e duas ou três características decisivas. Unidades, definição de siglas e modelo físico ficam em “Entender este cálculo”. Evitar tooltips como único acesso a instruções essenciais, pois precisam funcionar em toque e teclado.
+
+Não transformar toda margem pequena em bloqueio. Separar **configuração inválida**, **restrição operacional violada**, **alerta de margem** e **oportunidade de melhoria**. Um modo de diagnóstico pode permitir simular um projeto inviável para aprender com ele; a interface deve explicar a condição antes de iniciar. Se um botão ficar indisponível, a razão e o caminho de correção permanecem visíveis.
+
+## 2. Tutorial, ritmo e aprendizado
+
+Proposta de primeira experiência: tutorial opcional e retomável com quatro tarefas reais — selecionar uma peça, observar uma mudança no orçamento, escolher a agenda e simular. Exibir uma dica no ponto da ação; permitir fechar e consultar novamente. A ajuda acompanha o trabalho, sem exigir lembrar uma sequência de telas. Essa escolha aplica a orientação contextual da NN/g. [S03]
+
+Começar o hangar sem giro automático de câmera. Oferecer vistas “Geral”, “Instrumento” e “Energia”, além de “Recentrar câmera”. Manter “Reiniciar missão” visualmente separado; reiniciar câmera não apaga configurações. O histórico permite desfazer uma troca e duplicar uma tentativa. Acelerações de reprodução precisam ter rótulo explícito, por exemplo “1 segundo da interface representa X minutos da missão”, conforme o modelo.
+
+O debrief pode convidar: “Qual mudança você faria primeiro?” antes de mostrar a sugestão. A sugestão deve ser produzida por regras do modelo e incluir o custo da alternativa. Não gerar uma nota de engenharia única que esconda objetivos incompatíveis: custo menor, margem maior e mais ciência podem apontar para soluções diferentes. Um painel com três indicadores e seus critérios explica melhor o compromisso.
+
+Para os dados Terra/MODIS, distinguir **observação histórica usada no desafio**, **resultado calculado pelo jogo** e **representação ilustrativa**. Uma imagem bonita da Terra não valida previsão de NDVI, resolução de um instrumento ou cobertura de um satélite fictício. Rótulos de fonte e data pertencem à ficha de evidência e ao relatório.
+
+## 3. Acessibilidade como parte da interface principal
+
+Meta proposta: atender WCAG 2.2 AA; ainda depende de auditoria da implementação. A redução de animações por interação é uma recomendação adicional alinhada ao critério 2.3.3, que é AAA — não confundir seu nível com AA. [S05–S12]
+
+| Requisito | Implementação proposta | Referência |
+|---|---|---|
+| Teclado | Fluxo completo por Tab, Enter, Espaço e controles nativos; foco visível; nenhuma armadilha no canvas ou painel. | 2.1.1, [S06] |
+| Alternativa ao arraste | Botões “selecionar/instalar/remover”, campos numéricos e vistas de câmera. Teclado sozinho não satisfaz a exigência de alternativa por clique/toque. | 2.5.7, [S07] |
+| Equivalência do conteúdo | Modo 2D com esquema, lista de peças, agenda e os mesmos resultados. Se o canvas for decorativo, retirá-lo da navegação assistiva; se transmitir informação, oferecer descrição equivalente no DOM. | 1.1.1, [S08] |
+| Movimento | Respeitar preferência de movimento reduzido; desativar órbita automática, fly-through e parallax; controle de pausa para conteúdo em movimento aplicável. | 2.2.2 e 2.3.3, [S09–S10] |
+| Atualizações | Resumo de mudança em região de status, sem mover foco a cada ajuste. Agregar avisos; não anunciar telemetria a cada frame. | 4.1.3, [S11] |
+| Alvos | Usar 44 × 44 CSS px como objetivo de projeto para controles principais. O mínimo AA documentado é 24 × 24 CSS px, com exceções e regras de espaçamento. | 2.5.8, [S12] |
+| Informação visual | Texto e ícone além de verde/vermelho; contraste legível; gráfico acompanhado de tabela; ampliar texto sem perder controles. | WCAG 2.2, [S05] |
+
+Modos acessíveis não devem diminuir o conteúdo científico ou limitar a pontuação. O modo 2D também é a alternativa para WebGL indisponível, falha de carregamento ou dispositivos modestos. A escolha pode ficar visível em “Visualização: 3D / 2D”; a interface não precisa expor jargão de GPU para o jogador.
+
+## 4. Avaliação dos seis repositórios indicados
+
+“Disponível” significa página pública/README consultável nesta pesquisa. Não significa compilação confirmada, compatibilidade atual de dependências ou qualidade científica auditada.
+
+| Repositório | O que foi verificado | Licença e atribuição | Uso recomendado no beta |
+|---|---|---|---|
+| NASA-3D-Resources | Coleção pública de modelos, imagens e texturas. O README descreve os assets como livres de copyright, mas encaminha às regras de uso. [S13] | `meta.json` declara NOSA 1.3; isso não resolve os direitos de cada asset. A política NASA distingue conteúdo próprio, terceiros e identificadores de marca. Conferir a página e os créditos de cada arquivo. [S14–S15] | Seleção curada de poucos modelos; converter/otimizar antes do uso. Não importar a coleção toda nem apresentar logo NASA como endosso. |
+| rijulpaul/Planetarium | Público; React, TypeScript e Three.js, controles de tempo e cálculo próprio por elementos orbitais. As alegações de precisão são do autor. [S16] | Não foi localizada licença na listagem raiz/README consultados. Repositório público não é concessão geral de reprodução ou redistribuição. [S17] | Referência visual e de interação. Não copiar código ou assets antes de resolver licença. Não adotar como autoridade de física. |
+| ethanplusai/earth-moon-solar | Público; JavaScript, Three.js e Vite. Dados JPL interpolados, delimitados de 01/01/2026 a 01/01/2027. O projeto distingue escala ilustrada e real e declara limitações educativas. [S18] | Código original MIT; texturas Solar System Scope CC BY 4.0 e HYG adaptado CC BY-SA 4.0. Manter termos dos assets separados. A página CREDITS existe, mas seu conteúdo integral não foi recuperado pelo mecanismo de consulta. | Boa referência para Terra, controles e transparência de escala. Extrair seletivamente somente após conferir créditos do arquivo usado; portar lógica para componentes React, sem acoplar a aplicação multipágina inteira. |
+| sakobu/koenig-guffanti-damico-roe-stm | Público; React 19, TS, R3F, Zustand e Vite. Foco em rendezvous/proximidade em LEO, ROE/RIC, J2 e arrasto. README descreve alvos e Δv por trecho. [S19] | README declara MIT; o arquivo LICENSE separado não foi recuperado. Confirmar texto/copyright no commit adotado antes de redistribuir. | Melhor proximidade arquitetural com a stack. Pode informar separação entre órbita, cena, UI e stores. Não é planejador Terra–Lua ou interplanetário; não aplicar seu regime de movimento relativo a esses casos. |
+| nasa/muscat | Público; MuSCAT simula conceitos de missões e subsistemas. Instalação documentada usa MATLAB, arquivos de suporte externos e SPICE/MICE. [S20] | LICENSE Apache 2.0. Dados externos precisam de conferência própria. O apêndice do LICENSE consultado contém nomes de copyright que parecem não corresponder ao projeto; conservar o arquivo e esclarecer procedência antes de incorporar código. [S21] | Referência de dependências entre energia, atitude, instrumentos e comunicação. Não é dependência direta apropriada ao beta no navegador. Possível ferramenta de validação offline futura. |
+| nasa/cml | Público; modelos C++ compatíveis com Trick, com compartilhamento de modelos Trick/JEOD. [S22] | LICENSE confirma NASA Open Source Agreement 1.3; não tratar como MIT ou domínio público. [S23] | Referência para evolução de modelos e validação científica. Integração ou port para browser seria um projeto separado, desproporcional ao beta. |
+
+NASA: a política consultada permite, em geral, utilização educativa/informativa de seu conteúdo sob as diretrizes, pede reconhecimento da fonte e não transfere direitos sobre material de terceiros. Marca e endosso têm tratamento próprio. A ação prática é manter um manifesto de assets com origem, autor, licença/termos, modificações e texto de crédito, mais uma tela “Fontes e créditos”. [S15]
+
+## 5. Efemérides, órbitas e otimização são responsabilidades diferentes
+
+**No beta Cerrado/LEO:** usar o modelo atual para resultados e a geometria que ele de fato disponibiliza. Não adicionar Astronomy Engine apenas para desenhar a Terra. Se o modelo não fornece estado orbital, a órbita de apresentação deve ser explicitamente ilustrativa e não determinar o resultado da missão.
+
+**Astronomy Engine** é uma alternativa MIT para posições e eventos astronômicos no navegador. O projeto documenta vetores heliocêntricos/geocêntricos e precisão angular de aproximadamente um minuto de arco, insuficiente para navegação de espaçonaves. Seu escopo documentado não é um otimizador de transferências nem o cálculo do orçamento Δv de uma missão. Posições podem ser entradas de outro modelo; não substituem solver, condições de contorno e modelo propulsivo. [S24]
+
+**JPL Horizons** fornece efemérides e estados; para uma expansão, um conjunto de dados pré-calculado e versionado evita depender de consulta de rede durante o jogo. Registrar corpo central, referencial, escala de tempo, unidades, período e método de interpolação. Usar estados geométricos quando o cálculo exigir geometria física; não misturar posições aparentes corrigidas por tempo de luz com estados dinâmicos. Essa escolha depende do cálculo científico e deve ser validada. [S25]
+
+**ESA PyKEP/kep3** é uma opção real de projeto de trajetória: documenta solução de Lambert e formulações de otimização, inclusive baixo empuxo. O repositório atual identifica MPL 2.0. A linha 3 está em evolução e a documentação/README consultados apresentam diferenças sobre disponibilidade de pacotes; selecionar uma versão comprovada por execução e fixar a dependência. [S26–S28] Recomendação de arquitetura: processo offline para gerar casos de referência ou serviço científico isolado numa expansão; não presumir que um pacote Python/C++ possa entrar diretamente no bundle Vite.
+
+Um solver de Lambert fornece um arco sob hipóteses específicas. Δv de partida, chegada, captura e margens ainda dependem das condições da missão; otimizar um arco não prova viabilidade operacional total. A escolha de modelo lunar deve preceder a implementação visual dessa expansão. [S27]
+
+## 6. Arquitetura proposta para implementação
+
+| Camada | Responsabilidade | Limite essencial |
+|---|---|---|
+| `domain/` existente | Configuração, restrições, métricas, resultado determinístico e explicações estruturadas. | Não importar React, Three ou elementos de UI. Não duplicar fórmulas no debrief. |
+| `application/` | Comandos de alterar configuração, validar, executar, salvar e comparar tentativas. | Cada tentativa preserva versão do modelo, cenário e entradas. |
+| `stores/` | Estado de edição, seleção, preferências, simulação e histórico. | Persistir escolhas; não gravar objetos Three ou estado de frame. |
+| `components/ui/` | Briefing, catálogo, orçamento, agenda, mensagens e relatório em HTML semântico. | Fluxo completo permanece disponível fora do canvas. |
+| `components/scene/` | Terra, satélite, destaque de peças, câmera e efeitos limitados. | Escala visual não alimenta cálculos físicos. |
+| `adapters/` | Persistência, leitura de dados, importação/exportação, futuras efemérides. | Validar esquema e unidades na fronteira. |
+| `workers/` opcional | Cálculo dispendioso e geração de séries. | Só introduzir se o custo medido justificar; não reescrever motor pequeno por antecipação. |
+
+React Three Fiber é um renderer React para Three.js. A documentação atual associa R3F 8 a React 18 e R3F 9 a React 19; R3F 10 aparece como alpha. Para o beta, manter um par estável compatível com o repositório e fixar versões. Vite oferece template React/TS; a documentação atual pede Node 20.19+ ou 22.12+, podendo haver exigência maior de templates. [S29–S30]
+
+Zustand é adequado ao estado de produto. `persist` permite armazenar e selecionar campos persistidos; `subscribeWithSelector` observa fatias específicas. Proposta: configuração e preferências pequenas em armazenamento local; histórico volumoso em IndexedDB, se necessário. Versionar o esquema e tratar falhas de armazenamento sem perder a edição corrente. O usuário deve saber se “salvo” significa apenas neste navegador. [S31–S32]
+
+Separar tempo físico, reprodução e renderização. A execução científica produz um resultado/série estável; mudar FPS, câmera ou velocidade visual não muda ciência, custo ou consumo. Em R3F, usar `useFrame` e referências para transformações rápidas. A documentação recomenda evitar `setState` dentro do loop e reutilizar geometrias/materiais. [S33] Durante edição estática, renderização sob demanda reduz trabalho; durante playback, atualizar apenas o necessário. [S34]
+
+Modelos selecionados devem chegar ao produto como GLB/glTF, com orçamento de tamanho e testes no aparelho alvo. Three.js oferece GLTFLoader e extensões de compressão; KTX2Loader trata texturas GPU com transcodificação. [S35–S36] Compressão, sombras, atmosfera e pós-processamento são escolhas medidas: um planeta legível e o satélite selecionável valem mais que efeitos que atrasam feedback. Deixar cenas e assets pesados em carregamento tardio; carregar o briefing e os controles primeiro.
+
+Para eventual estado orbital, definir contrato explícito com `position`, `velocity`, `frame`, `origin`, `epoch`, `timeScale` e `units`. Manter valores físicos separados de escala/offset de cena. Tipos TS ajudam, mas não substituem validação numérica, conversão de unidades ou testes de referencial.
+
+## 7. Relatório causal e comparação de tentativas
+
+Resultado proposto: `inputs`, `modelVersion`, `scenarioVersion`, `summary`, `constraints`, `events`, `evidence`, `sourceRecords` e `assumptions`. Cada problema aponta `ruleId`, métrica, valor, limite e campos de configuração envolvidos. O texto visível é formatado a partir desses dados, com linguagem pt-BR. Isso permite explicar a execução sem inventar uma narrativa após o cálculo.
+
+Só afirmar uma causa específica se a regra do motor a demonstrar ou uma execução contrafactual controlada confirmar a diferença mantendo o restante igual. Para interações entre várias escolhas, o relatório deve reconhecer a combinação. Não atribuir a uma única peça a diferença de resultado entre duas tentativas que mudaram peça, agenda e cenário.
+
+Comparação mínima: configuração A/B, mudanças, métricas lado a lado, deltas, condições cumpridas e limitações. Uma tentativa deve ser imutável após executar; editar cria um novo rascunho. Guardar a versão do modelo evita comparar como equivalentes resultados calculados sob regras diferentes. Se a expansão introduzir sorte, guardar a semente e usar condições iguais para comparação didática.
+
+## 8. Critérios de aceite e validação focada
+
+1. Primeiro contato: o participante identifica objetivo, orçamento e sucesso sem ajuda do facilitador.
+2. Montagem: trocar uma peça atualiza a representação, a seleção e os valores no mesmo fluxo; é possível desfazer.
+3. Compreensão: o participante explica um compromisso real do modelo com suas palavras, não apenas repete uma legenda.
+4. Diagnóstico: diante de uma configuração inviável, encontra a causa e modifica uma escolha pertinente.
+5. Ritmo: pausar, acelerar, abrir ajuda e trocar 2D/3D preserva a tentativa e seu resultado.
+6. Comparação: identifica o que mudou entre duas tentativas e relaciona a diferença ao objetivo declarado.
+7. Acesso: briefing → montagem → execução → debrief completo por teclado; testar leitor de tela, toque, zoom e movimento reduzido.
+8. Regressão científica: para configurações conhecidas do motor, a nova UI produz os mesmos resultados e não introduz cálculos paralelos.
+9. Robustez visual: ausência de WebGL ou falha de asset oferece modo 2D funcional; teste em dispositivo modestamente equipado.
+10. Proveniência: todos os arquivos externos incorporados têm origem e termos registrados; conjunto de dados mostra data e limites.
+
+Testes com novatos e pessoas com repertório técnico devem observar conclusão, erros, tempo até recuperar uma restrição e compreensão dos trade-offs. Não usar rapidez como único critério de aprendizagem. As metas quantitativas de FPS, payload e tempo de carregamento devem ser definidas pelo aparelho/rede alvo e medidas; esta pesquisa não mediu performance da aplicação.
+
+## 9. Prioridade de implementação
+
+**Agora:** preservar motor e fontes; construir briefing curto, hangar R3F, orçamento fixo, agenda, validação, debrief e comparação; garantir equivalência 2D e créditos. Usar poucos assets com licença confirmada.
+
+**Depois de testar o beta:** refinar explicações conforme erros observados, histórico/exportação, cenários adicionais e visualização de séries realmente calculadas.
+
+**Expansão lunar:** definir objetivos e regime orbital, validar solver/efemérides e referências, então adicionar conteúdo e cena. MuSCAT, CML e PyKEP são candidatos a referência ou infraestrutura científica futura, com papéis diferentes; nenhum deles deve substituir o motor atual por mera associação à NASA/ESA.
+
+## Fontes primárias consultadas
+
+| ID | Fonte |
+|---|---|
+| S01 | NN/g — [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) |
+| S02 | NN/g — [Progressive Disclosure](https://www.nngroup.com/articles/progressive-disclosure/) |
+| S03 | NN/g — [Onboarding Tutorials vs. Contextual Help](https://www.nngroup.com/articles/onboarding-tutorials/) |
+| S04 | NN/g — [Error-Message Guidelines](https://www.nngroup.com/articles/error-message-guidelines/) |
+| S05 | W3C — [WCAG 2.2](https://www.w3.org/TR/WCAG22/) |
+| S06 | W3C — [Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) |
+| S07 | W3C — [Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) |
+| S08 | W3C — [Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) |
+| S09 | W3C — [Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide) |
+| S10 | W3C — [Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) |
+| S11 | W3C — [Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) |
+| S12 | W3C — [Target Size Minimum](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) |
+| S13 | NASA — [NASA-3D-Resources](https://github.com/nasa/NASA-3D-Resources) |
+| S14 | NASA — [NASA-3D-Resources/meta.json](https://github.com/nasa/NASA-3D-Resources/blob/master/meta.json) |
+| S15 | NASA — [Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/) |
+| S16 | Autor — [rijulpaul/Planetarium](https://github.com/rijulpaul/Planetarium) |
+| S17 | GitHub — [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) |
+| S18 | Autor — [ethanplusai/earth-moon-solar](https://github.com/ethanplusai/earth-moon-solar) |
+| S19 | Autor — [sakobu/koenig-guffanti-damico-roe-stm](https://github.com/sakobu/koenig-guffanti-damico-roe-stm) |
+| S20 | NASA — [MuSCAT](https://github.com/nasa/muscat) |
+| S21 | NASA — [MuSCAT LICENSE](https://github.com/nasa/muscat/blob/main/LICENSE) |
+| S22 | NASA — [Common Model Library](https://github.com/nasa/cml) |
+| S23 | NASA — [CML LICENSE](https://github.com/nasa/cml/blob/main/LICENSE) |
+| S24 | Autor — [Astronomy Engine](https://github.com/cosinekitty/astronomy) |
+| S25 | JPL — [Horizons Manual](https://ssd.jpl.nasa.gov/horizons/manual.html) |
+| S26 | ESA — [PyKEP repository](https://github.com/esa/pykep) e [COPYING](https://github.com/esa/pykep/blob/master/COPYING) |
+| S27 | ESA — [PyKEP documentation](https://esa.github.io/pykep/) e [Lambert class](https://esa.github.io/pykep/lambert.html) |
+| S28 | ESA — [Trajectory Optimization](https://esa.github.io/pykep/trajopt.html) |
+| S29 | PMNDRS — [R3F Introduction](https://r3f.docs.pmnd.rs/getting-started/introduction) |
+| S30 | Vite — [Getting Started](https://vite.dev/guide/) |
+| S31 | PMNDRS — [Zustand persistence](https://zustand.docs.pmnd.rs/reference/integrations/persisting-store-data) |
+| S32 | PMNDRS — [subscribeWithSelector](https://zustand.docs.pmnd.rs/reference/middlewares/subscribe-with-selector) |
+| S33 | PMNDRS — [R3F Performance pitfalls](https://r3f.docs.pmnd.rs/advanced/pitfalls) |
+| S34 | PMNDRS — [R3F Scaling performance](https://r3f.docs.pmnd.rs/advanced/scaling-performance) |
+| S35 | Three.js — [GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html) |
+| S36 | Three.js — [KTX2Loader](https://threejs.org/docs/pages/KTX2Loader.html) |
+
+
+---
+
+# Contrato de integração do protótipo de pesquisa
+
+Fonte: `experiments/mission-design-lab/specs/IMPLEMENTATION-CONTRACT.md` · SHA-256 original: `cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6` · Ajustes de caminhos privados: 0
+
+# Contrato de integração do protótipo de pesquisa
+
+Início real: 14/11/2026 antes das 09h BRT. Este artefato é desenvolvimento específico anterior ao evento. Isolá-lo, creditá-lo ou renomeá-lo não estabelece elegibilidade. Não retroagir datas nem apresentá-lo como trabalho feito durante o hackathon. A questão com a organização permanece aberta, inclusive para especificações anteriores.
+
+## Domínio fechado desta versão
+
+Protótipo local de uma missão educacional e duas condições: long-contact e short-contact. A mesma pergunta exige seis NDVI válidos de arquivo. As duas rotas usam a mesma fórmula e política de QA. Arquivos MOD13Q1 históricos, datas reais separadas de relógio simulado. Nenhum dado de satélite é adquirido pelo CubeSat fictício em 180 min.
+
+Seis escolhas binárias / 64 tuplas: battery small/large; panel compact/standard; processing bands/index; radio economy/fast; buffer compact/large; policy every-contact/last-contact. Lançador e perfil orbital estão fixos no briefing. Não alegar cobertura integral do brief oficial ainda indisponível. Valores didáticos; não calibração de hardware real. A enumeração avalia massa, créditos e todas as violações; inválidos são contabilizados.
+
+## API entre frentes
+
+`src/core/contracts.ts` pertence à coordenação. Alterações de contrato exigem mensagem, não edição paralela silenciosa.
+
+Frente motor produz `src/core/engine.ts`, `src/core/catalog.ts`, `src/core/science.ts`, `src/core/search.ts`. Exportar:
+
+- `catalog.ts`: CATALOG (Record<ConfigKey, readonly ComponentChoice[]>), CONFIG_KEYS, DEFAULT_CONFIG, SCENARIOS (readonly Scenario[]), getScenario(id).
+- `engine.ts`: `simulateMission(config: MissionConfig, scenarioId: ScenarioId, options?: SimulationOptions): MissionResult`.
+- `science.ts`: `validateScienceRecord(record: ScienceRecord): { valid: boolean; reasons: string[]; ndvi: number | null }`.
+- `search.ts`: `enumerateConfigurations(): MissionConfig[]`, `hammingDistance(a,b): number`, `searchCatalog(baseConfig, scenarioId): SearchResult`.
+
+Dados em `src/data/science-data.ts`: SCIENCE_RECORDS e SCIENCE_PACK_HASH. O JSON original vai em public/data com arquivos de origem. A coordenação gera o arquivo inicial; frente de persistência verifica procedência.
+
+## Motor: hipóteses iniciais a verificar
+
+Horizonte de 10800 s. Luz [0,5400) e [7200,9000). Seis trabalhos de 60 s começando em 600, 1200, 1800, 2400, 3000 e 3600 s. Contatos longos [5400,6000),[9000,9600); curtos [5400,5640),[9000,9240). Trabalho só produz lote completo no final, em ordem estável. Não há sobreposição de trabalho e contato nestes cenários fechados.
+
+Bateria de 16 Wh / 20 W ou 24 Wh / 35 W, início em 80%, reserva de 15%, eficiência de carga/descarga de 0.95. Painel compact de 12 W ou standard de 18 W; fator 0.55 no trabalho e 0.85 na espera; zero em eclipse. Limite de carga deve constar e ser respeitado (proposta de 10 W de entrada). Base de 8 W; BANDAS: 26 W totais / 180e6 bits; ÍNDICE: 38 W totais / 60e6 bits. Rádio econômico: 16 W totais / 960000 bps; rápido: 26 W totais / 2400000 bps. Buffer de 512e6 ou 1536e6 bits. TX muda para espera ao esvaziar fila.
+
+Cada componente tem massa/créditos para tornar trocas materiais; frente motor pode calibrar catálogo estático, preservando testemunhas e registrando decisões. Proposta de envelope: 86 créditos / 3.6 kg; base: 1.2 kg / 20 créditos; bateria: .6 / 1 kg e 12 / 19 créditos; painel: .25 / .55 kg e 10 / 16 créditos; modo: .35 / .4 kg e 8 / 14 créditos; rádio: .2 / .45 kg e 10 / 17 créditos; buffer: .05 / .15 kg e 2 / 5 créditos; política: 0 kg / 0 crédito. Esses números são hipóteses, não especificações NASA.
+
+Integração por eventos, não frame da UI. Concluir intervalo anterior antes dos eventos na fronteira. Pico de descarga não atendido termina operação; reserva registra falha sem apagar trace; energia não negativa; saturação contabiliza spill. Bits inteiros seguros até 2^53−1 internamente e strings decimais externamente; números com unidade não recebem tolerância que muda sucesso. Residual de energia deve ser reportado. Não afirmar determinismo bit a bit em motores diferentes.
+
+## Busca e explicação
+
+Busca exaustiva sobre 64 tuplas, resultado não depende da ordem. Mínimo somente se há testemunha viável e todas as alternativas menores foram decididas; erro é indeterminado. Cancelamento ou erro não conserva selo de mínimo. Sem Monte Carlo como verdade; entradas fixas e reexecução com versões. A escolha física alterada é outro projeto antes do lançamento.
+
+Política de operação é automática, escolhida antes de executar. Pausar/apontar a câmera não altera a execução. UI deve pedir previsão antes da primeira tentativa e bloquear ajuda de solver na primeira decisão do caso de transferência. Não chamar uso de botões de prova de aprendizagem. Sem LLM determinando potência, QA, resultado ou certificado.
+
+## Persistência e Worker
+
+Frente dados: `src/persistence/store.ts` exporta `saveRun(result): Promise<string>`, `listRuns(): Promise<SavedRun[]>`, `deleteRun(id): Promise<void>`, `saveDraft(config,scenarioId,expectedRevision): Promise<number>`, `loadDraft()`. SavedRun tem id, createdAt, result, inputHash e resultHash.
+
+`src/persistence/replay.ts` exporta `exportReplay(result): Promise<string>`, `importReplay(text): Promise<{ result: MissionResult; matchesClaim: boolean; importedClaim: unknown }>`. Importar sempre valida schema/tamanho/versões e recalcula pelo motor; não confiar na alegação importada. Hash SHA-256 canônico com versão; campos contados como números seguros; rejeitar chaves duplicadas e prototype pollution. Não buscar URLs importadas. Nenhum SDKde IA instalado por conveniência.
+
+A coordenação cria a bridge do Worker. A UI usa uma função Promise que retorna o resultado; a identidade da chamada e a etapa são conferidas antes da publicação. O IDB usa transação atômica; completar o request não equivale a commit. Em caso de erro de quota, o resultado visível em memória não é apagado. Migrações Prisma ficam separadas; o esquema permanece apenas fora do browser, sem backend desnecessário.
+
+## Propriedade dos arquivos
+
+Coordenação: contracts, configs, scripts build/server/worker, docs finais.
+Frente 4: core engine/catalog/science/search e testes próprios.
+Frente 5: App.tsx, ui/, styles.css, index.html/main.tsx; sem editar core/persistência.
+Frente 6: data/ revisão, persistence/, Prisma e testes respectivos.
+Frente 7: testes adversariais independentes e relatório, sem mudar a implementação.
+Frente 8: auditoria completa do anexo/repositórios, somente research.
+Frente 9: benchmark/offline e release scripts sob acordo com coordenação.
+Frente 10: auditoria final e handoff; alterações somente via coordenação.
+
+
+---
+
+# Declaração de assistência de IA — Missão Ipê / rodada R5
+
+Fonte: `kit/AI-USAGE.md` · SHA-256 original: `03bcc20d19ccefd2c9ec7ab13180c5efe2308c861b164e4eeee94c25c3a0a319` · Ajustes de caminhos privados: 0
+
+# Declaração de assistência de IA — Missão Ipê / rodada R5
+
+## Pesquisa, documentação e código
+
+Esta rodada utilizou três agentes GPT-6 Astra com esforço configurado como `max`, além da coordenação principal, para revisão das fontes do Space Apps, criação do HTML de apresentação e verificação/handoff. Código, textos e ilustrações vetoriais desta rodada foram produzidos com assistência de IA. As fontes consultadas e os limites de verificação estão registrados em `ab-mission-ipe/research/11-revisao-spaceapps-apresentacao.md` e nos recibos em `ab-mission-ipe/evidence/`.
+
+O histórico das rodadas anteriores, incluindo desenvolvimento do jogo e análise local com AB-R3A, permanece nos documentos originais. Esta declaração não muda suas datas, autores declarados ou condições de elegibilidade.
+
+## Dados e resultados
+
+- Os registros MOD13Q1.061 usados no jogo são dados observacionais recuperados de fontes NASA/ORNL; não foram gerados por IA. Os arquivos brutos e sua proveniência permanecem no projeto.
+- O catálogo de equipamentos, os custos, as potências, as janelas e os volumes de missão são parâmetros didáticos especificados com assistência de IA. Não são especificações de voo certificadas.
+- Os resultados mostrados pelo jogo e pela demonstração são calculados pelo motor determinístico `0.1.1-rd`; não são respostas produzidas por um modelo de linguagem durante a execução.
+- Ilustrações procedurais e diagramas não são fotografias, órbitas propagadas ou medições de sensores. Ilustrações autorais da apresentação recebem identificação visível de geração com IA. Gráficos de resultados identificam o modelo didático.
+
+## Mídia e materiais de referência
+
+Não foi gerado áudio nem vídeo nesta rodada. Os dois cartazes em `ab-mission-ipe/references/user/` foram fornecidos pelo usuário e preservados sem alteração dos bytes. São referências de contexto; seus direitos, marcas e autoria permanecem com os titulares originais. Não afirmamos sua origem de geração nem aprovação institucional do projeto.
+
+A apresentação usa a identidade própria Missão Ipê. Os nomes de programas e produtos de dados aparecem para atribuição e contexto científico. Não foi criado ou modificado logotipo NASA, Space Apps ou de missão.
+
+O jogo de base R4 foi preservado. Sua cena procedural contém a legenda de ilustração sem escala, sem uma marca visível específica de IA nessa vista. Ao produzir capturas ou vídeo do jogo para submissão, conferir a regra vigente e incluir a identificação de geração/assistência de IA na mídia correspondente. A declaração textual deste pacote não certifica que todas as capturas futuras atenderão à exigência de marca visível.
+
+## Limites da declaração
+
+Esta declaração dá transparência ao uso de IA. Não comprova elegibilidade, submissão, endosso da NASA, validação pedagógica, segurança de voo ou aceite do formato HTML. A orientação do GO Team consultada está em <https://github.com/nasa/spaceapps/discussions/1849>. O conteúdo integral recuperado e seu nível de autoridade estão discriminados na revisão R5.
+
+
+---
+
+# Missão Ipê — kit de apresentação R5
+
+Fonte: `kit/LEIA_PRIMEIRO.md` · SHA-256 original: `aca2833aca3a502d78f9ec822d3d2d838d8c8f42528e1c7a79053c919ed45ce2` · Ajustes de caminhos privados: 0
+
+# Missão Ipê — kit de apresentação R5
+
+**14/11/2026 · AB / Hackatur–Zer0Slop · jogo 0.1.1 · motor 0.1.1-rd.**
+
+Extraia o ZIP inteiro antes de abrir os arquivos. Preserve a pasta `ab-mission-ipe`: os links locais dependem dessa estrutura. `COMECE_AQUI.html` é a entrada do pacote.
+
+## Apresentar
+
+Abra `COMECE_AQUI.html` e escolha **Abrir apresentação**. O arquivo `ab-mission-ipe/presentation/Missao_Ipe_Apresentacao.html` incorpora seu CSS, JavaScript e o núcleo do demonstrador. Não requer CDN, conta, chave de API ou download de modelos. O pitch curto possui sete quadros principais e a exploração técnica possui seu próprio modo. O roteiro PT/EN acompanha a apresentação.
+
+O HTML pode ser usado separadamente, mas os links para jogo, documentos e dados complementares precisam da estrutura do ZIP. Os comandos de tela cheia e impressão dependem do navegador. O ensaio visual e os testes em equipamento real continuam pendentes; o relatório da rodada identifica exatamente as camadas verificadas.
+
+## Jogar e apresentar em uma origem local
+
+Com Node 24 ou superior instalado, abra um terminal na pasta principal extraída e execute:
+
+```bash
+node ab-mission-ipe/scripts/serve-presentation-kit.mjs
+```
+
+Abra `http://127.0.0.1:4174`. O servidor utiliza somente bibliotecas nativas de Node. Não precisa executar `npm install` para servir os builds incluídos. O botão do jogo abre `dist/index.html`, com Worker; a apresentação permanece um documento separado.
+
+Os arquivos `INICIAR_MAC_LINUX.command` e `INICIAR_WINDOWS.cmd` contêm esse mesmo comando para conveniência. As permissões e associações do sistema operacional podem exigir que você use o terminal. Não foram executados em macOS ou Windows nesta rodada. Encerre o servidor com Ctrl+C. Para outra porta:
+
+```bash
+node ab-mission-ipe/scripts/serve-presentation-kit.mjs --port 4175
+```
+
+Sem servidor, o botão do jogo usa `ab-mission-ipe/portable/Missao_Ipe_Local.html`. Essa versão executa o núcleo na thread principal. O armazenamento em origem `file:` varia entre navegadores. Exportar uma execução antes de mudar origem, porta ou local do arquivo evita depender da retenção do navegador.
+
+## Conteúdo
+
+| Local | Conteúdo |
+| --- | --- |
+| `presentation/` | HTML interativo, fontes, roteiro PT/EN e manual do apresentador |
+| `portable/` e `dist/` | Jogo compilado em arquivo único e build servido |
+| `src/`, `tests/`, `tests-ui/`, `scripts/` | Código, testes e ferramentas de reprodução |
+| `docs/` e `specs/` | PRD, PRT, Mermaid, cronograma, contratos e handoffs |
+| `prisma/` | Schema opcional e configuração, sem backend integrado |
+| `research/` | Dez pareceres anteriores e revisão atual do Space Apps |
+| `output/pdf/` e `output/html/` | Dossiê de base R4 com 112 páginas e estudo navegável |
+| `public/data/` e `examples/` | Dados científicos e três execuções importáveis |
+| `evidence/` | Recibos, hashes, benchmarks e limites das verificações |
+| `references/user/` | Dois cartazes fornecidos como referência; não são assets de endosso |
+| `licenses/`, `LICENSE`, `NOTICE.md` | Avisos e termos identificados |
+
+Todos os caminhos da tabela são relativos a `ab-mission-ipe/`. O ZIP não duplica ZIPs anteriores nem inclui `node_modules` ou os READMEs integrais de terceiros recuperados apenas para pesquisa. Dependências de desenvolvimento exigem instalação ou cache preparado. O código privado do runtime AB-R3A não é redistribuído.
+
+## Estado competitivo e científico
+
+O desenvolvimento específico começou antes da abertura local. **Elegibilidade competitiva não estabelecida.** A cronologia real permanece em `evidence/chronology.json`. A revisão R5 conserva os limites de autoridade e recuperação das fontes oficiais. O vínculo com um recurso qualificado na lista Resources do desafio permanece uma pendência. A apresentação não é comprovante de submissão ou aprovação.
+
+O tema principal é **Space Mission Design Game**. O cartaz de Marte é referência de expansão, sem missão marciana implementada. A versão atual usa dados MOD13Q1.061 históricos de 2024, com parâmetros de hardware e volume didáticos. Lançador e perfil orbital estão fixos. Não se trata de planejamento operacional de voo.
+
+O roteiro de sete quadros e o texto de 30 segundos foram preparados como alternativas de apresentação. Orientações de Navigators foram diferenciadas de regras recuperadas diretamente da equipe organizadora. Conferir o formulário e o guia efetivos antes de enviar.
+
+## Integridade e autoria
+
+`MANIFESTO_SHA256.json` lista cada arquivo empacotado. Ele exclui a si próprio para evitar uma referência circular. Com Python 3.9 ou superior, execute `python3 VERIFICAR_PACOTE.py` na pasta extraída para conferir esses bytes. Hash verifica identidade do conteúdo, não autenticidade da autoria ou elegibilidade.
+
+Código e documentação contam com assistência de IA. O jogo conserva cálculos determinísticos e revisão independente documentada. Não há execução Fastino ou modelo de linguagem no runtime. Nenhuma aprovação institucional é inferida.
 
 
 ---
@@ -3389,6 +6253,4222 @@ Esta sequência é um roteiro de facilitação, não uma duração observada com
 **“Is the benchmark from AB’s machine?”** No. The archived p95 figures come from Node 24.22.1 on the AMD EPYC 9V45 executor and exclude interface, Worker transport, persistence and GPU.
 
 Ao usar as notas durante a projeção, lembre que o painel é visível ao público e contém ajuda do facilitador. Feche-o antes de pedir uma hipótese ao participante.
+
+
+---
+
+# Estudos históricos — procedência e limites
+
+Fonte: `references/estudos/README.md` · SHA-256 original: `9bda603a2d9eb3a36e75531ba04e87b602f458a571e12addb1bfbf4210da467b` · Ajustes de caminhos privados: 0
+
+# Estudos históricos — procedência e limites
+
+**PROJETO IPÊ · projeção pública de 14/11/2026.**
+
+Este acervo preserva três estudos de outro projeto para consulta e continuidade. Seus prompts e comandos não são instruções de execução do Ipê. A síntese aplicável e a divisão de trabalho estão em [Oportunidades dos Estudos](../../docs/24-OPORTUNIDADES-ESTUDOS.md) e [Handoff para dois desenvolvedores](../../docs/25-HANDOFF-DOIS-DEVS.md).
+
+## Arquivos e cortes
+
+| Projeção | Origem relativa no acervo fornecido | Corte da fonte |
+|---|---|---|
+| [SMARTCITY-KIT-HISTORICO.md](SMARTCITY-KIT-HISTORICO.md) | `Estudos/SUPER_PROMPT_SMARTCITY_KIDS_ONE_SHOT.md` | 28/09/2026, declarado no original |
+| [SMARTCITY-DOSSIE-HISTORICO.md](SMARTCITY-DOSSIE-HISTORICO.md) | `Estudos/dossi_t_cnico_jogos_abertos_vibe_coding_smart_cities_tr_nsito_educativo.md` | sem data explícita no cabeçalho do original; consultado em 14/11/2026 |
+| [SMARTCITY-VALIDACAO-HISTORICA.md](SMARTCITY-VALIDACAO-HISTORICA.md) | `Estudos/VALIDACAO.md` | 28/09/2026, declarado no original |
+
+## Identidade e transformações
+
+Os hashes originais identificam os bytes recebidos; os hashes das projeções incluem o cabeçalho editorial. Não se afirma identidade byte a byte após a redação.
+
+### SMARTCITY-KIT-HISTORICO.md
+
+- Tamanho original: 201797 bytes.
+- SHA-256 original: `8fb2083f75e146cb63150d56a0e6fb8fadd565a20ab1d0941bba80ac61f05b8c`.
+- SHA-256 da projeção: `0e464b3763e0b768f1af4c0d53f84b81ce285c3bedf79bd8879bd2607467b066`.
+- Transformações: 1 ocorrência(s): valor de credencial/conexão, inclusive exemplo
+
+### SMARTCITY-DOSSIE-HISTORICO.md
+
+- Tamanho original: 39040 bytes.
+- SHA-256 original: `1ebde4d8edda4b364e638575febdca9541fe40b2e37514ecf11996a46449e058`.
+- SHA-256 da projeção: `b2eaadf5d825a313065b17dd8b1eec97acdd816899bd6dca2a49c6ffd6f74e8c`.
+- Transformações: Nenhuma redação do corpo necessária; cabeçalho de contexto acrescentado.
+
+### SMARTCITY-VALIDACAO-HISTORICA.md
+
+- Tamanho original: 2995 bytes.
+- SHA-256 original: `4a98c6c4ca15163759225bdcdf12dc932428be1bc55a5d67d7e810ff07b4c21e`.
+- SHA-256 da projeção: `5152881b935b2856059ffa284ad9ba4a81aceaeb3b38c14debb0712f5513f28d`.
+- Transformações: Nenhuma redação do corpo necessária; cabeçalho de contexto acrescentado.
+
+## Curadoria pública
+
+O kit contém um exemplo de conexão PostgreSQL rotulado como fictício no original. Seu valor completo foi removido, incluindo usuário, senha de exemplo e endereço local. Caminhos pessoais e endpoints privados são omitidos quando encontrados. Não foram encontrados padrões de chave privada, tokens GitHub ou chave AWS nas três fontes durante a busca limitada; isso não equivale a uma auditoria geral de segredos. O e-mail institucional público presente na consulta histórica foi mantido como parte da fonte; nenhuma mensagem foi enviada.
+
+O conteúdo restante, inclusive erros, decisões históricas, exemplos, tabelas, código e referência a licenças, foi preservado sem correção silenciosa. Declarações atuais sobre software, legislação, concurso ou licença exigem verificação na fonte primária antes de serem reutilizadas. O texto não atribui regras SENATRAN ao Space Apps e não converte resultados do kit em testes do Ipê.
+
+## O que não acompanha este acervo
+
+A pasta de origem forneceu somente os três arquivos Markdown listados. Não foram disponibilizados separadamente nesta pasta o ZIP referido no kit, PDFs legais, fotografias, vídeos, aplicação SmartCity, banco, dependências, `reference-test-output.txt`, `static-check-output.txt`, `typecheck-output.txt` ou diretórios de referência. A presença de seu conteúdo como trecho de Markdown não comprova existência, execução ou validação de um projeto instalado. Links externos históricos podem mudar.
+
+O relato VALIDACAO e o anexo correspondente no kit dizem respeito ao ambiente e à data declarados pelo autor. Não foram reexecutados. Não há novo estudo com participantes, aprovação pedagógica/jurídica ou publicação de produto SmartCity decorrente desta projeção.
+
+Os originais pessoais não foram alterados. Nenhum prompt ou código destes documentos foi executado. A publicação é documental e não amplia o escopo implementado do Ipê.
+
+
+---
+
+# Dossiê de jogos e cidades — referência histórica
+
+Fonte: `references/estudos/SMARTCITY-DOSSIE-HISTORICO.md` · SHA-256 original: `b2eaadf5d825a313065b17dd8b1eec97acdd816899bd6dca2a49c6ffd6f74e8c` · Ajustes de caminhos privados: 0
+
+# Dossiê de jogos e cidades — referência histórica
+
+**Projeção pública produzida em 14/11/2026. Corte da fonte: sem data explícita no cabeçalho do original; consultado em 14/11/2026.**
+
+> Referência histórica de outro projeto. Os prompts, comandos e instruções internos pertencem ao SmartCity e não se aplicam ao PROJETO IPÊ. Afirmações, regras de concurso, elegibilidade, dependências e resultados não se transferem ao Ipê. Blocos de código são texto documental, não ações autorizadas.
+
+Origem no acervo fornecido: `Estudos/dossi_t_cnico_jogos_abertos_vibe_coding_smart_cities_tr_nsito_educativo.md`. O corpo preserva o texto original, exceto as transformações públicas declaradas no [índice de procedência](README.md). Não houve execução dos prompts, instalação das dependências ou revalidação das afirmações históricas para esta publicação.
+
+Os arquivos externos citados pelo texto — ZIP, imagens, documentos legais, resultados de testes e projetos de referência — não foram fornecidos como arquivos separados nesta pasta de três Markdown e não foram fabricados nem anexados. Trechos incorporados no Markdown permanecem como exemplos.
+
+---
+
+# DOSSIÊ TÉCNICO GLOBAL: ENGENHARIA DE JOGOS, VIBE CODING, CIDADES INTELIGENTES, TURISMO DIGITAL E SEGURANÇA VIÁRIA
+
+---
+
+## SUMÁRIO GERAL
+
+1. [PANORAMA DE VIBE CODING & FERRAMENTAS AI-NATIVE PARA GAMEDEV](#1-panorama-de-vibe-coding--ferramentas-ai-native-para-gamedev)
+2. [GRANDES PROJETOS ABERTOS GLOBAIS DE JOGOS E SIMULAÇÃO](#2-grandes-projetos-abertos-globais-de-jogos-e-simulação)
+3. [MOBILIDADE URBANA, ENGENHARIA DE TRÁFEGO E EDUCAÇÃO VIÁRIA](#3-mobilidade-urbana-engenharia-de-tráfego-e-educação-viária)
+4. [CIDADES INTELIGENTES, GÊMEOS DIGITAIS E TRANSFORMAÇÃO DIGITAL](#4-cidades-inteligentes-gêmeos-digitais-e-transformação-digital)
+5. [TURISMO INTELIGENTE, GEOTECNOLOGIA E PATRIMÔNIO DIGITAL (LBS)](#5-turismo-inteligente-geotecnologia-e-patrimônio-digital-lbs)
+6. [MOTORES PEDAGÓGICOS GLOBAIS, APRENDIZAGEM CIENTÍFICA E LÓGICA](#6-motores-pedagógicos-globais-aprendizagem-científica-e-lógica)
+7. [MODELAGEM CINEMÁTICA E ESPECIFICAÇÃO MATEMÁTICA DE TRÂNSITO](#7-modelagem-cinemática-e-especificação-matemática-de-trânsito)
+8. [BLUEPRINT DE ENGENHARIA: MOTOR AUTOCONTIDO (TYPESCRIPT)](#8-blueprint-de-engenharia-motor-autocontido-typescript)
+9. [DIRETIVAS DE ENGENHARIA PARA AGENTES DE IA (.CURSORRULES)](#9-diretivas-de-engenharia-para-agentes-de-ia-cursorrules)
+10. [ROTEIRO METODOLÓGICO DE IMPLANTAÇÃO MUNICIPAL (5 FASES)](#10-roteiro-metodológico-de-implantação-municipal-5-fases)
+
+---
+
+## 1. PANORAMA DE VIBE CODING & FERRAMENTAS AI-NATIVE PARA GAMEDEV
+
+O conceito de *Vibe Coding* transcende o mero autocompletar sintático: trata-se da condução de desenvolvimento de software onde a especificação semântica de alto nível, os grafos de dependência e as lógicas de gameplay são gerados e orquestrados por Grandes Modelos de Linguagem (LLMs) integrados via protocolos de contexto aberto (como o Model Context Protocol - MCP).
+
+Abaixo estão listados os repositórios públicos, motores e ferramentas que sustentam esse fluxo na indústria de jogos:
+
+### 1.1 Motores e Camadas de Abstração AI-First
+* **VibeGame (`https://github.com/dylanebert/vibegame`)**
+  * **Stack:** TypeScript, WebGL, Entity-Component-System (ECS).
+  * **Licença:** MIT.
+  * **Diferencial Arquitetural:** Motor 3D web desenhado especificamente para interação via prompts. Elimina interfaces baseadas em binários e painéis visuais pesados; cada cena, colisor e comportamento é expresso em sintaxe declarativa textual e arquivos de contexto (`llms.txt`).
+  * **Ponto de Injeção de Agentes:** Ideal para agentes locais (Claude Code, Cursor) gerarem lógica procedural de física e movimentação sem etapas de compilação intermediárias.
+
+* **Vibe GameDev for Unity (`https://github.com/ryholmdahl/vibe-gamedev`)**
+  * **Stack:** C#, Python, Unity Editor Bridge.
+  * **Licença:** MIT.
+  * **Diferencial Arquitetural:** Servidor de automação local que expõe a árvore de GameObjects da Unity, componentes de física e hierarquias de cena como recursos JSON consultáveis por ferramentas MCP.
+  * **Ponto de Injeção de Agentes:** Um agente LLM pode inspecionar a hierarquia ativa, criar nós de física 3D, ajustar valores de atrito de materiais e atrelar scripts sem intervenção do ponteiro do mouse.
+
+* **SparkLabs (`https://github.com/Yuan-ManX/SparkLabs`)** *(China)*
+  * **Stack:** Python, C++, bindings para Unity e Godot.
+  * **Licença:** Apache-2.0.
+  * **Diferencial Arquitetural:** Framework multiagente criado na comunidade chinesa de IA para orquestrar comportamentos emergentes. Provê memória de longo prazo para NPCs (via vetores e RAG), planejamento hierárquico de tarefas e balanceamento adaptativo de gameplay em tempo de execução.
+
+* **PlumAI Godot (`https://github.com/danielmerja/PlumAI`)**
+  * **Stack:** C++, GDScript, Godot Engine.
+  * **Licença:** MIT.
+  * **Diferencial Arquitetural:** Extensão nativa para a Godot Engine que acopla modelos de geração procedural de malhas, texturas e roteiros em GDScript diretamente no editor de nós da engine.
+
+### 1.2 Simuladores de Agentes e Modelos de Mundo Generativos
+* **Generative Agents (Stanford / Google) (`https://github.com/joonspk-research/generative_agents`)**
+  * **Stack:** Python, Django, Phaser.js.
+  * **Licença:** Apache-2.0.
+  * **Diferencial Arquitetural:** Marco acadêmico da IA generativa interativa. Implementa uma arquitetura de cognição com módulos de *Memória*, *Reflexão* e *Planejamento* sobre 25 agentes virtuais que habitam a vila "Smallville", organizam eventos comunitários, propagam notícias e desenvolvem rotinas sem regras fixas predeterminadas.
+
+* **Open-Oasis (Decart & Etched) (`https://github.com/etched-ai/open-oasis`)**
+  * **Stack:** PyTorch, CUDA, Python.
+  * **Licença:** Apache-2.0.
+  * **Diferencial Arquitetural:** Primeiro modelo de mundo interativo aberto onde a computação gráfica tradicional (shaders, malhas poligonais) é substituída por um modelo de difusão de vídeo autorregressivo em tempo real. O modelo recebe entradas de teclado/mouse e sintetiza o próximo frame de vídeo preservando consistência física e de voxel.
+
+* **AI Dungeon Classic Engine (`https://github.com/latitudegames/AIDungeon`)**
+  * **Stack:** Python, GPT-Neo / Transformers.
+  * **Licença:** Apache-2.0.
+  * **Diferencial Arquitetural:** O projeto pioneiro que estabeleceu a mecânica de aventuras de texto infinitas guiadas por processamento de linguagem natural.
+
+---
+
+## 2. GRANDES PROJETOS ABERTOS GLOBAIS DE JOGOS E SIMULAÇÃO
+
+Para além de protótipos de IA, o desenvolvimento de simulações em larga escala requer o estudo dos maiores projetos mundiais de código aberto. Esses repositórios representam o estado da arte em gerenciamento de memória, concorrência, arquitetura ECS e modularidade.
+
+```
++-----------------------------------------------------------------------------------------+
+|                  PANORAMA DOS GIGANTES OPEN SOURCE DO DESENVOLVIMENTO DE JOGOS          |
++-----------------------------------------------------------------------------------------+
+|   Voxel & RPG 3D         │ Estratégia e Logística      │ Sobrevivência e Simulação      |
+|   - Veloren (Rust)       │ - OpenRA (C#)               │ - Cataclysm: DDA (C++)         |
+|   - Luanti/Minetest (C++)│ - OpenTTD (C++)             │ - Mindustry (Java)             |
+|                          │ - 0 A.D. (C++/JS)           │ - OpenXRay (C++/Vulkan)        |
++-----------------------------------------------------------------------------------------+
+```
+
+### 2.1 Veloren (`https://gitlab.com/veloren/veloren`)
+* **Stack:** Rust, motor gráfico próprio sobre `wgpu`, arquitetura ECS (`specs`).
+* **Licença:** GPL-3.0.
+* **Escopo do Projeto:** O maior RPG de ação e simulação voxel de código aberto do mundo. Possui mais de 300 colaboradores ativos.
+* **Engenharia:**
+  * Servidor desacoplado capaz de lidar com centenas de conexões simultâneas via UDP.
+  * Pipeline completo de geração procedural de terreno (placas tectônicas, biomas hidrológicos, erosão, rotas comerciais simuladas séculos antes do início do jogo).
+  * Código em Rust de alta segurança de memória (*zero-cost abstractions*), servindo de modelo global para motores de física e agentes concorrentes.
+
+### 2.2 Cataclysm: Dark Days Ahead (C-DDA) (`https://github.com/CleverRaven/Cataclysm-DDA`)
+* **Stack:** C++17, Lua, serialização profunda em JSON.
+* **Licença:** CC-BY-SA-3.0 / GPL-3.0.
+* **Escopo do Projeto:** Um dos repositórios de simulação mais complexos da história do desenvolvimento de software, com centenas de milhares de commits.
+* **Engenharia:**
+  * Simulação microscópica de termodinâmica corporal, decomposição de nutrientes, balística de materiais e física veicular parte por parte (peso por eixo, atrito do tipo de borracha, conexões elétricas de alternadores).
+  * Estrutura altamente modular onde itens, monstros, facções e regras de clima são externalizados em JSON, permitindo que agentes LLM adicionem sistemas inteiros sem recompilar o binário em C++.
+
+### 2.3 OpenRA (`https://github.com/OpenRA/OpenRA`)
+* **Stack:** C#, OpenGL, multi-engine renderer.
+* **Licença:** GPL-3.0.
+* **Escopo do Projeto:** Reimplementação e modernização de motores clássicos de estratégia em tempo real (Command & Conquer, Red Alert, Dune 2000).
+* **Engenharia:**
+  * Algoritmos de busca de caminho (*Pathfinding*) hierárquicos otimizados para milhares de unidades simultâneas.
+  * Arquitetura em camadas com sincronização determinística de estado de rede via Lockstep.
+
+### 2.4 OpenTTD (`https://github.com/OpenTTD/OpenTTD`)
+* **Stack:** C++, SDL.
+* **Licença:** GPL-2.0.
+* **Escopo do Projeto:** O padrão global de simulação econômica e logística de transporte (ferroviário, rodoviário, aéreo e hidroviário).
+* **Engenharia:**
+  * API nativa `NoAI`: interface dedicada para desenvolvimento de inteligências artificiais concorrentes em Squirrel ou C++, com cálculo de rotas econômicas, ROI de linhas de trem e balanceamento de malha de carga.
+
+### 2.5 Mindustry (`https://github.com/Anuken/Mindustry`)
+* **Stack:** Java, framework proprietário `Arc`.
+* **Licença:** GPL-3.0.
+* **Escopo do Projeto:** Sucesso comercial e de comunidade aberta mundial (com volume massivo de contribuições na China, Coreia do Sul e Japão).
+* **Engenharia:**
+  * Mecânica híbrida de Tower Defense e automação fabril estilo Factorio.
+  * Emulação de processadores lógicos virtuais: os jogadores programam micro-instruções (semelhantes a assembly) em terminais virtuais dentro do jogo para controlar portas lógicas, direcionar frotas de drones e regular fluxo de esteiras.
+
+### 2.6 Ecossistema Leste-Europeu e Russo: Preservação e Engenharia Reversa
+* **OpenXRay (`https://github.com/OpenXRay/xray-16`):**
+  * Modernização em C++ e Vulkan da X-Ray Engine da franquia S.T.A.L.K.E.R. Mantida predominantemente por desenvolvedores do Leste Europeu, é utilizada para experimentos de inteligência artificial de vida simulada autônoma (sistema A-Life).
+* **VCMI (`https://github.com/vcmi/vcmi`):**
+  * Recriação completa em C++ da engine do Heroes of Might and Magic III. Serve de base aberta para implementação de modelos de aprendizado por reforço profundo aplicados a combate tático em malha hexagonal.
+
+---
+
+## 3. MOBILIDADE URBANA, ENGENHARIA DE TRÁFEGO E EDUCAÇÃO VIÁRIA
+
+Esta vertical engloba simuladores microscópicos, cálculo cinético de desaceleração, comportamentos estocásticos de travessia e ambientes virtuais para formação de condutores e pedestres.
+
+```
++---------------------------------------------------------------------------------------+
+|                               CAMADA DE MICROSSIMULAÇÃO                               |
++---------------------------------------------------------------------------------------+
+|  Topologia Geoespacial     │ Modelagem Cinética & Comportamental │ Protocolos de Rede |
+|  - OpenStreetMap (.osm)    │ - IDM (Intelligent Driver Model)    │ - TraCI (TCP/IP)   |
+|  - ASAM OpenDRIVE (.xodr)  │ - Social Force Model (Pedestres)    │ - ROS2 / Autoware  |
+|  - CityGML / GeoJSON       │ - Krauß / Wiedemann 99              │ - gRPC / WebSockets|
++---------------------------------------------------------------------------------------+
+                                           │
+                                           ▼
++---------------------------------------------------------------------------------------+
+|                              MOTORES DE EXECUÇÃO ABERTOS                              |
+|  1. Eclipse SUMO (C++/Python)       -> Escala de malha viária municipal/regional      |
+|  2. CARLA Simulator (Unreal/C++)    -> Visão em primeira pessoa, sensores físicos     |
+|  3. A/B Street (Rust/Wasm)          -> Urbanismo tático e microssimulação ativa       |
+|  4. CityFlow / CBEngine (C++/Py)    -> RL massivo e controle semafórico adaptativo    |
+|  5. OpenDS (Java/jMonkey)           -> Ergonomia de condutores e distração ao volante |
++---------------------------------------------------------------------------------------+
+```
+
+### 3.1 Eclipse SUMO (Simulation of Urban MObility)
+* **Organização:** DLR (Centro Aeroespacial Alemão) / Eclipse Foundation.
+* **Repositório:** `https://github.com/eclipse-sumo/sumo`
+* **Linguagens & Stack:** C++17 (core), Python (`traci`, `libsumo`), XML Schemas estritos.
+* **Módulos do Sistema:**
+  * `netconvert`: Ingestor universal de cartografia. Lê arquivos brutos do OpenStreetMap (`.osm`), OpenDRIVE (`.xodr`), Shapefiles e VISUM, compilando-os em topologias viárias com conexões de faixas calculadas métrica a métrica.
+  * `duarouter`: Gerador de roteamento dinâmico que implementa o equilíbrio de Wardrop através dos algoritmos de Dijkstra e A*.
+  * `TraCI (Traffic Control Interface)`: Servidor TCP/IP local que permite inspecionar e alterar em tempo real o estado de cada semáforo, velocidade de cada automóvel, ângulo de aproximação de bicicletas e posição de pedestres.
+* **Modelos de Tráfego Imputados:**
+  * **Krauß:** Modelo de acompanhamento veicular livre de colisões com desaceleração determinística.
+  * **Intelligent Driver Model (IDM):** Modela a aceleração suave dependente da relação de velocidade com o veículo líder.
+  * **Social Force Model (Helbing & Molnár):** Rege a dinâmica microscópica de pedestres, calculando vetores repulsivos contra obstáculos e outros transeuntes.
+* **Potencial em Vibe Coding:** Agentes LLM podem gerar scripts de orquestração Python que consomem o módulo `traci` para acionar eventos didáticos: corte abrupto de semáforo, veículos furando sinal e medição precisa de tempo de frenagem.
+
+### 3.2 CARLA Simulator
+* **Organização:** Computer Vision Center (Espanha) / Linux Foundation.
+* **Repositório:** `https://github.com/carla-simulator/carla`
+* **Linguagens & Stack:** Unreal Engine 4/5, C++, Python 3, especificações ASAM OpenDRIVE e OpenSCENARIO.
+* **Capacidades Operacionais:**
+  * Motor de referência global para simulação de condução autônoma e treinamento sensorial.
+  * Emulação exata de sensores: Câmeras RGB, Matrizes de Profundidade, Câmeras de Segmentação Semântica (onde cada pedestre, faixa e asfalto tem um ID numérico), LIDAR de feixes configuráveis e Radares.
+* **Aplicação em Educação Viária:**
+  * Permite colocar o usuário em uma cabine virtual para experienciar situações extremas: perda súbita de aderência por óleo ou aquaplanagem, cones de ponto cego em carretas e o perigo de travessia infantil entre veículos estacionados.
+
+### 3.3 A/B Street
+* **Repositório:** `https://github.com/a-b-street/abstreet`
+* **Linguagens & Stack:** Rust puro, biblioteca gráfica `widgetry`, suporte nativo a WebAssembly.
+* **Inovação Técnica:**
+  * Ao contrário de simuladores macroscópicos que usam grafos simples de linha de centro, o A/B Street renderiza as vias de meio-fio a meio-fio, dividindo o espaço métrico entre calçadas, faixas de rolamento, baias de ônibus e ciclovias.
+  * Permite editar o desenho urbano instantaneamente: transformar uma rua residencial em uma via de tráfego restrito (*Low Traffic Neighborhood*) e calcular os desvios causados nas rotas vizinhas.
+
+### 3.4 CityFlow & CBEngine (China / Pesquisa de MARL Urbano)
+* **Repositórios:** `https://github.com/cityflow-project/CityFlow` | `https://github.com/DistMe/CBEngine`
+* **Instituições:** Tsinghua University, Penn State University, Shanghai Jiao Tong University.
+* **Stack:** C++ multi-threaded otimizado com wrappers para Gymnasium e PyTorch.
+* **Diferencial:** Capaz de simular mais de 10 milhões de veículos por segundo em uma CPU intermediária. Focado no treinamento de controladores semafóricos neurais via aprendizado por reforço multiagente (MARL).
+
+### 3.5 OpenDS
+* **Repositório:** `https://github.com/OpenDS/OpenDS`
+* **Stack:** Java, jMonkeyEngine 3.
+* **Foco Pedagógico:** Simulador projetado por centros de ergonomia e psicologia de transporte na Alemanha para autoescolas e pesquisas de fadiga. Integra-se a equipamentos de rastreamento ocular (*eye-trackers*) para quantificar a perda de atenção provocada por notificações no smartphone.
+
+---
+
+## 4. CIDADES INTELIGENTES, GÊMEOS DIGITAIS E TRANSFORMAÇÃO DIGITAL
+
+Projetos voltados à orquestração de dados municipais, governança aberta, redes de sensores IoT e simulação macroeconômica.
+
+| Projeto / Plataforma | Mantenedor / Origem | Stack Tecnológica | Padrão / Protocolo | Papel em Smart Cities |
+| :--- | :--- | :--- | :--- | :--- |
+| **FIWARE Orion-LD**<br>`github.com/FIWARE/context.Orion-LD` | FIWARE Foundation (UE) | C++, Libmicrohttpd, MongoDB | NGSI-LD (ETSI Standard), JSON-LD | Corretor de contexto central. Padroniza dados de sensores de lixeiras, iluminação, radares e estações de qualidade do ar. |
+| **Smart Data Models**<br>`github.com/smart-data-models` | Consórcio Global Aberto | JSON Schema, GeoJSON | ETSI, TM Forum | Repositório de esquemas abertos para modelagem de entidades municipais (estacionamentos inteligentes, hidrantes, sensores). |
+| **CityBound**<br>`github.com/citybound/citybound` | Projeto Aberto Comunitário | Rust, Bevy Engine, WebAssembly | ECS Concorrente | Simulação microscópica da economia urbana. Cada habitante sintético possui orçamento, rotina de trabalho e consumo energético. |
+| **UrbanSim / UDST**<br>`github.com/UDST/urbansim` | Urban Data Science Toolkit | Python, Cython, Pandas, NumPy | LUTI (Land Use Transport Interaction) | Modelagem econométrica do uso do solo urbano. Usado por governos para projetar impactos de planos diretores em 20 ou 30 anos. |
+| **Bigscity / LibCity**<br>`github.com/LibCity/Bigscity-LibCity` | Beihang University (China) | Python, PyTorch, Ray | Spatio-Temporal Graph Neural Networks | Benchmark asiático para previsão de fluxo de tráfego, demanda de micro-mobilidade e alocação ótima de infraestruturas públicas. |
+| **Decidim**<br>`github.com/decidim/decidim` | Prefeitura de Barcelona / Global | Ruby on Rails, React, PostgreSQL | Open Government Data, OAuth2 | Framework de democracia participativa e governança digital aberta, permitindo orçamentos participativos gamificados. |
+
+```
++-----------------------------------------------------------------------------------------+
+|                  ARQUITETURA DE DADOS: DO SENSOR FÍSICO À GAMIFICAÇÃO                   |
++-----------------------------------------------------------------------------------------+
+|   [ SENSORES MUNICIPAIS IoT ] -> Protocolos MQTT / HTTP                                 |
+|   (Radares de Velocidade, Contadores de Ciclistas, Estações Meteorológicas, Lixeiras)   |
+|                                │                                                        |
+|                                ▼                                                        |
+|   [ FIWARE ORION-LD CONTEXT BROKER ] -> Especificação NGSI-LD                           |
+|   (Entidades de Contexto Estruturadas com GeoJSON e Séries Temporais)                   |
+|                                │                                                        |
+|                                ▼ [WebSockets / GraphQL]                                 |
+|   [ MOTOR DO JOGO / DIGITAL TWIN ] -> MapLibre GL / Three.js / Cesium                   |
+|   - Gamificação do Orçamento Municipal (Cálculo de Eficiência Ecológica)                |
+|   - Visualização de Pontos Críticos de Acidentes e Emissões de CO2                      |
++-----------------------------------------------------------------------------------------+
+```
+
+---
+
+## 5. TURISMO INTELIGENTE, GEOTECNOLOGIA E PATRIMÔNIO DIGITAL (LBS)
+
+Plataformas para gamificação baseada em localização espacial (*Location-Based Services - LBS*), renderização de nuvens de pontos de monumentos tombados e cartografia vetorial aberta.
+
+### 5.1 StreetComplete (`https://github.com/streetcomplete/StreetComplete`)
+* **Stack:** Kotlin nativo, Android SDK, SQLite / Room, OpenStreetMap API.
+* **Licença:** GPL-3.0.
+* **Mecânica Central de Gamificação Cívica:**
+  * O aplicativo pesquisa lacunas cadastrais no OpenStreetMap em um raio próximo à localização do usuário via Overpass API.
+  * O cidadão resolve "quests" (desafios lúdicos): verificar acessibilidade de cadeirantes na entrada de um museu, informar se uma rua possui piso tátil, ou registrar o horário de funcionamento de uma feira pública.
+* **Reaproveitamento de Engenharia:** A arquitetura modular de classes em `app/src/main/java/de/westnordost/streetcomplete/quests` permite criar versões municipais de "Caça ao Tesouro Turístico", substituindo tarefas genéricas por charadas culturais e fatos históricos georreferenciados.
+
+### 5.2 Ecossistema Cesium (CesiumJS & Cesium for Unreal)
+* **Repositórios:** `https://github.com/CesiumGS/cesium` | `https://github.com/CesiumGS/cesium-unreal`
+* **Padrões de Dados:** OGC 3D Tiles 1.1, glTF 2.0 com compressão Draco, GeoTIFF, WGS84.
+* **Aplicações em Turismo:**
+  * Permite carregar cidades inteiras em escala métrica 1:1, combinando malhas fotogramétricas de monumentos com dados de elevação de terreno.
+  * Base para visitas virtuais imersivas acessíveis e linhas do tempo históricas que renderizam monumentos em diferentes épocas.
+
+### 5.3 Potree (`https://github.com/potree/potree`)
+* **Stack:** JavaScript, WebGL, Three.js.
+* **Licença:** BSD-2-Clause.
+* **Foco:** Visualizador web de nuvens de pontos LIDAR de alta densidade (centenas de bilhões de pontos) estruturados em Octree. É o padrão internacional para preservação digital de sítios arqueológicos, ruínas e fachadas históricas, rodando diretamente no navegador sem plugins proprietários.
+
+### 5.4 MapLibre GL (`https://github.com/maplibre/maplibre-gl-js`)
+* **Stack:** TypeScript (Web), C++ (Native Android/iOS).
+* **Licença:** BSD-3-Clause.
+* **Foco:** Fork comunitário e 100% aberto do Mapbox GL original. Renderiza dados cartográficos vetoriais (MVT) a 60 FPS com aceleração de hardware (WebGL/WebGPU). Permite construir jogos estilo Pokémon GO sem custos recorrentes de APIs comerciais de mapas.
+
+### 5.5 Indexação Espacial Avançada (Uber H3 & Google S2)
+* **H3 (`https://github.com/uber/h3`):** Sistema de particionamento global em grades hexagonais discretas. Essencial para turismo inteligente ao agrupar a densidade de visitantes, criar zonas de calor de segurança viária e modelar preços dinâmicos de passagens ou ingressos.
+* **S2 Geometry (`https://github.com/google/s2geometry`):** Projeção da esfera terrestre em um cubo desdobrado em quadtrees hierárquicas. Ideal para indexação e busca ultra-rápida de pontos de interesse (POIs) em raios de proximidade métricos.
+
+---
+
+## 6. MOTORES PEDAGÓGICOS GLOBAIS, APRENDIZAGEM CIENTÍFICA E LÓGICA
+
+Frameworks didáticos consolidados que fornecem padrões comprovados de design instrucional, telemetria pedagógica e física interativa.
+
+```
++-----------------------------------------------------------------------------------------+
+|                  ECOSSISTEMAS DIDÁTICOS E SANDBOXES DE APRENDIZAGEM                     |
++-----------------------------------------------------------------------------------------+
+|   Simulações Científicas   │ Sandboxes de Automação     │ Alfabetização e Lógica        |
+|   - PhET Sims (TS/Canvas)  │ - Luanti/Minetest (Lua/C++)│ - GCompris (C++/QML)          |
+|   - The Powder Toy (C++)   │ - Screeps (Node.js/WebGL)  │ - CodeCombat (CoffeeScript/JS)|
+|                            │ - Mindustry (Java)         │ - SugarLabs MusicBlocks (JS)  |
++-----------------------------------------------------------------------------------------+
+```
+
+### 6.1 Luanti / Minetest (`https://github.com/minetest/minetest`)
+* **Stack:** C++ (Core de renderização e física voxel), Lua (API declarativa de extensões).
+* **Licença:** LGPL-2.1.
+* **Aplicação em Cidades Inteligentes e Ensino Técnico:**
+  * Ecossistema sandbox aberto onde alunos podem programar redes complexas via mods:
+    * `advtrains`: Simulação ferroviária realista com cálculo de aceleração por carga, controle de desvios e sinalização por blocos semafóricos elétricos.
+    * `mesecons` & `digilines`: Emulação completa de sinais lógicos binários, barramentos de comunicação digital e microcontroladores virtuais programáveis em Lua, transformando o jogo em um laboratório aberto de sensores de cidades inteligentes e IoT.
+
+### 6.2 PhET Interactive Simulations (`https://github.com/phetsims`)
+* **Instituição:** Universidade do Colorado em Boulder.
+* **Stack:** TypeScript, JavaScript, HTML5 Canvas, SVG, WebGL.
+* **Licença:** GPL-3.0.
+* **Padrões de Engenharia Pedagógica:**
+  * **Axon (`phet-core/axon`):** Biblioteca reativa que estabelece instâncias observáveis (`Property<T>`). Quando um valor cinemático muda (ex.: coeficiente de atrito do pavimento), a interface, os gráficos vetoriais e os medidores virtuais se atualizam instantaneamente.
+  * **Tandem:** Sistema de instrumentação profunda de dados que registra cada decisão do estudante para análise de aprendizagem pós-interação (*learning analytics*).
+
+### 6.3 GCompris (`https://invent.kde.org/education/gcompris`)
+* **Instituição:** KDE Community.
+* **Stack:** C++, QML / Qt Quick 2.
+* **Licença:** GPL-3.0.
+* **Foco:** Mais de 100 atividades lúdicas de ciências, matemática, alfabetização e noções de trânsito. A arquitetura em QML mantém interface vetorial, animações e regras pedagógicas isoladas em arquivos declarativos de fácil manutenção por agentes de IA.
+
+### 6.4 CodeCombat & Screeps
+* **CodeCombat (`https://github.com/codecombat/codecombat`):** Plataforma web voltada para escolas que ensina lógica de programação (Python, JavaScript, Lua) transformando comandos de sintaxe real em movimentações de personagens e resolução de labirintos.
+* **Screeps (`https://github.com/screeps/screeps`):** MMO para programadores rodando em Node.js. Os jogadores não controlam suas unidades com cliques manuais; escrevem scripts reais em JavaScript que rodam 24/7 gerenciando coleta de recursos, expansão militar e logística de rotas.
+
+---
+
+## 7. MODELAGEM CINEMÁTICA E ESPECIFICAÇÃO MATEMÁTICA DE TRÂNSITO
+
+Um jogo educativo sério voltado à segurança viária deve reproduzir as equações fundamentais da física clássica, abandonando aproximações lineares inverossímeis.
+
+### 7.1 Distância de Percepção e Reação ($d_r$)
+Durante o período em que o motorista enxerga o obstáculo e aciona o pedal de freio, o veículo trafega em Movimento Retilíneo Uniforme (MRU):
+
+$$d_r = v_0 \cdot t_r$$
+
+Onde:
+* $v_0$ é a velocidade inicial em metros por segundo:
+  $$v_0 = \frac{v_{\text{km/h}}}{3.6}$$
+* $t_r$ é o tempo de percepção e reação humano:
+  * Motorista atento em condições normais: $t_r \approx 1.5\text{ s}$
+  * Motorista desatento / utilizando smartphone: $t_r \approx 2.5\text{ s} \text{ a } 3.0\text{ s}$
+  * Condutor fatigado ou sob efeito de substâncias: $t_r > 3.5\text{ s}$
+
+---
+
+### 7.2 Distância Efetiva de Frenagem ($d_f$)
+Após o início da desaceleração mecânica provocada pelo contato pneu-asfalto, o trabalho realizado pela força de atrito dissipa a energia cinética do veículo:
+
+$$W_{\text{atrito}} = \Delta E_c$$
+
+$$F_{\text{atrito}} \cdot d_f = \frac{1}{2} m v_0^2$$
+
+Substituindo a força de atrito ($F_{\text{atrito}} = \mu \cdot m \cdot g$):
+
+$$\mu \cdot m \cdot g \cdot d_f = \frac{1}{2} m v_0^2$$
+
+Isolando $d_f$:
+
+$$d_f = \frac{v_0^2}{2 \cdot \mu \cdot g}$$
+
+Onde:
+* $\mu$ é o coeficiente de atrito longitudinal entre pneu e pista (adimensional):
+  * Asfalto seco com pneus novos: $\mu \approx 0.75 - 0.85$
+  * Asfalto molhado (chuva moderada): $\mu \approx 0.35 - 0.45$
+  * Pista com lâmina de água (risco de aquaplanagem): $\mu \approx 0.20$
+  * Pista com óleo ou lama fina: $\mu \approx 0.15$
+* $g$ é a aceleração da gravidade local ($g = 9.81\text{ m/s}^2$).
+
+---
+
+### 7.3 Distância Total de Parada ($D_{\text{total}}$)
+A distância total percorrida pelo veículo desde a identificação do perigo até o repouso absoluto é dada por:
+
+$$D_{\text{total}} = d_r + d_f = \left( \frac{v_{\text{km/h}}}{3.6} \cdot t_r \right) + \left( \frac{\left( \frac{v_{\text{km/h}}}{3.6} \right)^2}{2 \cdot \mu \cdot g} \right)$$
+
+---
+
+## 8. BLUEPRINT DE ENGENHARIA: MOTOR AUTOCONTIDO (TYPESCRIPT)
+
+Abaixo está a implementação de referência de um motor completo de trânsito educativo e turismo inteligente em TypeScript puro. O código opera sem dependências externas e pode ser executado em navegadores (Canvas 2D) ou no Node.js.
+
+```typescript
+/**
+ * civic_traffic_engine.ts
+ * Motor de Microssimulação de Trânsito Educativo, Cinemática e Turismo Inteligente.
+ * Licença: MIT
+ */
+
+export interface SimulationConfig {
+  speedLimitKmh: number;
+  frictionCoefficient: number; // mu
+  driverReactionTime: number;  // segundos
+  trafficLightState: 'VERDE' | 'AMARELO' | 'VERMELHO';
+  scalePixelsPerMeter: number;
+}
+
+export interface PointOfInterest {
+  id: string;
+  name: string;
+  category: 'PATRIMONIO_HISTORICO' | 'INFRAESTRUTURA_SMART' | 'PRESERVACAO_AMBIENTAL';
+  positionX: number; // metros na via
+  description: string;
+  unlocked: boolean;
+}
+
+export interface TelemetryReport {
+  currentPositionMeters: number;
+  currentSpeedKmh: number;
+  stoppingDistanceMetrics: {
+    reactionDistanceMeters: number;
+    brakingDistanceMeters: number;
+    totalStoppingDistanceMeters: number;
+  };
+  infractions: string[];
+  systemLogs: string[];
+}
+
+export class CivicTrafficEngine {
+  private carX: number = 0; // Posição em metros
+  private currentSpeedMps: number; // m/s
+  private isBraking: boolean = false;
+  private brakingElapsedTime: number = 0;
+  private readonly g: number = 9.81;
+
+  public config: SimulationConfig;
+  public pedestrianCrossingX: number = 250; // Faixa de pedestres a 250 metros
+  public pointsOfInterest: PointOfInterest[] = [];
+  public infractions: string[] = [];
+  public systemLogs: string[] = [];
+
+  constructor(initialSpeedKmh: number = 60, friction: number = 0.75, reactionTime: number = 1.5) {
+    this.config = {
+      speedLimitKmh: 60,
+      frictionCoefficient: friction,
+      driverReactionTime: reactionTime,
+      trafficLightState: 'VERMELHO',
+      scalePixelsPerMeter: 4.0
+    };
+    this.currentSpeedMps = initialSpeedKmh / 3.6;
+    this.initializePointsOfInterest();
+  }
+
+  private initializePointsOfInterest(): void {
+    this.pointsOfInterest.push({
+      id: 'poi-01',
+      name: 'Palacete Histórico Provincial',
+      category: 'PATRIMONIO_HISTORICO',
+      positionX: 130,
+      description: 'Edifício neobarroco de 1892 tombado pelo patrimônio histórico cultural.',
+      unlocked: false
+    });
+    this.pointsOfInterest.push({
+      id: 'poi-02',
+      name: 'Estação Meteorológica e Sensor IoT de Ar',
+      category: 'INFRAESTRUTURA_SMART',
+      positionX: 320,
+      description: 'Sensor em malha de cidade inteligente conectado ao barramento FIWARE Orion-LD.',
+      unlocked: false
+    });
+  }
+
+  public activateBrakes(): void {
+    if (!this.isBraking) {
+      this.isBraking = true;
+      this.brakingElapsedTime = 0;
+      this.systemLogs.push("COMANDO: Freio de emergência acionado pelo condutor.");
+    }
+  }
+
+  public setWeatherCondition(condition: 'SECO' | 'CHUVA' | 'OLEO_LAMA'): void {
+    switch (condition) {
+      case 'SECO':
+        this.config.frictionCoefficient = 0.75;
+        break;
+      case 'CHUVA':
+        this.config.frictionCoefficient = 0.38;
+        break;
+      case 'OLEO_LAMA':
+        this.config.frictionCoefficient = 0.18;
+        break;
+    }
+    this.systemLogs.push(`AMBIENTE: Clima atualizado para ${condition} (Atrito mu: ${this.config.frictionCoefficient}).`);
+  }
+
+  public setDriverDistraction(distracted: boolean): void {
+    this.config.driverReactionTime = distracted ? 2.8 : 1.5;
+    this.systemLogs.push(`CONDUTOR: Estado alterado para ${distracted ? 'DISTRAÍDO (Celular - 2.8s)' : 'ATENTO (1.5s)'}.`);
+  }
+
+  public update(deltaTimeSeconds: number): void {
+    // 1. Cinemática de desaceleração considerando o tempo de percepção e reação
+    if (this.isBraking && this.currentSpeedMps > 0) {
+      this.brakingElapsedTime += deltaTimeSeconds;
+
+      // O veículo só dissipa energia de frenagem após o decurso do tempo de reação humano
+      if (this.brakingElapsedTime >= this.config.driverReactionTime) {
+        const deceleration = this.config.frictionCoefficient * this.g;
+        this.currentSpeedMps = Math.max(0, this.currentSpeedMps - (deceleration * deltaTimeSeconds));
+      }
+    }
+
+    // 2. Integração de Posição
+    this.carX += this.currentSpeedMps * deltaTimeSeconds;
+
+    // 3. Auditoria de Faixa de Pedestre e Semáforo
+    if (this.currentSpeedMps === 0 && this.isBraking) {
+      const distanceToCrossing = this.pedestrianCrossingX - this.carX;
+      if (distanceToCrossing < -1.5) {
+        this.recordInfraction(`INFRAÇÃO GRAVÍSSIMA: O veículo invadiu a faixa e parou ${Math.abs(distanceToCrossing).toFixed(2)}m além da área permitida.`);
+      } else if (distanceToCrossing >= 0 && distanceToCrossing <= 12.0) {
+        this.systemLogs.push(`DIREÇÃO DEFENSIVA: Imobilização segura realizada a ${distanceToCrossing.toFixed(2)}m da faixa de travessia.`);
+      }
+    }
+
+    // 4. Auditoria de Limite de Velocidade
+    const currentSpeedKmh = this.currentSpeedMps * 3.6;
+    if (currentSpeedKmh > this.config.speedLimitKmh + 2.0) {
+      this.recordInfraction(`INFRAÇÃO MÉDIA: Velocidade registrada de ${currentSpeedKmh.toFixed(1)} km/h em via regulamentada a ${this.config.speedLimitKmh} km/h.`);
+    }
+
+    // 5. Verificação de POIs Culturais e Turísticos
+    this.auditPointsOfInterest();
+  }
+
+  private auditPointsOfInterest(): void {
+    for (const poi of this.pointsOfInterest) {
+      if (!poi.unlocked && Math.abs(this.carX - poi.positionX) < 12.0) {
+        poi.unlocked = true;
+        this.systemLogs.push(`TURISMO DIGITAL DESBLOQUEADO: [${poi.name}] - ${poi.description}`);
+      }
+    }
+  }
+
+  private recordInfraction(description: string): void {
+    if (!this.infractions.includes(description)) {
+      this.infractions.push(description);
+    }
+  }
+
+  public getTelemetry(): TelemetryReport {
+    const v0 = this.currentSpeedMps;
+    const mu = this.config.frictionCoefficient;
+    const tr = this.config.driverReactionTime;
+
+    const reactionDistance = v0 * tr;
+    const brakingDistance = (v0 * v0) / (2 * mu * this.g);
+
+    return {
+      currentPositionMeters: this.carX,
+      currentSpeedKmh: this.currentSpeedMps * 3.6,
+      stoppingDistanceMetrics: {
+        reactionDistanceMeters: reactionDistance,
+        brakingDistanceMeters: brakingDistance,
+        totalStoppingDistanceMeters: reactionDistance + brakingDistance
+      },
+      infractions: this.infractions,
+      systemLogs: this.systemLogs
+    };
+  }
+}
+```
+
+---
+
+## 9. DIRETIVAS DE ENGENHARIA PARA AGENTES DE IA (.CURSORRULES)
+
+Copie e armazene este bloco no arquivo `.cursorrules` (ou no painel de instruções de contexto de agentes como Claude Code e Windsurf) para assegurar rigor técnico nas extensões geradas automaticamente:
+
+```markdown
+# DOMAIN RULES: SMART CITIES, TRAFFIC SAFETY & CIVIC GAMIFICATION
+
+## 1. Rigor Físico e Cinemático
+- Proibida a implementação de desacelerações lineares fictícias ou constantes arbitrárias. Toda frenagem veicular deve empregar a cinemática baseada no coeficiente de atrito longitudinal (\mu) e na gravidade padrão ($g = 9.81\text{ m/s}^2$).
+- Tempos de reação humanos estritos:
+  * Motorista atento padrão: fixado em 1.5s.
+  * Motorista distraído (uso de smartphone): fixado em 2.8s a 3.0s.
+- Faixas de coeficiente de atrito longitudinal (\mu):
+  * Asfalto seco: 0.75 a 0.85
+  * Asfalto molhado por chuva: 0.35 a 0.45
+  * Pista com óleo / lama / lâmina profunda: 0.15 a 0.20
+
+## 2. Ingestão de Dados do OpenStreetMap (Overpass API)
+- Utilize exclusivamente as tags formais e canônicas da especificação OSM:
+  * Semáforos veiculares: `highway=traffic_signals`
+  * Travessias e faixas: `highway=crossing` com `crossing=marked`
+  * Moderadores de tráfego: `traffic_calming=bump` ou `traffic_calming=table`
+  * Zonas de segurança escolar (30 km/h): `amenity=school`
+  * Patrimônio e atrativos: `historic=*`, `tourism=attraction`, `heritage=*`
+
+## 3. Padrões Arquiteturais de Código
+- Desacoplamento estrito entre a Camada de Dinâmica Física e a Camada Visual (Three.js, MapLibre GL ou Canvas 2D).
+- Implemente telemetria pedagógica reativa (padrão Observer / Axon do PhET) para registrar violações de trânsito e descobertas turísticas sem bloquear o loop de simulação a 60 FPS.
+```
+
+---
+
+## 10. ROTEIRO METODOLÓGICO DE IMPLANTAÇÃO MUNICIPAL (5 FASES)
+
+Estratégia para órgãos de Planejamento Urbano, Secretarias de Educação e Turismo estruturarem aplicações a partir deste dossiê:
+
+```
+[ FASE 1: MAPAS ]  ──▶  [ FASE 2: SUMO ]  ──▶  [ FASE 3: IOT ]  ──▶  [ FASE 4: WEB ]  ──▶  [ FASE 5: AUDITORIA ]
+Cadastramento OSM      Simulação de Vias      Hub FIWARE/Data      Serious Game Cidadão    Avaliação de Impacto
+```
+
+1. **Fase 1: Mapeamento Aberto e Georreferenciamento (Mês 1)**
+   * Capacitar servidores e alunos da rede pública para utilizar o **StreetComplete** e o editor **JOSM**, cadastrando todas as faixas de pedestre, sinalizações semafóricas, ciclovias e monumentos históricos da cidade no OpenStreetMap.
+2. **Fase 2: Modelagem e Microssimulação Viária (Mês 2)**
+   * Exportar a malha viária urbana para o **Eclipse SUMO** através do módulo `netconvert`. Mapear os cruzamentos com maior taxa histórica de atropelamentos e calibrar novos tempos semafóricos.
+3. **Fase 3: Implantação da Camada de Dados Abertos (Mês 3)**
+   * Configurar uma instância de contexto baseada em **FIWARE Orion-LD** com os esquemas da iniciativa *Smart Data Models*, conectando a telemetria dos semáforos, sensores ambientais e dados de GPS de frotas municipais.
+4. **Fase 4: Publicação da Aplicação Educativa e Turística Cidadã (Mês 4)**
+   * Disponibilizar uma plataforma web interativa (utilizando o motor TypeScript acima integrado ao **MapLibre GL**):
+     * *Ambiente de Trânsito Escolar:* Alunos experimentam a física real de frenagem, constatando o perigo da distração por smartphone e da condução em alta velocidade sob chuva.
+     * *Passaporte Cultural Gamificado:* Turistas e cidadãos recebem medalhas e desbloqueiam conteúdos históricos ao visitar os patrimônios mapeados.
+5. **Fase 5: Avaliação Contínua e Impacto nas Políticas Públicas (Mês 5 em diante)**
+   * Cruzar dados de redução de sinistros viários e fluxo de visitação em museus e centros culturais por meio de painéis abertos de governança urbana baseados em ferramentas cívicas como o **Decidim**.
+
+---
+
+# Kit SmartCity Kids — referência histórica
+
+Fonte: `references/estudos/SMARTCITY-KIT-HISTORICO.md` · SHA-256 original: `0e464b3763e0b768f1af4c0d53f84b81ce285c3bedf79bd8879bd2607467b066` · Ajustes de caminhos privados: 0
+
+# Kit SmartCity Kids — referência histórica
+
+**Projeção pública produzida em 14/11/2026. Corte da fonte: 28/09/2026, declarado no original.**
+
+> Referência histórica de outro projeto. Os prompts, comandos e instruções internos pertencem ao SmartCity e não se aplicam ao PROJETO IPÊ. Afirmações, regras de concurso, elegibilidade, dependências e resultados não se transferem ao Ipê. Blocos de código são texto documental, não ações autorizadas.
+
+Origem no acervo fornecido: `Estudos/SUPER_PROMPT_SMARTCITY_KIDS_ONE_SHOT.md`. O corpo preserva o texto original, exceto as transformações públicas declaradas no [índice de procedência](README.md). Não houve execução dos prompts, instalação das dependências ou revalidação das afirmações históricas para esta publicação.
+
+Os arquivos externos citados pelo texto — ZIP, imagens, documentos legais, resultados de testes e projetos de referência — não foram fornecidos como arquivos separados nesta pasta de três Markdown e não foram fabricados nem anexados. Trechos incorporados no Markdown permanecem como exemplos.
+
+---
+
+# SUPER PROMPT — SMARTCITY KIDS: MISSÃO DESACELERE
+## Kit executivo ONE SHOT para Antigravity · PRD + Prisma + Mermaid + i18n + game design
+
+**Versão:** 1.0 · **Data de referência:** 28/09/2026  
+**Público:** 5–14 anos, com adaptações 5–7, 8–10 e 11–14  
+**Propósito:** construir uma cidade educativa jogável sobre cuidado, convivência e trânsito brasileiro.  
+**Estado desta entrega:** especificação e referências de implementação; não é aplicação final, estudo realizado, aprovação jurídica ou inscrição no prêmio.
+
+> **Alerta decisivo:** o prazo de inscrição consultado foi encerrado em 17/08/2026. O item 17.3 do edital prevê eliminação de trabalho desenvolvido por IA e não contém a exceção descrita no dossiê. Este material foi preparado com assistência de IA, não oculta sua proveniência e não resolve a admissibilidade. Desenvolver o produto e um piloto real é diferente de poder inscrevê-los. Fontes e auditoria abaixo.
+
+## Como usar este arquivo sozinho
+
+Disponibilize este Markdown integralmente ao agente no Antigravity. Execute o contrato da **seção 2**, usando todas as outras seções e anexos como especificação. O ZIP complementar contém os mesmos documentos divididos e arquivos de referência que podem ser copiados e testados. Não é necessário colar milhares de linhas manualmente quando o agente consegue ler o arquivo no workspace.
+
+Instrução de partida:
+
+```text
+Leia este arquivo integralmente. Execute o SUPER PROMPT da seção 2. Construa o projeto em ./app/, preservando este kit. Implemente uma primeira missão jogável e validada, depois complete as 12 missões P0 com suas três adaptações, a cidade interativa, o modo guiado, a persistência opcional e o offline preparado. Produza código e testes, não apenas planejamento. Recursos sem integração real devem ficar desabilitados. Não publique, não inscreva no prêmio, não fabrique dados e não altere a proveniência de IA. Registre decisões, evidências de teste e bloqueios concretos.
+```
+
+## Mapa do conteúdo
+
+| Parte | Conteúdo |
+|---|---|
+| 1 | Auditoria do edital, correções do dossiê e condições de elegibilidade |
+| 2 | Prompt executivo para uma execução organizada em etapas internas |
+| 3–4 | PRD, gamificação saudável, faixas pedagógicas, 12 mecânicas e 24 ideias de expansão |
+| 5–6 | Arquitetura, API, segurança, i18n, offline, direção visual e Remotion |
+| 7 | Repositórios globais, licenças, aproveitamento e exclusões |
+| 8–9 | Testes, protocolo de piloto, documentação, execução e sustentabilidade |
+| 10 | Fontes primárias, materiais do usuário e limites de verificação |
+| Anexo A | Sete diagramas Mermaid completos |
+| Anexo B | Schema Prisma com 23 modelos, configuração, adapter e SQL adicional |
+| Anexo C | Catálogo completo de missões, claims e backlog em JSON |
+| Anexo D | Catálogos de interface pt-BR, inglês e espanhol |
+| Anexo E | Núcleo TypeScript, testes e comandos de referência |
+| Anexo F | Composição Remotion ilustrativa |
+| Anexo G | Relatório da validação realmente executada |
+
+**Critério de qualidade:** uma experiência de jogo contextual, não um quiz decorado; aprendizado e acessibilidade, não tempo de tela; evidência verdadeira, não aparência de candidatura pronta.
+
+---
+
+# 1. Auditoria do edital e do dossiê de origem
+
+**Data de referência: 28/09/2026.** Este kit é material de desenvolvimento assistido por IA, não um trabalho elegível já validado pela SENATRAN. O jogo pode ser desenvolvido e testado; sua eventual inscrição tem outra análise e não deve ser automatizada. Fontes [E01–E04, D01] estão no registro de fontes.
+
+## 1.1. Quatro decisões antes de escrever código
+
+**Prazo:** o edital original previa 27/07/2026. A Retificação nº 4 estendeu para **17/08/2026, às 17h**. A Retificação nº 8, publicada em 04/09/2026 e disponibilizada na página oficial, manteve esse encerramento e alterou o julgamento para 18/08–30/09. Não foi localizada reabertura posterior nas fontes consultadas. Em 28/09/2026, não tratar o certame como aberto nem sugerir retroagir datas. Desenvolver um piloto real e acompanhar oportunidades futuras sem supor que outro edital repetirá as regras. [E01–E04]
+
+**Inteligência artificial:** o item 17.3 prevê eliminação de trabalho desenvolvido por IA; não apresenta a exceção por revisão humana ou declaração de uso sugerida no dossiê. Registrar a assistência de IA não equivale a obter autorização para concorrer. A extensão da restrição a código, ilustrações, ferramentas e documentação deve ser esclarecida formalmente pela SENATRAN. Até resposta aplicável e análise institucional, `awardSubmissionEnabled=false`. Não ocultar o processo criativo ou reescrever a proveniência. [E01, p.18, itens 17.2–17.3]
+
+**Evidências:** os relatos de 120 estudantes, execução em 2025, percentuais de melhoria, significância estatística, fotos e vídeo não vieram acompanhados de comprovação. Não são dados utilizáveis como resultados reais. Removê-los da documentação executiva e de qualquer seed. Todos os exemplos devem ser DEMO e os resultados de campo permanecem “não coletados” até execução verificável. [D01, seções 6.7–6.10]
+
+**Categoria:** a aderência conceitual é ao **Grupo 4, Categoria 6 — Projetos, campanhas e/ou ações de Educação para Trânsito**. A inscrição é institucional, pelas entidades admitidas e seu representante habilitado. A modalidade acadêmica individual acompanhada de orientador pertence à Categoria 5, não é uma alternativa automática para a Categoria 6. O edital não prevê prêmio monetário para a Categoria 6. [E01, itens 5.3.1, 5.4.1, 12–13]
+
+## 1.2. Matriz de correções rastreável
+
+| Afirmação no dossiê | Leitura sustentada / problema | Decisão do produto |
+|---|---|---|
+| IA permitida com rigor e autoria humana declarada | Essa ressalva não consta do item 17.3 | Bloquear inscrição; solicitar esclarecimento, preservar autoria real |
+| Oficinas com 120 crianças e ganhos já observados | Sem evidência correspondente nos anexos | Não importar resultados; relatórios vazios ou DEMO identificado |
+| Calendário de desenvolvimento já executado em 2025 | Não comprovado | Cronograma prospectivo relativo ao início real |
+| Inscrição no primeiro dia ainda disponível | Prazo alterado e já encerrado nas fontes oficiais consultadas | Separar produto de inscrição e verificar novo ato antes de qualquer candidatura |
+| Kolb, software aberto, 60 FPS e simulador complexo como requisitos para nota máxima | São estratégias propostas pelo dossiê, não condições expressas da tabela do edital | Investir em didática, replicabilidade e evidência; complexidade apenas quando útil |
+| Dez seções obrigatórias | O edital lista onze rótulos, contando materiais complementares e bibliografia separadamente | Preservar todos os onze e o limite de dez páginas |
+| LocalStorage é memória temporária e garante anonimato | Persiste no dispositivo; código e perfil podem permitir associação a uma pessoa | Modo efêmero por padrão em turma; explicar salvamento e exclusão; tratar pseudonimização com cautela |
+| Capacete de bicicleta é sempre obrigação nacional do CTB | Não assumir essa universalidade a partir do CTB art.105, VI | Recomendar proteção adequada e diferenciar recomendação de obrigação regulamentar |
+| Gesto com a mão assegura travessia / é regra nacional universal | Não substitui observar sinalização e condições; a generalização não foi demonstrada | Não ensinar “gesto mágico”, nem responsabilizar a criança pela conduta do motorista |
+| Toda frente de escola tem limite legal nacional de 30 km/h | O art.61 não sustenta essa generalização | Usar “nesta via fictícia sinalizada a 30”; explicar competência e sinalização locais |
+| Tempo de reação universal de 0,75 s | Premissa não fundamentada como constante humana universal | Modelo exploratório com hipóteses explícitas, sem prometer distâncias reais |
+| Percentuais de sobrevivência e risco individuais | Referências insuficientes para aqueles números e desnecessários para o público | Excluir; ensinar cuidado sem imagens de lesão, medo ou probabilidades de dano |
+| Qualquer repository público pode ser adaptado e cedido | Público não equivale a licenciado; componentes têm titulares próprios | Auditoria por arquivo, LICENSE/NOTICE e registro de proveniência |
+| Vídeo de 2m45 e 1080p são exigência | Formato sugerido no dossiê, não duração/resolução obrigatória no trecho pertinente | Separar storyboard opcional de requisitos oficiais |
+| Certidões da Categoria 4 são automaticamente exigidas na 6 | Não importar obrigações entre categorias | Checklist próprio do item 5.4.1; confirmar formulário atual |
+
+As correções sobre legislação de trânsito são uma revisão externa do dossiê, não uma alteração do texto do edital. Publicar o currículo apenas após validação técnica e pedagógica humana dos trechos e versões aplicáveis. [L01]
+
+## 1.3. Como o projeto pode responder aos critérios — sem prometer nota
+
+| Critério da Categoria 6 | Pontos | Evidência planejada que ajuda a avaliá-lo |
+|---|---:|---|
+| Metodologia e didática | 2 | Objetivos observáveis, três faixas pedagógicas, explicação das escolhas, instrumentos pré/pós e guia de mediação |
+| Sustentabilidade e continuidade | 2 | Modo local, conteúdo versionado, treinamento de professores, orçamento e responsável pela manutenção |
+| Relevância e adequação do tema | 2 | Velocidade reduzida e proteção da vida como parte das decisões e da transformação da cidade |
+| Aderência ao PNATRANS | 2 | Matriz principalmente com Pilar 4; intervenções simuladas relacionadas ao Pilar 2, sem alegar obra pública executada |
+| Originalidade | 1 | Combinação autoral de missões, progressão cooperativa, acessibilidade e evidências; referências atribuídas |
+| Complexidade | 1 | Complexidade pedagógica e técnica justificada; arquitetura mínima que funciona, não excesso de dependências |
+
+A tabela de pontuação consta da página 15, item 10.4.1. As evidências sugeridas na terceira coluna são decisões deste kit, não obrigações textuais adicionais. [E01]
+
+## 1.4. Documentação para uma análise de elegibilidade futura
+
+Conferir categoria e entidade; representação legal; comprovação da condição jurídica; Anexo II; requisitos escolares quando aplicáveis; regras atuais de cessão e de originalidade; resultados realmente obtidos; permissões de uso das mídias; português brasileiro; PDF com até dez páginas; terceira pessoa; arquivos complementares nos formatos aceitos. O texto fornecido cita registro escolar junto ao MEC: não substituir silenciosamente por outro comprovante, solicitar confirmação à organização quando houver dúvida. [E01, pp.9–11]
+
+O limite de 200 inscrições por categoria e o desempate cronológico existem, mas não legitimam uma inscrição incompleta ou fora do prazo. Direitos de terceiros não passam a ser da equipe porque uma biblioteca é aberta. O Anexo II e o item 17.5 merecem análise jurídica antes de ceder projeto ou materiais. Não usar o Selo Prêmio Senatran como se a iniciativa já tivesse sido premiada. [E01, itens 8.9, 10.6, 12, 17.5 e Anexo II]
+
+### Minuta de consulta — NÃO ENVIADA
+
+Destinatário indicado no item 17.10: `premio.senatran@transportes.gov.br`.
+
+> Solicita-se esclarecimento sobre o alcance do item 17.3 do Edital nº 24/2026 quanto a ferramentas de IA utilizadas na programação de uma plataforma educativa, na preparação de protótipos, na criação de recursos visuais e na redação do projeto base. Há distinção entre essas atividades para fins de admissibilidade? Existe ato posterior que altere o prazo de inscrição ou essas condições? Como devem ser declarados componentes de código aberto e seus direitos de terceiros diante do Anexo II? A instituição pretende preservar a proveniência integral e não presume autorização pelo simples fato de haver revisão humana.
+
+Uma resposta futura deve ser arquivada com data, origem e alcance. A equipe não pode transformar ausência de resposta em consentimento.
+
+
+---
+
+# 2. SUPER PROMPT — contrato de execução ONE SHOT
+
+**Cole esta seção no agente e disponibilize o restante deste kit no workspace. O arquivo mestre também pode ser usado sozinho: ele inclui as especificações e os artefatos de referência.**
+
+--- INÍCIO DO PROMPT ---
+
+Você é o responsável técnico por transformar este contrato em um jogo educativo executável, não em uma landing page nem em uma demonstração de telas estáticas. Trabalhe como uma equipe coordenada de engenharia de jogos, pedagogia, UX infantil, acessibilidade, backend, segurança, QA e motion design. Esses são papéis de trabalho, não alegações de que especialistas humanos já aprovaram o produto.
+
+Construa **SmartCity Kids — Missão Desacelere: a cidade do cuidado**, para crianças e adolescentes de 5 a 14 anos. O tema é “Desacelere. Seu bem maior é a vida”. A pessoa jogadora aprende a cuidar da mobilidade, toma decisões como pedestre, passageira ou planejadora de uma cidade fictícia e vê o bairro tornar-se mais seguro, acolhedor e acessível. Não criar corrida, direção por crianças, simulação de atropelamento, violência ou pontuação por velocidade.
+
+O operador pretende usar Gemini 3.8 Flash no Antigravity com a configuração HIGH oferecida no ambiente. Não alterar modelo, plano, faturamento, permissões ou ferramentas sem autorização. Não inventar flags, limites de contexto ou recursos do produto. Descobrir capacidades realmente presentes. O contrato deve funcionar também com outro agente que consiga ler arquivos, editar código e executar testes.
+
+## Resultado obrigatório
+
+Entregue uma aplicação React + TypeScript + Vite com Phaser para o mundo 2D, e interface DOM equivalente para as decisões pedagógicas. O núcleo visitante deve funcionar sem conta, servidor, chave de API, LLM em produção ou banco. Após carregar e preparar os recursos, deve funcionar sem rede. O Prisma/PostgreSQL atende apenas o modo institucional opcional. Remotion é ferramenta separada de produção de vídeo, nunca dependência do ciclo do jogo.
+
+Implementar as 12 missões P0 do catálogo com três adaptações pedagógicas, progressão real, cidade com seis intervenções educativas, coleção de conquistas sem competição pública e exportação local. Não aceitar como pronto um conjunto de cartões com um botão que soma pontos. Cada missão precisa de situação, ação significativa, regra, feedback, oportunidade de reexperimentar e evidência de conclusão. A cidade tem estado persistível e alterações visualmente verificáveis.
+
+## Invariantes não negociáveis
+
+1. Preservar a auditoria do edital. Prazo encerrado nas fontes verificadas; restrição a IA não resolvida. Não inscrever, enviar e-mail, gerar declaração falsa de autoria, usar selo do prêmio, retroagir execução ou fabricar dados. Entregar produto e materiais internos separadamente de candidatura. Não converter DEMO em PILOT.
+2. Desenvolver em pasta e branch novas ou explicitamente autorizadas. Inspecionar o workspace e `git status` antes de editar. Preservar trabalho existente. Não usar `reset --hard`, não apagar arquivos externos, não publicar, não usar serviços pagos ou credenciais encontradas no ambiente. Mudanças remotas exigem autorização.
+3. Resolver dependências com documentação e registro oficiais; fixar versões compatíveis e lockfile. O projeto de referência está desenhado para Prisma 7: não misturar sua configuração com exemplos de Prisma 6 ou migrar major silenciosamente. Sem acesso à rede, registrar o bloqueio e implementar o que for possível sem afirmar instalação bem-sucedida.
+4. Não carregar rastreadores, anúncios, pixels, session replay, mapas de casas/escolas reais, chat, perfis públicos, geolocalização, câmera ou microfone. Não cadastrar e-mail, nome completo, foto, data de nascimento ou telefone de criança. Remover a rotina `log.js` de telemetria de build do template Phaser caso esse template seja adotado.
+5. Faixa pedagógica não é prova de idade nem autorização de tratamento. “Área de adultos” com desafio aritmético não é autenticação ou consentimento verificável. Modo institucional indisponível até autenticação, isolamento, finalidade, documentação e teste de autorização reais.
+6. Não usar contagem regressiva de pressão, vidas limitadas, streak que expira, sorteio de recompensas, ranking infantil, dinheiro real, compras, publicidade ou recompensa por ficar mais tempo online. Ajuda, pausas e recursos de acessibilidade não reduzem recompensas.
+7. Conteúdo de trânsito precisa de fonte e natureza explícitas: regra legal, recomendação de segurança ou simplificação do cenário. Tradução não muda a jurisdição brasileira. Não inventar regra do CTB, correspondência da BNCC, certificação ou homologação.
+8. Nunca representar lesões ou colisões com pessoas. A simulação congela antes de uma situação perigosa, explica e oferece nova escolha. Nenhuma missão manda a criança praticar em via pública, testar distância de carros, abordar motoristas ou fiscalizar pessoas.
+9. Bibliotecas de terceiros não são produção autoral integral. Respeitar LICENSE/NOTICE; não incorporar repositório sem licença clara, copiar jogos comerciais ou imitar personagens protegidos. Usar arte original simples e funcional quando não houver asset aprovado.
+10. Não declarar “100% pronto”, “LGPD garantida”, “certificado WCAG” ou “vencedor”. Relatar exatamente o que foi implementado, executado, validado e o que depende de pessoas, credenciais ou ambiente externo.
+
+## Método autônomo: uma solicitação, etapas internas verificáveis
+
+**Etapa A — reconhecimento e contrato.** Leia auditoria, PRD, catálogo, schema e fontes. Crie `docs/DECISOES.md`, `docs/IMPLEMENTACAO_STATUS.md` e uma lista de tarefas P0/P1/P2. Registre versões, estado inicial, riscos e plano de testes. Adote padrões seguros sem bombardear o operador com dúvidas resolvíveis por inspeção; só interrompa por consentimento, segredos, custo, perda de dados ou decisão externa indispensável.
+
+**Etapa B — fatia vertical primeiro.** Implemente M01 com mapa, avatar original, movimento/seleção, situação de travessia protegida, feedback DOM, pausar, áudio opcional, pontuação determinística e salvar/apagar local. Faça teste de ponta a ponta dessa fatia antes de replicá-la. Deve ser jogável com mouse, toque, teclado e modo guiado sem arrastar.
+
+**Etapa C — motor de missões e cidade.** Extraia regras para `packages/domain`. Conecte o catálogo validado, as três faixas e as 12 missões. Renderizador não decide a correção das respostas. Implementar as intervenções e as moedas sem farm; qualquer progresso visível corresponde ao estado real. Testar repetição, pausa, reload, redução de movimento e ausência de armazenamento.
+
+**Etapa D — conteúdo e inclusão.** Todo texto visível passa pelo catálogo de idiomas, sem strings soltas em sprites. Português completo. Inglês e espanhol completos para a interface; narrativas traduzidas incompletas ficam explicitamente desativadas por pacote. Não exibir um seletor que sugira suporte integral inexistente. Voz pré-gravada opcional e local; nunca bloquear o jogo sem som. O modo 5–7 deve ser mediado e não exigir leitura autônoma.
+
+**Etapa E — offline e relatórios.** Precache somente recursos públicos estáticos. Atualizações apenas no menu, nunca no meio da missão. Demonstrar jogo e exportação após desligar a rede, tendo preparado o cache antes. Exportar CSV/JSON agregado com metadados, qualidade dos dados e identificação DEMO. Sem piloto real, exibir “Ainda não há resultados de campo”.
+
+**Etapa F — institucional preparado, não fingido.** Materialize o schema Prisma, configurações e contratos. Rode `prisma format`, `prisma validate`, gere client e migrations em banco de teste quando disponível. Só habilite o portal com autenticação real e testes entre instituições A/B. Sem banco ou provedor de identidade, deixe o módulo desabilitado, mantenha visitante plenamente funcional e descreva o bloqueio. Não substituir autenticação por um botão de login fictício.
+
+**Etapa G — acabamento visual.** Aplicar design system, estados vazios/erro/carregamento, transições curtas, feedback de escolha, câmera suave opcional, ilustrações consistentes e tipografia legível. O mapa jogável ocupa a maior área da tela. Nada de decorar um dashboard e chamar isso de game.
+
+**Etapa H — vídeo e documentação.** Preparar composição Remotion independente, com arte própria e marca “DEMONSTRAÇÃO — SEM RESULTADOS DE CAMPO”. Renderizar somente se dependências e licença aplicável estiverem resolvidas. Não inventar sala de aula, depoimento, rosto, autorização ou estatística. Produzir guia do professor, protocolo de piloto, inventário de fontes e bibliotecas, checklist de publicação e minuta de projeto base não submetível automaticamente.
+
+**Etapa I — auditoria final.** Rodar lint, typecheck, unitários, validação de conteúdo, testes de navegador, acessibilidade automatizada e inspeção manual. Anexar comandos, saídas, screenshots reais e limitações. Corrigir as falhas reproduzíveis antes de finalizar. Proibir testes desativados para obter verde.
+
+## Organização e continuidade
+
+Se houver subagentes, distribua tarefas sem concorrência no mesmo arquivo: domínio/testes; experiência visual; conteúdo/i18n; modo institucional/segurança; vídeo/documentação. Um integrador é responsável por compilar e executar tudo junto. Sem subagentes, execute esses papéis em sequência; não alegue paralelismo que não ocorreu.
+
+Ao aproximar-se de um limite de contexto ou execução, escreva checkpoint com último comando, arquivos alterados, testes, bloqueios e próxima ação concreta. Não invente conclusão para terminar a resposta. `ONE SHOT` significa uma instrução de trabalho organizada, não a garantia de que infraestrutura, avaliação humana e validação em escola surgirão automaticamente.
+
+## Critério de encerramento da primeira entrega
+
+Visitante jogável com 12 missões, três faixas, cidade interativa, modo guiado equivalente, pt-BR, persistência opcional, offline preparado, testes e documentação; nenhum dado real coletado; todos os módulos não concluídos explicitamente desabilitados. Entregar também lista exata dos comandos locais, variáveis necessárias, estrutura de arquivos e evidências de teste. Não publicar nem inscrever.
+
+Aplique as seções seguintes como especificação detalhada e os arquivos de referência como base de implementação. Revise-os criticamente, valide-os no seu ambiente e preserve a separação entre requisito, hipótese e resultado observado.
+
+--- FIM DO PROMPT ---
+
+
+---
+
+# 3. PRD — SmartCity Kids: Missão Desacelere
+
+## 3.1. Tese de produto
+
+**Promessa:** aprender a cuidar de quem circula pela cidade e perceber como escolhas coletivas tornam o trânsito mais seguro. A cidade é o espaço de experimentação, não um simulador de habilitação. A diferença não é ter mais perguntas de placas: é conectar **decisão → explicação → transformação do bairro → nova situação de aprendizagem**.
+
+O nome do dossiê é preservado; “a cidade do cuidado” é subtítulo criativo provisório, não marca registrada. A visão e a arquitetura abaixo são propostas novas, não constatação de produto já implementado. O público foi ampliado de 7–12 no dossiê para **5–14**, como solicitado.
+
+**Objetivo de produto:** viabilizar uma experiência educativa curta, inclusiva e repetível em escola ou família, com um núcleo local de baixo atrito e uma forma honesta de avaliar aprendizagem. A meta não é tempo de tela, dependência ou velocidade de conclusão.
+
+**Hipóteses a testar:** as crianças compreenderão melhor por que veículos precisam de espaço para parar; o feedback explicativo ajudará a transferir a regra a cenas diferentes; professores conseguirão mediar sem treinamento técnico; o modo guiado preservará os objetivos sem exigir destreza em jogos. Nenhuma hipótese é apresentada como comprovada.
+
+## 3.2. Públicos, autonomia e modos
+
+| Faixa pedagógica | Forma de interação | Profundidade | Mediação |
+|---|---|---|---|
+| 5–7 — Exploradores do Cuidado | Ícones, uma decisão por vez, seleção direta, leitura/narração pelo adulto | Reconhecer local de espera, perceber sinalização, pedir ajuda e cuidar do passageiro | Adulto presente; sem pressupor leitura, cálculo ou circulação autônoma |
+| 8–10 — Guardiões do Bairro | Pequenas sequências e escolhas explicadas; mapa com objetivos claros | Comparar rotas fictícias, distinguir prioridade de garantia, observar visibilidade | Educador acompanha e contextualiza |
+| 11–14 — Projetistas da Mobilidade | Cenários com alternativas e efeitos; tabelas simples e editor com restrições | Responsabilidade compartilhada, acessibilidade, moderação de velocidade e leitura crítica de modelos | Discussão orientada; sem conteúdo de habilitação ou fiscalização real |
+
+A seleção informa apenas adaptação didática. Não calcular idade exata nem coletar data de nascimento. Não inferir capacidade cognitiva, deficiência, condição médica ou autonomia no trânsito. Uma pessoa pode escolher um modo mais guiado sem rótulo depreciativo.
+
+**Visitante familiar:** sem cadastro; progresso opcional no dispositivo; aviso de dispositivo compartilhado; apagar tudo em uma ação confirmada. **Oficina escolar:** sessão efêmera por padrão; o adulto decide exportar um resumo. **Institucional conectado:** etapa posterior, controles reais de acesso, minimização e governança; nunca obrigatório para aprender.
+
+## 3.3. Jornada e telas
+
+A entrada é um convite para conhecer a cidade, com “Jogar”, “Jogar com orientação”, “Acessibilidade” e “Área de educadores”. Sem formulário infantil. O adulto ou usuário escolhe faixa pedagógica, idioma disponível e salvamento local. O tutorial mostra três ações: observar, escolher e explicar com ajuda quando necessário.
+
+A praça central é o hub. Os lugares — escola, praça, ponto de ônibus, biblioteca, ciclovia fictícia e cruzamento — são claramente diferentes e conduzem a desafios. Uma missão apresenta uma situação, oferece ações, explica a relação com o cuidado e transforma algo observável no bairro. Concluída uma atividade, a pessoa pode fazer uma pausa, revisitar ou escolher a seguinte. Não há “volte amanhã para não perder”.
+
+Telas P0: abertura; seleção pedagógica; configuração acessível; cidade/hub; missão; explicação e nova tentativa; laboratório de parada; editor orientado; coleção; resumo de oficina; guia do adulto; créditos/privacidade. Painel institucional não autenticado não deve aparecer como funcional.
+
+## 3.4. Escopo e critérios de aceite
+
+| ID | Prioridade | Requisito | Aceite verificável |
+|---|---|---|---|
+| F01 | P0 | Jogar sem conta | Primeira missão abre sem banco, token, login ou chave externa |
+| F02 | P0 | 12 missões com significado | Todas têm ação contextual, regra, feedback e conclusão verificável; não apenas questionário |
+| F03 | P0 | Três adaptações | Vocabulário, carga visual e número de etapas mudam; objetivos permanecem equivalentes |
+| F04 | P0 | Cidade que responde | Seis intervenções educativas alteram rotas, espera, visibilidade ou representação de acesso na simulação |
+| F05 | P0 | Sem farm | Concluir a mesma missão dez vezes não multiplica a recompensa de marco |
+| F06 | P0 | Aprender com ajuda | Pausar, pedir explicação e usar modo guiado não reduz moedas nem bloqueia conteúdo |
+| F07 | P0 | Alternativa DOM | Todas as decisões e recompensas essenciais existem sem operar o canvas |
+| F08 | P0 | Offline preparado | Após pacote preparado, abrir, jogar, salvar e exportar sem rede; primeiro acesso offline explica o limite |
+| F09 | P0 | Salvar/apagar | Reload restaura estado compatível; falha de storage usa sessão em memória e avisa; exclusão limpa bases/cache pessoal |
+| F10 | P0 | Conteúdo rastreável | Cada missão referencia afirmações revisáveis; nenhum artigo inventado ou claim sem natureza |
+| F11 | P0 | Relatório honesto | Nenhum participante real no seed; relatório de campo vazio informa ausência de dados, não zero aprendizagem |
+| F12 | P0 | Idioma coerente | Todas as chaves pt-BR resolvem; suporte anunciado corresponde ao conteúdo disponível |
+| F13 | P1 | Educador autenticado | Sessão real, roles, proteção CSRF quando aplicável, testes de negação entre tenants |
+| F14 | P1 | Sincronização limitada | Reenvio idempotente; permissão revogada impede ingestão; pontuação calculada no serviço |
+| F15 | P1 | Piloto documentado | Instrumentos e consentimentos aplicáveis validados por pessoas; sem preenchimento automático de resultados |
+| F16 | P1 | Remotion | Composição independente e render de demonstração, sem resultados inventados; licença verificada |
+| F17 | P2 | Blockly protegido | DSL limitada, interpretador sem eval, semáforo intertravado; sem execução arbitrária |
+| F18 | P2 | Catálogo ampliado | 24 missões adicionais só depois da qualidade das 12 iniciais |
+
+**Fora do primeiro ciclo:** 3D/WebXR, mapa geográfico real, direção de veículos pela criança, multiplayer aberto, LLM tutor em tempo real, login social infantil, monetização dentro do jogo, conteúdo gerado por alunos, integração com fiscalização, CityFlow/SUMO em produção, hardware de trânsito e publicação automática em lojas.
+
+## 3.5. Métricas e critérios de valor
+
+Medir conclusão acompanhada de compreensão, clareza do feedback, necessidade de ajuda por desenho da interface, facilidade do educador, funcionamento sem rede e acessibilidade. Não usar ranking, retorno diário ou horas jogadas como meta de sucesso.
+
+Para um piloto autorizado, comparar pré/pós pareados por competência e faixa, informar tamanho da amostra válida, faltantes, instrumento, condições de ajuda e intervalo real entre avaliações. A diferença em pontos percentuais é uma descrição, não prova de causalidade. Não atribuir ao jogo redução de sinistros reais com base em acertos ou colisões simuladas. A telemetria não mede comportamento da criança na rua.
+
+**Metas internas de produto, ainda não medidas:** abrir o modo visitante em até 10 s em dispositivo de referência e rede documentados; não ter erro de console em fluxo P0; permitir todos os objetivos sem arrastar ou usar som; professor iniciar oficina com guia de uma página. A equipe mede e ajusta em vez de declarar cumprimento por intenção.
+
+## 3.6. Gamificação saudável e economia
+
+O ciclo é **curiosidade → escolha → explicação → reexperimentação → contribuição para o bairro**. O primeiro contato com um conceito não exige acertar para continuar. Conteúdo de cuidado e recursos de acessibilidade nunca ficam atrás de moedas. Recompensas não dependem de tempo, rapidez, habilidade motora ou uso de ajuda.
+
+Cada missão P0 concluída com sua etapa explicativa concede **20 Moedas do Cuidado, uma única vez por marco**, além de um selo descritivo: “Observou com atenção”, “Pensou no passageiro”, “Planejou uma rota acessível”. São fichas locais sem valor monetário, sem transferência e sem compra. Saldo inicial: 40. Doze missões: 240. Total disponível: 280.
+
+Seis personalizações opcionais custam 30, 40, 50, 40, 50 e 70, totalizando 280. Exemplos: bandeirolas na praça, painel comunitário fora da sinalização oficial, plantas de cenário e pinturas em mobiliário que não alterem legibilidade de placas. As obras educativas e rotas acessíveis são desbloqueadas pela exploração do conceito, **gratuitamente**; não se cobra para tornar a cidade segura nem para usar adaptações.
+
+A cidade coletiva de uma turma, em P1, combina contribuições sem identificar quem “foi melhor”. Não exibir desempenho individual para colegas. Certificados de participação são locais, opcionais e não afirmam habilitação ou certificação oficial; evitar nomes de crianças em links públicos.
+
+## 3.7. Intervenções educativas na cidade
+
+1. **Rota escolar legível:** sinalização regulamentar do cenário, local de espera e percurso contínuo. Efeito: veículo NPC reduz velocidade conforme regra fictícia validada.
+2. **Travessia com maior visibilidade:** remover obstáculo cenográfico da linha de visão; não atribuir segurança garantida à pintura.
+3. **Travessia acessível:** continuidade de calçada, espaço desobstruído e recursos representados corretamente após revisão. Toda pessoa do jogo já tem alternativas acessíveis.
+4. **Ponto de ônibus organizado:** espera afastada da área de circulação, embarque apenas com veículo parado, prioridade acolhedora.
+5. **Sinalização semafórica intertravada:** fases não conflitantes e tempo de travessia fictício escolhido por teste de cenário, não por norma inventada.
+6. **Zona de velocidade moderada:** comparar ocupação, visibilidade e distância de parada de NPCs. Não afirmar que implantar uma placa sozinho garante cumprimento.
+
+As intervenções são escolhas em um tabuleiro fictício, não instruções de projeto de engenharia ou instalação em rua real.
+
+
+---
+
+# 4. Currículo, catálogo e avaliação formativa
+
+As missões abaixo são **conteúdo editorial proposto, ainda não homologado**. Os arquivos JSON permanecem `NEEDS_REVIEW`, `DEMO` e `publicationAllowed=false`. A implementação deve funcionar em demonstração local sem confundir isso com aprovação para uso com crianças. [L01, E01, P01]
+
+## 4.1. Missões P0
+
+| ID | Missão | Competência | Ação contextual | Fonte / natureza |
+|---|---|---|---|---|
+| M01 | O lugar de esperar | LOCAL_DE_ESPERA | Escolher o lugar protegido antes de decidir a travessia. | CTB-PEDESTRE, CTB-CUIDADO |
+| M02 | Cada sinal tem sua vez | FASE_PROTEGIDA | Distinguir os sinais destinados a pedestres e veículos. | CTB-PEDESTRE, CTB-CUIDADO |
+| M03 | Ver e ser percebido | VISIBILIDADE | Reconhecer que um obstáculo pode impedir a visão. | PED-ATENCAO, CTB-CUIDADO |
+| M04 | Todo passageiro importa | TRANSPORTE_CUIDADOSO | Reconhecer que a preparação da viagem é responsabilidade dos adultos. | CTB-PASSAGEIRO, CTB-CUIDADO |
+| M05 | O ponto de encontro | EMBARQUE_PROTEGIDO | Planejar espera e embarque em uma situação mediada. | PED-ATENCAO, CTB-CUIDADO |
+| M06 | Bicicleta também caminha | BICICLETA_PEDESTRE | Entender a mudança de papel ao desmontar e empurrar a bicicleta. | CTB-BICICLETA, CTB-CUIDADO |
+| M07 | Preparar é cuidar | EQUIPAMENTOS | Separar recomendação de proteção de obrigação legal verificada. | CTB-BICICLETA, CTB-CUIDADO |
+| M08 | O espaço para parar | DISTANCIA_PARADA | Perceber que parar exige espaço e depende de parâmetros. | SIM-PARADA, CTB-CUIDADO |
+| M09 | A regra desta via | LIMITE_SINALIZADO | Ler o limite indicado no contexto sem generalização nacional. | CTB-LIMITE, CTB-CUIDADO |
+| M10 | A cidade cabe em todos | ROTA_CONTINUA | Planejar continuidade e espaço de circulação para pessoas diversas. | PED-ACESSO, CTB-CUIDADO |
+| M11 | O tempo de cada pessoa | FASES_SEM_CONFLITO | Compreender que o controle do cenário precisa proteger a travessia. | PED-SEMAFORO, CTB-CUIDADO |
+| M12 | Nossa rota do cuidado | SISTEMA_SEGURO | Transferir os conceitos para uma nova composição de bairro. | CTB-CUIDADO, CTB-CUIDADO |
+
+As doze definições completas incluem situação, três escolhas, feedback de acerto e reexperimentação, três adaptações pedagógicas, efeito na cidade, fonte e política de recompensa. Estão em `content/missions.mvp.json` e também nos anexos do arquivo mestre. São **12 missões com adaptações**, não 36 minijogos prontos.
+
+## 4.2. Expansão P2 — 24 ideias, não funcionalidades implementadas
+
+- **M13:** Calçada sem obstáculos.
+- **M14:** Sinais com forma e texto.
+- **M15:** Distrações no tabuleiro.
+- **M16:** A volta da biblioteca.
+- **M17:** Noite e visibilidade.
+- **M18:** Chuva e planejamento.
+- **M19:** Porta do veículo e cuidado.
+- **M20:** Transporte escolar acolhedor.
+- **M21:** Prioridades no transporte coletivo.
+- **M22:** Bagagem organizada pelo adulto.
+- **M23:** Diferentes rotas de bicicleta.
+- **M24:** Entendendo a sinalização local.
+- **M25:** A praça e o entorno.
+- **M26:** Ambiente rural fictício.
+- **M27:** Comunidade ribeirinha e acesso ao transporte.
+- **M28:** Rua compartilhada: contexto importa.
+- **M29:** Escolhendo melhorias com orçamento fictício.
+- **M30:** Fluxo não é sinônimo de segurança.
+- **M31:** Leitura crítica de um gráfico.
+- **M32:** Como revisar uma afirmação de trânsito.
+- **M33:** Blocos para fases protegidas.
+- **M34:** O que o modelo não mostra.
+- **M35:** Conselho mirim da cidade fictícia.
+- **M36:** Revisitando conceitos após uma pausa.
+
+## 4.3. Contrato editorial
+
+Toda escolha recebe feedback que explica o cuidado, sem chamar a pessoa de imprudente, ruim ou culpada. Não se usa medo como reforço. “Tente de outro jeito” sempre mantém o personagem protegido. As intervenções visuais são coerentes com o objetivo, sem inventar norma brasileira.
+
+Uma afirmação tem `claimKey`, fonte primária, localizador, jurisdição, natureza, versão, revisor e data de revisão. Mudança de regra exige nova versão e revisão das missões dependentes. Regras brasileiras não são importadas de questionários russos, japoneses ou americanos. A correspondência com a BNCC fica em documento separado a validar por pedagogo; nenhum código de habilidade é inventado para dar aparência de conformidade.
+
+## 4.4. Avaliação sem confundir jogo e pesquisa
+
+O feedback de uma missão é formativo e pode orientar a resposta. Já a avaliação independente usa situação paralela, ordem balanceada, mesma competência e primeira resposta registrada antes do feedback, com opção de não responder. Apoio de leitura é registrado separadamente de uma dica que fornece a resposta. Não comparar a faixa 5–7 com 11–14 como se usassem o mesmo instrumento.
+
+No piloto, selecionar seis itens dentre M01, M02, M04, M08, M10 e M12 para forma A; criar forma B com cenário diferente e dificuldade revisada. Contrabalancear A→B e B→A quando viável. Usar itens ilustrados e mediação padronizada na faixa inicial. A equivalência entre formas é hipótese que precisa de revisão/teste, não uma propriedade garantida por trocar palavras.
+
+Exemplos de transferência: outra calçada com área protegida de espera; um cruzamento com sinal de pedestres em posição diferente; veículo estacionado preparado por adulto; dois rastros de parada com velocidade/atrito explicitados; percurso mais curto com barreira versus percurso contínuo; mapa novo que combina as competências. Nenhum item solicita ensaio na rua.
+
+Não reduzir a avaliação a repetir literalmente as perguntas ensinadas. Não usar o erro, o tempo ou pedidos de ajuda para produzir rótulos sobre inteligência, saúde ou valor pessoal. O professor interpreta dados de uso com o contexto real da oficina.
+
+## 4.5. Mecânicas: não transformar o catálogo em doze quizzes
+
+Cada missão possui um tipo de interação próprio e flags de evidência. O botão de resposta final não pode completar uma missão sem suas ações de cenário. O modo guiado executa as mesmas decisões sem impor arrastar, coordenação motora ou percepção visual.
+
+| Missão | Mecânica | Evidência de interação |
+|---|---|---|
+| M01 | SAFE_WAIT_POINT | Selecionar pontos de observação no mapa; só então confirmar a espera protegida. |
+| M02 | SIGNAL_SEQUENCE | Ordenar cartões de fases; o cenário demonstra somente sequências intertravadas. |
+| M03 | VISIBILITY_EDITOR | Ativar camada de visibilidade e reorganizar um obstáculo cenográfico pelo editor. |
+| M04 | PASSENGER_CHECKLIST | Conferir etapas com adulto virtual em veículo estacionado; não dirigir. |
+| M05 | BUS_STOP_LAYOUT | Organizar fila em zonas protegidas por seleção e posicionamento, sem pressa. |
+| M06 | BIKE_ROLE_SWITCH | Alternar papel na representação e selecionar o percurso com bicicleta empurrada. |
+| M07 | GEAR_SOURCE_SORT | Classificar cartões por natureza da orientação, sem simular circulação real. |
+| M08 | STOPPING_COMPARISON | Executar dois cenários de NPCs, ver barras e rastros; velocidade nunca gera prêmio. |
+| M09 | SIGN_CONTEXT_MATCH | Associar o limite à via correspondente; outra rua tem contexto diferente. |
+| M10 | CONTINUOUS_ROUTE_BUILDER | Ligar pontos por percurso contínuo e explicar por que menor distância não basta. |
+| M11 | INTERLOCK_PUZZLE | Montar a sequência do controlador fictício; fase inválida é bloqueada antes de animar. |
+| M12 | CARE_ROUTE_CHALLENGE | Compor rota em mapa novo e aplicar uma melhoria, reunindo os conceitos anteriores. |
+
+O agente deve criar adaptadores de interação para esses tipos, e não duplicar doze telas idênticas. Reutilizar componentes e domínio, mas manter ações significativas: observar camadas, ordenar fases, comparar parâmetros, construir uma rota, organizar uma espera ou conferir etapas. O schema de conteúdo precisa validar os parâmetros específicos de cada tipo.
+
+
+---
+
+# 5. Arquitetura, persistência, API e segurança
+
+## 5.1. Decisão técnica principal
+
+**Um motor de jogo, um domínio de regras, dois modos de apresentação.** Usar Phaser + React + Vite + TypeScript. Phaser desenha o bairro e anima agentes; React apresenta menus, escolhas, foco, feedback, configurações e relatórios. O modo guiado DOM usa as mesmas regras sem exigir canvas. Não empilhar Godot, Cocos, Pixi como motor adicional, CityFlow, SUMO e Blockly no mesmo MVP. [T01–T02]
+
+A separação é intencional: a lógica pedagógica e a persistência não podem depender de um sprite, de uma tela específica ou de FPS. Remotion reutiliza dados e conceitos visuais em uma aplicação de vídeo isolada. O serviço institucional é um monólito modular pequeno, não uma constelação de microsserviços.
+
+### Árvore de destino a construir pelo agente
+
+```text
+smartcity-kids/
+  apps/
+    web/src/{app,components,game/scenes,game/adapters,features,workers}/
+    web/public/{assets,content,audio,icons}/
+    api/src/{auth,tenancy,content,sessions,sync,rewards,reports,retention}/
+    video/src/{compositions,components}/
+  packages/
+    domain/src/{missions,simulation,rewards,assessments,contracts}/
+    content/{claims,missions,assessments,locales}/
+    database/{prisma,generated,src}/
+    ui/src/{tokens,controls,a11y}/
+  tests/{unit,integration,e2e,content,fixtures}/
+  docs/{decisions,pedagogy,privacy,licenses,pilot,evidence}/
+  scripts/{verify-content,verify-locales,verify-licenses}/
+```
+
+Esta árvore é o destino do desenvolvimento. O ZIP entregue agora contém especificações e referências, não essa aplicação já construída.
+
+## 5.2. Bibliotecas e limites de adoção
+
+| Camada | Escolha | Responsabilidade / limite |
+|---|---|---|
+| Mundo 2D | `phaser` | Tilemap, câmera, sprites, animação; regras de aprendizagem fora das cenas |
+| Interface | `react`, `react-dom`, `vite`, TypeScript | UI semântica e ciclo de vida; template oficial ajuda a integrar [T02] |
+| Validação | `zod` | Contratos estritos de conteúdo, entradas e eventos; rejeitar campos desconhecidos [T11] |
+| Estado | Estado React + stores pequenos do domínio | Não adicionar gerenciador global antes de haver necessidade; nunca gravar a cada frame |
+| Idiomas | `i18next`, `react-i18next` | Chaves, namespaces, fallback explícito, pluralização [T05] |
+| Dados locais | `dexie` sobre IndexedDB | Progresso e outbox opcionais, versionados; não anunciar criptografia automática [T10] |
+| Offline | `vite-plugin-pwa` / Workbox | Shell e assets públicos; não cachear credenciais ou respostas privadas [T06] |
+| UI motion | `motion` | Microinterações DOM e preferência de movimento reduzido; opcional [T07] |
+| API opcional | `fastify` | Auth, tenancy e ingestão limitada; não necessário para visitante [T12] |
+| Banco opcional | Prisma ORM 7 + `@prisma/adapter-pg` + `pg` | Só servidor; migrations, transações e tipos gerados [T04] |
+| Testes | `vitest`, `@playwright/test` | Domínio e navegador real; acrescentar axe-core e revisão manual [T08–T09, T13] |
+| Vídeo separado | `remotion`, `@remotion/cli` | Gerar MP4 no ambiente de produção de materiais, sob licença aplicável [T03] |
+| Programação futura | `blockly` | Apenas editor de DSL limitada de fases; não gerar/evaluar JavaScript arbitrário [R11] |
+
+O agente deve selecionar releases estáveis compatíveis, resolver a instalação, gerar lockfile e registrar as versões efetivas. Não usar `latest` em CI, não afirmar que a versão principal escolhida é a mais recente e não mudar major no meio do trabalho sem ADR. O schema deste kit é para Prisma 7; versões posteriores exigem migração explícita. Para a base Node, verificar as versões suportadas pelo conjunto escolhido; o núcleo de referência deste kit foi compilado no ambiente descrito no relatório de validação.
+
+## 5.3. Motor de simulação e integração React/Phaser
+
+Criar `GameHost` uma vez por montagem; destruir game, listeners, timers e áudio no cleanup. Testar React StrictMode sem duplicar canvas. Comunicação por eventos tipados, com unsubscribe e payloads pequenos; sem singleton de sessão compartilhando progresso entre crianças.
+
+Simulação com passo fixo de 1/60 s e acumulador, limitando recuperação a cinco passos por frame. Ao perder foco, abrir pausa e não conceder recompensas por tempo transcorrido. `requestAnimationFrame` atualiza apresentação, não é unidade de tempo pedagógico. Semente reproduzível por cenário permite testar a mesma sequência; incluir versão do motor e tolerância numérica em replays.
+
+NPCs seguem rotas determinísticas no tabuleiro. O primeiro ciclo não precisa portar IDM ou executar redes de tráfego reais. Verificações de segurança devem impedir animação de conflito: em decisão inadequada, congelar antes do movimento, mostrar a explicação e permitir reescolha. Uma falha de lógica nunca deve virar cena de choque com uma criança.
+
+Usar pool de objetos, atlas pequeno, culling de tiles e câmera sem tremor. UI não deve receber uma atualização React a cada frame; atualizar apenas mudanças relevantes e, quando necessário, amostras limitadas. Ativar modo econômico com menos agentes/partículas e 30 FPS de apresentação, preservando regras.
+
+### Orçamento inicial de performance — alvos, não resultados medidos
+
+Shell/interface até 2 MB transferidos comprimidos; primeiro bairro até 8 MB de imagens/dados; áudio opcional em pacote separado; mapa inicial limitado a aproximadamente 32×32 tiles e 20 NPCs simultâneos. Medir em dispositivo e navegador identificados, rede controlada e modos WebGL/alternativa guiada. Aumentar esses limites exige medição, não promessa genérica de 60 FPS em qualquer computador de 2 GB.
+
+Imagens redimensionadas, sem vídeo pesado no primeiro acesso. Não usar CDN externo obrigatório para fonte, sprite ou narração. `prefers-reduced-motion` desliga partículas e movimentos de câmera; as informações permanecem em texto e símbolos.
+
+## 5.4. Modelo didático de parada
+
+```text
+v = velocidade_kmh / 3,6
+reação = v × tempo_de_reação
+frenagem = v² / (2 × atrito × gravidade)
+parada = reação + frenagem
+```
+
+Hipóteses de demonstração: pista horizontal; desaceleração simplificada constante; sem modelar pneus, freios, inclinação, desgaste ou variabilidade humana. O painel pode usar `tempo_de_reação=1,5 s`, `gravidade=9,81 m/s²` e atrito ilustrativo 0,7 versus 0,4, sempre visíveis para a faixa avançada. São parâmetros de projeto, não recomendações normativas ou medição de uma pessoa. A função de referência rejeita valores inválidos. [P01]
+
+A duplicação da velocidade quadruplica a parcela quadrática de frenagem e duplica a parcela de reação quando os demais parâmetros ficam fixos. **Não** afirmar que a distância total sempre triplica ou quadruplica. Nunca converter esses números em orientação para uma criança estimar se consegue atravessar uma via real. O laboratório tem veículos automáticos de brinquedo, pista vazia e nenhuma pessoa na área simulada.
+
+## 5.5. i18n com jurisdição independente
+
+`pt-BR` é a referência editorial. `en` e `es` têm catálogos de interface incluídos. O conteúdo das 12 missões está redigido em pt-BR; traduções completas do currículo são uma tarefa explícita, com revisão humana, antes de anunciar suporte integral. Russo e chinês podem ser adicionados futuramente, mas não mostrar bandeiras ou seletores de idiomas ainda inexistentes. Não confundir idioma com país ou lei aplicável. [T05]
+
+```ts
+await i18n.init({
+  lng: storedInterfaceLocale ?? 'pt-BR',
+  fallbackLng: 'pt-BR',
+  supportedLngs: ['pt-BR', 'en', 'es'],
+  ns: ['interface', 'missions', 'educator'],
+  defaultNS: 'interface',
+  interpolation: { escapeValue: true },
+  resources: reviewedResources,
+});
+```
+
+Não usar HTML vindo de tradução nem `dangerouslySetInnerHTML`. Para React, harmonizar a política de escaping sem desativar a proteção para HTML cru. Valores, moedas fictícias e percentuais usam `Intl.NumberFormat`; datas armazenadas em UTC e apresentadas conforme contexto. Separar `interfaceLocale`, `contentLocale` e `jurisdiction='BR'`. A frase oficial em documentos de candidatura permanece em português, sem substituir pelo equivalente traduzido.
+
+Verificar chaves faltantes, chaves órfãs, pluralização e interpolação. Descrições de imagem, rótulos de controle e mensagens de erro também são conteúdo localizado. Narração não pode ser a única forma de perceber informação.
+
+## 5.6. Offline e ciclo de dados
+
+IndexedDB é persistência local, não memória efêmera. O usuário escolhe salvar; oficina compartilhada usa memória por padrão. Caso o armazenamento esteja indisponível ou a quota esgote, manter a sessão em memória e avisar sem interromper a aprendizagem. Criptografia com chave ao lado do dado no navegador não deve ser vendida como proteção robusta. [T10]
+
+Cada save contém `schemaVersion`, `curriculumVersion`, `engineVersion`, revisão e checksum para detectar corrupção acidental; checksum não prova autenticidade. Validar tamanho, tipos e migrações. Não confiar em progresso importado para estatísticas oficiais. Política de versão: manter o pacote utilizado pela sessão até seu fim; ativar nova versão no menu; não apagar cache ativo de uma missão.
+
+Cachear apenas shell, arte, áudio e conteúdo público revisado. Não guardar `/api`, relatórios individuais, tokens ou páginas administrativas no service worker. Instalação/PWA depende do navegador e de contexto seguro; primeiro acesso sem rede não pode carregar recursos que nunca foram baixados. [T06]
+
+Sincronização P1 é opt-in institucional com finalidade documentada. Outbox guarda eventos mínimos, aplica backoff e limite de fila; nova permissão não é inferida por haver conexão. Retirar a permissão interrompe envio e inicia o fluxo de exclusão aplicável. Eventos antigos enviados depois de revogação são recusados, não reativam o perfil. Tokens de adulto não vão para LocalStorage; preferir sessão de servidor em cookie HttpOnly, Secure e SameSite com proteção CSRF/origem adequada.
+
+## 5.7. API do módulo institucional
+
+| Método e rota | Quem pode usar | Contrato / controle |
+|---|---|---|
+| `GET /health` | Público | Estado mínimo; sem versões sensíveis ou conexão exposta |
+| `GET /v1/content/manifest` | Público | Somente pacotes publicados e revisados; hash/versão |
+| `POST /v1/educator/sessions` | Educador autenticado da turma | Emite sessão limitada ao learner e finalidade; não recebe tenant arbitrário do body |
+| `POST /v1/session/events:batch` | Sessão curta e escopada | Máximo inicial 50 eventos/64 KB; enum e payload estritos; deduplicação |
+| `POST /v1/session/attempts/:id/complete` | Sessão autorizada | Serviço reavalia sequência; transação idempotente para marco e ledger |
+| `POST /v1/session/city/decorations` | Sessão autorizada | Chave de catálogo, revisão esperada, transação e saldo; nunca preço do cliente |
+| `GET /v1/educator/reports` | Educador/coordenador autorizado | Filtro de turma próprio, exclusão DEMO por padrão, ausência representada como null |
+| `POST /v1/educator/exports` | Adulto com permissão específica | Exportação mínima, trilha auditável, prevenção de fórmula CSV |
+| `POST /v1/educator/learners/:id/erase` | Papel autorizado e confirmação | Expurgo documentado, proteção contra IDOR e interrupção de sincronização |
+
+Exemplo conceitual de evento aceito:
+
+```json
+{
+  "clientEventId": "00000000-0000-4000-8000-000000000001",
+  "sessionId": "00000000-0000-4000-8000-000000000002",
+  "kind": "CHOICE_SELECTED",
+  "occurredAtClient": "2026-09-28T12:00:00.000Z",
+  "payload": {"missionKey": "M01", "missionVersion": 1, "choiceKey": "choice-1"}
+}
+```
+
+Esses UUIDs são exemplos, não credenciais. `tenantId`, `learnerId`, pontuação, papel, permissões, `dataKind` e data real de execução não são aceitos como autoridade fornecida pelo cliente. Derivar identidade do contexto autenticado. Horário do cliente não prova prazo do edital.
+
+Falhas: 401 sessão inexistente; 403 acesso/finalidade não autorizados; 409 revisão concorrente ou conflito de idempotência; 422 conteúdo inválido; 429 limite de uso. Respostas genéricas não revelam se um identificador infantil existe em outra instituição. Retentativas com a mesma chave e payload retornam o mesmo resultado; mesma chave com payload diferente deve ser rejeitada.
+
+As escolhas de um cliente controlado pelo usuário podem ser fabricadas mesmo quando o servidor calcula a pontuação. Por isso, telemetria não substitui documentação de execução do piloto nem comprova comportamento no mundo real.
+
+## 5.8. Integridade do Prisma e transações
+
+O schema completo está em `prisma/schema.prisma` e no anexo correspondente do arquivo mestre. Identidades institucionais usam chaves compostas para evitar relações entre tenants; versões de missão são imutáveis; `DEMO` é o padrão; relatórios de piloto exigem classificação e autorização próprias.
+
+`prisma.config.ts` define a URL e o caminho do schema; `client.ts` usa adapter PostgreSQL. Copiar ambos para os locais indicados ao montar o pacote. Executar `prisma generate` explicitamente; no Prisma 7, não pressupor geração automática após migrations. [T04]
+
+Algumas garantias exigem SQL e serviço, não apenas schema: contadores não negativos; versões positivas; PILOT com permissão; prova de que permissão está ACTIVE, ainda válida e cobre a finalidade; revisão de conteúdo; início/fim real de um piloto; manifesto assinado pela instituição quando cabível. Aplicar as restrições de `constraints.sql` na migration e testar sua execução.
+
+Para conceder moedas: autenticar → carregar tentativa/versão → verificar conclusão → bloquear estado do learner → inserir ledger com chave única de marco → atualizar projeção → commit. Duplicidade legítima retorna o grant existente; não gera nova recompensa. Para compra cosmética: bloquear `CitySave`, conferir revisão e saldo calculado, inserir débito, alterar estado, incrementar revisão e confirmar na mesma transação. Testar duas compras simultâneas; CHECK em uma linha não garante saldo global não negativo.
+
+## 5.9. Privacidade, crianças e publicação responsável
+
+LGPD e ECA Digital são referências de revisão, não selos obtidos por escolher tecnologias. O melhor interesse da criança orienta as decisões; não afirmar que um código aleatório torna todos os dados anônimos. A base legal deve ser documentada para a finalidade e o contexto reais, sem usar “interesse legítimo” ou um checkbox como atalho genérico. O enquadramento e as obrigações do ECA Digital precisam de verificação jurídica e das orientações atuais da ANPD antes da publicação. [L02–L04]
+
+Adotar minimização, privacidade por padrão, comunicação compreensível, nenhuma publicidade comportamental, nenhuma mecânica comercial infantil, nenhum contato livre entre usuários e nenhum uso de dados de crianças em prompts de fornecedores. A assistência de IA é para desenvolver o software com exemplos sintéticos, não para monitorar os jogadores.
+
+Proposta inicial de retenção **a validar, não prazo legal**: sessões efêmeras não persistem; saves familiares duram enquanto o usuário optar; eventos institucionais mínimos até 30 dias; registros de avaliação por até 90 dias após o fechamento do piloto quando justificado; documentos de autorização e evidência conforme política específica aprovada. Não manter tudo indefinidamente “para o prêmio”. Expurgo inclui storage, relatórios temporários e backups conforme procedimento documentado; não prometer exclusão física instantânea de backups imutáveis.
+
+Não coletar diagnóstico de deficiência para habilitar controles acessíveis. Não solicitar imagem, biometria ou documento infantil sem necessidade e processo adequados. A verificação de faixa e de responsabilidade parental deve minimizar dados e atender ao enquadramento real, não ser inventada pelo agente.
+
+### Ameaças prioritárias
+
+Isolamento de instituição; URL previsível de exportação; XSS em traduções ou conteúdo importado; vazamento em logs; cookie/CSRF; reenvio duplicado; importação de save adulterado; dados DEMO contaminando piloto; dependência maliciosa; rastreadores de templates; bucket público com mídia infantil; professor mantendo sessão aberta em computador compartilhado. Criar testes de negação e logs técnicos sem corpo de requisição, token, voz, imagem ou identificador desnecessário.
+
+Segredos somente no servidor. Não expor banco diretamente ao navegador. CSP, validação estrita, HTTPS na publicação, limites de request, atualização de dependências e rollback fazem parte da operação; uma lista de bibliotecas não implementa esses controles sozinha.
+
+### Expurgo e relações compostas
+
+Ao expurgar uma sessão sem excluir todo o learner, desvincular `RewardEntry.attemptId` das tentativas a remover antes de apagar a sessão, preservando apenas o marco mínimo enquanto houver finalidade válida. As relações compostas `NoAction` não são um expurgo automático. Excluir/encerrar sessões antes de remover sua autorização; não zerar `permissionId` em uma sessão PILOT que exige permissão. Ao excluir o learner integralmente, planejar e testar a ordem transacional e os cascades; retirar também outboxes e mídias relacionadas segundo a política aprovada. Criar um teste de integração específico de expurgo: esquema coerente não prova que o procedimento de exclusão funciona.
+
+
+---
+
+# 6. Direção de arte, interação e Remotion
+
+## 6.1. Direção visual
+
+Construir uma **maquete urbana brasileira acolhedora**, com personagens originais, árvores, praça, escola, ponto de ônibus e ruas legíveis. Preferir top-down com volume 2,5D leve a um mundo 3D pesado. A cidade deve comunicar função e fluxo sem parecer um dashboard corporativo. Evitar infantilização excessiva para 11–14: mesma linguagem visual, com mais autonomia no editor e conteúdo mais analítico.
+
+Paleta de proposta: fundo quente `#FFF8ED`; tinta `#17324D`; ação principal `#146B63`; destaque `#F4B942`; superfície `#FFFFFF`; feedback informativo `#DDEDF7`. Verificar contraste de cada combinação antes de publicar, não presumir conformidade pela paleta. Vermelho/verde de sinalização obedecem ao contexto revisado e nunca são o único canal de informação. Não alterar placas para combinar com a identidade visual.
+
+Tipografia: fontes de sistema legíveis inicialmente; fontes extras somente com licença e carregamento local autorizados. Não incluir arquivos de fonte neste kit. Texto de ação com 18–20 px no modo inicial, botões confortáveis com área-alvo de projeto de 48×48 px ou maior, espaçamento amplo e foco visível. Esse tamanho é decisão de design, não descrição do mínimo de todos os critérios WCAG.
+
+Personagens: proporções cartunizadas não realistas, variações diversas de cabelo/roupa, pessoas com diferentes modos de mobilidade e agência. Não usar diagnósticos, sotaques ou características corporais como piada. Ninguém é “culpado por atrapalhar o trânsito”. Mascote opcional: uma coruja geométrica original, sem imitar personagens conhecidos. O mascote orienta a tarefa e incentiva pedir ajuda, sem criar vínculo de dependência.
+
+## 6.2. Layout e microinterações
+
+Desktop: mundo ocupando aproximadamente 70% da área útil, painel de missão contextual à direita, cabeçalho discreto com pausa e acessibilidade. Mobile: mapa em área superior/central e painel DOM com duas ou três escolhas grandes, sem exigir orientação horizontal. Todos os controles cabem sem recortar textos ao aumentar zoom.
+
+Estados desenhados: início, preparando recursos, pronto offline, em missão, decisão, explicação, revisita, pausa, conclusão, armazenamento indisponível, conteúdo não revisado, modo institucional indisponível e ausência de dados. Evitar “estado vazio bonito” com números aleatórios.
+
+Movimento: 150–250 ms para transições de UI como alvo inicial; nenhuma informação apenas em animação. Câmera suave opcional; zero tremor ou flashes; partículas comemorativas breves e desativáveis; respeitar movimento reduzido. Pausar não reduz moedas. Sons curtos com volume baixo por padrão, controles de mudo sempre disponíveis, sem autoplay de voz. [T07]
+
+A cena reage à escolha: destaca um local de espera; mostra campo de visão no tabuleiro; transforma um trecho de calçada; apresenta dois rastros de parada em pista vazia. Essa reação é a linguagem do jogo. Uma chuva de confetes em cima de um quiz não substitui a mecânica contextual.
+
+## 6.3. Acessibilidade como critério funcional
+
+Usar WCAG 2.2 AA como referência de avaliação, não como certificação automática. Teclado, foco ordenado, texto alternativo, contraste, zoom, orientação, pausa e alternativas a gestos complexos são parte do aceite. O canvas pode ser decorativo para tecnologia assistiva quando todo o conteúdo equivalente está no DOM; não ocultar informação única. [T13]
+
+O modo guiado permite observar descrição do estado, selecionar alternativas, aplicar intervenção e compreender consequência sem movimentar um avatar. Utilizar a mesma regra, mesma conquista e mesma progressão. Não chamar esse modo de “fácil para quem não consegue”. Realizar testes com pessoas e recursos assistivos; axe ou Lighthouse isoladamente não validam a experiência de jogo.
+
+## 6.4. Assets e autoria
+
+Arte inicial pode ser produzida pelo agente como SVG/Canvas simples original, deixando sua proveniência declarada. No runtime, empacotar os recursos localmente e impedir URLs externas imprevistas. O kit não contém sprites de terceiros, fotos de crianças ou fontes tipográficas.
+
+O City Kit (Roads) de Kenney é referência de asset com CC0 informado na página, mas contém material para 3D; não é automaticamente um tilemap 2D pronto para Phaser. Para usá-lo, converter/renderizar o que for útil após validar os arquivos e a licença da versão, ou preferir arte 2D original no primeiro ciclo. Não misturar estilos apenas por serem gratuitos. [R15]
+
+A revisão para um edital pode distinguir arte produzida com IA de arte desenhada por pessoas; este kit não resolve a admissibilidade. Registrar ferramenta, autoria, modificações e fontes. Não usar o selo SENATRAN, logotipos oficiais ou “premiado” como decoração antes de autorização cabível. [E01]
+
+## 6.5. Remotion: vídeo explicativo, não engine do jogo
+
+Usar uma aplicação separada. A documentação de licença consultada prevê uso gratuito para pessoas e empresas de até três pessoas e licença de empresa em situações descritas para quatro ou mais; termos e tipo de uso precisam ser conferidos na adoção. Não rotular todo o Remotion como MIT ou como gratuito para qualquer organização. Este kit não contrata licença nem renderiza em serviço pago. [T03]
+
+Storyboard sugerido de **60 segundos**, sem alegar requisito do edital:
+
+| Trecho | Conteúdo | Tratamento |
+|---|---|---|
+| 0–10 s | Cidade do cuidado e tema | Título original; identificação de demonstração |
+| 10–25 s | Observar, escolher, compreender | Captura real do protótipo quando houver; antes disso, composição claramente ilustrativa |
+| 25–40 s | Bairro responde às decisões | Intervenções e rastros de parada sem pessoas na pista |
+| 40–52 s | Inclusão e funcionamento local | Mostrar modo guiado e indicação verdadeira de offline preparado |
+| 52–60 s | Convite a um piloto supervisionado | “Proposta em desenvolvimento”; sem resultado, prêmio ou depoimento inventado |
+
+A composição de referência em `video/` contém só elementos originais em CSS/React e texto. Não foi renderizada neste ambiente porque as dependências Remotion não estão instaladas. O agente deve substituir as telas ilustrativas por capturas reais do produto ao disponibilizá-las, mantendo rótulos honestos. Material de aplicação em escola exige processo distinto, direitos de imagem e revisão institucional.
+
+Após resolver licença e dependências no workspace do projeto:
+
+```bash
+# Exemplo de comandos a criar no pacote de vídeo, não confirmação de execução neste kit.
+remotion studio video/index.ts
+remotion render video/index.ts SmartCityDemo out/smartcity-demo.mp4 --codec=h264
+```
+
+Manter `remotion` e `@remotion/cli` na mesma versão resolvida. Áudio opcional e legendas; não gerar voz de criança, depoimento ou trilha protegida sem autorização. Hash do vídeo e descrição de seu caráter ilustrativo entram no inventário, não na tabela de resultados reais.
+
+
+---
+
+# 7. Repositórios globais: adotar, estudar ou evitar
+
+**Consulta: 28/09/2026.** As licenças abaixo foram identificadas nas páginas/arquivos indicados; a incorporação exige auditoria do commit e de seus componentes. Visitar o README não é teste de compatibilidade ou segurança. Estrelas não foram usadas como substituto de qualidade. Os projetos não foram clonados nem seus arquivos redistribuídos neste kit.
+
+A busca distinguiu origem institucional, idioma do conteúdo e nacionalidade. Um repositório em russo não prova que seu autor esteja na Rússia. “Russófono” abaixo descreve o conteúdo/ecossistema documentado; projetos bielorrussos ou globais não são rotulados como russos. Na Ásia, aproveitar padrões técnicos, nunca importar sinalização ou regras estrangeiras para o currículo brasileiro.
+
+## 7.1. Matriz de engenharia
+
+| Projeto / localização exata | Ecossistema documentado | Licença observada | Melhor aproveitamento | Decisão |
+|---|---|---|---|---|
+| [Phaser](https://github.com/phaserjs/phaser) e [template React/TS](https://github.com/phaserjs/template-react-ts) | Comunidade global | MIT | Integração real React + engine 2D + Vite; cenas e eventos | **P0, base escolhida**. Remover telemetria de build do template; não reutilizar marcas/personagens [T01–T02] |
+| [A/B Street](https://github.com/a-b-street/abstreet) | Origem ligada a Seattle; evolução internacional, incluindo Reino Unido | Apache-2.0 | Ideia de transformar ruas e comparar mobilidade | Referência de design; não portar o simulador Rust inteiro nem mapas reais de crianças [R01] |
+| [Microsoft MakeCode Arcade](https://github.com/microsoft/pxt-arcade) | Microsoft / ecossistema americano e global | MIT, com avisos de terceiros | Minijogos educativos e experiência de criação orientada | Extensão de oficina ou estudo de UX, não motor adicional do MVP [R02] |
+| [Blockly Games](https://github.com/blockly-games/blockly-games) | Projeto educacional originado no ecossistema Google, comunidade global | Apache-2.0 | Progressão por conceitos, feedback e aprendizagem por blocos | Estudar a didática; uso de Blockly futuro limitado à DSL protegida [R03] |
+| [ct.js](https://github.com/ct-js/ct-js) | Ecossistema com documentação oficial em russo; nacionalidade não inferida | MIT | Editor visual e fluxo leve de criação de jogos 2D | Alternativa para prototipagem por educadores, não empilhar com Phaser [R04] |
+| [PDD-2026](https://github.com/chibsaabji/PDD-2026) | Conteúdo de regras de trânsito russo; autoria nacional não confirmada | MIT identificada na página pesquisada | Organização de banco de conteúdo e suporte de idioma | Projeto comunitário a auditar. Não usar perguntas, condução ou regras russas no jogo infantil [R05] |
+| [CityFlow](https://github.com/cityflow-project/CityFlow) | Pesquisa internacional de tráfego; referência relevante ao levantamento asiático | Apache-2.0 | Modelagem de fases e cenários de tráfego para pesquisa | **P2/laboratório externo**, C++/Python; não é engine HTML5 de jogo infantil [R06] |
+| [Cocos Engine](https://github.com/cocos/cocos-engine) | Ecossistema chinês; titulares citados no arquivo LICENSE | MIT no `LICENSE.md` do tag `v3.8.9` examinado | Produção 2D/3D multiplataforma | Alternativa completa, não dependência do Phaser. Termos de Creator/serviços/terceiros devem ser examinados separadamente [R07] |
+| [LayaAir](https://github.com/layabox/LayaAir) | Ecossistema Layabox, documentação chinesa e inglesa | MIT | Engine web 2D/3D e ferramentas de publicação | Alternativa arquitetural; não usar SDK de miniapps/rastreamento por padrão [R08] |
+| [Akashic Engine](https://github.com/akashic-games/akashic-engine) | Documentação japonesa | MIT para o código; README diferencia imagens/áudios sob CC BY 2.1 JP | Padrões de jogos JS e módulos independentes do ambiente | Estudar ou testar isoladamente; core sozinho não é o ambiente completo; assets exigem tratamento próprio [R09] |
+| [Eclipse SUMO](https://github.com/eclipse-sumo/sumo) | Desenvolvimento principal ligado ao DLR, Alemanha | EPL-2.0; licenças de componentes separadas | Pesquisa e comparação de modelos de mobilidade | Fora do runtime infantil. Não dizer que SUMO é americano nem que seu modelo padrão é necessariamente IDM [R10] |
+| [Godot Road Generator](https://github.com/TheDuckCow/godot-road-generator) | Comunidade global Godot | MIT | Malha viária procedural e tráfego em 3D | Alternativa P2 para uma edição Godot; o README ainda alerta que não está feature-complete [R12] |
+| [Blockly-Traffic](https://github.com/Aayushadh/Blockly-Traffic) | País do autor não confirmado | Não foi localizada licença explícita na inspeção da raiz | Referência visual de blocos e semáforo | **Não incorporar código/assets sem licença ou autorização**; não repetir “Índia/Singapura” como fato [R13] |
+| [GCompris Qt](https://github.com/gcompris/GCompris-qt) | Ecossistema KDE, global | Licenças por arquivo não auditadas neste kit | Organização de atividades e autonomia de uso em contexto educativo | Inspiração, não copiar assets/atividades ou declarar licença única sem verificar [R14] |
+| [Kenney City Kit (Roads)](https://kenney.nl/assets/city-kit-roads) | Autor/fornecedor internacional de assets | CC0 indicada na página | Referência modular de ruas para pipeline de arte | Opcional; é asset de cidade 3D, não aplicativo pronto nem tilemap Phaser automático [R15] |
+| [Remotion](https://github.com/remotion-dev/remotion) | Ferramenta global de vídeo com React | Licença própria e condições de uso | Vídeo explicativo com composição reproduzível | Aplicação separada e gate de licença; não afirmar “MIT/grátis para todos” [T03] |
+
+## 7.2. O que realmente usar agora
+
+**Base de implementação:** Phaser/React/Vite/TypeScript, conteúdo original versionado, i18next, IndexedDB, testes e PWA. **Inspiração de mecânica:** A/B Street para transformação de ruas; Blockly Games para sequência didática; ct.js para simplicidade do fluxo de criação. **Materiais de apresentação:** Remotion separado e arte própria. **Pesquisa posterior:** CityFlow/SUMO; nenhuma integração deve ser fingida apenas por constar na bibliografia.
+
+**Não incorporados:** `bath-drivers-ed-game` não foi confirmado como repositório utilizável com proprietário, código e licença; “movimento ЮИД” não é um repositório de software. O dossier citou ambos de maneira insuficiente para iniciar uma integração. Não completar o que falta por adivinhação. [D01, R16]
+
+Aceleração real vem de reutilizar infraestrutura bem delimitada. Um fork completo de city builder ou simulador científico pode aumentar custos de adaptação, licença, manutenção e acessibilidade. O núcleo autoral deve continuar sendo currículo, missões, experiência inclusiva e avaliação honesta, não a soma de engines.
+
+## 7.3. Checklist de adoção por dependência
+
+Registrar URL canônica, commit/tag, licença SPDX quando aplicável, arquivo LICENSE, NOTICE, origem de assets, modificações e responsável. Conferir maturidade por teste reproduzível: instalar em sandbox, verificar build, integração pequena, remover telemetria não necessária e observar tráfego de rede. Falhas ou licença indefinida impedem incorporação, mas não obrigam abandonar o projeto: implementar a funcionalidade mínima com código próprio.
+
+Não presumir que engine MIT torna o editor, marketplace, modelo 3D, fonte, voz, mapa e exemplo comercial também MIT. Para submissão ao prêmio, a existência de licença aberta não resolve sozinha a cessão exigida no Anexo II. Revisão jurídica deve delimitar o que é da equipe e o que continua sendo de terceiros.
+
+Formato de inventário a preencher, sem dados fictícios:
+
+```json
+{
+  "name": "componente-a-incorporar",
+  "sourceUrl": "URL_VERIFICADA",
+  "commitOrVersion": "PREENCHER_APOS_INSTALACAO",
+  "licenseSpdx": "PREENCHER_APOS_AUDITORIA",
+  "licenseFile": "caminho-no-projeto",
+  "noticeRequired": null,
+  "assetLicenses": [],
+  "modified": false,
+  "redistributedFiles": [],
+  "reviewStatus": "PENDING"
+}
+```
+
+
+---
+
+# 8. Qualidade, piloto e evidências
+
+## 8.1. Pirâmide de testes e critérios de bloqueio
+
+O kit inclui testes reais de um núcleo de referência, mas isso não equivale a testar o jogo, o banco ou crianças. A aplicação deve acrescentar integração e navegador. Ferramentas de referência: Vitest e Playwright; acessibilidade requer também revisão manual. [T08–T09, T13]
+
+| Área | Teste obrigatório no produto | Bloqueio de publicação |
+|---|---|---|
+| Domínio | Mesma sequência produz mesma regra; argumentos físicos inválidos são rejeitados | NaN, estado impossível ou decisão pedagógica divergente entre modos |
+| Trânsito virtual | Nenhum movimento conflitante; guardas impedem cena perigosa | Animação de choque, sinalização contraditória ou instrução para prática arriscada |
+| Recompensas | Repetição, reenvio e concorrência não duplicam marco; saldo nunca negativo | Farm, perda por pausa/ajuda, compra real ou deadlock econômico |
+| Persistência | Reload, arquivo corrompido, versão antiga, quota e modo privado | Perda silenciosa, mistura de perfis, importação confiada como evidência real |
+| Conteúdo | Missões/claims/chaves completos; regra tem localizador e revisão | Conteúdo publicado sem revisor ou afirmação legal inventada |
+| Idiomas | Mesmas chaves de interface; cobertura do currículo declarada | Seletor promete idioma que a missão não oferece |
+| Acessibilidade | Teclado, foco, zoom 200%, sem som, sem arrastar, modo guiado, contraste | Objetivo essencial impossível por alternativa acessível |
+| Offline | Cache preparado; rede desligada; jogo e exportação funcionam | API externa obrigatória para iniciar/terminar missão visitante |
+| Segurança | A/B tenants; adulto sem role; cookie/CSRF; export; revogação; payload extra | Criança ou instituição acessa dado de outra; sessão recuperada sem autorização |
+| Relatórios | DEMO excluído; pares únicos; ausentes em null; CSV escapado | Percentual inventado, dado de teste contado como piloto, causalidade indevida |
+| Operação | Build, migrations, backup/restauração de teste, logs sanitizados | Segredo frontend, bucket público ou build que só funciona na máquina do autor |
+
+### Roteiros E2E prioritários
+
+**Jornada visitante:** abrir em armazenamento limpo, escolher faixa, fazer M01 errando uma decisão e depois compreendendo, pausar, retomar, receber uma única recompensa, mudar uma intervenção gratuita da cidade, salvar opcionalmente, recarregar e apagar. Verificar que não houve request de analytics nem cadastro infantil.
+
+**Jornada equivalente:** executar a mesma missão somente com teclado e modo guiado; comparar objetivo, explicação e recompensa. O resultado pedagógico não pode depender de movimento fino do avatar ou de ouvir áudio.
+
+**Jornada offline:** carregar e preparar recursos, desativar a rede, recarregar quando o navegador suportar a estratégia, concluir duas missões, exportar. Testar também primeiro acesso offline sem cache: mensagem clara e nenhum estado falso de pronto.
+
+**Jornada institucional:** educador A autentica e inicia sessão autorizada; educador B de outro tenant tenta ler, concluir ou exportar usando IDs de A; todas as tentativas são negadas. Revogar permissão e reenviar outbox antiga; eventos são recusados. Duplicar requisições e disparar duas compras simultâneas; estado permanece consistente.
+
+**Jornada editorial:** retirar uma claim e tentar publicar missão que a referencia; publicação deve falhar. Atualizar versão não altera tentativa antiga nem concede novamente moedas por simples bump de conteúdo.
+
+## 8.2. Protocolo de piloto — proposta, não pesquisa executada
+
+**Responsáveis a nomear:** instituição parceira, coordenação pedagógica, educador de trânsito, responsável por privacidade e equipe de implementação. Definir também responsável por direitos autorais/imagem. Nenhum nome de parceiro foi inferido dos arquivos fornecidos.
+
+**Etapa técnica:** antes de incluir crianças, testar com adultos as jornadas, leitura, desempenho, rede, recuperação e acessibilidade. Corrigir falhas de segurança. Depois, realizar avaliação de usabilidade supervisionada com autorização institucional e procedimentos de participação adequados, sem coleta excessiva.
+
+**Desenho de avaliação:** descrever perguntas de pesquisa, competências, faixa, instrumento, tamanho de amostra planejado e forma de recrutamento. O tamanho da amostra é decisão metodológica a justificar; não adotar 120 só porque o dossiê o mencionou. Uma aplicação pequena pode avaliar usabilidade sem pretender comprovar eficácia estatística.
+
+**Proteção de participantes:** informação clara ao responsável e assentimento compreensível à criança/adolescente conforme contexto; participação voluntária; recusa ou saída sem prejuízo escolar; adulto presente; nenhuma tarefa em rua real; nenhuma filmagem necessária para usar o jogo. Verificar exigências éticas de pesquisa quando se pretender produzir investigação envolvendo pessoas; o agente não emite aprovação ética. A documentação jurídica e institucional deve ser analisada no contexto real. [L02–L04]
+
+**Oficina sugerida:** acolhimento e explicação pelo educador; atividade diagnóstica breve; duas ou três missões com pausas livres; conversa sobre as escolhas; atividade de transferência; encerramento. Ajustar duração e número de missões à turma em vez de exigir completar o catálogo inteiro. Para 5–7, observação e mediação têm prioridade sobre formulários escritos.
+
+**Registros mínimos:** data real, versão do aplicativo/currículo, faixa pedagógica, tipo de mediação, dispositivos, quantidade de sessões e pares válidos, desistências/ausências, problemas técnicos e instrumentos usados. Código aleatório não significa anonimato se a escola mantiver uma chave de ligação; guardar tal chave fora do aplicativo e restringir acesso quando necessária.
+
+## 8.3. Plano analítico honesto
+
+Primeiro relatar contagens e distribuição de respostas por competência. Depois, calcular diferenças pré/pós apenas para pares válidos comparáveis. A média pós menos a média pré é diferença em pontos percentuais quando a escala é percentual; aumento relativo exige dividir pela base e pode ser inadequado se a base é zero ou pequena.
+
+Informar faltantes, uso de apoio, forma do instrumento, efeito de reapresentação, amostra de conveniência, possíveis diferenças entre mediadores e limitações do desenho. Não declarar significância estatística sem análise adequada e não declarar causalidade a partir de pré/pós sem controles compatíveis. Não transformar “acertou no jogo” em “mudou comportamento na rua” ou “reduziu mortes”.
+
+Uma avaliação posterior de retenção pode ser planejada em data combinada pela escola, sem notificação pressionando a criança. Preferir retorno mediado pelo educador. Somente executar coleta após autorizações aplicáveis, não por disparo automático do produto.
+
+## 8.4. Evidências para prestação de contas
+
+O conjunto mais seguro começa com screenshots do software sem identificação infantil, relatório metodológico, registros do educador e resultados agregados verificáveis. Fotos, voz ou vídeo de participantes só entram com processo de direitos e proteção próprio, quando necessários. Recusar uso de foto não exclui a criança da aprendizagem.
+
+Todo arquivo de evidência contém ID, data real, tipo, origem, hash, autorização quando cabível e revisão. Hash detecta alteração, não prova que a cena ocorreu como descrita. Separar `demo/`, `pilot-private/` e `public-reviewed/`. Exportação pública deve omitir identificadores, links duradouros de mídia e células que permitam reidentificação; grupos muito pequenos podem exigir supressão/agregação adicional.
+
+Os CSVs em `evidence/` contêm **somente cabeçalhos**. Não há estudantes, percentuais ou resultados de campo neste kit. Mesmo fixtures dos testes de software nunca são dados de pesquisa.
+
+## 8.5. Minuta do projeto base — estrutura a preencher por pessoas
+
+Documento futuro em português, terceira pessoa e no máximo dez páginas, conforme o edital fornecido. Manter todos os rótulos; distribuir o espaço segundo a evidência disponível. Uma minuta interna não se torna elegível por preencher os títulos. [E01, pp.10–11]
+
+| Seção | Conteúdo a preencher com evidência | Limite de honestidade |
+|---|---|---|
+| 1. Justificativa | Problema local documentado, contexto e pertinência | Não inventar estatísticas municipais ou escolares |
+| 2. Metodologia | Como foram conduzidas as ações, instrumentos e acompanhamento | Diferenciar planejado de realizado |
+| 3. Objetivo | Resultado educativo buscado | Não prometer redução de sinistros já demonstrada |
+| 4. Público-alvo | Faixa e contexto reais de participação | Não expor identidade de crianças |
+| 5. Proposta | Ações efetivamente implementadas | Não listar backlog como execução |
+| 6. Estratégia de implementação | Parcerias e papéis, meios e continuidade | Não afirmar apoio institucional sem documento |
+| 7. Cronograma de execução | Datas reais e fases concluídas | Não retroagir para satisfazer o edital |
+| 8. Desenvolvimento | Execução observável, ajustes e limitações | Não converter relato gerado em evidência |
+| 9. Resultado | Dados coletados, análise adequada, incertezas | Se ainda não coletados, declarar isso na minuta interna |
+| 10. Materiais complementares | Referência a arquivos reais e direitos de uso | Não inventar vídeo, autorização ou depoimento |
+| 11. Bibliografia | Fontes efetivamente utilizadas | Preservar fontes primárias e autoria de terceiros |
+
+Versão inicial a escrever: “A iniciativa encontra-se em desenvolvimento. Ainda não há aplicação de campo documentada neste material.” Atualizar apenas após fatos reais. O item 17.3 permanece um impedimento potencial independente da qualidade da redação e da revisão humana.
+
+
+---
+
+# 9. Plano de execução, sustentabilidade e oportunidades
+
+## 9.1. Sequência de entrega e gates
+
+| Marco | Entrega | Evidência para avançar |
+|---|---|---|
+| G0 — contrato | Workspace seguro, auditoria, versões, backlog e decisões | Arquivos lidos, branch identificada, flags seguras |
+| G1 — uma missão real | M01 com mapa, decisão, explicação, modo guiado e save | Teste E2E reproduzível e screenshot do produto |
+| G2 — sistema completo P0 | 12 missões, adaptação por idade, cidade, economia | Catálogo íntegro, regras e recompensas testadas |
+| G3 — inclusão/offline | Teclado, foco, modo guiado, ausência de áudio/rede/storage | Matriz de testes e limitações registradas |
+| G4 — editorial | Revisão de trânsito, didática e proteção infantil | Pessoas responsáveis e versões aprovadas, não checkboxes fictícios |
+| G5 — institucional opcional | API, Prisma, auth, relatórios e retenção | Banco de teste, migrations, isolamento A/B e revogação |
+| G6 — piloto | Protocolo e execução autorizada | Evidências reais, datas e relatório sem dados DEMO |
+| G7 — oportunidade pública | Análise de edital vigente, IA, autoria e documentos | Decisão humana e condição de elegibilidade confirmada |
+
+O agente pode construir grande parte da implementação em um fluxo único, mas não substitui os gates humanos, a infraestrutura externa ou o tempo de observação em escola. Se G5 estiver bloqueado, G1–G3 continuam úteis no modo visitante. Não criar dezenas de telas vazias para aumentar a contagem de entregáveis.
+
+### Contrato de scripts a implementar na aplicação
+
+```text
+pnpm dev                 # visitante, sem serviços externos obrigatórios
+pnpm build               # produção estática do jogo
+pnpm lint                # regras e higiene
+pnpm typecheck           # todos os pacotes construídos
+pnpm test                # domínio e conteúdo
+pnpm test:e2e            # jornadas de navegador
+pnpm verify:content      # claims, revisões, manifesto e variantes
+pnpm verify:i18n         # cobertura real de idioma
+pnpm verify:licenses     # inventário e arquivos incorporados
+pnpm db:validate         # schema Prisma no pacote institucional
+pnpm db:generate         # client explícito
+pnpm db:migrate:test     # apenas banco isolado de testes
+pnpm video:studio        # pacote separado, licença verificada
+```
+
+Os comandos acima são contrato para o produto a construir. Os comandos que já existem e foram usados **neste kit** são os indicados no README e em `validation/VALIDACAO.md`. Não confundir os dois.
+
+## 9.2. Oportunidades estratégicas — propostas, não editais anunciados
+
+**Escolas e redes de ensino:** oferecer oficina mediada, guia simples, modo sem cadastro e material impresso acessível. Validar com professores o tempo de preparação, dispositivos disponíveis e adequação da linguagem. O diferencial é reduzir barreiras para uso real, não vender coleta de dados.
+
+**Órgãos de educação para o trânsito:** colaborar na revisão técnica e em pacotes de cenário locais, sem geolocalizar crianças nem transformar o jogo em vitrine de fiscalização. Instituições podem contribuir com revisão e formação; nenhum apoio está confirmado neste kit.
+
+**Responsabilidade social de organizações:** estudar apoio à manutenção, revisão de conteúdo e oficinas, mantendo marcas comerciais fora da experiência infantil e sem publicidade comportamental. Não atribuir um selo oficial a patrocinador ou presumir contratação pública automática.
+
+**Inclusão de famílias e estudantes de outros idiomas:** traduzir a interface e depois o currículo com revisão humana, preservando regras brasileiras. Testar linguagem e mediação com pessoas do contexto atendido; três JSONs de interface não provam adequação cultural.
+
+**Kit físico complementar:** cartões de situações e tabuleiro de mesa para ambientes sem computador. As atividades permanecem em sala, sem desafios na rua. Fonte, autoria e revisão iguais às do jogo. Validar se a alternativa também atinge os objetivos, em vez de considerá-la inferior por não ter animação.
+
+**Ferramenta de autoria para educadores:** etapa posterior com modelos controlados de missão, aprovação editorial e pré-visualização segura. Não permitir conteúdo livre infantil publicado automaticamente. O editor pode criar cenários sobre calçadas e convivência sem liberar JavaScript arbitrário.
+
+**Pesquisa aplicada:** parceria formal com equipe pedagógica/universidade para validar instrumentos e desenho de avaliação. Essa oportunidade não implica categoria acadêmica elegível, financiamento garantido ou dispensa ética. Usar dados mínimos e acordos claros.
+
+Não foram identificados ou prometidos neste kit outros prêmios abertos, valores de fomento ou contratos específicos. Qualquer busca de oportunidade vigente deve conferir edital, data, elegibilidade, direitos e permissões de IA no momento da candidatura.
+
+## 9.3. Sustentabilidade e custos
+
+Núcleo estático local reduz dependências, mas não significa custo zero. Prever domínio/hospedagem, manutenção de conteúdo, revisão normativa/pedagógica, suporte, avaliação de acessibilidade, testes, produção audiovisual e operação institucional quando houver banco.
+
+Modelo a estimar com valores reais: custo mensal de infraestrutura + horas de revisão e suporte + custos de oficina e materiais + contingência. Registrar quem mantém o currículo após alteração normativa, quem responde ao professor, como restaurar dados e como desativar um recurso inseguro. Evitar prometer escalabilidade ilimitada em máquinas escolares sem medir.
+
+Uma estratégia de software aberto deve esclarecer licença do código autoral, licenças de conteúdo e assets, contribuições, versão mantida e governança. Não publicar todo material de estudo ou dados de piloto em repositório aberto. A cessão a um concurso precisa de análise própria e não transfere direitos de terceiros por decreto do projeto.
+
+## 9.4. Diferenciais defensáveis
+
+A combinação a desenvolver é: currículo brasileiro rastreável; três adaptações sem rótulos sobre capacidade; cidade transformada pelas escolhas; acessibilidade com paridade real; autonomia de funcionamento local; avaliação que distingue demonstração de evidência; continuidade para educadores. Esses são diferenciais de projeto e hipóteses de valor — não uma afirmação de ineditismo mundial já comprovado.
+
+O melhor argumento para uma futura banca será uma experiência consistente em funcionamento, pessoas responsáveis pela didática, registros reais de execução e uma explicação honesta do que se aprendeu com o piloto. Complexidade técnica pode apoiar isso, mas não substitui esses elementos.
+
+
+---
+
+# 10. Registro de fontes, proveniência e limites
+
+**Pesquisa realizada para este kit em 28/09/2026.** Os links são referências para inspeção; repositórios podem mudar. Registrar commit e versão efetivos antes de incorporar qualquer dependência. As fontes fornecidas pelo usuário e a pesquisa externa estão separadas. Propostas deste kit não são fatos observados em escola.
+
+## Documentos do usuário e atos oficiais
+
+| ID | Documento | Localização e uso |
+|---|---|---|
+| E01 | Edital de Concurso nº 24, de 4 de maio de 2026 | PDF fornecido pelo usuário, 21 páginas. DOU: https://www.in.gov.br/web/dou/-/edital-de-concurso-n-24-de-4-de-maio-de-2026-703398914 . Categoria 6 pp.9–11; critérios p.15; premiação p.16; cronograma pp.17–18; IA e cessão pp.18–21 |
+| D01 | Dossiê e projeto base fornecido | `dossi_completo_e_projeto_base_senatran_2026.md`. Fonte da ideia e de alegações auditadas; não comprova execução ou resultados |
+| E02 | Página oficial do Prêmio Senatran 2026 | https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/premio-senatran-2026 . Página consultada com edital e retificações |
+| E03 | Retificação nº 4 | https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/arquivos/RETIFICACAO_4.pdf . DOU de 30/07/2026; inscrição até 17/08/2026 às 17h; página única inspecionada |
+| E04 | Retificação nº 8 | https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/arquivos/RETIFICACAO_8.pdf . DOU de 04/09/2026; mantém encerramento da inscrição e altera julgamento para 18/08–30/09; página única inspecionada |
+
+As tabelas das páginas 15, 17 e 18 do PDF fornecido e as páginas das duas retificações foram consideradas, não apenas o resumo anterior. O calendário do PDF inicial não prevalece sobre as alterações oficiais consultadas. Não foi localizada reabertura posterior nas fontes examinadas; isso não é promessa de monitoramento permanente.
+
+## Legislação e proteção de crianças
+
+| ID | Fonte primária | Escopo neste kit |
+|---|---|---|
+| L01 | Código de Trânsito Brasileiro compilado: https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm | Cuidado, pedestres, bicicletas, limites, passageiros e educação; conferir regulamentação complementar antes de publicar detalhes |
+| L02 | LGPD, Lei nº 13.709/2018: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm | Base para revisão de finalidade, minimização, direitos e tratamento de dados de crianças/adolescentes |
+| L03 | Lei nº 15.211/2025, ECA Digital: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm | Proteção no ambiente digital e enquadramento a analisar na publicação |
+| L04 | ANPD — ECA Digital: https://www.gov.br/anpd/pt-br/assuntos/eca-digital | Orientações e materiais oficiais a acompanhar na revisão de conformidade |
+
+Este kit não é parecer jurídico. A decisão de tratamento de dados, execução de pesquisa, consentimento, imagem e submissão exige análise do contexto e dos atos vigentes. A revisão humana mencionada não afasta a restrição de IA do edital.
+
+## Ferramentas e documentação primária
+
+| ID | Fonte | O que foi verificado / utilizado |
+|---|---|---|
+| T01 | https://github.com/phaserjs/phaser | Engine 2D JavaScript/TypeScript como candidata principal |
+| T02 | https://github.com/phaserjs/template-react-ts | Template React/TS/Vite; integração e aviso de telemetria de build via `log.js`; MIT |
+| T03 | https://www.remotion.dev/docs/license/pricing e https://www.remotion.dev/docs/license | Condições próprias de licença; separação do vídeo; nenhuma licença adquirida neste kit |
+| T04 | https://www.prisma.io/docs/guides/upgrade-prisma-orm/v7 | Configuração Prisma 7, adapter, geração explícita e diferenças para exemplos antigos |
+| T05 | https://www.i18next.com/overview/configuration-options | Fallback, namespaces, idiomas e configuração |
+| T06 | https://vite-pwa-org.netlify.app/guide/ | Preparação de PWA/cache e limites de primeiro acesso offline |
+| T07 | https://motion.dev/docs/react-accessibility | Preferências de movimento e integração acessível |
+| T08 | https://vitest.dev/guide/ | Estratégia de testes do produto a construir |
+| T09 | https://playwright.dev/docs/intro | Testes de navegador do produto a construir |
+| T10 | https://dexie.org/docs | IndexedDB e persistência local |
+| T11 | https://zod.dev/ | Validação de contratos e conteúdo |
+| T12 | https://fastify.dev/docs/latest/ | API opcional em monólito modular |
+| T13 | https://www.w3.org/TR/WCAG22/ | Referência de acessibilidade; não certificação automática |
+| T14 | https://antigravity.google/docs/agent e https://antigravity.google/blog/ | Capacidades gerais do agente e anúncio oficial de Gemini 3.8 Flash; a configuração HIGH deve ser conferida na interface do operador |
+
+## Repositórios, projetos e assets complementares
+
+| ID | Fonte canônica consultada | Observação de auditoria |
+|---|---|---|
+| R01 | https://github.com/a-b-street/abstreet | Apache-2.0; origem em Seattle e evolução internacional; inspiração de planejamento |
+| R02 | https://github.com/microsoft/pxt-arcade | MIT e avisos de terceiros; ambiente educativo |
+| R03 | https://github.com/blockly-games/blockly-games | Apache-2.0; o endereço antigo google/blockly-games redirecionou |
+| R04 | https://github.com/ct-js/ct-js e https://ctjs.rocks/ru/ | MIT; presença de documentação oficial em russo, sem inferir nacionalidade |
+| R05 | https://github.com/chibsaabji/PDD-2026 | Repositório de conteúdo russo identificado na pesquisa; MIT indicada; integração e manutenção não testadas |
+| R06 | https://github.com/cityflow-project/CityFlow | Apache-2.0; motor de pesquisa em tráfego, não jogo HTML5 pronto |
+| R07 | https://github.com/cocos/cocos-engine/blob/v3.8.9/LICENSE.md | MIT nesse arquivo/tag; não generalizar para todos os produtos, serviços e assets do ecossistema |
+| R08 | https://github.com/layabox/LayaAir | MIT indicada na página; engine alternativa |
+| R09 | https://github.com/akashic-games/akashic-engine | MIT no código; README separa imagens/áudio em CC BY 2.1 JP |
+| R10 | https://github.com/eclipse-sumo/sumo | EPL-2.0, componentes próprios; desenvolvimento principal ligado ao DLR |
+| R11 | https://docs.blockly.com/ | Biblioteca de blocos; uso proposto somente em DSL limitada e segura |
+| R12 | https://github.com/TheDuckCow/godot-road-generator | MIT; conferir suporte à versão de Godot e aviso de incompletude |
+| R13 | https://github.com/Aayushadh/Blockly-Traffic | Repositório existe; licença explícita não localizada na inspeção da raiz; não reutilizar sem autorização |
+| R14 | https://github.com/gcompris/GCompris-qt | Mirror do KDE; apenas inspiração, licenças por arquivo não auditadas aqui |
+| R15 | https://kenney.nl/assets/city-kit-roads | CC0 indicada; pacote de assets, não jogo nem tilemap 2D automaticamente utilizável |
+| R16 | Referência `bath-drivers-ed-game` citada no dossiê | Não confirmada como repositório utilizável com owner/repo e licença; excluída da integração |
+
+## Fonte de proposta e cálculo
+
+**P01 — Modelo e desenho deste kit.** Mecânicas, catálogo, valores de recompensa, hipóteses físicas, orçamento de performance, cronograma, schema e critérios de teste são propostas de implementação. Os cálculos de parada aplicam um modelo idealizado de reação mais frenagem. Não foram calibrados com veículos reais e não são normas de engenharia. Nenhuma fonte externa deve ser citada como se tivesse aprovado essas escolhas.
+
+## Limites da verificação realizada
+
+Foram lidos os materiais fornecidos e pesquisadas fontes primárias. Não foram realizadas entrevista com a SENATRAN, auditoria jurídica, autorização institucional, aplicação com estudantes ou revisão pedagógica humana. Não foram clonadas ou executadas as engines pesquisadas. O registro de testes distingue o núcleo de referência realmente executado dos componentes que ainda dependem de instalação, compilação e testes no ambiente do agente.
+
+
+---
+
+# Anexo A — Fluxogramas e modelos Mermaid
+
+As fontes abaixo são editáveis. A renderização deve ser testada pelo agente no ambiente de implementação.
+
+## `diagrams/01_architecture.mmd`
+
+```mermaid
+flowchart TB
+  Child["Pessoa jogadora e adulto mediador"] --> UI["React: interface acessível"]
+  UI <--> Domain["Domínio TypeScript: regras e aprendizagem"]
+  Domain --> Phaser["Phaser: maquete 2D e animação protegida"]
+  Domain --> Guided["Modo guiado DOM equivalente"]
+  Content["Conteúdo revisado, versionado e BR"] --> Domain
+  Domain --> Store["Persistência opcional: memória ou IndexedDB"]
+  SW["Service Worker: apenas recursos públicos"] --> UI
+  Adult["Educador autenticado"] --> API["API institucional opcional"]
+  Store -. "Envio permitido e mínimo" .-> API
+  API --> Auth["Autorização, tenant e finalidade"]
+  Auth --> DB["Prisma 7 e PostgreSQL"]
+  DB --> Reports["Relatórios sem mistura DEMO e PILOT"]
+  Content --> Video["Remotion separado: vídeo de demonstração"]
+```
+
+## `diagrams/02_gameplay.mmd`
+
+```mermaid
+stateDiagram-v2
+  [*] --> BoasVindas
+  BoasVindas --> Configuracao: faixa e acessibilidade
+  Configuracao --> Cidade: sem cadastro infantil
+  Cidade --> Observar: escolher missão
+  Observar --> Decidir
+  Decidir --> Explicacao: nova escolha necessária
+  Explicacao --> Observar: reexperimentar sem punição
+  Decidir --> AcaoProtegida: guardas do cenário satisfeitas
+  AcaoProtegida --> Reflexao
+  Reflexao --> Marco: compreender com apoio permitido
+  Marco --> Cidade: recompensa idempotente
+  Observar --> Pausa
+  Decidir --> Pausa
+  Pausa --> Observar: retomar sem penalidade
+  Cidade --> [*]: encerrar ou salvar opcionalmente
+```
+
+## `diagrams/03_offline_sync.mmd`
+
+```mermaid
+sequenceDiagram
+  actor E as Educador
+  participant W as App local
+  participant Q as Outbox mínima
+  participant A as API autorizada
+  participant D as Banco
+  E->>W: Habilitar sessão institucional com finalidade documentada
+  W->>Q: Registrar evento tipado com UUID
+  Note over W,Q: Visitante não sincroniza; recursos públicos preparados funcionam offline
+  W->>A: Reenviar lote quando houver rede e permissão
+  A->>A: Verificar sessão, tenant, finalidade e validade
+  alt Permissão ausente ou revogada
+    A-->>W: Recusar ingestão; não reativar perfil
+  else Sessão válida
+    A->>D: Transação e deduplicação por tenant e UUID
+    D-->>A: Resultado já existente ou nova gravação
+    A-->>W: Confirmação dos UUIDs aceitos
+    W->>Q: Remover apenas eventos confirmados
+  end
+```
+
+## `diagrams/04_content_review.mmd`
+
+```mermaid
+flowchart LR
+  Source["Fonte primária identificada"] --> Claim["Afirmação: regra, recomendação ou hipótese"]
+  Claim --> Draft["Rascunho com localizador e versão"]
+  Draft --> Tech{"Revisão de trânsito"}
+  Tech -->|revisar| Draft
+  Tech -->|aprovado| Ped{"Revisão pedagógica e acessível"}
+  Ped -->|revisar| Draft
+  Ped -->|aprovado| Test["Testes de conteúdo e cenário"]
+  Test --> Publish["Pacote imutável publicado"]
+  Publish --> Monitor["Revisão de vigência"]
+  Monitor -->|regra mudou| New["Nova versão; anteriores preservadas"]
+  New --> Draft
+```
+
+## `diagrams/05_award_gate.mmd`
+
+```mermaid
+flowchart TD
+  Build["Desenvolver jogo com proveniência declarada"] --> Pilot["Planejar e autorizar piloto real"]
+  Pilot --> Run["Executar e documentar sem dados inventados"]
+  Run --> Eligibility{"Há certame aberto e elegibilidade confirmada?"}
+  Eligibility -->|não| Product["Continuar produto; não inscrever"]
+  Eligibility -->|sim| AI{"Uso de IA expressamente esclarecido e admissível?"}
+  AI -->|não| Product
+  AI -->|sim| Rights{"Direitos e documentos revisados?"}
+  Rights -->|não| Product
+  Rights -->|sim| Human["Revisão e decisão humana de submissão"]
+  Note["Em 28/09/2026: prazo consultado encerrado; cláusula 17.3 sem exceção confirmada"] --> Product
+```
+
+## `diagrams/06_data_model.mmd`
+
+```mermaid
+erDiagram
+  Tenant ||--o{ Membership : autoriza
+  AdultUser ||--o{ Membership : integra
+  Tenant ||--o{ Learner : delimita
+  Learner ||--o{ DataPermission : possui
+  Learner ||--o{ LearningSession : utiliza
+  LearningSession ||--o{ MissionAttempt : registra
+  Mission ||--|{ MissionVersion : versiona
+  MissionVersion ||--o{ MissionAttempt : fundamenta
+  ContentSource ||--o{ ContentClaim : sustenta
+  ContentClaim ||--o{ MissionClaim : vincula
+  MissionVersion ||--o{ MissionClaim : referencia
+  Learner ||--o{ RewardEntry : recebe
+  Learner ||--o| CitySave : persiste
+  LearningSession ||--o{ AssessmentRun : agrupa
+  AssessmentRun ||--o{ AssessmentAnswer : contem
+  Pilot ||--o{ PilotSession : associa
+  LearningSession ||--o{ PilotSession : participa
+  Pilot ||--o{ EvidenceAsset : documenta
+```
+
+## `diagrams/07_signal_interlock.mmd`
+
+```mermaid
+stateDiagram-v2
+  [*] --> VerdeVeicular
+  VerdeVeicular --> AmareloVeicular
+  AmareloVeicular --> TodosVermelhosA
+  TodosVermelhosA --> TodosVermelhosA: área de conflito não liberada
+  TodosVermelhosA --> VerdePedestre: área liberada
+  VerdePedestre --> TodosVermelhosB
+  TodosVermelhosB --> TodosVermelhosB: travessia ainda em curso
+  TodosVermelhosB --> VerdeVeicular: área liberada
+```
+
+# Anexo B — Schema Prisma e configuração do módulo institucional
+
+Schema destinado ao Prisma ORM 7 e PostgreSQL. O CLI Prisma não foi executado neste ambiente; executar validação, geração e migrations antes de habilitar o modo institucional. O visitante não depende deste banco.
+
+## `prisma/schema.prisma`
+
+```prisma
+// SmartCity Kids — esquema de referência para o modo institucional opcional.
+// Prisma ORM 7; PostgreSQL. URL em prisma.config.ts, nunca no frontend.
+// O modo visitante NÃO depende deste banco. JSON exige validação Zod no serviço.
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum StaffRole {
+  OWNER
+  COORDINATOR
+  EDUCATOR
+  AUDITOR
+}
+
+enum AgeBand {
+  AGE_5_7
+  AGE_8_10
+  AGE_11_14
+}
+
+enum DataKind {
+  DEMO
+  PILOT
+}
+
+enum ReviewStatus {
+  DRAFT
+  NEEDS_REVIEW
+  APPROVED
+  WITHDRAWN
+}
+
+enum ClaimKind {
+  LEGAL_RULE
+  SAFETY_RECOMMENDATION
+  SIMULATION_ASSUMPTION
+  PEDAGOGICAL_DESIGN
+}
+
+enum PermissionStatus {
+  PENDING
+  ACTIVE
+  WITHDRAWN
+  EXPIRED
+}
+
+enum LegalBasis {
+  CONSENT
+  LEGAL_OBLIGATION
+  PUBLIC_POLICY
+  STUDY_BY_RESEARCH_BODY
+  OTHER_REVIEWED_BASIS
+}
+
+enum AttemptStatus {
+  STARTED
+  COMPLETED
+  ABORTED
+}
+
+enum AssessmentPhase {
+  PRE
+  POST
+  FOLLOW_UP
+  FORMATIVE
+}
+
+enum PilotStatus {
+  PROPOSED
+  AUTHORIZED
+  RUNNING
+  COMPLETED
+  CANCELLED
+}
+
+enum EvidenceKind {
+  TEACHER_LOG
+  SOFTWARE_SCREEN_CAPTURE
+  AGGREGATE_REPORT
+  INSTITUTION_AUTHORIZATION
+  CLASSROOM_MEDIA
+}
+
+enum EventKind {
+  ATTEMPT_STARTED
+  CHOICE_SELECTED
+  EXPLANATION_OPENED
+  MISSION_COMPLETED
+  SESSION_PAUSED
+  SESSION_RESUMED
+}
+
+model Tenant {
+  id          String   @id @default(uuid()) @db.Uuid
+  name        String   @db.VarChar(160)
+  createdAt   DateTime @default(now()) @db.Timestamptz(3)
+  archivedAt  DateTime? @db.Timestamptz(3)
+  memberships Membership[]
+  classrooms  Classroom[]
+  learners    Learner[]
+  pilots      Pilot[]
+  audits      AuditEntry[]
+}
+
+model AdultUser {
+  id          String   @id @default(uuid()) @db.Uuid
+  authSubject String   @unique @db.VarChar(255)
+  // Contato profissional opcional. Nunca criar esta entidade para crianças.
+  email       String?  @db.VarChar(254)
+  createdAt   DateTime @default(now()) @db.Timestamptz(3)
+  memberships Membership[]
+  audits      AuditEntry[]
+}
+
+model Membership {
+  tenantId String @db.Uuid
+  userId   String @db.Uuid
+  role     StaffRole
+  active   Boolean @default(true)
+  tenant   Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  user     AdultUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@id([tenantId, userId])
+  @@index([userId, active])
+}
+
+model Classroom {
+  tenantId String @db.Uuid
+  id       String @default(uuid()) @db.Uuid
+  label    String @db.VarChar(80)
+  active   Boolean @default(true)
+  tenant   Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  learners Learner[]
+  @@id([tenantId, id])
+}
+
+model Learner {
+  tenantId    String @db.Uuid
+  id          String @default(uuid()) @db.Uuid
+  classroomId String? @db.Uuid
+  // Código aleatório e avatar de catálogo; não usar nome, data de nascimento ou endereço.
+  code        String @db.VarChar(32)
+  avatarKey   String @db.VarChar(64)
+  ageBand     AgeBand
+  locale      String @default("pt-BR") @db.VarChar(16)
+  createdAt   DateTime @default(now()) @db.Timestamptz(3)
+  expiresAt   DateTime @db.Timestamptz(3)
+  tenant      Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  classroom   Classroom? @relation(fields: [tenantId, classroomId], references: [tenantId, id], onDelete: NoAction)
+  permissions DataPermission[]
+  sessions    LearningSession[]
+  skills      SkillProgress[]
+  rewards     RewardEntry[]
+  city        CitySave?
+  @@id([tenantId, id])
+  @@unique([tenantId, code])
+  @@index([tenantId, classroomId])
+  @@index([expiresAt])
+}
+
+model DataPermission {
+  tenantId     String @db.Uuid
+  id           String @default(uuid()) @db.Uuid
+  learnerId    String @db.Uuid
+  purposeKey   String @db.VarChar(80)
+  policyVersion String @db.VarChar(32)
+  legalBasis   LegalBasis
+  status       PermissionStatus @default(PENDING)
+  // Referência opaca a registro protegido; não é assinatura nem prova criada pelo app.
+  evidenceRef  String? @db.VarChar(180)
+  recordedBy   String @db.Uuid
+  grantedAt    DateTime? @db.Timestamptz(3)
+  expiresAt    DateTime? @db.Timestamptz(3)
+  withdrawnAt  DateTime? @db.Timestamptz(3)
+  learner      Learner @relation(fields: [tenantId, learnerId], references: [tenantId, id], onDelete: Cascade)
+  sessions     LearningSession[]
+  @@id([tenantId, id])
+  @@unique([tenantId, learnerId, id])
+  @@index([tenantId, learnerId, status])
+}
+
+model ContentSource {
+  id          String @id @default(uuid()) @db.Uuid
+  sourceKey   String @unique @db.VarChar(64)
+  title       String @db.VarChar(240)
+  url         String @db.Text
+  publisher   String @db.VarChar(160)
+  checkedAt   DateTime @db.Timestamptz(3)
+  versionNote String @db.VarChar(160)
+  claims      ContentClaim[]
+}
+
+model ContentClaim {
+  id           String @id @default(uuid()) @db.Uuid
+  claimKey     String @unique @db.VarChar(80)
+  sourceId     String @db.Uuid
+  kind         ClaimKind
+  jurisdiction String @default("BR") @db.VarChar(16)
+  locator      String @db.VarChar(240)
+  editorialText String @db.Text
+  status       ReviewStatus @default(NEEDS_REVIEW)
+  reviewedBy   String? @db.VarChar(120)
+  reviewedAt   DateTime? @db.Timestamptz(3)
+  reviewDueAt  DateTime? @db.Timestamptz(3)
+  source       ContentSource @relation(fields: [sourceId], references: [id], onDelete: Restrict)
+  missions     MissionClaim[]
+}
+
+model Mission {
+  id       String @id @default(uuid()) @db.Uuid
+  key      String @unique @db.VarChar(80)
+  versions MissionVersion[]
+}
+
+model MissionVersion {
+  missionId        String @db.Uuid
+  version          Int
+  curriculumVersion String @db.VarChar(32)
+  ageBands         AgeBand[]
+  status           ReviewStatus @default(DRAFT)
+  config           Json
+  contentHash      String @db.Char(64)
+  createdAt        DateTime @default(now()) @db.Timestamptz(3)
+  publishedAt      DateTime? @db.Timestamptz(3)
+  mission          Mission @relation(fields: [missionId], references: [id], onDelete: Restrict)
+  claims           MissionClaim[]
+  attempts         MissionAttempt[]
+  @@id([missionId, version])
+}
+
+model MissionClaim {
+  missionId String @db.Uuid
+  version   Int
+  claimId   String @db.Uuid
+  mission   MissionVersion @relation(fields: [missionId, version], references: [missionId, version], onDelete: Cascade)
+  claim     ContentClaim @relation(fields: [claimId], references: [id], onDelete: Restrict)
+  @@id([missionId, version, claimId])
+}
+
+model LearningSession {
+  tenantId     String @db.Uuid
+  id           String @default(uuid()) @db.Uuid
+  learnerId    String @db.Uuid
+  permissionId String? @db.Uuid
+  dataKind     DataKind @default(DEMO)
+  curriculumVersion String @db.VarChar(32)
+  startedAt    DateTime @default(now()) @db.Timestamptz(3)
+  endedAt      DateTime? @db.Timestamptz(3)
+  expiresAt    DateTime @db.Timestamptz(3)
+  learner      Learner @relation(fields: [tenantId, learnerId], references: [tenantId, id], onDelete: Cascade)
+  permission   DataPermission? @relation(fields: [tenantId, learnerId, permissionId], references: [tenantId, learnerId, id], onDelete: NoAction)
+  attempts     MissionAttempt[]
+  assessments  AssessmentRun[]
+  events       EventReceipt[]
+  pilots       PilotSession[]
+  @@id([tenantId, id])
+  @@unique([tenantId, learnerId, id])
+  @@index([tenantId, dataKind, startedAt])
+  @@index([expiresAt])
+}
+
+model MissionAttempt {
+  tenantId       String @db.Uuid
+  id             String @default(uuid()) @db.Uuid
+  learnerId      String @db.Uuid
+  sessionId      String @db.Uuid
+  missionId      String @db.Uuid
+  missionVersion Int
+  clientAttemptId String @db.Uuid
+  status         AttemptStatus @default(STARTED)
+  firstChoiceCorrect Boolean?
+  supportUsed    Boolean @default(false)
+  completedAt    DateTime? @db.Timestamptz(3)
+  createdAt      DateTime @default(now()) @db.Timestamptz(3)
+  // Histórico de escolhas é tipado e limitado pelo serviço; não aceitar pontuação do cliente.
+  decisionLog    Json
+  session        LearningSession @relation(fields: [tenantId, learnerId, sessionId], references: [tenantId, learnerId, id], onDelete: Cascade)
+  mission        MissionVersion @relation(fields: [missionId, missionVersion], references: [missionId, version], onDelete: Restrict)
+  rewards        RewardEntry[]
+  @@id([tenantId, id])
+  @@unique([tenantId, clientAttemptId])
+  @@unique([tenantId, learnerId, id])
+  @@index([tenantId, learnerId, missionId, completedAt])
+}
+
+model SkillProgress {
+  tenantId       String @db.Uuid
+  learnerId      String @db.Uuid
+  competencyKey  String @db.VarChar(80)
+  curriculumVersion String @db.VarChar(32)
+  independentTrials Int @default(0)
+  independentCorrect Int @default(0)
+  // Projeção reconstruível, não diagnóstico cognitivo nem comparação pública.
+  updatedAt      DateTime @updatedAt @db.Timestamptz(3)
+  learner        Learner @relation(fields: [tenantId, learnerId], references: [tenantId, id], onDelete: Cascade)
+  @@id([tenantId, learnerId, competencyKey, curriculumVersion])
+}
+
+model RewardEntry {
+  tenantId      String @db.Uuid
+  id            String @default(uuid()) @db.Uuid
+  learnerId     String @db.Uuid
+  attemptId     String? @db.Uuid
+  // grantKey inclui política + marco; não incluir tentativa nem versão para multiplicar ganhos.
+  grantKey      String @db.VarChar(180)
+  amount        Int
+  reasonKey     String @db.VarChar(80)
+  createdAt     DateTime @default(now()) @db.Timestamptz(3)
+  learner       Learner @relation(fields: [tenantId, learnerId], references: [tenantId, id], onDelete: Cascade)
+  attempt       MissionAttempt? @relation(fields: [tenantId, learnerId, attemptId], references: [tenantId, learnerId, id], onDelete: NoAction)
+  @@id([tenantId, id])
+  @@unique([tenantId, learnerId, grantKey])
+  @@index([tenantId, learnerId, createdAt])
+}
+
+model CitySave {
+  tenantId   String @db.Uuid
+  learnerId  String @db.Uuid
+  revision   Int @default(0)
+  schemaVersion Int @default(1)
+  state      Json
+  updatedAt  DateTime @updatedAt @db.Timestamptz(3)
+  learner    Learner @relation(fields: [tenantId, learnerId], references: [tenantId, id], onDelete: Cascade)
+  @@id([tenantId, learnerId])
+}
+
+model AssessmentRun {
+  tenantId    String @db.Uuid
+  id          String @default(uuid()) @db.Uuid
+  learnerId   String @db.Uuid
+  sessionId   String @db.Uuid
+  phase       AssessmentPhase
+  formKey     String @db.VarChar(80)
+  formVersion Int
+  startedAt   DateTime @default(now()) @db.Timestamptz(3)
+  finishedAt  DateTime? @db.Timestamptz(3)
+  session     LearningSession @relation(fields: [tenantId, learnerId, sessionId], references: [tenantId, learnerId, id], onDelete: Cascade)
+  answers     AssessmentAnswer[]
+  @@id([tenantId, id])
+  @@index([tenantId, learnerId, phase])
+}
+
+model AssessmentAnswer {
+  tenantId      String @db.Uuid
+  assessmentId  String @db.Uuid
+  itemKey       String @db.VarChar(80)
+  itemVersion   Int
+  selectedKey   String? @db.VarChar(80)
+  correct       Boolean?
+  skipped       Boolean @default(false)
+  supportUsed   Boolean @default(false)
+  assessment    AssessmentRun @relation(fields: [tenantId, assessmentId], references: [tenantId, id], onDelete: Cascade)
+  @@id([tenantId, assessmentId, itemKey, itemVersion])
+}
+
+model EventReceipt {
+  tenantId      String @db.Uuid
+  clientEventId String @db.Uuid
+  sessionId     String @db.Uuid
+  kind          EventKind
+  payload       Json
+  // Horário do cliente não comprova cronologia de execução em campo.
+  occurredAtClient DateTime @db.Timestamptz(3)
+  receivedAt    DateTime @default(now()) @db.Timestamptz(3)
+  expiresAt     DateTime @db.Timestamptz(3)
+  session       LearningSession @relation(fields: [tenantId, sessionId], references: [tenantId, id], onDelete: Cascade)
+  @@id([tenantId, clientEventId])
+  @@index([expiresAt])
+}
+
+model Pilot {
+  tenantId   String @db.Uuid
+  id         String @default(uuid()) @db.Uuid
+  label      String @db.VarChar(160)
+  protocolVersion String @db.VarChar(32)
+  status     PilotStatus @default(PROPOSED)
+  plannedStart DateTime? @db.Date
+  actualStart DateTime? @db.Date
+  actualEnd   DateTime? @db.Date
+  // Autorizações éticas/institucionais reais; não produzir números, nomes ou assinaturas fictícios.
+  authorizationRef String? @db.VarChar(180)
+  tenant     Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sessions   PilotSession[]
+  evidence   EvidenceAsset[]
+  @@id([tenantId, id])
+}
+
+model PilotSession {
+  tenantId  String @db.Uuid
+  pilotId   String @db.Uuid
+  sessionId String @db.Uuid
+  pilot     Pilot @relation(fields: [tenantId, pilotId], references: [tenantId, id], onDelete: Cascade)
+  session   LearningSession @relation(fields: [tenantId, sessionId], references: [tenantId, id], onDelete: Cascade)
+  @@id([tenantId, pilotId, sessionId])
+}
+
+model EvidenceAsset {
+  tenantId   String @db.Uuid
+  id         String @default(uuid()) @db.Uuid
+  pilotId    String @db.Uuid
+  kind       EvidenceKind
+  storageKey String @db.VarChar(240)
+  sha256     String @db.Char(64)
+  mimeType   String @db.VarChar(100)
+  capturedAt DateTime @db.Timestamptz(3)
+  rightsRecordRef String? @db.VarChar(180)
+  reviewedAt DateTime? @db.Timestamptz(3)
+  // Armazenamento privado. Nunca expor URL pública duradoura de mídia de crianças.
+  expiresAt  DateTime @db.Timestamptz(3)
+  pilot      Pilot @relation(fields: [tenantId, pilotId], references: [tenantId, id], onDelete: Cascade)
+  @@id([tenantId, id])
+  @@unique([tenantId, pilotId, sha256])
+}
+
+model AuditEntry {
+  tenantId    String @db.Uuid
+  id          String @default(uuid()) @db.Uuid
+  actorUserId String? @db.Uuid
+  actionKey   String @db.VarChar(80)
+  targetType  String @db.VarChar(80)
+  targetId    String? @db.VarChar(80)
+  createdAt   DateTime @default(now()) @db.Timestamptz(3)
+  expiresAt   DateTime @db.Timestamptz(3)
+  tenant      Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  actor       AdultUser? @relation(fields: [actorUserId], references: [id], onDelete: SetNull)
+  @@id([tenantId, id])
+  @@index([tenantId, createdAt])
+  @@index([expiresAt])
+}
+```
+
+## `prisma.config.ts`
+
+```typescript
+import 'dotenv/config';
+import { defineConfig, env } from 'prisma/config';
+
+// Este arquivo fica na raiz do pacote de banco, junto do respectivo package.json.
+export default defineConfig({
+  schema: 'prisma/schema.prisma',
+  migrations: { path: 'prisma/migrations' },
+  datasource: { url: env('DATABASE_URL') },
+});
+```
+
+## `prisma/client.ts`
+
+```typescript
+// Arquivo de servidor; jamais exportar por um barrel importado pelo navegador.
+import { PrismaClient } from '../generated/prisma/client.js';
+import { PrismaPg } from '@prisma/adapter-pg';
+
+const connectionString = process.env.DATABASE_URL;
+if (!connectionString) throw new Error('DATABASE_URL não configurada.');
+const adapter = new PrismaPg({ connectionString });
+export const prisma = new PrismaClient({ adapter });
+// O processo deve chamar prisma.$disconnect() no encerramento gracioso.
+```
+
+## `prisma/constraints.sql`
+
+```sql
+-- Incorporar na migration inicial APÓS as tabelas; não executar isoladamente duas vezes.
+-- Estas restrições não substituem autenticação, autorização nem políticas de retenção.
+ALTER TABLE "MissionVersion" ADD CONSTRAINT "mission_version_positive" CHECK (version > 0);
+ALTER TABLE "SkillProgress" ADD CONSTRAINT "skill_counts_valid"
+CHECK ("independentTrials" >= 0 AND "independentCorrect" >= 0 AND "independentCorrect" <= "independentTrials");
+ALTER TABLE "CitySave" ADD CONSTRAINT "city_revision_nonnegative" CHECK (revision >= 0 AND "schemaVersion" > 0);
+ALTER TABLE "RewardEntry" ADD CONSTRAINT "reward_amount_valid" CHECK (amount <> 0 AND amount BETWEEN -1000 AND 1000);
+ALTER TABLE "LearningSession" ADD CONSTRAINT "pilot_requires_permission" CHECK ("dataKind" = 'DEMO' OR "permissionId" IS NOT NULL);
+ALTER TABLE "LearningSession" ADD CONSTRAINT "session_time_order" CHECK ("endedAt" IS NULL OR "endedAt" >= "startedAt");
+ALTER TABLE "AssessmentAnswer" ADD CONSTRAINT "assessment_skip_consistency"
+CHECK (NOT skipped OR ("selectedKey" IS NULL AND correct IS NULL));
+-- Status ACTIVE, finalidade e validade de DataPermission exigem consulta transacional no serviço.
+-- Saldo >= 0 depende do conjunto de linhas: travar CitySave por SELECT ... FOR UPDATE
+-- antes de inserir débito e atualizar revisão na MESMA transação. CHECK simples não basta.
+-- A criação de PILOT e o vínculo PilotSession exigem validação de autorização real e do dataKind.
+```
+
+## `.env.example`
+
+```dotenv
+# Apenas exemplos locais. Nenhum segredo real está incluído.
+VITE_APP_MODE=guest
+VITE_EDUCATOR_PORTAL_ENABLED=false
+VITE_CLOUD_SYNC_ENABLED=false
+VITE_AWARD_SUBMISSION_ENABLED=false
+VITE_ANALYTICS_ENABLED=false
+VITE_DEFAULT_LOCALE=pt-BR
+VITE_JURISDICTION=BR
+# Apenas no servidor, sem prefixo VITE_. A credencial abaixo é fictícia para DEV.
+DATABASE_URL=[VALOR OMITIDO NA PROJEÇÃO PÚBLICA]
+INSTITUTIONAL_MODE_ENABLED=false
+ALLOW_DEMO_SEED=true
+REMOTION_LICENSE_REVIEWED=false
+```
+
+# Anexo C — Conteúdo estruturado completo
+
+Conteúdo editorial proposto, com revisão pendente. As escolhas e flags de cenário precisam ser validadas por contratos estritos na aplicação. Dados de demonstração não são resultados escolares.
+
+## `content/claims.json`
+
+```json
+{
+  "jurisdiction": "BR",
+  "reviewStatus": "NEEDS_REVIEW",
+  "checkedAt": "2026-09-28",
+  "claims": [
+    {
+      "key": "CTB-CUIDADO",
+      "kind": "LEGAL_RULE",
+      "sourceId": "L01",
+      "locator": "Art. 29, § 2º",
+      "text": "O cuidado no trânsito inclui a proteção dos usuários mais vulneráveis; a segurança não é responsabilidade exclusiva da criança.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "CTB-PEDESTRE",
+      "kind": "LEGAL_RULE",
+      "sourceId": "L01",
+      "locator": "Arts. 68 a 71",
+      "text": "A circulação e a travessia do pedestre dependem da situação e da sinalização; a preferência não torna os veículos incapazes de causar risco.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "CTB-PASSAGEIRO",
+      "kind": "LEGAL_RULE",
+      "sourceId": "L01",
+      "locator": "Arts. 64 e 65; regulamentação complementar a conferir antes da publicação",
+      "text": "Cinto e transporte adequado de crianças são temas próprios de segurança do passageiro. A missão não ensina limites de idade/altura sem a regulamentação completa.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "CTB-BICICLETA",
+      "kind": "LEGAL_RULE",
+      "sourceId": "L01",
+      "locator": "Arts. 58, 59, 68 § 1º e 105 VI",
+      "text": "O ciclista desmontado empurrando a bicicleta equipara-se ao pedestre. Requisitos de equipamento e circulação precisam de contexto; capacete é tratado aqui como recomendação, não obrigação nacional universal.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "CTB-LIMITE",
+      "kind": "LEGAL_RULE",
+      "sourceId": "L01",
+      "locator": "Art. 61",
+      "text": "O limite do cenário é indicado por sua sinalização. Não generalizar 30 km/h como limite nacional obrigatório de toda área escolar.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "CTB-EDUCACAO",
+      "kind": "LEGAL_RULE",
+      "sourceId": "L01",
+      "locator": "Arts. 74 a 76",
+      "text": "Educação para o trânsito é o enquadramento desta proposta educativa.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "SIM-PARADA",
+      "kind": "SIMULATION_ASSUMPTION",
+      "sourceId": "P01",
+      "locator": "Modelo didático deste kit: d = vt + v²/(2μg)",
+      "text": "Valores representam um cenário idealizado com parâmetros explícitos, não previsão de frenagem de um veículo real.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "PED-ATENCAO",
+      "kind": "SAFETY_RECOMMENDATION",
+      "sourceId": "P01",
+      "locator": "Desenho pedagógico; revisão por educador de trânsito pendente",
+      "text": "Observar a situação, reduzir distrações e pedir ajuda são princípios de cuidado ensinados sem culpar usuários vulneráveis.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "PED-ACESSO",
+      "kind": "PEDAGOGICAL_DESIGN",
+      "sourceId": "E01",
+      "locator": "Pilar 2, descrição no edital p.9; aplicação didática proposta",
+      "text": "Planejar ruas para diferentes pessoas é uma atividade virtual; não substitui projeto de engenharia ou avaliação de acessibilidade física.",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "key": "PED-SEMAFORO",
+      "kind": "SIMULATION_ASSUMPTION",
+      "sourceId": "P01",
+      "locator": "Máquina de estados intertravada definida neste kit",
+      "text": "Fases do tabuleiro são mutuamente exclusivas; durações fictícias não são uma norma de programação semafórica real.",
+      "status": "NEEDS_REVIEW"
+    }
+  ]
+}
+```
+
+## `content/missions.mvp.json`
+
+```json
+{
+  "schemaVersion": 1,
+  "dataKind": "DEMO",
+  "localeCoverage": {
+    "pt-BR": "DRAFT_COMPLETE",
+    "en": "NOT_TRANSLATED",
+    "es": "NOT_TRANSLATED"
+  },
+  "publicationAllowed": false,
+  "missions": [
+    {
+      "key": "M01",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "travessia",
+      "competencyKey": "LOCAL_DE_ESPERA",
+      "claimIds": [
+        "CTB-PEDESTRE",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M01",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Escola",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "O lugar de esperar",
+          "objective": "Escolher o lugar protegido antes de decidir a travessia.",
+          "situation": "Uma pessoa adulta acompanha o personagem na calçada do cenário. Há um ponto de espera protegido e o sinal de pedestres está fechado.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Esperar no local protegido e observar com a pessoa adulta.",
+              "correct": true
+            },
+            {
+              "key": "choice-2",
+              "text": "Iniciar a travessia imediatamente.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Olhar apenas o veículo mais próximo.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "Esperar permite observar a sinalização e a situação. A faixa não faz os veículos pararem por mágica.",
+          "feedbackRetry": "Vamos observar de novo, sem pressa. O cenário foi pausado antes de qualquer situação perigosa.",
+          "cityEffect": "Liberar a rota escolar orientada.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Escolha onde o personagem pode esperar com o adulto.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Explique por que olhar apenas um veículo não basta.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Compare dois locais de espera sem atribuir toda a responsabilidade ao pedestre.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M01-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "SAFE_WAIT_POINT",
+        "requiredEvidenceFlags": [
+          "observeSignal",
+          "observeConflictLanes",
+          "chooseProtectedWait"
+        ],
+        "config": {
+          "sceneSize": [
+            16,
+            12
+          ],
+          "requiresAdultGuidedCheck": true
+        },
+        "interactionInstruction": "Selecionar pontos de observação no mapa; só então confirmar a espera protegida.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M02",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "sinalizacao",
+      "competencyKey": "FASE_PROTEGIDA",
+      "claimIds": [
+        "CTB-PEDESTRE",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M02",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Cruzamento",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "Cada sinal tem sua vez",
+          "objective": "Distinguir os sinais destinados a pedestres e veículos.",
+          "situation": "No tabuleiro, o sinal dos veículos está verde e o dos pedestres indica aguardar. A pessoa jogadora observa, mas não dirige.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Seguir o verde dos veículos como se fosse o seu.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Aguardar o sinal destinado aos pedestres e a verificação orientada da cena.",
+              "correct": true
+            },
+            {
+              "key": "choice-3",
+              "text": "Escolher somente pela cor de uma luz distante.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "Sinais diferentes orientam pessoas diferentes. Mesmo com indicação favorável, a travessia não deve ser tratada como uma garantia automática.",
+          "feedbackRetry": "Vamos identificar a quem cada sinal se destina. Nenhum personagem entra em conflito.",
+          "cityEffect": "Ativar painel explicativo de fases não conflitantes.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Encontre o sinal com o símbolo do pedestre.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Escolha a sequência de observar e aguardar.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Identifique uma situação em que uma indicação isolada não descreve todo o cruzamento.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M02-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "SIGNAL_SEQUENCE",
+        "requiredEvidenceFlags": [
+          "identifyPedestrianSignal",
+          "orderProtectedSequence"
+        ],
+        "config": {
+          "phaseCount": 5,
+          "neverAllowConflictingGreens": true
+        },
+        "interactionInstruction": "Ordenar cartões de fases; o cenário demonstra somente sequências intertravadas.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M03",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "visibilidade",
+      "competencyKey": "VISIBILIDADE",
+      "claimIds": [
+        "PED-ATENCAO",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M03",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Biblioteca",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "Ver e ser percebido",
+          "objective": "Reconhecer que um obstáculo pode impedir a visão.",
+          "situation": "Um veículo estacionado bloqueia a visão do cruzamento fictício. O personagem permanece na área protegida acompanhado.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Adivinhar o que existe atrás do obstáculo.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Avançar para descobrir rapidamente.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Continuar protegido e pedir ao adulto ajuda para escolher alternativa apropriada.",
+              "correct": true
+            }
+          ],
+          "feedbackCorrect": "Quando a visão está bloqueada, não é necessário arriscar para descobrir. O planejamento da rua também precisa ajudar as pessoas a serem vistas.",
+          "feedbackRetry": "O jogo pausa e mostra o campo de visão. Vamos escolher outra solução protegida.",
+          "cityEffect": "Reorganizar obstáculo cenográfico fora da linha de visão.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Aponte o objeto que esconde parte da cena.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Escolha uma alternativa com apoio do adulto.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "No editor, compare visibilidade antes e depois de reorganizar o cenário.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M03-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "VISIBILITY_EDITOR",
+        "requiredEvidenceFlags": [
+          "revealViewOverlay",
+          "compareRoutes",
+          "selectProtectedAlternative"
+        ],
+        "config": {
+          "obstacleCount": 2,
+          "forbidEnteringRoadToPeek": true
+        },
+        "interactionInstruction": "Ativar camada de visibilidade e reorganizar um obstáculo cenográfico pelo editor.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M04",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "passageiro",
+      "competencyKey": "TRANSPORTE_CUIDADOSO",
+      "claimIds": [
+        "CTB-PASSAGEIRO",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M04",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Garagem cenografica",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "Todo passageiro importa",
+          "objective": "Reconhecer que a preparação da viagem é responsabilidade dos adultos.",
+          "situation": "Um veículo está estacionado, desligado e com uma pessoa adulta responsável preparando os passageiros. Não há controle de direção.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Pedir ao adulto que confira a proteção adequada e o cinto antes da viagem.",
+              "correct": true
+            },
+            {
+              "key": "choice-2",
+              "text": "Tratar uma viagem curta como dispensa de cuidado.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Decidir sozinho qualquer equipamento pela aparência.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "A pessoa responsável confere as regras e a proteção adequada. O jogo não substitui o manual do dispositivo nem a regulamentação aplicável.",
+          "feedbackRetry": "Vamos voltar à preparação da viagem. Cuidado não depende de o trajeto ser curto.",
+          "cityEffect": "Ganhar o selo de cuidado com passageiros.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Encontre o cinto e peça ajuda à pessoa adulta.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Explique por que o trajeto curto também precisa de preparação.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Diferencie recomendação geral de especificação que exige consulta à regra e ao fabricante.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M04-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "PASSENGER_CHECKLIST",
+        "requiredEvidenceFlags": [
+          "vehicleStationary",
+          "adultProtectionCheck",
+          "explainPreparation"
+        ],
+        "config": {
+          "drivingControls": false,
+          "collectBodyMeasurements": false
+        },
+        "interactionInstruction": "Conferir etapas com adulto virtual em veículo estacionado; não dirigir.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M05",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "transporte_coletivo",
+      "competencyKey": "EMBARQUE_PROTEGIDO",
+      "claimIds": [
+        "PED-ATENCAO",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M05",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Ponto de onibus",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "O ponto de encontro",
+          "objective": "Planejar espera e embarque em uma situação mediada.",
+          "situation": "O ônibus NPC se aproxima do ponto. Os personagens aguardam em espaço protegido, com o adulto mediador.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Disputar o primeiro lugar no embarque.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Aguardar o veículo parar e seguir a orientação do adulto para embarcar.",
+              "correct": true
+            },
+            {
+              "key": "choice-3",
+              "text": "Usar a área de circulação como fila.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "Uma espera organizada protege o grupo. O veículo precisa estar parado e a situação de embarque deve ser conferida pela pessoa responsável.",
+          "feedbackRetry": "Podemos reorganizar a fila sem pressa e sem deixar ninguém para trás.",
+          "cityEffect": "Organizar o ponto de ônibus inclusivo.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Escolha o local da fila fora da circulação.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Ordene esperar, conferir e embarcar com orientação.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Redesenhe a espera para incluir pessoas com diferentes necessidades.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M05-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "BUS_STOP_LAYOUT",
+        "requiredEvidenceFlags": [
+          "chooseWaitingZone",
+          "organizeAccessibleQueue",
+          "waitForStop"
+        ],
+        "config": {
+          "zones": 3,
+          "dragAlternative": "select-and-place"
+        },
+        "interactionInstruction": "Organizar fila em zonas protegidas por seleção e posicionamento, sem pressa.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M06",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "bicicleta",
+      "competencyKey": "BICICLETA_PEDESTRE",
+      "claimIds": [
+        "CTB-BICICLETA",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M06",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Praca",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "Bicicleta também caminha",
+          "objective": "Entender a mudança de papel ao desmontar e empurrar a bicicleta.",
+          "situation": "O cenário indica um percurso destinado a pedestres. A bicicleta está parada e uma pessoa adulta acompanha o personagem.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Pedalar mais rápido para ocupar menos tempo.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Ignorar a indicação porque a bicicleta não tem motor.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Desmontar e empurrar a bicicleta no percurso orientado.",
+              "correct": true
+            }
+          ],
+          "feedbackCorrect": "O CTB equipara a pedestre o ciclista desmontado que empurra a bicicleta. A circulação montada em passeios depende das condições e da autorização previstas na regra.",
+          "feedbackRetry": "Vamos comparar os dois modos sem movimentar a bicicleta em área inadequada.",
+          "cityEffect": "Adicionar conexão legível entre percursos.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Escolha a figura da bicicleta sendo empurrada.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Diga o que muda no papel do personagem ao desmontar.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Diferencie percurso de pedestres de estrutura própria para circulação de bicicletas.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M06-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "BIKE_ROLE_SWITCH",
+        "requiredEvidenceFlags": [
+          "identifyPedestrianSegment",
+          "selectDismount",
+          "chooseWalkRoute"
+        ],
+        "config": {
+          "ridingOnPedestrianSegment": false
+        },
+        "interactionInstruction": "Alternar papel na representação e selecionar o percurso com bicicleta empurrada.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M07",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "equipamentos",
+      "competencyKey": "EQUIPAMENTOS",
+      "claimIds": [
+        "CTB-BICICLETA",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M07",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Oficina cenografica",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "Preparar é cuidar",
+          "objective": "Separar recomendação de proteção de obrigação legal verificada.",
+          "situation": "Na oficina virtual, um adulto ajuda a reconhecer itens de bicicleta e de proteção. Nenhuma saída para via pública é solicitada.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Reunir os cuidados com ajuda do adulto e distinguir a fonte de cada orientação.",
+              "correct": true
+            },
+            {
+              "key": "choice-2",
+              "text": "Chamar qualquer item escolhido de obrigação nacional sem consultar a regra.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Escolher os itens apenas pela recompensa.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "Recomendações de segurança e obrigações legais têm naturezas diferentes. Equipamentos precisam de orientação adequada; este jogo não autoriza circular sozinho.",
+          "feedbackRetry": "Vamos consultar o cartão da orientação e sua fonte.",
+          "cityEffect": "Abrir a coleção de fontes do cuidado.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Reconheça os itens com ajuda do adulto.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Separe cuidado recomendado de regra citada.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Revise uma afirmação exagerada: capacete de bicicleta como obrigação nacional universal não está demonstrado por este material.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M07-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "GEAR_SOURCE_SORT",
+        "requiredEvidenceFlags": [
+          "openSourceCards",
+          "sortClaimTypes",
+          "reviewProtectionWithAdult"
+        ],
+        "config": {
+          "bins": [
+            "recommendation",
+            "rule-to-verify"
+          ],
+          "noRealRideAssignment": true
+        },
+        "interactionInstruction": "Classificar cartões por natureza da orientação, sem simular circulação real.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M08",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "velocidade",
+      "competencyKey": "DISTANCIA_PARADA",
+      "claimIds": [
+        "SIM-PARADA",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M08",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Laboratorio fechado",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "O espaço para parar",
+          "objective": "Perceber que parar exige espaço e depende de parâmetros.",
+          "situation": "Dois veículos automáticos de brinquedo são observados em pista vazia, sem pessoas ou obstáculos. O painel compara cenários.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Afirmar que todos os carros param sempre no mesmo ponto.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Comparar os rastros de parada e reconhecer as hipóteses do modelo.",
+              "correct": true
+            },
+            {
+              "key": "choice-3",
+              "text": "Usar o número do jogo para medir carros em uma rua real.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "No modelo, maior velocidade aumenta a distância necessária para parar. Os números dependem das hipóteses; não são previsão para a vida real.",
+          "feedbackRetry": "Vamos observar os dois rastros novamente. Não é uma corrida e ninguém controla um veículo.",
+          "cityEffect": "Liberar comparação de zona com velocidade moderada.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Aponte o rastro maior sem fazer contas.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Compare velocidade e condição de pista com uma variável por vez.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Leia os parâmetros e explique por que a distância total não tem uma proporção universal fixa.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M08-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "STOPPING_COMPARISON",
+        "requiredEvidenceFlags": [
+          "runScenarioA",
+          "runScenarioB",
+          "compareTrails",
+          "identifyModelLimit"
+        ],
+        "config": {
+          "speedKmhOptions": [
+            20,
+            30,
+            50,
+            60
+          ],
+          "reactionSeconds": 1.5,
+          "frictionOptions": [
+            0.7,
+            0.4
+          ],
+          "gravity": 9.81,
+          "emptyToyTrack": true
+        },
+        "interactionInstruction": "Executar dois cenários de NPCs, ver barras e rastros; velocidade nunca gera prêmio.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M09",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "limites",
+      "competencyKey": "LIMITE_SINALIZADO",
+      "claimIds": [
+        "CTB-LIMITE",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M09",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Entrada do bairro",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "A regra desta via",
+          "objective": "Ler o limite indicado no contexto sem generalização nacional.",
+          "situation": "A via fictícia do bairro tem sinalização de limite 30. O painel mostra que é uma decisão específica do cenário.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Declarar que toda rua do Brasil possui esse mesmo limite.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Dizer que uma placa garante obediência de todos.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Reconhecer o limite sinalizado aqui e a necessidade de outras medidas de cuidado.",
+              "correct": true
+            }
+          ],
+          "feedbackCorrect": "A regra mostrada é desta via. O CTB trata dos limites e da sinalização; o jogo não cria um limite universal para todas as escolas.",
+          "feedbackRetry": "Vamos reler o contexto da placa e comparar outra via fictícia.",
+          "cityEffect": "Aplicar a regra de velocidade aos NPCs deste cenário.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Encontre o número apresentado na placa do cenário.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Explique por que não se deve generalizar para qualquer rua.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Relacione sinalização, desenho da via e comportamento sem prometer resultado automático.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M09-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "SIGN_CONTEXT_MATCH",
+        "requiredEvidenceFlags": [
+          "readLocalSign",
+          "matchScenarioRule",
+          "rejectUniversalClaim"
+        ],
+        "config": {
+          "scenarioSpeedKmh": 30,
+          "claimsAreContextual": true
+        },
+        "interactionInstruction": "Associar o limite à via correspondente; outra rua tem contexto diferente.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M10",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "acessibilidade",
+      "competencyKey": "ROTA_CONTINUA",
+      "claimIds": [
+        "PED-ACESSO",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M10",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Calcada da praca",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "A cidade cabe em todos",
+          "objective": "Planejar continuidade e espaço de circulação para pessoas diversas.",
+          "situation": "O editor mostra duas rotas fictícias: uma curta com obstáculos e outra contínua e desobstruída. As pessoas são representadas com autonomia e respeito.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Escolher uma rota contínua e desobstruída, mesmo que não seja a menor distância.",
+              "correct": true
+            },
+            {
+              "key": "choice-2",
+              "text": "Escolher sempre a menor distância, ignorando barreiras.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Tratar a acessibilidade como prêmio pago.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "Uma cidade acolhedora considera diferentes modos de circular. Acesso não é prêmio: faz parte da experiência desde o início.",
+          "feedbackRetry": "Vamos observar quem consegue usar cada percurso, sem classificar pessoas como problema.",
+          "cityEffect": "Reorganizar o percurso acessível do bairro.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Encontre a passagem desobstruída.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Compare continuidade das duas rotas.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Justifique uma decisão de desenho inclusivo sem apresentar o tabuleiro como projeto de engenharia.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M10-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "CONTINUOUS_ROUTE_BUILDER",
+        "requiredEvidenceFlags": [
+          "inspectBarriers",
+          "connectAccessiblePath",
+          "compareContinuity"
+        ],
+        "config": {
+          "grid": [
+            12,
+            10
+          ],
+          "essentialAccessibilityIsFree": true
+        },
+        "interactionInstruction": "Ligar pontos por percurso contínuo e explicar por que menor distância não basta.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M11",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "convivencia",
+      "competencyKey": "FASES_SEM_CONFLITO",
+      "claimIds": [
+        "PED-SEMAFORO",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M11",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Semaforo do bairro",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "O tempo de cada pessoa",
+          "objective": "Compreender que o controle do cenário precisa proteger a travessia.",
+          "situation": "No editor guiado, o sinal funciona com fases separadas. O objetivo é acolher diferentes tempos de travessia, não maximizar carros.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Abrir movimentos conflitantes para aumentar o fluxo.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Usar sequência protegida e aguardar o encerramento completo de cada fase.",
+              "correct": true
+            },
+            {
+              "key": "choice-3",
+              "text": "Escolher a menor espera dos carros como único objetivo.",
+              "correct": false
+            }
+          ],
+          "feedbackCorrect": "A segurança é uma condição do sistema. As durações são fictícias e não servem para configurar um equipamento de rua.",
+          "feedbackRetry": "O intertravamento impede combinações conflitantes. Vamos experimentar uma sequência protegida.",
+          "cityEffect": "Concluir a travessia com fases intertravadas.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Ordene cartões de esperar e atravessar na cena protegida.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Compare uma sequência permitida e outra bloqueada.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Explique por que fluxo de carros não é o único critério de uma cidade segura.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M11-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "INTERLOCK_PUZZLE",
+        "requiredEvidenceFlags": [
+          "assemblePhases",
+          "validateInterlock",
+          "observeProtectedCycle"
+        ],
+        "config": {
+          "slots": 5,
+          "arbitraryCodeAllowed": false,
+          "realControllerConnection": false
+        },
+        "interactionInstruction": "Montar a sequência do controlador fictício; fase inválida é bloqueada antes de animar.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    },
+    {
+      "key": "M12",
+      "version": 1,
+      "curriculumVersion": "br-ctb-demo-1",
+      "status": "NEEDS_REVIEW",
+      "jurisdiction": "BR",
+      "topic": "transferencia",
+      "competencyKey": "SISTEMA_SEGURO",
+      "claimIds": [
+        "CTB-CUIDADO",
+        "CTB-CUIDADO"
+      ],
+      "reward": {
+        "policy": "care-v1",
+        "milestone": "M12",
+        "coins": 20,
+        "once": true
+      },
+      "scene": {
+        "district": "Mapa completo",
+        "safeFreeze": true,
+        "role": "OBSERVER_PLANNER",
+        "allowsDriving": false
+      },
+      "copy": {
+        "pt-BR": {
+          "title": "Nossa rota do cuidado",
+          "objective": "Transferir os conceitos para uma nova composição de bairro.",
+          "situation": "O tabuleiro apresenta um trajeto fictício até a biblioteca, com diferentes alternativas de visibilidade, passagem e espera.",
+          "choices": [
+            {
+              "key": "choice-1",
+              "text": "Escolher apenas pelo tempo mais curto.",
+              "correct": false
+            },
+            {
+              "key": "choice-2",
+              "text": "Responsabilizar a criança por qualquer problema da rua.",
+              "correct": false
+            },
+            {
+              "key": "choice-3",
+              "text": "Escolher uma rota orientada que combine cuidado, sinalização e acesso, explicando a decisão.",
+              "correct": true
+            }
+          ],
+          "feedbackCorrect": "Pessoas, veículos, infraestrutura e responsáveis compartilham o cuidado. Aprender no jogo não significa estar pronto para circular sozinho.",
+          "feedbackRetry": "Vamos revisar as alternativas e melhorar a cidade juntos.",
+          "cityEffect": "Revelar o bairro transformado e o resumo de aprendizagem.",
+          "ageAdaptations": {
+            "AGE_5_7": {
+              "prompt": "Monte o caminho com ajuda do adulto usando três cartões.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 1
+            },
+            "AGE_8_10": {
+              "prompt": "Explique duas razões para a rota escolhida.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 3
+            },
+            "AGE_11_14": {
+              "prompt": "Compare alternativas e proponha uma melhoria coletiva no tabuleiro, sem tarefa em via real.",
+              "adultMediationRequired": true,
+              "maxDecisionSteps": 5
+            }
+          }
+        }
+      },
+      "assessmentTransferKey": "M12-B",
+      "completionRule": "all-mechanic-evidence-flags-and-correct-decision-and-explanation-reviewed",
+      "timeBonus": false,
+      "mechanic": {
+        "type": "CARE_ROUTE_CHALLENGE",
+        "requiredEvidenceFlags": [
+          "inspectNewMap",
+          "selectRoute",
+          "applyOneImprovement",
+          "explainTwoReasons"
+        ],
+        "config": {
+          "reusesExactEarlierMap": false,
+          "realWorldLocation": false
+        },
+        "interactionInstruction": "Compor rota em mapa novo e aplicar uma melhoria, reunindo os conceitos anteriores.",
+        "guidedEquivalent": "Selecionar os mesmos objetos e etapas por controles DOM; obter as mesmas evidências e recompensas."
+      }
+    }
+  ]
+}
+```
+
+## `content/backlog.json`
+
+```json
+{
+  "status": "IDEAS_NOT_IMPLEMENTED",
+  "items": [
+    {
+      "key": "M13",
+      "title": "Calçada sem obstáculos",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M14",
+      "title": "Sinais com forma e texto",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M15",
+      "title": "Distrações no tabuleiro",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M16",
+      "title": "A volta da biblioteca",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M17",
+      "title": "Noite e visibilidade",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M18",
+      "title": "Chuva e planejamento",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M19",
+      "title": "Porta do veículo e cuidado",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M20",
+      "title": "Transporte escolar acolhedor",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M21",
+      "title": "Prioridades no transporte coletivo",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M22",
+      "title": "Bagagem organizada pelo adulto",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M23",
+      "title": "Diferentes rotas de bicicleta",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M24",
+      "title": "Entendendo a sinalização local",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M25",
+      "title": "A praça e o entorno",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M26",
+      "title": "Ambiente rural fictício",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M27",
+      "title": "Comunidade ribeirinha e acesso ao transporte",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M28",
+      "title": "Rua compartilhada: contexto importa",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M29",
+      "title": "Escolhendo melhorias com orçamento fictício",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M30",
+      "title": "Fluxo não é sinônimo de segurança",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M31",
+      "title": "Leitura crítica de um gráfico",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M32",
+      "title": "Como revisar uma afirmação de trânsito",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M33",
+      "title": "Blocos para fases protegidas",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M34",
+      "title": "O que o modelo não mostra",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M35",
+      "title": "Conselho mirim da cidade fictícia",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    },
+    {
+      "key": "M36",
+      "title": "Revisitando conceitos após uma pausa",
+      "priority": "P2",
+      "requiresEditorialReview": true
+    }
+  ]
+}
+```
+
+# Anexo D — i18n: interface em três idiomas
+
+Estes catálogos cobrem a interface de referência. O currículo das missões ainda está em português; não anunciar versão educativa integral em outro idioma até traduzir e revisar o pacote completo.
+
+## `locales/pt-BR.json`
+
+```json
+{
+  "app": {
+    "title": "SmartCity Kids",
+    "subtitle": "Missão Desacelere",
+    "theme": "Desacelere. Seu bem maior é a vida"
+  },
+  "nav": {
+    "play": "Jogar",
+    "guided": "Jogar com orientação",
+    "educator": "Área de educadores",
+    "accessibility": "Acessibilidade",
+    "credits": "Créditos e fontes"
+  },
+  "actions": {
+    "observe": "Observar",
+    "choose": "Escolher",
+    "explain": "Entender a escolha",
+    "retry": "Tentar de outro jeito",
+    "pause": "Pausar",
+    "resume": "Continuar",
+    "save": "Salvar neste dispositivo",
+    "erase": "Apagar progresso",
+    "export": "Exportar resumo",
+    "back": "Voltar"
+  },
+  "a11y": {
+    "reducedMotion": "Reduzir movimento",
+    "sound": "Sons opcionais",
+    "readAloud": "Leitura com apoio",
+    "contrast": "Alto contraste",
+    "guidedMode": "Modo guiado sem arrastar"
+  },
+  "privacy": {
+    "local": "Seu progresso pode ficar somente neste dispositivo.",
+    "ephemeral": "Esta sessão não será salva ao sair.",
+    "shared": "Este dispositivo é compartilhado? Prefira sessão sem salvar.",
+    "eraseConfirm": "Apagar o progresso salvo neste dispositivo?",
+    "childSafe": "Peça a uma pessoa adulta para ajudar com as configurações."
+  },
+  "status": {
+    "offlineReady": "Pronto para jogar sem rede",
+    "offlineNotReady": "É preciso preparar os recursos antes de jogar sem rede.",
+    "noFieldData": "Ainda não há resultados de campo.",
+    "demo": "Demonstração — sem resultados de campo",
+    "storageUnavailable": "Não foi possível salvar. Você pode continuar nesta sessão.",
+    "institutionDisabled": "Modo institucional ainda não habilitado."
+  },
+  "reward": {
+    "coins_one": "{{count}} Moeda do Cuidado",
+    "coins_other": "{{count}} Moedas do Cuidado",
+    "alreadyGranted": "Você pode revisitar esta missão; a conquista já faz parte da sua coleção."
+  },
+  "languages": {
+    "curriculumNotice": "A interface muda de idioma; este pacote educativo continua em português do Brasil.",
+    "jurisdiction": "Conteúdo de trânsito: Brasil"
+  }
+}
+```
+
+## `locales/en.json`
+
+```json
+{
+  "app": {
+    "title": "SmartCity Kids",
+    "subtitle": "Slow Down Mission",
+    "theme": "Slow down. Your greatest good is life."
+  },
+  "nav": {
+    "play": "Play",
+    "guided": "Play with guidance",
+    "educator": "Educator area",
+    "accessibility": "Accessibility",
+    "credits": "Credits and sources"
+  },
+  "actions": {
+    "observe": "Observe",
+    "choose": "Choose",
+    "explain": "Understand the choice",
+    "retry": "Try another way",
+    "pause": "Pause",
+    "resume": "Continue",
+    "save": "Save on this device",
+    "erase": "Delete progress",
+    "export": "Export summary",
+    "back": "Back"
+  },
+  "a11y": {
+    "reducedMotion": "Reduce motion",
+    "sound": "Optional sounds",
+    "readAloud": "Supported reading",
+    "contrast": "High contrast",
+    "guidedMode": "Guided mode without dragging"
+  },
+  "privacy": {
+    "local": "Your progress can stay on this device only.",
+    "ephemeral": "This session will not be saved when you leave.",
+    "shared": "Is this a shared device? Prefer a session without saving.",
+    "eraseConfirm": "Delete the progress saved on this device?",
+    "childSafe": "Ask an adult to help with the settings."
+  },
+  "status": {
+    "offlineReady": "Ready to play offline",
+    "offlineNotReady": "Resources must be prepared before playing offline.",
+    "noFieldData": "No field results have been collected yet.",
+    "demo": "Demonstration — no field results",
+    "storageUnavailable": "Progress could not be saved. You can continue in this session.",
+    "institutionDisabled": "Institutional mode is not enabled yet."
+  },
+  "reward": {
+    "coins_one": "{{count}} Care Coin",
+    "coins_other": "{{count}} Care Coins",
+    "alreadyGranted": "You can revisit this mission; the achievement is already in your collection."
+  },
+  "languages": {
+    "curriculumNotice": "The interface language changes; this learning pack remains in Brazilian Portuguese.",
+    "jurisdiction": "Traffic curriculum: Brazil"
+  }
+}
+```
+
+## `locales/es.json`
+
+```json
+{
+  "app": {
+    "title": "SmartCity Kids",
+    "subtitle": "Misión Desacelera",
+    "theme": "Desacelera. Tu bien más valioso es la vida."
+  },
+  "nav": {
+    "play": "Jugar",
+    "guided": "Jugar con orientación",
+    "educator": "Área de educadores",
+    "accessibility": "Accesibilidad",
+    "credits": "Créditos y fuentes"
+  },
+  "actions": {
+    "observe": "Observar",
+    "choose": "Elegir",
+    "explain": "Comprender la elección",
+    "retry": "Intentar de otra manera",
+    "pause": "Pausar",
+    "resume": "Continuar",
+    "save": "Guardar en este dispositivo",
+    "erase": "Borrar progreso",
+    "export": "Exportar resumen",
+    "back": "Volver"
+  },
+  "a11y": {
+    "reducedMotion": "Reducir movimiento",
+    "sound": "Sonidos opcionales",
+    "readAloud": "Lectura con apoyo",
+    "contrast": "Alto contraste",
+    "guidedMode": "Modo guiado sin arrastrar"
+  },
+  "privacy": {
+    "local": "Tu progreso puede quedar solamente en este dispositivo.",
+    "ephemeral": "Esta sesión no se guardará al salir.",
+    "shared": "¿Es un dispositivo compartido? Es preferible una sesión sin guardar.",
+    "eraseConfirm": "¿Borrar el progreso guardado en este dispositivo?",
+    "childSafe": "Pide ayuda a una persona adulta para configurar."
+  },
+  "status": {
+    "offlineReady": "Listo para jugar sin conexión",
+    "offlineNotReady": "Hay que preparar los recursos antes de jugar sin conexión.",
+    "noFieldData": "Todavía no se han recopilado resultados de campo.",
+    "demo": "Demostración — sin resultados de campo",
+    "storageUnavailable": "No se pudo guardar. Puedes continuar en esta sesión.",
+    "institutionDisabled": "El modo institucional todavía no está habilitado."
+  },
+  "reward": {
+    "coins_one": "{{count}} Moneda del Cuidado",
+    "coins_other": "{{count}} Monedas del Cuidado",
+    "alreadyGranted": "Puedes volver a esta misión; el logro ya está en tu colección."
+  },
+  "languages": {
+    "curriculumNotice": "Cambia el idioma de la interfaz; este paquete educativo sigue en portugués de Brasil.",
+    "jurisdiction": "Contenido de tránsito: Brasil"
+  }
+}
+```
+
+# Anexo E — Referências executáveis de domínio e testes
+
+O núcleo abaixo foi compilado e seus 16 testes foram executados. Não substitui a implementação das cenas, API, autenticação, acessibilidade ou testes de banco e navegador.
+
+## `reference/domain.ts`
+
+```typescript
+/** Núcleo de referência. Não é simulador validado de engenharia nem aplicação completa. */
+export type StopInput = Readonly<{ speedKmh: number; reactionSeconds: number; friction: number; gravity?: number }>;
+export type StopResult = Readonly<{ reactionMeters: number; brakingMeters: number; totalMeters: number }>;
+
+export function stoppingDistance(input: StopInput): StopResult {
+  const { speedKmh, reactionSeconds, friction, gravity = 9.81 } = input;
+  if (![speedKmh, reactionSeconds, friction, gravity].every(Number.isFinite)) throw new Error('Parâmetro não finito.');
+  if (speedKmh < 0 || speedKmh > 100 || reactionSeconds < 0 || reactionSeconds > 5 || friction <= 0 || friction > 1.5 || gravity <= 0) {
+    throw new Error('Parâmetro fora dos limites do modelo didático.');
+  }
+  const v = speedKmh / 3.6;
+  const reactionMeters = v * reactionSeconds;
+  const brakingMeters = v * v / (2 * friction * gravity);
+  return { reactionMeters, brakingMeters, totalMeters: reactionMeters + brakingMeters };
+}
+
+export type SceneSafety = Readonly<{ pedestrianPhaseOpen: boolean; allConflictVehiclesStopped: boolean; pathClear: boolean; adultGuidedCheck: boolean }>;
+/** Guarda interna do TABULEIRO. Não é um protocolo de travessia para a vida real. */
+export function canAnimateProtectedCrossing(scene: SceneSafety): boolean {
+  return scene.pedestrianPhaseOpen && scene.allConflictVehiclesStopped && scene.pathClear && scene.adultGuidedCheck;
+}
+export type CrossingState = 'OBSERVING' | 'EXPLANATION' | 'PROTECTED_ANIMATION' | 'COMPLETE';
+export function decideCrossing(scene: SceneSafety): CrossingState {
+  return canAnimateProtectedCrossing(scene) ? 'PROTECTED_ANIMATION' : 'EXPLANATION';
+}
+
+export type SignalPhase = 'VEHICLE_GREEN' | 'VEHICLE_AMBER' | 'ALL_RED_TO_PEDESTRIAN' | 'PEDESTRIAN_GREEN' | 'ALL_RED_TO_VEHICLE';
+const next: Readonly<Record<SignalPhase, SignalPhase>> = {
+  VEHICLE_GREEN: 'VEHICLE_AMBER', VEHICLE_AMBER: 'ALL_RED_TO_PEDESTRIAN',
+  ALL_RED_TO_PEDESTRIAN: 'PEDESTRIAN_GREEN', PEDESTRIAN_GREEN: 'ALL_RED_TO_VEHICLE',
+  ALL_RED_TO_VEHICLE: 'VEHICLE_GREEN',
+};
+export function advanceSignal(phase: SignalPhase, conflictAreaClear: boolean): SignalPhase {
+  if ((phase === 'ALL_RED_TO_PEDESTRIAN' || phase === 'ALL_RED_TO_VEHICLE') && !conflictAreaClear) return phase;
+  return next[phase];
+}
+export function lightsFor(phase: SignalPhase): Readonly<{ vehiclesGo: boolean; pedestriansGo: boolean }> {
+  return { vehiclesGo: phase === 'VEHICLE_GREEN', pedestriansGo: phase === 'PEDESTRIAN_GREEN' };
+}
+
+export const MISSION_IDS: readonly string[] = Array.from({ length: 12 }, (_, i) => `M${String(i + 1).padStart(2, '0')}`);
+export const DECORATIONS = { flags: 30, mural: 40, plants: 50, benches: 40, banners: 50, pavilion: 70 } as const;
+export type DecorationKey = keyof typeof DECORATIONS;
+export type Wallet = Readonly<{ balance: number; grants: readonly string[]; decorations: readonly DecorationKey[] }>;
+export const initialWallet = (): Wallet => ({ balance: 40, grants: [], decorations: [] });
+/** Chamar após validar conclusão. O serviço não deve aceitar "completed=true" do cliente. */
+export function grantMission(wallet: Wallet, missionId: string): Wallet {
+  if (!MISSION_IDS.includes(missionId)) throw new Error('Missão desconhecida.');
+  const key = `care-v1:mission:${missionId}`;
+  if (wallet.grants.includes(key)) return wallet;
+  return { ...wallet, balance: wallet.balance + 20, grants: [...wallet.grants, key] };
+}
+export function buyDecoration(wallet: Wallet, key: DecorationKey): Wallet {
+  if (!Object.hasOwn(DECORATIONS, key)) throw new Error('Decoração desconhecida.');
+  if (wallet.decorations.includes(key)) return wallet;
+  const cost = DECORATIONS[key];
+  if (wallet.balance < cost) throw new Error('Saldo insuficiente. Nenhuma compra real é oferecida.');
+  return { ...wallet, balance: wallet.balance - cost, decorations: [...wallet.decorations, key] };
+}
+
+export type EvidenceRow = Readonly<{ dataKind: 'DEMO' | 'PILOT'; pairId: string; pre: number | null; post: number | null }>;
+export function summarizePilot(rows: readonly EvidenceRow[]): Readonly<{ pairs: number; preMean: number | null; postMean: number | null; deltaPoints: number | null }> {
+  const seen = new Set<string>();
+  const valid: Array<{ pre: number; post: number }> = [];
+  for (const row of rows) {
+    if (row.dataKind !== 'PILOT' || row.pre === null || row.post === null) continue;
+    if (seen.has(row.pairId)) throw new Error('Par duplicado: evitar contagem dupla.');
+    if (![row.pre, row.post].every(v => Number.isFinite(v) && v >= 0 && v <= 100)) throw new Error('Percentual inválido.');
+    seen.add(row.pairId); valid.push({ pre: row.pre, post: row.post });
+  }
+  if (!valid.length) return { pairs: 0, preMean: null, postMean: null, deltaPoints: null };
+  const preMean = valid.reduce((s, r) => s + r.pre, 0) / valid.length;
+  const postMean = valid.reduce((s, r) => s + r.post, 0) / valid.length;
+  return { pairs: valid.length, preMean, postMean, deltaPoints: postMean - preMean };
+}
+
+export function safeCsvCell(value: string | number | null): string {
+  if (value === null) return '""';
+  let text = String(value);
+  // Exportação defensiva contra fórmulas em aplicativos de planilha.
+  if (/^[\s]*[=+\-@]/u.test(text) || /^[\t\r\n]/u.test(text)) text = `'${text}`;
+  return `"${text.replaceAll('"', '""')}"`;
+}
+export function assertTenant(requestTenant: string, resourceTenant: string): void {
+  if (!requestTenant || requestTenant !== resourceTenant) throw new Error('Acesso não autorizado.');
+}
+```
+
+## `reference/domain.test.mjs`
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { stoppingDistance, canAnimateProtectedCrossing, decideCrossing, advanceSignal, lightsFor, MISSION_IDS, DECORATIONS, initialWallet, grantMission, buyDecoration, summarizePilot, safeCsvCell, assertTenant } from './dist/domain.js';
+
+test('Parada é zero com velocidade zero', () => assert.equal(stoppingDistance({speedKmh:0,reactionSeconds:1.5,friction:.7}).totalMeters,0));
+test('Dobrar velocidade quadruplica só a parcela de frenagem', () => {
+ const a=stoppingDistance({speedKmh:30,reactionSeconds:1.5,friction:.7});
+ const b=stoppingDistance({speedKmh:60,reactionSeconds:1.5,friction:.7});
+ assert.equal(b.brakingMeters/a.brakingMeters,4); assert.equal(b.reactionMeters/a.reactionMeters,2);
+ assert.ok(b.totalMeters/a.totalMeters > 2 && b.totalMeters/a.totalMeters < 4);
+});
+test('Menor atrito aumenta a parcela de frenagem no modelo', () => assert.ok(stoppingDistance({speedKmh:30,reactionSeconds:1.5,friction:.4}).brakingMeters > stoppingDistance({speedKmh:30,reactionSeconds:1.5,friction:.7}).brakingMeters));
+test('Parâmetros inválidos não propagam NaN', () => {
+ for (const speedKmh of [-1,101,Infinity,NaN]) assert.throws(()=>stoppingDistance({speedKmh,reactionSeconds:1.5,friction:.7}));
+ assert.throws(()=>stoppingDistance({speedKmh:30,reactionSeconds:1.5,friction:0}));
+});
+test('Apenas uma das 16 combinações permite animação protegida', () => {
+ let permitted=0;
+ for(let i=0;i<16;i++) {const s={pedestrianPhaseOpen:!!(i&1),allConflictVehiclesStopped:!!(i&2),pathClear:!!(i&4),adultGuidedCheck:!!(i&8)}; permitted += Number(canAnimateProtectedCrossing(s)); assert.equal(decideCrossing(s),i===15?'PROTECTED_ANIMATION':'EXPLANATION');}
+ assert.equal(permitted,1);
+});
+test('Semáforo não abre movimentos conflitantes', () => {
+ let p='VEHICLE_GREEN'; for(let i=0;i<100;i++){const l=lightsFor(p); assert.ok(!(l.vehiclesGo&&l.pedestriansGo));p=advanceSignal(p,true);}
+});
+test('Zona de conflito ocupada mantém intertravamento', () => {
+ assert.equal(advanceSignal('ALL_RED_TO_PEDESTRIAN',false),'ALL_RED_TO_PEDESTRIAN');
+ assert.equal(advanceSignal('ALL_RED_TO_VEHICLE',false),'ALL_RED_TO_VEHICLE');
+});
+test('Repetir missão não gera farm e preserva estado anterior', () => {
+ const original=initialWallet();const awarded=grantMission(original,'M01');
+ assert.equal(original.balance,40);assert.equal(awarded.balance,60);assert.deepEqual(grantMission(awarded,'M01'),awarded);
+});
+test('Missão desconhecida não concede moedas',()=>assert.throws(()=>grantMission(initialWallet(),'M99')));
+test('Economia completa cabe no saldo sem compra nem grind', () => {
+ let w=initialWallet();for(const m of MISSION_IDS)w=grantMission(w,m);assert.equal(w.balance,280);
+ for(const k of Object.keys(DECORATIONS))w=buyDecoration(w,k);assert.equal(w.balance,0);
+});
+test('Compra repetida é idempotente e saldo não fica negativo',()=>{
+ const w=buyDecoration(initialWallet(),'flags');assert.equal(w.balance,10);assert.deepEqual(buyDecoration(w,'flags'),w);assert.throws(()=>buyDecoration(w,'pavilion'));
+});
+test('Relatório sem piloto não inventa resultado',()=>assert.deepEqual(summarizePilot([{dataKind:'DEMO',pairId:'fake',pre:20,post:90}]),{pairs:0,preMean:null,postMean:null,deltaPoints:null}));
+test('Pares completos medem diferença em pontos percentuais',()=>{
+ const r=summarizePilot([{dataKind:'PILOT',pairId:'a',pre:20,post:60},{dataKind:'PILOT',pairId:'b',pre:40,post:80},{dataKind:'PILOT',pairId:'c',pre:20,post:null}]);
+ assert.deepEqual(r,{pairs:2,preMean:30,postMean:70,deltaPoints:40});
+});
+test('Pares duplicados não contam duas vezes',()=>assert.throws(()=>summarizePilot([{dataKind:'PILOT',pairId:'a',pre:20,post:60},{dataKind:'PILOT',pairId:'a',pre:20,post:60}])));
+test('Exportação escapa fórmulas, aspas e células vazias',()=>{
+ assert.equal(safeCsvCell('=1+1'),'"\'=1+1"');assert.equal(safeCsvCell('  @SUM(A1)'),'"\'  @SUM(A1)"');assert.equal(safeCsvCell('diz "oi"'),'"diz ""oi"""');assert.equal(safeCsvCell(null),'""');
+});
+test('Guarda ilustrativa rejeita tenant diferente e vazio',()=>{assert.throws(()=>assertTenant('A','B'));assert.throws(()=>assertTenant('',''));assert.doesNotThrow(()=>assertTenant('A','A'));});
+```
+
+## `reference/tsconfig.json`
+
+```json
+{"compilerOptions":{"target":"ES2022","module":"NodeNext","moduleResolution":"NodeNext","strict":true,"noUncheckedIndexedAccess":true,"exactOptionalPropertyTypes":true,"declaration":true,"outDir":"dist","skipLibCheck":true},"include":["domain.ts"]}
+```
+
+## `package.json`
+
+```json
+{
+  "name": "smartcity-kids-specification-kit",
+  "private": true,
+  "type": "module",
+  "description": "Kit de especificação e referências; não é o jogo final.",
+  "scripts": {
+    "typecheck:reference": "tsc -p reference/tsconfig.json --noEmit",
+    "build:reference": "tsc -p reference/tsconfig.json",
+    "test:reference": "node --test reference/domain.test.mjs",
+    "verify:kit": "python3 scripts/verify_kit.py"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}
+```
+
+## `scripts/verify_kit.py`
+
+```python
+#!/usr/bin/env python3
+"""Verifica consistência estática do kit; não substitui prisma validate ou render Mermaid."""
+from pathlib import Path
+import json
+import re
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+checks = []
+def check(name, condition):
+    checks.append((name, bool(condition)))
+    print(('PASS ' if condition else 'FAIL ') + name)
+
+def load(relative):
+    return json.loads((ROOT / relative).read_text(encoding='utf-8'))
+
+try:
+    doc = load('content/missions.mvp.json')
+    missions = doc['missions']
+    claims = {x['key'] for x in load('content/claims.json')['claims']}
+    check('12 missões distintas', len(missions) == 12 and len({m['key'] for m in missions}) == 12)
+    check('12 mecânicas distintas', len({m['mechanic']['type'] for m in missions}) == 12)
+    check('Nenhuma publicação editorial presumida', doc['dataKind'] == 'DEMO' and doc['publicationAllowed'] is False and all(m['status'] == 'NEEDS_REVIEW' for m in missions))
+    check('Referências de claims resolvem', all(set(m['claimIds']) <= claims for m in missions))
+    check('Três variantes pedagógicas em cada missão', all(set(m['copy']['pt-BR']['ageAdaptations']) == {'AGE_5_7','AGE_8_10','AGE_11_14'} for m in missions))
+    check('Uma resposta e feedback completo por missão', all(sum(c['correct'] for c in m['copy']['pt-BR']['choices']) == 1 and m['copy']['pt-BR']['feedbackCorrect'] and m['copy']['pt-BR']['feedbackRetry'] for m in missions))
+    check('Jogo não habilita direção, bônus de tempo ou conclusão vazia', all(m['scene']['allowsDriving'] is False and m['timeBonus'] is False and m['mechanic']['requiredEvidenceFlags'] for m in missions))
+    check('Recompensa fixa e única', all(m['reward']['coins'] == 20 and m['reward']['once'] is True for m in missions))
+    check('Backlog separado de implementação', len(load('content/backlog.json')['items']) == 24 and load('content/backlog.json')['status'] == 'IDEAS_NOT_IMPLEMENTED')
+    def flatten(value, prefix=''):
+        out = set()
+        for k, v in value.items():
+            key = f'{prefix}.{k}' if prefix else k
+            out |= flatten(v, key) if isinstance(v, dict) else {key}
+        return out
+    locales = [load(f'locales/{lang}.json') for lang in ['pt-BR','en','es']]
+    check('Paridade de chaves dos três idiomas de interface', flatten(locales[0]) == flatten(locales[1]) == flatten(locales[2]))
+    check('CSV de resultados sem amostra inventada', len((ROOT/'evidence/resultados_reais.csv').read_text().splitlines()) == 1)
+    schema = (ROOT/'prisma/schema.prisma').read_text()
+    declared = set(re.findall(r'^(?:model|enum)\s+(\w+)\s*\{', schema, re.M))
+    builtins = {'String','Boolean','Int','BigInt','Float','Decimal','DateTime','Json','Bytes','Unsupported'}
+    unknown = set()
+    for kind, name, body in re.findall(r'^(model|enum)\s+(\w+)\s*\{(.*?)^\}', schema, re.M | re.S):
+        if kind != 'model': continue
+        for line in body.splitlines():
+            line = line.strip()
+            if not line or line.startswith(('//','@@')): continue
+            parts=line.split()
+            if len(parts)>1:
+                typ=parts[1].replace('[]','').replace('?','')
+                if typ not in declared | builtins: unknown.add(typ)
+    check('Tipos declarados do schema sem nomes pendentes (checagem estática)', not unknown)
+    check('Delimitadores do schema balanceados (não é prisma validate)', schema.count('{') == schema.count('}'))
+    diagrams=list((ROOT/'diagrams').glob('*.mmd'))
+    check('Sete fontes Mermaid presentes',len(diagrams)==7)
+    check('Cabeçalhos Mermaid reconhecíveis (sem renderização)',all(p.read_text().splitlines()[0].startswith(('flowchart ','sequenceDiagram','stateDiagram-v2','erDiagram')) for p in diagrams))
+    check('Nenhum arquivo de fonte redistribuído', not any(p.suffix.lower() in {'.ttf','.otf','.woff','.woff2'} for p in ROOT.rglob('*')))
+except Exception as exc:
+    print(f'FAIL Exceção: {exc}', file=sys.stderr)
+    sys.exit(1)
+print(f'\n{sum(ok for _,ok in checks)}/{len(checks)} verificações estáticas aprovadas.')
+sys.exit(0 if all(ok for _,ok in checks) else 1)
+```
+
+## `README.md`
+
+````markdown
+# SmartCity Kids — kit ONE SHOT para Antigravity
+
+**Entregável:** especificação completa, prompt executivo e referências de implementação. **Não é o jogo já construído, não contém piloto realizado e não é uma inscrição pronta.**
+
+## Começar
+
+Abra esta pasta no Antigravity. Selecione o Gemini 3.8 Flash disponível na sua conta e confira a configuração de raciocínio HIGH na interface. Disponibilize `SUPER_PROMPT_SMARTCITY_KIDS_ONE_SHOT.md` como contexto ou peça ao agente para lê-lo no workspace. O arquivo mestre contém as especificações e os anexos essenciais; os demais arquivos facilitam copiar, testar e manter cada parte.
+
+Cole uma única instrução de início:
+
+```text
+Leia integralmente SUPER_PROMPT_SMARTCITY_KIDS_ONE_SHOT.md e os arquivos de referência desta pasta. Execute o contrato da seção 2, usando as demais seções como especificação. Construa a aplicação em ./app/, preservando este kit. Comece pela fatia vertical M01 e avance até as 12 missões P0, as três faixas pedagógicas, a cidade interativa, o modo guiado e o offline preparado. Escreva código, execute testes e registre evidências reais; não entregue apenas planejamento. Deixe recursos institucionais sem autenticação/validação desabilitados. Não publique, não inscreva no prêmio, não invente resultados ou autorizações e não altere a proveniência de IA. Ao terminar, apresente comandos de execução, testes realizados e bloqueios concretos.
+```
+
+O agente deve criar a aplicação dentro de `app/`. O `package.json` desta raiz serve apenas aos testes de referência; não possui `dev` de um jogo pronto.
+
+## Conteúdo
+
+| Caminho | Uso |
+|---|---|
+| `SUPER_PROMPT_SMARTCITY_KIDS_ONE_SHOT.md` | Arquivo autocontido para o agente e leitura completa |
+| `docs/` | Auditoria, prompt, PRD, currículo, arquitetura, design, repositórios, QA/piloto, roadmap e fontes |
+| `prisma/schema.prisma` | 23 modelos para o modo institucional opcional |
+| `prisma.config.ts`, `prisma/client.ts`, `prisma/constraints.sql` | Configuração Prisma 7, adapter e restrições adicionais; validar no ambiente de implementação |
+| `diagrams/` | Sete diagramas Mermaid editáveis |
+| `content/` | 12 missões com mecânicas e três adaptações, claims e 24 ideias de expansão |
+| `locales/` | Catálogos de interface pt-BR, en e es; currículo ainda em pt-BR |
+| `reference/` | Domínio TypeScript, JavaScript compilado e 16 testes unitários |
+| `video/` | Composição Remotion ilustrativa; não renderizada neste kit |
+| `evidence/` | Cabeçalhos de coleta e registro de proveniência, sem alunos ou resultados reais |
+| `validation/` | Saídas de testes e limites da verificação |
+
+## Executar os testes que já existem neste kit
+
+Requisitos para rodar os testes sobre o JavaScript incluído: Node.js compatível com `node:test`; usado aqui Node 22.16.0. Para checagem estática do kit, Python 3.
+
+```bash
+node --test reference/domain.test.mjs
+python3 scripts/verify_kit.py
+```
+
+Para recompilar ou fazer typecheck das referências TypeScript, instalar a dependência de desenvolvimento declarada no `package.json` em ambiente com acesso à rede, ou usar TypeScript 5.8.3 já instalado:
+
+```bash
+tsc -p reference/tsconfig.json --noEmit
+tsc -p reference/tsconfig.json
+```
+
+A pasta `reference/dist/` contém apenas JavaScript e declarações gerados a partir do código autoral de referência. Não há engines, node_modules, fontes ou assets de terceiros empacotados.
+
+## Atenção ao prêmio
+
+A retificação oficial consultada manteve o fim da inscrição em 17/08/2026; não foi localizada reabertura. O item 17.3 do edital não contém a exceção de uso de IA presumida pelo dossiê. A proposta do produto pode avançar, mas candidatura e admissibilidade exigem outra análise. Ver `docs/01_AUDITORIA_EDITAL.md` e `docs/10_FONTES.md`.
+````
+
+# Anexo F — Remotion: composição de demonstração
+
+Referência não renderizada neste kit. Instalar versões compatíveis e verificar licença antes de executar. Nenhuma cena abaixo comprova oficina, aprendizado ou premiação.
+
+## `video/TrafficExplainer.tsx`
+
+```tsx
+import React from 'react';
+import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from 'remotion';
+
+/** Composição ilustrativa própria. Não utiliza dados de alunos ou resultados de campo. */
+export const TrafficExplainer: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const second = frame / fps;
+  const panels = [
+    { until: 10, title: 'Uma cidade que aprende a cuidar', text: 'SmartCity Kids · Missão Desacelere' },
+    { until: 25, title: 'Observar. Escolher. Compreender.', text: 'Decisões educativas em um bairro fictício e protegido.' },
+    { until: 40, title: 'O cuidado transforma o bairro', text: 'Visibilidade, rotas contínuas e mobilidade acolhedora.' },
+    { until: 52, title: 'Diferentes formas de participar', text: 'Modo guiado e recursos locais fazem parte do projeto.' },
+    { until: 60, title: 'Desacelere. Seu bem maior é a vida.', text: 'Proposta em desenvolvimento para um piloto supervisionado.' },
+  ];
+  const index = panels.findIndex(p => second < p.until);
+  const panel = panels[index < 0 ? panels.length - 1 : index]!;
+  const start = index <= 0 ? 0 : panels[index - 1]!.until;
+  const opacity = interpolate(second - start, [0, 0.4], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return <AbsoluteFill style={{ backgroundColor: '#FFF8ED', color: '#17324D', fontFamily: 'system-ui, sans-serif', padding: 90 }}>
+    <div style={{ fontSize: 28, letterSpacing: 3 }}>SMARTCITY KIDS</div>
+    <div style={{ opacity, marginTop: 80 }}>
+      <h1 style={{ fontSize: 82, lineHeight: 1.08, maxWidth: 1400, margin: 0 }}>{panel.title}</h1>
+      <p style={{ fontSize: 38, maxWidth: 1350, lineHeight: 1.4 }}>{panel.text}</p>
+      <div style={{ display: 'flex', gap: 26, marginTop: 50 }}>
+        {['Observar', 'Cuidar', 'Transformar'].map((label, i) => <div key={label} style={{ backgroundColor: '#FFFFFF', border: '4px solid #146B63', borderRadius: 30, padding: '35px 50px', fontSize: 34 }}>
+          <span style={{ display: 'block', fontSize: 24, marginBottom: 20 }}>0{i + 1}</span>{label}
+        </div>)}
+      </div>
+    </div>
+    <div style={{ position: 'absolute', left: 90, right: 90, bottom: 60, fontSize: 27, borderTop: '2px solid #17324D', paddingTop: 22 }}>
+      DEMONSTRAÇÃO ILUSTRATIVA — SEM RESULTADOS DE CAMPO
+    </div>
+  </AbsoluteFill>;
+};
+```
+
+## `video/Root.tsx`
+
+```tsx
+import React from 'react';
+import { Composition } from 'remotion';
+import { TrafficExplainer } from './TrafficExplainer';
+export const RemotionRoot: React.FC = () => <Composition id="SmartCityDemo" component={TrafficExplainer} durationInFrames={1800} fps={30} width={1920} height={1080} />;
+```
+
+## `video/index.ts`
+
+```typescript
+import { registerRoot } from 'remotion';
+import { RemotionRoot } from './Root';
+registerRoot(RemotionRoot);
+```
+
+# Anexo G — Verificação realizada e proveniência
+
+# Validação do kit — 28/09/2026
+
+## Executado neste ambiente
+
+Ambiente: Node.js **22.16.0**, TypeScript **5.8.3**, Python 3. O módulo de referência não requer dependências de runtime de terceiros.
+
+| Verificação | Resultado |
+|---|---|
+| `tsc -p reference/tsconfig.json --noEmit` | Aprovada |
+| `tsc -p reference/tsconfig.json` | Compilação aprovada; JS e declarações gerados em `reference/dist/` |
+| `node --test reference/domain.test.mjs` | **16 testes aprovados**, zero falhas, zero testes ignorados |
+| `python3 scripts/verify_kit.py` | **16 verificações estáticas aprovadas** |
+| JSON do catálogo, claims, idiomas e proveniência | Leitura/consistência estrutural verificadas |
+| Integridade do pacote | Arquivos presentes e manifesto SHA-256 produzido ao empacotar |
+
+Os testes cobrem modelo didático de parada, entradas inválidas, guardas da animação protegida, fases mutuamente exclusivas, recompensa idempotente, economia cosmética, relatórios sem mistura DEMO/PILOT, pares duplicados, escape CSV e uma guarda ilustrativa de tenant. **Esse último teste não equivale a validar isolamento em um backend ou banco reais.**
+
+A checagem estática do schema verifica nomes de tipos e delimitadores. A checagem dos diagramas confirma sete arquivos e cabeçalhos reconhecidos. **Nenhuma das duas substitui o parser/validador oficial ou renderização.**
+
+## Não executado — requisitos do ambiente de implementação
+
+**Prisma CLI e PostgreSQL:** instalação de dependências adicionais não esteve disponível por falha de acesso/DNS ao registry neste ambiente. Não foram executados `prisma format`, `prisma validate`, `prisma generate`, migrations ou testes transacionais em PostgreSQL. O schema de 23 modelos é uma referência completa para validação pelo agente, não um schema cujo CLI tenha sido aprovado aqui.
+
+**Aplicação web:** não há jogo final, API, autenticação, serviço de armazenamento ou site publicado neste kit. Portanto não houve E2E de navegador, teste de offline real, auditoria de rede da aplicação, medição de FPS ou avaliação de acessibilidade de uma interface final.
+
+**Remotion:** composição incluída, mas dependências não instaladas e render não executado. A licença de uso deve ser analisada no contexto da equipe e do produto.
+
+**Mermaid:** fontes incluídas; renderização gráfica e validação pelo parser Mermaid não foram executadas neste ambiente.
+
+**Conteúdo/estudo:** nenhuma revisão pedagógica ou jurídica humana, nenhuma autorização escolar, nenhum participante e nenhum resultado de campo. Todos os textos de missão estão marcados para revisão; a proveniência de assistência de IA está explícita.
+
+## Arquivos de evidência técnica
+
+`reference-test-output.txt` e `static-check-output.txt` registram as saídas dos testes. `typecheck-output.txt` registra a versão e o comando de TypeScript. Esses registros descrevem o kit, não uma implantação de produção ou avaliação escolar.
+
+## Registro de proveniência
+
+```json
+{
+  "artifactType": "SPECIFICATION_AND_REFERENCE_KIT",
+  "preparedAt": "2026-09-28",
+  "aiAssistanceDisclosed": true,
+  "humanTechnicalReview": "PENDING",
+  "humanPedagogicalReview": "PENDING",
+  "legalEligibilityReview": "PENDING",
+  "awardSubmissionEnabled": false,
+  "fieldStudyConducted": false,
+  "studentDataIncluded": false,
+  "thirdPartyCodeVendored": false,
+  "note": "Dados em testes de software são fixtures sintéticas, não resultados educacionais."
+}
+```
+
+
+---
+
+# Validação SmartCity — relato histórico
+
+Fonte: `references/estudos/SMARTCITY-VALIDACAO-HISTORICA.md` · SHA-256 original: `5152881b935b2856059ffa284ad9ba4a81aceaeb3b38c14debb0712f5513f28d` · Ajustes de caminhos privados: 0
+
+# Validação SmartCity — relato histórico
+
+**Projeção pública produzida em 14/11/2026. Corte da fonte: 28/09/2026, declarado no original.**
+
+> Referência histórica de outro projeto. Os prompts, comandos e instruções internos pertencem ao SmartCity e não se aplicam ao PROJETO IPÊ. Afirmações, regras de concurso, elegibilidade, dependências e resultados não se transferem ao Ipê. Blocos de código são texto documental, não ações autorizadas.
+
+Origem no acervo fornecido: `Estudos/VALIDACAO.md`. O corpo preserva o texto original, exceto as transformações públicas declaradas no [índice de procedência](README.md). Não houve execução dos prompts, instalação das dependências ou revalidação das afirmações históricas para esta publicação.
+
+Os arquivos externos citados pelo texto — ZIP, imagens, documentos legais, resultados de testes e projetos de referência — não foram fornecidos como arquivos separados nesta pasta de três Markdown e não foram fabricados nem anexados. Trechos incorporados no Markdown permanecem como exemplos.
+
+---
+
+# Validação do kit — 28/09/2026
+
+## Executado neste ambiente
+
+Ambiente: Node.js **22.16.0**, TypeScript **5.8.3**, Python 3. O módulo de referência não requer dependências de runtime de terceiros.
+
+| Verificação | Resultado |
+|---|---|
+| `tsc -p reference/tsconfig.json --noEmit` | Aprovada |
+| `tsc -p reference/tsconfig.json` | Compilação aprovada; JS e declarações gerados em `reference/dist/` |
+| `node --test reference/domain.test.mjs` | **16 testes aprovados**, zero falhas, zero testes ignorados |
+| `python3 scripts/verify_kit.py` | **16 verificações estáticas aprovadas** |
+| JSON do catálogo, claims, idiomas e proveniência | Leitura/consistência estrutural verificadas |
+| Integridade do pacote | Arquivos presentes e manifesto SHA-256 produzido ao empacotar |
+
+Os testes cobrem modelo didático de parada, entradas inválidas, guardas da animação protegida, fases mutuamente exclusivas, recompensa idempotente, economia cosmética, relatórios sem mistura DEMO/PILOT, pares duplicados, escape CSV e uma guarda ilustrativa de tenant. **Esse último teste não equivale a validar isolamento em um backend ou banco reais.**
+
+A checagem estática do schema verifica nomes de tipos e delimitadores. A checagem dos diagramas confirma sete arquivos e cabeçalhos reconhecidos. **Nenhuma das duas substitui o parser/validador oficial ou renderização.**
+
+## Não executado — requisitos do ambiente de implementação
+
+**Prisma CLI e PostgreSQL:** instalação de dependências adicionais não esteve disponível por falha de acesso/DNS ao registry neste ambiente. Não foram executados `prisma format`, `prisma validate`, `prisma generate`, migrations ou testes transacionais em PostgreSQL. O schema de 23 modelos é uma referência completa para validação pelo agente, não um schema cujo CLI tenha sido aprovado aqui.
+
+**Aplicação web:** não há jogo final, API, autenticação, serviço de armazenamento ou site publicado neste kit. Portanto não houve E2E de navegador, teste de offline real, auditoria de rede da aplicação, medição de FPS ou avaliação de acessibilidade de uma interface final.
+
+**Remotion:** composição incluída, mas dependências não instaladas e render não executado. A licença de uso deve ser analisada no contexto da equipe e do produto.
+
+**Mermaid:** fontes incluídas; renderização gráfica e validação pelo parser Mermaid não foram executadas neste ambiente.
+
+**Conteúdo/estudo:** nenhuma revisão pedagógica ou jurídica humana, nenhuma autorização escolar, nenhum participante e nenhum resultado de campo. Todos os textos de missão estão marcados para revisão; a proveniência de assistência de IA está explícita.
+
+## Arquivos de evidência técnica
+
+`reference-test-output.txt` e `static-check-output.txt` registram as saídas dos testes. `typecheck-output.txt` registra a versão e o comando de TypeScript. Esses registros descrevem o kit, não uma implantação de produção ou avaliação escolar.
 
 
 ---
@@ -6354,3 +13434,430 @@ A transcrição2026 já menciona repetir simulações, comparar projetos e anál
 ## Formulação recomendada
 
 “Minha primeira escolha para seu perfil é o Jogo de Design de Missões, desde que a equipe consiga fechar uma missão cientificamente coerente e uma rodada compreensível no tempo local disponível. O ganho provável está em transformar restrições de engenharia em decisões e aprendizagem observáveis. Cooperação, recursos e debrief já fazem parte do campo; o diferencial precisa aparecer na qualidade da demonstração e nos testes. Fogo ou CLPS podem ultrapassá-lo se seus respectivos gargalos de dados e validação forem resolvidos cedo. Nenhuma dessas evidências permite prever premiação.”
+
+
+---
+
+# Plano técnico da especificação 001
+
+Fonte: `specs/001-mission-receipt/plan.md` · SHA-256 original: `a1fd13361dc9d24dfb19028027f47f636c46b0e270a3406df5ac590a01123f7f` · Ajustes de caminhos privados: 0
+
+# Plano técnico da especificação 001
+
+Incrementos: contrato/dados; motor e oráculos; busca; identidade e replay; persistência; UI; revisão independente; compilação e artefatos; validação no equipamento; estudo formativo. As dependências são explícitas: um compilador não valida a ciência, e um teste de armazenamento não valida o efeito educativo.
+
+O domínio permanece pequeno para tornar enumeração e inspeção viáveis. Nenhuma dependência de modelo Fastino, banco remoto ou motor orbital é introduzida no P0. Os riscos em aberto estão no handoff e nos pareceres. A estrutura segue disciplinas de Spec Kit sem executar instaladores ou comandos de agentes upstream.
+
+
+---
+
+# Especificação 001 — Missão e recibo verificáveis
+
+Fonte: `specs/001-mission-receipt/spec.md` · SHA-256 original: `cc0c99c3d344ee0d9749f62cbc4d7bcb9fc00e68bdbbabc33617a63c143e9aa1` · Ajustes de caminhos privados: 0
+
+# Especificação 001 — Missão e recibo verificáveis
+
+## História
+
+Como participante, quero projetar uma missão, prever o gargalo, observar quais resultados chegaram e conferir uma alteração que resolva o problema sem esconder o compromisso técnico. Como educador/avaliador, quero reexecutar a entrada e distinguir o resultado calculado da alegação exportada.
+
+## Contrato fixo
+
+SCI-01: seis IDs esperados e únicos, QA aceito e NDVI verificado.
+SCI-02: ambas as representações respondem ao mesmo pedido NDVI.
+ENG-01: conservação de energia e bits por evento.
+ENG-02: limite instantâneo de descarga não substituído por capacidade.
+SRCH-01: mínimo limitado ao catálogo de 64 configurações, sem indeterminados.
+EXP-01: diagnóstico aponta evento/regra e valor realmente calculados.
+DATA-01: datas MODIS de 2024 separadas do relógio didático de 180 min.
+PST-01: IDB confirma commit, não somente request success.
+PST-02: importação estrita reexecuta, não autentica alegação.
+UX-01: previsão antes da primeira tentativa; ajuda de transferência posterior.
+OFF-01: nenhum serviço externo obrigatório no pacote compilado.
+
+## Critérios
+
+Ver PRD para critérios de produto e PRT para semântica numérica. O registro de verificação da rodada discrimina teste real, benchmark local, bloqueio de ambiente e validação humana pendente.
+
+
+---
+
+# Tarefas e gates da especificação 001
+
+Fonte: `specs/001-mission-receipt/tasks.md` · SHA-256 original: `80c441eba3fbbf404079f4bbec09de0548c2acfa44bcc2babebb6e04337a353f` · Ajustes de caminhos privados: 0
+
+# Tarefas e gates da especificação 001
+
+Estado de coordenação da rodada 4. “Implementado” significa que o artefato existe; “verificado” exige um recibo correspondente. A especificação não transforma o trabalho anterior ao evento em candidatura elegível.
+
+| ID | Tarefa | Artefato | Estado e próximo gate |
+|---|---|---|---|
+| T01 | Preservar as duas entradas coladas e comprovar duplicação | research/anexo-original.txt; chronology.json | Concluído: hash e tamanho iguais. |
+| T02 | Confrontar regras temporais e Resources | research/01-regras-ciencia.md | Pesquisa concluída; resposta da organização e Resources específicos pendentes. |
+| T03 | Conferir o pacote NASA | public/data; verify-science-data.mjs | Verificado: seis registros e procedência; não aquisição orbital simulada. |
+| T04 | Congelar catálogo e semântica | IMPLEMENTATION-CONTRACT.md; core/catalog.ts | Implementado: 64 tuplas, duas condições. |
+| T05 | Implementar energia, potência e fronteiras | core/exact.ts, power.ts, engine.ts | Verificado no domínio fechado e em casos de fronteira. |
+| T06 | Implementar produção, buffer e FIFO | core/engine.ts | Verificado: lotes completos, perda e progresso parcial. |
+| T07 | Tornar ciência condição de sucesso | core/science.ts; science-data.ts | Verificado; política QA explícita, tolerância inclusiva corrigida. |
+| T08 | Enumerar e certificar mínimo | core/search.ts | Verificado: cobertura integral, quatro ordens, indeterminado invalida mínimo. |
+| T09 | Implementar recibo e parser limitado | persistence/json.ts, replay.ts, identity.ts | Verificado: adulteração, duplicatas, versões e recálculo. |
+| T10 | Persistir sem confirmar antes do commit | persistence/store.ts | Verificado em fake-indexeddb; navegador real pendente. |
+| T11 | Isolar trabalho e cancelar retorno obsoleto | workers/client.ts, mission.worker.ts; App.tsx | Contratos do Worker verificados; fluxo DOM e navegador distinguidos nos recibos. |
+| T12 | Criar três telas e alternativa 2D | ui/* | Compila; inspeção visual e acessibilidade manual pendentes. |
+| T13 | Preservar previsão e restringir ajuda | ui/learning.ts; App.tsx | Implementado; testes DOM documentam os fluxos exercitados. |
+| T14 | Auditar contra oráculo independente | tests/adversarial.test.mts | Verificado: 128 combinações e regressões preservadas. |
+| T15 | Executar QA de interface e benchmark | tests-ui/*; scripts/benchmark-engine.mjs | Recibos e limitações em research/09 e docs/09. |
+| T16 | Aplicar AB-R3A à fonte final | tools/rea-audit.mjs | Cobertura observada em evidence/ab-r3a-analysis.json; não certificação de segurança. |
+| T17 | Compilar variantes e conferir hashes | dist; portable; evidence | Reconstruir após qualquer alteração material; usar recibo final. |
+| T18 | Validar schema Prisma | prisma/schema.prisma | Estrutura aprovada; backend/migração fora da implementação atual. |
+| T19 | Preparar instalação nos equipamentos de AB | docs/08-HANDOFF.md | Pendente: navegador, tela, armazenamento, offline, desempenho e exportação reais. |
+| T20 | Fazer dois pilotos e seis sessões | protocolo no PRD | Pendente: não há evidência humana de aprendizagem. |
+| T21 | Revisar inglês e demonstração | cronograma e roteiro do dossiê | Pendente: edição do material de candidatura e revisão científica humana. |
+| T22 | Resolver uso competitivo deste material | registro temporal + orientação da organização | Pendente: divulgação/procedência não equivalem a autorização. |
+| T23 | Investigar EVI3, modelos compactos e agenda orbital | research/01,02,03,08 | P1/P2; sem modificar a condição NDVI do P0. |
+
+O método documental é inspirado no github/spec-kit. O CLI não foi instalado nem executado. Nenhum estado acima deriva de uma etiqueta automática “converged”.
+
+
+---
+
+# Contrato de integração do protótipo de pesquisa
+
+Fonte: `specs/IMPLEMENTATION-CONTRACT.md` · SHA-256 original: `cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6` · Ajustes de caminhos privados: 0
+
+# Contrato de integração do protótipo de pesquisa
+
+Início real: 14/11/2026 antes das 09h BRT. Este artefato é desenvolvimento específico anterior ao evento. Isolá-lo, creditá-lo ou renomeá-lo não estabelece elegibilidade. Não retroagir datas nem apresentá-lo como trabalho feito durante o hackathon. A questão com a organização permanece aberta, inclusive para especificações anteriores.
+
+## Domínio fechado desta versão
+
+Protótipo local de uma missão educacional e duas condições: long-contact e short-contact. A mesma pergunta exige seis NDVI válidos de arquivo. As duas rotas usam a mesma fórmula e política de QA. Arquivos MOD13Q1 históricos, datas reais separadas de relógio simulado. Nenhum dado de satélite é adquirido pelo CubeSat fictício em 180 min.
+
+Seis escolhas binárias / 64 tuplas: battery small/large; panel compact/standard; processing bands/index; radio economy/fast; buffer compact/large; policy every-contact/last-contact. Lançador e perfil orbital estão fixos no briefing. Não alegar cobertura integral do brief oficial ainda indisponível. Valores didáticos; não calibração de hardware real. A enumeração avalia massa, créditos e todas as violações; inválidos são contabilizados.
+
+## API entre frentes
+
+`src/core/contracts.ts` pertence à coordenação. Alterações de contrato exigem mensagem, não edição paralela silenciosa.
+
+Frente motor produz `src/core/engine.ts`, `src/core/catalog.ts`, `src/core/science.ts`, `src/core/search.ts`. Exportar:
+
+- `catalog.ts`: CATALOG (Record<ConfigKey, readonly ComponentChoice[]>), CONFIG_KEYS, DEFAULT_CONFIG, SCENARIOS (readonly Scenario[]), getScenario(id).
+- `engine.ts`: `simulateMission(config: MissionConfig, scenarioId: ScenarioId, options?: SimulationOptions): MissionResult`.
+- `science.ts`: `validateScienceRecord(record: ScienceRecord): { valid: boolean; reasons: string[]; ndvi: number | null }`.
+- `search.ts`: `enumerateConfigurations(): MissionConfig[]`, `hammingDistance(a,b): number`, `searchCatalog(baseConfig, scenarioId): SearchResult`.
+
+Dados em `src/data/science-data.ts`: SCIENCE_RECORDS e SCIENCE_PACK_HASH. O JSON original vai em public/data com arquivos de origem. A coordenação gera o arquivo inicial; frente de persistência verifica procedência.
+
+## Motor: hipóteses iniciais a verificar
+
+Horizonte de 10800 s. Luz [0,5400) e [7200,9000). Seis trabalhos de 60 s começando em 600, 1200, 1800, 2400, 3000 e 3600 s. Contatos longos [5400,6000),[9000,9600); curtos [5400,5640),[9000,9240). Trabalho só produz lote completo no final, em ordem estável. Não há sobreposição de trabalho e contato nestes cenários fechados.
+
+Bateria de 16 Wh / 20 W ou 24 Wh / 35 W, início em 80%, reserva de 15%, eficiência de carga/descarga de 0.95. Painel compact de 12 W ou standard de 18 W; fator 0.55 no trabalho e 0.85 na espera; zero em eclipse. Limite de carga deve constar e ser respeitado (proposta de 10 W de entrada). Base de 8 W; BANDAS: 26 W totais / 180e6 bits; ÍNDICE: 38 W totais / 60e6 bits. Rádio econômico: 16 W totais / 960000 bps; rápido: 26 W totais / 2400000 bps. Buffer de 512e6 ou 1536e6 bits. TX muda para espera ao esvaziar fila.
+
+Cada componente tem massa/créditos para tornar trocas materiais; frente motor pode calibrar catálogo estático, preservando testemunhas e registrando decisões. Proposta de envelope: 86 créditos / 3.6 kg; base: 1.2 kg / 20 créditos; bateria: .6 / 1 kg e 12 / 19 créditos; painel: .25 / .55 kg e 10 / 16 créditos; modo: .35 / .4 kg e 8 / 14 créditos; rádio: .2 / .45 kg e 10 / 17 créditos; buffer: .05 / .15 kg e 2 / 5 créditos; política: 0 kg / 0 crédito. Esses números são hipóteses, não especificações NASA.
+
+Integração por eventos, não frame da UI. Concluir intervalo anterior antes dos eventos na fronteira. Pico de descarga não atendido termina operação; reserva registra falha sem apagar trace; energia não negativa; saturação contabiliza spill. Bits inteiros seguros até 2^53−1 internamente e strings decimais externamente; números com unidade não recebem tolerância que muda sucesso. Residual de energia deve ser reportado. Não afirmar determinismo bit a bit em motores diferentes.
+
+## Busca e explicação
+
+Busca exaustiva sobre 64 tuplas, resultado não depende da ordem. Mínimo somente se há testemunha viável e todas as alternativas menores foram decididas; erro é indeterminado. Cancelamento ou erro não conserva selo de mínimo. Sem Monte Carlo como verdade; entradas fixas e reexecução com versões. A escolha física alterada é outro projeto antes do lançamento.
+
+Política de operação é automática, escolhida antes de executar. Pausar/apontar a câmera não altera a execução. UI deve pedir previsão antes da primeira tentativa e bloquear ajuda de solver na primeira decisão do caso de transferência. Não chamar uso de botões de prova de aprendizagem. Sem LLM determinando potência, QA, resultado ou certificado.
+
+## Persistência e Worker
+
+Frente dados: `src/persistence/store.ts` exporta `saveRun(result): Promise<string>`, `listRuns(): Promise<SavedRun[]>`, `deleteRun(id): Promise<void>`, `saveDraft(config,scenarioId,expectedRevision): Promise<number>`, `loadDraft()`. SavedRun tem id, createdAt, result, inputHash e resultHash.
+
+`src/persistence/replay.ts` exporta `exportReplay(result): Promise<string>`, `importReplay(text): Promise<{ result: MissionResult; matchesClaim: boolean; importedClaim: unknown }>`. Importar sempre valida schema/tamanho/versões e recalcula pelo motor; não confiar na alegação importada. Hash SHA-256 canônico com versão; campos contados como números seguros; rejeitar chaves duplicadas e prototype pollution. Não buscar URLs importadas. Nenhum SDKde IA instalado por conveniência.
+
+A coordenação cria a bridge do Worker. A UI usa uma função Promise que retorna o resultado; a identidade da chamada e a etapa são conferidas antes da publicação. O IDB usa transação atômica; completar o request não equivale a commit. Em caso de erro de quota, o resultado visível em memória não é apagado. Migrações Prisma ficam separadas; o esquema permanece apenas fora do browser, sem backend desnecessário.
+
+## Propriedade dos arquivos
+
+Coordenação: contracts, configs, scripts build/server/worker, docs finais.
+Frente 4: core engine/catalog/science/search e testes próprios.
+Frente 5: App.tsx, ui/, styles.css, index.html/main.tsx; sem editar core/persistência.
+Frente 6: data/ revisão, persistence/, Prisma e testes respectivos.
+Frente 7: testes adversariais independentes e relatório, sem mudar a implementação.
+Frente 8: auditoria completa do anexo/repositórios, somente research.
+Frente 9: benchmark/offline e release scripts sob acordo com coordenação.
+Frente 10: auditoria final e handoff; alterações somente via coordenação.
+
+
+---
+
+# Constituição do protótipo de pesquisa
+
+Fonte: `specs/constitution.md` · SHA-256 original: `1299a40afb83c2707a99be274526d83298355f30655237324efdbb924f5c5ee5` · Ajustes de caminhos privados: 0
+
+# Constituição do protótipo de pesquisa
+
+1. Procedência, hipótese e resultado têm classes distintas. Uma referência NASA não transforma um parâmetro didático em medição NASA.
+2. Uma missão só vence com ciência completa e utilizável recebida, além de respeitar os limites operacionais e estáticos.
+3. UI, busca e reexecução usam o mesmo motor. Oráculos independentes verificam o motor.
+4. Cancelamento, erro e ausência de evidência não são sucesso nem falha física.
+5. Nenhum modelo de linguagem determina física, QA, resultado ou certificação de mínimo.
+6. Uma alegação de mínimo declara domínio, distância, condição, versão e cobertura.
+7. Runtime compilado não depende de rede externa. Ambiente de desenvolvimento e inferência opcional possuem seus próprios requisitos.
+8. Código específico foi iniciado antes da abertura local oficial. Datas reais são preservadas; elegibilidade não é presumida.
+9. Pesquisa com usuários relata amostra, ajuda, falhas e limites. Nenhum ganho de aprendizagem é declarado sem observação.
+10. Cada mudança material atualiza requisitos, teste, evidência e decisão registrada.
+
+Método inspirado no github/spec-kit v1.4.0. O CLI Spec Kit não foi instalado nem executado; estes arquivos são aplicação documental do processo.
+
+
+---
+
+# Ferramentas documentais e de inspeção
+
+Fonte: `tools/README.md` · SHA-256 original: `c58ce8384f700a57e7ec1edcfb50448c114fce3151cef9a75e68bc949a046e85` · Ajustes de caminhos privados: 0
+
+# Ferramentas documentais e de inspeção
+
+Estas ferramentas não participam do runtime do jogo. A aplicação compilada é servida com `node scripts/serve.mjs`; reconstruir o jogo usa as dependências do `package-lock.json`.
+
+## Dossiê
+
+Ambiente efetivamente usado: Python 3.12.14, ReportLab 4.4.9, Pillow 13.0.0, Matplotlib 3.10.8, Pandoc 3.1.11.1, Graphviz, Poppler e fontes DejaVu Sans/Sans Mono em `/usr/share/fonts/truetype/dejavu/`. Essa lista registra o ambiente; não é um lockfile completo do sistema operacional.
+
+```bash
+python3 tools/render_diagrams.py
+python3 tools/build_study_artifacts.py
+python3 tools/qa_document.py
+```
+
+`render_diagrams.py` produz projeções Graphviz dos fluxos e preserva Mermaid editável. O HTML incorpora SVG e MathML sem buscar renderizadores na rede. O PDF usa texto vetorial, diagramas e equações renderizadas localmente. `artifact-build.json` registra hashes das fontes e dos documentos. `qa_document.py` gera geometria, contatos e amostras para inspeção humana/visual; resultado geométrico sozinho não comprova legibilidade. Os arquivos temporários ficam em uma pasta `tmp` adjacente ao projeto.
+
+## AB-R3A / REA
+
+`rea-audit.mjs` é um wrapper de leitura e análise estática para runtime REA 6.7.0 já disponível. O runtime privado não é redistribuído. Consulte o cabeçalho e os argumentos do wrapper, além de `evidence/ab-r3a-digest.json`, antes de reutilizar. Cobertura parcial, truncamentos e desconhecidos semânticos estão declarados. A ferramenta não executa o jogo e não equivale a teste de navegador, auditoria completa de segurança ou aprovação NASA.
+
+## Fontes e embalagem
+
+`build-evidence-index.py` indexa links e requisitos; inclusão no índice não comprova verificação de cada página. Os pareceres preservam as limitações de cada fonte. `package-manifest.json` identifica os bytes do pacote; hashes não autenticam autoria nem elegibilidade.
+
+## Apresentação e pacote R5
+
+A apresentação tem build próprio e incorpora o núcleo existente. Com as dependências de desenvolvimento já instaladas:
+
+```bash
+node scripts/build-presentation.mjs
+node scripts/test-presentation.mjs
+node scripts/smoke-presentation-kit.mjs
+python3 tools/package_presentation_kit.py
+```
+
+O teste da apresentação utiliza DOM simulado. O smoke do servidor realiza HTTP em loopback e não abre navegador. O empacotador exige os recibos aprovados e o registro `evidence/presentation-release-r5.json`, confere o SHA-256 da apresentação testada, verifica os arquivos conferidos por HTTP e impede empacotar alterações nos 52 arquivos do jogo congelados em `game-baseline-r5.json`. Uma evolução do jogo exige uma nova decisão de versão e regressão; não edite o baseline para esconder alterações.
+
+O empacotador escreve `output/packages/AB_Missao_Ipe_R5_Apresentacao_Completa.zip`, o manifesto SHA-256 de sua raiz e o recibo de integridade fora do ZIP para evitar referências circulares. Ele conserva o dossiê de base R4 e inclui a revisão atual separadamente. Recompilar o HTML muda seus bytes; execute a QA novamente antes de congelar a nova cópia.
+
+Para servir os builds incluídos, não é necessário instalar dependências:
+
+```bash
+node scripts/serve-presentation-kit.mjs
+```
+
+O servidor publica a entrada, a apresentação e o jogo em `http://127.0.0.1:4174`, com lista de arquivos permitidos. O comando não publica um site na internet.
+
+
+---
+
+# Verificação · edição pública R6
+
+Fonte: `web/public-docs/09-VERIFICACAO.md` · SHA-256 original: `c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6` · Ajustes de caminhos privados: 0
+
+# Verificação · edição pública R6
+
+Este resumo público preserva os resultados e limites dos recibos anteriores. Ele não substitui os recibos originais e não declara validações novas de navegador ou participantes. O manifesto identifica as projeções públicas de evidência.
+
+## Evidência já registrada
+
+| Camada | Resultado registrado | Alcance |
+|---|---|---|
+| Núcleo e persistência simulada | 51/51 testes Node | Motor, ciência, busca, importação, replay e contratos. |
+| Jornada da aplicação | 9 contagens TAP DOM | Componentes reais em ambiente DOM simulado. |
+| Servidor local anterior | 8 casos HTTP | Arquivos, métodos e rejeição de caminhos inválidos. |
+| Oráculo independente | 128 configurações | Duas condições completas, com integração alternativa. |
+| Apresentação R5 | 25/25 verificações DOM | Navegação, gate, casos, catálogo, ciência, trace e ausência de chamadas de rede. |
+
+Nove contagens TAP não representam nove jornadas humanas nem nove navegadores. O QA da apresentação compara o HTML ao motor real e não constitui outro oráculo físico.
+
+## Catálogo fechado
+
+| Condição | Configurações | Sucessos | Falhas | Inválidas | Indeterminadas |
+|---|---:|---:|---:|---:|---:|
+| Contatos longos | 64 | 17 | 41 | 6 | 0 |
+| Contatos curtos | 64 | 9 | 49 | 6 | 0 |
+
+A base longa entrega 6/6. A base curta entrega 2/6 por limitação de contato. Trocar somente para ÍNDICE no caso curto gera falha de potência aos 600 s. Bateria grande mais ÍNDICE entrega 6/6, com 3,5 kg e 84 créditos. É a única solução a duas mudanças da base nesse catálogo. Todas as sete configurações a distância zero ou um falham.
+
+## Benchmark do núcleo
+
+A medição registrada usa Node 24.22.1 em um executor AMD EPYC 9V45, com 30 aquecimentos e 200 amostras por carga. Busca de 64 configurações: p95 longo **4,936 ms** e curto **4,237 ms**. O valor máximo curto foi **32,073 ms**.
+
+O benchmark exclui inicialização, transporte Worker, interface, persistência e GPU. Não foi medido no equipamento de apresentação e não constitui promessa de latência ou FPS. A [projeção pública do recibo](../evidence/engine-benchmark.json) preserva protocolo e resultados.
+
+## Análise estática AB-R3A
+
+O corte registrado analisou 43 arquivos e identificou 596 observações estruturais, com cobertura de aplicação parcial e semântica parcial/truncada. Esses números não são vulnerabilidades confirmadas nem certificação de segurança. O [digest público](../evidence/ab-r3a-digest.json) preserva esses limites. O relatório bruto não integra o site.
+
+## Gates abertos
+
+Ainda precisam de evidência própria: navegador real, inspeção visual, foco nativo, leitor de tela, impressão, execução em equipamento de apresentação e pesquisa com participantes. A existência de um endereço público não fecha esses gates.
+
+Elegibilidade temporal, Resources específicos e adequação integral ao formulário também continuam pendentes. [Estado do projeto](ESTADO-PUBLICO.html) e [plano de release](15-PLANO-RELEASE.html) apresentam esses limites.
+
+
+---
+
+# Autoria, IA e atribuições
+
+Fonte: `web/public-docs/AUTORIA-E-IA.md` · SHA-256 original: `cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b` · Ajustes de caminhos privados: 0
+
+# Autoria, IA e atribuições
+
+Missão Ipê — Ciência que chega é um protótipo de pesquisa de AB / Hackatur–Zer0Slop. O código original usa a licença Apache-2.0. As bibliotecas e dados preservam seus termos específicos.
+
+## Assistência de IA
+
+Pesquisa, arquitetura, redação, implementação, testes e ilustrações originais tiveram assistência de IA. Essa assistência não substitui validação humana, execução de testes ou qualificação institucional. Ilustrações conceituais geradas com IA possuem identificação visível.
+
+O runtime não depende de um modelo de linguagem para calcular potência, energia, transmissão, NDVI, classificação ou busca. O motor aplica regras determinísticas do contrato declarado.
+
+## Dados observacionais
+
+Os seis registros MOD13Q1.061 são dados NASA/ORNL DAAC históricos. Não são observações produzidas por IA. Resultados da missão são saídas do modelo didático, derivadas das escolhas e do contrato.
+
+## Recursos distribuídos
+
+- [Licença Apache-2.0 do código original](../LICENSE).
+- [Atribuições do projeto](../NOTICE.md).
+- [Aviso React](../licenses/React-MIT.txt).
+- [Aviso ReactDOM](../licenses/ReactDOM-MIT.txt).
+- [Aviso Scheduler](../licenses/Scheduler-MIT.txt).
+- [Aviso Three.js](../licenses/Three-MIT.txt).
+
+As marcas NASA, Space Apps e de outras instituições não são usadas como endosso do projeto. A publicação não transfere direitos de materiais de terceiros nem estabelece elegibilidade competitiva. Referências contextuais fornecidas pelo usuário não integram esta saída estática pública.
+
+
+---
+
+# Como usar a BETA
+
+Fonte: `web/public-docs/COMO-USAR.md` · SHA-256 original: `3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26` · Ajustes de caminhos privados: 0
+
+# Como usar a BETA
+
+## Jogo
+
+Abra o [jogo](../game/index.html), escolha a condição e configure seis decisões. Registre uma previsão, execute e inspecione o resultado e seus eventos. Alterar escolhas exige uma nova execução. O objetivo inclui seis registros utilizáveis e todas as restrições do modelo.
+
+O jogo servido utiliza um Worker. Registros locais pertencem ao navegador e à origem usada. Exporte recibos antes de trocar de domínio, navegador ou instalação. Falha de armazenamento não deve ser confundida com resultado físico da missão.
+
+## Apresentação
+
+A [apresentação interativa](../presentation/Missao_Ipe_Apresentacao.html) contém sete quadros de Pitch e oito apêndices em Exploração completa. Use setas ou os botões da página. O índice permite saltar entre quadros. As notas têm texto PT/EN e são visíveis na própria tela.
+
+O demonstrador usa o mesmo motor do jogo. O quarto caso e a busca abrem depois da base curta e da troca isolada para ÍNDICE. Nenhum cronômetro escolhe configurações ou avança decisões.
+
+## Arquitetura
+
+O [mapa Archify](../architecture/index.html) mostra os componentes implementados e suas relações. Ele serve para inspecionar o projeto, sem receber ou alterar o estado das partidas.
+
+## Uso local
+
+O [HTML portátil do jogo](../portable/Missao_Ipe_Local.html) reúne código, estilos e dados. Salve-o para a alternativa de uso sem conexão. Essa variante calcula na thread principal. O ensaio de abertura por arquivo e armazenamento deve ser feito no equipamento escolhido.
+
+A apresentação também é autocontida para exibição e cálculo, mas seus links para jogo, documentos e evidências precisam da estrutura completa do pacote ou do portal público. O arquivo isolado não inclui o PDF histórico.
+
+## Histórico e evidências
+
+O [PDF de base R4](../output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf) e o [estudo integral de base R4](../output/html/AB_Missao_Ipe_Estudo_Integral.html) são documentos históricos. A revisão R5 e a documentação R6 acompanham a evolução. Não tratar uma meta antiga como medição concluída.
+
+
+---
+
+# Missão Ipê BETA · estado público
+
+Fonte: `web/public-docs/ESTADO-PUBLICO.md` · SHA-256 original: `d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb` · Ajustes de caminhos privados: 0
+
+# Missão Ipê BETA · estado público
+
+**Edição pública R6, 14/11/2026.** Este portal reúne o jogo de pesquisa existente, a apresentação interativa e a arquitetura. O núcleo científico não recebe novas funcionalidades nesta rodada.
+
+## O que está implementado
+
+Uma missão terrestre com seis decisões binárias e duas condições de contato. O objetivo é receber seis registros NDVI inteiros e cientificamente utilizáveis, respeitando os limites de massa, orçamento, energia e operação. Jogo, busca, replay e demonstrador da apresentação compartilham o mesmo núcleo.
+
+O jogo servido executa o trabalho em Worker e guarda registros no navegador por IndexedDB. O arquivo portátil incorpora os recursos e calcula na thread principal. A apresentação tem sete quadros no modo Pitch e oito apêndices adicionais, com notas em português e inglês.
+
+Não há servidor de pontuação, conta de aluno ou serviço de inferência de IA no cálculo. A hospedagem serve arquivos estáticos. A origem pública participa da identidade do armazenamento no navegador. Exporte recibos antes de mudar de domínio ou instalação.
+
+## Origem temporal e elegibilidade
+
+O desenvolvimento específico começou antes das 09h BRT de 14/11/2026, início local indicado pela orientação do GO Team. A elegibilidade temporal para o evento não está estabelecida. A cronologia é preservada e publicar uma BETA não regulariza esse trabalho anterior.
+
+A lista oficial de Resources do desafio também permanece pendente de confirmação. Fontes NASA reais e referências de engenharia são documentadas, mas sua procedência não estabelece, por si só, conformidade de uso na competição. Nenhum envio de candidatura ou aprovação institucional é reivindicado pelo portal.
+
+Consulte a [cronologia pública](../evidence/chronology.json) e a [revisão documental R5](../research/11-revisao-spaceapps-apresentacao.html).
+
+## Limites científicos e técnicos
+
+MOD13Q1.061 fornece dados de arquivo de 2024. O satélite didático não adquire MODIS em 180 minutos. Massas, créditos, potências, volumes de 60/180 Mbit e agenda são hipóteses versionadas do jogo. Lançador e perfil orbital permanecem fixos.
+
+O protótipo não é software de voo, gêmeo digital validado, previsão agrícola ou qualificação de missão. Não há propagador orbital, orçamento RF completo ou ambiente térmico. Marte e EVI3 são possibilidades de pesquisa e não integram a missão implementada.
+
+O aprendizado ainda é hipótese. Não foram realizadas sessões com participantes nesta rodada. Testes de motor, DOM e HTTP verificam suas respectivas camadas e não substituem ensaio visual, acessibilidade nativa, armazenamento ou funcionamento no equipamento de apresentação.
+
+## Release planejada
+
+O alvo de release é **15/11/2026 às 08h BRT**, equivalente a 11h UTC. Trata-se de uma meta condicionada aos critérios do [plano de release](15-PLANO-RELEASE.html), não de uma conclusão já alcançada.
+
+## O que esta publicação contém
+
+O site usa uma lista explícita de arquivos. Os documentos históricos de base R4 permanecem identificados como históricos. Alguns recibos públicos são projeções que preservam resultados e limites, sem o relatório interno completo. O [manifesto](../publication-manifest.json) lista caminho, tamanho, hash e forma de publicação de cada arquivo.
+
+Código de repositórios privados, anexos pessoais, arquivos de ambiente, credenciais, source maps e o relatório bruto AB-R3A não fazem parte da saída estática.
+
+
+---
+
+# Origem dos dados e hipótese de missão
+
+Fonte: `web/public-docs/ORIGEM-DOS-DADOS.md` · SHA-256 original: `61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76` · Ajustes de caminhos privados: 0
+
+# Origem dos dados e hipótese de missão
+
+O jogo usa seis registros reais de arquivo do produto **MOD13Q1.061**, extraídos do serviço NASA ORNL DAAC para três coordenadas solicitadas no entorno de Rio Verde. São duas composições de 16 dias iniciadas em **28/08/2024** e **13/09/2024**, com observações selecionadas em **01/09/2024** e **23/09/2024**.
+
+As coordenadas solicitadas não são apresentadas como centros exatos dos pixels. Três pontos não sustentam diagnóstico de lavoura, rendimento ou tendência regional.
+
+## O que o motor confere
+
+O NDVI é calculado como `(NIR − RED) / (NIR + RED)`. A política declarada confere bandas, escala de 0,0001, metadados temporais, campos de qualidade e concordância com o produto em tolerância de 0,0001. Um resultado só conta depois da recepção integral do lote e da aceitação científica.
+
+| Registro | Início da composição | Observação selecionada |
+|---|---|---|
+| A–A2024241 | 2024-08-28 | 2024-09-01 |
+| A–A2024257 | 2024-09-13 | 2024-09-23 |
+| B–A2024241 | 2024-08-28 | 2024-09-01 |
+| B–A2024257 | 2024-09-13 | 2024-09-23 |
+| C–A2024241 | 2024-08-28 | 2024-09-01 |
+| C–A2024257 | 2024-09-13 | 2024-09-23 |
+
+## O que pertence ao modelo didático
+
+A missão usa uma agenda de 180 minutos com trabalhos, iluminação e contatos fixos. Os lotes de 60 ou 180 Mbit representam uma carga lógica do jogo. Esses valores não são o tamanho dos JSONs, a telemetria real de MODIS ou uma especificação de hardware NASA.
+
+As escolhas de bateria, painel, processamento, rádio, memória e política de contato alteram a viabilidade operacional. O objetivo científico permanece fixo nas duas condições.
+
+## Fontes e arquivos preservados
+
+- [Guia MOD13 C6.1](https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf).
+- [Serviço NASA ORNL DAAC TESViS](https://modis.ornl.gov/data/modis_webservice.html).
+- Produto: DOI `10.5067/MODIS/MOD13Q1.061`.
+- Serviço: DOI `10.3334/ORNLDAAC/1600`.
+- [JSON original A](../public/data/mod13q1-A-raw.json), [JSON original B](../public/data/mod13q1-B-raw.json) e [JSON original C](../public/data/mod13q1-C-raw.json).
+- [Pack de pesquisa](../public/data/mod13q1-research-pack.json) com procedência e recuperação, distinto do contrato executável do jogo.
+
+Os originais científicos publicados preservam os bytes recebidos. Eles não são dados gerados por IA. A inclusão específica dessas fontes nos Resources do desafio ainda precisa de confirmação oficial.

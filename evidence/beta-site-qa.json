@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-14T18:40:22.439Z",
-  "finishedAt": "2026-11-14T18:40:23.628Z",
+  "startedAt": "2026-11-14T19:04:12.863Z",
+  "finishedAt": "2026-11-14T19:04:14.437Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -9,8 +9,8 @@
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 30022,
-    "sha256": "eef5e880b6146629a8164caa376c431850ec5628ca5e4ee29f1ffacaf9ecf277"
+    "bytes": 31047,
+    "sha256": "5a8310ed3c155d35eb9e8d6e4d03d06435af41c1bd09423df0d8488e684d6de3"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,18 +24,18 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "b1d1fc649c504ceb0c7191e7943de1f7f795031dcf3b86d8994402e810674c4c"
+        "sha256": "910bd408f4dbe486997ff714db512fbfea2ea9d2055223326851c679593b14bc"
       },
       "vercelConfig": {
         "path": "vercel.json",
-        "sha256": "eda7d2352e42f4172e2de156d13b10419cd6a7af3dda259095b9dd5c22fbe72f"
+        "sha256": "bf8b1c632eea29aa011f5573beae11855a05d264d0450fdbee02c1705f36567b"
       }
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 135,
-      "manifestedFiles": 134,
-      "bytes": 10385935,
+      "fileCount": 162,
+      "manifestedFiles": 161,
+      "bytes": 12464320,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 127,
+      "inspectedFiles": 150,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 751,
-      "uniqueTargets": 97,
+      "count": 1011,
+      "uniqueTargets": 116,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -298,6 +298,24 @@
         },
         {
           "source": "context/index.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/index.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/index.html",
           "target": "context/index.html",
           "requestPath": "/context/index.html",
           "kind": "navigation",
@@ -307,6 +325,18 @@
           "source": "context/index.html",
           "target": "game/index.html",
           "requestPath": "/game/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/index.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/index.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
           "kind": "navigation"
         },
         {
@@ -340,17 +370,29 @@
           "kind": "navigation"
         },
         {
+          "source": "context/index.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "context/index.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "context/index.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
           "source": "context/research-library.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "library-main"
-        },
-        {
-          "source": "context/research-library.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
-          "kind": "navigation"
         },
         {
           "source": "context/research-library.html",
@@ -360,8 +402,38 @@
         },
         {
           "source": "context/research-library.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "context/index.html",
+          "requestPath": "/context/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "docs/22-PLANO-CONTINUIDADE.html",
+          "requestPath": "/docs/22-PLANO-CONTINUIDADE.html",
           "kind": "navigation"
         },
         {
@@ -375,6 +447,34 @@
           "target": "context/research-library-index.json",
           "requestPath": "/context/research-library-index.json",
           "kind": "navigation"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-git-proveniencia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-notice-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-publicado-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-readme-md"
         },
         {
           "source": "context/research-library.html",
@@ -542,6 +642,139 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-24-oportunidades-estudos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-notice-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-guia-didatico-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-pesquisa-e-decisoes-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-qa-navegador-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-qa-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-refinamento-nasa-r10-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-research-round10-refinamento-conops-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-research-round10-refinamento-requisitos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-research-round10-refinamento-risco-ux-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-research-round9-a1-desafio-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-research-round9-a2-fisica-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-research-round9-a3-ux-tecnologia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-specs-implementation-contract-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-kit-ai-usage-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-kit-leia-primeiro-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-presentation-pitch-en-7-slides-md"
         },
         {
@@ -557,6 +790,34 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-presentation-roteiro-pt-en-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-dossie-historico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-kit-historico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-validacao-historica-md"
         },
         {
           "source": "context/research-library.html",
@@ -703,6 +964,195 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-specs-001-mission-receipt-plan-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-specs-001-mission-receipt-spec-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-specs-001-mission-receipt-tasks-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-specs-implementation-contract-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-specs-constitution-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-tools-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-web-public-docs-09-verificacao-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-web-public-docs-autoria-e-ia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-web-public-docs-como-usar-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-web-public-docs-estado-publico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-web-public-docs-origem-dos-dados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-23-identidade-visual-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-git-proveniencia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-publicado-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-02-prd-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-03-prt-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-04-flowcharts-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-21-oportunidades-nasa-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-22-plano-continuidade-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-24-oportunidades-estudos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-23-identidade-visual-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-git-proveniencia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-notice-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-16-oportunidades-beta-md"
         },
         {
@@ -718,6 +1168,195 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-21-oportunidades-nasa-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-kit-historico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-dossie-historico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-validacao-historica-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-21-oportunidades-nasa-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-22-plano-continuidade-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-22-plano-continuidade-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-21-oportunidades-nasa-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-24-oportunidades-estudos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-18-contexto-completo-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-19-revisao-evidencias-r8-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-21-oportunidades-nasa-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-24-oportunidades-estudos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-23-identidade-visual-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-24-oportunidades-estudos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-qa-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-guia-didatico-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-pesquisa-e-decisoes-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-notice-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-qa-navegador-r9-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-refinamento-nasa-r10-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-experiments-mission-design-lab-docs-qa-r9-md"
         },
         {
           "source": "context/research-library.html",
@@ -741,6 +1380,87 @@
           "fragment": "doc-presentation-pitch-en-7-slides-md"
         },
         {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-24-oportunidades-estudos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-kit-historico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-dossie-historico-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-smartcity-validacao-historica-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-references-estudos-readme-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "top"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
           "source": "docs/09-VERIFICACAO.html",
           "target": "docs/09-VERIFICACAO.html",
           "requestPath": "/docs/09-VERIFICACAO.html",
@@ -755,26 +1475,20 @@
         },
         {
           "source": "docs/09-VERIFICACAO.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/09-VERIFICACAO.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/09-VERIFICACAO.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/09-VERIFICACAO.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -832,6 +1546,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/09-VERIFICACAO.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/09-VERIFICACAO.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/09-VERIFICACAO.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/09-VERIFICACAO.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/13-ARQUITETURA-ARCHIFY.html",
           "target": "docs/13-ARQUITETURA-ARCHIFY.html",
           "requestPath": "/docs/13-ARQUITETURA-ARCHIFY.html",
@@ -846,26 +1584,20 @@
         },
         {
           "source": "docs/13-ARQUITETURA-ARCHIFY.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/13-ARQUITETURA-ARCHIFY.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/13-ARQUITETURA-ARCHIFY.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/13-ARQUITETURA-ARCHIFY.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -917,6 +1649,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/13-ARQUITETURA-ARCHIFY.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/13-ARQUITETURA-ARCHIFY.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/13-ARQUITETURA-ARCHIFY.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/13-ARQUITETURA-ARCHIFY.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/14-BETA-DEPLOY.html",
           "target": "docs/14-BETA-DEPLOY.html",
           "requestPath": "/docs/14-BETA-DEPLOY.html",
@@ -931,26 +1687,20 @@
         },
         {
           "source": "docs/14-BETA-DEPLOY.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/14-BETA-DEPLOY.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/14-BETA-DEPLOY.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/14-BETA-DEPLOY.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -990,6 +1740,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/14-BETA-DEPLOY.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/14-BETA-DEPLOY.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/14-BETA-DEPLOY.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/14-BETA-DEPLOY.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/15-PLANO-RELEASE.html",
           "target": "docs/15-PLANO-RELEASE.html",
           "requestPath": "/docs/15-PLANO-RELEASE.html",
@@ -1004,26 +1778,20 @@
         },
         {
           "source": "docs/15-PLANO-RELEASE.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/15-PLANO-RELEASE.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/15-PLANO-RELEASE.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/15-PLANO-RELEASE.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -1057,6 +1825,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/15-PLANO-RELEASE.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/15-PLANO-RELEASE.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/15-PLANO-RELEASE.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/15-PLANO-RELEASE.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/16-OPORTUNIDADES-BETA.html",
           "target": "docs/16-OPORTUNIDADES-BETA.html",
           "requestPath": "/docs/16-OPORTUNIDADES-BETA.html",
@@ -1071,26 +1863,20 @@
         },
         {
           "source": "docs/16-OPORTUNIDADES-BETA.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/16-OPORTUNIDADES-BETA.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/16-OPORTUNIDADES-BETA.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/16-OPORTUNIDADES-BETA.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -1124,6 +1910,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/16-OPORTUNIDADES-BETA.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/16-OPORTUNIDADES-BETA.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/16-OPORTUNIDADES-BETA.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/16-OPORTUNIDADES-BETA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/18-CONTEXTO-COMPLETO.html",
           "target": "docs/18-CONTEXTO-COMPLETO.html",
           "requestPath": "/docs/18-CONTEXTO-COMPLETO.html",
@@ -1138,26 +1948,20 @@
         },
         {
           "source": "docs/18-CONTEXTO-COMPLETO.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/18-CONTEXTO-COMPLETO.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/18-CONTEXTO-COMPLETO.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/18-CONTEXTO-COMPLETO.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -1701,6 +2505,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/18-CONTEXTO-COMPLETO.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/18-CONTEXTO-COMPLETO.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/18-CONTEXTO-COMPLETO.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/18-CONTEXTO-COMPLETO.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
           "target": "docs/19-REVISAO-EVIDENCIAS-R8.html",
           "requestPath": "/docs/19-REVISAO-EVIDENCIAS-R8.html",
@@ -1715,26 +2543,20 @@
         },
         {
           "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -1768,6 +2590,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
           "target": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
           "requestPath": "/docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
@@ -1782,26 +2628,20 @@
         },
         {
           "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -1853,6 +2693,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/21-OPORTUNIDADES-NASA.html",
           "target": "docs/21-OPORTUNIDADES-NASA.html",
           "requestPath": "/docs/21-OPORTUNIDADES-NASA.html",
@@ -1867,26 +2731,20 @@
         },
         {
           "source": "docs/21-OPORTUNIDADES-NASA.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/21-OPORTUNIDADES-NASA.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/21-OPORTUNIDADES-NASA.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/21-OPORTUNIDADES-NASA.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -1932,6 +2790,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/21-OPORTUNIDADES-NASA.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/21-OPORTUNIDADES-NASA.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/21-OPORTUNIDADES-NASA.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/21-OPORTUNIDADES-NASA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/22-PLANO-CONTINUIDADE.html",
           "target": "docs/22-PLANO-CONTINUIDADE.html",
           "requestPath": "/docs/22-PLANO-CONTINUIDADE.html",
@@ -1946,26 +2828,20 @@
         },
         {
           "source": "docs/22-PLANO-CONTINUIDADE.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/22-PLANO-CONTINUIDADE.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/22-PLANO-CONTINUIDADE.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/22-PLANO-CONTINUIDADE.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -2023,6 +2899,502 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/22-PLANO-CONTINUIDADE.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/22-PLANO-CONTINUIDADE.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/22-PLANO-CONTINUIDADE.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/22-PLANO-CONTINUIDADE.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "docs/23-IDENTIDADE-VISUAL.html",
+          "requestPath": "/docs/23-IDENTIDADE-VISUAL.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "docs/26-TIPOGRAFIA.md",
+          "requestPath": "/docs/26-TIPOGRAFIA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "docs/23-IDENTIDADE-VISUAL.md",
+          "requestPath": "/docs/23-IDENTIDADE-VISUAL.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/23-IDENTIDADE-VISUAL.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "references/estudos/README.md",
+          "requestPath": "/references/estudos/README.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "references/estudos/SMARTCITY-KIT-HISTORICO.md",
+          "requestPath": "/references/estudos/SMARTCITY-KIT-HISTORICO.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "references/estudos/SMARTCITY-DOSSIE-HISTORICO.md",
+          "requestPath": "/references/estudos/SMARTCITY-DOSSIE-HISTORICO.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "references/estudos/SMARTCITY-VALIDACAO-HISTORICA.md",
+          "requestPath": "/references/estudos/SMARTCITY-VALIDACAO-HISTORICA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/21-OPORTUNIDADES-NASA.md",
+          "requestPath": "/docs/21-OPORTUNIDADES-NASA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/22-PLANO-CONTINUIDADE.md",
+          "requestPath": "/docs/22-PLANO-CONTINUIDADE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/22-PLANO-CONTINUIDADE.md",
+          "requestPath": "/docs/22-PLANO-CONTINUIDADE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/21-OPORTUNIDADES-NASA.md",
+          "requestPath": "/docs/21-OPORTUNIDADES-NASA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/18-CONTEXTO-COMPLETO.md",
+          "requestPath": "/docs/18-CONTEXTO-COMPLETO.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/19-REVISAO-EVIDENCIAS-R8.md",
+          "requestPath": "/docs/19-REVISAO-EVIDENCIAS-R8.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/21-OPORTUNIDADES-NASA.md",
+          "requestPath": "/docs/21-OPORTUNIDADES-NASA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "references/estudos/README.md",
+          "requestPath": "/references/estudos/README.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/23-IDENTIDADE-VISUAL.md",
+          "requestPath": "/docs/23-IDENTIDADE-VISUAL.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/26-TIPOGRAFIA.md",
+          "requestPath": "/docs/26-TIPOGRAFIA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "context/research-library-index.json",
+          "requestPath": "/context/research-library-index.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "docs/26-TIPOGRAFIA.html",
+          "requestPath": "/docs/26-TIPOGRAFIA.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "docs/26-TIPOGRAFIA.md",
+          "requestPath": "/docs/26-TIPOGRAFIA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/26-TIPOGRAFIA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/AUTORIA-E-IA.html",
           "target": "docs/AUTORIA-E-IA.html",
           "requestPath": "/docs/AUTORIA-E-IA.html",
@@ -2037,26 +3409,20 @@
         },
         {
           "source": "docs/AUTORIA-E-IA.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/AUTORIA-E-IA.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/AUTORIA-E-IA.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/AUTORIA-E-IA.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -2126,6 +3492,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/AUTORIA-E-IA.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/AUTORIA-E-IA.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/AUTORIA-E-IA.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/AUTORIA-E-IA.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/COMO-USAR.html",
           "target": "docs/COMO-USAR.html",
           "requestPath": "/docs/COMO-USAR.html",
@@ -2140,26 +3530,20 @@
         },
         {
           "source": "docs/COMO-USAR.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/COMO-USAR.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/COMO-USAR.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/COMO-USAR.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -2229,6 +3613,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/COMO-USAR.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/COMO-USAR.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/COMO-USAR.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/COMO-USAR.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/ESTADO-PUBLICO.html",
           "target": "docs/ESTADO-PUBLICO.html",
           "requestPath": "/docs/ESTADO-PUBLICO.html",
@@ -2243,26 +3651,20 @@
         },
         {
           "source": "docs/ESTADO-PUBLICO.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/ESTADO-PUBLICO.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/ESTADO-PUBLICO.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/ESTADO-PUBLICO.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -2320,6 +3722,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/ESTADO-PUBLICO.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/ESTADO-PUBLICO.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/ESTADO-PUBLICO.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/ESTADO-PUBLICO.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/ORIGEM-DOS-DADOS.html",
           "target": "docs/ORIGEM-DOS-DADOS.html",
           "requestPath": "/docs/ORIGEM-DOS-DADOS.html",
@@ -2334,26 +3760,20 @@
         },
         {
           "source": "docs/ORIGEM-DOS-DADOS.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/ORIGEM-DOS-DADOS.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/ORIGEM-DOS-DADOS.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/ORIGEM-DOS-DADOS.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -2411,6 +3831,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/ORIGEM-DOS-DADOS.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/ORIGEM-DOS-DADOS.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/ORIGEM-DOS-DADOS.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/ORIGEM-DOS-DADOS.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/index.html",
           "target": "docs/index.html",
           "requestPath": "/docs/index.html",
@@ -2425,26 +3869,20 @@
         },
         {
           "source": "docs/index.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "docs/index.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "docs/index.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "docs/index.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -2463,6 +3901,54 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/23-IDENTIDADE-VISUAL.html",
+          "requestPath": "/docs/23-IDENTIDADE-VISUAL.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/23-IDENTIDADE-VISUAL.md",
+          "requestPath": "/docs/23-IDENTIDADE-VISUAL.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/26-TIPOGRAFIA.html",
+          "requestPath": "/docs/26-TIPOGRAFIA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/26-TIPOGRAFIA.md",
+          "requestPath": "/docs/26-TIPOGRAFIA.md",
           "kind": "navigation"
         },
         {
@@ -2706,6 +4192,30 @@
           "kind": "navigation"
         },
         {
+          "source": "docs/index.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "game/index.html",
           "target": "game/assets/index-DYhpvtlV.js",
           "requestPath": "/game/assets/index-DYhpvtlV.js",
@@ -2850,6 +4360,24 @@
         },
         {
           "source": "index.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
           "target": "lab/index.html",
           "requestPath": "/lab/index.html",
           "kind": "navigation"
@@ -2874,8 +4402,8 @@
         },
         {
           "source": "index.html",
-          "target": "brand/projeto-ipe-logo.png",
-          "requestPath": "/brand/projeto-ipe-logo.png",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
           "kind": "img"
         },
         {
@@ -2885,10 +4413,22 @@
           "kind": "link-icon"
         },
         {
+          "source": "index.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "lab/index.html",
-          "target": "lab/assets/index-MCOISTGE.js",
-          "requestPath": "/lab/assets/index-MCOISTGE.js",
+          "target": "lab/assets/index-Cgz5Ce2C.js",
+          "requestPath": "/lab/assets/index-Cgz5Ce2C.js",
           "kind": "script"
+        },
+        {
+          "source": "lab/index.html",
+          "target": "lab/fonts/fonts.css",
+          "requestPath": "/lab/fonts/fonts.css",
+          "kind": "link-stylesheet"
         },
         {
           "source": "lab/index.html",
@@ -2898,8 +4438,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-BtXoWU_-.css",
-          "requestPath": "/lab/assets/index-BtXoWU_-.css",
+          "target": "lab/assets/index-Dz_dtPrT.css",
+          "requestPath": "/lab/assets/index-Dz_dtPrT.css",
           "kind": "link-stylesheet"
         },
         {
@@ -4553,26 +6093,20 @@
         },
         {
           "source": "presentation/PITCH_EN_7_SLIDES.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "presentation/PITCH_EN_7_SLIDES.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "presentation/PITCH_EN_7_SLIDES.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "presentation/PITCH_EN_7_SLIDES.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -4606,6 +6140,30 @@
           "kind": "navigation"
         },
         {
+          "source": "presentation/PITCH_EN_7_SLIDES.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/PITCH_EN_7_SLIDES.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "presentation/PITCH_EN_7_SLIDES.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "presentation/PITCH_EN_7_SLIDES.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "presentation/README_APRESENTADOR.html",
           "target": "presentation/README_APRESENTADOR.html",
           "requestPath": "/presentation/README_APRESENTADOR.html",
@@ -4620,26 +6178,20 @@
         },
         {
           "source": "presentation/README_APRESENTADOR.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "presentation/README_APRESENTADOR.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "presentation/README_APRESENTADOR.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "presentation/README_APRESENTADOR.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -4685,6 +6237,30 @@
           "kind": "navigation"
         },
         {
+          "source": "presentation/README_APRESENTADOR.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/README_APRESENTADOR.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "presentation/README_APRESENTADOR.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "presentation/README_APRESENTADOR.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "presentation/ROTEIRO_PT_EN.html",
           "target": "presentation/ROTEIRO_PT_EN.html",
           "requestPath": "/presentation/ROTEIRO_PT_EN.html",
@@ -4699,26 +6275,20 @@
         },
         {
           "source": "presentation/ROTEIRO_PT_EN.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "presentation/ROTEIRO_PT_EN.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "presentation/ROTEIRO_PT_EN.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "presentation/ROTEIRO_PT_EN.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -4758,6 +6328,30 @@
           "kind": "navigation"
         },
         {
+          "source": "presentation/ROTEIRO_PT_EN.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/ROTEIRO_PT_EN.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "presentation/ROTEIRO_PT_EN.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "presentation/ROTEIRO_PT_EN.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "research/01-regras-ciencia.html",
           "target": "research/01-regras-ciencia.html",
           "requestPath": "/research/01-regras-ciencia.html",
@@ -4772,26 +6366,20 @@
         },
         {
           "source": "research/01-regras-ciencia.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "research/01-regras-ciencia.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "research/01-regras-ciencia.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "research/01-regras-ciencia.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -4843,6 +6431,30 @@
           "kind": "navigation"
         },
         {
+          "source": "research/01-regras-ciencia.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "research/01-regras-ciencia.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "research/01-regras-ciencia.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "research/01-regras-ciencia.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "research/11-revisao-spaceapps-apresentacao.html",
           "target": "research/11-revisao-spaceapps-apresentacao.html",
           "requestPath": "/research/11-revisao-spaceapps-apresentacao.html",
@@ -4857,26 +6469,20 @@
         },
         {
           "source": "research/11-revisao-spaceapps-apresentacao.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
           "source": "research/11-revisao-spaceapps-apresentacao.html",
-          "target": "presentation/Missao_Ipe_Apresentacao.html",
-          "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
           "source": "research/11-revisao-spaceapps-apresentacao.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "research/11-revisao-spaceapps-apresentacao.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
@@ -4910,6 +6516,54 @@
           "kind": "navigation"
         },
         {
+          "source": "research/11-revisao-spaceapps-apresentacao.html",
+          "target": "brand/projeto-ipe-logo.svg",
+          "requestPath": "/brand/projeto-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "research/11-revisao-spaceapps-apresentacao.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "research/11-revisao-spaceapps-apresentacao.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "research/11-revisao-spaceapps-apresentacao.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "fonts/fonts.css",
+          "target": "fonts/BricolageGrotesque-latin-variable.woff2",
+          "requestPath": "/fonts/BricolageGrotesque-latin-variable.woff2",
+          "kind": "css-resource"
+        },
+        {
+          "source": "fonts/fonts.css",
+          "target": "fonts/PlusJakartaSans-latin-variable.woff2",
+          "requestPath": "/fonts/PlusJakartaSans-latin-variable.woff2",
+          "kind": "css-resource"
+        },
+        {
+          "source": "lab/fonts/fonts.css",
+          "target": "lab/fonts/BricolageGrotesque-latin-variable.woff2",
+          "requestPath": "/lab/fonts/BricolageGrotesque-latin-variable.woff2",
+          "kind": "css-resource"
+        },
+        {
+          "source": "lab/fonts/fonts.css",
+          "target": "lab/fonts/PlusJakartaSans-latin-variable.woff2",
+          "requestPath": "/lab/fonts/PlusJakartaSans-latin-variable.woff2",
+          "kind": "css-resource"
+        },
+        {
           "source": "game/assets/OrbitalScene-B0I9aE-1.js",
           "target": "game/assets/index-DYhpvtlV.js",
           "requestPath": "/game/assets/index-DYhpvtlV.js",
@@ -4940,33 +6594,33 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BD01o6gr.js",
-          "target": "lab/assets/index-MCOISTGE.js",
-          "requestPath": "/lab/assets/index-MCOISTGE.js",
+          "source": "lab/assets/OrbitalScene-DSWH01-L.js",
+          "target": "lab/assets/index-Cgz5Ce2C.js",
+          "requestPath": "/lab/assets/index-Cgz5Ce2C.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-MCOISTGE.js",
-          "target": "lab/assets/search-Bpv4N3xJ.js",
-          "requestPath": "/lab/assets/search-Bpv4N3xJ.js",
+          "source": "lab/assets/index-Cgz5Ce2C.js",
+          "target": "lab/assets/search-nJBL8qRn.js",
+          "requestPath": "/lab/assets/search-nJBL8qRn.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-MCOISTGE.js",
+          "source": "lab/assets/index-Cgz5Ce2C.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-MCOISTGE.js",
-          "target": "lab/assets/OrbitalScene-BD01o6gr.js",
-          "requestPath": "/lab/assets/OrbitalScene-BD01o6gr.js",
+          "source": "lab/assets/index-Cgz5Ce2C.js",
+          "target": "lab/assets/OrbitalScene-DSWH01-L.js",
+          "requestPath": "/lab/assets/OrbitalScene-DSWH01-L.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-Bpv4N3xJ.js",
-          "target": "lab/assets/index-MCOISTGE.js",
-          "requestPath": "/lab/assets/index-MCOISTGE.js",
+          "source": "lab/assets/search-nJBL8qRn.js",
+          "target": "lab/assets/index-Cgz5Ce2C.js",
+          "requestPath": "/lab/assets/index-Cgz5Ce2C.js",
           "kind": "module-import"
         }
       ]
@@ -5006,33 +6660,33 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BD01o6gr.js",
-          "specifier": "./index-MCOISTGE.js",
-          "target": "lab/assets/index-MCOISTGE.js",
+          "source": "lab/assets/OrbitalScene-DSWH01-L.js",
+          "specifier": "./index-Cgz5Ce2C.js",
+          "target": "lab/assets/index-Cgz5Ce2C.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-MCOISTGE.js",
-          "specifier": "./search-Bpv4N3xJ.js",
-          "target": "lab/assets/search-Bpv4N3xJ.js",
+          "source": "lab/assets/index-Cgz5Ce2C.js",
+          "specifier": "./search-nJBL8qRn.js",
+          "target": "lab/assets/search-nJBL8qRn.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-MCOISTGE.js",
+          "source": "lab/assets/index-Cgz5Ce2C.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-MCOISTGE.js",
-          "specifier": "./OrbitalScene-BD01o6gr.js",
-          "target": "lab/assets/OrbitalScene-BD01o6gr.js",
+          "source": "lab/assets/index-Cgz5Ce2C.js",
+          "specifier": "./OrbitalScene-DSWH01-L.js",
+          "target": "lab/assets/OrbitalScene-DSWH01-L.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-Bpv4N3xJ.js",
-          "specifier": "./index-MCOISTGE.js",
-          "target": "lab/assets/index-MCOISTGE.js",
+          "source": "lab/assets/search-nJBL8qRn.js",
+          "specifier": "./index-Cgz5Ce2C.js",
+          "target": "lab/assets/index-Cgz5Ce2C.js",
           "kind": "module-import"
         }
       ]
@@ -5134,14 +6788,14 @@
         "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969"
       },
       {
-        "path": "lab/assets/index-BtXoWU_-.css",
-        "source": "experiments/mission-design-lab/dist/assets/index-BtXoWU_-.css",
-        "sha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d"
+        "path": "lab/assets/index-Cgz5Ce2C.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-Cgz5Ce2C.js",
+        "sha256": "da46b6b0345cf2536501ed713b442c5a3ce115671e16848cde420d38945f3e64"
       },
       {
-        "path": "lab/assets/index-MCOISTGE.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-MCOISTGE.js",
-        "sha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e"
+        "path": "lab/assets/index-Dz_dtPrT.css",
+        "source": "experiments/mission-design-lab/dist/assets/index-Dz_dtPrT.css",
+        "sha256": "56bc272169571b23a815e7af4d455d1a84f492b214e4a77ec4362f863ef48010"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -5149,19 +6803,24 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/OrbitalScene-BD01o6gr.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BD01o6gr.js",
-        "sha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416"
+        "path": "lab/assets/OrbitalScene-DSWH01-L.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DSWH01-L.js",
+        "sha256": "e158e9315aff413ad132cd325f9666e03ff2680a35e34632a78030209ef068f0"
       },
       {
-        "path": "lab/assets/search-Bpv4N3xJ.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-Bpv4N3xJ.js",
-        "sha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec"
+        "path": "lab/assets/search-nJBL8qRn.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-nJBL8qRn.js",
+        "sha256": "5fdaab8cc087f424985efffac4ad0875a547b4cfbcc8df2f9fc53d31fd1d2dc4"
       },
       {
         "path": "lab/brand/projeto-ipe-logo.png",
         "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.png",
         "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-logo.svg",
+        "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.svg",
+        "sha256": "ceb9d7c849f6553d1a54013c916945ed9c28083dfe84e4ac38b73b23d3bff6f3"
       },
       {
         "path": "lab/brand/projeto-ipe-symbol.svg",
@@ -5219,9 +6878,39 @@
         "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
       },
       {
+        "path": "lab/fonts/BricolageGrotesque-latin-variable.woff2",
+        "source": "experiments/mission-design-lab/dist/fonts/BricolageGrotesque-latin-variable.woff2",
+        "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447"
+      },
+      {
+        "path": "lab/fonts/BricolageGrotesque-OFL.txt",
+        "source": "experiments/mission-design-lab/dist/fonts/BricolageGrotesque-OFL.txt",
+        "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba"
+      },
+      {
+        "path": "lab/fonts/fonts.css",
+        "source": "experiments/mission-design-lab/dist/fonts/fonts.css",
+        "sha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9"
+      },
+      {
+        "path": "lab/fonts/manifest.json",
+        "source": "experiments/mission-design-lab/dist/fonts/manifest.json",
+        "sha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7"
+      },
+      {
+        "path": "lab/fonts/PlusJakartaSans-latin-variable.woff2",
+        "source": "experiments/mission-design-lab/dist/fonts/PlusJakartaSans-latin-variable.woff2",
+        "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215"
+      },
+      {
+        "path": "lab/fonts/PlusJakartaSans-OFL.txt",
+        "source": "experiments/mission-design-lab/dist/fonts/PlusJakartaSans-OFL.txt",
+        "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99"
+      },
+      {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0"
+        "sha256": "170a422c88f9230ca2bcf1208467ab34ceb753401257aa62a80b448bde1ddcaa"
       },
       {
         "path": "lab/research/assets/briefing-desktop.jpg",
@@ -5417,7 +7106,7 @@
         "referrer-policy": "strict-origin-when-cross-origin",
         "x-frame-options": "DENY",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
-        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-BMOkFw3Gzsz8ECqKuA8XakYgWLQRc7WQgoV5E+Mljpc=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
         "cache-control": "public, max-age=0, must-revalidate"
       },
       "checkedInlineScripts": 10,
@@ -5449,8 +7138,8 @@
       {
         "path": "NOTICE.md",
         "status": 200,
-        "bytes": 3144,
-        "sha256": "2b42c0bbe35d840490f20433a390abd26b57fd022581a4580578d72876aab6d1",
+        "bytes": 3629,
+        "sha256": "2c3e2d192ab582bc745c77358b258cd239f839f519af51ad93d2016b152f8b86",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -5482,6 +7171,13 @@
         "contentType": "image/png"
       },
       {
+        "path": "brand/projeto-ipe-logo.svg",
+        "status": 200,
+        "bytes": 46057,
+        "sha256": "ceb9d7c849f6553d1a54013c916945ed9c28083dfe84e4ac38b73b23d3bff6f3",
+        "contentType": "image/svg+xml"
+      },
+      {
         "path": "brand/projeto-ipe-symbol.svg",
         "status": 200,
         "bytes": 42871,
@@ -5491,8 +7187,8 @@
       {
         "path": "context/index.html",
         "status": 200,
-        "bytes": 130752,
-        "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+        "bytes": 135589,
+        "sha256": "9fc825dac589f364e3f3dacdd9cfa177d063fb8c7f116850873f4299660f6e4f",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5505,29 +7201,29 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 22418,
-        "sha256": "05b7971b7895f2a0125a5a3876ec2a7b13ad60b470cd00f2dd32a3b4326a1081",
+        "bytes": 43492,
+        "sha256": "bbe9d2d0dbb084e281c2f0e57befd214414083b03f0a7cd5b328c0d4b30b4031",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 902794,
-        "sha256": "ed60104f4aeaf93d4f880ec5506786280b92b8453366660d694d92c86f276bd6",
+        "bytes": 1702523,
+        "sha256": "2d2908ef3660043fd06385be0a4b1e159aa53e2f7395cd14e7531c37441d3e54",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 775168,
-        "sha256": "c54bca520ded9408cc98afb209829cbc573514e363f20a9ca666fc3344a436a2",
+        "bytes": 1371660,
+        "sha256": "c27ff8d07a69552ee847ab9b99f3d256c87659cee64709dfa4bf154fd3ad7637",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/09-VERIFICACAO.html",
         "status": 200,
-        "bytes": 8336,
-        "sha256": "c749f8fad26585e2dbde7112d3bdbc8998ae8fa1f7e3572dc80c38fc5b0cfa53",
+        "bytes": 5218,
+        "sha256": "3db775ad044f40d946d2f279fef0078234983cb22d5857d85094b9e006112b2b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5540,8 +7236,8 @@
       {
         "path": "docs/13-ARQUITETURA-ARCHIFY.html",
         "status": 200,
-        "bytes": 17948,
-        "sha256": "6ab7de29ee9bf854d45fef0681faea961ce2d047a5b10a91bed0c85f5dbe2db7",
+        "bytes": 14830,
+        "sha256": "c0e041f867f400859ce00cdb0da6c72225021231f2dd307968a9e56dedf1677a",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5554,8 +7250,8 @@
       {
         "path": "docs/14-BETA-DEPLOY.html",
         "status": 200,
-        "bytes": 12152,
-        "sha256": "9c272bd72f8a8c1c7afb7f01ba0f6c41f27bce1146d3a8c2df81fea437dd53da",
+        "bytes": 9034,
+        "sha256": "0c3b4ddaaec9cdbcada5e034a329b72745ee68b0cbc4c51a88a4ade96bee0515",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5568,8 +7264,8 @@
       {
         "path": "docs/15-PLANO-RELEASE.html",
         "status": 200,
-        "bytes": 20484,
-        "sha256": "e09aa0ea5362e2d4e81bb317ae1a545c2c7cc10036bf927d9edd4d4b08dc32b9",
+        "bytes": 17366,
+        "sha256": "d7e082b65c94fb2cfba90526120ec2780f0ea6d2f46c076b42976ee4cca3528f",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5582,8 +7278,8 @@
       {
         "path": "docs/16-OPORTUNIDADES-BETA.html",
         "status": 200,
-        "bytes": 16859,
-        "sha256": "c2f6b2fc82c1bc8b245329dac0f2479b99357d183d2efa6ea52eb83368d93437",
+        "bytes": 13741,
+        "sha256": "b8774a953f845903fd2abc196e1e3d29b2aa3c89b42ebdfa0b5c5e6c52a20792",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5596,8 +7292,8 @@
       {
         "path": "docs/18-CONTEXTO-COMPLETO.html",
         "status": 200,
-        "bytes": 85869,
-        "sha256": "8c6fd4055652f39c784731d523830a3f5994f5ce6a0b7e5639a00db2a34f346a",
+        "bytes": 82751,
+        "sha256": "a283d70cd63d9a103f8786fced1356682509768b0f816f8e132b116d00256b1a",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5610,8 +7306,8 @@
       {
         "path": "docs/19-REVISAO-EVIDENCIAS-R8.html",
         "status": 200,
-        "bytes": 19969,
-        "sha256": "909120251df0a531dbd94fc90425a9a3ce07d9e0dbb40e8c61125799681337bd",
+        "bytes": 16851,
+        "sha256": "34c7f5dcc38a5d6902943c29e949c4f63968ce24c25aa30318c9dda87ced0735",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5624,22 +7320,22 @@
       {
         "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
         "status": 200,
-        "bytes": 15197,
-        "sha256": "f17871e9658e13696de3e265a5ec632e2e16e70b06f84c7f2f6a17e57e600496",
+        "bytes": 12646,
+        "sha256": "427bfbd94e230cc665f49f823293e1108ee0fce394d9b1d09c722185f4bbf7a7",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
         "status": 200,
-        "bytes": 9892,
-        "sha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e",
+        "bytes": 10437,
+        "sha256": "078806af108969d52f57752828a2369e943caeea2e224454e97dc7bda61c7693",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/21-OPORTUNIDADES-NASA.html",
         "status": 200,
-        "bytes": 25703,
-        "sha256": "4487efd67c746c3580c111e4255cbfcc1373ce1ec3737794ab4004bb99bfff99",
+        "bytes": 22585,
+        "sha256": "cc277a74ce27dd0d4a76ba84de91f64fc14d4da2f14b4ecea34e03d66aae4151",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5652,8 +7348,8 @@
       {
         "path": "docs/22-PLANO-CONTINUIDADE.html",
         "status": 200,
-        "bytes": 12363,
-        "sha256": "9b6d3de378d3e0074269d6c99d26594029881b0a6a73e3cf43f52f683fb699fa",
+        "bytes": 9245,
+        "sha256": "5ec74b81ac5a4db2f2b3890260cd6eaa03a177ea78320e01ab1d815613f5af92",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5664,10 +7360,66 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/23-IDENTIDADE-VISUAL.html",
+        "status": 200,
+        "bytes": 6080,
+        "sha256": "e9db47c68f96c950ed9e743a8373f8547f6b2e729276d719aa0dfb1f6b73f406",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/23-IDENTIDADE-VISUAL.md",
+        "status": 200,
+        "bytes": 4037,
+        "sha256": "42af5f0bc7f487a03e533300f23559cb0d4ee10da3f45b164af076c86bd45b2f",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+        "status": 200,
+        "bytes": 18388,
+        "sha256": "351195440e84fa3f40388c7b114d70337c0980bd7666cdab43943d0a2383c8c8",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+        "status": 200,
+        "bytes": 15240,
+        "sha256": "7ff28fd98e7552f35747ed6bae2fbe1ab0519082cd0773ed9d68a6912859da98",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/25-HANDOFF-DOIS-DEVS.html",
+        "status": 200,
+        "bytes": 35572,
+        "sha256": "a427a046ec1a76014505cd2ef7e54d2aae33e1277d981558c02e33c989244dd9",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/25-HANDOFF-DOIS-DEVS.md",
+        "status": 200,
+        "bytes": 28278,
+        "sha256": "204a2fc034070d4aa88675bddb7dffb3715ceae787c41b5190136cbcb617c771",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/26-TIPOGRAFIA.html",
+        "status": 200,
+        "bytes": 8420,
+        "sha256": "c0ee53bcaa9f0ea01fcbe66a0e16c3be4f931a23095b103a221b39765e973d10",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/26-TIPOGRAFIA.md",
+        "status": 200,
+        "bytes": 5710,
+        "sha256": "12578e565405f28b081e5f377df6e497d575439150929b5138d753ba1d4f1bb1",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/AUTORIA-E-IA.html",
         "status": 200,
-        "bytes": 6441,
-        "sha256": "e6585ec9fb1e3e77f579a2218b1cda3fd8b31e375945359e13ea8de3fbc1add5",
+        "bytes": 3323,
+        "sha256": "8fc47c6f9547bc7a59bebc5f5e8c0395de0a1daed0f6f78917053c65d9e89e76",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5680,8 +7432,8 @@
       {
         "path": "docs/COMO-USAR.html",
         "status": 200,
-        "bytes": 6922,
-        "sha256": "e49fb19576ce95c096cc10306a7d2e52a920325fdf8cb642727fb07dd4fdf7d6",
+        "bytes": 3804,
+        "sha256": "74f6db9117e3714ce01b9f228391e857592de075d4a4d8ba5fc28aee6855893b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5694,8 +7446,8 @@
       {
         "path": "docs/ESTADO-PUBLICO.html",
         "status": 200,
-        "bytes": 8403,
-        "sha256": "2342b58953ad2f4e04617c02d0ea420877293140aa2a597a6f015fd1f9593719",
+        "bytes": 5285,
+        "sha256": "cdb0cf65fc73de6777cbfe8715e480f6b8a821e1399bd3580c56efa05daf6dd2",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5708,8 +7460,8 @@
       {
         "path": "docs/ORIGEM-DOS-DADOS.html",
         "status": 200,
-        "bytes": 7730,
-        "sha256": "84ac08392b8f16dc2624b7c45820f6371474787eba92d5cac17b740ceb39a259",
+        "bytes": 4612,
+        "sha256": "bfb5a7b82d6d49b9f88a631645c696666699d6ba92ca361d40dd3d0a4f645eb8",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -5722,9 +7474,16 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 9833,
-        "sha256": "b9093bf606c27d881af43cba28a44df26cf82c59fd45be4328b4cee24c0f22e9",
+        "bytes": 7814,
+        "sha256": "9615064421522eb8808e5113103606fb5bb477baa7d9da8659e64ea5d3331aeb",
         "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "documentation.css",
+        "status": 200,
+        "bytes": 3854,
+        "sha256": "600491f8be79e5c49125b11ad3e762926192b71f04208c60ef7b30687d2687bc",
+        "contentType": "text/css; charset=utf-8"
       },
       {
         "path": "evidence/ab-r3a-digest.json",
@@ -5780,6 +7539,48 @@
         "status": 200,
         "bytes": 11872,
         "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "fonts/BricolageGrotesque-OFL.txt",
+        "status": 200,
+        "bytes": 4403,
+        "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "fonts/BricolageGrotesque-latin-variable.woff2",
+        "status": 200,
+        "bytes": 76868,
+        "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "fonts/PlusJakartaSans-OFL.txt",
+        "status": 200,
+        "bytes": 4402,
+        "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "fonts/PlusJakartaSans-latin-variable.woff2",
+        "status": 200,
+        "bytes": 27272,
+        "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "fonts/fonts.css",
+        "status": 200,
+        "bytes": 929,
+        "sha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "fonts/manifest.json",
+        "status": 200,
+        "bytes": 1442,
+        "sha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -5897,30 +7698,30 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 51920,
-        "sha256": "5f7f42751a5d9c15e7e8beb52b24e52827e9a382104d167d7536effb0378491c",
+        "bytes": 55605,
+        "sha256": "5eeab1149dd02bebf0ca956d7dc79758f403f98d122e54db3f6c1acc5bfabc45",
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-BD01o6gr.js",
+        "path": "lab/assets/OrbitalScene-DSWH01-L.js",
         "status": 200,
         "bytes": 934292,
-        "sha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
+        "sha256": "e158e9315aff413ad132cd325f9666e03ff2680a35e34632a78030209ef068f0",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-BtXoWU_-.css",
-        "status": 200,
-        "bytes": 135705,
-        "sha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
-        "contentType": "text/css; charset=utf-8"
-      },
-      {
-        "path": "lab/assets/index-MCOISTGE.js",
+        "path": "lab/assets/index-Cgz5Ce2C.js",
         "status": 200,
         "bytes": 403757,
-        "sha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
+        "sha256": "da46b6b0345cf2536501ed713b442c5a3ce115671e16848cde420d38945f3e64",
         "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "lab/assets/index-Dz_dtPrT.css",
+        "status": 200,
+        "bytes": 136644,
+        "sha256": "56bc272169571b23a815e7af4d455d1a84f492b214e4a77ec4362f863ef48010",
+        "contentType": "text/css; charset=utf-8"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -5930,10 +7731,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-Bpv4N3xJ.js",
+        "path": "lab/assets/search-nJBL8qRn.js",
         "status": 200,
         "bytes": 1247,
-        "sha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
+        "sha256": "5fdaab8cc087f424985efffac4ad0875a547b4cfbcc8df2f9fc53d31fd1d2dc4",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -5942,6 +7743,13 @@
         "bytes": 13315,
         "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
         "contentType": "image/png"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-logo.svg",
+        "status": 200,
+        "bytes": 46057,
+        "sha256": "ceb9d7c849f6553d1a54013c916945ed9c28083dfe84e4ac38b73b23d3bff6f3",
+        "contentType": "image/svg+xml"
       },
       {
         "path": "lab/brand/projeto-ipe-symbol.svg",
@@ -6021,10 +7829,52 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "lab/fonts/BricolageGrotesque-OFL.txt",
+        "status": 200,
+        "bytes": 4403,
+        "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "lab/fonts/BricolageGrotesque-latin-variable.woff2",
+        "status": 200,
+        "bytes": 76868,
+        "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "lab/fonts/PlusJakartaSans-OFL.txt",
+        "status": 200,
+        "bytes": 4402,
+        "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "lab/fonts/PlusJakartaSans-latin-variable.woff2",
+        "status": 200,
+        "bytes": 27272,
+        "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "lab/fonts/fonts.css",
+        "status": 200,
+        "bytes": 929,
+        "sha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "lab/fonts/manifest.json",
+        "status": 200,
+        "bytes": 1442,
+        "sha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
         "path": "lab/index.html",
         "status": 200,
-        "bytes": 906,
-        "sha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
+        "bytes": 961,
+        "sha256": "170a422c88f9230ca2bcf1208467ab34ceb753401257aa62a80b448bde1ddcaa",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6219,8 +8069,8 @@
       {
         "path": "presentation/PITCH_EN_7_SLIDES.html",
         "status": 200,
-        "bytes": 20560,
-        "sha256": "5b642d5d73770f1e836edc728d5077ba059b4ba420cd131e0ba6142364c89a82",
+        "bytes": 17442,
+        "sha256": "bbf3461cbe3d535e6b9ee2eda571435b4c8b6b91f1b7cda1835deb51ea1ef13f",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6233,8 +8083,8 @@
       {
         "path": "presentation/README_APRESENTADOR.html",
         "status": 200,
-        "bytes": 14252,
-        "sha256": "00cb737423525d3be0d1c49d2244775f518a223672b3fcb291ba77e2917439b2",
+        "bytes": 11134,
+        "sha256": "868175f2dfcc65eab3f80fd04a8e1d456cc93c393f13246083468dee168e3539",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6247,8 +8097,8 @@
       {
         "path": "presentation/ROTEIRO_PT_EN.html",
         "status": 200,
-        "bytes": 13427,
-        "sha256": "d832fcdd8c7fd4d7142a7097f0113e1e2b6c79a27e00057635caf88d6cd5638f",
+        "bytes": 10309,
+        "sha256": "341585aec2ec11dbf32932b4f6532e77530705f55247453943ddf923163733f1",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6331,15 +8181,43 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 56705,
-        "sha256": "b1d1fc649c504ceb0c7191e7943de1f7f795031dcf3b86d8994402e810674c4c",
+        "bytes": 68128,
+        "sha256": "910bd408f4dbe486997ff714db512fbfea2ea9d2055223326851c679593b14bc",
         "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "references/estudos/README.md",
+        "status": 200,
+        "bytes": 4286,
+        "sha256": "9bda603a2d9eb3a36e75531ba04e87b602f458a571e12addb1bfbf4210da467b",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "references/estudos/SMARTCITY-DOSSIE-HISTORICO.md",
+        "status": 200,
+        "bytes": 40236,
+        "sha256": "b2eaadf5d825a313065b17dd8b1eec97acdd816899bd6dca2a49c6ffd6f74e8c",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "references/estudos/SMARTCITY-KIT-HISTORICO.md",
+        "status": 200,
+        "bytes": 202887,
+        "sha256": "0e464b3763e0b768f1af4c0d53f84b81ce285c3bedf79bd8879bd2607467b066",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "references/estudos/SMARTCITY-VALIDACAO-HISTORICA.md",
+        "status": 200,
+        "bytes": 4081,
+        "sha256": "5152881b935b2856059ffa284ad9ba4a81aceaeb3b38c14debb0712f5513f28d",
+        "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "research/01-regras-ciencia.html",
         "status": 200,
-        "bytes": 30785,
-        "sha256": "58c4e4ca4e5fa99977cc3262ed688079a451c0cb18ddafda14e51df1592a7ba2",
+        "bytes": 27667,
+        "sha256": "97c6361ff22cc2225a93d8e33275bdc29252f531559286c42d2c20fa06df446c",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6352,8 +8230,8 @@
       {
         "path": "research/11-revisao-spaceapps-apresentacao.html",
         "status": 200,
-        "bytes": 22022,
-        "sha256": "40aaf232c91ad93901b652ddff5e63871823fd6193c474537c5a5ea1867feb3d",
+        "bytes": 18904,
+        "sha256": "d2c19a7979ceed3ad3485ff83bcc6fabaedb812410b9a714349bcf3661ae97e3",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6386,7 +8264,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 107,
+      "linkedRoutesChecked": 126,
       "redirects": [
         {
           "source": "/game",
@@ -6486,77 +8364,77 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 3.517
+      "durationMs": 4.976
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.202
+      "durationMs": 0.225
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 28.427
+      "durationMs": 41.504
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.876
+      "durationMs": 4.376
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 51.005
+      "durationMs": 77.973
     },
     {
       "name": "todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas",
       "status": "passed",
-      "durationMs": 510.399
+      "durationMs": 764.515
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/",
       "status": "passed",
-      "durationMs": 279.6
+      "durationMs": 308.446
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 24.174
+      "durationMs": 27.698
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.803
+      "durationMs": 2.967
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 61.319
+      "durationMs": 59.414
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 60.707
+      "durationMs": 62.33
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 77.688
+      "durationMs": 108.579
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 48.297
+      "durationMs": 52.998
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.201
+      "durationMs": 1.232
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 21.434
+      "durationMs": 27.09
     }
   ]
 }

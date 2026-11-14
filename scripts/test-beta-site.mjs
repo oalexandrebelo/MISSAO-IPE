@@ -257,6 +257,15 @@ async function run() {
     const destinations = [...document.querySelectorAll('a[href]')].map(link => new URL(link.getAttribute('href'), 'https://beta.invalid/').pathname);
     for (const href of ['/lab/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html']) assert.ok(destinations.includes(href), `Destino principal ausente: ${href}`);
     assert.equal(document.querySelectorAll('form').length, 0, 'Portal não deve introduzir coleta de dados nesta rodada');
+    assert.match(document.querySelector('.brand img')?.getAttribute('src') || '', /projeto-ipe-logo\.svg$/);
+    const logo = new JSDOM(bytesByFile.get('brand/projeto-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
+    assert.ok(logo.querySelectorAll('path').length > 0, 'Marca vetorial sem contornos');
+    assert.equal(logo.querySelectorAll('image,foreignObject,script').length, 0, 'Marca deve ser SVG real sem bitmap ou código incorporado');
+    assert.ok(destinations.includes('/docs/25-HANDOFF-DOIS-DEVS.html'), 'Guia da dupla deve estar acessível pelo portal');
+    const library = JSON.parse(bytesByFile.get('context/research-library-index.json'));
+    for (const source of ['docs/25-HANDOFF-DOIS-DEVS.md', 'docs/24-OPORTUNIDADES-ESTUDOS.md', 'experiments/mission-design-lab/docs/GUIA-DIDATICO-R9.md', 'references/estudos/SMARTCITY-KIT-HISTORICO.md']) {
+      assert.ok(library.documents.some(entry => entry.source === source), `Contexto ausente da biblioteca: ${source}`);
+    }
     observations.portal = { language: 'pt-BR', beta: true, forms: 0 };
   });
 

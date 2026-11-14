@@ -2,7 +2,9 @@
 
 Jogo educativo de engenharia de missões espaciais. Projete um CubeSat fictício, formule uma hipótese, execute a missão e investigue como entregar seis registros históricos de vegetação do Cerrado dentro dos limites de massa, orçamento, energia, potência, memória e comunicação.
 
-**Beta atual: 0.4.0-beta.2. Portal e pesquisa: edição R11, 14/11/2026.**
+**Beta atual: 0.4.0-beta.2. Portal, estudo e continuidade: edição R12, 14/11/2026.**
+
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
 ## Explorar
 
@@ -33,6 +35,9 @@ O portal tem seis etapas navegáveis, catálogo pesquisável de 13 fontes e quat
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
+| Entrada da equipe de dois devs | [Handoff](docs/25-HANDOFF-DOIS-DEVS.md) |
+| Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
+| Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
 Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada nesta edição.
@@ -62,7 +67,7 @@ npm run test:context
 npm run test:beta
 ```
 
-Verificados nesta entrega: 101 testes de domínio do beta, 9 testes de interface, 51 testes do motor clássico, 24 verificações da central e 15 verificações da distribuição/HTTP. Também foi executado no navegador o cenário longo com 6/6 registros válidos e foram conferidas as interações do portal e o layout de celular. Isso não substitui pesquisa de aprendizagem, auditoria completa de acessibilidade ou validação de voo.
+O registro R11 preserva 101 testes de domínio do beta, 9 de interface, 51 do motor clássico, 24 verificações da central, 15 da distribuição/HTTP e uma partida observada com 6/6 registros válidos. Na revisão visual/documental R12, foram executados novamente a compilação, os 9 testes de interface, as 24 verificações da central e as 15 da distribuição. Navegação, busca, filtros, SVG e leitura foram conferidos em navegador no computador e em tela estreita. Isso não substitui pesquisa de aprendizagem, auditoria completa de acessibilidade ou validação de voo.
 
 ## Próximos passos
 
@@ -72,7 +77,7 @@ Verificados nesta entrega: 101 testes de domínio do beta, 9 testes de interface
 4. Validar uma campanha de pequenos corpos com SBDB, Mission Design e Horizons.
 5. Ensaiar a apresentação e confirmar regulamento/elegibilidade do desafio.
 
-A documentação histórica mantém seus cortes originais. O plano de continuidade é a referência da evolução atual. Nenhuma tarefa futura foi agendada automaticamente.
+A documentação histórica mantém seus cortes originais. O handoff para dois desenvolvedores e o plano de continuidade são as referências da evolução atual. Os materiais SmartCity são referências de outro projeto; seu código ilustrativo, regras de concurso e resultados não se transferem para o Ipê. Nenhuma tarefa futura foi agendada automaticamente.
 
 ## Licenças e atribuições
 

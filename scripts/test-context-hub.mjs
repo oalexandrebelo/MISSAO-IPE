@@ -76,7 +76,16 @@ async function boot({ storage = {}, documentHtml = html, clock = data.project.as
   virtualConsole.on('jsdomError', error => errors.push(String(error.message)));
   const dom = new JSDOM(documentHtml, {
     url: 'https://ipe.test/context/index.html' + hash, runScripts: 'dangerously',
-    resources: { interceptors: [requestInterceptor(request => {
+    resources: { interceptors: [requestInterceptor(async request => {
+      // Read only the exact local design assets; no external network is permitted.
+      const url = new URL(request.url);
+      const localAssets = new Map([
+        ['/fonts/fonts.css', ['fonts/fonts.css', 'text/css']],
+        ['/brand/projeto-ipe-logo.svg', ['brand/projeto-ipe-logo.svg', 'image/svg+xml']],
+        ['/brand/projeto-ipe-symbol.svg', ['brand/projeto-ipe-symbol.svg', 'image/svg+xml']],
+      ]);
+      const asset = url.origin === 'https://ipe.test' && localAssets.get(url.pathname);
+      if (asset) return new Response(await readFile(resolve(root, 'experiments/mission-design-lab/public', asset[0])), { headers: { 'Content-Type': asset[1] } });
       requested.push(request.url);
       return new Response('Network prohibited in standalone verification', { status: 503 });
     })] },
@@ -222,7 +231,7 @@ try {
   });
 
   app = await boot();
-  await check('inicialização completa sem acesso de rede nem exceções DOM', () => {
+  await check('inicialização com recursos locais, sem rede externa nem exceções DOM', () => {
     assert.deepEqual(app.errors, []);
     assert.deepEqual(app.requested, []);
     officialInitial = selected(app.document, 'official-progress').textContent;
@@ -437,7 +446,7 @@ try {
     schemaVersion: 1, edition: 'R8', startedAt, finishedAt: new Date().toISOString(),
     status: checks.some(check => check.status === 'failed') ? 'failed' : 'passed',
     summary: { total: checks.length, passed: checks.filter(check => check.status === 'passed').length, failed: checks.filter(check => check.status === 'failed').length },
-    scope: 'Data contracts and authored standalone HTML in jsdom; external network disabled; storage/import/export and navigation behavior. No real-browser execution.',
+    scope: 'Data contracts and authored HTML in jsdom; exact local design assets loaded from disk, external network disabled; storage/import/export and navigation behavior. No real-browser execution.',
     limitations: ['No visual or native-focus qualification', 'No screen-reader or print-engine observation', 'No device performance or cold-offline benchmark', 'No human learning study', 'No deployment evidence produced by this script'],
     observations, checks,
   };

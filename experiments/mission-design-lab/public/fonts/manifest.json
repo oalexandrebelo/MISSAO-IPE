@@ -1,0 +1,30 @@
+{
+  "retrievedOn": "2026-11-14",
+  "stylesheetSource": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap",
+  "fonts": [
+    {
+      "family": "Bricolage Grotesque",
+      "filename": "BricolageGrotesque-latin-variable.woff2",
+      "source": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2",
+      "license": "BricolageGrotesque-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/bricolagegrotesque/OFL.txt",
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+      "bytes": 76868,
+      "weight": "400 700",
+      "style": "normal",
+      "subset": "latin (including precomposed Portuguese accents)"
+    },
+    {
+      "family": "Plus Jakarta Sans",
+      "filename": "PlusJakartaSans-latin-variable.woff2",
+      "source": "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_vb.woff2",
+      "license": "PlusJakartaSans-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/plusjakartasans/OFL.txt",
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "bytes": 27272,
+      "weight": "400 700",
+      "style": "normal",
+      "subset": "latin (including precomposed Portuguese accents)"
+    }
+  ]
+}

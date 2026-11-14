@@ -1,15 +1,36 @@
 # Identidade visual — PROJETO IPÊ
 
-Aplicação da identidade fornecida pelo responsável em 14/11/2026.
+Atualização de 14/11/2026: a composição horizontal passa a ter um **SVG vetorial autossuficiente**, sem imagem raster incorporada e sem dependência de fonte instalada.
 
-- `arte.svg` e `arteFULL.svg` recebidos são idênticos e contêm somente o símbolo (viewBox 0 0 104 104).
-- `experiments/mission-design-lab/public/brand/projeto-ipe-symbol.svg` preserva todos os 104 paths e suas cores. Foram removidas somente as dimensões fixas do elemento raiz e adicionados título, descrição e grupo semântico.
-- `projeto-ipe-logo.png` preserva integralmente a composição horizontal fornecida, 300 × 100, com transparência. Não foi apresentada como uma composição vetorial.
-- Cabeçalhos usam a composição sobre fundo escuro, sem distorção; o ícone da aba usa o símbolo quadrado em SVG.
-- Originais enviados pelo usuário não foram sobrescritos.
+## Origem e arquivos
 
-A aplicação seguiu as orientações de SVG autocontido, proporções, acessibilidade e integração da [logo-designer-skill](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md). Não foram criados conceitos alternativos, pois a identidade já foi escolhida pelo responsável.
+- Os arquivos recebidos `arte.svg` e `arteFULL.svg` são idênticos e contêm somente o símbolo, com `viewBox="0 0 104 104"`. SHA-256: `af507645399111bf01fdae9d88ba9963dcf4aaeccef0dc59511688c96135bd4c`.
+- `experiments/mission-design-lab/public/brand/projeto-ipe-symbol.svg` conserva os 104 paths, as cores e as proporções originais. Título, descrição e grupo semântico identificam o símbolo; as dimensões fixas da raiz foram removidas.
+- `projeto-ipe-logo.svg` é a composição horizontal vetorial, com `viewBox="0 0 300 100"`, título, descrição e grupos `icon` e `wordmark`. O símbolo conserva seus 104 paths originais; a translação apenas o posiciona na composição.
+- `projeto-ipe-logo.png` permanece como referência original recebida, 300 × 100 e com transparência, não como dependência do SVG. SHA-256: `470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f`.
+- Os arquivos originais fornecidos pelo responsável não foram sobrescritos.
 
-SHA-256 dos SVGs originais: `af507645399111bf01fdae9d88ba9963dcf4aaeccef0dc59511688c96135bd4c`.
+## Como o lettering virou vetor
 
-SHA-256 do PNG original e publicado: `470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f`.
+O SVG recebido não contém o nome horizontal. Para preservar o desenho escolhido, os contornos de **PROJETO IPÊ** foram extraídos da transparência do PNG fornecido, mantendo posição, espaçamento, recortes internos e circunflexo. O contorno usa o limiar alfa 128/255 e simplificação geométrica de até 0,55 unidade no plano original de 300 × 100.
+
+Isso é uma reconstrução vetorial a partir de uma referência raster pequena, não a recuperação de curvas tipográficas originais desconhecidas. O resultado usa paths preenchidos, sem `<image>`, `<text>`, base64, fonte do sistema ou arquivo externo. A faixa azul usa um recorte vetorial local. Não foi substituído o lettering por uma terceira família de fontes.
+
+A paleta permanece cobre `#B88965`, azul `#085D9D` e branco `#FDFDFD`; tons secundários do símbolo original foram preservados. Os contornos reconstruídos não reproduzem cada pixel de antialiasing do PNG, e não há alegação de identidade binária entre os dois formatos.
+
+## Aplicação e legibilidade
+
+A marca horizontal foi preparada para fundos escuros, que preservam o branco de “PROJETO” e da órbita. Manter proporção 3:1 e usar dimensões explícitas no layout para evitar deslocamento durante o carregamento. A imagem pode ter `alt=""` quando o link ou botão já tiver o nome acessível apropriado; fora desse contexto, usar “Projeto Ipê”.
+
+O favicon usa o símbolo quadrado, nunca a composição horizontal comprimida. O símbolo fornecido é detalhado; em 16 px, ramos e circuitos deixam de ser distinguíveis. A miniatura conserva a silhueta e a paleta, sem prometer a leitura desses detalhes nessa escala.
+
+## Verificações desta edição
+
+- XML válido; ausência de scripts, handlers, referências externas, fontes e raster no SVG horizontal.
+- Comparação dos 104 atributos `d` e `fill` do símbolo com o SVG recebido: preservados.
+- Renderização local do SVG para inspeção do nome, acento, recortes, proporção e divisão cobre/azul. Essa conferência do arquivo não substitui a revisão da interface integrada em navegador.
+- A fonte científica e o motor do jogo não são alterados pela identidade visual.
+
+A aplicação seguiu as convenções de SVG autossuficiente, grupos semânticos, proporção e acessibilidade da [logo-designer-skill solicitada](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md). A identidade já estava escolhida; esta rodada converte a composição e preserva a direção existente. Não foram instaladas dependências para a conversão.
+
+As fontes da interface têm licenças próprias e estão documentadas em [Tipografia](26-TIPOGRAFIA.md). A licença das fontes não determina a titularidade do símbolo ou do lettering fornecido pelo responsável.
