@@ -43,6 +43,8 @@ const routeConfig = {
   cleanUrls: false,
   trailingSlash: false,
   redirects: [
+    { source: '/campanha/research', destination: '/campanha/research/index.html', permanent: false },
+    { source: '/campanha/apresentacao', destination: '/campanha/apresentacao/index.html', permanent: false },
     { source: '/campanha', destination: '/campanha/index.html', permanent: false },
     { source: '/game', destination: '/game/index.html', permanent: false },
     { source: '/jogar', destination: '/lab/index.html', permanent: false },
