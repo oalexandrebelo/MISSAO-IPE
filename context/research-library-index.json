@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T22:05:44.737Z",
+  "generatedAt": "2026-11-14T22:10:00.986Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 93,
   "documents": [
@@ -29,12 +29,12 @@
     {
       "source": "PUBLICADO.md",
       "id": "doc-publicado-md",
-      "title": "Publicação PROJETO IPÊ — campanha de quatro níveis",
+      "title": "Publicação PROJETO IPÊ — R15",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 7283,
-      "originalSha256": "6c64c2bc258f37b4575edbe3d7dfec796bd361463ade8cd0e943aff7f08007e8",
-      "projectedSha256": "6c64c2bc258f37b4575edbe3d7dfec796bd361463ade8cd0e943aff7f08007e8",
+      "originalBytes": 11251,
+      "originalSha256": "8c08f42740836cab57f47d7afee2fce9062a1835a9311fb4c86a5fc10df4a0a9",
+      "projectedSha256": "8c08f42740836cab57f47d7afee2fce9062a1835a9311fb4c86a5fc10df4a0a9",
       "redactions": 0
     },
     {
@@ -428,9 +428,9 @@
       "title": "34 — Continuidade para dois devs: escolhas visíveis na nave",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 10083,
-      "originalSha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
-      "projectedSha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
+      "originalBytes": 11381,
+      "originalSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
+      "projectedSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
       "redactions": 0
     },
     {
@@ -1031,13 +1031,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 1911415,
-      "sha256": "892501d4a96736c2d462fc8bf479e0e48b1c69645823e4250b0d39c9c6481a03"
+      "bytes": 1917568,
+      "sha256": "d06bfa3389d8388668a41d52daec26ef7593f8974d69dbe4c655ea7d4a5339f9"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1540712,
-      "sha256": "e2b4e7c8851c140d1bede8f826f00c8472cd617a2044b8978fe252d60f1d4341"
+      "bytes": 1545955,
+      "sha256": "202db07fb5ae922523ac706097af532671c658cb2d4f4d0496d1c3904a4314d2"
     }
   ]
 }

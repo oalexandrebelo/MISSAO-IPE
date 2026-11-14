@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-14T22:05:44.780Z",
+  "generatedAt": "2026-11-14T22:10:01.013Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 279,
-  "bytes": 27479859,
+  "bytes": 27493898,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 119452,
-    "sha256": "7cd61504524944922f11c2d6145eb547506a465171207a69c4f8d2775c7c4f6b"
+    "sha256": "e80d25597f4aecb3085d942a770496bb06d5217c28a4f85304d7bbc3eb80b419"
   },
   "entries": [
     {
@@ -598,29 +598,29 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 48124,
-      "sha256": "764725980af31b8b1ba5cf29d77186a11786cd927c4988bd97bd31dbdc1cae37",
+      "bytes": 48102,
+      "sha256": "f6398b25326a522d8e72774b69eada3526c728531c4e8f603c5a43aadc0372ef",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "764725980af31b8b1ba5cf29d77186a11786cd927c4988bd97bd31dbdc1cae37",
+      "sourceSha256": "f6398b25326a522d8e72774b69eada3526c728531c4e8f603c5a43aadc0372ef",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 1911415,
-      "sha256": "892501d4a96736c2d462fc8bf479e0e48b1c69645823e4250b0d39c9c6481a03",
+      "bytes": 1917568,
+      "sha256": "d06bfa3389d8388668a41d52daec26ef7593f8974d69dbe4c655ea7d4a5339f9",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "892501d4a96736c2d462fc8bf479e0e48b1c69645823e4250b0d39c9c6481a03",
+      "sourceSha256": "d06bfa3389d8388668a41d52daec26ef7593f8974d69dbe4c655ea7d4a5339f9",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1540712,
-      "sha256": "e2b4e7c8851c140d1bede8f826f00c8472cd617a2044b8978fe252d60f1d4341",
+      "bytes": 1545955,
+      "sha256": "202db07fb5ae922523ac706097af532671c658cb2d4f4d0496d1c3904a4314d2",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "e2b4e7c8851c140d1bede8f826f00c8472cd617a2044b8978fe252d60f1d4341",
+      "sourceSha256": "202db07fb5ae922523ac706097af532671c658cb2d4f4d0496d1c3904a4314d2",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1021,20 +1021,20 @@
     },
     {
       "path": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
-      "bytes": 12887,
-      "sha256": "788ce4fd849d58fff394e9295f8cb15c1170bec02455bb80859c606184a5f660",
+      "bytes": 14254,
+      "sha256": "a2822372afebc7a575f2cf808e57ab4d934ab95180a4b188ed068c3f1691ef73",
       "category": "rendered-public-document",
       "source": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
-      "sourceSha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
+      "sourceSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
       "transformation": "escaped static HTML rendering of selected Markdown"
     },
     {
       "path": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
-      "bytes": 10083,
-      "sha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
+      "bytes": 11381,
+      "sha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
       "category": "public-document",
       "source": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
-      "sourceSha256": "a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd",
+      "sourceSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
       "transformation": "none; bytes preserved"
     },
     {

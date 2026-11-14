@@ -56,11 +56,41 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 ---
 
-# Publicação PROJETO IPÊ — campanha de quatro níveis
+# Publicação PROJETO IPÊ — R15
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `6c64c2bc258f37b4575edbe3d7dfec796bd361463ade8cd0e943aff7f08007e8` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `8c08f42740836cab57f47d7afee2fce9062a1835a9311fb4c86a5fc10df4a0a9` · Ajustes de caminhos privados: 0
 
-# Publicação PROJETO IPÊ — campanha de quatro níveis
+# Publicação PROJETO IPÊ — R15
+
+Publicado e conferido em **14/11/2026**. As três missões científicas agora mostram na nave o efeito das escolhas de instrumento, energia e comunicação, com inspeção das peças, montagem separada e explicações didáticas.
+
+- [Jogar Cerrado, Bennu e Telescópio](https://projeto-ipe.vercel.app/lab/index.html)
+- [Guia didático completo — 17 capítulos](https://projeto-ipe.vercel.app/docs/32-GUIA-DIDATICO-MISSOES-3D.html)
+- [Oito oportunidades NASA Science](https://projeto-ipe.vercel.app/docs/33-OPORTUNIDADES-NASA-SCIENCE.html)
+- [Continuidade para dois devs](https://projeto-ipe.vercel.app/docs/34-HANDOFF-IMERSAO-3D-R15.html)
+- [Biblioteca integral — 93 documentos](https://projeto-ipe.vercel.app/context/research-library.html)
+- [Campanha paralela preservada](https://projeto-ipe.vercel.app/campanha/index.html)
+- [Código e documentação no GitHub](https://github.com/oalexandrebelo/PROJETO-IPE)
+
+## Entrega e verificação R15
+
+Beta `0.6.0-beta.1`; distribuição `R15-configured-spacecraft-plus-four-level-campaign`. Implementação: `7f7ca7767b8773bf1ff6bfbb4d9980952b493e69`. Integração com a campanha existente: `79b53969cfedd0b3bc14efd37733d284e2a700ac`. Implantação conferida: `dpl_GKiyRcwkDGCAxpKCjKxfFsAqw1Mh`, **READY**, domínio `projeto-ipe.vercel.app`, público e sem login.
+
+**Na nave:** processamento BANDAS/ÍNDICE no Cerrado; câmera ou espectrômetro nos demais casos; painéis e bateria proporcionais às capacidades escolhidas; rádio econômico/rápido no Cerrado. Nas expedições, ampliar contatos altera a agenda, mantendo o rádio. Durante a operação, carga, iluminação, fila e transmissão acompanham os estados registrados. Alterar o rascunho não modifica a nave da tentativa executada ou da comparação A/B.
+
+**Para aprender:** guia de cerca de 5.800 palavras com histórias, necessidade científica, requisitos, projeto, verificação, operação, interpretação, quatro segmentos, unidades, exemplos calculados, exercícios e roteiro de aula de 50 minutos. A pesquisa NASA Science prioriza oito oportunidades e distingue recursos existentes de propostas. O handoff define responsabilidades, contratos, arquivos e critérios de aceite para dois devs.
+
+**Evidência:** 140 testes de domínio e 26 de interface do laboratório; 24 de contexto e 17 de distribuição. A campanha preservada também passou em 120 testes de domínio e 14 de interface. Compilação e TypeScript aprovados. A conferência pública leu **278 arquivos**, todos com HTTP 200 e SHA-256 correspondente, MIME dos modelos/decoder e políticas de scripts corretos. Biblioteca com 93 documentos. No navegador foram conferidas peças, alternativa 2D, teclado, viewport de 390 px e o ensaio Bennu 6/6 local; na produção, nave configurada e guia abriram sem erro novo de console nas ações observadas.
+
+[Recibo local R15](evidence/revision-r15.json) · [Recibo remoto R15](evidence/production-r15.json). Este registro é posterior à implantação identificada; seu push aciona uma nova compilação documental. O recibo certifica os arquivos da implantação indicada, sem se atribuir a builds futuros.
+
+**Limites:** peças e dimensões são didáticas. Os modelos NASA são referências; Bennu e Telescópio usam dados sintéticos. Não houve nova API NASA ao vivo, propagação GMAT ou controle real de antena. Não foram medidos FPS, aprendizagem ou desempenho em celular físico. Cooperação permanece local.
+
+**Continuidade da campanha:** o merge preservou as publicações até `29fcc46`, com jogo, mapa, pesquisa, pitch e redirecionamentos próprios. Laboratório e campanha compartilham caderno e rascunho de contratos compatíveis; o diário compartilhado pode perder entradas em edição simultânea entre abas. Projetos das expedições e progressão da campanha são separados. Detalhes e plano de migração estão no documento 34; recomenda-se uma experiência por vez durante a demonstração.
+
+---
+
+## Histórico — campanha de quatro níveis
 
 A campanha didática foi publicada em **14/11/2026**, em uma área própria que preserva a edição R14.
 
@@ -4808,7 +4838,7 @@ Integração NASA de trajetória, novas observações reais de Bennu/espectros, 
 
 # 34 — Continuidade para dois devs: escolhas visíveis na nave
 
-Fonte: `docs/34-HANDOFF-IMERSAO-3D-R15.md` · SHA-256 original: `a63b5c119e79fd4821ff312b9b4e85ed111f8f8371fdece71d35b68ebb8fe1cd` · Ajustes de caminhos privados: 0
+Fonte: `docs/34-HANDOFF-IMERSAO-3D-R15.md` · SHA-256 original: `ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90` · Ajustes de caminhos privados: 0
 
 # 34 — Continuidade para dois devs: escolhas visíveis na nave
 
@@ -4908,6 +4938,14 @@ Na R15 passaram 140 testes de domínio, 26 de interface DOM, 24 de contexto e 17
 Durante a publicação, foram incorporados os commits de uma frente paralela até `29fcc46`, que acrescentam `experiments/four-level-campaign/` e a rota `/campanha/index.html`. O laboratório R15 continua em `/lab/index.html`. A campanha tem seu próprio catálogo, progresso, testes, documentação e build; a montagem configurável desta revisão pertence ao laboratório de três missões. Não compartilhar persistência entre as experiências sem comparar seus contratos. O build de publicação agora compila ambas e preserva os redirecionamentos, o mapa, o pitch e a pesquisa da campanha. Consulte [o handoff dessa frente](32-CAMPANHA-QUATRO-NIVEIS.md).
 
 Na integração foram executados também os 120 testes de domínio e 14 de interface da campanha, com compilação aprovada. A checagem compartilhada de distribuição inclui os dois aplicativos. Os resultados da campanha não são somados à cobertura do laboratório como se fossem a mesma base.
+
+## 10. Armazenamento compartilhado: limite preexistente
+
+Rotas diferentes não isolam armazenamento no mesmo domínio. Laboratório e campanha usam o mesmo IndexedDB `mission-ipe-research-v1`, versão 1, e o mesmo diário `mission-ipe:learning:v1`. Os contratos, catálogo, motor, hash científico, validação e replay foram comparados e são idênticos; a integração não introduziu incompatibilidade de recibos.
+
+O caderno reúne execuções das duas experiências sem identificação de origem. Há somente um rascunho `drafts/active`: salvar em uma experiência substitui o rascunho compartilhado; o controle de revisão recusa uma gravação desatualizada. O diário usa uma cópia em memória sem sincronização entre abas: **edições simultâneas podem sobrescrever entradas recentes**. Para a demonstração, use uma experiência por vez e exporte o registro antes de alternar. A progressão da campanha e os projetos Bennu/Telescópio têm chaves próprias.
+
+Dev A deve planejar migração e identificação de origem antes de isolar os bancos; renomear a chave diretamente esconderia o histórico existente. Dev B deve explicar onde o projeto foi salvo e testar alternância e concorrência. Esta limitação antecede a R15 e permanece registrada, sem prometer isolamento por rota.
 
 
 ---

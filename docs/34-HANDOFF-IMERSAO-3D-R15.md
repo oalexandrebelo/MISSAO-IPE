@@ -96,3 +96,11 @@ Na R15 passaram 140 testes de domínio, 26 de interface DOM, 24 de contexto e 17
 Durante a publicação, foram incorporados os commits de uma frente paralela até `29fcc46`, que acrescentam `experiments/four-level-campaign/` e a rota `/campanha/index.html`. O laboratório R15 continua em `/lab/index.html`. A campanha tem seu próprio catálogo, progresso, testes, documentação e build; a montagem configurável desta revisão pertence ao laboratório de três missões. Não compartilhar persistência entre as experiências sem comparar seus contratos. O build de publicação agora compila ambas e preserva os redirecionamentos, o mapa, o pitch e a pesquisa da campanha. Consulte [o handoff dessa frente](32-CAMPANHA-QUATRO-NIVEIS.md).
 
 Na integração foram executados também os 120 testes de domínio e 14 de interface da campanha, com compilação aprovada. A checagem compartilhada de distribuição inclui os dois aplicativos. Os resultados da campanha não são somados à cobertura do laboratório como se fossem a mesma base.
+
+## 10. Armazenamento compartilhado: limite preexistente
+
+Rotas diferentes não isolam armazenamento no mesmo domínio. Laboratório e campanha usam o mesmo IndexedDB `mission-ipe-research-v1`, versão 1, e o mesmo diário `mission-ipe:learning:v1`. Os contratos, catálogo, motor, hash científico, validação e replay foram comparados e são idênticos; a integração não introduziu incompatibilidade de recibos.
+
+O caderno reúne execuções das duas experiências sem identificação de origem. Há somente um rascunho `drafts/active`: salvar em uma experiência substitui o rascunho compartilhado; o controle de revisão recusa uma gravação desatualizada. O diário usa uma cópia em memória sem sincronização entre abas: **edições simultâneas podem sobrescrever entradas recentes**. Para a demonstração, use uma experiência por vez e exporte o registro antes de alternar. A progressão da campanha e os projetos Bennu/Telescópio têm chaves próprias.
+
+Dev A deve planejar migração e identificação de origem antes de isolar os bancos; renomear a chave diretamente esconderia o histórico existente. Dev B deve explicar onde o projeto foi salvo e testar alternância e concorrência. Esta limitação antecede a R15 e permanece registrada, sem prometer isolamento por rota.
