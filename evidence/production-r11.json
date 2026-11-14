@@ -1,12 +1,12 @@
 {
-  "verifiedAt": "2026-11-14T18:37:27.864Z",
+  "verifiedAt": "2026-11-14T18:44:04.485Z",
   "base": "https://projeto-ipe.vercel.app",
   "access": "public, no cookies or authorization headers",
-  "deploymentId": "dpl_FtBGyAoGw7gVoLny8aCYotCz2eYv",
-  "sourceCommit": "0f21b035b8af20e2aa494219ccbcad0ef7323879",
+  "deploymentId": "dpl_Efdhz3bFmzSDGCcAViVnmpqnLZQK",
+  "sourceCommit": "2adff7a17912d890d893ee604c081d4c798e5315",
   "version": "0.4.0-beta.2",
   "status": "passed",
-  "filesChecked": 130,
+  "filesChecked": 134,
   "failures": [],
   "checks": [
     {
@@ -37,6 +37,24 @@
       "contentType": "application/json; charset=utf-8"
     },
     {
+      "path": "brand/projeto-ipe-logo.png",
+      "status": 200,
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "brand/projeto-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
       "path": "context/index.html",
       "status": 200,
       "bytes": 130752,
@@ -57,8 +75,8 @@
     {
       "path": "context/research-library-index.json",
       "status": 200,
-      "bytes": 21973,
-      "sha256": "d9512a3c0df87844b51a7b3ff7aaf883e6e2f6503b8d48902f43ebc8671ae470",
+      "bytes": 22418,
+      "sha256": "e564fe94c9e96d05f651e4b66aee0a4153c469dda2f1df85f0f3272142bc9e0d",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "application/json; charset=utf-8"
@@ -66,8 +84,8 @@
     {
       "path": "context/research-library.html",
       "status": 200,
-      "bytes": 900669,
-      "sha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4",
+      "bytes": 902794,
+      "sha256": "ed60104f4aeaf93d4f880ec5506786280b92b8453366660d694d92c86f276bd6",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "text/html; charset=utf-8"
@@ -75,8 +93,8 @@
     {
       "path": "context/research-library.md",
       "status": 200,
-      "bytes": 773647,
-      "sha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574",
+      "bytes": 775168,
+      "sha256": "c54bca520ded9408cc98afb209829cbc573514e363f20a9ca666fc3344a436a2",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "text/markdown; charset=utf-8"
@@ -561,29 +579,29 @@
     {
       "path": "index.html",
       "status": 200,
-      "bytes": 51877,
-      "sha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+      "bytes": 51920,
+      "sha256": "5f7f42751a5d9c15e7e8beb52b24e52827e9a382104d167d7536effb0378491c",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "text/html; charset=utf-8"
     },
     {
-      "path": "lab/assets/index-BcfclJeA.js",
+      "path": "lab/assets/index-BtXoWU_-.css",
       "status": 200,
-      "bytes": 403927,
-      "sha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
-      "hashMatches": true,
-      "cspPass": true,
-      "contentType": "application/javascript; charset=utf-8"
-    },
-    {
-      "path": "lab/assets/index-OjdBRBwg.css",
-      "status": 200,
-      "bytes": 135548,
-      "sha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "bytes": 135705,
+      "sha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/index-MCOISTGE.js",
+      "status": 200,
+      "bytes": 403757,
+      "sha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
     },
     {
       "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -595,22 +613,40 @@
       "contentType": "application/javascript; charset=utf-8"
     },
     {
-      "path": "lab/assets/OrbitalScene-uN0SrvkO.js",
+      "path": "lab/assets/OrbitalScene-BD01o6gr.js",
       "status": 200,
       "bytes": 934292,
-      "sha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "sha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "application/javascript; charset=utf-8"
     },
     {
-      "path": "lab/assets/search-Ddk6UaCb.js",
+      "path": "lab/assets/search-Bpv4N3xJ.js",
       "status": 200,
       "bytes": 1247,
-      "sha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "sha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-logo.png",
+      "status": 200,
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/svg+xml"
     },
     {
       "path": "lab/data/cmr-mod13q1-granule-2.json",
@@ -705,8 +741,8 @@
     {
       "path": "lab/index.html",
       "status": 200,
-      "bytes": 823,
-      "sha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "bytes": 906,
+      "sha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
       "hashMatches": true,
       "cspPass": true,
       "contentType": "text/html; charset=utf-8"
@@ -1184,6 +1220,8 @@
     "scope": "Local deployment with same source and CSP; desktop and 390px requested viewport",
     "mission": "long-contact baseline delivered 6/6 valid records",
     "portal": "timeline selected; operation filter showed 2/13; mobile no horizontal overflow",
-    "limits": "Not a full accessibility or learning study"
+    "limits": "Not a full accessibility or learning study",
+    "branding": "Supplied horizontal logo loaded at 300x100 natural dimensions in public portal; local beta header and mobile portal visually checked.",
+    "productionPortal": "https://projeto-ipe.vercel.app/ opened without a login screen; logo loaded successfully."
   }
 }
