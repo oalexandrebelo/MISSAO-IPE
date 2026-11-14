@@ -56,54 +56,49 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 ---
 
-# Publicação PROJETO IPÊ — R13
+# Publicação PROJETO IPÊ — R14
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `90087835e5bc57babda07ba69099f8b4261d6710226f2e8114e6db06403518a3` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `70ae611eda83bde4f2bf6e686786e34124635e0c52ea049da1b60d7d8af8f2f3` · Ajustes de caminhos privados: 0
 
-# Publicação PROJETO IPÊ — R13
+# Publicação PROJETO IPÊ — R14
 
-Edição publicada e conferida em **14/11/2026**: marca sem caixa nos cabeçalhos claros, SVGs interativos, seis imagens NASA, revisão do Game Design e catálogo de oportunidades 3D para dois desenvolvedores.
+Publicado e conferido em **14/11/2026**: três missões científicas, cenas 3D ligadas aos eventos, quatro modelos NASA, revisão local em equipe e a marca SVG original enviada pelo autor.
 
+- [Jogar — Cerrado, Bennu e Telescópio](https://projeto-ipe.vercel.app/lab/index.html)
 - [Portal público](https://projeto-ipe.vercel.app/)
-- [Game Design interativo](https://projeto-ipe.vercel.app/game-design.html)
-- [Game Design completo e plano da dupla](https://projeto-ipe.vercel.app/docs/29-GAME-DESIGN-3D.html)
-- [11 oportunidades NASA 3D](https://projeto-ipe.vercel.app/docs/28-OPORTUNIDADES-NASA-3D.html)
-- [Biblioteca — 87 documentos](https://projeto-ipe.vercel.app/context/research-library.html)
-- [Simulador beta](https://projeto-ipe.vercel.app/lab/index.html)
-- [Logo SVG para cabeçalho claro](https://projeto-ipe.vercel.app/brand/projeto-ipe-logo-on-light.svg)
-- [Código e documentação](https://github.com/oalexandrebelo/PROJETO-IPE)
+- [Implementação e continuidade para dois desenvolvedores](https://projeto-ipe.vercel.app/docs/31-TRES-MISSOES-CIENTIFICAS-R14.html)
+- [Modelos NASA, créditos e limites](https://projeto-ipe.vercel.app/docs/30-ATIVOS-NASA-IMPLEMENTADOS.html)
+- [Biblioteca — 89 documentos](https://projeto-ipe.vercel.app/context/research-library.html)
+- [Logo vetorial](https://projeto-ipe.vercel.app/brand/projeto-ipe-logo.svg)
+- [Código e documentação no GitHub](https://github.com/oalexandrebelo/PROJETO-IPE)
 
-## Versão e registro da publicação
+## Versão e implantação
 
-Beta `0.4.0-beta.2`, distribuição `R13-visual-study`. Commit da revisão: `0dbbb17fecc31097557784c64b0a7679419da54c`. A primeira implantação conferida desta revisão foi `dpl_37zemSdLG5Rp3zFsy5CvU3cXNNmA`, em estado `READY`, com o domínio principal atribuído. O [recibo remoto R13](evidence/production-r13.json) registra essa implantação e o instante da conferência.
+Beta `0.5.0-beta.1`, distribuição `R14-scientific-missions`. Commit da implementação: `1a2990fbc304cb2c5add26f063d948bdd8f0238b`. Primeira implantação conferida: `dpl_9z4jXZ89cGM4iprckASM9GmNQnna`, em estado `READY`, com o domínio principal atribuído. O [recibo remoto R14](evidence/production-r14.json) identifica o instante e os arquivos verificados.
 
-O site abre publicamente, sem login. Este documento e o recibo são posteriores à primeira compilação da revisão. O Git conectado à Vercel pode gerar uma nova implantação ao publicar este registro; o recibo permanece evidência da implantação que identifica, sem pretender certificar um build posterior. A biblioteca compilada preserva o corte de seu build e aponta para este documento no GitHub.
+O site está público, sem login. Este registro é posterior à primeira compilação; seu push pode acionar outra implantação da documentação pela conexão Git. O recibo certifica apenas a implantação identificada. A biblioteca conserva o corte de seu build e aponta para este documento no GitHub.
 
-## Entregas desta edição
+## O que foi entregue
 
-- Marca horizontal vetorial preservada: 108 paths, incluindo os 104 paths originais do símbolo. A variante clara muda a palavra PROJETO para azul e remove a necessidade de fundo escuro no cabeçalho. Sem imagem raster embutida.
-- Diagrama orbital com seleção de Terra, CubeSat e estação; animação opcional com pausa. Fluxo de dados explorável por mouse ou teclado. Preferência por movimento reduzido respeitada.
-- Galeria local com seis imagens oficiais, contexto, datas, créditos e fontes. Total das imagens: 839.655 bytes. [Procedência](docs/27-ACERVO-VISUAL-NASA.md).
-- Estudo de Game Design com quatro segmentos, três comparações qualitativas e cinco cenas 3D propostas. [Especificação](docs/29-GAME-DESIGN-3D.md) inclui jornada, contratos, aceites, pitch e divisão E0–E5 entre dois devs.
-- Catálogo de 11 recursos 3D oficiais: nove GLBs, sete deles abaixo de 5 MB, além de STL e ZIP. Créditos, tamanhos, Draco, arquivos externos e limites da inspeção declarados. [Catálogo JSON](research/nasa-3d-catalog.json).
-- Biblioteca ampliada para 87 documentos, mantendo busca, navegação e acervo histórico. Bricolage Grotesque e Plus Jakarta Sans continuam hospedadas localmente.
+- **Marca original:** símbolo de `ARTE .svg` e lettering de `Vector.svg` em composição horizontal 900×320, sem fundo, bitmap ou fonte externa. As 99 curvas do símbolo e 14 do lettering preservam a paleta fornecida. Originais, histórico e hashes ficam em `experiments/mission-design-lab/public/brand/`. [Procedência](docs/23-IDENTIDADE-VISUAL.md).
+- **Três casos científicos:** Cerrado com registros históricos Terra/MODIS; levantamento didático de Bennu; comparação de faixas infravermelhas por telescópio fictício. Cada caso traz história, propósito e limites de interpretação.
+- **Engenharia de sistemas:** usuários, lançamento, segmento espacial e solo aparecem conectados. Bennu e Telescópio têm necessidade, requisitos, projeto, verificação, operação e retorno. Lançador, perfil orbital, instrumento, energia, contatos e vida operacional alteram o resultado.
+- **3D ligado ao tempo:** voltar a um evento mostra o último estado disponível, sem antecipar observações. Energia, fila, iluminação, contato e recepção seguem o cálculo. Comparação A/B das expedições usa o mesmo segundo; as tentativas permanecem preservadas.
+- **Quatro modelos oficiais locais:** CubeSat genérico, DSN 70 m, Bennu e JWST, com 7.462.304 bytes de GLB, créditos, hashes e decoder Draco local. A geometria do Webb é agrupada em memória para reduzir objetos sem substituir o arquivo original.
+- **Equipe e documentação:** revisão dos quatro papéis por até quatro pessoas no mesmo dispositivo. Edição invalida revisões anteriores. Projetos das expedições podem ser salvos, restaurados, exportados e importados; relatórios finais são exportáveis. Guia dos dois devs descreve contratos, arquivos, aceites e lacunas.
 
-O Game Design é uma proposta de evolução. A página de estudo usa diagramas SVG 2D; não representa cinco novas cenas 3D já implementadas. Nenhum GLB NASA foi incorporado ao runtime, GMAT não foi integrado e o motor da missão permaneceu inalterado.
+Os novos registros de Bennu e Telescópio são **sintéticos**, identificados na interface. Os modelos NASA são referências geométricas; não fornecem os parâmetros de engenharia. As 2 ou 3 horas representam operação depois da chegada. Não há integração GMAT/JPL em tempo real, trajetória de transferência, controle real da DSN nem multijogador remoto. O motor e a persistência próprios do Cerrado foram preservados.
 
 ## Verificação
 
-Compilação aprovada; **24 verificações da central e 16 da distribuição/HTTP passaram**. Os testes de domínio e da UI do beta não foram reexecutados nesta rodada visual/documental; os registros anteriores conservam seu corte.
+- **129 testes de domínio, 17 de interface, 24 de contexto e 17 de distribuição/HTTP passaram.** TypeScript e compilação aprovados.
+- Verificação remota sem cookies ou autorização: **212 arquivos com HTTP 200 e SHA-256 correspondente**, MIME correto dos GLBs e WebAssembly, política de scripts conferida e biblioteca com 89 documentos.
+- No navegador: os três casos locais concluíram o roteiro viável 6/6; eventos, retorno científico, geometria e textura foram inspecionados. Logo conferida em fundo claro e escuro; viewport de390px sem rolagem horizontal global na tela observada.
+- Na produção: beta e portal abriram sem login; logo nova, antena e carregamento Draco do Webb conferidos. Nenhum novo erro de console da origem pública nas interações observadas.
 
-Verificação remota sem cookies ou autorização: **182 arquivos com HTTP 200 e SHA-256 correspondente**, scripts embutidos compatíveis com a política de segurança e índice público com 87 documentos. Nenhuma divergência no recibo da primeira implantação R13.
+Recibos: [revisão local R14](evidence/revision-r14.json), [publicação R14](evidence/production-r14.json), [histórico R13](evidence/production-r13.json).
 
-No navegador foram conferidos seleção e pausa do diagrama orbital, fluxo por teclado, galeria local, expansão do caderno visual, busca, segmentos do Game Design e comparação qualitativa. As superfícies observadas não apresentaram rolagem horizontal global em telas estreitas e amplas nem erros de console. A revisão DOM delegada conferiu estados ARIA e navegação dos controles; não equivale a teste de GPU ou auditoria completa de acessibilidade.
-
-- [Revisão local R13](evidence/revision-r13.json)
-- [Verificação remota R13](evidence/production-r13.json)
-- [Histórico R12](evidence/production-r12.json)
-- [Histórico R11](evidence/production-r11.json)
-
-Não foram realizados estudo de aprendizagem, teste em dispositivo físico ou ensaio offline a frio. Inscrição e elegibilidade no desafio continuam exigindo confirmação. Referências e recursos NASA não representam endosso institucional.
+Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não foram medidos FPS nem desempenho em dispositivo físico; primeiro acesso offline continua sem ensaio. Recursos NASA não representam endosso institucional, qualificação de voo ou elegibilidade no desafio.
 
 
 ---

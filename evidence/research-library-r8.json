@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T20:23:41.391Z",
+  "generatedAt": "2026-11-14T20:27:41.683Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 89,
   "documents": [
@@ -29,12 +29,12 @@
     {
       "source": "PUBLICADO.md",
       "id": "doc-publicado-md",
-      "title": "Publicação PROJETO IPÊ — R13",
+      "title": "Publicação PROJETO IPÊ — R14",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 4661,
-      "originalSha256": "90087835e5bc57babda07ba69099f8b4261d6710226f2e8114e6db06403518a3",
-      "projectedSha256": "90087835e5bc57babda07ba69099f8b4261d6710226f2e8114e6db06403518a3",
+      "originalBytes": 5018,
+      "originalSha256": "70ae611eda83bde4f2bf6e686786e34124635e0c52ea049da1b60d7d8af8f2f3",
+      "projectedSha256": "70ae611eda83bde4f2bf6e686786e34124635e0c52ea049da1b60d7d8af8f2f3",
       "redactions": 0
     },
     {
@@ -987,13 +987,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 1818978,
-      "sha256": "272370473f41d5c30ee04047d3c370562b13929cb08b736269e5e009fd162a3a"
+      "bytes": 1819352,
+      "sha256": "c42f797fe5c12ede89ffa3dc35657d8996d4f5f328463b899373009e06eaff59"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1465545,
-      "sha256": "ad62bc045223b0d34f8667f33357e4a8deb1698b21ffee81a9187ec8c25ee07e"
+      "bytes": 1465902,
+      "sha256": "1f1e25d110f468eea012d80c7aa7f911587d32f87bd10e5da09be0d9888b7224"
     }
   ]
 }
