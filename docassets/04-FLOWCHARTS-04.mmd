@@ -1,0 +1,14 @@
+flowchart TD
+  A["Pacote local versionado"] --> B["React e controles HTML"]
+  A --> C["Dados científicos preservados"]
+  B --> D["Three.js procedural"]
+  B --> E["Worker de simulação e busca"]
+  C --> E
+  E --> F["Resultado e eventos"]
+  F --> B
+  F --> G["IndexedDB local"]
+  F --> H["Recibo JSON exportado"]
+  H --> I["Validador e reexecução"]
+  I --> E
+  B -. "P1: texto consentido" .-> J["Classificador local opcional"]
+  J -. "Sugestão validada ou abstenção" .-> B

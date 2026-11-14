@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "edition": "R8",
+  "startedAt": "2026-11-14T18:29:21.655Z",
+  "finishedAt": "2026-11-14T18:29:22.598Z",
+  "status": "passed",
+  "summary": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0
+  },
+  "scope": "Data contracts and authored standalone HTML in jsdom; external network disabled; storage/import/export and navigation behavior. No real-browser execution.",
+  "limitations": [
+    "No visual or native-focus qualification",
+    "No screen-reader or print-engine observation",
+    "No device performance or cold-offline benchmark",
+    "No human learning study",
+    "No deployment evidence produced by this script"
+  ],
+  "observations": {
+    "model": {
+      "tasks": 18,
+      "themes": 8,
+      "sources": 49,
+      "asOf": "2026-11-14T13:30:03.562Z",
+      "deadline": "2026-11-15T11:00:00Z",
+      "timezone": "America/Sao_Paulo"
+    },
+    "officialProgress": "Status oficial: 7 concluídas de 18 tarefas · corte 14/11, 10:30 BRT",
+    "personalStorageKey": "ipe.context.personal.v1",
+    "artifact": {
+      "path": "context/index.html",
+      "bytes": 130752,
+      "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e"
+    },
+    "data": {
+      "path": "context/compiled-context.json",
+      "bytes": 70554,
+      "sha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd"
+    }
+  },
+  "checks": [
+    {
+      "name": "modelo mantém versão, prazo BRT e oito temas sem confundir planejamento com conclusão",
+      "status": "passed",
+      "durationMs": 26.247
+    },
+    {
+      "name": "tarefas e gates formam DAG válido; concluídas possuem aceite e evidência",
+      "status": "passed",
+      "durationMs": 0.215,
+      "detail": {
+        "vertices": 18,
+        "dependencies": 22,
+        "gates": 5
+      }
+    },
+    {
+      "name": "referências da pesquisa resolvem para fontes identificadas e URLs não executáveis",
+      "status": "passed",
+      "durationMs": 0.188,
+      "detail": {
+        "sources": 49,
+        "sourceReferencesResolved": true
+      }
+    },
+    {
+      "name": "HTML embarca o modelo completo e não inclui scripts/handlers de terceiros",
+      "status": "passed",
+      "durationMs": 64.983
+    },
+    {
+      "name": "inicialização completa sem acesso de rede nem exceções DOM",
+      "status": "passed",
+      "durationMs": 0.546
+    },
+    {
+      "name": "navegação troca cada painel e mantém o conteúdo acessível no DOM",
+      "status": "passed",
+      "durationMs": 14.659
+    },
+    {
+      "name": "links diretos possuem destino semântico e abrem a seção correta em nova sessão",
+      "status": "passed",
+      "durationMs": 337.845
+    },
+    {
+      "name": "teclado muda a aba selecionada e mantém uma única parada de tabulação",
+      "status": "passed",
+      "durationMs": 5.17
+    },
+    {
+      "name": "janela até o release recorta o conjunto sem excluir o backlog do projeto",
+      "status": "passed",
+      "durationMs": 14.555
+    },
+    {
+      "name": "cronograma filtra status e trilha em conjunto, sem tarefas de outro grupo",
+      "status": "passed",
+      "durationMs": 11.07
+    },
+    {
+      "name": "busca vazia tem estado explícito; limpar filtros recupera as tarefas",
+      "status": "passed",
+      "durationMs": 12.238
+    },
+    {
+      "name": "alternar lista e trilhas preserva o conjunto filtrado e a identidade das tarefas",
+      "status": "passed",
+      "durationMs": 8.619
+    },
+    {
+      "name": "detalhe da tarefa informa descrição, aceite e dependências resolvidas",
+      "status": "passed",
+      "durationMs": 8.127
+    },
+    {
+      "name": "marcação pessoal altera somente estado local e preserva o progresso oficial",
+      "status": "passed",
+      "durationMs": 3.863
+    },
+    {
+      "name": "marcações pessoais persistem em nova sessão sem concluir tarefas oficiais",
+      "status": "passed",
+      "durationMs": 45.909
+    },
+    {
+      "name": "exportação contém somente contrato público de checklist e IDs conhecidos",
+      "status": "passed",
+      "durationMs": 1.695
+    },
+    {
+      "name": "importação válida substitui marcações, sem alterar estado oficial",
+      "status": "passed",
+      "durationMs": 15.746
+    },
+    {
+      "name": "importações inválidas são rejeitadas atomicamente e informam o erro",
+      "status": "passed",
+      "durationMs": 154.479,
+      "detail": {
+        "rejectedPayloads": 9,
+        "byteLimit": 262144
+      }
+    },
+    {
+      "name": "reset remove só a checklist desta aplicação",
+      "status": "passed",
+      "durationMs": 1.914
+    },
+    {
+      "name": "armazenamento indisponível não impede leitura do contexto ou cronograma",
+      "status": "passed",
+      "durationMs": 59.164
+    },
+    {
+      "name": "JSON pessoal corrompido não contamina o estado oficial nem quebra a inicialização",
+      "status": "passed",
+      "durationMs": 37.423
+    },
+    {
+      "name": "passagem do prazo não conclui tarefas automaticamente",
+      "status": "passed",
+      "durationMs": 47.382
+    },
+    {
+      "name": "pesquisa, contexto e fontes possuem busca com retorno vazio e recuperação",
+      "status": "passed",
+      "durationMs": 6.663
+    },
+    {
+      "name": "nenhuma interação testada acessou rede ou produziu exceção assíncrona",
+      "status": "passed",
+      "durationMs": 0.73
+    }
+  ]
+}

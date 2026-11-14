@@ -1,0 +1,501 @@
+{
+  "tasks": [
+    {
+      "id": "B01",
+      "title": "Apresentação e demonstrador verificados",
+      "track": "base",
+      "owner": "Frente de apresentação",
+      "status": "done",
+      "start": "2026-11-14T10:52:12Z",
+      "end": "2026-11-14T10:52:14Z",
+      "dependsOn": [],
+      "acceptance": [
+        "25 verificações DOM da apresentação aprovadas no recibo R5.",
+        "Mesmo motor e catálogo do jogo; sete quadros principais e oito apêndices."
+      ],
+      "evidence": [
+        "evidence/presentation-qa.json",
+        "presentation/README_APRESENTADOR.md"
+      ],
+      "description": "Marco histórico do recibo. A verificação DOM não equivale a um ensaio humano de apresentação.",
+      "priority": "P1",
+      "releaseGate": false
+    },
+    {
+      "id": "B02",
+      "title": "Mapa Archify e distribuição BETA verificados",
+      "track": "base",
+      "owner": "Arquitetura e QA",
+      "status": "done",
+      "start": "2026-11-14T11:37:33Z",
+      "end": "2026-11-14T11:38:11Z",
+      "dependsOn": [],
+      "acceptance": [
+        "25 verificações do mapa e 15 verificações da distribuição aprovadas na R6.",
+        "Motor e runtime preservados."
+      ],
+      "evidence": [
+        "evidence/architecture-checks-r6.json",
+        "evidence/beta-site-qa.json"
+      ],
+      "description": "Estado histórico da R6; os números desta rodada não são somados aos testes de motor.",
+      "priority": "P1",
+      "releaseGate": false
+    },
+    {
+      "id": "B03",
+      "title": "BETA 0.2 publicada na Vercel",
+      "track": "base",
+      "owner": "Coordenação técnica",
+      "status": "done",
+      "start": "2026-11-14T11:38:36Z",
+      "end": "2026-11-14T11:40:59Z",
+      "dependsOn": [
+        "B01",
+        "B02"
+      ],
+      "acceptance": [
+        "Deployment em READY, alvo production.",
+        "17 rotas conferidas: 16 respostas 200 e ausência 404 esperada."
+      ],
+      "evidence": [
+        "evidence/deployment-r6.json",
+        "evidence/vercel-static-r6.json"
+      ],
+      "description": "Publicação de referência já observada. A central R8 é um incremento documental sobre essa base.",
+      "priority": "P1",
+      "releaseGate": false
+    },
+    {
+      "id": "E01",
+      "title": "Consolidar contexto, pesquisa e razões da escolha",
+      "track": "entrega",
+      "owner": "Conteúdo e produto",
+      "status": "done",
+      "start": "2026-11-14T12:45:25Z",
+      "end": "2026-11-14T12:56:47.097703Z",
+      "dependsOn": [
+        "B03"
+      ],
+      "acceptance": [
+        "Oito temas comparados com critérios explícitos.",
+        "Escolha do usuário distinguida da justificativa e de fatos de competição.",
+        "Fontes e limitações localizáveis na central e no estudo integral."
+      ],
+      "evidence": [
+        "docs/18-CONTEXTO-COMPLETO.md"
+      ],
+      "description": "Reunir o registro disponível em uma narrativa verificável; não é uma transcrição literal de mensagens ausentes.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "E02",
+      "title": "Criar cronograma interativo e biblioteca integral",
+      "track": "entrega",
+      "owner": "Interface e engenharia",
+      "status": "done",
+      "start": "2026-11-14T12:45:25Z",
+      "end": "2026-11-14T12:56:47.097703Z",
+      "dependsOn": [
+        "B03"
+      ],
+      "acceptance": [
+        "Filtros, detalhes, dependências e prazo em BRT utilizáveis.",
+        "Marcações pessoais separadas do estado oficial.",
+        "HTML autocontido sem CDN; biblioteca com documentos integrais."
+      ],
+      "evidence": [
+        "context/index.html",
+        "context/research-library.html",
+        "evidence/context-qa-r8.json"
+      ],
+      "description": "Entregar instrumento de acompanhamento e consulta, preservando o corte temporal de cada fonte.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "E03",
+      "title": "Verificar central e preparar publicação R8",
+      "track": "entrega",
+      "owner": "QA e coordenação técnica",
+      "status": "done",
+      "start": "2026-11-14T12:58:06.544Z",
+      "end": "2026-11-14T13:30:03.562Z",
+      "dependsOn": [
+        "E01",
+        "E02"
+      ],
+      "acceptance": [
+        "Testes funcionais da central aprovados.",
+        "Links, CSP, dados e cópia do runtime conferidos.",
+        "Candidata identificada por commit e manifesto de distribuição; observação do deployment registrada separadamente após o envio."
+      ],
+      "evidence": [
+        "scripts/test-context-hub.mjs",
+        "scripts/test-beta-site.mjs",
+        "evidence/git-publication-r8.json",
+        "evidence/context-qa-r8.json",
+        "evidence/beta-site-qa.json"
+      ],
+      "description": "Verificação da candidata antes da publicação. O recibo de deployment registra separadamente o resultado observado no provedor.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "E04",
+      "title": "Criar repositório e enviar histórico ao GitHub",
+      "track": "entrega",
+      "owner": "AB e coordenação técnica",
+      "status": "done",
+      "start": "2026-11-14T12:45:25Z",
+      "end": "2026-11-14T13:30:03.562Z",
+      "dependsOn": [
+        "B03"
+      ],
+      "acceptance": [
+        "Repositório AB-NASA-TEAM-IPE na conta autorizada.",
+        "Conteúdo remoto e commit final conferidos; nenhum force-push."
+      ],
+      "evidence": [
+        "docs/17-PUBLICACAO-GIT-VERCEL.md",
+        "PUBLICADO.md",
+        "evidence/git-publication-r8.json"
+      ],
+      "description": "Repositório privado na conta oalexandrebelo. Importação integral confirmada: 315 arquivos, zero divergências. Relatório gzip e histórico em partes podem ser restaurados e verificados pelo comando documentado.",
+      "priority": "P0",
+      "releaseGate": false
+    },
+    {
+      "id": "P01",
+      "title": "Verificar compreensão no primeiro minuto",
+      "track": "produto",
+      "owner": "AB / UX Research",
+      "status": "planned",
+      "start": "2026-11-14T18:00:00Z",
+      "end": "2026-11-14T19:00:00Z",
+      "dependsOn": [
+        "E01"
+      ],
+      "acceptance": [
+        "Pessoa sem contexto inicia a missão sem orientação de operação.",
+        "Explica o objetivo de ciência entregue e localiza o resultado.",
+        "Observações e falhas registradas sem inferir aprendizagem a partir de satisfação."
+      ],
+      "evidence": [],
+      "description": "Ensaio exploratório com participante disponível; não substitui estudo de eficácia educacional.",
+      "priority": "P1",
+      "releaseGate": false
+    },
+    {
+      "id": "P02",
+      "title": "Ensaiar fluxo no equipamento real",
+      "track": "produto",
+      "owner": "Pessoa que apresenta e QA",
+      "status": "planned",
+      "start": "2026-11-14T21:00:00Z",
+      "end": "2026-11-14T22:00:00Z",
+      "dependsOn": [
+        "B03",
+        "E03"
+      ],
+      "acceptance": [
+        "Registrar dispositivo, navegador, resolução e origem.",
+        "Percorrer previsão, execução, diagnóstico, redesenho, exportação e importação.",
+        "Verificar foco, WebGL/alternativa 2D e persistência."
+      ],
+      "evidence": [],
+      "description": "Conferência manual do navegador e aparelho finais. Testes HTTP e DOM existentes não a substituem.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "P03",
+      "title": "Ensaiar apresentação curta e versão inglesa",
+      "track": "produto",
+      "owner": "AB / apresentação",
+      "status": "planned",
+      "start": "2026-11-14T22:00:00Z",
+      "end": "2026-11-14T23:00:00Z",
+      "dependsOn": [
+        "B01",
+        "P02"
+      ],
+      "acceptance": [
+        "Narrativa do problema à evidência reproduzível.",
+        "Texto inglês revisado e mídia final identificada.",
+        "Duração medida no formato efetivamente aceito pela organização."
+      ],
+      "evidence": [
+        "presentation/PITCH_EN_7_SLIDES.md",
+        "presentation/ROTEIRO_PT_EN.md"
+      ],
+      "description": "A versão inglesa escrita não prova que um vídeo ou deck inglês já foi exportado.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "P04",
+      "title": "Corrigir bloqueadores observados e congelar funções",
+      "track": "produto",
+      "owner": "Engenharia e produto",
+      "status": "planned",
+      "start": "2026-11-14T23:00:00Z",
+      "end": "2026-11-15T01:00:00Z",
+      "dependsOn": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "acceptance": [
+        "Corrigir somente falhas observadas de acesso, compreensão e apresentação.",
+        "Revalidar a camada afetada.",
+        "Evitar novas funções no motor após o corte."
+      ],
+      "evidence": [],
+      "description": "Adotar a última candidata válida se um incremento introduzir regressão.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "R01",
+      "title": "Conferência final da candidata",
+      "track": "release",
+      "owner": "QA / release",
+      "status": "planned",
+      "start": "2026-11-15T10:00:00Z",
+      "end": "2026-11-15T10:30:00Z",
+      "dependsOn": [
+        "P04"
+      ],
+      "acceptance": [
+        "Abrir URLs e conferir versão servida.",
+        "Confirmar dados, fontes, declaração de IA e limitações.",
+        "Verificar modo de recuperação e referências imutáveis."
+      ],
+      "evidence": [
+        "docs/15-PLANO-RELEASE-20261115-0800.md"
+      ],
+      "description": "Janela local de 07h a 07h30 BRT. Não marca tarefas anteriores como concluídas automaticamente.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "R02",
+      "title": "Aceitar release às 08h BRT",
+      "track": "release",
+      "owner": "AB / coordenação",
+      "status": "planned",
+      "start": "2026-11-15T10:30:00Z",
+      "end": "2026-11-15T11:00:00Z",
+      "dependsOn": [
+        "R01"
+      ],
+      "acceptance": [
+        "Responsável registra aceite ou pendências.",
+        "Commit e deployment aceitos identificados.",
+        "Sem bloqueador conhecido no fluxo principal; caso contrário conservar BETA."
+      ],
+      "evidence": [
+        "docs/15-PLANO-RELEASE-20261115-0800.md"
+      ],
+      "description": "Meta interna em 15/11/2026, 08h de Brasília. Não equivale ao prazo de submissão do Space Apps.",
+      "priority": "P0",
+      "releaseGate": true
+    },
+    {
+      "id": "C01",
+      "title": "Resolver elegibilidade temporal e Resources",
+      "track": "concurso",
+      "owner": "Responsável pela candidatura",
+      "status": "blocked",
+      "start": "2026-11-14T15:00:00Z",
+      "end": "2026-11-15T18:00:00Z",
+      "dependsOn": [],
+      "acceptance": [
+        "Obter orientação da organização sobre desenvolvimento anterior ao início oficial.",
+        "Conferir fonte NASA na lista oficial de Resources do desafio.",
+        "Registrar fonte e decisão sem presumir dispensa."
+      ],
+      "evidence": [
+        "research/11-revisao-spaceapps-apresentacao.md",
+        "evidence/chronology.json"
+      ],
+      "description": "A publicação de P&D continua independente; a candidatura exige fechamento desses pontos.",
+      "priority": "P0",
+      "releaseGate": false
+    },
+    {
+      "id": "C02",
+      "title": "Conferir formato e eventual submissão",
+      "track": "concurso",
+      "owner": "Equipe inscrita / candidatura",
+      "status": "planned",
+      "start": "2026-11-15T18:00:00Z",
+      "end": "2026-11-15T20:00:00Z",
+      "dependsOn": [
+        "C01",
+        "P03"
+      ],
+      "acceptance": [
+        "Conferir formulário e guia oficiais vigentes.",
+        "Validar idioma, tamanho da equipe, autoria e mídia.",
+        "Guardar recibo somente se o envio for realizado."
+      ],
+      "evidence": [],
+      "description": "Janela interna de preparação. Nenhuma inscrição, contato externo ou submissão foi executada pela central.",
+      "priority": "P0",
+      "releaseGate": false
+    },
+    {
+      "id": "F01",
+      "title": "Medir transferência de aprendizagem",
+      "track": "evolucao",
+      "owner": "UX Research e educação",
+      "status": "planned",
+      "start": "2026-11-16T12:00:00Z",
+      "end": "2026-11-20T21:00:00Z",
+      "dependsOn": [
+        "R02"
+      ],
+      "acceptance": [
+        "Desenho de avaliação e critérios de sucesso definidos antes da coleta.",
+        "Comparar previsão e redesenho em cenário não visto.",
+        "Separar compreensão, satisfação e resultado de aprendizagem."
+      ],
+      "evidence": [],
+      "description": "Prioridade pós-corte antes de prometer eficácia educacional.",
+      "priority": "P1",
+      "releaseGate": false
+    },
+    {
+      "id": "F02",
+      "title": "Avaliar tutor compacto local contra regras",
+      "track": "evolucao",
+      "owner": "IA aplicada e QA",
+      "status": "planned",
+      "start": "2026-11-23T12:00:00Z",
+      "end": "2026-11-27T21:00:00Z",
+      "dependsOn": [
+        "F01"
+      ],
+      "acceptance": [
+        "Corpus pt-BR representativo e split fixado.",
+        "Comparar acurácia, abstinência, latência e memória com baseline editorial.",
+        "Nenhum modelo altera física, nota científica ou ações sem validação."
+      ],
+      "evidence": [
+        "research/02-fastino-anexos.md"
+      ],
+      "description": "GLiNER/GLiDE são candidatos de pesquisa; não integram a BETA. Datas são proposta de sequência, sem compromisso automático.",
+      "priority": "P2",
+      "releaseGate": false
+    },
+    {
+      "id": "F03",
+      "title": "Investigar agenda orbital e novos pacotes de ciência",
+      "track": "evolucao",
+      "owner": "Engenharia e ciência",
+      "status": "planned",
+      "start": "2026-11-23T12:00:00Z",
+      "end": "2026-12-04T21:00:00Z",
+      "dependsOn": [
+        "F01"
+      ],
+      "acceptance": [
+        "Escolher modelo e referência independente para efemérides.",
+        "Versionar pacote, unidades e critérios de qualidade.",
+        "Definir cenário próprio antes de introduzir Marte."
+      ],
+      "evidence": [
+        "research/04-motor.md",
+        "research/08-auditoria-repositorios.md"
+      ],
+      "description": "Evolução condicionada a validação e escopo próprio; não ampliar a BETA apenas por disponibilidade de biblioteca.",
+      "priority": "P2",
+      "releaseGate": false
+    }
+  ],
+  "tracks": [
+    {
+      "id": "base",
+      "label": "Base já verificada"
+    },
+    {
+      "id": "entrega",
+      "label": "Contexto e publicação"
+    },
+    {
+      "id": "produto",
+      "label": "Experiência e demonstração"
+    },
+    {
+      "id": "release",
+      "label": "Corte de release"
+    },
+    {
+      "id": "concurso",
+      "label": "Candidatura ao Space Apps"
+    },
+    {
+      "id": "evolucao",
+      "label": "Evolução após o corte"
+    }
+  ],
+  "gates": [
+    {
+      "id": "G1",
+      "title": "Integridade da base",
+      "status": "done",
+      "criterion": "Motor, apresentação e dados preservados; distribuição de referência identificada.",
+      "taskIds": [
+        "B01",
+        "B02",
+        "B03"
+      ]
+    },
+    {
+      "id": "G2",
+      "title": "Central documentada e verificada",
+      "status": "done",
+      "criterion": "Contexto rastreável, cronograma funcional e recibo de verificação da nova candidata.",
+      "taskIds": [
+        "E01",
+        "E02",
+        "E03"
+      ]
+    },
+    {
+      "id": "G3",
+      "title": "Ensaio e aceite de release",
+      "status": "planned",
+      "criterion": "Jornada real, mídia e candidata final aceitas por responsável.",
+      "taskIds": [
+        "P02",
+        "P03",
+        "P04",
+        "R01",
+        "R02"
+      ]
+    },
+    {
+      "id": "G4",
+      "title": "Publicação GitHub",
+      "status": "done",
+      "criterion": "Repositório e conteúdo remoto confirmados após concluir o acesso.",
+      "taskIds": [
+        "E04"
+      ]
+    },
+    {
+      "id": "G5",
+      "title": "Candidatura ao concurso",
+      "status": "blocked",
+      "criterion": "Elegibilidade, Resources e formulário vigentes conferidos antes de eventual envio.",
+      "taskIds": [
+        "C01",
+        "C02"
+      ]
+    }
+  ]
+}

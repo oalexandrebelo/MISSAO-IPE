@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "edition": "R8",
+  "status": "passed_with_scope_limits",
+  "recordedAt": "2026-11-14T13:38:22.808Z",
+  "scope": "Observed desktop browser interaction through CUA Cloud Chrome on the immutable Vercel deployment. Not a device, mobile, learning or full-game qualification.",
+  "environment": {
+    "browser": "Cloud Chrome via CUA",
+    "tabId": "13",
+    "nativeScreenshotsObserved": true,
+    "applicationLoginUsed": false
+  },
+  "attempts": [
+    {
+      "surface": "Browser extension",
+      "outcome": "unavailable",
+      "reason": "Browser access requires the originating browser context"
+    },
+    {
+      "surface": "Cloud Chrome via CUA",
+      "url": "http://127.0.0.1:4175/context/index.html",
+      "outcome": "connection_refused",
+      "reason": "net::ERR_CONNECTION_REFUSED",
+      "tabId": "12"
+    }
+  ],
+  "testedDeployment": {
+    "entryUrl": "https://ab-nasa-team-ijunv263k-alexandrebelo.vercel.app/context/index.html",
+    "stableObservedUrl": "https://ab-nasa-team-ipe.vercel.app/context/index.html",
+    "htmlSha256ReportedByCoordinator": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+    "hashVerificationOwner": "Publication coordinator; this front inspected rendered UI.",
+    "retestScope": "Opening without fragment and direct #overview / #schedule anchors only; prior functional observations remain attached to the initial deployment."
+  },
+  "observations": [
+    {
+      "id": "VIS-01",
+      "outcome": "issue_found",
+      "action": "Open central URL without fragment",
+      "observed": "The URL normalized to #overview; native fragment positioning placed the initial heading behind the sticky header. First screenshot showed only the lower title line. Control+Home restored the full hero."
+    },
+    {
+      "id": "VIS-02",
+      "outcome": "passed",
+      "action": "Measure visible header and switch to Cronograma from page top",
+      "observed": "Read-only DOM observation: header position sticky, height 66px, top 0. Cronograma heading and controls were fully visible after this tab switch."
+    },
+    {
+      "id": "VIS-03",
+      "outcome": "passed",
+      "action": "Inspect release timeline",
+      "observed": "14 of 18 tasks shown for Até o corte. Legend, owners by track and planned/blocked/completed distinctions rendered. Short task bars truncate text and retain tooltips; the list is the readable alternative."
+    },
+    {
+      "id": "VIS-04",
+      "outcome": "passed",
+      "action": "Combine Bloqueado and Candidatura ao Space Apps filters; switch to list",
+      "observed": "One task remained, Resolver elegibilidade temporal e Resources. Its title, owner, dates, track and local checkbox were readable."
+    },
+    {
+      "id": "VIS-05",
+      "outcome": "passed",
+      "action": "Open C01 task details",
+      "observed": "Native modal showed status, owner, time window, dependencies, acceptance criteria and evidence paths. Focus was reported on the close button. Closing restored the task button."
+    },
+    {
+      "id": "VIS-06",
+      "outcome": "passed",
+      "action": "Check personal confirmation and close modal",
+      "observed": "Personal progress changed from 0/18 to 1/18; official status remained 7 completed of 18 at the documented cutoff. The checkbox was subsequently unchecked, restoring local 0/18."
+    },
+    {
+      "id": "VIS-07",
+      "outcome": "passed",
+      "action": "Select all phases and search for a nonexistent task",
+      "observed": "0 of 18 tasks and explicit empty-state text. Clearing the query restored 18 of 18 tasks."
+    },
+    {
+      "id": "VIS-08",
+      "outcome": "passed",
+      "action": "Open Contexto completo and follow the integral library link",
+      "observed": "Context section exposed 14 chapters and the library opened with 43 documents, provenance text, Markdown download, index/hash link and print control."
+    },
+    {
+      "id": "VIS-09",
+      "outcome": "passed",
+      "action": "Search library for Schema Prisma and select document 07",
+      "observed": "The index reduced to 5 of 43 documents. Selection updated the fragment and exposed document 07 with its source/hash metadata and readable relational-model table. Read-only DOM confirmed document 01 display none and document 07 display block."
+    },
+    {
+      "id": "VIS-10",
+      "outcome": "passed",
+      "action": "Return to central and follow Jogar",
+      "observed": "Game observatory opened with introductory copy, long/short contact choices, source controls and mission-start control. This was an opening check, not a complete mission run."
+    },
+    {
+      "id": "VIS-11",
+      "outcome": "limited",
+      "action": "Inspect captured browser error/warning logs",
+      "observed": "Sample included browser-extension metadata errors and THREE.WebGLRenderer context-creation errors reporting GL_RENDERER Disabled. These do not establish performance on AB hardware; 3D acceleration was not qualified."
+    },
+    {
+      "id": "VIS-12",
+      "outcome": "passed",
+      "action": "Return to central and conclude browser phase",
+      "observed": "Central #overview was marked as the user-facing deliverable. CUA completion_summary was sent. No external message, login, build or source edit occurred in this browser phase."
+    }
+  ],
+  "findings": [
+    {
+      "id": "R8-VIS-ANCHOR-01",
+      "severity": "usability",
+      "status": "resolved_and_retested",
+      "page": "context/index.html",
+      "description": "Initial #overview heading is partly occluded by the 66px sticky header.",
+      "reproduction": "Open the central entry URL without a fragment in a fresh navigation.",
+      "recoveryObserved": "Control+Home restores the whole hero.",
+      "recommendation": "Account for sticky-header height in fragment positioning and preserve deep-link destinations; coordinator is applying the fix.",
+      "resolution": "Coordinator published anchor-offset and initialization correction; the narrow browser retest above observed the title below the sticky header in all requested cases."
+    }
+  ],
+  "screenshots": {
+    "capturedForInspection": 13,
+    "savedInRepository": false,
+    "includedInZip": false,
+    "note": "Screenshots were inspected in the browser tool output only. No screenshot file was placed in the versioned project or deliverable ZIP."
+  },
+  "limitations": [
+    "The corrected deployment received only the requested anchor/title retest. Other interaction observations belong to the initial deployment and were not repeated after the scoped visual fix.",
+    "Desktop Cloud Chrome only; no mobile layout, screen reader, keyboard-complete accessibility audit or print-output inspection.",
+    "No benchmark or rehearsal on AB equipment, no FPS or GPU qualification, no cold-offline run.",
+    "No human learning study or contest eligibility decision.",
+    "Game opening was inspected; no new full mission or scientific validation was performed.",
+    "The error log sample was limited to 20 recent error/warning entries; it is not a complete console audit."
+  ],
+  "initialDeployment": {
+    "entryUrl": "https://ab-nasa-team-kq8yu5q00-alexandrebelo.vercel.app/context/index.html",
+    "centralObservedUrl": "https://ab-nasa-team-kq8yu5q00-alexandrebelo.vercel.app/context/index.html#overview",
+    "libraryObservedUrl": "https://ab-nasa-team-kq8yu5q00-alexandrebelo.vercel.app/context/research-library.html#doc-docs-07-schema-prisma-md",
+    "gameObservedUrl": "https://ab-nasa-team-kq8yu5q00-alexandrebelo.vercel.app/game/index.html",
+    "htmlSha256ReportedByCoordinator": "31fca07334657c3ba2b129baa7243ef3891910d8581e9ff0bd432ba4b269fc7d",
+    "hashVerificationOwner": "Publication coordinator; this front inspected the rendered interface."
+  },
+  "retest": {
+    "observedAt": "2026-11-14T13:38:22.808Z",
+    "result": "passed",
+    "header": {
+      "position": "sticky",
+      "heightPx": 66,
+      "topPx": 0,
+      "bottomPx": 66
+    },
+    "cases": [
+      {
+        "url": "https://ab-nasa-team-ijunv263k-alexandrebelo.vercel.app/context/index.html",
+        "outcome": "passed",
+        "observed": "URL remained without a fragment. Full hero title visible beneath the header.",
+        "headingTopPx": 169.15625,
+        "headingBottomPx": 304.0625
+      },
+      {
+        "url": "https://ab-nasa-team-ijunv263k-alexandrebelo.vercel.app/context/index.html#overview",
+        "outcome": "passed",
+        "observed": "Both heading lines visible; direct-link target remained below the sticky header.",
+        "headingTopPx": 102.15625,
+        "headingBottomPx": 237.0625
+      },
+      {
+        "url": "https://ab-nasa-team-ijunv263k-alexandrebelo.vercel.app/context/index.html#schedule",
+        "outcome": "passed",
+        "observed": "Cronograma heading visible below the header, correct tab selected, timeline and filters rendered.",
+        "headingTopPx": 100.03125,
+        "headingBottomPx": 159.984375
+      },
+      {
+        "url": "https://ab-nasa-team-ipe.vercel.app/context/index.html",
+        "outcome": "passed",
+        "observed": "Stable alias opened the complete hero without a fragment; marked as deliverable.",
+        "headingTopPx": 169.15625
+      }
+    ],
+    "completionSummarySent": "Validou os títulos da central",
+    "sourcesModifiedByThisFront": false,
+    "buildsRunByThisFront": false
+  },
+  "summary": {
+    "initialObservations": 12,
+    "initialPassed": 10,
+    "initialEnvironmentLimited": 1,
+    "initialIssuesFound": 1,
+    "resolvedFindings": 1,
+    "openFindings": 0,
+    "retestCasesPassed": 4
+  }
+}

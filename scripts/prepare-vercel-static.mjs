@@ -1,0 +1,81 @@
+import { readFile, writeFile, mkdir, readdir, lstat } from 'node:fs/promises';
+import { resolve, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const site = resolve(root, 'site');
+const files = [];
+async function walk(folder) {
+  for (const entry of await readdir(folder, { withFileTypes: true })) {
+    const path = resolve(folder, entry.name);
+    if ((await lstat(path)).isSymbolicLink()) throw new Error(`Symlink proibido na publicação: ${relative(site, path)}`);
+    if (entry.isDirectory()) await walk(path);
+    else if (entry.isFile()) files.push(path);
+  }
+}
+await walk(site);
+files.sort();
+const required = ['index.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
+for (const file of required) await readFile(resolve(site, file));
+const inlineHashes = new Set();
+let executableScripts = 0;
+for (const path of files.filter(f => f.endsWith('.html'))) {
+  const html = await readFile(path, 'utf8');
+  for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
+    if (/\bsrc\s*=/i.test(match[1]) || /\btype\s*=\s*["'](?:application\/(?:ld\+)?json|text\/plain)["']/i.test(match[1])) continue;
+    if (match[2].trim()) {
+      inlineHashes.add(`'sha256-${createHash('sha256').update(match[2], 'utf8').digest('base64')}'`);
+      executableScripts++;
+    }
+  }
+}
+const csp = [
+  "default-src 'self'", `script-src 'self' ${[...inlineHashes].sort().join(' ')}`,
+  "script-src-attr 'none'", "style-src 'self' 'unsafe-inline'", "img-src 'self' data: blob:",
+  "font-src 'self' data:", "connect-src 'self'", "worker-src 'self' blob:",
+  "media-src 'self' blob:", "object-src 'none'", "base-uri 'none'",
+  "frame-ancestors 'none'", "form-action 'none'"
+].join('; ');
+if (Buffer.byteLength(csp) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
+const routeConfig = {
+  $schema: 'https://openapi.vercel.sh/vercel.json',
+  cleanUrls: false,
+  trailingSlash: false,
+  redirects: [
+    { source: '/game', destination: '/game/index.html', permanent: false },
+    { source: '/jogar', destination: '/lab/index.html', permanent: false },
+    { source: '/lab', destination: '/lab/index.html', permanent: false },
+    { source: '/architecture', destination: '/architecture/index.html', permanent: false },
+    { source: '/arquitetura', destination: '/architecture/index.html', permanent: false },
+    { source: '/apresentacao', destination: '/presentation/Missao_Ipe_Apresentacao.html', permanent: false },
+    { source: '/docs', destination: '/docs/index.html', permanent: false },
+    { source: '/documentacao', destination: '/docs/index.html', permanent: false },
+    { source: '/contexto', destination: '/context/index.html', permanent: false },
+    { source: '/cronograma', destination: '/context/index.html', permanent: false },
+    { source: '/estudo', destination: '/context/research-library.html', permanent: false }
+  ],
+  headers: [
+    { source: '/(.*)', headers: [
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'X-Frame-Options', value: 'DENY' },
+      { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+      { key: 'Content-Security-Policy', value: csp },
+      { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }
+    ] },
+    { source: '/game/assets/(.*)', headers: [ { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' } ] }
+  ]
+};
+const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund', outputDirectory: 'site' };
+await writeFile(resolve(root, 'vercel.json'), JSON.stringify(config, null, 2) + '\n');
+await mkdir(resolve(root, '.vercel'), { recursive: true });
+const staticConfigPath = resolve(root, '.vercel/deploy-config.json');
+await writeFile(staticConfigPath, JSON.stringify(routeConfig, null, 2) + '\n');
+const upload = [];
+for (const path of [...files, staticConfigPath]) {
+  const buffer = await readFile(path);
+  upload.push({ file: path === staticConfigPath ? 'vercel.json' : relative(site, path).replaceAll('\\', '/'), source: relative(root, path).replaceAll('\\', '/'), size: buffer.length, sha: createHash('sha1').update(buffer).digest('hex'), sha256: createHash('sha256').update(buffer).digest('hex') });
+}
+await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version: '0.4.0-beta.2', files: upload }, null, 2) + '\n');
+console.log(JSON.stringify({ files: upload.length, bytes: upload.reduce((a,f)=>a+f.size,0), executableInlineScripts: executableScripts, uniqueInlineHashes: inlineHashes.size, cspBytes: Buffer.byteLength(csp), config: 'vercel.json', uploadManifest: '.vercel/upload-manifest.json' }, null, 2));

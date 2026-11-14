@@ -1,0 +1,305 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1070,
+    770
+  ],
+  "components": [
+    {
+      "id": "app",
+      "type": "frontend",
+      "label": "Jogo React",
+      "x": 40,
+      "y": 80,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        40,
+        80
+      ]
+    },
+    {
+      "id": "client",
+      "type": "backend",
+      "label": "Cliente do Worker",
+      "x": 420,
+      "y": 80,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        420,
+        80
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "messagebus",
+      "label": "Worker de missão",
+      "x": 800,
+      "y": 80,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        800,
+        80
+      ]
+    },
+    {
+      "id": "persistence",
+      "type": "database",
+      "label": "Persistência local",
+      "x": 40,
+      "y": 350,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        40,
+        350
+      ]
+    },
+    {
+      "id": "core",
+      "type": "backend",
+      "label": "Motor + busca",
+      "x": 800,
+      "y": 350,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        800,
+        350
+      ]
+    },
+    {
+      "id": "presentation",
+      "type": "frontend",
+      "label": "Apresentação HTML",
+      "x": 420,
+      "y": 620,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        420,
+        620
+      ]
+    },
+    {
+      "id": "science",
+      "type": "database",
+      "label": "Ciência congelada",
+      "x": 800,
+      "y": 620,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        800,
+        620
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "app",
+      "to": "client",
+      "label": "simular / buscar",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          270,
+          121
+        ],
+        [
+          420,
+          121
+        ]
+      ],
+      "labelAt": [
+        345,
+        111
+      ]
+    },
+    {
+      "from": "client",
+      "to": "worker",
+      "label": "mensagem",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          650,
+          121
+        ],
+        [
+          800,
+          121
+        ]
+      ],
+      "labelAt": [
+        725,
+        111
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "core",
+      "label": "executar",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          915,
+          162
+        ],
+        [
+          915,
+          350
+        ]
+      ],
+      "labelAt": [
+        885,
+        259
+      ]
+    },
+    {
+      "from": "app",
+      "to": "persistence",
+      "label": "salvar / importar",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          155,
+          162
+        ],
+        [
+          155,
+          350
+        ]
+      ],
+      "labelAt": [
+        103,
+        259
+      ]
+    },
+    {
+      "from": "presentation",
+      "to": "core",
+      "label": "demonstrar",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          634,
+          620
+        ],
+        [
+          634,
+          416
+        ],
+        [
+          800,
+          416
+        ]
+      ],
+      "labelAt": [
+        717,
+        406
+      ]
+    },
+    {
+      "from": "core",
+      "to": "science",
+      "label": "validar registros",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          915,
+          432
+        ],
+        [
+          915,
+          620
+        ]
+      ],
+      "labelAt": [
+        863,
+        529
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "simular / buscar",
+      "x": 302,
+      "y": 101,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        345,
+        111
+      ]
+    },
+    {
+      "text": "mensagem",
+      "x": 701,
+      "y": 101,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        725,
+        111
+      ]
+    },
+    {
+      "text": "executar",
+      "x": 861,
+      "y": 249,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        885,
+        259
+      ]
+    },
+    {
+      "text": "salvar / importar",
+      "x": 57,
+      "y": 249,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        103,
+        259
+      ]
+    },
+    {
+      "text": "demonstrar",
+      "x": 688,
+      "y": 396,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        717,
+        406
+      ]
+    },
+    {
+      "text": "validar registros",
+      "x": 817,
+      "y": 519,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        863,
+        529
+      ]
+    }
+  ]
+}

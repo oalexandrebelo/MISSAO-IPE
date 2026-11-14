@@ -1,0 +1,26 @@
+node_modules
+*.sqlite*
+*.db*
+.env*
+!.env.example
+playwright-report/
+test-results/
+site/
+.vercel/
+output/packages/
+__pycache__/
+
+.site-build-r6/
+
+# Lossless archives are versioned; these original forms are restored locally.
+evidence/ab-r3a-analysis.json
+recovery/*.bundle
+recovery/*.tmp
+
+# Public distribution: private recovery and hosting state stay at the source.
+.openai/
+**/.openai/
+recovery/
+references/user/
+evidence/ab-r3a-analysis.json.gz
+*.map

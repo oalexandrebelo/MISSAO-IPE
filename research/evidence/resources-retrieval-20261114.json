@@ -1,0 +1,102 @@
+{
+  "recordedAt": "2026-11-14T08:31:53.989646+00:00",
+  "officialResourcesListRecovered": false,
+  "authorityStatus": "OPEN_NOT_VERIFIED",
+  "scope": "Read-only public retrieval; no authentication, messages or publication",
+  "attempts": [
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/",
+      "method": "web.open and official link from secondary mirror",
+      "result": "502 Bad Gateway",
+      "sessionSourceRefs": [
+        "turn210view2",
+        "turn239view2"
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "method": "web.open",
+      "result": "Not accessible via tool",
+      "sessionSourceRefs": [
+        "turn210view3",
+        "turn221view0"
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "method": "urllib.request.urlopen(timeout=25)",
+      "attemptStartedAt": "2026-11-14T08:25:08.731199+00:00",
+      "result": "HTTPError HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "method": "web.open",
+      "result": "Not accessible via tool",
+      "sessionSourceRefs": [
+        "turn221view1"
+      ]
+    },
+    {
+      "url": "https://staging-web-v2.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "method": "web.open",
+      "result": "Not accessible via tool",
+      "sessionSourceRefs": [
+        "turn221view2"
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/resources/team-formation-guide/",
+      "method": "web.open",
+      "result": "502 Bad Gateway",
+      "sessionSourceRefs": [
+        "turn221view3"
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/resources/project-submission-guide/",
+      "method": "web.open",
+      "result": "502 Bad Gateway",
+      "sessionSourceRefs": [
+        "turn221view4"
+      ]
+    }
+  ],
+  "secondaryMirror": {
+    "url": "https://hackathlone.com/challenges/space-mission-design-game",
+    "retrieved": true,
+    "listedResourceCount": 9,
+    "canCertifyOfficialList": false,
+    "sessionSourceRef": "turn232view0"
+  },
+  "primaryScienceRecovered": [
+    {
+      "url": "https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf",
+      "sessionSourceRefs": [
+        "turn234view0",
+        "turn250view0"
+      ],
+      "note": "Text retrieved and EVI equation visually checked on PDF page index 5"
+    },
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/20250002492/downloads/Design%20and%20Develop%20Science%20Mission_03262025.pdf",
+      "sessionSourceRefs": [
+        "turn239view1"
+      ],
+      "pages": 29,
+      "note": "Different edition from April NASA upload; do not equate hashes/pages"
+    },
+    {
+      "url": "https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf",
+      "sessionSourceRefs": [
+        "turn245view0"
+      ],
+      "pages": 96,
+      "edition": "October 2017"
+    }
+  ],
+  "limits": [
+    "A fetch failure does not imply universal downtime.",
+    "Search cache metadata and secondary mirrors do not establish current official Resources contents.",
+    "Source references are session provenance only; canonical URLs are provided."
+  ]
+}

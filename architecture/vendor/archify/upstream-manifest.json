@@ -1,0 +1,258 @@
+{
+  "upstream": "https://github.com/tt-a1i/archify",
+  "commit": "e37848822238e3a61b12739185cdadd49843a620",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "chars": 11358
+    },
+    {
+      "path": "LICENSE-MIT",
+      "sha": "0f9f9397a0496ef63c7d555d36b40c3f932aff84",
+      "size": 1102,
+      "chars": 1102
+    },
+    {
+      "path": "NOTICE",
+      "sha": "b63fbccce2291058a9f4abec9d64b57b527e44d7",
+      "size": 1340,
+      "chars": 1340
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha": "4060ce3d7ad11ab81a2f3915d970a8f951dcfc28",
+      "size": 5669,
+      "chars": 5669
+    },
+    {
+      "path": "assets/JetBrainsMono-OFL.txt",
+      "sha": "675d198b74b6f10b5ca149e6a21cf06dcc46b676",
+      "size": 4398,
+      "chars": 4398
+    },
+    {
+      "path": "assets/template.html",
+      "sha": "51da6984ee79385535ff137ca56dfd034bcd3418",
+      "size": 787334,
+      "chars": 787157
+    },
+    {
+      "path": "locales/en.json",
+      "sha": "ce8c4c72cef31df683590d544327d8a3e1512052",
+      "size": 27386,
+      "chars": 27326
+    },
+    {
+      "path": "locales/manifest.json",
+      "sha": "34080e03359e03ce46cae8fde4b7a8732bf14ac1",
+      "size": 293,
+      "chars": 293
+    },
+    {
+      "path": "renderers/architecture/grid.mjs",
+      "sha": "807a1b860f531bab0ee217af19e6887fbbade398",
+      "size": 2071,
+      "chars": 2069
+    },
+    {
+      "path": "renderers/architecture/labels.mjs",
+      "sha": "6f0076b10c1d7163d215f3c0f1ebff8e671bf6e2",
+      "size": 155,
+      "chars": 155
+    },
+    {
+      "path": "renderers/architecture/render-architecture.mjs",
+      "sha": "8269df98b54d55c1ecce3027a51e323bc24e04b9",
+      "size": 58551,
+      "chars": 58493
+    },
+    {
+      "path": "renderers/architecture/routing.mjs",
+      "sha": "31c86024dad4854f78c32fdfde078081ca9456b1",
+      "size": 74482,
+      "chars": 74482
+    },
+    {
+      "path": "renderers/shared/atomic-output.mjs",
+      "sha": "8895d70d9d524394d6db375755977421bd39e20b",
+      "size": 70372,
+      "chars": 70372
+    },
+    {
+      "path": "renderers/shared/automatic-labels.mjs",
+      "sha": "85b1bd17f4b1cb0fd759bf40d0ed1022210167eb",
+      "size": 14771,
+      "chars": 14771
+    },
+    {
+      "path": "renderers/shared/brand-marks.mjs",
+      "sha": "869feaef416a163fb82e2ad7bbd825a343f10745",
+      "size": 28938,
+      "chars": 28936
+    },
+    {
+      "path": "renderers/shared/cli.mjs",
+      "sha": "d6589ed557908c2d596a25e1cd94dc1116372b45",
+      "size": 19047,
+      "chars": 19042
+    },
+    {
+      "path": "renderers/shared/desktop-readability.mjs",
+      "sha": "d4d1d0ec5bee5c4b1062c7a108c6bbab41ac74bf",
+      "size": 6929,
+      "chars": 6929
+    },
+    {
+      "path": "renderers/shared/diagnostics.mjs",
+      "sha": "9fbd25d557f47f64b142b2d5393ee921d6f337cd",
+      "size": 8272,
+      "chars": 8272
+    },
+    {
+      "path": "renderers/shared/engineering-profiles.mjs",
+      "sha": "76e3166aa19cbd23cc2187f16b0c120280ef4d48",
+      "size": 6936,
+      "chars": 6936
+    },
+    {
+      "path": "renderers/shared/generated-brand-marks.mjs",
+      "sha": "69dbb7c1c290f28620705486ecacba4d2184f634",
+      "size": 163612,
+      "chars": 163604
+    },
+    {
+      "path": "renderers/shared/generated-validators.mjs",
+      "sha": "2ce023ef13b3aa5df7f81def9219ab8798a5bd66",
+      "size": 1020040,
+      "chars": 1020027
+    },
+    {
+      "path": "renderers/shared/geometry.mjs",
+      "sha": "2568540140f1964307d7dbe3a1619c3f6d315339",
+      "size": 89929,
+      "chars": 89901
+    },
+    {
+      "path": "renderers/shared/i18n.mjs",
+      "sha": "6eee0b506c4c05f5ec144b24d56c1ea557fcf812",
+      "size": 13869,
+      "chars": 13865
+    },
+    {
+      "path": "renderers/shared/layout-report.mjs",
+      "sha": "6043316d5e4a6754d0af6975db7bf55e7d0a197d",
+      "size": 1587,
+      "chars": 1587
+    },
+    {
+      "path": "renderers/shared/legend.mjs",
+      "sha": "13bf15e9eb8335e3c053ee4b30d7f348e49ec34d",
+      "size": 9225,
+      "chars": 9225
+    },
+    {
+      "path": "renderers/shared/node-card-style.mjs",
+      "sha": "f3446ad0d7e2036e1671e9734a748c7ae1faad29",
+      "size": 2470,
+      "chars": 2470
+    },
+    {
+      "path": "renderers/shared/output-path.mjs",
+      "sha": "372249d628f400a76951d0178cc88a20c062687c",
+      "size": 19029,
+      "chars": 19029
+    },
+    {
+      "path": "renderers/shared/owned-temp-directory.mjs",
+      "sha": "cc910f094828fac6beb150d40f6af4a3bdf71ebd",
+      "size": 3198,
+      "chars": 3198
+    },
+    {
+      "path": "renderers/shared/path-semantics.mjs",
+      "sha": "59dc039c1737122b0fd116f40a51155cf267ffd8",
+      "size": 32406,
+      "chars": 32400
+    },
+    {
+      "path": "renderers/shared/portable-path.mjs",
+      "sha": "e9f8df9dbf097a165cdde67cba9d60b96553294d",
+      "size": 12543,
+      "chars": 12537
+    },
+    {
+      "path": "renderers/shared/repository-evidence.mjs",
+      "sha": "3368d1308f70e7bb5496d9d25187c0c8fe07fe0f",
+      "size": 20342,
+      "chars": 20290
+    },
+    {
+      "path": "renderers/shared/repository-location.mjs",
+      "sha": "7a36226d2144cdbe0ded72e2bfb192c0e209771f",
+      "size": 4349,
+      "chars": 4349
+    },
+    {
+      "path": "renderers/shared/route-quality.mjs",
+      "sha": "01f585f7c3b9f71285172ab8dc02305c6b04798c",
+      "size": 26944,
+      "chars": 26942
+    },
+    {
+      "path": "renderers/shared/sidecar-path.mjs",
+      "sha": "32e73601f9f05d4ff0e5fbd432dd5ebabfe8a0c4",
+      "size": 1269,
+      "chars": 1269
+    },
+    {
+      "path": "renderers/shared/software-notices.mjs",
+      "sha": "4e2802fe332b5a9660c8576ccac3f487332fc86b",
+      "size": 506,
+      "chars": 506
+    },
+    {
+      "path": "renderers/shared/spatial-grid.mjs",
+      "sha": "d2eb43961110be72a34d92804299de60e6d03126",
+      "size": 2440,
+      "chars": 2440
+    },
+    {
+      "path": "renderers/shared/svg-path-analysis.mjs",
+      "sha": "e77c2b691a86850e8bdad3c4c01070fd46822ed3",
+      "size": 5429,
+      "chars": 5217
+    },
+    {
+      "path": "renderers/shared/text-fit.mjs",
+      "sha": "860356a4c9709af3175e4f6e51393c772b0e8616",
+      "size": 5195,
+      "chars": 5191
+    },
+    {
+      "path": "renderers/shared/utils.mjs",
+      "sha": "81c1249387ef479be33599e0b2b40d24fc824c4f",
+      "size": 12972,
+      "chars": 12970
+    },
+    {
+      "path": "renderers/shared/validator.mjs",
+      "sha": "ad0a331c3d69024096ecf77a3a2baf1c569ce9ce",
+      "size": 3336,
+      "chars": 3336
+    },
+    {
+      "path": "schemas/architecture.schema.json",
+      "sha": "5fe3b8ecec4c76b7229bef83a13cb170fcc3fed5",
+      "size": 6024,
+      "chars": 6024
+    },
+    {
+      "path": "schemas/common.schema.json",
+      "sha": "a8a0ccc19b6392b3a78435abc2afbde9889ae3b2",
+      "size": 5785,
+      "chars": 5779
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.15",nodesep="0.22",ranksep="0.30",margin="0"];
+node [fontname="DejaVu Sans",fontsize=12,style="rounded,filled",fillcolor="#EEF6F4",color="#68988E",fontcolor="#143D38",margin="0.12,0.09"];
+edge [fontname="DejaVu Sans",fontsize=10,color="#567A73",fontcolor="#274C45",arrowsize=0.65];
+"A" [label="Validar cenário e\nconfiguração",shape="box"];
+"B" [label="Inicializar ledger e\nobservações",shape="box"];
+"C" [label="Concluir eventos na\nfronteira",shape="box"];
+"D" [label="Horizonte ou término?",shape="diamond"];
+"N" [label="Classificar resultado e\nresidual",shape="box"];
+"E" [label="Determinar modo e potências",shape="box"];
+"F" [label="Descarga instantânea\nadmissível?",shape="diamond"];
+"G" [label="Registrar falha terminal",shape="box"];
+"H" [label="Próxima fronteira temporal",shape="box"];
+"I" [label="Dividir por bateria e\nentrega",shape="box"];
+"J" [label="Integrar energia e serviço",shape="box"];
+"K" [label="Atualizar FIFO e lotes\ncompletos",shape="box"];
+"L" [label="Conferir reserva e\ncontabilidade",shape="box"];
+"M" [label="Registrar trace e avançar\nrelógio",shape="box"];
+"A" -> "B" [label="",style="solid"];
+"B" -> "C" [label="",style="solid"];
+"C" -> "D" [label="",style="solid"];
+"D" -> "N" [label="Sim",style="solid"];
+"D" -> "E" [label="Não",style="solid"];
+"E" -> "F" [label="",style="solid"];
+"F" -> "G" [label="Não",style="solid"];
+"G" -> "N" [label="",style="solid"];
+"F" -> "H" [label="Sim",style="solid"];
+"H" -> "I" [label="",style="solid"];
+"I" -> "J" [label="",style="solid"];
+"J" -> "K" [label="",style="solid"];
+"K" -> "L" [label="",style="solid"];
+"L" -> "M" [label="",style="solid"];
+"M" -> "C" [label="",style="solid"];
+}

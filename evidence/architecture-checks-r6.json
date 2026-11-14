@@ -1,0 +1,138 @@
+{
+  "generatedAt": "2026-11-14T11:37:33.133Z",
+  "status": "passed",
+  "checksPassed": 25,
+  "checks": [
+    {
+      "name": "native Archify generator preserved",
+      "status": "passed"
+    },
+    {
+      "name": "native schema and geometry accepted",
+      "status": "passed",
+      "detail": {
+        "viewBox": [
+          1070,
+          770
+        ],
+        "components": 7,
+        "connections": 6
+      }
+    },
+    {
+      "name": "no iframe or srcdoc",
+      "status": "passed"
+    },
+    {
+      "name": "no inline event attributes",
+      "status": "passed"
+    },
+    {
+      "name": "no mandatory remote scripts/styles/media",
+      "status": "passed"
+    },
+    {
+      "name": "CSS resources are embedded",
+      "status": "passed"
+    },
+    {
+      "name": "inline scripts parse",
+      "status": "passed",
+      "detail": 3
+    },
+    {
+      "name": "no dynamic evaluation or network calls in scripts",
+      "status": "passed"
+    },
+    {
+      "name": "model embedded without changes",
+      "status": "passed"
+    },
+    {
+      "name": "all local import targets exist",
+      "status": "passed"
+    },
+    {
+      "name": "generated CSP and rebuild receipt excluded from source hashes",
+      "status": "passed"
+    },
+    {
+      "name": "no unresolved imports or syntax diagnostics",
+      "status": "passed"
+    },
+    {
+      "name": "source snapshot hashes match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "public artifacts contain no local machine paths",
+      "status": "passed"
+    },
+    {
+      "name": "licenses included",
+      "status": "passed"
+    },
+    {
+      "name": "required relative navigation links exist",
+      "status": "passed"
+    },
+    {
+      "name": "all import rows rendered initially",
+      "status": "passed"
+    },
+    {
+      "name": "Worker filter identifies actual entry",
+      "status": "passed"
+    },
+    {
+      "name": "type-only filter exact",
+      "status": "passed"
+    },
+    {
+      "name": "dynamic import filter exact",
+      "status": "passed"
+    },
+    {
+      "name": "path search includes incoming and outgoing edges",
+      "status": "passed"
+    },
+    {
+      "name": "inventory view switches accessibly",
+      "status": "passed"
+    },
+    {
+      "name": "file details show matching hash and focus",
+      "status": "passed"
+    },
+    {
+      "name": "details close restores search focus",
+      "status": "passed"
+    },
+    {
+      "name": "reset restores complete import set",
+      "status": "passed"
+    }
+  ],
+  "statistics": {
+    "inventoryFiles": 189,
+    "parsedCodeFiles": 51,
+    "edges": 262,
+    "localEdges": 145,
+    "typeOnlyEdges": 32,
+    "dynamicImports": 10,
+    "workerEntries": 1,
+    "unresolvedImports": 0,
+    "parseErrors": 0
+  },
+  "artifact": {
+    "path": "architecture/index.html",
+    "bytes": 1007939,
+    "sha256": "5a8f128f597ddd614c8a6f0d10444eab79d6616004e94503577426c5dcf248bb"
+  },
+  "limits": [
+    "DOM tests execute only the project-authored inspector, not the native Archify viewer.",
+    "Real-browser rendering, layout, keyboard interaction of native controls, exports and deployed CSP remain unverified.",
+    "No browser restrictions were bypassed."
+  ]
+}

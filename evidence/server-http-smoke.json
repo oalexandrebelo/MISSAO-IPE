@@ -1,0 +1,163 @@
+{
+  "checkedAt": "2026-11-14T09:03:57.836Z",
+  "command": "node scripts/smoke-server.mjs",
+  "status": "passed",
+  "node": "v24.22.1",
+  "serverSha256": "cb1928ff2b92119a9daac0cd172c72687b26d80c93266dfefda0ca592631edd4",
+  "binding": "127.0.0.1",
+  "port": 45179,
+  "attempts": 1,
+  "output": "Missão Ipê local: http://127.0.0.1:45179\nNenhuma conexão externa é necessária. Ctrl+C encerra.\n",
+  "cases": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "797",
+        "cache-control": "no-store",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5"
+      },
+      "bodyBytes": 797,
+      "bodySha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "expected": 200
+    },
+    {
+      "method": "HEAD",
+      "path": "/",
+      "status": 200,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "797",
+        "cache-control": "no-store",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5"
+      },
+      "bodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": 200
+    },
+    {
+      "method": "POST",
+      "path": "/",
+      "status": 405,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "allow": "GET, HEAD",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": 405
+    },
+    {
+      "method": "GET",
+      "path": "/not-present-file",
+      "status": 404,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "bodyBytes": 24,
+      "bodySha256": "7923816a05610ad72910182ab35819728dcc9e1d468245e5f9684e80b5c11cae",
+      "expected": 404
+    },
+    {
+      "method": "GET",
+      "path": "/%2e%2e%2fpackage.json",
+      "status": 403,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": 403
+    },
+    {
+      "method": "GET",
+      "path": "/%00",
+      "status": 400,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": 400
+    },
+    {
+      "method": "GET",
+      "path": "/%5cpackage.json",
+      "status": 400,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "bodyBytes": 0,
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": 400
+    },
+    {
+      "method": "GET",
+      "path": "/%",
+      "status": 400,
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "cross-origin-resource-policy": "same-origin",
+        "date": "Sat, 14 Nov 2026 09:03:57 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "bodyBytes": 18,
+      "bodySha256": "8f04d22b2448ebbcc86004feb91caeb931233891cf5e88ffc60f5db56597a068",
+      "expected": 400
+    }
+  ],
+  "scope": "Node HTTP service smoke only; no browser, rendering or offline claim. Permission refusal is recorded and no bypass or retry is attempted."
+}

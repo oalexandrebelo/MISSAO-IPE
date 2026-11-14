@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Missão Ipê. Apresentação local com demonstrador do mesmo motor do jogo, dados MOD13Q1 históricos e hipóteses didáticas declaradas.">
+  <meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA em pesquisa, código e narrativa">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Missão Ipê — Ciência que chega · apresentação</title>
+  <style>/*__PRESENTATION_CSS__*/</style>
+</head>
+<body>
+<a class="skip-link" href="#slides">Ir ao quadro</a>
+<header class="topbar">
+  <a class="brand" href="#quadro-01" aria-label="Missão Ipê, início"><span class="brand-mark" aria-hidden="true">✳</span> MISSÃO IPÊ</a>
+  <span class="research-status">Protótipo de pesquisa</span>
+  <nav class="mode-switch" aria-label="Modo de apresentação">
+    <button id="mode-pitch" aria-pressed="true">Pitch <span>7 quadros</span></button>
+    <button id="mode-explore" aria-pressed="false">Exploração completa</button>
+  </nav>
+  <button class="quiet-button" id="open-overview" aria-haspopup="dialog">Índice <kbd>O</kbd></button>
+</header>
+<main id="slides" data-mode="pitch" tabindex="-1">
+
+<section class="slide hero" id="quadro-01" data-slide data-pitch="true" data-title="Quanta ciência chega?" aria-labelledby="title-01">
+  <div class="hero-copy">
+    <p class="eyebrow">IPÊ — SCIENCE DELIVERED</p>
+    <h1 id="title-01">Quanta ciência<br>chega ao <em>chão?</em></h1>
+    <p class="hero-subtitle">Um jogo sobre as decisões que fazem dados do espaço virar resultados utilizáveis.</p>
+    <div class="hero-rule"></div>
+    <p class="hero-credit">AB <span>Design de produto com DNA técnico</span></p>
+    <p class="tiny">Hackatur–Zer0Slop · P&amp;D educacional · 14 novembro 2026</p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 500 570" class="orbit-illustration">
+      <defs><pattern id="hero-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="currentColor" stroke-opacity=".08"/></pattern></defs>
+      <rect width="500" height="570" fill="url(#hero-grid)"/>
+      <ellipse cx="268" cy="280" rx="179" ry="213" fill="none" stroke="currentColor" stroke-opacity=".28" transform="rotate(31 268 280)"/>
+      <ellipse cx="268" cy="280" rx="114" ry="213" fill="none" stroke="currentColor" stroke-opacity=".14" transform="rotate(31 268 280)"/>
+      <circle cx="268" cy="280" r="108" fill="#173a48" stroke="#8fada6" stroke-width="1.4"/>
+      <ellipse cx="268" cy="280" rx="44" ry="108" fill="none" stroke="#8fada6" stroke-opacity=".55"/>
+      <ellipse cx="268" cy="280" rx="108" ry="40" fill="none" stroke="#8fada6" stroke-opacity=".55"/>
+      <path d="M160 280h216M268 172v216" fill="none" stroke="#8fada6" stroke-opacity=".55"/>
+      <g transform="translate(359 105) rotate(31)">
+        <rect x="-68" y="-17" width="42" height="34" fill="#274457" stroke="#f4eee3"/>
+        <rect x="26" y="-17" width="42" height="34" fill="#274457" stroke="#f4eee3"/>
+        <path d="M-54-17v34m14-34v34m80-34v34m14-34v34M-68 0h42m52 0h42" stroke="#f4eee3" stroke-opacity=".6"/>
+        <path d="M-26 0h52" stroke="#f4eee3" stroke-width="3"/>
+        <rect x="-18" y="-24" width="36" height="48" rx="3" fill="#edb64c" stroke="#0b2030" stroke-width="2"/>
+        <path d="M0 24v18m-12 0h24" stroke="#edb64c" stroke-width="3"/>
+      </g>
+      <path d="M338 144L165 419" stroke="#edb64c" stroke-width="1.7" stroke-dasharray="4 9"/>
+      <circle cx="165" cy="419" r="6" fill="#edb64c"/>
+      <path d="M165 425v52h70" fill="none" stroke="#edb64c"/>
+      <text x="248" y="484" fill="#edb64c" font-size="32" font-weight="750">6 resultados</text>
+      <text x="248" y="506" fill="#c1cdd0" font-size="13">O OBJETIVO ESTÁ NO SOLO</text>
+      <text x="23" y="540" fill="#c1cdd0" font-size="11">DIAGRAMA CONCEITUAL · ÓRBITA FIXA</text>
+      <text x="23" y="558" fill="#c1cdd0" font-size="11">Ilustração gerada com IA</text>
+    </svg>
+  </div>
+</section>
+
+<section class="slide" id="quadro-02" data-slide data-pitch="true" data-title="A missão termina no usuário" aria-labelledby="title-02" hidden>
+  <p class="eyebrow">01 / OBJETIVO</p>
+  <h2 id="title-02">A missão termina<br><em>no usuário.</em></h2>
+  <div class="objective-layout">
+    <div class="objective-number"><strong>6</strong><span>resultados NDVI<br>inteiros e válidos</span></div>
+    <div class="objective-context"><p>Três coordenadas no entorno de Rio Verde. Duas composições MOD13Q1.061 de 2024.</p><p class="muted">O jogo usa dados históricos para uma pergunta fixa. O satélite didático não adquire MODIS em 180 minutos.</p></div>
+  </div>
+  <div class="mission-chain" role="group" aria-label="Segmentos da missão. Selecione para conhecer o papel de cada segmento.">
+    <button class="chain-node" data-segment="launch" aria-pressed="false"><span>01</span><strong>Lançamento</strong><small>Envelope fixo</small></button>
+    <span class="chain-link" aria-hidden="true"></span>
+    <button class="chain-node" data-segment="space" aria-pressed="false"><span>02</span><strong>Espaço</strong><small>Recursos a bordo</small></button>
+    <span class="chain-link" aria-hidden="true"></span>
+    <button class="chain-node" data-segment="ground" aria-pressed="false"><span>03</span><strong>Solo</strong><small>Recepção completa</small></button>
+    <span class="chain-link" aria-hidden="true"></span>
+    <button class="chain-node active" data-segment="user" aria-pressed="true"><span>04</span><strong>Usuário</strong><small>NDVI + qualidade</small></button>
+  </div>
+  <p class="context-line" id="segment-detail" aria-live="polite">Só conta o registro recebido por inteiro, com qualidade aceita e NDVI verificado.</p>
+  <p class="source-line">Dados: NASA/ORNL DAAC. Estrutura: referências NASA de projeto de missão. Recursos e parâmetros do jogo são hipóteses didáticas. <button class="text-link" data-go-slide="13">Fontes</button></p>
+</section>
+
+<section class="slide" id="quadro-03" data-slide data-pitch="true" data-title="Seis escolhas que se afetam" aria-labelledby="title-03" hidden>
+  <p class="eyebrow">02 / PROJETO</p>
+  <div class="title-split"><h2 id="title-03">Seis escolhas<br>que se <em>afetam.</em></h2><div class="catalog-equation"><span>2 × 2 × 2 × 2 × 2 × 2</span><strong>64</strong><small>configurações por cenário</small></div></div>
+  <div class="choice-summary" id="choice-summary" aria-label="Seis escolhas e suas duas opções"></div>
+  <div class="envelope-strip"><p><strong>3,6 kg</strong><span>massa máxima</span></p><p><strong>86</strong><span>créditos disponíveis</span></p><p class="envelope-statement">Uma peça mais capaz também muda a massa, o consumo ou o orçamento.</p></div>
+  <p class="source-line">Catálogo ipe-64-v1. Lançador, órbita e agenda são fixos. Os limites não são especificações de um CubeSat real.</p>
+</section>
+
+<section class="slide" id="quadro-04" data-slide data-pitch="true" data-title="A janela encurta. A ciência fica." aria-labelledby="title-04" hidden>
+  <p class="eyebrow">03 / EXPERIMENTO</p>
+  <h2 id="title-04">A janela encurta.<br>A ciência <em>fica.</em></h2>
+  <div class="contact-comparison">
+    <article><div class="comparison-top"><h3>Contatos longos</h3><strong id="story-long-delivered">—</strong></div><div id="long-contact-diagram" class="contact-diagram"></div><p id="story-long-detail"></p></article>
+    <article><div class="comparison-top"><h3>Contatos curtos</h3><strong id="story-short-delivered">—</strong></div><div id="short-contact-diagram" class="contact-diagram"></div><p id="story-short-detail"></p></article>
+  </div>
+  <div class="takeaway"><span class="takeaway-marker" aria-hidden="true">!</span><p>A mesma configuração recebe menos tempo de transmissão. Um lote parcial ainda não entrega um resultado científico.</p></div>
+  <p class="source-line">Base: bateria 16 Wh, painel 18 W, BANDAS R/NIR, rádio econômico, memória grande, todos os contatos. Resultados calculados neste HTML pelo motor real.</p>
+</section>
+
+<section class="slide demo-slide" id="quadro-05" data-slide data-pitch="true" data-title="O reparo começa por uma hipótese" aria-labelledby="title-05" hidden>
+  <div class="demo-heading"><div><p class="eyebrow">04 / DEMONSTRAÇÃO AO VIVO</p><h2 id="title-05">O reparo começa<br>por uma <em>hipótese.</em></h2></div><p class="demo-engine-label">Mesmo motor do jogo<br><span id="engine-version"></span><br><strong>100% local</strong></p></div>
+  <div class="demo-layout">
+    <form id="demo-form" class="demo-controls">
+      <label for="scenario-select">Condição de contato</label><select id="scenario-select"><option value="long-contact">Contatos longos · 2 × 600 s</option><option value="short-contact">Contatos curtos · 2 × 240 s</option></select>
+      <div id="config-controls" class="config-controls"></div>
+      <p id="config-envelope" class="config-envelope"></p>
+      <button type="submit" class="primary-button" id="run-demo">Executar configuração</button>
+    </form>
+    <div class="demo-output">
+      <div class="demo-presets" role="group" aria-label="Casos do experimento"><button type="button" id="preset-long">1. Base longa</button><button type="button" id="preset-short">2. Base curta</button><button type="button" id="preset-index">3. Só ÍNDICE</button><button type="button" id="preset-repair" disabled>4. Duas mudanças</button></div>
+      <p id="demo-gate" class="gate-line">O quarto caso abre após executar a base curta e a alteração isolada para ÍNDICE.</p>
+      <div class="result-head" id="demo-result" aria-live="polite" aria-atomic="true"><strong id="demo-delivered" data-value="">—</strong><div><span class="result-label">registros utilizáveis</span><p id="demo-outcome" data-outcome="pending">Execute uma configuração.</p><p id="demo-diagnosis" class="small"></p></div></div>
+      <div class="demo-metrics"><p><span>Recebido</span><strong id="demo-bits">—</strong></p><p><span>Fila final</span><strong id="demo-queue">—</strong></p><p><span>Energia final</span><strong id="demo-energy">—</strong></p><p><span>Carga no trabalho</span><strong id="demo-load">—</strong></p></div>
+      <div id="demo-observations" class="observation-strip" aria-label="Estado dos seis registros"></div>
+      <div class="trace-header"><label for="trace-range">Inspeção da energia no trace</label><output id="trace-time" for="trace-range">—</output></div>
+      <div id="demo-trace" class="trace-chart"></div><input id="trace-range" type="range" min="0" max="0" value="0" aria-label="Evento do trace" disabled><p id="trace-detail" class="small trace-detail">O controle lê estados calculados. Arrastar não muda a física.</p>
+      <details class="event-details"><summary>Eventos e regras do resultado</summary><div id="demo-events"></div></details>
+    </div>
+  </div>
+  <p class="source-line">ÍNDICE reduz o lote de 180 para 60 Mbit e eleva a carga do trabalho de 26 para 38 W. Esses volumes são hipóteses didáticas.</p>
+</section>
+
+<section class="slide" id="quadro-06" data-slide data-pitch="true" data-title="O menor redesenho tem evidência" aria-labelledby="title-06" hidden>
+  <p class="eyebrow">05 / EVIDÊNCIA DE DECISÃO</p>
+  <h2 id="title-06">O menor redesenho<br>tem <em>evidência.</em></h2>
+  <div id="catalog-locked" class="catalog-locked"><p>Primeiro, observe a base curta e a troca isolada para ÍNDICE.</p><button class="primary-button" data-go-slide="4">Voltar ao demonstrador</button><p class="small">A busca compara todas as escolhas, depois da tentativa.</p></div>
+  <div class="catalog-layout" id="catalog-content" hidden>
+    <div class="catalog-proof"><div class="proof-number"><strong id="catalog-minimum">—</strong><span>mudanças mínimas<br>desde a base curta</span></div><p id="catalog-witness" class="proof-witness"></p><p id="catalog-proof-detail"></p><button class="primary-button" id="apply-catalog-witness" disabled>Experimentar a solução</button></div>
+    <div><div class="catalog-toolbar"><h3>Contatos curtos</h3><button id="run-catalog" disabled>Enumerar 64 configurações</button></div><div id="catalog-grid" class="catalog-grid" aria-label="Resultados das 64 configurações"></div><p id="catalog-summary" class="small" aria-live="polite"></p><div class="grid-legend"><span class="legend-success">S · sucesso</span><span class="legend-failure">F · falha</span><span class="legend-invalid">I · inválida</span></div><p id="catalog-selection" class="small">Selecione uma célula para inspecionar e abrir aquela configuração.</p></div>
+  </div>
+  <p class="source-line">Mínimo de alterações neste catálogo e sob estas hipóteses. A busca completa não estabelece um ótimo universal de projeto espacial.</p>
+</section>
+
+<section class="slide closing" id="quadro-07" data-slide data-pitch="true" data-title="A decisão precisa explicar o resultado" aria-labelledby="title-07" hidden>
+  <p class="eyebrow">MISSÃO IPÊ / SCIENCE DELIVERED</p>
+  <h2 id="title-07">A decisão precisa<br><em>explicar</em> o resultado.</h2>
+  <p class="closing-copy">Prever o gargalo. Ver o que chegou.<br>Redesenhar com uma justificativa.</p>
+  <div class="closing-actions"><a class="primary-button" id="open-game" href="../portable/Missao_Ipe_Local.html" target="_blank" rel="noopener">Abrir o jogo local <span aria-hidden="true">↗</span></a><button class="outline-button" id="explore-appendix">Explorar ciência e evidências</button><a id="open-dossier" href="../output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf" target="_blank" rel="noopener">Dossiê de base R4 · PDF</a></div>
+  <div class="closing-status"><p>Protótipo educacional com dados NASA de arquivo.<br>Pesquisa com participantes e validação no equipamento ainda pendentes.</p><p>Desenvolvimento específico iniciado antes do evento.<br>Elegibilidade e lista oficial de Resources não estabelecidas.</p></div>
+  <p class="package-note">Os links para jogo e dossiê exigem o ZIP completo, com suas pastas preservadas. Este HTML isolado mantém a apresentação e o demonstrador.</p>
+</section>
+
+<section class="slide appendix" id="quadro-08" data-slide data-pitch="false" data-title="A1 · Os seis registros científicos" aria-labelledby="title-08" hidden>
+  <p class="eyebrow">APÊNDICE A1 / CIÊNCIA</p>
+  <h2 id="title-08">A origem é real.<br>O contexto de voo é <em>didático.</em></h2>
+  <div class="science-layout"><div><h3>NDVI recalculado das bandas</h3><div id="science-chart" class="science-chart"></div><p class="small">Selecione um registro para conferir bandas, datas e qualidade.</p><div id="science-record-buttons" class="science-record-buttons"></div></div><div class="science-detail"><p class="formula">NDVI = (NIR − RED) / (NIR + RED)</p><dl id="science-record-detail"></dl></div></div>
+  <p class="context-line">Composições de 16 dias iniciadas em 28/08 e 13/09 de 2024. Observações selecionadas em 01/09 e 23/09. A agenda de 180 min pertence à simulação.</p>
+  <p class="source-line">MOD13Q1.061 · escala 0,0001 · tolerância declarada de NDVI 0,0001. Três pontos não estabelecem diagnóstico agrícola, rendimento ou tendência regional. <button class="text-link" data-go-slide="13">Fontes científicas</button></p>
+</section>
+
+<section class="slide appendix" id="quadro-09" data-slide data-pitch="false" data-title="A2 · Potência não é energia" aria-labelledby="title-09" hidden>
+  <p class="eyebrow">APÊNDICE A2 / O CONFLITO</p>
+  <h2 id="title-09">Ainda há energia.<br>Falta <em>potência instantânea.</em></h2>
+  <div class="power-layout"><div><p class="power-statement">Só trocar BANDAS por ÍNDICE encerra a operação no início do primeiro trabalho.</p><div class="power-fact"><strong id="power-time">—</strong><span>instante da falha</span></div><p id="power-energy"></p></div><div><div id="power-diagram" class="power-diagram"></div><p id="power-detail" class="context-line"></p></div></div>
+  <div class="two-facts"><p><strong>Energia / Wh</strong><span>Quanto a bateria ainda armazena.</span></p><p><strong>Potência / W</strong><span>Quanto precisa fornecer naquele instante.</span></p></div>
+  <p class="source-line">Valores extraídos do evento PEAK_POWER e do trace do motor. A demanda na bateria inclui a geração solar disponível e a eficiência de descarga do modelo.</p>
+</section>
+
+<section class="slide appendix" id="quadro-10" data-slide data-pitch="false" data-title="A3 · Um motor para todas as respostas" aria-labelledby="title-10" hidden>
+  <p class="eyebrow">APÊNDICE A3 / ARQUITETURA</p>
+  <h2 id="title-10">Um motor.<br>Respostas <em>reexecutáveis.</em></h2>
+  <div class="architecture-diagram"><div class="architecture-input"><strong>Entrada explícita</strong><p>Seis escolhas<br>Condição de contato<br>Seis registros versionados</p></div><div class="architecture-core"><span>MOTOR DETERMINÍSTICO</span><strong>simulateMission()</strong><p>Eventos, energia, bits,<br>qualidade e restrições</p></div><div class="architecture-output"><strong>Saída inspecionável</strong><p>Resultados recebidos<br>Diagnóstico e trace<br>Versões e recibo</p></div></div>
+  <div class="architecture-consumers"><span>Jogo</span><span>Busca de 64</span><span>Replay</span><span>Esta apresentação</span></div>
+  <p class="context-line">A apresentação importa o núcleo TypeScript do jogo e o compila dentro deste HTML. A interface lê os resultados calculados.</p>
+  <p class="source-line">Esta variante roda na thread principal. O pacote servido do jogo também possui Worker. Não há React, Three.js, API de IA ou chamada remota no runtime desta apresentação.</p>
+</section>
+
+<section class="slide appendix" id="quadro-11" data-slide data-pitch="false" data-title="A4 · Como avaliar a aprendizagem" aria-labelledby="title-11" hidden>
+  <p class="eyebrow">APÊNDICE A4 / UX RESEARCH</p>
+  <h2 id="title-11">Chegar a 6/6 ainda<br>não mede <em>aprendizagem.</em></h2>
+  <div class="research-flow"><article><span>ANTES</span><h3>Previsão</h3><p>Qual recurso você espera que limite a missão?</p></article><article><span>DURANTE</span><h3>Evidência</h3><p>Qual evento explica o que chegou ao solo?</p></article><article><span>DEPOIS</span><h3>Transferência</h3><p>O que você mudaria se o tempo de contato diminuísse?</p></article></div>
+  <div class="research-status-panel"><strong>Hipótese educativa aberta</strong><p>Plano formativo: até dois pilotos e seis sessões observadas. Registrar ajuda, erros, desistências e justificativas. Nenhuma sessão com participantes foi realizada nesta rodada.</p></div>
+  <p class="source-line">Meta de oito minutos por ciclo introdutório é hipótese de UX. O teste DOM não representa participante, navegador ou efeito educacional.</p>
+</section>
+
+<section class="slide appendix" id="quadro-12" data-slide data-pitch="false" data-title="A5 · O que foi verificado" aria-labelledby="title-12" hidden>
+  <p class="eyebrow">APÊNDICE A5 / EVIDÊNCIAS</p>
+  <h2 id="title-12">O que o pacote<br><em>já demonstra.</em></h2>
+  <div class="evidence-numbers"><p><strong>51</strong><span>testes de núcleo<br>aprovados</span></p><p><strong>9</strong><span>contagens TAP em DOM<br>simulado</span></p><p><strong>8</strong><span>casos HTTP<br>aprovados</span></p><p><strong>128</strong><span>casos comparados<br>com oráculo independente</span></p></div>
+  <table class="evidence-table"><thead><tr><th>Evidência</th><th>O que sustenta</th><th>Limite</th></tr></thead><tbody><tr><td>Motor e ciência</td><td>Catálogo fechado, balanços, QA, importação e replay</td><td>Não qualifica software de voo</td></tr><tr><td>Busca de 64 · p95</td><td>Longo 4,936 ms · curto 4,237 ms</td><td>Node 24.22.1 / AMD EPYC 9V45, sem UI</td></tr><tr><td>AB-R3A / REA</td><td>596 observações estruturais, cobertura parcial</td><td>Não são vulnerabilidades confirmadas</td></tr><tr><td>Apresentação local</td><td>Build e QA DOM identificados no pacote</td><td>Ensaio visual no equipamento permanece aberto</td></tr></tbody></table>
+  <p class="source-line">Recibos preservados: <a href="../docs/09-VERIFICACAO.md">verificação</a>, <a href="../evidence/engine-benchmark.json">benchmark</a>, <a href="../evidence/ab-r3a-digest.json">AB-R3A</a>, <a href="../evidence/presentation-qa.json">QA da apresentação</a>. Nenhuma medição nos computadores de AB.</p>
+</section>
+
+<section class="slide appendix" id="quadro-13" data-slide data-pitch="false" data-title="A6 · Metodologia e estado" aria-labelledby="title-13" hidden>
+  <p class="eyebrow">APÊNDICE A6 / METODOLOGIA</p>
+  <h2 id="title-13">O escopo é explícito.<br>A elegibilidade está <em>pendente.</em></h2>
+  <div class="methodology-grid"><article><h3>Procedência temporal</h3><p>P&amp;D específico iniciado antes das 09h BRT de 14/11/2026. A orientação do GO Team menciona risco de desclassificação por trabalho antecipado. Declarar a cronologia não resolve a elegibilidade.</p></article><article><h3>Resources oficiais</h3><p>A lista oficial do desafio ainda não foi confirmada. Dados NASA e referências de engenharia são identificados, mas sua presença na lista e o uso competitivo permanecem pendentes.</p></article><article><h3>Hipóteses do modelo</h3><p>Lançador e órbita fixos. Agenda de 180 min, massas, créditos, potências e lotes lógicos de 60/180 Mbit são didáticos. Não correspondem ao tamanho dos JSONs nem a especificações de voo.</p></article><article><h3>Autoria e evolução</h3><p>Pesquisa, narrativa, código e testes tiveram assistência de IA. Não há inferência de IA no jogo. Marte, EVI3, órbita real e backend Prisma não integram a missão implementada.</p></article></div>
+  <p class="context-line">Protótipo educacional. Não é missão qualificada, software de voo, gêmeo digital validado ou previsão agrícola. Não houve aprovação NASA, Black Star ou envio de candidatura.</p>
+  <p class="source-line">Este pitch local de sete quadros não comprova conformidade de submissão. <a href="https://github.com/nasa/spaceapps/discussions/1947" target="_blank" rel="noopener">Navigators #1947</a> e <a href="https://github.com/nasa/spaceapps/discussions/1973" target="_blank" rel="noopener">#1973</a> mencionam 30 s ou até sete slides em inglês. <a href="https://github.com/nasa/spaceapps/discussions/2028" target="_blank" rel="noopener">Guias indicados pelo GO Team</a> e formulário ainda precisam de conferência.</p>
+</section>
+
+<section class="slide appendix sources-slide" id="quadro-14" data-slide data-pitch="false" data-title="A7 · Fontes primárias e rastreio" aria-labelledby="title-14" hidden>
+  <p class="eyebrow">APÊNDICE A7 / FONTES</p>
+  <h2 id="title-14">Cada afirmação tem<br>uma <em>origem.</em></h2>
+  <div class="source-list">
+    <article id="fonte-mod13" data-source-id="mod13"><span>01</span><div><h3><a href="https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf" target="_blank" rel="noopener">MOD13 C6.1 User Guide</a></h3><p>Bandas, NDVI, escala, qualidade e composição de 16 dias. Produto MOD13Q1.061, DOI 10.5067/MODIS/MOD13Q1.061.</p></div></article>
+    <article id="fonte-ornl" data-source-id="ornl"><span>02</span><div><h3><a href="https://modis.ornl.gov/data/modis_webservice.html" target="_blank" rel="noopener">NASA ORNL DAAC / TESViS</a></h3><p>Serviço de extração e coordenadas solicitadas. DOI 10.3334/ORNLDAAC/1600. <a href="../public/data/mod13q1-A-raw.json" data-embedded-source="mod13q1-A-raw.json">JSON A</a> · <a href="../public/data/mod13q1-B-raw.json" data-embedded-source="mod13q1-B-raw.json">JSON B</a> · <a href="../public/data/mod13q1-C-raw.json" data-embedded-source="mod13q1-C-raw.json">JSON C</a>.</p></div></article>
+    <article id="fonte-mission" data-source-id="mission"><span>03</span><div><h3><a href="https://ntrs.nasa.gov/citations/20250002492" target="_blank" rel="noopener">Design and Develop Science Missions</a></h3><p>NASA Ames, Julie Levri, webinar de 26/03/2025. Segmentos, requisitos e verificação. A edição NTRS é distinta do PDF de abril listado no espelho do desafio.</p></div></article>
+    <article id="fonte-cubesat" data-source-id="cubesat"><span>04</span><div><h3><a href="https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf" target="_blank" rel="noopener">CubeSat 101</a></h3><p>NASA, revisão de outubro de 2017. Referência para comunicações, solo e operação. Não é fonte dos números didáticos do catálogo.</p></div></article>
+    <article id="fonte-rules" data-source-id="rules"><span>05</span><div><h3><a href="https://github.com/nasa/spaceapps/discussions/1827" target="_blank" rel="noopener">GO Team / cronologia</a> · <a href="https://github.com/nasa/spaceapps/discussions/1849" target="_blank" rel="noopener">recursos e IA</a></h3><p>Orientações do evento. <a href="../research/11-revisao-spaceapps-apresentacao.md">Revisão atual R5</a>, <a href="../research/01-regras-ciencia.md">parecer de base</a> e <a href="../evidence/chronology.json">cronologia</a> preservam autoridade e limites.</p></div></article>
+    <article id="fonte-resources" data-source-id="resources"><span>06</span><div><h3><a href="https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources" target="_blank" rel="noopener">Space Mission Design Game / Resources</a></h3><p>Autoridade final para a lista. Recuperação pendente no corte documentado. Não substituir confirmação oficial por um espelho.</p></div></article>
+  </div>
+  <p class="source-line">Links externos exigem rede e só abrem por clique. Os três JSONs científicos estão incorporados para download local. Demais documentos exigem o ZIP completo.</p>
+</section>
+
+<section class="slide appendix" id="quadro-15" data-slide data-pitch="false" data-title="A8 · Operação e pacote" aria-labelledby="title-15" hidden>
+  <p class="eyebrow">APÊNDICE A8 / USO LOCAL</p>
+  <h2 id="title-15">Pronto para ensaiar.<br>Com limites <em>visíveis.</em></h2>
+  <div class="operation-grid"><article><h3>Apresentar</h3><p><kbd>←</kbd> <kbd>→</kbd> e <kbd>Espaço</kbd> navegam. <kbd>Home</kbd> / <kbd>End</kbd> levam ao primeiro/último quadro do modo. <kbd>O</kbd> abre o índice. <kbd>N</kbd> abre as notas. <kbd>F</kbd> alterna tela cheia.</p><p>Inputs e seletores mantêm suas próprias teclas. Nada avança sozinho.</p></article><article><h3>Ensaiar</h3><p>As notas incluem roteiro em português e inglês. O cronômetro só começa por ação explícita e pausa quando o painel fecha ou a aba fica oculta.</p><p>O modo Pitch imprime sete quadros. Exploração completa imprime todos os 15.</p></article><article><h3>Abrir o pacote</h3><p>Preserve a pasta <code>presentation/</code> junto de <code>portable/</code>, <code>output/</code> e <code>evidence/</code>. Jogo e PDF abrem por links relativos.</p><p>O demonstrador deste HTML funciona sem baixar dependências, fontes ou dados remotos.</p></article><article><h3>Conferir antes da projeção</h3><p>Validar tamanho de texto, teclado, fullscreen, impressão e abertura real de arquivo no equipamento de apresentação. A rodada automatizada verificou outras camadas.</p><p>Marcas NASA e Black Star não são usadas como aprovação. Ilustrações são SVGs originais e conceituais.</p></article></div>
+  <p class="context-line">Código original sob Apache-2.0. Ciência e referências mantêm seus termos. Assistência de IA declarada em texto e metadados.</p>
+  <p class="source-line"><a href="README_APRESENTADOR.md">Guia do apresentador</a> · <a href="ROTEIRO_PT_EN.md">Roteiro PT/EN</a> · <a href="PITCH_EN_7_SLIDES.md">Copy dos sete quadros em inglês</a> · <a href="../evidence/presentation-build.json">Recibo de build</a> · <a href="../NOTICE.md">Atribuições</a></p>
+</section>
+</main>
+
+<footer class="bottom-bar">
+  <div class="navigation"><button id="previous-slide" aria-label="Quadro anterior">←</button><span id="slide-counter" aria-live="polite">01 / 07</span><button id="next-slide" aria-label="Próximo quadro">→</button><span id="current-slide-label" class="current-slide-label">Quanta ciência chega?</span></div>
+  <div class="utility-actions"><button id="open-notes" aria-expanded="false" aria-controls="notes-panel">Notas <kbd>N</kbd></button><button id="fullscreen">Tela cheia <kbd>F</kbd></button><button id="print-deck">Imprimir</button></div>
+</footer>
+
+<div id="overview-dialog" class="modal-shell" role="dialog" aria-modal="true" aria-labelledby="overview-title" hidden>
+  <div class="overview-content"><div class="dialog-heading"><div><p class="eyebrow">NAVEGAÇÃO</p><h2 id="overview-title">Índice da apresentação</h2></div><button id="close-overview" aria-label="Fechar índice">Fechar ×</button></div><p id="overview-mode-description" class="small"></p><div id="overview-grid" class="overview-grid"></div><p class="small">Escolha um quadro. <kbd>Esc</kbd> fecha. O índice segue o modo selecionado.</p></div>
+</div>
+
+<aside id="notes-panel" class="notes-panel" aria-labelledby="notes-title" hidden>
+  <div class="notes-heading"><h2 id="notes-title">Notas do apresentador</h2><button id="close-notes" aria-label="Fechar notas">Fechar ×</button></div>
+  <div class="notes-toolbar"><label for="notes-language">Roteiro</label><select id="notes-language"><option value="pt">Português</option><option value="en">English</option></select><span id="timer-value" role="timer" aria-label="Tempo de ensaio">00:00</span><button id="timer-toggle">Iniciar cronômetro</button><button id="timer-reset">Zerar</button></div>
+  <p class="notes-disclosure">Painel visível também na projeção. Para notas privadas, abra uma segunda janela em outra tela. O cronômetro não controla slides nem decisões.</p>
+  <h3 id="notes-slide-title"></h3><p id="notes-text"></p><p id="notes-cue" class="notes-cue"></p>
+</aside>
+<div id="status-message" class="toast" role="status" hidden></div>
+<noscript><div class="no-script"><h1>Missão Ipê</h1><p>Ative JavaScript para navegar e executar o demonstrador local. O código e os dados já estão neste arquivo. Não é necessário acessar a rede.</p></div></noscript>
+<script id="embedded-source-data" type="application/json">/*__PRESENTATION_DATA__*/</script>
+<script>/*__PRESENTATION_JS__*/</script>
+</body>
+</html>

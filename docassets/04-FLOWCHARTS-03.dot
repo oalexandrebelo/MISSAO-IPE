@@ -1,0 +1,27 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.15",nodesep="0.22",ranksep="0.30",margin="0"];
+node [fontname="DejaVu Sans",fontsize=12,style="rounded,filled",fillcolor="#EEF6F4",color="#68988E",fontcolor="#143D38",margin="0.12,0.09"];
+edge [fontname="DejaVu Sans",fontsize=10,color="#567A73",fontcolor="#274C45",arrowsize=0.65];
+"A" [label="Arquivo selecionado",shape="box"];
+"B" [label="Limitar tamanho e\nprofundidade",shape="box"];
+"C" [label="Parse estrito sem duplicatas",shape="box"];
+"D" [label="Validar campos e versões",shape="box"];
+"E" [label="Conferir hashes da entrada e\nalegação",shape="box"];
+"F" [label="Reexecutar entrada permitida",shape="box"];
+"G" [label="Resultado confere?",shape="diamond"];
+"H" [label="Exibir consistência\nverificada",shape="box"];
+"I" [label="Exibir divergência e novo\nresultado",shape="box"];
+"J" [label="Manter estado atual",shape="box"];
+"A" -> "B" [label="",style="solid"];
+"B" -> "C" [label="",style="solid"];
+"C" -> "D" [label="",style="solid"];
+"D" -> "E" [label="",style="solid"];
+"E" -> "F" [label="",style="solid"];
+"F" -> "G" [label="",style="solid"];
+"G" -> "H" [label="Sim",style="solid"];
+"G" -> "I" [label="Não",style="solid"];
+"B" -> "J" [label="Rejeição",style="solid"];
+"C" -> "J" [label="Rejeição",style="solid"];
+"D" -> "J" [label="Rejeição",style="solid"];
+"E" -> "J" [label="Rejeição",style="solid"];
+}

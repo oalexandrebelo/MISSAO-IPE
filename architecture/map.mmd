@@ -1,0 +1,39 @@
+flowchart TB
+  subgraph runtime["Execução local implementada"]
+    direction TB
+    app["Jogo React · App + UI"] -->|"simulateAsync / searchAsync"| client["Cliente Worker · validação"]
+    client -->|"postMessage"| worker["Worker de missão"]
+    worker -->|"simulateMission"| engine["Motor determinístico"]
+    worker -->|"searchCatalog"| search["Busca exaustiva · 64 configurações"]
+    search -->|"simulateMission"| engine
+    client -.->|"fallback portátil"| engine
+    engine -->|"leitura"| science["Registros MOD13 congelados"]
+    engine -->|"validação"| quality["Critérios científicos"]
+    engine -->|"cálculo"| exact["Racionais + fluxo de potência"]
+    app -->|"saveRun / saveDraft"| store["Persistência · IndexedDB"]
+    app -->|"diário"| local["localStorage"]
+    app -->|"importar arquivo"| replay["Replay · JSON e hashes"]
+    replay -->|"reexecutar e comparar"| engine
+    app -->|"visualização"| scene["Cena 3D · fallback 2D"]
+    pitch["Apresentação interativa"] -->|"simulateMission"| engine
+    pitch -->|"searchCatalog"| search
+  end
+  subgraph publication["Montagem estática observada · publicação externa verificada à parte"]
+    direction TB
+    gameSource["src + Vite"] -->|"build"| dist["dist · jogo compilado"]
+    pitchSource["presentation/src + núcleo"] -->|"esbuild"| pitchHtml["HTML autocontido do pitch"]
+    docs["Docs selecionadas + projeções"] --> assembler["build-beta-site.mjs · allowlist"]
+    dist -->|"bytes preservados"| assembler
+    pitchHtml -->|"bytes preservados"| assembler
+    portal["web/index.html"] --> assembler
+    architecture["Archify nativo + inspetor AST"] -->|"3 artefatos públicos"| assembler
+    assembler --> static["site + manifesto público"]
+    assembler --> preservation["Recibo de preservação · gerado"]
+    static -->|"hashes dos scripts HTML"| prepare["prepare-vercel-static.mjs"]
+    prepare --> config["vercel.json · CSP gerada"]
+  end
+  subgraph proposed["Proposto · sem arestas de runtime"]
+    prisma["Prisma · contrato futuro"]
+    ai["IA remota / Fastino · pesquisa"]
+    mars["Marte · expansão de cenário"]
+  end

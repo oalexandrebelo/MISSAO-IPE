@@ -1,0 +1,106 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/game",
+      "destination": "/game/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/jogar",
+      "destination": "/lab/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/lab",
+      "destination": "/lab/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/architecture",
+      "destination": "/architecture/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/arquitetura",
+      "destination": "/architecture/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/apresentacao",
+      "destination": "/presentation/Missao_Ipe_Apresentacao.html",
+      "permanent": false
+    },
+    {
+      "source": "/docs",
+      "destination": "/docs/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/documentacao",
+      "destination": "/docs/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/contexto",
+      "destination": "/context/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/cronograma",
+      "destination": "/context/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/estudo",
+      "destination": "/context/research-library.html",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-BMOkFw3Gzsz8ECqKuA8XakYgWLQRc7WQgoV5E+Mljpc=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/game/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "framework": null,
+  "buildCommand": "npm run build:release",
+  "installCommand": "npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund",
+  "outputDirectory": "site"
+}

@@ -1,0 +1,380 @@
+{
+  "generatedAt": "2026-11-14T18:33:53.999Z",
+  "status": "passed",
+  "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
+  "fileCount": 53,
+  "allByteIdentical": true,
+  "files": [
+    {
+      "source": "dist/assets/index-C0yMbnbH.css",
+      "output": "site/game/assets/index-C0yMbnbH.css",
+      "originalSha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
+      "publishedSha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/assets/index-DYhpvtlV.js",
+      "output": "site/game/assets/index-DYhpvtlV.js",
+      "originalSha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
+      "publishedSha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/assets/mission.worker-m4WSgatj.js",
+      "output": "site/game/assets/mission.worker-m4WSgatj.js",
+      "originalSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "publishedSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/assets/OrbitalScene-B0I9aE-1.js",
+      "output": "site/game/assets/OrbitalScene-B0I9aE-1.js",
+      "originalSha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
+      "publishedSha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/assets/search-DiIaA0z6.js",
+      "output": "site/game/assets/search-DiIaA0z6.js",
+      "originalSha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
+      "publishedSha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/cmr-mod13q1-granule-2.json",
+      "output": "site/game/data/cmr-mod13q1-granule-2.json",
+      "originalSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "publishedSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/cmr-mod13q1-granules.json",
+      "output": "site/game/data/cmr-mod13q1-granules.json",
+      "originalSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "publishedSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-A-raw.json",
+      "output": "site/game/data/mod13q1-A-raw.json",
+      "originalSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "publishedSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-A-retrieval.json",
+      "output": "site/game/data/mod13q1-A-retrieval.json",
+      "originalSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "publishedSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-B-raw.json",
+      "output": "site/game/data/mod13q1-B-raw.json",
+      "originalSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "publishedSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-B-retrieval.json",
+      "output": "site/game/data/mod13q1-B-retrieval.json",
+      "originalSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "publishedSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-bands.json",
+      "output": "site/game/data/mod13q1-bands.json",
+      "originalSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "publishedSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-C-raw.json",
+      "output": "site/game/data/mod13q1-C-raw.json",
+      "originalSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "publishedSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-C-retrieval.json",
+      "output": "site/game/data/mod13q1-C-retrieval.json",
+      "originalSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "publishedSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/data/mod13q1-research-pack.json",
+      "output": "site/game/data/mod13q1-research-pack.json",
+      "originalSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "publishedSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "byteIdentical": true
+    },
+    {
+      "source": "dist/index.html",
+      "output": "site/game/index.html",
+      "originalSha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "publishedSha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/assets/index-BcfclJeA.js",
+      "output": "site/lab/assets/index-BcfclJeA.js",
+      "originalSha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
+      "publishedSha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/assets/index-OjdBRBwg.css",
+      "output": "site/lab/assets/index-OjdBRBwg.css",
+      "originalSha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "publishedSha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/assets/mission.worker-m4WSgatj.js",
+      "output": "site/lab/assets/mission.worker-m4WSgatj.js",
+      "originalSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "publishedSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-uN0SrvkO.js",
+      "output": "site/lab/assets/OrbitalScene-uN0SrvkO.js",
+      "originalSha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "publishedSha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/assets/search-Ddk6UaCb.js",
+      "output": "site/lab/assets/search-Ddk6UaCb.js",
+      "originalSha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "publishedSha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/cmr-mod13q1-granule-2.json",
+      "output": "site/lab/data/cmr-mod13q1-granule-2.json",
+      "originalSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "publishedSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/cmr-mod13q1-granules.json",
+      "output": "site/lab/data/cmr-mod13q1-granules.json",
+      "originalSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "publishedSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-A-raw.json",
+      "output": "site/lab/data/mod13q1-A-raw.json",
+      "originalSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "publishedSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-A-retrieval.json",
+      "output": "site/lab/data/mod13q1-A-retrieval.json",
+      "originalSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "publishedSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-B-raw.json",
+      "output": "site/lab/data/mod13q1-B-raw.json",
+      "originalSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "publishedSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-B-retrieval.json",
+      "output": "site/lab/data/mod13q1-B-retrieval.json",
+      "originalSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "publishedSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-bands.json",
+      "output": "site/lab/data/mod13q1-bands.json",
+      "originalSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "publishedSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-C-raw.json",
+      "output": "site/lab/data/mod13q1-C-raw.json",
+      "originalSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "publishedSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-C-retrieval.json",
+      "output": "site/lab/data/mod13q1-C-retrieval.json",
+      "originalSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "publishedSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/data/mod13q1-research-pack.json",
+      "output": "site/lab/data/mod13q1-research-pack.json",
+      "originalSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "publishedSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/index.html",
+      "output": "site/lab/index.html",
+      "originalSha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "publishedSha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/assets/briefing-desktop.jpg",
+      "output": "site/lab/research/assets/briefing-desktop.jpg",
+      "originalSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "publishedSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/assets/briefing-mobile.jpg",
+      "output": "site/lab/research/assets/briefing-mobile.jpg",
+      "originalSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "publishedSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/assets/laboratorio.jpg",
+      "output": "site/lab/research/assets/laboratorio.jpg",
+      "originalSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "publishedSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/assets/retorno-cientifico.jpg",
+      "output": "site/lab/research/assets/retorno-cientifico.jpg",
+      "originalSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "publishedSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/assets/retorno-mobile.jpg",
+      "output": "site/lab/research/assets/retorno-mobile.jpg",
+      "originalSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "publishedSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/galeria.html",
+      "output": "site/lab/research/galeria.html",
+      "originalSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "publishedSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/index.html",
+      "output": "site/lab/research/index.html",
+      "originalSha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
+      "publishedSha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/manifest.json",
+      "output": "site/lab/research/manifest.json",
+      "originalSha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
+      "publishedSha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/a1-desafio.md",
+      "output": "site/lab/research/originals/a1-desafio.md",
+      "originalSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "publishedSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/a2-fisica.md",
+      "output": "site/lab/research/originals/a2-fisica.md",
+      "originalSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "publishedSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/a3-ux-tecnologia.md",
+      "output": "site/lab/research/originals/a3-ux-tecnologia.md",
+      "originalSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "publishedSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/GUIA-DIDATICO-R9.md",
+      "output": "site/lab/research/originals/GUIA-DIDATICO-R9.md",
+      "originalSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "publishedSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/PESQUISA-E-DECISOES-R9.md",
+      "output": "site/lab/research/originals/PESQUISA-E-DECISOES-R9.md",
+      "originalSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "publishedSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/QA-NAVEGADOR-R9.md",
+      "output": "site/lab/research/originals/QA-NAVEGADOR-R9.md",
+      "originalSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "publishedSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/QA-R9.md",
+      "output": "site/lab/research/originals/QA-R9.md",
+      "originalSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "publishedSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/refinamento-conops.md",
+      "output": "site/lab/research/originals/refinamento-conops.md",
+      "originalSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "publishedSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/REFINAMENTO-NASA-R10.md",
+      "output": "site/lab/research/originals/REFINAMENTO-NASA-R10.md",
+      "originalSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "publishedSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/refinamento-requisitos.md",
+      "output": "site/lab/research/originals/refinamento-requisitos.md",
+      "originalSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "publishedSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/research/originals/refinamento-risco-ux.md",
+      "output": "site/lab/research/originals/refinamento-risco-ux.md",
+      "originalSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "publishedSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "byteIdentical": true
+    },
+    {
+      "source": "portable/Missao_Ipe_Local.html",
+      "output": "site/portable/Missao_Ipe_Local.html",
+      "originalSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
+      "publishedSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/Missao_Ipe_Apresentacao.html",
+      "output": "site/presentation/Missao_Ipe_Apresentacao.html",
+      "originalSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "publishedSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "byteIdentical": true
+    }
+  ]
+}

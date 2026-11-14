@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-11-14T10:52:03.376Z",
+  "output": "presentation/Missao_Ipe_Apresentacao.html",
+  "bytes": 139710,
+  "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+  "title": "Missão Ipê — Ciência que chega / IPÊ — Science Delivered",
+  "mode": "Self-contained local HTML; deterministic product engine bundled as IIFE on main thread",
+  "target": "ES2022",
+  "pitchSlides": 7,
+  "appendixSlides": 8,
+  "totalSlides": 15,
+  "defaultMode": "pitch",
+  "externalRuntimeDependencies": 0,
+  "networkRequestsRequired": 0,
+  "embeddedSourceFiles": [
+    "mod13q1-A-raw.json",
+    "mod13q1-B-raw.json",
+    "mod13q1-C-raw.json"
+  ],
+  "inputs": [
+    "src/core/catalog.ts",
+    "src/core/contracts.ts",
+    "src/data/science-data.ts",
+    "src/core/science.ts",
+    "src/core/exact.ts",
+    "src/core/power.ts",
+    "src/core/engine.ts",
+    "src/core/search.ts",
+    "presentation/src/main.ts"
+  ],
+  "usesProductEngine": true,
+  "usesProductScienceValidator": true,
+  "usesProductCatalogSearch": true,
+  "automatedTimer": false,
+  "timer": "Explicit start; pause on notes close, print, pagehide or hidden tab; never controls simulation or slides",
+  "navigation": "Keyboard and buttons, overview, two display/print modes, local notes in PT/EN",
+  "accessibility": "Reduced motion, labeled controls, keyboard-safe forms, modal focus trap; real-browser accessibility review remains open",
+  "fallback": "No localStorage or fullscreen dependency",
+  "limitations": [
+    "No real-browser visual inspection in this environment",
+    "Package links require the complete ZIP",
+    "Research prototype; event eligibility and official Resources list unresolved"
+  ]
+}

@@ -1,0 +1,4799 @@
+{
+  "schemaVersion": 1,
+  "mode": "apply",
+  "recordedAtUtc": "2026-11-14T18:32:30.030864+00:00",
+  "sourceCommit": "7dc3cf734d63a2620bb68adb16990cc2f4a21f66",
+  "sourceBranch": "feat/mission-design-lab",
+  "policy": "Current tracked and non-ignored untracked files; no history; no deletes; documentary path/endpoint redaction only; source hashes preserved as origin metadata.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sourceSha256": "8d5988a25632a793e232e74f8ca76d5263b77704af1e012acc5f22b2c03da9d3",
+      "exportSha256": "8d5988a25632a793e232e74f8ca76d5263b77704af1e012acc5f22b2c03da9d3",
+      "sourceBytes": 286,
+      "exportBytes": 286,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "GIT-PROVENIENCIA.md",
+      "sourceSha256": "30b304899130fc63787f3f38a30cae8334f14bf8a09879375c20235499b249a7",
+      "exportSha256": "30b304899130fc63787f3f38a30cae8334f14bf8a09879375c20235499b249a7",
+      "sourceBytes": 1523,
+      "exportBytes": 1523,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "LICENSE",
+      "sourceSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exportSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sourceBytes": 11358,
+      "exportBytes": 11358,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "NOTICE.md",
+      "sourceSha256": "2b42c0bbe35d840490f20433a390abd26b57fd022581a4580578d72876aab6d1",
+      "exportSha256": "2b42c0bbe35d840490f20433a390abd26b57fd022581a4580578d72876aab6d1",
+      "sourceBytes": 3144,
+      "exportBytes": 3144,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "PUBLICADO.md",
+      "sourceSha256": "50d179268ae1763fd5a1915efa1f03936a66a7f19db22b0b58f04a3f7d250382",
+      "exportSha256": "50d179268ae1763fd5a1915efa1f03936a66a7f19db22b0b58f04a3f7d250382",
+      "sourceBytes": 4856,
+      "exportBytes": 4856,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "README.md",
+      "sourceSha256": "277fdcb1a453fc2260fdc8b005c82834a3edaf82f2421196a3038731b73394ec",
+      "exportSha256": "277fdcb1a453fc2260fdc8b005c82834a3edaf82f2421196a3038731b73394ec",
+      "sourceBytes": 7231,
+      "exportBytes": 7231,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/build-model.mjs",
+      "sourceSha256": "fd0903f38f9e53d1c0ff197cfc6e1ae496fd678d85bf991eeb2ff1e8c3d4c4c6",
+      "exportSha256": "fd0903f38f9e53d1c0ff197cfc6e1ae496fd678d85bf991eeb2ff1e8c3d4c4c6",
+      "sourceBytes": 23791,
+      "exportBytes": 23791,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/build-page.mjs",
+      "sourceSha256": "3c3ab400894b4bacd0774188f81f5a19710108f9680945ea14cad4206e7e0a0e",
+      "exportSha256": "3c3ab400894b4bacd0774188f81f5a19710108f9680945ea14cad4206e7e0a0e",
+      "sourceBytes": 19199,
+      "exportBytes": 19199,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/check-map.mjs",
+      "sourceSha256": "3712b68ea5db0ac038a37fd2dc2920b621fcf6c5816e83a9780ea8022aa0eb0e",
+      "exportSha256": "3712b68ea5db0ac038a37fd2dc2920b621fcf6c5816e83a9780ea8022aa0eb0e",
+      "sourceBytes": 7191,
+      "exportBytes": 7191,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/index.html",
+      "sourceSha256": "bd67abca2caa2110b67597f9c400585c06fc2e00c9133acb851add2e0bd5145e",
+      "exportSha256": "bd67abca2caa2110b67597f9c400585c06fc2e00c9133acb851add2e0bd5145e",
+      "sourceBytes": 1021364,
+      "exportBytes": 1021364,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/map.mmd",
+      "sourceSha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b",
+      "exportSha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b",
+      "sourceBytes": 2137,
+      "exportBytes": 2137,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/model.json",
+      "sourceSha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
+      "exportSha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
+      "sourceBytes": 165126,
+      "exportBytes": 165126,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/offline-guard.mjs",
+      "sourceSha256": "a9b43d8692c4fa392800f5689584ba04a7492613344993908b4a86fb0b757db1",
+      "exportSha256": "a9b43d8692c4fa392800f5689584ba04a7492613344993908b4a86fb0b757db1",
+      "sourceBytes": 634,
+      "exportBytes": 634,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/runtime.architecture.json",
+      "sourceSha256": "a1798788824078cdcd366087e547e21a890a5cb39f745906fd74129b38d70b00",
+      "exportSha256": "a1798788824078cdcd366087e547e21a890a5cb39f745906fd74129b38d70b00",
+      "sourceBytes": 5139,
+      "exportBytes": 5139,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/runtime.html",
+      "sourceSha256": "4837343c8bea1a257245cd1ec0acca99d6f8302278f7fc40b67a60658accbf5d",
+      "exportSha256": "4837343c8bea1a257245cd1ec0acca99d6f8302278f7fc40b67a60658accbf5d",
+      "sourceBytes": 841338,
+      "exportBytes": 841338,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/runtime.layout.json",
+      "sourceSha256": "b3d84f546e3058ba8b72f6a56308b12f7e04d8d8986046af78c0d688d8e09792",
+      "exportSha256": "b3d84f546e3058ba8b72f6a56308b12f7e04d8d8986046af78c0d688d8e09792",
+      "sourceBytes": 4690,
+      "exportBytes": 4690,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/LICENSE",
+      "sourceSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exportSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sourceBytes": 11358,
+      "exportBytes": 11358,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/LICENSE-MIT",
+      "sourceSha256": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706",
+      "exportSha256": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706",
+      "sourceBytes": 1102,
+      "exportBytes": 1102,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/NOTICE",
+      "sourceSha256": "665eb53e6fcf09cee183c9f23c8052645dc95570d9ccbbf53dc0f5213a1b5edd",
+      "exportSha256": "665eb53e6fcf09cee183c9f23c8052645dc95570d9ccbbf53dc0f5213a1b5edd",
+      "sourceBytes": 1340,
+      "exportBytes": 1340,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/THIRD_PARTY_NOTICES.md",
+      "sourceSha256": "b5e129197f391568f7abf287c74b24f4835f10e5388f600407c8788feaeb9015",
+      "exportSha256": "b5e129197f391568f7abf287c74b24f4835f10e5388f600407c8788feaeb9015",
+      "sourceBytes": 5669,
+      "exportBytes": 5669,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/assets/JetBrainsMono-OFL.txt",
+      "sourceSha256": "c1ab7c666206842a02b35b30770dac0d7a10156ed401c9defc3f02a754d89e90",
+      "exportSha256": "c1ab7c666206842a02b35b30770dac0d7a10156ed401c9defc3f02a754d89e90",
+      "sourceBytes": 4398,
+      "exportBytes": 4398,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/assets/template.html",
+      "sourceSha256": "9689eeec1a5918aea571eb84d66ea28c7b5bcdcbcf2ae71666bad19d44cc89bc",
+      "exportSha256": "9689eeec1a5918aea571eb84d66ea28c7b5bcdcbcf2ae71666bad19d44cc89bc",
+      "sourceBytes": 787334,
+      "exportBytes": 787334,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/locales/en.json",
+      "sourceSha256": "1e8b43d8ba6d8ae75c2b393b2edb43cac5e142f33cbc2d1a2351e0e8baf9e1aa",
+      "exportSha256": "1e8b43d8ba6d8ae75c2b393b2edb43cac5e142f33cbc2d1a2351e0e8baf9e1aa",
+      "sourceBytes": 27386,
+      "exportBytes": 27386,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/locales/manifest.json",
+      "sourceSha256": "9a377676b5d16f97a6a1f9326aadbb447321e9ceb5744718181796ce3dcce0d8",
+      "exportSha256": "9a377676b5d16f97a6a1f9326aadbb447321e9ceb5744718181796ce3dcce0d8",
+      "sourceBytes": 293,
+      "exportBytes": 293,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/architecture/grid.mjs",
+      "sourceSha256": "f6de99c32436feed3378b0ddef516bb4732ff27a89c543b50635d4d14a15a55a",
+      "exportSha256": "f6de99c32436feed3378b0ddef516bb4732ff27a89c543b50635d4d14a15a55a",
+      "sourceBytes": 2071,
+      "exportBytes": 2071,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/architecture/labels.mjs",
+      "sourceSha256": "3a0066a987d8ad20121d0f7261d8bcfd3659443a335ea5e47938e7779ae12d31",
+      "exportSha256": "3a0066a987d8ad20121d0f7261d8bcfd3659443a335ea5e47938e7779ae12d31",
+      "sourceBytes": 155,
+      "exportBytes": 155,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/architecture/render-architecture.mjs",
+      "sourceSha256": "50bf6f0748446ba99c4236e29e2e39755d5a2b8894fb598f104f7b3107063ca3",
+      "exportSha256": "50bf6f0748446ba99c4236e29e2e39755d5a2b8894fb598f104f7b3107063ca3",
+      "sourceBytes": 58551,
+      "exportBytes": 58551,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/architecture/routing.mjs",
+      "sourceSha256": "908ddaf85caaa2d5d4a17c0544489ad9500614914c64a1d2ee2b96c4cc9ad4b3",
+      "exportSha256": "908ddaf85caaa2d5d4a17c0544489ad9500614914c64a1d2ee2b96c4cc9ad4b3",
+      "sourceBytes": 74482,
+      "exportBytes": 74482,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/atomic-output.mjs",
+      "sourceSha256": "f804d66d1801ac2dadc9d0a4c334645cfbb7a8cd1a7de112ddfb952c056a580b",
+      "exportSha256": "f804d66d1801ac2dadc9d0a4c334645cfbb7a8cd1a7de112ddfb952c056a580b",
+      "sourceBytes": 70372,
+      "exportBytes": 70372,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/automatic-labels.mjs",
+      "sourceSha256": "3f3b63cd9cfd242968a739ca703291d7788567ec5699b5e7d6a11a4079e15917",
+      "exportSha256": "3f3b63cd9cfd242968a739ca703291d7788567ec5699b5e7d6a11a4079e15917",
+      "sourceBytes": 14771,
+      "exportBytes": 14771,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/brand-marks.mjs",
+      "sourceSha256": "87436fa956c98dc9bbabf826d5f254587c1b3e7a829883f4098e04c62f4b5345",
+      "exportSha256": "87436fa956c98dc9bbabf826d5f254587c1b3e7a829883f4098e04c62f4b5345",
+      "sourceBytes": 28938,
+      "exportBytes": 28938,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/cli.mjs",
+      "sourceSha256": "039c3fbb0d46436d387629ce16b737a7c3247dfb79a9e77c1487ca49c0afbbe0",
+      "exportSha256": "039c3fbb0d46436d387629ce16b737a7c3247dfb79a9e77c1487ca49c0afbbe0",
+      "sourceBytes": 19047,
+      "exportBytes": 19047,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/desktop-readability.mjs",
+      "sourceSha256": "55ee7aba702d7883a08b6e54b39b00d5a17918a0c6bcf0c0fea19034f4de8990",
+      "exportSha256": "55ee7aba702d7883a08b6e54b39b00d5a17918a0c6bcf0c0fea19034f4de8990",
+      "sourceBytes": 6929,
+      "exportBytes": 6929,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/diagnostics.mjs",
+      "sourceSha256": "4635119e65f77f28f0a81c038642c7d7de318ba9400073f37decd59df258dcd6",
+      "exportSha256": "4635119e65f77f28f0a81c038642c7d7de318ba9400073f37decd59df258dcd6",
+      "sourceBytes": 8272,
+      "exportBytes": 8272,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/engineering-profiles.mjs",
+      "sourceSha256": "7e99f9d5423f66cc9ab6224da56dc2d5aa6c6faec29178034794e9db6b5b2889",
+      "exportSha256": "7e99f9d5423f66cc9ab6224da56dc2d5aa6c6faec29178034794e9db6b5b2889",
+      "sourceBytes": 6936,
+      "exportBytes": 6936,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/generated-brand-marks.mjs",
+      "sourceSha256": "0f157d229c12df6f53763a3b88684baa5803a52484c49c4d34ec40b8743beea2",
+      "exportSha256": "0f157d229c12df6f53763a3b88684baa5803a52484c49c4d34ec40b8743beea2",
+      "sourceBytes": 163612,
+      "exportBytes": 163612,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/generated-validators.mjs",
+      "sourceSha256": "f9e6d4f4ef5c5ab98013563c7ea1d27d58c67111832bd4167989dc0c88405181",
+      "exportSha256": "f9e6d4f4ef5c5ab98013563c7ea1d27d58c67111832bd4167989dc0c88405181",
+      "sourceBytes": 1020040,
+      "exportBytes": 1020040,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/geometry.mjs",
+      "sourceSha256": "818f6c000595f11a915cce2f73b5deb1a82ececf6c578a22bee70099988ea7a5",
+      "exportSha256": "818f6c000595f11a915cce2f73b5deb1a82ececf6c578a22bee70099988ea7a5",
+      "sourceBytes": 89929,
+      "exportBytes": 89929,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/i18n.mjs",
+      "sourceSha256": "1e6601157babd70c455dcddc93868f4665e56e7e723708d95dcc791dd1b636b9",
+      "exportSha256": "1e6601157babd70c455dcddc93868f4665e56e7e723708d95dcc791dd1b636b9",
+      "sourceBytes": 13869,
+      "exportBytes": 13869,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/layout-report.mjs",
+      "sourceSha256": "979da7226c5080cb16fb352236d5705cc79c06c15d0a3550b95963af02c63b6e",
+      "exportSha256": "979da7226c5080cb16fb352236d5705cc79c06c15d0a3550b95963af02c63b6e",
+      "sourceBytes": 1587,
+      "exportBytes": 1587,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/legend.mjs",
+      "sourceSha256": "c33fcb54cc5aa60d788154036daa165f85d2e06d28aa9f1d4a73705fa278de70",
+      "exportSha256": "c33fcb54cc5aa60d788154036daa165f85d2e06d28aa9f1d4a73705fa278de70",
+      "sourceBytes": 9225,
+      "exportBytes": 9225,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/node-card-style.mjs",
+      "sourceSha256": "80a0d473b936ee198e73cb89addd43a6344fb81da94f9fc88c53ae759cbf748d",
+      "exportSha256": "80a0d473b936ee198e73cb89addd43a6344fb81da94f9fc88c53ae759cbf748d",
+      "sourceBytes": 2470,
+      "exportBytes": 2470,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/output-path.mjs",
+      "sourceSha256": "7422139101abd93493918898a97bed06f2212bfd411d3514cd229b6d57a3797e",
+      "exportSha256": "7422139101abd93493918898a97bed06f2212bfd411d3514cd229b6d57a3797e",
+      "sourceBytes": 19029,
+      "exportBytes": 19029,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/owned-temp-directory.mjs",
+      "sourceSha256": "fb94515f8cd4b6b28799a7367745235822e2169534b8200791600ce7c3953a0e",
+      "exportSha256": "fb94515f8cd4b6b28799a7367745235822e2169534b8200791600ce7c3953a0e",
+      "sourceBytes": 3198,
+      "exportBytes": 3198,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/path-semantics.mjs",
+      "sourceSha256": "4ef002af9061c06634a07de6d199fd7d13e6c50561c792fd018118bf3e065f52",
+      "exportSha256": "4ef002af9061c06634a07de6d199fd7d13e6c50561c792fd018118bf3e065f52",
+      "sourceBytes": 32406,
+      "exportBytes": 32406,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/portable-path.mjs",
+      "sourceSha256": "26130cbcdae9b9f082486aeb5feec9c5fe57905d2ed8e30c8081b9710e2e8ac3",
+      "exportSha256": "26130cbcdae9b9f082486aeb5feec9c5fe57905d2ed8e30c8081b9710e2e8ac3",
+      "sourceBytes": 12543,
+      "exportBytes": 12543,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/repository-evidence.mjs",
+      "sourceSha256": "d1e14f82ba07eb4df9fb0986b4d0c02110d1eaa05a4454f33e92bd1e5dfdc8d3",
+      "exportSha256": "d1e14f82ba07eb4df9fb0986b4d0c02110d1eaa05a4454f33e92bd1e5dfdc8d3",
+      "sourceBytes": 20342,
+      "exportBytes": 20342,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/repository-location.mjs",
+      "sourceSha256": "344044d8240a093919894bd63278652bd01b3717c5b49fb174a6f77bea28b839",
+      "exportSha256": "344044d8240a093919894bd63278652bd01b3717c5b49fb174a6f77bea28b839",
+      "sourceBytes": 4349,
+      "exportBytes": 4349,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/route-quality.mjs",
+      "sourceSha256": "c9cb9aae3a1623667f0490ba755bbc0ba57e5957e7ea56379d872eb1f2bb2090",
+      "exportSha256": "c9cb9aae3a1623667f0490ba755bbc0ba57e5957e7ea56379d872eb1f2bb2090",
+      "sourceBytes": 26944,
+      "exportBytes": 26944,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/sidecar-path.mjs",
+      "sourceSha256": "c23cac8bcc265a74e2920c58d0968d1ffa06c1328bdd9cfd07755d4df2f22974",
+      "exportSha256": "c23cac8bcc265a74e2920c58d0968d1ffa06c1328bdd9cfd07755d4df2f22974",
+      "sourceBytes": 1269,
+      "exportBytes": 1269,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/software-notices.mjs",
+      "sourceSha256": "8bfc9ee3dc35eb0aa9860f71e7038f15647ed24d6ce7386e0e24870766e10bfe",
+      "exportSha256": "8bfc9ee3dc35eb0aa9860f71e7038f15647ed24d6ce7386e0e24870766e10bfe",
+      "sourceBytes": 506,
+      "exportBytes": 506,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/spatial-grid.mjs",
+      "sourceSha256": "e728bf6a729972f95ae09e368ea370490d10ff94d49debe2fab2e9bac923ee1a",
+      "exportSha256": "e728bf6a729972f95ae09e368ea370490d10ff94d49debe2fab2e9bac923ee1a",
+      "sourceBytes": 2440,
+      "exportBytes": 2440,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/svg-path-analysis.mjs",
+      "sourceSha256": "4c498ef5ba090a2d658c2ce3d80145f4cc63da9462f547b621206250096957c5",
+      "exportSha256": "4c498ef5ba090a2d658c2ce3d80145f4cc63da9462f547b621206250096957c5",
+      "sourceBytes": 5429,
+      "exportBytes": 5429,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/text-fit.mjs",
+      "sourceSha256": "ebd499072ef4fe31c9aabf45a01c204a9c2c142d45f087c3240673f90f477038",
+      "exportSha256": "ebd499072ef4fe31c9aabf45a01c204a9c2c142d45f087c3240673f90f477038",
+      "sourceBytes": 5195,
+      "exportBytes": 5195,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/utils.mjs",
+      "sourceSha256": "d0e8692b8acdc6993578c5d4aeb67065effdf5bf4cf2cd127bf561c677af38f5",
+      "exportSha256": "d0e8692b8acdc6993578c5d4aeb67065effdf5bf4cf2cd127bf561c677af38f5",
+      "sourceBytes": 12972,
+      "exportBytes": 12972,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/renderers/shared/validator.mjs",
+      "sourceSha256": "f5cf5b9aa3623a456e9a07f0c5f08fe09a0a67d3ba356e32937c3287c75c3bc9",
+      "exportSha256": "f5cf5b9aa3623a456e9a07f0c5f08fe09a0a67d3ba356e32937c3287c75c3bc9",
+      "sourceBytes": 3336,
+      "exportBytes": 3336,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/schemas/architecture.schema.json",
+      "sourceSha256": "aef992b585a18a4016b8207254fe43a6227b0d45322a1ba95e0f69a80fc8f8c1",
+      "exportSha256": "aef992b585a18a4016b8207254fe43a6227b0d45322a1ba95e0f69a80fc8f8c1",
+      "sourceBytes": 6024,
+      "exportBytes": 6024,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/schemas/common.schema.json",
+      "sourceSha256": "3bb6bde1122ebc1d47f73cf12400015baa0c7e5650e5780b0e89773d7ead4def",
+      "exportSha256": "3bb6bde1122ebc1d47f73cf12400015baa0c7e5650e5780b0e89773d7ead4def",
+      "sourceBytes": 5785,
+      "exportBytes": 5785,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "architecture/vendor/archify/upstream-manifest.json",
+      "sourceSha256": "f712046382954d337b427610ca4218def26bc39bdfde898aa84fc779e67b03bc",
+      "exportSha256": "f712046382954d337b427610ca4218def26bc39bdfde898aa84fc779e67b03bc",
+      "sourceBytes": 6831,
+      "exportBytes": 6831,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/compiled-context.json",
+      "sourceSha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd",
+      "exportSha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd",
+      "sourceBytes": 70554,
+      "exportBytes": 70554,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/index.html",
+      "sourceSha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+      "exportSha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+      "sourceBytes": 130752,
+      "exportBytes": 130752,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/index.template.html",
+      "sourceSha256": "39757a59e4b05bca55d7c368699eabc7a7bce345d6d7aeb2190b235f782be057",
+      "exportSha256": "39757a59e4b05bca55d7c368699eabc7a7bce345d6d7aeb2190b235f782be057",
+      "sourceBytes": 73639,
+      "exportBytes": 73639,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/project-context.json",
+      "sourceSha256": "49d7d249dadf4da1f3c5f5d681cb629a7c896907d62cb24e133ebcb2639ec123",
+      "exportSha256": "49d7d249dadf4da1f3c5f5d681cb629a7c896907d62cb24e133ebcb2639ec123",
+      "sourceBytes": 54186,
+      "exportBytes": 54186,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/research-library-index.json",
+      "sourceSha256": "4f6719949ce2fb7de5b674236773c6394d6d192189ddce622f7fa4665d8ae50a",
+      "exportSha256": "4f6719949ce2fb7de5b674236773c6394d6d192189ddce622f7fa4665d8ae50a",
+      "sourceBytes": 21973,
+      "exportBytes": 21973,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/research-library.html",
+      "sourceSha256": "ab7cd3d367653f326f507e0a1907700f9c2276abbc4d543391f46c1dc3fdcc1a",
+      "exportSha256": "ab7cd3d367653f326f507e0a1907700f9c2276abbc4d543391f46c1dc3fdcc1a",
+      "sourceBytes": 900660,
+      "exportBytes": 900660,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/research-library.md",
+      "sourceSha256": "65fac70a7809bf75c5fbde21b9ed804bf77379db1f121a6cfe0a0ded5855747c",
+      "exportSha256": "65fac70a7809bf75c5fbde21b9ed804bf77379db1f121a6cfe0a0ded5855747c",
+      "sourceBytes": 773649,
+      "exportBytes": 773649,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "context/schedule.json",
+      "sourceSha256": "73fd125d2f599cae8b72a681cbbde7f7df20cc7f63a65e6f4061289b9d5265a5",
+      "exportSha256": "73fd125d2f599cae8b72a681cbbde7f7df20cc7f63a65e6f4061289b9d5265a5",
+      "sourceBytes": 16371,
+      "exportBytes": 16371,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/assets/OrbitalScene-B0I9aE-1.js",
+      "sourceSha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
+      "exportSha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
+      "sourceBytes": 567251,
+      "exportBytes": 567251,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/assets/index-C0yMbnbH.css",
+      "sourceSha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
+      "exportSha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
+      "sourceBytes": 55259,
+      "exportBytes": 55259,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/assets/index-DYhpvtlV.js",
+      "sourceSha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
+      "exportSha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
+      "sourceBytes": 311602,
+      "exportBytes": 311602,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/assets/mission.worker-m4WSgatj.js",
+      "sourceSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "exportSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "sourceBytes": 20166,
+      "exportBytes": 20166,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/assets/search-DiIaA0z6.js",
+      "sourceSha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
+      "exportSha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
+      "sourceBytes": 1242,
+      "exportBytes": 1242,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/cmr-mod13q1-granule-2.json",
+      "sourceSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "exportSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "sourceBytes": 5720,
+      "exportBytes": 5720,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/cmr-mod13q1-granules.json",
+      "sourceSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "exportSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "sourceBytes": 5719,
+      "exportBytes": 5719,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-A-raw.json",
+      "sourceSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "exportSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-A-retrieval.json",
+      "sourceSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "exportSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-B-raw.json",
+      "sourceSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "exportSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-B-retrieval.json",
+      "sourceSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "exportSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-C-raw.json",
+      "sourceSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "exportSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-C-retrieval.json",
+      "sourceSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "exportSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-bands.json",
+      "sourceSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "exportSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "sourceBytes": 2366,
+      "exportBytes": 2366,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/data/mod13q1-research-pack.json",
+      "sourceSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "exportSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "sourceBytes": 5942,
+      "exportBytes": 5942,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "dist/index.html",
+      "sourceSha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "exportSha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "sourceBytes": 797,
+      "exportBytes": 797,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-01.dot",
+      "sourceSha256": "9f96ea631cfed126cf1b4b62ff35355a9b02240ac1c1d01114d766ce6d6c3bf9",
+      "exportSha256": "9f96ea631cfed126cf1b4b62ff35355a9b02240ac1c1d01114d766ce6d6c3bf9",
+      "sourceBytes": 2048,
+      "exportBytes": 2048,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-01.mmd",
+      "sourceSha256": "71f4ba44fa2cff0f280e543430f13f2bed67c556dac71128575d776856bf86bc",
+      "exportSha256": "71f4ba44fa2cff0f280e543430f13f2bed67c556dac71128575d776856bf86bc",
+      "sourceBytes": 747,
+      "exportBytes": 747,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-01.png",
+      "sourceSha256": "1d396bf5069dc7e23a02f28e37ac0cb0a1aa5e3966c341d34574948610f954f9",
+      "exportSha256": "1d396bf5069dc7e23a02f28e37ac0cb0a1aa5e3966c341d34574948610f954f9",
+      "sourceBytes": 239989,
+      "exportBytes": 239989,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-01.svg",
+      "sourceSha256": "40e6b4213571643dbeca03b2b377c892bdf03dce2948f8588cb9bfeb3f50adda",
+      "exportSha256": "40e6b4213571643dbeca03b2b377c892bdf03dce2948f8588cb9bfeb3f50adda",
+      "sourceBytes": 17103,
+      "exportBytes": 17103,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-02.dot",
+      "sourceSha256": "7e8b3f12bb0493fd97cd7f998919f9528db1c57d85d29f4d0da863eab583f7ab",
+      "exportSha256": "7e8b3f12bb0493fd97cd7f998919f9528db1c57d85d29f4d0da863eab583f7ab",
+      "sourceBytes": 1732,
+      "exportBytes": 1732,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-02.mmd",
+      "sourceSha256": "803a9518d75bf00a26b1e0bb9534a4d935b0fb491ab11eb05f4953b9bab7d94e",
+      "exportSha256": "803a9518d75bf00a26b1e0bb9534a4d935b0fb491ab11eb05f4953b9bab7d94e",
+      "sourceBytes": 659,
+      "exportBytes": 659,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-02.png",
+      "sourceSha256": "9c0768104fa3c9c0c17117a52df52f2403c1f9051a0d67678dfae71422e78d14",
+      "exportSha256": "9c0768104fa3c9c0c17117a52df52f2403c1f9051a0d67678dfae71422e78d14",
+      "sourceBytes": 198135,
+      "exportBytes": 198135,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-02.svg",
+      "sourceSha256": "0f8833e4720f162c4ed7ffd216d79219f46c1979c940e33abdb37e5c8b491db0",
+      "exportSha256": "0f8833e4720f162c4ed7ffd216d79219f46c1979c940e33abdb37e5c8b491db0",
+      "sourceBytes": 13522,
+      "exportBytes": 13522,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-03.dot",
+      "sourceSha256": "acaae09fcba18ef11532b9853fb636a4be975e7e6278e243556f0bda2508ad2a",
+      "exportSha256": "acaae09fcba18ef11532b9853fb636a4be975e7e6278e243556f0bda2508ad2a",
+      "sourceBytes": 1388,
+      "exportBytes": 1388,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-03.mmd",
+      "sourceSha256": "15bc729604a620cb34adb2c81860a48419dbf60eaef40aaa2edd20b3759e2adb",
+      "exportSha256": "15bc729604a620cb34adb2c81860a48419dbf60eaef40aaa2edd20b3759e2adb",
+      "sourceBytes": 505,
+      "exportBytes": 505,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-03.png",
+      "sourceSha256": "9042b51c4563ebec5f88e6668d518c924d11defad7ad98cb3adb98392796c240",
+      "exportSha256": "9042b51c4563ebec5f88e6668d518c924d11defad7ad98cb3adb98392796c240",
+      "sourceBytes": 146866,
+      "exportBytes": 146866,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-03.svg",
+      "sourceSha256": "c14559f8978796da2df531c76506a16c9c46de6cf7392079566f56a476f46975",
+      "exportSha256": "c14559f8978796da2df531c76506a16c9c46de6cf7392079566f56a476f46975",
+      "sourceBytes": 10347,
+      "exportBytes": 10347,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-04.dot",
+      "sourceSha256": "458280ea58ed1182eb586b6c60c5ce2b4fa82afd67b7a6965b755916a4cbc8ec",
+      "exportSha256": "458280ea58ed1182eb586b6c60c5ce2b4fa82afd67b7a6965b755916a4cbc8ec",
+      "sourceBytes": 1383,
+      "exportBytes": 1383,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-04.mmd",
+      "sourceSha256": "ea79c4799b14a06266b7b4b9bf62a9a80bd7e91030df0887f8bd1acbf669b7f2",
+      "exportSha256": "ea79c4799b14a06266b7b4b9bf62a9a80bd7e91030df0887f8bd1acbf669b7f2",
+      "sourceBytes": 478,
+      "exportBytes": 478,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-04.png",
+      "sourceSha256": "bd58d60493c61bdd226d71b5ba5db460bd302af2054de3db5cb564de86c0f1bf",
+      "exportSha256": "bd58d60493c61bdd226d71b5ba5db460bd302af2054de3db5cb564de86c0f1bf",
+      "sourceBytes": 121982,
+      "exportBytes": 121982,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docassets/04-FLOWCHARTS-04.svg",
+      "sourceSha256": "08818bc0ee25b55ef97d6c538f1bd68e7778b38532fab952bedff61fa745e967",
+      "exportSha256": "08818bc0ee25b55ef97d6c538f1bd68e7778b38532fab952bedff61fa745e967",
+      "sourceBytes": 10479,
+      "exportBytes": 10479,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/01-DOSSIE-DECISAO.md",
+      "sourceSha256": "e4b0d44ddd8705da34166ed4564cb6d4748eda5d0c21e1a455aaaad75a9575c6",
+      "exportSha256": "e4b0d44ddd8705da34166ed4564cb6d4748eda5d0c21e1a455aaaad75a9575c6",
+      "sourceBytes": 12008,
+      "exportBytes": 12008,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/02-PRD.md",
+      "sourceSha256": "3824ffe2d27d6406065d7c0c6601a445e524d0ac451d43d5547a8751269d2de0",
+      "exportSha256": "3824ffe2d27d6406065d7c0c6601a445e524d0ac451d43d5547a8751269d2de0",
+      "sourceBytes": 11616,
+      "exportBytes": 11616,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/03-PRT.md",
+      "sourceSha256": "53d04790126a470c21a9e5061920e110215660d7ba83099a08fdc8156db7e569",
+      "exportSha256": "53d04790126a470c21a9e5061920e110215660d7ba83099a08fdc8156db7e569",
+      "sourceBytes": 16544,
+      "exportBytes": 16544,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/04-FLOWCHARTS.md",
+      "sourceSha256": "56051b9bb4ed7bab8878d36d04a14d00d6ba774964f23701cfad88f19398586c",
+      "exportSha256": "56051b9bb4ed7bab8878d36d04a14d00d6ba774964f23701cfad88f19398586c",
+      "sourceBytes": 3938,
+      "exportBytes": 3938,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/05-CRONOGRAMA-E-CRITERIOS.md",
+      "sourceSha256": "d4bc70743c2ec966c4befd7b6d5816e4164e0a881c64bcfee9fe5021337c4fac",
+      "exportSha256": "d4bc70743c2ec966c4befd7b6d5816e4164e0a881c64bcfee9fe5021337c4fac",
+      "sourceBytes": 6430,
+      "exportBytes": 6430,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/06-IA-LOCAL-E-ANEXOS.md",
+      "sourceSha256": "631bcc95f0278b643f3259e5ea20b3681438e00ab09b5250ae8e0f82c7257efb",
+      "exportSha256": "631bcc95f0278b643f3259e5ea20b3681438e00ab09b5250ae8e0f82c7257efb",
+      "sourceBytes": 10626,
+      "exportBytes": 10626,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/07-SCHEMA-PRISMA.md",
+      "sourceSha256": "659cd1e3c6ac157d3568f7f9a0cc1ff44724d1396795c8b9957c4d68ff2fecfd",
+      "exportSha256": "659cd1e3c6ac157d3568f7f9a0cc1ff44724d1396795c8b9957c4d68ff2fecfd",
+      "sourceBytes": 4514,
+      "exportBytes": 4514,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/08-HANDOFF.md",
+      "sourceSha256": "efa7c5ebe99409da56353c75bbe11487d59599b9819c5dab9e12ded6b360df0f",
+      "exportSha256": "efa7c5ebe99409da56353c75bbe11487d59599b9819c5dab9e12ded6b360df0f",
+      "sourceBytes": 17590,
+      "exportBytes": 17590,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/09-VERIFICACAO.md",
+      "sourceSha256": "71c0584469279d1d9d65a9d1fe311577b11722e1da49d874ca0d403c55163122",
+      "exportSha256": "71c0584469279d1d9d65a9d1fe311577b11722e1da49d874ca0d403c55163122",
+      "sourceBytes": 10504,
+      "exportBytes": 10504,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/10-FRENTES-E-RASTREABILIDADE.md",
+      "sourceSha256": "dfc6bd91d2efd04f93ca72c966dca5d408b8c82fcc51062b717bfcacc12968c5",
+      "exportSha256": "dfc6bd91d2efd04f93ca72c966dca5d408b8c82fcc51062b717bfcacc12968c5",
+      "sourceBytes": 4267,
+      "exportBytes": 4267,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/11-APENDICE-SCHEMA.md",
+      "sourceSha256": "b6c5ad5a86a015e8c584f8237da6583596785c81db623ab399775f4c8ebeedda",
+      "exportSha256": "b6c5ad5a86a015e8c584f8237da6583596785c81db623ab399775f4c8ebeedda",
+      "sourceBytes": 9505,
+      "exportBytes": 9505,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/12-HANDOFF-APRESENTACAO.md",
+      "sourceSha256": "62e097f4bd921164cd2002c24da26612ca4fe13f400f7f1cc7b119bacbd6cbf0",
+      "exportSha256": "62e097f4bd921164cd2002c24da26612ca4fe13f400f7f1cc7b119bacbd6cbf0",
+      "sourceBytes": 14172,
+      "exportBytes": 14172,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/13-ARQUITETURA-ARCHIFY.md",
+      "sourceSha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
+      "exportSha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
+      "sourceBytes": 11569,
+      "exportBytes": 11569,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/14-BETA-DEPLOY.md",
+      "sourceSha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
+      "exportSha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
+      "sourceBytes": 6588,
+      "exportBytes": 6588,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/15-PLANO-RELEASE-20261115-0800.md",
+      "sourceSha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
+      "exportSha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
+      "sourceBytes": 14221,
+      "exportBytes": 14221,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/16-OPORTUNIDADES-BETA.md",
+      "sourceSha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
+      "exportSha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
+      "sourceBytes": 10745,
+      "exportBytes": 10745,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/17-PUBLICACAO-GIT-VERCEL.md",
+      "sourceSha256": "f497039a93b71a9f2c3575aab5bc1eb2bf5619b945d28c5c2fb5d7cee7d67690",
+      "exportSha256": "f497039a93b71a9f2c3575aab5bc1eb2bf5619b945d28c5c2fb5d7cee7d67690",
+      "sourceBytes": 5985,
+      "exportBytes": 5985,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/18-CONTEXTO-COMPLETO.md",
+      "sourceSha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
+      "exportSha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
+      "sourceBytes": 70671,
+      "exportBytes": 70671,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/19-REVISAO-EVIDENCIAS-R8.md",
+      "sourceSha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
+      "exportSha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
+      "sourceBytes": 14215,
+      "exportBytes": 14215,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
+      "sourceSha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e",
+      "exportSha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e",
+      "sourceBytes": 9892,
+      "exportBytes": 9892,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/21-OPORTUNIDADES-NASA.md",
+      "sourceSha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
+      "exportSha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
+      "sourceBytes": 18391,
+      "exportBytes": 18391,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/22-PLANO-CONTINUIDADE.md",
+      "sourceSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "exportSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "sourceBytes": 7087,
+      "exportBytes": 7087,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/diagrams/01-jornada.mmd",
+      "sourceSha256": "71f4ba44fa2cff0f280e543430f13f2bed67c556dac71128575d776856bf86bc",
+      "exportSha256": "71f4ba44fa2cff0f280e543430f13f2bed67c556dac71128575d776856bf86bc",
+      "sourceBytes": 747,
+      "exportBytes": 747,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/diagrams/02-motor.mmd",
+      "sourceSha256": "803a9518d75bf00a26b1e0bb9534a4d935b0fb491ab11eb05f4953b9bab7d94e",
+      "exportSha256": "803a9518d75bf00a26b1e0bb9534a4d935b0fb491ab11eb05f4953b9bab7d94e",
+      "sourceBytes": 659,
+      "exportBytes": 659,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/diagrams/03-replay.mmd",
+      "sourceSha256": "15bc729604a620cb34adb2c81860a48419dbf60eaef40aaa2edd20b3759e2adb",
+      "exportSha256": "15bc729604a620cb34adb2c81860a48419dbf60eaef40aaa2edd20b3759e2adb",
+      "sourceBytes": 505,
+      "exportBytes": 505,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "docs/diagrams/04-topologia.mmd",
+      "sourceSha256": "ea79c4799b14a06266b7b4b9bf62a9a80bd7e91030df0887f8bd1acbf669b7f2",
+      "exportSha256": "ea79c4799b14a06266b7b4b9bf62a9a80bd7e91030df0887f8bd1acbf669b7f2",
+      "sourceBytes": 478,
+      "exportBytes": 478,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/ab-r3a-digest.json",
+      "sourceSha256": "2b7fe86f17d3e78671bb32fa9a080ceb93f618ec258fb27acf1d151b42be57ad",
+      "exportSha256": "2b7fe86f17d3e78671bb32fa9a080ceb93f618ec258fb27acf1d151b42be57ad",
+      "sourceBytes": 4878,
+      "exportBytes": 4878,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/adversarial-review.json",
+      "sourceSha256": "7fb5445ef491128c00a5d42f1f01251161c7ea51ea1e1bb2ce1f9d264284da20",
+      "exportSha256": "7fb5445ef491128c00a5d42f1f01251161c7ea51ea1e1bb2ce1f9d264284da20",
+      "sourceBytes": 8058,
+      "exportBytes": 8058,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/ai-usage-r5.json",
+      "sourceSha256": "db2dc46b6f8a5cd8033af38306d4e134d5239a2c03cb664cd590ff1552b12dfc",
+      "exportSha256": "db2dc46b6f8a5cd8033af38306d4e134d5239a2c03cb664cd590ff1552b12dfc",
+      "sourceBytes": 713,
+      "exportBytes": 713,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/archify-r6.json",
+      "sourceSha256": "6de8bb4154a8bc5d764560a0fc68f6a77f7857c7101645fa350474fbcf3802c0",
+      "exportSha256": "6de8bb4154a8bc5d764560a0fc68f6a77f7857c7101645fa350474fbcf3802c0",
+      "sourceBytes": 14615,
+      "exportBytes": 14615,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/architecture-checks-r6.json",
+      "sourceSha256": "c0edfb13ac58e7a878b7ce544d8896a4a77e06c25400747f21d8eb2219990784",
+      "exportSha256": "c0edfb13ac58e7a878b7ce544d8896a4a77e06c25400747f21d8eb2219990784",
+      "sourceBytes": 3231,
+      "exportBytes": 3231,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/architecture-checks-r8.json",
+      "sourceSha256": "7b1a6cdd4e60269417a19bf097923f8ee9e4dc03ca7a1b6f383c44ed0075cf98",
+      "exportSha256": "7b1a6cdd4e60269417a19bf097923f8ee9e4dc03ca7a1b6f383c44ed0075cf98",
+      "sourceBytes": 3231,
+      "exportBytes": 3231,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/artifact-build.json",
+      "sourceSha256": "77da69d97f5ac25534f19107923ff1009f8dff6ddaf6a12c672cae1db9ed26c0",
+      "exportSha256": "77da69d97f5ac25534f19107923ff1009f8dff6ddaf6a12c672cae1db9ed26c0",
+      "sourceBytes": 4173,
+      "exportBytes": 4173,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/beta-runtime-preservation.json",
+      "sourceSha256": "23b7c48b59ac806b3b524cc0e825b0265d153bf8ca649a49f1e7d4f01f23c716",
+      "exportSha256": "23b7c48b59ac806b3b524cc0e825b0265d153bf8ca649a49f1e7d4f01f23c716",
+      "sourceBytes": 19281,
+      "exportBytes": 19281,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/beta-site-build.json",
+      "sourceSha256": "00862b866a4bdfe3fa7d8cd444c183b95656a9aa12247635b2669289f9441a07",
+      "exportSha256": "00862b866a4bdfe3fa7d8cd444c183b95656a9aa12247635b2669289f9441a07",
+      "sourceBytes": 54119,
+      "exportBytes": 54119,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/beta-site-qa.json",
+      "sourceSha256": "7aab5972502ad034e8f961031b3a227fb51a39b627115cbc94a01f6890472ee9",
+      "exportSha256": "7aab5972502ad034e8f961031b3a227fb51a39b627115cbc94a01f6890472ee9",
+      "sourceBytes": 235176,
+      "exportBytes": 235176,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/catalog-enumeration.json",
+      "sourceSha256": "99082570a41065d0b80de44565e24de4dc63254d3d5a5647371b5d6f5bff9146",
+      "exportSha256": "99082570a41065d0b80de44565e24de4dc63254d3d5a5647371b5d6f5bff9146",
+      "sourceBytes": 144113,
+      "exportBytes": 144113,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/chronology.json",
+      "sourceSha256": "c8f70c711081ed975e0e6879b1a53309dc8f869d8bf92dd0617f69b56ac1720e",
+      "exportSha256": "c8f70c711081ed975e0e6879b1a53309dc8f869d8bf92dd0617f69b56ac1720e",
+      "sourceBytes": 925,
+      "exportBytes": 925,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/context-browser-r8.json",
+      "sourceSha256": "69175c7038c3d889ff4cbbea5cd9089bf122b88af808ada17c3915f923803173",
+      "exportSha256": "69175c7038c3d889ff4cbbea5cd9089bf122b88af808ada17c3915f923803173",
+      "sourceBytes": 9548,
+      "exportBytes": 9548,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/context-qa-r8.json",
+      "sourceSha256": "ff084019ec08c88860301bf7aefba53e3a1287e157fe33f2bd97c0c7f2016247",
+      "exportSha256": "ff084019ec08c88860301bf7aefba53e3a1287e157fe33f2bd97c0c7f2016247",
+      "sourceBytes": 5419,
+      "exportBytes": 5419,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/deployment-r6.json",
+      "sourceSha256": "cc26f4875b6372ecd7fe76d7858d2dff235372c3568288e79e812c257d447392",
+      "exportSha256": "cc26f4875b6372ecd7fe76d7858d2dff235372c3568288e79e812c257d447392",
+      "sourceBytes": 27664,
+      "exportBytes": 27664,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/deployment-r8.json",
+      "sourceSha256": "f7f91b368f6ce6c22db03b89f7b50a1d988e93baed8f303a51412fe8e12a0baf",
+      "exportSha256": "f7f91b368f6ce6c22db03b89f7b50a1d988e93baed8f303a51412fe8e12a0baf",
+      "sourceBytes": 29179,
+      "exportBytes": 29179,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/diagram-rendering.json",
+      "sourceSha256": "c375237ea9d6c65043433b55848fe2b65b07daeab303bac87573a4c5957c5b9a",
+      "exportSha256": "c375237ea9d6c65043433b55848fe2b65b07daeab303bac87573a4c5957c5b9a",
+      "sourceBytes": 1557,
+      "exportBytes": 1557,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/engine-benchmark.json",
+      "sourceSha256": "0121092e900a255e38ed3f17d24d3fc57573a0b7cc1121b319a8cab1d550b473",
+      "exportSha256": "0121092e900a255e38ed3f17d24d3fc57573a0b7cc1121b319a8cab1d550b473",
+      "sourceBytes": 26498,
+      "exportBytes": 26498,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/evi3-rerun.json",
+      "sourceSha256": "4f02e0dcc99dbbd07139a035eefb8a42c8c61293437857ed6f00e2d94bf0f7e2",
+      "exportSha256": "4f02e0dcc99dbbd07139a035eefb8a42c8c61293437857ed6f00e2d94bf0f7e2",
+      "sourceBytes": 4962,
+      "exportBytes": 4962,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/final-validation.json",
+      "sourceSha256": "08fd44f08a39fec218d914e3735572423a86bd126c22a1dcf7df78efb1df8972",
+      "exportSha256": "08fd44f08a39fec218d914e3735572423a86bd126c22a1dcf7df78efb1df8972",
+      "sourceBytes": 16713,
+      "exportBytes": 16713,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/game-baseline-r5.json",
+      "sourceSha256": "c7f2ca519555533de6b7363527cbde20ed1fff64567776c2b044688d43e74092",
+      "exportSha256": "c7f2ca519555533de6b7363527cbde20ed1fff64567776c2b044688d43e74092",
+      "sourceBytes": 8479,
+      "exportBytes": 8479,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/git-bundle-r8.json",
+      "sourceSha256": "a19cf2b6ad10a9873e84fca2c4605288e97e38d91be0fbb1acab62d42231ef4b",
+      "exportSha256": "a19cf2b6ad10a9873e84fca2c4605288e97e38d91be0fbb1acab62d42231ef4b",
+      "sourceBytes": 1973,
+      "exportBytes": 1973,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/git-final-r8.json",
+      "sourceSha256": "d642ab35a095fe78abc2e5c6a3c0757600dde875ddac30bead423b6c7065f00c",
+      "exportSha256": "d642ab35a095fe78abc2e5c6a3c0757600dde875ddac30bead423b6c7065f00c",
+      "sourceBytes": 828,
+      "exportBytes": 828,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/git-large-blob-r8.json",
+      "sourceSha256": "e862b6c00a0a1a0fba68bfd7295d39c36742d726ad897a70da11102472b1d6b2",
+      "exportSha256": "e862b6c00a0a1a0fba68bfd7295d39c36742d726ad897a70da11102472b1d6b2",
+      "sourceBytes": 1444,
+      "exportBytes": 1444,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/git-publication-r8.json",
+      "sourceSha256": "12f696cac8dbb6c287587495a56b9b2f0653fc6401465b22d09e04e844603281",
+      "exportSha256": "12f696cac8dbb6c287587495a56b9b2f0653fc6401465b22d09e04e844603281",
+      "sourceBytes": 1031,
+      "exportBytes": 1031,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/package-manifest.json",
+      "sourceSha256": "f683a766dfa69dc053df472281bcfbdc204a3fb4b535136206df6fe7a7e71033",
+      "exportSha256": "f683a766dfa69dc053df472281bcfbdc204a3fb4b535136206df6fe7a7e71033",
+      "sourceBytes": 28907,
+      "exportBytes": 28907,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/pdf-geometry-check.json",
+      "sourceSha256": "d82fcb0e7de805a2e5762758e40e710956fc6026dd0d14bc23892924912b1445",
+      "exportSha256": "d82fcb0e7de805a2e5762758e40e710956fc6026dd0d14bc23892924912b1445",
+      "sourceBytes": 12303,
+      "exportBytes": 12303,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/pdf-visual-review.json",
+      "sourceSha256": "f60557f470ba57ff397fe84b4f93a0e59f1f32fb6936b191c7c5a91cc3f43cb0",
+      "exportSha256": "f60557f470ba57ff397fe84b4f93a0e59f1f32fb6936b191c7c5a91cc3f43cb0",
+      "sourceBytes": 742,
+      "exportBytes": 742,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/portable-build.json",
+      "sourceSha256": "e29183200846cc0c8fe626cc14b320c7ec5565fb124c77da3a533fa2bee64544",
+      "exportSha256": "e29183200846cc0c8fe626cc14b320c7ec5565fb124c77da3a533fa2bee64544",
+      "sourceBytes": 1301,
+      "exportBytes": 1301,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/presentation-build.json",
+      "sourceSha256": "774366ecbc3e775dce97e0e04408c54597b8b827e385335cfc4acafdfeda660a",
+      "exportSha256": "774366ecbc3e775dce97e0e04408c54597b8b827e385335cfc4acafdfeda660a",
+      "sourceBytes": 1700,
+      "exportBytes": 1700,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/presentation-kit-http-qa.json",
+      "sourceSha256": "c97837305aa751ea4e14905788c91437c04ca51cac9819d045858923fd7662bb",
+      "exportSha256": "c97837305aa751ea4e14905788c91437c04ca51cac9819d045858923fd7662bb",
+      "sourceBytes": 2700,
+      "exportBytes": 2700,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/presentation-qa.json",
+      "sourceSha256": "108997b504ee3b87e83dc7557bf988d1c692519a0a4898347ceedb0c285be6cc",
+      "exportSha256": "108997b504ee3b87e83dc7557bf988d1c692519a0a4898347ceedb0c285be6cc",
+      "sourceBytes": 13017,
+      "exportBytes": 13017,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/presentation-release-r5.json",
+      "sourceSha256": "b6aead8209322c998dabe601528011e15aba4a56bc6c2631989b177eccee57de",
+      "exportSha256": "b6aead8209322c998dabe601528011e15aba4a56bc6c2631989b177eccee57de",
+      "sourceBytes": 4130,
+      "exportBytes": 4130,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/release-dependencies-network.json",
+      "sourceSha256": "b188c9a1de759dab527c09ecf4841631dd9ed6d0d7ee06c1522910c55691256e",
+      "exportSha256": "b188c9a1de759dab527c09ecf4841631dd9ed6d0d7ee06c1522910c55691256e",
+      "sourceBytes": 74911,
+      "exportBytes": 74911,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/release-qa-manifest.json",
+      "sourceSha256": "e0d13356bd7f032dff696c816fa90afddd08cc537b2db92a99ba92ed0c2fac0d",
+      "exportSha256": "e0d13356bd7f032dff696c816fa90afddd08cc537b2db92a99ba92ed0c2fac0d",
+      "sourceBytes": 4582,
+      "exportBytes": 4582,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/research-library-r8.json",
+      "sourceSha256": "4f6719949ce2fb7de5b674236773c6394d6d192189ddce622f7fa4665d8ae50a",
+      "exportSha256": "4f6719949ce2fb7de5b674236773c6394d6d192189ddce622f7fa4665d8ae50a",
+      "sourceBytes": 21973,
+      "exportBytes": 21973,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/server-http-smoke.json",
+      "sourceSha256": "795afc3997a751bee47183d245a0c54253dd0877ff3d58cb64400446a4f48d5e",
+      "exportSha256": "795afc3997a751bee47183d245a0c54253dd0877ff3d58cb64400446a4f48d5e",
+      "sourceBytes": 7457,
+      "exportBytes": 7457,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/source-index.json",
+      "sourceSha256": "c8886ddaaf981a7680288139a5628e4cb10fe5a0d753dd4a17922ffbe2613164",
+      "exportSha256": "c8886ddaaf981a7680288139a5628e4cb10fe5a0d753dd4a17922ffbe2613164",
+      "sourceBytes": 42639,
+      "exportBytes": 42639,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/spaceapps-review-r5.json",
+      "sourceSha256": "b179e63c0a79ec1d410ed07539a4b83a9d8d12104fd2dc8a31b20c2f93cf4dc1",
+      "exportSha256": "b179e63c0a79ec1d410ed07539a4b83a9d8d12104fd2dc8a31b20c2f93cf4dc1",
+      "sourceBytes": 14849,
+      "exportBytes": 14849,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/ui-dom-release-final.json",
+      "sourceSha256": "6e9be47f01ec9c66e3e5a033e0bb85ad33065c1a5d4ffb07a56284e0b7d97ab1",
+      "exportSha256": "6e9be47f01ec9c66e3e5a033e0bb85ad33065c1a5d4ffb07a56284e0b7d97ab1",
+      "sourceBytes": 746,
+      "exportBytes": 746,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/ui-dom-release-final.tap",
+      "sourceSha256": "5b375e6fa3b2aa9e5fca248b985d6792d02737e43298a0c0d00138ff1a4cd632",
+      "exportSha256": "5b375e6fa3b2aa9e5fca248b985d6792d02737e43298a0c0d00138ff1a4cd632",
+      "sourceBytes": 2653,
+      "exportBytes": 2653,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/ui-dom-test.json",
+      "sourceSha256": "6e9be47f01ec9c66e3e5a033e0bb85ad33065c1a5d4ffb07a56284e0b7d97ab1",
+      "exportSha256": "6e9be47f01ec9c66e3e5a033e0bb85ad33065c1a5d4ffb07a56284e0b7d97ab1",
+      "sourceBytes": 746,
+      "exportBytes": 746,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/ui-dom-test.tap",
+      "sourceSha256": "5b375e6fa3b2aa9e5fca248b985d6792d02737e43298a0c0d00138ff1a4cd632",
+      "exportSha256": "5b375e6fa3b2aa9e5fca248b985d6792d02737e43298a0c0d00138ff1a4cd632",
+      "sourceBytes": 2653,
+      "exportBytes": 2653,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/vercel-static-r6.json",
+      "sourceSha256": "7309991fe2538ce561cb761fa59410a0bd0a4e6dfe9bbe226685463482d7d4e4",
+      "exportSha256": "7309991fe2538ce561cb761fa59410a0bd0a4e6dfe9bbe226685463482d7d4e4",
+      "sourceBytes": 36629,
+      "exportBytes": 36629,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "evidence/vercel-static-r8.json",
+      "sourceSha256": "18c1bfb6520db438d8f9256647e7d72d53cac140492c096d1cc4c5451993ebd8",
+      "exportSha256": "18c1bfb6520db438d8f9256647e7d72d53cac140492c096d1cc4c5451993ebd8",
+      "sourceBytes": 9168,
+      "exportBytes": 9168,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "examples/01-long-base.json",
+      "sourceSha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb",
+      "exportSha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb",
+      "sourceBytes": 12876,
+      "exportBytes": 12876,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "examples/02-short-base.json",
+      "sourceSha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5",
+      "exportSha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5",
+      "sourceBytes": 11407,
+      "exportBytes": 11407,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "examples/03-short-repaired.json",
+      "sourceSha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5",
+      "exportSha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5",
+      "sourceBytes": 11872,
+      "exportBytes": 11872,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/.gitignore",
+      "sourceSha256": "487545f2d4b7f401b91b38d6552628f8a454b0ff6d90e8259a54342c66823aed",
+      "exportSha256": "487545f2d4b7f401b91b38d6552628f8a454b0ff6d90e8259a54342c66823aed",
+      "sourceBytes": 371,
+      "exportBytes": 371,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/LICENSE",
+      "sourceSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "exportSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sourceBytes": 11358,
+      "exportBytes": 11358,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/NOTICE.md",
+      "sourceSha256": "1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537",
+      "exportSha256": "1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537",
+      "sourceBytes": 7730,
+      "exportBytes": 7730,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/README.md",
+      "sourceSha256": "3f661b1c7f897e251f692384777c872a1a8e8bfb219566f6fd3f83c555a2339e",
+      "exportSha256": "3f661b1c7f897e251f692384777c872a1a8e8bfb219566f6fd3f83c555a2339e",
+      "sourceBytes": 12475,
+      "exportBytes": 12475,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/docs/GUIA-DIDATICO-R9.md",
+      "sourceSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "exportSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "sourceBytes": 13690,
+      "exportBytes": 13690,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/docs/PESQUISA-E-DECISOES-R9.md",
+      "sourceSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "exportSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "sourceBytes": 15716,
+      "exportBytes": 15716,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/docs/QA-NAVEGADOR-R9.md",
+      "sourceSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "exportSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "sourceBytes": 7503,
+      "exportBytes": 7503,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/docs/QA-R9.md",
+      "sourceSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "exportSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "sourceBytes": 19149,
+      "exportBytes": 19149,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/docs/REFINAMENTO-NASA-R10.md",
+      "sourceSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "exportSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "sourceBytes": 14646,
+      "exportBytes": 14646,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui-dom-test.json",
+      "sourceSha256": "4f84d0f70e12f5931a6c5e296faf839512d2dc709e36bcb8c031411a31d589ed",
+      "exportSha256": "4f84d0f70e12f5931a6c5e296faf839512d2dc709e36bcb8c031411a31d589ed",
+      "sourceBytes": 746,
+      "exportBytes": 746,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui-dom-test.tap",
+      "sourceSha256": "fcdba3303205fc870aa9ef5b7872a1f7323ef3347da4727a1563ba7cdf12363b",
+      "exportSha256": "fcdba3303205fc870aa9ef5b7872a1f7323ef3347da4727a1563ba7cdf12363b",
+      "sourceBytes": 2696,
+      "exportBytes": 2696,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui/briefing-desktop.jpg",
+      "sourceSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "exportSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "sourceBytes": 95217,
+      "exportBytes": 95217,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui/briefing-mobile.jpg",
+      "sourceSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "exportSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "sourceBytes": 58629,
+      "exportBytes": 58629,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui/laboratorio.jpg",
+      "sourceSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "exportSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "sourceBytes": 90299,
+      "exportBytes": 90299,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui/retorno-cientifico.jpg",
+      "sourceSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "exportSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "sourceBytes": 89187,
+      "exportBytes": 89187,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/evidence/ui/retorno-mobile.jpg",
+      "sourceSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "exportSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "sourceBytes": 68865,
+      "exportBytes": 68865,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/index.html",
+      "sourceSha256": "dae25aa1868fcedca22e83d1899ad1c128a22c82658f88039a0ea3c3719469a1",
+      "exportSha256": "dae25aa1868fcedca22e83d1899ad1c128a22c82658f88039a0ea3c3719469a1",
+      "sourceBytes": 723,
+      "exportBytes": 723,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/licenses/React-MIT.txt",
+      "sourceSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "exportSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sourceBytes": 1088,
+      "exportBytes": 1088,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/licenses/ReactDOM-MIT.txt",
+      "sourceSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "exportSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sourceBytes": 1088,
+      "exportBytes": 1088,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/licenses/Scheduler-MIT.txt",
+      "sourceSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "exportSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sourceBytes": 1088,
+      "exportBytes": 1088,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/licenses/Three-MIT.txt",
+      "sourceSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "exportSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "sourceBytes": 1081,
+      "exportBytes": 1081,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/package-lock.json",
+      "sourceSha256": "8b126ff19d0a048cccbc9bab7f53926654e871d971cf66ed13c12cfd4a3b489e",
+      "exportSha256": "8b126ff19d0a048cccbc9bab7f53926654e871d971cf66ed13c12cfd4a3b489e",
+      "sourceBytes": 104312,
+      "exportBytes": 104312,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/package.json",
+      "sourceSha256": "33969afc2e728087f5c92bcea4eb55a5a6d908178b7c6d4f7d1a190e2d9fffcb",
+      "exportSha256": "33969afc2e728087f5c92bcea4eb55a5a6d908178b7c6d4f7d1a190e2d9fffcb",
+      "sourceBytes": 1252,
+      "exportBytes": 1252,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/cmr-mod13q1-granule-2.json",
+      "sourceSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "exportSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "sourceBytes": 5720,
+      "exportBytes": 5720,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/cmr-mod13q1-granules.json",
+      "sourceSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "exportSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "sourceBytes": 5719,
+      "exportBytes": 5719,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-A-raw.json",
+      "sourceSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "exportSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-A-retrieval.json",
+      "sourceSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "exportSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-B-raw.json",
+      "sourceSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "exportSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-B-retrieval.json",
+      "sourceSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "exportSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-C-raw.json",
+      "sourceSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "exportSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-C-retrieval.json",
+      "sourceSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "exportSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-bands.json",
+      "sourceSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "exportSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "sourceBytes": 2366,
+      "exportBytes": 2366,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/data/mod13q1-research-pack.json",
+      "sourceSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "exportSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "sourceBytes": 5942,
+      "exportBytes": 5942,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/assets/briefing-desktop.jpg",
+      "sourceSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "exportSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "sourceBytes": 95217,
+      "exportBytes": 95217,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/assets/briefing-mobile.jpg",
+      "sourceSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "exportSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "sourceBytes": 58629,
+      "exportBytes": 58629,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/assets/laboratorio.jpg",
+      "sourceSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "exportSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "sourceBytes": 90299,
+      "exportBytes": 90299,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/assets/retorno-cientifico.jpg",
+      "sourceSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "exportSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "sourceBytes": 89187,
+      "exportBytes": 89187,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/assets/retorno-mobile.jpg",
+      "sourceSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "exportSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "sourceBytes": 68865,
+      "exportBytes": 68865,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/galeria.html",
+      "sourceSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "exportSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "sourceBytes": 12191,
+      "exportBytes": 12191,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/index.html",
+      "sourceSha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
+      "exportSha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
+      "sourceBytes": 314480,
+      "exportBytes": 314480,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/manifest.json",
+      "sourceSha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
+      "exportSha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
+      "sourceBytes": 13265,
+      "exportBytes": 13265,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/GUIA-DIDATICO-R9.md",
+      "sourceSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "exportSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "sourceBytes": 13690,
+      "exportBytes": 13690,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/PESQUISA-E-DECISOES-R9.md",
+      "sourceSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "exportSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "sourceBytes": 15716,
+      "exportBytes": 15716,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/QA-NAVEGADOR-R9.md",
+      "sourceSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "exportSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "sourceBytes": 7503,
+      "exportBytes": 7503,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/QA-R9.md",
+      "sourceSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "exportSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "sourceBytes": 19149,
+      "exportBytes": 19149,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/REFINAMENTO-NASA-R10.md",
+      "sourceSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "exportSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "sourceBytes": 14646,
+      "exportBytes": 14646,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/a1-desafio.md",
+      "sourceSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "exportSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "sourceBytes": 23667,
+      "exportBytes": 23667,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/a2-fisica.md",
+      "sourceSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "exportSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "sourceBytes": 30374,
+      "exportBytes": 30374,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/a3-ux-tecnologia.md",
+      "sourceSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "exportSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "sourceBytes": 26249,
+      "exportBytes": 26249,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/refinamento-conops.md",
+      "sourceSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "exportSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "sourceBytes": 19091,
+      "exportBytes": 19091,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/refinamento-requisitos.md",
+      "sourceSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "exportSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "sourceBytes": 13529,
+      "exportBytes": 13529,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/public/research/originals/refinamento-risco-ux.md",
+      "sourceSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "exportSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "sourceBytes": 20372,
+      "exportBytes": 20372,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/research/round10/refinamento-conops.md",
+      "sourceSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "exportSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "sourceBytes": 19091,
+      "exportBytes": 19091,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/research/round10/refinamento-requisitos.md",
+      "sourceSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "exportSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "sourceBytes": 13529,
+      "exportBytes": 13529,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/research/round10/refinamento-risco-ux.md",
+      "sourceSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "exportSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "sourceBytes": 20372,
+      "exportBytes": 20372,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/research/round9/a1-desafio.md",
+      "sourceSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "exportSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "sourceBytes": 23667,
+      "exportBytes": 23667,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/research/round9/a2-fisica.md",
+      "sourceSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "exportSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "sourceBytes": 30374,
+      "exportBytes": 30374,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/research/round9/a3-ux-tecnologia.md",
+      "sourceSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "exportSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "sourceBytes": 26249,
+      "exportBytes": 26249,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/scripts/build-research.mjs",
+      "sourceSha256": "cea4ef98e4dd326abd237f8c2d764b01dafa3e4ad22502bedd6bb6f1cf0f48f4",
+      "exportSha256": "cea4ef98e4dd326abd237f8c2d764b01dafa3e4ad22502bedd6bb6f1cf0f48f4",
+      "sourceBytes": 26487,
+      "exportBytes": 26487,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/scripts/test-ui.mjs",
+      "sourceSha256": "a789ac7a6f3a496b29153f51ca177e0f7f1309f28bb5a1b42a61d8fbdebe4b5a",
+      "exportSha256": "a789ac7a6f3a496b29153f51ca177e0f7f1309f28bb5a1b42a61d8fbdebe4b5a",
+      "sourceBytes": 2137,
+      "exportBytes": 2137,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/scripts/vendor/marked/LICENSE.md",
+      "sourceSha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+      "exportSha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+      "sourceBytes": 2942,
+      "exportBytes": 2942,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/scripts/vendor/marked/marked.esm.js",
+      "sourceSha256": "0b4487359ce6b85108708e7a532e1242a27f4718241e7b2de109ac6cd307d2dc",
+      "exportSha256": "0b4487359ce6b85108708e7a532e1242a27f4718241e7b2de109ac6cd307d2dc",
+      "sourceBytes": 41661,
+      "exportBytes": 41661,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/specs/IMPLEMENTATION-CONTRACT.md",
+      "sourceSha256": "cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6",
+      "exportSha256": "cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6",
+      "sourceBytes": 6862,
+      "exportBytes": 6862,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/App.tsx",
+      "sourceSha256": "c7aae8f20be4e2bd6cc5214a06673809e95b5261edba58d14c84ade45ccc2b3d",
+      "exportSha256": "c7aae8f20be4e2bd6cc5214a06673809e95b5261edba58d14c84ade45ccc2b3d",
+      "sourceBytes": 17702,
+      "exportBytes": 17702,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/catalog.ts",
+      "sourceSha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8",
+      "exportSha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8",
+      "sourceBytes": 6020,
+      "exportBytes": 6020,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/contracts.ts",
+      "sourceSha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "exportSha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "sourceBytes": 3414,
+      "exportBytes": 3414,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/engine.ts",
+      "sourceSha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "exportSha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "sourceBytes": 18245,
+      "exportBytes": 18245,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/exact.ts",
+      "sourceSha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8",
+      "exportSha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8",
+      "sourceBytes": 1915,
+      "exportBytes": 1915,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/power.ts",
+      "sourceSha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7",
+      "exportSha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7",
+      "sourceBytes": 1325,
+      "exportBytes": 1325,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/science.ts",
+      "sourceSha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "exportSha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "sourceBytes": 4892,
+      "exportBytes": 4892,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/core/search.ts",
+      "sourceSha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "exportSha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "sourceBytes": 3367,
+      "exportBytes": 3367,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/data/science-data.ts",
+      "sourceSha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "exportSha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "sourceBytes": 2754,
+      "exportBytes": 2754,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/lab/physics.ts",
+      "sourceSha256": "4a14095afdf3d78b2eb1297aaf7f02db57c706c7a6c323ddba00a3277782005b",
+      "exportSha256": "4a14095afdf3d78b2eb1297aaf7f02db57c706c7a6c323ddba00a3277782005b",
+      "sourceBytes": 6409,
+      "exportBytes": 6409,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/lab/preflight.ts",
+      "sourceSha256": "e87f72188ff01a62a9c6610d18ddf1271f3f1cb82a4b96cf62871279b7b1e559",
+      "exportSha256": "e87f72188ff01a62a9c6610d18ddf1271f3f1cb82a4b96cf62871279b7b1e559",
+      "sourceBytes": 9005,
+      "exportBytes": 9005,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/lab/requirements-review.ts",
+      "sourceSha256": "590901d7d81e38a6730d0389226c0797303442d70b4a677488625d2f64e448b1",
+      "exportSha256": "590901d7d81e38a6730d0389226c0797303442d70b4a677488625d2f64e448b1",
+      "sourceBytes": 13986,
+      "exportBytes": 13986,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/lab/science-return.ts",
+      "sourceSha256": "9bc03c0beba341beec4a303dddacd2e89f2724172db40714e4bef3aa58ea7ee1",
+      "exportSha256": "9bc03c0beba341beec4a303dddacd2e89f2724172db40714e4bef3aa58ea7ee1",
+      "sourceBytes": 4162,
+      "exportBytes": 4162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/main.tsx",
+      "sourceSha256": "455dfdf59ccfb6b19ef94ff34474032a8bd7bb2bf37cad8b241e694c444562ea",
+      "exportSha256": "455dfdf59ccfb6b19ef94ff34474032a8bd7bb2bf37cad8b241e694c444562ea",
+      "sourceBytes": 349,
+      "exportBytes": 349,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/orbit.css",
+      "sourceSha256": "95311f8dd1129c36964b025918b016819f035f0c67e382f240f8e7d26f750a83",
+      "exportSha256": "95311f8dd1129c36964b025918b016819f035f0c67e382f240f8e7d26f750a83",
+      "sourceBytes": 40483,
+      "exportBytes": 40483,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/persistence/identity.ts",
+      "sourceSha256": "1d2cc6eb5bb2f0b1c8917f96a9e677bd21628544971ef362700fde95fd67872e",
+      "exportSha256": "1d2cc6eb5bb2f0b1c8917f96a9e677bd21628544971ef362700fde95fd67872e",
+      "sourceBytes": 1570,
+      "exportBytes": 1570,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/persistence/json.ts",
+      "sourceSha256": "d3314f41efd953ac7fd7df0683daed1f641c60ac8ec09dc059aa6b14ad8a6d5a",
+      "exportSha256": "d3314f41efd953ac7fd7df0683daed1f641c60ac8ec09dc059aa6b14ad8a6d5a",
+      "sourceBytes": 7093,
+      "exportBytes": 7093,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/persistence/replay.ts",
+      "sourceSha256": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "exportSha256": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "sourceBytes": 3049,
+      "exportBytes": 3049,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/persistence/store.ts",
+      "sourceSha256": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf",
+      "exportSha256": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf",
+      "sourceBytes": 9394,
+      "exportBytes": 9394,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/persistence/validation.ts",
+      "sourceSha256": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "exportSha256": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "sourceBytes": 7358,
+      "exportBytes": 7358,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/styles.css",
+      "sourceSha256": "cdcb2107007161fb79d4a0085a9a212e6f8d3e2c80ea1a22e6e782e5455ed23a",
+      "exportSha256": "cdcb2107007161fb79d4a0085a9a212e6f8d3e2c80ea1a22e6e782e5455ed23a",
+      "sourceBytes": 55566,
+      "exportBytes": 55566,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/CompareDialog.tsx",
+      "sourceSha256": "0aad199ed04734dd2c1ba690b7d0af881112f8ed93e54772f323a7cc758d1c3a",
+      "exportSha256": "0aad199ed04734dd2c1ba690b7d0af881112f8ed93e54772f323a7cc758d1c3a",
+      "sourceBytes": 4859,
+      "exportBytes": 4859,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/Dialogs.tsx",
+      "sourceSha256": "d7ce28dd595bcb30b20ccef8f971a963c075e0832dfdd76500e31c84be810c2f",
+      "exportSha256": "d7ce28dd595bcb30b20ccef8f971a963c075e0832dfdd76500e31c84be810c2f",
+      "sourceBytes": 7755,
+      "exportBytes": 7755,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/EngineeringLab.tsx",
+      "sourceSha256": "8060eab460e5a052259a89ac7dc6807310265ae081860e697572c128ea8de68f",
+      "exportSha256": "8060eab460e5a052259a89ac7dc6807310265ae081860e697572c128ea8de68f",
+      "sourceBytes": 24786,
+      "exportBytes": 24786,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/Icon.tsx",
+      "sourceSha256": "0471a667ea8b051e7ab3ee141f9122cfb38c37f90359af11e50956399e3882ab",
+      "exportSha256": "0471a667ea8b051e7ab3ee141f9122cfb38c37f90359af11e50956399e3882ab",
+      "sourceBytes": 2199,
+      "exportBytes": 2199,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/MissionConcept.tsx",
+      "sourceSha256": "595d04c01a21f19a1b2d5afa3c394de144a074caae799ca770e4d187dfcb0999",
+      "exportSha256": "595d04c01a21f19a1b2d5afa3c394de144a074caae799ca770e4d187dfcb0999",
+      "sourceBytes": 2796,
+      "exportBytes": 2796,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/MissionControl.tsx",
+      "sourceSha256": "d1efca3fd4aadc9bdb74ca08e17f308cb05d89994a89fd7ec54daca91a9673b3",
+      "exportSha256": "d1efca3fd4aadc9bdb74ca08e17f308cb05d89994a89fd7ec54daca91a9673b3",
+      "sourceBytes": 22289,
+      "exportBytes": 22289,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/Observatory.tsx",
+      "sourceSha256": "f79b5ee592b45715771385e524e026926fd12f6c6c8913f00d979ef52eba3884",
+      "exportSha256": "f79b5ee592b45715771385e524e026926fd12f6c6c8913f00d979ef52eba3884",
+      "sourceBytes": 5306,
+      "exportBytes": 5306,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/OrbitalScene.tsx",
+      "sourceSha256": "57d0a9e2a5785626e0218a8add0b3133418c551b1b96b642a697e08bcd1fd48f",
+      "exportSha256": "57d0a9e2a5785626e0218a8add0b3133418c551b1b96b642a697e08bcd1fd48f",
+      "sourceBytes": 21252,
+      "exportBytes": 21252,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/PreflightReview.tsx",
+      "sourceSha256": "fbc6b96c917f1d453631b20e21d298940744cb7b0eb5855f4c40d4e5b755a3e9",
+      "exportSha256": "fbc6b96c917f1d453631b20e21d298940744cb7b0eb5855f4c40d4e5b755a3e9",
+      "sourceBytes": 6317,
+      "exportBytes": 6317,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/RequirementsReview.tsx",
+      "sourceSha256": "c730ab11ca887f99532393a6a2821f8f294cb46699a284aaf20ba609970d3b6f",
+      "exportSha256": "c730ab11ca887f99532393a6a2821f8f294cb46699a284aaf20ba609970d3b6f",
+      "sourceBytes": 7578,
+      "exportBytes": 7578,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/Scene.tsx",
+      "sourceSha256": "3f68850b2ff0c11cfa97123385c6c84f07ebade3a66a851e728d3b242e0a387b",
+      "exportSha256": "3f68850b2ff0c11cfa97123385c6c84f07ebade3a66a851e728d3b242e0a387b",
+      "sourceBytes": 16054,
+      "exportBytes": 16054,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/ScienceReturn.tsx",
+      "sourceSha256": "440cef0a28c93494808de5781c1d9dd3e56f8114fb6b3d15050c99f6f70d38d1",
+      "exportSha256": "440cef0a28c93494808de5781c1d9dd3e56f8114fb6b3d15050c99f6f70d38d1",
+      "sourceBytes": 6080,
+      "exportBytes": 6080,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/Workbench.tsx",
+      "sourceSha256": "674ca5a29144b601018a10afed7caf290d445974c89969727728dce278aecf9b",
+      "exportSha256": "674ca5a29144b601018a10afed7caf290d445974c89969727728dce278aecf9b",
+      "sourceBytes": 11792,
+      "exportBytes": 11792,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/engineering-lab.css",
+      "sourceSha256": "b049c1df1d0e41c856a9e64a2cae23c92825634dc2fb30d75637ebec741930fd",
+      "exportSha256": "b049c1df1d0e41c856a9e64a2cae23c92825634dc2fb30d75637ebec741930fd",
+      "sourceBytes": 15660,
+      "exportBytes": 15660,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/format.ts",
+      "sourceSha256": "73e1d4a40fda61b7678eaf2c4563257673e917296da8fa29c8b4abee5e4266f6",
+      "exportSha256": "73e1d4a40fda61b7678eaf2c4563257673e917296da8fa29c8b4abee5e4266f6",
+      "sourceBytes": 2871,
+      "exportBytes": 2871,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/learning.ts",
+      "sourceSha256": "2562f3acab69905346644a5104e2f9dab00dd7378c1c89f5de6a15b5e6faa3fe",
+      "exportSha256": "2562f3acab69905346644a5104e2f9dab00dd7378c1c89f5de6a15b5e6faa3fe",
+      "sourceBytes": 2603,
+      "exportBytes": 2603,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/mission-concept.css",
+      "sourceSha256": "f8c771b1975494e09cb7002ec6454a2b4df483087361b8e85c7123fd7afbc48a",
+      "exportSha256": "f8c771b1975494e09cb7002ec6454a2b4df483087361b8e85c7123fd7afbc48a",
+      "sourceBytes": 10808,
+      "exportBytes": 10808,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/preflight-review.css",
+      "sourceSha256": "90e23c387fba1bc86f36d313e42d844e991404bf010d958a3eec43c16403435d",
+      "exportSha256": "90e23c387fba1bc86f36d313e42d844e991404bf010d958a3eec43c16403435d",
+      "sourceBytes": 4187,
+      "exportBytes": 4187,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/requirements-review.css",
+      "sourceSha256": "c80e77e371c238a453378772c830bd689554a4a5482572852028ea9393a7057d",
+      "exportSha256": "c80e77e371c238a453378772c830bd689554a4a5482572852028ea9393a7057d",
+      "sourceBytes": 7905,
+      "exportBytes": 7905,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/scene-geometry.ts",
+      "sourceSha256": "b22f4ac327f2dfa1a3508f56910a6f6f5bdd0df59c5ae33fdb15cec8f646358a",
+      "exportSha256": "b22f4ac327f2dfa1a3508f56910a6f6f5bdd0df59c5ae33fdb15cec8f646358a",
+      "sourceBytes": 3797,
+      "exportBytes": 3797,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/ui/scene-orbit.css",
+      "sourceSha256": "a7b5396a27a82a7067d72f34fe3312b990beecd0d5aa17d1b80ba7c56e23ddb1",
+      "exportSha256": "a7b5396a27a82a7067d72f34fe3312b990beecd0d5aa17d1b80ba7c56e23ddb1",
+      "sourceBytes": 9667,
+      "exportBytes": 9667,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/workers/client.ts",
+      "sourceSha256": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1",
+      "exportSha256": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1",
+      "sourceBytes": 7209,
+      "exportBytes": 7209,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/src/workers/mission.worker.ts",
+      "sourceSha256": "ee16c56efce23c82105973bbbce9318dc7485d97488a5eb157466af2430454fb",
+      "exportSha256": "ee16c56efce23c82105973bbbce9318dc7485d97488a5eb157466af2430454fb",
+      "sourceBytes": 1059,
+      "exportBytes": 1059,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests-ui/flows.test.mjs",
+      "sourceSha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb",
+      "exportSha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb",
+      "sourceBytes": 10308,
+      "exportBytes": 10308,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/adversarial.test.mts",
+      "sourceSha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c",
+      "exportSha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c",
+      "sourceBytes": 14204,
+      "exportBytes": 14204,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/engine.test.mts",
+      "sourceSha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc",
+      "exportSha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc",
+      "sourceBytes": 20298,
+      "exportBytes": 20298,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/persistence.test.mts",
+      "sourceSha256": "73f0d5bb4fa46db514e36008fdc40b030f07d073f5ac22bbce791949d9b4f0a6",
+      "exportSha256": "73f0d5bb4fa46db514e36008fdc40b030f07d073f5ac22bbce791949d9b4f0a6",
+      "sourceBytes": 7349,
+      "exportBytes": 7349,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/physics-lab.test.mts",
+      "sourceSha256": "47cc0d39281ee2ac80cb74e39998f435016a7c623f9b3c4c608272387716a08b",
+      "exportSha256": "47cc0d39281ee2ac80cb74e39998f435016a7c623f9b3c4c608272387716a08b",
+      "sourceBytes": 11573,
+      "exportBytes": 11573,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/preflight.test.mts",
+      "sourceSha256": "35112bf7095d37b0d469fe2fd6e6a857635808824b1a59e349ac68a33eb714e6",
+      "exportSha256": "35112bf7095d37b0d469fe2fd6e6a857635808824b1a59e349ac68a33eb714e6",
+      "sourceBytes": 8212,
+      "exportBytes": 8212,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/replay.test.mts",
+      "sourceSha256": "2f66fc4a2e3aad53f4b612abdfd93ad9860ce7d924d891bff5dfc14a2ccba7ee",
+      "exportSha256": "2f66fc4a2e3aad53f4b612abdfd93ad9860ce7d924d891bff5dfc14a2ccba7ee",
+      "sourceBytes": 8037,
+      "exportBytes": 8037,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/requirements-review.test.mts",
+      "sourceSha256": "b72c27e92d8a68e26c7272c0a178a08b22d3a1528328555bb98c2ac8d7c8644d",
+      "exportSha256": "b72c27e92d8a68e26c7272c0a178a08b22d3a1528328555bb98c2ac8d7c8644d",
+      "sourceBytes": 10258,
+      "exportBytes": 10258,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/science-return.test.mts",
+      "sourceSha256": "d3db522b267b98af18a046c88a5d576c3765de7f1a621644fee0b941571bc8b3",
+      "exportSha256": "d3db522b267b98af18a046c88a5d576c3765de7f1a621644fee0b941571bc8b3",
+      "sourceBytes": 5486,
+      "exportBytes": 5486,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tests/ux-contract.test.mts",
+      "sourceSha256": "ffe0cc04333203d491e32afc393162326142ffead6f8901cfae475bb0050349c",
+      "exportSha256": "ffe0cc04333203d491e32afc393162326142ffead6f8901cfae475bb0050349c",
+      "sourceBytes": 3556,
+      "exportBytes": 3556,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/tsconfig.json",
+      "sourceSha256": "7e5edd587e6fe0fecfebd5597ce1c9d045632baf566345e94e03757bdd75e10b",
+      "exportSha256": "7e5edd587e6fe0fecfebd5597ce1c9d045632baf566345e94e03757bdd75e10b",
+      "sourceBytes": 472,
+      "exportBytes": 472,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "experiments/mission-design-lab/vite.config.ts",
+      "sourceSha256": "bcd1fd9812d9ea688a496d78b722f5d330121a1dfc733d308ef38634af99465c",
+      "exportSha256": "bcd1fd9812d9ea688a496d78b722f5d330121a1dfc733d308ef38634af99465c",
+      "sourceBytes": 159,
+      "exportBytes": 159,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "index.html",
+      "sourceSha256": "fe3f421b5189ec3694b46598b0bdd058d05a58785747aa97ab2ed39bef083b4f",
+      "exportSha256": "fe3f421b5189ec3694b46598b0bdd058d05a58785747aa97ab2ed39bef083b4f",
+      "sourceBytes": 697,
+      "exportBytes": 697,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "kit/AI-USAGE.md",
+      "sourceSha256": "03bcc20d19ccefd2c9ec7ab13180c5efe2308c861b164e4eeee94c25c3a0a319",
+      "exportSha256": "03bcc20d19ccefd2c9ec7ab13180c5efe2308c861b164e4eeee94c25c3a0a319",
+      "sourceBytes": 3175,
+      "exportBytes": 3175,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "kit/COMECE_AQUI.html",
+      "sourceSha256": "680152d706a87029aab77b3bec1cc31e1fe2410e743ef987d02632a1f43b43bd",
+      "exportSha256": "680152d706a87029aab77b3bec1cc31e1fe2410e743ef987d02632a1f43b43bd",
+      "sourceBytes": 10502,
+      "exportBytes": 10502,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "kit/INICIAR_MAC_LINUX.command",
+      "sourceSha256": "fcf52c8710b2dc1d2f6b2be094e84c806db3f847edb22303ec485e4666829b6b",
+      "exportSha256": "fcf52c8710b2dc1d2f6b2be094e84c806db3f847edb22303ec485e4666829b6b",
+      "sourceBytes": 325,
+      "exportBytes": 325,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "kit/INICIAR_WINDOWS.cmd",
+      "sourceSha256": "5daa1d08800721d906419e4bee79495543a669aa7d3ac36dd329a485587cab3d",
+      "exportSha256": "5daa1d08800721d906419e4bee79495543a669aa7d3ac36dd329a485587cab3d",
+      "sourceBytes": 248,
+      "exportBytes": 248,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "kit/LEIA_PRIMEIRO.md",
+      "sourceSha256": "aca2833aca3a502d78f9ec822d3d2d838d8c8f42528e1c7a79053c919ed45ce2",
+      "exportSha256": "aca2833aca3a502d78f9ec822d3d2d838d8c8f42528e1c7a79053c919ed45ce2",
+      "sourceBytes": 5124,
+      "exportBytes": 5124,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "kit/VERIFICAR_PACOTE.py",
+      "sourceSha256": "f3fc640a0aed551550846380f7501a712e356fe230a47804e8ba1e976b828c6f",
+      "exportSha256": "f3fc640a0aed551550846380f7501a712e356fe230a47804e8ba1e976b828c6f",
+      "sourceBytes": 1266,
+      "exportBytes": 1266,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "licenses/React-MIT.txt",
+      "sourceSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "exportSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sourceBytes": 1088,
+      "exportBytes": 1088,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "licenses/ReactDOM-MIT.txt",
+      "sourceSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "exportSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sourceBytes": 1088,
+      "exportBytes": 1088,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "licenses/Scheduler-MIT.txt",
+      "sourceSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "exportSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sourceBytes": 1088,
+      "exportBytes": 1088,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "licenses/Three-MIT.txt",
+      "sourceSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "exportSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "sourceBytes": 1081,
+      "exportBytes": 1081,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
+      "sourceSha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba",
+      "exportSha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba",
+      "sourceBytes": 475437,
+      "exportBytes": 475437,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+      "sourceSha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a",
+      "exportSha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a",
+      "sourceBytes": 1200768,
+      "exportBytes": 1200768,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "package-lock.json",
+      "sourceSha256": "c81e84fc85b8827e956ba95ebd658f6056cefe22122da9b5896bbd98cff6f959",
+      "exportSha256": "c81e84fc85b8827e956ba95ebd658f6056cefe22122da9b5896bbd98cff6f959",
+      "sourceBytes": 81476,
+      "exportBytes": 81476,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "package.json",
+      "sourceSha256": "579a88d927bd3d452c1dfb62f2cf9e6d197b8e0dd9933feefcc0cda893f05a60",
+      "exportSha256": "579a88d927bd3d452c1dfb62f2cf9e6d197b8e0dd9933feefcc0cda893f05a60",
+      "sourceBytes": 1794,
+      "exportBytes": 1794,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "portable/Missao_Ipe_Local.html",
+      "sourceSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
+      "exportSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
+      "sourceBytes": 1008522,
+      "exportBytes": 1008522,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/Missao_Ipe_Apresentacao.html",
+      "sourceSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "exportSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "sourceBytes": 139710,
+      "exportBytes": 139710,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/PITCH_EN_7_SLIDES.md",
+      "sourceSha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
+      "exportSha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
+      "sourceBytes": 13356,
+      "exportBytes": 13356,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/README_APRESENTADOR.md",
+      "sourceSha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
+      "exportSha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
+      "sourceBytes": 8269,
+      "exportBytes": 8269,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/ROTEIRO_PT_EN.md",
+      "sourceSha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
+      "exportSha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
+      "sourceBytes": 7849,
+      "exportBytes": 7849,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/src/main.ts",
+      "sourceSha256": "a5d7f07292789b771438ea8c69ecd68f11ba92f4e0249df24f5b5ca81f1832f5",
+      "exportSha256": "a5d7f07292789b771438ea8c69ecd68f11ba92f4e0249df24f5b5ca81f1832f5",
+      "sourceBytes": 50384,
+      "exportBytes": 50384,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/src/styles.css",
+      "sourceSha256": "6b6ec2c6e52a9201f48344ff98570d0dfdac2b412df6bd46187477ac5ff173ca",
+      "exportSha256": "6b6ec2c6e52a9201f48344ff98570d0dfdac2b412df6bd46187477ac5ff173ca",
+      "sourceBytes": 37972,
+      "exportBytes": 37972,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/src/template.html",
+      "sourceSha256": "04f5d875e5f0c0d317cdaec46c3b931a90e1334760f817708cb36a7ada186f3e",
+      "exportSha256": "04f5d875e5f0c0d317cdaec46c3b931a90e1334760f817708cb36a7ada186f3e",
+      "sourceBytes": 30702,
+      "exportBytes": 30702,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "presentation/tsconfig.json",
+      "sourceSha256": "4e66e4e80d1e3ea7d2965ccaffadc22a715f865065b395d889b095a7751c84a1",
+      "exportSha256": "4e66e4e80d1e3ea7d2965ccaffadc22a715f865065b395d889b095a7751c84a1",
+      "sourceBytes": 156,
+      "exportBytes": 156,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "prisma/prisma.config.ts",
+      "sourceSha256": "321f23211fa4744475ecbe09bd7211555efa2d86be914e22355c69128c309403",
+      "exportSha256": "321f23211fa4744475ecbe09bd7211555efa2d86be914e22355c69128c309403",
+      "sourceBytes": 290,
+      "exportBytes": 290,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "sourceSha256": "91e735506f3f2f30acf87db91e1c62c613b50ee7b38dc996ac78e7e4c6908fa3",
+      "exportSha256": "91e735506f3f2f30acf87db91e1c62c613b50ee7b38dc996ac78e7e4c6908fa3",
+      "sourceBytes": 8871,
+      "exportBytes": 8871,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/cmr-mod13q1-granule-2.json",
+      "sourceSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "exportSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "sourceBytes": 5720,
+      "exportBytes": 5720,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/cmr-mod13q1-granules.json",
+      "sourceSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "exportSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "sourceBytes": 5719,
+      "exportBytes": 5719,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-A-raw.json",
+      "sourceSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "exportSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-A-retrieval.json",
+      "sourceSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "exportSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-B-raw.json",
+      "sourceSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "exportSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-B-retrieval.json",
+      "sourceSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "exportSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-C-raw.json",
+      "sourceSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "exportSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "sourceBytes": 4232,
+      "exportBytes": 4232,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-C-retrieval.json",
+      "sourceSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "exportSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "sourceBytes": 6162,
+      "exportBytes": 6162,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-bands.json",
+      "sourceSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "exportSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "sourceBytes": 2366,
+      "exportBytes": 2366,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "public/data/mod13q1-research-pack.json",
+      "sourceSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "exportSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "sourceBytes": 5942,
+      "exportBytes": 5942,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/01-regras-ciencia.md",
+      "sourceSha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
+      "exportSha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
+      "sourceBytes": 22928,
+      "exportBytes": 22928,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/02-fastino-anexos.md",
+      "sourceSha256": "6d4bef61273b935dc9fe69495ec08cc8cbb85a987d79630b929ac005a42540f4",
+      "exportSha256": "6d4bef61273b935dc9fe69495ec08cc8cbb85a987d79630b929ac005a42540f4",
+      "sourceBytes": 38848,
+      "exportBytes": 38848,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/03-oportunidades-spec.md",
+      "sourceSha256": "d759b2e2b44c1abb0803b62e84dc6eee1039890a866e7204002649f7d0a46be8",
+      "exportSha256": "d759b2e2b44c1abb0803b62e84dc6eee1039890a866e7204002649f7d0a46be8",
+      "sourceBytes": 21968,
+      "exportBytes": 21968,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/04-motor.md",
+      "sourceSha256": "2f601634c0a66e3e2e3688756102ec6ee9dc3f0a85e329d1ceeecbda11c9a34b",
+      "exportSha256": "2f601634c0a66e3e2e3688756102ec6ee9dc3f0a85e329d1ceeecbda11c9a34b",
+      "sourceBytes": 11240,
+      "exportBytes": 11240,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/05-interface.md",
+      "sourceSha256": "5c042e98f379942c748714129218f5942379afdc1ad966672a341cb8361b7862",
+      "exportSha256": "5c042e98f379942c748714129218f5942379afdc1ad966672a341cb8361b7862",
+      "sourceBytes": 9373,
+      "exportBytes": 9373,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/06-persistencia.md",
+      "sourceSha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa",
+      "exportSha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa",
+      "sourceBytes": 13426,
+      "exportBytes": 13426,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/07-revisao-independente.md",
+      "sourceSha256": "9addda5dfac4abb150afd70a27c5773507524b1e985b8102997d58e432eb97c4",
+      "exportSha256": "9addda5dfac4abb150afd70a27c5773507524b1e985b8102997d58e432eb97c4",
+      "sourceBytes": 10542,
+      "exportBytes": 10542,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/08-auditoria-repositorios.md",
+      "sourceSha256": "ef25e95fc4db4eee3b9fbb0c0a7b6addacac1bc5fdea78f4c70e0a3f719d1437",
+      "exportSha256": "ef25e95fc4db4eee3b9fbb0c0a7b6addacac1bc5fdea78f4c70e0a3f719d1437",
+      "sourceBytes": 38683,
+      "exportBytes": 38683,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/09-release-e-desempenho.md",
+      "sourceSha256": "aa8a7efa47575230faa6365342aad72efd685a3736c8dccee9f9491ad9284aa7",
+      "exportSha256": "aa8a7efa47575230faa6365342aad72efd685a3736c8dccee9f9491ad9284aa7",
+      "sourceBytes": 11347,
+      "exportBytes": 11347,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/10-handoff-redteam.md",
+      "sourceSha256": "be7dc82e8e25c423fb55d71a1f833bed33f052eba965389f1b4a1a5c071b191e",
+      "exportSha256": "be7dc82e8e25c423fb55d71a1f833bed33f052eba965389f1b4a1a5c071b191e",
+      "sourceBytes": 15838,
+      "exportBytes": 15838,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/11-revisao-spaceapps-apresentacao.md",
+      "sourceSha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
+      "exportSha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
+      "sourceBytes": 15356,
+      "exportBytes": 15356,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/anexo-original.txt",
+      "sourceSha256": "62fa654201593bf9dd4f62667dcb91d3e89f98f00cf001ac1506847d0506dc51",
+      "exportSha256": "62fa654201593bf9dd4f62667dcb91d3e89f98f00cf001ac1506847d0506dc51",
+      "sourceBytes": 32575,
+      "exportBytes": 32575,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/evidence/evi3-validation.json",
+      "sourceSha256": "d62493deedf1a37207491b5019d363d5c12bd4578b863400d1536ae3d73ebda1",
+      "exportSha256": "5187580925c397fbd81f677a8f9386107a199fd87d15df8f241b2277279dc62e",
+      "sourceBytes": 5142,
+      "exportBytes": 4998,
+      "redactions": {
+        "machinePaths": 3,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/evidence/repository-audit.json",
+      "sourceSha256": "b41886b4009d60120c0abe622aee1067419ca894ff2032520fb431ab5e60d620",
+      "exportSha256": "b41886b4009d60120c0abe622aee1067419ca894ff2032520fb431ab5e60d620",
+      "sourceBytes": 108868,
+      "exportBytes": 108868,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/evidence/repository-metadata.json",
+      "sourceSha256": "a73be7ae400789722038aff5ae9b052e74899e1551dad0aba3ef29f8b90d9df5",
+      "exportSha256": "a73be7ae400789722038aff5ae9b052e74899e1551dad0aba3ef29f8b90d9df5",
+      "sourceBytes": 52640,
+      "exportBytes": 52640,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/evidence/resources-retrieval-20261114.json",
+      "sourceSha256": "c872b373c8c3e394791afe87c021fbcbbd0ae42fb977f262a334103d1e193afb",
+      "exportSha256": "c872b373c8c3e394791afe87c021fbcbbd0ae42fb977f262a334103d1e193afb",
+      "sourceBytes": 3392,
+      "exportBytes": 3392,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/evidence/validate-evi3-research.py",
+      "sourceSha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00",
+      "exportSha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00",
+      "sourceBytes": 4384,
+      "exportBytes": 4384,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/history/01-juri-mundial-rodada-anterior.md",
+      "sourceSha256": "4f7c72d8a7773f7340024fbf76364591b11a668dd3073656bb5bf7c3cee0b276",
+      "exportSha256": "4f7c72d8a7773f7340024fbf76364591b11a668dd3073656bb5bf7c3cee0b276",
+      "sourceBytes": 23496,
+      "exportBytes": 23496,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/history/02-selecao-rodada-anterior.md",
+      "sourceSha256": "8507eee03bea306b56327feb46d075818845f2607df4f769bfa4f1fe29d657a1",
+      "exportSha256": "8507eee03bea306b56327feb46d075818845f2607df4f769bfa4f1fe29d657a1",
+      "sourceBytes": 24050,
+      "exportBytes": 24050,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/initial/arquitetura-prova.md",
+      "sourceSha256": "9170c32242e6c7715b4f77591c2da33583b3344a5322b48982a2bb485b20fc94",
+      "exportSha256": "9170c32242e6c7715b4f77591c2da33583b3344a5322b48982a2bb485b20fc94",
+      "sourceBytes": 39812,
+      "exportBytes": 39812,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/initial/desafios-ciencia.md",
+      "sourceSha256": "7a6c1fd3172defafd96a73ebd5c86917f597b4d120a81ee8d403f794b59f8016",
+      "exportSha256": "7a6c1fd3172defafd96a73ebd5c86917f597b4d120a81ee8d403f794b59f8016",
+      "sourceBytes": 34474,
+      "exportBytes": 34474,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/initial/historico.md",
+      "sourceSha256": "f01cc4d6d8164f75a11b18d024e3a107a9e24b1ddc12cb178be26513d2cb7244",
+      "exportSha256": "f01cc4d6d8164f75a11b18d024e3a107a9e24b1ddc12cb178be26513d2cb7244",
+      "sourceBytes": 21566,
+      "exportBytes": 21566,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/initial/paises-brasil.md",
+      "sourceSha256": "1b111c13b85e95dabcce3ab6ffed21f267bcb2a1ec8ae4f6fb4d810b14a46984",
+      "exportSha256": "1b111c13b85e95dabcce3ab6ffed21f267bcb2a1ec8ae4f6fb4d810b14a46984",
+      "sourceBytes": 19553,
+      "exportBytes": 19553,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/initial/repositorios.md",
+      "sourceSha256": "5ee5c580d299236d85370760ddcc484060dfea6840b1f30fa8054c678b3ce28c",
+      "exportSha256": "5ee5c580d299236d85370760ddcc484060dfea6840b1f30fa8054c678b3ce28c",
+      "sourceBytes": 25874,
+      "exportBytes": 25874,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "research/initial/revisao-independente.md",
+      "sourceSha256": "dd115c751ce54ad732ec05b8e29d88cedbe4959663ea0a437957094930be29d2",
+      "exportSha256": "dd115c751ce54ad732ec05b8e29d88cedbe4959663ea0a437957094930be29d2",
+      "sourceBytes": 11263,
+      "exportBytes": 11263,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/audit-release.mjs",
+      "sourceSha256": "6c5fdf6c314cf076a8e70c021f2811bae4f39992bfeb54ee27fa333cf8a7726a",
+      "exportSha256": "6c5fdf6c314cf076a8e70c021f2811bae4f39992bfeb54ee27fa333cf8a7726a",
+      "sourceBytes": 4848,
+      "exportBytes": 4848,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/benchmark-engine.mjs",
+      "sourceSha256": "12c70dc52ed781b103722270508ea6b18a298abc7c82ad7a98e2b5c5f5a57f95",
+      "exportSha256": "12c70dc52ed781b103722270508ea6b18a298abc7c82ad7a98e2b5c5f5a57f95",
+      "sourceBytes": 4093,
+      "exportBytes": 4093,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/build-beta-site.mjs",
+      "sourceSha256": "f25949ca0c22268928235d51c344135a2bc3adc2fed344c777a0696781729210",
+      "exportSha256": "f25949ca0c22268928235d51c344135a2bc3adc2fed344c777a0696781729210",
+      "sourceBytes": 30064,
+      "exportBytes": 30064,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/build-context-hub.mjs",
+      "sourceSha256": "4eb57df4c8645007373f5e6f39c8651f0c58ff4a0bdb8fb5b66bee454ca74a25",
+      "exportSha256": "4eb57df4c8645007373f5e6f39c8651f0c58ff4a0bdb8fb5b66bee454ca74a25",
+      "sourceBytes": 4863,
+      "exportBytes": 4863,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/build-portable.mjs",
+      "sourceSha256": "44d853f432dbbbed9d3ea62167f9f994705afe8240bda91ac65dce3815177ce5",
+      "exportSha256": "44d853f432dbbbed9d3ea62167f9f994705afe8240bda91ac65dce3815177ce5",
+      "sourceBytes": 3330,
+      "exportBytes": 3330,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/build-presentation.mjs",
+      "sourceSha256": "12cbe6700e8773a65a3c37bf23af59a6a15920092abcb4b1d30baabc4a96bb41",
+      "exportSha256": "12cbe6700e8773a65a3c37bf23af59a6a15920092abcb4b1d30baabc4a96bb41",
+      "sourceBytes": 3483,
+      "exportBytes": 3483,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/build-research-library.mjs",
+      "sourceSha256": "e03536fbcdaebefd6e12a8a3783619fe9c6963a5ddfc6f47eea4023400b6f670",
+      "exportSha256": "e03536fbcdaebefd6e12a8a3783619fe9c6963a5ddfc6f47eea4023400b6f670",
+      "sourceBytes": 14364,
+      "exportBytes": 14364,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/export-examples.mjs",
+      "sourceSha256": "d4866cf994e7d48bb3014434802fc408a4ae1eedac0b11ee44464b2267613853",
+      "exportSha256": "d4866cf994e7d48bb3014434802fc408a4ae1eedac0b11ee44464b2267613853",
+      "sourceBytes": 3151,
+      "exportBytes": 3151,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/prepare-vercel-static.mjs",
+      "sourceSha256": "2031e23046ac17d7a71cf41377dff1e210158a538577643e01a58859b836fe65",
+      "exportSha256": "2031e23046ac17d7a71cf41377dff1e210158a538577643e01a58859b836fe65",
+      "sourceBytes": 5102,
+      "exportBytes": 5102,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/recover-archives.mjs",
+      "sourceSha256": "39d0fe80a6857d65ae818fa700424332777a960fb8afaf99fb3a275867b5a788",
+      "exportSha256": "39d0fe80a6857d65ae818fa700424332777a960fb8afaf99fb3a275867b5a788",
+      "sourceBytes": 3710,
+      "exportBytes": 3710,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/serve-beta.mjs",
+      "sourceSha256": "467f806b9e813818c567e0aa8e5d3ab8a203aa71be54bf493768eea4378894a3",
+      "exportSha256": "467f806b9e813818c567e0aa8e5d3ab8a203aa71be54bf493768eea4378894a3",
+      "sourceBytes": 3973,
+      "exportBytes": 3973,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/serve-presentation-kit.mjs",
+      "sourceSha256": "29756e6d81332a5223f933d7cf468ede496f36264c04508971d39bf9461d8f62",
+      "exportSha256": "29756e6d81332a5223f933d7cf468ede496f36264c04508971d39bf9461d8f62",
+      "sourceBytes": 5654,
+      "exportBytes": 5654,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "sourceSha256": "cb1928ff2b92119a9daac0cd172c72687b26d80c93266dfefda0ca592631edd4",
+      "exportSha256": "cb1928ff2b92119a9daac0cd172c72687b26d80c93266dfefda0ca592631edd4",
+      "sourceBytes": 3274,
+      "exportBytes": 3274,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/smoke-presentation-kit.mjs",
+      "sourceSha256": "2cc103b2d239596ffc04dc7a7cec28a978e164f9c6b2f2a890902d5f5e1d680a",
+      "exportSha256": "2cc103b2d239596ffc04dc7a7cec28a978e164f9c6b2f2a890902d5f5e1d680a",
+      "sourceBytes": 6624,
+      "exportBytes": 6624,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/smoke-server.mjs",
+      "sourceSha256": "e69b2fba1f4cbad3a54af13d005ad9e876c001f02ff9078f8e34128a23efd976",
+      "exportSha256": "e69b2fba1f4cbad3a54af13d005ad9e876c001f02ff9078f8e34128a23efd976",
+      "sourceBytes": 3307,
+      "exportBytes": 3307,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/test-beta-site.mjs",
+      "sourceSha256": "eef5e880b6146629a8164caa376c431850ec5628ca5e4ee29f1ffacaf9ecf277",
+      "exportSha256": "eef5e880b6146629a8164caa376c431850ec5628ca5e4ee29f1ffacaf9ecf277",
+      "sourceBytes": 30022,
+      "exportBytes": 30022,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/test-context-hub.mjs",
+      "sourceSha256": "a79ea9f59af63041dd1afb5c2cfba293afd635d2a45525a73e6c9fb19f76d4f9",
+      "exportSha256": "a79ea9f59af63041dd1afb5c2cfba293afd635d2a45525a73e6c9fb19f76d4f9",
+      "sourceBytes": 27405,
+      "exportBytes": 27405,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/test-presentation.mjs",
+      "sourceSha256": "271f9b6c1cacfc27bf0bd51d55b7222670cd113a78f60e7a768abce439d1c4e1",
+      "exportSha256": "271f9b6c1cacfc27bf0bd51d55b7222670cd113a78f60e7a768abce439d1c4e1",
+      "sourceBytes": 38231,
+      "exportBytes": 38231,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/test-ui.mjs",
+      "sourceSha256": "a789ac7a6f3a496b29153f51ca177e0f7f1309f28bb5a1b42a61d8fbdebe4b5a",
+      "exportSha256": "a789ac7a6f3a496b29153f51ca177e0f7f1309f28bb5a1b42a61d8fbdebe4b5a",
+      "sourceBytes": 2137,
+      "exportBytes": 2137,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "scripts/verify-science-data.mjs",
+      "sourceSha256": "3f3df8e8cb70fdb7793bf5576d6ab97bbcaa8f0fb0a3b570c2f34b433cca744e",
+      "exportSha256": "3f3df8e8cb70fdb7793bf5576d6ab97bbcaa8f0fb0a3b570c2f34b433cca744e",
+      "sourceBytes": 4138,
+      "exportBytes": 4138,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "specs/001-mission-receipt/plan.md",
+      "sourceSha256": "a1fd13361dc9d24dfb19028027f47f636c46b0e270a3406df5ac590a01123f7f",
+      "exportSha256": "a1fd13361dc9d24dfb19028027f47f636c46b0e270a3406df5ac590a01123f7f",
+      "sourceBytes": 690,
+      "exportBytes": 690,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "specs/001-mission-receipt/spec.md",
+      "sourceSha256": "cc0c99c3d344ee0d9749f62cbc4d7bcb9fc00e68bdbbabc33617a63c143e9aa1",
+      "exportSha256": "cc0c99c3d344ee0d9749f62cbc4d7bcb9fc00e68bdbbabc33617a63c143e9aa1",
+      "sourceBytes": 1362,
+      "exportBytes": 1362,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "specs/001-mission-receipt/tasks.md",
+      "sourceSha256": "80c441eba3fbbf404079f4bbec09de0548c2acfa44bcc2babebb6e04337a353f",
+      "exportSha256": "80c441eba3fbbf404079f4bbec09de0548c2acfa44bcc2babebb6e04337a353f",
+      "sourceBytes": 3846,
+      "exportBytes": 3846,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "specs/IMPLEMENTATION-CONTRACT.md",
+      "sourceSha256": "cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6",
+      "exportSha256": "cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6",
+      "sourceBytes": 6862,
+      "exportBytes": 6862,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "specs/constitution.md",
+      "sourceSha256": "1299a40afb83c2707a99be274526d83298355f30655237324efdbb924f5c5ee5",
+      "exportSha256": "1299a40afb83c2707a99be274526d83298355f30655237324efdbb924f5c5ee5",
+      "sourceBytes": 1312,
+      "exportBytes": 1312,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "specs/traceability.json",
+      "sourceSha256": "6ec70025eecbfbbfc98de28095c418041dcf5d2b9b22771af83019ef3d0ca658",
+      "exportSha256": "6ec70025eecbfbbfc98de28095c418041dcf5d2b9b22771af83019ef3d0ca658",
+      "sourceBytes": 13501,
+      "exportBytes": 13501,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/App.tsx",
+      "sourceSha256": "a650a7e75dcb2d71b014df322dad9f156c42db56d19f512e667c67c0ecad0e8b",
+      "exportSha256": "a650a7e75dcb2d71b014df322dad9f156c42db56d19f512e667c67c0ecad0e8b",
+      "sourceBytes": 16806,
+      "exportBytes": 16806,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/catalog.ts",
+      "sourceSha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8",
+      "exportSha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8",
+      "sourceBytes": 6020,
+      "exportBytes": 6020,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/contracts.ts",
+      "sourceSha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "exportSha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "sourceBytes": 3414,
+      "exportBytes": 3414,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sourceSha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "exportSha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "sourceBytes": 18245,
+      "exportBytes": 18245,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/exact.ts",
+      "sourceSha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8",
+      "exportSha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8",
+      "sourceBytes": 1915,
+      "exportBytes": 1915,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/power.ts",
+      "sourceSha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7",
+      "exportSha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7",
+      "sourceBytes": 1325,
+      "exportBytes": 1325,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/science.ts",
+      "sourceSha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "exportSha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "sourceBytes": 4892,
+      "exportBytes": 4892,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/core/search.ts",
+      "sourceSha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "exportSha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "sourceBytes": 3367,
+      "exportBytes": 3367,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/data/science-data.ts",
+      "sourceSha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "exportSha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "sourceBytes": 2754,
+      "exportBytes": 2754,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/main.tsx",
+      "sourceSha256": "c05a4ca1afdd6b72a93d9ae685a388b620c5d18258c770a40c9e9e5ee5faf01b",
+      "exportSha256": "c05a4ca1afdd6b72a93d9ae685a388b620c5d18258c770a40c9e9e5ee5faf01b",
+      "sourceBytes": 326,
+      "exportBytes": 326,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/persistence/identity.ts",
+      "sourceSha256": "1d2cc6eb5bb2f0b1c8917f96a9e677bd21628544971ef362700fde95fd67872e",
+      "exportSha256": "1d2cc6eb5bb2f0b1c8917f96a9e677bd21628544971ef362700fde95fd67872e",
+      "sourceBytes": 1570,
+      "exportBytes": 1570,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/persistence/json.ts",
+      "sourceSha256": "d3314f41efd953ac7fd7df0683daed1f641c60ac8ec09dc059aa6b14ad8a6d5a",
+      "exportSha256": "d3314f41efd953ac7fd7df0683daed1f641c60ac8ec09dc059aa6b14ad8a6d5a",
+      "sourceBytes": 7093,
+      "exportBytes": 7093,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/persistence/replay.ts",
+      "sourceSha256": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "exportSha256": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "sourceBytes": 3049,
+      "exportBytes": 3049,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/persistence/store.ts",
+      "sourceSha256": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf",
+      "exportSha256": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf",
+      "sourceBytes": 9394,
+      "exportBytes": 9394,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sourceSha256": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "exportSha256": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "sourceBytes": 7358,
+      "exportBytes": 7358,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/styles.css",
+      "sourceSha256": "cdcb2107007161fb79d4a0085a9a212e6f8d3e2c80ea1a22e6e782e5455ed23a",
+      "exportSha256": "cdcb2107007161fb79d4a0085a9a212e6f8d3e2c80ea1a22e6e782e5455ed23a",
+      "sourceBytes": 55566,
+      "exportBytes": 55566,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/Dialogs.tsx",
+      "sourceSha256": "e7c155466d4148fb530eca7f5548fa16b567281beb65ca3f0659d4ed3d103105",
+      "exportSha256": "e7c155466d4148fb530eca7f5548fa16b567281beb65ca3f0659d4ed3d103105",
+      "sourceBytes": 6931,
+      "exportBytes": 6931,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/Icon.tsx",
+      "sourceSha256": "0471a667ea8b051e7ab3ee141f9122cfb38c37f90359af11e50956399e3882ab",
+      "exportSha256": "0471a667ea8b051e7ab3ee141f9122cfb38c37f90359af11e50956399e3882ab",
+      "sourceBytes": 2199,
+      "exportBytes": 2199,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/MissionControl.tsx",
+      "sourceSha256": "7d064496216b094df4972cd4fbfb07d8d3635ae1f15b243cd7d608ca2d501763",
+      "exportSha256": "7d064496216b094df4972cd4fbfb07d8d3635ae1f15b243cd7d608ca2d501763",
+      "sourceBytes": 19023,
+      "exportBytes": 19023,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/Observatory.tsx",
+      "sourceSha256": "e11959892414239d507af0adb1b469adfe24d7784ddf59c7e70c6cb0fe37a313",
+      "exportSha256": "e11959892414239d507af0adb1b469adfe24d7784ddf59c7e70c6cb0fe37a313",
+      "sourceBytes": 3311,
+      "exportBytes": 3311,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/OrbitalScene.tsx",
+      "sourceSha256": "ef2a444b40a80c3efa4ea2f6705fd0848a15ad3b844c576d27773c964587f06d",
+      "exportSha256": "ef2a444b40a80c3efa4ea2f6705fd0848a15ad3b844c576d27773c964587f06d",
+      "sourceBytes": 10592,
+      "exportBytes": 10592,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/Scene.tsx",
+      "sourceSha256": "d7532f52b399cef4e670feb816e66a545835347b9647bd5edb03da162439cded",
+      "exportSha256": "d7532f52b399cef4e670feb816e66a545835347b9647bd5edb03da162439cded",
+      "sourceBytes": 3515,
+      "exportBytes": 3515,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/Workbench.tsx",
+      "sourceSha256": "c57019a4316cd54b0ffff061d72d5906bf51da2af3a498a7383278df68328deb",
+      "exportSha256": "c57019a4316cd54b0ffff061d72d5906bf51da2af3a498a7383278df68328deb",
+      "sourceBytes": 7292,
+      "exportBytes": 7292,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/format.ts",
+      "sourceSha256": "73e1d4a40fda61b7678eaf2c4563257673e917296da8fa29c8b4abee5e4266f6",
+      "exportSha256": "73e1d4a40fda61b7678eaf2c4563257673e917296da8fa29c8b4abee5e4266f6",
+      "sourceBytes": 2871,
+      "exportBytes": 2871,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/ui/learning.ts",
+      "sourceSha256": "2562f3acab69905346644a5104e2f9dab00dd7378c1c89f5de6a15b5e6faa3fe",
+      "exportSha256": "2562f3acab69905346644a5104e2f9dab00dd7378c1c89f5de6a15b5e6faa3fe",
+      "sourceBytes": 2603,
+      "exportBytes": 2603,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/workers/client.ts",
+      "sourceSha256": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1",
+      "exportSha256": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1",
+      "sourceBytes": 7209,
+      "exportBytes": 7209,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "src/workers/mission.worker.ts",
+      "sourceSha256": "ee16c56efce23c82105973bbbce9318dc7485d97488a5eb157466af2430454fb",
+      "exportSha256": "ee16c56efce23c82105973bbbce9318dc7485d97488a5eb157466af2430454fb",
+      "sourceBytes": 1059,
+      "exportBytes": 1059,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tests-ui/flows.test.mjs",
+      "sourceSha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb",
+      "exportSha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb",
+      "sourceBytes": 10308,
+      "exportBytes": 10308,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tests/adversarial.test.mts",
+      "sourceSha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c",
+      "exportSha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c",
+      "sourceBytes": 14204,
+      "exportBytes": 14204,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tests/engine.test.mts",
+      "sourceSha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc",
+      "exportSha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc",
+      "sourceBytes": 20298,
+      "exportBytes": 20298,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tests/persistence.test.mts",
+      "sourceSha256": "73f0d5bb4fa46db514e36008fdc40b030f07d073f5ac22bbce791949d9b4f0a6",
+      "exportSha256": "73f0d5bb4fa46db514e36008fdc40b030f07d073f5ac22bbce791949d9b4f0a6",
+      "sourceBytes": 7349,
+      "exportBytes": 7349,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tests/replay.test.mts",
+      "sourceSha256": "2f66fc4a2e3aad53f4b612abdfd93ad9860ce7d924d891bff5dfc14a2ccba7ee",
+      "exportSha256": "2f66fc4a2e3aad53f4b612abdfd93ad9860ce7d924d891bff5dfc14a2ccba7ee",
+      "sourceBytes": 8037,
+      "exportBytes": 8037,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/README.md",
+      "sourceSha256": "c58ce8384f700a57e7ec1edcfb50448c114fce3151cef9a75e68bc949a046e85",
+      "exportSha256": "c58ce8384f700a57e7ec1edcfb50448c114fce3151cef9a75e68bc949a046e85",
+      "sourceBytes": 3421,
+      "exportBytes": 3421,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/build-evidence-index.py",
+      "sourceSha256": "a6466ba5565fdec432a1e5599fd20cd66ca0175845005c04a92ac305c5e26462",
+      "exportSha256": "a6466ba5565fdec432a1e5599fd20cd66ca0175845005c04a92ac305c5e26462",
+      "sourceBytes": 4640,
+      "exportBytes": 4640,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/build_study_artifacts.py",
+      "sourceSha256": "a6379291c7030342ed4a6a3003de0f9c02ed90adb8ede8a538f7d119674bdc3e",
+      "exportSha256": "a6379291c7030342ed4a6a3003de0f9c02ed90adb8ede8a538f7d119674bdc3e",
+      "sourceBytes": 24640,
+      "exportBytes": 24640,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/package_presentation_kit.py",
+      "sourceSha256": "167dd9bf78b5d517b3867001fc53d564f9665bbac047ad840d6a1aaacc395aa5",
+      "exportSha256": "167dd9bf78b5d517b3867001fc53d564f9665bbac047ad840d6a1aaacc395aa5",
+      "sourceBytes": 5048,
+      "exportBytes": 5048,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/package_release.py",
+      "sourceSha256": "4320f454e198d3dafa4c51dd29582bc02e0999f029b4b465a3f9d6171b6431fb",
+      "exportSha256": "4320f454e198d3dafa4c51dd29582bc02e0999f029b4b465a3f9d6171b6431fb",
+      "sourceBytes": 3299,
+      "exportBytes": 3299,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/qa_document.py",
+      "sourceSha256": "f12866410d5e10440035727a27300385d6fab0dbb249dfe2eaf08a8e4db3e4fc",
+      "exportSha256": "f12866410d5e10440035727a27300385d6fab0dbb249dfe2eaf08a8e4db3e4fc",
+      "sourceBytes": 2723,
+      "exportBytes": 2723,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/rea-audit.mjs",
+      "sourceSha256": "0ca1b93042889fc04e0402f5528023d66c76175844d2fa3df90fdbc6d02bbf42",
+      "exportSha256": "0ca1b93042889fc04e0402f5528023d66c76175844d2fa3df90fdbc6d02bbf42",
+      "sourceBytes": 11564,
+      "exportBytes": 11564,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tools/render_diagrams.py",
+      "sourceSha256": "54abc3d970db1eadb2bd9c80fc7bbc2da13c2d96a9d3d9d47f34ba9c4a43b31c",
+      "exportSha256": "54abc3d970db1eadb2bd9c80fc7bbc2da13c2d96a9d3d9d47f34ba9c4a43b31c",
+      "sourceBytes": 6326,
+      "exportBytes": 6326,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "tsconfig.json",
+      "sourceSha256": "7e5edd587e6fe0fecfebd5597ce1c9d045632baf566345e94e03757bdd75e10b",
+      "exportSha256": "7e5edd587e6fe0fecfebd5597ce1c9d045632baf566345e94e03757bdd75e10b",
+      "sourceBytes": 472,
+      "exportBytes": 472,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "vercel.json",
+      "sourceSha256": "eda7d2352e42f4172e2de156d13b10419cd6a7af3dda259095b9dd5c22fbe72f",
+      "exportSha256": "eda7d2352e42f4172e2de156d13b10419cd6a7af3dda259095b9dd5c22fbe72f",
+      "sourceBytes": 3286,
+      "exportBytes": 3286,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "vite.config.ts",
+      "sourceSha256": "bcd1fd9812d9ea688a496d78b722f5d330121a1dfc733d308ef38634af99465c",
+      "exportSha256": "bcd1fd9812d9ea688a496d78b722f5d330121a1dfc733d308ef38634af99465c",
+      "sourceBytes": 159,
+      "exportBytes": 159,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "web/index.html",
+      "sourceSha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+      "exportSha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+      "sourceBytes": 51877,
+      "exportBytes": 51877,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "web/public-docs/09-VERIFICACAO.md",
+      "sourceSha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6",
+      "exportSha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6",
+      "sourceBytes": 3109,
+      "exportBytes": 3109,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "web/public-docs/AUTORIA-E-IA.md",
+      "sourceSha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b",
+      "exportSha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b",
+      "sourceBytes": 1594,
+      "exportBytes": 1594,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "web/public-docs/COMO-USAR.md",
+      "sourceSha256": "3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26",
+      "exportSha256": "3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26",
+      "sourceBytes": 2114,
+      "exportBytes": 2114,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "web/public-docs/ESTADO-PUBLICO.md",
+      "sourceSha256": "d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb",
+      "exportSha256": "d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb",
+      "sourceBytes": 3542,
+      "exportBytes": 3542,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    },
+    {
+      "path": "web/public-docs/ORIGEM-DOS-DADOS.md",
+      "sourceSha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76",
+      "exportSha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76",
+      "sourceBytes": 2489,
+      "exportBytes": 2489,
+      "redactions": {
+        "machinePaths": 0,
+        "privateEndpoints": 0
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "path": "dist/assets/OrbitalScene-B0I9aE-1.js.map",
+      "reason": "source map"
+    },
+    {
+      "path": "dist/assets/index-DYhpvtlV.js.map",
+      "reason": "source map"
+    },
+    {
+      "path": "dist/assets/mission.worker-m4WSgatj.js.map",
+      "reason": "source map"
+    },
+    {
+      "path": "dist/assets/search-DiIaA0z6.js.map",
+      "reason": "source map"
+    },
+    {
+      "path": "evidence/ab-r3a-analysis.json.gz",
+      "reason": "internal raw analysis report"
+    },
+    {
+      "path": "experiments/mission-design-lab/.openai/hosting.json",
+      "reason": "local authentication, hosting, dependencies, or repository state"
+    },
+    {
+      "path": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle.part01",
+      "reason": "private history/recovery or generated deployment tree"
+    },
+    {
+      "path": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle.part02",
+      "reason": "private history/recovery or generated deployment tree"
+    },
+    {
+      "path": "recovery/archive-manifest.json",
+      "reason": "private history/recovery or generated deployment tree"
+    },
+    {
+      "path": "references/user/README.md",
+      "reason": "personal attachment and attachment metadata"
+    },
+    {
+      "path": "references/user/cartaz-jogo-missoes-usuario.jpeg",
+      "reason": "personal attachment and attachment metadata"
+    },
+    {
+      "path": "references/user/cartaz-mapa-marte-usuario.jpeg",
+      "reason": "personal attachment and attachment metadata"
+    },
+    {
+      "path": "references/user/manifesto-referencias.json",
+      "reason": "personal attachment and attachment metadata"
+    }
+  ],
+  "findings": [],
+  "uninspectedBinaryFiles": [
+    "docassets/04-FLOWCHARTS-01.png",
+    "docassets/04-FLOWCHARTS-02.png",
+    "docassets/04-FLOWCHARTS-03.png",
+    "docassets/04-FLOWCHARTS-04.png",
+    "experiments/mission-design-lab/evidence/ui/briefing-desktop.jpg",
+    "experiments/mission-design-lab/evidence/ui/briefing-mobile.jpg",
+    "experiments/mission-design-lab/evidence/ui/laboratorio.jpg",
+    "experiments/mission-design-lab/evidence/ui/retorno-cientifico.jpg",
+    "experiments/mission-design-lab/evidence/ui/retorno-mobile.jpg",
+    "experiments/mission-design-lab/public/research/assets/briefing-desktop.jpg",
+    "experiments/mission-design-lab/public/research/assets/briefing-mobile.jpg",
+    "experiments/mission-design-lab/public/research/assets/laboratorio.jpg",
+    "experiments/mission-design-lab/public/research/assets/retorno-cientifico.jpg",
+    "experiments/mission-design-lab/public/research/assets/retorno-mobile.jpg",
+    "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf"
+  ],
+  "status": "copied",
+  "summary": {
+    "discovered": 441,
+    "included": 428,
+    "excluded": 13,
+    "redactedFiles": 1,
+    "findings": 0,
+    "exportBytes": 16515702
+  }
+}

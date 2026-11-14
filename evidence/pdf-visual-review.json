@@ -1,0 +1,20 @@
+{
+  "reviewedAt": "2026-11-14T09:16:47.259022+00:00",
+  "pdfSha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a",
+  "pages": 112,
+  "contactSheetsInspected": 5,
+  "allPagesInspectedAtContactSheetScale": true,
+  "finalHighResolutionSamplesInspected": [
+    21,
+    47,
+    61,
+    74,
+    96
+  ],
+  "corrections": [
+    "Display equations rendered rather than exposed as raw TeX.",
+    "Code paragraph backgrounds no longer overpaint adjacent source lines; Prisma appendix remains readable."
+  ],
+  "observed": "No page clipping or overlaps were observed after the corrections in contact sheets and sampled detail views.",
+  "scope": "Document layout review only. This is not visual QA of the game or a browser test."
+}

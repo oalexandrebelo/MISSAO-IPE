@@ -1,0 +1,121 @@
+{
+  "finalizedAt": "2026-11-14T09:07:42.382Z",
+  "status": "passed-with-explicit-limits",
+  "engineVersion": "0.1.1-rd",
+  "runtimeImplementationChangedByThisFront": false,
+  "uiRun": {
+    "startedAt": "2026-11-14T09:05:39.122Z",
+    "finishedAt": "2026-11-14T09:05:40.353Z",
+    "runnerTotal": 9,
+    "runnerPassed": 9,
+    "skipped": 0,
+    "durationMs": 1182.983399,
+    "note": "3 top-level tests including 1 parent with 6 subtests; final assertions inspect live config after invalid import"
+  },
+  "httpCasesPassed": 8,
+  "benchmarkSourceChecks": [
+    {
+      "file": "src/core/engine.ts",
+      "expected": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "current": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635"
+    },
+    {
+      "file": "src/core/exact.ts",
+      "expected": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8",
+      "current": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8"
+    },
+    {
+      "file": "src/core/power.ts",
+      "expected": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7",
+      "current": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7"
+    },
+    {
+      "file": "src/core/science.ts",
+      "expected": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "current": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92"
+    },
+    {
+      "file": "src/core/catalog.ts",
+      "expected": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8",
+      "current": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8"
+    },
+    {
+      "file": "src/core/contracts.ts",
+      "expected": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "current": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2"
+    },
+    {
+      "file": "src/core/search.ts",
+      "expected": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "current": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8"
+    },
+    {
+      "file": "src/data/science-data.ts",
+      "expected": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "current": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66"
+    }
+  ],
+  "files": [
+    {
+      "file": "tests-ui/flows.test.mjs",
+      "bytes": 10308,
+      "sha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb"
+    },
+    {
+      "file": "scripts/test-ui.mjs",
+      "bytes": 2137,
+      "sha256": "a789ac7a6f3a496b29153f51ca177e0f7f1309f28bb5a1b42a61d8fbdebe4b5a"
+    },
+    {
+      "file": "scripts/benchmark-engine.mjs",
+      "bytes": 4093,
+      "sha256": "12c70dc52ed781b103722270508ea6b18a298abc7c82ad7a98e2b5c5f5a57f95"
+    },
+    {
+      "file": "scripts/audit-release.mjs",
+      "bytes": 4848,
+      "sha256": "6c5fdf6c314cf076a8e70c021f2811bae4f39992bfeb54ee27fa333cf8a7726a"
+    },
+    {
+      "file": "scripts/smoke-server.mjs",
+      "bytes": 3307,
+      "sha256": "e69b2fba1f4cbad3a54af13d005ad9e876c001f02ff9078f8e34128a23efd976"
+    },
+    {
+      "file": "evidence/ui-dom-release-final.tap",
+      "bytes": 2653,
+      "sha256": "5b375e6fa3b2aa9e5fca248b985d6792d02737e43298a0c0d00138ff1a4cd632"
+    },
+    {
+      "file": "evidence/ui-dom-release-final.json",
+      "bytes": 746,
+      "sha256": "6e9be47f01ec9c66e3e5a033e0bb85ad33065c1a5d4ffb07a56284e0b7d97ab1"
+    },
+    {
+      "file": "evidence/engine-benchmark.json",
+      "bytes": 26498,
+      "sha256": "0121092e900a255e38ed3f17d24d3fc57573a0b7cc1121b319a8cab1d550b473"
+    },
+    {
+      "file": "evidence/release-dependencies-network.json",
+      "bytes": 74911,
+      "sha256": "b188c9a1de759dab527c09ecf4841631dd9ed6d0d7ee06c1522910c55691256e"
+    },
+    {
+      "file": "evidence/server-http-smoke.json",
+      "bytes": 7457,
+      "sha256": "795afc3997a751bee47183d245a0c54253dd0877ff3d58cb64400446a4f48d5e"
+    }
+  ],
+  "scopeLimits": [
+    "Simulated DOM, not browser",
+    "Real core, normal no-Worker fallback; no real Worker execution",
+    "Fake IndexedDB, not browser storage durability",
+    "No native file-picker/download or visual layout validation",
+    "No cold offline browser test",
+    "No FPS or AB hardware benchmark",
+    "No Fastino/model integration",
+    "Pre-event research; eligibility pending"
+  ],
+  "coordination": "Final DOM receipt preserved separately because the coordination gate may use the preceding test snapshot. Runtime src unchanged; AB-R3A/build/package under root responsibility."
+}

@@ -1,0 +1,48 @@
+{
+  "name": "projeto-ipe",
+  "version": "0.4.0-beta.2",
+  "private": true,
+  "type": "module",
+  "description": "Missão Ipê BETA: jogo, apresentação, contexto integral, cronograma interativo e arquitetura rastreável.",
+  "scripts": {
+    "build:release": "npm --prefix experiments/mission-design-lab run build && node scripts/build-beta-site.mjs && node scripts/prepare-vercel-static.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.mts",
+    "test:ui": "node scripts/test-ui.mjs",
+    "benchmark:engine": "node scripts/benchmark-engine.mjs",
+    "start": "node scripts/serve.mjs",
+    "verify": "npm run test && npm run build",
+    "build:portable": "node scripts/build-portable.mjs",
+    "build:beta": "node scripts/build-beta-site.mjs",
+    "test:beta": "node scripts/test-beta-site.mjs",
+    "build:presentation": "node scripts/build-presentation.mjs",
+    "start:beta": "node scripts/serve-beta.mjs",
+    "prepare:vercel": "node scripts/prepare-vercel-static.mjs",
+    "build:context": "node scripts/build-context-hub.mjs",
+    "build:research": "node scripts/build-research-library.mjs",
+    "test:context": "node scripts/test-context-hub.mjs"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@types/jsdom": "30.0.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
+    "esbuild": "0.28.2",
+    "fake-indexeddb": "6.2.8",
+    "jsdom": "31.0.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
+  }
+}

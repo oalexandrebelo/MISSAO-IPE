@@ -1,0 +1,253 @@
+Os repositórios abaixo representam a infraestrutura real usada em centros de controle de missão, laboratórios de sensoriamento remoto e estações terrestres ao redor do mundo. Cada item detalha os módulos internos, formatos de dados suportados e como acoplá-lo diretamente a um projeto do **NASA Space Apps Challenge**.
+
+---
+
+## 🇺🇸 EUA — Modelos Fundacionais, Voo, Astrodinâmica & Radar InSAR
+
+* **`NASA-IMPACT/Prithvi-EO-2.0` + `NASA-IMPACT/Prithvi-WxC` + `IBM/terratorch**` *(GitHub — NASA Marshall / IBM Research)*
+* **Arquitetura & Módulos:** O `Prithvi-EO-2.0` é um *Vision Transformer* (ViT) pré-treinado com *Masked Autoencoder* (MAE) e embeddings temporais/geográficos 3D sobre séries globais HLS (*Harmonized Landsat Sentinel-2* a 30 m). O `Prithvi-WxC` (2,3B parâmetros) atua sobre reanálise atmosférica `MERRA-2` (160 variáveis em níveis de pressão). O `terratorch` é o framework oficial em PyTorch Lightning que encapsula ambos para *fine-tuning* rápido com cabeças de segmentação (UPerNet, UNet) e regressão.
+* **Por que é ouro escondido:** Elimina a necessidade de treinar redes do zero com poucos rótulos. Já traz pipelines validados para mapeamento de cicatrizes de queimadas, detecção de plumas de inundação, deslizamentos de terra, estimativa de biomassa e *downscaling* climático de alta resolução.
+* **Uso no Space Apps:** Desafios de desastres naturais, mudanças climáticas, segurança alimentar e monitoramento ambiental com inferência rápida sobre dados reais da NASA/USGS.
+
+
+* **`NASA-AMMOS/3DTilesRendererJS` + `NASA-AMMOS/unity-3dtiles**` *(GitHub — NASA JPL)*
+* **Arquitetura & Módulos:** Implementação oficial do JPL para o padrão OGC **3D Tiles (1.0 e 1.1)** em JavaScript (`Three.js`, `React Three Fiber`, `Babylon.js`) e Unity. Suporta descompressão nativa `DRACO`, texturas GPU `KTX2/Basis`, nuvens de pontos `PNTS`, `GLTF/GLB`, elipsoides customizados (`WGS84_ELLIPSOID`, Lua e Marte) e plugins como `TopoLinesPlugin` (curvas de nível dinâmicas via shader) e sobreposição de `GeoJSON` e `Vector Tiles`.
+* **Por que é ouro escondido:** Permite carregar modelos fotogramétricos orbitais de altíssima resolução (como terrenos do *Mars Reconnaissance Orbiter HiRISE* ou *Lunar Reconnaissance Orbiter*) diretamente no navegador com *Level of Detail* (LOD) hierárquico sem travar a GPU.
+* **Uso no Space Apps:** Gêmeos digitais planetários, planejamento visual de rotas de rovers na Lua/Marte e visualização 3D de relevo terrestre com camadas científicas sobrepostas.
+
+
+* **`nasa/fprime` + `nasa/cFS` + `nasa/openmct**` *(GitHub — NASA JPL / Goddard / Ames)*
+* **Arquitetura & Módulos:** Stack completo de voo-solo (*Flight-to-Ground*). O `fprime` (usado no helicóptero marciano *Ingenuity*) utiliza a linguagem de modelagem `FPP` para gerar automaticamente componentes C++ embarcados, portas tipadas e o *Ground Data System* (GDS). O `cFS` (*Core Flight System*) fornece o barramento de software (`cFE`) e pacotes no padrão espacial `CCSDS`. O `openmct` é o console web de controle de missão que consome telemetria em tempo real via WebSockets/REST, séries históricas, alertas e linhas do tempo.
+* **Por que é ouro escondido:** Entrega em poucas horas a arquitetura visual e funcional exata da sala de controle da NASA para qualquer simulação de sonda, rover, estação orbital ou rede de sensores IoT.
+* **Uso no Space Apps:** Missões robóticas, habitats espaciais, monitoramento de saúde de satélites (*Spacecraft Health*) e dashboards de telemetria em tempo real.
+
+
+* **`AndrewAnnex/SpiceyPy` (Wrapper oficial do `NASA NAIF SPICE Toolkit`)** *(GitHub — NASA JPL)*
+* **Arquitetura & Módulos:** Interface Python completa para a biblioteca C `CSPICE` do JPL. Lê kernels binários oficiais da NASA: `.bsp` (efemérides de planetas, luas, asteroides e naves), `.ck` (orientação/atitude), `.fk` (referenciais), `.ik` (geometria de câmeras/instrumentos), `.tls` (*leapseconds*) e `.pck` (constantes planetárias).
+* **Por que é ouro escondido:** Calcula com precisão sub-métrica onde uma sonda está, para onde sua câmera está apontando, qual polígono da superfície planetária está dentro do campo de visão (*FOV intercept*), ângulos de incidência solar e janelas de ocultação de rádio.
+* **Uso no Space Apps:** Qualquer desafio envolvendo missões interplanetárias reais (Europa Clipper, Psyche, Juno, Cassini, Perseverance), planejamento de observação orbital e geometria de iluminação lunar.
+
+
+* **`AVSLab/basilisk` + `chrisrabotin/nyx**` *(GitHub — CU Boulder / LASP & Nyx Space)*
+* **Arquitetura & Módulos:** O `basilisk` é um simulador astrodinâmico e de GNC (*Guidance, Navigation & Control*) em C++ com bindings em Python que roda ordens de magnitude mais rápido que o tempo real, modelando rodas de reação, rastreadores de estrelas (*star trackers*), painéis solares, bateria, arrasto atmosférico e malhas de controle de atitude. O `nyx` é um motor astrodinâmico escrito em **Rust** com filtros de Kalman estendidos (EKF/CKF), dispersão de Monte Carlo e otimização de manobras orbitais.
+* **Por que é ouro escondido:** Permite simular falhas de hardware em órbita, consumo energético de CubeSats e desvio de detritos espaciais com física rigorosa em vez de animações fictícias.
+* **Uso no Space Apps:** Desafios de lixo espacial (*Orbital Debris*), manutenção em órbita, navegação autônoma e constelações de nanossatélites.
+
+
+* **`isce-framework/isce2` + `insarlab/MintPy**` *(GitHub — NASA JPL / Univ. of Miami)*
+* **Arquitetura & Módulos:** Pipeline completo de **Interferometria de Radar de Abertura Sintética (InSAR)**. O `ISCE2` processa dados brutos de radar (`SLC` — *Single Look Complex*) dos satélites Sentinel-1, ALOS-2 e NISAR para gerar interferogramas diferenciais. O `MintPy` (*Miami InSAR Time-series software in Python*) aplica inversão SBAS (*Small Baseline Subset*), correção troposférica (`PyAPS`) e desdobramento de fase para medir deformações milimétricas do solo ao longo do tempo.
+* **Por que é ouro escondido:** Radar penetra nuvens e opera à noite — permite detectar subsidência urbana, estufamento magmático antes de erupções vulcânicas, instabilidade de barragens e deslocamento de falhas sísmicas.
+* **Uso no Space Apps:** Monitoramento geofísico, prevenção de desastres geológicos e infraestrutura crítica.
+
+
+* **`microsoft/torchgeo` + `developmentseed/titiler**` *(GitHub)*
+* **Arquitetura & Módulos:** O `torchgeo` resolve o maior gargalo de IA geoespacial: combina datasets em diferentes projeções cartográficas (CRS) e resoluções espaciais dinamicamente durante o treinamento PyTorch via `GeoSampler` e `IntersectionDataset`. O `titiler` (FastAPI + GDAL/Rasterio) serve arquivos `COG` (*Cloud-Optimized GeoTIFF*) e coleções `STAC` diretamente da nuvem como tiles dinâmicos XYZ/WMTS com aplicação de fórmulas espectrais e colormaps em tempo real via URL.
+* **Por que é ouro escondido:** Elimina o pré-processamento pesado de recortar e reprojetar gigabytes de imagens antes de servir no frontend web.
+* **Uso no Space Apps:** Backends geoespaciais de alta performance com visualização interativa instantânea no navegador.
+
+
+* **`lightkurve/lightkurve` + `nasa/ExoMiner**` *(GitHub — NASA Ames / STScI)*
+* **Arquitetura & Módulos:** O `lightkurve` manipula diretamente curvas de luz e arquivos de pixels (`TargetPixelFile`) dos telescópios espaciais **Kepler, K2 e TESS**, aplicando correção de sistemática instrumental (`CBVCorrector`, `PLDCorrector`) e busca de trânsitos planetários via periodograma *Box Least Squares* (`BLS`). O `ExoMiner` é a rede neural profunda da NASA que classificou centenas de exoplanetas reais distinguindo trânsitos genuínos de estrelas binárias eclipsantes.
+* **Por que é ouro escondido:** Conecta-se diretamente ao arquivo MAST da NASA em três linhas de Python para analisar estrelas reais observadas pelo TESS.
+* **Uso no Space Apps:** Desafios de astrofísica, descoberta de exoplanetas, variabilidade estelar e ciência cidadã astronômica.
+
+
+
+---
+
+## 🇪🇺 Europa — Astrodinâmica CNES/ESA, Copernicus, Controle & Meteorologia
+
+* **`gitlab.orekit.org/orekit/orekit` + `CS-SI/orekit-python-wrapper**` *(GitLab — CNES / CS Group, França)*
+* **Arquitetura & Módulos:** A biblioteca aberta mais completa da engenharia orbital europeia. Inclui propagadores numéricos, analíticos (`SGP4/SDP4`) e semi-analíticos (`DSST`), modelos gravitacionais harmônicos (`EIGEN`, `EGM2008`), modelos de densidade atmosférica (`NRLMSISE-00`, `JB2008`), pressão de radiação solar, eventos orbitais (eclipses umbra/penumbra, elevação sobre estações terrestres, apogeu/perigeu) e determinação orbital via Mínimos Quadrados e Filtro de Kalman.
+* **Por que é ouro escondido:** É utilizada operacionalmente em centros de controle de satélites reais na Europa para cálculo de manobras e prevenção de colisões.
+* **Uso no Space Apps:** Rastreamento orbital de precisão, cálculo de janelas de comunicação com estações terrestres e previsão de reentrada atmosférica.
+
+
+* **`esa/pykep` + `esa/pagmo2` + `aidotse/PASEOS**` *(GitHub — ESA Advanced Concepts Team & Φ-lab)*
+* **Arquitetura & Módulos:** `pykep` e `pagmo2` formam o motor C++/Python da ESA para otimização de trajetórias interplanetárias: solucionadores do problema de Lambert, transcrição de propulsão de baixo empuxo (*Sims-Flanagan*), assistências gravitacionais múltiplas (*MGA-1DSM*) e otimização evolutiva/gradiente massivamente paralela (modelo de ilhas generalizado). O `PASEOS` simula restrições operacionais reais (bateria, dissipação térmica, apontamento e enlace de rádio) para executar IA embarcada a bordo de satélites.
+* **Por que é ouro escondido:** Permite projetar missões interplanetárias reais (como trajetórias Terra-Marte-asteroides) e testar como modelos de IA se comportam sob restrições térmicas e energéticas no espaço.
+* **Uso no Space Apps:** Planejamento de missões ao espaço profundo, mineração de asteroides e constelações autônomas com IA a bordo (*Edge AI in Space*).
+
+
+* **`sentinel-hub/eo-learn` + `sentinel-hub/custom-scripts` + `Open-EO/openeo-python-client**` *(GitHub — Eslovênia / Ecossistema Copernicus)*
+* **Arquitetura & Módulos:** O `eo-learn` organiza dados espaciotemporais dos satélites Sentinel-1 (radar SAR) e Sentinel-2 (óptico multiespectral) em estruturas `EOPatch` (cubos NumPy + polígonos GeoPandas + timestamps), integrando detecção de nuvens (`s2cloudless`), preenchimento de lacunas temporais e classificação. O `custom-scripts` oferece centenas de algoritmos em JavaScript prontos para isolar plumas de metano (`CH4`), dióxido de nitrogênio (`NO2`), clorofila-a, umidade do solo e severidade de incêndios.
+* **Por que é ouro escondido:** Transforma dados brutos do programa Copernicus em indicadores físicos prontos sem precisar escrever álgebra de bandas do zero.
+* **Uso no Space Apps:** Monitoramento de qualidade do ar, agricultura de precisão, detecção de vazamentos industriais de metano e recursos hídricos.
+
+
+* **`gitlab.orfeo-toolbox.org/orfeotoolbox/otb`** *(GitLab — CNES, França)*
+* **Arquitetura & Módulos:** Motor de processamento de imagens de sensoriamento remoto em C++ com bindings Python, construído sobre `ITK` e `GDAL`. Executa pipelines em *streaming* por blocos para ortorretificação rigorosa, estereoscopia 3D (geração de Modelos Digitais de Superfície a partir de pares estéreo orbitais), *pan-sharpening*, segmentação *Mean-Shift* em larga escala e extração de texturas de Haralick.
+* **Por que é ouro escondido:** Processa cenas de satélite de dezenas de gigabytes em máquinas com pouca memória RAM graças à arquitetura nativa de streaming.
+* **Uso no Space Apps:** Reconstrução topográfica 3D, mapeamento urbano de altíssima resolução e fusão de sensores ópticos e radar.
+
+
+* **`[gitlab.com/librespacefoundation/satnogs](https://gitlab.com/librespacefoundation/satnogs)` (`satnogs-network`, `gr-satnogs`, `satnogs-decoders`)** *(GitLab — Grécia / Europa)*
+* **Arquitetura & Módulos:** Maior rede global aberta de estações terrestres de recepção de satélites. Disponibiliza APIs REST com milhões de pacotes de telemetria históricos e em tempo real, espectrogramas *waterfall*, fluxogramas GNU Radio (`gr-satnogs`) e decodificadores binários escritos em **Kaitai Struct** (`satnogs-decoders`) para centenas de CubeSats ativos.
+* **Por que é ouro escondido:** Permite consumir telemetria real de satélites em órbita hoje mesmo via API, sem possuir uma antena física.
+* **Uso no Space Apps:** Análise de clima espacial via telemetria de CubeSats, monitoramento de saúde de constelações e educação em comunicações espaciais.
+
+
+* **`yamcs/yamcs`** *(GitHub — Space Applications Services, Bélgica)*
+* **Arquitetura & Módulos:** Sistema completo de controle de missão utilizado em cargas úteis reais da ESA e da Estação Espacial Internacional (módulo Columbus). Suporta bancos de dados de missão no padrão espacial `XTCE` (*XML Telemetric and Command Exchange*), ingestão de pacotes `CCSDS`, telecomandos, arquivamento de parâmetros em alta frequência, regras de alarme e APIs REST/WebSocket.
+* **Por que é ouro escondido:** Enquanto o `OpenMCT` foca na visualização frontend, o `Yamcs` fornece o backend industrial completo de comando e telemetria espacial.
+* **Uso no Space Apps:** Simulação de operações de voo, centros de controle de habitats lunares e gestão de telemetria multi-satélite.
+
+
+* **`pytroll/satpy` + `pytroll/pyresample**` *(GitHub — Consórcio Meteorológico Europeu SMHI/DWD/EUMETSAT)*
+* **Arquitetura & Módulos:** Padrão operacional dos serviços meteorológicos europeus. Lê formatos nativos Level-1b/1c/2 (`HRIT`, `MSG SEVIRI`, `MTG FCI`, `Sentinel-3 OLCI/SLSTR`, `Metop AVHRR/IASI`), realiza calibração radiométrica e correção solar/térmica, gera composições RGB físicas (poeira atmosférica, cinzas vulcânicas, microfísica noturna, massa de ar) e reprojeta via KD-Tree (`pyresample`).
+* **Por que é ouro escondido:** Os algoritmos físicos de composição RGB já vêm calibrados para destacar fenômenos invisíveis em imagens comuns (como cinzas vulcânicas à noite ou umidade em altitude).
+* **Uso no Space Apps:** Meteorologia severa, rastreamento de plumas vulcânicas, tempestades de poeira e monitoramento oceânico.
+
+
+
+---
+
+## 🇷🇺 Rússia — Telemetria SDR, Nanossatélites, Meteor-M & Geologia Estrutural
+
+* **`dernasherbrezon/r2cloud` + `dernasherbrezon/jradio**` *(GitHub)*
+* **Arquitetura & Módulos:** Ecossistema completo em Java/Linux para estações terrestres autônomas em Raspberry Pi/x86 conectadas a rádios SDR (`RTL-SDR`, `Airspy`, `PlutoSDR`). O `jradio` implementa demoduladores DSP puros (sem depender do peso do GNU Radio) para `FSK`, `GFSK`, `BPSK`, `QPSK`, `AFSK`, `LoRa`, códigos convolucionais Viterbi, Reed-Solomon e protocolos `AX.25` e `CSP`.
+* **Por que é ouro escondido:** Consegue decodificar tanto imagens meteorológicas quanto pacotes de telemetria de dezenas de nanossatélites com baixíssimo consumo de CPU e armazenamento automático de espectrogramas.
+* **Uso no Space Apps:** Estações receptoras portáteis de baixo custo para monitoramento ambiental remoto e recepção direta de dados orbitais.
+
+
+* **`baskiton/SatsDecoder`** *(GitHub)*
+* **Arquitetura & Módulos:** Decodificador especializado de alta precisão para os barramentos de nanossatélites russos (**GEOSCAN**, **SPUTNIX OrbiCraft-Pro / USP**, **ReshUCube**, **CubeSX**), além de `AX.25` e `Cubesat Space Protocol (CSP)`. Conecta-se via TCP/KISS a receptores SDR ou lê arquivos brutos do `SatDump`, reconstruindo automaticamente imagens JPEG/SSDV transmitidas do espaço e parseando sensores de bordo (temperatura, corrente solar, giroscópios).
+* **Por que é ouro escondido:** Desbloqueia a telemetria e as fotos reais capturadas por dezenas de CubeSats educativos e científicos em órbita baixa que transmitem em UHF aberto.
+* **Uso no Space Apps:** Ciência cidadã espacial, análise de sensores orbitais em tempo real e redes distribuídas de recepção.
+
+
+* **`sputnixru/SX-Files` + `sputnixru/gr-gpredict-doppler**` *(GitHub — SPUTNIX, Skolkovo)*
+* **Arquitetura & Módulos:** Ferramentas abertas da fabricante privada russa SPUTNIX: o `SX-Files` implementa a reconstrução de transferência de arquivos confiável sobre enlaces de rádio UHF/S-band sujeitos a perda de pacotes; o `gr-gpredict-doppler` acopla o rastreador orbital `Gpredict` via socket TCP diretamente aos blocos GNU Radio para compensar o desvio Doppler em tempo real durante a passagem do satélite.
+* **Por que é ouro escondido:** Resolve um dos problemas mais difíceis de telecomunicações espaciais (correção Doppler contínua e remontagem de arquivos fragmentados em passagens curtas de 10 minutos).
+* **Uso no Space Apps:** Desafios de comunicações espaciais, redes tolerantes a atrasos (*DTN*) e engenharia de enlace solo-espaço.
+
+
+* **`dbdexter-dev/meteor_demod` + `artlav/meteor_decoder**` *(GitHub)*
+* **Arquitetura & Módulos:** Demoduladores e decodificadores dedicados aos satélites meteorológicos polares russos **Meteor-M N2, N2-3 e N2-4** (sensor multiespectral `MSU-MR` com resolução espacial de 1 km). Implementam sincronização de portadora *Costas Loop* para modulação `OQPSK` a 72/80 kbps, correção de erros e retificação geométrica da curvatura terrestre.
+* **Por que é ouro escondido:** Permitem transformar gravações de rádio de satélites Meteor-M em mapas meteorológicos georreferenciados sem depender de servidores centrais.
+* **Uso no Space Apps:** Monitoramento meteorológico independente, cobertura de gelo polar e análise de vegetação em larga escala.
+
+
+* **`SergeiShevyrev/LSR` (Lineament & Structural Recognition)** *(GitHub — Academia Russa de Ciências)*
+* **Arquitetura & Módulos:** Software científico em Python e `GDAL` voltado à geologia estrutural orbital. Aplica filtragem direcional, transformadas de Radon/Hough e análise estatística de diagramas de roseta sobre imagens multiespectrais e Modelos Digitais de Elevação (DEM) para extrair automaticamente lineamentos tectônicos, falhas geológicas e redes de fraturamento.
+* **Por que é ouro escondido:** Automatiza o mapeamento estrutural de terrenos planetários (Terra, Marte, Lua, Vênus) que normalmente exige interpretação manual de geólogos.
+* **Uso no Space Apps:** Mapeamento geológico planetário, prospecção de recursos lunares/marcianos e análise de risco sísmico.
+
+
+* **`nextgis/qms_srv` + `NextGIS/nextgisqgis**` *(GitHub — NextGIS, Moscou)*
+* **Arquitetura & Módulos:** O `qms_srv` é o motor por trás do **QuickMapServices**, o maior catálogo aberto de serviços cartográficos (`TMS`, `WMS`, `WFS`, `GeoJSON`) do mundo, centralizando milhares de camadas de base de satélites, relevo e mapas temáticos com metadados de projeção e atribuição prontos.
+* **Por que é ouro escondido:** Economiza horas procurando endpoints válidos de mapas base e camadas geográficas globais para integrar em aplicações web e SIG.
+* **Uso no Space Apps:** Integração imediata de múltiplas camadas cartográficas globais em aplicações de visualização geoespacial.
+
+
+
+---
+
+## 🌏 Ásia & Ásia-Pacífico — Visão Computacional Orbital, Simuladores de Voo & Cubos de Dados
+
+* **`open-mmlab/mmrotate` + `open-mmlab/mmsegmentation**` *(GitHub — Shanghai AI Lab, China)*
+* **Arquitetura & Módulos:** Benchmark mundial para detecção de objetos orientados (**OBB — Oriented Bounding Boxes**) em imagens aéreas e de satélite em PyTorch. Implementa arquiteturas como `Oriented R-CNN`, `RoI Transformer`, `S2A-Net`, `R3Det` e funções de perda angulares (`KFIoU`, `GWD`) treinadas em datasets orbitais (`DOTA`, `DIOR-R`, `HRSC2016`).
+* **Por que é ouro escondido:** Detectores comuns falham em imagens de satélite porque navios, aviões, veículos e contêineres aparecem em qualquer ângulo de rotação; o `mmrotate` entrega coordenadas angulares exatas (`cx, cy, w, h, theta`).
+* **Uso no Space Apps:** Monitoramento marítimo (pesca ilegal, tráfego de navios), logística portuária, contagem de aeronaves e avaliação de infraestrutura.
+
+
+* **`PaddlePaddle/PaddleRS`** *(GitHub — Baidu & Institutos de Sensoriamento Remoto da China)*
+* **Arquitetura & Módulos:** Suíte completa de Deep Learning para sensoriamento remoto: inferência em janela deslizante com sobreposição (*overlap blending*) para GeoTIFFs gigantes (10.000×10.000+ pixels), cálculo nativo de **mais de 50 índices espectrais**, remoção atmosférica de nuvens e neblina (*dehazing*), detecção de mudanças multitemporais e regularização poligonal automática de telhados e estradas para exportação vetorial `Shapefile/GeoJSON`.
+* **Por que é ouro escondido:** A regularização geométrica transforma máscaras pixeladas de segmentação em polígonos CAD/GIS limpos com cantos retos prontos para mapas vetoriais.
+* **Uso no Space Apps:** Mapeamento cadastral urbano, expansão de desmatamento e resposta rápida pós-desastre.
+
+
+* **`likyoo/open-cd` + `Z-Zheng/Changen**` *(GitHub — Universidade de Wuhan / LIESMARS, China)*
+* **Arquitetura & Módulos:** O `open-cd` (construído sobre o ecossistema OpenMMLab) reúne modelos especializados em **Detecção de Mudanças Bitemporais e Multitemporais** (`Changer`, `BIT`, `STANet`, `SNUNet`, `TinyCD`), comparando pares de imagens de satélite capturadas em datas diferentes e isolando apenas alterações estruturais reais enquanto ignora variações de iluminação e estações do ano.
+* **Por que é ouro escondido:** É a ferramenta ideal para comparar imagens "antes e depois" de enchentes, terremotos, incêndios ou desmatamento com baixa taxa de falsos positivos.
+* **Uso no Space Apps:** Avaliação automática de danos após desastres naturais e monitoramento contínuo de uso do solo.
+
+
+* **`wangdi1996/SamRS` + `opengeos/segment-geospatial` (`SamGeo`)** *(GitHub — Universidade de Wuhan / Comunidade GeoAI)*
+* **Arquitetura & Módulos:** Adapta o *Segment Anything Model* (SAM) especificamente para imagens orbitais e aéreas usando o mega-dataset `SAMRS`, permitindo segmentação *zero-shot* guiada por pontos, caixas delimitadoras ou prompts de texto (`LangSAM`) diretamente sobre arquivos `GeoTIFF` com preservação integral de georreferenciamento e exportação direta para vetor.
+* **Por que é ouro escondido:** Permite extrair contornos precisos de corpos d'água, lavouras, geleiras ou edificações em qualquer lugar do planeta sem treinar um modelo específico.
+* **Uso no Space Apps:** Prototipagem ultrarrápida de ferramentas de mapeamento interativo onde o usuário clica no mapa e a IA vetoriza feições geográficas instantaneamente.
+
+
+* **`ut-issl/s2e-core` + `ut-issl/c2a-core**` *(GitHub — Intelligent Space Systems Laboratory, Universidade de Tóquio, Japão)*
+* **Arquitetura & Módulos:** Uma das maiores joias escondidas da engenharia espacial aberta. O `s2e-core` (*Spacecraft Simulation Environment*) é um simulador físico completo em C++ de dinâmica, ambiente espacial e sensores (campo magnético terrestre `IGRF`, radiação solar, gradiente gravitacional, arrasto atmosférico, sensores solares, magnetômetros, rodas de reação e balanço térmico/energético). O `c2a-core` (*Command Centric Architecture*) é um software de voo em C testado em órbita real em múltiplos CubeSats japoneses (`PROCION`, `TRICOM`, `EQUULEUS`).
+* **Por que é ouro escondido:** Fornece um gêmeo digital físico completo de um satélite real (dinâmica orbital + atitude + sensores + software de voo) sem licenças proprietárias.
+* **Uso no Space Apps:** Simulação de missões de CubeSats, testes de algoritmos de controle de atitude (ADCS) e validação de operações espaciais.
+
+
+* **`jaxa/open-set`** *(GitHub — Agência Aeroespacial Japonesa JAXA, Japão)*
+* **Arquitetura & Módulos:** Arquitetura de referência *Open Satellite/Service/Software Enhancement Technology* da JAXA para **Satélites Definidos por Software (SDS)**. Define o empacotamento de cargas úteis de software em contêineres Linux isolados, agendamento de tarefas e interfaces de comunicação para rodar modelos de visão computacional diretamente no computador de bordo da espaçonave.
+* **Por que é ouro escondido:** Permite estruturar projetos de computação em borda no espaço (*Onboard AI*) seguindo exatamente o padrão arquitetural real da JAXA.
+* **Uso no Space Apps:** Processamento inteligente a bordo de satélites para filtrar imagens cobertas por nuvens antes de enviá-las à Terra.
+
+
+* **`opendatacube/datacube-core`** *(GitHub — Geoscience Australia / Ecossistema Ásia-Pacífico)*
+* **Arquitetura & Módulos:** Motor de indexação e análise de cubos de dados de Observação da Terra (base do *Digital Earth Australia* e *Digital Earth Africa*). Indexa coleções massivas de imagens `COG/NetCDF` em PostgreSQL e expõe séries temporais multidimensionais diretamente como objetos `xarray.Dataset` prontos para processamento paralelo com `Dask`.
+* **Por que é ouro escondido:** Elimina o gerenciamento manual de milhares de arquivos raster individuais ao tratar décadas de imagens de satélite como um único cubo contínuo `(tempo, latitude, longitude, bandas)`.
+* **Uso no Space Apps:** Análise histórica de décadas de mudanças costeiras, secas prolongadas e evolução de bacias hidrográficas.
+
+
+
+---
+
+## 🌍 Mundo — Infraestrutura Global Multi-Agência & Cloud-Native Geo
+
+* **`SatDump/SatDump`** *(GitHub — Projeto Global Open-Source)*
+* **Arquitetura & Módulos:** Suíte universal em C++17 acelerada por OpenCL/GPU para decodificar, calibrar e projetar dados brutos de **mais de 90 satélites** meteorológicos e científicos (`NOAA`, `Meteor-M`, `GOES-R HRIT/GRB`, `Himawari`, `FengYun-3/4`, `Aqua/Terra MODIS`, `Suomi-NPP VIIRS`, `Metop`). Converte sinais IQ de rádio ou quadros binários `CADU` em produtos Level-1b/Level-2 radiometricamente calibrados e projeções cartográficas.
+* **Por que é ouro escondido:** Unifica em um único motor o suporte a satélites americanos, russos, europeus, chineses e japoneses.
+* **Uso no Space Apps:** Fusão de dados meteorológicos multi-constelação e estações terrestres universais.
+
+
+* **`skyfielders/python-skyfield` + `astropy/astropy` + `sunpy/sunpy**` *(GitHub — Comunidade Científica Global)*
+* **Arquitetura & Módulos:** A tríade científica fundamental em Python:
+* `skyfield`: Efemérides planetárias JPL (`DE421/DE440`), propagação `SGP4` de satélites via TLE, cálculo de eclipses, fases lunares e coordenadas topocêntricas usando apenas NumPy.
+* `astropy`: Padrão mundial para astronomia — leitura de arquivos `FITS`, transformações entre sistemas celestes (`ICRS`, `Galactic`, `AltAz`), `WCS` (*World Coordinate System*) e fotometria.
+* `sunpy`: Física solar e clima espacial (*Space Weather*) — ingestão e análise de dados dos observatórios `SDO` (AIA/HMI), `SOHO`, `STEREO`, `Parker Solar Probe` e `Solar Orbiter`, rastreamento de ejeções de massa coronal (CMEs) e regiões ativas magnéticas.
+
+
+* **Por que é ouro escondido:** Garante rigor matemático e físico irrefutável em qualquer cálculo astronômico, solar ou orbital.
+* **Uso no Space Apps:** Desafios de clima espacial (tempestades geomagnéticas e proteção de redes elétricas/satélites), astronomia observacional e navegação celeste.
+
+
+* **`stac-utils/pystac-client` + `developmentseed/stackstac` + `zarr-developers/zarr-python**` *(GitHub)*
+* **Arquitetura & Módulos:** Stack moderno *Cloud-Native Geospatial*. O `pystac-client` consulta catálogos abertos (`NASA CMR-STAC`, `AWS Earth Search`, `Microsoft Planetary Computer`) por polígono, data e cobertura de nuvens; o `stackstac` empilha milhares de cenas `COG` de forma preguiçosa (*lazy*) em arrays `Dask/Xarray` sem baixar arquivos locais; o `zarr` permite ler e gravar cubos científicos multidimensionais em blocos comprimidos sobre HTTP/S3.
+* **Por que é ouro escondido:** Permite analisar terabytes de dados da NASA diretamente da nuvem em um notebook ou backend leve durante o fim de semana do hackathon sem estourar o disco local.
+* **Uso no Space Apps:** Qualquer projeto que exija cruzamento rápido de grandes volumes de dados climáticos, oceânicos ou orbitais.
+
+
+* **`daniestevez/gr-satellites`** *(GitHub)*
+* **Arquitetura & Módulos:** Maior coleção mundial de decodificadores GNU Radio para satélites amadores, universitários e científicos (suporta mais de 100 missões ativas). Inclui sincronizadores de clock/portadora, decodificadores FEC (`Reed-Solomon`, `Viterbi`, `LDPC`, `CCSDS`), deframers `AX.25`/`CSP`/`USP` e encaminhamento automático de telemetria.
+* **Por que é ouro escondido:** Permite receber e decodificar telemetria real de dezenas de missões espaciais diferentes sem precisar escrever DSP de baixo nível.
+* **Uso no Space Apps:** Experimentos de rádio definida por software (SDR), rastreamento de telemetria e redes de estações terrestres colaborativas.
+
+
+* **`CesiumGS/cesium` + `uber/deck.gl` + `visgl/loaders.gl**` *(GitHub)*
+* **Arquitetura & Módulos:** Motores WebGL/WebGPU de visualização geoespacial 3D em escala planetária. O `CesiumJS` renderiza o globo terrestre, a Lua ou Marte com terrenos 3D, `3D Tiles`, sombras solares dinâmicas e trajetórias orbitais animadas no formato `CZML`. O `deck.gl` renderiza milhões de pontos, arcos de comunicação, nuvens de pontos LiDAR e camadas raster/vetoriais em alta taxa de quadros.
+* **Por que é ouro escondido:** Transforma resultados numéricos complexos em interfaces visuais interativas de nível aeroespacial que impressionam jurados técnicos imediatamente.
+* **Uso no Space Apps:** Interfaces principais de visualização orbital, análise climática global e exploração planetária.
+
+
+
+---
+
+## Arquiteturas de Integração (Blueprints Prontos para Hackathon)
+
+| Tipo de Projeto Space Apps | Ingestão & Dados Brutos | Motor de Processamento & IA | Visualização & Interface |
+| --- | --- | --- | --- |
+| **Monitoramento de Desastres & Clima em Tempo Real** | `pystac-client` (NASA CMR / Sentinel) + `stackstac` | `NASA-IMPACT/Prithvi-EO-2.0` (`terratorch`) + `likyoo/open-cd` | `developmentseed/titiler` + `CesiumGS/cesium` |
+| **Gêmeo Digital de Missão Orbital / Rover Lunar** | `AndrewAnnex/SpiceyPy` (Kernels NAIF) + `gitlab.orekit.org/orekit` | `ut-issl/s2e-core` ou `AVSLab/basilisk` | `NASA-AMMOS/3DTilesRendererJS` + `nasa/openmct` |
+| **Estação Terrestre Universal & Clima Espacial** | `SatDump/SatDump` + `[gitlab.com/librespacefoundation/satnogs](https://gitlab.com/librespacefoundation/satnogs)` | `sunpy/sunpy` + `baskiton/SatsDecoder` + `pytroll/satpy` | `yamcs/yamcs` + `uber/deck.gl` |
+| **Detecção de Infraestrutura & Deformação Geofísica** | Sentinel-1 `SLC` + Sentinel-2 `COG` | `isce-framework/isce2` (`MintPy`) + `open-mmlab/mmrotate` | `PaddlePaddle/PaddleRS` (Vetorização) + `nextgis/qms_srv` |
+
+---
+
+## Dicionário Rápido de Formatos & Protocolos Espaciais
+
+| Formato / Protocolo | O que contém | Repositórios que leem / processam nativamente |
+| --- | --- | --- |
+| **COG + STAC** (`.tif` + `.json`) | Imagens orbitais em nuvem otimizadas por blocos internos + catálogo JSON espaciotemporal | `pystac-client`, `stackstac`, `titiler`, `torchgeo`, `opendatacube` |
+| **SPICE Kernels** (`.bsp`, `.ck`, `.ik`, `.fk`) | Efemérides planetárias, atitude de naves e geometria de instrumentos da NASA NAIF | `SpiceyPy`, `skyfield`, `3DTilesRendererJS` |
+| **NetCDF4 / HDF5 / Zarr** (`.nc`, `.h5`, `.zarr`) | Cubos climáticos, atmosféricos e oceânicos multidimensionais (`MERRA-2`, `MODIS`, `GPM`) | `satpy`, `sunpy`, `xarray`, `zarr-python`, `Prithvi-WxC` |
+| **SAR SLC / GRD** (`.safe`, `.h5`) | Dados complexos de amplitude e fase de radar de abertura sintética (Sentinel-1, NISAR) | `isce2`, `MintPy`, `orfeotoolbox`, `eo-learn` |
+| **CCSDS / XTCE / CSP / AX.25** | Pacotes binários de telemetria e telecomando espacial usados em satélites e CubeSats | `yamcs`, `cFS`, `fprime`, `satnogs-decoders`, `SatsDecoder`, `gr-satellites` |
+| **FITS / VOTable** (`.fits`, `.xml`) | Imagens astronômicas calibradas, espectros e catálogos estelares (TESS, JWST, Hubble) | `astropy`, `lightkurve`, `sunpy` |

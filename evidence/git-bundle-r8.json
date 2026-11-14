@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T13:27:41.423Z",
+  "status": "uploaded",
+  "repository": "oalexandrebelo/AB-NASA-TEAM-IPE",
+  "method": "Git blobs; bundle split losslessly below MCP 16 MiB request limit",
+  "original": {
+    "name": "git-history",
+    "mode": "concat",
+    "target": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle",
+    "bytes": 12970222,
+    "sha256": "d965d1e1b5bfb76ea3a92146c3b7579997560dd594b1adec7cd80c02e8e8961f",
+    "sources": [
+      {
+        "path": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle.part01",
+        "bytes": 8000000,
+        "sha256": "2d07182604b31361208d832f13283a02c3c9d9e6aee2a1385d2e7e2dec071655",
+        "gitBlobSha1": "7174cdcc6fae407b6753a114da036b8ce7113ed8"
+      },
+      {
+        "path": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle.part02",
+        "bytes": 4970222,
+        "sha256": "dbe13aa7fc28aa56e305f3378a5bcb1a36dbe66b91f6896c3425e45431461169",
+        "gitBlobSha1": "a2b713162e3dd70de4e3f12bc640e6186a09288b"
+      }
+    ]
+  },
+  "parts": [
+    {
+      "path": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle.part01",
+      "bytes": 8000000,
+      "sha256": "2d07182604b31361208d832f13283a02c3c9d9e6aee2a1385d2e7e2dec071655",
+      "gitBlobSha1": "7174cdcc6fae407b6753a114da036b8ce7113ed8",
+      "confirmedGitBlobSha1": "7174cdcc6fae407b6753a114da036b8ce7113ed8",
+      "uploadedAt": "2026-11-14T13:27:30.712Z"
+    },
+    {
+      "path": "recovery/AB-NASA-TEAM-IPE-historico-local-r8.bundle.part02",
+      "bytes": 4970222,
+      "sha256": "dbe13aa7fc28aa56e305f3378a5bcb1a36dbe66b91f6896c3425e45431461169",
+      "gitBlobSha1": "a2b713162e3dd70de4e3f12bc640e6186a09288b",
+      "confirmedGitBlobSha1": "a2b713162e3dd70de4e3f12bc640e6186a09288b",
+      "uploadedAt": "2026-11-14T13:27:41.423Z"
+    }
+  ],
+  "verification": "Node recovery script concatenated and checked SHA-256; original git bundle verify passed. No commit/ref performed by this transfer."
+}

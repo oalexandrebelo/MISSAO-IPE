@@ -1,0 +1,1266 @@
+{
+  "version": 1,
+  "project": {
+    "name": "AB-NASA-TEAM-IPE",
+    "product": "Missão Ipê — Ciência que chega",
+    "version": "0.3.0-beta.1",
+    "asOf": "2026-11-14T13:30:03.562Z",
+    "deadline": "2026-11-15T11:00:00Z",
+    "timezone": "America/Sao_Paulo",
+    "subtitle": "Pesquisa rastreável, decisões de missão e evolução até o release.",
+    "scopeNote": "Consolidação das mensagens disponíveis e arquivos preservados; não é transcrição literal de todo o chat. P&D: elegibilidade e Resources pendentes. GitHub privado publicado e conferido durante R8; recibos registram o corte de cada publicação. Marcações pessoais não alteram evidência oficial."
+  },
+  "chapters": [
+    {
+      "id": "c01",
+      "title": "O problema inicial",
+      "summary": "Selecionar um desafio capaz de transformar o repertório de AB em uma entrega demonstrável.",
+      "paragraphs": [
+        "AB apresentou oito temas dentre um conjunto local de quatorze e pediu pesquisa mundial, referências brasileiras, tendências, repositórios e uma estratégia para representar o Brasil. A análise procurou afinidade com produto, UX Research, dados, inovação e engenharia. Faltavam notas de jurados, universo comparável e composição efetiva da equipe para estimar probabilidade de premiação.",
+        "Na mensagem seguinte, AB escolheu expressamente Jogo de Missão e trouxe o showroom Kapsch como referência para seleção visual de ambientes. Os pedidos evoluíram para PRD, PRT, Mermaid, Prisma, dossiê, handoff, jogo local, apresentação e publicação. A seleção não foi atribuída a uma pontuação matemática que não existiu.",
+        "Este contexto reconstrói mensagens disponíveis e arquivos preservados. Não é transcrição literal de todo o chat nem inclui conversas externas ausentes. Credenciais, sessões e conteúdo privado de outros projetos AB não pertencem à publicação."
+      ],
+      "evidenceIds": [
+        "S02",
+        "S22",
+        "P08",
+        "P10"
+      ]
+    },
+    {
+      "id": "c02",
+      "title": "Por que Jogo de Missão",
+      "summary": "A escolha reúne UX Research, desenho de decisões, dados e implementação verificável.",
+      "paragraphs": [
+        "UX Research entra no desenho da tarefa e na observação do raciocínio. Design de produto organiza restrições e consequências compreensíveis. Dados sustentam validade e procedência. Engenharia transforma essas relações em regras que outra pessoa consegue executar e conferir. A adequação ao perfil de AB é uma inferência fundamentada, sem atribuir competências não informadas aos demais membros.",
+        "CLPS, astronomia temporal, SAR, harmonização entre sensores e navegação marciana exigiriam fechar cadeias científicas adicionais antes da demonstração. No jogo, um recorte pequeno permite concentrar esforço em uma decisão significativa e verificável. O critério foi tornar possível investigar e explicar a falha, não acumular cenários, modelos ou interfaces.",
+        "Não há probabilidade calculada de chegar à final. A decisão de manter o tema reduziu troca de contexto e preservou o investimento existente. A hipótese competitiva é uma combinação demonstrável de ciência entregue, consequências acopladas, investigação e reexecução. A aprendizagem ainda precisa de observação com pessoas."
+      ],
+      "evidenceIds": [
+        "S10",
+        "S11",
+        "S36",
+        "P01",
+        "P08"
+      ]
+    },
+    {
+      "id": "c03",
+      "title": "Por que Terra, CubeSat e Rio Verde",
+      "summary": "Uma missão pequena torna a ciência e os limites de engenharia auditáveis.",
+      "paragraphs": [
+        "Missão Ipê — Ciência que chega pergunta se um satélite que coletou dados entregou resultados úteis ao solo. O primeiro cenário usa uma nave didática de observação da Terra, seis decisões e registros históricos de vegetação. Não reproduz operacionalmente Terra/MODIS nem promete planejar um voo.",
+        "Três coordenadas solicitadas no entorno de Rio Verde e duas composições de 2024 formam seis registros MOD13Q1.061. O vínculo regional dá sentido à pergunta e à linguagem. Não comprova parceria, demanda educacional, diagnóstico agronômico ou impacto humano. NDVI isolado não é uma conclusão sobre desmatamento ou saúde da lavoura.",
+        "O perfil orbital e o lançamento estão fixos. Marte continua como expansão proposta: terreno, riscos e navegação precisariam mudar decisões reais do motor e ter dados/validação próprios. Uma imagem marciana não torna esse cenário integrado. Adiar essa cadeia preserva uma demonstração terrestre completa no seu recorte."
+      ],
+      "evidenceIds": [
+        "S12",
+        "S13",
+        "S14",
+        "P02",
+        "P06"
+      ]
+    },
+    {
+      "id": "c04",
+      "title": "Dados que determinam vitória",
+      "summary": "Procedência, QA, completude e cálculo têm consequências no resultado.",
+      "paragraphs": [
+        "MOD13Q1 é um produto processado com composições de 16 dias. O jogo de 180 minutos não simula aquisição instantânea desses pixels. Bandas, escala, QA, datas e referências são preservados; coordenada solicitada não é centro exato garantido do pixel.",
+        "A tarefa exige seis NDVIs utilizáveis. Só registros completos, únicos, aceitos pelo QA e conferidos numericamente contam. Parte dos bytes recebida, duplicata ou dado inválido não completam a missão. BANDAS transmite vermelho e infravermelho próximo; ÍNDICE calcula NDVI a bordo, alterando processamento e payload sem mudar a pergunta atual.",
+        "EVI3 foi recalculado em pesquisa nos seis registros, com diferença inferior a 0,0001 do produto. Isso abre uma pergunta futura sobre perda de possibilidade de reprocessamento ao transmitir apenas um índice. A missão EVI não foi implementada; a constante na fórmula impede cancelar ingenuamente a escala como no NDVI."
+      ],
+      "evidenceIds": [
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "id": "c05",
+      "title": "O motor e a cadeia causal",
+      "summary": "O catálogo pequeno permite conferir todas as alternativas.",
+      "paragraphs": [
+        "Seis escolhas binárias — bateria, painel, representação, rádio, armazenamento e política de contato — geram 64 configurações por condição, 128 nos dois cenários. Massa total e créditos são limitados a 3,6 kg e 86. Os parâmetros são hipóteses didáticas versionadas; não são especificações NASA de um satélite real.",
+        "A base entrega 6/6 com contatos longos e 2/6 com contatos curtos. No caso curto, o replay registra 460,8 Mbit recebidos e 619,2 Mbit na fila. Alterar somente para ÍNDICE viola potência aos 600 segundos. Bateria grande + ÍNDICE entrega 6/6, com 3,5 kg e 84 créditos.",
+        "Todas as sete configurações a distância zero ou um da base curta falham; a testemunha a distância dois é a configuração citada. Isso demonstra a menor quantidade de escolhas alteradas no catálogo e cenário fixos. Não é ótimo universal de engenharia, menor custo industrial ou prova de causa única. Energia acumulada e potência instantânea permanecem restrições distintas."
+      ],
+      "evidenceIds": [
+        "P01",
+        "P07",
+        "P08"
+      ]
+    },
+    {
+      "id": "c06",
+      "title": "A experiência e a referência Kapsch",
+      "summary": "A cena orienta a decisão e tem alternativa HTML/2D.",
+      "paragraphs": [
+        "Kapsch foi referência de gramática de navegação: contexto espacial, pontos de interesse, câmera e painéis. Não foi inferida a tecnologia interna do showroom nem incorporado código, marca ou asset proprietário. A proposta traduz a interação para um ambiente de missão autoral.",
+        "React e Three.js implementam uma cena procedural conceitual. Controles HTML preservam seleção, configuração, execução e investigação quando WebGL não está disponível. A simulação é independente do FPS; a linha do tempo apresenta o traço já calculado. Ilustração não significa efeméride ou escala física.",
+        "A apresentação tem sete quadros principais, oito apêndices, notas PT/EN e texto inglês de preparação. O demonstrador usa o núcleo real. O próximo teste é com pessoa nova e equipamento final: prever, executar, explicar e redesenhar. Testes DOM não medem entendimento, contraste, leitor de tela ou foco nativo."
+      ],
+      "evidenceIds": [
+        "S22",
+        "S23",
+        "P01",
+        "P07"
+      ]
+    },
+    {
+      "id": "c07",
+      "title": "Arquitetura local e persistência",
+      "summary": "O caminho de cálculo não depende de IA remota ou backend de produto.",
+      "paragraphs": [
+        "Dados e dependências de runtime foram empacotados. A distribuição pode ser servida em loopback e há HTML portátil. O pacote pronto não exige npm para servir os arquivos, mas isso não é uma imagem de sistema completo nem prova de execução de agentes Astra no equipamento de AB.",
+        "Worker de módulo separa o cálculo da interface; validação, timeout e cancelamento tratam resultados inválidos ou obsoletos. No modo portátil, o thread principal executa o mesmo motor. IndexedDB conserva execuções; o diário é local. Importação valida estrutura, versões e reexecuta a alegação.",
+        "Hash detecta diferença contra bytes esperados, sem autenticar autoria ou tornar o diário inviolável. Prisma é schema validado para evolução, sem backend ou sincronização ativos. Uma camada remota adicionaria concorrência, migração e controle de acesso antes de existir benefício demonstrado para a tarefa atual."
+      ],
+      "evidenceIds": [
+        "P01",
+        "P03",
+        "P08"
+      ]
+    },
+    {
+      "id": "c08",
+      "title": "O que aprendemos com o mundo e o Brasil",
+      "summary": "Precedentes mostram possibilidades; não fornecem fórmula de vitória.",
+      "paragraphs": [
+        "O catálogo histórico cobriu 30 Global Winners de 2023–2025, dez categorias por edição. Global Nominee, Finalist, Winner e Honorable Mention foram separados. País do evento não foi tratado como nacionalidade individual. Não foram recuperadas notas ou avaliações comparáveis suficientes para explicar causalmente cada prêmio.",
+        "LunarTech Ensemble e TeamVoyagers em 2023, Eco-Metropolis e Connected Earth Museum em 2024 mostram espaço para jogo e experiência científica. PureFlow, de Aracaju, foi Best Mission Concept em 2025. A.T.L.A.S., naiπ, Stellar Narrators, The new Saraquatys e Titan aparecem como outros finalistas brasileiros daquele ano, sem serem convertidos em vencedores.",
+        "Comparáveis atuais já descrevem CubeSat, Vite, Three.js e salvamento local. Esses itens não são novidade exclusiva do Ipê. O nome NASA numa organização GitHub não prova afiliação ou elegibilidade. A proposta precisa demonstrar seu benefício e limites, sem declarar ineditismo mundial pela ausência de uma funcionalidade em alguns READMEs."
+      ],
+      "evidenceIds": [
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S35",
+        "S36"
+      ]
+    },
+    {
+      "id": "c09",
+      "title": "Países, regiões e tendências",
+      "summary": "Ranking de inovação e seleção de referências para o produto são perguntas diferentes.",
+      "paragraphs": [
+        "A pesquisa inicial usou o Global Innovation Index 2026: Suíça, Suécia e Estados Unidos nas três primeiras posições. Isso caracteriza ecossistemas de inovação; não prevê desempenho no hackathon. Indicadores distintos do AI Index também não foram fundidos num top 3 universal de IA.",
+        "O trio operacional para estudar este recorte foi Estados Unidos, França e Japão: NASA, Orekit e S2E/C2A oferecem referências pertinentes. É uma seleção técnica nossa, não alteração do ranking WIPO. Repositórios globais têm autoria distribuída; país não substitui análise de licença, capacidade e custo.",
+        "A Rússia tem o precedente HALA, Ivanovo, vencedor Best Use of Hardware em 2017. Não houve vencedor de evento russo no catálogo recente dos 30 casos analisados; isso não prova ausência de participantes russos ou capacidade. As tendências transferidas ao Ipê são processamento próximo à origem, ciência aberta, simulação explícita e avaliação orientada ao uso, sem instalar um modelo apenas por popularidade."
+      ],
+      "evidenceIds": [
+        "S07",
+        "S08",
+        "S09",
+        "S31",
+        "S33",
+        "S34",
+        "S37"
+      ]
+    },
+    {
+      "id": "c10",
+      "title": "Fastino e o texto anexado",
+      "summary": "A pesquisa separou possibilidades técnicas de promessas sem medição.",
+      "paragraphs": [
+        "GLiNER2.5-Decide, PII multi e GLiDE foram examinados por checkpoint, arquitetura, runtime, licença e benchmark. Nenhum modelo foi executado no jogo. Classificação sem sampling não garante acerto; extração PII local não garante conformidade total; suporte a alguns GGUF não torna llama.cpp compatível com qualquer encoder e head.",
+        "O uso futuro proposto é feedback pedagógico local ligado a rubrica, com abstenção e revisão humana. O modelo não decide física, ciência ou vitória. Deve ser comparado com regras determinísticas e avaliação humana em português, medindo erros, confiança, latência, memória e entradas adversariais.",
+        "Economia superior a 95%, decisão instantânea e zero overhead não foram demonstrados no Ipê. Sidecar e contratos estritos ajudam a delimitar falhas, mas IPC, carregamento, validação e serialização custam recursos. A licença de pesos exige conferência própria. Manter inferência fora do caminho crítico reduz risco da demonstração e reserva a avaliação para um benefício definido."
+      ],
+      "evidenceIds": [
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "P08"
+      ]
+    },
+    {
+      "id": "c11",
+      "title": "Repositórios e reuso criterioso",
+      "summary": "A auditoria selecionou funções úteis e corrigiu identidades equivocadas.",
+      "paragraphs": [
+        "Foram organizadas 33 famílias editoriais e 67 consultas GitHub. Isso não significa 67 tecnologias integradas, instaladas ou auditadas linha a linha. Código, modelos, datasets e assets têm termos diferentes; licença do framework não libera automaticamente todo conteúdo usado com ele.",
+        "Three.js está no runtime. Spec Kit inspirou a disciplina documental sem executar o CLI. Open MCT foi referência de inspeção temporal. Orekit, Basilisk e S2E/C2A ficaram como possíveis produtores de cenários externos. Terreno 3D, Cesium, geoprocessamento pesado e GeoAI só justificam integração quando modificam uma tarefa necessária.",
+        "A análise corrigiu LSR/LandsatShadowRemoval, separou SAMRS de SamGeo, identificou upstream de stackstac e distinguiu SpiceyPy, Skyfield e renderizadores. Nenhuma associação institucional garante precisão, processamento gratuito ou validade científica. Cada adoção exige versão, termos, exemplo mínimo e orçamento medido."
+      ],
+      "evidenceIds": [
+        "S23",
+        "S24",
+        "S25",
+        "S31",
+        "S32",
+        "S33",
+        "S38",
+        "P08"
+      ]
+    },
+    {
+      "id": "c12",
+      "title": "O que foi verificado",
+      "summary": "Cada resultado pertence a uma versão, ambiente e escopo.",
+      "paragraphs": [
+        "A R4 registrou 51 testes Node, nove contagens TAP DOM, verificação científica, build, HTML portátil e validação de schema Prisma. A revisão independente confrontou 128 casos; defeitos encontrados em tolerância, Worker, imutabilidade e importação foram corrigidos, mantendo contraprovas. DOM não equivale a jornadas humanas ou navegador real.",
+        "O AB-R3A executou análise estática REA em snapshot delimitado: 43 arquivos selecionados, 40 processados JS/TS e zero falhas de parsing. Cobertura semântica foi parcial; achados estruturais não foram chamados de vulnerabilidades confirmadas ou certificação de segurança. Não houve benchmark no hardware de AB.",
+        "A R6 conferiu 15 checks locais de distribuição, 25 do mapa, preservação de 18 arquivos e 17 rotas de produção: 16 respostas 200 e uma 404 esperada. A identidade do conteúdo foi verificada pelo acesso do provedor. Isso não substitui teste anônimo em outra rede ou interação real no dispositivo final."
+      ],
+      "evidenceIds": [
+        "P01",
+        "P03",
+        "P07",
+        "P08"
+      ]
+    },
+    {
+      "id": "c13",
+      "title": "Archify e documentação da estrutura",
+      "summary": "O mapa distingue fonte real, artefato gerado e proposta.",
+      "paragraphs": [
+        "O renderizador oficial Archify foi usado numa revisão fixa. O inventário de imports foi produzido pelo projeto com AST TypeScript; não se afirmou a execução de um scanner upstream. O snapshot R6 inclui 189 arquivos, 51 de código, 262 relações sintáticas, 145 arestas locais, dez imports dinâmicos e uma entrada de Worker.",
+        "O visualizador local acrescenta busca, inventário e inspeção de relações. Prisma, Fastino e Marte não recebem arestas de execução inexistentes. Arquivos gerados que criariam hashes circulares foram tratados explicitamente. As licenças pertinentes estão preservadas e o HTML não exige CDN.",
+        "A verificação estática e DOM não completou os gates de navegador e origem remota do Archify. Os números pertencem ao snapshot R6; documentação nova exige novo corte ou identificação histórica. A central de contexto melhora a leitura, mas não atualiza automaticamente a proveniência de um mapa anterior."
+      ],
+      "evidenceIds": [
+        "S26",
+        "P03",
+        "P08"
+      ]
+    },
+    {
+      "id": "c14",
+      "title": "Release, Git e elegibilidade",
+      "summary": "Planejamento interno, publicação e candidatura têm evidências distintas.",
+      "paragraphs": [
+        "A meta de AB é 15/11/2026 às 08h BRT, equivalente a 11h UTC. O cronograma organiza ensaio, correção e aceite; não agenda trabalho automático. Uma data vencida ou marcação pessoal não altera evidência oficial. As tarefas precisam de saída observável e responsável funcional.",
+        "A cronologia registra desenvolvimento específico antes das 09h locais oficiais. A interpretação inicial de preparação permitida foi corrigida após respostas GO Team. Não foi observada autorização ou decisão de desclassificação sobre a equipe. A fonte NASA existe, mas sua qualificação na lista Resources continua pendente. Orientações de Navigator sobre sete slides/30 segundos não substituem formulário e guia.",
+        "A Vercel tem BETA publicada e o GitHub privado recebeu o projeto durante R8. A primeira importação integral foi conferida em 14/11/2026 às 10h30 BRT: 315 arquivos, zero divergências de SHA de blob ou modo, commit 2bf2d05b0d98efa38e97de13def1712453235486. O relatório AB-R3A está comprimido sem perda e o histórico local é restaurável por partes verificadas. Recibos posteriores registram atualizações e o deployment da central. A R7 permanece uma auditoria histórica anterior, sem push."
+      ],
+      "evidenceIds": [
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "P04",
+        "P06",
+        "P09",
+        "P11"
+      ]
+    }
+  ],
+  "research": [
+    {
+      "id": "r01",
+      "title": "Histórico mundial",
+      "area": "Competição",
+      "findings": [
+        "30 vencedores de 2023–2025 mostram diversidade de formatos e públicos.",
+        "Ciência, experiência e explicação podem ser examinadas nos casos próximos ao problema."
+      ],
+      "limits": [
+        "Não há notas comparáveis nem chance calculada.",
+        "Prêmio não certifica aprendizagem ou originalidade absoluta."
+      ],
+      "sourceIds": [
+        "S03",
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "id": "r02",
+      "title": "Brasil e regiões",
+      "area": "Competição",
+      "findings": [
+        "PureFlow é vencedor 2025; cinco outros nomes brasileiros permanecem finalistas.",
+        "HALA/2017 é referência russa histórica; Europa, Ásia e EUA integram o catálogo recente."
+      ],
+      "limits": [
+        "Local do evento não identifica nacionalidade.",
+        "Ausência entre 30 registros não é ausência de capacidade."
+      ],
+      "sourceIds": [
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ]
+    },
+    {
+      "id": "r03",
+      "title": "Dados NASA",
+      "area": "Ciência",
+      "findings": [
+        "Seis MOD13Q1.061 tornam o índice e QA conferíveis.",
+        "BANDAS e ÍNDICE respondem à mesma pergunta com custos de engenharia diferentes.",
+        "EVI3 abre pesquisa posterior de preservação de informação."
+      ],
+      "limits": [
+        "Composição de 16 dias não é captura fictícia de 180 minutos.",
+        "Origem NASA não fecha o requisito Resources."
+      ],
+      "sourceIds": [
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S19",
+        "P02"
+      ]
+    },
+    {
+      "id": "r04",
+      "title": "Fastino e IA local",
+      "area": "IA",
+      "findings": [
+        "Checkpoints, runtime, licença e benchmark foram separados.",
+        "Feedback por rubrica e abstenção é proposta, mantendo física determinística."
+      ],
+      "limits": [
+        "Nenhum modelo rodou no jogo ou no hardware AB.",
+        "Economia de 95% e conformidade total não foram demonstradas."
+      ],
+      "sourceIds": [
+        "S27",
+        "S28",
+        "S29",
+        "S30"
+      ]
+    },
+    {
+      "id": "r05",
+      "title": "Ecossistema aberto",
+      "area": "Engenharia",
+      "findings": [
+        "33 famílias e 67 consultas foram organizadas por capacidade, licença e custo.",
+        "Three é runtime; Spec Kit método; Open MCT referência; Orekit/Basilisk/S2E evolução."
+      ],
+      "limits": [
+        "Consulta não é instalação nem auditoria completa.",
+        "Licença de código não cobre automaticamente dados, pesos e mapas."
+      ],
+      "sourceIds": [
+        "S23",
+        "S24",
+        "S25",
+        "S31",
+        "S32",
+        "S33",
+        "S38"
+      ]
+    },
+    {
+      "id": "r06",
+      "title": "Motor e verificação",
+      "area": "Engenharia",
+      "findings": [
+        "Enumeração finita e oráculo independente conferem 128 configurações.",
+        "Explicações apontam eventos reais; busca mantém objetivo e cenário fixos."
+      ],
+      "limits": [
+        "Replay com o mesmo motor não é validação independente.",
+        "Menor reparo no catálogo não é ótimo físico universal."
+      ],
+      "sourceIds": [
+        "P01",
+        "P07",
+        "P08"
+      ]
+    },
+    {
+      "id": "r07",
+      "title": "Imersão e aprendizagem",
+      "area": "Produto",
+      "findings": [
+        "Kapsch inspirou navegação por contexto e pontos de interesse.",
+        "Alternativa HTML/2D preserva a tarefa.",
+        "Previsão anterior à ajuda permite observar transferência próxima."
+      ],
+      "limits": [
+        "Não há estudo humano concluído.",
+        "Foco, FPS e equipamento real ainda exigem ensaio."
+      ],
+      "sourceIds": [
+        "S22",
+        "S23",
+        "S36",
+        "P01",
+        "P07"
+      ]
+    },
+    {
+      "id": "r08",
+      "title": "Distribuição e rastreabilidade",
+      "area": "Release",
+      "findings": [
+        "A BETA R6 tem manifesto, URLs e verificação de conteúdo.",
+        "Archify diferencia implementação e roadmap.",
+        "R8 acrescenta central de contexto e cronograma sobre o histórico preservado."
+      ],
+      "limits": [
+        "Fetch do provedor não equivale a navegação anônima em outra rede.",
+        "Deploy, push e submissão têm recibos distintos."
+      ],
+      "sourceIds": [
+        "S26",
+        "P03",
+        "P04",
+        "P08",
+        "P11"
+      ]
+    }
+  ],
+  "themes": [
+    {
+      "id": "t01",
+      "title": "Navegador lunar CLPS",
+      "fit": "Produto de decisão e visualização técnica.",
+      "opportunity": "Comparar locais/datas por iluminação, energia e comunicação.",
+      "risk": "Geometria, referenciais, horizonte e validação de restrições.",
+      "decision": "Alternativa relevante; fora deste MVP."
+    },
+    {
+      "id": "t02",
+      "title": "Jukebox de informações da Terra",
+      "fit": "Experiência, narrativa e acessibilidade.",
+      "opportunity": "Relacionar dado a percepção sonora verificável.",
+      "risk": "Mapeamento arbitrário e acessibilidade presumida; Arcobaleno é precedente.",
+      "decision": "Não escolhida; requer avaliação perceptiva."
+    },
+    {
+      "id": "t03",
+      "title": "Planeta X e SPHEREx",
+      "fit": "Exploração de dados e ferramenta científica.",
+      "opportunity": "Comparar observações e tornar candidatos auditáveis.",
+      "risk": "Ruído, registro temporal, disponibilidade e falsos positivos.",
+      "decision": "Não escolhida; nova cadeia astronômica."
+    },
+    {
+      "id": "t04",
+      "title": "Análogos terrestres Lua/Marte",
+      "fit": "Pesquisa e critérios geográficos.",
+      "opportunity": "Comparar atributos de locais de teste.",
+      "risk": "Semelhança visual não implica equivalência física ou operacional.",
+      "decision": "Não escolhida; exige matriz própria."
+    },
+    {
+      "id": "t05",
+      "title": "Dançando com os SARs / NISAR",
+      "fit": "Dados e mudanças ambientais.",
+      "opportunity": "Explicar fenômeno detectável por radar.",
+      "risk": "SLC, GRD e interferometria têm cadeias distintas; óptico não se transfere a SAR.",
+      "decision": "Não escolhida; validação SAR seria central."
+    },
+    {
+      "id": "t06",
+      "title": "Mapa de sobrevivência em Marte",
+      "fit": "UX espacial e exploração.",
+      "opportunity": "Ligar terreno, recursos e atividades a decisões.",
+      "risk": "Atlas sem mecanismo; riscos e navegação exigem dados/motor próprios.",
+      "decision": "Expansão proposta; não integrada."
+    },
+    {
+      "id": "t07",
+      "title": "Jogo de design de missões",
+      "fit": "UX Research, produto, dados e engenharia.",
+      "opportunity": "Aprender escolhas acopladas por investigação e redesenho.",
+      "risk": "Simulador genérico ou resposta automática sem aprendizagem.",
+      "decision": "Escolha explícita de AB; Missão Ipê."
+    },
+    {
+      "id": "t08",
+      "title": "Harmonização MODIS/VIIRS",
+      "fit": "Dados ambientais e relevância local.",
+      "opportunity": "Distinguir mudança real de artefato de sensor.",
+      "risk": "Resolução, limiar, cobertura, horário e QA impedem soma ingênua.",
+      "decision": "Alternativa forte com validação; fora do MVP."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d01",
+      "title": "Tema escolhido",
+      "choice": "Jogo de missões.",
+      "reason": "Escolha expressa de AB; reúne seus campos de atuação.",
+      "tradeoff": "Concentra esforço e adia temas com outras cadeias de validação.",
+      "evidenceIds": [
+        "S02",
+        "P08"
+      ]
+    },
+    {
+      "id": "d02",
+      "title": "Unidade de sucesso",
+      "choice": "Seis resultados científicos úteis ao solo.",
+      "reason": "Conecta coleta, processamento, fila e comunicação à pergunta humana.",
+      "tradeoff": "Limita variedade de destinos para fechar uma missão demonstrável.",
+      "evidenceIds": [
+        "S10",
+        "S11",
+        "P02"
+      ]
+    },
+    {
+      "id": "d03",
+      "title": "Arquivo NASA local",
+      "choice": "MOD13Q1.061 histórico de Rio Verde.",
+      "reason": "Dados pequenos com QA e transformações conferíveis.",
+      "tradeoff": "Não representa aquisição orbital em tempo real ou diagnóstico agronômico.",
+      "evidenceIds": [
+        "S12",
+        "S13",
+        "S14",
+        "P02"
+      ]
+    },
+    {
+      "id": "d04",
+      "title": "Modos equivalentes",
+      "choice": "BANDAS versus ÍNDICE para a mesma pergunta NDVI.",
+      "reason": "Muda engenharia sem benefício científico oculto de uma peça cara.",
+      "tradeoff": "Outra pergunta como EVI precisa de novo contrato.",
+      "evidenceIds": [
+        "S12",
+        "S15",
+        "P01"
+      ]
+    },
+    {
+      "id": "d05",
+      "title": "Domínio finito",
+      "choice": "Seis decisões binárias.",
+      "reason": "Permite enumeração completa e prova limitada do menor redesenho.",
+      "tradeoff": "Não cobre todos os subsistemas ou projetos possíveis.",
+      "evidenceIds": [
+        "P01",
+        "P08"
+      ]
+    },
+    {
+      "id": "d06",
+      "title": "Cálculo separado",
+      "choice": "Motor e Worker; cena lê o traço.",
+      "reason": "Animação não determina física nem resultado.",
+      "tradeoff": "Exige validação de mensagens, cancelamento e fallback.",
+      "evidenceIds": [
+        "P01",
+        "P03"
+      ]
+    },
+    {
+      "id": "d07",
+      "title": "Inferência fora do P0",
+      "choice": "Nenhum modelo arbitra vitória.",
+      "reason": "A tarefa atual cabe em regras verificáveis; benefício semântico não medido.",
+      "tradeoff": "Feedback livre fica para avaliação em português.",
+      "evidenceIds": [
+        "S27",
+        "S28",
+        "P01"
+      ]
+    },
+    {
+      "id": "d08",
+      "title": "Persistência local",
+      "choice": "IndexedDB e exportação/reexecução.",
+      "reason": "Operação sem API de produto e recuperação por arquivo.",
+      "tradeoff": "Não há colaboração remota na BETA.",
+      "evidenceIds": [
+        "P01",
+        "P03"
+      ]
+    },
+    {
+      "id": "d09",
+      "title": "Marte e órbita no roadmap",
+      "choice": "Terreno e propagador não integram o MVP.",
+      "reason": "São contratos científicos e operacionais adicionais.",
+      "tradeoff": "A visão futura não pode ser apresentada como módulo executado.",
+      "evidenceIds": [
+        "S31",
+        "S32",
+        "S38",
+        "P06"
+      ]
+    },
+    {
+      "id": "d10",
+      "title": "Estado rastreável",
+      "choice": "Separar implementado, testado, publicado e proposto.",
+      "reason": "Evita transformar prazo ou intenção em fato.",
+      "tradeoff": "Exige manter cortes e evidências próprias para cada rodada.",
+      "evidenceIds": [
+        "P03",
+        "P04",
+        "P09"
+      ]
+    }
+  ],
+  "insights": [
+    {
+      "id": "i01",
+      "title": "A ciência precisa chegar",
+      "claim": "Bytes recebidos não bastam.",
+      "why": "Completude, QA e cálculo ligam engenharia ao objetivo.",
+      "action": "Exibir origem e motivo de aceitação de cada resultado.",
+      "priority": "P0",
+      "evidenceIds": [
+        "P01",
+        "P02"
+      ]
+    },
+    {
+      "id": "i02",
+      "title": "Uma melhoria pode causar falha",
+      "claim": "Menos payload pode exigir potência demais.",
+      "why": "O cenário torna uma troca abstrata observável.",
+      "action": "Demonstrar base curta, alteração isolada e reparo com duas escolhas.",
+      "priority": "P0",
+      "evidenceIds": [
+        "P01",
+        "P07"
+      ]
+    },
+    {
+      "id": "i03",
+      "title": "Prever antes da ajuda",
+      "claim": "Acerto após recomendação não demonstra compreensão.",
+      "why": "Primeira hipótese distingue investigação de cópia.",
+      "action": "Observar uma pessoa nova explicando a restrição antes da sugestão.",
+      "priority": "P0",
+      "evidenceIds": [
+        "P01",
+        "P08"
+      ]
+    },
+    {
+      "id": "i04",
+      "title": "Demonstrar é o diferencial",
+      "claim": "CubeSat, offline e 3D já existem em comparáveis.",
+      "why": "Exclusividade não foi provada; evidência concreta pode ser examinada.",
+      "action": "Concentrar pitch numa cadeia causal conferível.",
+      "priority": "P0",
+      "evidenceIds": [
+        "S35",
+        "S36",
+        "P07"
+      ]
+    },
+    {
+      "id": "i05",
+      "title": "Brasil precisa alterar a tarefa",
+      "claim": "Identidade local sozinha não comprova impacto.",
+      "why": "Dados regionais e linguagem precisam ajudar o público.",
+      "action": "Validar vocabulário e aplicação com educador/participante.",
+      "priority": "P1",
+      "evidenceIds": [
+        "S21",
+        "P02",
+        "P08"
+      ]
+    },
+    {
+      "id": "i06",
+      "title": "Mínimo com domínio explícito",
+      "claim": "Duas mudanças bastam no catálogo curto atual.",
+      "why": "Enumeração pequena elimina necessidade de cluster para esta prova.",
+      "action": "Mostrar testemunha, domínio e limites da afirmação.",
+      "priority": "P0",
+      "evidenceIds": [
+        "P01",
+        "P07"
+      ]
+    },
+    {
+      "id": "i07",
+      "title": "Preservar informação cria opções",
+      "claim": "Só NDVI pode impedir outra pergunta futura.",
+      "why": "EVI exige banda adicional e outra transformação.",
+      "action": "Projetar missão separada de reprocessamento com contrato próprio.",
+      "priority": "P2",
+      "evidenceIds": [
+        "S12",
+        "S15",
+        "P02"
+      ]
+    },
+    {
+      "id": "i08",
+      "title": "Modelo deve superar baseline",
+      "claim": "Checkpoint menor não garante feedback melhor.",
+      "why": "Idioma, rubrica e confiança podem produzir erros relevantes.",
+      "action": "Comparar regras, modelo local e avaliação humana com abstenção.",
+      "priority": "P2",
+      "evidenceIds": [
+        "S27",
+        "S28",
+        "S29",
+        "S30"
+      ]
+    },
+    {
+      "id": "i09",
+      "title": "Progresso precisa de evidência",
+      "claim": "Prazo, marcação local e execução são estados distintos.",
+      "why": "Confundi-los gera cronograma otimista sem lastro.",
+      "action": "Manter dependências, critérios e personalização local separados.",
+      "priority": "P0",
+      "evidenceIds": [
+        "P03",
+        "P04",
+        "P09"
+      ]
+    },
+    {
+      "id": "i10",
+      "title": "O próximo teste é uso real",
+      "claim": "Cálculo e distribuição têm provas; experiência continua aberta.",
+      "why": "Repetir checks não mede foco, WebGL ou aprendizagem.",
+      "action": "Ensaiar jornada e apresentação no equipamento final.",
+      "priority": "P0",
+      "evidenceIds": [
+        "P01",
+        "P04",
+        "P05"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Space Apps 2026",
+      "url": "https://www.spaceappschallenge.org/2026/",
+      "publisher": "NASA Space Apps",
+      "kind": "primary",
+      "note": "Calendário institucional; não comprova inscrição ou elegibilidade do Ipê."
+    },
+    {
+      "id": "S02",
+      "title": "Space Mission Design Game",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/",
+      "publisher": "NASA Space Apps",
+      "kind": "primary",
+      "note": "URL oficial identificada. Enunciado integral e Resources não foram integralmente recuperados nas revisões preservadas."
+    },
+    {
+      "id": "S03",
+      "title": "Global Winners 2023",
+      "url": "https://science.nasa.gov/directorates/smd/2023-nasa-international-space-apps-challenge-announces-10-global-winners/",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S04",
+      "title": "Global Winners 2024",
+      "url": "https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/nasa-international-space-apps-challenge-announces-2024-global-winners/",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S05",
+      "title": "Global Winners 2025",
+      "url": "https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/nasa-announces-2025-international-space-apps-challenge-global-winners/",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S06",
+      "title": "Seis equipes brasileiras finalistas em 2025",
+      "url": "https://www.gov.br/aeb/pt-br/assuntos/noticias/seis-equipes-brasileiras-estao-entre-os-finalistas-do-nasa-space-apps-2025",
+      "publisher": "Agência Espacial Brasileira",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S07",
+      "title": "Space Apps Mission Report 2017",
+      "url": "https://assets.spaceappschallenge.org/media/documents/SpaceApps2017_MissionReport.pdf",
+      "publisher": "NASA Space Apps",
+      "kind": "primary",
+      "note": "HALA, Ivanovo, Rússia: Best Use of Hardware. Referência histórica, não resultado recente."
+    },
+    {
+      "id": "S08",
+      "title": "Global Innovation Index 2026",
+      "url": "https://www.wipo.int/pressroom/en/articles/2026/article_0014.html",
+      "publisher": "WIPO",
+      "kind": "primary",
+      "note": "Métrica de ecossistema de inovação; não ranking de chance de premiação."
+    },
+    {
+      "id": "S09",
+      "title": "AI Index 2026",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "publisher": "Stanford HAI",
+      "kind": "primary",
+      "note": "Indicadores de IA não foram combinados num ranking próprio do Ipê."
+    },
+    {
+      "id": "S10",
+      "title": "Design and Develop Science Missions",
+      "url": "https://ntrs.nasa.gov/citations/20250002492",
+      "publisher": "NASA NTRS",
+      "kind": "primary",
+      "note": "Registro de março/2025 de Julie Levri; não intercambiar paginação com outro PDF de abril."
+    },
+    {
+      "id": "S11",
+      "title": "CubeSat 101",
+      "url": "https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Referência de missão e operação; números das peças do jogo são hipóteses próprias."
+    },
+    {
+      "id": "S12",
+      "title": "MOD13 C6.1 User Guide",
+      "url": "https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf",
+      "publisher": "NASA MODIS Land",
+      "kind": "primary",
+      "note": "Bandas, escala, QA e composição temporal; não fundamenta a agenda orbital didática."
+    },
+    {
+      "id": "S13",
+      "title": "MOD13Q1.061 — DOI",
+      "url": "https://doi.org/10.5067/MODIS/MOD13Q1.061",
+      "publisher": "NASA LP DAAC",
+      "kind": "primary",
+      "note": "Identifica o produto; não demonstra inclusão na lista Resources do desafio."
+    },
+    {
+      "id": "S14",
+      "title": "Serviço MODIS de extração",
+      "url": "https://modis.ornl.gov/data/modis_webservice.html",
+      "publisher": "ORNL DAAC",
+      "kind": "primary",
+      "note": "Coordenada solicitada não equivale ao centro exato do pixel resultante."
+    },
+    {
+      "id": "S15",
+      "title": "NDVI e EVI",
+      "url": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+      "publisher": "NASA Earth Observatory",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S16",
+      "title": "GO Team — início do trabalho",
+      "url": "https://github.com/nasa/spaceapps/discussions/1827",
+      "publisher": "NASA Space Apps GO Team",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S17",
+      "title": "GO Team — funcionalidades e interface antes do evento",
+      "url": "https://github.com/nasa/spaceapps/discussions/1872",
+      "publisher": "NASA Space Apps GO Team",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S18",
+      "title": "GO Team — especificações e prompts",
+      "url": "https://github.com/nasa/spaceapps/discussions/2009",
+      "publisher": "NASA Space Apps GO Team",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S19",
+      "title": "GO Team — IA e Resources",
+      "url": "https://github.com/nasa/spaceapps/discussions/1849",
+      "publisher": "NASA Space Apps GO Team",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S20",
+      "title": "Formato de demonstração",
+      "url": "https://github.com/nasa/spaceapps/discussions/1947",
+      "publisher": "Space Apps Navigator",
+      "kind": "primary",
+      "note": "Orientação de Navigator; não substitui o formulário e guia vigentes."
+    },
+    {
+      "id": "S21",
+      "title": "Evento local Rio Verde",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/rio-verde/",
+      "publisher": "Space Apps / organizador local",
+      "kind": "primary",
+      "note": "Agenda local não se confunde com alvo interno de software às 08h."
+    },
+    {
+      "id": "S22",
+      "title": "Kapsch Experience",
+      "url": "https://experience.kapsch.net/es",
+      "publisher": "Kapsch TrafficCom",
+      "kind": "primary",
+      "note": "Referência interativa fornecida por AB. Código, marca e assets proprietários não foram incorporados."
+    },
+    {
+      "id": "S23",
+      "title": "Three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "publisher": "Three.js / comunidade",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S24",
+      "title": "Open MCT",
+      "url": "https://github.com/nasa/openmct",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Referência para inspeção temporal; framework não integrado ao runtime."
+    },
+    {
+      "id": "S25",
+      "title": "Spec Kit",
+      "url": "https://github.com/github/spec-kit",
+      "publisher": "GitHub",
+      "kind": "primary",
+      "note": "Disciplina documental aplicada; CLI upstream não instalado ou executado."
+    },
+    {
+      "id": "S26",
+      "title": "Archify — revisão fixada",
+      "url": "https://github.com/tt-a1i/archify/tree/e37848822238e3a61b12739185cdadd49843a620",
+      "publisher": "tt-a1i / Archify",
+      "kind": "primary",
+      "note": "Renderizador usado na R6; inventário AST foi implementado separadamente pelo projeto."
+    },
+    {
+      "id": "S27",
+      "title": "GLiNER2 oficial",
+      "url": "https://github.com/fastino-ai/GLiNER2",
+      "publisher": "Fastino",
+      "kind": "primary",
+      "note": "Pesquisa documental; nenhum modelo Fastino executado no jogo."
+    },
+    {
+      "id": "S28",
+      "title": "GLiNER2.5-Decide",
+      "url": "https://huggingface.co/fastino/GLiNER2.5-Decide",
+      "publisher": "Fastino",
+      "kind": "primary",
+      "note": "Model card do fornecedor; benchmark não valida português ou hardware de AB."
+    },
+    {
+      "id": "S29",
+      "title": "PII multi — model card",
+      "url": "https://huggingface.co/fastino/gliner2-privacy-filter-PII-multi",
+      "publisher": "Fastino",
+      "kind": "primary",
+      "note": "Extração local não garante conformidade ou mascaramento completo."
+    },
+    {
+      "id": "S30",
+      "title": "GLiDE 0.4B — licença",
+      "url": "https://huggingface.co/fastino/GLiDE-0.4B/blob/main/LICENSE",
+      "publisher": "Fastino",
+      "kind": "primary",
+      "note": "Condições específicas; não equivalem automaticamente a MIT/Apache."
+    },
+    {
+      "id": "S31",
+      "title": "Orekit",
+      "url": "https://github.com/CS-SI/Orekit",
+      "publisher": "CS GROUP / comunidade",
+      "kind": "primary",
+      "note": "Referência futura, não integrada ao motor."
+    },
+    {
+      "id": "S32",
+      "title": "Basilisk",
+      "url": "https://github.com/AVSLab/basilisk",
+      "publisher": "Autonomous Vehicle Systems Lab",
+      "kind": "primary",
+      "note": "Produtor de cenários de referência proposto; não dependência atual."
+    },
+    {
+      "id": "S33",
+      "title": "S2E",
+      "url": "https://github.com/ut-issl/s2e-core",
+      "publisher": "ISSL / Universidade de Tóquio",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S34",
+      "title": "C2A",
+      "url": "https://github.com/ut-issl/c2a-core",
+      "publisher": "ISSL / comunidade",
+      "kind": "primary",
+      "note": "Fonte identificada na pesquisa preservada; a consolidação não equivale a nova execução do sistema citado."
+    },
+    {
+      "id": "S35",
+      "title": "Comparável Space Mission Design Game",
+      "url": "https://github.com/NASA-SPACEAPP-2026/Space-Mission-Design-Game",
+      "publisher": "Autores do repositório",
+      "kind": "primary",
+      "note": "README/arquitetura consultados; nome NASA não comprova afiliação, funcionamento ou elegibilidade."
+    },
+    {
+      "id": "S36",
+      "title": "Build It Yourself",
+      "url": "https://science.nasa.gov/mission/webb/game-build-it-yourself/",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Precedente educacional de ciência conectada a decisões de projeto."
+    },
+    {
+      "id": "S37",
+      "title": "Prithvi — aplicações geoespaciais",
+      "url": "https://science.data.nasa.gov/blog/prithvi-geospatial-model-applications",
+      "publisher": "NASA",
+      "kind": "primary",
+      "note": "Referência de GeoAI e avaliação; nenhum checkpoint integrado."
+    },
+    {
+      "id": "S38",
+      "title": "3D Tiles Renderer JS",
+      "url": "https://github.com/NASA-AMMOS/3DTilesRendererJS",
+      "publisher": "NASA AMMOS",
+      "kind": "primary",
+      "note": "Oportunidade futura de terreno; não fornece automaticamente geometria SPICE ou dinâmica orbital."
+    },
+    {
+      "id": "P01",
+      "title": "Verificação pública",
+      "url": "../docs/09-VERIFICACAO.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Recorte público; resultados históricos pertencem às versões identificadas."
+    },
+    {
+      "id": "P02",
+      "title": "Origem dos dados",
+      "url": "../docs/ORIGEM-DOS-DADOS.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Observação científica, transformação e hipótese didática separadas."
+    },
+    {
+      "id": "P03",
+      "title": "Mapa Archify",
+      "url": "../architecture/index.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Snapshot identificado; integrações propostas não são execução."
+    },
+    {
+      "id": "P04",
+      "title": "Plano de release",
+      "url": "../docs/15-PLANO-RELEASE.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Meta interna 15/11/2026 às 08h BRT; não agenda trabalho automático."
+    },
+    {
+      "id": "P05",
+      "title": "Oportunidades da BETA",
+      "url": "../docs/16-OPORTUNIDADES-BETA.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Priorização R6 preservada."
+    },
+    {
+      "id": "P06",
+      "title": "Revisão Space Apps R5",
+      "url": "../research/11-revisao-spaceapps-apresentacao.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "GO Team, Navigator, agenda local e lacunas distinguidos."
+    },
+    {
+      "id": "P07",
+      "title": "Apresentação HTML",
+      "url": "../presentation/Missao_Ipe_Apresentacao.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Sete quadros principais e oito apêndices."
+    },
+    {
+      "id": "P08",
+      "title": "Biblioteca integral de pesquisas",
+      "url": "../context/research-library.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Documentos-base, pesquisas e decisões, com cortes históricos preservados."
+    },
+    {
+      "id": "P09",
+      "title": "Estado público",
+      "url": "../docs/ESTADO-PUBLICO.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "P&D e limites do escopo."
+    },
+    {
+      "id": "P10",
+      "title": "Autoria e IA",
+      "url": "../docs/AUTORIA-E-IA.html",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Assistência de IA e ativos observacionais distintos."
+    },
+    {
+      "id": "P11",
+      "title": "Repositório do projeto",
+      "url": "https://github.com/oalexandrebelo/AB-NASA-TEAM-IPE",
+      "publisher": "AB-NASA-TEAM-IPE",
+      "kind": "project",
+      "note": "Privado. Publicação integral conferida na R8; evidência em evidence/git-publication-r8.json."
+    }
+  ],
+  "history": [
+    {
+      "id": "h01",
+      "round": "R1",
+      "title": "Exploração dos oito desafios",
+      "status": "documentado",
+      "dateLabel": "Pesquisa inicial preservada; sem horário individual consolidado",
+      "details": [
+        "Histórico mundial 2023–2025, Brasil, países e repositórios.",
+        "Separação de ranking de inovação e estratégia do hackathon."
+      ],
+      "evidenceIds": [
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S08",
+        "P08"
+      ]
+    },
+    {
+      "id": "h02",
+      "round": "R2",
+      "title": "Escolha do jogo e primeira estrutura",
+      "status": "documentado",
+      "dateLabel": "Etapa anterior à implementação R4",
+      "details": [
+        "AB escolheu Jogo de Missão e forneceu Kapsch como referência.",
+        "Primeiro PRD/PRT e desenho amplo; seus parâmetros são históricos."
+      ],
+      "evidenceIds": [
+        "S22",
+        "P08"
+      ]
+    },
+    {
+      "id": "h03",
+      "round": "R3",
+      "title": "Revisão adversarial do diferencial",
+      "status": "documentado",
+      "dateLabel": "14/11/2026; parecer de seleção preservado",
+      "details": [
+        "Recorte Ciência que chega e comparação com jogos existentes.",
+        "Crítica a peça cara sem benefício modelado; escolha de modos para a mesma ciência.",
+        "Desenho anterior de 288 combinações por pack não é motor executado da BETA."
+      ],
+      "evidenceIds": [
+        "S35",
+        "S36",
+        "P08"
+      ]
+    },
+    {
+      "id": "h04",
+      "round": "R4",
+      "title": "Motor e jogo local",
+      "status": "concluido",
+      "dateLabel": "14/11/2026; início específico anterior às 09h BRT registrado",
+      "details": [
+        "Dez frentes em ondas, não dez modelos rodando no hardware AB.",
+        "Motor 0.1.1-rd, catálogo ipe-64-v1, UI, ciência, replay e verificações.",
+        "Dossiê, Prisma, rastreabilidade e handoff com limites."
+      ],
+      "evidenceIds": [
+        "P01",
+        "P02",
+        "P08",
+        "P09"
+      ]
+    },
+    {
+      "id": "h05",
+      "round": "R5",
+      "title": "Apresentação e revisão Space Apps",
+      "status": "concluido",
+      "dateLabel": "14/11/2026; revisão de regras às 07h32 BRT",
+      "details": [
+        "Sete quadros principais, oito apêndices e demonstrador real.",
+        "Notas PT/EN e preparação inglesa; mídia final não qualificada.",
+        "Elegibilidade e Resources permaneceram pendentes."
+      ],
+      "evidenceIds": [
+        "P06",
+        "P07"
+      ]
+    },
+    {
+      "id": "h06",
+      "round": "R6",
+      "title": "BETA, portal e Archify",
+      "status": "concluido",
+      "dateLabel": "14/11/2026; publicação com recibo próprio",
+      "details": [
+        "BETA 0.2.0-beta.1 na Vercel com jogo, apresentação, mapa e documentos.",
+        "Checks locais e de produção com limites explícitos.",
+        "GitHub ainda não publicado naquele corte; bundle local preservado."
+      ],
+      "evidenceIds": [
+        "P01",
+        "P03",
+        "P04",
+        "P08"
+      ]
+    },
+    {
+      "id": "h07",
+      "round": "R7",
+      "title": "Auditoria antes do envio Git",
+      "status": "documentado",
+      "dateLabel": "14/11/2026; após publicação da BETA",
+      "details": [
+        "284 arquivos presentes, histórico íntegro e estado limpo na conferência.",
+        "Criação remota ainda bloqueada pelo acesso naquele momento; sem push ou deploy nesta auditoria.",
+        "Bloqueio de criação posteriormente superado durante R8."
+      ],
+      "evidenceIds": [
+        "P08",
+        "P11"
+      ]
+    },
+    {
+      "id": "h08",
+      "round": "R8",
+      "title": "Contexto e cronograma interativo",
+      "status": "em-andamento",
+      "dateLabel": "14/11/2026; corte editorial base às 09h45 BRT, com atualização de acesso",
+      "details": [
+        "Consolidação do tema, pesquisa, decisões, insights e próximos critérios.",
+        "Repositório privado fornecido por AB; primeira importação integral publicada e conferida, com 315 arquivos sem divergência.",
+        "Central HTML verificada e preparada para publicação; o recibo final registra o deployment observado.",
+        "Meta interna 15/11/2026 às 08h BRT, sem automação futura presumida."
+      ],
+      "evidenceIds": [
+        "P04",
+        "P08",
+        "P11"
+      ]
+    }
+  ]
+}

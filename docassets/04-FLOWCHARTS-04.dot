@@ -1,0 +1,28 @@
+digraph G {
+graph [rankdir=TB,bgcolor="white",pad="0.15",nodesep="0.22",ranksep="0.30",margin="0"];
+node [fontname="DejaVu Sans",fontsize=12,style="rounded,filled",fillcolor="#EEF6F4",color="#68988E",fontcolor="#143D38",margin="0.12,0.09"];
+edge [fontname="DejaVu Sans",fontsize=10,color="#567A73",fontcolor="#274C45",arrowsize=0.65];
+"A" [label="Pacote local versionado",shape="box"];
+"B" [label="React e controles HTML",shape="box"];
+"C" [label="Dados científicos\npreservados",shape="box"];
+"D" [label="Three.js procedural",shape="box"];
+"E" [label="Worker de simulação e busca",shape="box"];
+"F" [label="Resultado e eventos",shape="box"];
+"G" [label="IndexedDB local",shape="box"];
+"H" [label="Recibo JSON exportado",shape="box"];
+"I" [label="Validador e reexecução",shape="box"];
+"J" [label="Classificador local opcional",shape="box"];
+"A" -> "B" [label="",style="solid"];
+"A" -> "C" [label="",style="solid"];
+"B" -> "D" [label="",style="solid"];
+"B" -> "E" [label="",style="solid"];
+"C" -> "E" [label="",style="solid"];
+"E" -> "F" [label="",style="solid"];
+"F" -> "B" [label="",style="solid"];
+"F" -> "G" [label="",style="solid"];
+"F" -> "H" [label="",style="solid"];
+"H" -> "I" [label="",style="solid"];
+"I" -> "E" [label="",style="solid"];
+"B" -> "J" [label="P1: texto consentido",style="dashed"];
+"J" -> "B" [label="Sugestão validada ou abstenção",style="dashed"];
+}

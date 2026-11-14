@@ -1,0 +1,715 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T13:38:25.602Z",
+  "release": "0.3.0-beta.1",
+  "edition": "R8",
+  "project": {
+    "teamId": "team_54JvyyNs6zR6e4xTuK0jN4Gh",
+    "projectId": "prj_sGbtmlQ0fOsI06DKt2lZaBF6Eks7",
+    "name": "ab-nasa-team-ipe"
+  },
+  "deployment": {
+    "id": "dpl_9mjoVLVxA4QEtRbMp6CKcCL985XX",
+    "url": "https://ab-nasa-team-ijunv263k-alexandrebelo.vercel.app",
+    "alias": "https://ab-nasa-team-ipe.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "readyAt": "2026-11-14T13:36:44.863Z"
+  },
+  "source": {
+    "gitRepository": "https://github.com/oalexandrebelo/AB-NASA-TEAM-IPE",
+    "gitCommit": "4aef453f9dbe9c6fe886d3154e4121f3aba243d1",
+    "localCommit": "b2336f3110de9620cd109643b5a2c1c71b651a26",
+    "manifestSha256": "236a368f5f31d7a98b34b6984115c73ee72a75547f7ac642a9a7e523dc4f6f65",
+    "sourceTreeVerifiedFiles": 317
+  },
+  "transport": {
+    "method": "Vercel MCP; immutable SHA references, uploaded static files",
+    "files": [
+      {
+        "file": "LICENSE",
+        "source": "site/LICENSE",
+        "size": 11358,
+        "sha": "2b8b815229aa8a61e483fb4ba0588b8b6c491890",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "file": "NOTICE.md",
+        "source": "site/NOTICE.md",
+        "size": 3144,
+        "sha": "54391ad016916f306169afea4d7bf072502d3bdb",
+        "sha256": "2b42c0bbe35d840490f20433a390abd26b57fd022581a4580578d72876aab6d1"
+      },
+      {
+        "file": "architecture/index.html",
+        "source": "site/architecture/index.html",
+        "size": 1021364,
+        "sha": "53c10f8667d5f7ad48e9f28cdae8ed2381e99292",
+        "sha256": "bd67abca2caa2110b67597f9c400585c06fc2e00c9133acb851add2e0bd5145e"
+      },
+      {
+        "file": "architecture/map.mmd",
+        "source": "site/architecture/map.mmd",
+        "size": 2137,
+        "sha": "a3330b4d562a30ca48b74836ff34bccef6ce8f5d",
+        "sha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b"
+      },
+      {
+        "file": "architecture/model.json",
+        "source": "site/architecture/model.json",
+        "size": 165126,
+        "sha": "1d1da3016534e173f5ef2479f60b05ef9df6d2c6",
+        "sha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8"
+      },
+      {
+        "file": "context/index.html",
+        "source": "site/context/index.html",
+        "size": 130752,
+        "sha": "d2525999e041967bc8ba8ba13da5a68f44affa53",
+        "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e"
+      },
+      {
+        "file": "context/project-context.json",
+        "source": "site/context/project-context.json",
+        "size": 70554,
+        "sha": "989909fdc781d9ae08470db8777e2e0710d324f3",
+        "sha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd"
+      },
+      {
+        "file": "context/research-library-index.json",
+        "source": "site/context/research-library-index.json",
+        "size": 21057,
+        "sha": "ba60ae04d29844ad417333345b0457da3a984af2",
+        "sha256": "8efc418a8f2c6340c36a08c9cf7bfae162062a75e359557cc963ba10cf2a3329"
+      },
+      {
+        "file": "context/research-library.html",
+        "source": "site/context/research-library.html",
+        "size": 870393,
+        "sha": "d372c86f0d89b113523aabfc13dce838f1ba405c",
+        "sha256": "34aeedf41032d9a566c49e58802fe96d57c1267f4baba62936f4ce7f7ec97c0c"
+      },
+      {
+        "file": "context/research-library.md",
+        "source": "site/context/research-library.md",
+        "size": 747732,
+        "sha": "12491a05d722b29419d4a623d8904aca267f490c",
+        "sha256": "4ec1e00b3c52aa3092e1315d8213ed421d57fa29866b3fb4f9297c257a31b11b"
+      },
+      {
+        "file": "docs/09-VERIFICACAO.html",
+        "source": "site/docs/09-VERIFICACAO.html",
+        "size": 8336,
+        "sha": "5ae20cf628d5eae4af45dfeda53828a2881dcee1",
+        "sha256": "c749f8fad26585e2dbde7112d3bdbc8998ae8fa1f7e3572dc80c38fc5b0cfa53"
+      },
+      {
+        "file": "docs/09-VERIFICACAO.md",
+        "source": "site/docs/09-VERIFICACAO.md",
+        "size": 3109,
+        "sha": "439ecbe881cfa6f012923ea7b28463db9c33aee8",
+        "sha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6"
+      },
+      {
+        "file": "docs/13-ARQUITETURA-ARCHIFY.html",
+        "source": "site/docs/13-ARQUITETURA-ARCHIFY.html",
+        "size": 17948,
+        "sha": "7b6d30db0b037794f03e348d8eaf7331c79db41a",
+        "sha256": "6ab7de29ee9bf854d45fef0681faea961ce2d047a5b10a91bed0c85f5dbe2db7"
+      },
+      {
+        "file": "docs/13-ARQUITETURA-ARCHIFY.md",
+        "source": "site/docs/13-ARQUITETURA-ARCHIFY.md",
+        "size": 11569,
+        "sha": "1772d0d4d92196c4831a80ddc798d966ef182a4f",
+        "sha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04"
+      },
+      {
+        "file": "docs/14-BETA-DEPLOY.html",
+        "source": "site/docs/14-BETA-DEPLOY.html",
+        "size": 12152,
+        "sha": "a1504b522c93069ad2d81481b17fc0fac6895f2a",
+        "sha256": "9c272bd72f8a8c1c7afb7f01ba0f6c41f27bce1146d3a8c2df81fea437dd53da"
+      },
+      {
+        "file": "docs/14-BETA-DEPLOY.md",
+        "source": "site/docs/14-BETA-DEPLOY.md",
+        "size": 6588,
+        "sha": "2af898ec1284085c448b25f05a5a9931a4457017",
+        "sha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474"
+      },
+      {
+        "file": "docs/15-PLANO-RELEASE.html",
+        "source": "site/docs/15-PLANO-RELEASE.html",
+        "size": 20484,
+        "sha": "69fafadd43d12bab1e7b040eb8e23eed2e9d1568",
+        "sha256": "e09aa0ea5362e2d4e81bb317ae1a545c2c7cc10036bf927d9edd4d4b08dc32b9"
+      },
+      {
+        "file": "docs/15-PLANO-RELEASE.md",
+        "source": "site/docs/15-PLANO-RELEASE.md",
+        "size": 14221,
+        "sha": "f7b4fb8aa0dda9292d2fed2e319f3c15d5efcd12",
+        "sha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e"
+      },
+      {
+        "file": "docs/16-OPORTUNIDADES-BETA.html",
+        "source": "site/docs/16-OPORTUNIDADES-BETA.html",
+        "size": 16859,
+        "sha": "4335b1409651e1270ccb2bc246c4854c7f2e84ea",
+        "sha256": "c2f6b2fc82c1bc8b245329dac0f2479b99357d183d2efa6ea52eb83368d93437"
+      },
+      {
+        "file": "docs/16-OPORTUNIDADES-BETA.md",
+        "source": "site/docs/16-OPORTUNIDADES-BETA.md",
+        "size": 10745,
+        "sha": "6379344756d88e19238e8b5d49cdcea491fe84d9",
+        "sha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29"
+      },
+      {
+        "file": "docs/18-CONTEXTO-COMPLETO.html",
+        "source": "site/docs/18-CONTEXTO-COMPLETO.html",
+        "size": 85869,
+        "sha": "0c35e09ef356637d3ce592cf9a3b8c2c679be1f0",
+        "sha256": "8c6fd4055652f39c784731d523830a3f5994f5ce6a0b7e5639a00db2a34f346a"
+      },
+      {
+        "file": "docs/18-CONTEXTO-COMPLETO.md",
+        "source": "site/docs/18-CONTEXTO-COMPLETO.md",
+        "size": 70671,
+        "sha": "6fa9f4a182a3c8dfd1f028203898754bdd9e5df8",
+        "sha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03"
+      },
+      {
+        "file": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+        "source": "site/docs/19-REVISAO-EVIDENCIAS-R8.html",
+        "size": 19969,
+        "sha": "64eacea3dbb2478cb9e5b216bbc1cc4f576fcbe4",
+        "sha256": "909120251df0a531dbd94fc90425a9a3ce07d9e0dbb40e8c61125799681337bd"
+      },
+      {
+        "file": "docs/19-REVISAO-EVIDENCIAS-R8.md",
+        "source": "site/docs/19-REVISAO-EVIDENCIAS-R8.md",
+        "size": 14215,
+        "sha": "ec864ac24544d9f80ae441b392588aed40b6b181",
+        "sha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2"
+      },
+      {
+        "file": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+        "source": "site/docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+        "size": 15197,
+        "sha": "5d8933fd0947145bda6b468d4a5f158ea31014eb",
+        "sha256": "f17871e9658e13696de3e265a5ec632e2e16e70b06f84c7f2f6a17e57e600496"
+      },
+      {
+        "file": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
+        "source": "site/docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
+        "size": 9892,
+        "sha": "01b05122c87cbad2b331313b3468cfa21b6cb8ee",
+        "sha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e"
+      },
+      {
+        "file": "docs/AUTORIA-E-IA.html",
+        "source": "site/docs/AUTORIA-E-IA.html",
+        "size": 6441,
+        "sha": "dd883aea86987f72494d1fc3c666161fead5a939",
+        "sha256": "e6585ec9fb1e3e77f579a2218b1cda3fd8b31e375945359e13ea8de3fbc1add5"
+      },
+      {
+        "file": "docs/AUTORIA-E-IA.md",
+        "source": "site/docs/AUTORIA-E-IA.md",
+        "size": 1594,
+        "sha": "b1200bc3f41b8c9fb6d0540dabf1b5b6194ab6ff",
+        "sha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b"
+      },
+      {
+        "file": "docs/COMO-USAR.html",
+        "source": "site/docs/COMO-USAR.html",
+        "size": 6922,
+        "sha": "9eb75b36882b004f837d9cdefb85dd71646c552b",
+        "sha256": "e49fb19576ce95c096cc10306a7d2e52a920325fdf8cb642727fb07dd4fdf7d6"
+      },
+      {
+        "file": "docs/COMO-USAR.md",
+        "source": "site/docs/COMO-USAR.md",
+        "size": 2114,
+        "sha": "ff52545750687e7b1ab6573265bb45cb74bc5d7b",
+        "sha256": "3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26"
+      },
+      {
+        "file": "docs/ESTADO-PUBLICO.html",
+        "source": "site/docs/ESTADO-PUBLICO.html",
+        "size": 8403,
+        "sha": "3e22a1cccbb39e7d3e9bbd2f163e20bde4c3ba8f",
+        "sha256": "2342b58953ad2f4e04617c02d0ea420877293140aa2a597a6f015fd1f9593719"
+      },
+      {
+        "file": "docs/ESTADO-PUBLICO.md",
+        "source": "site/docs/ESTADO-PUBLICO.md",
+        "size": 3542,
+        "sha": "6b1703f83f00b8e8cba3bb063810180ffe23fd01",
+        "sha256": "d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb"
+      },
+      {
+        "file": "docs/ORIGEM-DOS-DADOS.html",
+        "source": "site/docs/ORIGEM-DOS-DADOS.html",
+        "size": 7730,
+        "sha": "d779b30c66caf70fa5bb7fa8146b89cdb63d6cd6",
+        "sha256": "84ac08392b8f16dc2624b7c45820f6371474787eba92d5cac17b740ceb39a259"
+      },
+      {
+        "file": "docs/ORIGEM-DOS-DADOS.md",
+        "source": "site/docs/ORIGEM-DOS-DADOS.md",
+        "size": 2489,
+        "sha": "6f35e9de8d53a80e2a03de3f9fd6232b8668ccd3",
+        "sha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76"
+      },
+      {
+        "file": "docs/index.html",
+        "source": "site/docs/index.html",
+        "size": 9316,
+        "sha": "396cafa7f2ae96cfd674a026b590352ea36d5c12",
+        "sha256": "a0b4454ae08c139e13615769a8ad000c2fa43da44332e624a5a9d6173b5f244b"
+      },
+      {
+        "file": "evidence/ab-r3a-digest.json",
+        "source": "site/evidence/ab-r3a-digest.json",
+        "size": 1374,
+        "sha": "b6fe31f1c9804f85d49776142ef66e0ae6f30856",
+        "sha256": "d755ddd885a9178fd62481ee53df5beadf710c43d65a0b5d256de3d1b075da01"
+      },
+      {
+        "file": "evidence/chronology.json",
+        "source": "site/evidence/chronology.json",
+        "size": 1043,
+        "sha": "4a7994baf0f1d2807526c67b2d7bfc3e38b5e5aa",
+        "sha256": "85a658b0934d06f2e3d630ab19557499a5a9272b6562f6d94809485ef129337b"
+      },
+      {
+        "file": "evidence/engine-benchmark.json",
+        "source": "site/evidence/engine-benchmark.json",
+        "size": 3149,
+        "sha": "81289370ea64089d44b246f3ad745aafb50954da",
+        "sha256": "bffdec34f845924e60f4dcbaa2473c80ee45aa9ef8c42b8b4ef11aa4e3a2f468"
+      },
+      {
+        "file": "evidence/presentation-build.json",
+        "source": "site/evidence/presentation-build.json",
+        "size": 1308,
+        "sha": "89d93ca18b87bfa6f795ba0317901db805980006",
+        "sha256": "323e74cebf5a588d26740e8bc3c2d7bc5c951c41383220339c3c2617be1ff98c"
+      },
+      {
+        "file": "evidence/presentation-qa.json",
+        "source": "site/evidence/presentation-qa.json",
+        "size": 5273,
+        "sha": "1adca4d590294e901f66edd38216f142150eddc9",
+        "sha256": "ff467a401f6e2c712327177b91801489c802a51871b22b23df0dff96c57a2464"
+      },
+      {
+        "file": "examples/01-long-base.json",
+        "source": "site/examples/01-long-base.json",
+        "size": 12876,
+        "sha": "7cdc4df623f70828280d2cd7a7bbc2b95b2c6cd6",
+        "sha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb"
+      },
+      {
+        "file": "examples/02-short-base.json",
+        "source": "site/examples/02-short-base.json",
+        "size": 11407,
+        "sha": "0e90c149fe779f659c2585d5a10fcf103a2b2794",
+        "sha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5"
+      },
+      {
+        "file": "examples/03-short-repaired.json",
+        "source": "site/examples/03-short-repaired.json",
+        "size": 11872,
+        "sha": "4dd292ded706419b0d3a20348a07c335eb3bd578",
+        "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5"
+      },
+      {
+        "file": "game/assets/OrbitalScene-B0I9aE-1.js",
+        "source": "site/game/assets/OrbitalScene-B0I9aE-1.js",
+        "size": 567251,
+        "sha": "f95414a486e3cd6cd83ca199b05d7818f4f41d3c",
+        "sha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b"
+      },
+      {
+        "file": "game/assets/index-C0yMbnbH.css",
+        "source": "site/game/assets/index-C0yMbnbH.css",
+        "size": 55259,
+        "sha": "580f05a77c20e2159c51b87f2b84b16a476ccaf8",
+        "sha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94"
+      },
+      {
+        "file": "game/assets/index-DYhpvtlV.js",
+        "source": "site/game/assets/index-DYhpvtlV.js",
+        "size": 311602,
+        "sha": "935c15ccba68a85df34bcfdac9fe63892e3e0b55",
+        "sha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50"
+      },
+      {
+        "file": "game/assets/mission.worker-m4WSgatj.js",
+        "source": "site/game/assets/mission.worker-m4WSgatj.js",
+        "size": 20166,
+        "sha": "882b6e93f45311ead4bd20abe5a6fc6b41d7142f",
+        "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
+      },
+      {
+        "file": "game/assets/search-DiIaA0z6.js",
+        "source": "site/game/assets/search-DiIaA0z6.js",
+        "size": 1242,
+        "sha": "fac0d58cd10884c0823802ba0cef66ec79934db5",
+        "sha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4"
+      },
+      {
+        "file": "game/data/cmr-mod13q1-granule-2.json",
+        "source": "site/game/data/cmr-mod13q1-granule-2.json",
+        "size": 5720,
+        "sha": "44a141b8c356ed4b2a70c1b957f8f6c3c4031a3f",
+        "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b"
+      },
+      {
+        "file": "game/data/cmr-mod13q1-granules.json",
+        "source": "site/game/data/cmr-mod13q1-granules.json",
+        "size": 5719,
+        "sha": "0c5a882de03ed75a41205d1556b0e8547881edfb",
+        "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f"
+      },
+      {
+        "file": "game/data/mod13q1-A-raw.json",
+        "source": "site/game/data/mod13q1-A-raw.json",
+        "size": 4232,
+        "sha": "9b3e37e47857501ce1a5d3036bf6d5090495043d",
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+      },
+      {
+        "file": "game/data/mod13q1-A-retrieval.json",
+        "source": "site/game/data/mod13q1-A-retrieval.json",
+        "size": 6162,
+        "sha": "6c196d8af4591093d088a5cd212cb02502835625",
+        "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f"
+      },
+      {
+        "file": "game/data/mod13q1-B-raw.json",
+        "source": "site/game/data/mod13q1-B-raw.json",
+        "size": 4232,
+        "sha": "e8456222aeafbce70c8d97c3ee49dcd97f790f2c",
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+      },
+      {
+        "file": "game/data/mod13q1-B-retrieval.json",
+        "source": "site/game/data/mod13q1-B-retrieval.json",
+        "size": 6162,
+        "sha": "ceaf391a5a9b5442047604659828fa558d18e335",
+        "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b"
+      },
+      {
+        "file": "game/data/mod13q1-C-raw.json",
+        "source": "site/game/data/mod13q1-C-raw.json",
+        "size": 4232,
+        "sha": "9fd9416ee3cc5e31bf8e5f5b46c88e84074b0960",
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+      },
+      {
+        "file": "game/data/mod13q1-C-retrieval.json",
+        "source": "site/game/data/mod13q1-C-retrieval.json",
+        "size": 6162,
+        "sha": "29573a477ee9dfd34bbbb591e5a8a394cdb080b4",
+        "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e"
+      },
+      {
+        "file": "game/data/mod13q1-bands.json",
+        "source": "site/game/data/mod13q1-bands.json",
+        "size": 2366,
+        "sha": "f2ab3a48fdfdd80236142db7456a25efff7cdc01",
+        "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303"
+      },
+      {
+        "file": "game/data/mod13q1-research-pack.json",
+        "source": "site/game/data/mod13q1-research-pack.json",
+        "size": 5942,
+        "sha": "ff7eb2696e7524104ca6d0e193b135e8a73c20d5",
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+      },
+      {
+        "file": "game/index.html",
+        "source": "site/game/index.html",
+        "size": 797,
+        "sha": "5157e0b47378f336dabf0a801a1234dabdbeab6a",
+        "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969"
+      },
+      {
+        "file": "index.html",
+        "source": "site/index.html",
+        "size": 19822,
+        "sha": "e39fc675fd2fc57c38cd0edb56f3e77182b8827c",
+        "sha256": "053c416628799b2d57e050cbd32ff1d4224dbdf3233d7a293a1df25ec59ef441"
+      },
+      {
+        "file": "licenses/React-MIT.txt",
+        "source": "site/licenses/React-MIT.txt",
+        "size": 1088,
+        "sha": "747a45681a2e4dbf3d896fd908dd836ee7e191cd",
+        "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      {
+        "file": "licenses/ReactDOM-MIT.txt",
+        "source": "site/licenses/ReactDOM-MIT.txt",
+        "size": 1088,
+        "sha": "747a45681a2e4dbf3d896fd908dd836ee7e191cd",
+        "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      {
+        "file": "licenses/Scheduler-MIT.txt",
+        "source": "site/licenses/Scheduler-MIT.txt",
+        "size": 1088,
+        "sha": "747a45681a2e4dbf3d896fd908dd836ee7e191cd",
+        "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      {
+        "file": "licenses/Three-MIT.txt",
+        "source": "site/licenses/Three-MIT.txt",
+        "size": 1081,
+        "sha": "7293d37daed3d6714b36d830e30c9614a5e268ec",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      },
+      {
+        "file": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
+        "source": "site/output/html/AB_Missao_Ipe_Estudo_Integral.html",
+        "size": 475437,
+        "sha": "830d1e03875adc33be54a1807c4069209529a834",
+        "sha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba"
+      },
+      {
+        "file": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+        "source": "site/output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+        "size": 1200768,
+        "sha": "292c0569ba4bd776a4421d4fa407e1deae7f90bb",
+        "sha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a"
+      },
+      {
+        "file": "portable/Missao_Ipe_Local.html",
+        "source": "site/portable/Missao_Ipe_Local.html",
+        "size": 1008522,
+        "sha": "e2c3b1dd27ec52d42d0fec49ee3bd9674cfe5dd5",
+        "sha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac"
+      },
+      {
+        "file": "presentation/Missao_Ipe_Apresentacao.html",
+        "source": "site/presentation/Missao_Ipe_Apresentacao.html",
+        "size": 139710,
+        "sha": "591a91f53ff62c28add85036314d8d92e0e1c573",
+        "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+      },
+      {
+        "file": "presentation/PITCH_EN_7_SLIDES.html",
+        "source": "site/presentation/PITCH_EN_7_SLIDES.html",
+        "size": 20560,
+        "sha": "65e6bbd92eb0799946da8290964bffe39d856bec",
+        "sha256": "5b642d5d73770f1e836edc728d5077ba059b4ba420cd131e0ba6142364c89a82"
+      },
+      {
+        "file": "presentation/PITCH_EN_7_SLIDES.md",
+        "source": "site/presentation/PITCH_EN_7_SLIDES.md",
+        "size": 13356,
+        "sha": "e7df1116f975cf02a05a691ac7cb1444dba2de4d",
+        "sha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155"
+      },
+      {
+        "file": "presentation/README_APRESENTADOR.html",
+        "source": "site/presentation/README_APRESENTADOR.html",
+        "size": 14252,
+        "sha": "b40758637894c320152a7ff4523f482c7eb444c9",
+        "sha256": "00cb737423525d3be0d1c49d2244775f518a223672b3fcb291ba77e2917439b2"
+      },
+      {
+        "file": "presentation/README_APRESENTADOR.md",
+        "source": "site/presentation/README_APRESENTADOR.md",
+        "size": 8269,
+        "sha": "e8ac1fb74eb77be68d71de93fa92f5685e71d3e1",
+        "sha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641"
+      },
+      {
+        "file": "presentation/ROTEIRO_PT_EN.html",
+        "source": "site/presentation/ROTEIRO_PT_EN.html",
+        "size": 13427,
+        "sha": "c92fc51e848da45bf4d8f3b5df888cbd048037a8",
+        "sha256": "d832fcdd8c7fd4d7142a7097f0113e1e2b6c79a27e00057635caf88d6cd5638f"
+      },
+      {
+        "file": "presentation/ROTEIRO_PT_EN.md",
+        "source": "site/presentation/ROTEIRO_PT_EN.md",
+        "size": 7849,
+        "sha": "1fb9a2b52ffdec75805b45f16b94d5d325fa6bc2",
+        "sha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6"
+      },
+      {
+        "file": "public/data/cmr-mod13q1-granule-2.json",
+        "source": "site/public/data/cmr-mod13q1-granule-2.json",
+        "size": 5720,
+        "sha": "44a141b8c356ed4b2a70c1b957f8f6c3c4031a3f",
+        "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b"
+      },
+      {
+        "file": "public/data/cmr-mod13q1-granules.json",
+        "source": "site/public/data/cmr-mod13q1-granules.json",
+        "size": 5719,
+        "sha": "0c5a882de03ed75a41205d1556b0e8547881edfb",
+        "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f"
+      },
+      {
+        "file": "public/data/mod13q1-A-raw.json",
+        "source": "site/public/data/mod13q1-A-raw.json",
+        "size": 4232,
+        "sha": "9b3e37e47857501ce1a5d3036bf6d5090495043d",
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+      },
+      {
+        "file": "public/data/mod13q1-A-retrieval.json",
+        "source": "site/public/data/mod13q1-A-retrieval.json",
+        "size": 6162,
+        "sha": "6c196d8af4591093d088a5cd212cb02502835625",
+        "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f"
+      },
+      {
+        "file": "public/data/mod13q1-B-raw.json",
+        "source": "site/public/data/mod13q1-B-raw.json",
+        "size": 4232,
+        "sha": "e8456222aeafbce70c8d97c3ee49dcd97f790f2c",
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+      },
+      {
+        "file": "public/data/mod13q1-B-retrieval.json",
+        "source": "site/public/data/mod13q1-B-retrieval.json",
+        "size": 6162,
+        "sha": "ceaf391a5a9b5442047604659828fa558d18e335",
+        "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b"
+      },
+      {
+        "file": "public/data/mod13q1-C-raw.json",
+        "source": "site/public/data/mod13q1-C-raw.json",
+        "size": 4232,
+        "sha": "9fd9416ee3cc5e31bf8e5f5b46c88e84074b0960",
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+      },
+      {
+        "file": "public/data/mod13q1-C-retrieval.json",
+        "source": "site/public/data/mod13q1-C-retrieval.json",
+        "size": 6162,
+        "sha": "29573a477ee9dfd34bbbb591e5a8a394cdb080b4",
+        "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e"
+      },
+      {
+        "file": "public/data/mod13q1-bands.json",
+        "source": "site/public/data/mod13q1-bands.json",
+        "size": 2366,
+        "sha": "f2ab3a48fdfdd80236142db7456a25efff7cdc01",
+        "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303"
+      },
+      {
+        "file": "public/data/mod13q1-research-pack.json",
+        "source": "site/public/data/mod13q1-research-pack.json",
+        "size": 5942,
+        "sha": "ff7eb2696e7524104ca6d0e193b135e8a73c20d5",
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+      },
+      {
+        "file": "publication-manifest.json",
+        "source": "site/publication-manifest.json",
+        "size": 38052,
+        "sha": "2a2f3d2ae6b15e8fec0a7557267d369e710cb381",
+        "sha256": "236a368f5f31d7a98b34b6984115c73ee72a75547f7ac642a9a7e523dc4f6f65"
+      },
+      {
+        "file": "research/01-regras-ciencia.html",
+        "source": "site/research/01-regras-ciencia.html",
+        "size": 30785,
+        "sha": "1ca8a5cf8e798a49172133bd694ffa1f6ad0e42e",
+        "sha256": "58c4e4ca4e5fa99977cc3262ed688079a451c0cb18ddafda14e51df1592a7ba2"
+      },
+      {
+        "file": "research/01-regras-ciencia.md",
+        "source": "site/research/01-regras-ciencia.md",
+        "size": 22928,
+        "sha": "2b237a18a27592a074a81979bfdeb70f375353e5",
+        "sha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43"
+      },
+      {
+        "file": "research/11-revisao-spaceapps-apresentacao.html",
+        "source": "site/research/11-revisao-spaceapps-apresentacao.html",
+        "size": 22022,
+        "sha": "b5e6dea3df4b1ad906d175e91daffd2c20d19adf",
+        "sha256": "40aaf232c91ad93901b652ddff5e63871823fd6193c474537c5a5ea1867feb3d"
+      },
+      {
+        "file": "research/11-revisao-spaceapps-apresentacao.md",
+        "source": "site/research/11-revisao-spaceapps-apresentacao.md",
+        "size": 15356,
+        "sha": "7209dec63e845c4b667936b4e08c761fc2f3e44b",
+        "sha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89"
+      },
+      {
+        "file": "research/evidence/evi3-validation.json",
+        "source": "site/research/evidence/evi3-validation.json",
+        "size": 5313,
+        "sha": "b59c20cfa70f046973e7d39faaad58d334fe8c70",
+        "sha256": "d7645e04230c86aa1915324da439258b2043bad4593890fc34bd873fa3bac9f6"
+      },
+      {
+        "file": "research/evidence/resources-retrieval-20261114.json",
+        "source": "site/research/evidence/resources-retrieval-20261114.json",
+        "size": 2806,
+        "sha": "97cd912ea6b68e6316ec5f43c5b98c296c379887",
+        "sha256": "cbbd3fa1c6102415b9844bf3347d3b8710a5b7334ea25b6f943e9088c4e6f400"
+      },
+      {
+        "file": "research/evidence/validate-evi3-research.py",
+        "source": "site/research/evidence/validate-evi3-research.py",
+        "size": 4384,
+        "sha": "63de8650175035d46d4997e9fa5a2589f77ba01b",
+        "sha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00"
+      },
+      {
+        "file": "vercel.json",
+        "source": ".vercel/deploy-config.json",
+        "size": 2876,
+        "sha": "1a6cc891a5a50338590738a771bebb2f305259ea",
+        "sha256": "b1f558467708486ad8b936540390cbe652ce96b7fdb01cd7e665bb3017146123"
+      }
+    ],
+    "settings": {
+      "framework": null,
+      "buildCommand": "",
+      "installCommand": "",
+      "outputDirectory": ".",
+      "nodeVersion": "24.x"
+    }
+  },
+  "previousAttempts": [
+    {
+      "id": "dpl_Hjga9X3rpjSNyDenSBA4zwaeAJf7",
+      "status": "ERROR",
+      "error": "MODULE_NOT_FOUND: attempted node scripts/build-beta-site.mjs with an already-built static tree",
+      "correction": "Explicit empty build and install commands; outputDirectory '.' for static upload"
+    },
+    {
+      "id": "dpl_HUDFto7fhBaqbes9WEKgSvtA48x2",
+      "status": "READY",
+      "supersededBy": "Initial header-anchor visual correction; same product features"
+    }
+  ],
+  "verification": {
+    "localContext": "24/24",
+    "localDistribution": "15/15",
+    "architecture": "25/25",
+    "httpReceipt": "evidence/vercel-static-r8.json",
+    "browserReceipt": "evidence/context-browser-r8.json"
+  },
+  "limitations": [
+    "This is a directly uploaded static deployment. Automatic Git-to-Vercel CI has not been configured or claimed.",
+    "Prisma and inference services are not deployed.",
+    "No competition submission or eligibility decision was performed.",
+    "Receipts committed after this source commit do not change the deployed source."
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "generatedAt": "2026-11-14T09:05:29.349Z",
+  "report": "evidence/ab-r3a-analysis.json",
+  "reportSha256": "e3c5fdac7d59f8af7b0528e5c7847a2fe49331a7fd53744bf8cadfaec53865bb",
+  "engine": {
+    "package": "rea-agents",
+    "version": "6.7.0",
+    "releaseCommit": "27dc42d10249f0410904a75c0997842eb03b931c",
+    "packageJsonSha256": "3f6c47fb12c8388f291a21e7f99a876495d03aee671b3b6a0708dd12d6ebb570",
+    "cliSha256": "ed06cee49505b95a3cc5fceb1b4b279167e26df86227c644bb366ffffdbaf738",
+    "abR3aReferenceCommit": "e76c4aff2d97b27ae00ebefcf60f16804130edd8"
+  },
+  "execution": {
+    "startedAt": "2026-11-14T09:05:21.715Z",
+    "elapsedMs": 7634,
+    "node": "v24.22.1",
+    "exitCode": 0,
+    "signal": null,
+    "stopReason": null,
+    "startError": null,
+    "status": "completed",
+    "stdoutBytes": 31463993,
+    "stderrBytes": 8843,
+    "stdoutSha256": "ba914adcc2b3c3bfb02e086d857e10aa3ede0838eb419e00f31a79d9235606ec"
+  },
+  "sourceFiles": 43,
+  "sourceBytes": 244722,
+  "statistics": {
+    "relevant_files": 43,
+    "nested_asar_containers": 0,
+    "text_bytes_read": 244722,
+    "invalid_utf8_files": 0,
+    "parsed_javascript_files": 40,
+    "skipped_javascript_files": 0,
+    "visited_ast_nodes": 40369,
+    "findings": 596,
+    "modules": 0,
+    "parse_failures": 0
+  },
+  "applicationCoverage": {
+    "status": "partial",
+    "truncated": false,
+    "omitted_count": null,
+    "limits": [
+      {
+        "name": "javascript_analysis_parent_available_result_budget_bytes",
+        "value": 0,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_parent_available_result_budget_bytes",
+        "value": 15700,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_parent_available_result_budget_bytes",
+        "value": 4108,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_parent_result_budget_bytes",
+        "value": 317958592,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_semantic_result_budget_bytes",
+        "value": 0,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_worker_heap_limit_bytes",
+        "value": 830472192,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_worker_timeout_ms",
+        "value": 300000,
+        "unit": "milliseconds"
+      }
+    ]
+  },
+  "semanticCoverage": {
+    "status": "partial",
+    "truncated": true,
+    "omitted_nodes": null,
+    "omitted_relations": null,
+    "limits": [
+      {
+        "name": "javascript_analysis_semantic_result_budget_bytes",
+        "value": 0,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_worker_heap_limit_bytes",
+        "value": 830472192,
+        "unit": "bytes"
+      },
+      {
+        "name": "javascript_analysis_worker_timeout_ms",
+        "value": 300000,
+        "unit": "milliseconds"
+      }
+    ]
+  },
+  "semanticFamilies": [
+    {
+      "family": "boundary",
+      "status": "partial",
+      "retainedRelations": 42,
+      "unknownCount": 8
+    },
+    {
+      "family": "call-flow",
+      "status": "partial",
+      "retainedRelations": 1255,
+      "unknownCount": 1584
+    },
+    {
+      "family": "child-process",
+      "status": "partial",
+      "retainedRelations": 6,
+      "unknownCount": 5
+    },
+    {
+      "family": "closure",
+      "status": "partial",
+      "retainedRelations": 1583,
+      "unknownCount": 4
+    },
+    {
+      "family": "configuration",
+      "status": "partial",
+      "retainedRelations": 0,
+      "unknownCount": 4
+    },
+    {
+      "family": "data-flow",
+      "status": "partial",
+      "retainedRelations": 12506,
+      "unknownCount": 1541
+    },
+    {
+      "family": "event",
+      "status": "partial",
+      "retainedRelations": 10,
+      "unknownCount": 6
+    },
+    {
+      "family": "object-flow",
+      "status": "partial",
+      "retainedRelations": 1585,
+      "unknownCount": 2155
+    },
+    {
+      "family": "promise-ownership",
+      "status": "partial",
+      "retainedRelations": 158,
+      "unknownCount": 139
+    },
+    {
+      "family": "request",
+      "status": "partial",
+      "retainedRelations": 5,
+      "unknownCount": 5
+    },
+    {
+      "family": "resource-lifecycle",
+      "status": "partial",
+      "retainedRelations": 2,
+      "unknownCount": 4
+    },
+    {
+      "family": "timer",
+      "status": "partial",
+      "retainedRelations": 8,
+      "unknownCount": 5
+    }
+  ],
+  "changedAfterSnapshot": [
+    "tests-ui/flows.test.mjs"
+  ],
+  "limits": [
+    "Structural findings are not a count of confirmed vulnerabilities.",
+    "Partial semantic coverage remains partial despite exit 0.",
+    "A subsequent strengthening of a DOM test does not modify the audited runtime; the precise changed paths are preserved.",
+    "No behavioral, educational, flight or contest eligibility certification."
+  ]
+}

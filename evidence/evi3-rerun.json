@@ -1,0 +1,143 @@
+{
+  "status": "RESEARCH_ONLY_P1_NOT_GAME_CONTRACT",
+  "calculatedAt": "2026-11-14T09:02:40.358029+00:00",
+  "sourceDocument": "https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf",
+  "sourceEquation": "Equation 2, printed p.3 / PDF p.6, G=2.5 C1=6 C2=7.5 L=1",
+  "product": "MOD13Q1.061",
+  "productDoi": "10.5067/MODIS/MOD13Q1.061",
+  "formula": "2.5 * (NIR - RED) / (NIR + 6*RED - 7.5*BLUE + 1)",
+  "method": "Exact rational arithmetic on previously retrieved integer bands scaled by 1/10000",
+  "inputs": [
+    {
+      "path": "public/data/mod13q1-A-raw.json",
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+    },
+    {
+      "path": "public/data/mod13q1-B-raw.json",
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+    },
+    {
+      "path": "public/data/mod13q1-C-raw.json",
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+    }
+  ],
+  "records": [
+    {
+      "id": "A-A2024241",
+      "redInteger": 1654,
+      "nirInteger": 2626,
+      "blueInteger": 457,
+      "reflectanceScale": 0.0001,
+      "eviPublished": 0.127,
+      "evi3Recalculated": 0.12707543469734606,
+      "evi3ExactFraction": "972/7649",
+      "absoluteDifference": 7.543469734605831e-05,
+      "denominator": 1.91225,
+      "evi2RecalculatedForDistinctionOnly": 0.1464243534430813,
+      "viQuality": 2116,
+      "pixelReliability": 0,
+      "modisDate": "A2024241",
+      "pixelDayOfYear": 245
+    },
+    {
+      "id": "A-A2024257",
+      "redInteger": 1294,
+      "nirInteger": 2856,
+      "blueInteger": 482,
+      "reflectanceScale": 0.0001,
+      "eviPublished": 0.2296,
+      "evi3Recalculated": 0.2296383416642164,
+      "evi3ExactFraction": "781/3401",
+      "absoluteDifference": 3.834166421640694e-05,
+      "denominator": 1.7005,
+      "evi2RecalculatedForDistinctionOnly": 0.24464965918203688,
+      "viQuality": 2116,
+      "pixelReliability": 0,
+      "modisDate": "A2024257",
+      "pixelDayOfYear": 267
+    },
+    {
+      "id": "B-A2024241",
+      "redInteger": 1058,
+      "nirInteger": 2712,
+      "blueInteger": 545,
+      "reflectanceScale": 0.0001,
+      "eviPublished": 0.2761,
+      "evi3Recalculated": 0.27617298380364,
+      "evi3ExactFraction": "1654/5989",
+      "absoluteDifference": 7.298380364000668e-05,
+      "denominator": 1.49725,
+      "evi2RecalculatedForDistinctionOnly": 0.2711262064624423,
+      "viQuality": 2116,
+      "pixelReliability": 0,
+      "modisDate": "A2024241",
+      "pixelDayOfYear": 245
+    },
+    {
+      "id": "B-A2024257",
+      "redInteger": 1566,
+      "nirInteger": 2819,
+      "blueInteger": 556,
+      "reflectanceScale": 0.0001,
+      "eviPublished": 0.1735,
+      "evi3Recalculated": 0.17359379329454142,
+      "evi3ExactFraction": "1253/7218",
+      "absoluteDifference": 9.379329454142421e-05,
+      "denominator": 1.8045,
+      "evi2RecalculatedForDistinctionOnly": 0.18896208090532896,
+      "viQuality": 2116,
+      "pixelReliability": 0,
+      "modisDate": "A2024257",
+      "pixelDayOfYear": 267
+    },
+    {
+      "id": "C-A2024241",
+      "redInteger": 1713,
+      "nirInteger": 3099,
+      "blueInteger": 573,
+      "reflectanceScale": 0.0001,
+      "eviPublished": 0.1816,
+      "evi3Recalculated": 0.18160853271836264,
+      "evi3ExactFraction": "630/3469",
+      "absoluteDifference": 8.53271836264053e-06,
+      "denominator": 1.90795,
+      "evi2RecalculatedForDistinctionOnly": 0.20133409257300902,
+      "viQuality": 2116,
+      "pixelReliability": 0,
+      "modisDate": "A2024241",
+      "pixelDayOfYear": 245
+    },
+    {
+      "id": "C-A2024257",
+      "redInteger": 1938,
+      "nirInteger": 3275,
+      "blueInteger": 593,
+      "reflectanceScale": 0.0001,
+      "eviPublished": 0.1634,
+      "evi3Recalculated": 0.16340348561511575,
+      "evi3ExactFraction": "6685/40911",
+      "absoluteDifference": 3.4856151157390435e-06,
+      "denominator": 2.04555,
+      "evi2RecalculatedForDistinctionOnly": 0.18645892604121342,
+      "viQuality": 2116,
+      "pixelReliability": 0,
+      "modisDate": "A2024257",
+      "pixelDayOfYear": 267
+    }
+  ],
+  "count": 6,
+  "maximumAbsoluteDifference": 9.379329454142421e-05,
+  "sampleComparisonThreshold": 0.0001,
+  "limits": [
+    "This checks six archived records, not the entire MODIS production algorithm.",
+    "Comparison threshold is for this sample, not a universal product accuracy claim.",
+    "A physical-band representation must explicitly include BLUE before it supports EVI3.",
+    "NDVI-only telemetry does not contain enough information to reconstruct EVI3.",
+    "This is neither a game result nor evidence of learning or resource-list eligibility.",
+    "The primary NDVI objective and fixed-objective redesign contract remain unchanged.",
+    "No game code, public submission, publication, or outside communication was performed by this research script."
+  ]
+}

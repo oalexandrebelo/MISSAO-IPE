@@ -1,0 +1,264 @@
+{
+  "sourceId": "NASA-ORNL-MOD13Q1-061-B",
+  "url": "https://modis.ornl.gov/rst/api/v1/MOD13Q1/subset?latitude=-17.85&longitude=-50.98&startDate=A2024241&endDate=A2024257&kmAboveBelow=0&kmLeftRight=0",
+  "retrievedAt": "2026-11-14T07:44:09.093483+00:00",
+  "bytes": 4232,
+  "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+  "shape": [
+    1,
+    1
+  ],
+  "metadata": {
+    "xllcorner": "-5395971.54",
+    "yllcorner": "-1985063.30",
+    "cellsize": 231.656358264,
+    "nrows": 1,
+    "ncols": 1,
+    "band": "all",
+    "latitude": -17.85,
+    "longitude": -50.98,
+    "header": "https://modisrest.ornl.gov/rst/api/v1/MOD13Q1/subset?latitude=-17.85&longitude=-50.98&startDate=A2024241&endDate=A2024257&kmAboveBelow=0&kmLeftRight=0"
+  },
+  "data": [
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_blue_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        545
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_MIR_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        2214
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_NIR_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        2712
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_pixel_reliability",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        0
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_red_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        1058
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_relative_azimuth_angle",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        3904
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_sun_zenith_angle",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        4577
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_view_zenith_angle",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        1217
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_VI_Quality",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        2116
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_NDVI",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        4387
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_EVI",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        2761
+      ]
+    },
+    {
+      "modis_date": "A2024241",
+      "calendar_date": "2024-08-28",
+      "band": "250m_16_days_composite_day_of_the_year",
+      "tile": "h13v10",
+      "proc_date": "2024258125601",
+      "data": [
+        245
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_blue_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        556
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_MIR_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        2052
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_NIR_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        2819
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_pixel_reliability",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        0
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_red_reflectance",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        1566
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_relative_azimuth_angle",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        3015
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_sun_zenith_angle",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        4004
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_view_zenith_angle",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        1190
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_VI_Quality",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        2116
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_NDVI",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        2857
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_EVI",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        1735
+      ]
+    },
+    {
+      "modis_date": "A2024257",
+      "calendar_date": "2024-09-13",
+      "band": "250m_16_days_composite_day_of_the_year",
+      "tile": "h13v10",
+      "proc_date": "2024275122737",
+      "data": [
+        267
+      ]
+    }
+  ]
+}

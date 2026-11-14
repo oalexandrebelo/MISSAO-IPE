@@ -1,0 +1,422 @@
+{
+  "generatedAt": "2026-11-14T09:09:09.958050+00:00",
+  "engineVersion": "0.1.1-rd",
+  "catalogVersion": "ipe-64-v1",
+  "limit": "Mappings identify tests and receipts; a mapping is not an additional test run or proof of educational efficacy.",
+  "requirements": [
+    {
+      "requirementId": "SCI-01",
+      "productRequirement": "PRD-06",
+      "claim": "QA and complete unique records",
+      "implementation": "src/core/science.ts",
+      "tests": [
+        "tests/engine.test.mts",
+        "tests/adversarial.test.mts"
+      ],
+      "references": [
+        "public/data/mod13q1-research-pack.json",
+        "research/01-regras-ciencia.md"
+      ],
+      "status": "NODE_VERIFIED",
+      "artifacts": [
+        {
+          "path": "src/core/science.ts",
+          "exists": true,
+          "sha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92"
+        },
+        {
+          "path": "tests/engine.test.mts",
+          "exists": true,
+          "sha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "public/data/mod13q1-research-pack.json",
+          "exists": true,
+          "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+        },
+        {
+          "path": "research/01-regras-ciencia.md",
+          "exists": true,
+          "sha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43"
+        }
+      ]
+    },
+    {
+      "requirementId": "SCI-02",
+      "productRequirement": "PRD-06",
+      "claim": "Equivalent NDVI objective for both representations",
+      "implementation": "src/core/science.ts",
+      "tests": [
+        "tests/engine.test.mts",
+        "tests/adversarial.test.mts"
+      ],
+      "references": [
+        "scripts/verify-science-data.mjs"
+      ],
+      "status": "NODE_VERIFIED",
+      "artifacts": [
+        {
+          "path": "src/core/science.ts",
+          "exists": true,
+          "sha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92"
+        },
+        {
+          "path": "tests/engine.test.mts",
+          "exists": true,
+          "sha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "scripts/verify-science-data.mjs",
+          "exists": true,
+          "sha256": "3f3df8e8cb70fdb7793bf5576d6ab97bbcaa8f0fb0a3b570c2f34b433cca744e"
+        }
+      ]
+    },
+    {
+      "requirementId": "ENG-01",
+      "productRequirement": "PRD-05",
+      "claim": "Energy and bit conservation",
+      "implementation": "src/core/engine.ts",
+      "tests": [
+        "tests/engine.test.mts",
+        "tests/adversarial.test.mts"
+      ],
+      "references": [
+        "specs/IMPLEMENTATION-CONTRACT.md"
+      ],
+      "status": "NODE_VERIFIED",
+      "artifacts": [
+        {
+          "path": "src/core/engine.ts",
+          "exists": true,
+          "sha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635"
+        },
+        {
+          "path": "tests/engine.test.mts",
+          "exists": true,
+          "sha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "specs/IMPLEMENTATION-CONTRACT.md",
+          "exists": true,
+          "sha256": "cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6"
+        }
+      ]
+    },
+    {
+      "requirementId": "ENG-02",
+      "productRequirement": "PRD-05",
+      "claim": "Instantaneous discharge limit differs from energy capacity",
+      "implementation": "src/core/power.ts",
+      "tests": [
+        "tests/engine.test.mts",
+        "tests/adversarial.test.mts"
+      ],
+      "references": [
+        "specs/IMPLEMENTATION-CONTRACT.md"
+      ],
+      "status": "NODE_VERIFIED",
+      "artifacts": [
+        {
+          "path": "src/core/power.ts",
+          "exists": true,
+          "sha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7"
+        },
+        {
+          "path": "tests/engine.test.mts",
+          "exists": true,
+          "sha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "specs/IMPLEMENTATION-CONTRACT.md",
+          "exists": true,
+          "sha256": "cb1d823a9909d3ed2e9be07b88378eabc5a7fbba3cfb70f53c407d44e8aec1b6"
+        }
+      ]
+    },
+    {
+      "requirementId": "SRCH-01",
+      "productRequirement": "PRD-08",
+      "claim": "Complete enumeration and bounded minimum",
+      "implementation": "src/core/search.ts",
+      "tests": [
+        "tests/engine.test.mts",
+        "tests/adversarial.test.mts"
+      ],
+      "references": [
+        "evidence/catalog-enumeration.json"
+      ],
+      "status": "NODE_VERIFIED",
+      "artifacts": [
+        {
+          "path": "src/core/search.ts",
+          "exists": true,
+          "sha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8"
+        },
+        {
+          "path": "tests/engine.test.mts",
+          "exists": true,
+          "sha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "evidence/catalog-enumeration.json",
+          "exists": true,
+          "sha256": "99082570a41065d0b80de44565e24de4dc63254d3d5a5647371b5d6f5bff9146"
+        }
+      ]
+    },
+    {
+      "requirementId": "EXP-01",
+      "productRequirement": "PRD-07",
+      "claim": "Presentation uses computed events and values",
+      "implementation": "src/ui/MissionControl.tsx",
+      "tests": [
+        "tests-ui/flows.test.mjs"
+      ],
+      "references": [
+        "research/05-interface.md"
+      ],
+      "status": "IMPLEMENTED_DOM_PARTIAL_BROWSER_PENDING",
+      "artifacts": [
+        {
+          "path": "src/ui/MissionControl.tsx",
+          "exists": true,
+          "sha256": "7d064496216b094df4972cd4fbfb07d8d3635ae1f15b243cd7d608ca2d501763"
+        },
+        {
+          "path": "tests-ui/flows.test.mjs",
+          "exists": true,
+          "sha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb"
+        },
+        {
+          "path": "research/05-interface.md",
+          "exists": true,
+          "sha256": "5c042e98f379942c748714129218f5942379afdc1ad966672a341cb8361b7862"
+        }
+      ]
+    },
+    {
+      "requirementId": "DATA-01",
+      "productRequirement": "PRD-14",
+      "claim": "Archive dates distinct from simulated time",
+      "implementation": "src/data/science-data.ts",
+      "tests": [
+        "tests/engine.test.mts"
+      ],
+      "references": [
+        "scripts/verify-science-data.mjs",
+        "public/data/mod13q1-A-raw.json"
+      ],
+      "status": "DATA_VERIFIED_PRESENTATION_BROWSER_PENDING",
+      "artifacts": [
+        {
+          "path": "src/data/science-data.ts",
+          "exists": true,
+          "sha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66"
+        },
+        {
+          "path": "tests/engine.test.mts",
+          "exists": true,
+          "sha256": "0c052ab5ad2eb4ca568cd84787129315715bda11663992f641a2501b6c7f48fc"
+        },
+        {
+          "path": "scripts/verify-science-data.mjs",
+          "exists": true,
+          "sha256": "3f3df8e8cb70fdb7793bf5576d6ab97bbcaa8f0fb0a3b570c2f34b433cca744e"
+        },
+        {
+          "path": "public/data/mod13q1-A-raw.json",
+          "exists": true,
+          "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+        }
+      ]
+    },
+    {
+      "requirementId": "PST-01",
+      "productRequirement": "PRD-10",
+      "claim": "Commit acknowledgement and revision CAS",
+      "implementation": "src/persistence/store.ts",
+      "tests": [
+        "tests/persistence.test.mts"
+      ],
+      "references": [
+        "research/06-persistencia.md"
+      ],
+      "status": "FAKE_INDEXEDDB_VERIFIED_BROWSER_PENDING",
+      "artifacts": [
+        {
+          "path": "src/persistence/store.ts",
+          "exists": true,
+          "sha256": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf"
+        },
+        {
+          "path": "tests/persistence.test.mts",
+          "exists": true,
+          "sha256": "73f0d5bb4fa46db514e36008fdc40b030f07d073f5ac22bbce791949d9b4f0a6"
+        },
+        {
+          "path": "research/06-persistencia.md",
+          "exists": true,
+          "sha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa"
+        }
+      ]
+    },
+    {
+      "requirementId": "PST-02",
+      "productRequirement": "PRD-11",
+      "claim": "Strict import and recomputation",
+      "implementation": "src/persistence/replay.ts",
+      "tests": [
+        "tests/replay.test.mts",
+        "tests/adversarial.test.mts"
+      ],
+      "references": [
+        "research/06-persistencia.md"
+      ],
+      "status": "NODE_VERIFIED",
+      "artifacts": [
+        {
+          "path": "src/persistence/replay.ts",
+          "exists": true,
+          "sha256": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc"
+        },
+        {
+          "path": "tests/replay.test.mts",
+          "exists": true,
+          "sha256": "2f66fc4a2e3aad53f4b612abdfd93ad9860ce7d924d891bff5dfc14a2ccba7ee"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "research/06-persistencia.md",
+          "exists": true,
+          "sha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa"
+        }
+      ]
+    },
+    {
+      "requirementId": "UX-01",
+      "productRequirement": "PRD-04/09",
+      "claim": "Prediction before own attempt and restricted help",
+      "implementation": "src/App.tsx",
+      "tests": [
+        "tests-ui/flows.test.mjs"
+      ],
+      "references": [
+        "docs/02-PRD.md"
+      ],
+      "status": "DOM_VERIFIED_HUMAN_LEARNING_PENDING",
+      "artifacts": [
+        {
+          "path": "src/App.tsx",
+          "exists": true,
+          "sha256": "a650a7e75dcb2d71b014df322dad9f156c42db56d19f512e667c67c0ecad0e8b"
+        },
+        {
+          "path": "tests-ui/flows.test.mjs",
+          "exists": true,
+          "sha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb"
+        },
+        {
+          "path": "docs/02-PRD.md",
+          "exists": true,
+          "sha256": "3824ffe2d27d6406065d7c0c6601a445e524d0ac451d43d5547a8751269d2de0"
+        }
+      ]
+    },
+    {
+      "requirementId": "OFF-01",
+      "productRequirement": "PRD-12",
+      "claim": "No mandatory external runtime service",
+      "implementation": "scripts/build-portable.mjs",
+      "tests": [
+        "scripts/test-ui.mjs"
+      ],
+      "references": [
+        "evidence/portable-build.json"
+      ],
+      "status": "STATIC_AND_DOM_VERIFIED_COLD_BROWSER_PENDING",
+      "artifacts": [
+        {
+          "path": "scripts/build-portable.mjs",
+          "exists": true,
+          "sha256": "44d853f432dbbbed9d3ea62167f9f994705afe8240bda91ac65dce3815177ce5"
+        },
+        {
+          "path": "scripts/test-ui.mjs",
+          "exists": true,
+          "sha256": "a789ac7a6f3a496b29153f51ca177e0f7f1309f28bb5a1b42a61d8fbdebe4b5a"
+        },
+        {
+          "path": "evidence/portable-build.json",
+          "exists": true,
+          "sha256": "e29183200846cc0c8fe626cc14b320c7ec5565fb124c77da3a533fa2bee64544"
+        }
+      ]
+    },
+    {
+      "requirementId": "ASYNC-01",
+      "productRequirement": "PRD-15",
+      "claim": "Cancel stale work and validate replies",
+      "implementation": "src/workers/client.ts",
+      "tests": [
+        "tests/adversarial.test.mts",
+        "tests-ui/flows.test.mjs"
+      ],
+      "references": [
+        "research/07-revisao-independente.md"
+      ],
+      "status": "NODE_AND_DOM_VERIFIED_BROWSER_PENDING",
+      "artifacts": [
+        {
+          "path": "src/workers/client.ts",
+          "exists": true,
+          "sha256": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1"
+        },
+        {
+          "path": "tests/adversarial.test.mts",
+          "exists": true,
+          "sha256": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+        },
+        {
+          "path": "tests-ui/flows.test.mjs",
+          "exists": true,
+          "sha256": "8adda61000e533618475591158893153859fe7e6a35c9246d7ed69cceb3163cb"
+        },
+        {
+          "path": "research/07-revisao-independente.md",
+          "exists": true,
+          "sha256": "9addda5dfac4abb150afd70a27c5773507524b1e985b8102997d58e432eb97c4"
+        }
+      ]
+    }
+  ]
+}

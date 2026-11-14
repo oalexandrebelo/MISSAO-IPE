@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Missão Ipê · execução local",
+    "output": "architecture/runtime.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "visual_preset": "editorial",
+    "animation": "none",
+    "subtitle": "R8 BETA · fluxo principal agrupado · contexto e publicação no inventário abaixo",
+    "views": [
+      {
+        "id": "missao",
+        "label": "Executar uma missão",
+        "focus": [
+          "app",
+          "client",
+          "worker",
+          "core",
+          "science"
+        ],
+        "note": "Interface → Worker → motor determinístico; os resultados retornam à interface."
+      },
+      {
+        "id": "armazenar",
+        "label": "Guardar no navegador",
+        "focus": [
+          "app",
+          "persistence"
+        ],
+        "note": "Execuções e rascunhos usam IndexedDB; o diário usa localStorage."
+      },
+      {
+        "id": "apresentar",
+        "label": "Demonstrar no pitch",
+        "focus": [
+          "presentation",
+          "core",
+          "science"
+        ],
+        "note": "A apresentação usa o mesmo núcleo no thread principal."
+      }
+    ],
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "Lógica no navegador"
+        },
+        "database": {
+          "label": "Dados locais"
+        },
+        "messagebus": {
+          "label": "Worker local"
+        },
+        "frontend": {
+          "label": "Interface"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "app",
+      "type": "frontend",
+      "label": "Jogo React",
+      "sublabel": "src/App.tsx + UI",
+      "tag": "INTERFACE",
+      "pos": [
+        40,
+        80
+      ],
+      "size": [
+        230,
+        82
+      ]
+    },
+    {
+      "id": "client",
+      "type": "backend",
+      "label": "Cliente do Worker",
+      "sublabel": "workers/client.ts",
+      "tag": "VALIDAÇÃO + TIMEOUT",
+      "pos": [
+        420,
+        80
+      ],
+      "size": [
+        230,
+        82
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "messagebus",
+      "label": "Worker de missão",
+      "sublabel": "mission.worker.ts",
+      "tag": "POSTMESSAGE",
+      "pos": [
+        800,
+        80
+      ],
+      "size": [
+        230,
+        82
+      ]
+    },
+    {
+      "id": "persistence",
+      "type": "database",
+      "label": "Persistência local",
+      "sublabel": "IndexedDB + replay",
+      "tag": "HASH + REEXECUÇÃO",
+      "pos": [
+        40,
+        350
+      ],
+      "size": [
+        230,
+        82
+      ]
+    },
+    {
+      "id": "core",
+      "type": "backend",
+      "label": "Motor + busca",
+      "sublabel": "core/engine + search",
+      "tag": "CATÁLOGO: 64",
+      "pos": [
+        800,
+        350
+      ],
+      "size": [
+        230,
+        82
+      ]
+    },
+    {
+      "id": "presentation",
+      "type": "frontend",
+      "label": "Apresentação HTML",
+      "sublabel": "presentation/src/main.ts",
+      "tag": "MESMO NÚCLEO",
+      "pos": [
+        420,
+        620
+      ],
+      "size": [
+        230,
+        82
+      ]
+    },
+    {
+      "id": "science",
+      "type": "database",
+      "label": "Ciência congelada",
+      "sublabel": "data/science-data.ts",
+      "tag": "MOD13 · DIDÁTICO",
+      "pos": [
+        800,
+        620
+      ],
+      "size": [
+        230,
+        82
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "app-client",
+      "from": "app",
+      "to": "client",
+      "label": "simular / buscar",
+      "variant": "emphasis"
+    },
+    {
+      "id": "client-worker",
+      "from": "client",
+      "to": "worker",
+      "label": "mensagem",
+      "variant": "emphasis"
+    },
+    {
+      "id": "worker-core",
+      "from": "worker",
+      "to": "core",
+      "label": "executar",
+      "variant": "emphasis"
+    },
+    {
+      "id": "app-persistence",
+      "from": "app",
+      "to": "persistence",
+      "label": "salvar / importar"
+    },
+    {
+      "id": "presentation-core",
+      "from": "presentation",
+      "to": "core",
+      "label": "demonstrar"
+    },
+    {
+      "id": "core-science",
+      "from": "core",
+      "to": "science",
+      "label": "validar registros"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Implementado",
+      "items": [
+        "Motor determinístico, busca exaustiva e validação científica",
+        "Worker isolado; fallback principal no modo portátil",
+        "Persistência local e replay verificado"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Fronteiras",
+      "items": [
+        "Backend significa lógica local neste desenho; não há API de produto",
+        "A visão agrupa arquivos; o inspetor abaixo enumera cada import",
+        "Apresentação, jogo, portal e mapa se conectam por navegação"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Ainda proposto",
+      "items": [
+        "Prisma: contrato, sem serviço implantado",
+        "Marte, Fastino e IA remota: sem integração no motor",
+        "Elegibilidade e Resources oficiais continuam pendentes"
+      ]
+    }
+  ]
+}

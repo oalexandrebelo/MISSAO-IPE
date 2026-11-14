@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T13:30:03.562Z",
+  "status": "verified",
+  "repository": "oalexandrebelo/AB-NASA-TEAM-IPE",
+  "visibility": "private",
+  "branch": "main",
+  "commit": "2bf2d05b0d98efa38e97de13def1712453235486",
+  "tree": "1bd00fb1fdb828ee079dc5996c37b5e1c0e48fce",
+  "localSourceCommit": "2f080fa7f1a255bc71bf5611e4e6adfe3fc04452",
+  "sourceHistoryThroughBundleCommit": "47ec62ea16e9c8c3c4871886ce58ab4ecd111610",
+  "method": "Authenticated GitHub Git Data API; fast-forward with expected parent; recursive tree compared with local Git blob SHA-1 and modes",
+  "filesCompared": 315,
+  "mismatches": 0,
+  "unexpectedFiles": 0,
+  "archiveRecovery": "recovery/archive-manifest.json + node scripts/recover-archives.mjs",
+  "limitations": [
+    "API commit metadata differ from local history; bundle preserves original history.",
+    "Private repository access is required; the Vercel site is public.",
+    "This receipt proves the recorded commit; subsequent receipt commits may append files."
+  ]
+}

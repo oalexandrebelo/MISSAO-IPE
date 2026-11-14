@@ -1,0 +1,198 @@
+{
+  "completedAt": "2026-11-14T09:05:34.573887+00:00",
+  "node": "v24.22.1",
+  "engineVersion": "0.1.1-rd",
+  "scope": "Release gate: Node, simulated DOM, data, compile and structural Prisma validation. No visual browser/hardware/learning qualification.",
+  "results": [
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "startedAt": "2026-11-14T09:05:21.640197+00:00",
+      "elapsedSeconds": 0.8875,
+      "exitCode": 0,
+      "stdout": "\n> ab-mission-ipe-research@0.1.1 test\n> node --experimental-strip-types --test tests/*.test.mts\n\n✔ independent 1-second oracle checks the complete 64 by 2 domain and envelope (82.323469ms)\n✔ minimum and all smaller alternatives come from the independent oracle in four orders (87.501543ms)\n✔ scientific tolerance is inclusive and symmetric for positive and negative NDVI (0.318303ms)\n✔ recomputed hashes never hide altered receipt metadata or observation accounting (44.84414ms)\n✔ Worker bridge isolates concurrent jobs, ignores foreign IDs and cannot revive cancellation (8.878124ms)\n✔ Worker bridge rejects malformed and mismatched successful responses (13.998686ms)\n✔ null Worker response rejects the job without throwing from its event listener (0.330251ms)\n✔ compiled scientific pack rejects accidental mutation of provenance metadata (0.220995ms)\n✔ catalog is exactly 64 unique six-choice tuples with independent values (1.949559ms)\n✔ all 64 configurations in both scenarios conserve exact bits and energy (71.486442ms)\n✔ baseline long contacts succeeds, while short contacts deliver only two complete records (0.614393ms)\n✔ contact service is FIFO, preserves partial records, and becomes idle when empty (0.675034ms)\n✔ jobs produce only complete batches and overflow loses the entire newest batch (0.446398ms)\n✔ INDEX alone, FAST alone, and compact panel alone have terminal battery-side peak failures (0.693923ms)\n✔ static validation reports both mass and budget; equality at 3.6 kg is not rejected (0.483755ms)\n✔ battery saturation records discarded energy without exceeding capacity (0.215437ms)\n✔ charge limiter accepts at most 10 W of input and accounts for conversion and spill (0.139532ms)\n✔ reserve is inclusive; crossing it records a failure while keeping the later trace (0.379125ms)\n✔ depleted energy ends operation at the exact boundary and never becomes negative (0.188486ms)\n✔ a complete job at contact start and last bit at contact end count at their exact boundaries (0.290271ms)\n✔ power depletion during a transmission conserves the partially received payload (0.269789ms)\n✔ operational policy is chosen in advance and never opens a skipped first contact (0.345444ms)\n✔ six archived records pass the declared QA and both representations answer the identical NDVI question (0.726362ms)\n✔ MODLAND, usefulness, aerosol, cloud, water, snow, shadow and reliability masks all affect scientific validity (0.333066ms)\n✔ invalid reflectance, denominator, scale, NDVI and dates remain invalid rather than becoming zero (0.281057ms)\n✔ a fully transmitted QA-rejected record cannot satisfy the science objective (0.205883ms)\n✔ exhaustive certificate has one minimum-distance-two short-contact witness and decides every smaller design (23.092808ms)\n✔ search order does not alter results; errors or incomplete evaluation remove the minimum certificate (30.020172ms)\n✔ same inputs are reproducible in this runtime and trace suppression cannot change physics (0.818071ms)\n✔ unknown choices/scenarios and malformed model clocks fail explicitly (0.541662ms)\n✔ simultaneous identical writes are idempotent across independent connections (55.59618ms)\n✔ a save snapshots its input before asynchronous hashes and opens (7.805587ms)\n✔ a distinct result is retained as distinct evidence under the same input hash (17.55275ms)\n✔ two tabs cannot both commit a draft at the same revision (3.065452ms)\n✔ request success followed by transaction abort is rejected and rolled back (3.934772ms)\n✔ quota failure is visible and preserves the previous committed draft (0.746543ms)\n✔ an asynchronous request error aborts a write and reaches the caller (2.97787ms)\n✔ stored corruption is detected instead of silently deleting or trusting the run (4.689908ms)\n✔ draft revision and domain validation rejects invalid writes without mutation (0.914748ms)\n✔ all 64 configurations in both scenarios survive export and independent reexecution (389.954879ms)\n✔ trace omission is explicit and roundtrips without changing the calculation (2.60216ms)\n✔ canonical SHA-256 is independent of insertion order and matches standard crypto (0.718911ms)\n✔ editing an input or result without updating its hash is rejected (7.642129ms)\n✔ a forged claim with a correctly recomputed hash is reported as mismatch (4.259755ms)\n✔ unknown fields are rejected at every imported schema boundary (21.462945ms)\n✔ duplicates, decoded duplicates and pollution keys are rejected before overwrite (5.697297ms)\n✔ non-JSON syntax, nonfinite numbers and unsafe numeric integers are rejected (5.239823ms)\n✔ size, depth, array and string limits stop excessive imports (3.612733ms)\n✔ every version and scientific pack hash is pinned to this supported implementation (22.309539ms)\n✔ bit strings retain the maximum safe integer and reject coercion or loss (16.14265ms)\n✔ an imported string resembling a URL is never fetched (5.313714ms)\nℹ tests 51\nℹ suites 0\nℹ pass 51\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 669.721553\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:ui"
+      ],
+      "startedAt": "2026-11-14T09:05:22.527961+00:00",
+      "elapsedSeconds": 1.5079,
+      "exitCode": 0,
+      "stdout": "\n> ab-mission-ipe-research@0.1.1 test:ui\n> node scripts/test-ui.mjs\n\nTAP version 13\n# THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.\n# Subtest: real React journey: prediction, long 6/6, short 2/6, certified minimum 2, applied candidate 6/6, invalid import preservation\n    # Subtest: prediction and minimum rationale are mandatory; solver is absent before a completed own attempt\n    ok 1 - prediction and minimum rationale are mandatory; solver is absent before a completed own attempt\n      ---\n      duration_ms: 48.999518\n      type: 'test'\n      ...\n    # Subtest: long contact really delivers 6/6 and commits the prediction before completion\n    ok 2 - long contact really delivers 6/6 and commits the prediction before completion\n      ---\n      duration_ms: 62.932875\n      type: 'test'\n      ...\n    # Subtest: transfer clears prediction and real short contact delivers only 2/6\n    ok 3 - transfer clears prediction and real short contact delivers only 2/6\n      ---\n      duration_ms: 77.439591\n      type: 'test'\n      ...\n    # Subtest: search evaluates all 64 and certifies minimum two choices after the own attempt\n    ok 4 - search evaluates all 64 and certifies minimum two choices after the own attempt\n      ---\n      duration_ms: 28.452133\n      type: 'test'\n      ...\n    # Subtest: invalid replay preserves the published result, candidate search and config\n    ok 5 - invalid replay preserves the published result, candidate search and config\n      ---\n      duration_ms: 31.840334\n      type: 'test'\n      ...\n    # Subtest: applying a witness requires another prediction and really executes 6/6\n    ok 6 - applying a witness requires another prediction and really executes 6/6\n      ---\n      duration_ms: 95.64944\n      type: 'test'\n      ...\n# THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.\n    1..6\nok 1 - real React journey: prediction, long 6/6, short 2/6, certified minimum 2, applied candidate 6/6, invalid import preservation\n  ---\n  duration_ms: 466.040511\n  type: 'test'\n  ...\n# THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.\n# Subtest: importing a valid replay without a personal attempt keeps the solver gated\nok 2 - importing a valid replay without a personal attempt keeps the solver gated\n  ---\n  duration_ms: 55.007857\n  type: 'test'\n  ...\n# Subtest: unavailable IndexedDB and localStorage keep the real result available and replay export enabled\nok 3 - unavailable IndexedDB and localStorage keep the real result available and replay export enabled\n  ---\n  duration_ms: 78.659724\n  type: 'test'\n  ...\n1..3\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1267.057461\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-science-data.mjs"
+      ],
+      "startedAt": "2026-11-14T09:05:24.035964+00:00",
+      "elapsedSeconds": 0.0635,
+      "exitCode": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"sciencePackHash\": \"6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e\",\n  \"records\": 6,\n  \"sources\": [\n    {\n      \"sourceId\": \"NASA-ORNL-MOD13Q1-061-A\",\n      \"sha256\": \"ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47\",\n      \"retrievedAt\": \"2026-11-14T07:44:09.037615+00:00\"\n    },\n    {\n      \"sourceId\": \"NASA-ORNL-MOD13Q1-061-B\",\n      \"sha256\": \"94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10\",\n      \"retrievedAt\": \"2026-11-14T07:44:09.093483+00:00\"\n    },\n    {\n      \"sourceId\": \"NASA-ORNL-MOD13Q1-061-C\",\n      \"sha256\": \"1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6\",\n      \"retrievedAt\": \"2026-11-14T07:44:09.060103+00:00\"\n    }\n  ],\n  \"observationDates\": [\n    \"2024-09-01\",\n    \"2024-09-23\"\n  ],\n  \"note\": \"Confere transformação e integridade local; não autentica origem ou elegibilidade. Nenhum original foi alterado.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "startedAt": "2026-11-14T09:05:24.099482+00:00",
+      "elapsedSeconds": 0.7853,
+      "exitCode": 0,
+      "stdout": "\n> ab-mission-ipe-research@0.1.1 build\n> tsc --noEmit && vite build\n\nvite v8.3.8 building client environment for production...\ntransforming...\n✓ 42 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                           0.79 kB │ gzip:   0.46 kB\ndist/assets/mission.worker-m4WSgatj.js   20.16 kB\ndist/assets/index-C0yMbnbH.css           55.25 kB │ gzip:  11.95 kB\ndist/assets/search-DiIaA0z6.js            1.24 kB │ gzip:   0.75 kB │ map:     5.80 kB\ndist/assets/index-DYhpvtlV.js           311.60 kB │ gzip:  98.26 kB │ map: 1,278.60 kB\ndist/assets/OrbitalScene-B0I9aE-1.js    567.25 kB │ gzip: 142.28 kB │ map: 2,909.03 kB\n\n✓ built in 274ms\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n\u001b[33m[INEFFECTIVE_DYNAMIC_IMPORT] \u001b[0msrc/core/engine.ts is dynamically imported by src/workers/client.ts but also statically imported by src/core/search.ts, src/persistence/replay.ts, dynamic import will not move module into another chunk.\n\n"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build:portable"
+      ],
+      "startedAt": "2026-11-14T09:05:24.884843+00:00",
+      "elapsedSeconds": 0.2448,
+      "exitCode": 0,
+      "stdout": "\n> ab-mission-ipe-research@0.1.1 build:portable\n> node scripts/build-portable.mjs\n\nHTML portátil: 1008522 bytes; 10 fontes JSON incorporadas.\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n"
+    },
+    {
+      "command": [
+        "npm",
+        "exec",
+        "--yes",
+        "--package=prisma@7.10.1",
+        "--",
+        "prisma",
+        "validate",
+        "--config",
+        "prisma/prisma.config.ts"
+      ],
+      "startedAt": "2026-11-14T09:05:25.129683+00:00",
+      "elapsedSeconds": 9.4433,
+      "exitCode": 0,
+      "stdout": "The schema at prisma/schema.prisma is valid 🚀\n",
+      "stderr": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\nLoaded Prisma config from prisma/prisma.config.ts.\n\nPrisma schema loaded from prisma/schema.prisma.\n"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "package-lock.json",
+      "sha256": "fc8ecb347c808526944c8a23640fcdb77882e8a6e5ece71a099c573cfda8dc78"
+    },
+    {
+      "path": "package.json",
+      "sha256": "dce1c6d090b5d7c00bd6a4661c547bcda29448b4d24085578a166c80549e3b34"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "a650a7e75dcb2d71b014df322dad9f156c42db56d19f512e667c67c0ecad0e8b"
+    },
+    {
+      "path": "src/core/catalog.ts",
+      "sha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8"
+    },
+    {
+      "path": "src/core/contracts.ts",
+      "sha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2"
+    },
+    {
+      "path": "src/core/engine.ts",
+      "sha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635"
+    },
+    {
+      "path": "src/core/exact.ts",
+      "sha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8"
+    },
+    {
+      "path": "src/core/power.ts",
+      "sha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7"
+    },
+    {
+      "path": "src/core/science.ts",
+      "sha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92"
+    },
+    {
+      "path": "src/core/search.ts",
+      "sha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8"
+    },
+    {
+      "path": "src/data/science-data.ts",
+      "sha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "c05a4ca1afdd6b72a93d9ae685a388b620c5d18258c770a40c9e9e5ee5faf01b"
+    },
+    {
+      "path": "src/persistence/identity.ts",
+      "sha256": "1d2cc6eb5bb2f0b1c8917f96a9e677bd21628544971ef362700fde95fd67872e"
+    },
+    {
+      "path": "src/persistence/json.ts",
+      "sha256": "d3314f41efd953ac7fd7df0683daed1f641c60ac8ec09dc059aa6b14ad8a6d5a"
+    },
+    {
+      "path": "src/persistence/replay.ts",
+      "sha256": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc"
+    },
+    {
+      "path": "src/persistence/store.ts",
+      "sha256": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf"
+    },
+    {
+      "path": "src/persistence/validation.ts",
+      "sha256": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567"
+    },
+    {
+      "path": "src/ui/Dialogs.tsx",
+      "sha256": "e7c155466d4148fb530eca7f5548fa16b567281beb65ca3f0659d4ed3d103105"
+    },
+    {
+      "path": "src/ui/Icon.tsx",
+      "sha256": "0471a667ea8b051e7ab3ee141f9122cfb38c37f90359af11e50956399e3882ab"
+    },
+    {
+      "path": "src/ui/MissionControl.tsx",
+      "sha256": "7d064496216b094df4972cd4fbfb07d8d3635ae1f15b243cd7d608ca2d501763"
+    },
+    {
+      "path": "src/ui/Observatory.tsx",
+      "sha256": "e11959892414239d507af0adb1b469adfe24d7784ddf59c7e70c6cb0fe37a313"
+    },
+    {
+      "path": "src/ui/OrbitalScene.tsx",
+      "sha256": "ef2a444b40a80c3efa4ea2f6705fd0848a15ad3b844c576d27773c964587f06d"
+    },
+    {
+      "path": "src/ui/Scene.tsx",
+      "sha256": "d7532f52b399cef4e670feb816e66a545835347b9647bd5edb03da162439cded"
+    },
+    {
+      "path": "src/ui/Workbench.tsx",
+      "sha256": "c57019a4316cd54b0ffff061d72d5906bf51da2af3a498a7383278df68328deb"
+    },
+    {
+      "path": "src/ui/format.ts",
+      "sha256": "73e1d4a40fda61b7678eaf2c4563257673e917296da8fa29c8b4abee5e4266f6"
+    },
+    {
+      "path": "src/ui/learning.ts",
+      "sha256": "2562f3acab69905346644a5104e2f9dab00dd7378c1c89f5de6a15b5e6faa3fe"
+    },
+    {
+      "path": "src/workers/client.ts",
+      "sha256": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1"
+    },
+    {
+      "path": "src/workers/mission.worker.ts",
+      "sha256": "ee16c56efce23c82105973bbbce9318dc7485d97488a5eb157466af2430454fb"
+    }
+  ]
+}

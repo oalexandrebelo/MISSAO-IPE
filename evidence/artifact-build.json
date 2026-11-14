@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-11-14T09:15:13.786683+00:00",
+  "scope": "Documentary rendering; execution claims are limited to the referenced receipts. Browser and participant validation remain pending.",
+  "documents": 21,
+  "diagrams": 4,
+  "displayEquations": 5,
+  "chapterPages": {
+    "cap-00": 4,
+    "cap-01": 7,
+    "cap-02": 11,
+    "cap-03": 15,
+    "cap-04": 20,
+    "cap-05": 25,
+    "cap-06": 28,
+    "cap-07": 32,
+    "cap-08": 34,
+    "cap-09": 41,
+    "cap-10": 45,
+    "cap-11": 47,
+    "cap-12": 53,
+    "cap-13": 60,
+    "cap-14": 73,
+    "cap-15": 79,
+    "cap-16": 83,
+    "cap-17": 86,
+    "cap-18": 91,
+    "cap-19": 95,
+    "cap-20": 104,
+    "cap-21": 108
+  },
+  "unhandledAstNodes": [],
+  "files": [
+    {
+      "path": "AB_Missao_Ipe_Dossie_Implementacao.pdf",
+      "bytes": 1200768,
+      "sha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a"
+    },
+    {
+      "path": "AB_Missao_Ipe_Estudo_Integral.html",
+      "bytes": 475437,
+      "sha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "README.md",
+      "sha256": "3f8a43ca994a822ac4ad8fe7542bb9ad01fb024ec1bd4972619bb74f9f854c5f"
+    },
+    {
+      "path": "docs/01-DOSSIE-DECISAO.md",
+      "sha256": "e4b0d44ddd8705da34166ed4564cb6d4748eda5d0c21e1a455aaaad75a9575c6"
+    },
+    {
+      "path": "docs/02-PRD.md",
+      "sha256": "3824ffe2d27d6406065d7c0c6601a445e524d0ac451d43d5547a8751269d2de0"
+    },
+    {
+      "path": "docs/03-PRT.md",
+      "sha256": "53d04790126a470c21a9e5061920e110215660d7ba83099a08fdc8156db7e569"
+    },
+    {
+      "path": "docs/04-FLOWCHARTS.md",
+      "sha256": "56051b9bb4ed7bab8878d36d04a14d00d6ba774964f23701cfad88f19398586c"
+    },
+    {
+      "path": "docs/05-CRONOGRAMA-E-CRITERIOS.md",
+      "sha256": "d4bc70743c2ec966c4befd7b6d5816e4164e0a881c64bcfee9fe5021337c4fac"
+    },
+    {
+      "path": "docs/06-IA-LOCAL-E-ANEXOS.md",
+      "sha256": "631bcc95f0278b643f3259e5ea20b3681438e00ab09b5250ae8e0f82c7257efb"
+    },
+    {
+      "path": "docs/07-SCHEMA-PRISMA.md",
+      "sha256": "659cd1e3c6ac157d3568f7f9a0cc1ff44724d1396795c8b9957c4d68ff2fecfd"
+    },
+    {
+      "path": "docs/08-HANDOFF.md",
+      "sha256": "efa7c5ebe99409da56353c75bbe11487d59599b9819c5dab9e12ded6b360df0f"
+    },
+    {
+      "path": "docs/09-VERIFICACAO.md",
+      "sha256": "71c0584469279d1d9d65a9d1fe311577b11722e1da49d874ca0d403c55163122"
+    },
+    {
+      "path": "docs/10-FRENTES-E-RASTREABILIDADE.md",
+      "sha256": "dfc6bd91d2efd04f93ca72c966dca5d408b8c82fcc51062b717bfcacc12968c5"
+    },
+    {
+      "path": "docs/11-APENDICE-SCHEMA.md",
+      "sha256": "b6c5ad5a86a015e8c584f8237da6583596785c81db623ab399775f4c8ebeedda"
+    },
+    {
+      "path": "research/01-regras-ciencia.md",
+      "sha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43"
+    },
+    {
+      "path": "research/02-fastino-anexos.md",
+      "sha256": "6d4bef61273b935dc9fe69495ec08cc8cbb85a987d79630b929ac005a42540f4"
+    },
+    {
+      "path": "research/03-oportunidades-spec.md",
+      "sha256": "d759b2e2b44c1abb0803b62e84dc6eee1039890a866e7204002649f7d0a46be8"
+    },
+    {
+      "path": "research/04-motor.md",
+      "sha256": "2f601634c0a66e3e2e3688756102ec6ee9dc3f0a85e329d1ceeecbda11c9a34b"
+    },
+    {
+      "path": "research/05-interface.md",
+      "sha256": "5c042e98f379942c748714129218f5942379afdc1ad966672a341cb8361b7862"
+    },
+    {
+      "path": "research/06-persistencia.md",
+      "sha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa"
+    },
+    {
+      "path": "research/07-revisao-independente.md",
+      "sha256": "9addda5dfac4abb150afd70a27c5773507524b1e985b8102997d58e432eb97c4"
+    },
+    {
+      "path": "research/08-auditoria-repositorios.md",
+      "sha256": "ef25e95fc4db4eee3b9fbb0c0a7b6addacac1bc5fdea78f4c70e0a3f719d1437"
+    },
+    {
+      "path": "research/09-release-e-desempenho.md",
+      "sha256": "aa8a7efa47575230faa6365342aad72efd685a3736c8dccee9f9491ad9284aa7"
+    },
+    {
+      "path": "research/10-handoff-redteam.md",
+      "sha256": "be7dc82e8e25c423fb55d71a1f833bed33f052eba965389f1b4a1a5c071b191e"
+    }
+  ]
+}

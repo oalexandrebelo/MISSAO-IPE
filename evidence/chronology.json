@@ -1,0 +1,20 @@
+{
+  "recordedAtUtc": "2026-11-14T08:27:16.674478+00:00",
+  "status": "PRE_EVENT_RESEARCH_AND_DEVELOPMENT_NOT_CLEARED_FOR_COMPETITION",
+  "userRequestedImplementation": true,
+  "eligibilityNotEstablished": true,
+  "priorWorkAlsoNotAutomaticallyPermitted": true,
+  "officialStartRioVerdeLocal": "2026-11-14T09:00:00-03:00",
+  "officialGuidance": [
+    "https://github.com/nasa/spaceapps/discussions/1827",
+    "https://github.com/nasa/spaceapps/discussions/1872",
+    "https://github.com/nasa/spaceapps/discussions/2009",
+    "https://github.com/nasa/spaceapps/discussions/1924"
+  ],
+  "attachments": {
+    "bytesEach": 32575,
+    "sha256": "62fa654201593bf9dd4f62667dcb91d3e89f98f00cf001ac1506847d0506dc51",
+    "duplicates": true
+  },
+  "note": "Isolating and disclosing this prototype does not make challenge-specific pre-event development eligible. Never backdate, relabel as unrelated work or imply organizer approval."
+}

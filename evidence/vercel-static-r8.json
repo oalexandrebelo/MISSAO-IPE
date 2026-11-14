@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-11-14T13:37:29.231Z",
+  "finishedAt": "2026-11-14T13:37:48.357Z",
+  "status": "passed",
+  "target": "https://ab-nasa-team-ipe.vercel.app",
+  "deployment": "dpl_9mjoVLVxA4QEtRbMp6CKcCL985XX",
+  "method": "Exact UTF-8 body comparison using Vercel provider fetch and final local distribution; selected header checks",
+  "summary": {
+    "routes": 9,
+    "responses200": 7,
+    "expected404": 2,
+    "mismatches": 0
+  },
+  "cases": [
+    {
+      "path": "/context/index.html",
+      "status": 200,
+      "file": "context/index.html",
+      "bytes": 130752,
+      "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/cronograma",
+      "status": 200,
+      "file": "context/index.html",
+      "bytes": 130752,
+      "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/context/project-context.json",
+      "status": 200,
+      "file": "context/project-context.json",
+      "bytes": 70554,
+      "sha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/context/research-library-index.json",
+      "status": 200,
+      "file": "context/research-library-index.json",
+      "bytes": 21057,
+      "sha256": "8efc418a8f2c6340c36a08c9cf7bfae162062a75e359557cc963ba10cf2a3329",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/architecture/model.json",
+      "status": 200,
+      "file": "architecture/model.json",
+      "bytes": 165126,
+      "sha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/publication-manifest.json",
+      "status": 200,
+      "file": "publication-manifest.json",
+      "bytes": 38052,
+      "sha256": "236a368f5f31d7a98b34b6984115c73ee72a75547f7ac642a9a7e523dc4f6f65",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/game/index.html",
+      "status": 200,
+      "file": "game/index.html",
+      "bytes": 797,
+      "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "exactUtf8Match": true,
+      "headersVerified": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/evidence/ab-r3a-analysis.json.gz",
+      "status": 404,
+      "expectedStatus": 404
+    },
+    {
+      "path": "/src/main.tsx",
+      "status": 404,
+      "expectedStatus": 404
+    }
+  ],
+  "previousDeploymentVerification": {
+    "schemaVersion": 1,
+    "startedAt": "2026-11-14T13:34:02.841Z",
+    "finishedAt": "2026-11-14T13:34:36.889Z",
+    "status": "passed",
+    "target": "https://ab-nasa-team-ipe.vercel.app",
+    "deployment": "dpl_HUDFto7fhBaqbes9WEKgSvtA48x2",
+    "method": "Vercel provider fetch; exact UTF-8 body comparison with final local distribution and selected response headers",
+    "summary": {
+      "routes": 14,
+      "responses200": 11,
+      "expected404": 3,
+      "mismatches": 0
+    },
+    "cases": [
+      {
+        "path": "/",
+        "status": 200,
+        "expectedFile": "index.html",
+        "bytes": 19822,
+        "sha256": "053c416628799b2d57e050cbd32ff1d4224dbdf3233d7a293a1df25ec59ef441",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/context/index.html",
+        "status": 200,
+        "expectedFile": "context/index.html",
+        "bytes": 130648,
+        "sha256": "31fca07334657c3ba2b129baa7243ef3891910d8581e9ff0bd432ba4b269fc7d",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/context/project-context.json",
+        "status": 200,
+        "expectedFile": "context/project-context.json",
+        "bytes": 70554,
+        "sha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "application/json; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/context/research-library.html",
+        "status": 200,
+        "expectedFile": "context/research-library.html",
+        "bytes": 870393,
+        "sha256": "34aeedf41032d9a566c49e58802fe96d57c1267f4baba62936f4ce7f7ec97c0c",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/context/research-library.md",
+        "status": 200,
+        "expectedFile": "context/research-library.md",
+        "bytes": 747732,
+        "sha256": "4ec1e00b3c52aa3092e1315d8213ed421d57fa29866b3fb4f9297c257a31b11b",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/markdown; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/docs/18-CONTEXTO-COMPLETO.html",
+        "status": 200,
+        "expectedFile": "docs/18-CONTEXTO-COMPLETO.html",
+        "bytes": 85869,
+        "sha256": "8c6fd4055652f39c784731d523830a3f5994f5ce6a0b7e5639a00db2a34f346a",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/game/index.html",
+        "status": 200,
+        "expectedFile": "game/index.html",
+        "bytes": 797,
+        "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/presentation/Missao_Ipe_Apresentacao.html",
+        "status": 200,
+        "expectedFile": "presentation/Missao_Ipe_Apresentacao.html",
+        "bytes": 139710,
+        "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/architecture/model.json",
+        "status": 200,
+        "expectedFile": "architecture/model.json",
+        "bytes": 165126,
+        "sha256": "fb22a059d2ea0ba487fed133ecd9b9280978219c66ed06fdf523ebe59bd7d58f",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "application/json; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/cronograma",
+        "status": 200,
+        "expectedFile": "context/index.html",
+        "bytes": 130648,
+        "sha256": "31fca07334657c3ba2b129baa7243ef3891910d8581e9ff0bd432ba4b269fc7d",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/estudo",
+        "status": 200,
+        "expectedFile": "context/research-library.html",
+        "bytes": 870393,
+        "sha256": "34aeedf41032d9a566c49e58802fe96d57c1267f4baba62936f4ce7f7ec97c0c",
+        "exactUtf8Match": true,
+        "headersVerified": true,
+        "contentType": "text/html; charset=utf-8",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/context/ausente-r8.html",
+        "status": 404,
+        "expectedStatus": 404
+      },
+      {
+        "path": "/evidence/ab-r3a-analysis.json",
+        "status": 404,
+        "expectedStatus": 404
+      },
+      {
+        "path": "/src/main.tsx",
+        "status": 404,
+        "expectedStatus": 404
+      }
+    ],
+    "limitations": [
+      "Provider fetch is not an independent browser or ISP.",
+      "No claim of hardware FPS, cold offline readiness or human learning outcomes.",
+      "The 404 checks are concrete boundary checks, not a full penetration test."
+    ]
+  },
+  "limitations": [
+    "Provider HTTP checks are not independent ISP checks or browser performance measurements.",
+    "Browser-specific observations are in context-browser-r8.json.",
+    "Unchanged bodies from the previous deployment keep their SHA in the final manifest; this receipt identifies which routes were re-fetched."
+  ]
+}

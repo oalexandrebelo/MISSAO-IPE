@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-11-14T10:52:55.949Z",
+  "node": "v24.22.1",
+  "scope": "Native Node loopback HTTP; no browser, layout, GPU, CSP execution or offline cold start",
+  "command": "node scripts/smoke-presentation-kit.mjs",
+  "passed": 13,
+  "failed": 0,
+  "verifiedFiles": [
+    {
+      "path": "kit/COMECE_AQUI.html",
+      "bytes": 10502,
+      "sha256": "680152d706a87029aab77b3bec1cc31e1fe2410e743ef987d02632a1f43b43bd"
+    },
+    {
+      "path": "scripts/serve-presentation-kit.mjs",
+      "bytes": 5654,
+      "sha256": "29756e6d81332a5223f933d7cf468ede496f36264c04508971d39bf9461d8f62"
+    },
+    {
+      "path": "scripts/smoke-presentation-kit.mjs",
+      "bytes": 6624,
+      "sha256": "2cc103b2d239596ffc04dc7a7cec28a978e164f9c6b2f2a890902d5f5e1d680a"
+    },
+    {
+      "path": "presentation/Missao_Ipe_Apresentacao.html",
+      "bytes": 139710,
+      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+    },
+    {
+      "path": "portable/Missao_Ipe_Local.html",
+      "bytes": 1008522,
+      "sha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 797,
+      "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969"
+    },
+    {
+      "path": "docs/12-HANDOFF-APRESENTACAO.md",
+      "bytes": 14172,
+      "sha256": "62e097f4bd921164cd2002c24da26612ca4fe13f400f7f1cc7b119bacbd6cbf0"
+    }
+  ],
+  "cases": [
+    {
+      "name": "Launcher at root is the bundled HTML",
+      "passed": true
+    },
+    {
+      "name": "Every local launcher link resolves through HTTP",
+      "passed": true
+    },
+    {
+      "name": "Presentation bytes match source file",
+      "passed": true
+    },
+    {
+      "name": "Presentation CSP permits only bundled inline scripts and self",
+      "passed": true
+    },
+    {
+      "name": "Game build index and referenced JS/CSS load",
+      "passed": true
+    },
+    {
+      "name": "Portable game bytes match previous game build",
+      "passed": true
+    },
+    {
+      "name": "Base dossier PDF is served with PDF MIME",
+      "passed": true
+    },
+    {
+      "name": "Study and updated research are reachable",
+      "passed": true
+    },
+    {
+      "name": "HEAD preserves content length without a response body",
+      "passed": true
+    },
+    {
+      "name": "Mutation verbs are refused",
+      "passed": true
+    },
+    {
+      "name": "Plain and encoded path traversal are refused",
+      "passed": true
+    },
+    {
+      "name": "Malformed and forbidden path bytes are refused",
+      "passed": true
+    },
+    {
+      "name": "Non-published files and absent files are not exposed",
+      "passed": true
+    }
+  ]
+}

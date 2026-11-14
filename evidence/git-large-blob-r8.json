@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T13:28:56.299Z",
+  "repository": "oalexandrebelo/AB-NASA-TEAM-IPE",
+  "path": "evidence/ab-r3a-analysis.json",
+  "bytes": 56170035,
+  "sourceSha256": "e3c5fdac7d59f8af7b0528e5c7847a2fe49331a7fd53744bf8cadfaec53865bb",
+  "expectedGitBlobSha1": "5cce9919833f293e0b941d3d364cfd9d0913744d",
+  "attempt": {
+    "encoding": "base64",
+    "payloadContentCharacters": 74893380,
+    "result": "blocked_before_tool_invocation",
+    "error": "code-mode tool invocation exceeds the 67108864-byte gRPC message limit",
+    "remoteBlobCreated": false
+  },
+  "alternativeMeasurement": {
+    "encoding": "utf-8",
+    "strictUtf8Decode": true,
+    "jsonPayloadBytes": 60548954,
+    "withinTransportLimit": true,
+    "attempted": "interrupted_without_confirmed_response",
+    "note": "The 64 MiB orchestration limit was not the final limit; MCP application accepts requests only below 16 MiB."
+  },
+  "branchOrCommitMutation": false,
+  "status": "lossless_gzip_uploaded",
+  "gzip": {
+    "path": "evidence/ab-r3a-analysis.json.gz",
+    "bytes": 7053101,
+    "sha256": "37b82fa27b645f3b327701833e67c1d6583ba8e7605f3e8df59db14da38f8b4a",
+    "confirmedGitBlobSha1": "0c8d9e986212d3045b84c0bff53186d354dc2f96",
+    "encoding": "gzip mtime=0; uploaded using base64",
+    "roundtrip": "Recovered 56,170,035 original bytes; SHA-256 equals sourceSha256",
+    "restoreCommand": "node scripts/recover-archives.mjs"
+  }
+}

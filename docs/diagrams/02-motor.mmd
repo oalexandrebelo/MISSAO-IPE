@@ -1,0 +1,16 @@
+flowchart TD
+  A["Validar cenário e configuração"] --> B["Inicializar ledger e observações"]
+  B --> C["Concluir eventos na fronteira"]
+  C --> D{"Horizonte ou término?"}
+  D -->|Sim| N["Classificar resultado e residual"]
+  D -->|Não| E["Determinar modo e potências"]
+  E --> F{"Descarga instantânea admissível?"}
+  F -->|Não| G["Registrar falha terminal"]
+  G --> N
+  F -->|Sim| H["Próxima fronteira temporal"]
+  H --> I["Dividir por bateria e entrega"]
+  I --> J["Integrar energia e serviço"]
+  J --> K["Atualizar FIFO e lotes completos"]
+  K --> L["Conferir reserva e contabilidade"]
+  L --> M["Registrar trace e avançar relógio"]
+  M --> C

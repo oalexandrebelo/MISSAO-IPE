@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "edition": "R6",
+  "recordedAtUtc": "2026-11-14T11:37:02.486559+00:00",
+  "recordedAtBrt": "2026-11-14T08:37:02.486559-03:00 America/Sao_Paulo",
+  "scope": "Arquitetura da cópia AB-NASA-TEAM-IPE; base R5 preservada. Sem publicação nesta frente.",
+  "upstream": {
+    "repository": "https://github.com/tt-a1i/archify",
+    "commit": "e37848822238e3a61b12739185cdadd49843a620",
+    "version": "3.2.0",
+    "access": "Plugin GitHub: metadados, refs/tree e arquivos individuais fixados no commit",
+    "fullClone": false,
+    "repositoryReportedSizeKiB": 1568506,
+    "materializedFiles": 42,
+    "materializedBytes": 2591903,
+    "gitBlobMatches": 42,
+    "gitBlobMismatches": 0,
+    "manifest": "architecture/vendor/archify/upstream-manifest.json",
+    "consultedSources": [
+      {
+        "path": "README.md",
+        "sha": "c9efdb48e9c62aaba78088f9b6c2429d4af2dbb9",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/README.md",
+        "retrieved": true
+      },
+      {
+        "path": "AGENTS.md",
+        "sha": "562788125a8bd393392eff656a31109e94485833",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/AGENTS.md",
+        "retrieved": true
+      },
+      {
+        "path": "archify/SKILL.md",
+        "sha": "380de2c1016ee24910d425d74cc0efc91d426be9",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/archify/SKILL.md",
+        "retrieved": true
+      },
+      {
+        "path": "archify/references/repository-authoring.md",
+        "sha": "38d06a6173042da3557e4d447330a7c3a56ad60c",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/archify/references/repository-authoring.md",
+        "retrieved": true
+      },
+      {
+        "path": "archify/references/authoring-defaults.md",
+        "sha": "4e7f30d6c684b7d1737854c29a645448771f4ca1",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/archify/references/authoring-defaults.md",
+        "retrieved": true
+      },
+      {
+        "path": "archify/references/delivery-contract.md",
+        "sha": "bc7265d45afbf379c81b795a08459e3fb013b966",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/archify/references/delivery-contract.md",
+        "retrieved": true
+      },
+      {
+        "path": "archify/examples/web-app.architecture.json",
+        "sha": "f370a41262113cdce1d1376efc0b32235c16f58f",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/archify/examples/web-app.architecture.json",
+        "retrieved": true
+      },
+      {
+        "path": "LICENSE",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/LICENSE",
+        "retrieved": true
+      },
+      {
+        "path": "LICENSE-MIT",
+        "sha": "0f9f9397a0496ef63c7d555d36b40c3f932aff84",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/LICENSE-MIT",
+        "retrieved": true
+      },
+      {
+        "path": "NOTICE",
+        "sha": "b63fbccce2291058a9f4abec9d64b57b527e44d7",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/NOTICE",
+        "retrieved": true
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha": "4060ce3d7ad11ab81a2f3915d970a8f951dcfc28",
+        "url": "https://github.com/tt-a1i/archify/blob/e37848822238e3a61b12739185cdadd49843a620/THIRD_PARTY_NOTICES.md",
+        "retrieved": true
+      }
+    ],
+    "kind": "Skill de autoria de IR e renderizadores; não scanner automático",
+    "license": "Apache-2.0 com licença MIT histórica e NOTICE preservados; JetBrains Mono SIL OFL 1.1"
+  },
+  "codeProvenance": {
+    "baseCommit": "3d6e8e9bd8dcb1618e00c6fc7ace181141cb4aaf",
+    "baseCommitIsRealLocalGit": true,
+    "baseRemoteAtAuthoring": null,
+    "method": "Git blob local comparado à árvore do commit; SHA-256 adicional para cada arquivo",
+    "r6": "Novos/alterados identificados separadamente; commit final não incorporado para evitar autorreferência",
+    "sourceGraphMethod": "TypeScript 7.0.2 unstable/sync API + AST; inspeção sintática sem executar fontes do produto",
+    "statistics": {
+      "inventoryFiles": 189,
+      "parsedCodeFiles": 51,
+      "edges": 262,
+      "localEdges": 145,
+      "typeOnlyEdges": 32,
+      "dynamicImports": 10,
+      "workerEntries": 1,
+      "unresolvedImports": 0,
+      "parseErrors": 0
+    },
+    "generatedOutputsWithoutInventoriedHash": [
+      {
+        "path": "vercel.json",
+        "source": "scripts/prepare-vercel-static.mjs",
+        "hashInventoried": false,
+        "reason": "Configuração e CSP geradas a partir dos scripts HTML finais; incluir seu hash no mapa criaria ciclo."
+      },
+      {
+        "path": "evidence/beta-runtime-preservation.json",
+        "source": "scripts/build-beta-site.mjs",
+        "hashInventoried": false,
+        "reason": "Recibo posterior à montagem; registra hashes de runtime e timestamp do build. Não é fonte do mapa."
+      }
+    ]
+  },
+  "workflow": [
+    {
+      "step": "inspeção",
+      "status": "concluída",
+      "details": "README, SKILL, referências de autoria/entrega, exemplo, schemas e licenças upstream; arquivos e chamadas do projeto"
+    },
+    {
+      "step": "revisão pré-execução",
+      "status": "concluída",
+      "details": "42 blobs iguais; 32 módulos passam node --check; imports relativos resolvidos; captura HTTP opcional de marcas identificada, sem brand na entrada; módulos gerados sem eval/Function/fetch/exec/spawn"
+    },
+    {
+      "step": "autoria de IR",
+      "status": "concluída",
+      "artifact": "architecture/runtime.architecture.json",
+      "details": "Sete componentes agrupados e seis relações corroboradas por imports/chamadas. Inputs não inventam URL/origin."
+    },
+    {
+      "step": "renderer nativo",
+      "status": "passou",
+      "command": "node --import ./architecture/offline-guard.mjs architecture/vendor/archify/renderers/architecture/render-architecture.mjs architecture/runtime.architecture.json architecture/runtime.html",
+      "details": "Rede negada via preload. Schema e geometria aceitos; quality_profile showcase."
+    },
+    {
+      "step": "relatório de layout",
+      "status": "passou",
+      "artifact": "architecture/runtime.layout.json",
+      "details": "ok=true, canvas 1070x770, 7 componentes, 6 relações; sem erro reportado."
+    },
+    {
+      "step": "composição pública",
+      "status": "concluída",
+      "artifact": "architecture/index.html",
+      "details": "HTML nativo acrescido de navegação e inspetor do projeto; CSS/JS/fontes/modelo/avisos incorporados. Sem iframe ou srcdoc."
+    },
+    {
+      "step": "checks locais",
+      "status": "passou",
+      "artifact": "evidence/architecture-checks-r6.json",
+      "checksPassed": 25,
+      "details": "Escopo concreto: fontes/hash, imports, scriptattr/eval/rede, licenças, links e interações do inspetor."
+    }
+  ],
+  "adaptations": [
+    "Renderer nativo direto executado; comando completo finalize não executado porque inclui navegador real indisponível nesta sessão.",
+    "Não foi contornado o bloqueio prévio de navegador.",
+    "Verificador de sources/origin do Archify não foi usado: checkout não tinha origin confirmado na autoria. Proveniência local está no modelo próprio, sem afirmar validação remota pelo Archify.",
+    "UI nativa em inglês; conteúdo e inspetor do projeto em pt-BR.",
+    "Snapshot textual e grafo completo do escopo são gerados por script do projeto; desenho nativo agrupa responsabilidades.",
+    "Fontes e scripts mínimos mantidos no repositório; publicação recebe só index.html, model.json e map.mmd."
+  ],
+  "verification": {
+    "nativeRendererSchemaGeometry": true,
+    "fullArchifyFinalize": false,
+    "realBrowser": false,
+    "domTestedOnlyProjectInspector": true,
+    "checks": [
+      {
+        "name": "native Archify generator preserved",
+        "status": "passed"
+      },
+      {
+        "name": "native schema and geometry accepted",
+        "status": "passed",
+        "detail": {
+          "viewBox": [
+            1070,
+            770
+          ],
+          "components": 7,
+          "connections": 6
+        }
+      },
+      {
+        "name": "no iframe or srcdoc",
+        "status": "passed"
+      },
+      {
+        "name": "no inline event attributes",
+        "status": "passed"
+      },
+      {
+        "name": "no mandatory remote scripts/styles/media",
+        "status": "passed"
+      },
+      {
+        "name": "CSS resources are embedded",
+        "status": "passed"
+      },
+      {
+        "name": "inline scripts parse",
+        "status": "passed",
+        "detail": 3
+      },
+      {
+        "name": "no dynamic evaluation or network calls in scripts",
+        "status": "passed"
+      },
+      {
+        "name": "model embedded without changes",
+        "status": "passed"
+      },
+      {
+        "name": "all local import targets exist",
+        "status": "passed"
+      },
+      {
+        "name": "generated CSP and rebuild receipt excluded from source hashes",
+        "status": "passed"
+      },
+      {
+        "name": "no unresolved imports or syntax diagnostics",
+        "status": "passed"
+      },
+      {
+        "name": "source snapshot hashes match",
+        "status": "passed",
+        "detail": []
+      },
+      {
+        "name": "public artifacts contain no local machine paths",
+        "status": "passed"
+      },
+      {
+        "name": "licenses included",
+        "status": "passed"
+      },
+      {
+        "name": "required relative navigation links exist",
+        "status": "passed"
+      },
+      {
+        "name": "all import rows rendered initially",
+        "status": "passed"
+      },
+      {
+        "name": "Worker filter identifies actual entry",
+        "status": "passed"
+      },
+      {
+        "name": "type-only filter exact",
+        "status": "passed"
+      },
+      {
+        "name": "dynamic import filter exact",
+        "status": "passed"
+      },
+      {
+        "name": "path search includes incoming and outgoing edges",
+        "status": "passed"
+      },
+      {
+        "name": "inventory view switches accessibly",
+        "status": "passed"
+      },
+      {
+        "name": "file details show matching hash and focus",
+        "status": "passed"
+      },
+      {
+        "name": "details close restores search focus",
+        "status": "passed"
+      },
+      {
+        "name": "reset restores complete import set",
+        "status": "passed"
+      }
+    ],
+    "limitations": [
+      "DOM tests execute only the project-authored inspector, not the native Archify viewer.",
+      "Real-browser rendering, layout, keyboard interaction of native controls, exports and deployed CSP remain unverified.",
+      "No browser restrictions were bypassed."
+    ]
+  },
+  "publication": {
+    "performedByThisFront": false,
+    "publicFiles": [
+      "architecture/index.html",
+      "architecture/model.json",
+      "architecture/map.mmd"
+    ],
+    "documentation": "docs/13-ARQUITETURA-ARCHIFY.md",
+    "statusAtSnapshot": "preparada; confirmação externa em recibo posterior da coordenação",
+    "noMandatoryRemoteRuntimeResources": true,
+    "embeddedLicenses": [
+      "LICENSE",
+      "LICENSE-MIT",
+      "NOTICE",
+      "THIRD_PARTY_NOTICES.md",
+      "assets/JetBrainsMono-OFL.txt"
+    ]
+  },
+  "boundaries": {
+    "implemented": [
+      "jogo React",
+      "Worker e fallback",
+      "núcleo determinístico",
+      "busca finita",
+      "registros científicos congelados",
+      "IndexedDB/localStorage",
+      "replay validado",
+      "apresentação com núcleo real",
+      "portal estático",
+      "montagem pública por allowlist"
+    ],
+    "proposed": [
+      "Prisma como serviço",
+      "IA remota/Fastino no produto",
+      "cenário de Marte no motor",
+      "sincronização remota"
+    ],
+    "officialEventState": "P&D; elegibilidade e Resources oficiais pendentes; publicação não altera cronologia"
+  },
+  "artifacts": [
+    {
+      "path": "architecture/index.html",
+      "bytes": 1007939,
+      "sha256": "5a8f128f597ddd614c8a6f0d10444eab79d6616004e94503577426c5dcf248bb"
+    },
+    {
+      "path": "architecture/model.json",
+      "bytes": 149610,
+      "sha256": "970548f3cb26703ccb674657589a5e3b98597aa26f085f162d19393cc6f55f8e"
+    },
+    {
+      "path": "architecture/map.mmd",
+      "bytes": 2137,
+      "sha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b"
+    },
+    {
+      "path": "architecture/runtime.architecture.json",
+      "bytes": 5128,
+      "sha256": "aea514b73b4ea30721d8741543c946181634cf486769f8537efbff7501843d5a"
+    },
+    {
+      "path": "architecture/runtime.html",
+      "bytes": 841316,
+      "sha256": "232df5e3888cb8c8c524274739f31e8a38a842e94bf3e70343a15305223a95c2"
+    },
+    {
+      "path": "architecture/runtime.layout.json",
+      "bytes": 4690,
+      "sha256": "b3d84f546e3058ba8b72f6a56308b12f7e04d8d8986046af78c0d688d8e09792"
+    },
+    {
+      "path": "architecture/build-model.mjs",
+      "bytes": 21846,
+      "sha256": "83aa5141d5af0a24f7ebaf425c2e77c3cfc6652ce5a1770e4885b733a8135f8b"
+    },
+    {
+      "path": "architecture/build-page.mjs",
+      "bytes": 19147,
+      "sha256": "19e05a624b54a939c2a9b03bb26f562954f291db5bb7f1b2387afed853f952f6"
+    },
+    {
+      "path": "architecture/check-map.mjs",
+      "bytes": 7191,
+      "sha256": "a48df71fb7350cf6c28cdfa70e4ac6d66b4bc343c3048e96db3c0998bff3c9f8"
+    },
+    {
+      "path": "architecture/offline-guard.mjs",
+      "bytes": 634,
+      "sha256": "a9b43d8692c4fa392800f5689584ba04a7492613344993908b4a86fb0b757db1"
+    },
+    {
+      "path": "docs/13-ARQUITETURA-ARCHIFY.md",
+      "bytes": 11569,
+      "sha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04"
+    },
+    {
+      "path": "evidence/architecture-checks-r6.json",
+      "bytes": 3231,
+      "sha256": "61163cc6f0943b58d0c993007a8818ff7effd04ed3d39f87de6345438ecc380d"
+    }
+  ],
+  "initialSnapshotAtUtc": "2026-11-14 11:32:00 UTC",
+  "finalSnapshotReason": "Correção necessária de ciclo antes do deploy: vercel.json contém CSP com hash do mapa; beta-runtime-preservation.json é reemitido após build. Ambos explicitamente excluídos do inventário e representados como saídas sem hash. Harness QA final preservado."
+}

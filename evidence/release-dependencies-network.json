@@ -1,0 +1,2508 @@
+{
+  "auditedAt": "2026-11-14T09:03:57.832Z",
+  "command": "node scripts/audit-release.mjs",
+  "packageLockSha256": "fc8ecb347c808526944c8a23640fcdb77882e8a6e5ece71a099c573cfda8dc78",
+  "project": {
+    "name": "ab-mission-ipe-research",
+    "version": "0.1.1",
+    "licenseMetadata": null,
+    "private": true,
+    "declaredRuntime": {
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "three": "0.187.0"
+    },
+    "declaredDevelopment": {
+      "@testing-library/dom": "10.4.2",
+      "@testing-library/react": "16.3.3",
+      "@types/jsdom": "30.0.0",
+      "@types/node": "26.6.6",
+      "@types/react": "19.3.0",
+      "@types/react-dom": "19.3.0",
+      "@types/three": "0.187.0",
+      "esbuild": "0.28.2",
+      "fake-indexeddb": "6.2.8",
+      "jsdom": "31.0.1",
+      "typescript": "7.0.2",
+      "vite": "8.3.8"
+    }
+  },
+  "inventory": {
+    "lockPackageEntries": 157,
+    "installedEntries": 83,
+    "versionMismatches": [],
+    "missingLicenseMetadata": [],
+    "runtimePackages": [
+      {
+        "installPath": "node_modules/react",
+        "name": "react",
+        "lockedVersion": "19.3.1",
+        "installedVersion": "19.3.1",
+        "versionMatches": true,
+        "licenseMetadata": "MIT",
+        "dev": false,
+        "optional": false,
+        "integrityPresent": true,
+        "licenseFiles": [
+          {
+            "file": "node_modules/react/LICENSE",
+            "bytes": 1088,
+            "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+          }
+        ]
+      },
+      {
+        "installPath": "node_modules/react-dom",
+        "name": "react-dom",
+        "lockedVersion": "19.3.1",
+        "installedVersion": "19.3.1",
+        "versionMatches": true,
+        "licenseMetadata": "MIT",
+        "dev": false,
+        "optional": false,
+        "integrityPresent": true,
+        "licenseFiles": [
+          {
+            "file": "node_modules/react-dom/LICENSE",
+            "bytes": 1088,
+            "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+          }
+        ]
+      },
+      {
+        "installPath": "node_modules/scheduler",
+        "name": "scheduler",
+        "lockedVersion": "0.28.0",
+        "installedVersion": "0.28.0",
+        "versionMatches": true,
+        "licenseMetadata": "MIT",
+        "dev": false,
+        "optional": false,
+        "integrityPresent": true,
+        "licenseFiles": [
+          {
+            "file": "node_modules/scheduler/LICENSE",
+            "bytes": 1088,
+            "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+          }
+        ]
+      },
+      {
+        "installPath": "node_modules/three",
+        "name": "three",
+        "lockedVersion": "0.187.0",
+        "installedVersion": "0.187.0",
+        "versionMatches": true,
+        "licenseMetadata": "MIT",
+        "dev": false,
+        "optional": false,
+        "integrityPresent": true,
+        "licenseFiles": [
+          {
+            "file": "node_modules/three/LICENSE",
+            "bytes": 1081,
+            "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+          }
+        ]
+      }
+    ]
+  },
+  "packages": [
+    {
+      "installPath": "node_modules/@babel/code-frame",
+      "name": "@babel/code-frame",
+      "lockedVersion": "7.29.7",
+      "installedVersion": "7.29.7",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@babel/code-frame/LICENSE",
+          "bytes": 1106,
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@babel/helper-validator-identifier",
+      "name": "@babel/helper-validator-identifier",
+      "lockedVersion": "7.29.7",
+      "installedVersion": "7.29.7",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@babel/helper-validator-identifier/LICENSE",
+          "bytes": 1106,
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@babel/runtime",
+      "name": "@babel/runtime",
+      "lockedVersion": "7.29.14",
+      "installedVersion": "7.29.14",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@babel/runtime/LICENSE",
+          "bytes": 1106,
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@dimforge/rapier3d-compat",
+      "name": "@dimforge/rapier3d-compat",
+      "lockedVersion": "0.12.0",
+      "installedVersion": "0.12.0",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@dimforge/rapier3d-compat/LICENSE",
+          "bytes": 11343,
+          "sha256": "4c05555705e3efde601fb1252ae48f1d63992af8a8fb8947745b7fa834e8f519"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@emnapi/core",
+      "name": "@emnapi/core",
+      "lockedVersion": "2.0.0-beta.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@emnapi/runtime",
+      "name": "@emnapi/runtime",
+      "lockedVersion": "2.0.0-beta.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@emnapi/wasi-threads",
+      "name": "@emnapi/wasi-threads",
+      "lockedVersion": "2.2.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/aix-ppc64",
+      "name": "@esbuild/aix-ppc64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/android-arm",
+      "name": "@esbuild/android-arm",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/android-arm64",
+      "name": "@esbuild/android-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/android-x64",
+      "name": "@esbuild/android-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/darwin-arm64",
+      "name": "@esbuild/darwin-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/darwin-x64",
+      "name": "@esbuild/darwin-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/freebsd-arm64",
+      "name": "@esbuild/freebsd-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/freebsd-x64",
+      "name": "@esbuild/freebsd-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-arm",
+      "name": "@esbuild/linux-arm",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-arm64",
+      "name": "@esbuild/linux-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-ia32",
+      "name": "@esbuild/linux-ia32",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-loong64",
+      "name": "@esbuild/linux-loong64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-mips64el",
+      "name": "@esbuild/linux-mips64el",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-ppc64",
+      "name": "@esbuild/linux-ppc64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-riscv64",
+      "name": "@esbuild/linux-riscv64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-s390x",
+      "name": "@esbuild/linux-s390x",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/linux-x64",
+      "name": "@esbuild/linux-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": "0.28.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/netbsd-arm64",
+      "name": "@esbuild/netbsd-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/netbsd-x64",
+      "name": "@esbuild/netbsd-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/openbsd-arm64",
+      "name": "@esbuild/openbsd-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/openbsd-x64",
+      "name": "@esbuild/openbsd-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/openharmony-arm64",
+      "name": "@esbuild/openharmony-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/sunos-x64",
+      "name": "@esbuild/sunos-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/win32-arm64",
+      "name": "@esbuild/win32-arm64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/win32-ia32",
+      "name": "@esbuild/win32-ia32",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@esbuild/win32-x64",
+      "name": "@esbuild/win32-x64",
+      "lockedVersion": "0.28.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@exodus/bytes",
+      "name": "@exodus/bytes",
+      "lockedVersion": "1.16.0",
+      "installedVersion": "1.16.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@exodus/bytes/LICENSE",
+          "bytes": 1077,
+          "sha256": "dbffd380d59504ba19fcf87ff5a1a33c37edf66d5b09966b0ad5368ab87bc2af"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@napi-rs/wasm-runtime",
+      "name": "@napi-rs/wasm-runtime",
+      "lockedVersion": "1.2.6",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@oxc-project/types",
+      "name": "@oxc-project/types",
+      "lockedVersion": "0.156.0",
+      "installedVersion": "0.156.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@oxc-project/types/LICENSE",
+          "bytes": 1119,
+          "sha256": "95ced5ecf1133fbf41d409b5555c86c344f83f3b019926057ddbc07cfdcc27b3"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-android-arm-eabi",
+      "name": "@rolldown/binding-android-arm-eabi",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-android-arm64",
+      "name": "@rolldown/binding-android-arm64",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-darwin-arm64",
+      "name": "@rolldown/binding-darwin-arm64",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-darwin-x64",
+      "name": "@rolldown/binding-darwin-x64",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-freebsd-x64",
+      "name": "@rolldown/binding-freebsd-x64",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+      "name": "@rolldown/binding-linux-arm-gnueabihf",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-arm64-gnu",
+      "name": "@rolldown/binding-linux-arm64-gnu",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-arm64-musl",
+      "name": "@rolldown/binding-linux-arm64-musl",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+      "name": "@rolldown/binding-linux-ppc64-gnu",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-s390x-gnu",
+      "name": "@rolldown/binding-linux-s390x-gnu",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-x64-gnu",
+      "name": "@rolldown/binding-linux-x64-gnu",
+      "lockedVersion": "1.2.19",
+      "installedVersion": "1.2.19",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-linux-x64-musl",
+      "name": "@rolldown/binding-linux-x64-musl",
+      "lockedVersion": "1.2.19",
+      "installedVersion": "1.2.19",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-openharmony-arm64",
+      "name": "@rolldown/binding-openharmony-arm64",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-wasm32-wasi",
+      "name": "@rolldown/binding-wasm32-wasi",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-win32-arm64-msvc",
+      "name": "@rolldown/binding-win32-arm64-msvc",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/binding-win32-x64-msvc",
+      "name": "@rolldown/binding-win32-x64-msvc",
+      "lockedVersion": "1.2.19",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@rolldown/pluginutils",
+      "name": "@rolldown/pluginutils",
+      "lockedVersion": "1.1.1",
+      "installedVersion": "1.1.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@rolldown/pluginutils/LICENSE",
+          "bytes": 1106,
+          "sha256": "e1919b3b98b8bf6c1b99fcc60a0ed46027c97ac947432e1278446c9606f50161"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@testing-library/dom",
+      "name": "@testing-library/dom",
+      "lockedVersion": "10.4.2",
+      "installedVersion": "10.4.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@testing-library/dom/LICENSE",
+          "bytes": 1079,
+          "sha256": "bf8fd38056b7606deccfcadb4d8ca1c210082d8ef5513426d2650daedc30bed3"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@testing-library/react",
+      "name": "@testing-library/react",
+      "lockedVersion": "16.3.3",
+      "installedVersion": "16.3.3",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@testing-library/react/LICENSE",
+          "bytes": 1087,
+          "sha256": "9680978280d509520d2a7b51e93ffbf7d9ec2b9de4411a6989daba5b659048e0"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@tweenjs/tween.js",
+      "name": "@tweenjs/tween.js",
+      "lockedVersion": "23.1.3",
+      "installedVersion": "23.1.3",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@tweenjs/tween.js/LICENSE",
+          "bytes": 1166,
+          "sha256": "c95fecd88f2709bfc34e4d1f1ccc36d17048990e6ba26c283cfecdef0432936b"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@tybys/wasm-util",
+      "name": "@tybys/wasm-util",
+      "lockedVersion": "0.10.4",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@types/aria-query",
+      "name": "@types/aria-query",
+      "lockedVersion": "5.0.4",
+      "installedVersion": "5.0.4",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/aria-query/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/jsdom",
+      "name": "@types/jsdom",
+      "lockedVersion": "30.0.0",
+      "installedVersion": "30.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/jsdom/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/node",
+      "name": "@types/node",
+      "lockedVersion": "26.6.6",
+      "installedVersion": "26.6.6",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/node/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/react",
+      "name": "@types/react",
+      "lockedVersion": "19.3.0",
+      "installedVersion": "19.3.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/react/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/react-dom",
+      "name": "@types/react-dom",
+      "lockedVersion": "19.3.0",
+      "installedVersion": "19.3.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/react-dom/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/stats.js",
+      "name": "@types/stats.js",
+      "lockedVersion": "0.17.4",
+      "installedVersion": "0.17.4",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/stats.js/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/three",
+      "name": "@types/three",
+      "lockedVersion": "0.187.0",
+      "installedVersion": "0.187.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/three/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/tough-cookie",
+      "name": "@types/tough-cookie",
+      "lockedVersion": "4.0.5",
+      "installedVersion": "4.0.5",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/tough-cookie/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@types/webxr",
+      "name": "@types/webxr",
+      "lockedVersion": "0.5.24",
+      "installedVersion": "0.5.24",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@types/webxr/LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-aix-ppc64",
+      "name": "@typescript/typescript-aix-ppc64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-darwin-arm64",
+      "name": "@typescript/typescript-darwin-arm64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-darwin-x64",
+      "name": "@typescript/typescript-darwin-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-freebsd-arm64",
+      "name": "@typescript/typescript-freebsd-arm64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-freebsd-x64",
+      "name": "@typescript/typescript-freebsd-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-arm",
+      "name": "@typescript/typescript-linux-arm",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-arm64",
+      "name": "@typescript/typescript-linux-arm64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-loong64",
+      "name": "@typescript/typescript-linux-loong64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-mips64el",
+      "name": "@typescript/typescript-linux-mips64el",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-ppc64",
+      "name": "@typescript/typescript-linux-ppc64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-riscv64",
+      "name": "@typescript/typescript-linux-riscv64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-s390x",
+      "name": "@typescript/typescript-linux-s390x",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-linux-x64",
+      "name": "@typescript/typescript-linux-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": "7.0.2",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/@typescript/typescript-linux-x64/LICENSE",
+          "bytes": 9197,
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-netbsd-arm64",
+      "name": "@typescript/typescript-netbsd-arm64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-netbsd-x64",
+      "name": "@typescript/typescript-netbsd-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-openbsd-arm64",
+      "name": "@typescript/typescript-openbsd-arm64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-openbsd-x64",
+      "name": "@typescript/typescript-openbsd-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-sunos-x64",
+      "name": "@typescript/typescript-sunos-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-win32-arm64",
+      "name": "@typescript/typescript-win32-arm64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/@typescript/typescript-win32-x64",
+      "name": "@typescript/typescript-win32-x64",
+      "lockedVersion": "7.0.2",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/ansi-regex",
+      "name": "ansi-regex",
+      "lockedVersion": "5.0.1",
+      "installedVersion": "5.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/ansi-regex/license",
+          "bytes": 1109,
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/ansi-styles",
+      "name": "ansi-styles",
+      "lockedVersion": "5.2.0",
+      "installedVersion": "5.2.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/ansi-styles/license",
+          "bytes": 1109,
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/aria-query",
+      "name": "aria-query",
+      "lockedVersion": "5.3.0",
+      "installedVersion": "5.3.0",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/aria-query/LICENSE",
+          "bytes": 10236,
+          "sha256": "c8df456c7ccba74b959087dff494d4ac2a12dfb0400c08b46b2494a08a000567"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/bcp-47",
+      "name": "bcp-47",
+      "lockedVersion": "2.1.2",
+      "installedVersion": "2.1.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/bcp-47/license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/bcp-47-match",
+      "name": "bcp-47-match",
+      "lockedVersion": "2.0.3",
+      "installedVersion": "2.0.3",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/bcp-47-match/license",
+          "bytes": 1099,
+          "sha256": "3deefaee9d13b2f578671d459a89f2fc3dbe3a12cddf88984517a858e4ee6f76"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/csstype",
+      "name": "csstype",
+      "lockedVersion": "3.2.3",
+      "installedVersion": "3.2.3",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/csstype/LICENSE",
+          "bytes": 1062,
+          "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/data-urls",
+      "name": "data-urls",
+      "lockedVersion": "8.0.0",
+      "installedVersion": "8.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/data-urls/LICENSE.txt",
+          "bytes": 1069,
+          "sha256": "528eec83cb836a0adda9f8fc3d6a2a70a710d6cc0be9a155f92212c8df28acfa"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/decimal.js",
+      "name": "decimal.js",
+      "lockedVersion": "10.6.0",
+      "installedVersion": "10.6.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/decimal.js/LICENCE.md",
+          "bytes": 1104,
+          "sha256": "3108b546bcff5d346923a82f48b2d252ca722f9088076db6d145f6b67757ad6c"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/dequal",
+      "name": "dequal",
+      "lockedVersion": "2.0.3",
+      "installedVersion": "2.0.3",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/dequal/license",
+          "bytes": 1114,
+          "sha256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/detect-libc",
+      "name": "detect-libc",
+      "lockedVersion": "2.1.2",
+      "installedVersion": "2.1.2",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/detect-libc/LICENSE",
+          "bytes": 11357,
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/dom-accessibility-api",
+      "name": "dom-accessibility-api",
+      "lockedVersion": "0.5.16",
+      "installedVersion": "0.5.16",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/dom-accessibility-api/LICENSE.md",
+          "bytes": 1077,
+          "sha256": "0ffe67fe630169de46df2d29dc18f5857b4c98f0f95b0cd9e3c21fef51f9a9b8"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/entities",
+      "name": "entities",
+      "lockedVersion": "9.0.0",
+      "installedVersion": "9.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/entities/LICENSE",
+          "bytes": 1260,
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/esbuild",
+      "name": "esbuild",
+      "lockedVersion": "0.28.2",
+      "installedVersion": "0.28.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/esbuild/LICENSE.md",
+          "bytes": 1069,
+          "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/fake-indexeddb",
+      "name": "fake-indexeddb",
+      "lockedVersion": "6.2.8",
+      "installedVersion": "6.2.8",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/fake-indexeddb/LICENSE",
+          "bytes": 10893,
+          "sha256": "0c2e77addd3045b932ae0de86b7cf66aa1eeed4248d4dab37e851f9e5499d85e"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/fdir",
+      "name": "fdir",
+      "lockedVersion": "6.5.0",
+      "installedVersion": "6.5.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/fdir/LICENSE",
+          "bytes": 1053,
+          "sha256": "9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/fflate",
+      "name": "fflate",
+      "lockedVersion": "0.8.3",
+      "installedVersion": "0.8.3",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/fflate/LICENSE",
+          "bytes": 1069,
+          "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/fsevents",
+      "name": "fsevents",
+      "lockedVersion": "2.3.3",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/html-encoding-sniffer",
+      "name": "html-encoding-sniffer",
+      "lockedVersion": "7.0.0",
+      "installedVersion": "7.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/html-encoding-sniffer/LICENSE.txt",
+          "bytes": 1069,
+          "sha256": "528eec83cb836a0adda9f8fc3d6a2a70a710d6cc0be9a155f92212c8df28acfa"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/is-alphabetical",
+      "name": "is-alphabetical",
+      "lockedVersion": "2.0.1",
+      "installedVersion": "2.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/is-alphabetical/license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/is-alphanumerical",
+      "name": "is-alphanumerical",
+      "lockedVersion": "2.0.1",
+      "installedVersion": "2.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/is-alphanumerical/license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/is-decimal",
+      "name": "is-decimal",
+      "lockedVersion": "2.0.1",
+      "installedVersion": "2.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/is-decimal/license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/is-potential-custom-element-name",
+      "name": "is-potential-custom-element-name",
+      "lockedVersion": "1.0.1",
+      "installedVersion": "1.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/js-tokens",
+      "name": "js-tokens",
+      "lockedVersion": "4.0.0",
+      "installedVersion": "4.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/js-tokens/LICENSE",
+          "bytes": 1103,
+          "sha256": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/jsdom",
+      "name": "jsdom",
+      "lockedVersion": "31.0.1",
+      "installedVersion": "31.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/jsdom/LICENSE.txt",
+          "bytes": 6426,
+          "sha256": "8fbe420fb1fa891873359074f630997002afce10d9ac59028b8b4ed9976d52d7"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/lightningcss",
+      "name": "lightningcss",
+      "lockedVersion": "1.33.0",
+      "installedVersion": "1.33.0",
+      "versionMatches": true,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/lightningcss/LICENSE",
+          "bytes": 15648,
+          "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/lightningcss-android-arm64",
+      "name": "lightningcss-android-arm64",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-darwin-arm64",
+      "name": "lightningcss-darwin-arm64",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-darwin-x64",
+      "name": "lightningcss-darwin-x64",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-freebsd-x64",
+      "name": "lightningcss-freebsd-x64",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-linux-arm-gnueabihf",
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-linux-arm64-gnu",
+      "name": "lightningcss-linux-arm64-gnu",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-linux-arm64-musl",
+      "name": "lightningcss-linux-arm64-musl",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-linux-x64-gnu",
+      "name": "lightningcss-linux-x64-gnu",
+      "lockedVersion": "1.33.0",
+      "installedVersion": "1.33.0",
+      "versionMatches": true,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/lightningcss-linux-x64-gnu/LICENSE",
+          "bytes": 15648,
+          "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/lightningcss-linux-x64-musl",
+      "name": "lightningcss-linux-x64-musl",
+      "lockedVersion": "1.33.0",
+      "installedVersion": "1.33.0",
+      "versionMatches": true,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/lightningcss-linux-x64-musl/LICENSE",
+          "bytes": 15648,
+          "sha256": "5eba353fe5076ac3432177f8ab1cf75e3afcd0584251e37c3bfead5f447d040e"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/lightningcss-win32-arm64-msvc",
+      "name": "lightningcss-win32-arm64-msvc",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lightningcss-win32-x64-msvc",
+      "name": "lightningcss-win32-x64-msvc",
+      "lockedVersion": "1.33.0",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "MPL-2.0",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/lru-cache",
+      "name": "lru-cache",
+      "lockedVersion": "11.5.3",
+      "installedVersion": "11.5.3",
+      "versionMatches": true,
+      "licenseMetadata": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/lru-cache/LICENSE.md",
+          "bytes": 1552,
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/lz-string",
+      "name": "lz-string",
+      "lockedVersion": "1.5.0",
+      "installedVersion": "1.5.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/lz-string/LICENSE",
+          "bytes": 1064,
+          "sha256": "433fc9dfe659dbfb1e91eed8351f13651e97bfa3ac6d03394c3d63f61d4bbc80"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/meshoptimizer",
+      "name": "meshoptimizer",
+      "lockedVersion": "1.1.1",
+      "installedVersion": "1.1.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/meshoptimizer/LICENSE.md",
+          "bytes": 1079,
+          "sha256": "f03037ca7bad1e3eb7f4a63fa6084a8baabd5ba30d3c239a9a7f35705d873e26"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/nanoid",
+      "name": "nanoid",
+      "lockedVersion": "3.3.20",
+      "installedVersion": "3.3.20",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/nanoid/LICENSE",
+          "bytes": 1095,
+          "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/parse5",
+      "name": "parse5",
+      "lockedVersion": "8.1.1",
+      "installedVersion": "8.1.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/parse5/LICENSE",
+          "bytes": 1109,
+          "sha256": "8c535800331e1e4439835555b3f9edc7fe9dee2fab0d8bbbd5a982e8b8343d4d"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/parse5-parser-stream",
+      "name": "parse5-parser-stream",
+      "lockedVersion": "8.1.1",
+      "installedVersion": "8.1.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/parse5-parser-stream/LICENSE",
+          "bytes": 1109,
+          "sha256": "8c535800331e1e4439835555b3f9edc7fe9dee2fab0d8bbbd5a982e8b8343d4d"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/picocolors",
+      "name": "picocolors",
+      "lockedVersion": "1.1.1",
+      "installedVersion": "1.1.1",
+      "versionMatches": true,
+      "licenseMetadata": "ISC",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/picocolors/LICENSE",
+          "bytes": 787,
+          "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/picomatch",
+      "name": "picomatch",
+      "lockedVersion": "4.0.7",
+      "installedVersion": "4.0.7",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/picomatch/LICENSE",
+          "bytes": 1091,
+          "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/postcss",
+      "name": "postcss",
+      "lockedVersion": "8.5.33",
+      "installedVersion": "8.5.33",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/postcss/LICENSE",
+          "bytes": 1095,
+          "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/pretty-format",
+      "name": "pretty-format",
+      "lockedVersion": "27.5.1",
+      "installedVersion": "27.5.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/pretty-format/LICENSE",
+          "bytes": 1086,
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/punycode",
+      "name": "punycode",
+      "lockedVersion": "2.3.1",
+      "installedVersion": "2.3.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/react",
+      "name": "react",
+      "lockedVersion": "19.3.1",
+      "installedVersion": "19.3.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": false,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/react/LICENSE",
+          "bytes": 1088,
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/react-dom",
+      "name": "react-dom",
+      "lockedVersion": "19.3.1",
+      "installedVersion": "19.3.1",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": false,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/react-dom/LICENSE",
+          "bytes": 1088,
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/react-is",
+      "name": "react-is",
+      "lockedVersion": "17.0.2",
+      "installedVersion": "17.0.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/react-is/LICENSE",
+          "bytes": 1086,
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/rolldown",
+      "name": "rolldown",
+      "lockedVersion": "1.2.19",
+      "installedVersion": "1.2.19",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/rolldown/LICENSE",
+          "bytes": 1302,
+          "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/saxes",
+      "name": "saxes",
+      "lockedVersion": "6.0.0",
+      "installedVersion": "6.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "ISC",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/scheduler",
+      "name": "scheduler",
+      "lockedVersion": "0.28.0",
+      "installedVersion": "0.28.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": false,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/scheduler/LICENSE",
+          "bytes": 1088,
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/source-map-js",
+      "name": "source-map-js",
+      "lockedVersion": "1.2.2",
+      "installedVersion": "1.2.2",
+      "versionMatches": true,
+      "licenseMetadata": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/source-map-js/LICENSE",
+          "bytes": 1526,
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/three",
+      "name": "three",
+      "lockedVersion": "0.187.0",
+      "installedVersion": "0.187.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": false,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/three/LICENSE",
+          "bytes": 1081,
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/tinyglobby",
+      "name": "tinyglobby",
+      "lockedVersion": "0.2.17",
+      "installedVersion": "0.2.17",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/tinyglobby/LICENSE",
+          "bytes": 1076,
+          "sha256": "22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/tldts",
+      "name": "tldts",
+      "lockedVersion": "7.5.2",
+      "installedVersion": "7.5.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/tldts/LICENSE",
+          "bytes": 1078,
+          "sha256": "c64182d48160db948b6aa97a984f1a32974ce4d2053900361264cd33853796cb"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/tldts-core",
+      "name": "tldts-core",
+      "lockedVersion": "7.5.2",
+      "installedVersion": "7.5.2",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/tldts-core/LICENSE",
+          "bytes": 1078,
+          "sha256": "c64182d48160db948b6aa97a984f1a32974ce4d2053900361264cd33853796cb"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/tough-cookie",
+      "name": "tough-cookie",
+      "lockedVersion": "6.1.0",
+      "installedVersion": "6.1.0",
+      "versionMatches": true,
+      "licenseMetadata": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/tough-cookie/LICENSE",
+          "bytes": 1485,
+          "sha256": "22ec6791c91ba42c0516a05f4cbdde019aae4687f8a38c5ca7e8a69ee68f851d"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/tr46",
+      "name": "tr46",
+      "lockedVersion": "7.0.0",
+      "installedVersion": "7.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/tr46/LICENSE.md",
+          "bytes": 1076,
+          "sha256": "499d6d466d064e0460427967a344e2a32fcb86ea8c6cd1a285ec4f1fa03fba67"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/tslib",
+      "name": "tslib",
+      "lockedVersion": "2.9.1",
+      "installedVersion": null,
+      "versionMatches": null,
+      "licenseMetadata": "0BSD",
+      "dev": true,
+      "optional": true,
+      "integrityPresent": true,
+      "licenseFiles": []
+    },
+    {
+      "installPath": "node_modules/typescript",
+      "name": "typescript",
+      "lockedVersion": "7.0.2",
+      "installedVersion": "7.0.2",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/typescript/LICENSE",
+          "bytes": 9197,
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/undici",
+      "name": "undici",
+      "lockedVersion": "8.12.4",
+      "installedVersion": "8.12.4",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/undici/LICENSE",
+          "bytes": 1090,
+          "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/undici-types",
+      "name": "undici-types",
+      "lockedVersion": "8.9.0",
+      "installedVersion": "8.9.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/undici-types/LICENSE",
+          "bytes": 1090,
+          "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/vite",
+      "name": "vite",
+      "lockedVersion": "8.3.8",
+      "installedVersion": "8.3.8",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/vite/LICENSE.md",
+          "bytes": 98196,
+          "sha256": "a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/w3c-xmlserializer",
+      "name": "w3c-xmlserializer",
+      "lockedVersion": "6.0.0",
+      "installedVersion": "6.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/w3c-xmlserializer/LICENSE.md",
+          "bytes": 1105,
+          "sha256": "ab654de803cdaa9e2819ab2e934bdf7f757e308649ec231d78e80e92425cdc34"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/webidl-conversions",
+      "name": "webidl-conversions",
+      "lockedVersion": "8.0.1",
+      "installedVersion": "8.0.1",
+      "versionMatches": true,
+      "licenseMetadata": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/webidl-conversions/LICENSE.md",
+          "bytes": 1323,
+          "sha256": "a889cc4dbee2ae172c179856b25d75b0b7a5a136e1b97109b9b590b2ff1a879c"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/whatwg-mimetype",
+      "name": "whatwg-mimetype",
+      "lockedVersion": "5.0.0",
+      "installedVersion": "5.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/whatwg-mimetype/LICENSE.txt",
+          "bytes": 1069,
+          "sha256": "528eec83cb836a0adda9f8fc3d6a2a70a710d6cc0be9a155f92212c8df28acfa"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/whatwg-url",
+      "name": "whatwg-url",
+      "lockedVersion": "17.3.0",
+      "installedVersion": "17.3.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/whatwg-url/LICENSE.txt",
+          "bytes": 1076,
+          "sha256": "db480f236292a093e77a83c35431a8496624e1e664a3547768a9ce2bdde39877"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/xml-name-validator",
+      "name": "xml-name-validator",
+      "lockedVersion": "5.0.0",
+      "installedVersion": "5.0.0",
+      "versionMatches": true,
+      "licenseMetadata": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/xml-name-validator/LICENSE.txt",
+          "bytes": 10173,
+          "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        }
+      ]
+    },
+    {
+      "installPath": "node_modules/xmlchars",
+      "name": "xmlchars",
+      "lockedVersion": "2.2.0",
+      "installedVersion": "2.2.0",
+      "versionMatches": true,
+      "licenseMetadata": "MIT",
+      "dev": true,
+      "optional": false,
+      "integrityPresent": true,
+      "licenseFiles": [
+        {
+          "file": "node_modules/xmlchars/LICENSE",
+          "bytes": 1086,
+          "sha256": "45d196313c2647d313cc65ca9b093d2d6974b64d35ee7346f2c60c9d518dff2c"
+        }
+      ]
+    }
+  ],
+  "staticRuntimeScan": {
+    "filesScanned": 28,
+    "urlLiterals": [
+      {
+        "file": "src/core/science.ts",
+        "line": 6,
+        "url": "https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf",
+        "commentOnly": true
+      }
+    ],
+    "networkApiMatches": [],
+    "remoteAssetMatches": [],
+    "sourceSha256": {
+      "index.html": "fe3f421b5189ec3694b46598b0bdd058d05a58785747aa97ab2ed39bef083b4f",
+      "src/App.tsx": "a650a7e75dcb2d71b014df322dad9f156c42db56d19f512e667c67c0ecad0e8b",
+      "src/core/catalog.ts": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8",
+      "src/core/contracts.ts": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "src/core/engine.ts": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "src/core/exact.ts": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8",
+      "src/core/power.ts": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7",
+      "src/core/science.ts": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "src/core/search.ts": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "src/data/science-data.ts": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "src/main.tsx": "c05a4ca1afdd6b72a93d9ae685a388b620c5d18258c770a40c9e9e5ee5faf01b",
+      "src/persistence/identity.ts": "1d2cc6eb5bb2f0b1c8917f96a9e677bd21628544971ef362700fde95fd67872e",
+      "src/persistence/json.ts": "d3314f41efd953ac7fd7df0683daed1f641c60ac8ec09dc059aa6b14ad8a6d5a",
+      "src/persistence/replay.ts": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "src/persistence/store.ts": "addb66e19f58b3ced909342f10cddf88f3caebe009701c055e2a48d698c757cf",
+      "src/persistence/validation.ts": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "src/styles.css": "cdcb2107007161fb79d4a0085a9a212e6f8d3e2c80ea1a22e6e782e5455ed23a",
+      "src/ui/Dialogs.tsx": "e7c155466d4148fb530eca7f5548fa16b567281beb65ca3f0659d4ed3d103105",
+      "src/ui/Icon.tsx": "0471a667ea8b051e7ab3ee141f9122cfb38c37f90359af11e50956399e3882ab",
+      "src/ui/MissionControl.tsx": "7d064496216b094df4972cd4fbfb07d8d3635ae1f15b243cd7d608ca2d501763",
+      "src/ui/Observatory.tsx": "e11959892414239d507af0adb1b469adfe24d7784ddf59c7e70c6cb0fe37a313",
+      "src/ui/OrbitalScene.tsx": "ef2a444b40a80c3efa4ea2f6705fd0848a15ad3b844c576d27773c964587f06d",
+      "src/ui/Scene.tsx": "d7532f52b399cef4e670feb816e66a545835347b9647bd5edb03da162439cded",
+      "src/ui/Workbench.tsx": "c57019a4316cd54b0ffff061d72d5906bf51da2af3a498a7383278df68328deb",
+      "src/ui/format.ts": "73e1d4a40fda61b7678eaf2c4563257673e917296da8fa29c8b4abee5e4266f6",
+      "src/ui/learning.ts": "2562f3acab69905346644a5104e2f9dab00dd7378c1c89f5de6a15b5e6faa3fe",
+      "src/workers/client.ts": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1",
+      "src/workers/mission.worker.ts": "ee16c56efce23c82105973bbbce9318dc7485d97488a5eb157466af2430454fb"
+    },
+    "scope": "Application src TS/TSX/CSS and index.html; source-code inspection, not browser/network execution",
+    "limitations": [
+      "Regex scan is not a formal proof of all possible network behavior",
+      "No cold offline browser test",
+      "License metadata/file hashes inventory does not establish full legal compliance",
+      "Build tool downloads/npm bootstrap are outside runtime scope"
+    ]
+  }
+}

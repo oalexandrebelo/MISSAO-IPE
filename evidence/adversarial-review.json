@@ -1,0 +1,210 @@
+{
+  "review": "independent-adversarial",
+  "createdAt": "2026-11-14T08:52:25.591Z",
+  "runtime": "v24.22.1",
+  "status": "PASS_WITH_HISTORICAL_FINDINGS",
+  "preFix": {
+    "engineVersion": "0.1.0-rd",
+    "sourceSha256": {
+      "src/core/contracts.ts": "5ff8b2daae4673efaaec51ca08de8c0db7edbbe6ee1c1aabe93e055f2beb5970",
+      "src/core/science.ts": "88484973ff48ccc8758d0513feb9363757a39df12b8aace8064e1aff305ea5c7",
+      "src/core/engine.ts": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "src/core/search.ts": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "src/persistence/replay.ts": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "src/persistence/validation.ts": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "src/workers/client.ts": "ecca9d094b821aa2515e20787904257b40b5f9b06c8a0b94dc8eae97c5c81739",
+      "tests/adversarial.test.mts": "35f715d18dd1d5f12c1f78ec707780d3db6b64e50fb6602cd3fa0da9fe3aa32d"
+    },
+    "command": "node --experimental-strip-types --test tests/adversarial.test.mts",
+    "exitCode": 1,
+    "tests": 5,
+    "pass": 4,
+    "fail": 1,
+    "failure": {
+      "id": "NDVI-TOLERANCE-001",
+      "test": "scientific tolerance is inclusive and symmetric for positive and negative NDVI",
+      "expectedValid": true,
+      "actualValid": false,
+      "reasons": [
+        "ndvi:product-disagreement"
+      ],
+      "counterexamples": [
+        {
+          "red": 9999,
+          "nir": 10000,
+          "product": 0.0001,
+          "error": 0.000049997499874993756
+        },
+        {
+          "red": 10000,
+          "nir": 9999,
+          "product": -0.0001,
+          "error": 0.000049997499874993756
+        },
+        {
+          "red": 5000,
+          "nir": 5000,
+          "product": 0.0001,
+          "error": 0.0001
+        },
+        {
+          "red": 5000,
+          "nir": 5000,
+          "product": -0.0001,
+          "error": 0.0001
+        }
+      ],
+      "finalStatus": "PASS_AFTER_COORDINATOR_FIX"
+    }
+  },
+  "sourceReview": {
+    "url": "https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf",
+    "section": "5.2 table 1, PDF page 11 (zero-based), printed page 9",
+    "findings": "Defines NDVI int16, range −2000..10000 and scale 0.0001. Searches trunc and round found no explicit rounding/truncation algorithm. No NASA truncation claim is justified from this source or six records."
+  },
+  "afterScientificFix": {
+    "at": "2026-11-14T08:53:47.953Z",
+    "engineVersion": "0.1.1-rd",
+    "catalogVersion": "ipe-64-v1",
+    "command": "node --experimental-strip-types --test tests/adversarial.test.mts",
+    "tests": 7,
+    "pass": 5,
+    "fail": 2,
+    "exitCode": 1,
+    "scienceStatus": "PASS",
+    "domainStatus": "PASS",
+    "workerStatus": "FAIL",
+    "sourceSha256": {
+      "src/core/contracts.ts": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "src/core/science.ts": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "src/workers/client.ts": "ecca9d094b821aa2515e20787904257b40b5f9b06c8a0b94dc8eae97c5c81739",
+      "tests/adversarial.test.mts": "82597cdcdc37d1b069dbe834f79d7ae8e4fdcaf2869c5d701377714ca2f54417"
+    },
+    "search": [
+      {
+        "scenarioId": "long-contact",
+        "total": 64,
+        "evaluated": 64,
+        "successful": 17,
+        "failed": 41,
+        "invalid": 6,
+        "indeterminate": 0,
+        "minimumDistance": 0,
+        "best": [
+          {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          }
+        ]
+      },
+      {
+        "scenarioId": "short-contact",
+        "total": 64,
+        "evaluated": 64,
+        "successful": 9,
+        "failed": 49,
+        "invalid": 6,
+        "indeterminate": 0,
+        "minimumDistance": 2,
+        "best": [
+          {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          }
+        ]
+      }
+    ]
+  },
+  "workerCounterexamples": [
+    {
+      "id": "WORKER-SHAPE-001",
+      "payload": "{requestId: current, ok: true, result: {}}",
+      "expected": "reject malformed result and terminate",
+      "actual": "resolved {}",
+      "finalStatus": "PASS_AFTER_COORDINATOR_FIX"
+    },
+    {
+      "id": "WORKER-NULL-002",
+      "payload": null,
+      "expected": "reject through finish and terminate",
+      "actual": "TypeError escapes listener; promise still pending until explicit AbortSignal cancellation or timeout",
+      "finalStatus": "PASS_AFTER_COORDINATOR_FIX"
+    }
+  ],
+  "metadataHardening": {
+    "status": "OBSERVATION_NOT_IMPORT_BYPASS",
+    "requires": "runtime module mutation",
+    "mutatedFields": {
+      "sourceId": "unverified-source",
+      "latitudeRequested": 12,
+      "longitudeRequested": 42
+    },
+    "validatorAccepted": true,
+    "missionOutcome": "success",
+    "sameResultHash": true,
+    "sameSciencePackHash": true,
+    "restored": true,
+    "recordsFrozen": false,
+    "recordFrozen": false,
+    "finalRecordsFrozen": true,
+    "finalEveryRecordFrozen": true,
+    "remediation": "Frozen array and each record; prevents accidental runtime mutation, not a claim of cryptographic NASA authenticity."
+  },
+  "preWorkerFix": {
+    "command": "node --experimental-strip-types --test --test-name-pattern='Worker bridge rejects|null Worker|compiled scientific' tests/adversarial.test.mts",
+    "exitCode": 1,
+    "tests": 3,
+    "pass": 0,
+    "fail": 3,
+    "failures": [
+      "malformed successful response resolved instead of rejecting",
+      "null response escaped handler as TypeError",
+      "compiled scientific array not frozen"
+    ]
+  },
+  "finalVerification": {
+    "at": "2026-11-14T08:57:13.961Z",
+    "runtime": "v24.22.1",
+    "engineVersion": "0.1.1-rd",
+    "catalogVersion": "ipe-64-v1",
+    "sciencePackHash": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+    "status": "PASS",
+    "command": "node --experimental-strip-types --test --test-name-pattern='Worker|compiled scientific' tests/adversarial.test.mts",
+    "exitCode": 0,
+    "tests": 4,
+    "pass": 4,
+    "fail": 0,
+    "typecheck": {
+      "command": "./node_modules/.bin/tsc --noEmit --pretty false",
+      "exitCode": 0
+    },
+    "allEightDistinctTestsPassedAcrossAffectedReruns": true,
+    "singleFullFinalEightTestRunPerformed": false,
+    "sourceSha256": {
+      "src/core/contracts.ts": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2",
+      "src/core/science.ts": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92",
+      "src/core/engine.ts": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635",
+      "src/core/search.ts": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8",
+      "src/data/science-data.ts": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66",
+      "src/persistence/replay.ts": "cb0511377a61a121e0c0f5fad721b5f12d5d32ea8c43991c4397f2b0d3f5dbbc",
+      "src/persistence/validation.ts": "c6a1fb3b100a3dc0bddb48f3697e83b75f72d1ebfb55ed2083c53aad07276567",
+      "src/workers/client.ts": "1a7766cf5d91ae0a809f7a8d4386d8fcd2cdc6c8ff5318d267b9e5bc778fcfa1",
+      "tests/adversarial.test.mts": "5814a5a4154f5f287de255faea09fcd1c0898bd69bba72f4f4fc48fe48bf6e2c"
+    }
+  },
+  "limits": [
+    "No real browser or GPU performance claim; FakeWorker only tests message bridge behavior.",
+    "Independent oracle applies only to the closed 64 configurations and two integer-boundary scenarios.",
+    "Floating tolerance <1e-8 in oracle checks output serialization/integration agreement, never changes production mission classification.",
+    "No Prisma expansion; optional schema is not on active browser persistence path.",
+    "Pre-event R&D; event eligibility remains pending."
+  ]
+}

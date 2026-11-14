@@ -1,0 +1,1800 @@
+{
+  "generatedAt": "2026-11-14T09:09:09.956570+00:00",
+  "method": "Index of references present in the reports; retrieval success, publisher and limits remain in the corresponding report. Inclusion is not a new verification of availability or truth.",
+  "count": 185,
+  "sources": [
+    {
+      "url": "http://127.0.0.1:4173",
+      "occurrences": [
+        {
+          "document": "README.md",
+          "line": 21
+        },
+        {
+          "document": "docs/08-HANDOFF.md",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "url": "https://aclanthology.org/2025.naacl-srw.23/",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 271
+        }
+      ]
+    },
+    {
+      "url": "https://ajv.js.org/standalone.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 115
+        },
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 142
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2002.06278",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 131
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.02034",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 66
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.09973",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 259
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/html/2605.09973v1",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 70
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 242
+        }
+      ]
+    },
+    {
+      "url": "https://assets.spaceappschallenge.org/media/documents/2026_NASA_Space_Apps_Registration_Recruitment.pdf",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 143
+        }
+      ]
+    },
+    {
+      "url": "https://avslab.github.io/basilisk/",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 118
+        }
+      ]
+    },
+    {
+      "url": "https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 65
+        }
+      ]
+    },
+    {
+      "url": "https://db.satnogs.org/about/",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://docs.astropy.org/en/latest/utils/iers.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 141
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "url": "https://docs.fastino.ai/concepts/glide-capabilities",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 261
+        }
+      ]
+    },
+    {
+      "url": "https://docs.fastino.ai/inference/systemone",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 262
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/2.15/notes/randomness.html",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 240
+        }
+      ]
+    },
+    {
+      "url": "https://docs.satdump.org/pipelines.html",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 75
+        }
+      ]
+    },
+    {
+      "url": "https://docs.satnogs.org/projects/satnogs-network/en/latest/api.html",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://docs.vllm.ai/en/latest/models/supported_models/",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 248
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1111/cogs.12107",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 132
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/10.1145/263699.263712",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 128
+        }
+      ]
+    },
+    {
+      "url": "https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 66
+        }
+      ]
+    },
+    {
+      "url": "https://fast-check.dev/docs/advanced/model-based-testing/",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 116
+        }
+      ]
+    },
+    {
+      "url": "https://fastino.ai/blog/a-guide-to-small-language-models",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 272
+        }
+      ]
+    },
+    {
+      "url": "https://fastino.ai/blog/training-glide-sota-decision-model",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 71
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 244
+        }
+      ]
+    },
+    {
+      "url": "https://fastino.space/blog/introducing-glide-the-first-thinking-decision-model",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 243
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/AVSLab/basilisk",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 118
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/AndrewAnnex/SpiceyPy",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 120
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/CS-SI/Orekit",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 119
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/CesiumGS/cesium",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-AMMOS/3DTilesRendererJS",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-AMMOS/Unity3DTiles",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-AMMOS/Unity3DTiles/blob/master/license.txt",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-IMPACT/Prithvi-EO-2.0",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-IMPACT/Prithvi-WxC",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-SPACEAPP-2026/Space-Mission-Design-Game",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 72
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 109
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/NASA-SPACEAPP-2026/Space-Mission-Design-Game/blob/main/documentation/architecture.md",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 109
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Open-EO/openeo-python-client",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/PaddlePaddle/PaddleRS",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/PaddlePaddle/PaddleRS/blob/develop/README_EN.md",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/SatDump/SatDump",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 75
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/SergeiShevyrev/LSR",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ViTAE-Transformer/SAMRS",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 66
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Z-Zheng/Changen",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 65
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/aidotse/PASEOS",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ajv-validator/ajv",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 115
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/artlav/meteor_decoder",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/astropy/astropy",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/baskiton/SatsDecoder",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 53
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/daniestevez/gr-satellites",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/dbdexter-dev/meteor_demod",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/dernasherbrezon/jradio",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/dernasherbrezon/r2cloud",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/developmentseed/titiler",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/dubzzz/fast-check",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 116
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/esa/pagmo2",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/esa/pykep",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/fastino-ai/GLiNER2",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 238
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/30387",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 269
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/pull/30504",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 74
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 249
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/github/spec-kit",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 114
+        },
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/github/spec-kit/commit/0019fa14d12f45edabc2cc3176c9168a68bd0f97",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 135
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/github/spec-kit/releases",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 135
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/github/spec-kit/releases/tag/v1.4.0",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/gjoseph92/stackstac",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/insarlab/MintPy",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/insarlab/MintPy/blob/main/LICENSE",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/isce-framework/isce2",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/isce-framework/isce3",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/jaxa/open-set",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/lightkurve/lightkurve",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 32
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/likyoo/open-cd",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 65
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/ExoMiner",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 32
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/cFS",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/fprime",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/openmct",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 117
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/openmct/blob/master/LICENSE.md",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 117
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1777",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1827",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 65
+        },
+        {
+          "document": "docs/05-CRONOGRAMA-E-CRITERIOS.md",
+          "line": 3
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1849",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 68
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1872",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 66
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1924",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1947",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 73
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/1973",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 73
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nasa/spaceapps/discussions/2009",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 67
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nextgis/nextgisqgis",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nextgis/qms_srv",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nextgis/quickmapservices_contrib",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/nyx-space/nyx",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/open-mmlab/mmrotate",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/open-mmlab/mmsegmentation",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/opendatacube/datacube-core",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/opengeos/segment-geospatial",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 66
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pytroll/pyresample",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pytroll/satpy",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 44
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sandrohanea/gliner.cpp",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 75
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 250
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sentinel-hub/custom-scripts",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sentinel-hub/eo-learn",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/skyfielders/python-skyfield",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sputnixru/SX-Files",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sputnixru/gr-gpredict-doppler",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 54
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/stac-utils/pystac-client",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/stac-utils/pystac-client/blob/main/LICENSE",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/sunpy/sunpy",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/torchgeo/terratorch",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/torchgeo/torchgeo",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/unslothai/unsloth",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 251
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ut-issl/c2a-core",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ut-issl/s2e-core",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/visgl/deck.gl",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/visgl/loaders.gl",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/yamcs/yamcs",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/zarr-developers/zarr-python",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "url": "https://github.github.io/spec-kit/install/air-gapped.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "url": "https://github.github.io/spec-kit/installation.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 137
+        }
+      ]
+    },
+    {
+      "url": "https://github.github.io/spec-kit/integrations/cli.html#command-invocation",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 138
+        }
+      ]
+    },
+    {
+      "url": "https://github.github.io/spec-kit/quickstart.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.com/librespacefoundation/satnogs",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.com/librespacefoundation/satnogs/gr-satnogs",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.com/librespacefoundation/satnogs/satnogs-decoders",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.com/librespacefoundation/satnogs/satnogs-network",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.orekit.org/orekit-labs/python-wrapper/-/wikis/home",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.orekit.org/orekit/orekit",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 119
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.orekit.org/orekit/orekit_jpype/-/tree/master",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "url": "https://hackathlone.com/challenges/space-mission-design-game",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 260
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 268
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiDE-0.4B",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 245
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiDE-0.4B/blob/main/LICENSE",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 73
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 256
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiDE-0.4B/blob/main/NOTICE",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 257
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiDE-0.8B",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 246
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiDE-27B/blob/main/README.md",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 72
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 258
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiDE-2B",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 247
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiNER2.5-Decide",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 67
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 236
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiNER2.5-Decide/blob/main/config.json",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 263
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiNER2.5-Decide/tree/main",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 264
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiNER2.5-multi-Decide",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 68
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 237
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/GLiNER2.5-multi-Decide/tree/main",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 265
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/gliner2-privacy-filter-PII-multi",
+      "occurrences": [
+        {
+          "document": "docs/06-IA-LOCAL-E-ANEXOS.md",
+          "line": 69
+        },
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 241
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/gliner2-privacy-filter-PII-multi/blob/main/config.json",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 270
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/gliner2-privacy-filter-PII-multi/tree/main",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 267
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/gliner2.5-multi-v1",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 255
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/tree/main",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 266
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-600M",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "url": "https://huggingface.co/ibm-nasa-geospatial/Prithvi-WxC-1.0-2300M",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "url": "https://isce-framework.github.io/isce3/",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "url": "https://json-schema.org/understanding-json-schema/basics",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 254
+        }
+      ]
+    },
+    {
+      "url": "https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 89
+        },
+        {
+          "document": "research/04-motor.md",
+          "line": 35
+        },
+        {
+          "document": "research/07-revisao-independente.md",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "url": "https://modis.ornl.gov/data/modis_webservice.html",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "url": "https://naif.jpl.nasa.gov/naif/links.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 139
+        },
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "url": "https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/problems.html",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 140
+        }
+      ]
+    },
+    {
+      "url": "https://nasa.github.io/mission-viz/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/20250002492/downloads/Design%20and%20Develop%20Science%20Mission_03262025.pdf",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "url": "https://ntrs.nasa.gov/citations/20250002492",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 77
+        }
+      ]
+    },
+    {
+      "url": "https://pydantic.dev/docs/validation/latest/concepts/strict_mode/",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 253
+        }
+      ]
+    },
+    {
+      "url": "https://qms.nextgis.com/",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 57
+        }
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 142
+        }
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/mission/webb/game-build-it-yourself/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 68
+        },
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 129
+        }
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/wp-content/uploads/2023/06/nasa_csli_cubesat_101_508.pdf",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 69
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 81
+        }
+      ]
+    },
+    {
+      "url": "https://software.nasa.gov/software/GSC-19468-1",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "url": "https://spiceypy.readthedocs.io/en/stable/",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 120
+        }
+      ]
+    },
+    {
+      "url": "https://standards.nasa.gov/standard/NASA/NASA-HDBK-7009",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 134
+        }
+      ]
+    },
+    {
+      "url": "https://standards.nasa.gov/standard/nasa/nasa-std-7009",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 134
+        }
+      ]
+    },
+    {
+      "url": "https://unsloth.ai/docs/get-started/unsloth-model-catalog.md",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 252
+        }
+      ]
+    },
+    {
+      "url": "https://w3c.github.io/IndexedDB/",
+      "occurrences": [
+        {
+          "document": "research/06-persistencia.md",
+          "line": 106
+        }
+      ]
+    },
+    {
+      "url": "https://www.asc-csa.gc.ca/eng/youth-educators/digital-games-and-activities.asp",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "url": "https://www.gov.br/aeb/pt-br/assuntos/noticias/seis-equipes-brasileiras-estao-entre-os-finalistas-do-nasa-space-apps-2025",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 71
+        }
+      ]
+    },
+    {
+      "url": "https://www.insightpartners.com/ideas/fastino-launches-tlms-task-specific-language-models-with-17-5m-seed-round-led-by-khosla-ventures/",
+      "occurrences": [
+        {
+          "document": "research/02-fastino-anexos.md",
+          "line": 239
+        }
+      ]
+    },
+    {
+      "url": "https://www.kenkai.jaxa.jp/research/sasshin/dx.html",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "url": "https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/nasa-announces-2025-international-space-apps-challenge-global-winners/",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 70
+        }
+      ]
+    },
+    {
+      "url": "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "url": "https://www.orfeo-toolbox.org/FAQ/",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "url": "https://www.orfeo-toolbox.org/download/",
+      "occurrences": [
+        {
+          "document": "research/08-auditoria-repositorios.md",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "url": "https://www.prisma.io/docs/orm/v7/reference/prisma-config-reference",
+      "occurrences": [
+        {
+          "document": "research/06-persistencia.md",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "occurrences": [
+        {
+          "document": "docs/01-DOSSIE-DECISAO.md",
+          "line": 69
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources`:",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 53
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/`:",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/local-events/rio-verde/",
+      "occurrences": [
+        {
+          "document": "docs/05-CRONOGRAMA-E-CRITERIOS.md",
+          "line": 3
+        },
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/legal/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/resources/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/resources/team-formation-guide/",
+      "occurrences": [
+        {
+          "document": "research/01-regras-ciencia.md",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "url": "https://www.w3.org/TR/prov-constraints/",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 130
+        }
+      ]
+    },
+    {
+      "url": "https://zilles.cs.illinois.edu/papers/hassan_tracing_sigcse_2022.pdf",
+      "occurrences": [
+        {
+          "document": "research/03-oportunidades-spec.md",
+          "line": 133
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-14T10:40:25.515742+00:00",
+  "release": "R5 presentation",
+  "delegated_agents": 3,
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "max",
+  "activities": [
+    "primary-source review",
+    "HTML presentation and original vector illustrations",
+    "DOM verification and handoff",
+    "local launcher and release packaging"
+  ],
+  "ai_assisted_code_and_documentation": true,
+  "runtime_language_model_required": false,
+  "new_generated_audio_or_video": false,
+  "observational_data_generated_by_ai": false,
+  "didactic_parameters_ai_assisted": true,
+  "ai_disclosure": "kit/AI-USAGE.md",
+  "human_evaluation_completed": false,
+  "institutional_endorsement": false
+}

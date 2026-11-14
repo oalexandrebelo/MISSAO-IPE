@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "spaceapps-presentation-r5",
+  "reviewDate": "2026-11-14",
+  "clockObservedAtUtc": "2026-11-14T10:32:50Z",
+  "clockObservedAtBrt": "2026-11-14T07:32:50-03:00",
+  "clockMethod": "clock.curr_time; BRT = UTC-03:00",
+  "officialStartRioVerdeLocal": "2026-11-14T09:00:00-03:00",
+  "officialStartUtc": "2026-11-14T12:00:00Z",
+  "preEventAtClockObservation": true,
+  "scope": "Documentary review for presentation; no runtime/UI edits, no submission, no external messaging, no browser or restriction bypass.",
+  "runtimeVersionReadFromDocumentation": "0.1.1-rd",
+  "localInputsRead": [
+    "docs/01-DOSSIE-DECISAO.md",
+    "research/01-regras-ciencia.md",
+    "research/evidence/resources-retrieval-20261114.json",
+    "evidence/chronology.json",
+    "docs/09-VERIFICACAO.md",
+    "evidence/release-qa-manifest.json",
+    "evidence/final-validation.json"
+  ],
+  "authorityDefinitions": {
+    "CENTRAL_OFFICIAL": "Institutional Space Apps publication, subject to retrieval limits.",
+    "GO_TEAM": "Attributed response or announcement by a Global Organizing Team account in nasa/spaceapps.",
+    "NAVIGATOR": "Labeled Navigator answer in nasa/spaceapps; not represented as a GO Team ruling.",
+    "LOCAL_ORGANIZER": "Local Lead/event content published on the official platform; not a global rubric or NASA-reviewed endorsement.",
+    "PARTIAL_PLATFORM_CONTEXT": "Challenge summary embedded on a team page; not the complete canonical challenge statement.",
+    "NOT_RECOVERED": "No content from this requested page was recovered."
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://www.spaceappschallenge.org/",
+      "authority": "NOT_RECOVERED",
+      "retrieval": "web.open returned 502 Bad Gateway",
+      "sessionRefs": [
+        "turn287view0"
+      ]
+    },
+    {
+      "id": "S02",
+      "url": "https://www.spaceappschallenge.org/2026/",
+      "authority": "CENTRAL_OFFICIAL",
+      "retrieval": "Search-index content recovered; direct open returned 502",
+      "sessionRefs": [
+        "turn287search1",
+        "turn289view3",
+        "turn292search0"
+      ],
+      "confirmed": "2026 theme The Next Frontier; November 14–15; project editing/submission 09:00 Saturday–23:59 Sunday local; no more than six participants.",
+      "limits": "Does not establish the team's registration, membership or eligibility."
+    },
+    {
+      "id": "S03",
+      "url": "https://www.spaceappschallenge.org/2026/find-a-team/project_morazan/",
+      "authority": "PARTIAL_PLATFORM_CONTEXT",
+      "retrieval": "Indexed About the Challenge block; direct open returned 502",
+      "sessionRefs": [
+        "turn288search0",
+        "turn292search2",
+        "turn293view1"
+      ],
+      "confirmed": "Challenge title and short description of interactive mission design, management and simulation with engineering decisions and constrained resources.",
+      "limits": "Not the canonical full statement or its Resources list; team's own project description is excluded."
+    },
+    {
+      "id": "S04",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/",
+      "authority": "NOT_RECOVERED",
+      "retrieval": "web.open returned 502 Bad Gateway",
+      "sessionRefs": [
+        "turn288view1"
+      ]
+    },
+    {
+      "id": "S05",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "authority": "NOT_RECOVERED",
+      "retrieval": "web.open reported URL not accessible via tool",
+      "sessionRefs": [
+        "turn288view0"
+      ],
+      "limits": "No claim about the contents, membership or universal availability of the official list."
+    },
+    {
+      "id": "S06",
+      "url": "https://github.com/nasa/spaceapps/discussions/1849",
+      "authority": "GO_TEAM",
+      "author": "Nick-GO-Team",
+      "publishedDate": "2026-11-06",
+      "retrieval": "Full answer recovered",
+      "sessionRefs": [
+        "turn289view0",
+        "turn291view0"
+      ],
+      "confirmed": "At least one NASA data source from challenge Resources is required for Global Awards. AI is allowed with disclosure; generated image/video needs visible watermark; generated audio/code/data needs descriptive-text and metadata acknowledgement; generated content may not use, contain or modify NASA branding/design elements.",
+      "limits": "Does not certify a resource or this project's compliance."
+    },
+    {
+      "id": "S07",
+      "url": "https://github.com/nasa/spaceapps/discussions/1947",
+      "authority": "NAVIGATOR",
+      "author": "chancyshah",
+      "publishedDate": "2026-11-12",
+      "retrieval": "Full answer and Navigator label recovered",
+      "sessionRefs": [
+        "turn289view1",
+        "turn291view1",
+        "turn293view2"
+      ],
+      "confirmed": "Navigator describes demo maximum 30 seconds or seven slides including title/closing; supplementary longer material is separate.",
+      "limits": "Answer is Navigator guidance, not a recovered full 2026 submission guide. Universal Event membership discussion is not generalized to Rio Verde."
+    },
+    {
+      "id": "S08",
+      "url": "https://github.com/nasa/spaceapps/discussions/1973",
+      "authority": "NAVIGATOR",
+      "author": "kharevanai",
+      "publishedDate": "2026-11-12",
+      "retrieval": "Full answer and Navigator label recovered",
+      "sessionRefs": [
+        "turn289view2",
+        "turn290view2",
+        "turn293view3"
+      ],
+      "confirmed": "Navigator recommends English submission or English subtitles, publicly accessible demo, NASA-use explanation and AI disclosure.",
+      "limits": "Does not verify a current form or authorize this project."
+    },
+    {
+      "id": "S09",
+      "url": "https://github.com/nasa/spaceapps/discussions/2028",
+      "authority": "GO_TEAM",
+      "author": "Madison-GO-Team",
+      "publishedDate": "2026-11-13",
+      "retrieval": "Announcement and linked guide URLs recovered",
+      "sessionRefs": [
+        "turn294search0",
+        "turn295view0"
+      ],
+      "confirmed": "GO Team points participants to current submission, judging/awards and FAQ guide URLs.",
+      "limits": "Linked documents' complete contents were not recovered."
+    },
+    {
+      "id": "S10",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/rio-verde/",
+      "authority": "LOCAL_ORGANIZER",
+      "retrieval": "Indexed local page and user-generated-content notice; direct open returned 502",
+      "sessionRefs": [
+        "turn287search0",
+        "turn289view4",
+        "turn292search5"
+      ],
+      "confirmed": "Hub Goiás Rio Verde; Sunday pre-presentations 15:30, submission 17:00, presentations 18:00. Portuguese 17:00 line has a question mark; English line does not.",
+      "limits": "Local page is marked participant/Local Lead content and may not have NASA review; no local pitch duration recovered."
+    },
+    {
+      "id": "S11",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/ajmer/",
+      "authority": "LOCAL_ORGANIZER",
+      "retrieval": "Indexed 2026 local page",
+      "sessionRefs": [
+        "turn289search1",
+        "turn290search0"
+      ],
+      "confirmed": "Lists Impact, Creativity, Validity, Relevance and Presentation.",
+      "limits": "Not direct access to the central 2026 judging guide; no weights or Rio Verde rubric inferred."
+    },
+    {
+      "id": "S12",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/faisalabad/",
+      "authority": "LOCAL_ORGANIZER",
+      "retrieval": "Indexed 2026 local page",
+      "sessionRefs": [
+        "turn290search6",
+        "turn291search1"
+      ],
+      "confirmed": "Also lists the five judging dimensions.",
+      "limits": "Local corroboration only."
+    },
+    {
+      "id": "S13",
+      "url": "https://www.spaceappschallenge.org/legal/",
+      "authority": "CENTRAL_OFFICIAL",
+      "retrieval": "Indexed terms text; direct open returned 502",
+      "sessionRefs": [
+        "turn288search7",
+        "turn292view2"
+      ],
+      "confirmed": "Terms require citation of sources used, including open-source/freely available materials, and appropriate licensing documentation.",
+      "limits": "No individualized legal or eligibility determination made."
+    },
+    {
+      "id": "S14",
+      "url": "https://github.com/nasa/spaceapps/discussions/1827",
+      "authority": "GO_TEAM",
+      "author": "Paula-GO-Team",
+      "publishedDate": "2026-11-05",
+      "retrieval": "Answer recovered",
+      "sessionRefs": [
+        "turn290view4",
+        "turn291view3"
+      ],
+      "confirmed": "Start Saturday 09:00 local; early work can lead to disqualification; prior challenge selection, resource review, topic research and team formation are permitted.",
+      "limits": "Does not rule on this team's eligibility."
+    },
+    {
+      "id": "S15",
+      "url": "https://github.com/nasa/spaceapps/discussions/1872",
+      "authority": "GO_TEAM",
+      "author": "Nick-GO-Team",
+      "publishedDate": "2026-11-09",
+      "retrieval": "Answer recovered",
+      "sessionRefs": [
+        "turn290view5",
+        "turn291view4"
+      ],
+      "confirmed": "Recommends waiting to discuss features or sketch UI; warns of disqualification/award removal for early work.",
+      "limits": "No retrospective exception identified."
+    },
+    {
+      "id": "S16",
+      "url": "https://github.com/nasa/spaceapps/discussions/2009",
+      "authority": "GO_TEAM",
+      "author": "Madison-GO-Team",
+      "publishedDate": "2026-11-13",
+      "retrieval": "GO reply recovered despite general discussion state Closed Unanswered",
+      "sessionRefs": [
+        "turn290view3",
+        "turn292view3"
+      ],
+      "confirmed": "GO reply reiterates 09:00 start when asked about detailed specifications and ready-to-use AI prompts.",
+      "limits": "Collaborator interpretation is not attributed to GO; no explicit permission for detailed project-specific advance work."
+    },
+    {
+      "id": "S17",
+      "url": "https://github.com/nasa/spaceapps/discussions/1924",
+      "authority": "NAVIGATOR",
+      "author": "alangnt",
+      "publishedDate": "2026-11-11",
+      "retrieval": "Answer and Navigator label recovered",
+      "sessionRefs": [
+        "turn291view5",
+        "turn292view4"
+      ],
+      "confirmed": "Allows properly credited previous work not built specifically for Space Apps; challenge-specific development belongs in the hackathon window.",
+      "limits": "Does not authorize Missão Ipê's pre-event implementation."
+    },
+    {
+      "id": "S18",
+      "url": "https://www.spaceappschallenge.org/resources/project-submission-guide",
+      "authority": "NOT_RECOVERED",
+      "retrieval": "Official GO announcement link followed; 400 Timeout. Slash variant also timed out.",
+      "sessionRefs": [
+        "turn288view2",
+        "turn296view0"
+      ]
+    },
+    {
+      "id": "S19",
+      "url": "https://www.spaceappschallenge.org/resources/judging-awards-guide",
+      "authority": "NOT_RECOVERED",
+      "retrieval": "Official GO announcement link followed; 400 Timeout. Slash variant returned 502.",
+      "sessionRefs": [
+        "turn288view3",
+        "turn296view1"
+      ]
+    },
+    {
+      "id": "S20",
+      "url": "https://www.spaceappschallenge.org/resources/participant-faqs/",
+      "authority": "NOT_RECOVERED",
+      "retrieval": "Official GO announcement link followed; 502 Bad Gateway",
+      "sessionRefs": [
+        "turn292view1",
+        "turn296view2"
+      ]
+    }
+  ],
+  "keyDecisions": [
+    {
+      "id": "D01",
+      "decision": "Keep seven main presentation frames and separate appendices; treat interactive HTML as supporting artifact pending current-form confirmation.",
+      "status": "EDITORIAL_RECOMMENDATION_NOT_FORMAT_CERTIFICATION",
+      "sourceIds": [
+        "S07",
+        "S08",
+        "S09",
+        "S18"
+      ]
+    },
+    {
+      "id": "D02",
+      "decision": "Preserve PRE_EVENT_RESEARCH_AND_DEVELOPMENT_NOT_CLEARED_FOR_COMPETITION status and actual chronology.",
+      "status": "EXISTING_PROJECT_STATUS_PRESERVED",
+      "sourceIds": [
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "localEvidence": "evidence/chronology.json"
+    },
+    {
+      "id": "D03",
+      "decision": "Do not certify MOD13Q1 or engineering documents as qualifying challenge Resources until official inclusion is established.",
+      "status": "RESOURCE_LIST_GATE_OPEN",
+      "sourceIds": [
+        "S04",
+        "S05",
+        "S06"
+      ]
+    },
+    {
+      "id": "D04",
+      "decision": "Use Mars image only as explicitly labeled proposed expansion with no integration into the current engine.",
+      "status": "LOCAL_SCOPE_BOUNDARY",
+      "sourceIds": [],
+      "localEvidence": "docs/09-VERIFICACAO.md and coordination scope"
+    },
+    {
+      "id": "D05",
+      "decision": "Use five evaluation dimensions as editorial prompts, without inventing central scoring weights or a local pitch time.",
+      "status": "CORROBORATED_LOCALLY_CENTRAL_GUIDE_NOT_RECOVERED",
+      "sourceIds": [
+        "S11",
+        "S12",
+        "S19"
+      ]
+    }
+  ],
+  "localTimeline": [
+    {
+      "event": "Official development start",
+      "brt": "2026-11-14T09:00:00-03:00",
+      "utc": "2026-11-14T12:00:00Z",
+      "sourceId": "S14"
+    },
+    {
+      "event": "Rio Verde pre-presentations",
+      "brt": "2026-11-15T15:30:00-03:00",
+      "utc": "2026-11-15T18:30:00Z",
+      "sourceId": "S10"
+    },
+    {
+      "event": "Rio Verde submission schedule",
+      "brt": "2026-11-15T17:00:00-03:00",
+      "utc": "2026-11-15T20:00:00Z",
+      "sourceId": "S10"
+    },
+    {
+      "event": "Rio Verde presentations",
+      "brt": "2026-11-15T18:00:00-03:00",
+      "utc": "2026-11-15T21:00:00Z",
+      "sourceId": "S10"
+    },
+    {
+      "event": "General project submission close",
+      "brt": "2026-11-15T23:59:00-03:00",
+      "utc": "2026-11-16T02:59:00Z",
+      "sourceId": "S02"
+    }
+  ],
+  "knownLimits": [
+    "Direct retrieval failure does not prove universal website downtime.",
+    "Search-index content is not proof that a live form is accessible or unchanged.",
+    "Canonical challenge statement, official Resources list, complete submission guide and complete judging guide were not recovered.",
+    "No competition eligibility determination or organizer-specific exception was observed.",
+    "No public submission, registration change, external message or website publication was performed.",
+    "Scientific/runtime result descriptions in the report cite prior local evidence; no new application execution or human-learning evaluation was performed by this front.",
+    "Session reference IDs are retrieval provenance, not canonical URLs.",
+    "Staging/legacy dates and third-party competitor guidance were excluded as current rules."
+  ]
+}

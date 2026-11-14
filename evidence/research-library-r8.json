@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-14T18:33:53.984Z",
+  "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
+  "documentCount": 45,
+  "documents": [
+    {
+      "source": "docs/01-DOSSIE-DECISAO.md",
+      "id": "doc-docs-01-dossie-decisao-md",
+      "title": "01 — Dossiê de decisão: Missão Ipê — Ciência que chega",
+      "category": "Documentação do produto",
+      "originalBytes": 12008,
+      "originalSha256": "e4b0d44ddd8705da34166ed4564cb6d4748eda5d0c21e1a455aaaad75a9575c6",
+      "projectedSha256": "e4b0d44ddd8705da34166ed4564cb6d4748eda5d0c21e1a455aaaad75a9575c6",
+      "redactions": 0
+    },
+    {
+      "source": "docs/02-PRD.md",
+      "id": "doc-docs-02-prd-md",
+      "title": "02 — PRD: Missão Ipê — Ciência que chega",
+      "category": "Documentação do produto",
+      "originalBytes": 11616,
+      "originalSha256": "3824ffe2d27d6406065d7c0c6601a445e524d0ac451d43d5547a8751269d2de0",
+      "projectedSha256": "3824ffe2d27d6406065d7c0c6601a445e524d0ac451d43d5547a8751269d2de0",
+      "redactions": 0
+    },
+    {
+      "source": "docs/03-PRT.md",
+      "id": "doc-docs-03-prt-md",
+      "title": "03 — PRT: requisitos técnicos, modelo e verificação",
+      "category": "Documentação do produto",
+      "originalBytes": 16544,
+      "originalSha256": "53d04790126a470c21a9e5061920e110215660d7ba83099a08fdc8156db7e569",
+      "projectedSha256": "53d04790126a470c21a9e5061920e110215660d7ba83099a08fdc8156db7e569",
+      "redactions": 0
+    },
+    {
+      "source": "docs/04-FLOWCHARTS.md",
+      "id": "doc-docs-04-flowcharts-md",
+      "title": "04 — Fluxos Mermaid e fronteiras do sistema",
+      "category": "Documentação do produto",
+      "originalBytes": 3938,
+      "originalSha256": "56051b9bb4ed7bab8878d36d04a14d00d6ba774964f23701cfad88f19398586c",
+      "projectedSha256": "56051b9bb4ed7bab8878d36d04a14d00d6ba774964f23701cfad88f19398586c",
+      "redactions": 0
+    },
+    {
+      "source": "docs/05-CRONOGRAMA-E-CRITERIOS.md",
+      "id": "doc-docs-05-cronograma-e-criterios-md",
+      "title": "05 — Cronograma, responsabilidades e passagem de etapa",
+      "category": "Documentação do produto",
+      "originalBytes": 6430,
+      "originalSha256": "d4bc70743c2ec966c4befd7b6d5816e4164e0a881c64bcfee9fe5021337c4fac",
+      "projectedSha256": "d4bc70743c2ec966c4befd7b6d5816e4164e0a881c64bcfee9fe5021337c4fac",
+      "redactions": 0
+    },
+    {
+      "source": "docs/06-IA-LOCAL-E-ANEXOS.md",
+      "id": "doc-docs-06-ia-local-e-anexos-md",
+      "title": "06 — Fastino, execução local e análise do texto enviado",
+      "category": "Documentação do produto",
+      "originalBytes": 10626,
+      "originalSha256": "631bcc95f0278b643f3259e5ea20b3681438e00ab09b5250ae8e0f82c7257efb",
+      "projectedSha256": "631bcc95f0278b643f3259e5ea20b3681438e00ab09b5250ae8e0f82c7257efb",
+      "redactions": 0
+    },
+    {
+      "source": "docs/07-SCHEMA-PRISMA.md",
+      "id": "doc-docs-07-schema-prisma-md",
+      "title": "07 — Schema Prisma e persistência implementada",
+      "category": "Documentação do produto",
+      "originalBytes": 4514,
+      "originalSha256": "659cd1e3c6ac157d3568f7f9a0cc1ff44724d1396795c8b9957c4d68ff2fecfd",
+      "projectedSha256": "659cd1e3c6ac157d3568f7f9a0cc1ff44724d1396795c8b9957c4d68ff2fecfd",
+      "redactions": 0
+    },
+    {
+      "source": "docs/08-HANDOFF.md",
+      "id": "doc-docs-08-handoff-md",
+      "title": "08 — Handoff: o que existe, como conferir e quando avançar",
+      "category": "Documentação do produto",
+      "originalBytes": 17590,
+      "originalSha256": "efa7c5ebe99409da56353c75bbe11487d59599b9819c5dab9e12ded6b360df0f",
+      "projectedSha256": "efa7c5ebe99409da56353c75bbe11487d59599b9819c5dab9e12ded6b360df0f",
+      "redactions": 0
+    },
+    {
+      "source": "docs/09-VERIFICACAO.md",
+      "id": "doc-docs-09-verificacao-md",
+      "title": "09 — Verificação executada e limites da versão 0.1.1",
+      "category": "Documentação do produto",
+      "originalBytes": 10504,
+      "originalSha256": "71c0584469279d1d9d65a9d1fe311577b11722e1da49d874ca0d403c55163122",
+      "projectedSha256": "71c0584469279d1d9d65a9d1fe311577b11722e1da49d874ca0d403c55163122",
+      "redactions": 0
+    },
+    {
+      "source": "docs/10-FRENTES-E-RASTREABILIDADE.md",
+      "id": "doc-docs-10-frentes-e-rastreabilidade-md",
+      "title": "10 — Dez frentes, fontes e rastreabilidade",
+      "category": "Documentação do produto",
+      "originalBytes": 4267,
+      "originalSha256": "dfc6bd91d2efd04f93ca72c966dca5d408b8c82fcc51062b717bfcacc12968c5",
+      "projectedSha256": "dfc6bd91d2efd04f93ca72c966dca5d408b8c82fcc51062b717bfcacc12968c5",
+      "redactions": 0
+    },
+    {
+      "source": "docs/11-APENDICE-SCHEMA.md",
+      "id": "doc-docs-11-apendice-schema-md",
+      "title": "11 — Apêndice: schema Prisma integral",
+      "category": "Documentação do produto",
+      "originalBytes": 9505,
+      "originalSha256": "b6c5ad5a86a015e8c584f8237da6583596785c81db623ab399775f4c8ebeedda",
+      "projectedSha256": "b6c5ad5a86a015e8c584f8237da6583596785c81db623ab399775f4c8ebeedda",
+      "redactions": 0
+    },
+    {
+      "source": "docs/12-HANDOFF-APRESENTACAO.md",
+      "id": "doc-docs-12-handoff-apresentacao-md",
+      "title": "12 — Handoff da apresentação e do pacote local",
+      "category": "Documentação do produto",
+      "originalBytes": 14172,
+      "originalSha256": "62e097f4bd921164cd2002c24da26612ca4fe13f400f7f1cc7b119bacbd6cbf0",
+      "projectedSha256": "62e097f4bd921164cd2002c24da26612ca4fe13f400f7f1cc7b119bacbd6cbf0",
+      "redactions": 0
+    },
+    {
+      "source": "docs/13-ARQUITETURA-ARCHIFY.md",
+      "id": "doc-docs-13-arquitetura-archify-md",
+      "title": "Arquitetura verificável da Missão Ipê — R6 BETA",
+      "category": "Documentação do produto",
+      "originalBytes": 11569,
+      "originalSha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
+      "projectedSha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
+      "redactions": 0
+    },
+    {
+      "source": "docs/14-BETA-DEPLOY.md",
+      "id": "doc-docs-14-beta-deploy-md",
+      "title": "BETA pública · montagem e contrato de publicação",
+      "category": "Documentação do produto",
+      "originalBytes": 6588,
+      "originalSha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
+      "projectedSha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
+      "redactions": 0
+    },
+    {
+      "source": "docs/15-PLANO-RELEASE-20261115-0800.md",
+      "id": "doc-docs-15-plano-release-20261115-0800-md",
+      "title": "15 — Plano de release beta para 15/11/2026 às 08h BRT",
+      "category": "Documentação do produto",
+      "originalBytes": 14221,
+      "originalSha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
+      "projectedSha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
+      "redactions": 0
+    },
+    {
+      "source": "docs/16-OPORTUNIDADES-BETA.md",
+      "id": "doc-docs-16-oportunidades-beta-md",
+      "title": "16 — Oportunidades concretas para a beta",
+      "category": "Documentação do produto",
+      "originalBytes": 10745,
+      "originalSha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
+      "projectedSha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
+      "redactions": 0
+    },
+    {
+      "source": "docs/17-PUBLICACAO-GIT-VERCEL.md",
+      "id": "doc-docs-17-publicacao-git-vercel-md",
+      "title": "Publicação R6 — Git e Vercel",
+      "category": "Documentação do produto",
+      "originalBytes": 5985,
+      "originalSha256": "f497039a93b71a9f2c3575aab5bc1eb2bf5619b945d28c5c2fb5d7cee7d67690",
+      "projectedSha256": "f497039a93b71a9f2c3575aab5bc1eb2bf5619b945d28c5c2fb5d7cee7d67690",
+      "redactions": 0
+    },
+    {
+      "source": "docs/18-CONTEXTO-COMPLETO.md",
+      "id": "doc-docs-18-contexto-completo-md",
+      "title": "Contexto completo — AB-NASA-TEAM-IPE",
+      "category": "Documentação do produto",
+      "originalBytes": 70671,
+      "originalSha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
+      "projectedSha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
+      "redactions": 0
+    },
+    {
+      "source": "docs/19-REVISAO-EVIDENCIAS-R8.md",
+      "id": "doc-docs-19-revisao-evidencias-r8-md",
+      "title": "19 — Revisão das evidências da central de contexto",
+      "category": "Documentação do produto",
+      "originalBytes": 14215,
+      "originalSha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
+      "projectedSha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
+      "redactions": 0
+    },
+    {
+      "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
+      "id": "doc-docs-20-central-contexto-cronograma-md",
+      "title": "Central de contexto e cronograma — R8",
+      "category": "Documentação do produto",
+      "originalBytes": 9892,
+      "originalSha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e",
+      "projectedSha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e",
+      "redactions": 0
+    },
+    {
+      "source": "docs/21-OPORTUNIDADES-NASA.md",
+      "id": "doc-docs-21-oportunidades-nasa-md",
+      "title": "21 — Oportunidades NASA para a Missão Ipê",
+      "category": "Documentação do produto",
+      "originalBytes": 18391,
+      "originalSha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
+      "projectedSha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
+      "redactions": 0
+    },
+    {
+      "source": "docs/22-PLANO-CONTINUIDADE.md",
+      "id": "doc-docs-22-plano-continuidade-md",
+      "title": "PROJETO IPÊ — contexto e próximas etapas",
+      "category": "Documentação do produto",
+      "originalBytes": 7087,
+      "originalSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "projectedSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "redactions": 0
+    },
+    {
+      "source": "presentation/PITCH_EN_7_SLIDES.md",
+      "id": "doc-presentation-pitch-en-7-slides-md",
+      "title": "Missão Ipê — English copy for seven pitch slides",
+      "category": "Apresentação",
+      "originalBytes": 13356,
+      "originalSha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
+      "projectedSha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
+      "redactions": 0
+    },
+    {
+      "source": "presentation/README_APRESENTADOR.md",
+      "id": "doc-presentation-readme-apresentador-md",
+      "title": "Missão Ipê · guia do apresentador",
+      "category": "Apresentação",
+      "originalBytes": 8269,
+      "originalSha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
+      "projectedSha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
+      "redactions": 0
+    },
+    {
+      "source": "presentation/ROTEIRO_PT_EN.md",
+      "id": "doc-presentation-roteiro-pt-en-md",
+      "title": "Missão Ipê · roteiro de fala PT / EN",
+      "category": "Apresentação",
+      "originalBytes": 7849,
+      "originalSha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
+      "projectedSha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
+      "redactions": 0
+    },
+    {
+      "source": "research/01-regras-ciencia.md",
+      "id": "doc-research-01-regras-ciencia-md",
+      "title": "Frente 1 — Regras atuais, procedência científica e limites da Missão Ipê",
+      "category": "Pesquisa técnica",
+      "originalBytes": 22928,
+      "originalSha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
+      "projectedSha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
+      "redactions": 0
+    },
+    {
+      "source": "research/02-fastino-anexos.md",
+      "id": "doc-research-02-fastino-anexos-md",
+      "title": "Missão Ipê — verificação adversarial de Fastino e dos anexos",
+      "category": "Pesquisa técnica",
+      "originalBytes": 38848,
+      "originalSha256": "6d4bef61273b935dc9fe69495ec08cc8cbb85a987d79630b929ac005a42540f4",
+      "projectedSha256": "6d4bef61273b935dc9fe69495ec08cc8cbb85a987d79630b929ac005a42540f4",
+      "redactions": 0
+    },
+    {
+      "source": "research/03-oportunidades-spec.md",
+      "id": "doc-research-03-oportunidades-spec-md",
+      "title": "03 — Oportunidades concretas e protocolo spec ↔ código ↔ prova",
+      "category": "Pesquisa técnica",
+      "originalBytes": 21968,
+      "originalSha256": "d759b2e2b44c1abb0803b62e84dc6eee1039890a866e7204002649f7d0a46be8",
+      "projectedSha256": "d759b2e2b44c1abb0803b62e84dc6eee1039890a866e7204002649f7d0a46be8",
+      "redactions": 0
+    },
+    {
+      "source": "research/04-motor.md",
+      "id": "doc-research-04-motor-md",
+      "title": "Frente 4 — Motor determinístico, catálogo e prova finita",
+      "category": "Pesquisa técnica",
+      "originalBytes": 11240,
+      "originalSha256": "2f601634c0a66e3e2e3688756102ec6ee9dc3f0a85e329d1ceeecbda11c9a34b",
+      "projectedSha256": "2f601634c0a66e3e2e3688756102ec6ee9dc3f0a85e329d1ceeecbda11c9a34b",
+      "redactions": 0
+    },
+    {
+      "source": "research/05-interface.md",
+      "id": "doc-research-05-interface-md",
+      "title": "05 — Interface funcional e limites da verificação",
+      "category": "Pesquisa técnica",
+      "originalBytes": 9373,
+      "originalSha256": "5c042e98f379942c748714129218f5942379afdc1ad966672a341cb8361b7862",
+      "projectedSha256": "5c042e98f379942c748714129218f5942379afdc1ad966672a341cb8361b7862",
+      "redactions": 0
+    },
+    {
+      "source": "research/06-persistencia.md",
+      "id": "doc-research-06-persistencia-md",
+      "title": "Persistência e replay — implementação e verificação",
+      "category": "Pesquisa técnica",
+      "originalBytes": 13426,
+      "originalSha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa",
+      "projectedSha256": "44855b8a8b25a1a9a114b2b8dfd4b7e695a564da132303e9c316fc25752407fa",
+      "redactions": 0
+    },
+    {
+      "source": "research/07-revisao-independente.md",
+      "id": "doc-research-07-revisao-independente-md",
+      "title": "Frente 7 — Revisão independente adversarial",
+      "category": "Pesquisa técnica",
+      "originalBytes": 10542,
+      "originalSha256": "9addda5dfac4abb150afd70a27c5773507524b1e985b8102997d58e432eb97c4",
+      "projectedSha256": "9addda5dfac4abb150afd70a27c5773507524b1e985b8102997d58e432eb97c4",
+      "redactions": 0
+    },
+    {
+      "source": "research/08-auditoria-repositorios.md",
+      "id": "doc-research-08-auditoria-repositorios-md",
+      "title": "08 — Auditoria mundial dos repositórios do anexo",
+      "category": "Pesquisa técnica",
+      "originalBytes": 38683,
+      "originalSha256": "ef25e95fc4db4eee3b9fbb0c0a7b6addacac1bc5fdea78f4c70e0a3f719d1437",
+      "projectedSha256": "ef25e95fc4db4eee3b9fbb0c0a7b6addacac1bc5fdea78f4c70e0a3f719d1437",
+      "redactions": 0
+    },
+    {
+      "source": "research/09-release-e-desempenho.md",
+      "id": "doc-research-09-release-e-desempenho-md",
+      "title": "09 — QA de integração, release e desempenho",
+      "category": "Pesquisa técnica",
+      "originalBytes": 11347,
+      "originalSha256": "aa8a7efa47575230faa6365342aad72efd685a3736c8dccee9f9491ad9284aa7",
+      "projectedSha256": "aa8a7efa47575230faa6365342aad72efd685a3736c8dccee9f9491ad9284aa7",
+      "redactions": 0
+    },
+    {
+      "source": "research/10-handoff-redteam.md",
+      "id": "doc-research-10-handoff-redteam-md",
+      "title": "10 — Revisão final independente e limites da entrega",
+      "category": "Pesquisa técnica",
+      "originalBytes": 15838,
+      "originalSha256": "be7dc82e8e25c423fb55d71a1f833bed33f052eba965389f1b4a1a5c071b191e",
+      "projectedSha256": "be7dc82e8e25c423fb55d71a1f833bed33f052eba965389f1b4a1a5c071b191e",
+      "redactions": 0
+    },
+    {
+      "source": "research/11-revisao-spaceapps-apresentacao.md",
+      "id": "doc-research-11-revisao-spaceapps-apresentacao-md",
+      "title": "Revisão Space Apps para a apresentação do Missão Ipê",
+      "category": "Pesquisa técnica",
+      "originalBytes": 15356,
+      "originalSha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
+      "projectedSha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
+      "redactions": 0
+    },
+    {
+      "source": "research/anexo-original.txt",
+      "id": "doc-research-anexo-original-txt",
+      "title": "Anexo fornecido — catálogo de tecnologias e blueprints",
+      "category": "Pesquisa técnica",
+      "originalBytes": 32575,
+      "originalSha256": "62fa654201593bf9dd4f62667dcb91d3e89f98f00cf001ac1506847d0506dc51",
+      "projectedSha256": "62fa654201593bf9dd4f62667dcb91d3e89f98f00cf001ac1506847d0506dc51",
+      "redactions": 0
+    },
+    {
+      "source": "research/history/01-juri-mundial-rodada-anterior.md",
+      "id": "doc-research-history-01-juri-mundial-rodada-anterior-md",
+      "title": "Parecer de júri mundial: Missão Ipê diante dos precedentes de 2023–2025",
+      "category": "Rodadas históricas",
+      "originalBytes": 23496,
+      "originalSha256": "4f7c72d8a7773f7340024fbf76364591b11a668dd3073656bb5bf7c3cee0b276",
+      "projectedSha256": "4f7c72d8a7773f7340024fbf76364591b11a668dd3073656bb5bf7c3cee0b276",
+      "redactions": 0
+    },
+    {
+      "source": "research/history/02-selecao-rodada-anterior.md",
+      "id": "doc-research-history-02-selecao-rodada-anterior-md",
+      "title": "Seleção adversarial: qual projeto merece as próximas 32 horas?",
+      "category": "Rodadas históricas",
+      "originalBytes": 24050,
+      "originalSha256": "8507eee03bea306b56327feb46d075818845f2607df4f769bfa4f1fe29d657a1",
+      "projectedSha256": "8507eee03bea306b56327feb46d075818845f2607df4f769bfa4f1fe29d657a1",
+      "redactions": 0
+    },
+    {
+      "source": "research/initial/arquitetura-prova.md",
+      "id": "doc-research-initial-arquitetura-prova-md",
+      "title": "Arquitetura e prova — Space Mission Design Game",
+      "category": "Pesquisa inicial",
+      "originalBytes": 39812,
+      "originalSha256": "9170c32242e6c7715b4f77591c2da33583b3344a5322b48982a2bb485b20fc94",
+      "projectedSha256": "9170c32242e6c7715b4f77591c2da33583b3344a5322b48982a2bb485b20fc94",
+      "redactions": 0
+    },
+    {
+      "source": "research/initial/desafios-ciencia.md",
+      "id": "doc-research-initial-desafios-ciencia-md",
+      "title": "Oito desafios — ciência, dados, exequibilidade e afinidade AB",
+      "category": "Pesquisa inicial",
+      "originalBytes": 34474,
+      "originalSha256": "7a6c1fd3172defafd96a73ebd5c86917f597b4d120a81ee8d403f794b59f8016",
+      "projectedSha256": "7a6c1fd3172defafd96a73ebd5c86917f597b4d120a81ee8d403f794b59f8016",
+      "redactions": 0
+    },
+    {
+      "source": "research/initial/historico.md",
+      "id": "doc-research-initial-historico-md",
+      "title": "Histórico mundial e regras — NASA Space Apps",
+      "category": "Pesquisa inicial",
+      "originalBytes": 21566,
+      "originalSha256": "f01cc4d6d8164f75a11b18d024e3a107a9e24b1ddc12cb178be26513d2cb7244",
+      "projectedSha256": "f01cc4d6d8164f75a11b18d024e3a107a9e24b1ddc12cb178be26513d2cb7244",
+      "redactions": 0
+    },
+    {
+      "source": "research/initial/paises-brasil.md",
+      "id": "doc-research-initial-paises-brasil-md",
+      "title": "Frente 3 — países, Brasil e tendências transferíveis",
+      "category": "Pesquisa inicial",
+      "originalBytes": 19553,
+      "originalSha256": "1b111c13b85e95dabcce3ab6ffed21f267bcb2a1ec8ae4f6fb4d810b14a46984",
+      "projectedSha256": "1b111c13b85e95dabcce3ab6ffed21f267bcb2a1ec8ae4f6fb4d810b14a46984",
+      "redactions": 0
+    },
+    {
+      "source": "research/initial/repositorios.md",
+      "id": "doc-research-initial-repositorios-md",
+      "title": "Frente 4 — Repositórios e aceleração técnica",
+      "category": "Pesquisa inicial",
+      "originalBytes": 25874,
+      "originalSha256": "5ee5c580d299236d85370760ddcc484060dfea6840b1f30fa8054c678b3ce28c",
+      "projectedSha256": "5ee5c580d299236d85370760ddcc484060dfea6840b1f30fa8054c678b3ce28c",
+      "redactions": 0
+    },
+    {
+      "source": "research/initial/revisao-independente.md",
+      "id": "doc-research-initial-revisao-independente-md",
+      "title": "Revisão independente — decisões que precisam sobreviver à crítica",
+      "category": "Pesquisa inicial",
+      "originalBytes": 11263,
+      "originalSha256": "dd115c751ce54ad732ec05b8e29d88cedbe4959663ea0a437957094930be29d2",
+      "projectedSha256": "dd115c751ce54ad732ec05b8e29d88cedbe4959663ea0a437957094930be29d2",
+      "redactions": 0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "context/research-library.html",
+      "bytes": 900669,
+      "sha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4"
+    },
+    {
+      "path": "context/research-library.md",
+      "bytes": 773647,
+      "sha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574"
+    }
+  ]
+}

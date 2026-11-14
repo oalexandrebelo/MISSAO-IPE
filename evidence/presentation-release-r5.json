@@ -1,0 +1,125 @@
+{
+  "releaseId": "R5-presentation",
+  "frozenAt": "2026-11-14T10:53:22.599931+00:00",
+  "project": "Missão Ipê — Ciência que chega",
+  "gameVersion": "0.1.1",
+  "engineVersion": "0.1.1-rd",
+  "catalogVersion": "ipe-64-v1",
+  "status": "P&D pré-evento; elegibilidade competitiva não estabelecida",
+  "entrypoint": "COMECE_AQUI.html",
+  "presentation": {
+    "path": "presentation/Missao_Ipe_Apresentacao.html",
+    "bytes": 139710,
+    "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+  },
+  "presentationModes": {
+    "pitch": 7,
+    "exploration": 15,
+    "appendices": 8,
+    "visibleLanguage": "pt-BR",
+    "speakerNotes": [
+      "pt-BR",
+      "en"
+    ],
+    "englishSlideCopy": "presentation/PITCH_EN_7_SLIDES.md",
+    "automaticEnglishVisualDeck": false
+  },
+  "gamePreserved": {
+    "baseline": "evidence/game-baseline-r5.json",
+    "filesVerifiedUnchanged": 52,
+    "coreOrGameBuildChangedThisRound": false
+  },
+  "qualityEvidence": {
+    "presentationDom": {
+      "path": "evidence/presentation-qa.json",
+      "passed": 25,
+      "failed": 0,
+      "finishedAt": "2026-11-14T10:52:13.664Z"
+    },
+    "kitHttp": {
+      "path": "evidence/presentation-kit-http-qa.json",
+      "passed": 13,
+      "failed": 0,
+      "checkedAt": "2026-11-14T10:52:55.949Z"
+    },
+    "oldSuiteReexecuted": false,
+    "reexecutionsCountedAsNewCases": false,
+    "realBrowserExecuted": false,
+    "targetHardwareQualified": false
+  },
+  "sourceReview": {
+    "report": "research/11-revisao-spaceapps-apresentacao.md",
+    "receipt": "evidence/spaceapps-review-r5.json",
+    "sourcesRegistered": 20,
+    "allSourcesSuccessfullyRetrieved": false,
+    "challengeResourcesQualified": false,
+    "submissionFormOrFormatCertified": false
+  },
+  "baseDossier": {
+    "path": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+    "bytes": 1200768,
+    "sha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a"
+  },
+  "sourcesForPresentation": [
+    {
+      "path": "presentation/src/main.ts",
+      "bytes": 50384,
+      "sha256": "a5d7f07292789b771438ea8c69ecd68f11ba92f4e0249df24f5b5ca81f1832f5"
+    },
+    {
+      "path": "presentation/src/styles.css",
+      "bytes": 37972,
+      "sha256": "6b6ec2c6e52a9201f48344ff98570d0dfdac2b412df6bd46187477ac5ff173ca"
+    },
+    {
+      "path": "presentation/src/template.html",
+      "bytes": 30702,
+      "sha256": "04f5d875e5f0c0d317cdaec46c3b931a90e1334760f817708cb36a7ada186f3e"
+    },
+    {
+      "path": "presentation/tsconfig.json",
+      "bytes": 156,
+      "sha256": "4e66e4e80d1e3ea7d2965ccaffadc22a715f865065b395d889b095a7751c84a1"
+    },
+    {
+      "path": "scripts/build-presentation.mjs",
+      "bytes": 3483,
+      "sha256": "12cbe6700e8773a65a3c37bf23af59a6a15920092abcb4b1d30baabc4a96bb41"
+    },
+    {
+      "path": "scripts/test-presentation.mjs",
+      "bytes": 38231,
+      "sha256": "271f9b6c1cacfc27bf0bd51d55b7222670cd113a78f60e7a768abce439d1c4e1"
+    }
+  ],
+  "agents": [
+    {
+      "task": "r5_01_revisao_spaceapps",
+      "model": "gpt-6-astra",
+      "reasoningEffort": "max",
+      "scope": "Source review and English slide copy"
+    },
+    {
+      "task": "r5_02_apresentacao_html",
+      "model": "gpt-6-astra",
+      "reasoningEffort": "max",
+      "scope": "Interactive HTML, source and presenter guides"
+    },
+    {
+      "task": "r5_03_qa_handoff",
+      "model": "gpt-6-astra",
+      "reasoningEffort": "max",
+      "scope": "Independent DOM verification and handoff"
+    }
+  ],
+  "archiveIntegrity": "MANIFESTO_SHA256.json at ZIP root; archive CRC and per-entry hashes verified by tools/package_presentation_kit.py",
+  "limits": [
+    "No public deployment, external message, registration or submission performed.",
+    "English slide copy is not an exported English deck.",
+    "CSS, fullscreen and print require rehearsal in a real browser.",
+    "Real NASA archived data is distinct from the model didactic hardware and schedules.",
+    "Mars is not implemented.",
+    "Native launch scripts were not executed on macOS or Windows.",
+    "AI provenance does not resolve competition eligibility."
+  ]
+}

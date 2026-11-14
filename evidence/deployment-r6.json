@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T11:40:59.269Z",
+  "release": "0.2.0-beta.1",
+  "project": {
+    "name": "ab-nasa-team-ipe",
+    "id": "prj_sGbtmlQ0fOsI06DKt2lZaBF6Eks7",
+    "accountId": "team_54JvyyNs6zR6e4xTuK0jN4Gh"
+  },
+  "deployment": {
+    "id": "dpl_gBvSpdXEuRRSLFm1qYFt2YQaVFBu",
+    "url": "https://ab-nasa-team-313pfevlb-alexandrebelo.vercel.app",
+    "aliases": [
+      "https://ab-nasa-team-ipe.vercel.app",
+      "https://ab-nasa-team-ipe-alexandrebelo.vercel.app"
+    ],
+    "readyState": "READY",
+    "target": "production",
+    "readyAt": "2026-11-14T11:38:42.848Z"
+  },
+  "source": {
+    "kind": "local-git-snapshot",
+    "commit": "5d650364c0229de6f40c3dd855c6eb92f942732c",
+    "remoteGithubPushConfirmed": false
+  },
+  "transport": {
+    "method": "Vercel MCP upload_file plus create_deployment with SHA references",
+    "files": [
+      {
+        "file": "LICENSE",
+        "source": "site/LICENSE",
+        "size": 11358,
+        "sha": "2b8b815229aa8a61e483fb4ba0588b8b6c491890",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "file": "NOTICE.md",
+        "source": "site/NOTICE.md",
+        "size": 3144,
+        "sha": "54391ad016916f306169afea4d7bf072502d3bdb",
+        "sha256": "2b42c0bbe35d840490f20433a390abd26b57fd022581a4580578d72876aab6d1"
+      },
+      {
+        "file": "architecture/index.html",
+        "source": "site/architecture/index.html",
+        "size": 1007939,
+        "sha": "231529b78129b59d51450d057f00a26f58dc785a",
+        "sha256": "5a8f128f597ddd614c8a6f0d10444eab79d6616004e94503577426c5dcf248bb"
+      },
+      {
+        "file": "architecture/map.mmd",
+        "source": "site/architecture/map.mmd",
+        "size": 2137,
+        "sha": "a3330b4d562a30ca48b74836ff34bccef6ce8f5d",
+        "sha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b"
+      },
+      {
+        "file": "architecture/model.json",
+        "source": "site/architecture/model.json",
+        "size": 149610,
+        "sha": "e9ec8d933efee07871ecca10394439f138831e59",
+        "sha256": "970548f3cb26703ccb674657589a5e3b98597aa26f085f162d19393cc6f55f8e"
+      },
+      {
+        "file": "docs/09-VERIFICACAO.html",
+        "source": "site/docs/09-VERIFICACAO.html",
+        "size": 8284,
+        "sha": "c9248717ad5a0a713003e57e813eadf0cc56846d",
+        "sha256": "c43bec8202b35a78ef529720f6299aa0cb514023c6b365ba1a2dd634b20d6266"
+      },
+      {
+        "file": "docs/09-VERIFICACAO.md",
+        "source": "site/docs/09-VERIFICACAO.md",
+        "size": 3109,
+        "sha": "439ecbe881cfa6f012923ea7b28463db9c33aee8",
+        "sha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6"
+      },
+      {
+        "file": "docs/13-ARQUITETURA-ARCHIFY.html",
+        "source": "site/docs/13-ARQUITETURA-ARCHIFY.html",
+        "size": 17896,
+        "sha": "e61e0afc227ce3a2b974bd4a55aa7e856c2a9f50",
+        "sha256": "4a3a871750e7de627ae80b3ad018142ddd8b59375105f9380b34b7e94584490b"
+      },
+      {
+        "file": "docs/13-ARQUITETURA-ARCHIFY.md",
+        "source": "site/docs/13-ARQUITETURA-ARCHIFY.md",
+        "size": 11569,
+        "sha": "1772d0d4d92196c4831a80ddc798d966ef182a4f",
+        "sha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04"
+      },
+      {
+        "file": "docs/14-BETA-DEPLOY.html",
+        "source": "site/docs/14-BETA-DEPLOY.html",
+        "size": 12100,
+        "sha": "372e956b5776343685f0ada29045a1c96dbffafc",
+        "sha256": "d8eabfe715eb5cb56f6aaafd8b719c42075236519c4da57105b9e6ac7976d103"
+      },
+      {
+        "file": "docs/14-BETA-DEPLOY.md",
+        "source": "site/docs/14-BETA-DEPLOY.md",
+        "size": 6588,
+        "sha": "2af898ec1284085c448b25f05a5a9931a4457017",
+        "sha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474"
+      },
+      {
+        "file": "docs/15-PLANO-RELEASE.html",
+        "source": "site/docs/15-PLANO-RELEASE.html",
+        "size": 20432,
+        "sha": "4f61ba66ddaf5075805c63cb6df3d262ec43d855",
+        "sha256": "574a6916e9ddf746d5a149b5446368b4b43a68be555b3655a60173a5816d006b"
+      },
+      {
+        "file": "docs/15-PLANO-RELEASE.md",
+        "source": "site/docs/15-PLANO-RELEASE.md",
+        "size": 14221,
+        "sha": "f7b4fb8aa0dda9292d2fed2e319f3c15d5efcd12",
+        "sha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e"
+      },
+      {
+        "file": "docs/16-OPORTUNIDADES-BETA.html",
+        "source": "site/docs/16-OPORTUNIDADES-BETA.html",
+        "size": 16807,
+        "sha": "0c231587430ce7e5f4c6bde0d4c2029c9146ea0d",
+        "sha256": "37474005c0894bcb1caadf6e07818bad049efbbcf96a8f6a7103b9e07e2a594e"
+      },
+      {
+        "file": "docs/16-OPORTUNIDADES-BETA.md",
+        "source": "site/docs/16-OPORTUNIDADES-BETA.md",
+        "size": 10745,
+        "sha": "6379344756d88e19238e8b5d49cdcea491fe84d9",
+        "sha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29"
+      },
+      {
+        "file": "docs/AUTORIA-E-IA.html",
+        "source": "site/docs/AUTORIA-E-IA.html",
+        "size": 6389,
+        "sha": "e089ffe588d1a72930098d52e811a40215f8957a",
+        "sha256": "5d0bdfa14e3a77eaae9d82aeb6d40fe13fb3096b7a513adf4b2a2485c82cdd87"
+      },
+      {
+        "file": "docs/AUTORIA-E-IA.md",
+        "source": "site/docs/AUTORIA-E-IA.md",
+        "size": 1594,
+        "sha": "b1200bc3f41b8c9fb6d0540dabf1b5b6194ab6ff",
+        "sha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b"
+      },
+      {
+        "file": "docs/COMO-USAR.html",
+        "source": "site/docs/COMO-USAR.html",
+        "size": 6870,
+        "sha": "c035b86487d274c005e19826c641011076f05bed",
+        "sha256": "e468e191793512b6bfe49976e7abdc7e95d51d53c7eddff7f84ab915d9ff5253"
+      },
+      {
+        "file": "docs/COMO-USAR.md",
+        "source": "site/docs/COMO-USAR.md",
+        "size": 2114,
+        "sha": "ff52545750687e7b1ab6573265bb45cb74bc5d7b",
+        "sha256": "3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26"
+      },
+      {
+        "file": "docs/ESTADO-PUBLICO.html",
+        "source": "site/docs/ESTADO-PUBLICO.html",
+        "size": 8351,
+        "sha": "77d5967748ea3c3690b4993d864cc170da9a9429",
+        "sha256": "c91b48a2bc99a8a9bc5c8e067a8961ec8105095da3253227993c8afbac68cb6a"
+      },
+      {
+        "file": "docs/ESTADO-PUBLICO.md",
+        "source": "site/docs/ESTADO-PUBLICO.md",
+        "size": 3542,
+        "sha": "6b1703f83f00b8e8cba3bb063810180ffe23fd01",
+        "sha256": "d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb"
+      },
+      {
+        "file": "docs/ORIGEM-DOS-DADOS.html",
+        "source": "site/docs/ORIGEM-DOS-DADOS.html",
+        "size": 7678,
+        "sha": "af7edc1de7fa262ededc27a237e3e762a79a9218",
+        "sha256": "114b99b3d4027d0c12f3c32ae138a1fe95b6df0e546b91070b8a1fa8db7a58eb"
+      },
+      {
+        "file": "docs/ORIGEM-DOS-DADOS.md",
+        "source": "site/docs/ORIGEM-DOS-DADOS.md",
+        "size": 2489,
+        "sha": "6f35e9de8d53a80e2a03de3f9fd6232b8668ccd3",
+        "sha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76"
+      },
+      {
+        "file": "docs/index.html",
+        "source": "site/docs/index.html",
+        "size": 8238,
+        "sha": "ed35a0667182186bbbd238348a450ed74bcaed9c",
+        "sha256": "6bd1873950588a3cccec98e6dc57fc83b3e249f2544009b41f2db96fbc78f69a"
+      },
+      {
+        "file": "evidence/ab-r3a-digest.json",
+        "source": "site/evidence/ab-r3a-digest.json",
+        "size": 1374,
+        "sha": "b6fe31f1c9804f85d49776142ef66e0ae6f30856",
+        "sha256": "d755ddd885a9178fd62481ee53df5beadf710c43d65a0b5d256de3d1b075da01"
+      },
+      {
+        "file": "evidence/chronology.json",
+        "source": "site/evidence/chronology.json",
+        "size": 1043,
+        "sha": "4a7994baf0f1d2807526c67b2d7bfc3e38b5e5aa",
+        "sha256": "85a658b0934d06f2e3d630ab19557499a5a9272b6562f6d94809485ef129337b"
+      },
+      {
+        "file": "evidence/engine-benchmark.json",
+        "source": "site/evidence/engine-benchmark.json",
+        "size": 3149,
+        "sha": "81289370ea64089d44b246f3ad745aafb50954da",
+        "sha256": "bffdec34f845924e60f4dcbaa2473c80ee45aa9ef8c42b8b4ef11aa4e3a2f468"
+      },
+      {
+        "file": "evidence/presentation-build.json",
+        "source": "site/evidence/presentation-build.json",
+        "size": 1308,
+        "sha": "89d93ca18b87bfa6f795ba0317901db805980006",
+        "sha256": "323e74cebf5a588d26740e8bc3c2d7bc5c951c41383220339c3c2617be1ff98c"
+      },
+      {
+        "file": "evidence/presentation-qa.json",
+        "source": "site/evidence/presentation-qa.json",
+        "size": 5273,
+        "sha": "1adca4d590294e901f66edd38216f142150eddc9",
+        "sha256": "ff467a401f6e2c712327177b91801489c802a51871b22b23df0dff96c57a2464"
+      },
+      {
+        "file": "examples/01-long-base.json",
+        "source": "site/examples/01-long-base.json",
+        "size": 12876,
+        "sha": "7cdc4df623f70828280d2cd7a7bbc2b95b2c6cd6",
+        "sha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb"
+      },
+      {
+        "file": "examples/02-short-base.json",
+        "source": "site/examples/02-short-base.json",
+        "size": 11407,
+        "sha": "0e90c149fe779f659c2585d5a10fcf103a2b2794",
+        "sha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5"
+      },
+      {
+        "file": "examples/03-short-repaired.json",
+        "source": "site/examples/03-short-repaired.json",
+        "size": 11872,
+        "sha": "4dd292ded706419b0d3a20348a07c335eb3bd578",
+        "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5"
+      },
+      {
+        "file": "game/assets/OrbitalScene-B0I9aE-1.js",
+        "source": "site/game/assets/OrbitalScene-B0I9aE-1.js",
+        "size": 567251,
+        "sha": "f95414a486e3cd6cd83ca199b05d7818f4f41d3c",
+        "sha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b"
+      },
+      {
+        "file": "game/assets/index-C0yMbnbH.css",
+        "source": "site/game/assets/index-C0yMbnbH.css",
+        "size": 55259,
+        "sha": "580f05a77c20e2159c51b87f2b84b16a476ccaf8",
+        "sha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94"
+      },
+      {
+        "file": "game/assets/index-DYhpvtlV.js",
+        "source": "site/game/assets/index-DYhpvtlV.js",
+        "size": 311602,
+        "sha": "935c15ccba68a85df34bcfdac9fe63892e3e0b55",
+        "sha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50"
+      },
+      {
+        "file": "game/assets/mission.worker-m4WSgatj.js",
+        "source": "site/game/assets/mission.worker-m4WSgatj.js",
+        "size": 20166,
+        "sha": "882b6e93f45311ead4bd20abe5a6fc6b41d7142f",
+        "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
+      },
+      {
+        "file": "game/assets/search-DiIaA0z6.js",
+        "source": "site/game/assets/search-DiIaA0z6.js",
+        "size": 1242,
+        "sha": "fac0d58cd10884c0823802ba0cef66ec79934db5",
+        "sha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4"
+      },
+      {
+        "file": "game/data/cmr-mod13q1-granule-2.json",
+        "source": "site/game/data/cmr-mod13q1-granule-2.json",
+        "size": 5720,
+        "sha": "44a141b8c356ed4b2a70c1b957f8f6c3c4031a3f",
+        "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b"
+      },
+      {
+        "file": "game/data/cmr-mod13q1-granules.json",
+        "source": "site/game/data/cmr-mod13q1-granules.json",
+        "size": 5719,
+        "sha": "0c5a882de03ed75a41205d1556b0e8547881edfb",
+        "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f"
+      },
+      {
+        "file": "game/data/mod13q1-A-raw.json",
+        "source": "site/game/data/mod13q1-A-raw.json",
+        "size": 4232,
+        "sha": "9b3e37e47857501ce1a5d3036bf6d5090495043d",
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+      },
+      {
+        "file": "game/data/mod13q1-A-retrieval.json",
+        "source": "site/game/data/mod13q1-A-retrieval.json",
+        "size": 6162,
+        "sha": "6c196d8af4591093d088a5cd212cb02502835625",
+        "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f"
+      },
+      {
+        "file": "game/data/mod13q1-B-raw.json",
+        "source": "site/game/data/mod13q1-B-raw.json",
+        "size": 4232,
+        "sha": "e8456222aeafbce70c8d97c3ee49dcd97f790f2c",
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+      },
+      {
+        "file": "game/data/mod13q1-B-retrieval.json",
+        "source": "site/game/data/mod13q1-B-retrieval.json",
+        "size": 6162,
+        "sha": "ceaf391a5a9b5442047604659828fa558d18e335",
+        "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b"
+      },
+      {
+        "file": "game/data/mod13q1-C-raw.json",
+        "source": "site/game/data/mod13q1-C-raw.json",
+        "size": 4232,
+        "sha": "9fd9416ee3cc5e31bf8e5f5b46c88e84074b0960",
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+      },
+      {
+        "file": "game/data/mod13q1-C-retrieval.json",
+        "source": "site/game/data/mod13q1-C-retrieval.json",
+        "size": 6162,
+        "sha": "29573a477ee9dfd34bbbb591e5a8a394cdb080b4",
+        "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e"
+      },
+      {
+        "file": "game/data/mod13q1-bands.json",
+        "source": "site/game/data/mod13q1-bands.json",
+        "size": 2366,
+        "sha": "f2ab3a48fdfdd80236142db7456a25efff7cdc01",
+        "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303"
+      },
+      {
+        "file": "game/data/mod13q1-research-pack.json",
+        "source": "site/game/data/mod13q1-research-pack.json",
+        "size": 5942,
+        "sha": "ff7eb2696e7524104ca6d0e193b135e8a73c20d5",
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+      },
+      {
+        "file": "game/index.html",
+        "source": "site/game/index.html",
+        "size": 797,
+        "sha": "5157e0b47378f336dabf0a801a1234dabdbeab6a",
+        "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969"
+      },
+      {
+        "file": "index.html",
+        "source": "site/index.html",
+        "size": 18676,
+        "sha": "6f1554250c2b03908a6af3e6957c8e05080d7df3",
+        "sha256": "4d91e17b3c358b543c32eb478594034af2d52396f211876893e6b4d23275b222"
+      },
+      {
+        "file": "licenses/React-MIT.txt",
+        "source": "site/licenses/React-MIT.txt",
+        "size": 1088,
+        "sha": "747a45681a2e4dbf3d896fd908dd836ee7e191cd",
+        "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      {
+        "file": "licenses/ReactDOM-MIT.txt",
+        "source": "site/licenses/ReactDOM-MIT.txt",
+        "size": 1088,
+        "sha": "747a45681a2e4dbf3d896fd908dd836ee7e191cd",
+        "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      {
+        "file": "licenses/Scheduler-MIT.txt",
+        "source": "site/licenses/Scheduler-MIT.txt",
+        "size": 1088,
+        "sha": "747a45681a2e4dbf3d896fd908dd836ee7e191cd",
+        "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+      },
+      {
+        "file": "licenses/Three-MIT.txt",
+        "source": "site/licenses/Three-MIT.txt",
+        "size": 1081,
+        "sha": "7293d37daed3d6714b36d830e30c9614a5e268ec",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+      },
+      {
+        "file": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
+        "source": "site/output/html/AB_Missao_Ipe_Estudo_Integral.html",
+        "size": 475437,
+        "sha": "830d1e03875adc33be54a1807c4069209529a834",
+        "sha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba"
+      },
+      {
+        "file": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+        "source": "site/output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+        "size": 1200768,
+        "sha": "292c0569ba4bd776a4421d4fa407e1deae7f90bb",
+        "sha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a"
+      },
+      {
+        "file": "portable/Missao_Ipe_Local.html",
+        "source": "site/portable/Missao_Ipe_Local.html",
+        "size": 1008522,
+        "sha": "e2c3b1dd27ec52d42d0fec49ee3bd9674cfe5dd5",
+        "sha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac"
+      },
+      {
+        "file": "presentation/Missao_Ipe_Apresentacao.html",
+        "source": "site/presentation/Missao_Ipe_Apresentacao.html",
+        "size": 139710,
+        "sha": "591a91f53ff62c28add85036314d8d92e0e1c573",
+        "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+      },
+      {
+        "file": "presentation/PITCH_EN_7_SLIDES.html",
+        "source": "site/presentation/PITCH_EN_7_SLIDES.html",
+        "size": 20508,
+        "sha": "02e6cf767a75c67d2bd0e8503e1730e3c15d1961",
+        "sha256": "0f8f62d77ad233c1ec9b13b7f70068253902b4862927e876822bc57a6cae278e"
+      },
+      {
+        "file": "presentation/PITCH_EN_7_SLIDES.md",
+        "source": "site/presentation/PITCH_EN_7_SLIDES.md",
+        "size": 13356,
+        "sha": "e7df1116f975cf02a05a691ac7cb1444dba2de4d",
+        "sha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155"
+      },
+      {
+        "file": "presentation/README_APRESENTADOR.html",
+        "source": "site/presentation/README_APRESENTADOR.html",
+        "size": 14200,
+        "sha": "629eae0304cddccce915deb9c2221bfc80e71b90",
+        "sha256": "8574d26b880fe6e7ebeb75f10115c5093890a0e073e78ce37076c8195ac2b1c7"
+      },
+      {
+        "file": "presentation/README_APRESENTADOR.md",
+        "source": "site/presentation/README_APRESENTADOR.md",
+        "size": 8269,
+        "sha": "e8ac1fb74eb77be68d71de93fa92f5685e71d3e1",
+        "sha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641"
+      },
+      {
+        "file": "presentation/ROTEIRO_PT_EN.html",
+        "source": "site/presentation/ROTEIRO_PT_EN.html",
+        "size": 13375,
+        "sha": "4077df360f0c65358399c922664788414c6b6f59",
+        "sha256": "3867c053340e4610ae01e5063f40db7e4550213e3197ff6b815253ec98fee942"
+      },
+      {
+        "file": "presentation/ROTEIRO_PT_EN.md",
+        "source": "site/presentation/ROTEIRO_PT_EN.md",
+        "size": 7849,
+        "sha": "1fb9a2b52ffdec75805b45f16b94d5d325fa6bc2",
+        "sha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6"
+      },
+      {
+        "file": "public/data/cmr-mod13q1-granule-2.json",
+        "source": "site/public/data/cmr-mod13q1-granule-2.json",
+        "size": 5720,
+        "sha": "44a141b8c356ed4b2a70c1b957f8f6c3c4031a3f",
+        "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b"
+      },
+      {
+        "file": "public/data/cmr-mod13q1-granules.json",
+        "source": "site/public/data/cmr-mod13q1-granules.json",
+        "size": 5719,
+        "sha": "0c5a882de03ed75a41205d1556b0e8547881edfb",
+        "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f"
+      },
+      {
+        "file": "public/data/mod13q1-A-raw.json",
+        "source": "site/public/data/mod13q1-A-raw.json",
+        "size": 4232,
+        "sha": "9b3e37e47857501ce1a5d3036bf6d5090495043d",
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+      },
+      {
+        "file": "public/data/mod13q1-A-retrieval.json",
+        "source": "site/public/data/mod13q1-A-retrieval.json",
+        "size": 6162,
+        "sha": "6c196d8af4591093d088a5cd212cb02502835625",
+        "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f"
+      },
+      {
+        "file": "public/data/mod13q1-B-raw.json",
+        "source": "site/public/data/mod13q1-B-raw.json",
+        "size": 4232,
+        "sha": "e8456222aeafbce70c8d97c3ee49dcd97f790f2c",
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+      },
+      {
+        "file": "public/data/mod13q1-B-retrieval.json",
+        "source": "site/public/data/mod13q1-B-retrieval.json",
+        "size": 6162,
+        "sha": "ceaf391a5a9b5442047604659828fa558d18e335",
+        "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b"
+      },
+      {
+        "file": "public/data/mod13q1-C-raw.json",
+        "source": "site/public/data/mod13q1-C-raw.json",
+        "size": 4232,
+        "sha": "9fd9416ee3cc5e31bf8e5f5b46c88e84074b0960",
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+      },
+      {
+        "file": "public/data/mod13q1-C-retrieval.json",
+        "source": "site/public/data/mod13q1-C-retrieval.json",
+        "size": 6162,
+        "sha": "29573a477ee9dfd34bbbb591e5a8a394cdb080b4",
+        "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e"
+      },
+      {
+        "file": "public/data/mod13q1-bands.json",
+        "source": "site/public/data/mod13q1-bands.json",
+        "size": 2366,
+        "sha": "f2ab3a48fdfdd80236142db7456a25efff7cdc01",
+        "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303"
+      },
+      {
+        "file": "public/data/mod13q1-research-pack.json",
+        "source": "site/public/data/mod13q1-research-pack.json",
+        "size": 5942,
+        "sha": "ff7eb2696e7524104ca6d0e193b135e8a73c20d5",
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+      },
+      {
+        "file": "publication-manifest.json",
+        "source": "site/publication-manifest.json",
+        "size": 33517,
+        "sha": "1c9e8ea5a6a2d42691990b931ffc6acfb32f9230",
+        "sha256": "ac6cfaab2084d4c06dd405514ca71db40332b38539d1d6134961ffe3b8ee1a64"
+      },
+      {
+        "file": "research/01-regras-ciencia.html",
+        "source": "site/research/01-regras-ciencia.html",
+        "size": 30733,
+        "sha": "ac3a1c966e8d47068c9d60e48a5865481ebed972",
+        "sha256": "23627360680afb20869bdeead2fb0a935040f40cd2d7f88925ee0c0fac5722b0"
+      },
+      {
+        "file": "research/01-regras-ciencia.md",
+        "source": "site/research/01-regras-ciencia.md",
+        "size": 22928,
+        "sha": "2b237a18a27592a074a81979bfdeb70f375353e5",
+        "sha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43"
+      },
+      {
+        "file": "research/11-revisao-spaceapps-apresentacao.html",
+        "source": "site/research/11-revisao-spaceapps-apresentacao.html",
+        "size": 21970,
+        "sha": "03f510d2afdbf247d3e603e812ce937595658160",
+        "sha256": "3120f750136db80600b282f7f10187756cc45bd883f33844829f42f544fda14f"
+      },
+      {
+        "file": "research/11-revisao-spaceapps-apresentacao.md",
+        "source": "site/research/11-revisao-spaceapps-apresentacao.md",
+        "size": 15356,
+        "sha": "7209dec63e845c4b667936b4e08c761fc2f3e44b",
+        "sha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89"
+      },
+      {
+        "file": "research/evidence/evi3-validation.json",
+        "source": "site/research/evidence/evi3-validation.json",
+        "size": 5313,
+        "sha": "b59c20cfa70f046973e7d39faaad58d334fe8c70",
+        "sha256": "d7645e04230c86aa1915324da439258b2043bad4593890fc34bd873fa3bac9f6"
+      },
+      {
+        "file": "research/evidence/resources-retrieval-20261114.json",
+        "source": "site/research/evidence/resources-retrieval-20261114.json",
+        "size": 2806,
+        "sha": "97cd912ea6b68e6316ec5f43c5b98c296c379887",
+        "sha256": "cbbd3fa1c6102415b9844bf3347d3b8710a5b7334ea25b6f943e9088c4e6f400"
+      },
+      {
+        "file": "research/evidence/validate-evi3-research.py",
+        "source": "site/research/evidence/validate-evi3-research.py",
+        "size": 4384,
+        "sha": "63de8650175035d46d4997e9fa5a2589f77ba01b",
+        "sha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00"
+      },
+      {
+        "file": "vercel.json",
+        "source": ".vercel/deploy-config.json",
+        "size": 2424,
+        "sha": "1e6a5a9e399dc0fef733f81de8241881bd0b405c",
+        "sha256": "4d7c0f5b03def2fc2afdbca68378b27d87c6a2d8ef6835df7096dffcf4cd206a"
+      }
+    ],
+    "publicFileCount": 81,
+    "publicBytes": 5511703,
+    "publicManifestSha256": "ac6cfaab2084d4c06dd405514ca71db40332b38539d1d6134961ffe3b8ee1a64"
+  },
+  "accessConfiguration": {
+    "passwordProtectionEnabled": false,
+    "ssoProtectionEnabled": false,
+    "trustedIpsEnabled": false,
+    "scope": "new project ab-nasa-team-ipe only"
+  },
+  "http": {
+    "root": {
+      "status": 200,
+      "headers": {
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sat, 14 Nov 2026 11:39:10 GMT",
+        "etag": "W/\"3da15866c6b255bb203dd9af80b49308\"",
+        "last-modified": "Sat, 14 Nov 2026 11:39:10 GMT",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-vercel-cache": "MISS",
+        "x-vercel-id": "gru1:iad1::84rx8-1794656350064-1d5058e7e5c4"
+      },
+      "method": "Vercel connector web_fetch_vercel_url"
+    },
+    "productionChecksFile": "evidence/vercel-static-r6.json",
+    "independentSearchFetch": "URL not accessible via search tool; no anonymous or browser coverage claimed",
+    "productionSummary": {
+      "routesChecked": 17,
+      "expectedStatusesPassed": 17,
+      "successful200": 16,
+      "expected404": 1,
+      "uniqueLocalArtifacts": 13,
+      "exactUtf8Comparisons": 16,
+      "truncatedOrIncompleteComparisons": 0,
+      "mimeChecksPassed": 16,
+      "securityHeaderChecksPassed": 16,
+      "mismatches": 0
+    },
+    "productionReceiptSha256": "7309991fe2538ce561cb761fa59410a0bd0a4e6dfe9bbe226685463482d7d4e4",
+    "productionStatus": "passed-with-provider-access-limits"
+  },
+  "limitations": [
+    "No real browser inspection performed; existing restriction respected",
+    "GitHub repository creation/push still needs authorized authentication",
+    "MCP web fetch is not a test from an independent ISP or end-user browser",
+    "No NASA eligibility or Resources confirmation",
+    "Publication does not schedule the planned release work"
+  ]
+}

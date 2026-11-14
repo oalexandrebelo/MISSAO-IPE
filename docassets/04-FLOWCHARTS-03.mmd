@@ -1,0 +1,13 @@
+flowchart TD
+  A["Arquivo selecionado"] --> B["Limitar tamanho e profundidade"]
+  B --> C["Parse estrito sem duplicatas"]
+  C --> D["Validar campos e versões"]
+  D --> E["Conferir hashes da entrada e alegação"]
+  E --> F["Reexecutar entrada permitida"]
+  F --> G{"Resultado confere?"}
+  G -->|Sim| H["Exibir consistência verificada"]
+  G -->|Não| I["Exibir divergência e novo resultado"]
+  B -->|Rejeição| J["Manter estado atual"]
+  C -->|Rejeição| J
+  D -->|Rejeição| J
+  E -->|Rejeição| J

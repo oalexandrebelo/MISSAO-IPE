@@ -1,0 +1,430 @@
+{
+  "startedAt": "2026-11-14T10:52:12.799Z",
+  "finishedAt": "2026-11-14T10:52:13.664Z",
+  "command": "node scripts/test-presentation.mjs",
+  "node": "v24.22.1",
+  "status": "passed-with-explicit-limits",
+  "checksPassed": 25,
+  "checksFailed": 0,
+  "environment": "jsdom; DOM simulado, sem navegador real, HTTP, Worker, GPU ou acesso de rede",
+  "engine": "HTML compilado com núcleo real; expectativas comparadas à API original e aos casos publicados. Não é novo oráculo físico independente.",
+  "nativeAdapters": [
+    "scrollTo/scrollIntoView sem efeito visual",
+    "print registra somente chamada",
+    "fullscreen simulado por atributos",
+    "setInterval controlado pelo teste",
+    "Date.now controlado somente no teste do cronômetro"
+  ],
+  "limitations": [
+    "Não verifica layout, contraste, responsividade, foco nativo ou árvore de acessibilidade",
+    "Não verifica impressão/PDF nativa ou tela cheia real",
+    "Não valida abertura fria offline, file: ou persistência em navegador",
+    "Não repete os 51 testes Node, 9 contagens DOM e 8 casos HTTP anteriores",
+    "Não estabelece elegibilidade, conformidade de submissão ou aprendizagem"
+  ],
+  "harness": {
+    "path": "scripts/test-presentation.mjs",
+    "bytes": 38231,
+    "sha256": "271f9b6c1cacfc27bf0bd51d55b7222670cd113a78f60e7a768abce439d1c4e1"
+  },
+  "observations": {
+    "artifact": {
+      "path": "presentation/Missao_Ipe_Apresentacao.html",
+      "bytes": 139710,
+      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+    },
+    "runtimeDependencies": {
+      "externalAssets": 0,
+      "networkApisFound": 0,
+      "csp": "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'",
+      "externalReferenceLinks": 10
+    },
+    "buildReceipt": {
+      "path": "evidence/presentation-build.json",
+      "generatedAt": "2026-11-14T10:52:03.376Z",
+      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+    },
+    "linkAudit": {
+      "uniqueIds": 118,
+      "internalAnchors": [
+        "#slides",
+        "#quadro-01"
+      ],
+      "localFiles": [
+        {
+          "href": "../portable/Missao_Ipe_Local.html",
+          "target": "portable/Missao_Ipe_Local.html"
+        },
+        {
+          "href": "../output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+          "target": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf"
+        },
+        {
+          "href": "../docs/09-VERIFICACAO.md",
+          "target": "docs/09-VERIFICACAO.md"
+        },
+        {
+          "href": "../evidence/engine-benchmark.json",
+          "target": "evidence/engine-benchmark.json"
+        },
+        {
+          "href": "../evidence/ab-r3a-digest.json",
+          "target": "evidence/ab-r3a-digest.json"
+        },
+        {
+          "href": "../evidence/presentation-qa.json",
+          "target": "evidence/presentation-qa.json",
+          "producedByThisCommand": true
+        },
+        {
+          "href": "../public/data/mod13q1-A-raw.json",
+          "target": "public/data/mod13q1-A-raw.json"
+        },
+        {
+          "href": "../public/data/mod13q1-B-raw.json",
+          "target": "public/data/mod13q1-B-raw.json"
+        },
+        {
+          "href": "../public/data/mod13q1-C-raw.json",
+          "target": "public/data/mod13q1-C-raw.json"
+        },
+        {
+          "href": "../research/11-revisao-spaceapps-apresentacao.md",
+          "target": "research/11-revisao-spaceapps-apresentacao.md"
+        },
+        {
+          "href": "../research/01-regras-ciencia.md",
+          "target": "research/01-regras-ciencia.md"
+        },
+        {
+          "href": "../evidence/chronology.json",
+          "target": "evidence/chronology.json"
+        },
+        {
+          "href": "README_APRESENTADOR.md",
+          "target": "presentation/README_APRESENTADOR.md"
+        },
+        {
+          "href": "ROTEIRO_PT_EN.md",
+          "target": "presentation/ROTEIRO_PT_EN.md"
+        },
+        {
+          "href": "PITCH_EN_7_SLIDES.md",
+          "target": "presentation/PITCH_EN_7_SLIDES.md"
+        },
+        {
+          "href": "../evidence/presentation-build.json",
+          "target": "evidence/presentation-build.json"
+        },
+        {
+          "href": "../NOTICE.md",
+          "target": "NOTICE.md"
+        }
+      ]
+    },
+    "sourceIds": [
+      "mod13",
+      "ornl",
+      "mission",
+      "cubesat",
+      "rules",
+      "resources"
+    ],
+    "embeddedSources": [
+      {
+        "name": "mod13q1-A-raw.json",
+        "bytes": 4232,
+        "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47"
+      },
+      {
+        "name": "mod13q1-B-raw.json",
+        "bytes": 4232,
+        "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10"
+      },
+      {
+        "name": "mod13q1-C-raw.json",
+        "bytes": 4232,
+        "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6"
+      }
+    ],
+    "printMode": "Regras CSS por data-in-mode verificadas; paginação/impressão nativa não executada.",
+    "slideCounts": {
+      "pitch": 7,
+      "exploration": 15,
+      "appendix": 8
+    },
+    "nativeControls": "Somente chamada/estado em adaptadores: não qualifica fullscreen, impressão ou foco nativos.",
+    "timer": {
+      "initiallyRunning": false,
+      "explicitStart": true,
+      "controlledElapsedSeconds": 61,
+      "pausedOnClose": true,
+      "pausedOnHidden": true,
+      "pausedOnPrint": true,
+      "automaticDecisions": 0
+    },
+    "initialControlledIntervals": 0,
+    "controls": {
+      "configKeys": [
+        "battery",
+        "panel",
+        "processing",
+        "radio",
+        "buffer",
+        "policy"
+      ],
+      "scenarios": [
+        "long-contact",
+        "short-contact"
+      ]
+    },
+    "scientificSelection": {
+      "records": 6,
+      "ids": [
+        "A-A2024241",
+        "A-A2024257",
+        "B-A2024241",
+        "B-A2024257",
+        "C-A2024241",
+        "C-A2024257"
+      ],
+      "segments": [
+        "launch",
+        "space",
+        "ground",
+        "user"
+      ]
+    },
+    "longBase": {
+      "outcome": "success",
+      "deliveredRecords": 6,
+      "downlinkedBits": "1080000000"
+    },
+    "shortBase": {
+      "outcome": "failure",
+      "deliveredRecords": 2,
+      "downlinkedBits": "460800000",
+      "violations": [
+        "delivery"
+      ]
+    },
+    "indexOnly": {
+      "outcome": "failure",
+      "deliveredRecords": 0,
+      "completedAtS": 600,
+      "violations": [
+        "peak-power",
+        "delivery"
+      ]
+    },
+    "repaired": {
+      "outcome": "success",
+      "deliveredRecords": 6,
+      "downlinkedBits": "360000000",
+      "massKg": 3.5,
+      "credits": 84
+    },
+    "traceInspection": {
+      "tracePoints": 26,
+      "firstTimeS": 0,
+      "lastTimeS": 10800,
+      "resultUnchanged": true
+    },
+    "manualGate": {
+      "equivalentToPresets": true,
+      "unlockedBySelectionOnly": false
+    },
+    "manualCombination": {
+      "config": {
+        "battery": "large",
+        "panel": "compact",
+        "processing": "index",
+        "radio": "fast",
+        "buffer": "compact",
+        "policy": "last-contact"
+      },
+      "outcome": "success",
+      "deliveredRecords": 6,
+      "massKg": 3.35,
+      "credits": 82
+    },
+    "catalog": {
+      "evaluated": 64,
+      "total": 64,
+      "successful": 9,
+      "failed": 49,
+      "invalid": 6,
+      "indeterminate": 0,
+      "minimumDistance": 2,
+      "bestCount": 1
+    },
+    "catalogSelection": {
+      "loadsConfiguration": true,
+      "executesAutomatically": false,
+      "explicitExecutionDelivered": 6
+    },
+    "preservedCore": [
+      {
+        "path": "src/core/catalog.ts",
+        "sha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8"
+      },
+      {
+        "path": "src/core/contracts.ts",
+        "sha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2"
+      },
+      {
+        "path": "src/core/engine.ts",
+        "sha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635"
+      },
+      {
+        "path": "src/core/exact.ts",
+        "sha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8"
+      },
+      {
+        "path": "src/core/power.ts",
+        "sha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7"
+      },
+      {
+        "path": "src/core/science.ts",
+        "sha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92"
+      },
+      {
+        "path": "src/core/search.ts",
+        "sha256": "27ebae8c4b0b6dda92a23b33fafe0ad21f47fdae97a02625380f7bbf82f759e8"
+      },
+      {
+        "path": "src/data/science-data.ts",
+        "sha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66"
+      }
+    ],
+    "domInstances": 13,
+    "networkAttempts": 0
+  },
+  "checks": [
+    {
+      "name": "artefato compilado autocontido: nenhum recurso remoto obrigatório ou API de rede",
+      "status": "passed",
+      "durationMs": 140.392
+    },
+    {
+      "name": "recibo do build corresponde ao HTML testado e inclui os módulos do núcleo real",
+      "status": "passed",
+      "durationMs": 1.395
+    },
+    {
+      "name": "IDs únicos e todos os links internos/relativos resolvidos no diretório do pacote",
+      "status": "passed",
+      "durationMs": 40.73
+    },
+    {
+      "name": "fontes do apêndice possuem identidade e links explícitos",
+      "status": "passed",
+      "durationMs": 51.521
+    },
+    {
+      "name": "três JSONs de fonte incorporados preservam os bytes dos originais locais",
+      "status": "passed",
+      "durationMs": 51.43
+    },
+    {
+      "name": "CSS de impressão seleciona apenas os quadros do modo ativo",
+      "status": "passed",
+      "durationMs": 50.722
+    },
+    {
+      "name": "pitch inicial contém sete quadros; navegação, limites e contador concordam",
+      "status": "passed",
+      "durationMs": 81.888
+    },
+    {
+      "name": "modo Exploração inclui apêndices e retorna ao pitch com contador consistente",
+      "status": "passed",
+      "durationMs": 34.99
+    },
+    {
+      "name": "visão geral, notas, impressão e tela cheia têm handlers conectados",
+      "status": "passed",
+      "durationMs": 55.597
+    },
+    {
+      "name": "notas PT/EN e cronômetro exigem ação e pausam ao fechar, ocultar ou imprimir",
+      "status": "passed",
+      "durationMs": 46.346
+    },
+    {
+      "name": "atalhos respeitam campos e diálogo; intervalos não executam decisões ou navegam",
+      "status": "passed",
+      "durationMs": 34.005
+    },
+    {
+      "name": "seis escolhas binárias e dois cenários correspondem ao catálogo real",
+      "status": "passed",
+      "durationMs": 29.997
+    },
+    {
+      "name": "segmentos e seis registros científicos respondem a seleção com fonte e valores identificáveis",
+      "status": "passed",
+      "durationMs": 43.234
+    },
+    {
+      "name": "reparo e catálogo permanecem fechados antes dos dois conflitos observados",
+      "status": "passed",
+      "durationMs": 4.644
+    },
+    {
+      "name": "base longa entrega 6/6 calculados pelo núcleo incorporado",
+      "status": "passed",
+      "durationMs": 9.204
+    },
+    {
+      "name": "base curta entrega 2/6 por contato, sem confundir falha de entrega e de potência",
+      "status": "passed",
+      "durationMs": 6.168
+    },
+    {
+      "name": "ÍNDICE isolado falha por potência aos 600 s e só então libera a revelação",
+      "status": "passed",
+      "durationMs": 2.949
+    },
+    {
+      "name": "reparo explícito bateria grande + ÍNDICE entrega 6/6 e não modifica o núcleo",
+      "status": "passed",
+      "durationMs": 5.316
+    },
+    {
+      "name": "trace e botões de evento inspecionam estados sem recalcular ou alterar o resultado",
+      "status": "passed",
+      "durationMs": 1.645
+    },
+    {
+      "name": "gate reconhece execuções manuais equivalentes e não simples troca dos seletores",
+      "status": "passed",
+      "durationMs": 48.567
+    },
+    {
+      "name": "controles manuais recalculam uma combinação diferente com o núcleo real",
+      "status": "passed",
+      "durationMs": 37.5
+    },
+    {
+      "name": "catálogo interativo enumera 64 casos e certifica mínimo 2 apenas no domínio declarado",
+      "status": "passed",
+      "durationMs": 38.003
+    },
+    {
+      "name": "seleção no catálogo e aplicação da testemunha carregam projeto pendente, sem execução automática",
+      "status": "passed",
+      "durationMs": 13.05
+    },
+    {
+      "name": "núcleo e fontes científicas preservam os hashes do gate anterior",
+      "status": "passed",
+      "durationMs": 2.061
+    },
+    {
+      "name": "execuções DOM não geram erro JavaScript nem tentam conexão de rede",
+      "status": "passed",
+      "durationMs": 0.061
+    }
+  ]
+}

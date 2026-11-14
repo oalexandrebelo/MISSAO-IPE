@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-14T13:39:19.031Z",
+  "status": "verified",
+  "repository": "oalexandrebelo/AB-NASA-TEAM-IPE",
+  "visibility": "private",
+  "branch": "main",
+  "sourceCommit": "4aef453f9dbe9c6fe886d3154e4121f3aba243d1",
+  "sourceTree": "a9c0282bee714c9fd0e9dad6465e79d0e39bd534",
+  "filesCompared": 317,
+  "mismatches": 0,
+  "method": "Recursive GitHub tree compared against local Git blob SHA-1 and mode",
+  "localSourceCommit": "b2336f3110de9620cd109643b5a2c1c71b651a26",
+  "deploymentId": "dpl_9mjoVLVxA4QEtRbMp6CKcCL985XX",
+  "archiveRoundtripVerified": true,
+  "note": "A subsequent fast-forward commit appends final publication receipts. The package metadata records that final commit after its own remote comparison; this receipt does not pretend to contain its own future commit hash."
+}

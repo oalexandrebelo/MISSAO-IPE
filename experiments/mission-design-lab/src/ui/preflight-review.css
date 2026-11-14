@@ -1,0 +1,62 @@
+.pf-review {
+  --pf-bg: #101821;
+  --pf-card: #131e29;
+  --pf-line: #2b3945;
+  --pf-text: #edf2ee;
+  --pf-muted: #afbcc7;
+  --pf-accent: #d5f894;
+  margin-top: 18px;
+  border: 1px solid var(--pf-line);
+  border-radius: 9px;
+  background: var(--pf-bg);
+  color: var(--pf-text);
+  overflow: hidden;
+  color-scheme: dark;
+}
+.pf-review *, .pf-review *::before, .pf-review *::after { box-sizing: border-box; }
+.pf-summary { display: flex; align-items: center; gap: 12px; min-height: 66px; padding: 17px 20px; cursor: pointer; list-style: none; font-size: 14px; font-weight: 550; }
+.pf-summary::-webkit-details-marker { display: none; }
+.pf-summary > svg:first-child { color: var(--pf-accent); flex-shrink: 0; }
+.pf-summary > svg:last-child { margin-left: auto; color: var(--pf-muted); flex-shrink: 0; transform: rotate(90deg); }
+.pf-review[open] > .pf-summary > svg:last-child { transform: rotate(-90deg); }
+.pf-summary small { display: block; margin-top: 4px; font-size: 11px; font-weight: 400; color: var(--pf-muted); line-height: 1.5; }
+.pf-summary:hover { background: #1a2630; }
+.pf-summary:focus-visible { outline: 2px solid var(--pf-accent); outline-offset: -4px; border-radius: 8px; }
+.pf-content { padding: 22px 20px 20px; border-top: 1px solid var(--pf-line); }
+.pf-eyebrow { margin: 0 0 10px; color: var(--pf-accent); font-size: 10px; line-height: 1.5; letter-spacing: .12em; }
+.pf-review .pf-heading h3 { margin: 0; font-family: inherit; font-size: 21px; font-weight: 550; line-height: 1.3; letter-spacing: -.025em; }
+.pf-heading > p:last-child { margin: 12px 0 0; color: var(--pf-muted); font-size: 12px; line-height: 1.75; }
+.pf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.pf-card { min-width: 0; padding: 18px 16px; background: var(--pf-card); border: 1px solid var(--pf-line); border-radius: 7px; }
+.pf-card-top { display: flex; align-items: center; gap: 8px; color: var(--pf-muted); }
+.pf-card-top > svg { flex-shrink: 0; color: var(--pf-accent); }
+.pf-card-top > span { font-size: 9px; line-height: 1.6; letter-spacing: .05em; }
+.pf-review .pf-card h4 { margin: 13px 0 12px; font-family: inherit; font-size: 14px; font-weight: 550; line-height: 1.45; }
+.pf-condition { display: inline-flex; align-items: flex-start; gap: 6px; padding: 5px 7px; border-radius: 4px; font-size: 10px; line-height: 1.5; }
+.pf-condition > svg { flex-shrink: 0; }
+.pf-condition-within-limit { color: #daf2b1; background: #33452b; }
+.pf-condition-limit-exceeded { color: #ffd0b5; background: #4c3028; }
+.pf-condition-execution-required { color: #c7dced; background: #293d4d; }
+.pf-values { display: grid; gap: 12px; margin: 18px 0; padding: 14px 0; border-top: 1px solid var(--pf-line); border-bottom: 1px solid var(--pf-line); }
+.pf-values > div { min-width: 0; }
+.pf-values dt { color: var(--pf-muted); font-size: 10px; line-height: 1.6; }
+.pf-values dd { margin: 5px 0 0; color: var(--pf-text); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 17px; line-height: 1.45; overflow-wrap: anywhere; }
+.pf-explanation, .pf-assumption, .pf-reference-list { color: var(--pf-muted); font-size: 11px; line-height: 1.75; }
+.pf-explanation { margin: 0; }
+.pf-assumption { margin: 12px 0 0; }
+.pf-reference-list { padding-left: 16px; margin: 0; }
+.pf-reference-list li + li { margin-top: 6px; }
+.pf-limitation { display: flex; align-items: flex-start; gap: 10px; margin: 18px 0 0; padding: 14px; border: 1px solid #3f5140; border-radius: 5px; color: var(--pf-muted); background: #d5f89405; font-size: 11px; line-height: 1.8; }
+.pf-limitation > svg { color: var(--pf-accent); flex-shrink: 0; margin-top: 2px; }
+.pf-limitation strong { color: var(--pf-text); font-weight: 550; }
+@media (max-width: 640px) {
+  .pf-grid { grid-template-columns: minmax(0, 1fr); }
+  .pf-content { padding: 19px 14px 15px; }
+  .pf-summary { padding: 16px; }
+  .pf-card { padding: 18px; }
+  .pf-explanation, .pf-assumption, .pf-reference-list, .pf-limitation { font-size: 12px; }
+  .pf-values { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+}
+@media (forced-colors: active) {
+  .pf-condition { border: 1px solid currentColor; }
+}

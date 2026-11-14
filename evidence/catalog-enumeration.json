@@ -1,0 +1,4626 @@
+{
+  "generatedAt": "2026-11-14T09:04:18.798Z",
+  "engineVersion": "0.1.1-rd",
+  "catalogVersion": "ipe-64-v1",
+  "sciencePackHash": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+  "kind": "research-enumeration-not-a-browser-search-certificate",
+  "limits": "Results from this engine; independent verification is recorded separately in adversarial-review.json. Hashes do not authenticate an author or certify flight validity.",
+  "examples": [
+    {
+      "path": "examples/01-long-base.json",
+      "outcome": "success",
+      "deliveredRecords": 6,
+      "sha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb"
+    },
+    {
+      "path": "examples/02-short-base.json",
+      "outcome": "failure",
+      "deliveredRecords": 2,
+      "sha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5"
+    },
+    {
+      "path": "examples/03-short-repaired.json",
+      "outcome": "success",
+      "deliveredRecords": 6,
+      "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "long-contact",
+      "search": {
+        "scenarioId": "long-contact",
+        "baseConfig": {
+          "battery": "small",
+          "panel": "standard",
+          "processing": "bands",
+          "radio": "economy",
+          "buffer": "large",
+          "policy": "every-contact"
+        },
+        "total": 64,
+        "evaluated": 64,
+        "invalid": 6,
+        "successful": 17,
+        "failed": 41,
+        "indeterminate": 0,
+        "complete": true,
+        "minimumDistance": 0,
+        "best": [
+          {
+            "config": {
+              "battery": "small",
+              "panel": "standard",
+              "processing": "bands",
+              "radio": "economy",
+              "buffer": "large",
+              "policy": "every-contact"
+            },
+            "distance": 0,
+            "result": {
+              "engineVersion": "0.1.1-rd",
+              "catalogVersion": "ipe-64-v1",
+              "resultSchemaVersion": 1,
+              "config": {
+                "battery": "small",
+                "panel": "standard",
+                "processing": "bands",
+                "radio": "economy",
+                "buffer": "large",
+                "policy": "every-contact"
+              },
+              "scenarioId": "long-contact",
+              "outcome": "success",
+              "completedAtS": 10800,
+              "massKg": 3.05,
+              "credits": 71,
+              "initialEnergyWh": 12.8,
+              "finalEnergyWh": 8.414868421052631,
+              "minEnergyWh": 8.414868421052631,
+              "reserveWh": 2.4,
+              "generatedBits": "1080000000",
+              "downlinkedBits": "1080000000",
+              "lostBits": "0",
+              "queueBits": "0",
+              "deliveredRecords": 6,
+              "requiredRecords": 6,
+              "energyBalance": {
+                "solarWh": 30.06,
+                "loadWh": 28.3,
+                "conversionLossWh": 1.0774861495844876,
+                "spillWh": 5.067645429362881,
+                "residualWh": 0
+              },
+              "violations": [],
+              "events": [
+                {
+                  "id": "event-1",
+                  "timeS": 0,
+                  "code": "MISSION_START",
+                  "severity": "info",
+                  "rule": "fixed-inputs",
+                  "message": "Execução determinística iniciada com registros MOD13 de arquivo e recursos didáticos."
+                },
+                {
+                  "id": "event-2",
+                  "timeS": 0,
+                  "code": "SUNLIGHT_START",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Trecho iluminado iniciado."
+                },
+                {
+                  "id": "event-3",
+                  "timeS": 600,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "A-A2024241"
+                },
+                {
+                  "id": "event-4",
+                  "timeS": 660,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "A-A2024241",
+                  "value": 180000000
+                },
+                {
+                  "id": "event-5",
+                  "timeS": 1200,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "A-A2024257"
+                },
+                {
+                  "id": "event-6",
+                  "timeS": 1260,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "A-A2024257",
+                  "value": 180000000
+                },
+                {
+                  "id": "event-7",
+                  "timeS": 1800,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "B-A2024241"
+                },
+                {
+                  "id": "event-8",
+                  "timeS": 1860,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "B-A2024241",
+                  "value": 180000000
+                },
+                {
+                  "id": "event-9",
+                  "timeS": 2281.013167381323,
+                  "code": "BATTERY_FULL",
+                  "severity": "info",
+                  "rule": "energyWh <= capacityWh",
+                  "message": "Bateria cheia; excedente solar posterior é contabilizado como descarte.",
+                  "value": 16,
+                  "limit": 16
+                },
+                {
+                  "id": "event-10",
+                  "timeS": 2400,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "B-A2024257"
+                },
+                {
+                  "id": "event-11",
+                  "timeS": 2460,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "B-A2024257",
+                  "value": 180000000
+                },
+                {
+                  "id": "event-12",
+                  "timeS": 2606.624672712784,
+                  "code": "BATTERY_FULL",
+                  "severity": "info",
+                  "rule": "energyWh <= capacityWh",
+                  "message": "Bateria cheia; excedente solar posterior é contabilizado como descarte.",
+                  "value": 16,
+                  "limit": 16
+                },
+                {
+                  "id": "event-13",
+                  "timeS": 3000,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "C-A2024241"
+                },
+                {
+                  "id": "event-14",
+                  "timeS": 3060,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "C-A2024241",
+                  "value": 180000000
+                },
+                {
+                  "id": "event-15",
+                  "timeS": 3206.624672712784,
+                  "code": "BATTERY_FULL",
+                  "severity": "info",
+                  "rule": "energyWh <= capacityWh",
+                  "message": "Bateria cheia; excedente solar posterior é contabilizado como descarte.",
+                  "value": 16,
+                  "limit": 16
+                },
+                {
+                  "id": "event-16",
+                  "timeS": 3600,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "C-A2024257"
+                },
+                {
+                  "id": "event-17",
+                  "timeS": 3660,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "C-A2024257",
+                  "value": 180000000
+                },
+                {
+                  "id": "event-18",
+                  "timeS": 3806.624672712784,
+                  "code": "BATTERY_FULL",
+                  "severity": "info",
+                  "rule": "energyWh <= capacityWh",
+                  "message": "Bateria cheia; excedente solar posterior é contabilizado como descarte.",
+                  "value": 16,
+                  "limit": 16
+                },
+                {
+                  "id": "event-19",
+                  "timeS": 5400,
+                  "code": "SUNLIGHT_END",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Início de eclipse: geração solar zero."
+                },
+                {
+                  "id": "event-20",
+                  "timeS": 5400,
+                  "code": "CONTACT_START",
+                  "severity": "info",
+                  "rule": "preselected-automatic-policy",
+                  "message": "Janela disponível para transmissão automática."
+                },
+                {
+                  "id": "event-21",
+                  "timeS": 5587.5,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "A-A2024241"
+                },
+                {
+                  "id": "event-22",
+                  "timeS": 5775,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "A-A2024257"
+                },
+                {
+                  "id": "event-23",
+                  "timeS": 5962.5,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "B-A2024241"
+                },
+                {
+                  "id": "event-24",
+                  "timeS": 6000,
+                  "code": "CONTACT_END",
+                  "severity": "info",
+                  "rule": "contacts-[start,end)",
+                  "message": "Janela encerrada; recepção parcial permanece no solo e o restante na fila."
+                },
+                {
+                  "id": "event-25",
+                  "timeS": 7200,
+                  "code": "SUNLIGHT_START",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Trecho iluminado iniciado."
+                },
+                {
+                  "id": "event-26",
+                  "timeS": 9000,
+                  "code": "SUNLIGHT_END",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Início de eclipse: geração solar zero."
+                },
+                {
+                  "id": "event-27",
+                  "timeS": 9000,
+                  "code": "CONTACT_START",
+                  "severity": "info",
+                  "rule": "preselected-automatic-policy",
+                  "message": "Janela disponível para transmissão automática."
+                },
+                {
+                  "id": "event-28",
+                  "timeS": 9150,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "B-A2024257"
+                },
+                {
+                  "id": "event-29",
+                  "timeS": 9337.5,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "C-A2024241"
+                },
+                {
+                  "id": "event-30",
+                  "timeS": 9525,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "C-A2024257"
+                },
+                {
+                  "id": "event-31",
+                  "timeS": 9525,
+                  "code": "QUEUE_EMPTY",
+                  "severity": "info",
+                  "rule": "empty-queue-switches-to-idle",
+                  "message": "Fila vazia; rádio deixa de consumir potência de transmissão."
+                },
+                {
+                  "id": "event-32",
+                  "timeS": 9600,
+                  "code": "CONTACT_END",
+                  "severity": "info",
+                  "rule": "contacts-[start,end)",
+                  "message": "Janela encerrada; recepção parcial permanece no solo e o restante na fila."
+                },
+                {
+                  "id": "event-33",
+                  "timeS": 10800,
+                  "code": "MISSION_END",
+                  "severity": "info",
+                  "rule": "all-constraints-and-science",
+                  "message": "Horizonte concluído com todos os requisitos satisfeitos."
+                }
+              ],
+              "trace": [
+                {
+                  "timeS": 0,
+                  "energyWh": 12.8,
+                  "queueBits": 0,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 600,
+                  "energyWh": 13.955833333333333,
+                  "queueBits": 0,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 26,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 660,
+                  "energyWh": 13.673377192982457,
+                  "queueBits": 180000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 1200,
+                  "energyWh": 14.713627192982456,
+                  "queueBits": 180000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 26,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 1260,
+                  "energyWh": 14.431171052631578,
+                  "queueBits": 360000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 1800,
+                  "energyWh": 15.471421052631579,
+                  "queueBits": 360000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 26,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 1860,
+                  "energyWh": 15.188964912280701,
+                  "queueBits": 540000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 2281.013167381323,
+                  "energyWh": 16,
+                  "queueBits": 540000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 2400,
+                  "energyWh": 16,
+                  "queueBits": 540000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 26,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 2460,
+                  "energyWh": 15.717543859649123,
+                  "queueBits": 720000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 2606.624672712784,
+                  "energyWh": 16,
+                  "queueBits": 720000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 3000,
+                  "energyWh": 16,
+                  "queueBits": 720000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 26,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 3060,
+                  "energyWh": 15.717543859649123,
+                  "queueBits": 900000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 3206.624672712784,
+                  "energyWh": 16,
+                  "queueBits": 900000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 3600,
+                  "energyWh": 16,
+                  "queueBits": 900000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 26,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 3660,
+                  "energyWh": 15.717543859649123,
+                  "queueBits": 1080000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 3806.624672712784,
+                  "energyWh": 16,
+                  "queueBits": 1080000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 5400,
+                  "energyWh": 16,
+                  "queueBits": 1080000000,
+                  "downlinkedBits": 0,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5587.5,
+                  "energyWh": 15.12280701754386,
+                  "queueBits": 900000000,
+                  "downlinkedBits": 180000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5775,
+                  "energyWh": 14.24561403508772,
+                  "queueBits": 720000000,
+                  "downlinkedBits": 360000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5962.5,
+                  "energyWh": 13.368421052631579,
+                  "queueBits": 540000000,
+                  "downlinkedBits": 540000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 6000,
+                  "energyWh": 13.192982456140351,
+                  "queueBits": 504000000,
+                  "downlinkedBits": 576000000,
+                  "solarW": 0,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 7200,
+                  "energyWh": 10.385964912280702,
+                  "queueBits": 504000000,
+                  "downlinkedBits": 576000000,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 9000,
+                  "energyWh": 13.853464912280701,
+                  "queueBits": 504000000,
+                  "downlinkedBits": 576000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 9150,
+                  "energyWh": 13.151710526315789,
+                  "queueBits": 360000000,
+                  "downlinkedBits": 720000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 9337.5,
+                  "energyWh": 12.274517543859648,
+                  "queueBits": 180000000,
+                  "downlinkedBits": 900000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 9525,
+                  "energyWh": 11.397324561403508,
+                  "queueBits": 0,
+                  "downlinkedBits": 1080000000,
+                  "solarW": 0,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 9600,
+                  "energyWh": 11.22188596491228,
+                  "queueBits": 0,
+                  "downlinkedBits": 1080000000,
+                  "solarW": 0,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 10800,
+                  "energyWh": 8.414868421052631,
+                  "queueBits": 0,
+                  "downlinkedBits": 1080000000,
+                  "solarW": 0,
+                  "loadW": 0,
+                  "mode": "complete"
+                }
+              ],
+              "observations": [
+                {
+                  "id": "A-A2024241",
+                  "generatedBits": "180000000",
+                  "downlinkedBits": "180000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 660,
+                  "deliveredAtS": 5587.5,
+                  "ndvi": 0.22710280373831776,
+                  "expectedNdvi": 0.22710000000000002,
+                  "scienceValid": true
+                },
+                {
+                  "id": "A-A2024257",
+                  "generatedBits": "180000000",
+                  "downlinkedBits": "180000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 1260,
+                  "deliveredAtS": 5775,
+                  "ndvi": 0.3763855421686747,
+                  "expectedNdvi": 0.3763,
+                  "scienceValid": true
+                },
+                {
+                  "id": "B-A2024241",
+                  "generatedBits": "180000000",
+                  "downlinkedBits": "180000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 1860,
+                  "deliveredAtS": 5962.5,
+                  "ndvi": 0.4387267904509284,
+                  "expectedNdvi": 0.43870000000000003,
+                  "scienceValid": true
+                },
+                {
+                  "id": "B-A2024257",
+                  "generatedBits": "180000000",
+                  "downlinkedBits": "180000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 2460,
+                  "deliveredAtS": 9150,
+                  "ndvi": 0.28574686431014823,
+                  "expectedNdvi": 0.2857,
+                  "scienceValid": true
+                },
+                {
+                  "id": "C-A2024241",
+                  "generatedBits": "180000000",
+                  "downlinkedBits": "180000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 3060,
+                  "deliveredAtS": 9337.5,
+                  "ndvi": 0.2880299251870324,
+                  "expectedNdvi": 0.28800000000000003,
+                  "scienceValid": true
+                },
+                {
+                  "id": "C-A2024257",
+                  "generatedBits": "180000000",
+                  "downlinkedBits": "180000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 3660,
+                  "deliveredAtS": 9525,
+                  "ndvi": 0.2564741991175906,
+                  "expectedNdvi": 0.2564,
+                  "scienceValid": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rows": [
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.65,
+          "credits": 62,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.65,
+          "credits": 62,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.75,
+          "credits": 65,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.75,
+          "credits": 65,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.9,
+          "credits": 69,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.9,
+          "credits": 69,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 72,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 72,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.7,
+          "credits": 68,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.7,
+          "credits": 68,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.8,
+          "credits": 71,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.8,
+          "credits": 71,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.95,
+          "credits": 75,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.95,
+          "credits": 75,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.05,
+          "credits": 78,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.05,
+          "credits": 78,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 2.95,
+          "credits": 68,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 10.169254385964912,
+          "finalEnergyWh": 10.169254385964912,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 2.95,
+          "credits": 68,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 10.169254385964912,
+          "finalEnergyWh": 10.169254385964912,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 0,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.05,
+          "credits": 71,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 8.414868421052631,
+          "finalEnergyWh": 8.414868421052631,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.05,
+          "credits": 71,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "576000000",
+          "queueBits": "504000000",
+          "lostBits": "0",
+          "minEnergyWh": 9.642938596491229,
+          "finalEnergyWh": 9.642938596491229,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.2,
+          "credits": 75,
+          "completedAtS": 5400,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "360000000",
+          "lostBits": "720000000",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 16,
+          "violations": [
+            "buffer-overflow",
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.2,
+          "credits": 75,
+          "completedAtS": 9000,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "360000000",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.789473684210526,
+          "finalEnergyWh": 15.256973684210527,
+          "violations": [
+            "buffer-overflow",
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.3,
+          "credits": 78,
+          "completedAtS": 5400,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "1080000000",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 16,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.3,
+          "credits": 78,
+          "completedAtS": 9000,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "1080000000",
+          "lostBits": "0",
+          "minEnergyWh": 11.789473684210526,
+          "finalEnergyWh": 15.256973684210527,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 74,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 74,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.1,
+          "credits": 77,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.1,
+          "credits": 77,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.25,
+          "credits": 81,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.25,
+          "credits": 81,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.35,
+          "credits": 84,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.35,
+          "credits": 84,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.05,
+          "credits": 69,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.830649122807017,
+          "finalEnergyWh": 11.830649122807017,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.05,
+          "credits": 69,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.830649122807017,
+          "finalEnergyWh": 11.830649122807017,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.15,
+          "credits": 72,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.076263157894736,
+          "finalEnergyWh": 10.076263157894736,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.15,
+          "credits": 72,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "576000000",
+          "queueBits": "504000000",
+          "lostBits": "0",
+          "minEnergyWh": 11.304333333333334,
+          "finalEnergyWh": 11.304333333333334,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.3,
+          "credits": 76,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.918368421052632,
+          "finalEnergyWh": 11.918368421052632,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.3,
+          "credits": 76,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.918368421052632,
+          "finalEnergyWh": 11.918368421052632,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.4,
+          "credits": 79,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.339421052631579,
+          "finalEnergyWh": 10.339421052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.4,
+          "credits": 79,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.339421052631579,
+          "finalEnergyWh": 10.339421052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.1,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.567491228070175,
+          "finalEnergyWh": 10.567491228070175,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.1,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.567491228070175,
+          "finalEnergyWh": 10.567491228070175,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.2,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.567491228070175,
+          "finalEnergyWh": 10.567491228070175,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.2,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.567491228070175,
+          "finalEnergyWh": 10.567491228070175,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.35,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 6,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.35,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.45,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.45,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.35,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.35,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.45,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 16.41486842105263,
+          "finalEnergyWh": 16.41486842105263,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.45,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "576000000",
+          "queueBits": "504000000",
+          "lostBits": "0",
+          "minEnergyWh": 17.642938596491227,
+          "finalEnergyWh": 17.642938596491227,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.6,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.6,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.7,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 16.678026315789474,
+          "finalEnergyWh": 16.678026315789474,
+          "violations": [
+            "mass"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.7,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 16.678026315789474,
+          "finalEnergyWh": 16.678026315789474,
+          "violations": [
+            "mass"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.4,
+          "credits": 81,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.4,
+          "credits": 81,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.5,
+          "credits": 84,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.5,
+          "credits": 84,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.65,
+          "credits": 88,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.65,
+          "credits": 88,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.75,
+          "credits": 91,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.75,
+          "credits": 91,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        }
+      ]
+    },
+    {
+      "scenarioId": "short-contact",
+      "search": {
+        "scenarioId": "short-contact",
+        "baseConfig": {
+          "battery": "small",
+          "panel": "standard",
+          "processing": "bands",
+          "radio": "economy",
+          "buffer": "large",
+          "policy": "every-contact"
+        },
+        "total": 64,
+        "evaluated": 64,
+        "invalid": 6,
+        "successful": 9,
+        "failed": 49,
+        "indeterminate": 0,
+        "complete": true,
+        "minimumDistance": 2,
+        "best": [
+          {
+            "config": {
+              "battery": "large",
+              "panel": "standard",
+              "processing": "index",
+              "radio": "economy",
+              "buffer": "large",
+              "policy": "every-contact"
+            },
+            "distance": 2,
+            "result": {
+              "engineVersion": "0.1.1-rd",
+              "catalogVersion": "ipe-64-v1",
+              "resultSchemaVersion": 1,
+              "config": {
+                "battery": "large",
+                "panel": "standard",
+                "processing": "index",
+                "radio": "economy",
+                "buffer": "large",
+                "policy": "every-contact"
+              },
+              "scenarioId": "short-contact",
+              "outcome": "success",
+              "completedAtS": 10800,
+              "massKg": 3.5,
+              "credits": 84,
+              "initialEnergyWh": 19.2,
+              "finalEnergyWh": 18.169254385964912,
+              "minEnergyWh": 18.169254385964912,
+              "reserveWh": 3.6,
+              "generatedBits": "360000000",
+              "downlinkedBits": "360000000",
+              "lostBits": "0",
+              "queueBits": "0",
+              "deliveredRecords": 6,
+              "requiredRecords": 6,
+              "energyBalance": {
+                "solarWh": 30.06,
+                "loadWh": 27.833333333333332,
+                "conversionLossWh": 1.203617266851339,
+                "spillWh": 2.0537950138504155,
+                "residualWh": 0
+              },
+              "violations": [],
+              "events": [
+                {
+                  "id": "event-1",
+                  "timeS": 0,
+                  "code": "MISSION_START",
+                  "severity": "info",
+                  "rule": "fixed-inputs",
+                  "message": "Execução determinística iniciada com registros MOD13 de arquivo e recursos didáticos."
+                },
+                {
+                  "id": "event-2",
+                  "timeS": 0,
+                  "code": "SUNLIGHT_START",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Trecho iluminado iniciado."
+                },
+                {
+                  "id": "event-3",
+                  "timeS": 600,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "A-A2024241"
+                },
+                {
+                  "id": "event-4",
+                  "timeS": 660,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "A-A2024241",
+                  "value": 60000000
+                },
+                {
+                  "id": "event-5",
+                  "timeS": 1200,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "A-A2024257"
+                },
+                {
+                  "id": "event-6",
+                  "timeS": 1260,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "A-A2024257",
+                  "value": 60000000
+                },
+                {
+                  "id": "event-7",
+                  "timeS": 1800,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "B-A2024241"
+                },
+                {
+                  "id": "event-8",
+                  "timeS": 1860,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "B-A2024241",
+                  "value": 60000000
+                },
+                {
+                  "id": "event-9",
+                  "timeS": 2400,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "B-A2024257"
+                },
+                {
+                  "id": "event-10",
+                  "timeS": 2460,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "B-A2024257",
+                  "value": 60000000
+                },
+                {
+                  "id": "event-11",
+                  "timeS": 3000,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "C-A2024241"
+                },
+                {
+                  "id": "event-12",
+                  "timeS": 3060,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "C-A2024241",
+                  "value": 60000000
+                },
+                {
+                  "id": "event-13",
+                  "timeS": 3600,
+                  "code": "JOB_START",
+                  "severity": "info",
+                  "rule": "fixed-60-second-job",
+                  "message": "Trabalho iniciado; nenhum bit fica disponível antes da conclusão.",
+                  "recordId": "C-A2024257"
+                },
+                {
+                  "id": "event-14",
+                  "timeS": 3660,
+                  "code": "JOB_COMPLETE",
+                  "severity": "info",
+                  "rule": "complete-batch-at-job-end",
+                  "message": "Trabalho concluído; lote completo produzido.",
+                  "recordId": "C-A2024257",
+                  "value": 60000000
+                },
+                {
+                  "id": "event-15",
+                  "timeS": 4387.169582210754,
+                  "code": "BATTERY_FULL",
+                  "severity": "info",
+                  "rule": "energyWh <= capacityWh",
+                  "message": "Bateria cheia; excedente solar posterior é contabilizado como descarte.",
+                  "value": 24,
+                  "limit": 24
+                },
+                {
+                  "id": "event-16",
+                  "timeS": 5400,
+                  "code": "SUNLIGHT_END",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Início de eclipse: geração solar zero."
+                },
+                {
+                  "id": "event-17",
+                  "timeS": 5400,
+                  "code": "CONTACT_START",
+                  "severity": "info",
+                  "rule": "preselected-automatic-policy",
+                  "message": "Janela disponível para transmissão automática."
+                },
+                {
+                  "id": "event-18",
+                  "timeS": 5462.5,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "A-A2024241"
+                },
+                {
+                  "id": "event-19",
+                  "timeS": 5525,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "A-A2024257"
+                },
+                {
+                  "id": "event-20",
+                  "timeS": 5587.5,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "B-A2024241"
+                },
+                {
+                  "id": "event-21",
+                  "timeS": 5640,
+                  "code": "CONTACT_END",
+                  "severity": "info",
+                  "rule": "contacts-[start,end)",
+                  "message": "Janela encerrada; recepção parcial permanece no solo e o restante na fila."
+                },
+                {
+                  "id": "event-22",
+                  "timeS": 7200,
+                  "code": "SUNLIGHT_START",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Trecho iluminado iniciado."
+                },
+                {
+                  "id": "event-23",
+                  "timeS": 9000,
+                  "code": "SUNLIGHT_END",
+                  "severity": "info",
+                  "rule": "sunlight-[start,end)",
+                  "message": "Início de eclipse: geração solar zero."
+                },
+                {
+                  "id": "event-24",
+                  "timeS": 9000,
+                  "code": "CONTACT_START",
+                  "severity": "info",
+                  "rule": "preselected-automatic-policy",
+                  "message": "Janela disponível para transmissão automática."
+                },
+                {
+                  "id": "event-25",
+                  "timeS": 9010,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "B-A2024257"
+                },
+                {
+                  "id": "event-26",
+                  "timeS": 9072.5,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "C-A2024241"
+                },
+                {
+                  "id": "event-27",
+                  "timeS": 9135,
+                  "code": "RECORD_DELIVERED",
+                  "severity": "info",
+                  "rule": "complete-reception-before-science",
+                  "message": "Lote integral recebido; NDVI e QA válidos para a pergunta científica.",
+                  "recordId": "C-A2024257"
+                },
+                {
+                  "id": "event-28",
+                  "timeS": 9135,
+                  "code": "QUEUE_EMPTY",
+                  "severity": "info",
+                  "rule": "empty-queue-switches-to-idle",
+                  "message": "Fila vazia; rádio deixa de consumir potência de transmissão."
+                },
+                {
+                  "id": "event-29",
+                  "timeS": 9240,
+                  "code": "CONTACT_END",
+                  "severity": "info",
+                  "rule": "contacts-[start,end)",
+                  "message": "Janela encerrada; recepção parcial permanece no solo e o restante na fila."
+                },
+                {
+                  "id": "event-30",
+                  "timeS": 10800,
+                  "code": "MISSION_END",
+                  "severity": "info",
+                  "rule": "all-constraints-and-science",
+                  "message": "Horizonte concluído com todos os requisitos satisfeitos."
+                }
+              ],
+              "trace": [
+                {
+                  "timeS": 0,
+                  "energyWh": 19.2,
+                  "queueBits": 0,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 600,
+                  "energyWh": 20.355833333333333,
+                  "queueBits": 0,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 38,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 660,
+                  "energyWh": 19.862850877192983,
+                  "queueBits": 60000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 1200,
+                  "energyWh": 20.903100877192983,
+                  "queueBits": 60000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 38,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 1260,
+                  "energyWh": 20.41011842105263,
+                  "queueBits": 120000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 1800,
+                  "energyWh": 21.45036842105263,
+                  "queueBits": 120000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 38,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 1860,
+                  "energyWh": 20.95738596491228,
+                  "queueBits": 180000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 2400,
+                  "energyWh": 21.99763596491228,
+                  "queueBits": 180000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 38,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 2460,
+                  "energyWh": 21.50465350877193,
+                  "queueBits": 240000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 3000,
+                  "energyWh": 22.54490350877193,
+                  "queueBits": 240000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 38,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 3060,
+                  "energyWh": 22.051921052631577,
+                  "queueBits": 300000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 3600,
+                  "energyWh": 23.092171052631578,
+                  "queueBits": 300000000,
+                  "downlinkedBits": 0,
+                  "solarW": 9.9,
+                  "loadW": 38,
+                  "mode": "processing"
+                },
+                {
+                  "timeS": 3660,
+                  "energyWh": 22.599188596491228,
+                  "queueBits": 360000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 4387.169582210754,
+                  "energyWh": 24,
+                  "queueBits": 360000000,
+                  "downlinkedBits": 0,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 5400,
+                  "energyWh": 24,
+                  "queueBits": 360000000,
+                  "downlinkedBits": 0,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5462.5,
+                  "energyWh": 23.707602339181285,
+                  "queueBits": 300000000,
+                  "downlinkedBits": 60000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5525,
+                  "energyWh": 23.415204678362574,
+                  "queueBits": 240000000,
+                  "downlinkedBits": 120000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5587.5,
+                  "energyWh": 23.12280701754386,
+                  "queueBits": 180000000,
+                  "downlinkedBits": 180000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 5640,
+                  "energyWh": 22.87719298245614,
+                  "queueBits": 129600000,
+                  "downlinkedBits": 230400000,
+                  "solarW": 0,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 7200,
+                  "energyWh": 19.228070175438596,
+                  "queueBits": 129600000,
+                  "downlinkedBits": 230400000,
+                  "solarW": 15.3,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 9000,
+                  "energyWh": 22.695570175438597,
+                  "queueBits": 129600000,
+                  "downlinkedBits": 230400000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 9010,
+                  "energyWh": 22.6487865497076,
+                  "queueBits": 120000000,
+                  "downlinkedBits": 240000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 9072.5,
+                  "energyWh": 22.35638888888889,
+                  "queueBits": 60000000,
+                  "downlinkedBits": 300000000,
+                  "solarW": 0,
+                  "loadW": 16,
+                  "mode": "transmitting"
+                },
+                {
+                  "timeS": 9135,
+                  "energyWh": 22.063991228070176,
+                  "queueBits": 0,
+                  "downlinkedBits": 360000000,
+                  "solarW": 0,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 9240,
+                  "energyWh": 21.818377192982457,
+                  "queueBits": 0,
+                  "downlinkedBits": 360000000,
+                  "solarW": 0,
+                  "loadW": 8,
+                  "mode": "idle"
+                },
+                {
+                  "timeS": 10800,
+                  "energyWh": 18.169254385964912,
+                  "queueBits": 0,
+                  "downlinkedBits": 360000000,
+                  "solarW": 0,
+                  "loadW": 0,
+                  "mode": "complete"
+                }
+              ],
+              "observations": [
+                {
+                  "id": "A-A2024241",
+                  "generatedBits": "60000000",
+                  "downlinkedBits": "60000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 660,
+                  "deliveredAtS": 5462.5,
+                  "ndvi": 0.22710280373831776,
+                  "expectedNdvi": 0.22710000000000002,
+                  "scienceValid": true
+                },
+                {
+                  "id": "A-A2024257",
+                  "generatedBits": "60000000",
+                  "downlinkedBits": "60000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 1260,
+                  "deliveredAtS": 5525,
+                  "ndvi": 0.3763855421686747,
+                  "expectedNdvi": 0.3763,
+                  "scienceValid": true
+                },
+                {
+                  "id": "B-A2024241",
+                  "generatedBits": "60000000",
+                  "downlinkedBits": "60000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 1860,
+                  "deliveredAtS": 5587.5,
+                  "ndvi": 0.4387267904509284,
+                  "expectedNdvi": 0.43870000000000003,
+                  "scienceValid": true
+                },
+                {
+                  "id": "B-A2024257",
+                  "generatedBits": "60000000",
+                  "downlinkedBits": "60000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 2460,
+                  "deliveredAtS": 9010,
+                  "ndvi": 0.28574686431014823,
+                  "expectedNdvi": 0.2857,
+                  "scienceValid": true
+                },
+                {
+                  "id": "C-A2024241",
+                  "generatedBits": "60000000",
+                  "downlinkedBits": "60000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 3060,
+                  "deliveredAtS": 9072.5,
+                  "ndvi": 0.2880299251870324,
+                  "expectedNdvi": 0.28800000000000003,
+                  "scienceValid": true
+                },
+                {
+                  "id": "C-A2024257",
+                  "generatedBits": "60000000",
+                  "downlinkedBits": "60000000",
+                  "lostBits": "0",
+                  "state": "delivered",
+                  "producedAtS": 3660,
+                  "deliveredAtS": 9135,
+                  "ndvi": 0.2564741991175906,
+                  "expectedNdvi": 0.2564,
+                  "scienceValid": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rows": [
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.65,
+          "credits": 62,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.65,
+          "credits": 62,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.75,
+          "credits": 65,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.75,
+          "credits": 65,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.9,
+          "credits": 69,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.9,
+          "credits": 69,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 72,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 72,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.7,
+          "credits": 68,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.7,
+          "credits": 68,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.8,
+          "credits": 71,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.8,
+          "credits": 71,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.95,
+          "credits": 75,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 2.95,
+          "credits": 75,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.05,
+          "credits": 78,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.05,
+          "credits": 78,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.148333333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 2.95,
+          "credits": 68,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 10.169254385964912,
+          "finalEnergyWh": 10.169254385964912,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 1,
+          "massKg": 2.95,
+          "credits": 68,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "720000000",
+          "minEnergyWh": 10.485043859649123,
+          "finalEnergyWh": 10.485043859649123,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 0,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.05,
+          "credits": 71,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "460800000",
+          "queueBits": "619200000",
+          "lostBits": "0",
+          "minEnergyWh": 9.923640350877193,
+          "finalEnergyWh": 9.923640350877193,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 1,
+          "massKg": 3.05,
+          "credits": 71,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "849600000",
+          "lostBits": "0",
+          "minEnergyWh": 10.485043859649123,
+          "finalEnergyWh": 10.485043859649123,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.2,
+          "credits": 75,
+          "completedAtS": 5400,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "360000000",
+          "lostBits": "720000000",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 16,
+          "violations": [
+            "buffer-overflow",
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.2,
+          "credits": 75,
+          "completedAtS": 9000,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "360000000",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.789473684210526,
+          "finalEnergyWh": 15.256973684210527,
+          "violations": [
+            "buffer-overflow",
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.3,
+          "credits": 78,
+          "completedAtS": 5400,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "1080000000",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 16,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.3,
+          "credits": 78,
+          "completedAtS": 9000,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "0",
+          "queueBits": "1080000000",
+          "lostBits": "0",
+          "minEnergyWh": 11.789473684210526,
+          "finalEnergyWh": 15.256973684210527,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 74,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3,
+          "credits": 74,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.1,
+          "credits": 77,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.1,
+          "credits": 77,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.25,
+          "credits": 81,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.25,
+          "credits": 81,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.35,
+          "credits": 84,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "small",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 0,
+          "massKg": 3.35,
+          "credits": 84,
+          "completedAtS": 600,
+          "generatedBits": "0",
+          "downlinkedBits": "0",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 12.8,
+          "finalEnergyWh": 13.955833333333333,
+          "violations": [
+            "peak-power",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.05,
+          "credits": 69,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.830649122807017,
+          "finalEnergyWh": 11.830649122807017,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 1,
+          "massKg": 3.05,
+          "credits": 69,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "720000000",
+          "minEnergyWh": 12.146438596491228,
+          "finalEnergyWh": 12.146438596491228,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.15,
+          "credits": 72,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "460800000",
+          "queueBits": "619200000",
+          "lostBits": "0",
+          "minEnergyWh": 11.585035087719298,
+          "finalEnergyWh": 11.585035087719298,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 1,
+          "massKg": 3.15,
+          "credits": 72,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "849600000",
+          "lostBits": "0",
+          "minEnergyWh": 12.146438596491228,
+          "finalEnergyWh": 12.146438596491228,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.3,
+          "credits": 76,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.918368421052632,
+          "finalEnergyWh": 11.918368421052632,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.3,
+          "credits": 76,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 11.918368421052632,
+          "finalEnergyWh": 11.918368421052632,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.4,
+          "credits": 79,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.339421052631579,
+          "finalEnergyWh": 10.339421052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.4,
+          "credits": 79,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "576000000",
+          "queueBits": "504000000",
+          "lostBits": "0",
+          "minEnergyWh": 11.444684210526315,
+          "finalEnergyWh": 11.444684210526315,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.1,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.567491228070175,
+          "finalEnergyWh": 10.567491228070175,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.1,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "0",
+          "minEnergyWh": 10.883280701754385,
+          "finalEnergyWh": 10.883280701754385,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.2,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.567491228070175,
+          "finalEnergyWh": 10.567491228070175,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.2,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "0",
+          "minEnergyWh": 10.883280701754385,
+          "finalEnergyWh": 10.883280701754385,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.35,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 6,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.35,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.45,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "compact",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.45,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 10.65521052631579,
+          "finalEnergyWh": 10.65521052631579,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.35,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 1,
+          "massKg": 3.35,
+          "credits": 75,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.485043859649124,
+          "finalEnergyWh": 18.485043859649124,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 1,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.45,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "460800000",
+          "queueBits": "619200000",
+          "lostBits": "0",
+          "minEnergyWh": 17.923640350877193,
+          "finalEnergyWh": 17.923640350877193,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "failure",
+          "deliveredRecords": 1,
+          "massKg": 3.45,
+          "credits": 78,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "849600000",
+          "lostBits": "0",
+          "minEnergyWh": 18.485043859649124,
+          "finalEnergyWh": 18.485043859649124,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.6,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 2,
+          "massKg": 3.6,
+          "credits": 82,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "720000000",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "buffer-overflow",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.7,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "1080000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 16.678026315789474,
+          "finalEnergyWh": 16.678026315789474,
+          "violations": [
+            "mass"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "bands",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "invalid",
+          "deliveredRecords": 3,
+          "massKg": 3.7,
+          "credits": 85,
+          "completedAtS": 10800,
+          "generatedBits": "1080000000",
+          "downlinkedBits": "576000000",
+          "queueBits": "504000000",
+          "lostBits": "0",
+          "minEnergyWh": 17.78328947368421,
+          "finalEnergyWh": 17.78328947368421,
+          "violations": [
+            "mass",
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.4,
+          "credits": 81,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.4,
+          "credits": 81,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "0",
+          "minEnergyWh": 18.485043859649124,
+          "finalEnergyWh": 18.485043859649124,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 2,
+          "outcome": "success",
+          "deliveredRecords": 6,
+          "massKg": 3.5,
+          "credits": 84,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.169254385964912,
+          "finalEnergyWh": 18.169254385964912,
+          "violations": []
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "economy",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "failure",
+          "deliveredRecords": 3,
+          "massKg": 3.5,
+          "credits": 84,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "230400000",
+          "queueBits": "129600000",
+          "lostBits": "0",
+          "minEnergyWh": 18.485043859649124,
+          "finalEnergyWh": 18.485043859649124,
+          "violations": [
+            "delivery"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.65,
+          "credits": 88,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "compact",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 5,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.65,
+          "credits": 88,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "every-contact"
+          },
+          "distanceFromBase": 3,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.75,
+          "credits": 91,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        },
+        {
+          "config": {
+            "battery": "large",
+            "panel": "standard",
+            "processing": "index",
+            "radio": "fast",
+            "buffer": "large",
+            "policy": "last-contact"
+          },
+          "distanceFromBase": 4,
+          "outcome": "invalid",
+          "deliveredRecords": 6,
+          "massKg": 3.75,
+          "credits": 91,
+          "completedAtS": 10800,
+          "generatedBits": "360000000",
+          "downlinkedBits": "360000000",
+          "queueBits": "0",
+          "lostBits": "0",
+          "minEnergyWh": 18.256973684210525,
+          "finalEnergyWh": 18.256973684210525,
+          "violations": [
+            "mass",
+            "budget"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+flowchart TD
+  A["Escolher condição"] --> B["Ler pedido e fontes"]
+  B --> C["Projetar seis escolhas"]
+  C --> D{"Primeira tentativa?"}
+  D -->|Sim| E["Registrar previsão"]
+  D -->|Não| F["Congelar entrada"]
+  E --> F
+  F --> G["Executar motor"]
+  G --> H{"Execução concluída?"}
+  H -->|Erro ou cancelamento| I["Preservar entrada e explicar erro"]
+  I --> C
+  H -->|Sim| J["Inspecionar ciência e eventos"]
+  J --> K["Explicar consequência"]
+  K --> L{"Consultar alternativas?"}
+  L -->|Sim| M["Enumerar catálogo completo"]
+  M --> N{"Cobertura sem indeterminados?"}
+  N -->|Sim| O["Mostrar mínimo e testemunhas"]
+  N -->|Não| P["Não certificar mínimo"]
+  O --> C
+  P --> C
+  L -->|Não| Q["Redesenhar ou mudar condição"]
+  Q --> C

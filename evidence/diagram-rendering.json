@@ -1,0 +1,41 @@
+{
+  "method": "Diagrams of the documentation only. Mermaid sources preserved; equivalent static Graphviz projections produced for PDF/HTML. Browser visual validation of the game remains unexecuted.",
+  "diagrams": [
+    {
+      "document": "docs/04-FLOWCHARTS.md",
+      "index": 1,
+      "base": "docassets/04-FLOWCHARTS-01",
+      "nodes": 17,
+      "edges": 21,
+      "sourceSha256": "71f4ba44fa2cff0f280e543430f13f2bed67c556dac71128575d776856bf86bc",
+      "renderer": "Graphviz 2D projection; sequence SVG generated from source messages"
+    },
+    {
+      "document": "docs/04-FLOWCHARTS.md",
+      "index": 2,
+      "base": "docassets/04-FLOWCHARTS-02",
+      "nodes": 14,
+      "edges": 15,
+      "sourceSha256": "803a9518d75bf00a26b1e0bb9534a4d935b0fb491ab11eb05f4953b9bab7d94e",
+      "renderer": "Graphviz 2D projection; sequence SVG generated from source messages"
+    },
+    {
+      "document": "docs/04-FLOWCHARTS.md",
+      "index": 3,
+      "base": "docassets/04-FLOWCHARTS-03",
+      "nodes": 10,
+      "edges": 12,
+      "sourceSha256": "15bc729604a620cb34adb2c81860a48419dbf60eaef40aaa2edd20b3759e2adb",
+      "renderer": "Graphviz 2D projection; sequence SVG generated from source messages"
+    },
+    {
+      "document": "docs/04-FLOWCHARTS.md",
+      "index": 4,
+      "base": "docassets/04-FLOWCHARTS-04",
+      "nodes": 10,
+      "edges": 13,
+      "sourceSha256": "ea79c4799b14a06266b7b4b9bf62a9a80bd7e91030df0887f8bd1acbf669b7f2",
+      "renderer": "Graphviz 2D projection; sequence SVG generated from source messages"
+    }
+  ]
+}
