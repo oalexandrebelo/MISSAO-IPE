@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T18:33:53.984Z",
+  "generatedAt": "2026-11-14T18:40:08.247Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 45,
+  "documentCount": 46,
   "documents": [
     {
       "source": "docs/01-DOSSIE-DECISAO.md",
@@ -222,6 +222,16 @@
       "originalBytes": 7087,
       "originalSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
       "projectedSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "redactions": 0
+    },
+    {
+      "source": "docs/23-IDENTIDADE-VISUAL.md",
+      "id": "doc-docs-23-identidade-visual-md",
+      "title": "Identidade visual — PROJETO IPÊ",
+      "category": "Documentação do produto",
+      "originalBytes": 1314,
+      "originalSha256": "bb98fbc098cc35f7624ac0e318be72d626435b3df1ed800e219ee7f6b85df8fb",
+      "projectedSha256": "bb98fbc098cc35f7624ac0e318be72d626435b3df1ed800e219ee7f6b85df8fb",
       "redactions": 0
     },
     {
@@ -458,13 +468,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 900669,
-      "sha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4"
+      "bytes": 902794,
+      "sha256": "ed60104f4aeaf93d4f880ec5506786280b92b8453366660d694d92c86f276bd6"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 773647,
-      "sha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574"
+      "bytes": 775168,
+      "sha256": "c54bca520ded9408cc98afb209829cbc573514e363f20a9ca666fc3344a436a2"
     }
   ]
 }

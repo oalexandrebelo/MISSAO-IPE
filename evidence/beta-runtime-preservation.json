@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-14T18:33:53.999Z",
+  "generatedAt": "2026-11-14T18:40:08.264Z",
   "status": "passed",
   "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
-  "fileCount": 53,
+  "fileCount": 55,
   "allByteIdentical": true,
   "files": [
     {
@@ -118,17 +118,17 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-BcfclJeA.js",
-      "output": "site/lab/assets/index-BcfclJeA.js",
-      "originalSha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
-      "publishedSha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
+      "source": "experiments/mission-design-lab/dist/assets/index-BtXoWU_-.css",
+      "output": "site/lab/assets/index-BtXoWU_-.css",
+      "originalSha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
+      "publishedSha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-OjdBRBwg.css",
-      "output": "site/lab/assets/index-OjdBRBwg.css",
-      "originalSha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
-      "publishedSha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "source": "experiments/mission-design-lab/dist/assets/index-MCOISTGE.js",
+      "output": "site/lab/assets/index-MCOISTGE.js",
+      "originalSha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
+      "publishedSha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
       "byteIdentical": true
     },
     {
@@ -139,17 +139,31 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-uN0SrvkO.js",
-      "output": "site/lab/assets/OrbitalScene-uN0SrvkO.js",
-      "originalSha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
-      "publishedSha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BD01o6gr.js",
+      "output": "site/lab/assets/OrbitalScene-BD01o6gr.js",
+      "originalSha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
+      "publishedSha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/search-Ddk6UaCb.js",
-      "output": "site/lab/assets/search-Ddk6UaCb.js",
-      "originalSha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
-      "publishedSha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "source": "experiments/mission-design-lab/dist/assets/search-Bpv4N3xJ.js",
+      "output": "site/lab/assets/search-Bpv4N3xJ.js",
+      "originalSha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
+      "publishedSha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.png",
+      "output": "site/lab/brand/projeto-ipe-logo.png",
+      "originalSha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "publishedSha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-symbol.svg",
+      "output": "site/lab/brand/projeto-ipe-symbol.svg",
+      "originalSha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "publishedSha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
       "byteIdentical": true
     },
     {
@@ -225,8 +239,8 @@
     {
       "source": "experiments/mission-design-lab/dist/index.html",
       "output": "site/lab/index.html",
-      "originalSha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
-      "publishedSha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "originalSha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
+      "publishedSha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
       "byteIdentical": true
     },
     {

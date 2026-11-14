@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-14T18:34:27.175Z",
-  "finishedAt": "2026-11-14T18:34:28.492Z",
+  "startedAt": "2026-11-14T18:40:22.439Z",
+  "finishedAt": "2026-11-14T18:40:23.628Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "c69875d7b1effbb4c29a7cbf6377fcdf83fa8e5f204e9d6d57b3ba0833dc8c59"
+        "sha256": "b1d1fc649c504ceb0c7191e7943de1f7f795031dcf3b86d8994402e810674c4c"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 131,
-      "manifestedFiles": 130,
-      "bytes": 10267655,
+      "fileCount": 135,
+      "manifestedFiles": 134,
+      "bytes": 10385935,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 125,
+      "inspectedFiles": 127,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 747,
-      "uniqueTargets": 94,
+      "count": 751,
+      "uniqueTargets": 97,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -529,6 +529,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-22-plano-continuidade-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-23-identidade-visual-md"
         },
         {
           "source": "context/research-library.html",
@@ -2866,15 +2873,33 @@
           "kind": "navigation"
         },
         {
+          "source": "index.html",
+          "target": "brand/projeto-ipe-logo.png",
+          "requestPath": "/brand/projeto-ipe-logo.png",
+          "kind": "img"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
           "source": "lab/index.html",
-          "target": "lab/assets/index-BcfclJeA.js",
-          "requestPath": "/lab/assets/index-BcfclJeA.js",
+          "target": "lab/assets/index-MCOISTGE.js",
+          "requestPath": "/lab/assets/index-MCOISTGE.js",
           "kind": "script"
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-OjdBRBwg.css",
-          "requestPath": "/lab/assets/index-OjdBRBwg.css",
+          "target": "lab/brand/projeto-ipe-symbol.svg",
+          "requestPath": "/lab/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "lab/index.html",
+          "target": "lab/assets/index-BtXoWU_-.css",
+          "requestPath": "/lab/assets/index-BtXoWU_-.css",
           "kind": "link-stylesheet"
         },
         {
@@ -4915,33 +4940,33 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-uN0SrvkO.js",
-          "target": "lab/assets/index-BcfclJeA.js",
-          "requestPath": "/lab/assets/index-BcfclJeA.js",
+          "source": "lab/assets/OrbitalScene-BD01o6gr.js",
+          "target": "lab/assets/index-MCOISTGE.js",
+          "requestPath": "/lab/assets/index-MCOISTGE.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-BcfclJeA.js",
-          "target": "lab/assets/search-Ddk6UaCb.js",
-          "requestPath": "/lab/assets/search-Ddk6UaCb.js",
+          "source": "lab/assets/index-MCOISTGE.js",
+          "target": "lab/assets/search-Bpv4N3xJ.js",
+          "requestPath": "/lab/assets/search-Bpv4N3xJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BcfclJeA.js",
+          "source": "lab/assets/index-MCOISTGE.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-BcfclJeA.js",
-          "target": "lab/assets/OrbitalScene-uN0SrvkO.js",
-          "requestPath": "/lab/assets/OrbitalScene-uN0SrvkO.js",
+          "source": "lab/assets/index-MCOISTGE.js",
+          "target": "lab/assets/OrbitalScene-BD01o6gr.js",
+          "requestPath": "/lab/assets/OrbitalScene-BD01o6gr.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-Ddk6UaCb.js",
-          "target": "lab/assets/index-BcfclJeA.js",
-          "requestPath": "/lab/assets/index-BcfclJeA.js",
+          "source": "lab/assets/search-Bpv4N3xJ.js",
+          "target": "lab/assets/index-MCOISTGE.js",
+          "requestPath": "/lab/assets/index-MCOISTGE.js",
           "kind": "module-import"
         }
       ]
@@ -4981,33 +5006,33 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-uN0SrvkO.js",
-          "specifier": "./index-BcfclJeA.js",
-          "target": "lab/assets/index-BcfclJeA.js",
+          "source": "lab/assets/OrbitalScene-BD01o6gr.js",
+          "specifier": "./index-MCOISTGE.js",
+          "target": "lab/assets/index-MCOISTGE.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-BcfclJeA.js",
-          "specifier": "./search-Ddk6UaCb.js",
-          "target": "lab/assets/search-Ddk6UaCb.js",
+          "source": "lab/assets/index-MCOISTGE.js",
+          "specifier": "./search-Bpv4N3xJ.js",
+          "target": "lab/assets/search-Bpv4N3xJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BcfclJeA.js",
+          "source": "lab/assets/index-MCOISTGE.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-BcfclJeA.js",
-          "specifier": "./OrbitalScene-uN0SrvkO.js",
-          "target": "lab/assets/OrbitalScene-uN0SrvkO.js",
+          "source": "lab/assets/index-MCOISTGE.js",
+          "specifier": "./OrbitalScene-BD01o6gr.js",
+          "target": "lab/assets/OrbitalScene-BD01o6gr.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-Ddk6UaCb.js",
-          "specifier": "./index-BcfclJeA.js",
-          "target": "lab/assets/index-BcfclJeA.js",
+          "source": "lab/assets/search-Bpv4N3xJ.js",
+          "specifier": "./index-MCOISTGE.js",
+          "target": "lab/assets/index-MCOISTGE.js",
           "kind": "module-import"
         }
       ]
@@ -5109,14 +5134,14 @@
         "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969"
       },
       {
-        "path": "lab/assets/index-BcfclJeA.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-BcfclJeA.js",
-        "sha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef"
+        "path": "lab/assets/index-BtXoWU_-.css",
+        "source": "experiments/mission-design-lab/dist/assets/index-BtXoWU_-.css",
+        "sha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d"
       },
       {
-        "path": "lab/assets/index-OjdBRBwg.css",
-        "source": "experiments/mission-design-lab/dist/assets/index-OjdBRBwg.css",
-        "sha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5"
+        "path": "lab/assets/index-MCOISTGE.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-MCOISTGE.js",
+        "sha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -5124,14 +5149,24 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/OrbitalScene-uN0SrvkO.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-uN0SrvkO.js",
-        "sha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13"
+        "path": "lab/assets/OrbitalScene-BD01o6gr.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BD01o6gr.js",
+        "sha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416"
       },
       {
-        "path": "lab/assets/search-Ddk6UaCb.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-Ddk6UaCb.js",
-        "sha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a"
+        "path": "lab/assets/search-Bpv4N3xJ.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-Bpv4N3xJ.js",
+        "sha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-logo.png",
+        "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.png",
+        "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-symbol.svg",
+        "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-symbol.svg",
+        "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf"
       },
       {
         "path": "lab/data/cmr-mod13q1-granule-2.json",
@@ -5186,7 +5221,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a"
+        "sha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0"
       },
       {
         "path": "lab/research/assets/briefing-desktop.jpg",
@@ -5440,6 +5475,20 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "brand/projeto-ipe-logo.png",
+        "status": 200,
+        "bytes": 13315,
+        "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+        "contentType": "image/png"
+      },
+      {
+        "path": "brand/projeto-ipe-symbol.svg",
+        "status": 200,
+        "bytes": 42871,
+        "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+        "contentType": "image/svg+xml"
+      },
+      {
         "path": "context/index.html",
         "status": 200,
         "bytes": 130752,
@@ -5456,22 +5505,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 21973,
-        "sha256": "5329c16ef2fcd9c505ade8d8f0b652f6abfce85f33cf861ed97b3e25b3ea69df",
+        "bytes": 22418,
+        "sha256": "05b7971b7895f2a0125a5a3876ec2a7b13ad60b470cd00f2dd32a3b4326a1081",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 900669,
-        "sha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4",
+        "bytes": 902794,
+        "sha256": "ed60104f4aeaf93d4f880ec5506786280b92b8453366660d694d92c86f276bd6",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 773647,
-        "sha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574",
+        "bytes": 775168,
+        "sha256": "c54bca520ded9408cc98afb209829cbc573514e363f20a9ca666fc3344a436a2",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -5848,30 +5897,30 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 51877,
-        "sha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+        "bytes": 51920,
+        "sha256": "5f7f42751a5d9c15e7e8beb52b24e52827e9a382104d167d7536effb0378491c",
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-uN0SrvkO.js",
+        "path": "lab/assets/OrbitalScene-BD01o6gr.js",
         "status": 200,
         "bytes": 934292,
-        "sha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+        "sha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-BcfclJeA.js",
+        "path": "lab/assets/index-BtXoWU_-.css",
         "status": 200,
-        "bytes": 403927,
-        "sha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
-        "contentType": "text/javascript; charset=utf-8"
-      },
-      {
-        "path": "lab/assets/index-OjdBRBwg.css",
-        "status": 200,
-        "bytes": 135548,
-        "sha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+        "bytes": 135705,
+        "sha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
         "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "lab/assets/index-MCOISTGE.js",
+        "status": 200,
+        "bytes": 403757,
+        "sha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -5881,11 +5930,25 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-Ddk6UaCb.js",
+        "path": "lab/assets/search-Bpv4N3xJ.js",
         "status": 200,
         "bytes": 1247,
-        "sha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+        "sha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
         "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-logo.png",
+        "status": 200,
+        "bytes": 13315,
+        "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+        "contentType": "image/png"
+      },
+      {
+        "path": "lab/brand/projeto-ipe-symbol.svg",
+        "status": 200,
+        "bytes": 42871,
+        "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+        "contentType": "image/svg+xml"
       },
       {
         "path": "lab/data/cmr-mod13q1-granule-2.json",
@@ -5960,8 +6023,8 @@
       {
         "path": "lab/index.html",
         "status": 200,
-        "bytes": 823,
-        "sha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+        "bytes": 906,
+        "sha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -6268,8 +6331,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 55001,
-        "sha256": "c69875d7b1effbb4c29a7cbf6377fcdf83fa8e5f204e9d6d57b3ba0833dc8c59",
+        "bytes": 56705,
+        "sha256": "b1d1fc649c504ceb0c7191e7943de1f7f795031dcf3b86d8994402e810674c4c",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -6323,7 +6386,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 104,
+      "linkedRoutesChecked": 107,
       "redirects": [
         {
           "source": "/game",
@@ -6423,77 +6486,77 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 3.804
+      "durationMs": 3.517
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.247
+      "durationMs": 0.202
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 27.905
+      "durationMs": 28.427
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 2.809
+      "durationMs": 1.876
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 52.433
+      "durationMs": 51.005
     },
     {
       "name": "todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas",
       "status": "passed",
-      "durationMs": 507.527
+      "durationMs": 510.399
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/",
       "status": "passed",
-      "durationMs": 428.302
+      "durationMs": 279.6
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 22.385
+      "durationMs": 24.174
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.373
+      "durationMs": 2.803
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 45.192
+      "durationMs": 61.319
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 56.765
+      "durationMs": 60.707
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 69.758
+      "durationMs": 77.688
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 43.399
+      "durationMs": 48.297
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.021
+      "durationMs": 1.201
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 17.872
+      "durationMs": 21.434
     }
   ]
 }

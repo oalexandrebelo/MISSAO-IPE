@@ -1,0 +1,1189 @@
+{
+  "verifiedAt": "2026-11-14T18:37:27.864Z",
+  "base": "https://projeto-ipe.vercel.app",
+  "access": "public, no cookies or authorization headers",
+  "deploymentId": "dpl_FtBGyAoGw7gVoLny8aCYotCz2eYv",
+  "sourceCommit": "0f21b035b8af20e2aa494219ccbcad0ef7323879",
+  "version": "0.4.0-beta.2",
+  "status": "passed",
+  "filesChecked": 130,
+  "failures": [],
+  "checks": [
+    {
+      "path": "architecture/index.html",
+      "status": 200,
+      "bytes": 1021364,
+      "sha256": "bd67abca2caa2110b67597f9c400585c06fc2e00c9133acb851add2e0bd5145e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "architecture/map.mmd",
+      "status": 200,
+      "bytes": 2137,
+      "sha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "architecture/model.json",
+      "status": 200,
+      "bytes": 165126,
+      "sha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "context/index.html",
+      "status": 200,
+      "bytes": 130752,
+      "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "context/project-context.json",
+      "status": 200,
+      "bytes": 70554,
+      "sha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "context/research-library-index.json",
+      "status": 200,
+      "bytes": 21973,
+      "sha256": "d9512a3c0df87844b51a7b3ff7aaf883e6e2f6503b8d48902f43ebc8671ae470",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "context/research-library.html",
+      "status": 200,
+      "bytes": 900669,
+      "sha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "context/research-library.md",
+      "status": 200,
+      "bytes": 773647,
+      "sha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/09-VERIFICACAO.html",
+      "status": 200,
+      "bytes": 8336,
+      "sha256": "c749f8fad26585e2dbde7112d3bdbc8998ae8fa1f7e3572dc80c38fc5b0cfa53",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/09-VERIFICACAO.md",
+      "status": 200,
+      "bytes": 3109,
+      "sha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/13-ARQUITETURA-ARCHIFY.html",
+      "status": 200,
+      "bytes": 17948,
+      "sha256": "6ab7de29ee9bf854d45fef0681faea961ce2d047a5b10a91bed0c85f5dbe2db7",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/13-ARQUITETURA-ARCHIFY.md",
+      "status": 200,
+      "bytes": 11569,
+      "sha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/14-BETA-DEPLOY.html",
+      "status": 200,
+      "bytes": 12152,
+      "sha256": "9c272bd72f8a8c1c7afb7f01ba0f6c41f27bce1146d3a8c2df81fea437dd53da",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/14-BETA-DEPLOY.md",
+      "status": 200,
+      "bytes": 6588,
+      "sha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/15-PLANO-RELEASE.html",
+      "status": 200,
+      "bytes": 20484,
+      "sha256": "e09aa0ea5362e2d4e81bb317ae1a545c2c7cc10036bf927d9edd4d4b08dc32b9",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/15-PLANO-RELEASE.md",
+      "status": 200,
+      "bytes": 14221,
+      "sha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/16-OPORTUNIDADES-BETA.html",
+      "status": 200,
+      "bytes": 16859,
+      "sha256": "c2f6b2fc82c1bc8b245329dac0f2479b99357d183d2efa6ea52eb83368d93437",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/16-OPORTUNIDADES-BETA.md",
+      "status": 200,
+      "bytes": 10745,
+      "sha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/18-CONTEXTO-COMPLETO.html",
+      "status": 200,
+      "bytes": 85869,
+      "sha256": "8c6fd4055652f39c784731d523830a3f5994f5ce6a0b7e5639a00db2a34f346a",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/18-CONTEXTO-COMPLETO.md",
+      "status": 200,
+      "bytes": 70671,
+      "sha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+      "status": 200,
+      "bytes": 19969,
+      "sha256": "909120251df0a531dbd94fc90425a9a3ce07d9e0dbb40e8c61125799681337bd",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/19-REVISAO-EVIDENCIAS-R8.md",
+      "status": 200,
+      "bytes": 14215,
+      "sha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+      "status": 200,
+      "bytes": 15197,
+      "sha256": "f17871e9658e13696de3e265a5ec632e2e16e70b06f84c7f2f6a17e57e600496",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
+      "status": 200,
+      "bytes": 9892,
+      "sha256": "e33c59d0a3129e31abb45f39200efa1a348746549270a34bb315a8de55b2f35e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/21-OPORTUNIDADES-NASA.html",
+      "status": 200,
+      "bytes": 25703,
+      "sha256": "4487efd67c746c3580c111e4255cbfcc1373ce1ec3737794ab4004bb99bfff99",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/21-OPORTUNIDADES-NASA.md",
+      "status": 200,
+      "bytes": 18391,
+      "sha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/22-PLANO-CONTINUIDADE.html",
+      "status": 200,
+      "bytes": 12363,
+      "sha256": "9b6d3de378d3e0074269d6c99d26594029881b0a6a73e3cf43f52f683fb699fa",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/22-PLANO-CONTINUIDADE.md",
+      "status": 200,
+      "bytes": 7087,
+      "sha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/AUTORIA-E-IA.html",
+      "status": 200,
+      "bytes": 6441,
+      "sha256": "e6585ec9fb1e3e77f579a2218b1cda3fd8b31e375945359e13ea8de3fbc1add5",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/AUTORIA-E-IA.md",
+      "status": 200,
+      "bytes": 1594,
+      "sha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/COMO-USAR.html",
+      "status": 200,
+      "bytes": 6922,
+      "sha256": "e49fb19576ce95c096cc10306a7d2e52a920325fdf8cb642727fb07dd4fdf7d6",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/COMO-USAR.md",
+      "status": 200,
+      "bytes": 2114,
+      "sha256": "3e3a2e4a699f022a45034e8191dc127bc1ea4fcb44d810530f1d58f226044b26",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/ESTADO-PUBLICO.html",
+      "status": 200,
+      "bytes": 8403,
+      "sha256": "2342b58953ad2f4e04617c02d0ea420877293140aa2a597a6f015fd1f9593719",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/ESTADO-PUBLICO.md",
+      "status": 200,
+      "bytes": 3542,
+      "sha256": "d3b5e715b406f995c82bd79149b9e0f8216434c50452409fcf88888da89773fb",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/index.html",
+      "status": 200,
+      "bytes": 9833,
+      "sha256": "b9093bf606c27d881af43cba28a44df26cf82c59fd45be4328b4cee24c0f22e9",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/ORIGEM-DOS-DADOS.html",
+      "status": 200,
+      "bytes": 7730,
+      "sha256": "84ac08392b8f16dc2624b7c45820f6371474787eba92d5cac17b740ceb39a259",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/ORIGEM-DOS-DADOS.md",
+      "status": 200,
+      "bytes": 2489,
+      "sha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "evidence/ab-r3a-digest.json",
+      "status": 200,
+      "bytes": 1374,
+      "sha256": "d755ddd885a9178fd62481ee53df5beadf710c43d65a0b5d256de3d1b075da01",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/chronology.json",
+      "status": 200,
+      "bytes": 1043,
+      "sha256": "85a658b0934d06f2e3d630ab19557499a5a9272b6562f6d94809485ef129337b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/engine-benchmark.json",
+      "status": 200,
+      "bytes": 3149,
+      "sha256": "bffdec34f845924e60f4dcbaa2473c80ee45aa9ef8c42b8b4ef11aa4e3a2f468",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/presentation-build.json",
+      "status": 200,
+      "bytes": 1308,
+      "sha256": "323e74cebf5a588d26740e8bc3c2d7bc5c951c41383220339c3c2617be1ff98c",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/presentation-qa.json",
+      "status": 200,
+      "bytes": 5273,
+      "sha256": "ff467a401f6e2c712327177b91801489c802a51871b22b23df0dff96c57a2464",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "examples/01-long-base.json",
+      "status": 200,
+      "bytes": 12876,
+      "sha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "examples/02-short-base.json",
+      "status": 200,
+      "bytes": 11407,
+      "sha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "examples/03-short-repaired.json",
+      "status": 200,
+      "bytes": 11872,
+      "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/assets/index-C0yMbnbH.css",
+      "status": 200,
+      "bytes": 55259,
+      "sha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "game/assets/index-DYhpvtlV.js",
+      "status": 200,
+      "bytes": 311602,
+      "sha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/mission.worker-m4WSgatj.js",
+      "status": 200,
+      "bytes": 20166,
+      "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/OrbitalScene-B0I9aE-1.js",
+      "status": 200,
+      "bytes": 567251,
+      "sha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/search-DiIaA0z6.js",
+      "status": 200,
+      "bytes": 1242,
+      "sha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/index.html",
+      "status": 200,
+      "bytes": 797,
+      "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 51877,
+      "sha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/index-BcfclJeA.js",
+      "status": 200,
+      "bytes": 403927,
+      "sha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/index-OjdBRBwg.css",
+      "status": 200,
+      "bytes": 135548,
+      "sha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/mission.worker-m4WSgatj.js",
+      "status": 200,
+      "bytes": 20166,
+      "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/OrbitalScene-uN0SrvkO.js",
+      "status": 200,
+      "bytes": 934292,
+      "sha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/search-Ddk6UaCb.js",
+      "status": 200,
+      "bytes": 1247,
+      "sha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 823,
+      "sha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/research/assets/briefing-desktop.jpg",
+      "status": 200,
+      "bytes": 95217,
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/briefing-mobile.jpg",
+      "status": 200,
+      "bytes": 58629,
+      "sha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/laboratorio.jpg",
+      "status": 200,
+      "bytes": 90299,
+      "sha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/retorno-cientifico.jpg",
+      "status": 200,
+      "bytes": 89187,
+      "sha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/retorno-mobile.jpg",
+      "status": 200,
+      "bytes": 68865,
+      "sha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/galeria.html",
+      "status": 200,
+      "bytes": 12191,
+      "sha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/research/index.html",
+      "status": 200,
+      "bytes": 314480,
+      "sha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/research/manifest.json",
+      "status": 200,
+      "bytes": 13265,
+      "sha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/a1-desafio.md",
+      "status": 200,
+      "bytes": 23667,
+      "sha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/a2-fisica.md",
+      "status": 200,
+      "bytes": 30374,
+      "sha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/a3-ux-tecnologia.md",
+      "status": 200,
+      "bytes": 26249,
+      "sha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/GUIA-DIDATICO-R9.md",
+      "status": 200,
+      "bytes": 13690,
+      "sha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/PESQUISA-E-DECISOES-R9.md",
+      "status": 200,
+      "bytes": 15716,
+      "sha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/QA-NAVEGADOR-R9.md",
+      "status": 200,
+      "bytes": 7503,
+      "sha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/QA-R9.md",
+      "status": 200,
+      "bytes": 19149,
+      "sha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/refinamento-conops.md",
+      "status": 200,
+      "bytes": 19091,
+      "sha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/REFINAMENTO-NASA-R10.md",
+      "status": 200,
+      "bytes": 14646,
+      "sha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/refinamento-requisitos.md",
+      "status": 200,
+      "bytes": 13529,
+      "sha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/refinamento-risco-ux.md",
+      "status": 200,
+      "bytes": 20372,
+      "sha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "licenses/React-MIT.txt",
+      "status": 200,
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/ReactDOM-MIT.txt",
+      "status": 200,
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/Scheduler-MIT.txt",
+      "status": 200,
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/Three-MIT.txt",
+      "status": 200,
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "NOTICE.md",
+      "status": 200,
+      "bytes": 3144,
+      "sha256": "2b42c0bbe35d840490f20433a390abd26b57fd022581a4580578d72876aab6d1",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
+      "status": 200,
+      "bytes": 475437,
+      "sha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+      "status": 200,
+      "bytes": 1200768,
+      "sha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "portable/Missao_Ipe_Local.html",
+      "status": 200,
+      "bytes": 1008522,
+      "sha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/Missao_Ipe_Apresentacao.html",
+      "status": 200,
+      "bytes": 139710,
+      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/PITCH_EN_7_SLIDES.html",
+      "status": 200,
+      "bytes": 20560,
+      "sha256": "5b642d5d73770f1e836edc728d5077ba059b4ba420cd131e0ba6142364c89a82",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/PITCH_EN_7_SLIDES.md",
+      "status": 200,
+      "bytes": 13356,
+      "sha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "presentation/README_APRESENTADOR.html",
+      "status": 200,
+      "bytes": 14252,
+      "sha256": "00cb737423525d3be0d1c49d2244775f518a223672b3fcb291ba77e2917439b2",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/README_APRESENTADOR.md",
+      "status": 200,
+      "bytes": 8269,
+      "sha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "presentation/ROTEIRO_PT_EN.html",
+      "status": 200,
+      "bytes": 13427,
+      "sha256": "d832fcdd8c7fd4d7142a7097f0113e1e2b6c79a27e00057635caf88d6cd5638f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/ROTEIRO_PT_EN.md",
+      "status": 200,
+      "bytes": 7849,
+      "sha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "public/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/01-regras-ciencia.html",
+      "status": 200,
+      "bytes": 30785,
+      "sha256": "58c4e4ca4e5fa99977cc3262ed688079a451c0cb18ddafda14e51df1592a7ba2",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "research/01-regras-ciencia.md",
+      "status": 200,
+      "bytes": 22928,
+      "sha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "research/11-revisao-spaceapps-apresentacao.html",
+      "status": 200,
+      "bytes": 22022,
+      "sha256": "40aaf232c91ad93901b652ddff5e63871823fd6193c474537c5a5ea1867feb3d",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "research/11-revisao-spaceapps-apresentacao.md",
+      "status": 200,
+      "bytes": 15356,
+      "sha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "research/evidence/evi3-validation.json",
+      "status": 200,
+      "bytes": 5313,
+      "sha256": "59f06f82cfa1f317eb6e0bdbeae2de0154d8e57b840309e68f130b1196a759e3",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/evidence/resources-retrieval-20261114.json",
+      "status": 200,
+      "bytes": 2806,
+      "sha256": "cbbd3fa1c6102415b9844bf3347d3b8710a5b7334ea25b6f943e9088c4e6f400",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/evidence/validate-evi3-research.py",
+      "status": 200,
+      "bytes": 4384,
+      "sha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00",
+      "hashMatches": true,
+      "cspPass": true,
+      "contentType": "application/octet-stream"
+    }
+  ],
+  "browserEvidence": {
+    "scope": "Local deployment with same source and CSP; desktop and 390px requested viewport",
+    "mission": "long-contact baseline delivered 6/6 valid records",
+    "portal": "timeline selected; operation filter showed 2/13; mobile no horizontal overflow",
+    "limits": "Not a full accessibility or learning study"
+  }
+}

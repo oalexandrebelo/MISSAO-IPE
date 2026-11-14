@@ -21,3 +21,5 @@
 .scenario-switch button{flex-direction:column;align-items:center;justify-content:center}.scenario-switch button>span{background:transparent;padding:0;line-height:1.5}
 
 .selected-evidence .nominal-explanation{font-size:12px;color:#c8d6bb;border-left:2px solid #93ac73;padding-left:12px;margin-top:13px}
+
+.site-header .brand-logo{display:block;width:180px;height:60px;object-fit:contain}@media(max-width:580px){.site-header .brand-logo{width:156px;height:52px}}

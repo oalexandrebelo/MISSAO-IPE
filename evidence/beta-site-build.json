@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-14T18:33:53.999Z",
+  "generatedAt": "2026-11-14T18:40:08.264Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 131,
-  "bytes": 10267655,
+  "fileCount": 135,
+  "bytes": 10385935,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 55001,
-    "sha256": "c69875d7b1effbb4c29a7cbf6377fcdf83fa8e5f204e9d6d57b3ba0833dc8c59"
+    "bytes": 56705,
+    "sha256": "b1d1fc649c504ceb0c7191e7943de1f7f795031dcf3b86d8994402e810674c4c"
   },
   "entries": [
     {
@@ -39,6 +39,24 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "brand/projeto-ipe-logo.png",
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "category": "project-brand",
+      "source": "experiments/mission-design-lab/public/brand/projeto-ipe-logo.png",
+      "sourceSha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "brand/projeto-ipe-symbol.svg",
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "category": "project-brand",
+      "source": "experiments/mission-design-lab/public/brand/projeto-ipe-symbol.svg",
+      "sourceSha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "context/index.html",
       "bytes": 130752,
       "sha256": "a99334a4e5e77ea8e154eb0954b531dc8cc09889a469503a1ff2b4d598818e4e",
@@ -58,29 +76,29 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 21973,
-      "sha256": "5329c16ef2fcd9c505ade8d8f0b652f6abfce85f33cf861ed97b3e25b3ea69df",
+      "bytes": 22418,
+      "sha256": "05b7971b7895f2a0125a5a3876ec2a7b13ad60b470cd00f2dd32a3b4326a1081",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "5329c16ef2fcd9c505ade8d8f0b652f6abfce85f33cf861ed97b3e25b3ea69df",
+      "sourceSha256": "05b7971b7895f2a0125a5a3876ec2a7b13ad60b470cd00f2dd32a3b4326a1081",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 900669,
-      "sha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4",
+      "bytes": 902794,
+      "sha256": "ed60104f4aeaf93d4f880ec5506786280b92b8453366660d694d92c86f276bd6",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "74b681ff7b618aaac1382b7aa6f8294d32e86e61761d490b7127b17094bc77c4",
+      "sourceSha256": "ed60104f4aeaf93d4f880ec5506786280b92b8453366660d694d92c86f276bd6",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 773647,
-      "sha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574",
+      "bytes": 775168,
+      "sha256": "c54bca520ded9408cc98afb209829cbc573514e363f20a9ca666fc3344a436a2",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "3014e46fae01d3d11b8e4594de5a47590cb87c3d8c6556f9ee5f79ea829c4574",
+      "sourceSha256": "c54bca520ded9408cc98afb209829cbc573514e363f20a9ca666fc3344a436a2",
       "transformation": "none; bytes preserved"
     },
     {
@@ -561,29 +579,29 @@
     },
     {
       "path": "index.html",
-      "bytes": 51877,
-      "sha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+      "bytes": 51920,
+      "sha256": "5f7f42751a5d9c15e7e8beb52b24e52827e9a382104d167d7536effb0378491c",
       "category": "public-portal",
       "source": "web/index.html",
-      "sourceSha256": "9fbf5c05983780c07bbe4c8c609d6085e6e37ab2ca3c3142b2005cea56497bd1",
+      "sourceSha256": "5f7f42751a5d9c15e7e8beb52b24e52827e9a382104d167d7536effb0378491c",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-BcfclJeA.js",
-      "bytes": 403927,
-      "sha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
+      "path": "lab/assets/index-BtXoWU_-.css",
+      "bytes": 135705,
+      "sha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-BcfclJeA.js",
-      "sourceSha256": "0b5917dd2b4fcaef2b1c295339c6ff89fe14caccdd9b974956af620b85efe3ef",
+      "source": "experiments/mission-design-lab/dist/assets/index-BtXoWU_-.css",
+      "sourceSha256": "d30921cb1959feb3a74766ed7574ec96e17df59fbfdb4644023c7ef63ecacc0d",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-OjdBRBwg.css",
-      "bytes": 135548,
-      "sha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "path": "lab/assets/index-MCOISTGE.js",
+      "bytes": 403757,
+      "sha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-OjdBRBwg.css",
-      "sourceSha256": "bc472eb1ab171c3c345032769fdc2d6962e3b59e5748ce7eca9167218f4c3da5",
+      "source": "experiments/mission-design-lab/dist/assets/index-MCOISTGE.js",
+      "sourceSha256": "04aa41c8e388290cb2fce752a7e0fbc36892b3905c651f45ed30a4d1fdbe3a5e",
       "transformation": "none; bytes preserved"
     },
     {
@@ -596,21 +614,39 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/OrbitalScene-uN0SrvkO.js",
+      "path": "lab/assets/OrbitalScene-BD01o6gr.js",
       "bytes": 934292,
-      "sha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "sha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-uN0SrvkO.js",
-      "sourceSha256": "fae768336df1479997fbbb0edfdb9769726b0adfd691f038937e2c53d6fe3f13",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BD01o6gr.js",
+      "sourceSha256": "2ab35034130cafb0d636ec6071da11d54e98c0819ac2e7fd1be0c6d960c83416",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/search-Ddk6UaCb.js",
+      "path": "lab/assets/search-Bpv4N3xJ.js",
       "bytes": 1247,
-      "sha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "sha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/search-Ddk6UaCb.js",
-      "sourceSha256": "44af655932f228c0cd25e6018ac0d747d25101e2d0db433d8ccb32a8013b6a3a",
+      "source": "experiments/mission-design-lab/dist/assets/search-Bpv4N3xJ.js",
+      "sourceSha256": "796c5fa2bd4dd24ee85cc979f23befc2b01eafe31361e9599e6ddac8c1c8e5ec",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-logo.png",
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.png",
+      "sourceSha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-symbol.svg",
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-symbol.svg",
+      "sourceSha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
       "transformation": "none; bytes preserved"
     },
     {
@@ -705,11 +741,11 @@
     },
     {
       "path": "lab/index.html",
-      "bytes": 823,
-      "sha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "bytes": 906,
+      "sha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/index.html",
-      "sourceSha256": "800116f95b9a62a03bccee623f2ccdfbc52d5c8d3fe100f2cad8ed7af11fc56a",
+      "sourceSha256": "640fa9cb86107c2698d2aefc483baa1b8ca2aeb7975b93d9d1ee4372b86947b0",
       "transformation": "none; bytes preserved"
     },
     {

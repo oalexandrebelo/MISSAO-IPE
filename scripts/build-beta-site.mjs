@@ -153,6 +153,9 @@ await rm(stage, { recursive: true, force: true });
 await mkdir(stage, { recursive: true });
 try {
   await copy('web/index.html', 'index.html', 'public-portal');
+  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.png']) {
+    await copy(`experiments/mission-design-lab/public/brand/${name}`, `brand/${name}`, 'project-brand');
+  }
   for (const source of await tree('experiments/mission-design-lab/dist')) {
     const rel = source.slice('experiments/mission-design-lab/dist/'.length);
     if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb)$/.test(rel)) {
