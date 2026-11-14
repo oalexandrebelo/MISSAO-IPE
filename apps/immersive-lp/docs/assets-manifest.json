@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "date": "2026-11-14",
+  "files": [
+    {
+      "path": "public/assets/REMOTION-LICENSE.md",
+      "bytes": 2849,
+      "sha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09"
+    },
+    {
+      "path": "public/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "bytes": 1255,
+      "sha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b"
+    },
+    {
+      "path": "public/assets/earth-mobile.webp",
+      "bytes": 96344,
+      "sha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf"
+    },
+    {
+      "path": "public/assets/earth.webp",
+      "bytes": 379916,
+      "sha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214"
+    },
+    {
+      "path": "public/assets/game-preview.jpg",
+      "bytes": 95217,
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1"
+    },
+    {
+      "path": "public/assets/science-provenance.json",
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+    },
+    {
+      "path": "public/brand/projeto-ipe-logo.png",
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f"
+    },
+    {
+      "path": "public/brand/projeto-ipe-symbol.svg",
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf"
+    },
+    {
+      "path": "public/fonts/eb-garamond-italic-latin.woff2",
+      "bytes": 25412,
+      "sha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297"
+    },
+    {
+      "path": "public/fonts/eb-garamond-latin.woff2",
+      "bytes": 23848,
+      "sha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366"
+    },
+    {
+      "path": "public/fonts/ebgaramond-OFL.txt",
+      "bytes": 4398,
+      "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7"
+    },
+    {
+      "path": "public/fonts/figtree-OFL.txt",
+      "bytes": 4388,
+      "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268"
+    },
+    {
+      "path": "public/fonts/figtree-latin.woff2",
+      "bytes": 20184,
+      "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928"
+    },
+    {
+      "path": "asset-packs/kaykit-manifest.json",
+      "bytes": 18851,
+      "sha256": "43666b129f5bb8c611f1a0839f7ffbb6a57b46c2ec50356db9c8611b999ad6f2"
+    },
+    {
+      "path": "asset-packs/kaykit-space-base-gltf.zip",
+      "bytes": 533500,
+      "sha256": "73f4cc5c231a1df8fefeddd00debef3d8dd91df8a0f6df047668c34372ebbee3"
+    }
+  ]
+}

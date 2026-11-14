@@ -1,0 +1,44 @@
+{
+  "name": "@projeto-ipe/immersive-lp",
+  "version": "1.0.0-beta.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.14.0" },
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build --webpack",
+    "build:offline-fonts": "node scripts/build-offline.mjs",
+    "start": "node scripts/serve.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:engine": "node --experimental-strip-types --test tests/engine.test.mts",
+    "video:studio": "remotion studio remotion/index.ts",
+    "video:render": "remotion render remotion/index.ts IpeMission public/assets/ipe-mission.mp4 --codec=h264 --crf=20",
+    "assets:verify": "node scripts/verify-assets.mjs",
+    "verify": "pnpm typecheck && pnpm test:engine && pnpm assets:verify && pnpm build && pnpm test"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "gsap": "3.15.1",
+    "remotion": "4.0.543",
+    "@remotion/player": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "@remotion/paths": "4.0.543",
+    "@remotion/layout-utils": "4.0.543"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.543",
+    "@tailwindcss/postcss": "^4.1.0",
+    "tailwindcss": "^4.1.0",
+    "@playwright/test": "^1.56.0",
+    "playwright": "^1.56.0",
+    "@axe-core/playwright": "^4.10.2",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "5.9.3"
+  }
+}
