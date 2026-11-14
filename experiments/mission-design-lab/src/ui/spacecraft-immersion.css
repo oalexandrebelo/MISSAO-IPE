@@ -1,0 +1,4 @@
+/* Pointer inspection supplements the equivalent HTML controls. */
+.scene.scene-orbit .orbital-canvas.spacecraft-interactive,
+.scene.scene-orbit .orbital-canvas.spacecraft-interactive canvas { pointer-events:auto; }
+.scene.scene-orbit .orbital-canvas.spacecraft-interactive canvas { cursor:crosshair; touch-action:pan-y; }

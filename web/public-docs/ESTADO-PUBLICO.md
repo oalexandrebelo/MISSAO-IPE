@@ -1,5 +1,7 @@
 # Missão Ipê BETA · estado público
 
+**Atualização R15:** as três missões agora representam as escolhas na nave didática, com inspeção de carga, energia e comunicação, componentes separados e alternativa SVG. No projeto, a cena segue as escolhas; na operação e comparação, conserva a configuração executada. Consulte o [guia para aprender](32-GUIA-DIDATICO-MISSOES-3D.html) e o [handoff atual](34-HANDOFF-IMERSAO-3D-R15.html). Os textos seguintes conservam seus cortes históricos.
+
 ## Leitura atual — edição R14
 
 **14/11/2026 · implementação R14.** O [beta atual](../lab/index.html) reúne três casos científicos: Cerrado, Bennu e telescópio. A campanha do Cerrado usa seis registros históricos Terra/MODIS; as duas novas expedições usam observações sintéticas, identificadas como didáticas. Seus domínios permanecem separados. Consulte [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.html) para comportamento, versões, verificações e limites.

@@ -2,9 +2,9 @@
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.5.0-beta.1 · edição R14 · 14/11/2026.**
+**Beta atual: 0.6.0-beta.1 · edição R15 · 14/11/2026.**
 
-**Entrada da R14:** [três missões e continuidade para dois devs](docs/31-TRES-MISSOES-CIENTIFICAS-R14.md) · [modelos NASA e créditos](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/34-HANDOFF-IMERSAO-3D-R15.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
@@ -28,6 +28,9 @@ As três jornadas têm quatro segmentos — usuários, lançamento, espaço e so
 
 ## Exploração visual
 
+A R15 torna as escolhas reconhecíveis na nave: carga de processamento, câmera ou espectrômetro, painéis, bateria e rádio. Inspecione cada sistema, separe os componentes e gire a montagem. As explicações usam valores do catálogo: W, Wh, Mbit, taxa, massa, créditos e agenda. Nas expedições, ampliar contatos mantém a mesma antena e taxa. Na reprodução e comparação, a nave conserva a configuração executada.
+
+
 A marca usa o símbolo e lettering SVG enviados pelo autor, sem fundo. Quatro modelos oficiais NASA são locais: CubeSat genérico, antena DSN, Bennu e JWST. Bennu e JWST contextualizam as novas cenas; o acervo permite inspecionar os quatro modelos. O estado e os indicadores vêm do motor; uma malha não valida a engenharia. Os [créditos e limites](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md) distinguem geometria real, parâmetros didáticos e dados sintéticos.
 
 A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, trajetória de chegada, operação de antenas reais, multiplayer remoto e validação de aprendizagem permanecem futuros trabalhos. As duas ou três horas das novas missões representam somente operação após chegada.
@@ -36,7 +39,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.5.0-beta.1 / R14 | `experiments/mission-design-lab/` |
+| Beta 0.6.0-beta.1 / R15 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |

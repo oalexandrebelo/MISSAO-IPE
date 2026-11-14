@@ -21,6 +21,9 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', target: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', title: 'Aprenda com o Projeto Ipê', description: 'Guia completo: histórias, escolhas, conceitos, experimentos e roteiros de aula para as três missões.' },
+  { source: 'docs/33-OPORTUNIDADES-NASA-SCIENCE.md', target: 'docs/33-OPORTUNIDADES-NASA-SCIENCE.md', title: 'Oportunidades NASA Science', description: 'Oito recursos oficiais, aplicações didáticas, limites e sequência recomendada de integração.' },
+  { source: 'docs/34-HANDOFF-IMERSAO-3D-R15.md', target: 'docs/34-HANDOFF-IMERSAO-3D-R15.md', title: 'Dois devs · montagem 3D R15', description: 'Estado atual, contratos de apresentação, vínculo com o motor, mapa do código e critérios de continuidade.' },
   { source: 'docs/31-TRES-MISSOES-CIENTIFICAS-R14.md', target: 'docs/31-TRES-MISSOES-CIENTIFICAS-R14.md', title: 'Três missões científicas · R14', description: 'Jornadas jogáveis, quatro segmentos, replay 3D, contratos e continuidade para dois devs.' },
   { source: 'docs/30-ATIVOS-NASA-IMPLEMENTADOS.md', target: 'docs/30-ATIVOS-NASA-IMPLEMENTADOS.md', title: 'Modelos NASA implementados', description: 'Quatro modelos locais, procedência, otimização, carregamento e limites científicos.' },
   { source: 'docs/29-GAME-DESIGN-3D.md', target: 'docs/29-GAME-DESIGN-3D.md', title: 'Game Design · missão em 3D', description: 'Proposta de experiência, quatro segmentos, revisão causal, cinco cenas e entregas para dois desenvolvedores.' },
@@ -161,6 +164,7 @@ await mkdir(stage, { recursive: true });
 try {
   await copy('web/index.html', 'index.html', 'public-portal');
   for (const extension of ['html', 'css', 'js']) await copy(`web/game-design.${extension}`, `game-design.${extension}`, 'interactive-game-design-study');
+  await copy('research/nasa-science-opportunities.json', 'research/nasa-science-opportunities.json', 'official-nasa-science-opportunities');
   await copy('research/nasa-3d-catalog.json', 'research/nasa-3d-catalog.json', 'official-3d-resource-catalog');
   await copy('web/documentation.css', 'documentation.css', 'documentation-style');
   for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo-on-light.svg', 'projeto-ipe-logo.png']) {
@@ -247,7 +251,7 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R14-scientific-missions', version: '0.5.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R15-configured-spacecraft', version: '0.6.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,

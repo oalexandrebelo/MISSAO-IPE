@@ -1,5 +1,7 @@
 # 25 — Handoff do PROJETO IPÊ para dois desenvolvedores
 
+**Leitura atual R15:** [montagem 3D e handoff dos dois devs](34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md). Os registros abaixo preservam seus cortes; a R15 acrescenta a nave configurável aos três casos.
+
 **Entrada atual R14 · beta 0.5.0-beta.1:** leia primeiro [Três missões científicas e handoff da dupla](31-TRES-MISSOES-CIENTIFICAS-R14.md). Estão implementados Cerrado, Bennu e Telescópio, cena orientada por eventos, quatro segmentos, revisão local de equipe e modelos NASA locais. [Ativos e limites](30-ATIVOS-NASA-IMPLEMENTADOS.md). A proposta R13 e o inventário R12 abaixo são históricos; use o documento 31 para o mapa atual e [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) para o recibo.
 
 

@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "title": "Oportunidades NASA Science para as três missões do Ipê",
+  "edition": "R15",
+  "verifiedDate": "2026-11-14",
+  "language": "pt-BR",
+  "scope": "Curadoria documental e propostas de aprendizagem. Não implementa API nem altera o motor.",
+  "statusAtCut": "A montagem configurável R15 está implementada e sua verificação integrada local foi concluída, preservando o domínio. O status da publicação e a implantação efetivamente conferida são registrados separadamente em PUBLICADO.md e evidence/production-r15.json.",
+  "costScale": {
+    "baixo": "Conteúdo, links e pequena apresentação, com revisão.",
+    "medio": "Interação, acessibilidade ou validação com participantes.",
+    "note": "Estimativas qualitativas, não prazos nem orçamento contratado."
+  },
+  "verificationLimits": [
+    "Nenhuma nova API, autenticação, política CORS, endpoint de feed ou SLA foi presumido.",
+    "As aplicações Eyes foram identificadas pelas páginas oficiais e links resolvidos, sem ensaio interativo nesta rodada.",
+    "A data de consulta não é a data de produção das observações.",
+    "Nenhuma mídia nova foi baixada para este catálogo."
+  ],
+  "opportunities": [
+    {
+      "id": "NS01",
+      "title": "NDVI: interpretar o retorno do Cerrado",
+      "missions": [
+        "cerrado"
+      ],
+      "sourceTitle": "Measuring Vegetation (NDVI & EVI)",
+      "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+      "sourcePublishedDate": "2000-08-30",
+      "resourceType": "artigo educativo",
+      "teaches": "Relacionar bandas, índice de vegetação, qualidade e limites de interpretação.",
+      "proposedIntegration": "Adicionar uma explicação curta após o retorno científico, com comparação de pares recebidos e perguntas sobre dados ausentes.",
+      "currentState": "O cálculo e a comparação de registros MODIS já existem. A atividade contextual específica proposta aqui ainda não foi integrada.",
+      "implementationStatus": "proposed_extension_existing_domain",
+      "priority": "P1",
+      "impact": "alto",
+      "effort": "baixo",
+      "costBasis": "Redação, revisão científica e pequenos componentes de apresentação; sem nova coleta.",
+      "acceptance": [
+        "Somente pares recebidos e válidos entram na comparação.",
+        "Dado ausente nunca vira zero.",
+        "O texto separa data de observação e início do composto."
+      ],
+      "limits": [
+        "O artigo é histórico, de 2000; não substitui a documentação do produto MOD13Q1.061.",
+        "Um índice não identifica sozinho a causa de mudança ambiental."
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "relatedUrls": [],
+      "launchUrl": null
+    },
+    {
+      "id": "NS02",
+      "title": "Webb: escolher instrumento pela pergunta",
+      "missions": [
+        "telescope"
+      ],
+      "sourceTitle": "Webb’s Scientific Instruments",
+      "sourceUrl": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/",
+      "sourcePublishedDate": null,
+      "resourceType": "explicação científica",
+      "teaches": "Distinguir imagem e espectro; justificar o modo de observação pelo dado necessário.",
+      "proposedIntegration": "Criar uma ficha curta de comparação entre imagem e espectro e pedir a justificativa antes da escolha do instrumento.",
+      "currentState": "A expedição exige espectrômetro e já rejeita câmera para seu objetivo. A ficha NASA e sua atividade guiada são propostas.",
+      "implementationStatus": "proposed_extension_existing_domain",
+      "priority": "P1",
+      "impact": "alto",
+      "effort": "baixo",
+      "costBasis": "Conteúdo e revisão; um catálogo instrumental real exigiria novo modelo e outro esforço.",
+      "acceptance": [
+        "O requisito continua visível antes da escolha.",
+        "A câmera não é apresentada como inferior para qualquer pergunta.",
+        "Os fluxos do jogo permanecem identificados como sintéticos."
+      ],
+      "limits": [
+        "O modelo visual do Webb não transforma a nave fictícia em JWST.",
+        "Faixas e intensidades didáticas não demonstram água, atmosfera ou vida."
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "relatedUrls": [],
+      "launchUrl": null
+    },
+    {
+      "id": "NS03",
+      "title": "Bennu: da observação à amostra e à evidência",
+      "missions": [
+        "bennu"
+      ],
+      "sourceTitle": "OSIRIS-REx Resources",
+      "sourceUrl": "https://science.nasa.gov/solar-system/resources/resource-packages/osiris-rex-resources/",
+      "sourcePublishedDate": null,
+      "resourceType": "coleção de missão",
+      "teaches": "Distinguir imagem de superfície, amostra física e interpretação de laboratório.",
+      "proposedIntegration": "Adicionar uma atividade de classificação de evidências usando a coleção oficial e uma pergunta sobre o que o exercício de morfologia não permite concluir.",
+      "currentState": "Bennu já possui história, modelo oficial e dados de rugosidade sintéticos. Não há retorno físico de amostras nem mapa científico derivado do modelo.",
+      "implementationStatus": "proposed_extension_existing_domain",
+      "priority": "P1",
+      "impact": "alto",
+      "effort": "baixo",
+      "costBasis": "Curadoria de links e conteúdo; incorporar mídia exige checar cada crédito e tamanho.",
+      "acceptance": [
+        "Cada evidência é identificada como imagem, modelo, medição sintética ou amostra real.",
+        "Não há alegação de coleta de amostra pelo Ipê.",
+        "A atividade aponta a fonte e registra a data de consulta."
+      ],
+      "limits": [
+        "A coleção contém links e mídias com créditos variados; não tratar tudo como um único arquivo livre.",
+        "As regiões A/B/C do jogo não são locais científicos nomeados de Bennu."
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "relatedUrls": [],
+      "launchUrl": null
+    },
+    {
+      "id": "NS04",
+      "title": "Modelos 3D: explicar função e fronteira da representação",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sourceTitle": "NASA 3D Resources",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/",
+      "sourcePublishedDate": null,
+      "resourceType": "acervo de modelos",
+      "teaches": "Reconhecer partes e diferenciar geometria de referência, configuração didática e estado calculado.",
+      "proposedIntegration": "Anotar partes relevantes e comparar a referência NASA com a nave fictícia configurada; manter fontes e alternativa 2D.",
+      "currentState": "Quatro GLBs oficiais locais, manifest e decoder fazem parte da base R14. A montagem configurável R15 está implementada e verificada localmente; PUBLICADO.md e evidence/production-r15.json registram o status da publicação. As anotações e atividades de aprendizagem propostas nesta oportunidade permanecem futuras.",
+      "implementationStatus": "implemented_assets_proposed_learning_extension",
+      "priority": "P1",
+      "impact": "alto",
+      "effort": "medio",
+      "costBasis": "Reutilização dos ativos existentes; anotação, interação, acessibilidade e medição de desempenho.",
+      "acceptance": [
+        "Uma alteração visual deriva de escolha explícita e não muda silenciosamente o domínio.",
+        "Modelos e parâmetros didáticos têm identificações distintas.",
+        "A interação possui equivalente textual/2D e não depende somente da cor."
+      ],
+      "limits": [
+        "Modelo 3D não comprova massa, energia, trajetória, precisão ou desempenho de voo.",
+        "Arquivos exigem revisão individual de créditos, dependências e custo de renderização."
+      ],
+      "relatedUrls": [
+        "https://science.nasa.gov/3d-resources/cubesat-2-ru-generic/",
+        "https://science.nasa.gov/3d-resources/70-meter-dish/",
+        "https://science.nasa.gov/3d-resources/1999-rq36-asteroid/",
+        "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/"
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "launchUrl": null
+    },
+    {
+      "id": "NS05",
+      "title": "Eyes on the Earth: contexto de missão e observação",
+      "missions": [
+        "cerrado"
+      ],
+      "sourceTitle": "NASA Eyes — Eyes on the Earth",
+      "sourceUrl": "https://science.nasa.gov/eyes/",
+      "launchUrl": "https://eyes.nasa.gov/apps/earth/",
+      "sourcePublishedDate": null,
+      "resourceType": "aplicação externa 3D",
+      "teaches": "Relacionar satélite, instrumento, fenômeno observado e escala temporal.",
+      "proposedIntegration": "Oferecer uma excursão externa opcional antes da campanha, com uma pergunta de observação e retorno ao jogo.",
+      "currentState": "Não integrado ao cálculo nem à cena do Ipê. O link oficial foi resolvido; a aplicação WebGL não foi ensaiada nesta pesquisa.",
+      "implementationStatus": "proposed_external_activity",
+      "priority": "P2",
+      "impact": "medio",
+      "effort": "baixo",
+      "costBasis": "Link, instrução e alternativa textual; incorporar a aplicação não faz parte da estimativa.",
+      "acceptance": [
+        "O jogo funciona sem abrir o serviço externo.",
+        "A atividade distingue os dados do serviço dos seis arquivos fixos do jogo.",
+        "Não há promessa de atualização ao vivo no Ipê."
+      ],
+      "limits": [
+        "Exige conexão e capacidade gráfica para a atividade externa.",
+        "Não foi verificada API, licença de incorporação, CORS ou suporte a iframe."
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "relatedUrls": []
+    },
+    {
+      "id": "NS06",
+      "title": "Eyes on the Solar System: separar viagem e operação",
+      "missions": [
+        "bennu",
+        "telescope"
+      ],
+      "sourceTitle": "NASA Eyes — Eyes on the Solar System",
+      "sourceUrl": "https://science.nasa.gov/eyes/",
+      "launchUrl": "https://eyes.nasa.gov/apps/solar-system/",
+      "sourcePublishedDate": null,
+      "resourceType": "aplicação externa 3D",
+      "teaches": "Distinguir a trajetória histórica de uma missão da pequena janela operacional simulada no jogo.",
+      "proposedIntegration": "Guiar uma exploração externa de uma missão e pedir uma linha do tempo com viagem, observação e retorno de dados.",
+      "currentState": "Não há efemérides importadas do Eyes. O link oficial foi resolvido; a aplicação WebGL não foi ensaiada nesta pesquisa.",
+      "implementationStatus": "proposed_external_activity",
+      "priority": "P2",
+      "impact": "medio",
+      "effort": "baixo",
+      "costBasis": "Roteiro e ligação externa. Propagação orbital integrada seria um projeto diferente.",
+      "acceptance": [
+        "As duas ou três horas do Ipê continuam identificadas como operação após chegada.",
+        "A cronologia externa não é apresentada como validação do perfil do jogo.",
+        "A atividade tem alternativa sem aplicação externa."
+      ],
+      "limits": [
+        "Não há API de trajetórias confirmada por esta pesquisa.",
+        "Não copiar a interface ou extrair dados sem verificar um contrato público apropriado."
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "relatedUrls": []
+    },
+    {
+      "id": "NS07",
+      "title": "Learn Science: preparar mediação e avaliação de aprendizagem",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sourceTitle": "Learn Science with NASA",
+      "sourceUrl": "https://science.nasa.gov/learn/resources/learn-with-nasa/",
+      "sourcePublishedDate": null,
+      "resourceType": "coleção de aprendizagem",
+      "teaches": "Escolher atividades e linguagem conforme o público; registrar observação, hipótese e revisão.",
+      "proposedIntegration": "Criar uma ficha do facilitador com objetivos, perguntas antes/depois e duas profundidades de explicação para uma mesma missão.",
+      "currentState": "O guia didático desta edição propõe exercícios. Não há validação educacional, alinhamento curricular certificado ou avaliação automática de aprendizagem.",
+      "implementationStatus": "documented_facilitation_proposal",
+      "priority": "P1",
+      "impact": "alto",
+      "effort": "medio",
+      "costBasis": "Adaptação em português, facilitação piloto e análise de respostas; sem estimativa de eficácia.",
+      "acceptance": [
+        "Cada atividade tem objetivo e evidência observável de compreensão.",
+        "A tradução e a autoria da adaptação são identificadas.",
+        "O piloto separa sucesso no jogo de qualidade da justificativa."
+      ],
+      "limits": [
+        "Etapas escolares norte-americanas não equivalem automaticamente à BNCC.",
+        "A existência de recursos NASA não valida o produto Ipê nem seus resultados educacionais."
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "relatedUrls": [],
+      "launchUrl": null
+    },
+    {
+      "id": "NS08",
+      "title": "Basics of Space Flight: justificar requisitos e comunicação",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sourceTitle": "Basics of Space Flight — Mission Inception e Telecom",
+      "sourceUrl": "https://science.nasa.gov/learn/basics-of-space-flight/",
+      "sourcePublishedDate": null,
+      "resourceType": "tutorial de fundamentos",
+      "teaches": "Ligar objetivo científico a requisitos e compreender os papéis de nave e solo na transmissão.",
+      "proposedIntegration": "Acrescentar leitura contextual após falha: requisitos no início, comunicação após fila ou entrega incompleta; pedir uma revisão de uma única escolha.",
+      "currentState": "O processo em seis etapas, os quatro segmentos e os balanços do jogo já existem. A trilha de leitura contextual é proposta.",
+      "implementationStatus": "proposed_extension_existing_domain",
+      "priority": "P1",
+      "impact": "alto",
+      "effort": "baixo",
+      "costBasis": "Redação e associação entre conceitos, eventos e links; sem implantar um orçamento RF real.",
+      "acceptance": [
+        "Cada indicação aponta o conceito que ajuda a interpretar um evento.",
+        "O estudante diferencia taxa útil, duração de contato e quantidade recebida.",
+        "A antena DSN de referência não é apresentada como estação operacional do Cerrado."
+      ],
+      "limits": [
+        "O tutorial oferece visão geral; não é validação de engenharia do jogo.",
+        "Não há agendamento real de antenas, controle DSN ou cálculo RF integrado."
+      ],
+      "relatedUrls": [
+        "https://science.nasa.gov/learn/basics-of-space-flight/chapter7-1/",
+        "https://science.nasa.gov/learn/basics-of-space-flight/chapter10-1/"
+      ],
+      "verifiedDate": "2026-11-14",
+      "verificationMethod": "Página primária aberta e conteúdo conferido com navegação web; propostas cruzadas com o código local.",
+      "rightsNote": "Preservar autoria e crédito por recurso; verificar condições do item antes de copiar mídia. Referência não indica endosso NASA.",
+      "launchUrl": null
+    }
+  ]
+}

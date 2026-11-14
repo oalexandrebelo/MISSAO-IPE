@@ -1,5 +1,7 @@
 # 31 — Três missões científicas: implementação e continuidade R14
 
+**Leitura atual R15:** [montagem 3D e handoff dos dois devs](34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md). Os registros abaixo preservam seus cortes; a R15 acrescenta a nave configurável aos três casos.
+
 **14/11/2026 · implementação R14 · beta 0.5.0-beta.1.** O guia descreve o código e seus limites. A verificação integrada está em `evidence/revision-r14.json`; a publicação identificada por commit e implantação está em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md).
 
 O Ipê conecta uma necessidade científica a escolhas de engenharia e à evidência efetivamente recebida. A R14 mantém a campanha do Cerrado e acrescenta duas expedições independentes, Bennu e telescópio. Os três casos aparecem no briefing, com histórias próprias, quatro segmentos de missão e apresentação 3D/2D. O modelo numérico continua separado da aparência da cena.

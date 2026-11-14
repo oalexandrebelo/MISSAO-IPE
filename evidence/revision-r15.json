@@ -1,0 +1,54 @@
+{
+  "revision": "R15",
+  "version": "0.6.0-beta.1",
+  "verifiedAt": "2026-11-14T22:02:28.853827+00:00",
+  "status": "local-checks-passed",
+  "scope": "Configured 3D spacecraft for all three scientific missions; didactic inspection and NASA Science research",
+  "checks": {
+    "domain": {
+      "passed": 140,
+      "failed": 0
+    },
+    "uiDOM": {
+      "passed": 26,
+      "failed": 0
+    },
+    "typescript": "passed",
+    "viteBuild": "passed",
+    "context": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distributionHTTP": {
+      "passed": 17,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "environment": "ChatGPT in-app browser, local release on loopback",
+    "observed": [
+      "Bennu camera/spectrometer visibly change, incompatible payload warned, energy and contact choices reflected",
+      "Bennu viable mission 6/6; event seek to contact and communication inspection",
+      "Telescope spectrometer/camera and compact/extended power visibly change; equivalent SVG fallback",
+      "Cerrado BANDAS/INDEX processor changes; fast radio dish replaces economy antenna; separation invoked with Enter",
+      "Direct click on Bennu payload selects instrument inspection",
+      "390px telescope viewport: complete spacecraft and controls, document width390px"
+    ],
+    "qualification": "Observed interface behavior only. Temporary browser-control delays occurred; no new console error or code-level loop regression identified.",
+    "limitations": [
+      "No FPS/performance benchmark",
+      "No physical mobile device",
+      "No cold offline first-load test",
+      "No remote multiplayer",
+      "No learning outcome study",
+      "No new live NASA API or GMAT integration"
+    ]
+  },
+  "rules": "Existing scientific engine and catalog results preserved; new presentation reads chosen/executed configuration and recorded state without calculating a new outcome",
+  "documentation": [
+    "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+    "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+    "docs/34-HANDOFF-IMERSAO-3D-R15.md"
+  ],
+  "publication": "Consult evidence/production-r15.json and PUBLICADO.md; this local receipt alone is not deployment proof."
+}

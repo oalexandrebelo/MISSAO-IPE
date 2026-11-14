@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T20:27:41.683Z",
+  "generatedAt": "2026-11-14T22:03:07.016Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 89,
+  "documentCount": 92,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -43,9 +43,9 @@
       "title": "PROJETO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 8091,
-      "originalSha256": "a789cebe796c190af0f2cfac410492dcbde9249901c6b29421df64b5feb0fa5d",
-      "projectedSha256": "a789cebe796c190af0f2cfac410492dcbde9249901c6b29421df64b5feb0fa5d",
+      "originalBytes": 8566,
+      "originalSha256": "b1cb42ebf0cf87f63f5d65fd8441cde8269b3af06bd39567561d592270993aff",
+      "projectedSha256": "b1cb42ebf0cf87f63f5d65fd8441cde8269b3af06bd39567561d592270993aff",
       "redactions": 0
     },
     {
@@ -318,9 +318,9 @@
       "title": "25 — Handoff do PROJETO IPÊ para dois desenvolvedores",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 29397,
-      "originalSha256": "7b0437d8516846781e0a27317e385f68a7bc1c8a787060c32a178a06e4a93c5f",
-      "projectedSha256": "7b0437d8516846781e0a27317e385f68a7bc1c8a787060c32a178a06e4a93c5f",
+      "originalBytes": 29712,
+      "originalSha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
+      "projectedSha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
       "redactions": 0
     },
     {
@@ -384,9 +384,42 @@
       "title": "31 — Três missões científicas: implementação e continuidade R14",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 21381,
-      "originalSha256": "dd18a53a6d09d37146d08200216f25a9d7422dc87dfd165d8881ac1b3009b547",
-      "projectedSha256": "dd18a53a6d09d37146d08200216f25a9d7422dc87dfd165d8881ac1b3009b547",
+      "originalBytes": 21696,
+      "originalSha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
+      "projectedSha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
+      "redactions": 0
+    },
+    {
+      "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+      "id": "doc-docs-32-guia-didatico-missoes-3d-md",
+      "title": "32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 39349,
+      "originalSha256": "a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522",
+      "projectedSha256": "a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522",
+      "redactions": 0
+    },
+    {
+      "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+      "id": "doc-docs-33-oportunidades-nasa-science-md",
+      "title": "33 — Oportunidades NASA Science para o Ipê",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 14758,
+      "originalSha256": "dc1a2ad060017f33fa693d47018b39dcb32b4996e2cab51ba581e5adce6054fe",
+      "projectedSha256": "dc1a2ad060017f33fa693d47018b39dcb32b4996e2cab51ba581e5adce6054fe",
+      "redactions": 0
+    },
+    {
+      "source": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+      "id": "doc-docs-34-handoff-imersao-3d-r15-md",
+      "title": "34 — Continuidade para dois devs: escolhas visíveis na nave",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 9086,
+      "originalSha256": "32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f",
+      "projectedSha256": "32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f",
       "redactions": 0
     },
     {
@@ -406,9 +439,9 @@
       "title": "Missão Ipê — laboratório de missões R9–R10",
       "category": "Laboratório R9–R10",
       "editionGroup": "current",
-      "originalBytes": 12949,
-      "originalSha256": "20c19f0138ef4e6cf357ab18b7aeb9b1eb7f084e4df011bdb2a171cc3a3a10c5",
-      "projectedSha256": "20c19f0138ef4e6cf357ab18b7aeb9b1eb7f084e4df011bdb2a171cc3a3a10c5",
+      "originalBytes": 13243,
+      "originalSha256": "a23d94f8f0eb011916ae9863d2014d6726e450b1fa4dd191098ad55f840bd59e",
+      "projectedSha256": "a23d94f8f0eb011916ae9863d2014d6726e450b1fa4dd191098ad55f840bd59e",
       "redactions": 0
     },
     {
@@ -956,9 +989,9 @@
       "title": "Como usar a BETA",
       "category": "Documentação pública R6",
       "editionGroup": "historical",
-      "originalBytes": 4342,
-      "originalSha256": "2bc99e96910e566f1d42e8b3823fbdc0297f2a1c09281fa3ac25ac1ef484157c",
-      "projectedSha256": "2bc99e96910e566f1d42e8b3823fbdc0297f2a1c09281fa3ac25ac1ef484157c",
+      "originalBytes": 4803,
+      "originalSha256": "4cfbb0e3628fa54d1def900b2798a9ea06410545fa966ce2e8e56289fca9ffd9",
+      "projectedSha256": "4cfbb0e3628fa54d1def900b2798a9ea06410545fa966ce2e8e56289fca9ffd9",
       "redactions": 0
     },
     {
@@ -967,9 +1000,9 @@
       "title": "Missão Ipê BETA · estado público",
       "category": "Documentação pública R6",
       "editionGroup": "historical",
-      "originalBytes": 5476,
-      "originalSha256": "7083049b2a637c7305426c02db568e74a616fcb883e7accaaa0854eafb2ede9c",
-      "projectedSha256": "7083049b2a637c7305426c02db568e74a616fcb883e7accaaa0854eafb2ede9c",
+      "originalBytes": 5937,
+      "originalSha256": "566a632947dcfb436bba5ac3e023529d11d25c7f879188f2aa6f9fe7a285fda0",
+      "projectedSha256": "566a632947dcfb436bba5ac3e023529d11d25c7f879188f2aa6f9fe7a285fda0",
       "redactions": 0
     },
     {
@@ -987,13 +1020,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 1819352,
-      "sha256": "c42f797fe5c12ede89ffa3dc35657d8996d4f5f328463b899373009e06eaff59"
+      "bytes": 1900173,
+      "sha256": "72e95ec74614a12ca5ce3af0615a99886dd3007a202d0d81ff13fdaf5b29f2e5"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1465902,
-      "sha256": "1f1e25d110f468eea012d80c7aa7f911587d32f87bd10e5da09be0d9888b7224"
+      "bytes": 1532145,
+      "sha256": "927a71388f678e652b302cb16f4ec3f85ff4070c1a798baf2bc14866a706e71e"
     }
   ]
 }

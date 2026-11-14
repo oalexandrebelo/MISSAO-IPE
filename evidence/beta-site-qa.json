@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-14T20:23:54.148Z",
-  "finishedAt": "2026-11-14T20:23:55.601Z",
+  "startedAt": "2026-11-14T22:03:10.702Z",
+  "finishedAt": "2026-11-14T22:03:12.316Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "d55ab01f140b04efcaa07a4b461a79dedc003fdd34d2807cd30eb43fc6db228f"
+        "sha256": "8b9b4fd46ee6e6dd2afd2c0867bb59f6b39c79c37b2782b69bacfffefe432db7"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 213,
-      "manifestedFiles": 212,
-      "bytes": 23862744,
+      "fileCount": 221,
+      "manifestedFiles": 220,
+      "bytes": 24205558,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 188,
+      "inspectedFiles": 196,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 1179,
-      "uniqueTargets": 136,
+      "count": 1283,
+      "uniqueTargets": 143,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -298,20 +298,20 @@
         },
         {
           "source": "context/index.html",
-          "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
-          "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "context/index.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
           "kind": "navigation"
         },
         {
           "source": "context/index.html",
           "target": "lab/index.html",
           "requestPath": "/lab/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "context/index.html",
-          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
-          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
           "kind": "navigation"
         },
         {
@@ -710,6 +710,27 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -1088,28 +1109,28 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-27-acervo-visual-nasa-md"
+          "fragment": "doc-docs-23-identidade-visual-md"
         },
         {
           "source": "context/research-library.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-29-game-design-3d-md"
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
         },
         {
           "source": "context/research-library.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-31-tres-missoes-cientificas-r14-md"
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
         },
         {
           "source": "context/research-library.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-30-ativos-nasa-implementados-md"
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
         },
         {
           "source": "context/research-library.html",
@@ -1312,6 +1333,27 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-31-tres-missoes-cientificas-r14-md"
         },
         {
@@ -1466,6 +1508,27 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-30-ativos-nasa-implementados-md"
         },
         {
@@ -1474,6 +1537,132 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-31-tres-missoes-cientificas-r14-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-30-ativos-nasa-implementados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-30-ativos-nasa-implementados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-28-oportunidades-nasa-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-31-tres-missoes-cientificas-r14-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-31-tres-missoes-cientificas-r14-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-30-ativos-nasa-implementados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
         },
         {
           "source": "context/research-library.html",
@@ -3378,6 +3567,24 @@
         },
         {
           "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/25-HANDOFF-DOIS-DEVS.html",
           "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
           "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
           "kind": "navigation"
@@ -4032,6 +4239,24 @@
         },
         {
           "source": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
           "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
           "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
           "kind": "navigation"
@@ -4086,6 +4311,363 @@
         },
         {
           "source": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+          "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "research/nasa-science-opportunities.json",
+          "requestPath": "/research/nasa-science-opportunities.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/28-OPORTUNIDADES-NASA-3D.md",
+          "requestPath": "/docs/28-OPORTUNIDADES-NASA-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+          "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.md",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+          "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
           "target": "documentation.css",
           "requestPath": "/documentation.css",
           "kind": "link-stylesheet"
@@ -4250,6 +4832,18 @@
         },
         {
           "source": "docs/COMO-USAR.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/COMO-USAR.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/COMO-USAR.html",
           "target": "lab/index.html",
           "requestPath": "/lab/index.html",
           "kind": "navigation"
@@ -4379,6 +4973,18 @@
           "source": "docs/ESTADO-PUBLICO.html",
           "target": "docs/index.html",
           "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/ESTADO-PUBLICO.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/ESTADO-PUBLICO.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
           "kind": "navigation"
         },
         {
@@ -4633,6 +5239,42 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
           "kind": "navigation"
         },
         {
@@ -5301,14 +5943,26 @@
         },
         {
           "source": "index.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
           "target": "game-design.html",
           "requestPath": "/game-design.html",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
-          "requestPath": "/docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
           "kind": "navigation"
         },
         {
@@ -5463,8 +6117,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-Dv3eH_W8.js",
-          "requestPath": "/lab/assets/index-Dv3eH_W8.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
+          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
           "kind": "script"
         },
         {
@@ -5481,8 +6135,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-CY3WqX05.css",
-          "requestPath": "/lab/assets/index-CY3WqX05.css",
+          "target": "lab/assets/index-DZxOWY_c.css",
+          "requestPath": "/lab/assets/index-DZxOWY_c.css",
           "kind": "link-stylesheet"
         },
         {
@@ -7637,81 +8291,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
-          "target": "lab/assets/index-Dv3eH_W8.js",
-          "requestPath": "/lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
+          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
-          "target": "lab/assets/OrbitalScene-Dcv20nw_.js",
-          "requestPath": "/lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "requestPath": "/lab/assets/OrbitalScene-DsueDMe_.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
-          "target": "lab/assets/index-Dv3eH_W8.js",
-          "requestPath": "/lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
+          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "requestPath": "/lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "requestPath": "/lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "requestPath": "/lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
-          "target": "lab/assets/search-DtDxlPRJ.js",
-          "requestPath": "/lab/assets/search-DtDxlPRJ.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
+          "target": "lab/assets/search-Bt_K2iOV.js",
+          "requestPath": "/lab/assets/search-Bt_K2iOV.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
-          "target": "lab/assets/OrbitalScene-Dcv20nw_.js",
-          "requestPath": "/lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
+          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "requestPath": "/lab/assets/OrbitalScene-DsueDMe_.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
-          "target": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-DjzOEbxZ.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
+          "target": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-BjpH6oFl.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-DtDxlPRJ.js",
-          "target": "lab/assets/index-Dv3eH_W8.js",
-          "requestPath": "/lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/search-Bt_K2iOV.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
+          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
           "kind": "module-import"
         }
       ]
@@ -7756,81 +8410,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
-          "specifier": "./index-Dv3eH_W8.js",
-          "target": "lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "specifier": "./index-Bg4_LhxS.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
-          "specifier": "./OrbitalScene-Dcv20nw_.js",
-          "target": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "specifier": "./OrbitalScene-DsueDMe_.js",
+          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
-          "specifier": "./index-Dv3eH_W8.js",
-          "target": "lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "specifier": "./index-Bg4_LhxS.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "specifier": "draco_decoder-C32yEggz.wasm",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "specifier": "draco_wasm_wrapper-DxJM36Ib.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "specifier": "draco_decoder-fzg4nYZr.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "specifier": "draco_wasm_wrapper-fZCQGLGb.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
           "specifier": "draco_decoder-Z1_iN-Ht.wasm",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
-          "specifier": "./search-DtDxlPRJ.js",
-          "target": "lab/assets/search-DtDxlPRJ.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
+          "specifier": "./search-Bt_K2iOV.js",
+          "target": "lab/assets/search-Bt_K2iOV.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
-          "specifier": "./OrbitalScene-Dcv20nw_.js",
-          "target": "lab/assets/OrbitalScene-Dcv20nw_.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
+          "specifier": "./OrbitalScene-DsueDMe_.js",
+          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Dv3eH_W8.js",
-          "specifier": "./NASAReferenceScene-DjzOEbxZ.js",
-          "target": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
+          "source": "lab/assets/index-Bg4_LhxS.js",
+          "specifier": "./NASAReferenceScene-BjpH6oFl.js",
+          "target": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-DtDxlPRJ.js",
-          "specifier": "./index-Dv3eH_W8.js",
-          "target": "lab/assets/index-Dv3eH_W8.js",
+          "source": "lab/assets/search-Bt_K2iOV.js",
+          "specifier": "./index-Bg4_LhxS.js",
+          "target": "lab/assets/index-Bg4_LhxS.js",
           "kind": "module-import"
         }
       ]
@@ -7957,14 +8611,14 @@
         "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
       },
       {
-        "path": "lab/assets/index-CY3WqX05.css",
-        "source": "experiments/mission-design-lab/dist/assets/index-CY3WqX05.css",
-        "sha256": "82ceefdf990cd19c5641478b9af3bde10b8631036e14e7330143cfacbd57a37d"
+        "path": "lab/assets/index-Bg4_LhxS.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-Bg4_LhxS.js",
+        "sha256": "986ae0430db5f08970be40cdb27b098a90329a61b9b3734fc227daf960490db7"
       },
       {
-        "path": "lab/assets/index-Dv3eH_W8.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-Dv3eH_W8.js",
-        "sha256": "008eef777ef2c50611f14744e9f9eced6b0642a712116fd16c370701688046de"
+        "path": "lab/assets/index-DZxOWY_c.css",
+        "source": "experiments/mission-design-lab/dist/assets/index-DZxOWY_c.css",
+        "sha256": "c64584146ca7cf4a2038701dae28427d4430bf23881e5f01f485b73bfd88bd0e"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -7972,19 +8626,24 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-DjzOEbxZ.js",
-        "sha256": "0e7dbb591a3da31284efb72758251c7afc22233d2eded24b72d813103b98c5d1"
+        "path": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-BjpH6oFl.js",
+        "sha256": "4032255d0e1847a6a904f51611088542ac28cd7c5151011f23d6d9b3065cf4c4"
       },
       {
-        "path": "lab/assets/OrbitalScene-Dcv20nw_.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-Dcv20nw_.js",
-        "sha256": "58cb864ab298c61690c81bd09364bdd91c20cd7174d7a218227226b013ebe4ae"
+        "path": "lab/assets/OrbitalScene-DChm9aPx.css",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DChm9aPx.css",
+        "sha256": "73324a09a3ca908e67eb7d336bda0617b4b097de5c7a915446ad1ee73ffbe724"
       },
       {
-        "path": "lab/assets/search-DtDxlPRJ.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-DtDxlPRJ.js",
-        "sha256": "89fa603c5eac9552f1113ee611e1d2f08f7cc8d97eb8d7567d749ada4d593b83"
+        "path": "lab/assets/OrbitalScene-DsueDMe_.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DsueDMe_.js",
+        "sha256": "47de78c222fd4f4daac1db457d8efe3e4b5642f598084dd31142c36bb243a8ff"
+      },
+      {
+        "path": "lab/assets/search-Bt_K2iOV.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-Bt_K2iOV.js",
+        "sha256": "51d227ba4db779b9b2704e9c10e054bed60441b1a7920c88bd6c2565a27566a7"
       },
       {
         "path": "lab/brand/brand-provenance-r14.json",
@@ -8124,7 +8783,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "a190382bdcdee7043cf9130e0292838535cf4d2d711263215891a9d1042c030c"
+        "sha256": "040cb0cd7ad133c628326d3be8ca5354aa778310974d2848e69595bdf63e54e1"
       },
       {
         "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -8479,8 +9138,8 @@
       {
         "path": "context/index.html",
         "status": 200,
-        "bytes": 135933,
-        "sha256": "4e1d305597b837035e6e067f3639e38123362f10402a0af9a652506eb0faede0",
+        "bytes": 135909,
+        "sha256": "c958ab02d05a0212d1225c23cba3a7bd958a9a87db6ae0a3c7ab8d420ddaebda",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -8493,22 +9152,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 46028,
-        "sha256": "019c8b5471c5d60a0eb29283f8f4f8767832d2c3d7cff2a953709b07c681f83d",
+        "bytes": 47593,
+        "sha256": "0aa422be949f03b7e30b7c7dba1a7de61655da5b6353a6e1a0d6dcfe93ade2fe",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 1818978,
-        "sha256": "272370473f41d5c30ee04047d3c370562b13929cb08b736269e5e009fd162a3a",
+        "bytes": 1900173,
+        "sha256": "72e95ec74614a12ca5ce3af0615a99886dd3007a202d0d81ff13fdaf5b29f2e5",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1465545,
-        "sha256": "ad62bc045223b0d34f8667f33357e4a8deb1698b21ffee81a9187ec8c25ee07e",
+        "bytes": 1532145,
+        "sha256": "927a71388f678e652b302cb16f4ec3f85ff4070c1a798baf2bc14866a706e71e",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -8682,15 +9341,15 @@
       {
         "path": "docs/25-HANDOFF-DOIS-DEVS.html",
         "status": 200,
-        "bytes": 36823,
-        "sha256": "48fa4d22f8a64126958cf8eb4f7568729cbf530f874fcddf5f0f49e8de9460a0",
+        "bytes": 37190,
+        "sha256": "131727919010c916da4ef3f4061317f5b5fa4adfb33fa59d1e544ccc3f28871f",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/25-HANDOFF-DOIS-DEVS.md",
         "status": 200,
-        "bytes": 29397,
-        "sha256": "7b0437d8516846781e0a27317e385f68a7bc1c8a787060c32a178a06e4a93c5f",
+        "bytes": 29712,
+        "sha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -8766,15 +9425,57 @@
       {
         "path": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
         "status": 200,
-        "bytes": 25975,
-        "sha256": "4591590dadecca0c16d630ab8543f02c3e94c9d1732b86c6ff657a37fe7e2d9f",
+        "bytes": 26342,
+        "sha256": "8dcd8a8193e0ed2a8f4261ab36a86ab2b2f04fa29a304d6a6ecbb8247cc8a720",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
         "status": 200,
-        "bytes": 21381,
-        "sha256": "dd18a53a6d09d37146d08200216f25a9d7422dc87dfd165d8881ac1b3009b547",
+        "bytes": 21696,
+        "sha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+        "status": 200,
+        "bytes": 46185,
+        "sha256": "a67d2bc51c9f6948d2e367860408bd2d2395c17deeab9041c6995bf86d43389f",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+        "status": 200,
+        "bytes": 39349,
+        "sha256": "a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+        "status": 200,
+        "bytes": 18108,
+        "sha256": "dbabc6692e94ac0a7420d9b2b21bb07a325a743b9fc3d1ba8260a031c2ddf7d4",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+        "status": 200,
+        "bytes": 14758,
+        "sha256": "dc1a2ad060017f33fa693d47018b39dcb32b4996e2cab51ba581e5adce6054fe",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+        "status": 200,
+        "bytes": 11818,
+        "sha256": "4ce231ab3d4538f7ac4326b6d3a8a898fcfa7454e59ce98aaee6cfa1060cb9cf",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+        "status": 200,
+        "bytes": 9086,
+        "sha256": "32557b5b8d2330c17e980f512ba93ca55c79bb8d46144b9d01b19c71db8c8b1f",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -8794,29 +9495,29 @@
       {
         "path": "docs/COMO-USAR.html",
         "status": 200,
-        "bytes": 6253,
-        "sha256": "b8d12aa8ff23e6cd27f4cc0adf6e35459895021fe39dd7459bf0287ae82dbfda",
+        "bytes": 6755,
+        "sha256": "9368cda4b8e75478038441d8ba2d707fc187f1db083882f87e0ab982de6b5c7e",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/COMO-USAR.md",
         "status": 200,
-        "bytes": 4342,
-        "sha256": "2bc99e96910e566f1d42e8b3823fbdc0297f2a1c09281fa3ac25ac1ef484157c",
+        "bytes": 4803,
+        "sha256": "4cfbb0e3628fa54d1def900b2798a9ea06410545fa966ce2e8e56289fca9ffd9",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/ESTADO-PUBLICO.html",
         "status": 200,
-        "bytes": 7380,
-        "sha256": "204c9086f7037fba71336d7a17f0884d5ab88de43f462792c7ebde623026a42e",
+        "bytes": 7882,
+        "sha256": "79dfc546ae8a48ac0fe8072548d6d1fe6f4fa881a7d4c5d36b3c2b850845ab85",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/ESTADO-PUBLICO.md",
         "status": 200,
-        "bytes": 5476,
-        "sha256": "7083049b2a637c7305426c02db568e74a616fcb883e7accaaa0854eafb2ede9c",
+        "bytes": 5937,
+        "sha256": "566a632947dcfb436bba5ac3e023529d11d25c7f879188f2aa6f9fe7a285fda0",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -8836,8 +9537,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 9214,
-        "sha256": "8c2b520d722623389c5fe3b8c4862d538a6f225d1e07871ae4fbed5c60b8d0d1",
+        "bytes": 10106,
+        "sha256": "0065edf2c15e6df271e9873ab499fe0dab3213d51233d61c41a90d378efb716b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -9081,22 +9782,29 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 58347,
-        "sha256": "021a3cc6e83008296a6d7d8116dbf2879897c83df9ba2954b37fd0551074d7d9",
+        "bytes": 58617,
+        "sha256": "408678fe56546d11ecbcdbd6e5a22a28dd66283b62ac3f41c2a71c002de05995",
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-DjzOEbxZ.js",
+        "path": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
         "status": 200,
-        "bytes": 7037,
-        "sha256": "0e7dbb591a3da31284efb72758251c7afc22233d2eded24b72d813103b98c5d1",
+        "bytes": 7069,
+        "sha256": "4032255d0e1847a6a904f51611088542ac28cd7c5151011f23d6d9b3065cf4c4",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-Dcv20nw_.js",
+        "path": "lab/assets/OrbitalScene-DChm9aPx.css",
         "status": 200,
-        "bytes": 1001081,
-        "sha256": "58cb864ab298c61690c81bd09364bdd91c20cd7174d7a218227226b013ebe4ae",
+        "bytes": 245,
+        "sha256": "73324a09a3ca908e67eb7d336bda0617b4b097de5c7a915446ad1ee73ffbe724",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "lab/assets/OrbitalScene-DsueDMe_.js",
+        "status": 200,
+        "bytes": 1014962,
+        "sha256": "47de78c222fd4f4daac1db457d8efe3e4b5642f598084dd31142c36bb243a8ff",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -9135,18 +9843,18 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-CY3WqX05.css",
+        "path": "lab/assets/index-Bg4_LhxS.js",
         "status": 200,
-        "bytes": 150545,
-        "sha256": "82ceefdf990cd19c5641478b9af3bde10b8631036e14e7330143cfacbd57a37d",
-        "contentType": "text/css; charset=utf-8"
+        "bytes": 473809,
+        "sha256": "986ae0430db5f08970be40cdb27b098a90329a61b9b3734fc227daf960490db7",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-Dv3eH_W8.js",
+        "path": "lab/assets/index-DZxOWY_c.css",
         "status": 200,
-        "bytes": 463110,
-        "sha256": "008eef777ef2c50611f14744e9f9eced6b0642a712116fd16c370701688046de",
-        "contentType": "text/javascript; charset=utf-8"
+        "bytes": 154625,
+        "sha256": "c64584146ca7cf4a2038701dae28427d4430bf23881e5f01f485b73bfd88bd0e",
+        "contentType": "text/css; charset=utf-8"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -9156,10 +9864,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-DtDxlPRJ.js",
+        "path": "lab/assets/search-Bt_K2iOV.js",
         "status": 200,
         "bytes": 1247,
-        "sha256": "89fa603c5eac9552f1113ee611e1d2f08f7cc8d97eb8d7567d749ada4d593b83",
+        "sha256": "51d227ba4db779b9b2704e9c10e054bed60441b1a7920c88bd6c2565a27566a7",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -9355,7 +10063,7 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 961,
-        "sha256": "a190382bdcdee7043cf9130e0292838535cf4d2d711263215891a9d1042c030c",
+        "sha256": "040cb0cd7ad133c628326d3be8ca5354aa778310974d2848e69595bdf63e54e1",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -9816,8 +10524,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 89928,
-        "sha256": "d55ab01f140b04efcaa07a4b461a79dedc003fdd34d2807cd30eb43fc6db228f",
+        "bytes": 93332,
+        "sha256": "8b9b4fd46ee6e6dd2afd2c0867bb59f6b39c79c37b2782b69bacfffefe432db7",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -9903,10 +10611,17 @@
         "bytes": 24255,
         "sha256": "b4e19162531da2b4eba41426c8fd898a2626519f23699919f0d46026820658c2",
         "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "research/nasa-science-opportunities.json",
+        "status": 200,
+        "bytes": 17381,
+        "sha256": "56ed771633de4df5140867498bbf76690cc6062d71b0c2cd1ed47f77b8f6a236",
+        "contentType": "application/json; charset=utf-8"
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 152,
+      "linkedRoutesChecked": 159,
       "redirects": [
         {
           "source": "/game",
@@ -10006,87 +10721,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 7.92
+      "durationMs": 12.835
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.23
+      "durationMs": 0.267
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 41.056
+      "durationMs": 59.914
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.707
+      "durationMs": 1.431
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 63.038
+      "durationMs": 83.468
     },
     {
       "name": "todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas",
       "status": "passed",
-      "durationMs": 627.373
+      "durationMs": 676.053
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.579
+      "durationMs": 0.459
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/ e lab/",
       "status": "passed",
-      "durationMs": 316.908
+      "durationMs": 368.121
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 52.652
+      "durationMs": 40.888
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.18
+      "durationMs": 2.075
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 47.312
+      "durationMs": 49.849
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.151
+      "durationMs": 4.98
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 48.046
+      "durationMs": 63.525
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 121.042
+      "durationMs": 128.419
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 44.844
+      "durationMs": 43.882
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.024
+      "durationMs": 1.019
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 34.112
+      "durationMs": 33.033
     }
   ]
 }

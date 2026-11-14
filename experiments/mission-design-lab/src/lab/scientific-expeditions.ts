@@ -161,6 +161,12 @@ function scheduleFor(id: ExpeditionId, config: ExpeditionConfig): ExpeditionSche
   };
 }
 
+/** Read the same planned windows as the engine without running a mission. */
+export function getExpeditionSchedule(id: ExpeditionId, config: ExpeditionConfig): ExpeditionSchedule {
+  getExpeditionPreflight(id, config);
+  return freeze(scheduleFor(id, config));
+}
+
 /** Fixed educational scenarios. Exact W·s and integer bit ledgers; ideal 100% conversion, no trajectory model. */
 export function simulateExpedition(id: ExpeditionId, input: ExpeditionConfig): ExpeditionResult {
   const { totals, constraints: preflight } = getExpeditionPreflight(id, input);

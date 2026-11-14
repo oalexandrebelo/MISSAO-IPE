@@ -1,5 +1,7 @@
 # Como usar a BETA
 
+**Atualização R15:** as três missões agora representam as escolhas na nave didática, com inspeção de carga, energia e comunicação, componentes separados e alternativa SVG. No projeto, a cena segue as escolhas; na operação e comparação, conserva a configuração executada. Consulte o [guia para aprender](32-GUIA-DIDATICO-MISSOES-3D.html) e o [handoff atual](34-HANDOFF-IMERSAO-3D-R15.html). Os textos seguintes conservam seus cortes históricos.
+
 ## Beta atual — edição R14
 
 Abra o [beta atual](../lab/index.html) e escolha **Cerrado**, **Bennu** ou **Telescópio** no briefing. Leia a pergunta científica e a origem dos dados: Cerrado usa arquivos históricos Terra/MODIS; Bennu e telescópio usam observações sintéticas do exercício.

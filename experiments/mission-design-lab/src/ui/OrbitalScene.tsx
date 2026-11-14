@@ -4,6 +4,9 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { ConfiguredSpacecraft } from './ConfiguredSpacecraft.tsx';
+import type { SpacecraftInspection, SpacecraftPresentation } from '../lab/spacecraft-presentation.ts';
+import './spacecraft-immersion.css';
 import type { MissionVisualState } from '../lab/mission-visual-state.ts';
 import type { MissionConfig } from '../core/contracts.ts';
 import type { SceneFocus, SceneVariant, MissionSegment, MissionWorld } from './Scene.tsx';
@@ -23,6 +26,10 @@ interface OrbitalSceneProps {
   segment?: MissionSegment;
   world?: MissionWorld;
   scienceRecordCount?: number;
+  presentation?: SpacecraftPresentation;
+  inspection?: SpacecraftInspection;
+  exploded?: boolean;
+  onInspect?: (inspection: SpacecraftInspection) => void;
 }
 
 const EARTH_RADIUS = 2.05;
@@ -406,6 +413,33 @@ function ReferenceMissionWorld(props: OrbitalSceneProps) {
     {props.visualState?.mode==='processing'?<mesh position={[0,.3,1.5]}><sphereGeometry args={[.09,16,10]}/><meshBasicMaterial color="#ffc28c"/></mesh>:null}
   </>;
 }
+function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: SpacecraftPresentation }) {
+  const inspection = props.inspection ?? 'overview';
+  const inspect = inspection !== 'overview';
+  const separated = props.exploded === true;
+  const hangar = props.variant === 'hangar';
+  const world = props.presentation.world;
+  const craftX = hangar ? 0 : inspect ? .25 : .65;
+  const craftScale = separated ? .88 : inspect ? 1.12 : 1;
+  const craftY = props.segment === 'ground' ? .2 : .05;
+  const contextPosition: [number,number,number] = inspect ? [-2.15,.75,-1.5] : [-1.75,.75,-1.5];
+  const contextScale = inspect ? .3 : .48;
+  const radioAnchor: [number,number,number] = [craftX, craftY + (separated ? 1.8 : 1.25) * craftScale, .45];
+  return <>
+    {!hangar ? world === 'earth' ? <group position={contextPosition} scale={contextScale}><Earth focus={props.focus} animating={false}/></group> : <group position={contextPosition} scale={contextScale} rotation={[.12,.3,-.08]}><NASAAsset url={`${import.meta.env.BASE_URL}models/nasa/${world === 'telescope' ? 'jwst-a.glb' : 'bennu-1999-rq36.glb'}`} onUnavailable={props.onUnavailable}/></group> : null}
+    <group position={[craftX,craftY,.45]} scale={craftScale}><ConfiguredSpacecraft presentation={props.presentation} visualState={props.visualState} inspection={inspection} exploded={separated} turn={props.turn} onInspect={props.onInspect}/></group>
+    {props.segment === 'launch' ? <mesh position={[craftX,craftY,.1]}><boxGeometry args={[separated ? 4.6 : 3.9,separated ? 3.3 : 2.7,2.2]}/><meshBasicMaterial color="#6c91a7" wireframe transparent opacity={.22} depthWrite={false}/></mesh> : null}
+    {props.segment === 'ground' ? <group position={[-1.7,-1.1,.5]} scale={.46} rotation={[.1,0,-.28]}>
+      <mesh position={[0,-.2,0]}><cylinderGeometry args={[.14,.23,.85,16]}/><meshStandardMaterial color="#a9bac3" metalness={.55} roughness={.45}/></mesh>
+      <mesh position={[0,.34,0]} rotation={[-Math.PI/4,0,0]}><sphereGeometry args={[.76,32,20,0,Math.PI*2,Math.PI/2,Math.PI/2]}/><meshStandardMaterial color="#c3d0d6" side={THREE.DoubleSide} metalness={.45} roughness={.45}/></mesh>
+      <mesh position={[0,.5,0]}><cylinderGeometry args={[.02,.02,.7,10]}/><meshStandardMaterial color="#ddb985"/></mesh>
+    </group> : null}
+    {props.visualState?.available && props.visualState.transmitting ? <Transmission from={radioAnchor} to={props.segment === 'ground' ? [-1.7,-.8,.5] : [-2,-1.2,0]}/> : null}
+    {props.segment === 'user' || props.segment === 'ground' ? Array.from({length:props.scienceRecordCount ?? 6},(_,i)=><mesh key={i} position={[-1.15+i*.4,-1.65,1]}><boxGeometry args={[.25,.3,.025]}/><meshStandardMaterial color={i<(props.visualState?.deliveredRecordIds.length ?? 0) ? '#bddca9' : '#2f4a5c'} roughness={.6}/></mesh>) : null}
+    {hangar ? <group position={[0,-1.2,-.1]} rotation={[Math.PI/2,0,0]} scale={[1,.6,1]}><Curve points={HANGAR_RING} color="#6c8d9b" opacity={.24}/></group> : null}
+  </>;
+}
+
 function AssetViewLifecycle({ onUnavailable, turn, tilt }: Pick<NASAAssetCanvasProps,'onUnavailable'|'turn'|'tilt'>) {
   const {gl,invalidate}=useThree();
   useEffect(()=>{const lost=(event:Event)=>{event.preventDefault();onUnavailable();};gl.domElement.addEventListener('webglcontextlost',lost);return()=>gl.domElement.removeEventListener('webglcontextlost',lost);},[gl,onUnavailable]);
@@ -427,43 +461,45 @@ function SceneLifecycle({ onUnavailable, active, ...state }: OrbitalSceneProps) 
     gl.domElement.addEventListener('webglcontextlost', lost);
     return () => gl.domElement.removeEventListener('webglcontextlost', lost);
   }, [gl, onUnavailable]);
-  useEffect(() => { if (active) invalidate(); }, [active, state.focus, state.progress, state.config, state.turn, state.animating, state.visualState, state.segment, state.world, invalidate]);
+  useEffect(() => { if (active) invalidate(); }, [active, state.focus, state.progress, state.config, state.turn, state.animating, state.visualState, state.segment, state.world, state.presentation, state.inspection, state.exploded, invalidate]);
   return null;
 }
 
-function ResponsiveFraming({ variant }: { variant: SceneVariant }) {
+function ResponsiveFraming({ variant, cameraDistance }: { variant: SceneVariant; cameraDistance?: number }) {
   const { camera, size, invalidate } = useThree();
   useEffect(() => {
     // Keep the satellite and its wings inside a narrow viewport. Wide layouts
     // retain the large globe; changing the visual zoom never changes the model.
     if (!(camera instanceof THREE.PerspectiveCamera) || !size.height) return;
     const aspect = size.width / size.height;
-    camera.zoom = Math.min(1, aspect / (variant === 'hangar' ? 1.12 : 1.04));
+    if (cameraDistance !== undefined) camera.position.set(0, 0, cameraDistance);
+    camera.zoom = Math.min(1, aspect / (cameraDistance !== undefined ? 1.32 : variant === 'hangar' ? 1.12 : 1.04));
     camera.updateProjectionMatrix();
     invalidate();
-  }, [camera, size.width, size.height, variant, invalidate]);
+  }, [camera, size.width, size.height, variant, cameraDistance, invalidate]);
   return null;
 }
 
 export default function OrbitalScene(props: OrbitalSceneProps) {
   const isHangar = props.variant === 'hangar' || props.segment === 'launch' || props.segment === 'ground';
+  const inspectionDistance = props.presentation ? props.exploded ? 8 : props.inspection === 'instrument' ? 7.3 : props.inspection === 'communications' ? 7.2 : props.inspection === 'energy' ? 7.6 : 7.8 : undefined;
   return <Canvas
-    className="orbital-canvas"
+    className={`orbital-canvas ${props.onInspect && props.presentation ? 'spacecraft-interactive' : ''}`}
     dpr={[1, 1.5]}
     frameloop={!props.active ? 'never' : props.animating ? 'always' : 'demand'}
     camera={{ position: isHangar ? [0, .05, 7.2] : [0, 0, 8.9], fov: isHangar ? 35 : 35, near: .1, far: 40 }}
     gl={{ antialias: true, alpha: true, powerPreference: 'low-power', stencil: false }}
     onCreated={({ gl }) => { gl.setClearColor('#0a0e14', 0); gl.toneMapping = THREE.ACESFilmicToneMapping; gl.toneMappingExposure = 1.12; }}
     fallback={null}
-    style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}
+    style={{ position: 'absolute', inset: 0, pointerEvents: props.onInspect && props.presentation ? 'auto' : 'none' }}
   >
     <ambientLight color="#aabfd0" intensity={isHangar ? .7 : .4} />
     <directionalLight position={[-3.5, 4.5, 5]} color="#fff2d7" intensity={isHangar ? 3.8 : 3.3} />
     <directionalLight position={[4, .5, 1]} color="#7aa7cb" intensity={isHangar ? 1.4 : .5} />
     <directionalLight position={[-2, -1, -4]} color="#a5cbc3" intensity={1.2} />
     <StarField />
-    {props.segment === 'ground' ? <GroundWorld {...props}/> : props.world && props.world !== 'earth' ? <ReferenceMissionWorld {...props}/> : props.segment === 'launch' ? <LaunchWorld {...props}/> : props.segment === 'user' ? <ScienceWorld {...props}/> : isHangar ? <HangarWorld {...props} /> : <OrbitWorld {...props} />}
-    <ResponsiveFraming variant={isHangar ? 'hangar' : props.variant} />
+    {props.presentation ? <ConfiguredMissionWorld {...props} presentation={props.presentation}/> : props.segment === 'ground' ? <GroundWorld {...props}/> : props.world && props.world !== 'earth' ? <ReferenceMissionWorld {...props}/> : props.segment === 'launch' ? <LaunchWorld {...props}/> : props.segment === 'user' ? <ScienceWorld {...props}/> : isHangar ? <HangarWorld {...props} /> : <OrbitWorld {...props} />}
+    <ResponsiveFraming variant={isHangar ? 'hangar' : props.variant} cameraDistance={inspectionDistance}/>
     <SceneLifecycle {...props} />
   </Canvas>;
 }

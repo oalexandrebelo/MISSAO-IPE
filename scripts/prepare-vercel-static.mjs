@@ -77,5 +77,5 @@ for (const path of [...files, staticConfigPath]) {
   const buffer = await readFile(path);
   upload.push({ file: path === staticConfigPath ? 'vercel.json' : relative(site, path).replaceAll('\\', '/'), source: relative(root, path).replaceAll('\\', '/'), size: buffer.length, sha: createHash('sha1').update(buffer).digest('hex'), sha256: createHash('sha256').update(buffer).digest('hex') });
 }
-await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version: '0.5.0-beta.1', files: upload }, null, 2) + '\n');
+await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version: '0.6.0-beta.1', files: upload }, null, 2) + '\n');
 console.log(JSON.stringify({ files: upload.length, bytes: upload.reduce((a,f)=>a+f.size,0), executableInlineScripts: executableScripts, uniqueInlineHashes: inlineHashes.size, cspBytes: Buffer.byteLength(csp), config: 'vercel.json', uploadManifest: '.vercel/upload-manifest.json' }, null, 2));
