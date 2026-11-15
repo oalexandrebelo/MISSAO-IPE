@@ -6,6 +6,8 @@ Jogo educativo de engenharia de missões espaciais com três casos científicos:
 
 **MVP R19:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
 
+A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
+
 **Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/48-HANDOFF-DOIS-DEVS-R19.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.

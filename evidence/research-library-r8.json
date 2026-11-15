@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T10:17:26.382Z",
+  "generatedAt": "2026-11-15T10:25:30.150Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 111,
+  "documentCount": 112,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -43,9 +43,9 @@
       "title": "MISSÃO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 13559,
-      "originalSha256": "bc4860512f7075ed189f23f92331baba0129d9fd48f103f6ad5455f5855e06d8",
-      "projectedSha256": "bc4860512f7075ed189f23f92331baba0129d9fd48f103f6ad5455f5855e06d8",
+      "originalBytes": 13761,
+      "originalSha256": "0dca759c55fc562aed7919f314a793d4d9511a4e8f12457295ff655970750acb",
+      "projectedSha256": "0dca759c55fc562aed7919f314a793d4d9511a4e8f12457295ff655970750acb",
       "redactions": 0
     },
     {
@@ -582,9 +582,9 @@
       "title": "MISSÃO IPÊ · handoff dos dois devs · R19",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 9177,
-      "originalSha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
-      "projectedSha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
+      "originalBytes": 9494,
+      "originalSha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
+      "projectedSha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
       "redactions": 0
     },
     {
@@ -596,6 +596,17 @@
       "originalBytes": 4844,
       "originalSha256": "36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee",
       "projectedSha256": "36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee",
+      "redactions": 0
+    },
+    {
+      "source": "docs/50-LP-E-404-R19.md",
+      "id": "doc-docs-50-lp-e-404-r19-md",
+      "title": "Landing page e página 404 · MISSÃO IPÊ R19",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 3337,
+      "originalSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
+      "projectedSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
       "redactions": 0
     },
     {
@@ -1229,13 +1240,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2205441,
-      "sha256": "be853bb560023308176f57539acaa61c5d14f5ed8d7ff16bb8168be189a47f07"
+      "bytes": 2211088,
+      "sha256": "794afe4b0d79184042fede940f33d370e63b41583508ab14db9638eb61893364"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1774466,
-      "sha256": "53dddae92be52b87bfd8e77c5d471fcefa459cb11c4dda1aca5bdc336e4b76f8"
+      "bytes": 1778536,
+      "sha256": "bbf41520dfbcf13aa71c233815125fc2dd19e96dca028c96f69795ca9ffaef7c"
     }
   ]
 }

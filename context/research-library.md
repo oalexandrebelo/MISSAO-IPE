@@ -227,7 +227,7 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 # MISSÃO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `bc4860512f7075ed189f23f92331baba0129d9fd48f103f6ad5455f5855e06d8` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `0dca759c55fc562aed7919f314a793d4d9511a4e8f12457295ff655970750acb` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ — Ciência que chega
 
@@ -236,6 +236,8 @@ Jogo educativo de engenharia de missões espaciais com três casos científicos:
 **Beta atual: 0.10.0-beta.1 · edição R19 · 15/11/2026.**
 
 **MVP R19:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+
+A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
 **Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
@@ -6420,7 +6422,7 @@ Para Bennu e Webb existem diretórios [NAIF ORX](https://naif.jpl.nasa.gov/pub/n
 
 # MISSÃO IPÊ · handoff dos dois devs · R19
 
-Fonte: `docs/48-HANDOFF-DOIS-DEVS-R19.md` · SHA-256 original: `c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf` · Ajustes de caminhos privados: 0
+Fonte: `docs/48-HANDOFF-DOIS-DEVS-R19.md` · SHA-256 original: `2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ · handoff dos dois devs · R19
 
@@ -6464,6 +6466,8 @@ Cena ampliável dentro da página, saída com Escape, inspeção por sistema e t
 Reutilizamos os quatro modelos NASA locais e a pilha React/Three já instalada. Movimento reduzido e controles de texto permanecem disponíveis. Não foram adicionadas bibliotecas, modelos gerados, vídeo remoto ou serviços externos durante a partida.
 
 ## Divisão dos dois devs
+
+O complemento da apresentação pública fica em [LP imersiva e 404 R19](50-LP-E-404-R19.md): Dev B mantém navegação, mídia decorativa e acessibilidade; Dev A revisa a precisão dos destinos e a distinção entre referência visual e evidência NASA. A mídia externa da 404 não é carregada durante a partida.
 
 | Responsável | Arquivos e tarefas | Contrato que precisa preservar |
 | --- | --- | --- |
@@ -6543,6 +6547,37 @@ O jogo ensina a negociar recursos sem perder a pergunta científica. Cada caso t
 - Se WebGL falhar, use a alternativa 2D: o relógio, as evidências, a comparação e os pareceres continuam disponíveis.
 - Para a apresentação de seis minutos, use os ensaios preparados. Configurar e discutir três missões completas com iniciantes exige mais tempo; meça isso em um piloto.
 - Não apresente o protótipo como simulador de voo certificado, telemetria em tempo real, produto endossado pela NASA ou vencedor já qualificado. A maturidade educativa precisa ser demonstrada com participantes.
+
+
+---
+
+# Landing page e página 404 · MISSÃO IPÊ R19
+
+Fonte: `docs/50-LP-E-404-R19.md` · SHA-256 original: `9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37` · Ajustes de caminhos privados: 0
+
+# Landing page e página 404 · MISSÃO IPÊ R19
+
+A seção [Três casos NASA](https://projeto-ipe-lp.vercel.app/#jornada) apresenta as perguntas de Cerrado, Bennu e Webb, com fonte e limite de interpretação em cada cartão. Os três links abrem a escolha de missão no laboratório. A campanha do Cerrado tem entrada própria. O [roteiro de seis minutos](49-ROTEIRO-APRESENTACAO-MVP-R19.md) fica junto aos casos e conduz a demonstração pela comparação A/B, pela trilha de registros e pelo conselho final.
+
+## Página fora de órbita
+
+A página de erro usa o contraste, o número dominante e o horizonte planetário da referência [404 Planet da MotionSites](https://motionsites.ai/?prompt=404-planet). O símbolo, as fontes e a navegação seguem a identidade da MISSÃO IPÊ. A primeira ação volta ao início. O rodapé leva ao jogo, à pesquisa, ao GitHub e aos créditos.
+
+O fundo usa o vídeo indicado pelo responsável pelo projeto. O vídeo é decorativo, mudo, embutido e pode ser pausado. Com preferência por movimento reduzido, a página começa com a imagem local Blue Marble da NASA e só solicita o arquivo externo após uma ação do visitante. A imagem também permanece disponível se a reprodução falhar. [Vídeo de referência](https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260613_180732_a54afbf6-b30d-470e-861f-669871f09f67.mp4) · [Fontes e créditos da LP](https://projeto-ipe-lp.vercel.app/creditos/).
+
+O Next.js exporta `404.html`, que o servidor de prévia local usa em endereços inexistentes com status HTTP 404. Para conferir a publicação, abra [um endereço inexistente na LP](https://projeto-ipe-lp.vercel.app/rota-de-teste-404/) e volte pelo botão. No celular, Escape fecha o menu quando há teclado e devolve o foco ao botão que o abriu.
+
+## Continuidade para os dois desenvolvedores
+
+| Responsável | Arquivos relativos a `apps/immersive-lp/` | Contrato |
+| --- | --- | --- |
+| Dev A · conteúdo e ciência | `lib/content.ts`, `app/creditos/page.tsx` e fontes dos três casos | Conferir destinos e créditos. O vídeo da referência é decoração de terceiros, não observação NASA nem parte da simulação. |
+| Dev B · apresentação e navegação | `app/not-found.tsx`, `app/not-found.module.css`, `components/NotFoundBackdrop.tsx`, `components/Navigation.tsx` | Manter HTTP 404, retorno real ao início, imagem local, controle de reprodução, movimento reduzido e foco do menu. |
+| Revisão conjunta | `tests/not-found.spec.ts` e `tests/experience.spec.ts` | Conferir computador e celular, vídeo indisponível, teclado, acessibilidade automatizada e entrada no jogo. |
+
+Use `npm run build` e `npm test` nessa pasta. A prévia estática é servida por `scripts/serve.mjs`; ela entrega o HTML de erro sem converter a ausência em sucesso HTTP. A publicação da LP é separada do jogo: os dois projetos Vercel devem apontar para o mesmo commit do repositório oficial. O build principal publica este documento em HTML e Markdown.
+
+A revisão preservou as fontes locais Figtree e EB Garamond, a logo SVG oficial e os componentes existentes. A composição da referência foi adaptada ao projeto, sem adicionar formulários de cadastro ou contas de hospedagem. A disponibilidade do vídeo externo não é garantida; o caminho de retorno funciona sem ele.
 
 
 ---

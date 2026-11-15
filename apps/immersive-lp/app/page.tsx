@@ -69,9 +69,10 @@ export default function Home() {
           <MissionGlyph kind={level.icon} className="level-glyph" />
           <p className="eyebrow">{level.tag}</p><h3>{level.name}</h3><h4>{level.subtitle}</h4><p className="level-copy">{level.text}</p><p className="level-learning">{level.learning}</p>
           <details><summary>Fato real e exercício <Icon name="plus" /></summary><p>{level.detail}</p><a className="text-link" href={level.source}>{level.sourceLabel} <Icon name="arrow-up" /></a></details>
-          <a href={LINKS.game} className="level-link">Entrar no laboratório <Icon name="arrow-up" /></a>
+          <a href={LINKS.game} className="level-link">Escolher missão no laboratório <Icon name="arrow-up" /></a>
         </article>)}</div>
-        <p className="journey-note">Os três casos já estão no laboratório. Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
+        <div className="journey-demo"><p><strong>Apresente os três casos em seis minutos.</strong> O roteiro mostra como comparar duas escolhas, seguir um registro e concluir com os quatro papéis da missão.</p><a href={LINKS.roadmap} className="text-link">Abrir roteiro da demonstração <Icon name="arrow-up" /></a></div>
+        <p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
       </div></section>
 
       <section className="earth-interlude" aria-labelledby="earth-title">

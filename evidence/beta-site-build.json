@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T10:17:26.420Z",
+  "generatedAt": "2026-11-15T10:25:30.208Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 346,
-  "bytes": 29639635,
+  "fileCount": 348,
+  "bytes": 29660378,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 148777,
-    "sha256": "537a0b2bfde509003be4042b28b907f07495fb1518064ee96ef207c7c5030b46"
+    "bytes": 149571,
+    "sha256": "2e4fb6e47ea8d17f0ad5f3f7bda0f3f9b5c0f3a8ccf0decea391e7faa55e5789"
   },
   "entries": [
     {
@@ -715,29 +715,29 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 57364,
-      "sha256": "21b13dfc62f3105e36fc82a8ce64e2651e48b0ecf5924415dfca96b59c402c47",
+      "bytes": 57844,
+      "sha256": "c765188353bb107a38a6a5a9370a28fb0458efe50ee7e8af811ef44b51cd18ea",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "21b13dfc62f3105e36fc82a8ce64e2651e48b0ecf5924415dfca96b59c402c47",
+      "sourceSha256": "c765188353bb107a38a6a5a9370a28fb0458efe50ee7e8af811ef44b51cd18ea",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2205441,
-      "sha256": "be853bb560023308176f57539acaa61c5d14f5ed8d7ff16bb8168be189a47f07",
+      "bytes": 2211088,
+      "sha256": "794afe4b0d79184042fede940f33d370e63b41583508ab14db9638eb61893364",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "be853bb560023308176f57539acaa61c5d14f5ed8d7ff16bb8168be189a47f07",
+      "sourceSha256": "794afe4b0d79184042fede940f33d370e63b41583508ab14db9638eb61893364",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1774466,
-      "sha256": "53dddae92be52b87bfd8e77c5d471fcefa459cb11c4dda1aca5bdc336e4b76f8",
+      "bytes": 1778536,
+      "sha256": "bbf41520dfbcf13aa71c233815125fc2dd19e96dca028c96f69795ca9ffaef7c",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "53dddae92be52b87bfd8e77c5d471fcefa459cb11c4dda1aca5bdc336e4b76f8",
+      "sourceSha256": "bbf41520dfbcf13aa71c233815125fc2dd19e96dca028c96f69795ca9ffaef7c",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1390,20 +1390,20 @@
     },
     {
       "path": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
-      "bytes": 11966,
-      "sha256": "c51e8b352805e126b0d39655587bcd96ad726c5896ad7d6718cd5d773eb386c8",
+      "bytes": 12300,
+      "sha256": "c7e0ced87442720c4041dcdd1ed54ff3c625829aaa6bf91b27cff6e102f84c9d",
       "category": "rendered-public-document",
       "source": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
-      "sourceSha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
+      "sourceSha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
       "transformation": "escaped static HTML rendering of selected Markdown"
     },
     {
       "path": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
-      "bytes": 9177,
-      "sha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
+      "bytes": 9494,
+      "sha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
       "category": "public-document",
       "source": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
-      "sourceSha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
+      "sourceSha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1422,6 +1422,24 @@
       "category": "public-document",
       "source": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md",
       "sourceSha256": "36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "docs/50-LP-E-404-R19.html",
+      "bytes": 5491,
+      "sha256": "432986094f5d4722c6f3f222a70913f1fd82ce80d9bf409e3dee60201d44d3e6",
+      "category": "rendered-public-document",
+      "source": "docs/50-LP-E-404-R19.md",
+      "sourceSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
+      "transformation": "escaped static HTML rendering of selected Markdown"
+    },
+    {
+      "path": "docs/50-LP-E-404-R19.md",
+      "bytes": 3337,
+      "sha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
+      "category": "public-document",
+      "source": "docs/50-LP-E-404-R19.md",
+      "sourceSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1480,8 +1498,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 14883,
-      "sha256": "b0483615fa8b91423045b6067ec9b645b9e0e2543872fe60ca229821500e001b",
+      "bytes": 15156,
+      "sha256": "08cd037a77d7f04ec5f3ef446fd68c8f658ee5507bbaa9bb36addc8247b2c4af",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
       "transformation": "generated from the explicit document allowlist"

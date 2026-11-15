@@ -3,9 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 import { CHAPTERS, LINKS } from '@/lib/content';
 import { Icon } from './Icon';
 
-export function Navigation() {
+export function Navigation({ outsideHome = false }: { outsideHome?: boolean } = {}) {
   const menu = useRef<HTMLDialogElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const chapterHref = (id: string) => `${outsideHome ? '/' : ''}#${id}`;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -17,18 +18,18 @@ export function Navigation() {
   function close() { menu.current?.close(); setOpen(false); }
   return <>
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#inicio" aria-label="MISSÃO IPÊ — início"><img src="/brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" /></a>
+      <a className="brand" href={chapterHref('inicio')} aria-label="MISSÃO IPÊ — início"><img src="/brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" /></a>
       <nav className="desktop-nav" aria-label="Navegação principal">
-        <a href="#missao">A missão</a><a href="#jornada">Três casos NASA</a><a href="#segmentos">A missão completa</a>
+        <a href={chapterHref('missao')}>A missão</a><a href={chapterHref('jornada')}>Três casos NASA</a><a href={chapterHref('segmentos')}>A missão completa</a>
       </nav>
       <div className="header-actions"><a className="header-cta" href={LINKS.game}>Jogar o beta <Icon name="arrow-up" /></a>
         <button ref={menuButton} className="menu-button" type="button" aria-label="Abrir menu" aria-expanded={open} aria-controls="mobile-menu" onClick={() => { menu.current?.showModal(); setOpen(true); }}><Icon name="menu" /></button>
       </div>
-      <div className="reading-progress" aria-hidden="true"><div className="progress-fill" /></div>
+      {!outsideHome && <div className="reading-progress" aria-hidden="true"><div className="progress-fill" /></div>}
     </header>
     <dialog id="mobile-menu" className="mobile-menu" ref={menu} aria-label="Menu de navegação" onClose={() => { setOpen(false); menuButton.current?.focus(); }} onClick={event => { if (event.target === menu.current) close(); }}>
       <div className="mobile-menu-inner"><div className="mobile-menu-top"><span className="eyebrow">EXPLORE O IPÊ</span><button type="button" className="icon-button" onClick={close} aria-label="Fechar menu"><Icon name="close" /></button></div>
-        <nav aria-label="Navegação no celular">{CHAPTERS.map(chapter => <a href={`#${chapter.id}`} key={chapter.id} onClick={close}><span>{chapter.number}</span>{chapter.label}<Icon name="arrow-up" /></a>)}</nav>
+        <nav aria-label="Navegação no celular">{CHAPTERS.map(chapter => <a href={chapterHref(chapter.id)} key={chapter.id} onClick={close}><span>{chapter.number}</span>{chapter.label}<Icon name="arrow-up" /></a>)}</nav>
         <p>Da órbita, para a vida.</p>
       </div>
     </dialog>

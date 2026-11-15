@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T10:17:27.128Z",
-  "finishedAt": "2026-11-15T10:17:29.472Z",
+  "startedAt": "2026-11-15T10:25:44.849Z",
+  "finishedAt": "2026-11-15T10:25:48.636Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "537a0b2bfde509003be4042b28b907f07495fb1518064ee96ef207c7c5030b46"
+        "sha256": "2e4fb6e47ea8d17f0ad5f3f7bda0f3f9b5c0f3a8ccf0decea391e7faa55e5789"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 346,
-      "manifestedFiles": 345,
-      "bytes": 29639635,
+      "fileCount": 348,
+      "manifestedFiles": 347,
+      "bytes": 29660378,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 310,
+      "inspectedFiles": 312,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 2197,
-      "uniqueTargets": 244,
+      "count": 2219,
+      "uniqueTargets": 246,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -3938,6 +3938,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-50-lp-e-404-r19-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -4359,6 +4366,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-49-roteiro-apresentacao-mvp-r19-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-50-lp-e-404-r19-md"
         },
         {
           "source": "context/research-library.html",
@@ -5212,7 +5226,21 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-50-lp-e-404-r19-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-48-handoff-dois-devs-r19-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-49-roteiro-apresentacao-mvp-r19-md"
         },
         {
           "source": "context/research-library.html",
@@ -9977,6 +10005,12 @@
         },
         {
           "source": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
+          "target": "docs/50-LP-E-404-R19.md",
+          "requestPath": "/docs/50-LP-E-404-R19.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
           "target": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
           "requestPath": "/docs/48-HANDOFF-DOIS-DEVS-R19.md",
           "kind": "navigation"
@@ -10110,6 +10144,97 @@
         },
         {
           "source": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "docs/50-LP-E-404-R19.html",
+          "requestPath": "/docs/50-LP-E-404-R19.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
+          "requestPath": "/docs/48-HANDOFF-DOIS-DEVS-R19.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md",
+          "requestPath": "/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "docs/50-LP-E-404-R19.md",
+          "requestPath": "/docs/50-LP-E-404-R19.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/50-LP-E-404-R19.html",
           "target": "documentation.css",
           "requestPath": "/documentation.css",
           "kind": "link-stylesheet"
@@ -10766,6 +10891,18 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/50-LP-E-404-R19.html",
+          "requestPath": "/docs/50-LP-E-404-R19.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/50-LP-E-404-R19.md",
+          "requestPath": "/docs/50-LP-E-404-R19.md",
           "kind": "navigation"
         },
         {
@@ -16033,22 +16170,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 57364,
-        "sha256": "21b13dfc62f3105e36fc82a8ce64e2651e48b0ecf5924415dfca96b59c402c47",
+        "bytes": 57844,
+        "sha256": "c765188353bb107a38a6a5a9370a28fb0458efe50ee7e8af811ef44b51cd18ea",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2205441,
-        "sha256": "be853bb560023308176f57539acaa61c5d14f5ed8d7ff16bb8168be189a47f07",
+        "bytes": 2211088,
+        "sha256": "794afe4b0d79184042fede940f33d370e63b41583508ab14db9638eb61893364",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1774466,
-        "sha256": "53dddae92be52b87bfd8e77c5d471fcefa459cb11c4dda1aca5bdc336e4b76f8",
+        "bytes": 1778536,
+        "sha256": "bbf41520dfbcf13aa71c233815125fc2dd19e96dca028c96f69795ca9ffaef7c",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -16558,15 +16695,15 @@
       {
         "path": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
         "status": 200,
-        "bytes": 11966,
-        "sha256": "c51e8b352805e126b0d39655587bcd96ad726c5896ad7d6718cd5d773eb386c8",
+        "bytes": 12300,
+        "sha256": "c7e0ced87442720c4041dcdd1ed54ff3c625829aaa6bf91b27cff6e102f84c9d",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
         "status": 200,
-        "bytes": 9177,
-        "sha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
+        "bytes": 9494,
+        "sha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -16581,6 +16718,20 @@
         "status": 200,
         "bytes": 4844,
         "sha256": "36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/50-LP-E-404-R19.html",
+        "status": 200,
+        "bytes": 5491,
+        "sha256": "432986094f5d4722c6f3f222a70913f1fd82ce80d9bf409e3dee60201d44d3e6",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/50-LP-E-404-R19.md",
+        "status": 200,
+        "bytes": 3337,
+        "sha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -16656,8 +16807,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 14883,
-        "sha256": "b0483615fa8b91423045b6067ec9b645b9e0e2543872fe60ca229821500e001b",
+        "bytes": 15156,
+        "sha256": "08cd037a77d7f04ec5f3ef446fd68c8f658ee5507bbaa9bb36addc8247b2c4af",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -17755,8 +17906,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 148777,
-        "sha256": "537a0b2bfde509003be4042b28b907f07495fb1518064ee96ef207c7c5030b46",
+        "bytes": 149571,
+        "sha256": "2e4fb6e47ea8d17f0ad5f3f7bda0f3f9b5c0f3a8ccf0decea391e7faa55e5789",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -17894,7 +18045,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 266,
+      "linkedRoutesChecked": 268,
       "redirects": [
         {
           "source": "/campanha/research",
@@ -18014,87 +18165,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 13.044
+      "durationMs": 13.474
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.276
+      "durationMs": 0.372
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 62.449
+      "durationMs": 72.831
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.11
+      "durationMs": 7.95
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 77.796
+      "durationMs": 100.346
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1099.896
+      "durationMs": 1414.538
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.52
+      "durationMs": 1.693
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 501.677
+      "durationMs": 901.954
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 41.169
+      "durationMs": 132.266
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.304
+      "durationMs": 2.853
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 86.14
+      "durationMs": 149.649
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.775
+      "durationMs": 7.141
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 59.538
+      "durationMs": 78.435
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 191.09
+      "durationMs": 457.893
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 71.044
+      "durationMs": 249.878
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.13
+      "durationMs": 1.757
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 83.726
+      "durationMs": 75.245
     }
   ]
 }

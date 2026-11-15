@@ -237,6 +237,12 @@ section[id] { scroll-margin-top:100px; }
 .level-link { width:100%; display:flex; justify-content:space-between; align-items:center; font-size:10px; font-weight:500; padding:16px 0 22px; margin-top:auto; }
 .level-link svg { width:17px; height:17px; }
 .journey-note { font-size:10px; color:#52604f; margin-top:30px; line-height:1.8; }
+.journey-note a { text-decoration:underline; text-underline-offset:3px; }
+.journey-demo { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 30px; margin-top:30px; padding:16px 0; border-block:1px solid var(--line); }
+.journey-demo p { max-width:61ch; font-size:13px; line-height:1.65; color:var(--muted); }
+.journey-demo strong { color:var(--ink); }
+.journey-demo .text-link { min-height:44px; }
+.journey-demo .text-link:hover { color:#426329; }
 .earth-interlude { min-height:720px; overflow:hidden; position:relative; isolation:isolate; display:flex; align-items:center; }
 .horizon-planet { width:150%; position:absolute; top:42%; left:-25%; z-index:-1; }
 .horizon-planet .planet-surface img { transform:rotate(30deg); filter:saturate(.35) brightness(.6); }

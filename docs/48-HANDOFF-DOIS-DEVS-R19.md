@@ -41,6 +41,8 @@ Reutilizamos os quatro modelos NASA locais e a pilha React/Three já instalada. 
 
 ## Divisão dos dois devs
 
+O complemento da apresentação pública fica em [LP imersiva e 404 R19](50-LP-E-404-R19.md): Dev B mantém navegação, mídia decorativa e acessibilidade; Dev A revisa a precisão dos destinos e a distinção entre referência visual e evidência NASA. A mídia externa da 404 não é carregada durante a partida.
+
 | Responsável | Arquivos e tarefas | Contrato que precisa preservar |
 | --- | --- | --- |
 | Dev A · ciência e motor | `src/lab/learning-comparison.ts`, `mission-curriculum.ts`, `scientific-expeditions.ts`, `mission-visual-state.ts`, `core/`, `data/science/`; revisar comparadores de `CerradoLearning.tsx` e `ExpeditionLearning.tsx` | IDs, unidades, procedência, incertezas e causalidade. Funções de apresentação não alteram o motor. Comparar resultados executados, nunca rascunhos posteriores. |

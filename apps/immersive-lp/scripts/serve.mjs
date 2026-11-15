@@ -17,5 +17,9 @@ createServer(async (req, res) => {
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('Cache-Control', 'no-cache');
     res.writeHead(200); res.end(req.method === 'HEAD' ? undefined : data);
-  } catch { res.writeHead(404, { 'Content-Type':'text/plain' }); res.end('Not found'); }
+  } catch {
+    const notFound = await readFile(resolve(root, '404.html')).catch(() => null);
+    res.writeHead(404, { 'Content-Type': notFound ? mime['.html'] : 'text/plain; charset=utf-8' });
+    res.end(req.method === 'HEAD' ? undefined : notFound ?? 'Not found');
+  }
 }).listen(port, '0.0.0.0', () => process.stdout.write(`MISSÃO IPÊ em http://localhost:${port}\n`));

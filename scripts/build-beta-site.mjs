@@ -21,6 +21,7 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/50-LP-E-404-R19.md', target: 'docs/50-LP-E-404-R19.md', title: 'LP imersiva e rota 404 · R19', description: 'Referência visual, recuperação de navegação, movimento acessível e continuidade para dois devs.' },
   { source: 'docs/48-HANDOFF-DOIS-DEVS-R19.md', target: 'docs/48-HANDOFF-DOIS-DEVS-R19.md', title: 'Comece aqui · handoff R19', description: 'Trilha da evidência, comparação explicada, quatro papéis e imersão 3D nas três missões.' },
   { source: 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md', target: 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md', title: 'Apresente o MVP · roteiro de 6 minutos', description: 'Percurso demonstrável, decisões e aprendizagem em cada caso científico.' },
   { source: 'docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md', target: 'docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md', title: 'Pesquisa NASA · origem das prioridades R19', description: 'Pesquisa Sol 6.1 max: recursos verificados, quatro segmentos e prioridades viáveis para dois devs.' },
