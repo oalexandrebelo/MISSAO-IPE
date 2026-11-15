@@ -27,6 +27,7 @@ const click = async target => { await act(async () => fireEvent.click(typeof tar
 const change = async (name, value) => { await act(async () => fireEvent.change(screen.getByLabelText(name), { target: { value } })); };
 const flightStage = () => document.querySelector('.scientific-flight-path [aria-current="step"]')?.textContent;
 const command = () => document.querySelector('.scientific-command [role="status"]')?.textContent;
+const agenda = scene => within(scene).getByText('Agenda prevista de operação');
 
 function CerradoHarness() {
   const [config, setConfig] = useState({ ...DEFAULT_CONFIG });
@@ -54,12 +55,24 @@ test('Cerrado cockpit directs choices, prediction and cancellation to real contr
   assert.ok(editorAccess.getByText('Editando · Bateria'));
   await click(editorAccess.getByRole('button', { name: 'Ir às opções' }));
   assert.equal(document.activeElement.textContent, 'Bateria');
+  await click('Inspecionar esta escolha na nave');
+  assert.equal(scene.dataset.inspection, 'energy');
+  assert.equal(document.activeElement, scene.parentElement);
+  assert.equal(document.querySelector('.assembly-scene .scene'), scene);
   await click(screen.getByRole('radio', { name: /Bateria 24 Wh/ }));
   assert.equal(scene.dataset.inspection, 'energy');
   assert.equal(scene.dataset.batteryWh, '24');
   await click('Inspecionar esta escolha na nave');
   assert.equal(document.activeElement.getAttribute('aria-label'), 'Visualização de Bateria');
-  await click('Conferir projeto');
+  const systems = screen.getByRole('navigation', { name: 'Escolher subsistema' });
+  await click(within(systems).getByRole('button', { name: /Plano de transmissão/ }));
+  assert.equal(agenda(scene).parentElement.open, true);
+  await click(agenda(scene));
+  assert.equal(agenda(scene).parentElement.open, false);
+  await click('Inspecionar agenda de transmissão');
+  assert.equal(scene.dataset.inspection, 'communications');
+  assert.equal(agenda(scene).parentElement.open, true);
+  await click('Seguir para checagem');
   assert.match(flightStage(), /Checagem/);
   assert.match(command(), /Previsão pendente/);
   assert.equal(document.activeElement.id, 'dossier-title');
@@ -115,6 +128,9 @@ for (const id of ['bennu', 'telescope']) {
     assert.ok(editorAccess.getByText('Editando · Instrumento científico'));
     await click(editorAccess.getByRole('button', { name: 'Ir às opções' }));
     assert.equal(document.activeElement.textContent, 'Instrumento científico');
+    await click('Inspecionar esta escolha na nave');
+    assert.equal(designScene.dataset.inspection, 'instrument');
+    assert.equal(document.activeElement, designScene.parentElement);
     const config = id === 'bennu'
       ? { launch: 'compact', orbit: 'near', duration: 'full', instrument: 'camera', power: 'extended', ground: 'extended' }
       : { launch: 'science', orbit: 'far', duration: 'full', instrument: 'camera', power: 'extended', ground: 'extended' };
@@ -123,9 +139,20 @@ for (const id of ['bennu', 'telescope']) {
       await click(within(systems).getByRole('button', { name: label }));
       await click(screen.getByRole('group', { name: label }).querySelector(`input[value="${config[key]}"]`));
     }
+    await click(within(systems).getByRole('button', { name: 'Perfil orbital' }));
+    assert.equal(designScene.dataset.inspection, 'overview');
+    await click('Inspecionar agenda e função na nave');
+    assert.equal(designScene.dataset.inspection, 'communications');
+    assert.equal(agenda(designScene).parentElement.open, true);
+    assert.equal(document.activeElement, designScene.parentElement);
+    await click(agenda(designScene));
+    assert.equal(agenda(designScene).parentElement.open, false);
+    await click('Inspecionar agenda e função na nave');
+    assert.equal(agenda(designScene).parentElement.open, true);
+    assert.equal(document.querySelector('.equipment-assembly .scene'), designScene);
     assert.equal(document.querySelector('.equipment-assembly .scene').dataset.payloadId, config.instrument);
     const expected = simulateExpedition(id, config);
-    await click('Revisar para executar');
+    await click('Seguir para checagem');
     assert.match(flightStage(), /Verificação/);
     assert.match(command(), /Previsão pendente/);
     const launchScene = document.querySelector('.expedition-brief-deck .scene');

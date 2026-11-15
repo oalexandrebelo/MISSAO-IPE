@@ -23,7 +23,7 @@ export type SceneFocus = 'science' | 'satellite' | 'ground';
 export type SceneVariant = 'orbit' | 'hangar';
 export type MissionWorld = 'earth' | 'bennu' | 'telescope';
 export type MissionSegment = 'space' | 'ground' | 'launch' | 'user';
-export interface SceneProps { preview?: boolean; compact?: boolean; progress?: number; config?: MissionConfig; variant?: SceneVariant; visualState?: MissionVisualState; segment?: MissionSegment; world?: MissionWorld; scienceRecordCount?: number; expeditionConfig?: ExpeditionConfig; scenarioId?: ScenarioId; inspectSubsystem?: SpacecraftInspection; }
+export interface SceneProps { preview?: boolean; compact?: boolean; progress?: number; config?: MissionConfig; variant?: SceneVariant; visualState?: MissionVisualState; segment?: MissionSegment; world?: MissionWorld; scienceRecordCount?: number; expeditionConfig?: ExpeditionConfig; scenarioId?: ScenarioId; inspectSubsystem?: SpacecraftInspection; inspectionRequest?: number; }
 
 const ORBIT_VIEWS: readonly { id: SceneFocus; number: string; name: string; text: string }[] = [
   { id: 'science', number: '01', name: 'O Cerrado', text: 'A pergunta científica parte de seis registros históricos de vegetação Terra/MODIS.' },
@@ -188,13 +188,14 @@ function PlannedSchedule({ plan, state }: { plan: SceneSchedule; state?: Mission
   </div>;
 }
 
-export function Scene({ preview = false, compact = false, progress = 0, config = DEFAULT_CONFIG, variant = 'orbit', visualState, segment, world = 'earth', scienceRecordCount = 6, expeditionConfig, scenarioId, inspectSubsystem }: SceneProps) {
+export function Scene({ preview = false, compact = false, progress = 0, config = DEFAULT_CONFIG, variant = 'orbit', visualState, segment, world = 'earth', scienceRecordCount = 6, expeditionConfig, scenarioId, inspectSubsystem, inspectionRequest }: SceneProps) {
   const metrics = usePlayerMetrics();
   function inspectManually(next: SpacecraftInspection) {
     if (next === 'energy' || next === 'communications' || next === 'instrument') metrics.track('inspection', world === 'earth' ? 'cerrado' : world, { target: next });
     setInspection(next); setTurn(0);
   }
   const host = useRef<HTMLElement>(null);
+  const scheduleDetails = useRef<HTMLDetailsElement>(null);
   const [mode, setMode] = useState<'3d' | '2d'>('3d');
   const [checked, setChecked] = useState(false);
   const [unavailable, setUnavailable] = useState(false);
@@ -223,7 +224,8 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
     const eventInspection = system === 'radio' ? 'communications' : system === 'panel' || system === 'battery' ? 'energy' : system === 'processing' || system === 'buffer' ? 'instrument' : undefined;
     const next = inspectSubsystem ?? eventInspection;
     if (next) { setInspection(next); setTurn(0); }
-  }, [inspectSubsystem, visualState?.timeS, visualState?.focusSubsystem, presentation.configurationKey]);
+    if (inspectionRequest && next === 'communications' && scheduleDetails.current) scheduleDetails.current.open = true;
+  }, [inspectSubsystem, inspectionRequest, visualState?.timeS, visualState?.focusSubsystem, presentation.configurationKey]);
   useEffect(() => {
     if (!expanded) return;
     const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') setExpanded(false); };
@@ -280,7 +282,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
       {preview ? <div className="spacecraft-view-tools"><button type="button" aria-label="Girar destino à esquerda" onClick={() => setTurn(value => value - Math.PI / 6)} disabled={mode === '2d'}>↶ Girar</button><button type="button" aria-label="Girar destino à direita" onClick={() => setTurn(value => value + Math.PI / 6)} disabled={mode === '2d'}>Girar ↷</button></div> : configured ? <><div className="spacecraft-inspection-controls" role="group" aria-label="Inspecionar os sistemas da nave">{INSPECTIONS.map(item => <button key={item.id} type="button" aria-pressed={inspection === item.id} onClick={() => { inspectManually(item.id); setTurn(0); }}>{item.label}</button>)}</div>{compactHangar ? <details className="scene-optional-tools"><summary>Girar e separar a nave</summary>{viewTools}</details> : viewTools}</> : <div className="orbit-viewbar" role="group" aria-label="Explore a missão">{views.map(item => <button key={item.id} type="button" className={`orbit-view ${focus === item.id ? 'is-active' : ''}`} aria-pressed={focus === item.id} onClick={() => { setFocus(item.id); setTurn(0); }}><span>{item.number}</span>{item.name}</button>)}
       </div>}
       {configured && !reducedMotion ? compactHangar ? <details className="scene-optional-tools" open={diagramOpen} onToggle={event => setDiagramOpen(event.currentTarget.open)}><summary>Diagrama animado dos sistemas</summary>{diagramOpen ? assemblyDiagram : null}</details> : assemblyDiagram : null}
-      {configured ? compactHangar ? <details className="scene-optional-tools" open={inspection === 'communications'}><summary>Agenda prevista de operação</summary><PlannedSchedule plan={schedule} state={visualState} /></details> : <PlannedSchedule plan={schedule} state={visualState} /> : null}
+      {configured ? compactHangar ? <details ref={scheduleDetails} className="scene-optional-tools" open={inspection === 'communications'}><summary>Agenda prevista de operação</summary><PlannedSchedule plan={schedule} state={visualState} /></details> : <PlannedSchedule plan={schedule} state={visualState} /> : null}
       {configured && !compactHangar ? <p className="orbit-visual-key">Contorno claro: peça em inspeção, não uma falha. Enlace azul: transmissão registrada. Os segmentos da bateria e da memória comparam capacidade; não contam componentes reais.</p> : null}
       {!configured ? !compact ? <div className="orbit-explanation" aria-live="polite"><p>{selectedText}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selectedText}</p> : null}
       <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>{recorded ? 'Recursos do motor · posição ilustrativa sem escala' : 'Ilustração sem escala · física calculada separadamente'}</span></p>

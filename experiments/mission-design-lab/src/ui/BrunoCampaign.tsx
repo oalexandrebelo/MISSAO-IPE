@@ -413,12 +413,16 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
   const launcherSlots = BRUNO_LAUNCHER_SLOTS[config.launcher];
   const missingWarning = preview && loadout?.length === 0 && preview.outcome !== 'invalid'
     ? `Uma partida sem instrumentos custa ${BRUNO_LAUNCH_FEE} créditos e produz zero registros.` : '';
+  const missingNames = missing.map(instrument => BRUNO_INSTRUMENTS[instrument].label).join(' e ');
   const instrumentGuide = toBuy.length > 0
     ? `Compre ${toBuy.map(instrument => BRUNO_INSTRUMENTS[instrument].label).join(' e ')}.`
-    : missing.length ? `Equipe ${missing.map(instrument => BRUNO_INSTRUMENTS[instrument].label).join(' e ')} em Instrumento.` : '';
+    : missing.length ? `Equipe ${missingNames} em Instrumento.` : '';
   const requiredSlotsMessage = missing.length > 0 && neededSlots > launcherSlots
     ? `A carga da missão precisa de ${neededSlots} encaixes. O lançador atual tem ${launcherSlots}.` : '';
   const checks = preview?.diagnostics.filter(diagnostic => missing.length === 0 || !['PAYLOAD_MISSING', 'PAYLOAD_MISMATCH'].includes(diagnostic.code)) ?? [];
+  const launcherLimit = requiredSlotsMessage || checks.find(check => check.code === 'MASS_LIMIT')?.message;
+  const showLauncherShortcut = showInstrumentGuide && toBuy.length === 0 && config.launcher === 'compact' && Boolean(launcherLimit);
+  const hangarGuide = showLauncherShortcut ? `Ajuste o lançador para equipar ${missingNames}.` : instrumentGuide;
   const budgetPart = checks.some(check => check.code === 'BUDGET_LIMIT') ? partKeys.find(key => {
     if (key === 'payload' && loadout) return false;
     const selected = BRUNO_CHOICES[key].find(choice => choice.id === config[key]);
@@ -435,7 +439,7 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
     : phase === 'result' && result
       ? `${title}. Produzidos: ${result.generatedRecords}. Recebidos: ${result.receivedRecords}. Válidos: ${result.deliveredRecords} de ${result.requiredRecords}. Pontuação: ${result.score.total} de 100. ${result.diagnostics[0]?.message ?? mission.evidence}`
       : phase === 'briefing' ? `${mission.question} Parâmetros e registros simulados.` : `${event?.title ?? ''}. ${event?.message ?? ''}`;
-  const libras = `${mission.name}. ${phaseLabels[phase]}. ${context[phase]} ${phase === 'hangar' ? `${instrumentGuide} ${requiredSlotsMessage} ${checks[0] ? `${checkIntro} ${checks[0].message}` : ''}` : ''} ${readout} ${inventory?.notice ?? ''}`.trim();
+  const libras = `${mission.name}. ${phaseLabels[phase]}. ${context[phase]} ${phase === 'hangar' ? `${hangarGuide} ${requiredSlotsMessage} ${checks[0] ? `${checkIntro} ${checks[0].message}` : ''}` : ''} ${readout} ${inventory?.notice ?? ''}`.trim();
   const inventoryStatus = inventory ? <BrunoInventoryStatus controller={inventory} onResolved={acceptResponse} /> : null;
   return <section className="bruno-campaign" data-bruno-mission={id} data-stage={phase} aria-labelledby="bruno-title"
     data-ipe-libras-context={libras}>
@@ -476,9 +480,9 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
     </div> : null}
     {phase === 'hangar' ? <div className="bruno-hangar">
       {showInstrumentGuide ? <div className="bruno-instrument-guide" role="group" aria-label="Próximo passo no hangar">
-        <p><strong>{instrumentGuide}</strong>{requiredSlotsMessage ? <span>{requiredSlotsMessage}</span> : null}</p>
+        <p><strong>{hangarGuide}</strong>{launcherLimit ? <span>{launcherLimit}</span> : null}</p>
         {showShopShortcut ? <button type="button" className="bruno-action bruno-primary" onClick={onShop}>Loja e inventário</button>
-          : <button type="button" className="bruno-action bruno-primary" onClick={() => focusSystem('payload')}>Abrir instrumentos</button>}
+          : <button type="button" className="bruno-action bruno-primary" onClick={() => focusSystem(showLauncherShortcut ? 'launcher' : 'payload')}>{showLauncherShortcut ? 'Ajustar lançador' : 'Abrir instrumentos'}</button>}
       </div> : null}
       <CraftView id={id} config={viewingA ? baseline : assembly ?? unequipped(config)} plan={comparisonOpen ? viewingA ? 'A' : 'B' : undefined} part={part} onPart={setPart} unverified={!viewingA && !assembly} figureRef={craft} referenceOpen={referenceOpen} onReferenceToggle={setReferenceOpen}
         onEditSystem={() => focusSystem(part)} prioritizeOptions={!showInstrumentGuide} prediction={viewingA ? undefined : systemPrediction?.summary} />
@@ -506,7 +510,7 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
           <p id="bruno-preflight-status" data-outcome={preview?.outcome}>{preflightStatus}</p>
           {checks.length > 0 ? <p>{checkIntro}</p> : null}
           {checks.length || missing.length ? <ul className="bruno-preflight-issues" role="list">
-            {missing.length ? <li><div><strong>Instrumentos pendentes</strong><p>{instrumentGuide}{toBuy.length > 0 ? ' Volte ao hangar e use Equipar em Instrumento.' : ''}</p></div></li> : null}
+            {missing.length ? <li><div><strong>Instrumentos pendentes</strong><p>{hangarGuide}{toBuy.length > 0 ? ' Volte ao hangar e use Equipar em Instrumento.' : ''}</p></div></li> : null}
             {requiredSlotsMessage && !checks.some(check => check.code === 'SLOT_LIMIT') ? <li>
               <div><strong>Encaixes necessários</strong><p>{requiredSlotsMessage}</p></div>
               <button type="button" className="bruno-action bruno-quiet" onClick={() => focusSystem('launcher')}>Rever encaixes</button>

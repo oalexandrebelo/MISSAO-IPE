@@ -246,7 +246,7 @@ export function ScientificExpedition({ id, onBack }: { id: ExpeditionId; onBack:
     {editingProject ? <>
       {phase === 'design' ? <section className="expedition-section">
         <h2 className="sr-only">Montagem da nave</h2>
-        <ExpeditionWorkbench id={id} config={config} onChoice={choose} />
+        <ExpeditionWorkbench id={id} config={config} onChoice={choose} onReview={() => selectPhase('verify')} />
       </section> : <section className="expedition-section">
         <h2>Checagem de lançamento</h2>
         <p>O envelope mostra a integração da nave com o lançador selecionado. O relógio da operação começa após a chegada ao destino.</p>

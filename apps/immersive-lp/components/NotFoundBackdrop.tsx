@@ -15,13 +15,18 @@ function play(video: HTMLVideoElement) {
 
 export function NotFoundBackdrop() {
   const player = useRef<HTMLVideoElement>(null);
+  const [videoAllowed, setVideoAllowed] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [hasFrame, setHasFrame] = useState(false);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
+    setVideoAllowed(window.location.hostname === 'projeto-ipe-lp.vercel.app');
+  }, []);
+
+  useEffect(() => {
     const video = player.current;
-    if (!video) return;
+    if (!videoAllowed || !video) return;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (!motion.matches) play(video);
     function reduceMotion(event: MediaQueryListEvent) {
@@ -29,7 +34,7 @@ export function NotFoundBackdrop() {
     }
     motion.addEventListener('change', reduceMotion);
     return () => motion.removeEventListener('change', reduceMotion);
-  }, []);
+  }, [videoAllowed]);
 
   function toggle() {
     const video = player.current;
@@ -48,7 +53,7 @@ export function NotFoundBackdrop() {
       <div className="starfield" />
       <Planet className={styles.earth} priority />
       <div className={styles.orbit} />
-      <video
+      {videoAllowed ? <video
         id="fundo-orbital"
         ref={player}
         className={styles.video}
@@ -60,11 +65,11 @@ export function NotFoundBackdrop() {
         onPlaying={() => { setHasFrame(true); setPlaying(true); }}
         onPause={() => setPlaying(false)}
         onError={() => { setHasFrame(false); setPlaying(false); setFailed(true); }}
-      />
+      /> : null}
       <div className={styles.vignette} />
     </div>
-    <button className={styles.motion} type="button" aria-controls="fundo-orbital" onClick={toggle}>
+    {videoAllowed ? <button className={styles.motion} type="button" aria-controls="fundo-orbital" onClick={toggle}>
       <Icon name={playing ? 'pause' : 'play'} /> {action}
-    </button>
+    </button> : null}
   </>;
 }

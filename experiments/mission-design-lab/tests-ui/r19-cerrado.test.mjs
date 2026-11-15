@@ -56,11 +56,26 @@ test('Cerrado A/B locates the measured power divergence at 600 seconds and lists
   let sought;
   render(React.createElement(CerradoComparisonExplanation, { a: trials[0].result, b: trials[1].result, onSeek: value => { sought = value; } }));
   assert.ok(screen.getByText(/Limite instantâneo de potência/));
+  assert.ok(screen.getByText(/já diferiam em massa e custo em créditos/));
   assert.ok(screen.getByText(/W de carga total/));
   assert.ok(screen.getByText(/bit por registro/));
   fireEvent.click(screen.getByRole('button', { name: 'Investigar esta diferença no 3D' }));
   assert.equal(sought, 600);
   assert.equal(compareCerrado(trials[0].result, trials[0].result).firstTimeS, null);
+});
+
+test('Cerrado A/B reports equal mass and cost when only the contact calendar changes', () => {
+  const config = { ...DEFAULT_CONFIG, battery: 'large' };
+  const a = simulateMission(config, 'long-contact');
+  const b = simulateMission(config, 'short-contact');
+  const comparison = compareCerrado(a, b);
+  assert.equal(comparison.firstTimeS, 5_640);
+  assert.deepEqual(comparison.changed, []);
+  assert.equal(a.massKg, b.massKg);
+  assert.equal(a.credits, b.credits);
+  render(React.createElement(CerradoComparisonExplanation, { a, b, onSeek: () => {} }));
+  const explanation = screen.getByText(/O calendário de contato mudou/);
+  assert.match(explanation.textContent, /Massa e custo são iguais nos dois projetos/);
 });
 
 test('four-role analysis registers all four answers with existing event IDs and exports the same executed result', () => {

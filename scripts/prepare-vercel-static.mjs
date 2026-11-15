@@ -19,7 +19,7 @@ async function walk(folder) {
 }
 await walk(site);
 files.sort();
-const required = ['site.css', 'lab/rive/ipe-subsystems.riv', 'equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
+const required = ['site.css', 'lab/rive/ipe-subsystems.riv', 'equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'documentation.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
 for (const file of required) await readFile(resolve(site, file));
 const inlineHashes = new Set();
 const portalHashes = new Set();
@@ -47,7 +47,6 @@ const policy = (hashes, externalMedia = false) => [
 const privateCsp = policy(inlineHashes);
 const csp = allowPublicAnalytics(privateCsp), portalCsp = allowPublicAnalytics(policy(portalHashes, true));
 const presentationUrl = 'https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/';
-const landingPageUrl = 'https://projeto-ipe-lp.vercel.app/';
 if (Math.max(Buffer.byteLength(csp), Buffer.byteLength(portalCsp)) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
 const routeConfig = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
@@ -58,7 +57,6 @@ const routeConfig = {
       { source: '/', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: area === 'pitch' ? presentationUrl : `https://nasa-missaoipe.alexandrebelo.com${path}`, permanent: false },
       { source: '/:path*', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: 'https://nasa-missaoipe.alexandrebelo.com/:path*', permanent: false },
     ]),
-    { source: '/', destination: landingPageUrl, permanent: false },
     { source: '/doc', destination: '/docs/index.html', permanent: false },
     { source: '/painel', destination: '/dashboard/index.html', permanent: false },
     { source: '/campanha/research', destination: '/campanha/research/index.html', permanent: false },
@@ -80,7 +78,7 @@ const routeConfig = {
     { source: '/cronograma', destination: '/context/index.html', permanent: false },
     { source: '/estudo', destination: '/context/research-library.html', permanent: false }
   ],
-  rewrites: [{ source: '/documentacao', destination: '/index.html' }],
+  rewrites: [{ source: '/documentacao', destination: '/documentation.html' }, { source: '/creditos', destination: '/creditos/index.html' }],
   headers: [
     { source: '/(.*)', headers: [
       { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -98,7 +96,7 @@ const routeConfig = {
     { source: '/dashboard/(.*)', headers: [ { key: 'Cache-Control', value: 'private, no-store, max-age=0' }, { key: 'X-Robots-Tag', value: 'noindex, nofollow' } ] }
   ]
 };
-const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund', outputDirectory: 'site', functions: { 'api/metrics.mjs': { maxDuration: 60 } } };
+const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund && pnpm --dir apps/immersive-lp install --frozen-lockfile', outputDirectory: 'site', functions: { 'api/metrics.mjs': { maxDuration: 60 } } };
 await writeFile(resolve(root, 'vercel.json'), JSON.stringify(config, null, 2) + '\n');
 await mkdir(resolve(root, '.vercel'), { recursive: true });
 const staticConfigPath = resolve(root, '.vercel/deploy-config.json');

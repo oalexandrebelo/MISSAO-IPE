@@ -33,6 +33,8 @@ const bytesByFile = new Map();
 const documents = new Map();
 const references = [];
 const remoteReferences = [];
+const officialOrigin = 'https://nasa-missaoipe.alexandrebelo.com';
+const landingFiles = new Set();
 const portalOrigin = 'https://d2ol7oe51mr4n9.cloudfront.net';
 const portalAssetBase = `${portalOrigin}/user_38xzZboKViGWJOttwIXH07lWA1P/`;
 const portalAssets = new Map([
@@ -87,14 +89,16 @@ function resolveReference(source, value, kind) {
   if (!value || /^(?:data:|blob:|mailto:|tel:)/i.test(value)) return;
   assert.doesNotMatch(value, /^\s*(?:javascript|vbscript):/i, `Protocolo executável em ${source}`);
   const url = new URL(value, `https://beta.invalid/${source}`);
-  if (url.origin !== 'https://beta.invalid') {
+  if (url.origin !== 'https://beta.invalid' && (url.origin !== officialOrigin || !landingFiles.has(source))) {
     if (kind !== 'navigation') {
       assert.ok(source === 'planet-jumping.html' && portalAssets.get(url.href) === kind, `Recurso remoto de runtime não autorizado em ${source}: ${kind} · ${url.href}`);
       remoteReferences.push({ source, url: url.href, kind });
     }
     return;
   }
-  const target = decodeURIComponent(url.pathname).replace(/^\//, '') || 'index.html';
+  const pathname = decodeURIComponent(url.pathname);
+  const rewrite = vercel.rewrites?.find(rule => rule.source === pathname || vercel.trailingSlash === false && `${rule.source}/` === pathname);
+  const target = (rewrite?.destination ?? pathname).replace(/^\//, '') || 'index.html';
   const filename = target.endsWith('/') ? `${target}index.html` : target;
   assert.ok(bytesByFile.has(filename), `Referência local ausente: ${source} → ${filename} (${kind})`);
   if (url.hash && filename.endsWith('.html')) {
@@ -231,6 +235,7 @@ async function run() {
   files = await inventory(site);
   for (const filename of files) bytesByFile.set(filename, await readFile(path.join(site, filename)));
   manifest = JSON.parse(bytesByFile.get('publication-manifest.json').toString('utf8'));
+  for (const file of manifest.files) if (file.category === 'immersive-landing') landingFiles.add(file.path);
   vercel = JSON.parse(await readFile(path.join(root, 'vercel.json'), 'utf8'));
   observations.inputs = { manifest: { path: 'site/publication-manifest.json', sha256: digest(bytesByFile.get('publication-manifest.json')) }, vercelConfig: { path: 'vercel.json', sha256: digest(await readFile(path.join(root, 'vercel.json'))) } };
 
@@ -288,7 +293,18 @@ async function run() {
   });
 
   await check('portal conecta beta, contexto e plano e distingue pesquisa de implementação', async () => {
-    const document = parseHtml('index.html');
+    const landing = parseHtml('index.html');
+    assert.ok(landingFiles.has('index.html'), 'A raiz deve usar a LP exportada');
+    assert.ok(manifest.routeEntrypoints.includes('/documentacao'));
+    assert.equal(landing.documentElement.lang, 'pt-BR');
+    assert.equal(landing.querySelector('link[rel="canonical"]')?.getAttribute('href'), `${officialOrigin}/`);
+    const landingDestinations = [...landing.querySelectorAll('a[href]')].map(link => new URL(link.getAttribute('href'), officialOrigin).href);
+    for (const route of ['/lab/index.html', '/documentacao']) assert.ok(landingDestinations.includes(officialOrigin + route), `Destino ausente na LP: ${route}`);
+    const chunks = [...landing.querySelectorAll('script[src]')].map(script => script.getAttribute('src')).filter(src => src.startsWith('/_next/static/'));
+    assert.ok(chunks.length > 0, 'A LP deve carregar seus módulos Next no próprio domínio');
+    for (const chunk of chunks) assert.ok(landingFiles.has(chunk.slice(1)), `Módulo LP ausente: ${chunk}`);
+    assert.equal(landing.querySelectorAll('form').length, 0);
+    const document = parseHtml('documentation.html');
     const text = document.body.textContent;
     assert.equal(document.documentElement.lang, 'pt-BR');
     assert.match(document.title, /IPÊ/i);
@@ -300,12 +316,12 @@ async function run() {
     const logo = new JSDOM(bytesByFile.get('brand/missao-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
     assert.ok(logo.querySelectorAll('path').length > 0, 'Marca vetorial sem contornos');
     assert.equal(logo.querySelectorAll('image,foreignObject,script').length, 0, 'Marca deve ser SVG real sem bitmap ou código incorporado');
-    assert.ok(destinations.includes('/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html'), 'Guia da dupla deve estar acessível pelo portal');
+    assert.ok(destinations.includes('/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html'), 'Guia da dupla deve estar acessível pelo portal');
     const library = JSON.parse(bytesByFile.get('context/research-library-index.json'));
     for (const source of ['docs/25-HANDOFF-DOIS-DEVS.md', 'docs/24-OPORTUNIDADES-ESTUDOS.md', 'experiments/mission-design-lab/docs/GUIA-DIDATICO-R9.md', 'references/estudos/SMARTCITY-KIT-HISTORICO.md']) {
       assert.ok(library.documents.some(entry => entry.source === source), `Contexto ausente da biblioteca: ${source}`);
     }
-    observations.portal = { language: 'pt-BR', beta: true, forms: 0 };
+    observations.portal = { language: 'pt-BR', beta: true, forms: 0, landing: '/', documentaryHub: '/documentacao', localLandingChunks: chunks.length };
   });
 
   await check('links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas', async () => {
@@ -380,7 +396,7 @@ async function run() {
 
   await check('runtime, apresentação e dados preservam os artefatos já verificados', async () => {
     const preserved = [];
-    for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
+    for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed', 'immersive-landing', 'public-portal'].includes(file.category))) {
       const original = await readFile(path.join(root, file.source));
       let expected = original;
       if (file.libras) expected = decorateLibrasPage(expected.toString('utf8'), file.path);
@@ -413,6 +429,10 @@ async function run() {
       assert.equal(link.dataset.ipeLibras, scope);
       assert.equal(new URL(link.href).pathname, `/${librasGuide}`);
       assert.ok(document.querySelector('script[src$="/acessibilidade/libras.js"],script[src^="acessibilidade/libras.js"]'), filename);
+      if (landingFiles.has(filename)) {
+        assert.equal(document.querySelectorAll('a[data-ipe-libras]').length, 1, `Link Libras duplicado na LP: ${filename}`);
+        assert.equal(document.querySelectorAll('script[src$="/acessibilidade/libras.js"]').length, 1, `Script Libras duplicado na LP: ${filename}`);
+      }
       assert.equal(document.querySelector('script[src*="vlibras.gov.br"]'), null, filename);
       coverage[scope]++;
     }
@@ -444,7 +464,11 @@ async function run() {
   await check('configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos', async () => {
     assert.equal(vercel.outputDirectory, 'site');
     assert.equal(vercel.buildCommand, 'npm run build:release');
-    assert.equal(vercel.installCommand, 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund');
+    for (const command of [
+      'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund',
+      'npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund',
+      'pnpm --dir apps/immersive-lp install --frozen-lockfile',
+    ]) assert.ok(vercel.installCommand.includes(command), `Instalação ausente: ${command}`);
     assert.equal(vercel.cleanUrls, false);
     assert.equal(vercel.trailingSlash, false);
     const common = Object.fromEntries(vercel.headers.find(rule => rule.source === '/(.*)').headers.map(header => [header.key.toLowerCase(), header.value]));
@@ -564,9 +588,12 @@ async function run() {
 
   await check('servidor de release inicia apenas em loopback para os testes HTTP', async () => {
     await startServer();
-    const response = await fetchLocal('/documentacao');
-    assert.equal(response.status, 200);
-    assert.equal(digest(Buffer.from(await response.arrayBuffer())), digest(bytesByFile.get('index.html')));
+    for (const [route, file] of [['/', 'index.html'], ['/documentacao', 'documentation.html'], ['/creditos', 'creditos/index.html']]) {
+      const response = await fetchLocal(route);
+      assert.equal(response.status, 200, route);
+      assert.equal(response.headers.get('location'), null, route);
+      assert.equal(digest(Buffer.from(await response.arrayBuffer())), digest(bytesByFile.get(file)), route);
+    }
     observations.http = { server: 'scripts/serve-beta.mjs', originClass: '127.0.0.1 loopback; temporary port', realBrowser: false, publicDeploymentTested: false };
   });
 
@@ -588,19 +615,25 @@ async function run() {
   });
 
   await check('rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado', async () => {
-    const landingPageUrl = 'https://projeto-ipe-lp.vercel.app/';
     const paths = [...new Set(references.map(reference => reference.requestPath))];
     for (const requestPath of paths) {
       const response = await fetchLocal(requestPath, { method: 'HEAD' });
-      const homepage = new URL(requestPath, origin).pathname === '/';
-      assert.equal(response.status, homepage ? 307 : 200, `HEAD de link falhou: ${requestPath}`);
-      if (homepage) assert.equal(response.headers.get('location'), landingPageUrl + new URL(requestPath, origin).search);
+      const url = new URL(requestPath, origin);
+      const alias = vercel.rewrites?.find(rule => vercel.trailingSlash === false && `${rule.source}/` === url.pathname);
+      assert.equal(response.status, alias ? 308 : 200, `HEAD de link falhou: ${requestPath}`);
+      if (alias) {
+        const destination = alias.source + url.search;
+        assert.equal(response.headers.get('location'), destination);
+        const canonical = await fetchLocal(destination, { method: 'HEAD' });
+        assert.equal(canonical.status, 200, destination);
+        assert.equal((await canonical.arrayBuffer()).byteLength, 0);
+      }
       assert.equal((await response.arrayBuffer()).byteLength, 0);
     }
     // Inspect configured headers independently, even if an earlier CSP assertion failed.
     const commonRule = vercel.headers.find(rule => rule.source === '/(.*)');
     assert.ok(commonRule, 'Cabeçalhos comuns não configurados');
-    for (const route of ['/documentacao', '/planet-jumping.html', '/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html', `/${librasGuide}`]) {
+    for (const route of ['/', '/documentacao', '/creditos', '/planet-jumping.html', '/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html', `/${librasGuide}`]) {
       const response = await fetchLocal(route, { method: 'HEAD' });
       assert.equal(response.status, 200, `HEAD da aplicação falhou: ${route}`);
       assert.equal((await response.arrayBuffer()).byteLength, 0);
@@ -611,10 +644,9 @@ async function run() {
     }
     const presentationUrl = 'https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/';
     for (const source of ['/pitch', '/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && !redirect.has && redirect.destination === presentationUrl && redirect.permanent === false));
-    const landingRedirect = vercel.redirects.find(redirect => redirect.source === '/' && !redirect.has);
-    assert.deepEqual(landingRedirect, { source: '/', destination: landingPageUrl, permanent: false });
-    assert.ok(vercel.redirects.every((redirect, index) => redirect.source !== '/' || !redirect.has || index < vercel.redirects.indexOf(landingRedirect)));
-    assert.deepEqual(vercel.rewrites?.find(rule => rule.source === '/documentacao'), { source: '/documentacao', destination: '/index.html' });
+    assert.equal(vercel.redirects.some(redirect => redirect.source === '/' && !redirect.has), false);
+    assert.deepEqual(vercel.rewrites?.find(rule => rule.source === '/documentacao'), { source: '/documentacao', destination: '/documentation.html' });
+    assert.deepEqual(vercel.rewrites?.find(rule => rule.source === '/creditos'), { source: '/creditos', destination: '/creditos/index.html' });
     const documentaryAlias = await fetchLocal('/documentacao/?origem=qa');
     assert.equal(documentaryAlias.status, 308);
     assert.equal(documentaryAlias.headers.get('location'), '/documentacao?origem=qa');
@@ -636,7 +668,7 @@ async function run() {
         const destination = await fetchLocal(redirect.destination, { method: 'HEAD' });
         assert.equal(destination.status, 200);
         assert.equal((await destination.arrayBuffer()).byteLength, 0);
-      } else assert.ok([presentationUrl, landingPageUrl].includes(redirect.destination), 'Destino externo não previsto.');
+      } else assert.equal(redirect.destination, presentationUrl, 'Destino externo não previsto.');
       redirects.push({ source: redirect.source, destination: redirect.destination, status: result.status });
     }
     for (const redirect of vercel.redirects.filter(r => r.has)) {

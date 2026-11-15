@@ -115,6 +115,9 @@ test('Europa purchases replay a lost receipt, reserve both instruments, consume 
   assert.deepEqual(purchases[0], purchases[1]);
   assert.equal(document.querySelector('.bruno-wallet dd').textContent, '17');
 
+  await click('Voltar ao hangar');
+  await click('Loja e inventário');
+  assert.ok(screen.getByRole('button', { name: /^Radar do gelo.*8 créditos/, pressed: true }));
   await buy('europa-reason');
   await buy('bennu-ovirs');
   assert.ok(screen.getByText(/Referência do acervo Bennu/));
@@ -122,8 +125,9 @@ test('Europa purchases replay a lost receipt, reserve both instruments, consume 
   assert.equal(document.querySelector('.bruno-wallet dd').textContent, '9');
 
   await click('Voltar ao hangar');
-  await click('Abrir instrumentos');
-  assert.equal(document.activeElement, screen.getByRole('button', { name: 'Instrumento' }));
+  await click('Ajustar lançador');
+  assert.equal(document.activeElement, screen.getByRole('button', { name: 'Lançador' }));
+  await click('Instrumento');
   await click(/^Equipar Espectrômetro infravermelho/);
   assert.equal(screen.getByRole('button', { name: /^Equipar Radar do gelo/ }).disabled, true);
   assert.ok(screen.getByText(/A carga ocupa 3 espaços/));
@@ -131,7 +135,9 @@ test('Europa purchases replay a lost receipt, reserve both instruments, consume 
   await part('Energia', /Reserva ampliada/);
   await part('Proteção', /Reforçada/);
   await part('Navegação e enlace', /Enlace direcional/);
-  await click('Instrumento'); await click(/^Equipar Radar do gelo/);
+  await click('Abrir instrumentos');
+  assert.equal(document.activeElement, screen.getByRole('button', { name: 'Instrumento' }));
+  await click(/^Equipar Radar do gelo/);
 
   let craft = document.querySelector('[data-bruno-craft]');
   assert.match(craft.dataset.instruments, /europa-mise europa-reason/);

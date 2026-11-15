@@ -46,22 +46,28 @@ function InstrumentPreview({ id }: { id: BrunoInstrumentId }) {
     {available ? <div className="bruno-instrument-stage"><BrunoPreviewBoundary fallback={<p>Prévia 3D indisponível.</p>} onUnavailable={unavailable}>
       <Suspense fallback={<p role="status">Carregando instrumento 3D…</p>}><InstrumentScene id={id} turn={turn} onUnavailable={unavailable} /></Suspense>
     </BrunoPreviewBoundary></div> : null}
-    <figcaption>{available ? 'Instrumento didático, fora de escala.' : 'A ficha abaixo descreve o instrumento. Prévia 3D indisponível.'}</figcaption>
+    <figcaption>{available ? 'Instrumento didático, fora de escala.' : 'Prévia 3D indisponível. A ficha descreve o instrumento.'}</figcaption>
     {available ? <button type="button" className="bruno-action bruno-secondary" onClick={() => setTurn(value => (value + Math.PI / 4) % (2 * Math.PI))}>Girar instrumento <Icon name="route" size={16} /></button> : null}
   </figure>;
 }
 
 export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }: { controller: BrunoInventoryController; onBack: () => void; backLabel: string; missionId?: BrunoMissionId }) {
-  const [selected, setSelected] = useState<BrunoInstrumentId>(() => {
-    const required: readonly BrunoInstrumentId[] = missionId ? BRUNO_MISSIONS[missionId].requiredInstruments : [];
-    return instruments.find(([id]) => required.includes(id))?.[0] ?? instruments[0]![0];
-  });
+  const [chosen, setChosen] = useState<BrunoInstrumentId | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [confirmReset, setConfirmReset] = useState(false);
+  const instrumentTitle = useRef<HTMLHeadingElement>(null);
   const stockTitle = useRef<HTMLHeadingElement>(null);
   const { snapshot, busy, uncertain } = controller;
-  const gear = BRUNO_INSTRUMENTS[selected];
   const state = snapshot?.inventory;
+  const required: readonly BrunoInstrumentId[] = missionId ? BRUNO_MISSIONS[missionId].requiredInstruments : [];
+  const missionInstruments = instruments.filter(([instrumentId]) => required.includes(instrumentId));
+  const missing = state && missionInstruments.find(([instrumentId]) => !state.items.some(unit => {
+    if (unit.instrumentId !== instrumentId || unit.usesRemaining === 0) return false;
+    const reservation = reservedFor(state, unit.id);
+    return !reservation || reservation === missionId;
+  }));
+  const selected = chosen ?? missing?.[0] ?? missionInstruments[0]?.[0] ?? instruments[0]![0];
+  const gear = BRUNO_INSTRUMENTS[selected];
   const active = snapshot?.attempts.filter(attempt => attempt.status === 'launched') ?? [];
   const available = !!state && !busy && !uncertain;
   const maxQuantity = state ? Math.min(MAX_PURCHASE_UNITS, Math.floor(state.balance / gear.priceCredits)) : 0;
@@ -77,20 +83,23 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
     <BrunoInventoryStatus controller={controller} onResolved={response => { if (response.receipt.operation === 'buy') setQuantity(1); }} />
     <div className="bruno-shop-catalogue">
       <section aria-labelledby="bruno-catalogue-title">
-        <h2 id="bruno-catalogue-title">Instrumentos</h2>
+        <div className="bruno-catalogue-heading">
+          <h2 id="bruno-catalogue-title">Instrumentos</h2>
+          <button type="button" className="bruno-action bruno-quiet bruno-shop-jump" aria-controls="bruno-instrument-detail" onClick={() => {
+            instrumentTitle.current?.focus({ preventScroll: true });
+            instrumentTitle.current?.scrollIntoView?.({ block: 'center', behavior: 'instant' });
+          }}>Ir à compra <Icon name="arrow" size={16} /></button>
+        </div>
         <div className="bruno-instrument-picker" role="group" aria-label="Catálogo de instrumentos">
-          {instruments.map(([id, equipment]) => <button key={id} type="button" className="bruno-action bruno-secondary" aria-pressed={id === selected} aria-controls="bruno-instrument-detail" onClick={() => { if (id !== selected) { setSelected(id); setQuantity(1); } }}>
+          {instruments.map(([id, equipment]) => <button key={id} type="button" className="bruno-action bruno-secondary" aria-pressed={id === selected} aria-controls="bruno-instrument-detail" onClick={() => { if (id !== selected) { setChosen(id); setQuantity(1); } }}>
             <strong>{equipment.label}</strong>{' '}<span>{equipment.priceCredits} créditos</span>
           </button>)}
         </div>
       </section>
       <section className="bruno-panel bruno-instrument-detail" id="bruno-instrument-detail" aria-labelledby="bruno-instrument-title">
-        <h2 id="bruno-instrument-title">{gear.label}</h2>
-        <InstrumentPreview id={selected} />
+        <h2 id="bruno-instrument-title" ref={instrumentTitle} tabIndex={-1}>{gear.label}</h2>
         <p>{gear.description}</p>
         <dl className="bruno-instrument-spec"><div><dt>Massa</dt><dd>{gear.massKg} kg</dd></div><div><dt>Encaixes</dt><dd>{gear.slots}</dd></div><div><dt>Ciclos de fábrica</dt><dd>{gear.durability}</dd></div></dl>
-        <p>{gear.missions.includes('bennu') ? 'Referência do acervo Bennu. Use para comparar cargas nas missões de engenharia. A peça não atende às perguntas dessas missões e não altera a investigação histórica de Bennu.' : `Indicado para ${gear.missions.map(id => id === 'bennu' ? 'Bennu' : BRUNO_MISSIONS[id].name).join(', ')}.`}</p>
-        <a href={gear.source.url}>{gear.source.label}</a>
         <div className="bruno-shop-actions">
           <label>Quantidade{' '}
             <select className="bruno-action bruno-secondary" value={orderQuantity} disabled={!canBuy}
@@ -100,12 +109,18 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
             </select>
           </label>
           <button type="button" className="bruno-action bruno-primary" disabled={!canBuy}
-            onClick={() => void controller.execute({ kind: 'buy', instrumentIds: Array.from({ length: orderQuantity }, () => selected) })
-              .then(response => { if (response) setQuantity(1); })}>
+            onClick={() => {
+              setChosen(selected);
+              void controller.execute({ kind: 'buy', instrumentIds: Array.from({ length: orderQuantity }, () => selected) })
+                .then(response => { if (response) setQuantity(1); });
+            }}>
             Comprar {gear.label}{orderQuantity > 1 ? ` (${orderQuantity} unidades)` : ''} · {totalCredits} créditos
           </button>
         </div>
         {state && maxQuantity === 0 ? <p>Créditos insuficientes para este instrumento.</p> : null}
+        <InstrumentPreview id={selected} />
+        <p>{gear.missions.includes('bennu') ? 'Referência do acervo Bennu. Use para comparar cargas nas missões de engenharia. A peça não atende às perguntas dessas missões e não altera a investigação histórica de Bennu.' : `Indicado para ${gear.missions.map(id => id === 'bennu' ? 'Bennu' : BRUNO_MISSIONS[id].name).join(', ')}.`}</p>
+        <a href={gear.source.url}>{gear.source.label}</a>
       </section>
     </div>
     <section className="bruno-panel bruno-owned-stock" aria-labelledby="bruno-stock-title">

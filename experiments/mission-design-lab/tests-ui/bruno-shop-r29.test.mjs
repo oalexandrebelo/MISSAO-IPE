@@ -31,6 +31,9 @@ test('a loja confirma várias unidades em um pedido e recupera o mesmo recibo se
   const chooseGear = name => act(async () => fireEvent.click(within(catalog).getByRole('button', { name })));
   const buy = () => screen.getByRole('button', { name: /^Comprar Monitor de compostos voláteis/ });
   await waitFor(() => assert.equal(document.querySelector('.bruno-wallet dd').textContent, '25'));
+  await click('Ir à compra');
+  assert.ok(document.activeElement === screen.getByRole('heading', { name: 'Monitor de compostos voláteis' }));
+  assert.ok(buy().compareDocumentPosition(document.querySelector('[data-instrument]')) & Node.DOCUMENT_POSITION_FOLLOWING);
   assert.deepEqual([...select().options].map(option => option.value), ['1', '2', '3', '4', '5']);
 
   await selectCount('3');
@@ -58,4 +61,37 @@ test('a loja confirma várias unidades em um pedido e recupera o mesmo recibo se
   assert.deepEqual([...select().options].map(option => option.value), ['1', '2']);
   assert.equal(select().value, '1');
   assert.match(buy().textContent, /5 créditos/);
+});
+
+test('a loja mantém o pedido sem confirmação ao remontar e recupera o mesmo recibo uma vez', async t => {
+  t.after(async () => {
+    await act(async () => cleanup());
+    window.sessionStorage.clear();
+  });
+  const api = await installInventoryApi();
+  const mount = () => act(async () => render(React.createElement(Shop)));
+  const click = name => act(async () => fireEvent.click(screen.getByRole('button', { name })));
+  const purchaseCalls = () => api.calls.filter(call => call?.command?.kind === 'buy');
+  await mount();
+  await waitFor(() => assert.equal(document.querySelector('.bruno-wallet dd').textContent, '25'));
+  api.loseNextAcknowledgement('buy');
+  await click(/^Comprar Monitor de compostos voláteis/);
+  const [purchase] = purchaseCalls();
+  assert.ok(screen.getByRole('button', { name: 'Confirmar operação anterior' }));
+
+  await act(async () => cleanup());
+  await mount();
+  assert.equal(purchaseCalls().length, 1);
+  assert.equal(screen.getByRole('button', { name: /^Comprar Monitor de compostos voláteis/ }).disabled, true);
+  await click('Confirmar operação anterior');
+  assert.deepEqual(purchaseCalls(), [purchase, purchase]);
+  const first = await api.snapshot();
+  assert.equal(first.inventory.balance, 20);
+  assert.equal(first.inventory.items.length, 1);
+
+  await act(async () => cleanup());
+  await mount();
+  await waitFor(() => assert.equal(document.querySelector('.bruno-wallet dd').textContent, '20'));
+  assert.equal(screen.queryByRole('button', { name: 'Confirmar operação anterior' }), null);
+  assert.deepEqual(await api.snapshot(), first);
 });

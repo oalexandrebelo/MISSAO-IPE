@@ -5,5 +5,5 @@ const MiniLab = dynamic(() => import('./MiniLab'), { loading: () => <div classNa
 export function LabLoader() {
   const ref = useRef<HTMLDivElement>(null); const [ready, setReady] = useState(false);
   useEffect(() => { const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setReady(true); observer.disconnect(); } }, { rootMargin: '400px' }); if (ref.current) observer.observe(ref.current); return () => observer.disconnect(); }, []);
-  return <div ref={ref} className="lab-loader">{ready ? <MiniLab /> : <div className="lab-placeholder"><span className="eyebrow">UMA ESCOLHA MUDA A MISSÃO</span><p>Um experimento de engenharia, no seu navegador.</p><button type="button" className="text-link" onClick={() => setReady(true)}>Abrir laboratório →</button><noscript>Ative o JavaScript para experimentar. O jogo completo está disponível pelo link acima.</noscript></div>}</div>;
+  return <div ref={ref} className="lab-loader">{ready ? <MiniLab /> : <div className="lab-placeholder"><p>Teste quanto da coleta do Cerrado chega à Terra com uma janela de comunicação mais curta.</p><button type="button" className="text-link" onClick={() => setReady(true)}>Iniciar o ensaio do Cerrado →</button><noscript>Ative o JavaScript para experimentar. Use Jogar agora para explorar as sete missões.</noscript></div>}</div>;
 }

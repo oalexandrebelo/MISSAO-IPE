@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T20:44:43.604Z",
-  "finishedAt": "2026-11-15T20:44:47.462Z",
+  "startedAt": "2026-11-15T21:29:52.815Z",
+  "finishedAt": "2026-11-15T21:29:56.525Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -9,8 +9,8 @@
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 51255,
-    "sha256": "24920a499f4526c40cb88ec9d33d3554084c1db258ccb13b030ef7eb9e1fe37b"
+    "bytes": 53792,
+    "sha256": "497656bb88b69cd60499899c9b81b79d56d1fb09cc3bddba957b17928cf56c11"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,18 +24,18 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "a6ab8958a9f2005605986862c03de7162ba8b83fc3c14be16cb17749cc2df543"
+        "sha256": "d52006a61da7d5f527009636906f624a4e99cafdf9d782c719c95d6a184f8d02"
       },
       "vercelConfig": {
         "path": "vercel.json",
-        "sha256": "6944680abc8b235d83c6734a2ba9b3f6ac783b481e84c465ff41fd208467148c"
+        "sha256": "b9751d6e0dfafe0e3c72d1d6be0b7f72aca2fc981436378347048cb23646f8e5"
       }
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 486,
-      "manifestedFiles": 485,
-      "bytes": 82588388,
+      "fileCount": 550,
+      "manifestedFiles": 549,
+      "bytes": 85381347,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -56,7 +56,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 424,
+      "inspectedFiles": 480,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -101,12 +101,855 @@
     "portal": {
       "language": "pt-BR",
       "beta": true,
-      "forms": 0
+      "forms": 0,
+      "landing": "/",
+      "documentaryHub": "/documentacao",
+      "localLandingChunks": 8
     },
     "localReferences": {
-      "count": 3466,
-      "uniqueTargets": 346,
+      "count": 3745,
+      "uniqueTargets": 372,
       "entries": [
+        {
+          "source": "404.html",
+          "target": "404.html",
+          "requestPath": "/404.html",
+          "kind": "navigation",
+          "fragment": "conteudo"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "404.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "404.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "requestPath": "/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/342-019291b0f9618eab.js",
+          "requestPath": "/_next/static/chunks/342-019291b0f9618eab.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/main-app-ad65c149d539868c.js",
+          "requestPath": "/_next/static/chunks/main-app-ad65c149d539868c.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/271-f968bf12d74198b2.js",
+          "requestPath": "/_next/static/chunks/271-f968bf12d74198b2.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/app/page-771159789dace341.js",
+          "requestPath": "/_next/static/chunks/app/page-771159789dace341.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "requestPath": "/_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "requestPath": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "404.html",
+          "target": "assets/earth.webp",
+          "requestPath": "/assets/earth.webp",
+          "kind": "img"
+        },
+        {
+          "source": "404.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "requestPath": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "requestPath": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/css/4ebcf2432b2e840d.css",
+          "requestPath": "/_next/static/css/4ebcf2432b2e840d.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/css/42db836d9e64e415.css",
+          "requestPath": "/_next/static/css/42db836d9e64e415.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "404.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404.html",
+          "target": "assets/earth-mobile.webp",
+          "requestPath": "/assets/earth-mobile.webp",
+          "kind": "srcset"
+        },
+        {
+          "source": "404/index.html",
+          "target": "404/index.html",
+          "requestPath": "/404/index.html",
+          "kind": "navigation",
+          "fragment": "conteudo"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "404/index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "404/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "requestPath": "/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/342-019291b0f9618eab.js",
+          "requestPath": "/_next/static/chunks/342-019291b0f9618eab.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/main-app-ad65c149d539868c.js",
+          "requestPath": "/_next/static/chunks/main-app-ad65c149d539868c.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/271-f968bf12d74198b2.js",
+          "requestPath": "/_next/static/chunks/271-f968bf12d74198b2.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/app/page-771159789dace341.js",
+          "requestPath": "/_next/static/chunks/app/page-771159789dace341.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "requestPath": "/_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "requestPath": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "404/index.html",
+          "target": "assets/earth.webp",
+          "requestPath": "/assets/earth.webp",
+          "kind": "img"
+        },
+        {
+          "source": "404/index.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "requestPath": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "requestPath": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404/index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/css/4ebcf2432b2e840d.css",
+          "requestPath": "/_next/static/css/4ebcf2432b2e840d.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/css/42db836d9e64e415.css",
+          "requestPath": "/_next/static/css/42db836d9e64e415.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404/index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404/index.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "404/index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "404/index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404/index.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "404/index.html",
+          "target": "assets/earth-mobile.webp",
+          "requestPath": "/assets/earth-mobile.webp",
+          "kind": "srcset"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_not-found/index.html",
+          "requestPath": "/_not-found/index.html",
+          "kind": "navigation",
+          "fragment": "conteudo"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "requestPath": "/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/342-019291b0f9618eab.js",
+          "requestPath": "/_next/static/chunks/342-019291b0f9618eab.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/main-app-ad65c149d539868c.js",
+          "requestPath": "/_next/static/chunks/main-app-ad65c149d539868c.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/271-f968bf12d74198b2.js",
+          "requestPath": "/_next/static/chunks/271-f968bf12d74198b2.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/app/page-771159789dace341.js",
+          "requestPath": "/_next/static/chunks/app/page-771159789dace341.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "requestPath": "/_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "requestPath": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "assets/earth.webp",
+          "requestPath": "/assets/earth.webp",
+          "kind": "img"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "requestPath": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "requestPath": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/css/4ebcf2432b2e840d.css",
+          "requestPath": "/_next/static/css/4ebcf2432b2e840d.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/css/42db836d9e64e415.css",
+          "requestPath": "/_next/static/css/42db836d9e64e415.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "link-preload"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "assets/earth-mobile.webp",
+          "requestPath": "/assets/earth-mobile.webp",
+          "kind": "srcset"
+        },
         {
           "source": "acessibilidade/guia.html",
           "target": "acessibilidade/guia.js",
@@ -4509,6 +5352,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-82-fluxo-movel-persistencia-e-handoff-r33-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -4902,6 +5752,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-web-public-docs-origem-dos-dados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-81-design-do-jogo-e-handoff-r32-md"
         },
         {
           "source": "context/research-library.html",
@@ -6849,6 +7706,292 @@
         },
         {
           "source": "context/research-library.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/index.html",
+          "kind": "navigation",
+          "fragment": "conteudo"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "fonts/BricolageGrotesque-OFL.txt",
+          "requestPath": "/fonts/BricolageGrotesque-OFL.txt",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "fonts/PlusJakartaSans-OFL.txt",
+          "requestPath": "/fonts/PlusJakartaSans-OFL.txt",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "fonts/ebgaramond-OFL.txt",
+          "requestPath": "/fonts/ebgaramond-OFL.txt",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "fonts/figtree-OFL.txt",
+          "requestPath": "/fonts/figtree-OFL.txt",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "requestPath": "/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/342-019291b0f9618eab.js",
+          "requestPath": "/_next/static/chunks/342-019291b0f9618eab.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/main-app-ad65c149d539868c.js",
+          "requestPath": "/_next/static/chunks/main-app-ad65c149d539868c.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/271-f968bf12d74198b2.js",
+          "requestPath": "/_next/static/chunks/271-f968bf12d74198b2.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+          "requestPath": "/_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "requestPath": "/_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "requestPath": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "requestPath": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "requestPath": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/css/4ebcf2432b2e840d.css",
+          "requestPath": "/_next/static/css/4ebcf2432b2e840d.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/static/css/42db836d9e64e415.css",
+          "requestPath": "/_next/static/css/42db836d9e64e415.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "creditos/index.html",
           "target": "acessibilidade/libras.css",
           "requestPath": "/acessibilidade/libras.css",
           "kind": "link-stylesheet"
@@ -16538,6 +17681,115 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "equipe/index.html",
+          "requestPath": "/equipe/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/AUTORIA-E-IA.html",
           "target": "docs/AUTORIA-E-IA.html",
           "requestPath": "/docs/AUTORIA-E-IA.html",
@@ -17303,6 +18555,18 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
           "kind": "navigation"
         },
         {
@@ -18332,6 +19596,298 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "documentation.html",
+          "target": "documentation.html",
+          "requestPath": "/documentation.html",
+          "kind": "navigation",
+          "fragment": "main"
+        },
+        {
+          "source": "documentation.html",
+          "target": "documentation.html",
+          "requestPath": "/documentation.html",
+          "kind": "navigation",
+          "fragment": "contexto"
+        },
+        {
+          "source": "documentation.html",
+          "target": "documentation.html",
+          "requestPath": "/documentation.html",
+          "kind": "navigation",
+          "fragment": "plano"
+        },
+        {
+          "source": "documentation.html",
+          "target": "documentation.html",
+          "requestPath": "/documentation.html",
+          "kind": "navigation",
+          "fragment": "fontes"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "context/index.html",
+          "requestPath": "/context/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/22-PLANO-CONTINUIDADE.html",
+          "requestPath": "/docs/22-PLANO-CONTINUIDADE.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/22-PLANO-CONTINUIDADE.html",
+          "requestPath": "/docs/22-PLANO-CONTINUIDADE.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "campanha/index.html",
+          "requestPath": "/campanha/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/21-OPORTUNIDADES-NASA.html",
+          "requestPath": "/docs/21-OPORTUNIDADES-NASA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "presentation/pitch/index.html",
+          "requestPath": "/presentation/pitch/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "context/index.html",
+          "requestPath": "/context/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "architecture/index.html",
+          "requestPath": "/architecture/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "game/index.html",
+          "requestPath": "/game/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "portable/Missao_Ipe_Local.html",
+          "requestPath": "/portable/Missao_Ipe_Local.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html",
+          "requestPath": "/docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html",
+          "requestPath": "/docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "game-design.html",
+          "requestPath": "/game-design.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "requestPath": "/docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "LICENSE",
+          "requestPath": "/LICENSE",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "documentation.html",
+          "target": "mission-visuals.js",
+          "requestPath": "/mission-visuals.js",
+          "kind": "script"
+        },
+        {
+          "source": "documentation.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "documentation.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "documentation.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "documentation.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "documentation.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "documentation.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "documentation.html",
+          "target": "mission-visuals.css",
+          "requestPath": "/mission-visuals.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "documentation.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "equipe/index.html",
           "target": "equipe/index.html",
           "requestPath": "/equipe/index.html",
@@ -18629,33 +20185,46 @@
           "target": "index.html",
           "requestPath": "/index.html",
           "kind": "navigation",
-          "fragment": "main"
+          "fragment": "conteudo"
         },
         {
           "source": "index.html",
           "target": "index.html",
           "requestPath": "/index.html",
           "kind": "navigation",
-          "fragment": "contexto"
+          "fragment": "inicio"
         },
         {
           "source": "index.html",
           "target": "index.html",
           "requestPath": "/index.html",
           "kind": "navigation",
-          "fragment": "plano"
+          "fragment": "missao"
         },
         {
           "source": "index.html",
           "target": "index.html",
           "requestPath": "/index.html",
           "kind": "navigation",
-          "fragment": "fontes"
+          "fragment": "laboratorio"
         },
         {
           "source": "index.html",
-          "target": "docs/index.html",
-          "requestPath": "/docs/index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
           "kind": "navigation"
         },
         {
@@ -18672,8 +20241,146 @@
         },
         {
           "source": "index.html",
-          "target": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
-          "requestPath": "/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "index.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "jornada"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "segmentos"
+        },
+        {
+          "source": "index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "missao"
+        },
+        {
+          "source": "index.html",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "laboratorio"
+        },
+        {
+          "source": "index.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "requestPath": "/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
           "kind": "navigation"
         },
         {
@@ -18684,146 +20391,32 @@
         },
         {
           "source": "index.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "docs/22-PLANO-CONTINUIDADE.html",
-          "requestPath": "/docs/22-PLANO-CONTINUIDADE.html",
+          "target": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "requestPath": "/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "docs/22-PLANO-CONTINUIDADE.html",
-          "requestPath": "/docs/22-PLANO-CONTINUIDADE.html",
+          "target": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "requestPath": "/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "campanha/index.html",
-          "requestPath": "/campanha/index.html",
+          "target": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "requestPath": "/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "docs/21-OPORTUNIDADES-NASA.html",
-          "requestPath": "/docs/21-OPORTUNIDADES-NASA.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "presentation/pitch/index.html",
-          "requestPath": "/presentation/pitch/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "context/index.html",
-          "requestPath": "/context/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/index.html",
-          "requestPath": "/docs/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "architecture/index.html",
-          "requestPath": "/architecture/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "context/research-library.html",
-          "requestPath": "/context/research-library.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "game/index.html",
-          "requestPath": "/game/index.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "portable/Missao_Ipe_Local.html",
-          "requestPath": "/portable/Missao_Ipe_Local.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html",
-          "requestPath": "/docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html",
-          "requestPath": "/docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
-          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
-          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "planet-jumping.html",
-          "requestPath": "/planet-jumping.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
-          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
-          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "game-design.html",
-          "requestPath": "/game-design.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
-          "requestPath": "/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
-          "requestPath": "/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "docs/24-OPORTUNIDADES-ESTUDOS.html",
-          "requestPath": "/docs/24-OPORTUNIDADES-ESTUDOS.html",
+          "target": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+          "requestPath": "/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
           "kind": "navigation"
         },
         {
@@ -18840,21 +20433,29 @@
         },
         {
           "source": "index.html",
-          "target": "publication-manifest.json",
-          "requestPath": "/publication-manifest.json",
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "inicio"
+        },
+        {
+          "source": "index.html",
+          "target": "documentation.html",
+          "requestPath": "/documentacao",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "docs/AUTORIA-E-IA.html",
-          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "target": "creditos/index.html",
+          "requestPath": "/creditos/",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "LICENSE",
-          "requestPath": "/LICENSE",
-          "kind": "navigation"
+          "target": "index.html",
+          "requestPath": "/index.html",
+          "kind": "navigation",
+          "fragment": "inicio"
         },
         {
           "source": "index.html",
@@ -18864,9 +20465,75 @@
         },
         {
           "source": "index.html",
-          "target": "mission-visuals.js",
-          "requestPath": "/mission-visuals.js",
+          "target": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+          "requestPath": "/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
           "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/342-019291b0f9618eab.js",
+          "requestPath": "/_next/static/chunks/342-019291b0f9618eab.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/main-app-ad65c149d539868c.js",
+          "requestPath": "/_next/static/chunks/main-app-ad65c149d539868c.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/271-f968bf12d74198b2.js",
+          "requestPath": "/_next/static/chunks/271-f968bf12d74198b2.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/app/page-771159789dace341.js",
+          "requestPath": "/_next/static/chunks/app/page-771159789dace341.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "requestPath": "/_next/static/chunks/app/not-found-b1edda7131376300.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "requestPath": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "index.html",
+          "target": "assets/earth.webp",
+          "requestPath": "/assets/earth.webp",
+          "kind": "img"
+        },
+        {
+          "source": "index.html",
+          "target": "assets/earth.webp",
+          "requestPath": "/assets/earth.webp",
+          "kind": "img"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/brand/missao-ipe-logo-stacked.svg",
+          "kind": "img"
         },
         {
           "source": "index.html",
@@ -18876,9 +20543,9 @@
         },
         {
           "source": "index.html",
-          "target": "brand/missao-ipe-logo-on-light.svg",
-          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
-          "kind": "img"
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
         },
         {
           "source": "index.html",
@@ -18888,15 +20555,69 @@
         },
         {
           "source": "index.html",
-          "target": "brand/missao-ipe-symbol.svg",
-          "requestPath": "/brand/missao-ipe-symbol.svg",
-          "kind": "link-icon"
+          "target": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "requestPath": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "kind": "link-preload"
         },
         {
           "source": "index.html",
-          "target": "fonts/fonts.css",
-          "requestPath": "/fonts/fonts.css",
+          "target": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "requestPath": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/brand/missao-ipe-logo-stacked.svg",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/css/4ebcf2432b2e840d.css",
+          "requestPath": "/_next/static/css/4ebcf2432b2e840d.css",
           "kind": "link-stylesheet"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/static/css/42db836d9e64e415.css",
+          "requestPath": "/_next/static/css/42db836d9e64e415.css",
+          "kind": "link-preload"
+        },
+        {
+          "source": "index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
         },
         {
           "source": "index.html",
@@ -18906,15 +20627,21 @@
         },
         {
           "source": "index.html",
-          "target": "mission-visuals.css",
-          "requestPath": "/mission-visuals.css",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
           "kind": "link-stylesheet"
         },
         {
           "source": "index.html",
-          "target": "acessibilidade/libras.css",
-          "requestPath": "/acessibilidade/libras.css",
-          "kind": "link-stylesheet"
+          "target": "assets/earth-mobile.webp",
+          "requestPath": "/assets/earth-mobile.webp",
+          "kind": "srcset"
+        },
+        {
+          "source": "index.html",
+          "target": "assets/earth-mobile.webp",
+          "requestPath": "/assets/earth-mobile.webp",
+          "kind": "srcset"
         },
         {
           "source": "lab/brand/preview-r14.html",
@@ -19272,8 +20999,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "script"
         },
         {
@@ -19314,8 +21041,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-7CMtLNql.css",
-          "requestPath": "/lab/assets/index-7CMtLNql.css",
+          "target": "lab/assets/index-Cfy7O6Fx.css",
+          "requestPath": "/lab/assets/index-Cfy7O6Fx.css",
           "kind": "link-stylesheet"
         },
         {
@@ -21972,6 +23699,18 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "_next/static/css/4ebcf2432b2e840d.css",
+          "target": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "requestPath": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+          "kind": "css-resource"
+        },
+        {
+          "source": "_next/static/css/4ebcf2432b2e840d.css",
+          "target": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "requestPath": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+          "kind": "css-resource"
+        },
+        {
           "source": "fonts/fonts.css",
           "target": "fonts/BricolageGrotesque-latin-variable.woff2",
           "requestPath": "/fonts/BricolageGrotesque-latin-variable.woff2",
@@ -22056,27 +23795,27 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "requestPath": "/lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "requestPath": "/lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "requestPath": "/lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
@@ -22140,207 +23879,207 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-q8FbWaEJ.js",
+          "source": "lab/assets/LobbyScene-C17CUeE_.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-q8FbWaEJ.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/LobbyScene-C17CUeE_.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-q8FbWaEJ.js",
-          "target": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-          "requestPath": "/lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbyScene-C17CUeE_.js",
+          "target": "lab/assets/LobbySceneRenderer-D6freGnk.js",
+          "requestPath": "/lab/assets/LobbySceneRenderer-D6freGnk.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "requestPath": "/lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "requestPath": "/lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "requestPath": "/lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "requestPath": "/lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "requestPath": "/lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
+          "source": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "requestPath": "/lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "requestPath": "/lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "requestPath": "/lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "requestPath": "/lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "requestPath": "/lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "requestPath": "/lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "target": "lab/assets/HDRLoader-CzOMh6Id.js",
           "requestPath": "/lab/assets/HDRLoader-CzOMh6Id.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "requestPath": "/lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/search-CcYThNlJ.js",
-          "requestPath": "/lab/assets/search-CcYThNlJ.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/search-DDCq2ywb.js",
+          "requestPath": "/lab/assets/search-DDCq2ywb.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "requestPath": "/lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "requestPath": "/lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "requestPath": "/lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "requestPath": "/lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "requestPath": "/lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/LobbyScene-q8FbWaEJ.js",
-          "requestPath": "/lab/assets/LobbyScene-q8FbWaEJ.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/LobbyScene-C17CUeE_.js",
+          "requestPath": "/lab/assets/LobbyScene-C17CUeE_.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "requestPath": "/lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "requestPath": "/lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "requestPath": "/lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-          "requestPath": "/lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+          "requestPath": "/lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-          "requestPath": "/lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+          "requestPath": "/lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "requestPath": "/lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "requestPath": "/lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "target": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-Du2jNw9H.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "target": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-Bz_OxVu3.js",
           "kind": "dynamic-import"
         },
         {
@@ -22362,15 +24101,15 @@
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/search-CcYThNlJ.js",
+          "source": "lab/assets/search-DDCq2ywb.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "requestPath": "/lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/search-CcYThNlJ.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
-          "requestPath": "/lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/search-DDCq2ywb.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
+          "requestPath": "/lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
@@ -22481,27 +24220,27 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-          "specifier": "./OrbitalScene-DLhsqcJS.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+          "specifier": "./OrbitalScene-CxONEVlJ.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "specifier": "./three.module-Ctsc3Dhe.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-          "specifier": "./index-SFxDCbbV.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+          "specifier": "./index-CZybv0Ge.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
@@ -22565,207 +24304,207 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-q8FbWaEJ.js",
+          "source": "lab/assets/LobbyScene-C17CUeE_.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-q8FbWaEJ.js",
-          "specifier": "./index-SFxDCbbV.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/LobbyScene-C17CUeE_.js",
+          "specifier": "./index-CZybv0Ge.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-q8FbWaEJ.js",
-          "specifier": "./LobbySceneRenderer-DEHn3g7X.js",
-          "target": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbyScene-C17CUeE_.js",
+          "specifier": "./LobbySceneRenderer-D6freGnk.js",
+          "target": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "specifier": "./three.module-Ctsc3Dhe.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-          "specifier": "./index-SFxDCbbV.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
+          "specifier": "./index-CZybv0Ge.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "specifier": "./GLTFLoader-DZrvgIDN.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
           "specifier": "./DRACOLoader-BmJkKnDo.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-          "specifier": "./OrbitalScene-DLhsqcJS.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/LobbySceneRenderer-D6freGnk.js",
+          "specifier": "./OrbitalScene-CxONEVlJ.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
+          "source": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
-          "specifier": "./index-SFxDCbbV.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+          "specifier": "./index-CZybv0Ge.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
-          "specifier": "./OrbitalScene-DLhsqcJS.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+          "specifier": "./OrbitalScene-CxONEVlJ.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
-          "specifier": "./index-SFxDCbbV.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
+          "specifier": "./index-CZybv0Ge.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "specifier": "./three.module-Ctsc3Dhe.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "specifier": "./GLTFLoader-DZrvgIDN.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "specifier": "./DRACOLoader-BmJkKnDo.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "specifier": "./exact-BFEcRz5A.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "specifier": "./HDRLoader-CzOMh6Id.js",
           "target": "lab/assets/HDRLoader-CzOMh6Id.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./exact-BFEcRz5A.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./search-CcYThNlJ.js",
-          "target": "lab/assets/search-CcYThNlJ.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./search-DDCq2ywb.js",
+          "target": "lab/assets/search-DDCq2ywb.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rive-BApFqc81.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rive-C6TFBdW0.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rive_fallback-CbNVjUCh.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./OrbitalScene-DLhsqcJS.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./OrbitalScene-CxONEVlJ.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./LobbyScene-q8FbWaEJ.js",
-          "target": "lab/assets/LobbyScene-q8FbWaEJ.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./LobbyScene-C17CUeE_.js",
+          "target": "lab/assets/LobbyScene-C17CUeE_.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rive-BApFqc81.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rive-C6TFBdW0.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
           "specifier": "./rive_fallback-CbNVjUCh.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./BrunoHangarScene-DQJ3x109.js",
-          "target": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./BrunoHangarScene-BuxvF7Tb.js",
+          "target": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./BrunoHangarScene-DQJ3x109.js",
-          "target": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./BrunoHangarScene-BuxvF7Tb.js",
+          "target": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./OrbitalScene-DLhsqcJS.js",
-          "target": "lab/assets/OrbitalScene-DLhsqcJS.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./OrbitalScene-CxONEVlJ.js",
+          "target": "lab/assets/OrbitalScene-CxONEVlJ.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-SFxDCbbV.js",
-          "specifier": "./NASAReferenceScene-Du2jNw9H.js",
-          "target": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
+          "source": "lab/assets/index-CZybv0Ge.js",
+          "specifier": "./NASAReferenceScene-Bz_OxVu3.js",
+          "target": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
           "kind": "dynamic-import"
         },
         {
@@ -22787,15 +24526,15 @@
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/search-CcYThNlJ.js",
+          "source": "lab/assets/search-DDCq2ywb.js",
           "specifier": "./exact-BFEcRz5A.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/search-CcYThNlJ.js",
-          "specifier": "./index-SFxDCbbV.js",
-          "target": "lab/assets/index-SFxDCbbV.js",
+          "source": "lab/assets/search-DDCq2ywb.js",
+          "specifier": "./index-CZybv0Ge.js",
+          "target": "lab/assets/index-CZybv0Ge.js",
           "kind": "module-import"
         },
         {
@@ -22807,6 +24546,259 @@
       ]
     },
     "preservedArtifacts": [
+      {
+        "path": "__next.__PAGE__.txt",
+        "source": "apps/immersive-lp/out/__next.__PAGE__.txt",
+        "sha256": "9fe6500082cd355e1255a26432ad4d8508757e3f1ab50b87ba70577143f7b5d4"
+      },
+      {
+        "path": "__next._full.txt",
+        "source": "apps/immersive-lp/out/__next._full.txt",
+        "sha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f"
+      },
+      {
+        "path": "__next._tree.txt",
+        "source": "apps/immersive-lp/out/__next._tree.txt",
+        "sha256": "5016aa1a252fa5de9b50434e5ad5fddd87e3f590173b0cf4008a14acecaba7cb"
+      },
+      {
+        "path": "_next/static/chunks/103.94a309edc76848ed.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/103.94a309edc76848ed.js",
+        "sha256": "c93bdc25184527438170e165f6c4974c6b9a6b7ba1cf82389cfe08ead31f1bbd"
+      },
+      {
+        "path": "_next/static/chunks/156.10c9103ccace51f8.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/156.10c9103ccace51f8.js",
+        "sha256": "9f7a1af294896337794d212e91c7b4b23f291ab640f2712f6dba96beb587c05e"
+      },
+      {
+        "path": "_next/static/chunks/175.411f7cfbdb25125a.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/175.411f7cfbdb25125a.js",
+        "sha256": "78b7e964b64253e71e1d6ffe8c8b51242ea756bb7caec3812e8c841eb2fa4485"
+      },
+      {
+        "path": "_next/static/chunks/201.ae26e8aa8066c60a.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/201.ae26e8aa8066c60a.js",
+        "sha256": "2fc7d8a35aeaee2a7c5cb3bc506d3ead190b22fd751fde8060b7a6f490f5eec7"
+      },
+      {
+        "path": "_next/static/chunks/215.08866beccaac9931.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/215.08866beccaac9931.js",
+        "sha256": "f29de5c7fd5fbb2dfc71ebfa41a362662f081310ac6564267ef857715f582e7a"
+      },
+      {
+        "path": "_next/static/chunks/271-f968bf12d74198b2.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/271-f968bf12d74198b2.js",
+        "sha256": "79bbeb2d0cbcb7472457db005230c13dec20935aa81e13e2fd7daa188ad289ca"
+      },
+      {
+        "path": "_next/static/chunks/342-019291b0f9618eab.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/342-019291b0f9618eab.js",
+        "sha256": "afe026846e0bc289379672ac35d80ecea4f378f05f2761f255f2cbaafe6d76f2"
+      },
+      {
+        "path": "_next/static/chunks/3c94d2aa.87e84013b0a99ee7.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/3c94d2aa.87e84013b0a99ee7.js",
+        "sha256": "25a5f4d8b4be306b21eaca7ea41d3ca5bb64fd282d99ec3a5b28ba051d3984bb"
+      },
+      {
+        "path": "_next/static/chunks/649.f25ca1961cc576d0.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/649.f25ca1961cc576d0.js",
+        "sha256": "f20c71a5c0c594ce5ef7b7d1e43365c8676fe3008d77e3a7c859852e442c43d8"
+      },
+      {
+        "path": "_next/static/chunks/687.d348d9873d9776dc.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/687.d348d9873d9776dc.js",
+        "sha256": "ed2e107f24dd891c7b5efafc257538d0db8746c0c07cf5ec5a66fecf70521baf"
+      },
+      {
+        "path": "_next/static/chunks/99.3ba811e1dbd0c5c8.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/99.3ba811e1dbd0c5c8.js",
+        "sha256": "3957de16afa04e13f0065c316389f05fbaa03eede916ebda951e282df9301b07"
+      },
+      {
+        "path": "_next/static/chunks/app/_global-error/page-9a8545b8184e4b2c.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/app/_global-error/page-9a8545b8184e4b2c.js",
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c"
+      },
+      {
+        "path": "_next/static/chunks/app/_not-found/page-2f0144ff161ed937.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/app/_not-found/page-2f0144ff161ed937.js",
+        "sha256": "319898e299e48d35d7a4c0d78f3d4fc33b7adc54dbe090cdd0fd1e2b62f4fc66"
+      },
+      {
+        "path": "_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+        "sha256": "b0ad4791c0ddc228a0b2550478c9cadee6db1a073a911bd1ca2392c0006adde3"
+      },
+      {
+        "path": "_next/static/chunks/app/layout-13269ce456e7179b.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/app/layout-13269ce456e7179b.js",
+        "sha256": "403b0503db3c0d327a0490942388ef22352d27a7159699954182226f10e106a3"
+      },
+      {
+        "path": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/app/not-found-b1edda7131376300.js",
+        "sha256": "5d3414b177dd771375dc6e44e3b702d332307ccb7a7acea66beacc8e6fdb915b"
+      },
+      {
+        "path": "_next/static/chunks/app/page-771159789dace341.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/app/page-771159789dace341.js",
+        "sha256": "69b8ff47aa186d1bfc503b6c42aa1a1ca2500676c13150780b26222839ae1cf6"
+      },
+      {
+        "path": "_next/static/chunks/d5df7396.f88ae6e60ae6743b.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/d5df7396.f88ae6e60ae6743b.js",
+        "sha256": "f405710af4dc95c13da61a0f71eea690f42d08c060c7b3e55d9c2dc673d8a190"
+      },
+      {
+        "path": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+        "sha256": "c839384b1b1677deec31464ac433c06e28685264af02b91146c58a489ef7cf7a"
+      },
+      {
+        "path": "_next/static/chunks/framework-cad7b4fb3c2d55a4.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/framework-cad7b4fb3c2d55a4.js",
+        "sha256": "dc1a72b72ff5a8a786ebfda1d805f6694f6694e94e6bc886d3bc63b7c32e8251"
+      },
+      {
+        "path": "_next/static/chunks/main-app-ad65c149d539868c.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/main-app-ad65c149d539868c.js",
+        "sha256": "3543a56753dc77277b9799af65cf27b2da8d9730670fa4f9d6c486c92d7ca048"
+      },
+      {
+        "path": "_next/static/chunks/main-c2e6c90cafe2f5ea.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/main-c2e6c90cafe2f5ea.js",
+        "sha256": "fc21f4b7332a53503d1cbec965c5508dc6046f9813ed062ea723ea948c31e6e6"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/app-error-9a8545b8184e4b2c.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/app-error-9a8545b8184e4b2c.js",
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/forbidden-9a8545b8184e4b2c.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/forbidden-9a8545b8184e4b2c.js",
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-b5b1e37774f52387.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/global-error-b5b1e37774f52387.js",
+        "sha256": "89ac4ce96c59be73f4ae477ba7e756fe315039eba151b86b5df8b30eed4d3dd3"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/unauthorized-9a8545b8184e4b2c.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/unauthorized-9a8545b8184e4b2c.js",
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c"
+      },
+      {
+        "path": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+      },
+      {
+        "path": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+        "source": "apps/immersive-lp/out/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+        "sha256": "f510ef20971f3efabe4219cdb752727bf3a4c942c272e9a042498454c87bc68a"
+      },
+      {
+        "path": "_next/static/css/42db836d9e64e415.css",
+        "source": "apps/immersive-lp/out/_next/static/css/42db836d9e64e415.css",
+        "sha256": "8f374746872af23f82ae365b26c83e44a71dabdb3fa76625963c203a59e4b666"
+      },
+      {
+        "path": "_next/static/css/4ebcf2432b2e840d.css",
+        "source": "apps/immersive-lp/out/_next/static/css/4ebcf2432b2e840d.css",
+        "sha256": "2c41d3d5212d7fb681f78fffc7a3853d8f94b0f2686da2f032a4cdbe86428175"
+      },
+      {
+        "path": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+        "source": "apps/immersive-lp/out/_next/static/media/33553e7595b74ccf-s.p.woff2",
+        "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447"
+      },
+      {
+        "path": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+        "source": "apps/immersive-lp/out/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+        "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215"
+      },
+      {
+        "path": "_next/static/NK6AByopCtH7a8RHHGC37/_buildManifest.js",
+        "source": "apps/immersive-lp/out/_next/static/NK6AByopCtH7a8RHHGC37/_buildManifest.js",
+        "sha256": "5fba4bbb35e626dcd502bbc86831accc5cb7b50ae26d13fc4fa16426423d803c"
+      },
+      {
+        "path": "_next/static/NK6AByopCtH7a8RHHGC37/_ssgManifest.js",
+        "source": "apps/immersive-lp/out/_next/static/NK6AByopCtH7a8RHHGC37/_ssgManifest.js",
+        "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+      },
+      {
+        "path": "_not-found/__next._full.txt",
+        "source": "apps/immersive-lp/out/_not-found/__next._full.txt",
+        "sha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b"
+      },
+      {
+        "path": "_not-found/__next._not-found.__PAGE__.txt",
+        "source": "apps/immersive-lp/out/_not-found/__next._not-found.__PAGE__.txt",
+        "sha256": "8515c0674122b75509598a419268becf3ed1935c1bee92b3d6224ea866065ba6"
+      },
+      {
+        "path": "_not-found/__next._tree.txt",
+        "source": "apps/immersive-lp/out/_not-found/__next._tree.txt",
+        "sha256": "4bc113c3b921e0314fb4ddf046b198d6d4e9cd1fae5b53abb7eb53f7f24b9667"
+      },
+      {
+        "path": "_not-found/index.html",
+        "source": "apps/immersive-lp/out/_not-found/index.html",
+        "sha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
+        "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
+        "path": "_not-found/index.txt",
+        "source": "apps/immersive-lp/out/_not-found/index.txt",
+        "sha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b"
+      },
+      {
+        "path": "404.html",
+        "source": "apps/immersive-lp/out/404.html",
+        "sha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
+        "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
+        "path": "404/index.html",
+        "source": "apps/immersive-lp/out/404/index.html",
+        "sha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
+        "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
+        "path": "assets/earth-mobile.webp",
+        "source": "apps/immersive-lp/out/assets/earth-mobile.webp",
+        "sha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf"
+      },
+      {
+        "path": "assets/earth.webp",
+        "source": "apps/immersive-lp/out/assets/earth.webp",
+        "sha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214"
+      },
+      {
+        "path": "assets/game-preview.jpg",
+        "source": "apps/immersive-lp/out/assets/game-preview.jpg",
+        "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1"
+      },
+      {
+        "path": "assets/REMOTION-LICENSE.md",
+        "source": "apps/immersive-lp/out/assets/REMOTION-LICENSE.md",
+        "sha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09"
+      },
+      {
+        "path": "assets/REMOTION-THIRD-PARTY-LICENSES.md",
+        "source": "apps/immersive-lp/out/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+        "sha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b"
+      },
+      {
+        "path": "assets/science-provenance.json",
+        "source": "apps/immersive-lp/out/assets/science-provenance.json",
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e"
+      },
       {
         "path": "campanha/apresentacao/index.html",
         "source": "experiments/four-level-campaign/dist/apresentacao/index.html",
@@ -22964,7 +24956,7 @@
       {
         "path": "campanha/release.json",
         "source": "experiments/four-level-campaign/dist/release.json",
-        "sha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01"
+        "sha256": "8d943f39f1e4b02d34dc29ec08fbb22f0d3b88c60833571d6efab125e9c73c14"
       },
       {
         "path": "campanha/research/assets/briefing-desktop.jpg",
@@ -23116,6 +25108,39 @@
         "sha256": "551e20987e80721f9349f6632ce1e0a91669b5dd2f99e4769a6a683cb9775845"
       },
       {
+        "path": "creditos/__next._full.txt",
+        "source": "apps/immersive-lp/out/creditos/__next._full.txt",
+        "sha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e"
+      },
+      {
+        "path": "creditos/__next._tree.txt",
+        "source": "apps/immersive-lp/out/creditos/__next._tree.txt",
+        "sha256": "5449ec063c5c2165100ecc2afa8047e55f6a85b654f110babf8456ce57d80829"
+      },
+      {
+        "path": "creditos/__next.creditos.__PAGE__.txt",
+        "source": "apps/immersive-lp/out/creditos/__next.creditos.__PAGE__.txt",
+        "sha256": "6785250676a574508e0ce9d905224c6f6ef2b9c00f8962f9689c46dd066ddbcc"
+      },
+      {
+        "path": "creditos/index.html",
+        "source": "apps/immersive-lp/out/creditos/index.html",
+        "sha256": "62221d1af880d3a0c11d66d590161eacc3d111926d4d309b1e5e7bf5acf407d9",
+        "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
+        "path": "creditos/index.txt",
+        "source": "apps/immersive-lp/out/creditos/index.txt",
+        "sha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e"
+      },
+      {
+        "path": "documentation.html",
+        "source": "web/index.html",
+        "sha256": "9098308d0b9fb2ef362c08928202d1c9359002a2610ade4f29a4b1e2e9a1ded7",
+        "libras": "public",
+        "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
         "path": "examples/01-long-base.json",
         "source": "examples/01-long-base.json",
         "sha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb"
@@ -23129,6 +25154,31 @@
         "path": "examples/03-short-repaired.json",
         "source": "examples/03-short-repaired.json",
         "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5"
+      },
+      {
+        "path": "fonts/eb-garamond-italic-latin.woff2",
+        "source": "apps/immersive-lp/out/fonts/eb-garamond-italic-latin.woff2",
+        "sha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297"
+      },
+      {
+        "path": "fonts/eb-garamond-latin.woff2",
+        "source": "apps/immersive-lp/out/fonts/eb-garamond-latin.woff2",
+        "sha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366"
+      },
+      {
+        "path": "fonts/ebgaramond-OFL.txt",
+        "source": "apps/immersive-lp/out/fonts/ebgaramond-OFL.txt",
+        "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7"
+      },
+      {
+        "path": "fonts/figtree-latin.woff2",
+        "source": "apps/immersive-lp/out/fonts/figtree-latin.woff2",
+        "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928"
+      },
+      {
+        "path": "fonts/figtree-OFL.txt",
+        "source": "apps/immersive-lp/out/fonts/figtree-OFL.txt",
+        "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268"
       },
       {
         "path": "game/assets/index-BbJokAPr.js",
@@ -23213,9 +25263,20 @@
         "analytics": "custom-host-only; page performance; no private routes"
       },
       {
-        "path": "lab/assets/BrunoHangarScene-DQJ3x109.js",
-        "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DQJ3x109.js",
-        "sha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d"
+        "path": "index.html",
+        "source": "apps/immersive-lp/out/index.html",
+        "sha256": "4a8b485ddade2e33e00608e2b762887c5f151cbbcef01c806ca2df337eb1c20c",
+        "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
+        "path": "index.txt",
+        "source": "apps/immersive-lp/out/index.txt",
+        "sha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f"
+      },
+      {
+        "path": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+        "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-BuxvF7Tb.js",
+        "sha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335"
       },
       {
         "path": "lab/assets/draco_decoder-C32yEggz.wasm",
@@ -23263,24 +25324,24 @@
         "sha256": "ef8d9695d0d736229ab0ffe64531d364a779c1fb95ab8c72e84988553e305685"
       },
       {
-        "path": "lab/assets/index-7CMtLNql.css",
-        "source": "experiments/mission-design-lab/dist/assets/index-7CMtLNql.css",
-        "sha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a"
+        "path": "lab/assets/index-Cfy7O6Fx.css",
+        "source": "experiments/mission-design-lab/dist/assets/index-Cfy7O6Fx.css",
+        "sha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b"
       },
       {
-        "path": "lab/assets/index-SFxDCbbV.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-SFxDCbbV.js",
-        "sha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876"
+        "path": "lab/assets/index-CZybv0Ge.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-CZybv0Ge.js",
+        "sha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd"
       },
       {
-        "path": "lab/assets/LobbyScene-q8FbWaEJ.js",
-        "source": "experiments/mission-design-lab/dist/assets/LobbyScene-q8FbWaEJ.js",
-        "sha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9"
+        "path": "lab/assets/LobbyScene-C17CUeE_.js",
+        "source": "experiments/mission-design-lab/dist/assets/LobbyScene-C17CUeE_.js",
+        "sha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4"
       },
       {
-        "path": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-        "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-DEHn3g7X.js",
-        "sha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802"
+        "path": "lab/assets/LobbySceneRenderer-D6freGnk.js",
+        "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-D6freGnk.js",
+        "sha256": "1545a64e8fa8b6f3079cc058adc57612846035025bc78925b22d10d78c42ad48"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -23288,14 +25349,14 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Du2jNw9H.js",
-        "sha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6"
+        "path": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Bz_OxVu3.js",
+        "sha256": "7406b795e2c8fdbbd2124e1dbaa2ddd0ed793ee56c4faa8e5d48f23dbeb1036b"
       },
       {
-        "path": "lab/assets/OrbitalScene-DLhsqcJS.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DLhsqcJS.js",
-        "sha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459"
+        "path": "lab/assets/OrbitalScene-CxONEVlJ.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-CxONEVlJ.js",
+        "sha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde"
       },
       {
         "path": "lab/assets/rive_fallback-CbNVjUCh.js",
@@ -23328,9 +25389,9 @@
         "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
       },
       {
-        "path": "lab/assets/search-CcYThNlJ.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-CcYThNlJ.js",
-        "sha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4"
+        "path": "lab/assets/search-DDCq2ywb.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-DDCq2ywb.js",
+        "sha256": "a211c92a1d0e0ad75f7f1fc428074740d24c9b46aa30394b7c5439ba48de5af2"
       },
       {
         "path": "lab/assets/three.module-Ctsc3Dhe.js",
@@ -23591,7 +25652,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "7bc4063a7d41fe54f88e11aaa6b8a3919b653c925ba683ef84885425937e6fe6",
+        "sha256": "dba33c42b25492fedf085128214caf2eaeca5a468bc2a2be7e5711ad0cf57ca1",
         "libras": "lab",
         "analytics": "custom-host-only; page performance; no private routes"
       },
@@ -24040,7 +26101,7 @@
     ],
     "scientificFilesPerLocation": 10,
     "libras": {
-      "public": 104,
+      "public": 110,
       "lab": 1,
       "dashboard": 1
     },
@@ -24072,9 +26133,9 @@
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "cache-control": "public, max-age=0, must-revalidate"
       },
-      "defaultCsp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-92Ic8Wf9FTBrsYAd2QuY/54Uta0/FxzSEwtCACc/c54=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-fzVPE99bcHxN4Y3blMgazx0/FOHoXsngVIhffl4JwEQ=' 'sha256-mdWUxPhLndb/Ef9NgwcXSqexFAKu539gMKbU9disX1w=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+      "defaultCsp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-92Ic8Wf9FTBrsYAd2QuY/54Uta0/FxzSEwtCACc/c54=' 'sha256-OBTN3RiyCV4Bq7dFqZ5a2pAXjnCcCYeTJMO2I/LYKeo=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-fzVPE99bcHxN4Y3blMgazx0/FOHoXsngVIhffl4JwEQ=' 'sha256-hEoB1rE+MpwcvLyxWBNfynwxK5/QR67hX1vxQSnVDQ4=' 'sha256-jvl75e4dF2JHVng3V7XHWuD25pCZYwJ5pfQhh7CpnQE=' 'sha256-mdWUxPhLndb/Ef9NgwcXSqexFAKu539gMKbU9disX1w=' 'sha256-xwcS6eUwRMMFiM76Kj3Xoaho/JQuM44LT3RF1k5h3Y0=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
       "planetJumpingCsp": "default-src 'self'; script-src 'self' 'sha256-5zH2jHInwlBmvgN6XgTA2bfTu90yxKGQCMCCFWkXvvk=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://d2ol7oe51mr4n9.cloudfront.net; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob: https://d2ol7oe51mr4n9.cloudfront.net; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
-      "checkedInlineScripts": 13,
+      "checkedInlineScripts": 23,
       "assetCacheRule": {
         "source": "/game/assets/(.*)",
         "headers": [
@@ -24114,6 +26175,20 @@
     },
     "httpFiles": [
       {
+        "path": "404.html",
+        "status": 200,
+        "bytes": 23107,
+        "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "404/index.html",
+        "status": 200,
+        "bytes": 23107,
+        "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
         "path": "LICENSE",
         "status": 200,
         "bytes": 11358,
@@ -24125,6 +26200,300 @@
         "status": 200,
         "bytes": 4901,
         "sha256": "60af10872b7871f08523562c1301d45f0cc247df792066929a1b249f0b50a7ef",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "__next.__PAGE__.txt",
+        "status": 200,
+        "bytes": 40491,
+        "sha256": "9fe6500082cd355e1255a26432ad4d8508757e3f1ab50b87ba70577143f7b5d4",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "__next._full.txt",
+        "status": 200,
+        "bytes": 40966,
+        "sha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "__next._tree.txt",
+        "status": 200,
+        "bytes": 579,
+        "sha256": "5016aa1a252fa5de9b50434e5ad5fddd87e3f590173b0cf4008a14acecaba7cb",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "_next/static/NK6AByopCtH7a8RHHGC37/_buildManifest.js",
+        "status": 200,
+        "bytes": 478,
+        "sha256": "5fba4bbb35e626dcd502bbc86831accc5cb7b50ae26d13fc4fa16426423d803c",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/NK6AByopCtH7a8RHHGC37/_ssgManifest.js",
+        "status": 200,
+        "bytes": 80,
+        "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/103.94a309edc76848ed.js",
+        "status": 200,
+        "bytes": 19438,
+        "sha256": "c93bdc25184527438170e165f6c4974c6b9a6b7ba1cf82389cfe08ead31f1bbd",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/156.10c9103ccace51f8.js",
+        "status": 200,
+        "bytes": 6403,
+        "sha256": "9f7a1af294896337794d212e91c7b4b23f291ab640f2712f6dba96beb587c05e",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/175.411f7cfbdb25125a.js",
+        "status": 200,
+        "bytes": 43440,
+        "sha256": "78b7e964b64253e71e1d6ffe8c8b51242ea756bb7caec3812e8c841eb2fa4485",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/201.ae26e8aa8066c60a.js",
+        "status": 200,
+        "bytes": 26059,
+        "sha256": "2fc7d8a35aeaee2a7c5cb3bc506d3ead190b22fd751fde8060b7a6f490f5eec7",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/215.08866beccaac9931.js",
+        "status": 200,
+        "bytes": 129450,
+        "sha256": "f29de5c7fd5fbb2dfc71ebfa41a362662f081310ac6564267ef857715f582e7a",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/271-f968bf12d74198b2.js",
+        "status": 200,
+        "bytes": 7923,
+        "sha256": "79bbeb2d0cbcb7472457db005230c13dec20935aa81e13e2fd7daa188ad289ca",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/342-019291b0f9618eab.js",
+        "status": 200,
+        "bytes": 242289,
+        "sha256": "afe026846e0bc289379672ac35d80ecea4f378f05f2761f255f2cbaafe6d76f2",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/3c94d2aa.87e84013b0a99ee7.js",
+        "status": 200,
+        "bytes": 251742,
+        "sha256": "25a5f4d8b4be306b21eaca7ea41d3ca5bb64fd282d99ec3a5b28ba051d3984bb",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/649.f25ca1961cc576d0.js",
+        "status": 200,
+        "bytes": 20263,
+        "sha256": "f20c71a5c0c594ce5ef7b7d1e43365c8676fe3008d77e3a7c859852e442c43d8",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/687.d348d9873d9776dc.js",
+        "status": 200,
+        "bytes": 7448,
+        "sha256": "ed2e107f24dd891c7b5efafc257538d0db8746c0c07cf5ec5a66fecf70521baf",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/99.3ba811e1dbd0c5c8.js",
+        "status": 200,
+        "bytes": 3912,
+        "sha256": "3957de16afa04e13f0065c316389f05fbaa03eede916ebda951e282df9301b07",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/app/_global-error/page-9a8545b8184e4b2c.js",
+        "status": 200,
+        "bytes": 143,
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/app/_not-found/page-2f0144ff161ed937.js",
+        "status": 200,
+        "bytes": 626,
+        "sha256": "319898e299e48d35d7a4c0d78f3d4fc33b7adc54dbe090cdd0fd1e2b62f4fc66",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+        "status": 200,
+        "bytes": 178,
+        "sha256": "b0ad4791c0ddc228a0b2550478c9cadee6db1a073a911bd1ca2392c0006adde3",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/app/layout-13269ce456e7179b.js",
+        "status": 200,
+        "bytes": 547,
+        "sha256": "403b0503db3c0d327a0490942388ef22352d27a7159699954182226f10e106a3",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+        "status": 200,
+        "bytes": 5409,
+        "sha256": "5d3414b177dd771375dc6e44e3b702d332307ccb7a7acea66beacc8e6fdb915b",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/app/page-771159789dace341.js",
+        "status": 200,
+        "bytes": 13807,
+        "sha256": "69b8ff47aa186d1bfc503b6c42aa1a1ca2500676c13150780b26222839ae1cf6",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/d5df7396.f88ae6e60ae6743b.js",
+        "status": 200,
+        "bytes": 52272,
+        "sha256": "f405710af4dc95c13da61a0f71eea690f42d08c060c7b3e55d9c2dc673d8a190",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+        "status": 200,
+        "bytes": 203720,
+        "sha256": "c839384b1b1677deec31464ac433c06e28685264af02b91146c58a489ef7cf7a",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/framework-cad7b4fb3c2d55a4.js",
+        "status": 200,
+        "bytes": 218914,
+        "sha256": "dc1a72b72ff5a8a786ebfda1d805f6694f6694e94e6bc886d3bc63b7c32e8251",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/main-app-ad65c149d539868c.js",
+        "status": 200,
+        "bytes": 514,
+        "sha256": "3543a56753dc77277b9799af65cf27b2da8d9730670fa4f9d6c486c92d7ca048",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/main-c2e6c90cafe2f5ea.js",
+        "status": 200,
+        "bytes": 137469,
+        "sha256": "fc21f4b7332a53503d1cbec965c5508dc6046f9813ed062ea723ea948c31e6e6",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/app-error-9a8545b8184e4b2c.js",
+        "status": 200,
+        "bytes": 143,
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/forbidden-9a8545b8184e4b2c.js",
+        "status": 200,
+        "bytes": 143,
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-b5b1e37774f52387.js",
+        "status": 200,
+        "bytes": 179,
+        "sha256": "89ac4ce96c59be73f4ae477ba7e756fe315039eba151b86b5df8b30eed4d3dd3",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/next/dist/client/components/builtin/unauthorized-9a8545b8184e4b2c.js",
+        "status": 200,
+        "bytes": 143,
+        "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "status": 200,
+        "bytes": 112594,
+        "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+        "status": 200,
+        "bytes": 3638,
+        "sha256": "f510ef20971f3efabe4219cdb752727bf3a4c942c272e9a042498454c87bc68a",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/static/css/42db836d9e64e415.css",
+        "status": 200,
+        "bytes": 3173,
+        "sha256": "8f374746872af23f82ae365b26c83e44a71dabdb3fa76625963c203a59e4b666",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "_next/static/css/4ebcf2432b2e840d.css",
+        "status": 200,
+        "bytes": 43695,
+        "sha256": "2c41d3d5212d7fb681f78fffc7a3853d8f94b0f2686da2f032a4cdbe86428175",
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+        "status": 200,
+        "bytes": 76868,
+        "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+        "status": 200,
+        "bytes": 27272,
+        "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "_not-found/__next._full.txt",
+        "status": 200,
+        "bytes": 10824,
+        "sha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "_not-found/__next._not-found.__PAGE__.txt",
+        "status": 200,
+        "bytes": 10129,
+        "sha256": "8515c0674122b75509598a419268becf3ed1935c1bee92b3d6224ea866065ba6",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "_not-found/__next._tree.txt",
+        "status": 200,
+        "bytes": 538,
+        "sha256": "4bc113c3b921e0314fb4ddf046b198d6d4e9cd1fae5b53abb7eb53f7f24b9667",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "_not-found/index.html",
+        "status": 200,
+        "bytes": 23107,
+        "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "_not-found/index.txt",
+        "status": 200,
+        "bytes": 10824,
+        "sha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24177,11 +26546,53 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "assets/REMOTION-LICENSE.md",
+        "status": 200,
+        "bytes": 2849,
+        "sha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "assets/REMOTION-THIRD-PARTY-LICENSES.md",
+        "status": 200,
+        "bytes": 1255,
+        "sha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "assets/analytics.js",
         "status": 200,
         "bytes": 1030,
         "sha256": "7c86a24a26056a5f32bbd29543874ff3b2073bc358b4a739abbd4bf062d191b2",
         "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "assets/earth-mobile.webp",
+        "status": 200,
+        "bytes": 96344,
+        "sha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+        "contentType": "image/webp"
+      },
+      {
+        "path": "assets/earth.webp",
+        "status": 200,
+        "bytes": 379916,
+        "sha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+        "contentType": "image/webp"
+      },
+      {
+        "path": "assets/game-preview.jpg",
+        "status": 200,
+        "bytes": 95217,
+        "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+        "contentType": "image/jpeg"
+      },
+      {
+        "path": "assets/science-provenance.json",
+        "status": 200,
+        "bytes": 5942,
+        "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+        "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "brand/brand-provenance-r17.json",
@@ -24516,7 +26927,7 @@
         "path": "campanha/release.json",
         "status": 200,
         "bytes": 326,
-        "sha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
+        "sha256": "8d943f39f1e4b02d34dc29ec08fbb22f0d3b88c60833571d6efab125e9c73c14",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -24739,22 +27150,57 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 73546,
-        "sha256": "99170b58ac27f899201a0821872e5f617e15580d977c57a0d0c9f4ccd2a3161f",
+        "bytes": 74078,
+        "sha256": "02b3c926fefbdb27f67a597742769fa7f74829e1f0f5d981cc34e0d51414056b",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2627581,
-        "sha256": "c88d6d7cfc36383141084a814fbc06915cd6ab6e538230ebf3638b8ec5234310",
+        "bytes": 2641607,
+        "sha256": "f44714ff2759effb919ba7095d48ecc6daf89423821b67fd126d84aeb0a92626",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 2101999,
-        "sha256": "651b9add245c3f559a65144eb5a7ac10ae7444141b63676527689125be51fd25",
+        "bytes": 2113297,
+        "sha256": "4c2337866f7b3a8609186755b2992a5dc1c1a1dc0fdb0a8e89ed20d51f81c406",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "creditos/__next._full.txt",
+        "status": 200,
+        "bytes": 15619,
+        "sha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "creditos/__next._tree.txt",
+        "status": 200,
+        "bytes": 536,
+        "sha256": "5449ec063c5c2165100ecc2afa8047e55f6a85b654f110babf8456ce57d80829",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "creditos/__next.creditos.__PAGE__.txt",
+        "status": 200,
+        "bytes": 14944,
+        "sha256": "6785250676a574508e0ce9d905224c6f6ef2b9c00f8962f9689c46dd066ddbcc",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "creditos/index.html",
+        "status": 200,
+        "bytes": 31392,
+        "sha256": "4cd891b6e3a86b98482ba67837c7199f067c996555973fbf609ec6c4e649b35b",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "creditos/index.txt",
+        "status": 200,
+        "bytes": 15619,
+        "sha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -25628,15 +28074,15 @@
       {
         "path": "docs/72-DOMINIOS-E-ACESSOS-R27.html",
         "status": 200,
-        "bytes": 7887,
-        "sha256": "77cec2b16ebaa121d49a6171588747b51ca8d414c27004cbd7e66f059b037d08",
+        "bytes": 8002,
+        "sha256": "96e0043f1f82d342a2d601493685c9f266fe6fed1e89517d25878e4fc520509b",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
         "status": 200,
-        "bytes": 4686,
-        "sha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
+        "bytes": 4801,
+        "sha256": "107da53dcbb02bb2833b9ade30ad08c907206f0164cb9bf275fe656525f40d0e",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -25766,6 +28212,20 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+        "status": 200,
+        "bytes": 12802,
+        "sha256": "ae3d0a528959d611e8ac8fd13b8880c0f6f9e1a23e2a47263704e3a2547c4db0",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+        "status": 200,
+        "bytes": 9470,
+        "sha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/AUTORIA-E-IA.html",
         "status": 200,
         "bytes": 3942,
@@ -25838,8 +28298,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 24666,
-        "sha256": "c9f642c541891a898d9aec824b3e6cc0313f0e9c93b429639f43a8120efebd26",
+        "bytes": 24998,
+        "sha256": "b8aead233381d51b6a7f624c41bbd6d4eefc504994c939c2edcf97e39724ffa9",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -25848,6 +28308,13 @@
         "bytes": 3923,
         "sha256": "5416b7f8ffd7405427188ca39d382f3026e9d73c73968e7335725de7a49f8937",
         "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "documentation.html",
+        "status": 200,
+        "bytes": 61259,
+        "sha256": "ca4d57a5d6c8f81e79591a16cc4c50260f0e885bc3ab828d5650064f3c4b2966",
+        "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "equipe/index.html",
@@ -25938,6 +28405,41 @@
         "status": 200,
         "bytes": 27272,
         "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "fonts/eb-garamond-italic-latin.woff2",
+        "status": 200,
+        "bytes": 25412,
+        "sha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "fonts/eb-garamond-latin.woff2",
+        "status": 200,
+        "bytes": 23848,
+        "sha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+        "contentType": "font/woff2"
+      },
+      {
+        "path": "fonts/ebgaramond-OFL.txt",
+        "status": 200,
+        "bytes": 4398,
+        "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "fonts/figtree-OFL.txt",
+        "status": 200,
+        "bytes": 4388,
+        "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "fonts/figtree-latin.woff2",
+        "status": 200,
+        "bytes": 20184,
+        "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
         "contentType": "font/woff2"
       },
       {
@@ -26090,15 +28592,22 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 61215,
-        "sha256": "44c48e3a09b5eee97a6c773bb79549dbef5267caa3c078a0ae1e81b57faf1a43",
+        "bytes": 89849,
+        "sha256": "052085df649111d30028dedca7d9def9f140184dae1ba6ae318216f9b25b6110",
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+        "path": "index.txt",
+        "status": 200,
+        "bytes": 40966,
+        "sha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
         "status": 200,
         "bytes": 16323,
-        "sha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
+        "sha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -26123,31 +28632,31 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/LobbyScene-q8FbWaEJ.js",
+        "path": "lab/assets/LobbyScene-C17CUeE_.js",
         "status": 200,
         "bytes": 2812,
-        "sha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
+        "sha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+        "path": "lab/assets/LobbySceneRenderer-D6freGnk.js",
         "status": 200,
         "bytes": 7642,
-        "sha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
+        "sha256": "1545a64e8fa8b6f3079cc058adc57612846035025bc78925b22d10d78c42ad48",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
+        "path": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
         "status": 200,
         "bytes": 7308,
-        "sha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
+        "sha256": "7406b795e2c8fdbbd2124e1dbaa2ddd0ed793ee56c4faa8e5d48f23dbeb1036b",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-DLhsqcJS.js",
+        "path": "lab/assets/OrbitalScene-CxONEVlJ.js",
         "status": 200,
         "bytes": 219963,
-        "sha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
+        "sha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -26193,18 +28702,18 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-7CMtLNql.css",
+        "path": "lab/assets/index-CZybv0Ge.js",
         "status": 200,
-        "bytes": 242611,
-        "sha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
-        "contentType": "text/css; charset=utf-8"
+        "bytes": 713774,
+        "sha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-SFxDCbbV.js",
+        "path": "lab/assets/index-Cfy7O6Fx.css",
         "status": 200,
-        "bytes": 711121,
-        "sha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
-        "contentType": "text/javascript; charset=utf-8"
+        "bytes": 243051,
+        "sha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b",
+        "contentType": "text/css; charset=utf-8"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -26256,10 +28765,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-CcYThNlJ.js",
+        "path": "lab/assets/search-DDCq2ywb.js",
         "status": 200,
         "bytes": 1280,
-        "sha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
+        "sha256": "a211c92a1d0e0ad75f7f1fc428074740d24c9b46aa30394b7c5439ba48de5af2",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -26616,7 +29125,7 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 1457,
-        "sha256": "17d2b1abc965d0412e9343c909be4333150b9717a9405564cde1fcad0d36421f",
+        "sha256": "1fe7c00949d194adc8678543c17437a47877f89e65691c42fafa317554f26009",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -27364,8 +29873,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 230846,
-        "sha256": "a6ab8958a9f2005605986862c03de7162ba8b83fc3c14be16cb17749cc2df543",
+        "bytes": 259256,
+        "sha256": "d52006a61da7d5f527009636906f624a4e99cafdf9d782c719c95d6a184f8d02",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -27517,13 +30026,8 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 378,
+      "linkedRoutesChecked": 406,
       "redirects": [
-        {
-          "source": "/",
-          "destination": "https://projeto-ipe-lp.vercel.app/",
-          "status": 307
-        },
         {
           "source": "/doc",
           "destination": "/docs/index.html",
@@ -27667,102 +30171,102 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 29.511
+      "durationMs": 32.575
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.304
+      "durationMs": 0.356
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 76.329
+      "durationMs": 76.06
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.051
+      "durationMs": 0.929
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 70.659
+      "durationMs": 84.616
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1324.35
+      "durationMs": 1219.673
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 1.048
+      "durationMs": 0.486
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 556.958
+      "durationMs": 561.964
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 151.654
+      "durationMs": 146.998
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 65.81
+      "durationMs": 40.361
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.344
+      "durationMs": 3.172
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 112.286
+      "durationMs": 99.538
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 6.213
+      "durationMs": 5.318
     },
     {
       "name": "iluminação CC0 do hangar é local e preserva origem e integridade",
       "status": "passed",
-      "durationMs": 0.609
+      "durationMs": 0.574
     },
     {
       "name": "plataforma Kenney CC0 é local, íntegra e não exige arquivos externos",
       "status": "passed",
-      "durationMs": 0.126
+      "durationMs": 0.106
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 56.067
+      "durationMs": 59.706
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 1026.106
+      "durationMs": 1037.416
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 155.619
+      "durationMs": 123.932
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 6.311
+      "durationMs": 6.307
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 147.394
+      "durationMs": 139.447
     }
   ]
 }

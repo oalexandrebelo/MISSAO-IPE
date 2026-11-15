@@ -23,6 +23,7 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md', target: 'docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md', title: 'Fluxo móvel e persistência · R33', description: 'Sete missões testadas, LP no domínio oficial, pontuação, inventário e continuidade dos dois devs.' },
   { source: 'docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md', target: 'docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md', title: 'Design do jogo e handoff · R32', description: 'Hierarquia do cockpit, continuidade do destino, escolhas no 3D e revisão móvel.' },
   { source: 'docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md', target: 'docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md', title: 'Auditoria completa Bruno · R31', description: 'Versão atual, áreas integradas, assets e limites da incorporação.' },
   { source: 'docs/79-GAME-DESIGN-E-SKILLS-R31.md', target: 'docs/79-GAME-DESIGN-E-SKILLS-R31.md', title: 'Escolhas claras no hangar · R31', description: 'Skills de game design, usabilidade, previsão, componentes e próximo passo.' },
@@ -113,7 +114,7 @@ async function emit(target, bytes, metadata) {
   const path = safePath(stage, target);
   if (entries.some(entry => entry.path === target)) throw new Error(`Destino duplicado: ${target}`);
   const scope = librasScope(target);
-  if (scope) {
+  if (scope && metadata.category !== 'immersive-landing') {
     bytes = decorateLibrasPage(bytes.toString(), target);
     const base = metadata.transformation === 'none; bytes preserved' ? '' : metadata.transformation + '; ';
     metadata = { ...metadata, libras: scope, transformation: `${base}local Libras launcher and frame permissions in the public HTML copy` };
@@ -226,7 +227,7 @@ async function addMarkdown(entry, { index = true, category = 'public-document' }
 await rm(stage, { recursive: true, force: true });
 await mkdir(stage, { recursive: true });
 try {
-  await copy('web/index.html', 'index.html', 'public-portal');
+  await copy('web/index.html', 'documentation.html', 'public-portal');
   await copy(`web/${analyticsAsset}`, analyticsAsset, 'public-page-analytics');
   for (const name of librasAssets) {
     await copy(`apps/immersive-lp/public/acessibilidade/${name}`, `acessibilidade/${name}`, 'libras-integration');
@@ -339,6 +340,19 @@ try {
   await project('evidence/ab-r3a-digest.json', 'evidence/ab-r3a-digest.json', x => ({ generatedAt: x.generatedAt, execution: { startedAt: x.execution.startedAt, elapsedMs: x.execution.elapsedMs, exitCode: x.execution.exitCode, status: x.execution.status }, sourceFiles: x.sourceFiles, statistics: x.statistics, applicationCoverage: { status: x.applicationCoverage.status, truncated: x.applicationCoverage.truncated }, semanticCoverage: { status: x.semanticCoverage.status, truncated: x.semanticCoverage.truncated }, limits: x.limits, fullReportPublished: false }));
   await project('evidence/presentation-qa.json', 'evidence/presentation-qa.json', x => ({ startedAt: x.startedAt, finishedAt: x.finishedAt, status: x.status, checksPassed: x.checksPassed, checksFailed: x.checksFailed, environment: x.environment, engine: x.engine, limitations: x.limitations, artifact: x.observations.artifact, runtimeDependencies: x.observations.runtimeDependencies, slideCounts: x.observations.slideCounts, catalog: x.observations.catalog, checks: x.checks.map(({ name, status }) => ({ name, status })) }));
   await project('evidence/presentation-build.json', 'evidence/presentation-build.json', x => ({ generatedAt: x.generatedAt, output: x.output, bytes: x.bytes, sha256: x.sha256, title: x.title, mode: x.mode, target: x.target, pitchSlides: x.pitchSlides, appendixSlides: x.appendixSlides, totalSlides: x.totalSlides, defaultMode: x.defaultMode, externalRuntimeDependencies: x.externalRuntimeDependencies, networkRequestsRequired: x.networkRequestsRequired, embeddedSourceFiles: x.embeddedSourceFiles, usesProductEngine: x.usesProductEngine, usesProductScienceValidator: x.usesProductScienceValidator, usesProductCatalogSearch: x.usesProductCatalogSearch, limitations: x.limitations }));
+  // Serve the LP in the same release and origin as the game. Shared assets keep one owner.
+  const landingRoot = 'apps/immersive-lp/out';
+  for (const source of await tree(landingRoot)) {
+    const target = source.slice(landingRoot.length + 1);
+    // Historical alias differs from the official symbol; the curated brand owns it.
+    if (target === 'brand/projeto-ipe-symbol.svg') continue;
+    const existing = entries.find(entry => entry.path === target);
+    if (existing) {
+      if (!(await readFile(safePath(stage, target))).equals(await readFile(safePath(root, source)))) throw new Error(`LP compartilha asset diferente: ${target}`);
+      continue;
+    }
+    await copy(source, target, 'immersive-landing');
+  }
   const cards = docs.map(entry => `<article class="doc-card"><h2><a href="${escape(entry.html.slice(5))}">${escape(entry.title)}</a></h2><p>${escape(entry.description)}</p><a href="${escape(entry.target.slice(5))}">Markdown desta edição</a></article>`).join('');
   const docsIndex = `<p class="eyebrow">MISSÃO IPÊ / DOCUMENTAÇÃO PÚBLICA</p><h1>O contexto para<br>continuar construindo.</h1><p class="intro">Dois desenvolvedores, uma base compartilhada. Comece pelo guia de continuidade, consulte as decisões e explore o acervo completo. Cada documento distingue resultados, hipóteses e trabalho pendente.</p><p><a href="../context/index.html">Abrir a central interativa de contexto e cronograma</a> · <a href="../context/research-library.html">Ler a biblioteca integral de documentos</a></p><div class="doc-grid">${cards}</div><h2 class="section-label">DOCUMENTOS HISTÓRICOS DE BASE</h2><div class="historical"><p><strong>R4 · Dossiê de implementação e estudo integral.</strong> Estes arquivos preservam o corte original. Metas e pendências neles descritas não devem ser interpretadas como validações concluídas na BETA.</p><p><a href="../output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf">Dossiê de base R4 · PDF</a> · <a href="../output/html/AB_Missao_Ipe_Estudo_Integral.html">Estudo integral de base R4 · HTML</a></p><p><a href="../research/11-revisao-spaceapps-apresentacao.html">Revisão documental Space Apps · R5</a></p></div><h2 class="section-label">APRESENTAÇÃO E RECIBOS</h2><div class="doc-grid"><article class="doc-card"><h2>Roteiros de apresentação</h2><p>Interface em português, notas PT/EN e copy inglesa dos sete quadros. Formato e elegibilidade ainda dependem de confirmação.</p><a href="../presentation/README_APRESENTADOR.html">Guia</a> · <a href="../presentation/ROTEIRO_PT_EN.html">Roteiro PT/EN</a> · <a href="../presentation/PITCH_EN_7_SLIDES.html">Copy inglesa</a></article><article class="doc-card"><h2>Projeções públicas de evidência</h2><p>Campos selecionados de recibos históricos. Cada projeção identifica o hash do original e seu alcance.</p><a href="../evidence/presentation-qa.json">QA da apresentação</a> · <a href="../evidence/engine-benchmark.json">Benchmark</a> · <a href="../evidence/ab-r3a-digest.json">AB-R3A</a> · <a href="../evidence/chronology.json">Cronologia</a></article></div>`;
   await emit('docs/index.html', page('Documentação pública', docsIndex, { index: true }), { category: 'documentation-index', source: 'scripts/build-beta-site.mjs', transformation: 'generated from the explicit document allowlist' });

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T20:44:42.637Z",
+  "generatedAt": "2026-11-15T21:29:51.906Z",
   "status": "passed",
   "scope": "Original and emitted runtime bytes reread after static build and checked against the declared HTML integration; no browser execution.",
   "fileCount": 225,
@@ -249,8 +249,8 @@
     {
       "source": "experiments/four-level-campaign/dist/release.json",
       "output": "site/campanha/release.json",
-      "originalSha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
-      "publishedSha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
+      "originalSha256": "8d943f39f1e4b02d34dc29ec08fbb22f0d3b88c60833571d6efab125e9c73c14",
+      "publishedSha256": "8d943f39f1e4b02d34dc29ec08fbb22f0d3b88c60833571d6efab125e9c73c14",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -615,10 +615,10 @@
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DQJ3x109.js",
-      "output": "site/lab/assets/BrunoHangarScene-DQJ3x109.js",
-      "originalSha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
-      "publishedSha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
+      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-BuxvF7Tb.js",
+      "output": "site/lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+      "originalSha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335",
+      "publishedSha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -695,34 +695,34 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-7CMtLNql.css",
-      "output": "site/lab/assets/index-7CMtLNql.css",
-      "originalSha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
-      "publishedSha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
+      "source": "experiments/mission-design-lab/dist/assets/index-Cfy7O6Fx.css",
+      "output": "site/lab/assets/index-Cfy7O6Fx.css",
+      "originalSha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b",
+      "publishedSha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-SFxDCbbV.js",
-      "output": "site/lab/assets/index-SFxDCbbV.js",
-      "originalSha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
-      "publishedSha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
+      "source": "experiments/mission-design-lab/dist/assets/index-CZybv0Ge.js",
+      "output": "site/lab/assets/index-CZybv0Ge.js",
+      "originalSha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd",
+      "publishedSha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/LobbyScene-q8FbWaEJ.js",
-      "output": "site/lab/assets/LobbyScene-q8FbWaEJ.js",
-      "originalSha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
-      "publishedSha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
+      "source": "experiments/mission-design-lab/dist/assets/LobbyScene-C17CUeE_.js",
+      "output": "site/lab/assets/LobbyScene-C17CUeE_.js",
+      "originalSha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4",
+      "publishedSha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-DEHn3g7X.js",
-      "output": "site/lab/assets/LobbySceneRenderer-DEHn3g7X.js",
-      "originalSha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
-      "publishedSha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
+      "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-D6freGnk.js",
+      "output": "site/lab/assets/LobbySceneRenderer-D6freGnk.js",
+      "originalSha256": "1545a64e8fa8b6f3079cc058adc57612846035025bc78925b22d10d78c42ad48",
+      "publishedSha256": "1545a64e8fa8b6f3079cc058adc57612846035025bc78925b22d10d78c42ad48",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -735,18 +735,18 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Du2jNw9H.js",
-      "output": "site/lab/assets/NASAReferenceScene-Du2jNw9H.js",
-      "originalSha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
-      "publishedSha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Bz_OxVu3.js",
+      "output": "site/lab/assets/NASAReferenceScene-Bz_OxVu3.js",
+      "originalSha256": "7406b795e2c8fdbbd2124e1dbaa2ddd0ed793ee56c4faa8e5d48f23dbeb1036b",
+      "publishedSha256": "7406b795e2c8fdbbd2124e1dbaa2ddd0ed793ee56c4faa8e5d48f23dbeb1036b",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DLhsqcJS.js",
-      "output": "site/lab/assets/OrbitalScene-DLhsqcJS.js",
-      "originalSha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
-      "publishedSha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-CxONEVlJ.js",
+      "output": "site/lab/assets/OrbitalScene-CxONEVlJ.js",
+      "originalSha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde",
+      "publishedSha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -799,10 +799,10 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/search-CcYThNlJ.js",
-      "output": "site/lab/assets/search-CcYThNlJ.js",
-      "originalSha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
-      "publishedSha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
+      "source": "experiments/mission-design-lab/dist/assets/search-DDCq2ywb.js",
+      "output": "site/lab/assets/search-DDCq2ywb.js",
+      "originalSha256": "a211c92a1d0e0ad75f7f1fc428074740d24c9b46aa30394b7c5439ba48de5af2",
+      "publishedSha256": "a211c92a1d0e0ad75f7f1fc428074740d24c9b46aa30394b7c5439ba48de5af2",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -1209,8 +1209,8 @@
     {
       "source": "experiments/mission-design-lab/dist/index.html",
       "output": "site/lab/index.html",
-      "originalSha256": "7bc4063a7d41fe54f88e11aaa6b8a3919b653c925ba683ef84885425937e6fe6",
-      "publishedSha256": "17d2b1abc965d0412e9343c909be4333150b9717a9405564cde1fcad0d36421f",
+      "originalSha256": "dba33c42b25492fedf085128214caf2eaeca5a468bc2a2be7e5711ad0cf57ca1",
+      "publishedSha256": "1fe7c00949d194adc8678543c17437a47877f89e65691c42fafa317554f26009",
       "byteIdentical": false,
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader"
     },

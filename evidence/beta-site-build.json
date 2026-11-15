@@ -1,16 +1,415 @@
 {
-  "generatedAt": "2026-11-15T20:44:42.637Z",
+  "generatedAt": "2026-11-15T21:29:51.906Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 486,
-  "bytes": 82588388,
+  "fileCount": 550,
+  "bytes": 85381347,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 230846,
-    "sha256": "a6ab8958a9f2005605986862c03de7162ba8b83fc3c14be16cb17749cc2df543"
+    "bytes": 259256,
+    "sha256": "d52006a61da7d5f527009636906f624a4e99cafdf9d782c719c95d6a184f8d02"
   },
   "entries": [
+    {
+      "path": "__next.__PAGE__.txt",
+      "bytes": 40491,
+      "sha256": "9fe6500082cd355e1255a26432ad4d8508757e3f1ab50b87ba70577143f7b5d4",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/__next.__PAGE__.txt",
+      "sourceSha256": "9fe6500082cd355e1255a26432ad4d8508757e3f1ab50b87ba70577143f7b5d4",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "__next._full.txt",
+      "bytes": 40966,
+      "sha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/__next._full.txt",
+      "sourceSha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "__next._tree.txt",
+      "bytes": 579,
+      "sha256": "5016aa1a252fa5de9b50434e5ad5fddd87e3f590173b0cf4008a14acecaba7cb",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/__next._tree.txt",
+      "sourceSha256": "5016aa1a252fa5de9b50434e5ad5fddd87e3f590173b0cf4008a14acecaba7cb",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/103.94a309edc76848ed.js",
+      "bytes": 19438,
+      "sha256": "c93bdc25184527438170e165f6c4974c6b9a6b7ba1cf82389cfe08ead31f1bbd",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/103.94a309edc76848ed.js",
+      "sourceSha256": "c93bdc25184527438170e165f6c4974c6b9a6b7ba1cf82389cfe08ead31f1bbd",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/156.10c9103ccace51f8.js",
+      "bytes": 6403,
+      "sha256": "9f7a1af294896337794d212e91c7b4b23f291ab640f2712f6dba96beb587c05e",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/156.10c9103ccace51f8.js",
+      "sourceSha256": "9f7a1af294896337794d212e91c7b4b23f291ab640f2712f6dba96beb587c05e",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/175.411f7cfbdb25125a.js",
+      "bytes": 43440,
+      "sha256": "78b7e964b64253e71e1d6ffe8c8b51242ea756bb7caec3812e8c841eb2fa4485",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/175.411f7cfbdb25125a.js",
+      "sourceSha256": "78b7e964b64253e71e1d6ffe8c8b51242ea756bb7caec3812e8c841eb2fa4485",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/201.ae26e8aa8066c60a.js",
+      "bytes": 26059,
+      "sha256": "2fc7d8a35aeaee2a7c5cb3bc506d3ead190b22fd751fde8060b7a6f490f5eec7",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/201.ae26e8aa8066c60a.js",
+      "sourceSha256": "2fc7d8a35aeaee2a7c5cb3bc506d3ead190b22fd751fde8060b7a6f490f5eec7",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/215.08866beccaac9931.js",
+      "bytes": 129450,
+      "sha256": "f29de5c7fd5fbb2dfc71ebfa41a362662f081310ac6564267ef857715f582e7a",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/215.08866beccaac9931.js",
+      "sourceSha256": "f29de5c7fd5fbb2dfc71ebfa41a362662f081310ac6564267ef857715f582e7a",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/271-f968bf12d74198b2.js",
+      "bytes": 7923,
+      "sha256": "79bbeb2d0cbcb7472457db005230c13dec20935aa81e13e2fd7daa188ad289ca",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/271-f968bf12d74198b2.js",
+      "sourceSha256": "79bbeb2d0cbcb7472457db005230c13dec20935aa81e13e2fd7daa188ad289ca",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/342-019291b0f9618eab.js",
+      "bytes": 242289,
+      "sha256": "afe026846e0bc289379672ac35d80ecea4f378f05f2761f255f2cbaafe6d76f2",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/342-019291b0f9618eab.js",
+      "sourceSha256": "afe026846e0bc289379672ac35d80ecea4f378f05f2761f255f2cbaafe6d76f2",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/3c94d2aa.87e84013b0a99ee7.js",
+      "bytes": 251742,
+      "sha256": "25a5f4d8b4be306b21eaca7ea41d3ca5bb64fd282d99ec3a5b28ba051d3984bb",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/3c94d2aa.87e84013b0a99ee7.js",
+      "sourceSha256": "25a5f4d8b4be306b21eaca7ea41d3ca5bb64fd282d99ec3a5b28ba051d3984bb",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/649.f25ca1961cc576d0.js",
+      "bytes": 20263,
+      "sha256": "f20c71a5c0c594ce5ef7b7d1e43365c8676fe3008d77e3a7c859852e442c43d8",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/649.f25ca1961cc576d0.js",
+      "sourceSha256": "f20c71a5c0c594ce5ef7b7d1e43365c8676fe3008d77e3a7c859852e442c43d8",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/687.d348d9873d9776dc.js",
+      "bytes": 7448,
+      "sha256": "ed2e107f24dd891c7b5efafc257538d0db8746c0c07cf5ec5a66fecf70521baf",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/687.d348d9873d9776dc.js",
+      "sourceSha256": "ed2e107f24dd891c7b5efafc257538d0db8746c0c07cf5ec5a66fecf70521baf",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/99.3ba811e1dbd0c5c8.js",
+      "bytes": 3912,
+      "sha256": "3957de16afa04e13f0065c316389f05fbaa03eede916ebda951e282df9301b07",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/99.3ba811e1dbd0c5c8.js",
+      "sourceSha256": "3957de16afa04e13f0065c316389f05fbaa03eede916ebda951e282df9301b07",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/app/_global-error/page-9a8545b8184e4b2c.js",
+      "bytes": 143,
+      "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/app/_global-error/page-9a8545b8184e4b2c.js",
+      "sourceSha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/app/_not-found/page-2f0144ff161ed937.js",
+      "bytes": 626,
+      "sha256": "319898e299e48d35d7a4c0d78f3d4fc33b7adc54dbe090cdd0fd1e2b62f4fc66",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/app/_not-found/page-2f0144ff161ed937.js",
+      "sourceSha256": "319898e299e48d35d7a4c0d78f3d4fc33b7adc54dbe090cdd0fd1e2b62f4fc66",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+      "bytes": 178,
+      "sha256": "b0ad4791c0ddc228a0b2550478c9cadee6db1a073a911bd1ca2392c0006adde3",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/app/creditos/page-2b0696ee5348f8e1.js",
+      "sourceSha256": "b0ad4791c0ddc228a0b2550478c9cadee6db1a073a911bd1ca2392c0006adde3",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/app/layout-13269ce456e7179b.js",
+      "bytes": 547,
+      "sha256": "403b0503db3c0d327a0490942388ef22352d27a7159699954182226f10e106a3",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/app/layout-13269ce456e7179b.js",
+      "sourceSha256": "403b0503db3c0d327a0490942388ef22352d27a7159699954182226f10e106a3",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/app/not-found-b1edda7131376300.js",
+      "bytes": 5409,
+      "sha256": "5d3414b177dd771375dc6e44e3b702d332307ccb7a7acea66beacc8e6fdb915b",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/app/not-found-b1edda7131376300.js",
+      "sourceSha256": "5d3414b177dd771375dc6e44e3b702d332307ccb7a7acea66beacc8e6fdb915b",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/app/page-771159789dace341.js",
+      "bytes": 13807,
+      "sha256": "69b8ff47aa186d1bfc503b6c42aa1a1ca2500676c13150780b26222839ae1cf6",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/app/page-771159789dace341.js",
+      "sourceSha256": "69b8ff47aa186d1bfc503b6c42aa1a1ca2500676c13150780b26222839ae1cf6",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/d5df7396.f88ae6e60ae6743b.js",
+      "bytes": 52272,
+      "sha256": "f405710af4dc95c13da61a0f71eea690f42d08c060c7b3e55d9c2dc673d8a190",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/d5df7396.f88ae6e60ae6743b.js",
+      "sourceSha256": "f405710af4dc95c13da61a0f71eea690f42d08c060c7b3e55d9c2dc673d8a190",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+      "bytes": 203720,
+      "sha256": "c839384b1b1677deec31464ac433c06e28685264af02b91146c58a489ef7cf7a",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+      "sourceSha256": "c839384b1b1677deec31464ac433c06e28685264af02b91146c58a489ef7cf7a",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/framework-cad7b4fb3c2d55a4.js",
+      "bytes": 218914,
+      "sha256": "dc1a72b72ff5a8a786ebfda1d805f6694f6694e94e6bc886d3bc63b7c32e8251",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/framework-cad7b4fb3c2d55a4.js",
+      "sourceSha256": "dc1a72b72ff5a8a786ebfda1d805f6694f6694e94e6bc886d3bc63b7c32e8251",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/main-app-ad65c149d539868c.js",
+      "bytes": 514,
+      "sha256": "3543a56753dc77277b9799af65cf27b2da8d9730670fa4f9d6c486c92d7ca048",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/main-app-ad65c149d539868c.js",
+      "sourceSha256": "3543a56753dc77277b9799af65cf27b2da8d9730670fa4f9d6c486c92d7ca048",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/main-c2e6c90cafe2f5ea.js",
+      "bytes": 137469,
+      "sha256": "fc21f4b7332a53503d1cbec965c5508dc6046f9813ed062ea723ea948c31e6e6",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/main-c2e6c90cafe2f5ea.js",
+      "sourceSha256": "fc21f4b7332a53503d1cbec965c5508dc6046f9813ed062ea723ea948c31e6e6",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/next/dist/client/components/builtin/app-error-9a8545b8184e4b2c.js",
+      "bytes": 143,
+      "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/app-error-9a8545b8184e4b2c.js",
+      "sourceSha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/next/dist/client/components/builtin/forbidden-9a8545b8184e4b2c.js",
+      "bytes": 143,
+      "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/forbidden-9a8545b8184e4b2c.js",
+      "sourceSha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/next/dist/client/components/builtin/global-error-b5b1e37774f52387.js",
+      "bytes": 179,
+      "sha256": "89ac4ce96c59be73f4ae477ba7e756fe315039eba151b86b5df8b30eed4d3dd3",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/global-error-b5b1e37774f52387.js",
+      "sourceSha256": "89ac4ce96c59be73f4ae477ba7e756fe315039eba151b86b5df8b30eed4d3dd3",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/next/dist/client/components/builtin/unauthorized-9a8545b8184e4b2c.js",
+      "bytes": 143,
+      "sha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/next/dist/client/components/builtin/unauthorized-9a8545b8184e4b2c.js",
+      "sourceSha256": "e3f3f6c1f30064d76cadad79df86b8d59d4e36023b5494051867b262c345fd7c",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "sourceSha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+      "bytes": 3638,
+      "sha256": "f510ef20971f3efabe4219cdb752727bf3a4c942c272e9a042498454c87bc68a",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+      "sourceSha256": "f510ef20971f3efabe4219cdb752727bf3a4c942c272e9a042498454c87bc68a",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/css/42db836d9e64e415.css",
+      "bytes": 3173,
+      "sha256": "8f374746872af23f82ae365b26c83e44a71dabdb3fa76625963c203a59e4b666",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/css/42db836d9e64e415.css",
+      "sourceSha256": "8f374746872af23f82ae365b26c83e44a71dabdb3fa76625963c203a59e4b666",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/css/4ebcf2432b2e840d.css",
+      "bytes": 43695,
+      "sha256": "2c41d3d5212d7fb681f78fffc7a3853d8f94b0f2686da2f032a4cdbe86428175",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/css/4ebcf2432b2e840d.css",
+      "sourceSha256": "2c41d3d5212d7fb681f78fffc7a3853d8f94b0f2686da2f032a4cdbe86428175",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/media/33553e7595b74ccf-s.p.woff2",
+      "bytes": 76868,
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/media/33553e7595b74ccf-s.p.woff2",
+      "sourceSha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/media/636a5ac981f94f8b-s.p.woff2",
+      "bytes": 27272,
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+      "sourceSha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/NK6AByopCtH7a8RHHGC37/_buildManifest.js",
+      "bytes": 478,
+      "sha256": "5fba4bbb35e626dcd502bbc86831accc5cb7b50ae26d13fc4fa16426423d803c",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/NK6AByopCtH7a8RHHGC37/_buildManifest.js",
+      "sourceSha256": "5fba4bbb35e626dcd502bbc86831accc5cb7b50ae26d13fc4fa16426423d803c",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/static/NK6AByopCtH7a8RHHGC37/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_next/static/NK6AByopCtH7a8RHHGC37/_ssgManifest.js",
+      "sourceSha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_not-found/__next._full.txt",
+      "bytes": 10824,
+      "sha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_not-found/__next._full.txt",
+      "sourceSha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_not-found/__next._not-found.__PAGE__.txt",
+      "bytes": 10129,
+      "sha256": "8515c0674122b75509598a419268becf3ed1935c1bee92b3d6224ea866065ba6",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_not-found/__next._not-found.__PAGE__.txt",
+      "sourceSha256": "8515c0674122b75509598a419268becf3ed1935c1bee92b3d6224ea866065ba6",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_not-found/__next._tree.txt",
+      "bytes": 538,
+      "sha256": "4bc113c3b921e0314fb4ddf046b198d6d4e9cd1fae5b53abb7eb53f7f24b9667",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_not-found/__next._tree.txt",
+      "sourceSha256": "4bc113c3b921e0314fb4ddf046b198d6d4e9cd1fae5b53abb7eb53f7f24b9667",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_not-found/index.html",
+      "bytes": 23107,
+      "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_not-found/index.html",
+      "sourceSha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
+      "transformation": "local hostname-gated analytics loader",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "_not-found/index.txt",
+      "bytes": 10824,
+      "sha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/_not-found/index.txt",
+      "sourceSha256": "33032af1849ca42ed6d06b9146b8f87c389842792e764ccf3e4b3bc66d0cbe0b",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "404.html",
+      "bytes": 23107,
+      "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/404.html",
+      "sourceSha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
+      "transformation": "local hostname-gated analytics loader",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "404/index.html",
+      "bytes": 23107,
+      "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/404/index.html",
+      "sourceSha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
+      "transformation": "local hostname-gated analytics loader",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
     {
       "path": "acessibilidade/guia.html",
       "bytes": 1750,
@@ -83,6 +482,60 @@
       "category": "public-page-analytics",
       "source": "web/assets/analytics.js",
       "sourceSha256": "7c86a24a26056a5f32bbd29543874ff3b2073bc358b4a739abbd4bf062d191b2",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/earth-mobile.webp",
+      "bytes": 96344,
+      "sha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/assets/earth-mobile.webp",
+      "sourceSha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/earth.webp",
+      "bytes": 379916,
+      "sha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/assets/earth.webp",
+      "sourceSha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/game-preview.jpg",
+      "bytes": 95217,
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/assets/game-preview.jpg",
+      "sourceSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/REMOTION-LICENSE.md",
+      "bytes": 2849,
+      "sha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/assets/REMOTION-LICENSE.md",
+      "sourceSha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "bytes": 1255,
+      "sha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "sourceSha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/science-provenance.json",
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/assets/science-provenance.json",
+      "sourceSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
       "transformation": "none; bytes preserved"
     },
     {
@@ -519,10 +972,10 @@
     {
       "path": "campanha/release.json",
       "bytes": 326,
-      "sha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
+      "sha256": "8d943f39f1e4b02d34dc29ec08fbb22f0d3b88c60833571d6efab125e9c73c14",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/release.json",
-      "sourceSha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
+      "sourceSha256": "8d943f39f1e4b02d34dc29ec08fbb22f0d3b88c60833571d6efab125e9c73c14",
       "transformation": "none; bytes preserved"
     },
     {
@@ -812,31 +1265,77 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 73546,
-      "sha256": "99170b58ac27f899201a0821872e5f617e15580d977c57a0d0c9f4ccd2a3161f",
+      "bytes": 74078,
+      "sha256": "02b3c926fefbdb27f67a597742769fa7f74829e1f0f5d981cc34e0d51414056b",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "99170b58ac27f899201a0821872e5f617e15580d977c57a0d0c9f4ccd2a3161f",
+      "sourceSha256": "02b3c926fefbdb27f67a597742769fa7f74829e1f0f5d981cc34e0d51414056b",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2627581,
-      "sha256": "c88d6d7cfc36383141084a814fbc06915cd6ab6e538230ebf3638b8ec5234310",
+      "bytes": 2641607,
+      "sha256": "f44714ff2759effb919ba7095d48ecc6daf89423821b67fd126d84aeb0a92626",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "3f322eb15b842ff6766146c4cad33014acc549a4c49ca28a5c7feb820fbc3c7d",
+      "sourceSha256": "f7240b3e647ccd09c3fc3dd469018eb51684af24fa3e114ea6c5d8ad0321f8ae",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2101999,
-      "sha256": "651b9add245c3f559a65144eb5a7ac10ae7444141b63676527689125be51fd25",
+      "bytes": 2113297,
+      "sha256": "4c2337866f7b3a8609186755b2992a5dc1c1a1dc0fdb0a8e89ed20d51f81c406",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "651b9add245c3f559a65144eb5a7ac10ae7444141b63676527689125be51fd25",
+      "sourceSha256": "4c2337866f7b3a8609186755b2992a5dc1c1a1dc0fdb0a8e89ed20d51f81c406",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "creditos/__next._full.txt",
+      "bytes": 15619,
+      "sha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/creditos/__next._full.txt",
+      "sourceSha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "creditos/__next._tree.txt",
+      "bytes": 536,
+      "sha256": "5449ec063c5c2165100ecc2afa8047e55f6a85b654f110babf8456ce57d80829",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/creditos/__next._tree.txt",
+      "sourceSha256": "5449ec063c5c2165100ecc2afa8047e55f6a85b654f110babf8456ce57d80829",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "creditos/__next.creditos.__PAGE__.txt",
+      "bytes": 14944,
+      "sha256": "6785250676a574508e0ce9d905224c6f6ef2b9c00f8962f9689c46dd066ddbcc",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/creditos/__next.creditos.__PAGE__.txt",
+      "sourceSha256": "6785250676a574508e0ce9d905224c6f6ef2b9c00f8962f9689c46dd066ddbcc",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "creditos/index.html",
+      "bytes": 31392,
+      "sha256": "4cd891b6e3a86b98482ba67837c7199f067c996555973fbf609ec6c4e649b35b",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/creditos/index.html",
+      "sourceSha256": "62221d1af880d3a0c11d66d590161eacc3d111926d4d309b1e5e7bf5acf407d9",
+      "transformation": "local hostname-gated analytics loader",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "creditos/index.txt",
+      "bytes": 15619,
+      "sha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/creditos/index.txt",
+      "sourceSha256": "93e79f4c0bff6e12acfffef7dac08392d6757334bcad302614bbed6e8bcd700e",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2078,22 +2577,22 @@
     },
     {
       "path": "docs/72-DOMINIOS-E-ACESSOS-R27.html",
-      "bytes": 7887,
-      "sha256": "77cec2b16ebaa121d49a6171588747b51ca8d414c27004cbd7e66f059b037d08",
+      "bytes": 8002,
+      "sha256": "96e0043f1f82d342a2d601493685c9f266fe6fed1e89517d25878e4fc520509b",
       "category": "rendered-public-document",
       "source": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
-      "sourceSha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
+      "sourceSha256": "107da53dcbb02bb2833b9ade30ad08c907206f0164cb9bf275fe656525f40d0e",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
-      "bytes": 4686,
-      "sha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
+      "bytes": 4801,
+      "sha256": "107da53dcbb02bb2833b9ade30ad08c907206f0164cb9bf275fe656525f40d0e",
       "category": "public-document",
       "source": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
-      "sourceSha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
+      "sourceSha256": "107da53dcbb02bb2833b9ade30ad08c907206f0164cb9bf275fe656525f40d0e",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2277,6 +2776,26 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+      "bytes": 12802,
+      "sha256": "ae3d0a528959d611e8ac8fd13b8880c0f6f9e1a23e2a47263704e3a2547c4db0",
+      "category": "rendered-public-document",
+      "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+      "sourceSha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+      "bytes": 9470,
+      "sha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+      "category": "public-document",
+      "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
+      "sourceSha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "docs/AUTORIA-E-IA.html",
       "bytes": 3942,
       "sha256": "f5792a4fb283c0f5849ad027889d733ec76cd4f913b3bc701379fc271d5bb7a7",
@@ -2338,8 +2857,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 24666,
-      "sha256": "c9f642c541891a898d9aec824b3e6cc0313f0e9c93b429639f43a8120efebd26",
+      "bytes": 24998,
+      "sha256": "b8aead233381d51b6a7f624c41bbd6d4eefc504994c939c2edcf97e39724ffa9",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
       "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
@@ -2394,6 +2913,17 @@
       "source": "web/documentation.css",
       "sourceSha256": "5416b7f8ffd7405427188ca39d382f3026e9d73c73968e7335725de7a49f8937",
       "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "documentation.html",
+      "bytes": 61259,
+      "sha256": "ca4d57a5d6c8f81e79591a16cc4c50260f0e885bc3ab828d5650064f3c4b2966",
+      "category": "public-portal",
+      "source": "web/index.html",
+      "sourceSha256": "9098308d0b9fb2ef362c08928202d1c9359002a2610ade4f29a4b1e2e9a1ded7",
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "equipe/index.html",
@@ -2493,6 +3023,51 @@
       "category": "local-font-and-license",
       "source": "experiments/mission-design-lab/public/fonts/BricolageGrotesque-OFL.txt",
       "sourceSha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "fonts/eb-garamond-italic-latin.woff2",
+      "bytes": 25412,
+      "sha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/fonts/eb-garamond-italic-latin.woff2",
+      "sourceSha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "fonts/eb-garamond-latin.woff2",
+      "bytes": 23848,
+      "sha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/fonts/eb-garamond-latin.woff2",
+      "sourceSha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "fonts/ebgaramond-OFL.txt",
+      "bytes": 4398,
+      "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/fonts/ebgaramond-OFL.txt",
+      "sourceSha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "fonts/figtree-latin.woff2",
+      "bytes": 20184,
+      "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/fonts/figtree-latin.woff2",
+      "sourceSha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "fonts/figtree-OFL.txt",
+      "bytes": 4388,
+      "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/fonts/figtree-OFL.txt",
+      "sourceSha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2708,22 +3283,30 @@
     },
     {
       "path": "index.html",
-      "bytes": 61215,
-      "sha256": "44c48e3a09b5eee97a6c773bb79549dbef5267caa3c078a0ae1e81b57faf1a43",
-      "category": "public-portal",
-      "source": "web/index.html",
-      "sourceSha256": "63d13e051ea856f33c6a76ecadaad6be3574cfa318cdf6b22c3c31a0f45b9d2e",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
-      "libras": "public",
+      "bytes": 89849,
+      "sha256": "052085df649111d30028dedca7d9def9f140184dae1ba6ae318216f9b25b6110",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/index.html",
+      "sourceSha256": "4a8b485ddade2e33e00608e2b762887c5f151cbbcef01c806ca2df337eb1c20c",
+      "transformation": "local hostname-gated analytics loader",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
-      "path": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+      "path": "index.txt",
+      "bytes": 40966,
+      "sha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f",
+      "category": "immersive-landing",
+      "source": "apps/immersive-lp/out/index.txt",
+      "sourceSha256": "c7123187618bbd5cdb63d39437eef55ad5e39fef4f1c48dc04468f756eb5ce1f",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
       "bytes": 16323,
-      "sha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
+      "sha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DQJ3x109.js",
-      "sourceSha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
+      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-BuxvF7Tb.js",
+      "sourceSha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2808,39 +3391,39 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-7CMtLNql.css",
-      "bytes": 242611,
-      "sha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
+      "path": "lab/assets/index-Cfy7O6Fx.css",
+      "bytes": 243051,
+      "sha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-7CMtLNql.css",
-      "sourceSha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
+      "source": "experiments/mission-design-lab/dist/assets/index-Cfy7O6Fx.css",
+      "sourceSha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-SFxDCbbV.js",
-      "bytes": 711121,
-      "sha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
+      "path": "lab/assets/index-CZybv0Ge.js",
+      "bytes": 713774,
+      "sha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-SFxDCbbV.js",
-      "sourceSha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
+      "source": "experiments/mission-design-lab/dist/assets/index-CZybv0Ge.js",
+      "sourceSha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/LobbyScene-q8FbWaEJ.js",
+      "path": "lab/assets/LobbyScene-C17CUeE_.js",
       "bytes": 2812,
-      "sha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
+      "sha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/LobbyScene-q8FbWaEJ.js",
-      "sourceSha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
+      "source": "experiments/mission-design-lab/dist/assets/LobbyScene-C17CUeE_.js",
+      "sourceSha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
+      "path": "lab/assets/LobbySceneRenderer-D6freGnk.js",
       "bytes": 7642,
-      "sha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
+      "sha256": "1545a64e8fa8b6f3079cc058adc57612846035025bc78925b22d10d78c42ad48",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-DEHn3g7X.js",
-      "sourceSha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
+      "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-D6freGnk.js",
+      "sourceSha256": "1545a64e8fa8b6f3079cc058adc57612846035025bc78925b22d10d78c42ad48",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2853,21 +3436,21 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
+      "path": "lab/assets/NASAReferenceScene-Bz_OxVu3.js",
       "bytes": 7308,
-      "sha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
+      "sha256": "7406b795e2c8fdbbd2124e1dbaa2ddd0ed793ee56c4faa8e5d48f23dbeb1036b",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Du2jNw9H.js",
-      "sourceSha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Bz_OxVu3.js",
+      "sourceSha256": "7406b795e2c8fdbbd2124e1dbaa2ddd0ed793ee56c4faa8e5d48f23dbeb1036b",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/OrbitalScene-DLhsqcJS.js",
+      "path": "lab/assets/OrbitalScene-CxONEVlJ.js",
       "bytes": 219963,
-      "sha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
+      "sha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DLhsqcJS.js",
-      "sourceSha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-CxONEVlJ.js",
+      "sourceSha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2925,12 +3508,12 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/search-CcYThNlJ.js",
+      "path": "lab/assets/search-DDCq2ywb.js",
       "bytes": 1280,
-      "sha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
+      "sha256": "a211c92a1d0e0ad75f7f1fc428074740d24c9b46aa30394b7c5439ba48de5af2",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/search-CcYThNlJ.js",
-      "sourceSha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
+      "source": "experiments/mission-design-lab/dist/assets/search-DDCq2ywb.js",
+      "sourceSha256": "a211c92a1d0e0ad75f7f1fc428074740d24c9b46aa30394b7c5439ba48de5af2",
       "transformation": "none; bytes preserved"
     },
     {
@@ -3392,10 +3975,10 @@
     {
       "path": "lab/index.html",
       "bytes": 1457,
-      "sha256": "17d2b1abc965d0412e9343c909be4333150b9717a9405564cde1fcad0d36421f",
+      "sha256": "1fe7c00949d194adc8678543c17437a47877f89e65691c42fafa317554f26009",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/index.html",
-      "sourceSha256": "7bc4063a7d41fe54f88e11aaa6b8a3919b653c925ba683ef84885425937e6fe6",
+      "sourceSha256": "dba33c42b25492fedf085128214caf2eaeca5a468bc2a2be7e5711ad0cf57ca1",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "lab",
       "analytics": "custom-host-only; page performance; no private routes"

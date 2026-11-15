@@ -52,13 +52,13 @@ export default function Home() {
         <div className="container">
           <div className="section-kicker"><span className="eyebrow">01 / NOSSA RAZÃO DE EXPLORAR</span><span className="small-orbit" aria-hidden="true">✳</span><span className="eyebrow muted">CIÊNCIA QUE CHEGA</span></div>
           <h2 id="mission-title" className="mission-statement">Não basta chegar ao espaço. <br />{' '}É preciso fazer a ciência <br />{' '}<em>chegar à Terra.</em></h2>
-          <div className="mission-intro" data-reveal><span className="eyebrow">O GRANDE DESAFIO<br />{' '}ESTÁ NO CAMINHO DE VOLTA.</span><p>Na MISSÃO IPÊ, você parte de três casos documentados: <strong>a vegetação observada pelo Terra, a investigação de Bennu e o espectro medido pelo Webb.</strong> Defina a pergunta, escolha instrumentos e recursos, opere a nave e interprete o que chegou aos cientistas.</p></div>
-          <div className="signal-diagram" aria-label="Fluxo da missão: observar, processar e entregar">
+          <div className="mission-intro" data-reveal><span className="eyebrow">O GRANDE DESAFIO<br />{' '}ESTÁ NO CAMINHO DE VOLTA.</span><p>Na MISSÃO IPÊ, <strong>suas escolhas determinam quais dados chegam à Terra.</strong> A nave pode coletar todos os registros e perder a janela de comunicação. Projete a nave, simule a operação e use o relatório para decidir o que mudar.</p></div>
+          <div className="signal-diagram" role="group" aria-label="Etapas para jogar">
             <svg viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true"><path className="signal-path" d="M0 45H270Q300 45 315 25T360 25Q385 45 410 45H600Q640 45 650 65T705 65Q720 45 760 45H1000" stroke="currentColor" strokeWidth="1" fill="none" /></svg>
             {[
-              ['01', 'Observar.', 'Uma pergunta com os pés no Cerrado.', 'Interprete registros históricos de vegetação. Descubra o que um dado pode — e o que não pode — dizer.'],
-              ['02', 'Projetar.', 'Um sistema de escolhas conectadas.', 'Combine energia, processamento e comunicação. Mais capacidade também pode significar mais massa ou custo.'],
-              ['03', 'Fazer chegar.', 'O resultado precisa voltar para casa.', 'Execute, investigue e redesenhe. Compare o que você imaginou com a ciência que realmente chegou.'],
+              ['01', 'Briefing.', 'Comece pela pergunta científica.', 'Escolha um destino e descubra o que você precisa medir e entregar.'],
+              ['02', 'Hangar.', 'Monte a nave e confira a previsão.', 'Escolha instrumentos e recursos. Inspecione a nave em 3D e veja o que muda no projeto.'],
+              ['03', 'Operação.', 'Acompanhe os eventos e leia o relatório.', 'Confira quantos registros chegaram válidos à Terra. Volte ao hangar para testar outra escolha.'],
             ].map(([number, title, subtitle, text]) => <article key={number} data-reveal><span className="signal-node">{number}</span><h3>{title}</h3><h4>{subtitle}</h4><p>{text}</p></article>)}
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
       <section id="laboratorio" className="lab-section section-pad" aria-labelledby="lab-title" tabIndex={-1}><div className="container">
         <div className="section-heading"><div><p className="eyebrow"><span className="accent-dash" />02 / VOCÊ NO CONTROLE</p><h2 id="lab-title">Pequenas escolhas.<br />{' '}<em>Grandes descobertas.</em></h2></div><p>O mesmo satélite. Uma janela menor para transmitir.<br />{' '}Experimente mudar o projeto e veja o que chega à Terra.</p></div>
         <LabLoader />
-        <p className="lab-disclaimer">Este é um recorte interativo do beta. Componentes, créditos e duração são didáticos; os registros científicos são históricos. <a href={LINKS.research}>Explore a origem dos dados <Icon name="arrow-up" /></a></p>
+        <p className="lab-disclaimer">Neste ensaio do Cerrado, você testa um projeto com registros históricos. Componentes, créditos e duração fazem parte da simulação. <a href={LINKS.research}>Explore a origem dos dados <Icon name="arrow-up" /></a></p>
       </div></section>
 
       <section id="jornada" className="journey-section section-pad" aria-labelledby="journey-title" tabIndex={-1}><div className="container">
@@ -77,10 +77,10 @@ export default function Home() {
           <MissionGlyph kind={level.icon} className="level-glyph" />
           <p className="eyebrow">{level.tag}</p><h3>{level.name}</h3><h4>{level.subtitle}</h4><p className="level-copy">{level.text}</p><p className="level-learning">{level.learning}</p>
           <details><summary>Fato real e exercício <Icon name="plus" /></summary><p>{level.detail}</p><a className="text-link" href={level.source}>{level.sourceLabel} <Icon name="arrow-up" /></a></details>
-          <a href={LINKS.game} className="level-link">Escolher missão no laboratório <Icon name="arrow-up" /></a>
+          <a href={LINKS.game} className="level-link">Escolher missão no jogo <Icon name="arrow-up" /></a>
         </article>)}</div>
         <div className="journey-demo"><p><strong>Apresente os três casos em seis minutos.</strong> O roteiro mostra como comparar duas escolhas, seguir um registro e concluir com os quatro papéis da missão.</p><a href={LINKS.roadmap} className="text-link">Abrir roteiro da demonstração <Icon name="arrow-up" /></a></div>
-        <div className="journey-demo"><p><strong>Quatro destinos de engenharia: ISS, Lua, Marte e Europa.</strong> Compre e equipe instrumentos, acompanhe os ciclos de uso e compare sua nave em 3D. Monte lançador, propulsão, energia, proteção e enlace. Execute a missão e investigue a pontuação. Os desafios de engenharia adaptam a contribuição do Bruno com parâmetros didáticos.</p><a href={LINKS.game} className="text-link">Abrir seleção de missões <Icon name="arrow-up" /></a></div><p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
+        <div className="journey-demo"><p><strong>ISS, Lua, Marte e Europa.</strong> Preserve a calibração do monitor na ISS, combine temperatura e indícios de hidrogênio na Lua, proteja a estação na chegada a Marte e planeje a carga de radar e espectrometria para Europa. Compre e equipe os instrumentos, compare montagens e confira no relatório quantas leituras simuladas chegaram válidas. Os quatro desafios adaptam a contribuição de Bruno A Carvalho.</p><a href={LINKS.game} className="text-link">Jogar os desafios de engenharia <Icon name="arrow-up" /></a></div><p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
       </div></section>
 
       <section className="earth-interlude" aria-labelledby="earth-title">

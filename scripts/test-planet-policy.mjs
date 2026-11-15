@@ -21,13 +21,13 @@ let child;
 try {
   await mkdir(join(fixture, 'scripts'));
   for (const name of ['package.json', 'scripts/prepare-vercel-static.mjs', 'scripts/serve-beta.mjs', 'scripts/public-libras.mjs', 'scripts/public-analytics.mjs']) await writeFile(join(fixture, name), await readFile(join(project, name)));
-  const pages = ['site.css', 'lab/rive/ipe-subsystems.riv', 'equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
+  const pages = ['site.css', 'lab/rive/ipe-subsystems.riv', 'equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'documentation.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
   const portal = await readFile(join(project, 'web/planet-jumping.html'), 'utf8');
   const documentaryHub = await readFile(join(project, 'web/index.html'), 'utf8');
   for (const file of pages) {
     const destination = join(fixture, 'site', file);
     await mkdir(dirname(destination), { recursive: true });
-    await writeFile(destination, file === 'planet-jumping.html' ? portal : file === 'index.html' ? documentaryHub : '<!doctype html><title>Local fixture</title><script>window.localPolicyFixture=true;</script>');
+    await writeFile(destination, file === 'planet-jumping.html' ? portal : file === 'documentation.html' ? documentaryHub : '<!doctype html><title>Local fixture</title><script>window.localPolicyFixture=true;</script>');
   }
   await run(process.execPath, ['scripts/prepare-vercel-static.mjs'], { cwd: fixture, timeout: 5000 });
   const config = JSON.parse(await readFile(join(fixture, 'vercel.json'), 'utf8'));
@@ -81,12 +81,13 @@ try {
     assert.equal(response.headers.get('cache-control'),'no-store');
     assert.equal((await response.arrayBuffer()).byteLength,0);
   }
-  assert.deepEqual(config.rewrites?.find(rule => rule.source === '/documentacao'), { source: '/documentacao', destination: '/index.html' });
-  const rootRedirect = config.redirects.find(rule => rule.source === '/' && !rule.has);
-  assert.deepEqual(rootRedirect, { source: '/', destination: 'https://projeto-ipe-lp.vercel.app/', permanent: false });
-  assert.ok(config.redirects.filter(rule => rule.source === '/' && rule.has).every(rule => config.redirects.indexOf(rule) < config.redirects.indexOf(rootRedirect)));
+  assert.deepEqual(config.rewrites?.find(rule => rule.source === '/documentacao'), { source: '/documentacao', destination: '/documentation.html' });
+  assert.equal(config.redirects.find(rule => rule.source === '/' && !rule.has), undefined);
+  const landing = await fetch(local + '/', { redirect: 'manual' });
+  assert.equal(landing.status, 200);
+  assert.equal(landing.headers.get('location'), null);
+  assert.match(await landing.text(), /Local fixture/);
   for (const [route, status, location] of [
-    ['/', 307, 'https://projeto-ipe-lp.vercel.app/'],
     ['/documentacao/', 308, '/documentacao'],
     ['/documentacao/index.html', 307, '/documentacao'],
     ['/docs', 307, '/docs/index.html'],

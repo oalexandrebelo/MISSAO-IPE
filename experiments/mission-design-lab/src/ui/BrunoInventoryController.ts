@@ -16,16 +16,42 @@ const feedback: Record<Operation, string> = {
   reset: 'Carteira reiniciada. Seu progresso de missões permanece disponível.',
 };
 const unavailable = 'A carteira está indisponível. Atualize o inventário para confirmar saldo e unidades.';
+const confirmationPending = 'A confirmação da operação está pendente. Tente confirmá-la antes de fazer outra alteração.';
+const pendingKey = (sessionId: string) => `missao-ipe:inventory-pending:v1:${sessionId}`;
+
+function readPendingRequest(sessionId: string): Request | null {
+  try {
+    const value = JSON.parse(window.sessionStorage.getItem(pendingKey(sessionId)) ?? 'null') as Partial<Request> | null;
+    if (!value || typeof value.requestId !== 'string' || typeof value.expectedRevision !== 'number'
+      || !Number.isSafeInteger(value.expectedRevision) || value.expectedRevision < 0
+      || !value.command || !Object.hasOwn(feedback, value.command.kind)) return null;
+    return { requestId: value.requestId, expectedRevision: value.expectedRevision, command: value.command };
+  } catch { return null; }
+}
+
+function rememberRequest(sessionId: string, request: Request): boolean {
+  try {
+    window.sessionStorage.setItem(pendingKey(sessionId), JSON.stringify(request));
+    return true;
+  } catch { return false; }
+}
+
+function forgetRequest(sessionId: string, requestId: string) {
+  try {
+    if (readPendingRequest(sessionId)?.requestId === requestId) window.sessionStorage.removeItem(pendingKey(sessionId));
+  } catch { /* Rechecking the same receipt is idempotent. */ }
+}
 
 export function useBrunoInventory(sessionId: string) {
+  const [restoredRequest] = useState(() => readPendingRequest(sessionId));
   const current = useRef<InventorySnapshot | null>(null);
-  const pending = useRef<Request | null>(null);
+  const pending = useRef<Request | null>(restoredRequest);
   const inFlight = useRef(false);
   const mounted = useRef(false);
   const [snapshot, setSnapshot] = useState<InventorySnapshot | null>(null);
-  const [busy, setBusy] = useState<Operation | 'load' | null>('load');
-  const [uncertain, setUncertain] = useState<Operation | null>(null);
-  const [issue, setIssue] = useState('');
+  const [busy, setBusy] = useState<Operation | 'load' | null>(restoredRequest ? null : 'load');
+  const [uncertain, setUncertain] = useState<Operation | null>(restoredRequest?.command.kind ?? null);
+  const [issue, setIssue] = useState(restoredRequest ? confirmationPending : '');
   const [notice, setNotice] = useState('');
 
   const publish = useCallback((value: InventorySnapshot | null) => {
@@ -51,7 +77,7 @@ export function useBrunoInventory(sessionId: string) {
 
   useEffect(() => {
     mounted.current = true;
-    const offline = () => { publish(null); setIssue(unavailable); setNotice(''); };
+    const offline = () => { publish(null); setIssue(pending.current ? confirmationPending : unavailable); setNotice(''); };
     void refresh();
     window.addEventListener('offline', offline);
     window.addEventListener('online', refresh);
@@ -65,12 +91,15 @@ export function useBrunoInventory(sessionId: string) {
   const send = useCallback(async (request: Request) => {
     if (inFlight.current || navigator.onLine === false) return null;
     inFlight.current = true;
+    pending.current = request;
+    const saved = rememberRequest(sessionId, request);
     setBusy(request.command.kind);
     setIssue('');
     setNotice('');
     try {
       const response = await sendInventoryCommand(sessionId, request);
       pending.current = null;
+      forgetRequest(sessionId, request.requestId);
       publish(response.snapshot);
       if (mounted.current) {
         setUncertain(null);
@@ -78,14 +107,15 @@ export function useBrunoInventory(sessionId: string) {
       }
       return response;
     } catch (error) {
-      if (!mounted.current) return null;
       if (!(error instanceof InventoryApiError) || error.uncertain) {
-        pending.current = request;
+        if (!mounted.current) return null;
         publish(null);
         setUncertain(request.command.kind);
-        setIssue('A confirmação da operação está pendente. Tente confirmá-la antes de fazer outra alteração.');
+        setIssue(saved ? confirmationPending : `${confirmationPending} Mantenha esta aba aberta para recuperar o pedido.`);
       } else {
         pending.current = null;
+        forgetRequest(sessionId, request.requestId);
+        if (!mounted.current) return null;
         setUncertain(null);
         if (error.snapshot) publish(error.snapshot);
         else if (error.status === 401 || error.status >= 500) publish(null);

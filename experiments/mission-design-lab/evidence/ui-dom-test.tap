@@ -1,74 +1,80 @@
 TAP version 13
-# (node:19230) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31028) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: briefing da ISS percorre a tentativa e redesenha um resultado em resposta à escolha
 ok 1 - briefing da ISS percorre a tentativa e redesenha um resultado em resposta à escolha
   ---
-  duration_ms: 89.755792
+  duration_ms: 106.140667
   type: 'test'
   ...
 # Subtest: Marte bloqueia o lançamento incompatível; Lua pula a espera com movimento reduzido
 ok 2 - Marte bloqueia o lançamento incompatível; Lua pula a espera com movimento reduzido
   ---
-  duration_ms: 23.975959
+  duration_ms: 27.808208
   type: 'test'
   ...
 # Subtest: A/B troca a nave sem modificar B; rascunho retoma por participação sem pontuar novamente
 ok 3 - A/B troca a nave sem modificar B; rascunho retoma por participação sem pontuar novamente
   ---
-  duration_ms: 44.28
+  duration_ms: 47.314125
   type: 'test'
   ...
 # Subtest: operação percorre eventos reais, permite pausa e registra saída como cancelamento
 ok 4 - operação percorre eventos reais, permite pausa e registra saída como cancelamento
   ---
-  duration_ms: 12.571958
+  duration_ms: 15.652209
   type: 'test'
   ...
-# (node:19231) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31078) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: a loja confirma várias unidades em um pedido e recupera o mesmo recibo sem repetir a compra
 ok 5 - a loja confirma várias unidades em um pedido e recupera o mesmo recibo sem repetir a compra
   ---
-  duration_ms: 75.070958
+  duration_ms: 99.676375
   type: 'test'
   ...
-# (node:19232) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# Subtest: a loja mantém o pedido sem confirmação ao remontar e recupera o mesmo recibo uma vez
+ok 6 - a loja mantém o pedido sem confirmação ao remontar e recupera o mesmo recibo uma vez
+  ---
+  duration_ms: 35.514542
+  type: 'test'
+  ...
+# (node:31092) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: bennu: energia altera a nave e mostra diferenças calculadas pelo catálogo
-ok 6 - bennu: energia altera a nave e mostra diferenças calculadas pelo catálogo
+ok 7 - bennu: energia altera a nave e mostra diferenças calculadas pelo catálogo
   ---
-  duration_ms: 102.64575
+  duration_ms: 119.519667
   type: 'test'
   ...
 # Subtest: bennu: ampliar contatos mantém hardware e taxa e usa a agenda do motor
-ok 7 - bennu: ampliar contatos mantém hardware e taxa e usa a agenda do motor
+ok 8 - bennu: ampliar contatos mantém hardware e taxa e usa a agenda do motor
   ---
-  duration_ms: 37.2635
+  duration_ms: 38.315958
   type: 'test'
   ...
 # Subtest: telescope: energia altera a nave e mostra diferenças calculadas pelo catálogo
-ok 8 - telescope: energia altera a nave e mostra diferenças calculadas pelo catálogo
+ok 9 - telescope: energia altera a nave e mostra diferenças calculadas pelo catálogo
   ---
-  duration_ms: 44.090584
+  duration_ms: 40.045666
   type: 'test'
   ...
 # Subtest: telescope: ampliar contatos mantém hardware e taxa e usa a agenda do motor
-ok 9 - telescope: ampliar contatos mantém hardware e taxa e usa a agenda do motor
+ok 10 - telescope: ampliar contatos mantém hardware e taxa e usa a agenda do motor
   ---
-  duration_ms: 35.582625
+  duration_ms: 33.773875
   type: 'test'
   ...
 # Subtest: Cerrado: trocar bateria preserva recurso científico e mostra massa, custo e capacidade reais do catálogo
-ok 10 - Cerrado: trocar bateria preserva recurso científico e mostra massa, custo e capacidade reais do catálogo
+ok 11 - Cerrado: trocar bateria preserva recurso científico e mostra massa, custo e capacidade reais do catálogo
   ---
-  duration_ms: 55.503333
+  duration_ms: 52.262542
   type: 'test'
   ...
-# (node:19233) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31170) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -76,60 +82,60 @@ ok 10 - Cerrado: trocar bateria preserva recurso científico e mostra massa, cus
     # Subtest: prediction and minimum rationale are mandatory; solver is absent before a completed own attempt
     ok 1 - prediction and minimum rationale are mandatory; solver is absent before a completed own attempt
       ---
-      duration_ms: 153.033583
+      duration_ms: 85.543208
       type: 'test'
       ...
     # Subtest: long contact really delivers 6/6 and commits the prediction before completion
     ok 2 - long contact really delivers 6/6 and commits the prediction before completion
       ---
-      duration_ms: 84.767958
+      duration_ms: 67.055541
       type: 'test'
       ...
     # Subtest: transfer clears prediction and real short contact delivers only 2/6
     ok 3 - transfer clears prediction and real short contact delivers only 2/6
       ---
-      duration_ms: 145.24
+      duration_ms: 99.040083
       type: 'test'
       ...
     # Subtest: search evaluates all 64 and certifies minimum two choices after the own attempt
     ok 4 - search evaluates all 64 and certifies minimum two choices after the own attempt
       ---
-      duration_ms: 31.106125
+      duration_ms: 25.109458
       type: 'test'
       ...
     # Subtest: invalid replay preserves the published result, candidate search and config
     ok 5 - invalid replay preserves the published result, candidate search and config
       ---
-      duration_ms: 114.606792
+      duration_ms: 65.788792
       type: 'test'
       ...
     # Subtest: applying a witness requires another prediction and really executes 6/6
     ok 6 - applying a witness requires another prediction and really executes 6/6
       ---
-      duration_ms: 140.962541
+      duration_ms: 89.78825
       type: 'test'
       ...
     1..6
-ok 11 - real React journey: prediction, long 6/6, short 2/6, certified minimum 2, applied candidate 6/6, invalid import preservation
+ok 12 - real React journey: prediction, long 6/6, short 2/6, certified minimum 2, applied candidate 6/6, invalid import preservation
   ---
-  duration_ms: 797.849125
+  duration_ms: 542.972042
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: importing a valid replay without a personal attempt keeps the solver gated
-ok 12 - importing a valid replay without a personal attempt keeps the solver gated
+ok 13 - importing a valid replay without a personal attempt keeps the solver gated
   ---
-  duration_ms: 93.1205
+  duration_ms: 66.434042
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: unavailable IndexedDB and localStorage keep the real result available and replay export enabled
-ok 13 - unavailable IndexedDB and localStorage keep the real result available and replay export enabled
+ok 14 - unavailable IndexedDB and localStorage keep the real result available and replay export enabled
   ---
-  duration_ms: 100.384458
+  duration_ms: 94.147333
   type: 'test'
   ...
-# (node:19242) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31217) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -141,9 +147,9 @@ ok 13 - unavailable IndexedDB and localStorage keep the real result available an
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: the real App routes all seven lobby choices to their mission, without recording a launch on selection
-ok 14 - the real App routes all seven lobby choices to their mission, without recording a launch on selection
+ok 15 - the real App routes all seven lobby choices to their mission, without recording a launch on selection
   ---
-  duration_ms: 286.641417
+  duration_ms: 248.287959
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -152,70 +158,70 @@ ok 14 - the real App routes all seven lobby choices to their mission, without re
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: the shop selects a mission instrument from each hangar and opens on the catalog default from the lobby
-ok 15 - the shop selects a mission instrument from each hangar and opens on the catalog default from the lobby
+ok 16 - the shop selects a mission instrument from each hangar and opens on the catalog default from the lobby
   ---
-  duration_ms: 165.690834
+  duration_ms: 127.93975
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: Europa purchases replay a lost receipt, reserve both instruments, consume condition and record one confirmed attempt
-ok 16 - Europa purchases replay a lost receipt, reserve both instruments, consume condition and record one confirmed attempt
+ok 17 - Europa purchases replay a lost receipt, reserve both instruments, consume condition and record one confirmed attempt
   ---
-  duration_ms: 211.280125
+  duration_ms: 173.091917
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: an unavailable wallet keeps purchase and launch unavailable until a real inventory read returns
-ok 17 - an unavailable wallet keeps purchase and launch unavailable until a real inventory read returns
+ok 18 - an unavailable wallet keeps purchase and launch unavailable until a real inventory read returns
   ---
-  duration_ms: 34.965042
+  duration_ms: 24.022792
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: the normal launch countdown completes once and persists the computed result
-ok 18 - the normal launch countdown completes once and persists the computed result
+ok 19 - the normal launch countdown completes once and persists the computed result
   ---
-  duration_ms: 7340.138
+  duration_ms: 7265.509625
   type: 'test'
   ...
-# (node:19281) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31387) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: title starts the game only after a player action even when fullscreen is declined
-ok 19 - title starts the game only after a player action even when fullscreen is declined
+ok 20 - title starts the game only after a player action even when fullscreen is declined
   ---
-  duration_ms: 40.842208
+  duration_ms: 38.432584
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: seven mission choices change the briefing without launching; Play dispatches only the selected mission
-ok 20 - seven mission choices change the briefing without launching; Play dispatches only the selected mission
+ok 21 - seven mission choices change the briefing without launching; Play dispatches only the selected mission
   ---
-  duration_ms: 35.28325
+  duration_ms: 33.292792
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: neighbor controls wrap all destinations, and keyboard selection keeps focus in the picker
-ok 21 - neighbor controls wrap all destinations, and keyboard selection keeps focus in the picker
+ok 22 - neighbor controls wrap all destinations, and keyboard selection keeps focus in the picker
   ---
-  duration_ms: 10.37125
+  duration_ms: 10.261375
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: the lobby pauses its stage without changing the active mission or the other actions
-ok 22 - the lobby pauses its stage without changing the active mission or the other actions
+ok 23 - the lobby pauses its stage without changing the active mission or the other actions
   ---
-  duration_ms: 9.071458
+  duration_ms: 8.189541
   type: 'test'
   ...
 # Subtest: reduced motion starts static and keeps all seven destinations available
-ok 23 - reduced motion starts static and keeps all seven destinations available
+ok 24 - reduced motion starts static and keeps all seven destinations available
   ---
-  duration_ms: 4.849375
+  duration_ms: 4.854042
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -223,734 +229,740 @@ ok 23 - reduced motion starts static and keeps all seven destinations available
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: returning to the lobby keeps Webb selected after visiting progress, the shop and the archive
-ok 24 - returning to the lobby keeps Webb selected after visiting progress, the shop and the archive
+ok 25 - returning to the lobby keeps Webb selected after visiting progress, the shop and the archive
   ---
-  duration_ms: 63.453958
+  duration_ms: 59.004917
   type: 'test'
   ...
-# (node:19289) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31388) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: Libras no cadastro acompanha as quatro etapas sem ler nome ou e-mail
-ok 25 - Libras no cadastro acompanha as quatro etapas sem ler nome ou e-mail
+ok 26 - Libras no cadastro acompanha as quatro etapas sem ler nome ou e-mail
   ---
-  duration_ms: 52.434334
+  duration_ms: 51.149375
   type: 'test'
   ...
 # Subtest: Libras da bancada do Cerrado segue a categoria sem incluir a hipótese digitada
-ok 26 - Libras da bancada do Cerrado segue a categoria sem incluir a hipótese digitada
+ok 27 - Libras da bancada do Cerrado segue a categoria sem incluir a hipótese digitada
   ---
-  duration_ms: 50.054792
+  duration_ms: 45.957417
   type: 'test'
   ...
 # Subtest: Libras da bancada bennu lê seleção e recursos do projeto atualizado
-ok 27 - Libras da bancada bennu lê seleção e recursos do projeto atualizado
+ok 28 - Libras da bancada bennu lê seleção e recursos do projeto atualizado
   ---
-  duration_ms: 24.47825
+  duration_ms: 20.769208
   type: 'test'
   ...
 # Subtest: Libras da bancada telescope lê seleção e recursos do projeto atualizado
-ok 28 - Libras da bancada telescope lê seleção e recursos do projeto atualizado
+ok 29 - Libras da bancada telescope lê seleção e recursos do projeto atualizado
   ---
-  duration_ms: 23.759875
+  duration_ms: 22.815791
   type: 'test'
   ...
 # Subtest: Libras da expedição acompanha fase e replay sem hipótese, reflexão ou eventos futuros
-ok 29 - Libras da expedição acompanha fase e replay sem hipótese, reflexão ou eventos futuros
+ok 30 - Libras da expedição acompanha fase e replay sem hipótese, reflexão ou eventos futuros
   ---
-  duration_ms: 99.29575
+  duration_ms: 89.520833
   type: 'test'
   ...
 # Subtest: Libras no relatório do Cerrado não reutiliza texto arbitrário de um replay importado
-ok 30 - Libras no relatório do Cerrado não reutiliza texto arbitrário de um replay importado
+ok 31 - Libras no relatório do Cerrado não reutiliza texto arbitrário de um replay importado
   ---
-  duration_ms: 30.080083
+  duration_ms: 27.597291
   type: 'test'
   ...
 # Subtest: Libras das duas comparações acompanha lado e tempo comum sem confundir total final
-ok 31 - Libras das duas comparações acompanha lado e tempo comum sem confundir total final
+ok 32 - Libras das duas comparações acompanha lado e tempo comum sem confundir total final
   ---
-  duration_ms: 36.829583
+  duration_ms: 33.193792
   type: 'test'
   ...
-# (node:19290) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31390) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: only the selected texture loads; late responses cannot replace the selected destination
-ok 32 - only the selected texture loads; late responses cannot replace the selected destination
+ok 33 - only the selected texture loads; late responses cannot replace the selected destination
   ---
-  duration_ms: 48.7565
+  duration_ms: 47.847542
   type: 'test'
   ...
 # Subtest: pause, reduced motion, hidden tabs, offscreen and zero-height stages suspend the single animation loop
-ok 33 - pause, reduced motion, hidden tabs, offscreen and zero-height stages suspend the single animation loop
+ok 34 - pause, reduced motion, hidden tabs, offscreen and zero-height stages suspend the single animation loop
   ---
-  duration_ms: 8.129916
+  duration_ms: 7.464292
   type: 'test'
   ...
 # Subtest: mobile resize caps DPR at one and context loss cannot be cleared by a late asset or another mission
-ok 34 - mobile resize caps DPR at one and context loss cannot be cleared by a late asset or another mission
+ok 35 - mobile resize caps DPR at one and context loss cannot be cleared by a late asset or another mission
   ---
-  duration_ms: 6.460583
+  duration_ms: 4.992583
   type: 'test'
   ...
 # Subtest: unmount releases pending and loaded textures, the renderer and scheduled work
-ok 35 - unmount releases pending and loaded textures, the renderer and scheduled work
+ok 36 - unmount releases pending and loaded textures, the renderer and scheduled work
   ---
-  duration_ms: 6.486834
+  duration_ms: 7.704125
   type: 'test'
   ...
-# (node:19292) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31393) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: R23 Bennu compares real executed states, keeps one radio, and separates replay from final delta
-ok 36 - R23 Bennu compares real executed states, keeps one radio, and separates replay from final delta
+ok 37 - R23 Bennu compares real executed states, keeps one radio, and separates replay from final delta
   ---
-  duration_ms: 103.765875
+  duration_ms: 102.572167
   type: 'test'
   ...
 # Subtest: R23 Webb connects instrument comparison to geometry and distinguishes reception from valid science
-ok 37 - R23 Webb connects instrument comparison to geometry and distinguishes reception from valid science
+ok 38 - R23 Webb connects instrument comparison to geometry and distinguishes reception from valid science
   ---
-  duration_ms: 45.332958
+  duration_ms: 45.862083
   type: 'test'
   ...
 # Subtest: R23 Cerrado links changed processing to scene, clamps ended attempts and resets a new pair
-ok 38 - R23 Cerrado links changed processing to scene, clamps ended attempts and resets a new pair
+ok 39 - R23 Cerrado links changed processing to scene, clamps ended attempts and resets a new pair
   ---
-  duration_ms: 69.391792
+  duration_ms: 69.092417
   type: 'test'
   ...
 # Subtest: R23 initial energy differences inspect energy instead of misidentifying the launch segment
-ok 39 - R23 initial energy differences inspect energy instead of misidentifying the launch segment
+ok 40 - R23 initial energy differences inspect energy instead of misidentifying the launch segment
   ---
-  duration_ms: 23.990292
+  duration_ms: 22.679917
   type: 'test'
   ...
-# (node:19293) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31402) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: a guided experiment requires a prediction before exposing final results or an executed scene
-ok 40 - a guided experiment requires a prediction before exposing final results or an executed scene
+ok 41 - a guided experiment requires a prediction before exposing final results or an executed scene
   ---
-  duration_ms: 62.704166
+  duration_ms: 55.983417
   type: 'test'
   ...
 # Subtest: each lesson shows real final totals separately from the clock and switches executed A/B configurations without seeking
     # Subtest: cerrado
     ok 1 - cerrado
       ---
-      duration_ms: 67.76475
+      duration_ms: 64.892542
       type: 'test'
       ...
     # Subtest: bennu
     ok 2 - bennu
       ---
-      duration_ms: 60.047125
+      duration_ms: 51.830792
       type: 'test'
       ...
     # Subtest: telescope
     ok 3 - telescope
       ---
-      duration_ms: 51.361625
+      duration_ms: 43.446416
       type: 'test'
       ...
     1..3
-ok 41 - each lesson shows real final totals separately from the clock and switches executed A/B configurations without seeking
+ok 42 - each lesson shows real final totals separately from the clock and switches executed A/B configurations without seeking
   ---
-  duration_ms: 179.988083
+  duration_ms: 160.585584
   type: 'test'
   ...
 # Subtest: applying explicitly passes the selected trial once, including a failed choice, without saving or rerunning a project
-ok 42 - applying explicitly passes the selected trial once, including a failed choice, without saving or rerunning a project
+ok 43 - applying explicitly passes the selected trial once, including a failed choice, without saving or rerunning a project
   ---
-  duration_ms: 33.4195
+  duration_ms: 31.273042
   type: 'test'
   ...
 # Subtest: a disabled experiment cannot run even when a prediction was selected before disabling
-ok 43 - a disabled experiment cannot run even when a prediction was selected before disabling
+ok 44 - a disabled experiment cannot run even when a prediction was selected before disabling
   ---
-  duration_ms: 2.957042
+  duration_ms: 3.348708
   type: 'test'
   ...
 # Subtest: reflection preserves missing evidence at zero valid records and rejects fabricated interpretations in all missions
     # Subtest: cerrado
     ok 1 - cerrado
       ---
-      duration_ms: 4.385417
+      duration_ms: 4.61575
       type: 'test'
       ...
     # Subtest: bennu
     ok 2 - bennu
       ---
-      duration_ms: 2.978042
+      duration_ms: 3.566167
       type: 'test'
       ...
     # Subtest: telescope
     ok 3 - telescope
       ---
-      duration_ms: 3.106333
+      duration_ms: 2.975
       type: 'test'
       ...
     1..3
-ok 44 - reflection preserves missing evidence at zero valid records and rejects fabricated interpretations in all missions
+ok 45 - reflection preserves missing evidence at zero valid records and rejects fabricated interpretations in all missions
   ---
-  duration_ms: 10.794
+  duration_ms: 11.502458
   type: 'test'
   ...
 # Subtest: a complete reflection reports receipt without claiming causal or molecular discovery
-ok 45 - a complete reflection reports receipt without claiming causal or molecular discovery
+ok 46 - a complete reflection reports receipt without claiming causal or molecular discovery
   ---
-  duration_ms: 2.666208
+  duration_ms: 2.555459
   type: 'test'
   ...
 # Subtest: R19 guided comparison seeks an actual first difference and resets focus when freely navigating
     # Subtest: cerrado
     ok 1 - cerrado
       ---
-      duration_ms: 20.4225
+      duration_ms: 18.649791
       type: 'test'
       ...
     # Subtest: bennu
     ok 2 - bennu
       ---
-      duration_ms: 26.0425
+      duration_ms: 22.648708
       type: 'test'
       ...
     # Subtest: telescope
     ok 3 - telescope
       ---
-      duration_ms: 21.832333
+      duration_ms: 20.044958
       type: 'test'
       ...
     1..3
-ok 46 - R19 guided comparison seeks an actual first difference and resets focus when freely navigating
+ok 47 - R19 guided comparison seeks an actual first difference and resets focus when freely navigating
   ---
-  duration_ms: 68.653791
+  duration_ms: 61.659459
   type: 'test'
   ...
 # Subtest: the mission sequence gives all stages and outcomes in HTML with reduced motion
-ok 47 - the mission sequence gives all stages and outcomes in HTML with reduced motion
+ok 48 - the mission sequence gives all stages and outcomes in HTML with reduced motion
   ---
-  duration_ms: 29.505625
+  duration_ms: 27.949
   type: 'test'
   ...
 # Subtest: the HTML progression stays available when Canvas2D is unavailable
-ok 48 - the HTML progression stays available when Canvas2D is unavailable
+ok 49 - the HTML progression stays available when Canvas2D is unavailable
   ---
-  duration_ms: 2.873208
+  duration_ms: 1.811583
   type: 'test'
   ...
-# (node:19297) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31412) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: sequential entry preserves answers, starts Cerrado even when fullscreen is declined, and stores the own attempt
-ok 49 - sequential entry preserves answers, starts Cerrado even when fullscreen is declined, and stores the own attempt
+ok 50 - sequential entry preserves answers, starts Cerrado even when fullscreen is declined, and stores the own attempt
   ---
-  duration_ms: 225.177875
+  duration_ms: 204.626458
   type: 'test'
   ...
 # Subtest: Bennu and Webb each open their mission directly when fullscreen is unavailable
-ok 50 - Bennu and Webb each open their mission directly when fullscreen is unavailable
+ok 51 - Bennu and Webb each open their mission directly when fullscreen is unavailable
   ---
-  duration_ms: 60.3805
+  duration_ms: 50.434
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: a restored session requests fullscreen only after Retomar and follows browser fullscreen changes
-ok 51 - a restored session requests fullscreen only after Retomar and follows browser fullscreen changes
+ok 52 - a restored session requests fullscreen only after Retomar and follows browser fullscreen changes
   ---
-  duration_ms: 20.40825
+  duration_ms: 17.88675
   type: 'test'
   ...
 # Subtest: network failure does not silently create a player or promise that metrics were saved
-ok 52 - network failure does not silently create a player or promise that metrics were saved
+ok 53 - network failure does not silently create a player or promise that metrics were saved
   ---
-  duration_ms: 12.465666
+  duration_ms: 11.349375
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: the exit confirmation can be cancelled with Escape and gives focus back to the exit button
-ok 53 - the exit confirmation can be cancelled with Escape and gives focus back to the exit button
+ok 54 - the exit confirmation can be cancelled with Escape and gives focus back to the exit button
   ---
-  duration_ms: 20.482541
+  duration_ms: 17.305417
   type: 'test'
   ...
 # Subtest: failed upload remains pending and retries the same UUID without result/identity payload
-ok 54 - failed upload remains pending and retries the same UUID without result/identity payload
+ok 55 - failed upload remains pending and retries the same UUID without result/identity payload
   ---
-  duration_ms: 6.635458
+  duration_ms: 6.585834
   type: 'test'
   ...
 # Subtest: expired or replaced owner can leave the old UI without reassigning pending events or clearing another cookie
-ok 55 - expired or replaced owner can leave the old UI without reassigning pending events or clearing another cookie
+ok 56 - expired or replaced owner can leave the old UI without reassigning pending events or clearing another cookie
   ---
-  duration_ms: 11.418625
+  duration_ms: 10.808833
   type: 'test'
   ...
 # Subtest: progress summarizes all seven missions and preserves first/latest Bruno scores without inventing assessments
-ok 56 - progress summarizes all seven missions and preserves first/latest Bruno scores without inventing assessments
+ok 57 - progress summarizes all seven missions and preserves first/latest Bruno scores without inventing assessments
   ---
-  duration_ms: 6.771125
+  duration_ms: 5.201041
   type: 'test'
   ...
 # Subtest: seven-destination milestone counts unique confirmed successes, preserves failure history and adds no reward
-ok 57 - seven-destination milestone counts unique confirmed successes, preserves failure history and adds no reward
+ok 58 - seven-destination milestone counts unique confirmed successes, preserves failure history and adds no reward
   ---
-  duration_ms: 14.568334
+  duration_ms: 11.197
   type: 'test'
   ...
-# (node:19305) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31417) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: replay focuses the involved system and a rewind does not retain future reception
-ok 58 - replay focuses the involved system and a rewind does not retain future reception
+ok 59 - replay focuses the involved system and a rewind does not retain future reception
   ---
-  duration_ms: 69.087875
+  duration_ms: 64.316125
   type: 'test'
   ...
 # Subtest: presentation enlargement remains inline, works in 2D and closes with Escape
-ok 59 - presentation enlargement remains inline, works in 2D and closes with Escape
+ok 60 - presentation enlargement remains inline, works in 2D and closes with Escape
   ---
-  duration_ms: 20.116208
+  duration_ms: 18.639
   type: 'test'
   ...
-# (node:19306) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31418) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: Cerrado trace withholds historical values until that exact record is delivered and hides future events
-ok 60 - Cerrado trace withholds historical values until that exact record is delivered and hides future events
+ok 61 - Cerrado trace withholds historical values until that exact record is delivered and hides future events
   ---
-  duration_ms: 34.368041
+  duration_ms: 31.44025
   type: 'test'
   ...
 # Subtest: a different record does not inherit an available value and an incomplete pair cannot show a difference
-ok 61 - a different record does not inherit an available value and an incomplete pair cannot show a difference
+ok 62 - a different record does not inherit an available value and an incomplete pair cannot show a difference
   ---
-  duration_ms: 2.697542
+  duration_ms: 2.996791
   type: 'test'
   ...
 # Subtest: Cerrado A/B locates the measured power divergence at 600 seconds and lists all changed module attributes
-ok 62 - Cerrado A/B locates the measured power divergence at 600 seconds and lists all changed module attributes
+ok 63 - Cerrado A/B locates the measured power divergence at 600 seconds and lists all changed module attributes
   ---
-  duration_ms: 2.91425
+  duration_ms: 3.22875
+  type: 'test'
+  ...
+# Subtest: Cerrado A/B reports equal mass and cost when only the contact calendar changes
+ok 64 - Cerrado A/B reports equal mass and cost when only the contact calendar changes
+  ---
+  duration_ms: 1.995916
   type: 'test'
   ...
 # Subtest: four-role analysis registers all four answers with existing event IDs and exports the same executed result
-ok 63 - four-role analysis registers all four answers with existing event IDs and exports the same executed result
+ok 65 - four-role analysis registers all four answers with existing event IDs and exports the same executed result
   ---
-  duration_ms: 9.57725
+  duration_ms: 8.633083
   type: 'test'
   ...
 # Subtest: the final scientific table returns to the same record delivery in the main 3D replay
-ok 64 - the final scientific table returns to the same record delivery in the main 3D replay
+ok 66 - the final scientific table returns to the same record delivery in the main 3D replay
   ---
-  duration_ms: 69.139583
+  duration_ms: 62.919917
   type: 'test'
   ...
-# (node:19307) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31419) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: R19 evidence states preserve time, delivery validity, exact measurements and record event identity in both missions
     # Subtest: bennu
     ok 1 - bennu
       ---
-      duration_ms: 42.325166
+      duration_ms: 51.213875
       type: 'test'
       ...
     # Subtest: telescope
     ok 2 - telescope
       ---
-      duration_ms: 9.393709
+      duration_ms: 9.071917
       type: 'test'
       ...
     1..2
-ok 65 - R19 evidence states preserve time, delivery validity, exact measurements and record event identity in both missions
+ok 67 - R19 evidence states preserve time, delivery validity, exact measurements and record event identity in both missions
   ---
-  duration_ms: 52.227458
+  duration_ms: 60.773458
   type: 'test'
   ...
 # Subtest: R19 incompatible completed Webb records remain unavailable as scientific evidence
-ok 66 - R19 incompatible completed Webb records remain unavailable as scientific evidence
+ok 68 - R19 incompatible completed Webb records remain unavailable as scientific evidence
   ---
-  duration_ms: 2.382375
+  duration_ms: 2.565667
   type: 'test'
   ...
 # Subtest: R19 A/B explains composite ground choices and identifies real first divergence without editing results
-ok 67 - R19 A/B explains composite ground choices and identifies real first divergence without editing results
+ok 69 - R19 A/B explains composite ground choices and identifies real first divergence without editing results
   ---
-  duration_ms: 5.48625
+  duration_ms: 5.642833
   type: 'test'
   ...
 # Subtest: R19 four role conclusions preserve explicit event and record references without grading knowledge
-ok 68 - R19 four role conclusions preserve explicit event and record references without grading knowledge
+ok 70 - R19 four role conclusions preserve explicit event and record references without grading knowledge
   ---
-  duration_ms: 26.6195
+  duration_ms: 27.041041
   type: 'test'
   ...
 # Subtest: R19 real mission export carries four-role analysis and resets it only after new execution
-ok 69 - R19 real mission export carries four-role analysis and resets it only after new execution
+ok 71 - R19 real mission export carries four-role analysis and resets it only after new execution
   ---
-  duration_ms: 252.079541
+  duration_ms: 230.797291
   type: 'test'
   ...
-# (node:19308) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31420) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: no context or sound exists until the player opts in; mute stops and closes it
-ok 70 - no context or sound exists until the player opts in; mute stops and closes it
+ok 72 - no context or sound exists until the player opts in; mute stops and closes it
   ---
-  duration_ms: 1.531583
+  duration_ms: 1.338
   type: 'test'
   ...
 # Subtest: an unavailable or rejected audio context leaves gameplay silent without throwing
-ok 71 - an unavailable or rejected audio context leaves gameplay silent without throwing
+ok 73 - an unavailable or rejected audio context leaves gameplay silent without throwing
   ---
-  duration_ms: 0.200792
+  duration_ms: 0.18325
   type: 'test'
   ...
 # Subtest: a late resume cannot undo mute or disposal
-ok 72 - a late resume cannot undo mute or disposal
+ok 74 - a late resume cannot undo mute or disposal
   ---
-  duration_ms: 0.114291
+  duration_ms: 0.111459
   type: 'test'
   ...
 # Subtest: hidden pages stop queued cues and never replay them when visible again
-ok 73 - hidden pages stop queued cues and never replay them when visible again
+ok 75 - hidden pages stop queued cues and never replay them when visible again
   ---
-  duration_ms: 0.819042
+  duration_ms: 0.798625
   type: 'test'
   ...
 # Subtest: rapid inputs stay bounded and duplicate cues are suppressed
-ok 74 - rapid inputs stay bounded and duplicate cues are suppressed
+ok 76 - rapid inputs stay bounded and duplicate cues are suppressed
   ---
-  duration_ms: 0.850583
+  duration_ms: 0.99575
   type: 'test'
   ...
 # Subtest: the actual synthesized PCM is short, finite, quiet and starts and ends at zero
-ok 75 - the actual synthesized PCM is short, finite, quiet and starts and ends at zero
+ok 77 - the actual synthesized PCM is short, finite, quiet and starts and ends at zero
   ---
-  duration_ms: 3.200458
+  duration_ms: 3.475875
   type: 'test'
   ...
 # Subtest: the control exposes consent and unsupported feedback, independently of reduced motion
-ok 76 - the control exposes consent and unsupported feedback, independently of reduced motion
+ok 78 - the control exposes consent and unsupported feedback, independently of reduced motion
   ---
-  duration_ms: 30.884875
+  duration_ms: 28.830375
   type: 'test'
   ...
 # Subtest: turning the control off while audio is starting cannot be undone by a delayed browser reply
-ok 77 - turning the control off while audio is starting cannot be undone by a delayed browser reply
+ok 79 - turning the control off while audio is starting cannot be undone by a delayed browser reply
   ---
-  duration_ms: 2.458709
+  duration_ms: 2.335916
   type: 'test'
   ...
 # Subtest: campaign cues follow the real success, failure and invalid results with reduced motion
-ok 78 - campaign cues follow the real success, failure and invalid results with reduced motion
+ok 80 - campaign cues follow the real success, failure and invalid results with reduced motion
   ---
-  duration_ms: 58.2175
+  duration_ms: 56.297834
   type: 'test'
   ...
-# (node:19309) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31428) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: a verificação encaminha a pendência de massa, prazo e proteção ao sistema certo
-ok 79 - a verificação encaminha a pendência de massa, prazo e proteção ao sistema certo
+ok 81 - a verificação encaminha a pendência de massa, prazo e proteção ao sistema certo
   ---
-  duration_ms: 64.407208
+  duration_ms: 60.363708
   type: 'test'
   ...
 # Subtest: a escolha na montagem só move o foco à nave quando o jogador pede a inspeção
-ok 80 - a escolha na montagem só move o foco à nave quando o jogador pede a inspeção
+ok 82 - a escolha na montagem só move o foco à nave quando o jogador pede a inspeção
   ---
-  duration_ms: 26.518125
+  duration_ms: 23.318625
   type: 'test'
   ...
 # Subtest: editar um componente atualiza a nave do plano B mesmo com a referência NASA aberta
-ok 81 - editar um componente atualiza a nave do plano B mesmo com a referência NASA aberta
+ok 83 - editar um componente atualiza a nave do plano B mesmo com a referência NASA aberta
   ---
-  duration_ms: 22.582959
+  duration_ms: 20.532542
   type: 'test'
   ...
 # Subtest: a vista da nave oferece retorno para a opção do sistema em foco
-ok 82 - a vista da nave oferece retorno para a opção do sistema em foco
+ok 84 - a vista da nave oferece retorno para a opção do sistema em foco
   ---
-  duration_ms: 13.620084
+  duration_ms: 12.860292
   type: 'test'
   ...
 # Subtest: a régua só revela a transferência interrompida ao chegar a ela e marca as operações sem execução
-ok 83 - a régua só revela a transferência interrompida ao chegar a ela e marca as operações sem execução
+ok 85 - a régua só revela a transferência interrompida ao chegar a ela e marca as operações sem execução
   ---
-  duration_ms: 23.939584
+  duration_ms: 21.686375
   type: 'test'
   ...
 # Subtest: coleta parcial não recebe selo de conclusão nem antecipa os dados no solo
-ok 84 - coleta parcial não recebe selo de conclusão nem antecipa os dados no solo
+ok 86 - coleta parcial não recebe selo de conclusão nem antecipa os dados no solo
   ---
-  duration_ms: 15.915084
+  duration_ms: 13.795583
   type: 'test'
   ...
 # Subtest: um bloqueio em T+0 mantém as etapas de voo posteriores como não executadas
-ok 85 - um bloqueio em T+0 mantém as etapas de voo posteriores como não executadas
+ok 87 - um bloqueio em T+0 mantém as etapas de voo posteriores como não executadas
   ---
-  duration_ms: 10.436084
+  duration_ms: 9.271375
   type: 'test'
   ...
-# (node:19313) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31429) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: 2D equivalence visibly resizes the memory and changes contact permission without requiring WebGL
-ok 86 - 2D equivalence visibly resizes the memory and changes contact permission without requiring WebGL
+ok 88 - 2D equivalence visibly resizes the memory and changes contact permission without requiring WebGL
   ---
-  duration_ms: 38.640125
+  duration_ms: 33.94775
   type: 'test'
   ...
 # Subtest: bennu: contact and lifetime choices remain visible with the same antenna
-ok 87 - bennu: contact and lifetime choices remain visible with the same antenna
+ok 89 - bennu: contact and lifetime choices remain visible with the same antenna
   ---
-  duration_ms: 16.203042
+  duration_ms: 13.590166
   type: 'test'
   ...
 # Subtest: telescope: contact and lifetime choices remain visible with the same antenna
-ok 88 - telescope: contact and lifetime choices remain visible with the same antenna
+ok 90 - telescope: contact and lifetime choices remain visible with the same antenna
   ---
-  duration_ms: 13.556792
+  duration_ms: 11.450792
   type: 'test'
   ...
 # Subtest: assembly shows capacity without claiming energy, operation or future deliveries
-ok 89 - assembly shows capacity without claiming energy, operation or future deliveries
+ok 91 - assembly shows capacity without claiming energy, operation or future deliveries
   ---
-  duration_ms: 0.739833
+  duration_ms: 0.677333
   type: 'test'
   ...
 # Subtest: iss: revealed engine entries govern arrival, collection and reception separately
-ok 90 - iss: revealed engine entries govern arrival, collection and reception separately
+ok 92 - iss: revealed engine entries govern arrival, collection and reception separately
   ---
-  duration_ms: 0.11975
+  duration_ms: 0.121666
   type: 'test'
   ...
 # Subtest: moon: revealed engine entries govern arrival, collection and reception separately
-ok 91 - moon: revealed engine entries govern arrival, collection and reception separately
+ok 93 - moon: revealed engine entries govern arrival, collection and reception separately
   ---
-  duration_ms: 0.074583
+  duration_ms: 0.071834
   type: 'test'
   ...
 # Subtest: mars: revealed engine entries govern arrival, collection and reception separately
-ok 92 - mars: revealed engine entries govern arrival, collection and reception separately
+ok 94 - mars: revealed engine entries govern arrival, collection and reception separately
   ---
-  duration_ms: 0.064209
+  duration_ms: 0.06225
   type: 'test'
   ...
 # Subtest: europa: revealed engine entries govern arrival, collection and reception separately
-ok 93 - europa: revealed engine entries govern arrival, collection and reception separately
+ok 95 - europa: revealed engine entries govern arrival, collection and reception separately
   ---
-  duration_ms: 0.084625
+  duration_ms: 0.0635
   type: 'test'
   ...
 # Subtest: a blocked launch never ignites, arrives or reveals a later collection
-ok 94 - a blocked launch never ignites, arrives or reveals a later collection
+ok 96 - a blocked launch never ignites, arrives or reveals a later collection
   ---
-  duration_ms: 0.073583
+  duration_ms: 0.069166
   type: 'test'
   ...
 # Subtest: received but scientifically invalid data still transmits; empty cargo does not emit acquisition
-ok 95 - received but scientifically invalid data still transmits; empty cargo does not emit acquisition
+ok 97 - received but scientifically invalid data still transmits; empty cargo does not emit acquisition
   ---
-  duration_ms: 0.108958
+  duration_ms: 0.102959
   type: 'test'
   ...
 # Subtest: a phase without a matching engine entry cannot reveal counts or light an effect
-ok 96 - a phase without a matching engine entry cannot reveal counts or light an effect
+ok 98 - a phase without a matching engine entry cannot reveal counts or light an effect
   ---
-  duration_ms: 0.06175
+  duration_ms: 0.059916
   type: 'test'
   ...
 # Subtest: Cerrado contact policy changes permission, while scenario changes actual scheduled width
-ok 97 - Cerrado contact policy changes permission, while scenario changes actual scheduled width
+ok 99 - Cerrado contact policy changes permission, while scenario changes actual scheduled width
   ---
-  duration_ms: 0.459166
+  duration_ms: 0.38475
   type: 'test'
   ...
 # Subtest: bennu: near/far, contact duration and lifetime remain planned engine windows
-ok 98 - bennu: near/far, contact duration and lifetime remain planned engine windows
+ok 100 - bennu: near/far, contact duration and lifetime remain planned engine windows
   ---
-  duration_ms: 0.512
+  duration_ms: 0.478333
   type: 'test'
   ...
 # Subtest: telescope: near/far, contact duration and lifetime remain planned engine windows
-ok 99 - telescope: near/far, contact duration and lifetime remain planned engine windows
+ok 101 - telescope: near/far, contact duration and lifetime remain planned engine windows
   ---
-  duration_ms: 0.549458
+  duration_ms: 0.524125
   type: 'test'
   ...
-# (node:19333) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31431) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: Cerrado cockpit directs choices, prediction and cancellation to real controls
-ok 100 - Cerrado cockpit directs choices, prediction and cancellation to real controls
+ok 102 - Cerrado cockpit directs choices, prediction and cancellation to real controls
   ---
-  duration_ms: 214.685625
+  duration_ms: 222.648833
   type: 'test'
   ...
 # Subtest: Cerrado result separates the completed report from a replay at T+0
-ok 101 - Cerrado result separates the completed report from a replay at T+0
+ok 103 - Cerrado result separates the completed report from a replay at T+0
   ---
-  duration_ms: 64.817291
+  duration_ms: 50.027083
   type: 'test'
   ...
 # Subtest: bennu: montagem e checagem levam à operação em T+0 e ao resultado do motor
-ok 102 - bennu: montagem e checagem levam à operação em T+0 e ao resultado do motor
+ok 104 - bennu: montagem e checagem levam à operação em T+0 e ao resultado do motor
   ---
-  duration_ms: 174.158333
+  duration_ms: 170.866375
   type: 'test'
   ...
 # Subtest: telescope: montagem e checagem levam à operação em T+0 e ao resultado do motor
-ok 103 - telescope: montagem e checagem levam à operação em T+0 e ao resultado do motor
+ok 105 - telescope: montagem e checagem levam à operação em T+0 e ao resultado do motor
   ---
-  duration_ms: 172.312542
+  duration_ms: 159.461209
   type: 'test'
   ...
-# (node:19334) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31432) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: the Kenney copy matches the verified GLB and its CC0 manifest
-ok 104 - the Kenney copy matches the verified GLB and its CC0 manifest
+ok 106 - the Kenney copy matches the verified GLB and its CC0 manifest
   ---
-  duration_ms: 6.054209
+  duration_ms: 3.293417
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: the deck uses the placement and finish documented for runtime
-ok 105 - the deck uses the placement and finish documented for runtime
+ok 107 - the deck uses the placement and finish documented for runtime
   ---
-  duration_ms: 31.231917
+  duration_ms: 23.379959
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: enlarged Bruno assembly stays inside narrow camera bounds when rotated
-ok 106 - enlarged Bruno assembly stays inside narrow camera bounds when rotated
+ok 108 - enlarged Bruno assembly stays inside narrow camera bounds when rotated
   ---
-  duration_ms: 36.3085
+  duration_ms: 30.84575
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: iss mounts the local platform below the separated spacecraft
-ok 107 - iss mounts the local platform below the separated spacecraft
+ok 109 - iss mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 6.812583
+  duration_ms: 5.236083
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: moon mounts the local platform below the separated spacecraft
-ok 108 - moon mounts the local platform below the separated spacecraft
+ok 110 - moon mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 6.618667
+  duration_ms: 5.588875
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: mars mounts the local platform below the separated spacecraft
-ok 109 - mars mounts the local platform below the separated spacecraft
+ok 111 - mars mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 6.021333
+  duration_ms: 4.04525
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: europa mounts the local platform below the separated spacecraft
-ok 110 - europa mounts the local platform below the separated spacecraft
+ok 112 - europa mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 4.963959
+  duration_ms: 4.038833
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: cerrado mounts the local platform below the separated spacecraft
-ok 111 - cerrado mounts the local platform below the separated spacecraft
+ok 113 - cerrado mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 13.852459
+  duration_ms: 9.404625
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: bennu mounts the local platform below the separated spacecraft
-ok 112 - bennu mounts the local platform below the separated spacecraft
+ok 114 - bennu mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 9.445333
+  duration_ms: 8.660625
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: webb mounts the local platform below the separated spacecraft
-ok 113 - webb mounts the local platform below the separated spacecraft
+ok 115 - webb mounts the local platform below the separated spacecraft
   ---
-  duration_ms: 8.942709
+  duration_ms: 9.570292
   type: 'test'
   ...
 # THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
 # Subtest: the Bruno flight scene releases the platform when the launcher is approved
-ok 114 - the Bruno flight scene releases the platform when the launcher is approved
+ok 116 - the Bruno flight scene releases the platform when the launcher is approved
   ---
-  duration_ms: 7.271625
+  duration_ms: 5.824625
   type: 'test'
   ...
 # Subtest: a failed request keeps the fallback deck and spacecraft in 3D
-ok 115 - a failed request keeps the fallback deck and spacecraft in 3D
+ok 117 - a failed request keeps the fallback deck and spacecraft in 3D
   ---
-  duration_ms: 10.030458
+  duration_ms: 6.915458
   type: 'test'
   ...
-# (node:19335) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31433) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: the three mission workbenches update the Rive inputs from their project choices
-ok 116 - the three mission workbenches update the Rive inputs from their project choices
+ok 118 - the three mission workbenches update the Rive inputs from their project choices
   ---
-  duration_ms: 118.587667
+  duration_ms: 82.16025
   type: 'test'
   ...
 # Subtest: Cerrado maps all four panel and battery combinations from its actual 18 W and 16 Wh default
-ok 117 - Cerrado maps all four panel and battery combinations from its actual 18 W and 16 Wh default
+ok 119 - Cerrado maps all four panel and battery combinations from its actual 18 W and 16 Wh default
   ---
-  duration_ms: 22.082458
+  duration_ms: 16.508125
   type: 'test'
   ...
 # Subtest: comparison maps A/B to the executed architectures, independently of instrument compatibility
-ok 118 - comparison maps A/B to the executed architectures, independently of instrument compatibility
+ok 120 - comparison maps A/B to the executed architectures, independently of instrument compatibility
   ---
-  duration_ms: 110.326625
+  duration_ms: 78.550083
   type: 'test'
   ...
 # Subtest: a replay uses the recorded configuration across time changes and keeps its canvas
-ok 119 - a replay uses the recorded configuration across time changes and keeps its canvas
+ok 121 - a replay uses the recorded configuration across time changes and keeps its canvas
   ---
-  duration_ms: 13.473708
+  duration_ms: 11.107875
   type: 'test'
   ...
 # Subtest: Rive plays its startup and choice windows in engine time and pauses outside the scene
-ok 120 - Rive plays its startup and choice windows in engine time and pauses outside the scene
+ok 122 - Rive plays its startup and choice windows in engine time and pauses outside the scene
   ---
-  duration_ms: 0.445583
+  duration_ms: 0.36875
   type: 'test'
   ...
 # Subtest: the scene uses the newest entry from each viewport observation
-ok 121 - the scene uses the newest entry from each viewport observation
+ok 123 - the scene uses the newest entry from each viewport observation
   ---
-  duration_ms: 8.8025
+  duration_ms: 6.387625
   type: 'test'
   ...
 # Subtest: starting and switching to reduced motion retains the static equipment illustration
-ok 122 - starting and switching to reduced motion retains the static equipment illustration
+ok 124 - starting and switching to reduced motion retains the static equipment illustration
   ---
-  duration_ms: 15.468375
+  duration_ms: 8.83975
   type: 'test'
   ...
-# (node:19336) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31434) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: hub exposes all three missions; Cerrado rewind excludes future delivery; NASA fallback never claims GPU loading
-ok 123 - hub exposes all three missions; Cerrado rewind excludes future delivery; NASA fallback never claims GPU loading
+ok 125 - hub exposes all three missions; Cerrado rewind excludes future delivery; NASA fallback never claims GPU loading
   ---
-  duration_ms: 412.46625
+  duration_ms: 259.569125
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -958,48 +970,48 @@ ok 123 - hub exposes all three missions; Cerrado rewind excludes future delivery
     # Subtest: bennu
     ok 1 - bennu
       ---
-      duration_ms: 419.9815
+      duration_ms: 225.866375
       type: 'test'
       ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
     # Subtest: telescope
     ok 2 - telescope
       ---
-      duration_ms: 261.158291
+      duration_ms: 203.277042
       type: 'test'
       ...
     1..2
-ok 124 - both new scientific missions execute viable inputs and reject incompatible instruments as science
+ok 126 - both new scientific missions execute viable inputs and reject incompatible instruments as science
   ---
-  duration_ms: 681.834833
+  duration_ms: 429.51675
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: four-person review gates execution and resets after changing a hypothesis or a component
-ok 125 - four-person review gates execution and resets after changing a hypothesis or a component
+ok 127 - four-person review gates execution and resets after changing a hypothesis or a component
   ---
-  duration_ms: 255.381292
+  duration_ms: 244.319709
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: saved project and rejected import preserve the result; A/B redesign shares a clock in seconds
-ok 126 - saved project and rejected import preserve the result; A/B redesign shares a clock in seconds
+ok 128 - saved project and rejected import preserve the result; A/B redesign shares a clock in seconds
   ---
-  duration_ms: 400.527875
+  duration_ms: 272.932583
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: a new pair of short attempts resets an older long comparison clock and selects the newest attempt
-ok 127 - a new pair of short attempts resets an older long comparison clock and selects the newest attempt
+ok 129 - a new pair of short attempts resets an older long comparison clock and selects the newest attempt
   ---
-  duration_ms: 324.656125
+  duration_ms: 217.238042
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: a valid replay without trace preserves final science and labels temporal readings unavailable
-ok 128 - a valid replay without trace preserves final science and labels temporal readings unavailable
+ok 130 - a valid replay without trace preserves final science and labels temporal readings unavailable
   ---
-  duration_ms: 58.8125
+  duration_ms: 40.650459
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -1007,37 +1019,37 @@ ok 128 - a valid replay without trace preserves final science and labels tempora
     # Subtest: bennu
     ok 1 - bennu
       ---
-      duration_ms: 134.678166
+      duration_ms: 90.603041
       type: 'test'
       ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
     # Subtest: telescope
     ok 2 - telescope
       ---
-      duration_ms: 130.0795
+      duration_ms: 105.277292
       type: 'test'
       ...
     1..2
-ok 129 - expedition design choices focus the relevant system while manual inspection remains available
+ok 131 - expedition design choices focus the relevant system while manual inspection remains available
   ---
-  duration_ms: 265.158166
+  duration_ms: 196.199709
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: the beginner can return from a guided Cerrado example to the edited hangar without executing it
-ok 130 - the beginner can return from a guided Cerrado example to the edited hangar without executing it
+ok 132 - the beginner can return from a guided Cerrado example to the edited hangar without executing it
   ---
-  duration_ms: 75.266167
+  duration_ms: 58.142083
   type: 'test'
   ...
-# (node:19348) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:31456) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: Cerrado assembly explains the selected processor, energy and radio without inventing telemetry
-ok 131 - Cerrado assembly explains the selected processor, energy and radio without inventing telemetry
+ok 133 - Cerrado assembly explains the selected processor, energy and radio without inventing telemetry
   ---
-  duration_ms: 330.237834
+  duration_ms: 246.695583
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -1045,33 +1057,33 @@ ok 131 - Cerrado assembly explains the selected processor, energy and radio with
     # Subtest: bennu
     ok 1 - bennu
       ---
-      duration_ms: 194.826875
+      duration_ms: 120.222541
       type: 'test'
       ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
     # Subtest: telescope
     ok 2 - telescope
       ---
-      duration_ms: 144.444292
+      duration_ms: 114.973458
       type: 'test'
       ...
     1..2
-ok 132 - Bennu and telescope render actual instruments and power choices while contact changes preserve radio hardware
+ok 134 - Bennu and telescope render actual instruments and power choices while contact changes preserve radio hardware
   ---
-  duration_ms: 339.973667
+  duration_ms: 235.560708
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: inspection, exploded assembly and restore remain usable in the real 2D fallback
-ok 133 - inspection, exploded assembly and restore remain usable in the real 2D fallback
+ok 135 - inspection, exploded assembly and restore remain usable in the real 2D fallback
   ---
-  duration_ms: 172.963041
+  duration_ms: 86.180875
   type: 'test'
   ...
 # Subtest: the optional diagram preserves its disclosure when reduced motion is toggled
-ok 134 - the optional diagram preserves its disclosure when reduced motion is toggled
+ok 136 - the optional diagram preserves its disclosure when reduced motion is toggled
   ---
-  duration_ms: 20.768625
+  duration_ms: 13.182792
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
@@ -1079,35 +1091,35 @@ ok 134 - the optional diagram preserves its disclosure when reduced motion is to
     # Subtest: bennu
     ok 1 - bennu
       ---
-      duration_ms: 253.649208
+      duration_ms: 255.965
       type: 'test'
       ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
     # Subtest: telescope
     ok 2 - telescope
       ---
-      duration_ms: 308.627667
+      duration_ms: 236.472042
       type: 'test'
       ...
     1..2
-ok 135 - edited drafts never replace executed assembly; A/B keeps each input and receives no future records
+ok 137 - edited drafts never replace executed assembly; A/B keeps each input and receives no future records
   ---
-  duration_ms: 562.810334
+  duration_ms: 492.770042
   type: 'test'
   ...
 # THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.
 # Subtest: a valid imported replay without trace retains its assembly but does not fabricate resource readings
-ok 136 - a valid imported replay without trace retains its assembly but does not fabricate resource readings
+ok 138 - a valid imported replay without trace retains its assembly but does not fabricate resource readings
   ---
-  duration_ms: 46.781541
+  duration_ms: 37.427584
   type: 'test'
   ...
-1..136
-# tests 161
+1..138
+# tests 163
 # suites 0
-# pass 161
+# pass 163
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 23999.45025
+# duration_ms 21931.586208

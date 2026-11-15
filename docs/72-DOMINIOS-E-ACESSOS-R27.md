@@ -4,8 +4,8 @@
 
 | Área | Endereço |
 | --- | --- |
-| LP principal | [projeto-ipe-lp.vercel.app](https://projeto-ipe-lp.vercel.app/) |
-| Entrada no domínio oficial | [nasa-missaoipe.alexandrebelo.com](https://nasa-missaoipe.alexandrebelo.com/) |
+| LP principal | [nasa-missaoipe.alexandrebelo.com](https://nasa-missaoipe.alexandrebelo.com/) |
+| Publicação alternativa da LP | [projeto-ipe-lp.vercel.app](https://projeto-ipe-lp.vercel.app/) |
 | Hub de documentação e contexto | [Abrir hub](https://nasa-missaoipe.alexandrebelo.com/documentacao) |
 | Jogo, cadastro e sete missões | https://jogo.nasa-missaoipe.alexandrebelo.com/ |
 | Pitch interativo de Alexandre Belo | https://pitch.nasa-missaoipe.alexandrebelo.com/ |
@@ -21,7 +21,7 @@ O painel exige autenticação administrativa já configurada. Nome e e-mail dos 
 
 Os subdomínios **jogo**, **pitch**, **painel** e **docs** redirecionam para o endereço canônico da sua área no domínio principal. Assim, cadastro, jogo e painel mantêm cookies no mesmo host. Isso evita pedir novo cadastro porque alguém trocou de link. A LP tem projeto Vercel próprio e é servida diretamente em **lp**.
 
-A raiz do domínio oficial encaminha para a LP principal com HTTP 307. **`/documentacao`** serve o conteúdo do hub anterior no mesmo domínio. Use o endereço sem barra final para compartilhar seções como [Contexto](https://nasa-missaoipe.alexandrebelo.com/documentacao#contexto), [Próximas etapas](https://nasa-missaoipe.alexandrebelo.com/documentacao#plano) e [Dados NASA](https://nasa-missaoipe.alexandrebelo.com/documentacao#fontes). `/documentacao/` e `/documentacao/index.html` encaminham para `/documentacao`.
+Atualização R33: a raiz do domínio oficial serve a LP diretamente com HTTP 200, sem encaminhar para vercel.app. A exportação estática da LP entra na mesma publicação do jogo. **`/documentacao`** serve o conteúdo do hub anterior no mesmo domínio. Use o endereço sem barra final para compartilhar seções como [Contexto](https://nasa-missaoipe.alexandrebelo.com/documentacao#contexto), [Próximas etapas](https://nasa-missaoipe.alexandrebelo.com/documentacao#plano) e [Dados NASA](https://nasa-missaoipe.alexandrebelo.com/documentacao#fontes). `/documentacao/` e `/documentacao/index.html` encaminham para `/documentacao`.
 
 O jogo usa `/lab/index.html`, o painel usa `/dashboard/index.html` e o índice usa `/docs/index.html`. O pitch abre a [central de apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/). `/doc` abre o índice e `/painel` abre o painel. Caminhos desconhecidos retornam 404.
 
