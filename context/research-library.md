@@ -8865,7 +8865,7 @@ A LP principal permanece em `https://projeto-ipe-lp.vercel.app/`. A raiz `https:
 
 # R33 — da página principal às sete missões
 
-Fonte: `docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md` · SHA-256 original: `dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775` · Ajustes de caminhos privados: 0
+Fonte: `docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md` · SHA-256 original: `6187fc6bb1dd1febed37b8146ecf46dfead629f22117d5a21acc24166e7a3461` · Ajustes de caminhos privados: 0
 
 # R33 — da página principal às sete missões
 
@@ -8943,7 +8943,7 @@ Sem login, usar o mesmo e-mail em outro aparelho cria outra participação. Limp
 
 **Dev 1 — game e interface:** componentes em `experiments/mission-design-lab/src/ui`. Contrato `inspectionRequest` reaplica foco na mesma Scene sem recriar canvas. Preservar atalhos de foco, controles HTML equivalentes ao 3D e preferência de movimento reduzido. LP em `apps/immersive-lp`; fontes, marca, textos e chamadas de ação devem manter coerência com os sete destinos.
 
-**Dev 2 — métricas e publicação:** `BrunoInventoryController.ts`, `server/metrics`, `tests/metrics-r28-http.test.mjs`, `scripts/build-beta-site.mjs` e `scripts/prepare-vercel-static.mjs`. Não trocar IDs de recibos no retry, não confiar em saldo ou nota do cliente. Preservar assets compartilhados por comparação de bytes; conflito no build deve falhar. Não editar manualmente `vercel.json`: ele é gerado. `npm run build:release` agora compila também a LP com seu lockfile PNPM existente; sem nova dependência.
+**Dev 2 — métricas e publicação:** `BrunoInventoryController.ts`, `server/metrics`, `tests/metrics-r28-http.test.mjs`, `scripts/build-beta-site.mjs` e `scripts/prepare-vercel-static.mjs`. Não trocar IDs de recibos no retry, não confiar em saldo ou nota do cliente. Preservar assets compartilhados por comparação de bytes; conflito no build deve falhar. Não editar manualmente `vercel.json`: ele é gerado. `npm run build:release` agora compila também a LP com seu lockfile PNPM existente e a versão 11.25.0 fixada no comando; sem nova dependência de produto. Scripts executáveis inline do export Next viram arquivos locais com hash, na ordem original. Isso evita vincular a CSP lida antes do build ao identificador variável do build Next.
 
 Validação R33: 180 testes de domínio, 163 de interface, 53 de métricas, 20 da distribuição e dois de política HTTP aprovados. LP: quatro testes do motor, 21 assets por hash, TypeScript e export aprovados. O navegador verificou menu móvel (Escape retorna foco) e ensaio da LP passando de 2/6 para 6/6 com Redesenhar, sem erros de console no servidor final.
 

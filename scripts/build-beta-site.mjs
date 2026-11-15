@@ -351,7 +351,19 @@ try {
       if (!(await readFile(safePath(stage, target))).equals(await readFile(safePath(root, source)))) throw new Error(`LP compartilha asset diferente: ${target}`);
       continue;
     }
-    await copy(source, target, 'immersive-landing');
+    if (target.endsWith('.html')) {
+      const original = await readFile(safePath(root, source), 'utf8');
+      let html = original;
+      // Next flight data contains a build ID. Externalize executable scripts so
+      // Vercel's pre-build CSP does not depend on this build's generated payload.
+      for (const match of original.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
+        if (/\bsrc\s*=/i.test(match[1]) || /\btype\s*=\s*["'](?:application\/(?:ld\+)?json|text\/plain)["']/i.test(match[1]) || !match[2].trim()) continue;
+        const scriptPath = `_next/ipe-inline-${digest(match[2]).slice(0, 24)}.js`;
+        if (!entries.some(entry => entry.path === scriptPath)) await emit(scriptPath, match[2], { category: 'landing-script', source, transformation: 'byte-exact executable script extracted from Next export' });
+        html = html.replace(match[0], `<script${match[1]} src="/${scriptPath}"></script>`);
+      }
+      await emit(target, html, { category: 'immersive-landing', source, sourceSha256: digest(original), transformation: 'executable inline scripts externalized in original order; local analytics loader added' });
+    } else await copy(source, target, 'immersive-landing');
   }
   const cards = docs.map(entry => `<article class="doc-card"><h2><a href="${escape(entry.html.slice(5))}">${escape(entry.title)}</a></h2><p>${escape(entry.description)}</p><a href="${escape(entry.target.slice(5))}">Markdown desta edição</a></article>`).join('');
   const docsIndex = `<p class="eyebrow">MISSÃO IPÊ / DOCUMENTAÇÃO PÚBLICA</p><h1>O contexto para<br>continuar construindo.</h1><p class="intro">Dois desenvolvedores, uma base compartilhada. Comece pelo guia de continuidade, consulte as decisões e explore o acervo completo. Cada documento distingue resultados, hipóteses e trabalho pendente.</p><p><a href="../context/index.html">Abrir a central interativa de contexto e cronograma</a> · <a href="../context/research-library.html">Ler a biblioteca integral de documentos</a></p><div class="doc-grid">${cards}</div><h2 class="section-label">DOCUMENTOS HISTÓRICOS DE BASE</h2><div class="historical"><p><strong>R4 · Dossiê de implementação e estudo integral.</strong> Estes arquivos preservam o corte original. Metas e pendências neles descritas não devem ser interpretadas como validações concluídas na BETA.</p><p><a href="../output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf">Dossiê de base R4 · PDF</a> · <a href="../output/html/AB_Missao_Ipe_Estudo_Integral.html">Estudo integral de base R4 · HTML</a></p><p><a href="../research/11-revisao-spaceapps-apresentacao.html">Revisão documental Space Apps · R5</a></p></div><h2 class="section-label">APRESENTAÇÃO E RECIBOS</h2><div class="doc-grid"><article class="doc-card"><h2>Roteiros de apresentação</h2><p>Interface em português, notas PT/EN e copy inglesa dos sete quadros. Formato e elegibilidade ainda dependem de confirmação.</p><a href="../presentation/README_APRESENTADOR.html">Guia</a> · <a href="../presentation/ROTEIRO_PT_EN.html">Roteiro PT/EN</a> · <a href="../presentation/PITCH_EN_7_SLIDES.html">Copy inglesa</a></article><article class="doc-card"><h2>Projeções públicas de evidência</h2><p>Campos selecionados de recibos históricos. Cada projeção identifica o hash do original e seu alcance.</p><a href="../evidence/presentation-qa.json">QA da apresentação</a> · <a href="../evidence/engine-benchmark.json">Benchmark</a> · <a href="../evidence/ab-r3a-digest.json">AB-R3A</a> · <a href="../evidence/chronology.json">Cronologia</a></article></div>`;

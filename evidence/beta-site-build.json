@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T21:29:51.906Z",
+  "generatedAt": "2026-11-15T21:32:45.393Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 550,
-  "bytes": 85381347,
+  "fileCount": 554,
+  "bytes": 85359167,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 259256,
-    "sha256": "d52006a61da7d5f527009636906f624a4e99cafdf9d782c719c95d6a184f8d02"
+    "bytes": 261102,
+    "sha256": "395faa5bdec3132ae05b4dd268c8b072e18b83645ec495a12513d40fb0c22bed"
   },
   "entries": [
     {
@@ -37,6 +37,38 @@
       "source": "apps/immersive-lp/out/__next._tree.txt",
       "sourceSha256": "5016aa1a252fa5de9b50434e5ad5fddd87e3f590173b0cf4008a14acecaba7cb",
       "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+      "bytes": 43,
+      "sha256": "3814cddd18b2095e01abb745a99e5ada90178e709c09879324c3b623f2d829ea",
+      "category": "landing-script",
+      "source": "apps/immersive-lp/out/404.html",
+      "transformation": "byte-exact executable script extracted from Next export"
+    },
+    {
+      "path": "_next/ipe-inline-844a01d6b13e329c1cbcbcb1.js",
+      "bytes": 47100,
+      "sha256": "844a01d6b13e329c1cbcbcb158135fca7c312b9fd047aee15f5bf14129d50d0e",
+      "category": "landing-script",
+      "source": "apps/immersive-lp/out/index.html",
+      "transformation": "byte-exact executable script extracted from Next export"
+    },
+    {
+      "path": "_next/ipe-inline-8ef97be5ee1d176247567837.js",
+      "bytes": 17643,
+      "sha256": "8ef97be5ee1d17624756783757b5c75ae0f6e69099630279a5f42187b0a99d01",
+      "category": "landing-script",
+      "source": "apps/immersive-lp/out/creditos/index.html",
+      "transformation": "byte-exact executable script extracted from Next export"
+    },
+    {
+      "path": "_next/ipe-inline-c70712e9e53044c30588cefa.js",
+      "bytes": 12649,
+      "sha256": "c70712e9e53044c30588cefa2a3dd7a1a868fc942e338e0b4f7445d64e61dd8d",
+      "category": "landing-script",
+      "source": "apps/immersive-lp/out/404.html",
+      "transformation": "byte-exact executable script extracted from Next export"
     },
     {
       "path": "_next/static/chunks/103.94a309edc76848ed.js",
@@ -373,12 +405,12 @@
     },
     {
       "path": "_not-found/index.html",
-      "bytes": 23107,
-      "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+      "bytes": 10519,
+      "sha256": "647dd487ae300996f4990fcacdbc947c46de6dcf3f1fc750991ed0881ec31cd1",
       "category": "immersive-landing",
       "source": "apps/immersive-lp/out/_not-found/index.html",
       "sourceSha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
-      "transformation": "local hostname-gated analytics loader",
+      "transformation": "executable inline scripts externalized in original order; local analytics loader added; local hostname-gated analytics loader",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
@@ -392,22 +424,22 @@
     },
     {
       "path": "404.html",
-      "bytes": 23107,
-      "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+      "bytes": 10519,
+      "sha256": "647dd487ae300996f4990fcacdbc947c46de6dcf3f1fc750991ed0881ec31cd1",
       "category": "immersive-landing",
       "source": "apps/immersive-lp/out/404.html",
       "sourceSha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
-      "transformation": "local hostname-gated analytics loader",
+      "transformation": "executable inline scripts externalized in original order; local analytics loader added; local hostname-gated analytics loader",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "404/index.html",
-      "bytes": 23107,
-      "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+      "bytes": 10519,
+      "sha256": "647dd487ae300996f4990fcacdbc947c46de6dcf3f1fc750991ed0881ec31cd1",
       "category": "immersive-landing",
       "source": "apps/immersive-lp/out/404/index.html",
       "sourceSha256": "28583230c112ac1a84ccc4d5dd26a49b132de58310b35ca32e77b2c529f31bb1",
-      "transformation": "local hostname-gated analytics loader",
+      "transformation": "executable inline scripts externalized in original order; local analytics loader added; local hostname-gated analytics loader",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
@@ -1266,30 +1298,30 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 74078,
-      "sha256": "02b3c926fefbdb27f67a597742769fa7f74829e1f0f5d981cc34e0d51414056b",
+      "sha256": "17fd923f0204d4aac0aa117ac182cbb39cea788d712be63c77aa4e1bbc087112",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "02b3c926fefbdb27f67a597742769fa7f74829e1f0f5d981cc34e0d51414056b",
+      "sourceSha256": "17fd923f0204d4aac0aa117ac182cbb39cea788d712be63c77aa4e1bbc087112",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2641607,
-      "sha256": "f44714ff2759effb919ba7095d48ecc6daf89423821b67fd126d84aeb0a92626",
+      "bytes": 2641838,
+      "sha256": "23fc629dbda5e03854b3e2e0de833189932dd3930d95dbb9e3d194c97f492837",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "f7240b3e647ccd09c3fc3dd469018eb51684af24fa3e114ea6c5d8ad0321f8ae",
+      "sourceSha256": "bda4e9252d896f4dee3483771657627b298f5a494f3e86140184ecee4500a0be",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2113297,
-      "sha256": "4c2337866f7b3a8609186755b2992a5dc1c1a1dc0fdb0a8e89ed20d51f81c406",
+      "bytes": 2113528,
+      "sha256": "8ae0367b965cc5fac061381ca871cadcab6fcb58d085cb83437d4ac5af9d565a",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "4c2337866f7b3a8609186755b2992a5dc1c1a1dc0fdb0a8e89ed20d51f81c406",
+      "sourceSha256": "8ae0367b965cc5fac061381ca871cadcab6fcb58d085cb83437d4ac5af9d565a",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1321,12 +1353,12 @@
     },
     {
       "path": "creditos/index.html",
-      "bytes": 31392,
-      "sha256": "4cd891b6e3a86b98482ba67837c7199f067c996555973fbf609ec6c4e649b35b",
+      "bytes": 13810,
+      "sha256": "ea204f4d5ac8a115f6c049845c7456f9feb1325467db3408f38c6d57223a826e",
       "category": "immersive-landing",
       "source": "apps/immersive-lp/out/creditos/index.html",
       "sourceSha256": "62221d1af880d3a0c11d66d590161eacc3d111926d4d309b1e5e7bf5acf407d9",
-      "transformation": "local hostname-gated analytics loader",
+      "transformation": "executable inline scripts externalized in original order; local analytics loader added; local hostname-gated analytics loader",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
@@ -2777,22 +2809,22 @@
     },
     {
       "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
-      "bytes": 12802,
-      "sha256": "ae3d0a528959d611e8ac8fd13b8880c0f6f9e1a23e2a47263704e3a2547c4db0",
+      "bytes": 13033,
+      "sha256": "c0679a0e47701c4fd7a39081eb45dfa354ebf41af2c039c4057064a85dd0bf17",
       "category": "rendered-public-document",
       "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
-      "sourceSha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+      "sourceSha256": "6187fc6bb1dd1febed37b8146ecf46dfead629f22117d5a21acc24166e7a3461",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
-      "bytes": 9470,
-      "sha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+      "bytes": 9701,
+      "sha256": "6187fc6bb1dd1febed37b8146ecf46dfead629f22117d5a21acc24166e7a3461",
       "category": "public-document",
       "source": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
-      "sourceSha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+      "sourceSha256": "6187fc6bb1dd1febed37b8146ecf46dfead629f22117d5a21acc24166e7a3461",
       "transformation": "none; bytes preserved"
     },
     {
@@ -3283,12 +3315,12 @@
     },
     {
       "path": "index.html",
-      "bytes": 89849,
-      "sha256": "052085df649111d30028dedca7d9def9f140184dae1ba6ae318216f9b25b6110",
+      "bytes": 42810,
+      "sha256": "4eca2cd647b96ad658de233c0abc852394e4f7ce0e38c06be7625d84398fa8aa",
       "category": "immersive-landing",
       "source": "apps/immersive-lp/out/index.html",
       "sourceSha256": "4a8b485ddade2e33e00608e2b762887c5f151cbbcef01c806ca2df337eb1c20c",
-      "transformation": "local hostname-gated analytics loader",
+      "transformation": "executable inline scripts externalized in original order; local analytics loader added; local hostname-gated analytics loader",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {

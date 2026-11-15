@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T21:29:52.815Z",
-  "finishedAt": "2026-11-15T21:29:56.525Z",
+  "startedAt": "2026-11-15T21:34:55.803Z",
+  "finishedAt": "2026-11-15T21:34:59.527Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -9,8 +9,8 @@
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 53792,
-    "sha256": "497656bb88b69cd60499899c9b81b79d56d1fb09cc3bddba957b17928cf56c11"
+    "bytes": 55295,
+    "sha256": "959c3e5426c2f53dd0bafe4cab712a9118e04542c8dac8103211a5dc143a4c5e"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,18 +24,18 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "d52006a61da7d5f527009636906f624a4e99cafdf9d782c719c95d6a184f8d02"
+        "sha256": "395faa5bdec3132ae05b4dd268c8b072e18b83645ec495a12513d40fb0c22bed"
       },
       "vercelConfig": {
         "path": "vercel.json",
-        "sha256": "b9751d6e0dfafe0e3c72d1d6be0b7f72aca2fc981436378347048cb23646f8e5"
+        "sha256": "57dad34e33d67f5806437cb5f15c6d1e20bbc3d39d5ed5ced43debc35ceeb30c"
       }
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 550,
-      "manifestedFiles": 549,
-      "bytes": 85381347,
+      "fileCount": 554,
+      "manifestedFiles": 553,
+      "bytes": 85359167,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -56,7 +56,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 480,
+      "inspectedFiles": 484,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -107,8 +107,8 @@
       "localLandingChunks": 8
     },
     "localReferences": {
-      "count": 3745,
-      "uniqueTargets": 372,
+      "count": 3755,
+      "uniqueTargets": 376,
       "entries": [
         {
           "source": "404.html",
@@ -310,6 +310,18 @@
           "source": "404.html",
           "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
           "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "requestPath": "/_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "kind": "script"
+        },
+        {
+          "source": "404.html",
+          "target": "_next/ipe-inline-c70712e9e53044c30588cefa.js",
+          "requestPath": "/_next/ipe-inline-c70712e9e53044c30588cefa.js",
           "kind": "script"
         },
         {
@@ -594,6 +606,18 @@
         },
         {
           "source": "404/index.html",
+          "target": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "requestPath": "/_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
+          "target": "_next/ipe-inline-c70712e9e53044c30588cefa.js",
+          "requestPath": "/_next/ipe-inline-c70712e9e53044c30588cefa.js",
+          "kind": "script"
+        },
+        {
+          "source": "404/index.html",
           "target": "assets/analytics.js",
           "requestPath": "/assets/analytics.js",
           "kind": "script"
@@ -870,6 +894,18 @@
           "source": "_not-found/index.html",
           "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
           "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "requestPath": "/_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "kind": "script"
+        },
+        {
+          "source": "_not-found/index.html",
+          "target": "_next/ipe-inline-c70712e9e53044c30588cefa.js",
+          "requestPath": "/_next/ipe-inline-c70712e9e53044c30588cefa.js",
           "kind": "script"
         },
         {
@@ -7922,6 +7958,18 @@
           "source": "creditos/index.html",
           "target": "_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
           "requestPath": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "requestPath": "/_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "kind": "script"
+        },
+        {
+          "source": "creditos/index.html",
+          "target": "_next/ipe-inline-8ef97be5ee1d176247567837.js",
+          "requestPath": "/_next/ipe-inline-8ef97be5ee1d176247567837.js",
           "kind": "script"
         },
         {
@@ -20549,6 +20597,18 @@
         },
         {
           "source": "index.html",
+          "target": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "requestPath": "/_next/ipe-inline-3814cddd18b2095e01abb745.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
+          "target": "_next/ipe-inline-844a01d6b13e329c1cbcbcb1.js",
+          "requestPath": "/_next/ipe-inline-844a01d6b13e329c1cbcbcb1.js",
+          "kind": "script"
+        },
+        {
+          "source": "index.html",
           "target": "assets/analytics.js",
           "requestPath": "/assets/analytics.js",
           "kind": "script"
@@ -24545,6 +24605,10 @@
         }
       ]
     },
+    "landingScripts": {
+      "localFiles": 4,
+      "byteExactInOriginalOrder": true
+    },
     "preservedArtifacts": [
       {
         "path": "__next.__PAGE__.txt",
@@ -26133,9 +26197,9 @@
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "cache-control": "public, max-age=0, must-revalidate"
       },
-      "defaultCsp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-92Ic8Wf9FTBrsYAd2QuY/54Uta0/FxzSEwtCACc/c54=' 'sha256-OBTN3RiyCV4Bq7dFqZ5a2pAXjnCcCYeTJMO2I/LYKeo=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-fzVPE99bcHxN4Y3blMgazx0/FOHoXsngVIhffl4JwEQ=' 'sha256-hEoB1rE+MpwcvLyxWBNfynwxK5/QR67hX1vxQSnVDQ4=' 'sha256-jvl75e4dF2JHVng3V7XHWuD25pCZYwJ5pfQhh7CpnQE=' 'sha256-mdWUxPhLndb/Ef9NgwcXSqexFAKu539gMKbU9disX1w=' 'sha256-xwcS6eUwRMMFiM76Kj3Xoaho/JQuM44LT3RF1k5h3Y0=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+      "defaultCsp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-92Ic8Wf9FTBrsYAd2QuY/54Uta0/FxzSEwtCACc/c54=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-fzVPE99bcHxN4Y3blMgazx0/FOHoXsngVIhffl4JwEQ=' 'sha256-mdWUxPhLndb/Ef9NgwcXSqexFAKu539gMKbU9disX1w=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
       "planetJumpingCsp": "default-src 'self'; script-src 'self' 'sha256-5zH2jHInwlBmvgN6XgTA2bfTu90yxKGQCMCCFWkXvvk=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://d2ol7oe51mr4n9.cloudfront.net; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob: https://d2ol7oe51mr4n9.cloudfront.net; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
-      "checkedInlineScripts": 23,
+      "checkedInlineScripts": 13,
       "assetCacheRule": {
         "source": "/game/assets/(.*)",
         "headers": [
@@ -26177,15 +26241,15 @@
       {
         "path": "404.html",
         "status": 200,
-        "bytes": 23107,
-        "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+        "bytes": 10519,
+        "sha256": "647dd487ae300996f4990fcacdbc947c46de6dcf3f1fc750991ed0881ec31cd1",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "404/index.html",
         "status": 200,
-        "bytes": 23107,
-        "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+        "bytes": 10519,
+        "sha256": "647dd487ae300996f4990fcacdbc947c46de6dcf3f1fc750991ed0881ec31cd1",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -26222,6 +26286,34 @@
         "bytes": 579,
         "sha256": "5016aa1a252fa5de9b50434e5ad5fddd87e3f590173b0cf4008a14acecaba7cb",
         "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "_next/ipe-inline-3814cddd18b2095e01abb745.js",
+        "status": 200,
+        "bytes": 43,
+        "sha256": "3814cddd18b2095e01abb745a99e5ada90178e709c09879324c3b623f2d829ea",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/ipe-inline-844a01d6b13e329c1cbcbcb1.js",
+        "status": 200,
+        "bytes": 47100,
+        "sha256": "844a01d6b13e329c1cbcbcb158135fca7c312b9fd047aee15f5bf14129d50d0e",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/ipe-inline-8ef97be5ee1d176247567837.js",
+        "status": 200,
+        "bytes": 17643,
+        "sha256": "8ef97be5ee1d17624756783757b5c75ae0f6e69099630279a5f42187b0a99d01",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "_next/ipe-inline-c70712e9e53044c30588cefa.js",
+        "status": 200,
+        "bytes": 12649,
+        "sha256": "c70712e9e53044c30588cefa2a3dd7a1a868fc942e338e0b4f7445d64e61dd8d",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
         "path": "_next/static/NK6AByopCtH7a8RHHGC37/_buildManifest.js",
@@ -26485,8 +26577,8 @@
       {
         "path": "_not-found/index.html",
         "status": 200,
-        "bytes": 23107,
-        "sha256": "4234509594efb8b06734750d54caaf19dec10031779ac0edd8045c39d53990ba",
+        "bytes": 10519,
+        "sha256": "647dd487ae300996f4990fcacdbc947c46de6dcf3f1fc750991ed0881ec31cd1",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -27151,21 +27243,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 74078,
-        "sha256": "02b3c926fefbdb27f67a597742769fa7f74829e1f0f5d981cc34e0d51414056b",
+        "sha256": "17fd923f0204d4aac0aa117ac182cbb39cea788d712be63c77aa4e1bbc087112",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2641607,
-        "sha256": "f44714ff2759effb919ba7095d48ecc6daf89423821b67fd126d84aeb0a92626",
+        "bytes": 2641838,
+        "sha256": "23fc629dbda5e03854b3e2e0de833189932dd3930d95dbb9e3d194c97f492837",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 2113297,
-        "sha256": "4c2337866f7b3a8609186755b2992a5dc1c1a1dc0fdb0a8e89ed20d51f81c406",
+        "bytes": 2113528,
+        "sha256": "8ae0367b965cc5fac061381ca871cadcab6fcb58d085cb83437d4ac5af9d565a",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -27192,8 +27284,8 @@
       {
         "path": "creditos/index.html",
         "status": 200,
-        "bytes": 31392,
-        "sha256": "4cd891b6e3a86b98482ba67837c7199f067c996555973fbf609ec6c4e649b35b",
+        "bytes": 13810,
+        "sha256": "ea204f4d5ac8a115f6c049845c7456f9feb1325467db3408f38c6d57223a826e",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -28214,15 +28306,15 @@
       {
         "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
         "status": 200,
-        "bytes": 12802,
-        "sha256": "ae3d0a528959d611e8ac8fd13b8880c0f6f9e1a23e2a47263704e3a2547c4db0",
+        "bytes": 13033,
+        "sha256": "c0679a0e47701c4fd7a39081eb45dfa354ebf41af2c039c4057064a85dd0bf17",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md",
         "status": 200,
-        "bytes": 9470,
-        "sha256": "dedec44183033b42e8b7d9939aa9dcb387511ec90c78b67b9c3e8939e1c7e775",
+        "bytes": 9701,
+        "sha256": "6187fc6bb1dd1febed37b8146ecf46dfead629f22117d5a21acc24166e7a3461",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -28592,8 +28684,8 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 89849,
-        "sha256": "052085df649111d30028dedca7d9def9f140184dae1ba6ae318216f9b25b6110",
+        "bytes": 42810,
+        "sha256": "4eca2cd647b96ad658de233c0abc852394e4f7ce0e38c06be7625d84398fa8aa",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -29873,8 +29965,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 259256,
-        "sha256": "d52006a61da7d5f527009636906f624a4e99cafdf9d782c719c95d6a184f8d02",
+        "bytes": 261102,
+        "sha256": "395faa5bdec3132ae05b4dd268c8b072e18b83645ec495a12513d40fb0c22bed",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -30026,7 +30118,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 406,
+      "linkedRoutesChecked": 410,
       "redirects": [
         {
           "source": "/doc",
@@ -30171,102 +30263,102 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 32.575
+      "durationMs": 28.768
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.356
+      "durationMs": 0.286
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 76.06
+      "durationMs": 73.461
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 0.929
+      "durationMs": 1.266
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 84.616
+      "durationMs": 78.869
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1219.673
+      "durationMs": 1152.16
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.486
+      "durationMs": 0.534
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 561.964
+      "durationMs": 473.083
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 146.998
+      "durationMs": 196.046
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 40.361
+      "durationMs": 49.832
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 3.172
+      "durationMs": 2.246
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 99.538
+      "durationMs": 112.793
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.318
+      "durationMs": 6.209
     },
     {
       "name": "iluminação CC0 do hangar é local e preserva origem e integridade",
       "status": "passed",
-      "durationMs": 0.574
+      "durationMs": 0.612
     },
     {
       "name": "plataforma Kenney CC0 é local, íntegra e não exige arquivos externos",
       "status": "passed",
-      "durationMs": 0.106
+      "durationMs": 0.12
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 59.706
+      "durationMs": 71.798
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 1037.416
+      "durationMs": 1111.2
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 123.932
+      "durationMs": 141.639
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 6.307
+      "durationMs": 6.52
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 139.447
+      "durationMs": 149.107
     }
   ]
 }

@@ -96,7 +96,7 @@ const routeConfig = {
     { source: '/dashboard/(.*)', headers: [ { key: 'Cache-Control', value: 'private, no-store, max-age=0' }, { key: 'X-Robots-Tag', value: 'noindex, nofollow' } ] }
   ]
 };
-const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund && pnpm --dir apps/immersive-lp install --frozen-lockfile', outputDirectory: 'site', functions: { 'api/metrics.mjs': { maxDuration: 60 } } };
+const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund && npx --yes pnpm@11.25.0 --dir apps/immersive-lp install --frozen-lockfile', outputDirectory: 'site', functions: { 'api/metrics.mjs': { maxDuration: 60 } } };
 await writeFile(resolve(root, 'vercel.json'), JSON.stringify(config, null, 2) + '\n');
 await mkdir(resolve(root, '.vercel'), { recursive: true });
 const staticConfigPath = resolve(root, '.vercel/deploy-config.json');

@@ -396,14 +396,30 @@ async function run() {
 
   await check('runtime, apresentação e dados preservam os artefatos já verificados', async () => {
     const preserved = [];
+    const relocated = new Set();
     for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed', 'immersive-landing', 'public-portal'].includes(file.category))) {
       const original = await readFile(path.join(root, file.source));
+      let actual = bytesByFile.get(file.path);
       let expected = original;
       if (file.libras) expected = decorateLibrasPage(expected.toString('utf8'), file.path);
       if (file.analytics) expected = decorateAnalyticsPage(expected.toString('utf8'), file.path);
-      assert.equal(digest(bytesByFile.get(file.path)), digest(expected), `Cópia alterou artefato fora da composição declarada: ${file.path}`);
+      if (file.category === 'immersive-landing' && file.path.endsWith('.html')) {
+        const restored = actual.toString('utf8').replace(/<script\b([^>]*) src="\/(_next\/ipe-inline-([a-f0-9]{24})\.js)"><\/script>/g, (_, attributes, filename, hash) => {
+          assert.doesNotMatch(attributes, /\b(?:async|defer)\b|\btype\s*=\s*["'](?:importmap|application\/(?:ld\+)?json|text\/plain)["']/i);
+          const script = bytesByFile.get(filename);
+          assert.ok(script, `Script local da LP ausente: ${filename}`);
+          assert.equal(digest(script).slice(0, 24), hash);
+          relocated.add(filename);
+          return `<script${attributes}>${script.toString('utf8')}</script>`;
+        });
+        actual = Buffer.from(restored);
+      }
+      assert.equal(digest(actual), digest(expected), `Cópia alterou artefato ou ordem dos scripts fora da composição declarada: ${file.path}`);
       preserved.push({ path: file.path, source: file.source, sha256: digest(original), ...(file.libras && { libras: file.libras }), ...(file.analytics && { analytics: file.analytics }) });
     }
+    assert.ok(relocated.size > 0, 'O bootstrap do export da LP deve estar em arquivos locais');
+    assert.deepEqual([...relocated].sort(), manifest.files.filter(file => file.category === 'landing-script').map(file => file.path).sort());
+    observations.landingScripts = { localFiles: relocated.size, byteExactInOriginalOrder: true };
     for (const runtime of ['lab', 'campanha']) assert.ok(preserved.some(file => file.path === `${runtime}/index.html`), `Runtime não incluído na conferência de preservação: ${runtime}`);
     const presentationReceipt = JSON.parse(await readFile(path.join(root, 'evidence/presentation-qa.json'), 'utf8'));
     assert.equal(digest(await readFile(path.join(root, 'presentation/Missao_Ipe_Apresentacao.html'))), presentationReceipt.observations.artifact.sha256);
@@ -467,8 +483,10 @@ async function run() {
     for (const command of [
       'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund',
       'npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund',
-      'pnpm --dir apps/immersive-lp install --frozen-lockfile',
+      'npx --yes pnpm@11.25.0 --dir apps/immersive-lp install --frozen-lockfile',
     ]) assert.ok(vercel.installCommand.includes(command), `Instalação ausente: ${command}`);
+    const workspacePackage = JSON.parse(await readFile(path.join(root, 'package.json'), 'utf8'));
+    assert.ok(workspacePackage.scripts['build:release'].includes('npx --yes pnpm@11.25.0 --dir apps/immersive-lp build'));
     assert.equal(vercel.cleanUrls, false);
     assert.equal(vercel.trailingSlash, false);
     const common = Object.fromEntries(vercel.headers.find(rule => rule.source === '/(.*)').headers.map(header => [header.key.toLowerCase(), header.value]));
@@ -517,6 +535,7 @@ async function run() {
       for (const element of document.querySelectorAll('*')) for (const attr of element.attributes) assert.ok(!/^on[a-z]+$/i.test(attr.name), `Handler HTML inline bloqueado pela CSP em ${filename}`);
       for (const script of document.querySelectorAll('script:not([src])')) {
         if (/^(?:application\/(?:ld\+)?json|text\/plain)$/i.test(script.type) || !script.textContent.trim()) continue;
+        assert.ok(!landingFiles.has(filename), `Script executável inline na LP: ${filename}`);
         const hash = createHash('sha256').update(script.textContent).digest('base64');
         assert.ok(documentScriptDirective.includes(`'sha256-${hash}'`), `Hash inline ausente da CSP: ${filename}`);
         if (filename === 'planet-jumping.html') assert.ok(!scriptDirective.includes(`'sha256-${hash}'`), 'Script do experimento não deve ampliar os hashes autorizados nos jogos');
