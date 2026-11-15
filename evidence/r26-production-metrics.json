@@ -1,0 +1,58 @@
+{
+  "edition": "R26",
+  "checkedAt": "2026-11-15T17:15:19.681Z",
+  "origin": "https://nasa-missaoipe.alexandrebelo.com",
+  "synthetic": true,
+  "humanLearningEvidence": false,
+  "checks": [
+    "anonymous_admin_denied",
+    "registration_201",
+    "player_admin_denied",
+    "six_attempts_accepted",
+    "identical_retry_idempotent",
+    "six_unique_persisted_attempts",
+    "six_exact_server_recalculations",
+    "comparison_role_review_and_cancellation_persisted"
+  ],
+  "results": [
+    {
+      "mission": "cerrado",
+      "score": 91,
+      "validRecords": 6,
+      "outcome": "success"
+    },
+    {
+      "mission": "bennu",
+      "score": 93,
+      "validRecords": 6,
+      "outcome": "success"
+    },
+    {
+      "mission": "telescope",
+      "score": 92,
+      "validRecords": 6,
+      "outcome": "success"
+    },
+    {
+      "mission": "iss",
+      "score": 92,
+      "validRecords": 6,
+      "outcome": "success"
+    },
+    {
+      "mission": "moon",
+      "score": 90,
+      "validRecords": 6,
+      "outcome": "success"
+    },
+    {
+      "mission": "mars",
+      "score": 91,
+      "validRecords": 6,
+      "outcome": "success"
+    }
+  ],
+  "status": "passed",
+  "commit": "789af317b737243afa8f928152f3e488e1e6ab5c",
+  "deploymentId": "dpl_E66f2F38Us5whEzqT8qn6249fPqz"
+}

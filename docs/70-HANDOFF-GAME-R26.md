@@ -63,6 +63,8 @@ No navegador real, ISS entregou 6 registros/92 pontos, Lua 6/91 e Marte passou d
 
 A inspeção visual levou à redução do cabeçalho e ao posicionamento do Rive ao lado dele no desktop, mantendo nave e controles visíveis. O botão de áudio mantém descrição acessível sem ocupar a bancada inteira.
 
-Nunca substituir teste com jogadores por contagem de testes automatizados. O recibo de publicação será registrado em PUBLICADO.md depois de verificar o commit na Vercel.
+**Produção verificada:** código `789af317b737243afa8f928152f3e488e1e6ab5c`, com jogo e LP em READY. Treze páginas/assets corresponderam ao build local por SHA-256. A API persistiu seis tentativas sintéticas, recalculou as pontuações e aceitou reenvio sem duplicação. Comparação A/B, revisão de papéis e cancelamento ficaram registrados; visitante e jogador não acessaram a API administrativa. [Publicação e recibos](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md).
+
+Nunca substituir teste com jogadores por contagem de testes automatizados. Os resultados sintéticos validam o funcionamento técnico, sem provar aprendizagem humana.
 
 Links: [jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html), [painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html), [equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html), [pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html), [GitHub oficial](https://github.com/oalexandrebelo/MISSAO-IPE).

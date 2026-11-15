@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-11-15T17:16:49.792Z",
+  "origin": "https://nasa-missaoipe.alexandrebelo.com",
+  "commit": "789af317b737243afa8f928152f3e488e1e6ab5c",
+  "deploymentId": "dpl_E66f2F38Us5whEzqT8qn6249fPqz",
+  "lpDeploymentId": "dpl_Cgb3KxWwoRNioCK2STXX4M2DDwEf",
+  "status": "passed",
+  "checks": [
+    {
+      "path": "/lab/index.html",
+      "bytes": 1380,
+      "sha256": "d56560a4f37e5a7006974e51fa65716b43cc1bfd0f798385d79f60c85a9fde84",
+      "byteIdentical": true
+    },
+    {
+      "path": "/dashboard/index.html",
+      "bytes": 6996,
+      "sha256": "53004a36997c3cee33a5a29094ecadb8c35a55265ac93e8a82509cbd786ec2cd",
+      "byteIdentical": true
+    },
+    {
+      "path": "/equipe/index.html",
+      "bytes": 52020,
+      "sha256": "442f65487f71cfcfce552e404958d58f8a6dc0da9aeeef120607b8bb58a8b52f",
+      "byteIdentical": true
+    },
+    {
+      "path": "/presentation/pitch/index.html",
+      "bytes": 26368,
+      "sha256": "0879eaedc8445abce3d4b1f52e7f5b464cb561dcef76ea68d3864f9c845eb64c",
+      "byteIdentical": true
+    },
+    {
+      "path": "/docs/67-AUDITORIA-BRUNO-FASTMODE-R26.html",
+      "bytes": 25266,
+      "sha256": "6d0680fcc926a564c114998b95b2d69f1866d44a31c44d0553a2344f7c1b52f9",
+      "byteIdentical": true
+    },
+    {
+      "path": "/docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.html",
+      "bytes": 12561,
+      "sha256": "19e051cb78c05bcd0db6c36b1cba46d3a05604bffe946209066c8993df187f61",
+      "byteIdentical": true
+    },
+    {
+      "path": "/docs/69-RIVE-MISSOES-R26.html",
+      "bytes": 6390,
+      "sha256": "66cc66c698c7993a248fe921abfd115917a69b42a2b5f34a98546018ab300dc7",
+      "byteIdentical": true
+    },
+    {
+      "path": "/docs/70-HANDOFF-GAME-R26.html",
+      "bytes": 11785,
+      "sha256": "0c083ac4c867b823d39cb700ba811855b6efa7ca374c4b1f9004ad170ee17261",
+      "byteIdentical": true
+    },
+    {
+      "path": "/lab/rive/ipe-mission-sequence.riv",
+      "bytes": 20637,
+      "sha256": "e0a7c87f9ce5177402e3ca5d5223edf1796cc614512ce33e6f1c6c4fc4a2437f",
+      "byteIdentical": true
+    },
+    {
+      "path": "/lab/rive/ipe-subsystems.riv",
+      "bytes": 15019,
+      "sha256": "103b0ce860cf3b696dc6d9eaea3603ca24922a54f85fd862cda188348d37e5db",
+      "byteIdentical": true
+    },
+    {
+      "path": "/lab/assets/index-A72CBLpX.js",
+      "bytes": 664299,
+      "sha256": "0a7580b2e86372016404870ad17588ed97dbf95f82cd9b830823b303b7fc53fd",
+      "byteIdentical": true
+    },
+    {
+      "path": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
+      "bytes": 726,
+      "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7",
+      "byteIdentical": true
+    },
+    {
+      "path": "/lab/assets/index-C_IR0o8g.css",
+      "bytes": 221592,
+      "sha256": "1d5fdd5d22d6c3cd5203b577faf5a7bec5587a1732bda35d62cd2e089fbead71",
+      "byteIdentical": true
+    }
+  ],
+  "lpHome200": true
+}

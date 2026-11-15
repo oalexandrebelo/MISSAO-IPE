@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T17:11:30.968Z",
+  "generatedAt": "2026-11-15T17:17:34.014Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 447,
-  "bytes": 43362762,
+  "bytes": 43371626,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 211677,
-    "sha256": "eee5ac5038a0d1017e0c723f0e8031f494248edec218792443e2730993b93499"
+    "sha256": "38ef9cdcaba1a6c61d77a8b0f55e6d1267125493eaf770b8067db4f90ffc1abb"
   },
   "entries": [
     {
@@ -813,30 +813,30 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 67927,
-      "sha256": "afa4984d4540ee81465ce0382905241cfd33de748cbc6e4f21241e0dc7a523bf",
+      "sha256": "67b306530c685ec7898cca208bd818e9f597ad0550a493af5254c33b9556ecc4",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "afa4984d4540ee81465ce0382905241cfd33de748cbc6e4f21241e0dc7a523bf",
+      "sourceSha256": "67b306530c685ec7898cca208bd818e9f597ad0550a493af5254c33b9556ecc4",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2466006,
-      "sha256": "98505f83474680cee41d87f36e2e3b38b846b65dec8a389878f1608f9fc26ae0",
+      "bytes": 2470176,
+      "sha256": "68c89a7713ebc3860840ad4a415f5957ac67fca00733f3a066c7cc5dc5f7935f",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "ced06f4004ff2e15fcbfc4d9670f06ee2ef43930b1de009e09c63f097ddf5242",
+      "sourceSha256": "e52a2f7a6ffe93792e56c7cfe79a2e7e61de73ccdf73990a702e0189a1be6f61",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1975883,
-      "sha256": "2a5db26f567b8071dcff0f394040f372900f459ccc29f743b4f35e22c64878a0",
+      "bytes": 1979511,
+      "sha256": "8964be911f47f83a6da3acc8ddad427305a4a6c820f1089a3c5ad982aab8497b",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "2a5db26f567b8071dcff0f394040f372900f459ccc29f743b4f35e22c64878a0",
+      "sourceSha256": "8964be911f47f83a6da3acc8ddad427305a4a6c820f1089a3c5ad982aab8497b",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2038,22 +2038,22 @@
     },
     {
       "path": "docs/70-HANDOFF-GAME-R26.html",
-      "bytes": 11785,
-      "sha256": "0c083ac4c867b823d39cb700ba811855b6efa7ca374c4b1f9004ad170ee17261",
+      "bytes": 12354,
+      "sha256": "1d4a77bdbe463ea6be73ce360458abc69b512b253deed65585ce01c85cd2de03",
       "category": "rendered-public-document",
       "source": "docs/70-HANDOFF-GAME-R26.md",
-      "sourceSha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "sourceSha256": "e98b7746b9424c67a4934677712ff1db60346ea803d65606218fcc91adc14e20",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/70-HANDOFF-GAME-R26.md",
-      "bytes": 8619,
-      "sha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "bytes": 9116,
+      "sha256": "e98b7746b9424c67a4934677712ff1db60346ea803d65606218fcc91adc14e20",
       "category": "public-document",
       "source": "docs/70-HANDOFF-GAME-R26.md",
-      "sourceSha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "sourceSha256": "e98b7746b9424c67a4934677712ff1db60346ea803d65606218fcc91adc14e20",
       "transformation": "none; bytes preserved"
     },
     {

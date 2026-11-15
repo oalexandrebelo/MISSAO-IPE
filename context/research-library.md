@@ -65,9 +65,29 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `40381fb33c86dbd80d3d6619ffe96957b3a54b30a3035b95f748d307f3a6fcb9` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `b700a577022a48fa66af1b8f48fe1701c8a74de808cdfdf16e61e1e03b374e79` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R26 — operação conectada ao 3D, comparação e Rive
+
+**Publicada e conferida em 15/11/2026.** Código `789af317b737243afa8f928152f3e488e1e6ab5c`. Principal `dpl_E66f2F38Us5whEzqT8qn6249fPqz` e LP `dpl_Cgb3KxWwoRNioCK2STXX4M2DDwEf`, ambos **READY** no mesmo commit, com os domínios oficiais associados.
+
+ISS, Lua e Marte ganharam comparação A/B ligada à nave, retomada por participação, revisão pré-voo, operação com pausa e avanço por evento, áudio opcional e análise dos quatro segmentos. O novo artboard Rive **IpeMissionSequence** acompanha decisão, lançamento, coleta, recepção e desfecho; a confirmação de **End Prompt** foi recebida. Cerrado, Bennu e Webb continuam disponíveis. A tentativa é calculada pelo motor; a animação apresenta seus eventos.
+
+**Aceite local:** 171 testes de domínio, 111 de interface, 33 de métricas e 18 de distribuição passaram. As três jornadas foram exercitadas no navegador, incluindo falha, redesenho, A/B, reload e cancelamento sem recompensa. Viewports de 320 e 390 px ficaram sem overflow horizontal. [Recibo funcional](evidence/r26-functional-qa.json).
+
+**Aceite de produção:** treze páginas/assets conferidos com SHA-256 idêntico ao build local, incluindo os dois Rives e os JS/CSS de entrada; a LP respondeu HTTP 200. Jogo e handoff abriram no navegador público. A API persistiu seis tentativas sintéticas, recalculou exatamente os seis resultados e aceitou repetição sem duplicar. Inspeção A/B, revisão dos papéis e cancelamento também foram persistidos. O painel administrativo recusou visitante e sessão de jogador com `401`. [Assets e rotas](evidence/r26-production-assets.json) · [Métricas privadas](evidence/r26-production-metrics.json).
+
+As pontuações das configurações técnicas conferidas foram Cerrado 91, Bennu 93, Webb 92, ISS 92, Lua 90 e Marte 91, todas com seis registros válidos. São resultados de teste, sem participantes humanos e sem demonstração de aprendizagem. A configuração da Lua no teste de API inclui proteção reforçada; a jornada local com 91 pontos usa outra configuração.
+
+O repositório preserva 37 arquivos úteis da nova contribuição de Bruno, com manifesto e autoria. Loja, inventário múltiplo, desgaste, reserva e Europa ainda não foram migrados ao motor oficial. Earshot e ManimGX foram avaliados; o jogo aplica feedback com Web Audio e Rive, sem instalar esses runtimes. Aceite em telefone físico, avaliação de aprendizagem e validação de Libras por pessoa surda permanecem pendentes.
+
+[Jogar](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) · [Handoff dos dois devs](https://nasa-missaoipe.alexandrebelo.com/docs/70-HANDOFF-GAME-R26.html) · [Auditoria Bruno/Fastmode](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [Áudio e skills](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md) · [Autoria Rive](docs/69-RIVE-MISSOES-R26.md)
+
+Este registro identifica as implantações verificadas. O commit documental posterior publica os recibos e atualiza o handoff, sem mudar o runtime do jogo.
+
+---
 
 ## R25 — seis missões, Start, hangar e progresso
 
@@ -7967,7 +7987,7 @@ O runtime oficial `@rive-app/canvas@2.50.0` carrega o `.riv` e o WASM da própri
 
 # MISSÃO IPÊ — handoff do game R26
 
-Fonte: `docs/70-HANDOFF-GAME-R26.md` · SHA-256 original: `3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52` · Ajustes de caminhos privados: 0
+Fonte: `docs/70-HANDOFF-GAME-R26.md` · SHA-256 original: `e98b7746b9424c67a4934677712ff1db60346ea803d65606218fcc91adc14e20` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ — handoff do game R26
 
@@ -8034,7 +8054,9 @@ No navegador real, ISS entregou 6 registros/92 pontos, Lua 6/91 e Marte passou d
 
 A inspeção visual levou à redução do cabeçalho e ao posicionamento do Rive ao lado dele no desktop, mantendo nave e controles visíveis. O botão de áudio mantém descrição acessível sem ocupar a bancada inteira.
 
-Nunca substituir teste com jogadores por contagem de testes automatizados. O recibo de publicação será registrado em PUBLICADO.md depois de verificar o commit na Vercel.
+**Produção verificada:** código `789af317b737243afa8f928152f3e488e1e6ab5c`, com jogo e LP em READY. Treze páginas/assets corresponderam ao build local por SHA-256. A API persistiu seis tentativas sintéticas, recalculou as pontuações e aceitou reenvio sem duplicação. Comparação A/B, revisão de papéis e cancelamento ficaram registrados; visitante e jogador não acessaram a API administrativa. [Publicação e recibos](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md).
+
+Nunca substituir teste com jogadores por contagem de testes automatizados. Os resultados sintéticos validam o funcionamento técnico, sem provar aprendizagem humana.
 
 Links: [jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html), [painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html), [equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html), [pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html), [GitHub oficial](https://github.com/oalexandrebelo/MISSAO-IPE).
 
