@@ -61,6 +61,10 @@
       "Reduced motion and unavailable media tested with simulated DOM/media, not OS preference controls",
       "No validated educational-outcome study",
       "Browser actions do not constitute exhaustive accessibility certification"
+    ],
+    "productionObserved": [
+      "Public lab loads without authentication; Bennu and Webb reference views and destination controls inspected",
+      "Public console captured with no error-level entries during observed actions"
     ]
   },
   "review": {

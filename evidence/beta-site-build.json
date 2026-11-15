@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T08:31:28.997Z",
+  "generatedAt": "2026-11-15T08:35:14.203Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 292,
-  "bytes": 28006168,
+  "bytes": 28014056,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 125436,
-    "sha256": "4f44173e6437ecd5a5ed691813d87a36da6d5f411985c8a85c1b087121c50598"
+    "sha256": "6dd0e9df9bee2544a9fd2422532b3fc021958b281bc57883c9424321e7ae9fcc"
   },
   "entries": [
     {
@@ -599,28 +599,28 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 50694,
-      "sha256": "7bab63cd92820e02e819828264b498c298af26f735196edf5fbbc094be70683c",
+      "sha256": "1768197654ad0def2ec0eb4e937db6317c7d0ff1fad9c4421457963d09ca634f",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "7bab63cd92820e02e819828264b498c298af26f735196edf5fbbc094be70683c",
+      "sourceSha256": "1768197654ad0def2ec0eb4e937db6317c7d0ff1fad9c4421457963d09ca634f",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2009651,
-      "sha256": "ab393c9b09cec3ad93c91a4c8dc2b1c1fba9891efca3501df28731d24d3fda51",
+      "bytes": 2013987,
+      "sha256": "44e13ced91488cd83fb5c89023d240e5a3eb5b58088d6e499c0c4745fc1fdba7",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "ab393c9b09cec3ad93c91a4c8dc2b1c1fba9891efca3501df28731d24d3fda51",
+      "sourceSha256": "44e13ced91488cd83fb5c89023d240e5a3eb5b58088d6e499c0c4745fc1fdba7",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1620196,
-      "sha256": "1c6c6679f4a0c281087049e6d1176f925d43435f318e9e82f045a36383adeb1b",
+      "bytes": 1623748,
+      "sha256": "54e30c78f7bee78eeda350f94d2fd7918af68259f3557603e82ddca70e7e86bf",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "1c6c6679f4a0c281087049e6d1176f925d43435f318e9e82f045a36383adeb1b",
+      "sourceSha256": "54e30c78f7bee78eeda350f94d2fd7918af68259f3557603e82ddca70e7e86bf",
       "transformation": "none; bytes preserved"
     },
     {

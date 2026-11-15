@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T08:31:28.950Z",
+  "generatedAt": "2026-11-15T08:35:14.144Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 98,
   "documents": [
@@ -29,12 +29,12 @@
     {
       "source": "PUBLICADO.md",
       "id": "doc-publicado-md",
-      "title": "Publicação PROJETO IPÊ — R15",
+      "title": "Publicação PROJETO IPÊ — R16",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 11251,
-      "originalSha256": "8c08f42740836cab57f47d7afee2fce9062a1835a9311fb4c86a5fc10df4a0a9",
-      "projectedSha256": "8c08f42740836cab57f47d7afee2fce9062a1835a9311fb4c86a5fc10df4a0a9",
+      "originalBytes": 14803,
+      "originalSha256": "a9840b1760bf360ad1f87a9aeabbfdea2f2caf7f1f0bd7c67b715825563e5cab",
+      "projectedSha256": "a9840b1760bf360ad1f87a9aeabbfdea2f2caf7f1f0bd7c67b715825563e5cab",
       "redactions": 0
     },
     {
@@ -1086,13 +1086,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2009651,
-      "sha256": "ab393c9b09cec3ad93c91a4c8dc2b1c1fba9891efca3501df28731d24d3fda51"
+      "bytes": 2013987,
+      "sha256": "44e13ced91488cd83fb5c89023d240e5a3eb5b58088d6e499c0c4745fc1fdba7"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1620196,
-      "sha256": "1c6c6679f4a0c281087049e6d1176f925d43435f318e9e82f045a36383adeb1b"
+      "bytes": 1623748,
+      "sha256": "54e30c78f7bee78eeda350f94d2fd7918af68259f3557603e82ddca70e7e86bf"
     }
   ]
 }
