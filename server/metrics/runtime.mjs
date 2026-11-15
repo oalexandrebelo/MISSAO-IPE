@@ -1764,10 +1764,10 @@ function createBlobRepository({ storeId: configuredStoreId, getToken = currentMa
   return {
     get,
     async getVersioned(path) {
-      const response = await call(`${origin}/${safePath(path)}?cache=0`);
+      const response = await call(`${origin}/${safePath(path)}?cache=0`, { headers: { "accept-encoding": "identity" } });
       if (response.status === 404) return null;
       const etag = response.headers.get("etag");
-      if (!response.ok || !etag) throw new StorageUnavailable("N\xE3o foi poss\xEDvel ler a vers\xE3o do invent\xE1rio.");
+      if (!response.ok || !etag || /^W\//i.test(etag)) throw new StorageUnavailable("N\xE3o foi poss\xEDvel ler a vers\xE3o do invent\xE1rio.");
       try {
         return { document: await response.json(), etag };
       } catch {
@@ -1775,7 +1775,7 @@ function createBlobRepository({ storeId: configuredStoreId, getToken = currentMa
       }
     },
     async compareAndSwap(path, document, etag) {
-      if (!path.startsWith("r27/inventory/") || typeof etag !== "string" || !etag || /[\r\n]/.test(etag)) throw new StorageUnavailable("Vers\xE3o inv\xE1lida.");
+      if (!path.startsWith("r27/inventory/") || typeof etag !== "string" || !etag || /^W\//i.test(etag) || /[\r\n]/.test(etag)) throw new StorageUnavailable("Vers\xE3o inv\xE1lida.");
       const response = await call(`${API}/?${new URLSearchParams({ pathname: safePath(path) })}`, {
         method: "PUT",
         headers: { "content-type": "application/json", "x-content-type": "application/json", "x-vercel-blob-access": "private", "x-add-random-suffix": "0", "x-allow-overwrite": "1", "x-if-match": etag, "x-cache-control-max-age": "60", "x-ttl-days": "90" },

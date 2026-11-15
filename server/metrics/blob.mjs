@@ -40,15 +40,17 @@ export function createBlobRepository({ storeId: configuredStoreId, getToken = cu
   return {
     get,
     async getVersioned(path) {
-      const response = await call(`${origin}/${safePath(path)}?cache=0`);
+      // Compression can turn the origin's strong ETag into a weak CDN validator.
+      // CAS needs the unchanged representation's validator, even after state grows.
+      const response = await call(`${origin}/${safePath(path)}?cache=0`, { headers: { 'accept-encoding': 'identity' } });
       if (response.status === 404) return null;
       const etag = response.headers.get('etag');
-      if (!response.ok || !etag) throw new StorageUnavailable('Não foi possível ler a versão do inventário.');
+      if (!response.ok || !etag || /^W\//i.test(etag)) throw new StorageUnavailable('Não foi possível ler a versão do inventário.');
       try { return { document: await response.json(), etag }; }
       catch { throw new StorageUnavailable('Inventário indisponível.'); }
     },
     async compareAndSwap(path, document, etag) {
-      if (!path.startsWith('r27/inventory/') || typeof etag !== 'string' || !etag || /[\r\n]/.test(etag)) throw new StorageUnavailable('Versão inválida.');
+      if (!path.startsWith('r27/inventory/') || typeof etag !== 'string' || !etag || /^W\//i.test(etag) || /[\r\n]/.test(etag)) throw new StorageUnavailable('Versão inválida.');
       // Vercel's official put-helpers.ts maps ifMatch to x-if-match. Private cache=0 reads
       // bypass the CDN; this compare is enforced by storage, not a warm-instance mutex.
       const response = await call(`${API}/?${new URLSearchParams({ pathname: safePath(path) })}`, {

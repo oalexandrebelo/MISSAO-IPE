@@ -46,8 +46,10 @@ async function api(action, body, auth, query = {}) {
     headers: { 'content-type': 'application/json', origin, ...(auth ? { cookie: auth } : {}) },
     ...(body ? { body: JSON.stringify({ action, ...body }) } : {}) });
   evidence.requests++;
+  evidence.lastHttp = { action, status: response.status };
   check(/no-store/.test(response.headers.get('cache-control') ?? ''), 'no_store');
   let value; try { value = await response.json(); } catch { throw new Error('non_json_response'); }
+  if (typeof value?.code === 'string' && /^[A-Z_]{1,60}$/.test(value.code)) evidence.lastHttp.code = value.code;
   return { response, value };
 }
 const expectedLedger = new Set(), expectedAttempts = new Set();

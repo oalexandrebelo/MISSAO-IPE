@@ -237,3 +237,38 @@ test('private Blob CAS uses origin reads and storage preconditions, never overwr
   assert.equal(calls[1].options.headers['x-vercel-blob-access'], 'private');
   await assert.rejects(() => repo.compareAndSwap(`r21/records/${randomUUID()}/profile.json`, {}, '"v2"'), StorageUnavailable);
 });
+
+test('private Blob CAS keeps a strong ETag when a growing inventory would be compressed', async () => {
+  const path = `r27/inventory/${randomUUID()}/state.json`;
+  let document = { revision: 0 }, version = 0;
+  const repo = createBlobRepository({ storeId: 'store_Test123', getToken: async () => 'synthetic-oidc' }, async (_url, options) => {
+    const etag = `"v${version}"`;
+    if (options.method === 'PUT') {
+      if (options.headers['x-if-match'] !== etag) return new Response('{}', { status: 412 });
+      document = JSON.parse(options.body); version++;
+      return new Response('{}');
+    }
+    const body = JSON.stringify(document);
+    // A CDN can weaken the validator when it negotiates a compressed representation.
+    const compressed = body.length > 1024 && options.headers['accept-encoding'] !== 'identity';
+    return new Response(body, { headers: { etag: compressed ? `W/${etag}` : etag, ...(compressed ? { 'content-encoding': 'gzip' } : {}) } });
+  });
+  const initial = await repo.getVersioned(path);
+  assert.equal(await repo.compareAndSwap(path, { revision: 1, receipt: 'x'.repeat(2048) }, initial.etag), true);
+  const afterPurchase = await repo.getVersioned(path);
+  assert.equal(await repo.compareAndSwap(path, { revision: 2 }, afterPurchase.etag), true);
+  assert.equal((await repo.getVersioned(path)).document.revision, 2);
+  assert.equal(await repo.compareAndSwap(path, { revision: 3 }, afterPurchase.etag), false);
+});
+
+test('private Blob refuses weak validators instead of stripping their weakness or retrying writes', async () => {
+  const path = `r27/inventory/${randomUUID()}/state.json`;
+  let writes = 0;
+  const repo = createBlobRepository({ storeId: 'store_Test123', getToken: async () => 'synthetic-oidc' }, async (_url, options) => {
+    if (options.method === 'PUT') writes++;
+    return new Response('{"revision":1}', { headers: { etag: 'W/"v1"' } });
+  });
+  await assert.rejects(() => repo.getVersioned(path), StorageUnavailable);
+  await assert.rejects(() => repo.compareAndSwap(path, { revision: 2 }, 'W/"v1"'), StorageUnavailable);
+  assert.equal(writes, 0);
+});
