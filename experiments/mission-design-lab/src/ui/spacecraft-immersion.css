@@ -2,3 +2,22 @@
 .scene.scene-orbit .orbital-canvas.spacecraft-interactive,
 .scene.scene-orbit .orbital-canvas.spacecraft-interactive canvas { pointer-events:auto; }
 .scene.scene-orbit .orbital-canvas.spacecraft-interactive canvas { cursor:crosshair; touch-action:pan-y; }
+
+/* Expand the drawing in the document so mission controls stay reachable. */
+.scene.scene-orbit.scene-configured.scene-expanded .orbit-render { height:clamp(440px,72vh,780px); }
+.scene.scene-orbit.scene-configured.scene-expanded .orbit-bottom { margin-top:calc(clamp(440px,72vh,780px) - 15px); }
+.scene.scene-orbit .orbit-expand[aria-expanded="true"] { border-color:#d8b287; color:#ffddb5; background:#4b382b; }
+.scene.scene-orbit .orbit-focus-brief { display:grid; gap:6px; margin:18px 0 14px; padding:16px 18px; border-left:2px solid #daab7d; background:linear-gradient(100deg,#c38c4f12,transparent); }
+.scene.scene-orbit .orbit-focus-brief>span { font:10px/1.4 var(--mono,monospace); letter-spacing:.1em; color:#d9b28d; }
+.scene.scene-orbit .orbit-focus-brief>strong { font-size:18px; font-weight:600; color:#f2e7d6; }
+.scene.scene-orbit .orbit-focus-brief p { margin:0; max-width:80ch; font-size:13px; line-height:1.65; color:#b9cbd4; }
+.scene.scene-orbit .orbit-focus-brief small { max-width:85ch; font-size:11px; line-height:1.6; color:#a9bcc8; }
+.scene.scene-orbit .orbit-display-tools { flex-wrap:wrap; }
+@media(max-width:600px) {
+  .scene.scene-orbit.scene-configured .orbit-topline { position:relative; inset:auto; padding:8px 12px; }
+  .scene.scene-orbit.scene-configured .orbit-render { top:70px; }
+  .scene.scene-orbit.scene-configured .orbit-bottom { margin-top:330px; }
+  .scene.scene-orbit.scene-configured.scene-expanded .orbit-bottom { margin-top:calc(clamp(440px,72vh,780px) - 15px); }
+  .scene.scene-orbit .orbit-focus-brief { padding:12px; }
+  .scene.scene-orbit .orbit-focus-brief>strong { font-size:16px; }
+}

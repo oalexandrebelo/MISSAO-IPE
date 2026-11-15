@@ -1,3 +1,5 @@
+> **Atualização R19 — 0.10.0-beta.1.** As três missões conectam evidência, replay 3D, comparação explicada e análise dos quatro papéis. [Handoff atual](../../docs/48-HANDOFF-DOIS-DEVS-R19.md) · [roteiro de apresentação](../../docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+
 > **Atualização R18 — 0.9.0-beta.1.** Bennu e Webb usam dados publicados, procedência local e replay por ID. Comece pelo [handoff atual](../../docs/46-HANDOFF-DOIS-DEVS-R18.md) e pelo [contrato de dados reais](../../docs/45-DADOS-REAIS-BENNU-WEBB-R18.md). O histórico abaixo conserva as rodadas em que foi escrito.
 
 # Missão Ipê — laboratório de missões R9–R10

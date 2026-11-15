@@ -147,3 +147,8 @@ Recibos: [revisão local R14](evidence/revision-r14.json), [publicação R14](ev
 
 Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não foram medidos FPS nem desempenho em dispositivo físico; primeiro acesso offline continua sem ensaio. Recursos NASA não representam endosso institucional, qualificação de voo ou elegibilidade no desafio.
 
+
+
+## R19 · trilha da evidência, A/B e quatro papéis · 15/11/2026
+
+Versão 0.10.0-beta.1. A implementação das três prioridades está concluída nas três missões. A integração local passou 151 testes de domínio, 56 de interface, 17 verificações da distribuição e 18 jornadas da apresentação. O recibo técnico está em `evidence/revision-r19.json`. [Handoff R19](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md). Os recibos de produção anteriores conservam seus commits; a publicação R19 será conferida pelo commit do deploy e pelo manifesto público.

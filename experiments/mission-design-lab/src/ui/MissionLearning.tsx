@@ -4,6 +4,7 @@ import type { LearningExperiment, LearningMission, LearningTrial } from '../lab/
 import { getMissionVisualState } from '../lab/mission-visual-state.ts';
 import { getExpeditionVisualState } from '../lab/scientific-expeditions.ts';
 import { Scene } from './Scene.tsx';
+import { LearningComparison } from './LearningComparison.tsx';
 import { number, time } from './format.ts';
 import './mission-learning.css';
 
@@ -20,12 +21,14 @@ export function MissionExperiment({ id, onApply, disabled = false }: { id: Learn
   const [experiment, setExperiment] = useState<LearningExperiment | null>(null);
   const [side, setSide] = useState<0 | 1>(0);
   const [at, setAt] = useState(0);
+  const [inspection, setInspection] = useState<'energy' | 'communications' | 'instrument'>();
+  const [selectedEvent, setSelectedEvent] = useState<string>();
   const trial = experiment?.trials[side];
   const snapshots = experiment?.trials.map(summarizeLearningTrial);
   const difference = snapshots ? snapshots[1]!.valid - snapshots[0]!.valid : 0;
   const expected = difference > 0 ? 'more' : difference < 0 ? 'less' : 'same';
   const horizon = trial?.kind === 'expedition' ? trial.result.horizonS : 10800;
-  const state = trial ? trial.kind === 'cerrado' ? getMissionVisualState(trial.result, at) : getExpeditionVisualState(trial.result, at) : undefined;
+  const state = trial ? trial.kind === 'cerrado' ? getMissionVisualState(trial.result, at, selectedEvent) : getExpeditionVisualState(trial.result, at, selectedEvent) : undefined;
   const keyEvent = trial?.result.events.find(event => event.severity === 'error') ?? trial?.result.events.find(event => event.code.includes('CONTACT'));
   return <section className="learning-experiment" aria-labelledby={`${uid}-title`}>
     <div className="experiment-heading"><div><p className="eyebrow">EXPERIMENTO GUIADO · UMA ESCOLHA POR VEZ</p><h2 id={`${uid}-title`}>{lesson.experiment}</h2></div><button className="button button-secondary" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? 'Fechar experimento' : 'Investigar esta escolha'}</button></div>
@@ -33,6 +36,7 @@ export function MissionExperiment({ id, onApply, disabled = false }: { id: Learn
       <fieldset disabled={disabled || experiment !== null}><legend>Faça uma previsão sobre os registros válidos de B em relação a A</legend><div className="experiment-predictions">{[{ value: 'more', text: 'B entrega mais' }, { value: 'same', text: 'B entrega o mesmo' }, { value: 'less', text: 'B entrega menos' }].map(option => <label key={option.value}><input type="radio" name={`${uid}-prediction`} value={option.value} checked={prediction === option.value} onChange={() => setPrediction(option.value)}/>{option.text}</label>)}</div></fieldset>
       {!experiment ? <button className="button button-primary" type="button" disabled={!prediction || disabled} onClick={() => { setExperiment(runLearningExperiment(id)); setSide(0); setAt(0); }}>Executar os dois ensaios</button> : <>
         <div className="experiment-feedback" role="status"><strong>{prediction === expected ? 'Sua previsão combina com este resultado.' : 'O resultado convida a rever a previsão.'}</strong><p>{lesson.explanation}</p></div>
+        <LearningComparison experiment={experiment} at={at} onInspect={(next, nextSide, subsystem) => { setAt(next); setSide(nextSide); setInspection(subsystem); const events = experiment.trials[nextSide].result.events.filter(event => event.timeS === next); setSelectedEvent((events.find(event => event.severity === 'error') ?? events[0])?.id); }}/>
         <div className="table-scroll"><table className="source-table"><caption>Resultados finais dos ensaios — independentes do instante visualizado abaixo</caption><thead><tr><th scope="col">Evidência</th>{experiment.trials.map(item => <th key={item.label} scope="col">{item.label}</th>)}</tr></thead><tbody>
           <tr><th scope="row">Registros completos recebidos</th>{snapshots!.map((s,i) => <td key={i}>{s.received} / 6</td>)}</tr>
           <tr><th scope="row">Registros cientificamente válidos</th>{snapshots!.map((s,i) => <td key={i}>{s.valid} / 6</td>)}</tr>
@@ -40,14 +44,14 @@ export function MissionExperiment({ id, onApply, disabled = false }: { id: Learn
           <tr><th scope="row">Massa / orçamento usado</th>{snapshots!.map((s,i) => <td key={i}>{number(s.massKg)} kg / {s.credits} créditos</td>)}</tr>
           <tr><th scope="row">Atende à missão?</th>{snapshots!.map((s,i) => <td key={i}>{s.outcome === 'success' ? 'Sim' : s.outcome === 'invalid' ? 'Projeto incompatível' : 'Não'}</td>)}</tr>
         </tbody></table></div>
-        <div className="experiment-actions" role="group" aria-label="Inspecionar ensaio guiado">{experiment.trials.map((item, index) => <button key={item.label} className="button button-secondary" type="button" aria-pressed={side === index} onClick={() => setSide(index as 0 | 1)}>{item.label}</button>)}</div>
-        {trial && state ? <><label className="experiment-time" htmlFor={`${uid}-time`}>Mesmo relógio · T+{time(at)}<input id={`${uid}-time`} type="range" min={0} max={horizon} step={1} value={at} onChange={event => setAt(Number(event.target.value))}/></label><div className="experiment-actions"><button className="text-button" type="button" onClick={() => setAt(0)}>Voltar ao início do ensaio</button>{keyEvent ? <button className="text-button" type="button" onClick={() => setAt(keyEvent.timeS)}>Ver evento chave · T+{time(keyEvent.timeS)}</button> : null}<button className="text-button" type="button" onClick={() => setAt(horizon)}>Ver final do ensaio</button></div>
-          <Scene key={trial.kind === 'cerrado' ? 'cerrado' : trial.result.expeditionId} world={trial.kind === 'cerrado' ? 'earth' : trial.result.expeditionId} config={trial.kind === 'cerrado' ? trial.result.config : undefined} scenarioId={trial.kind === 'cerrado' ? trial.result.scenarioId : undefined} expeditionConfig={trial.kind === 'expedition' ? trial.result.config : undefined} visualState={state} segment="space"/>
+        <div className="experiment-actions" role="group" aria-label="Inspecionar ensaio guiado">{experiment.trials.map((item, index) => <button key={item.label} className="button button-secondary" type="button" aria-pressed={side === index} onClick={() => { setSide(index as 0 | 1); setSelectedEvent(undefined); setInspection(undefined); }}>{item.label}</button>)}</div>
+        {trial && state ? <><label className="experiment-time" htmlFor={`${uid}-time`}>Mesmo relógio · T+{time(at)}<input id={`${uid}-time`} type="range" min={0} max={horizon} step={1} value={at} onChange={event => { setAt(Number(event.target.value)); setSelectedEvent(undefined); setInspection(undefined); }}/></label><div className="experiment-actions"><button className="text-button" type="button" onClick={() => { setAt(0); setSelectedEvent(undefined); setInspection(undefined); }}>Voltar ao início do ensaio</button>{keyEvent ? <button className="text-button" type="button" onClick={() => { setAt(keyEvent.timeS); setSelectedEvent(keyEvent.id); setInspection(undefined); }}>Ver evento chave · T+{time(keyEvent.timeS)}</button> : null}<button className="text-button" type="button" onClick={() => { setAt(horizon); setSelectedEvent(undefined); setInspection(undefined); }}>Ver final do ensaio</button></div>
+          <Scene key={trial.kind === 'cerrado' ? 'cerrado' : trial.result.expeditionId} world={trial.kind === 'cerrado' ? 'earth' : trial.result.expeditionId} config={trial.kind === 'cerrado' ? trial.result.config : undefined} scenarioId={trial.kind === 'cerrado' ? trial.result.scenarioId : undefined} expeditionConfig={trial.kind === 'expedition' ? trial.result.config : undefined} visualState={state} segment={inspection === 'communications' ? 'ground' : 'space'} inspectSubsystem={inspection}/>
           <p className="experiment-evidence">{keyEvent ? `Evento para investigar: ${keyEvent.message}` : 'Compare as leituras e os registros disponíveis.'} A cena conserva o último estado registrado; o fim antecipado de uma operação não cria novos dados.</p>
           <button className="button button-primary" type="button" disabled={disabled} onClick={() => onApply(trial)}>Usar {side === 0 ? 'A' : 'B'} como ponto de partida</button>
         </> : null}
         <p className="field-help">Aplicar copia as escolhas para o projeto, inclusive as que falham. Você ainda precisa justificar e executar sua própria tentativa. Este experimento não salva uma missão no caderno.</p>
-        <button className="text-button" type="button" onClick={() => { setExperiment(null); setPrediction(''); setAt(0); }}>Refazer minha previsão</button>
+        <button className="text-button" type="button" onClick={() => { setExperiment(null); setPrediction(''); setAt(0); setSelectedEvent(undefined); setInspection(undefined); }}>Refazer minha previsão</button>
       </>}
     </div> : null}
   </section>;

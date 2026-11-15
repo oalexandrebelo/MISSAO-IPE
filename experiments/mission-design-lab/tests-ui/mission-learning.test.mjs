@@ -190,3 +190,20 @@ test('a complete reflection reports receipt without claiming causal or molecular
   await click(screen.getByRole('radio', { name: MISSION_CURRICULUM.telescope.overclaim }));
   assert.match(screen.getByRole('status').textContent, /recorte não refaz a detecção de CO₂ nem estima abundâncias ou vida/);
 });
+
+
+test('R19 guided comparison seeks an actual first difference and resets focus when freely navigating', async t => {
+  for (const id of ids) await t.test(id, async sub => {
+    sub.after(cleanupView);
+    await mountExperiment(id); await predictAndRun('B entrega mais');
+    await click(/^Investigar primeira diferença/);
+    assert.ok(Number(clock().value) > 0);
+    assert.equal(scene().dataset.inspection, id === 'bennu' ? 'communications' : id === 'telescope' ? 'instrument' : 'energy');
+    await click('Voltar ao início do ensaio');
+    assert.equal(clock().value, '0');
+    assert.equal(readout('Recepção em solo'), '0 / 6 registros válidos');
+    await click(/^Ver evento chave/);
+    assert.ok(Number(clock().value) >= 0);
+    assert.ok(screen.getByText('Ver o histórico completo dos recursos'));
+  });
+});

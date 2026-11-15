@@ -11,6 +11,7 @@ import { CATALOG, CONFIG_KEYS, DEFAULT_CONFIG } from '../core/catalog.ts';
 import { Icon } from './Icon.tsx';
 import { CONTINENTS } from './scene-geometry.ts';
 import './scene-orbit.css';
+import './spacecraft-immersion.css';
 
 const OrbitalScene = lazy(() => import('./OrbitalScene.tsx'));
 export type SceneFocus = 'science' | 'satellite' | 'ground';
@@ -174,9 +175,10 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
   const [turn, setTurn] = useState(0);
   const [inspection, setInspection] = useState<SpacecraftInspection>('overview');
   const [exploded, setExploded] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const presentation = getSpacecraftPresentation(world === 'earth' ? { world, config, scenarioId } : { world, expeditionConfig: expeditionConfig ?? DEFAULT_EXPEDITION_CONFIGS[world] });
   const previousPresentation = useRef(presentation);
-  useEffect(() => { if (inspectSubsystem) setInspection(inspectSubsystem); }, [inspectSubsystem]);
+
   useEffect(() => {
     const before = previousPresentation.current;
     if (before.payload.id !== presentation.payload.id || before.storage.bufferBits !== presentation.storage.bufferBits) setInspection('instrument');
@@ -184,6 +186,18 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
     else if (JSON.stringify(before.communications) !== JSON.stringify(presentation.communications)) setInspection('communications');
     previousPresentation.current = presentation;
   }, [presentation.configurationKey]);
+  useEffect(() => {
+    const system = visualState?.focusSubsystem;
+    const eventInspection = system === 'radio' ? 'communications' : system === 'panel' || system === 'battery' ? 'energy' : system === 'processing' || system === 'buffer' ? 'instrument' : undefined;
+    const next = inspectSubsystem ?? eventInspection;
+    if (next) { setInspection(next); setTurn(0); }
+  }, [inspectSubsystem, visualState?.timeS, visualState?.focusSubsystem]);
+  useEffect(() => {
+    if (!expanded) return;
+    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') setExpanded(false); };
+    window.addEventListener('keydown', escape);
+    return () => window.removeEventListener('keydown', escape);
+  }, [expanded]);
   const { active, reducedMotion } = useSceneActivity(host);
   const descriptionId = useId();
   const useFallback = useCallback(() => { setUnavailable(true); setMode('2d'); }, []);
@@ -197,11 +211,15 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
   const fallback = configured ? <FlatConfiguredCraft presentation={presentation} inspection={inspection} exploded={exploded} state={visualState}/> : preview && world !== 'earth' ? <div className="orbit-flat" aria-hidden="true"><svg viewBox="0 0 720 500"><g transform="translate(360 225)">{world === 'bennu' ? <><path d="M-145-60L-70-140L55-150L145-55L155 75L45 140L-90 115L-155 25Z" fill="#716b61" stroke="#c9b89b" strokeWidth="2"/><path d="M-70-140L0-10L145-55M-145-60L0-10L45 140M-90 115L0-10L155 75" fill="none" stroke="#a99b84"/></> : <><path d="M-150 70L-20-80L115-40L150 70L0 145Z" fill="#657b90" stroke="#c0d0dd"/>{[-1,0,1].map(x=><path key={x} d="M-42-24L0-48L42-24V24L0 48L-42 24Z" transform={`translate(${x*74} ${x===0?-53:0})`} fill="#c4a469" stroke="#f1d9a6" strokeWidth="3"/>)}</>}</g><text x="360" y="430" textAnchor="middle" fill="#becdd3" fontSize="15">{world === 'bennu' ? 'Bennu' : 'Webb'} · esquema 2D de referência</text></svg></div> : <FlatScene variant={variant} config={config} focus={focus} />;
   const configDescription = world !== 'earth' ? `${presentation.payload.label}; ${presentation.energy.label}; ${presentation.communications.label}` : CONFIG_KEYS.map(key => CATALOG[key].find(choice => choice.id === config[key])?.label).filter(Boolean).join('; ');
   const motionPaused = recorded || !!segment || paused || reducedMotion || mode === '2d';
+  const focusLabel = inspection === 'instrument' ? presentation.payload.label : inspection === 'energy' ? presentation.energy.label : inspection === 'communications' ? presentation.communications.label : 'Uma nave, decisões conectadas';
+  const focusDetail = inspection === 'instrument' ? `${presentation.payload.totalLoadW.toLocaleString('pt-BR')} W durante o trabalho · ${(presentation.payload.bitsPerRecord / 1e6).toLocaleString('pt-BR')} Mbit por registro didático.` : inspection === 'energy' ? `${presentation.energy.panelW.toLocaleString('pt-BR')} W de geração nominal · ${presentation.energy.batteryWh.toLocaleString('pt-BR')} Wh armazenáveis. Potência e energia são limites diferentes.` : inspection === 'communications' ? `${(presentation.communications.rateBps / 1e6).toLocaleString('pt-BR')} Mbit/s durante uma janela autorizada. Produzir dados não garante que eles cheguem.` : 'Toque em uma peça ou escolha um sistema abaixo. O destaque mostra onde a decisão atua.';
 
-  return <section ref={host} className={`scene scene-orbit scene-${variant} ${compact ? 'scene-compact' : ''} ${recorded ? 'scene-recorded' : ''} ${configured ? 'scene-configured' : ''}`} aria-label={world === 'earth' && variant === 'hangar' ? 'Modelo visual do CubeSat' : 'Modelo visual da missão'} aria-describedby={descriptionId} data-visual-mode={checked && mode === '3d' ? '3d' : '2d'} data-mission-world={world} data-spacecraft-config={presentation.configurationKey} data-payload-id={presentation.payload.id} data-panel-w={presentation.energy.panelW} data-battery-wh={presentation.energy.batteryWh} data-radio-hardware={presentation.communications.radioHardware} data-inspection={inspection} data-exploded={exploded} data-state-time={visualState?.timeS} data-focus-subsystem={visualState?.focusSubsystem ?? undefined}>
+
+  return <section ref={host} className={`scene scene-orbit scene-${variant} ${compact ? 'scene-compact' : ''} ${recorded ? 'scene-recorded' : ''} ${configured ? 'scene-configured' : ''} ${expanded ? 'scene-expanded' : ''}`} aria-label={world === 'earth' && variant === 'hangar' ? 'Modelo visual do CubeSat' : 'Modelo visual da missão'} aria-describedby={descriptionId} data-visual-mode={checked && mode === '3d' ? '3d' : '2d'} data-mission-world={world} data-spacecraft-config={presentation.configurationKey} data-payload-id={presentation.payload.id} data-panel-w={presentation.energy.panelW} data-battery-wh={presentation.energy.batteryWh} data-radio-hardware={presentation.communications.radioHardware} data-inspection={inspection} data-exploded={exploded} data-state-time={visualState?.timeS} data-focus-subsystem={visualState?.focusSubsystem ?? undefined}>
     <div className="orbit-grid" aria-hidden="true" /><div className="orbit-corner orbit-corner-tl" aria-hidden="true" /><div className="orbit-corner orbit-corner-br" aria-hidden="true" />
     <div className="orbit-topline"><span className="orbit-eyebrow"><i />{segment ? SEGMENT_NAMES[segment] : world === 'bennu' ? 'MISSÃO DIDÁTICA / BENNU' : world === 'telescope' ? 'OBSERVATÓRIO DIDÁTICO / REFERÊNCIA JWST' : variant === 'hangar' ? 'IPÊ–01 / SEU PROJETO' : 'MISSÃO IPÊ / TERRA'}</span><div className="orbit-display-tools">
       <button type="button" className="orbit-tool" onClick={() => setPaused(value => !value)} aria-label={recorded || segment ? 'Visualização estática do instante selecionado' : motionPaused ? 'Retomar animação ilustrativa' : 'Pausar animação ilustrativa'} aria-pressed={motionPaused} disabled={recorded || !!segment || mode === '2d' || reducedMotion} title={reducedMotion ? 'Movimento reduzido acompanha sua preferência do dispositivo' : undefined}><Icon name={motionPaused ? 'play' : 'pause'} size={13} /><span>{recorded ? 'Tempo registrado' : segment ? 'Vista estática' : motionPaused ? 'Pausada' : 'Pausar'}</span></button>
+      {configured ? <button type="button" className="orbit-tool orbit-expand" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}>{expanded ? 'Reduzir cena' : 'Ampliar cena'}</button> : null}
       <button type="button" className="orbit-tool orbit-mode" onClick={() => setMode(value => value === '3d' ? '2d' : '3d')} aria-label={`Usar visualização ${mode === '3d' ? '2D' : '3D'}`} disabled={unavailable}><Icon name="layers" size={13} /><span>{unavailable ? '2D ativo' : mode === '3d' ? 'Ver em 2D' : 'Ver em 3D'}</span></button>
     </div></div>
     <div className="orbit-render" aria-hidden="true">{checked && mode === '3d' ? <SceneBoundary fallback={fallback} onUnavailable={useFallback}><Suspense fallback={fallback}><OrbitalScene presentation={configured ? presentation : undefined} inspection={inspection} exploded={exploded} onInspect={configured ? setInspection : undefined} focus={focus} progress={visualState?.progress ?? progress} visualState={visualState} segment={segment} world={world} scienceRecordCount={scienceRecordCount} config={config} variant={variant} animating={animating} active={active} reducedMotion={reducedMotion} turn={turn} onUnavailable={useFallback} /></Suspense></SceneBoundary> : fallback}</div>
@@ -213,6 +231,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
     <div className="orbit-bottom">
       {preview ? <div className="spacecraft-view-tools"><button type="button" aria-label="Girar destino à esquerda" onClick={() => setTurn(value => value - Math.PI / 6)} disabled={mode === '2d'}>↶ Girar</button><button type="button" aria-label="Girar destino à direita" onClick={() => setTurn(value => value + Math.PI / 6)} disabled={mode === '2d'}>Girar ↷</button></div> : configured ? <><div className="spacecraft-inspection-controls" role="group" aria-label="Inspecionar os sistemas da nave">{INSPECTIONS.map(item => <button key={item.id} type="button" aria-pressed={inspection === item.id} onClick={() => { setInspection(item.id); setTurn(0); }}>{item.label}</button>)}</div><div className="spacecraft-view-tools"><button type="button" aria-pressed={exploded} onClick={() => setExploded(value => !value)}>{exploded ? 'Reunir componentes' : 'Separar componentes'}</button><button type="button" aria-label="Girar nave à esquerda" onClick={() => setTurn(value => value - Math.PI / 6)} disabled={mode === '2d'}>↶ Girar</button><button type="button" aria-label="Girar nave à direita" onClick={() => setTurn(value => value + Math.PI / 6)} disabled={mode === '2d'}>Girar ↷</button><button type="button" onClick={() => { setInspection('overview'); setExploded(false); setTurn(0); }}>Restaurar montagem</button></div></> : <div className="orbit-viewbar" role="group" aria-label="Explore a missão">{views.map(item => <button key={item.id} type="button" className={`orbit-view ${focus === item.id ? 'is-active' : ''}`} aria-pressed={focus === item.id} onClick={() => { setFocus(item.id); setTurn(0); }}><span>{item.number}</span>{item.name}</button>)}
       </div>}
+      {configured ? <div className="orbit-focus-brief" aria-live="polite"><span>{inspection === 'overview' ? 'EXPLORE A MONTAGEM' : 'SISTEMA EM FOCO'}</span><strong>{focusLabel}</strong><p>{focusDetail}</p>{visualState?.focusSubsystem ? <small>Evento selecionado: {SUBSYSTEM_NAMES[visualState.focusSubsystem]}. O destaque identifica o sistema envolvido; a causa é explicada na trilha da missão.</small> : null}</div> : null}
       {!configured ? !compact ? <div className="orbit-explanation" aria-live="polite"><p>{selectedText}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selectedText}</p> : null}
       <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>{recorded ? 'Recursos do motor · posição ilustrativa sem escala' : 'Ilustração sem escala · física calculada separadamente'}</span></p>
     </div>

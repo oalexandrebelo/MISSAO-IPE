@@ -1,3 +1,5 @@
+> **Continuidade R19:** as três prioridades agora estão implementadas. Use o [handoff R19](48-HANDOFF-DOIS-DEVS-R19.md) para código, roteiro e validação. Este documento preserva a migração dos dados reais.
+
 # R18 — handoff de ciência, experiência e publicação
 
 **15/11/2026 · MISSÃO IPÊ.** Repositório oficial: [oalexandrebelo/MISSAO-IPE](https://github.com/oalexandrebelo/MISSAO-IPE). Esta entrega substitui as medidas sintéticas de Bennu/Webb por dados publicados e mantém a simulação de recursos explicitamente didática. O estado de publicação e a validação integrada devem ser consultados em [PUBLICADO.md](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md); este documento não é recibo de deploy.

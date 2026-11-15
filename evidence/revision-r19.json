@@ -1,0 +1,49 @@
+{
+  "edition": "R19-evidence-learning-3d",
+  "version": "0.10.0-beta.1",
+  "checkedAt": "2026-11-15T10:14:14.107042+00:00",
+  "features": [
+    "Three mission evidence trails connected by actual record and event IDs to replay and 3D component inspection",
+    "Guided and own-run A/B explanation with common clock, changed attributes and first recorded difference",
+    "Four-role postmission analysis with journal/report export",
+    "Expanded inline 3D scene, smooth component focus and exact delivered-ID cards"
+  ],
+  "validation": {
+    "labDomain": {
+      "passed": 151,
+      "failed": 0
+    },
+    "labDOM": {
+      "passed": 56,
+      "failed": 0
+    },
+    "publication": {
+      "passed": 17,
+      "failed": 0
+    },
+    "lpBrowser": {
+      "passed": 18,
+      "failed": 0
+    },
+    "labBuild": "passed",
+    "lpBuild": "passed",
+    "typeScript": "passed"
+  },
+  "browserChecks": [
+    "Local browser: Bennu guided comparison jumps to actual contact difference T+5100 and communications focus; own B run completes6/6; evidence delivery selects actualevent; expanded3D rendered.",
+    "Local browser: Cerrado long-contact run completes6/6; four written role analyses registered in existinglocaljournal.",
+    "Local browser: Webb guidedcomparison; own spectrometer run; finalrole references row80; reopening3D preserves row80andactualdeliverytime10050s in trail. No consoleerrorsobserved."
+  ],
+  "correctionsDuringValidation": [
+    "Fixed stale explicit component focus when freely navigating replay",
+    "Preserved selected evidence record across return-to3D-to-trail transitions",
+    "Fixed Earth ground cards to use actual delivered IDs",
+    "Separated ground service package causality from radio rate and isolated duration"
+  ],
+  "limits": [
+    "Historical NASA records with unchanged values; engine remains educational",
+    "No new remote multiplayer, GMAT integration or georeferenced trajectory",
+    "DOM tests do not prove human learning or physical-device performance",
+    "Public production checks are recorded separately after deployment"
+  ]
+}

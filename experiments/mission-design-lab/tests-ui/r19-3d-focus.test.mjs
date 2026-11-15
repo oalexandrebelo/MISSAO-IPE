@@ -1,0 +1,51 @@
+import test, { after } from 'node:test';
+import assert from 'node:assert/strict';
+import React from 'react';
+import { JSDOM } from 'jsdom';
+const dom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'https://mission.test/', pretendToBeVisual: true });
+for (const name of ['window', 'document', 'navigator', 'HTMLElement', 'HTMLCanvasElement', 'Element', 'Node', 'MutationObserver', 'getComputedStyle']) Object.defineProperty(globalThis, name, { configurable: true, value: dom.window[name], writable: true });
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+dom.window.HTMLCanvasElement.prototype.getContext = () => null;
+const { render, fireEvent, act, cleanup, within } = await import('@testing-library/react');
+const { Scene } = await import('../src/ui/Scene.tsx');
+const { simulateExpedition, getExpeditionVisualState } = await import('../src/lab/scientific-expeditions.ts');
+const config = { launch: 'science', orbit: 'far', duration: 'full', instrument: 'spectrometer', power: 'extended', ground: 'extended' };
+after(() => dom.window.close());
+
+test('replay focuses the involved system and a rewind does not retain future reception', async t => {
+  t.after(async () => { await act(async () => cleanup()); });
+  const result = simulateExpedition('telescope', config);
+  const job = result.events.find(event => event.code === 'JOB_START');
+  const delivery = result.events.find(event => event.code === 'RECORD_DELIVERED');
+  const props = (event, extra = {}) => ({ world: 'telescope', expeditionConfig: config, visualState: getExpeditionVisualState(result, event.timeS, event.id), ...extra });
+  let view;
+  await act(async () => { view = render(React.createElement(Scene, props(job))); });
+  const scene = view.container.querySelector('.scene');
+  assert.equal(scene.dataset.visualMode, '2d');
+  assert.equal(scene.dataset.inspection, 'instrument');
+  await act(async () => fireEvent.click(within(scene).getByRole('button', { name: 'Energia', exact: true })));
+  assert.equal(scene.dataset.inspection, 'energy');
+  await act(async () => view.rerender(React.createElement(Scene, props(delivery))));
+  assert.equal(scene.dataset.inspection, 'communications');
+  assert.match(scene.querySelector('.orbit-resource-grid').textContent, /1 \/ 6 registros válidos/);
+  await act(async () => view.rerender(React.createElement(Scene, props(job))));
+  assert.equal(scene.dataset.inspection, 'instrument');
+  assert.match(scene.querySelector('.orbit-resource-grid').textContent, /0 \/ 6 registros válidos/);
+  await act(async () => view.rerender(React.createElement(Scene, props(delivery, { inspectSubsystem: 'energy' }))));
+  assert.equal(scene.dataset.inspection, 'energy');
+});
+
+test('presentation enlargement remains inline, works in 2D and closes with Escape', async t => {
+  t.after(async () => { await act(async () => cleanup()); });
+  let view;
+  await act(async () => { view = render(React.createElement(Scene, { world: 'telescope', expeditionConfig: config, variant: 'hangar' })); });
+  const scene = view.container.querySelector('.scene');
+  await act(async () => fireEvent.click(within(scene).getByRole('button', { name: 'Ampliar cena' })));
+  assert.equal(scene.classList.contains('scene-expanded'), true);
+  assert.equal(within(scene).getByRole('button', { name: 'Reduzir cena' }).getAttribute('aria-expanded'), 'true');
+  assert.ok(scene.querySelector('.configured-flat svg'));
+  assert.equal(scene.querySelector('.orbit-recorded-state'), null);
+  await act(async () => fireEvent.keyDown(window, { key: 'Escape' }));
+  assert.equal(scene.classList.contains('scene-expanded'), false);
+  assert.equal(within(scene).getByRole('button', { name: 'Ampliar cena' }).getAttribute('aria-expanded'), 'false');
+});

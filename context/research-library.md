@@ -65,7 +65,7 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `26f928b9a1cddb9770d20783b3b044a412c3123affa67903309583138e1ce931` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `86d8309ed0e294406b8c366fa5ece4195383c40eba1de312e9bcd7d4220dc5cd` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
 
@@ -218,21 +218,28 @@ Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não 
 
 
 
+## R19 · trilha da evidência, A/B e quatro papéis · 15/11/2026
+
+Versão 0.10.0-beta.1. A implementação das três prioridades está concluída nas três missões. A integração local passou 151 testes de domínio, 56 de interface, 17 verificações da distribuição e 18 jornadas da apresentação. O recibo técnico está em `evidence/revision-r19.json`. [Handoff R19](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md). Os recibos de produção anteriores conservam seus commits; a publicação R19 será conferida pelo commit do deploy e pelo manifesto público.
+
+
 ---
 
 # MISSÃO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `1bf8321d77a001b99ebdc7f6b980b84edb9326b28a53c8d0ff48fb7d630daeeb` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `bc4860512f7075ed189f23f92331baba0129d9fd48f103f6ad5455f5855e06d8` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.9.0-beta.1 · edição R18 · 15/11/2026.**
+**Beta atual: 0.10.0-beta.1 · edição R19 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/46-HANDOFF-DOIS-DEVS-R18.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**MVP R19:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/46-HANDOFF-DOIS-DEVS-R18.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/48-HANDOFF-DOIS-DEVS-R19.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
 ## Direção vigente — histórias reais, identidade da equipe
 
@@ -260,7 +267,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R18. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R19. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -293,7 +300,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.9.0-beta.1 / R18 | `experiments/mission-design-lab/` |
+| Beta 0.10.0-beta.1 / R19 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -6220,7 +6227,9 @@ Leia o [handoff R18 para os dois devs](46-HANDOFF-DOIS-DEVS-R18.md) antes de mod
 
 # R18 — handoff de ciência, experiência e publicação
 
-Fonte: `docs/46-HANDOFF-DOIS-DEVS-R18.md` · SHA-256 original: `52e12835207f543d6665224ef5824424843f8b3ab2101a21d6d67103e1ac6cc4` · Ajustes de caminhos privados: 0
+Fonte: `docs/46-HANDOFF-DOIS-DEVS-R18.md` · SHA-256 original: `f8e293499e448009c5a1e603aceaee79c233d4419dca9725f30f8883e1c3e747` · Ajustes de caminhos privados: 0
+
+> **Continuidade R19:** as três prioridades agora estão implementadas. Use o [handoff R19](48-HANDOFF-DOIS-DEVS-R19.md) para código, roteiro e validação. Este documento preserva a migração dos dados reais.
 
 # R18 — handoff de ciência, experiência e publicação
 
@@ -6409,6 +6418,135 @@ Para Bennu e Webb existem diretórios [NAIF ORX](https://naif.jpl.nasa.gov/pub/n
 
 ---
 
+# MISSÃO IPÊ · handoff dos dois devs · R19
+
+Fonte: `docs/48-HANDOFF-DOIS-DEVS-R19.md` · SHA-256 original: `c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · handoff dos dois devs · R19
+
+**15/11/2026 · 0.10.0-beta.1.** Esta edição implementa as três prioridades da [pesquisa R18](47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md) no laboratório de Cerrado, Bennu e Telescópio. O jogo liga pergunta, requisito, registro e evento; explica comparações A/B; e encerra com a análise dos quatro papéis. [Jogar](https://projeto-ipe.vercel.app/lab/) · [roteiro de apresentação](49-ROTEIRO-APRESENTACAO-MVP-R19.md) · [dados e fontes](45-DADOS-REAIS-BENNU-WEBB-R18.md).
+
+## O que o jogador faz e aprende
+
+| Caso | Evidência real | Decisão e consequência | Conclusão defensável |
+| --- | --- | --- | --- |
+| Cerrado | Três pares de arquivos históricos Terra/MODIS MOD13Q1.061 | BANDAS versus ÍNDICE altera volume e pico de potência. Mais energia armazenada não remove automaticamente um limite de descarga. | Comparar NDVI somente quando os dois registros chegaram válidos. Uma diferença não prova a causa da mudança. |
+| Bennu | Eixos maiores de seis rochas/clastos publicados com PolyCam e OLA | Serviço de solo altera início da primeira janela, duração e custo. A mesma taxa de rádio pode entregar conjuntos diferentes. | Comparar dimensões recebidas; tamanho sozinho não identifica composição, origem ou segurança de pouso. |
+| Webb | Seis bins FIREFLy do trânsito de WASP-39 b em 10/07/2022, com 1σ | Instrumento altera compatibilidade, carga, massa, custo e volume. Receber todos os pacotes não garante ciência válida. | Ler o espectro com suas incertezas; seis bins não refazem a detecção molecular publicada. |
+
+As fontes são históricas; a nave configurável, orçamento em créditos, calendário operacional e envelopes são didáticos. O 3D é uma representação sem escala física, sem navegação georreferenciada ou telemetria NASA ao vivo. IPÊ identifica a equipe.
+
+## Entregas implementadas
+
+### 1. Trilha da evidência ligada ao 3D
+
+Na operação, selecionar um registro revela seu caminho. O Cerrado mantém a identidade do ponto e os dois períodos; Bennu e Webb mostram pergunta, requisito, registro, solo e interpretação. Eventos reais do motor mudam o relógio e o componente inspecionado. O retorno científico oferece o caminho de volta à entrega na cena.
+
+O valor fica oculto antes da recepção válida. Um pacote incompatível pode ser recebido e permanecer sem valor científico no jogo. A fonte histórica externa continua acessível e está explicitamente separada da disponibilidade operacional. Avançar e rebobinar reavaliam os mesmos IDs. O 2D mantém controles e explicações quando WebGL não está disponível.
+
+### 2. Comparação A/B explicada
+
+Os ensaios guiados nas três missões mostram a primeira diferença **operacional** entre amostras, duas leituras no mesmo T+ e um histórico opcional de potência ou memória. As curvas são degraus das amostras completas, identificadas como histórico final; a leitura do instante nunca interpola recursos. O botão de investigação seleciona o lado e o sistema correspondente.
+
+As comparações das tentativas próprias mostram a primeira diferença em eventos/estados, inclusive verificações em T+0. Listam os atributos de cada escolha alterada. Cenários ou vários componentes diferentes são explicitados como contraste conjunto. Em Bennu, mudar um seletor de serviço de solo não isola a duração da janela. Após encerramento antecipado, cada vista conserva o último estado disponível.
+
+### 3. Análise dos quatro papéis
+
+Lançamento, espaço, solo e usuários recebem achados calculados, acesso a eventos e campos para conclusão, evidência e próximo passo. Uma pessoa pode assumir os quatro papéis; equipes compartilham o mesmo dispositivo. O contador indica preenchimento, não nota ou certificação de aprendizagem.
+
+- **Cerrado:** registrar as quatro respostas adiciona entradas no diário local existente. A exportação da análise inclui configuração, resultado, respostas e IDs dos eventos, no formato `ipe-cerrado-four-role-analysis-v1`. O replay anterior não muda.
+- **Bennu/Webb:** pareceres ficam no estado da tentativa e entram no relatório científico exportado, com evento e registro citados. Nova execução inicia uma nova análise. Os formatos de projeto e o modelo físico R18 são preservados porque os dados e cálculos não mudaram.
+
+### Imersão e apresentação
+
+Cena ampliável dentro da página, saída com Escape, inspeção por sistema e transição suave da nave. O destaque segue o evento selecionado ou o foco explícito da trilha. As capacidades do componente aparecem em texto, ao lado da montagem. A direção do enlace aparece durante transmissão registrada. No solo, os cartões seguem os IDs efetivamente recebidos, inclusive no Cerrado; não basta pintar os primeiros N cartões.
+
+Reutilizamos os quatro modelos NASA locais e a pilha React/Three já instalada. Movimento reduzido e controles de texto permanecem disponíveis. Não foram adicionadas bibliotecas, modelos gerados, vídeo remoto ou serviços externos durante a partida.
+
+## Divisão dos dois devs
+
+| Responsável | Arquivos e tarefas | Contrato que precisa preservar |
+| --- | --- | --- |
+| Dev A · ciência e motor | `src/lab/learning-comparison.ts`, `mission-curriculum.ts`, `scientific-expeditions.ts`, `mission-visual-state.ts`, `core/`, `data/science/`; revisar comparadores de `CerradoLearning.tsx` e `ExpeditionLearning.tsx` | IDs, unidades, procedência, incertezas e causalidade. Funções de apresentação não alteram o motor. Comparar resultados executados, nunca rascunhos posteriores. |
+| Dev B · interação e 3D | `MissionLearning.tsx`, `LearningComparison.tsx`, `CerradoLearning.tsx`, `ExpeditionLearning.tsx`, `MissionControl.tsx`, `ScientificExpedition.tsx`, `CompareDialog.tsx`, `Scene.tsx`, `ConfiguredSpacecraft.tsx`, `OrbitalScene.tsx` e CSS associados | A mesma seleção controla texto, relógio e cena. Alternativa 2D, foco por teclado, movimento reduzido, textos curtos e visibilidade de registros futuros. |
+| Revisão conjunta | Roteiro das três missões, casos incompletos, exportação e reabertura | Não confundir seis pacotes com seis evidências válidas; não atribuir causalidade isolada a opções compostas. |
+
+Os caminhos da tabela são relativos a `experiments/mission-design-lab/`. As três experiências de aprendizagem são componentes pequenos sobre resultados existentes. Os dois fluxos mantêm seus contratos de persistência próprios. Uma futura consolidação só se justifica quando reduzir duplicação sem esconder diferenças científicas.
+
+## Verificação e comandos
+
+1. `npm --prefix experiments/mission-design-lab run verify`: domínio, UI simulada e build. Os testes R19 cobrem estados temporais, pares incompletos, incompatibilidade, comparações e pareceres.
+2. `npm run build:beta && npm run test:beta && npm run prepare:vercel`: documentos, arquivos científicos, hashes e política da publicação.
+3. `npm --prefix apps/immersive-lp run build`: apresentação pública, com link para o roteiro atual.
+4. Conferir no navegador as três missões, expansão da cena, retorno por evento, A/B e exportação. Verificar o commit do deploy e os arquivos públicos após publicação.
+
+O executor de testes UI usa uma pasta temporária compartilhada: apenas um agente deve rodar `test:ui` por vez. Suites de agentes podem usar diretórios temporários próprios. Testes DOM não medem GPU, desempenho de aparelho físico, experiência de leitor de tela ou aprendizagem humana. O recibo `evidence/revision-r19.json` registra os resultados efetivamente obtidos nesta rodada.
+
+## Recursos NASA pesquisados e aproveitados
+
+- [Science Traceability Matrix — NASA HESTO](https://hesto.smce.nasa.gov/focused-topics/): orienta o encadeamento de objetivo, observável, requisito e produto. A trilha é uma adaptação educativa própria, não uma certificação STM.
+- [PI Launchpad — elementos da STM](https://science.nasa.gov/wp-content/uploads/2023/04/PILaunchpad__STM__JLeisner210615.pdf): referência para separar pergunta, medida e desempenho requerido. Texto e UI foram escritos para este jogo.
+- [Instrumentos científicos do Webb](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) e [observatório Webb](https://science.nasa.gov/mission/webb/spacecraftoverview/): reforçam a diferença entre instrumentos, plataforma e comunicação. O catálogo didático não reproduz o desempenho do hardware NASA.
+- [Construir um modelo do Webb](https://science.nasa.gov/mission/webb/build-a-model-of-webb/) e [Webb em 3D](https://science.nasa.gov/mission/webb/webb-3d/): atividades externas de aprofundamento; não foram incorporadas dependências ou mídias desses sites.
+
+A pesquisa anterior conserva GMAT/NAIF e terreno georreferenciado como etapas posteriores. Nesta edição não executamos GMAT, não integramos API JPL e não introduzimos um segundo motor de física. O próximo passo é um piloto com iniciantes: observar se conseguem explicar um evento, apontar um registro e revisar uma conclusão sem ajuda. Esse resultado ainda não foi medido.
+
+
+---
+
+# Apresente o MISSÃO IPÊ em seis minutos
+
+Fonte: `docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md` · SHA-256 original: `36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee` · Ajustes de caminhos privados: 0
+
+# Apresente o MISSÃO IPÊ em seis minutos
+
+**MVP R19 · 15/11/2026.** Abra [o jogo](https://projeto-ipe.vercel.app/lab/). O objetivo é mostrar que cada decisão tem uma consequência que o jogador consegue investigar e explicar. As três missões usam dados históricos reais; a operação é um modelo didático.
+
+## 0:00–0:40 · Uma pergunta antes de uma nave
+
+Apresente as três perguntas da entrada: mudança da vegetação no Cerrado, dimensões de rochas de Bennu e espectro de WASP-39 b com o Webb. Selecione um destino para ver seu contexto e modelo. Diga: **“Não queremos apenas lançar uma nave. Precisamos entregar a evidência certa a quem vai fazer ciência.”**
+
+Os quatro segmentos — lançamento, espaço, solo e usuários — estão presentes nas decisões e na análise final. Uma pessoa pode jogar sozinha; até quatro podem discutir no mesmo dispositivo. Não há multiplayer remoto sincronizado.
+
+## 0:40–2:00 · Cerrado: menos dados pode exigir mais potência
+
+Entre no Cerrado e abra **Investigar esta escolha** no ensaio guiado. Faça uma previsão e execute A/B. BANDAS entrega dois registros válidos neste exemplo; ÍNDICE encerra com zero devido ao pico de potência. Use **Investigar primeira diferença** para chegar ao estado relevante e inspecione energia. Amplie a cena ou separe os componentes.
+
+Explique a distinção: a bateria pode armazenar energia em Wh e não fornecer a potência instantânea exigida em W. A tabela de escolhas e o diário sustentam a conclusão. O gráfico opcional mostra o histórico completo de recursos em degraus.
+
+## 2:00–3:20 · Bennu: ciência produzida precisa chegar
+
+Volte à escolha de missões e abra Bennu. Execute o ensaio guiado dos serviços de solo. A entrega muda de **2 para 6 registros válidos**, com a mesma taxa de rádio. O serviço ampliado começa antes e dura mais: são atributos conjuntos da escolha.
+
+Copie B como ponto de partida, revise o projeto, registre uma hipótese de pelo menos oito caracteres e execute. Na operação, vá ao estado final. Escolha um registro na trilha e reveja sua entrega no 3D. Os cartões conservam o ID. A medida em metros tem fonte na tabela publicada; o modelo do asteroide não localiza aquele sítio nem certifica pouso.
+
+## 3:20–4:40 · Webb: receber tudo não basta
+
+Abra Telescópio e execute o ensaio da câmera versus espectrômetro. Ambos recebem seis pacotes; só o espectrômetro do catálogo atende ao requisito científico. A escolha também aumenta carga e volume dos pacotes. Copie B, justifique e execute a própria tentativa.
+
+No estado final, leia os seis pontos de profundidade de trânsito com barras de incerteza. Use a trilha para voltar ao evento de uma entrega. Ao rebobinar, o valor que ainda não chegou fica oculto. Diga: **“Transportar um arquivo, medir algo adequado e interpretar a descoberta são três responsabilidades diferentes.”**
+
+## 4:40–5:40 · Quatro papéis precisam defender a missão
+
+Abra o retorno científico e o **Conselho final da missão**. Percorra lançamento, espaço, solo e usuários. Cada papel tem um achado calculado, uma pergunta e acesso à evidência no 3D. Escreva uma conclusão curta e indique o próximo passo. Exporte o relatório para mostrar a continuidade entre escolha, resultado e análise.
+
+No Cerrado, as quatro análises podem ser registradas no diário e exportadas em conjunto. Bennu e Webb incluem os pareceres no relatório da tentativa. O contador mede preenchimento; não declara que o participante aprendeu.
+
+## 5:40–6:00 · Por que isso importa
+
+O jogo ensina a negociar recursos sem perder a pergunta científica. Cada caso traz um compromisso diferente, uma fonte verificável e uma conclusão limitada pelos dados. O mesmo mecanismo ajuda quem está começando a fazer uma pergunta melhor: **“Qual evidência demonstra que minha decisão funcionou?”**
+
+## Preparação da demonstração
+
+- Carregue as três missões antes da apresentação para conferir os modelos no equipamento. Use **Ampliar cena** e **Separar componentes** quando ajudarem a explicar uma decisão. Escape reduz a cena.
+- Mantenha as fontes e o [handoff R19](48-HANDOFF-DOIS-DEVS-R19.md) disponíveis. O jogo não depende das fontes externas durante uma partida já carregada, mas abertura a frio sem rede não foi estabelecida.
+- Se WebGL falhar, use a alternativa 2D: o relógio, as evidências, a comparação e os pareceres continuam disponíveis.
+- Para a apresentação de seis minutos, use os ensaios preparados. Configurar e discutir três missões completas com iniciantes exige mais tempo; meça isso em um piloto.
+- Não apresente o protótipo como simulador de voo certificado, telemetria em tempo real, produto endossado pela NASA ou vencedor já qualificado. A maturidade educativa precisa ser demonstrada com participantes.
+
+
+---
+
 # Atribuição, licenças e autoria assistida
 
 Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0
@@ -6496,7 +6634,9 @@ A versão 0.4.0-beta.2 acrescenta ConOps didático, revisão pré-voo, requisito
 
 # Missão Ipê — laboratório de missões R9–R10
 
-Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `0feddd885a800b8c9b03716fc773238f37f6e3db45e854cbd8eb4e5c85c60af5` · Ajustes de caminhos privados: 0
+Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `7ba754dfce6b435970d5bdabe2faa0e0699794ec4821951fcfa883f7450e99a4` · Ajustes de caminhos privados: 0
+
+> **Atualização R19 — 0.10.0-beta.1.** As três missões conectam evidência, replay 3D, comparação explicada e análise dos quatro papéis. [Handoff atual](../../docs/48-HANDOFF-DOIS-DEVS-R19.md) · [roteiro de apresentação](../../docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
 
 > **Atualização R18 — 0.9.0-beta.1.** Bennu e Webb usam dados publicados, procedência local e replay por ID. Comece pelo [handoff atual](../../docs/46-HANDOFF-DOIS-DEVS-R18.md) e pelo [contrato de dados reais](../../docs/45-DADOS-REAIS-BENNU-WEBB-R18.md). O histórico abaixo conserva as rodadas em que foi escrito.
 

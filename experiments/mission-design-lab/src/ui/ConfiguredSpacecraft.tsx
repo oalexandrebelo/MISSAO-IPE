@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import type { ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 import type { MissionVisualState } from '../lab/mission-visual-state.ts';
@@ -11,6 +12,7 @@ export interface ConfiguredSpacecraftProps {
   inspection?: SpacecraftInspection;
   exploded?: boolean;
   turn?: number;
+  reducedMotion?: boolean;
   onInspect?: (inspection: SpacecraftInspection) => void;
 }
 const COPPER = '#bd8d56';
@@ -104,7 +106,7 @@ function Radio({ hardware, transmitting, active }: { hardware: SpacecraftPresent
 }
 
 /** Original didactic spacecraft. It only consumes catalog presentation + recorded state. */
-export function ConfiguredSpacecraft({ presentation, visualState, inspection = 'overview', exploded = false, turn = 0, onInspect }: ConfiguredSpacecraftProps) {
+export function ConfiguredSpacecraft({ presentation, visualState, inspection = 'overview', exploded = false, turn = 0, reducedMotion = true, onInspect }: ConfiguredSpacecraftProps) {
   const [hovered,setHovered] = useState<SpacecraftInspection | null>(null);
   const available = visualState?.available === true;
   const subsystem = available ? visualState.focusSubsystem : null;
@@ -113,6 +115,22 @@ export function ConfiguredSpacecraft({ presentation, visualState, inspection = '
   const processing = available && visualState.mode === 'processing';
   const transmitting = available && visualState.transmitting;
   const rotation: [number,number,number] = inspection === 'instrument' ? [.02,-.12+turn,0] : inspection === 'energy' ? [.28,.45+turn,-.05] : inspection === 'communications' ? [.48,-.36+turn,-.03] : [.18,-.38+turn,.04];
+  const craft = useRef<THREE.Group>(null);
+  const initialized = useRef(false);
+  const destination = useMemo(() => new THREE.Euler(...rotation), [rotation[0], rotation[1], rotation[2]]);
+  const target = useMemo(() => new THREE.Quaternion().setFromEuler(destination), [destination]);
+  const { invalidate, frameloop } = useThree();
+  useEffect(() => {
+    if (!craft.current) return;
+    if (!initialized.current || reducedMotion || frameloop === 'never') craft.current.quaternion.copy(target);
+    initialized.current = true;
+    invalidate();
+  }, [target, reducedMotion, frameloop, invalidate]);
+  useFrame((_, delta) => {
+    if (!craft.current || reducedMotion || craft.current.quaternion.angleTo(target) < .0005) return;
+    craft.current.quaternion.slerp(target, 1 - Math.exp(-12 * Math.min(delta, .05)));
+    invalidate();
+  });
   const interact = (part: SpacecraftInspection) => onInspect ? {
     onClick: (event: ThreeEvent<MouseEvent>) => { event.stopPropagation(); onInspect(part); },
     onPointerOver: (event: ThreeEvent<PointerEvent>) => { event.stopPropagation(); setHovered(part); },
@@ -121,7 +139,7 @@ export function ConfiguredSpacecraft({ presentation, visualState, inspection = '
   const payloadZ = exploded ? 1.05 : .54;
   const batteryY = exploded ? -1.12 : -.53;
   const radioY = exploded ? 1.28 : .72;
-  return <group rotation={rotation} name={`ipe-spacecraft-${presentation.world}`} userData={{ configurationKey: presentation.configurationKey, conceptual: true }}>
+  return <group ref={craft} name={`ipe-spacecraft-${presentation.world}`} userData={{ configurationKey: presentation.configurationKey, conceptual: true }}>
     <group>
       <mesh><boxGeometry args={[.86,1.12,.68]}/><meshStandardMaterial color={COPPER} metalness={.6} roughness={.4}/></mesh>
       {[-1,1].map(side=><group key={side}><mesh position={[side*.44,0,0]}><boxGeometry args={[.055,1.25,.76]}/><meshStandardMaterial color={SILVER} metalness={.72} roughness={.3}/></mesh>{[-.58,.58].map(y=><mesh key={y} position={[0,y,side*.36]}><boxGeometry args={[.94,.06,.05]}/><meshStandardMaterial color={SILVER} metalness={.7} roughness={.3}/></mesh>)}</group>)}

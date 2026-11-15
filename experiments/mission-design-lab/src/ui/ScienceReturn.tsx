@@ -20,7 +20,7 @@ function ReturnedValue({ sample }: { sample: ReturnedScienceSample }) {
   return sample.ndvi !== null ? <><span className="srn-value">{NDVI.format(sample.ndvi)}</span><span className="srn-value-note">Recebido e válido</span></> : <><span className="srn-empty" aria-hidden="true">—</span><span className="srn-value-note srn-not-ready">{sample.status === 'ready' ? 'Valor indisponível' : SAMPLE_STATUS[sample.status]}</span></>;
 }
 
-export function ScienceReturn({ result }: { result: MissionResult }) {
+export function ScienceReturn({ result, onInspect }: { result: MissionResult; onInspect?: (recordId: string) => void }) {
   const titleId = useId(), precisionId = useId();
   const summary = buildScienceReturn(result);
   const firstPair = summary.pairs[0]!;
@@ -35,7 +35,7 @@ export function ScienceReturn({ result }: { result: MissionResult }) {
       <thead><tr><th scope="col">Ponto</th><th scope="col"><span>1º período</span><time dateTime={earlier.observationDate}>{displayDate(earlier.observationDate)}</time></th><th scope="col"><span>2º período</span><time dateTime={later.observationDate}>{displayDate(later.observationDate)}</time></th><th scope="col">Variação<small>2º − 1º</small></th></tr></thead>
       <tbody>{summary.pairs.map(pair => <tr key={pair.point}>
         <th scope="row"><span className="srn-point">{pair.point}</span><span className="srn-coordinates" aria-label={`Localização solicitada: latitude ${coordinate(pair.latitude, true)}, longitude ${coordinate(pair.longitude, false)}`}><span>{coordinate(pair.latitude, true)}</span><span>{coordinate(pair.longitude, false)}</span></span></th>
-        {pair.samples.map(sample => <td key={sample.recordId}><ReturnedValue sample={sample} /></td>)}
+        {pair.samples.map(sample => <td key={sample.recordId}><ReturnedValue sample={sample} />{onInspect ? <button className="text-button" type="button" onClick={() => onInspect(sample.recordId)} aria-label={`Seguir ${sample.recordId} na trilha e no 3D`}>Seguir registro ↗</button> : null}</td>)}
         <td>{pair.difference !== null ? <><span className={`srn-change ${pair.difference > 0 ? 'srn-increase' : pair.difference < 0 ? 'srn-decrease' : ''}`}>{DIFFERENCE.format(pair.difference)}</span><span className="srn-value-note">{pair.difference > 0 ? 'Aumento do índice' : pair.difference < 0 ? 'Redução do índice' : 'Sem diferença'}</span></> : <><span className="srn-empty" aria-hidden="true">—</span><span className="srn-value-note srn-not-ready">Aguarda par completo</span></>}</td>
       </tr>)}</tbody>
     </table></div>

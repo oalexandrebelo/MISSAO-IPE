@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import type { SavedRun } from '../persistence/store.ts';
 import { CONFIG_KEYS, getScenario } from '../core/catalog.ts';
-import { CONFIG_LABELS, bits, choiceLabel, number } from './format.ts';
+import { CONFIG_LABELS, bits, choiceLabel, number, time } from './format.ts';
 import { Dialog } from './Dialogs.tsx';
+import { Scene } from './Scene.tsx';
+import { CerradoComparisonExplanation } from './CerradoLearning.tsx';
+import { getMissionVisualState } from '../lab/mission-visual-state.ts';
 
 const status = { success: 'Missão cumprida', failure: 'Missão não cumprida', invalid: 'Projeto inválido' };
 export function CompareDialog({ runs, onClose }: { runs: readonly SavedRun[]; onClose: () => void }) {
   const [aId, setAId] = useState(runs[1]?.id ?? runs[0]?.id ?? '');
   const [bId, setBId] = useState(runs[0]?.id ?? '');
+  const [side, setSide] = useState<'a' | 'b'>('a');
+  const [cursorTime, setCursorTime] = useState(0);
   const a = runs.find(run => run.id === aId);
   const b = runs.find(run => run.id === bId);
   const label = (run: SavedRun) => `${getScenario(run.result.scenarioId).title} · ${run.result.deliveredRecords}/6 · ${run.result.credits} cr. · ${new Date(run.createdAt).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
@@ -17,6 +22,11 @@ export function CompareDialog({ runs, onClose }: { runs: readonly SavedRun[]; on
     {a && b ? <>
       <div className="compare-outcomes"><div><span>MISSÃO A</span><strong>{a.result.deliveredRecords}<small>/6</small></strong><p>{status[a.result.outcome]}</p></div><span aria-hidden="true">→</span><div><span>MISSÃO B</span><strong>{b.result.deliveredRecords}<small>/6</small></strong><p>{status[b.result.outcome]}</p></div></div>
       <p className="compare-note">{a.id === b.id ? 'Você selecionou a mesma execução nos dois lados.' : a.result.scenarioId !== b.result.scenarioId ? 'As condições de contato são diferentes. Uma mudança de resultado não pode ser atribuída só aos módulos.' : 'Mesma condição de contato. Observe quais escolhas mudaram e confira os eventos de cada execução.'}</p>
+      <CerradoComparisonExplanation a={a.result} b={b.result} onSeek={setCursorTime} />
+      <div className="cl-compare-controls"><button className="button button-secondary" type="button" aria-pressed={side === 'a'} onClick={() => setSide('a')}>Inspecionar A no 3D</button><button className="button button-secondary" type="button" aria-pressed={side === 'b'} onClick={() => setSide('b')}>Inspecionar B no 3D</button></div>
+      <label className="cl-compare-clock">Relógio comum A/B · T+{time(cursorTime)}<input type="range" min={0} max={Math.max(getScenario(a.result.scenarioId).horizonS, getScenario(b.result.scenarioId).horizonS)} value={cursorTime} onChange={event => setCursorTime(Number(event.target.value))} /></label>
+      <Scene config={(side === 'a' ? a : b).result.config} scenarioId={(side === 'a' ? a : b).result.scenarioId} visualState={getMissionVisualState((side === 'a' ? a : b).result, cursorTime)} />
+      <p className="cl-compare-state">Vista {side.toUpperCase()} em T+{time(cursorTime)}. A: {getMissionVisualState(a.result, cursorTime).deliveredRecordIds.length} registros válidos; B: {getMissionVisualState(b.result, cursorTime).deliveredRecordIds.length}. Após o encerramento de cada tentativa, a vista conserva seu último estado conhecido. O tempo comum não usa índices de amostras.</p>
       <div className="table-scroll"><table className="source-table comparison-table"><caption>Escolhas e resultados das duas execuções</caption><thead><tr><th scope="col">Indicador</th><th scope="col">Missão A</th><th scope="col">Missão B</th></tr></thead><tbody>
         <tr><th scope="row">Cenário</th><td>{getScenario(a.result.scenarioId).title}</td><td>{getScenario(b.result.scenarioId).title}</td></tr>
         <tr><th scope="row">Massa</th><td>{number(a.result.massKg)} kg</td><td>{number(b.result.massKg)} kg</td></tr><tr><th scope="row">Orçamento</th><td>{a.result.credits} créditos</td><td>{b.result.credits} créditos</td></tr>

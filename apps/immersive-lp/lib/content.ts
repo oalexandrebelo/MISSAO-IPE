@@ -2,7 +2,7 @@ export const LINKS = {
   game: 'https://projeto-ipe.vercel.app/lab/index.html',
   campaign: 'https://projeto-ipe.vercel.app/campanha/index.html',
   research: 'https://projeto-ipe.vercel.app/context/research-library.html',
-  roadmap: 'https://projeto-ipe.vercel.app/docs/32-GUIA-DIDATICO-MISSOES-3D.html',
+  roadmap: 'https://projeto-ipe.vercel.app/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html',
   github: 'https://github.com/oalexandrebelo/MISSAO-IPE',
   pitch: 'https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html',
 } as const;
@@ -53,7 +53,7 @@ export const MILESTONES = [
 ] as const;
 
 export const FAQ = [
-  ['Preciso entender de engenharia espacial?', 'Não. Comece pela pergunta científica, faça uma previsão e teste uma escolha. O laboratório mostra como energia, massa, dados e comunicação afetam o resultado. Você pode voltar, redesenhar e comparar.'],
+  ['Preciso entender de engenharia espacial?', 'Não. Comece pela pergunta científica, faça uma previsão e teste uma escolha. Siga um registro até o evento e o componente em 3D, investigue a primeira diferença entre duas tentativas e conclua com os quatro papéis da missão. Você pode voltar, redesenhar e comparar.'],
   ['O jogo usa dados reais?', 'Sim. O Cerrado usa arquivos históricos MOD13Q1.061; Bennu incorpora dimensões publicadas de rochas e clastos; Webb incorpora seis bins reais de WASP-39 b com incertezas. Fontes e seleção são verificáveis. Componentes, pacotes, recursos e operação são didáticos; não há telemetria ao vivo nem validação de voo.'],
   ['As três missões e a campanha já estão disponíveis?', 'Sim. O laboratório reúne Cerrado, Bennu e Telescópio. A campanha do Cerrado também está disponível em quatro etapas: Primeiro sinal, Memória em disputa, Janela estreita e Ciência que chega. São experiências distintas, com links nesta página.'],
   ['Posso jogar em equipe?', 'É possível discutir decisões e dividir responsabilidades no mesmo dispositivo. A colaboração remota sincronizada para quatro jogadores ainda não está disponível. O aprendizado envolve os quatro segmentos: lançamento, espaço, solo e usuários.'],

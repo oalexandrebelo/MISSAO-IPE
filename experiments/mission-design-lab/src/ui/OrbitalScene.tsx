@@ -9,6 +9,7 @@ import type { SpacecraftInspection, SpacecraftPresentation } from '../lab/spacec
 import './spacecraft-immersion.css';
 import type { MissionVisualState } from '../lab/mission-visual-state.ts';
 import { EXPEDITIONS } from '../lab/scientific-expeditions.ts';
+import { SCIENCE_RECORDS } from '../data/science-data.ts';
 import type { ExpeditionDatum, ExpeditionId } from '../lab/scientific-expeditions.ts';
 import type { MissionConfig } from '../core/contracts.ts';
 import type { SceneFocus, SceneVariant, MissionSegment, MissionWorld } from './Scene.tsx';
@@ -302,7 +303,10 @@ function HangarWorld({ config, focus, animating, turn, reducedMotion, visualStat
 
 function Transmission({ from, to }: { from: [number,number,number]; to: [number,number,number] }) {
   const points = useMemo(() => new Float32Array([...from,...to]), [from[0],from[1],from[2],to[0],to[1],to[2]]);
-  return <line><bufferGeometry><bufferAttribute attach="attributes-position" args={[points,3]}/></bufferGeometry><lineBasicMaterial color="#a4e6ff" transparent opacity={.9}/></line>;
+  const direction = useMemo(() => new THREE.Vector3(...to).sub(new THREE.Vector3(...from)).normalize(), [from[0],from[1],from[2],to[0],to[1],to[2]]);
+  const orientation = useMemo(() => new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0), direction), [direction]);
+  // Direction markers represent the recorded transmitting state, not packet positions.
+  return <group name="recorded-downlink-direction"><line><bufferGeometry><bufferAttribute attach="attributes-position" args={[points,3]}/></bufferGeometry><lineBasicMaterial color="#a4e6ff" transparent opacity={.9}/></line>{[.25,.5,.75].map(fraction=><mesh key={fraction} position={[from[0]+(to[0]-from[0])*fraction,from[1]+(to[1]-from[1])*fraction,from[2]+(to[2]-from[2])*fraction]} quaternion={orientation}><coneGeometry args={[.045,.13,12]}/><meshBasicMaterial color="#bcefff"/></mesh>)}</group>;
 }
 function GroundWorld({ config, visualState, scienceRecordCount = 6 }: OrbitalSceneProps) {
   return <>
@@ -415,7 +419,7 @@ function ReferenceMissionWorld(props: OrbitalSceneProps) {
     {props.visualState?.mode==='processing'?<mesh position={[0,.3,1.5]}><sphereGeometry args={[.09,16,10]}/><meshBasicMaterial color="#ffc28c"/></mesh>:null}
   </>;
 }
-function ExpeditionEvidenceCard({ record, received, index, total }: { record: ExpeditionDatum; received: boolean; index: number; total: number }) {
+function ExpeditionEvidenceCard({ record, received, index, total }: { record: Pick<ExpeditionDatum, 'id' | 'label' | 'unit'> & { value?: number }; received: boolean; index: number; total: number }) {
   const texture = useMemo(() => {
     const canvas = document.createElement('canvas');
     canvas.width = 512; canvas.height = 280;
@@ -427,7 +431,7 @@ function ExpeditionEvidenceCard({ record, received, index, total }: { record: Ex
     ctx.font = '600 27px sans-serif'; ctx.fillText(`${String(index + 1).padStart(2, '0')} · ${received ? 'RECEBIDO' : 'AGUARDANDO'}`, 256, 48, 470);
     if (received) {
       ctx.fillStyle = '#edf3ed'; ctx.font = '500 29px sans-serif'; ctx.fillText(record.label, 256, 110, 470);
-      ctx.font = '600 43px sans-serif'; ctx.fillText(new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 8 }).format(record.value), 256, 177, 470);
+      ctx.font = '600 43px sans-serif'; ctx.fillText(record.value === undefined ? 'REGISTRO VÁLIDO' : new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 8 }).format(record.value), 256, 177, 470);
       ctx.fillStyle = '#bdd0d6'; ctx.font = '25px sans-serif'; ctx.fillText(record.unit, 256, 235, 470);
     } else {
       ctx.font = '27px sans-serif'; ctx.fillText('Recepção completa', 256, 135, 470); ctx.fillText('ainda não estabelecida', 256, 185, 470);
@@ -447,6 +451,11 @@ function ExpeditionEvidenceCards({ world, state }: { world: ExpeditionId; state?
   return <group name="archived-science-records">{records.map((record, index) => <ExpeditionEvidenceCard key={record.id} record={record} index={index} total={records.length} received={delivered.has(record.id)}/>)}</group>;
 }
 
+function EarthEvidenceCards({ state }: { state?: MissionVisualState }) {
+  const delivered = new Set(state?.deliveredRecordIds ?? []);
+  return <group name="modis-science-records">{SCIENCE_RECORDS.map((record, index) => <ExpeditionEvidenceCard key={record.id} record={{ id: record.id, label: record.id, unit: `Composto ${record.compositeStart}` }} index={index} total={SCIENCE_RECORDS.length} received={delivered.has(record.id)}/>)}</group>;
+}
+
 function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: SpacecraftPresentation }) {
   const inspection = props.inspection ?? 'overview';
   const inspect = inspection !== 'overview';
@@ -461,7 +470,7 @@ function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: Space
   const radioAnchor: [number,number,number] = [craftX, craftY + (separated ? 1.8 : 1.25) * craftScale, .45];
   return <>
     {!hangar ? world === 'earth' ? <group position={contextPosition} scale={contextScale}><Earth focus={props.focus} animating={false}/></group> : <group position={contextPosition} scale={contextScale} rotation={[.12,.3,-.08]}><NASAAsset url={`${import.meta.env.BASE_URL}models/nasa/${world === 'telescope' ? 'jwst-a.glb' : 'bennu-1999-rq36.glb'}`} onUnavailable={props.onUnavailable}/></group> : null}
-    <group position={[craftX,craftY,.45]} scale={craftScale}><ConfiguredSpacecraft presentation={props.presentation} visualState={props.visualState} inspection={inspection} exploded={separated} turn={props.turn} onInspect={props.onInspect}/></group>
+    <group position={[craftX,craftY,.45]} scale={craftScale}><ConfiguredSpacecraft presentation={props.presentation} visualState={props.visualState} inspection={inspection} exploded={separated} turn={props.turn} reducedMotion={props.reducedMotion} onInspect={props.onInspect}/></group>
     {props.segment === 'launch' ? <mesh position={[craftX,craftY,.1]}><boxGeometry args={[separated ? 4.6 : 3.9,separated ? 3.3 : 2.7,2.2]}/><meshBasicMaterial color="#6c91a7" wireframe transparent opacity={.22} depthWrite={false}/></mesh> : null}
     {props.segment === 'ground' ? <group position={[-1.7,-1.1,.5]} scale={.46} rotation={[.1,0,-.28]}>
       <mesh position={[0,-.2,0]}><cylinderGeometry args={[.14,.23,.85,16]}/><meshStandardMaterial color="#a9bac3" metalness={.55} roughness={.45}/></mesh>
@@ -469,7 +478,7 @@ function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: Space
       <mesh position={[0,.5,0]}><cylinderGeometry args={[.02,.02,.7,10]}/><meshStandardMaterial color="#ddb985"/></mesh>
     </group> : null}
     {props.visualState?.available && props.visualState.transmitting ? <Transmission from={radioAnchor} to={props.segment === 'ground' ? [-1.7,-.8,.5] : [-2,-1.2,0]}/> : null}
-    {props.segment === 'user' || props.segment === 'ground' ? world === 'earth' ? Array.from({length:props.scienceRecordCount ?? 6},(_,i)=><mesh key={i} position={[-1.15+i*.4,-1.65,1]}><boxGeometry args={[.25,.3,.025]}/><meshStandardMaterial color={i<(props.visualState?.deliveredRecordIds.length ?? 0) ? '#bddca9' : '#2f4a5c'} roughness={.6}/></mesh>) : <ExpeditionEvidenceCards world={world} state={props.visualState}/> : null}
+    {props.segment === 'user' || props.segment === 'ground' ? world === 'earth' ? <EarthEvidenceCards state={props.visualState}/> : <ExpeditionEvidenceCards world={world} state={props.visualState}/> : null}
     {hangar ? <group position={[0,-1.2,-.1]} rotation={[Math.PI/2,0,0]} scale={[1,.6,1]}><Curve points={HANGAR_RING} color="#6c8d9b" opacity={.24}/></group> : null}
   </>;
 }
