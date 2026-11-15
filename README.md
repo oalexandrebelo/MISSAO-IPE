@@ -2,9 +2,9 @@
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos. Investigue a vegetação do Cerrado, as dimensões de rochas em Bennu e um recorte do espectro de trânsito observado pelo Webb. Projete, execute e use os registros recebidos para revisar a missão.
 
-**R23 · validação local, publicação pendente.** A bancada mostra a mudança no equipamento e nos recursos; a comparação A/B usa a mesma cena e o mesmo tempo simulado. Os callouts identificam instrumento, energia e comunicação. O companheiro de Libras acompanha contextos do jogo após ativação do jogador. A animação Rive aguarda um arquivo ativo no editor.
+**R23 publicada em 15/11/2026.** O site principal e a LP estão `READY` na Vercel no commit `80ce5ad`. A bancada mostra a mudança no equipamento e nos recursos. A comparação A/B usa a mesma cena e o mesmo tempo simulado, com callouts de instrumento, energia e comunicação. A animação Rive aguarda um arquivo ativo no editor do MacBook Pro. [Registro da publicação](PUBLICADO.md)
 
-O domínio próprio já atende o projeto principal. A entrada usa **Nome → E-mail → Tipo de missão → Play**, com métricas de jogo calculadas no servidor e acesso administrativo autenticado. A coleta de desempenho público pelo Cloudflare será verificada após a publicação R23. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
+No domínio oficial, o avatar do VLibras sinalizou no portal e acompanhou a passagem de **Nome** para **E-mail** dentro do jogo. A API privada confirmou três tentativas sintéticas distintas após reenvio, e o painel Cloudflare registrou uma visita técnica. Continuam pendentes os testes em celular físico e a avaliação com jogadores e pessoas fluentes em Libras. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
 
 **Continuidade para dois desenvolvedores.** O handoff reúne os ensaios reproduzíveis, a divisão de trabalho e os critérios de aceite. [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
 
@@ -72,7 +72,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.12.0-beta.1 / R23 em validação local | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R23 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |

@@ -1,0 +1,124 @@
+{
+  "verifiedAt": "2026-11-15T15:25:28.134Z",
+  "deploymentId": "dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5",
+  "sourceCommit": "80ce5ade8e566e3e3a6ff03ac998fff2814ac94f",
+  "alias": "https://projeto-ipe-lp.vercel.app",
+  "status": "passed",
+  "checks": [
+    {
+      "path": "/",
+      "finalPath": "/",
+      "status": 200,
+      "expected": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85764,
+      "sha256": "6bd04593f6e2f04c1e75b1e0712bb704ba3f2fcb3f471f59a92f0eae8ba49487",
+      "tlsVerified": true,
+      "passed": true,
+      "librasLauncher": true,
+      "librasLoader": true,
+      "cloudflareWebAnalytics": false
+    },
+    {
+      "path": "/creditos",
+      "finalPath": "/creditos/",
+      "status": 200,
+      "expected": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 24771,
+      "sha256": "6fd32a47ac7b357ce77d13b077b996bf27830d89a6758650a316a8bab7c8fbad",
+      "tlsVerified": true,
+      "passed": true,
+      "redirect": {
+        "status": 308,
+        "path": "/creditos/"
+      },
+      "librasLauncher": true,
+      "librasLoader": true,
+      "cloudflareWebAnalytics": false
+    },
+    {
+      "path": "/__r23-smoke-rota-inexistente__/",
+      "finalPath": "/__r23-smoke-rota-inexistente__/",
+      "status": 404,
+      "expected": 404,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 22177,
+      "sha256": "e2b02f6dbc15f8b08fe5fee2de5b6da73df72e29d7c26cdd008a2c988389bcab",
+      "tlsVerified": true,
+      "passed": true,
+      "librasLauncher": true,
+      "librasLoader": true,
+      "cloudflareWebAnalytics": false
+    },
+    {
+      "path": "/acessibilidade/guia/",
+      "finalPath": "/acessibilidade/guia/",
+      "status": 200,
+      "expected": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 1750,
+      "sha256": "de80e19a14c75f45b085946c8dcc1036b9d6474779b37df74164d057e0bb000c",
+      "tlsVerified": true,
+      "passed": true,
+      "source": "apps/immersive-lp/public/acessibilidade/guia.html",
+      "sourceSha256": "de80e19a14c75f45b085946c8dcc1036b9d6474779b37df74164d057e0bb000c",
+      "matchesSource": true,
+      "framePolicy": {
+        "xFrameOptions": "SAMEORIGIN",
+        "sandbox": "allow-scripts",
+        "frameAncestors": "self"
+      },
+      "assetLinks": [
+        "/acessibilidade/libras.css",
+        "/acessibilidade/guia.js"
+      ]
+    },
+    {
+      "path": "/acessibilidade/guia.js",
+      "finalPath": "/acessibilidade/guia.js",
+      "status": 200,
+      "expected": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 4426,
+      "sha256": "1a994c3b24c91a93f46c44adea9cc158785752f1083919711c59ae8af0d5ed35",
+      "tlsVerified": true,
+      "passed": true,
+      "source": "apps/immersive-lp/public/acessibilidade/guia.js",
+      "sourceSha256": "1a994c3b24c91a93f46c44adea9cc158785752f1083919711c59ae8af0d5ed35",
+      "matchesSource": true
+    },
+    {
+      "path": "/acessibilidade/libras.js",
+      "finalPath": "/acessibilidade/libras.js",
+      "status": 200,
+      "expected": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 10467,
+      "sha256": "d36f633a7a4954dd3c773970fdccb7db0d5a86b4fdc07f5f9a67f537f125a922",
+      "tlsVerified": true,
+      "passed": true,
+      "source": "apps/immersive-lp/public/acessibilidade/libras.js",
+      "sourceSha256": "d36f633a7a4954dd3c773970fdccb7db0d5a86b4fdc07f5f9a67f537f125a922",
+      "matchesSource": true
+    },
+    {
+      "path": "/acessibilidade/libras.css",
+      "finalPath": "/acessibilidade/libras.css",
+      "status": 200,
+      "expected": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 3664,
+      "sha256": "1340cbbae8d7814928d936c647137721c5aae051b264923b784acc787043ccda",
+      "tlsVerified": true,
+      "passed": true,
+      "source": "apps/immersive-lp/public/acessibilidade/libras.css",
+      "sourceSha256": "1340cbbae8d7814928d936c647137721c5aae051b264923b784acc787043ccda",
+      "matchesSource": true
+    }
+  ],
+  "limits": [
+    "Associação entre o alias e o identificador do deploy fornecida pela coordenação.",
+    "Verificação HTTP e de bytes. Layout, interação e serviço externo VLibras exigem validação separada."
+  ]
+}

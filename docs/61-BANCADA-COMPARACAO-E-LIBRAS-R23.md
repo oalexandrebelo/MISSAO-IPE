@@ -4,6 +4,8 @@ O laboratório propõe uma sequência para as três missões. Escolha um equipam
 
 [Laboratório](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Roteiro do MVP](49-ROTEIRO-APRESENTACAO-MVP-R19.md) · [Verificação do domínio e Cloudflare](62-DOMINIO-E-CLOUDFLARE-R23.md)
 
+A R23 está publicada no commit `80ce5ade8e566e3e3a6ff03ac998fff2814ac94f`. Vercel principal `dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ` e LP `dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5`, ambos **READY**. [Recibo funcional](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-functional-qa.json)
+
 ## Como experimentar e aprender
 
 1. Entre por **Nome → E-mail → Tipo de missão → Play**. Na bancada, escolha o sistema antes de trocar a opção. Observe o destaque da peça e a variação de massa, créditos, capacidade de energia, geração ou memória. O cartão de impacto descreve a última troca efetiva do projeto em edição.
@@ -40,6 +42,8 @@ Ative **Libras** e inspecione bancada, troca de lado A/B, evento no replay e ret
 
 No laboratório a entrada do tradutor é `data-ipe-libras-context`, preenchida com explicações do catálogo e estados calculados pelo jogo, limitada a 900 caracteres. O painel privado usa uma orientação fixa. Mantenha nome, e-mail, hipótese, reflexões, credenciais e linhas do painel fora desses atributos e use dados sintéticos no QA. O iframe tem origem opaca por sandbox e o pai valida a janela de origem das mensagens. A tradução chama o serviço oficial após o opt-in. A qualidade linguística, inclusive termos de ciência e engenharia, exige avaliação por pessoas fluentes em Libras. [Acessibilidade e Libras R21](56-ACESSIBILIDADE-E-LIBRAS-R21.md)
 
+No domínio publicado, o navegador mostrou o avatar sinalizando no portal. A ativação acompanhou a navegação até o jogo, e o trecho mudou automaticamente de **Nome** para **E-mail** com a orientação da etapa. O console registrou armazenamento indisponível no iframe isolado e bloqueio de importação opcional do PostHog pela CSP. [Verificação de Libras em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-functional-qa.json)
+
 ### Rive no MacBook Pro
 
 **Aguardando arquivo ativo no Rive.app.** A consulta ao MCP do editor em 15/11/2026 retornou `activeFileId: null` e `openTabs: []`. O MVP usa a cena 3D/2D acima. A autoria, a exportação `.riv` e a integração web continuam pendentes.
@@ -52,7 +56,9 @@ No laboratório a entrada do tradutor é `data-ipe-libras-context`, preenchida c
 
 As métricas de jogo são da API própria e do armazenamento privado. Cada execução própria recebe um identificador de tentativa e o servidor recalcula o resultado. Um reenvio usa esse mesmo identificador. O painel apresenta participação, escolhas, diagnósticos e respostas. A comprovação de aprendizagem exige observação de participantes.
 
-O carregador Cloudflare é restrito às páginas públicas de nível superior em `nasa-missaoipe.alexandrebelo.com`. A equipe deve observar, após publicar, a carga de `beacon.min.js`, o envio RUM e o recebimento no painel Cloudflare. Confirme a exclusão de `/equipe`, `/dashboard`, `/acessibilidade` e `/api` e mantenha os dados dos jogadores somente na API privada. O novo hostname exige uma sessão própria. [DNS, CSP, estado do beacon e aceite em produção](62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário das métricas do jogo](54-METRICAS-E-HANDOFF-R21.md)
+A API privada publicada aceitou o cadastro sintético e três eventos de tentativa. O reenvio retornou `200` e a leitura autenticada mostrou três tentativas únicas. O recálculo do servidor produziu **92/100**, **51/100** e **92/100** para Cerrado, Bennu e Webb nas configurações do teste. A leitura administrativa sem sessão retornou `401`. [Recibo da API em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-production-metrics.json)
+
+O carregador Cloudflare atua nas páginas públicas de nível superior no domínio oficial. O beacon carregou e o painel registrou **uma visita técnica** ao portal com a exclusão de bots desligada. A configuração exclui `/equipe`, `/dashboard`, `/acessibilidade` e `/api`. [Domínio e métricas Cloudflare](62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário das métricas do jogo](54-METRICAS-E-HANDOFF-R21.md)
 
 ## Como verificar a entrega
 
@@ -67,7 +73,7 @@ O executor de UI usa um diretório temporário compartilhado. Execute uma instâ
 
 ### Verificação local do candidato
 
-O build de release passou antes do último ajuste de responsividade. As suítes registraram **164/164** no domínio do laboratório, **83/83** na UI e **26/26** na API de métricas. A equipe percorreu as três missões no navegador do Codex com WebGL, em viewports desktop e móvel.
+Os builds do release e da LP passaram. As suítes registraram **164/164** no domínio do laboratório, **83/83** na UI e **26/26** na API de métricas. A equipe percorreu as três missões no navegador do Codex com WebGL, em viewports desktop e móvel. O console mostrou aviso de depreciação de `THREE.Clock`.
 
 - **Cerrado.** Contatos longos e bateria de 24 Wh entregaram **6/6** registros válidos com **91/100**.
 - **Bennu.** Ampliar os contatos elevou a entrega de **2/6** para **6/6**.

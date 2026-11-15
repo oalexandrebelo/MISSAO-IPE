@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-15T15:18:57.713Z",
+  "hostname": "nasa-missaoipe.alexandrebelo.com",
+  "status": "passed",
+  "transport": {
+    "https": true,
+    "tlsBypass": false,
+    "resolveOverride": "216.198.79.66",
+    "priorAnonymousProbeTimedOut": true,
+    "noProductionWriteBeforeReachableEdge": true
+  },
+  "scope": "Explicit synthetic QA participation only; three engine configurations and an identical retry. No real participant data exported; no deletion.",
+  "checks": {
+    "anonymousAdmin": {
+      "status": 401,
+      "denied": true
+    },
+    "registration": {
+      "status": 201,
+      "syntheticClearlyLabelled": true,
+      "usesInvalidExampleEmail": true,
+      "cookieHttpOnly": true,
+      "cookieSecure": true,
+      "cookieSameSiteStrict": true
+    },
+    "initialWrite": {
+      "status": 200,
+      "accepted": 3,
+      "rejected": 0
+    },
+    "identicalRetry": {
+      "status": 200,
+      "accepted": 3,
+      "rejected": 0
+    },
+    "adminLogin": {
+      "status": 200,
+      "cookieHttpOnly": true,
+      "cookieSecure": true
+    },
+    "privateRead": {
+      "status": 200,
+      "paginationComplete": true,
+      "pages": 1,
+      "qaProfiles": 1,
+      "qaAttempts": 3,
+      "uniqueQaAttempts": 3,
+      "otherParticipantsNotExported": true
+    },
+    "serverRecalculation": [
+      {
+        "mission": "cerrado",
+        "configuration": {
+          "battery": "small",
+          "panel": "standard",
+          "processing": "bands",
+          "radio": "economy",
+          "buffer": "large",
+          "policy": "every-contact"
+        },
+        "scenarioId": "long-contact",
+        "completeResultMatchesLocalEngine": true,
+        "outcome": "success",
+        "validRecords": 6,
+        "deliveredRecords": 6,
+        "score": {
+          "total": 92,
+          "science": 60,
+          "engineering": 30,
+          "efficiency": 2,
+          "max": 100,
+          "rubricVersion": "r21-v1"
+        },
+        "engineVersion": "0.1.1-rd"
+      },
+      {
+        "mission": "bennu",
+        "configuration": {
+          "launch": "compact",
+          "orbit": "near",
+          "duration": "full",
+          "instrument": "camera",
+          "power": "extended",
+          "ground": "short"
+        },
+        "completeResultMatchesLocalEngine": true,
+        "outcome": "failure",
+        "validRecords": 2,
+        "deliveredRecords": 2,
+        "score": {
+          "total": 51,
+          "science": 20,
+          "engineering": 30,
+          "efficiency": 1,
+          "max": 100,
+          "rubricVersion": "r21-v1"
+        },
+        "engineVersion": "ipe-expeditions-r18-v1"
+      },
+      {
+        "mission": "telescope",
+        "configuration": {
+          "launch": "science",
+          "orbit": "far",
+          "duration": "full",
+          "instrument": "spectrometer",
+          "power": "extended",
+          "ground": "extended"
+        },
+        "completeResultMatchesLocalEngine": true,
+        "outcome": "success",
+        "validRecords": 6,
+        "deliveredRecords": 6,
+        "score": {
+          "total": 92,
+          "science": 60,
+          "engineering": 30,
+          "efficiency": 2,
+          "max": 100,
+          "rubricVersion": "r21-v1"
+        },
+        "engineVersion": "ipe-expeditions-r18-v1"
+      }
+    ],
+    "anonymousAdminAfterLogin": {
+      "status": 401,
+      "denied": true
+    }
+  },
+  "limitations": [
+    "API proof only: does not prove mobile browser identity entry or UI accessibility.",
+    "DNS override verifies hostname/SNI/certificate on an available Vercel edge; does not prove local resolver health."
+  ],
+  "runtimeSha256": "33743b28f683f182a96bfdb81434ca52f3eceb2faade7c84874f3eacbdff1c64",
+  "completedAt": "2026-11-15T15:19:29.316Z",
+  "release": {
+    "deploymentId": "dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ",
+    "gitSha": "80ce5ade8e566e3e3a6ff03ac998fff2814ac94f",
+    "source": "Coordinator confirmed deployment READY before execution"
+  },
+  "temporarySessionRemoved": true
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T15:14:54.591Z",
+  "generatedAt": "2026-11-15T15:26:25.149Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 124,
   "documents": [
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 29044,
-      "originalSha256": "378ff832395ca34145e64d14f6547de69a0b81bbf2a711808b0709a869ef0438",
-      "projectedSha256": "378ff832395ca34145e64d14f6547de69a0b81bbf2a711808b0709a869ef0438",
+      "originalBytes": 30389,
+      "originalSha256": "81933078a149cd0059633d3550da7668fac79e039fc60ce300c32ce8668f7350",
+      "projectedSha256": "81933078a149cd0059633d3550da7668fac79e039fc60ce300c32ce8668f7350",
       "redactions": 0
     },
     {
@@ -43,9 +43,9 @@
       "title": "MISSÃO IPÊ · R23 / Beta 0.12",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 14883,
-      "originalSha256": "04378df3c815a1aaf45c821745ebaaba42fb858647448272920e14f6a3c12064",
-      "projectedSha256": "04378df3c815a1aaf45c821745ebaaba42fb858647448272920e14f6a3c12064",
+      "originalBytes": 14959,
+      "originalSha256": "f4ac5b873ff519e9f324868f436a9592b9cac526eb68f499876ce55c19096813",
+      "projectedSha256": "f4ac5b873ff519e9f324868f436a9592b9cac526eb68f499876ce55c19096813",
       "redactions": 0
     },
     {
@@ -725,9 +725,9 @@
       "title": "MISSÃO IPÊ · bancada, comparação e Libras · R23",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 13498,
-      "originalSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
-      "projectedSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "originalBytes": 14606,
+      "originalSha256": "2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70",
+      "projectedSha256": "2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70",
       "redactions": 0
     },
     {
@@ -736,9 +736,9 @@
       "title": "R23 — domínio próprio e métricas Cloudflare",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 8514,
-      "originalSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
-      "projectedSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "originalBytes": 7935,
+      "originalSha256": "705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9",
+      "projectedSha256": "705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9",
       "redactions": 0
     },
     {
@@ -1372,13 +1372,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2369624,
-      "sha256": "029818c4815c1d90f93994e19fbe10d5e49f22278d9011e8f84c56f5d8da881c"
+      "bytes": 2372382,
+      "sha256": "2117fd53cdc29b758c6e1f624cd54aafa7e16734101d9198fa1e2115ffdf6f28"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1902586,
-      "sha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366"
+      "bytes": 1904536,
+      "sha256": "c58060ba0432f734023acd0ff63952be762c63bd74c914b94fab781e1dde4c38"
     }
   ]
 }

@@ -65,17 +65,25 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `378ff832395ca34145e64d14f6547de69a0b81bbf2a711808b0709a869ef0438` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `81933078a149cd0059633d3550da7668fac79e039fc60ce300c32ce8668f7350` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
 
 ## R23 — bancada de equipamentos, comparação e Libras
 
-**Validação local · publicação pendente.** A bancada liga as escolhas ao equipamento da nave e aos deltas de recursos. A comparação A/B permite alternar tentativas no mesmo T+ e investigar o primeiro evento diferente. Os callouts usam os valores do catálogo e Libras acompanha o contexto autorizado após ativação. A autoria Rive aguarda um arquivo ativo no editor.
+**Publicada em 15/11/2026.** Commit `80ce5ade8e566e3e3a6ff03ac998fff2814ac94f`. Principal `dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ` e LP `dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5`, ambos **READY**. A bancada liga as escolhas ao equipamento e aos recursos. A comparação A/B usa o mesmo T+ e permite investigar o primeiro evento diferente. Os callouts usam valores do catálogo.
 
 **Verificação local do candidato.** `npm run build:release` passou com o ajuste do cabeçalho em telas estreitas; o build da LP também passou. O laboratório passou em **164/164** testes de domínio e **83/83** de interface. A suíte de métricas passou em **26/26**. Em navegador com GPU e viewports desktop e móvel, o Cerrado entregou **6/6** com bateria de 24 Wh e contatos longos, Bennu passou de **2/6 para 6/6** ao ampliar os contatos e Webb passou de **0/6 para 6/6** ao trocar a câmera pelo espectrômetro. O reteste em 320 px confirmou ausência de overflow horizontal em Cerrado e Webb (largura do documento igual à viewport).
 
-**Domínio próprio.** O DNS foi configurado e as rotas principais responderam via HTTPS. A publicação R23 e a recepção do beacon Cloudflare aguardam confirmação. [Portal](https://nasa-missaoipe.alexandrebelo.com/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+**Domínio e Cloudflare.** O domínio oficial serviu o portal e o laboratório por HTTPS. O beacon carregou e o painel Cloudflare registrou **uma visita técnica** em `/`, Brasil, Chrome desktop, com o filtro de exclusão de bots desligado. [Portal](https://nasa-missaoipe.alexandrebelo.com/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+
+**Libras em produção.** O avatar sinalizou no portal, continuou ativo ao entrar no laboratório e acompanhou **Nome → E-mail**. O trecho continha apenas a orientação da etapa. O console registrou avisos de armazenamento no iframe isolado e bloqueio de uma importação opcional do PostHog pela CSP. Na inspeção do laboratório também foi observado o aviso de depreciação de `THREE.Clock`. [Recibo funcional R23](evidence/r23-functional-qa.json)
+
+**Métricas privadas em produção.** Cadastro sintético `201`, gravação e reenvio idêntico `200`, três tentativas únicas na leitura autenticada. O servidor recalculou **92/100** no Cerrado, **51/100** em Bennu e **92/100** no Webb e a rota administrativa manteve `401` sem sessão. [Recibo da API em produção](evidence/r23-production-metrics.json)
+
+**LP e fechamento documental.** Sete verificações HTTP da LP passaram, incluindo a 404 personalizada e a igualdade dos assets de Libras. Esta revisão reúne os recibos e direciona os links da LP e da central da equipe ao domínio oficial. [Recibo da LP](evidence/r23-lp-production.json)
+
+A autoria Rive aguarda um arquivo ativo no editor. O aceite em celular físico, a qualidade linguística da Libras e a aprendizagem humana dependem de validação com usuários.
 
 [Handoff dos dois devs](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Recibo DNS/TLS](evidence/domain-cloudflare-r23.json)
 
@@ -276,15 +284,15 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 # MISSÃO IPÊ · R23 / Beta 0.12
 
-Fonte: `README.md` · SHA-256 original: `04378df3c815a1aaf45c821745ebaaba42fb858647448272920e14f6a3c12064` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `f4ac5b873ff519e9f324868f436a9592b9cac526eb68f499876ce55c19096813` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ · R23 / Beta 0.12
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos. Investigue a vegetação do Cerrado, as dimensões de rochas em Bennu e um recorte do espectro de trânsito observado pelo Webb. Projete, execute e use os registros recebidos para revisar a missão.
 
-**R23 · validação local, publicação pendente.** A bancada mostra a mudança no equipamento e nos recursos; a comparação A/B usa a mesma cena e o mesmo tempo simulado. Os callouts identificam instrumento, energia e comunicação. O companheiro de Libras acompanha contextos do jogo após ativação do jogador. A animação Rive aguarda um arquivo ativo no editor.
+**R23 publicada em 15/11/2026.** O site principal e a LP estão `READY` na Vercel no commit `80ce5ad`. A bancada mostra a mudança no equipamento e nos recursos. A comparação A/B usa a mesma cena e o mesmo tempo simulado, com callouts de instrumento, energia e comunicação. A animação Rive aguarda um arquivo ativo no editor do MacBook Pro. [Registro da publicação](PUBLICADO.md)
 
-O domínio próprio já atende o projeto principal. A entrada usa **Nome → E-mail → Tipo de missão → Play**, com métricas de jogo calculadas no servidor e acesso administrativo autenticado. A coleta de desempenho público pelo Cloudflare será verificada após a publicação R23. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
+No domínio oficial, o avatar do VLibras sinalizou no portal e acompanhou a passagem de **Nome** para **E-mail** dentro do jogo. A API privada confirmou três tentativas sintéticas distintas após reenvio, e o painel Cloudflare registrou uma visita técnica. Continuam pendentes os testes em celular físico e a avaliação com jogadores e pessoas fluentes em Libras. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
 
 **Continuidade para dois desenvolvedores.** O handoff reúne os ensaios reproduzíveis, a divisão de trabalho e os critérios de aceite. [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
 
@@ -352,7 +360,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.12.0-beta.1 / R23 em validação local | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R23 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -7375,13 +7383,15 @@ Começar pela bancada e pela comparação, com uma missão de cada vez. ISS, Lua
 
 # MISSÃO IPÊ · bancada, comparação e Libras · R23
 
-Fonte: `docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md` · SHA-256 original: `770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7` · Ajustes de caminhos privados: 0
+Fonte: `docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md` · SHA-256 original: `2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ · bancada, comparação e Libras · R23
 
 O laboratório propõe uma sequência para as três missões. Escolha um equipamento, examine o que ele muda na nave, preveja a consequência, execute e use os registros para justificar o próximo projeto. A revisão alterna A e B na mesma cena e no mesmo relógio simulado.
 
 [Laboratório](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Roteiro do MVP](49-ROTEIRO-APRESENTACAO-MVP-R19.md) · [Verificação do domínio e Cloudflare](62-DOMINIO-E-CLOUDFLARE-R23.md)
+
+A R23 está publicada no commit `80ce5ade8e566e3e3a6ff03ac998fff2814ac94f`. Vercel principal `dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ` e LP `dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5`, ambos **READY**. [Recibo funcional](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-functional-qa.json)
 
 ## Como experimentar e aprender
 
@@ -7419,6 +7429,8 @@ Ative **Libras** e inspecione bancada, troca de lado A/B, evento no replay e ret
 
 No laboratório a entrada do tradutor é `data-ipe-libras-context`, preenchida com explicações do catálogo e estados calculados pelo jogo, limitada a 900 caracteres. O painel privado usa uma orientação fixa. Mantenha nome, e-mail, hipótese, reflexões, credenciais e linhas do painel fora desses atributos e use dados sintéticos no QA. O iframe tem origem opaca por sandbox e o pai valida a janela de origem das mensagens. A tradução chama o serviço oficial após o opt-in. A qualidade linguística, inclusive termos de ciência e engenharia, exige avaliação por pessoas fluentes em Libras. [Acessibilidade e Libras R21](56-ACESSIBILIDADE-E-LIBRAS-R21.md)
 
+No domínio publicado, o navegador mostrou o avatar sinalizando no portal. A ativação acompanhou a navegação até o jogo, e o trecho mudou automaticamente de **Nome** para **E-mail** com a orientação da etapa. O console registrou armazenamento indisponível no iframe isolado e bloqueio de importação opcional do PostHog pela CSP. [Verificação de Libras em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-functional-qa.json)
+
 ### Rive no MacBook Pro
 
 **Aguardando arquivo ativo no Rive.app.** A consulta ao MCP do editor em 15/11/2026 retornou `activeFileId: null` e `openTabs: []`. O MVP usa a cena 3D/2D acima. A autoria, a exportação `.riv` e a integração web continuam pendentes.
@@ -7431,7 +7443,9 @@ No laboratório a entrada do tradutor é `data-ipe-libras-context`, preenchida c
 
 As métricas de jogo são da API própria e do armazenamento privado. Cada execução própria recebe um identificador de tentativa e o servidor recalcula o resultado. Um reenvio usa esse mesmo identificador. O painel apresenta participação, escolhas, diagnósticos e respostas. A comprovação de aprendizagem exige observação de participantes.
 
-O carregador Cloudflare é restrito às páginas públicas de nível superior em `nasa-missaoipe.alexandrebelo.com`. A equipe deve observar, após publicar, a carga de `beacon.min.js`, o envio RUM e o recebimento no painel Cloudflare. Confirme a exclusão de `/equipe`, `/dashboard`, `/acessibilidade` e `/api` e mantenha os dados dos jogadores somente na API privada. O novo hostname exige uma sessão própria. [DNS, CSP, estado do beacon e aceite em produção](62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário das métricas do jogo](54-METRICAS-E-HANDOFF-R21.md)
+A API privada publicada aceitou o cadastro sintético e três eventos de tentativa. O reenvio retornou `200` e a leitura autenticada mostrou três tentativas únicas. O recálculo do servidor produziu **92/100**, **51/100** e **92/100** para Cerrado, Bennu e Webb nas configurações do teste. A leitura administrativa sem sessão retornou `401`. [Recibo da API em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-production-metrics.json)
+
+O carregador Cloudflare atua nas páginas públicas de nível superior no domínio oficial. O beacon carregou e o painel registrou **uma visita técnica** ao portal com a exclusão de bots desligada. A configuração exclui `/equipe`, `/dashboard`, `/acessibilidade` e `/api`. [Domínio e métricas Cloudflare](62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário das métricas do jogo](54-METRICAS-E-HANDOFF-R21.md)
 
 ## Como verificar a entrega
 
@@ -7446,7 +7460,7 @@ O executor de UI usa um diretório temporário compartilhado. Execute uma instâ
 
 ### Verificação local do candidato
 
-O build de release passou antes do último ajuste de responsividade. As suítes registraram **164/164** no domínio do laboratório, **83/83** na UI e **26/26** na API de métricas. A equipe percorreu as três missões no navegador do Codex com WebGL, em viewports desktop e móvel.
+Os builds do release e da LP passaram. As suítes registraram **164/164** no domínio do laboratório, **83/83** na UI e **26/26** na API de métricas. A equipe percorreu as três missões no navegador do Codex com WebGL, em viewports desktop e móvel. O console mostrou aviso de depreciação de `THREE.Clock`.
 
 - **Cerrado.** Contatos longos e bateria de 24 Wh entregaram **6/6** registros válidos com **91/100**.
 - **Bennu.** Ampliar os contatos elevou a entrega de **2/6** para **6/6**.
@@ -7467,19 +7481,19 @@ A inspeção móvel encontrou transbordamento no cabeçalho a **354 px**. A corr
 
 # R23 — domínio próprio e métricas Cloudflare
 
-Fonte: `docs/62-DOMINIO-E-CLOUDFLARE-R23.md` · SHA-256 original: `78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a` · Ajustes de caminhos privados: 0
+Fonte: `docs/62-DOMINIO-E-CLOUDFLARE-R23.md` · SHA-256 original: `705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9` · Ajustes de caminhos privados: 0
 
 # R23 — domínio próprio e métricas Cloudflare
 
 Infraestrutura verificada em **15/11/2026, 14:57 UTC**. [Recibo de domínio e Cloudflare no repositório](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/domain-cloudflare-r23.json).
 
-## Estado real
+## Produção verificada
 
-O endereço `nasa-missaoipe.alexandrebelo.com` foi associado ao projeto principal `missao-ipe` na Vercel, para produção, sem redirecionamento. A Vercel confirmou a propriedade (`verified: true`). O endereço anterior `projeto-ipe.vercel.app` continua associado ao mesmo projeto. A LP separada não foi alterada.
+O endereço `nasa-missaoipe.alexandrebelo.com` foi associado ao projeto principal `missao-ipe` na Vercel para produção. O commit `80ce5ade8e566e3e3a6ff03ac998fff2814ac94f` foi publicado no principal `dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ` e na LP `dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5`, ambos **READY**. O navegador abriu o portal e o laboratório por HTTPS no hostname oficial. [Recibo funcional R23](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-functional-qa.json)
 
 **O DNS já foi configurado e propagado.** A criação do CNAME pelo painel Cloudflare foi confirmada por consulta independente ao servidor autoritativo e aos resolvedores públicos `1.1.1.1` e `8.8.8.8`. A Vercel informa `configuredBy: CNAME`, `misconfigured: false` e ausência de conflitos. Entre 14:54 e 14:57 UTC, todas as cinco páginas da tabela abaixo responderam `200` por HTTPS válido; a API administrativa respondeu `401` sem autenticação. A sequência completa passou no IP público `64.29.17.65`. No outro IP, houve respostas válidas e timeouts intermitentes. O resolvedor local do Mac ainda conservava a resposta negativa anterior, portanto as verificações HTTPS usaram os IPs do DNS público com `curl --resolve`, preservando a validação de certificado. Isso comprova certificado e rotas no endereço novo, mas ainda não a estabilidade por todos os resolvedores/rede local.
 
-A configuração DNS foi feita no painel autenticado da Cloudflare, pois não havia conector de gerenciamento ou sessão de CLI disponível para esta tarefa. Nenhum segredo foi lido ou incluído no repositório. O site também foi cadastrado no Web Analytics por esse mesmo painel. A instalação do beacon e a confirmação de recepção dos dados dependem da publicação R23.
+A configuração DNS e o cadastro no Web Analytics foram feitos no painel autenticado da Cloudflare. Após publicar a R23, o navegador confirmou o carregamento do beacon e o painel registrou uma visita técnica ao portal.
 
 ## Configuração DNS exata
 
@@ -7497,7 +7511,7 @@ O destino acima veio da recomendação de maior prioridade da API da Vercel para
 
 ## Um endereço para o jogo e a equipe
 
-Caminhos que responderam no novo hostname com TLS válido (a funcionalidade R23 ainda depende da nova publicação):
+Caminhos conferidos no endereço oficial com TLS válido:
 
 | Área | Caminho no novo endereço |
 | --- | --- |
@@ -7508,7 +7522,7 @@ Caminhos que responderam no novo hostname com TLS válido (a funcionalidade R23 
 | Painel privado | `/dashboard/index.html` |
 | Registro e resultados privados | `/api/metrics` |
 
-Todos devem usar a mesma origem. A R23 já adicionou `https://nasa-missaoipe.alexandrebelo.com` à lista explícita `PRODUCTION_ORIGINS` em `server/metrics/handler.mjs`, preservando as origens anteriores, e acrescentou o caso correspondente em `tests/metrics-server.test.mjs`. Essa correção precisa estar na publicação servida pelo novo hostname. A aceitação final ainda requer uma gravação privada no ambiente publicado; teste local não comprova a persistência em produção.
+O hostname oficial está entre as origens permitidas em `server/metrics/handler.mjs`. Em produção, o teste sintético recebeu `201` no cadastro e `200` ao gravar três eventos. O reenvio idêntico recebeu `200` e a leitura privada mostrou três tentativas únicas. Os resultados calculados pelo servidor coincidiram com o motor local, com **92/100** no Cerrado, **51/100** em Bennu e **92/100** no Webb. A rota administrativa retornou `401` sem sessão. O teste verificou a API com resolução de DNS específica para o edge, preservando a validação de TLS. [Recibo da API em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-production-metrics.json)
 
 Os cookies são restritos ao hostname em que foram emitidos e a `/api/metrics`, com `HttpOnly`, `Secure` e `SameSite=Strict`. Um cookie criado em `projeto-ipe.vercel.app` não aparece automaticamente no domínio novo. O armazenamento privado é o mesmo; mudar o hostname não copia a sessão do navegador e não deve motivar a exposição de tokens na URL. O painel exige nova autenticação no novo endereço.
 
@@ -7516,18 +7530,18 @@ Os cookies são restritos ao hostname em que foram emitidos e a `/api/metrics`, 
 
 | Pergunta | Sistema responsável |
 | --- | --- |
-| Quantas visitas chegaram e como a página carregou no celular? | Cloudflare Web Analytics, após ativação e validação |
+| Quantas visitas chegaram e como a página carregou? | Cloudflare Web Analytics, com uma visita técnica observada na validação |
 | Qual decisão o jogador tomou, qual tentativa terminou e qual foi a pontuação? | API própria e Vercel Blob privado já existentes |
 | Quem é o participante e qual seu e-mail? | Somente o armazenamento e painel privados |
 | Houve aprendizado comprovado em pessoas? | Avaliação e testes com participantes; não inferir de visitas nem de testes automatizados |
 
 Não enviar nome, e-mail, respostas abertas, hipóteses, identificadores de sessão, cookies nem chave administrativa ao beacon. Não colocar esses valores em URL, título da página ou eventos públicos. Não instrumentar o painel administrativo com analytics externo. Cloudflare Web Analytics não substitui a persistência dos eventos do jogo nem garante que todos os visitantes serão contados: bloqueadores, ausência de rede e políticas do navegador podem impedir o beacon.
 
-## Ativação de Web Analytics
+## Web Analytics em produção
 
-O site `nasa-missaoipe.alexandrebelo.com` já foi criado em **Web Analytics** e o token público do beacon foi obtido pelo responsável da integração. O painel autenticado da equipe é [Cloudflare Web Analytics — MISSÃO IPÊ](https://dash.cloudflare.com/d64af6bb2dd0607566aed9f467eea464/web-analytics/overview?siteTag~in=c9b4c50132194ef29aa7e269794dee86&excludeBots=Yes). A chave desse snippet é pública e específica do site; ela não é um API token de gerenciamento. **O cadastro do site não confirma coleta: a recepção de dados ainda precisa ser verificada depois da publicação R23.** O procedimento oficial permite instalação manual em sites sem proxy Cloudflare. [Documentação de configuração](https://developers.cloudflare.com/web-analytics/get-started/).
+O script `beacon.min.js` carregou no navegador. O painel registrou **uma visita técnica** no hostname oficial, rota `/`, país Brasil e navegador Chrome desktop. O registro apareceu com **Excluir bots** desligado. O teste comprova recepção de uma amostra de QA; avaliação de aprendizagem requer observação com jogadores. [Painel autenticado de visitas](https://dash.cloudflare.com/d64af6bb2dd0607566aed9f467eea464/web-analytics/overview/visits?siteTag~in=c9b4c50132194ef29aa7e269794dee86)
 
-A integração deve usar o snippet real emitido pelo painel, sem um token inventado, e carregar somente nas páginas públicas do hostname configurado. Evitar injeção automática e manual simultâneas, pois duplicariam a coleta. Para a política de conteúdo atual, autorizar de forma específica:
+A instalação manual usa o identificador público de site emitido pela Cloudflare. O carregador roda em páginas públicas de nível superior do hostname oficial. A CSP libera as origens necessárias para o script e a coleta. [Configuração oficial](https://developers.cloudflare.com/web-analytics/get-started/)
 
 ```text
 script-src: adicionar https://static.cloudflareinsights.com
@@ -7540,11 +7554,11 @@ O rastreamento automático de navegação em SPA pode ser desativado com a opç�
 
 ## Verificação de aceitação e divisão dos dois devs
 
-**Dev de aplicação:** adicionar a origem autorizada e o teste; integrar o snippet público nas páginas públicas quando disponível; manter os dados pessoais na API própria; validar cadastro, três missões, pontuação, reenvio após reconexão e painel privado no mesmo hostname. O carregamento do analytics não pode bloquear Play nem o salvamento.
+**Dev de aplicação.** Mantenha o cadastro, as tentativas e as respostas na API privada. Ao mudar origens ou contratos, refaça o teste de cadastro sintético, reenvio, recálculo e painel. Teste o jogo com o beacon bloqueado.
 
-**Dev de publicação e qualidade:** preservar o CNAME já criado; conferir o destino DNS público e a configuração da Vercel; confirmar HTTPS estável sem ignorar erros de certificado; testar as rotas acima no desktop e em viewport móvel; confirmar que `/api/metrics?action=admin` responde `401` sem autenticação; registrar requisição do beacon e depois presença dos dados no painel Cloudflare.
+**Dev de publicação e qualidade.** Confira DNS, TLS e o commit da implantação. Verifique o beacon nas rotas públicas, as exclusões das rotas privadas e a entrada no painel de visitas. Registre as visitas de QA como tráfego técnico.
 
-O domínio novo já tem DNS, certificado e rotas observados. Manter `https://projeto-ipe.vercel.app` como alternativa enquanto caches DNS e conexões se estabilizam. Não confundir disponibilidade das páginas com a publicação R23, a gravação privada no novo hostname ou a recepção do beacon: esses itens precisam de verificações após publicar. Atualizar este documento e o recibo com a evidência final, incluindo eventuais limitações de rede local.
+O endereço `https://projeto-ipe.vercel.app` segue disponível para acesso ao projeto. Os recibos registram o alcance da sessão de teste, incluindo oscilações de conexão durante a verificação inicial de infraestrutura. [Handoff R23](61-BANCADA-COMPARACAO-E-LIBRAS-R23.md)
 
 
 ---

@@ -71,9 +71,30 @@
     "console": "No application errors observed; dependency THREE.Clock deprecation and VLibras storage sandbox warnings observed"
   },
   "pending": [
-    "Production publication and metrics readback",
-    "VLibras avatar end-to-end confirmation",
     "Rive authoring/export: no active file in desktop editor",
-    "Physical mobile and human learning validation"
-  ]
+    "Physical mobile, human learning and Libras user validation"
+  ],
+  "production": {
+    "gitSha": "80ce5ade8e566e3e3a6ff03ac998fff2814ac94f",
+    "mainDeployment": "dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ",
+    "lpDeployment": "dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5",
+    "bothReady": true,
+    "domain": "https://nasa-missaoipe.alexandrebelo.com",
+    "metricsReceipt": "r23-production-metrics.json",
+    "libras": {
+      "avatarVisuallySigning": true,
+      "automaticContextTransition": "Portal to game, Name to Email",
+      "personalFieldValueAbsentFromTranslatedText": true,
+      "sandbox": "allow-scripts",
+      "warnings": "Official optional PostHog import blocked by CSP; storage unavailable in isolated frame. Avatar worked despite those warnings."
+    },
+    "cloudflare": {
+      "scriptLoaded": true,
+      "dashboardReceivedVisits": 1,
+      "path": "/",
+      "trafficScope": "Technical QA visit, not a human learner or measured learning outcome",
+      "dashboardBotsExcluded": false,
+      "loaderSha256": "7c86a24a26056a5f32bbd29543874ff3b2073bc358b4a739abbd4bf062d191b2"
+    }
+  }
 }

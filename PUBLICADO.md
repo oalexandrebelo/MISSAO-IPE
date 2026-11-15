@@ -2,11 +2,19 @@
 
 ## R23 — bancada de equipamentos, comparação e Libras
 
-**Validação local · publicação pendente.** A bancada liga as escolhas ao equipamento da nave e aos deltas de recursos. A comparação A/B permite alternar tentativas no mesmo T+ e investigar o primeiro evento diferente. Os callouts usam os valores do catálogo e Libras acompanha o contexto autorizado após ativação. A autoria Rive aguarda um arquivo ativo no editor.
+**Publicada em 15/11/2026.** Commit `80ce5ade8e566e3e3a6ff03ac998fff2814ac94f`. Principal `dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ` e LP `dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5`, ambos **READY**. A bancada liga as escolhas ao equipamento e aos recursos. A comparação A/B usa o mesmo T+ e permite investigar o primeiro evento diferente. Os callouts usam valores do catálogo.
 
 **Verificação local do candidato.** `npm run build:release` passou com o ajuste do cabeçalho em telas estreitas; o build da LP também passou. O laboratório passou em **164/164** testes de domínio e **83/83** de interface. A suíte de métricas passou em **26/26**. Em navegador com GPU e viewports desktop e móvel, o Cerrado entregou **6/6** com bateria de 24 Wh e contatos longos, Bennu passou de **2/6 para 6/6** ao ampliar os contatos e Webb passou de **0/6 para 6/6** ao trocar a câmera pelo espectrômetro. O reteste em 320 px confirmou ausência de overflow horizontal em Cerrado e Webb (largura do documento igual à viewport).
 
-**Domínio próprio.** O DNS foi configurado e as rotas principais responderam via HTTPS. A publicação R23 e a recepção do beacon Cloudflare aguardam confirmação. [Portal](https://nasa-missaoipe.alexandrebelo.com/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+**Domínio e Cloudflare.** O domínio oficial serviu o portal e o laboratório por HTTPS. O beacon carregou e o painel Cloudflare registrou **uma visita técnica** em `/`, Brasil, Chrome desktop, com o filtro de exclusão de bots desligado. [Portal](https://nasa-missaoipe.alexandrebelo.com/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+
+**Libras em produção.** O avatar sinalizou no portal, continuou ativo ao entrar no laboratório e acompanhou **Nome → E-mail**. O trecho continha apenas a orientação da etapa. O console registrou avisos de armazenamento no iframe isolado e bloqueio de uma importação opcional do PostHog pela CSP. Na inspeção do laboratório também foi observado o aviso de depreciação de `THREE.Clock`. [Recibo funcional R23](evidence/r23-functional-qa.json)
+
+**Métricas privadas em produção.** Cadastro sintético `201`, gravação e reenvio idêntico `200`, três tentativas únicas na leitura autenticada. O servidor recalculou **92/100** no Cerrado, **51/100** em Bennu e **92/100** no Webb e a rota administrativa manteve `401` sem sessão. [Recibo da API em produção](evidence/r23-production-metrics.json)
+
+**LP e fechamento documental.** Sete verificações HTTP da LP passaram, incluindo a 404 personalizada e a igualdade dos assets de Libras. Esta revisão reúne os recibos e direciona os links da LP e da central da equipe ao domínio oficial. [Recibo da LP](evidence/r23-lp-production.json)
+
+A autoria Rive aguarda um arquivo ativo no editor. O aceite em celular físico, a qualidade linguística da Libras e a aprendizagem humana dependem de validação com usuários.
 
 [Handoff dos dois devs](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Recibo DNS/TLS](evidence/domain-cloudflare-r23.json)
 

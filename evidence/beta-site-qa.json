@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T15:15:21.699Z",
-  "finishedAt": "2026-11-15T15:15:23.864Z",
+  "startedAt": "2026-11-15T15:26:26.064Z",
+  "finishedAt": "2026-11-15T15:26:28.653Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "fbcd3609557ccba210cd3805ae4cdff10f8476f5a2bff2247b88454ee15cf581"
+        "sha256": "091ee3263994cec74982fee363306c17c935d6acaeac4d5692425d0b2f526980"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 416,
       "manifestedFiles": 415,
-      "bytes": 31851581,
+      "bytes": 31858484,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -104,7 +104,7 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 2925,
+      "count": 2928,
       "uniqueTargets": 308,
       "entries": [
         {
@@ -4755,6 +4755,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-publicado-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-61-bancada-comparacao-e-libras-r23-md"
         },
         {
@@ -5834,6 +5841,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-54-metricas-e-handoff-r21-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-61-bancada-comparacao-e-libras-r23-md"
         },
         {
           "source": "context/research-library.html",
@@ -13350,6 +13364,12 @@
         },
         {
           "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.html",
+          "target": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
+          "requestPath": "/docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.html",
           "target": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
           "requestPath": "/docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
           "kind": "navigation"
@@ -20717,21 +20737,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 63960,
-        "sha256": "42d2556435aa0be7e1d8980dff059d4a0628a0d320dea016a1eec41e6f35f99f",
+        "sha256": "be63da0d1ef8ed6bdeba6b3a5471be80f711ea013de14ebefcbdf59a1bc4fcbe",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2369941,
-        "sha256": "c196a466c9f483898c2c7cf49faa8f431216581184233bbf26a5f997786302f7",
+        "bytes": 2372699,
+        "sha256": "6175c45c4ea8e0ee1a768fc946974311094835b0d928c9d31c659c7e297a002d",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1902586,
-        "sha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366",
+        "bytes": 1904536,
+        "sha256": "c58060ba0432f734023acd0ff63952be762c63bd74c914b94fab781e1dde4c38",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -21451,29 +21471,29 @@
       {
         "path": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html",
         "status": 200,
-        "bytes": 17634,
-        "sha256": "0377f4aa4defc575bc630c8a4d82e877c5c16c31a513312ac2dc7b448af94002",
+        "bytes": 19021,
+        "sha256": "d0d6f3e703c5697c2bde08a3864e1fc9552e3c80096f438db9c71f76480d71f8",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
         "status": 200,
-        "bytes": 13498,
-        "sha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+        "bytes": 14606,
+        "sha256": "2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/62-DOMINIO-E-CLOUDFLARE-R23.html",
         "status": 200,
-        "bytes": 12038,
-        "sha256": "1bc5d25decb39b984c72c59fe4624619faa5e78ee77cc433c6caf71972045558",
+        "bytes": 11613,
+        "sha256": "70a007483a88b3e6376e1a2ea567d56a56c9a31ae0d7f7f771ca864261efdad7",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
         "status": 200,
-        "bytes": 8514,
-        "sha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+        "bytes": 7935,
+        "sha256": "705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -21563,8 +21583,8 @@
       {
         "path": "equipe/index.html",
         "status": 200,
-        "bytes": 50801,
-        "sha256": "2d7cec29cf96269b6fdbd6a919d12521c664fd48463d28ac732966f7c0ec0adc",
+        "bytes": 51505,
+        "sha256": "9237570bdb908aa0fc7830d4a31c321bff5f244a48cbdbd3983c320f82d13b23",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -22859,7 +22879,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 196852,
-        "sha256": "fbcd3609557ccba210cd3805ae4cdff10f8476f5a2bff2247b88454ee15cf581",
+        "sha256": "091ee3263994cec74982fee363306c17c935d6acaeac4d5692425d0b2f526980",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -23139,92 +23159,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 10.11
+      "durationMs": 11.408
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.24
+      "durationMs": 0.289
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 60.205
+      "durationMs": 69.753
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 0.84
+      "durationMs": 1.705
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 60.476
+      "durationMs": 77.545
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 986.775
+      "durationMs": 1149.422
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.484
+      "durationMs": 0.452
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 398.923
+      "durationMs": 545.54
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 77.469
+      "durationMs": 81.466
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 34.332
+      "durationMs": 39.15
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.272
+      "durationMs": 2.397
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 82.073
+      "durationMs": 91.254
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 11.143
+      "durationMs": 5.861
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 59.224
+      "durationMs": 62.202
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 191.695
+      "durationMs": 237.398
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 94.766
+      "durationMs": 101.705
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 0.975
+      "durationMs": 2.758
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 51.822
+      "durationMs": 62.9
     }
   ]
 }

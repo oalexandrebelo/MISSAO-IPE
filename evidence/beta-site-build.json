@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T15:14:54.623Z",
+  "generatedAt": "2026-11-15T15:26:25.189Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 416,
-  "bytes": 31851581,
+  "bytes": 31858484,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 196852,
-    "sha256": "fbcd3609557ccba210cd3805ae4cdff10f8476f5a2bff2247b88454ee15cf581"
+    "sha256": "091ee3263994cec74982fee363306c17c935d6acaeac4d5692425d0b2f526980"
   },
   "entries": [
     {
@@ -813,30 +813,30 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 63960,
-      "sha256": "42d2556435aa0be7e1d8980dff059d4a0628a0d320dea016a1eec41e6f35f99f",
+      "sha256": "be63da0d1ef8ed6bdeba6b3a5471be80f711ea013de14ebefcbdf59a1bc4fcbe",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "42d2556435aa0be7e1d8980dff059d4a0628a0d320dea016a1eec41e6f35f99f",
+      "sourceSha256": "be63da0d1ef8ed6bdeba6b3a5471be80f711ea013de14ebefcbdf59a1bc4fcbe",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2369941,
-      "sha256": "c196a466c9f483898c2c7cf49faa8f431216581184233bbf26a5f997786302f7",
+      "bytes": 2372699,
+      "sha256": "6175c45c4ea8e0ee1a768fc946974311094835b0d928c9d31c659c7e297a002d",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "029818c4815c1d90f93994e19fbe10d5e49f22278d9011e8f84c56f5d8da881c",
+      "sourceSha256": "2117fd53cdc29b758c6e1f624cd54aafa7e16734101d9198fa1e2115ffdf6f28",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1902586,
-      "sha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366",
+      "bytes": 1904536,
+      "sha256": "c58060ba0432f734023acd0ff63952be762c63bd74c914b94fab781e1dde4c38",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366",
+      "sourceSha256": "c58060ba0432f734023acd0ff63952be762c63bd74c914b94fab781e1dde4c38",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1858,42 +1858,42 @@
     },
     {
       "path": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html",
-      "bytes": 17634,
-      "sha256": "0377f4aa4defc575bc630c8a4d82e877c5c16c31a513312ac2dc7b448af94002",
+      "bytes": 19021,
+      "sha256": "d0d6f3e703c5697c2bde08a3864e1fc9552e3c80096f438db9c71f76480d71f8",
       "category": "rendered-public-document",
       "source": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
-      "sourceSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "sourceSha256": "2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
-      "bytes": 13498,
-      "sha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "bytes": 14606,
+      "sha256": "2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70",
       "category": "public-document",
       "source": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
-      "sourceSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "sourceSha256": "2abb99563978e97863816cb42ca2db2bbf6aa0856bec7d2f47ed290f3ef77a70",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "docs/62-DOMINIO-E-CLOUDFLARE-R23.html",
-      "bytes": 12038,
-      "sha256": "1bc5d25decb39b984c72c59fe4624619faa5e78ee77cc433c6caf71972045558",
+      "bytes": 11613,
+      "sha256": "70a007483a88b3e6376e1a2ea567d56a56c9a31ae0d7f7f771ca864261efdad7",
       "category": "rendered-public-document",
       "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
-      "sourceSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "sourceSha256": "705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
-      "bytes": 8514,
-      "sha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "bytes": 7935,
+      "sha256": "705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9",
       "category": "public-document",
       "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
-      "sourceSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "sourceSha256": "705697e44f8bc48478b9fdfdd1c0c6f5483b2a9199843670da9c872b6fee5ff9",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2017,11 +2017,11 @@
     },
     {
       "path": "equipe/index.html",
-      "bytes": 50801,
-      "sha256": "2d7cec29cf96269b6fdbd6a919d12521c664fd48463d28ac732966f7c0ec0adc",
+      "bytes": 51505,
+      "sha256": "9237570bdb908aa0fc7830d4a31c321bff5f244a48cbdbd3983c320f82d13b23",
       "category": "team-access-hub",
       "source": "equipe/index.html",
-      "sourceSha256": "c0e6f0df3fc9c9f3f40a228f2d14cb22b811cd1e77cdfde9d4e3c51f1964bd11",
+      "sourceSha256": "2a99d3450ad4bbac7cd2968717dedd80f3130fb58deb30ca42c510b5909ced02",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "public"
     },

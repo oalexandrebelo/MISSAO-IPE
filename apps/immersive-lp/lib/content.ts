@@ -1,10 +1,10 @@
 export const LINKS = {
-  game: 'https://projeto-ipe.vercel.app/lab/index.html',
-  campaign: 'https://projeto-ipe.vercel.app/campanha/index.html',
-  research: 'https://projeto-ipe.vercel.app/context/research-library.html',
-  roadmap: 'https://projeto-ipe.vercel.app/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html',
+  game: 'https://nasa-missaoipe.alexandrebelo.com/lab/index.html',
+  campaign: 'https://nasa-missaoipe.alexandrebelo.com/campanha/index.html',
+  research: 'https://nasa-missaoipe.alexandrebelo.com/context/research-library.html',
+  roadmap: 'https://nasa-missaoipe.alexandrebelo.com/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html',
   github: 'https://github.com/oalexandrebelo/MISSAO-IPE',
-  pitch: 'https://projeto-ipe.vercel.app/presentation/pitch/index.html',
+  pitch: 'https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html',
 } as const;
 
 export const CHAPTERS = [
