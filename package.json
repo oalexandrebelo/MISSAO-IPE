@@ -1,11 +1,11 @@
 {
   "name": "projeto-ipe",
-  "version": "0.11.0-beta.1",
+  "version": "0.12.0-beta.1",
   "private": true,
   "type": "module",
-  "description": "Missão Ipê BETA: jogo, apresentação, contexto integral, cronograma interativo e arquitetura rastreável.",
+  "description": "Miss\u00e3o Ip\u00ea BETA: jogo, apresenta\u00e7\u00e3o, contexto integral, cronograma interativo e arquitetura rastre\u00e1vel.",
   "scripts": {
-    "build:release": "npm --prefix experiments/mission-design-lab run build && npm --prefix experiments/four-level-campaign run verify && node scripts/build-beta-site.mjs && node scripts/prepare-vercel-static.mjs",
+    "build:release": "npm --prefix experiments/mission-design-lab run build && npm --prefix experiments/four-level-campaign run verify && node scripts/build-metrics-server.mjs && node scripts/build-beta-site.mjs && node scripts/prepare-vercel-static.mjs",
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "test": "node --experimental-strip-types --test tests/*.test.mts",
@@ -22,7 +22,8 @@
     "prepare:vercel": "node scripts/prepare-vercel-static.mjs",
     "build:context": "node scripts/build-context-hub.mjs",
     "build:research": "node scripts/build-research-library.mjs",
-    "test:context": "node scripts/test-context-hub.mjs"
+    "test:context": "node scripts/test-context-hub.mjs",
+    "test:metrics": "node --experimental-strip-types --test tests/metrics-*.test.mjs"
   },
   "engines": {
     "node": ">=24.0.0"

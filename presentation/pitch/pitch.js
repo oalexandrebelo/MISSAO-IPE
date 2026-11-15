@@ -14,6 +14,7 @@ const motionToggle = document.querySelector('#motion-toggle');
 const fullscreenToggle = document.querySelector('#fullscreen-toggle');
 const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 const clockLimit = 180_000;
+const legacyHashes = new Map([['#cerrado', '#problema'], ['#bennu', '#solucao'], ['#webb', '#solucao']]);
 
 let currentScene = 0;
 let requestedScene = 0;
@@ -29,8 +30,8 @@ const timerValue = document.querySelector('#timer-value');
 const timerSymbol = document.querySelector('#timer-symbol');
 
 function sceneFromHash() {
-  const index = scenes.findIndex(scene => '#' + scene.id === location.hash);
-  return Math.max(0, index);
+  const hash = legacyHashes.get(location.hash) ?? location.hash;
+  return scenes.findIndex(scene => '#' + scene.id === hash);
 }
 
 function displayScene(index) {
@@ -105,7 +106,7 @@ async function navigate(index, { instant = false } = {}) {
 previous.addEventListener('click', () => navigate(requestedScene - 1));
 next.addEventListener('click', () => navigate(requestedScene + 1));
 window.addEventListener('hashchange', () => {
-  const index = scenes.findIndex(scene => '#' + scene.id === location.hash);
+  const index = sceneFromHash();
   if (index >= 0) navigate(index, { instant: true });
 });
 
@@ -185,10 +186,12 @@ function paintClock() {
   const minutes = Math.floor(seconds / 60);
   const secondsWithinMinute = seconds % 60;
   const running = deadline !== null;
-  timerValue.textContent = String(minutes).padStart(2, '0') + ':' + String(secondsWithinMinute).padStart(2, '0');
+  const displayTime = String(minutes).padStart(2, '0') + ':' + String(secondsWithinMinute).padStart(2, '0');
+  const action = running ? 'Pausar relógio do pitch' : 'Iniciar relógio do pitch';
+  timerValue.textContent = displayTime;
   timerValue.dateTime = 'PT' + seconds + 'S';
   timerToggle.setAttribute('aria-pressed', String(running));
-  timerToggle.setAttribute('aria-label', running ? 'Pausar relógio do pitch' : 'Iniciar relógio do pitch');
+  timerToggle.setAttribute('aria-label', displayTime + ' — ' + action);
   timerSymbol.textContent = running ? 'Ⅱ' : '▶';
 }
 
@@ -205,7 +208,7 @@ function startClock() {
   if (remaining === 0) remaining = clockLimit;
   deadline = performance.now() + remaining;
   hasStarted = true;
-  startPitch.textContent = 'Avançar para o Cerrado →';
+  startPitch.textContent = 'Avançar para o problema →';
   timerInterval = setInterval(() => {
     remaining = Math.max(0, deadline - performance.now());
     if (remaining === 0) {
@@ -241,6 +244,7 @@ const trialCount = document.querySelector('#trial-count');
 const trialStart = document.querySelector('#trial-start');
 const trialWindow = document.querySelector('#trial-window');
 const trialCost = document.querySelector('#trial-cost');
+const trialCaptures = Array.from(experiment.querySelectorAll('[data-capture]'));
 const conditionalRecords = Array.from(experiment.querySelectorAll('.conditional-record'));
 
 trialButtons.forEach(button => {
@@ -254,12 +258,9 @@ trialButtons.forEach(button => {
     trialStart.textContent = extended ? 'T+85 min' : 'T+90 min';
     trialWindow.textContent = extended ? '500 s' : '120 s';
     trialCost.textContent = extended ? '12 créditos' : '6 créditos';
+    trialCaptures.forEach(capture => { capture.hidden = capture.dataset.capture !== choice; });
 
     experiment.getAnimations?.({ subtree: true }).forEach(animation => animation.cancel());
-    const signal = experiment.querySelector('.signal');
-    if (!reduceMotion && signal.animate) {
-      signal.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(97%)' }], { duration: extended ? 500 : 280 });
-    }
     conditionalRecords.forEach((record, i) => {
       record.querySelector('strong').hidden = !extended;
       record.querySelector('.not-received').hidden = extended;
@@ -280,6 +281,7 @@ chooseRole(roleButtons[0]);
 if (location.protocol === 'file:') {
   document.querySelectorAll('a[data-online]').forEach(link => { link.href = link.dataset.online; });
 }
-requestedScene = sceneFromHash();
+requestedScene = Math.max(0, sceneFromHash());
 displayScene(requestedScene);
+paintClock();
 document.documentElement.classList.add('pitch-ready');

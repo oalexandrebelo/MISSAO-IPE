@@ -14,19 +14,22 @@ function open(hash = '') {
   return dom;
 }
 
-test('pitch opens a shared scene and skip-to-content preserves it', () => {
+test('pitch has six timed scenes and resolves current and shared scene links', () => {
   const dom = open('#webb');
   try {
     const { window } = dom;
     const document = window.document;
-    assert.equal(document.querySelector('.scene:not([hidden])').id, 'webb');
+    const scenes = [...document.querySelectorAll('.scene')];
+    assert.deepEqual(scenes.map(scene => Number(scene.dataset.duration)), [20, 30, 40, 50, 25, 15]);
+    assert.deepEqual(scenes.map(scene => scene.id), [...document.querySelectorAll('[data-note]')].map(note => note.dataset.note));
+    assert.equal(document.querySelector('.scene:not([hidden])').id, 'solucao');
     window.location.hash = document.querySelector('.skip-link').hash;
     window.dispatchEvent(new window.HashChangeEvent('hashchange'));
-    assert.equal(document.querySelector('.scene:not([hidden])').id, 'webb');
-    assert.equal(document.querySelector('#scene-position').textContent, '4 / 7');
-    window.location.hash = '#bennu';
+    assert.equal(document.querySelector('.scene:not([hidden])').id, 'solucao');
+    assert.equal(document.querySelector('#scene-position').textContent, '3 / 6');
+    window.location.hash = '#problema';
     window.dispatchEvent(new window.HashChangeEvent('hashchange'));
-    assert.equal(document.querySelector('.scene:not([hidden])').id, 'bennu');
+    assert.equal(document.querySelector('.scene:not([hidden])').id, 'problema');
   } finally { dom.window.close(); }
 });
 

@@ -35,9 +35,9 @@ function isEntry(value: unknown): value is LearningEntry {
     && (value.attemptId === undefined || typeof value.attemptId === 'string')
     && (value.prediction === undefined || PREDICTIONS.some((item) => item.id === value.prediction));
 }
-export function readJournal(): LearningEntry[] {
+export function readJournal(key = JOURNAL_KEY): LearningEntry[] {
   try {
-    const text = localStorage.getItem(JOURNAL_KEY);
+    const text = localStorage.getItem(key);
     if (!text || text.length > 2_000_000) return [];
     const value: unknown = JSON.parse(text);
     return Array.isArray(value) && value.every(isEntry) ? value : [];

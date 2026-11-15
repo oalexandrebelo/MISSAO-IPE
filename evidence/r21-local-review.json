@@ -1,0 +1,62 @@
+{
+  "verifiedAt": "2026-11-15T11:46:43.669769+00:00",
+  "scope": "Local integration, synthetic player only",
+  "browser": {
+    "threeOwnAttempts": [
+      "Cerrado: 6/6 valid, success",
+      "Bennu default: 2/6 valid, failure",
+      "Webb amplified energy/contacts with compact launcher: 6/6 valid, incompatible mass/budget"
+    ],
+    "eventsAcknowledged": 8,
+    "pending": 0,
+    "rejected": 0,
+    "closedQuestionsCorrect": "2/2",
+    "consoleErrors": 0,
+    "admin": {
+      "anonymous": "login required",
+      "protectedRead": "1 synthetic participation, 3 attempts, 8 events",
+      "emailHiddenByDefault": true,
+      "logout": "returned to login"
+    },
+    "fixesFound": [
+      "Mission filter had invalid option markup; repaired and HTML DOM regression added",
+      "Failure diagnostics incorrectly repeated positive requirement labels; repaired with measured values and regression",
+      "Admin logout now clears aggregate hidden content as well as personal rows"
+    ]
+  },
+  "limits": [
+    "This local QA uses in-memory storage. Production Blob and API require a separate deployment receipt.",
+    "No human learning study or physical mobile-device performance acceptance.",
+    "Earlier intermittent 3D view report did not reproduce in this pass and has no confirmed cause."
+  ],
+  "finalChecksAt": "2026-11-15T13:08:35.299Z",
+  "checks": {
+    "labDomain": 164,
+    "labInterface": 67,
+    "metrics": 25,
+    "pitch": 2,
+    "libras": 2,
+    "betaDistribution": 18,
+    "context": 24,
+    "legacyPresentation": 25
+  },
+  "onboarding": {
+    "sequence": [
+      "name",
+      "email",
+      "mission",
+      "play"
+    ],
+    "rootBrowser": "Local IAB: 320px without horizontal overflow, four steps, Bennu opened after Play, guide moved away from form",
+    "nativeFullscreen": "Delegated Chrome local test: Play, exit, reentry and logout passed",
+    "personalData": "Synthetic local fixture only; registration deferred until Play",
+    "scope": "Cerrado, Bennu and Webb selection tested in the interface suite"
+  },
+  "accessibility": {
+    "structuralPages": 81,
+    "automatedSampleUrls": 18,
+    "manualScope": "Local keyboard flows, focus return and 320px layout; official avatar signed a public guide phrase",
+    "remaining": "Human screen-reader and Libras review; no full WCAG certification"
+  },
+  "serverPackaging": "Generated ESM runtime booted in isolation; no unbundled TypeScript imports or package dependencies in function"
+}

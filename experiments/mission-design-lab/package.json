@@ -1,9 +1,9 @@
 {
   "name": "missao-ipe-mission-lab",
-  "version": "0.11.0-beta.1",
+  "version": "0.12.0-beta.1",
   "private": true,
   "type": "module",
-  "description": "Jogo educacional de engenharia de missões espaciais com dados históricos NASA, laboratório de física e hangar R3F.",
+  "description": "Jogo educacional de engenharia de miss\u00f5es espaciais com dados hist\u00f3ricos NASA, laborat\u00f3rio de f\u00edsica e hangar R3F.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "node scripts/sync-science-records.mjs && npm run build:research && tsc --noEmit && vite build",

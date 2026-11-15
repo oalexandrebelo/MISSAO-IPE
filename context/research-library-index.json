@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T11:10:08.544Z",
+  "generatedAt": "2026-11-15T13:07:58.100Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 114,
+  "documentCount": 119,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -40,12 +40,12 @@
     {
       "source": "README.md",
       "id": "doc-readme-md",
-      "title": "MISSÃO IPÊ — Ciência que chega",
+      "title": "MISSÃO IPÊ · R21 / Beta 0.12",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 14182,
-      "originalSha256": "eb9d5f0fb7b814c9c4b04d91cc146649e32cf7df2edfbe127886782aff0e1bbf",
-      "projectedSha256": "eb9d5f0fb7b814c9c4b04d91cc146649e32cf7df2edfbe127886782aff0e1bbf",
+      "originalBytes": 15274,
+      "originalSha256": "1eed3d4119f2e8ae4314635600483d2074cdc8a0554093490bf84d592dfe2c0e",
+      "projectedSha256": "1eed3d4119f2e8ae4314635600483d2074cdc8a0554093490bf84d592dfe2c0e",
       "redactions": 0
     },
     {
@@ -629,6 +629,61 @@
       "originalBytes": 11089,
       "originalSha256": "8342e86dc299ba93c2e460c67eec27e8bcd7be09370d0b6c695a151594e86043",
       "projectedSha256": "8342e86dc299ba93c2e460c67eec27e8bcd7be09370d0b6c695a151594e86043",
+      "redactions": 0
+    },
+    {
+      "source": "docs/53-PITCH-JURADOS-E-FALA-R21.md",
+      "id": "doc-docs-53-pitch-jurados-e-fala-r21-md",
+      "title": "MISSÃO IPÊ · Pitch para jurados e fala de Alexandre Belo",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 10835,
+      "originalSha256": "2a51d0bef6f6ea248b90a769eace7710e0474f7ace2faf6146eb3bcadc22619a",
+      "projectedSha256": "2a51d0bef6f6ea248b90a769eace7710e0474f7ace2faf6146eb3bcadc22619a",
+      "redactions": 0
+    },
+    {
+      "source": "docs/54-METRICAS-E-HANDOFF-R21.md",
+      "id": "doc-docs-54-metricas-e-handoff-r21-md",
+      "title": "R21 · métricas, pitch e continuidade dos dois devs",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 16089,
+      "originalSha256": "a52c0fa13484e0ecbc806df0bec670abcfa4d40b107fb1d5faf6cc1f21cc4bcd",
+      "projectedSha256": "a52c0fa13484e0ecbc806df0bec670abcfa4d40b107fb1d5faf6cc1f21cc4bcd",
+      "redactions": 0
+    },
+    {
+      "source": "docs/55-PAINEL-E-ACESSOS-R21.md",
+      "id": "doc-docs-55-painel-e-acessos-r21-md",
+      "title": "MISSÃO IPÊ · painel e acessos da equipe R21",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 3554,
+      "originalSha256": "0de41094770f0d0a8ec9f68a091772d7eba5a62bec0ebfa686c5582b3e3bcf55",
+      "projectedSha256": "0de41094770f0d0a8ec9f68a091772d7eba5a62bec0ebfa686c5582b3e3bcf55",
+      "redactions": 0
+    },
+    {
+      "source": "docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md",
+      "id": "doc-docs-56-acessibilidade-e-libras-r21-md",
+      "title": "Acessibilidade e Libras na MISSÃO IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 4684,
+      "originalSha256": "bc8d327cdff484e56a70df1cc038a5c6ef1d165e617a34e8336015ccb3f8a70c",
+      "projectedSha256": "bc8d327cdff484e56a70df1cc038a5c6ef1d165e617a34e8336015ccb3f8a70c",
+      "redactions": 0
+    },
+    {
+      "source": "docs/57-KIT-PRE-BANCA-R21.md",
+      "id": "doc-docs-57-kit-pre-banca-r21-md",
+      "title": "MISSÃO IPÊ · kit da pré-banca local",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 7888,
+      "originalSha256": "84e42892092faffc3fe9fd45df5e0138cabce24deb4e273690f1c4a35a04f054",
+      "projectedSha256": "84e42892092faffc3fe9fd45df5e0138cabce24deb4e273690f1c4a35a04f054",
       "redactions": 0
     },
     {
@@ -1262,13 +1317,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2244544,
-      "sha256": "4917f5da947059a962f7a1664296b6993cdf46f70ade5f4385947911293286d2"
+      "bytes": 2302371,
+      "sha256": "1fabc1c8457335afd048baa0169cbb9c395fabd6b5fb2df42d4f5d64626dfa9f"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1805417,
-      "sha256": "dba2d48e28a3480f17bdc6665fbc3e2c146ab07dd16c9b90b96b8d01ca1ec71f"
+      "bytes": 1850680,
+      "sha256": "44450d6b9a0279a6228aa540c75fdb068569ad8ec222bfb55f903f84132f5e1b"
     }
   ]
 }

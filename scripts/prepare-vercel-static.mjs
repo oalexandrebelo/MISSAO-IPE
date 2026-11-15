@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir, readdir, lstat } from 'node:fs/promises';
 import { resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { librasGuide } from './public-libras.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const site = resolve(root, 'site');
@@ -17,7 +18,7 @@ async function walk(folder) {
 }
 await walk(site);
 files.sort();
-const required = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
+const required = ['equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
 for (const file of required) await readFile(resolve(site, file));
 const inlineHashes = new Set();
 const portalHashes = new Set();
@@ -34,10 +35,11 @@ for (const path of files.filter(f => f.endsWith('.html'))) {
   }
 }
 const portalOrigin = 'https://d2ol7oe51mr4n9.cloudfront.net';
+const guidePattern = librasGuide.replaceAll('.', '\\.');
 const policy = (hashes, externalMedia = false) => [
   "default-src 'self'", `script-src 'self' ${externalMedia ? '' : "'wasm-unsafe-eval' "}${[...hashes].sort().join(' ')}`,
   "script-src-attr 'none'", "style-src 'self' 'unsafe-inline'", `img-src 'self' data: blob:${externalMedia ? ` ${portalOrigin}` : ''}`,
-  "font-src 'self' data:", "connect-src 'self' blob:", "worker-src 'self' blob:",
+  "font-src 'self' data:", "connect-src 'self' blob:", "worker-src 'self' blob:", "frame-src 'self'",
   `media-src 'self' blob:${externalMedia ? ` ${portalOrigin}` : ''}`, "object-src 'none'", "base-uri 'none'",
   "frame-ancestors 'none'", "form-action 'none'"
 ].join('; ');
@@ -58,6 +60,8 @@ const routeConfig = {
     { source: '/architecture', destination: '/architecture/index.html', permanent: false },
     { source: '/arquitetura', destination: '/architecture/index.html', permanent: false },
     { source: '/pitch', destination: '/presentation/pitch/index.html', permanent: false },
+    { source: '/equipe', destination: '/equipe/index.html', permanent: false },
+    { source: '/dashboard', destination: '/dashboard/index.html', permanent: false },
     { source: '/apresentacao', destination: '/presentation/Missao_Ipe_Apresentacao.html', permanent: false },
     { source: '/docs', destination: '/docs/index.html', permanent: false },
     { source: '/documentacao', destination: '/docs/index.html', permanent: false },
@@ -69,17 +73,19 @@ const routeConfig = {
     { source: '/(.*)', headers: [
       { key: 'X-Content-Type-Options', value: 'nosniff' },
       { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-      { key: 'X-Frame-Options', value: 'DENY' },
       { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
       { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }
     ] },
-    // Exclusive matchers avoid combining a restrictive policy with the media exception.
-    { source: '/((?!planet-jumping\\.html$).*)', headers: [ { key: 'Content-Security-Policy', value: csp } ] },
-    { source: '/planet-jumping.html', headers: [ { key: 'Content-Security-Policy', value: portalCsp } ] },
-    { source: '/game/assets/(.*)', headers: [ { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' } ] }
+    // The VLibras guide declares its resource policy in HTML, for both hosts.
+    { source: `/((?!planet-jumping\\.html$|${guidePattern}$).*)`, headers: [{ key: 'X-Frame-Options', value: 'DENY' }, { key: 'Content-Security-Policy', value: csp }] },
+    { source: '/planet-jumping.html', headers: [{ key: 'X-Frame-Options', value: 'DENY' }, { key: 'Content-Security-Policy', value: portalCsp }] },
+    { source: `/${librasGuide}`, headers: [{ key: 'X-Frame-Options', value: 'SAMEORIGIN' }, { key: 'Content-Security-Policy', value: "frame-ancestors 'self'; sandbox allow-scripts" }] },
+    { source: '/game/assets/(.*)', headers: [ { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' } ] },
+    { source: '/api/(.*)', headers: [ { key: 'Cache-Control', value: 'private, no-store, max-age=0' }, { key: 'Vercel-CDN-Cache-Control', value: 'no-store' } ] },
+    { source: '/dashboard/(.*)', headers: [ { key: 'Cache-Control', value: 'private, no-store, max-age=0' }, { key: 'X-Robots-Tag', value: 'noindex, nofollow' } ] }
   ]
 };
-const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund', outputDirectory: 'site' };
+const config = { ...routeConfig, framework: null, buildCommand: 'npm run build:release', installCommand: 'npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund && npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund', outputDirectory: 'site', functions: { 'api/metrics.mjs': { maxDuration: 60 } } };
 await writeFile(resolve(root, 'vercel.json'), JSON.stringify(config, null, 2) + '\n');
 await mkdir(resolve(root, '.vercel'), { recursive: true });
 const staticConfigPath = resolve(root, '.vercel/deploy-config.json');

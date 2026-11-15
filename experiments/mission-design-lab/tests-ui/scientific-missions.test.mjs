@@ -1,3 +1,4 @@
+import { installMetricsApi, TEST_SESSION } from './metrics-api-fixture.mjs';
 import test, { after } from 'node:test';
 import assert from 'node:assert/strict';
 import React from 'react';
@@ -14,6 +15,7 @@ dom.window.HTMLDialogElement.prototype.showModal = function () { this.setAttribu
 dom.window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
 const { render, screen, fireEvent, waitFor, cleanup, act, within } = await import('@testing-library/react');
 const { default: App } = await import('../src/App.tsx');
+const { metricsKey } = await import('../src/metrics/player-metrics.ts');
 const { simulateExpedition, getExpeditionVisualState, EXPEDITIONS } = await import('../src/lab/scientific-expeditions.ts');
 const { DEFAULT_CONFIG } = await import('../src/core/catalog.ts');
 const { simulateMission } = await import('../src/core/engine.ts');
@@ -30,8 +32,10 @@ const click = async target => { await act(async () => fireEvent.click(typeof tar
 const change = async (label, value) => { await act(async () => fireEvent.change(screen.getByLabelText(label, { selector: 'input, select, textarea' }), { target: { value } })); };
 const cleanupView = async () => { await act(async () => cleanup()); };
 async function mount() {
+  installMetricsApi();
   localStorage.clear(); globalThis.indexedDB = new IDBFactory();
   await act(async () => render(React.createElement(App)));
+  await click('Retomar jogo');
   await waitFor(() => assert.match(document.body.textContent, /3D indisponível · equivalente 2D ativo/));
 }
 async function openDesign(id, config = VIABLE[id]) {
@@ -94,6 +98,8 @@ test('both new scientific missions execute viable inputs and reject incompatible
     sub.after(cleanupView); await mount(); await openDesign(id);
     const valid = simulateExpedition(id, VIABLE[id]); assert.equal(valid.outcome, 'success');
     await execute(); assert.equal(currentCount(), '0 / 6'); assertSceneAt(valid, 0);
+    const firstMetrics = JSON.parse(localStorage.getItem(metricsKey(TEST_SESSION.sessionId))).entries.filter(item => item.event.kind === 'attempt');
+    assert.equal(firstMetrics.length, 1); assert.equal(firstMetrics[0].event.mission, id); assert.equal(firstMetrics[0].summary.valid, 6);
     assert.match(document.querySelector('.expedition-replay-help').textContent, /A simulação já terminou/);
     assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
     assert.equal(document.querySelectorAll('.archive-point').length, 0);
@@ -111,12 +117,16 @@ test('both new scientific missions execute viable inputs and reject incompatible
     assert.equal(document.querySelectorAll('.archive-record.is-received').length, 6);
     for (const record of valid.observations) assert.ok(document.querySelector(`[data-record-id="${record.id}"] .archive-value`).textContent.includes(record.value.toLocaleString('pt-BR', { maximumFractionDigits: 5 })));
     assert.match(document.querySelector('.archive-evidence').textContent, /ARQUIVO CIENTÍFICO REAL/);
+    assert.equal(JSON.parse(localStorage.getItem(metricsKey(TEST_SESSION.sessionId))).entries.filter(item => item.event.kind === 'attempt').length, 1, 'replay and evidence inspection do not add attempts');
     await click('Criar uma nova tentativa');
     const wrong = { ...VIABLE[id], launch: 'science', instrument: id === 'bennu' ? 'spectrometer' : 'camera' };
     await change(LABELS.launch, wrong.launch); await change(LABELS.instrument, wrong.instrument);
     const condition = [...document.querySelectorAll('.expedition-constraints li')].find(item => item.textContent.includes('Instrumento atende ao objetivo'));
     assert.match(condition.textContent, /^Revisar/);
     await execute('Quero verificar se receber arquivos basta quando o instrumento não responde à pergunta.');
+    const twoAttempts = JSON.parse(localStorage.getItem(metricsKey(TEST_SESSION.sessionId))).entries.filter(item => item.event.kind === 'attempt');
+    assert.equal(twoAttempts.length, 2); assert.notEqual(twoAttempts[0].event.payload.attemptId, twoAttempts[1].event.payload.attemptId);
+    assert.equal(twoAttempts[1].summary.outcome, 'invalid');
     const invalid = simulateExpedition(id, wrong); assert.equal(invalid.outcome, 'invalid'); assert.equal(invalid.deliveredRecords, 0);
     await click('Ir ao estado final'); assert.equal(currentCount(), '0 / 6'); assertSceneAt(invalid, invalid.completedAtS);
     await click('Interpretar o retorno científico'); assert.ok(screen.getByRole('heading', { name: '0 de 6 registros válidos.' }));
@@ -152,7 +162,7 @@ test('saved project and rejected import preserve the result; A/B redesign shares
   await execute(hypothesis); await click('Ir ao estado final');
   const first = simulateExpedition('bennu', VIABLE.bennu);
   await click('Redesenhar esta missão'); await click('Salvar projeto');
-  const saved = JSON.parse(localStorage.getItem('ipe:expedition:bennu'));
+  const saved = JSON.parse(localStorage.getItem(`ipe:expedition:bennu:${TEST_SESSION.sessionId}`));
   assert.deepEqual(saved.config, VIABLE.bennu); assert.equal(saved.hypothesis, hypothesis);
   await importDesign(JSON.stringify({ ...saved, format: 'ipe-scientific-design-v1' }));
   await waitFor(() => assert.match(document.querySelector('.expedition-notice').textContent, /R18 usa novos dados reais/));

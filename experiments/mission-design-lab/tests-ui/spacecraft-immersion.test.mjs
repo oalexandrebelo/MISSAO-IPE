@@ -1,3 +1,4 @@
+import { installMetricsApi, TEST_SESSION } from './metrics-api-fixture.mjs';
 import test, { after } from 'node:test';
 import assert from 'node:assert/strict';
 import React from 'react';
@@ -37,8 +38,10 @@ const numeric = value => value.toLocaleString('pt-BR', { maximumFractionDigits: 
 const validCount = scene => within(scene).getByText('Recepção em solo').parentElement.querySelector('strong').textContent;
 
 async function mount() {
+  installMetricsApi();
   localStorage.clear(); globalThis.indexedDB = new IDBFactory();
   await act(async () => render(React.createElement(App)));
+  await click('Retomar jogo');
   await waitFor(() => assert.match(document.body.textContent, /3D indisponível · equivalente 2D ativo/));
 }
 async function openDesign(id, config = VIABLE[id]) {

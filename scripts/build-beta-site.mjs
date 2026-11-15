@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { lstat, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { decorateLibrasPage, librasAssets, librasGuide, librasScope } from './public-libras.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 await import('./build-context-hub.mjs');
@@ -21,6 +22,11 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/57-KIT-PRE-BANCA-R21.md', target: 'docs/57-KIT-PRE-BANCA-R21.md', title: 'Kit pré-banca · R21', description: 'Checklist, suíte executável, roteiro de demonstração e evidências para a banca.' },
+  { source: 'docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md', target: 'docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md', title: 'Acessibilidade e Libras · R21', description: 'Como usar o VLibras, onde a tradução está disponível e como a sessão privada é protegida.' },
+  { source: 'docs/53-PITCH-JURADOS-E-FALA-R21.md', target: 'docs/53-PITCH-JURADOS-E-FALA-R21.md', title: 'Pitch para jurados · fala de 3 minutos', description: 'Aprendizado por missão, decisões visíveis e fala de Alexandre Belo.' },
+  { source: 'docs/55-PAINEL-E-ACESSOS-R21.md', target: 'docs/55-PAINEL-E-ACESSOS-R21.md', title: 'Central de acessos da equipe · R21', description: 'Jogo, pitch, fala, documentação, fontes e painel privado em um só lugar.' },
+  { source: 'docs/54-METRICAS-E-HANDOFF-R21.md', target: 'docs/54-METRICAS-E-HANDOFF-R21.md', title: 'Comece aqui · métricas e handoff R21', description: 'Entrada simples, painel privado, dicionário de métricas, limites e operação para dois devs.' },
   { source: 'docs/51-QA-INICIANTE-E-HANDOFF-R20.md', target: 'docs/51-QA-INICIANTE-E-HANDOFF-R20.md', title: 'Comece aqui · percurso iniciante R20', description: 'Confusões corrigidas, escolhas ligadas ao 3D, aprendizagem nas três missões e continuidade para dois devs.' },
   { source: 'docs/52-PITCH-ALEXANDRE-BELO-R20.md', target: 'docs/52-PITCH-ALEXANDRE-BELO-R20.md', title: 'Pitch interativo · Alexandre Belo', description: 'Roteiro, apresentação imersiva, movimento, créditos e instruções para apresentar.' },
   { source: 'docs/50-LP-E-404-R19.md', target: 'docs/50-LP-E-404-R19.md', title: 'LP imersiva e rota 404 · R19', description: 'Referência visual, recuperação de navegação, movimento acessível e continuidade para dois devs.' },
@@ -81,6 +87,12 @@ async function exists(name) {
 async function emit(target, bytes, metadata) {
   const path = safePath(stage, target);
   if (entries.some(entry => entry.path === target)) throw new Error(`Destino duplicado: ${target}`);
+  const scope = librasScope(target);
+  if (scope) {
+    bytes = decorateLibrasPage(bytes.toString(), target);
+    const base = metadata.transformation === 'none; bytes preserved' ? '' : metadata.transformation + '; ';
+    metadata = { ...metadata, libras: scope, transformation: `${base}local Libras launcher and frame permissions in the public HTML copy` };
+  }
   await mkdir(dirname(path), { recursive: true });
   await writeFile(path, bytes);
   entries.push({ path: target, bytes: Buffer.byteLength(bytes), sha256: digest(bytes), ...metadata });
@@ -185,6 +197,9 @@ await rm(stage, { recursive: true, force: true });
 await mkdir(stage, { recursive: true });
 try {
   await copy('web/index.html', 'index.html', 'public-portal');
+  for (const name of librasAssets) {
+    await copy(`apps/immersive-lp/public/acessibilidade/${name}`, `acessibilidade/${name}`, 'libras-integration');
+  }
   for (const extension of ['html', 'css', 'js']) await copy(`web/game-design.${extension}`, `game-design.${extension}`, 'interactive-game-design-study');
   await copy('web/planet-jumping.html', 'planet-jumping.html', 'standalone-remote-media-experiment');
   await copy('research/technology-opportunities-r16.json', 'research/technology-opportunities-r16.json', 'reviewed-technology-opportunities');
@@ -243,7 +258,12 @@ try {
       await copy(source, source, 'interactive-pitch-runtime');
     }
   }
-  if (!entries.some(entry => entry.path === 'presentation/pitch/index.html')) throw new Error('Apresentação interativa R20 ausente.');
+  if (!entries.some(entry => entry.path === 'presentation/pitch/index.html')) throw new Error('Apresentação interativa ausente.');
+  await copy('equipe/index.html', 'equipe/index.html', 'team-access-hub');
+  for (const source of await tree('dashboard')) {
+    if (!['.html', '.css', '.js', '.mjs'].includes(extname(source))) throw new Error(`Arquivo inesperado no painel: ${source}`);
+    await copy(source, source, 'private-dashboard-shell');
+  }
   for (const name of ['README_APRESENTADOR', 'ROTEIRO_PT_EN', 'PITCH_EN_7_SLIDES']) {
     await addMarkdown({ source: `presentation/${name}.md`, target: `presentation/${name}.md`, title: name === 'README_APRESENTADOR' ? 'Guia do apresentador' : name === 'ROTEIRO_PT_EN' ? 'Roteiro PT/EN' : 'Pitch em inglês, sete quadros' }, { index: false, category: 'presentation-guide' });
   }
@@ -292,18 +312,20 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R20-beginner-journey-and-pitch', version: '0.11.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R21-judging-pitch-and-private-metrics', version: '0.12.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
-    releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
+    releaseTarget: { status: 'candidate; validate deployment receipt before claiming publication' },
     scientificEngineModified: false,
-    routeEntrypoints: ['/', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/presentation/pitch/index.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
+    routeEntrypoints: ['/', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/dashboard/index.html', '/equipe/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/presentation/pitch/index.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html', `/${librasGuide}`],
     curation: 'Explicit allowlist of runtime assets, public documents, historical artifacts reviewed by coordination, scientific sources, licenses and field-projected evidence.',
     excludedClasses: ['raw static-analysis report', 'repository-sources', 'personal attachments and poster references', 'environment and credential files', 'source maps', 'private repository code', 'node_modules', 'git and Vercel local state'],
     eligibility: 'Pre-event specific development preserved; temporal eligibility and official Resources unresolved.',
-    fullBrowserValidation: false, requiredRuntimeNetworkServices: 1,
+    fullBrowserValidation: false, requiredRuntimeNetworkServices: 2,
     runtimeNetworkRequirements: {
-      missionGames: { requiredServices: 0, routes: ['/lab/index.html', '/game/index.html', '/campanha/index.html'] },
+      missionGames: { requiredServices: 0, routes: ['/game/index.html', '/campanha/index.html'] },
+      measuredMissionLab: { requiredServices: 1, routes: ['/lab/index.html', '/dashboard/index.html'], endpoint: '/api/metrics', storage: 'Private Vercel Blob; credentials only in server environment', withoutNetwork: 'New participant registration requires the service; pending events are retained for an established session and retried.' },
       presentations: { requiredServices: 0, routes: ['/presentation/pitch/index.html', '/presentation/Missao_Ipe_Apresentacao.html'] },
+      libras: { requiredServices: 0, optionalService: 'VLibras Widget', frame: `/${librasGuide}`, privateSurfaces: ['/lab/index.html', '/dashboard/index.html'], withoutNetwork: 'Public text, links and the original runtimes remain available. Automatic signing needs the official service.' },
       experiments: [{ route: '/planet-jumping.html', requiredServices: 1, mediaOrigin: 'https://d2ol7oe51mr4n9.cloudfront.net', mediaFiles: 6, withoutNetwork: 'Text journey remains available; external audiovisual media are unavailable.' }],
     },
     fileCount: entries.length, files: entries, missingRequired,
@@ -316,14 +338,16 @@ try {
   const receipt = { generatedAt: now, command: `node scripts/build-beta-site.mjs${allowIncomplete ? ' --allow-incomplete' : ''}`, output: 'site/', publicationReady: manifest.publicationReady, fileCount: entries.length + 1, bytes: entries.reduce((sum, file) => sum + file.bytes, 0) + Buffer.byteLength(manifestBytes), manifest: { path: 'site/publication-manifest.json', bytes: Buffer.byteLength(manifestBytes), sha256: digest(manifestBytes) }, entries, omissions, limitations: ['Static build only; does not publish to a remote service', 'No real-browser inspection or restriction bypass', 'Public projections are not complete internal receipts', 'Release target is planned, not a completed qualification'] };
   const preservedRuntimes = [];
   for (const entry of entries.filter(item => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime'].includes(item.category))) {
-    const originalSha256 = digest(await readFile(safePath(root, entry.source)));
+    const original = await readFile(safePath(root, entry.source));
+    const originalSha256 = digest(original);
     const publishedSha256 = digest(await readFile(safePath(output, entry.path)));
-    if (originalSha256 !== publishedSha256 || publishedSha256 !== entry.sha256) throw new Error(`Runtime não preservado: ${entry.path}`);
-    preservedRuntimes.push({ source: entry.source, output: `site/${entry.path}`, originalSha256, publishedSha256, byteIdentical: true });
+    const expected = entry.libras ? digest(decorateLibrasPage(original.toString(), entry.path)) : originalSha256;
+    if (expected !== publishedSha256 || publishedSha256 !== entry.sha256) throw new Error(`Runtime alterado fora da composição declarada: ${entry.path}`);
+    preservedRuntimes.push({ source: entry.source, output: `site/${entry.path}`, originalSha256, publishedSha256, byteIdentical: originalSha256 === publishedSha256, transformation: entry.transformation });
   }
   await mkdir(resolve(root, 'evidence'), { recursive: true });
   await writeFile(resolve(root, 'evidence/beta-site-build.json'), JSON.stringify(receipt, null, 2) + '\n');
-  await writeFile(resolve(root, 'evidence/beta-runtime-preservation.json'), JSON.stringify({ generatedAt: now, status: 'passed', scope: 'Actual original and emitted runtime bytes reread after static build; no browser execution', fileCount: preservedRuntimes.length, allByteIdentical: true, files: preservedRuntimes }, null, 2) + '\n');
+  await writeFile(resolve(root, 'evidence/beta-runtime-preservation.json'), JSON.stringify({ generatedAt: now, status: 'passed', scope: 'Original and emitted runtime bytes reread after static build and checked against the declared HTML integration; no browser execution.', fileCount: preservedRuntimes.length, allByteIdentical: preservedRuntimes.every(file => file.byteIdentical), allMatchDeclaredTransformation: true, files: preservedRuntimes }, null, 2) + '\n');
   process.stdout.write(`BETA estática: ${receipt.fileCount} arquivos, ${receipt.bytes} bytes, publicationReady=${receipt.publicationReady}.\nManifesto SHA-256 ${receipt.manifest.sha256}\n`);
 } catch (error) {
   await rm(stage, { recursive: true, force: true });

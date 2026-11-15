@@ -1,3 +1,4 @@
+import { installMetricsApi, TEST_SESSION } from './metrics-api-fixture.mjs';
 import test, { after } from 'node:test';
 import assert from 'node:assert/strict';
 import React from 'react';
@@ -19,18 +20,22 @@ const { default: App } = await import('../src/App.tsx');
 const { DEFAULT_CONFIG } = await import('../src/core/catalog.ts');
 const { simulateMission } = await import('../src/core/engine.ts');
 const { exportReplay } = await import('../src/persistence/replay.ts');
-const { listRuns } = await import('../src/persistence/store.ts');
-const { JOURNAL_KEY } = await import('../src/ui/learning.ts');
+const { createMissionStore } = await import('../src/persistence/store.ts');
+const { listRuns } = createMissionStore({ databaseName: `mission-ipe-player-${TEST_SESSION.sessionId}` });
+const { JOURNAL_KEY: BASE_JOURNAL_KEY } = await import('../src/ui/learning.ts');
+const JOURNAL_KEY = `${BASE_JOURNAL_KEY}:${TEST_SESSION.sessionId}`;
 
 const journal = () => JSON.parse(localStorage.getItem(JOURNAL_KEY) ?? '[]');
 const button = name => screen.getByRole('button', { name });
 const click = async target => { await act(async () => { fireEvent.click(typeof target === 'string' || target instanceof RegExp ? button(target) : target); }); };
 const change = async (name, value) => { await act(async () => { fireEvent.change(screen.getByLabelText(name), { target: { value } }); }); };
 async function mount(storage = true) {
+  installMetricsApi();
   localStorage.clear();
   globalThis.indexedDB = storage ? new IDBFactory() : undefined;
   await act(async () => { render(React.createElement(App)); });
   // Wait for the real renderer's unavailable-context path. This is not visual QA.
+  await click('Retomar jogo');
   await waitFor(() => assert.match(document.body.textContent, /3D indisponível · equivalente 2D ativo/));
 }
 async function predict(value = 'none') {
@@ -164,7 +169,8 @@ test('unavailable IndexedDB and localStorage keep the real result available and 
     await click('Começar a missão');
     await predict();
     await launch(6);
-    await waitFor(() => assert.match(screen.getByRole('status').textContent, /resultado permanece visível, mas não foi salvo/));
+    const storageNotice = await screen.findByText(/resultado permanece visível, mas não foi salvo/);
+    assert.ok(storageNotice.closest('[role="status"]'));
     assert.equal(button('Exportar replay verificável').disabled, false);
     assert.equal(button('Consultar alternativas').disabled, false);
     assert.equal(journal().length, 0);

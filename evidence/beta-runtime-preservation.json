@@ -1,1297 +1,1514 @@
 {
-  "generatedAt": "2026-11-15T11:10:08.587Z",
+  "generatedAt": "2026-11-15T13:07:58.150Z",
   "status": "passed",
-  "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
-  "fileCount": 184,
-  "allByteIdentical": true,
+  "scope": "Original and emitted runtime bytes reread after static build and checked against the declared HTML integration; no browser execution.",
+  "fileCount": 188,
+  "allByteIdentical": false,
+  "allMatchDeclaredTransformation": true,
   "files": [
     {
       "source": "experiments/four-level-campaign/dist/apresentacao/index.html",
       "output": "site/campanha/apresentacao/index.html",
-      "originalSha256": "606d717bec4f08f3633cf5d90efb435558698c5e6e27e4fb38afc2b94d70223d",
-      "publishedSha256": "606d717bec4f08f3633cf5d90efb435558698c5e6e27e4fb38afc2b94d70223d",
-      "byteIdentical": true
+      "originalSha256": "0b896bb00e702e499acc0cb7a53c1b69ee3be214d448f3dfd3009f28fdf91cab",
+      "publishedSha256": "ec4d5c1ecd18e65c122e0c0dd6476420e2f53e91ed0e60a2be7fba8bbca7fcce",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/four-level-campaign/dist/apresentacao/presentation.js",
       "output": "site/campanha/apresentacao/presentation.js",
       "originalSha256": "4736f81b75a69e0eac3149639588c88097fad1048f6347e1bed99854037837ae",
       "publishedSha256": "4736f81b75a69e0eac3149639588c88097fad1048f6347e1bed99854037837ae",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/apresentacao/PROJETO-IPE-Pitch.pptx",
       "output": "site/campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
       "originalSha256": "01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11",
       "publishedSha256": "01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/apresentacao/style.css",
       "output": "site/campanha/apresentacao/style.css",
       "originalSha256": "3948fad365bc3fa241c5b2c1fe49e64ff103abd27c87a70ca8779be115971857",
       "publishedSha256": "3948fad365bc3fa241c5b2c1fe49e64ff103abd27c87a70ca8779be115971857",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/four-level-campaign/dist/assets/index-BqypOpJI.js",
-      "output": "site/campanha/assets/index-BqypOpJI.js",
-      "originalSha256": "75ad500b8b5117215c335fe2069762d3284d91757dfb501300c02675b07f7c71",
-      "publishedSha256": "75ad500b8b5117215c335fe2069762d3284d91757dfb501300c02675b07f7c71",
-      "byteIdentical": true
+      "source": "experiments/four-level-campaign/dist/assets/index-Bm9BMYuU.js",
+      "output": "site/campanha/assets/index-Bm9BMYuU.js",
+      "originalSha256": "8c15713e9b009fa7162b5f657dea39168efd4ee47ffab6c98925f20e16584683",
+      "publishedSha256": "8c15713e9b009fa7162b5f657dea39168efd4ee47ffab6c98925f20e16584683",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/assets/index-CKsj43Du.css",
       "output": "site/campanha/assets/index-CKsj43Du.css",
       "originalSha256": "bb1092c2d8ab91eee96d8f6aa9ff53b83f5e0a2cb0bcabe9cde70bd3e1c07ce6",
       "publishedSha256": "bb1092c2d8ab91eee96d8f6aa9ff53b83f5e0a2cb0bcabe9cde70bd3e1c07ce6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/assets/mission.worker-m4WSgatj.js",
       "output": "site/campanha/assets/mission.worker-m4WSgatj.js",
       "originalSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
       "publishedSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/four-level-campaign/dist/assets/OrbitalScene-XUox1LWo.js",
-      "output": "site/campanha/assets/OrbitalScene-XUox1LWo.js",
-      "originalSha256": "a63a9e769cf27068c8d9596a1a759ebaf1db999c24905d7148664f069551ecea",
-      "publishedSha256": "a63a9e769cf27068c8d9596a1a759ebaf1db999c24905d7148664f069551ecea",
-      "byteIdentical": true
+      "source": "experiments/four-level-campaign/dist/assets/OrbitalScene-OGG8DlFw.js",
+      "output": "site/campanha/assets/OrbitalScene-OGG8DlFw.js",
+      "originalSha256": "5b511de30c4027d2dee41d0b661119583a7da0342de38d92f259c0e4ea6c6f2c",
+      "publishedSha256": "5b511de30c4027d2dee41d0b661119583a7da0342de38d92f259c0e4ea6c6f2c",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/brand/missao-ipe-logo-on-light.svg",
       "output": "site/campanha/brand/missao-ipe-logo-on-light.svg",
       "originalSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
       "publishedSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/brand/missao-ipe-logo.svg",
       "output": "site/campanha/brand/missao-ipe-logo.svg",
       "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
       "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/brand/missao-ipe-symbol-on-light.svg",
       "output": "site/campanha/brand/missao-ipe-symbol-on-light.svg",
       "originalSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
       "publishedSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/brand/missao-ipe-symbol.svg",
       "output": "site/campanha/brand/missao-ipe-symbol.svg",
       "originalSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
       "publishedSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/cmr-mod13q1-granule-2.json",
       "output": "site/campanha/data/cmr-mod13q1-granule-2.json",
       "originalSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
       "publishedSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/cmr-mod13q1-granules.json",
       "output": "site/campanha/data/cmr-mod13q1-granules.json",
       "originalSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
       "publishedSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-A-raw.json",
       "output": "site/campanha/data/mod13q1-A-raw.json",
       "originalSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
       "publishedSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-A-retrieval.json",
       "output": "site/campanha/data/mod13q1-A-retrieval.json",
       "originalSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
       "publishedSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-B-raw.json",
       "output": "site/campanha/data/mod13q1-B-raw.json",
       "originalSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
       "publishedSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-B-retrieval.json",
       "output": "site/campanha/data/mod13q1-B-retrieval.json",
       "originalSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
       "publishedSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-bands.json",
       "output": "site/campanha/data/mod13q1-bands.json",
       "originalSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
       "publishedSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-C-raw.json",
       "output": "site/campanha/data/mod13q1-C-raw.json",
       "originalSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
       "publishedSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-C-retrieval.json",
       "output": "site/campanha/data/mod13q1-C-retrieval.json",
       "originalSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
       "publishedSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/data/mod13q1-research-pack.json",
       "output": "site/campanha/data/mod13q1-research-pack.json",
       "originalSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
       "publishedSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/index.html",
       "output": "site/campanha/index.html",
-      "originalSha256": "7f2ba9bd80de17186752ca0f95ba5ff9bb47962052c5740eca4595122bdabd2f",
-      "publishedSha256": "7f2ba9bd80de17186752ca0f95ba5ff9bb47962052c5740eca4595122bdabd2f",
-      "byteIdentical": true
+      "originalSha256": "5af9d392b92ed60907ba1c372cd5acb51eef57f0a63562227ae9da4b2fa9d9b6",
+      "publishedSha256": "3b4356ffe7f47c961d3e7032ce9605080e2d9c3692630b7ebccc9d8c22904993",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/diagrams/01-user-flow.mmd",
       "output": "site/campanha/kit/diagrams/01-user-flow.mmd",
       "originalSha256": "a93c63940bcc082751187f3c195d36a28377c0112e24abe0d868e17a2c1f4450",
       "publishedSha256": "a93c63940bcc082751187f3c195d36a28377c0112e24abe0d868e17a2c1f4450",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/diagrams/02-game-state.mmd",
       "output": "site/campanha/kit/diagrams/02-game-state.mmd",
       "originalSha256": "6e3f7395dc8b0f6bebf8bea918bfcbf6e0ea040f1085ca5653501b1ad5512592",
       "publishedSha256": "6e3f7395dc8b0f6bebf8bea918bfcbf6e0ea040f1085ca5653501b1ad5512592",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/diagrams/03-data-flow.mmd",
       "output": "site/campanha/kit/diagrams/03-data-flow.mmd",
       "originalSha256": "acd03273400e52b265231e21e754add4153ff4c807e4aeb8c0dc4dc5f87f7e9c",
       "publishedSha256": "acd03273400e52b265231e21e754add4153ff4c807e4aeb8c0dc4dc5f87f7e9c",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/diagrams/04-deployment.mmd",
       "output": "site/campanha/kit/diagrams/04-deployment.mmd",
       "originalSha256": "13368fd9b7447986dc02a02fdcb76d1337e68e363b4934d67ceb23a23c7d2d8b",
       "publishedSha256": "13368fd9b7447986dc02a02fdcb76d1337e68e363b4934d67ceb23a23c7d2d8b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/diagrams/05-er-content.mmd",
       "output": "site/campanha/kit/diagrams/05-er-content.mmd",
       "originalSha256": "dc69aae73d88b46795853fddec1b88ec44f351ff152dd3a6f551dcdfdd855387",
       "publishedSha256": "dc69aae73d88b46795853fddec1b88ec44f351ff152dd3a6f551dcdfdd855387",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/diagrams/06-er-player.mmd",
       "output": "site/campanha/kit/diagrams/06-er-player.mmd",
       "originalSha256": "9df96ac6d925015e64823c3563b657294fa5d342975f45141b1b3b4f64549c40",
       "publishedSha256": "9df96ac6d925015e64823c3563b657294fa5d342975f45141b1b3b4f64549c40",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/kit/schema.prisma",
       "output": "site/campanha/kit/schema.prisma",
       "originalSha256": "94febcdc03d58830da102d1af5a3f270e2b5120b9c64338b815094509302c521",
       "publishedSha256": "94febcdc03d58830da102d1af5a3f270e2b5120b9c64338b815094509302c521",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/release.json",
       "output": "site/campanha/release.json",
-      "originalSha256": "d08e3dcd809f1f380644cf9732ea559f74dd0f5cc7f43d9ab162a9320eeeaf2b",
-      "publishedSha256": "d08e3dcd809f1f380644cf9732ea559f74dd0f5cc7f43d9ab162a9320eeeaf2b",
-      "byteIdentical": true
+      "originalSha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
+      "publishedSha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/assets/briefing-desktop.jpg",
       "output": "site/campanha/research/assets/briefing-desktop.jpg",
       "originalSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
       "publishedSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/assets/briefing-mobile.jpg",
       "output": "site/campanha/research/assets/briefing-mobile.jpg",
       "originalSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
       "publishedSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/assets/laboratorio.jpg",
       "output": "site/campanha/research/assets/laboratorio.jpg",
       "originalSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
       "publishedSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/assets/retorno-cientifico.jpg",
       "output": "site/campanha/research/assets/retorno-cientifico.jpg",
       "originalSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
       "publishedSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/assets/retorno-mobile.jpg",
       "output": "site/campanha/research/assets/retorno-mobile.jpg",
       "originalSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
       "publishedSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/galeria.html",
       "output": "site/campanha/research/galeria.html",
       "originalSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
-      "publishedSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
-      "byteIdentical": true
+      "publishedSha256": "9828ee198b2329e32aab8e32482e0a578246b7305140ee981cfb2e335f88d1ac",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/index.html",
       "output": "site/campanha/research/index.html",
       "originalSha256": "2ab6b04ed37d15b487705dd3c015cfa265a59d75fad3518d3160e91f756c2689",
-      "publishedSha256": "2ab6b04ed37d15b487705dd3c015cfa265a59d75fad3518d3160e91f756c2689",
-      "byteIdentical": true
+      "publishedSha256": "9e7832e1cf82eeb2397dc331ccbf9e5e6c74ff92ebd97e74addf059e5caf77bb",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/manifest.json",
       "output": "site/campanha/research/manifest.json",
       "originalSha256": "bbc1faa41fb1b59634e572feb86989893ae1797608af93d9b02189bf4ba1afe0",
       "publishedSha256": "bbc1faa41fb1b59634e572feb86989893ae1797608af93d9b02189bf4ba1afe0",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/a1-desafio.md",
       "output": "site/campanha/research/originals/a1-desafio.md",
       "originalSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
       "publishedSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/a2-fisica.md",
       "output": "site/campanha/research/originals/a2-fisica.md",
       "originalSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
       "publishedSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/a3-ux-tecnologia.md",
       "output": "site/campanha/research/originals/a3-ux-tecnologia.md",
       "originalSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
       "publishedSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/ARQUITETURA.md",
       "output": "site/campanha/research/originals/ARQUITETURA.md",
       "originalSha256": "47ecd3deb0297d4a1fafe78496ec7e869ea9b7a3e94ce6edd53f34102bf2b9d0",
       "publishedSha256": "47ecd3deb0297d4a1fafe78496ec7e869ea9b7a3e94ce6edd53f34102bf2b9d0",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/FLOWCHARTS.md",
       "output": "site/campanha/research/originals/FLOWCHARTS.md",
       "originalSha256": "ef71683e2a35e6a758cb1b674749ebc39691245f8dfa0c37b106e6e49f9a9d37",
       "publishedSha256": "ef71683e2a35e6a758cb1b674749ebc39691245f8dfa0c37b106e6e49f9a9d37",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/GUIA-DIDATICO-R9.md",
       "output": "site/campanha/research/originals/GUIA-DIDATICO-R9.md",
       "originalSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
       "publishedSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/HANDOFF.md",
       "output": "site/campanha/research/originals/HANDOFF.md",
       "originalSha256": "2287e81ea57cbf4093fa53a28599afec045d996441967b0d70e06a2ed44dbcaf",
       "publishedSha256": "2287e81ea57cbf4093fa53a28599afec045d996441967b0d70e06a2ed44dbcaf",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
       "output": "site/campanha/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
       "originalSha256": "130ad02bd0ed5a4bafa17a3d726bb661f9726091c24b0784ade332ab5e00f344",
       "publishedSha256": "130ad02bd0ed5a4bafa17a3d726bb661f9726091c24b0784ade332ab5e00f344",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/PESQUISA-E-DECISOES-R9.md",
       "output": "site/campanha/research/originals/PESQUISA-E-DECISOES-R9.md",
       "originalSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
       "publishedSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/PITCH.md",
       "output": "site/campanha/research/originals/PITCH.md",
       "originalSha256": "a75b16018519b016dcdca46c555f07935574eed9e7cf351d8e03b1a82efaa65a",
       "publishedSha256": "a75b16018519b016dcdca46c555f07935574eed9e7cf351d8e03b1a82efaa65a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/PRD.md",
       "output": "site/campanha/research/originals/PRD.md",
       "originalSha256": "88e76cd3f38ef4eaa1fff0476485d7c75428a258f865905166c3652178fd9d17",
       "publishedSha256": "88e76cd3f38ef4eaa1fff0476485d7c75428a258f865905166c3652178fd9d17",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/PRISMA-README.md",
       "output": "site/campanha/research/originals/PRISMA-README.md",
       "originalSha256": "5d46a919d1dac19f943288e1d6e60987ee44b594db4a2b2c59f7499f2260b08a",
       "publishedSha256": "5d46a919d1dac19f943288e1d6e60987ee44b594db4a2b2c59f7499f2260b08a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/PRT.md",
       "output": "site/campanha/research/originals/PRT.md",
       "originalSha256": "98cd93c67ecfef8a0e16e3998ccca20a5907a231c9e0c11234adae73499e3ee5",
       "publishedSha256": "98cd93c67ecfef8a0e16e3998ccca20a5907a231c9e0c11234adae73499e3ee5",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/QA-BETA-0.5.md",
       "output": "site/campanha/research/originals/QA-BETA-0.5.md",
       "originalSha256": "3fa57051ecd0ad1e3060ee1d14dc61b16af1ff72677b3287ac3f6b70775b6d4b",
       "publishedSha256": "3fa57051ecd0ad1e3060ee1d14dc61b16af1ff72677b3287ac3f6b70775b6d4b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/QA-NAVEGADOR-R9.md",
       "output": "site/campanha/research/originals/QA-NAVEGADOR-R9.md",
       "originalSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
       "publishedSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/QA-R9.md",
       "output": "site/campanha/research/originals/QA-R9.md",
       "originalSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
       "publishedSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/refinamento-conops.md",
       "output": "site/campanha/research/originals/refinamento-conops.md",
       "originalSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
       "publishedSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/REFINAMENTO-NASA-R10.md",
       "output": "site/campanha/research/originals/REFINAMENTO-NASA-R10.md",
       "originalSha256": "65c9440391ab41218545cae82683ce90feed05d93edc89f0d871267ab57d86d9",
       "publishedSha256": "65c9440391ab41218545cae82683ce90feed05d93edc89f0d871267ab57d86d9",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/refinamento-requisitos.md",
       "output": "site/campanha/research/originals/refinamento-requisitos.md",
       "originalSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
       "publishedSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/refinamento-risco-ux.md",
       "output": "site/campanha/research/originals/refinamento-risco-ux.md",
       "originalSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
       "publishedSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/four-level-campaign/dist/research/originals/STORYTELLING-4-NIVEIS.md",
       "output": "site/campanha/research/originals/STORYTELLING-4-NIVEIS.md",
       "originalSha256": "551e20987e80721f9349f6632ce1e0a91669b5dd2f99e4769a6a683cb9775845",
       "publishedSha256": "551e20987e80721f9349f6632ce1e0a91669b5dd2f99e4769a6a683cb9775845",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "dist/assets/index-C0yMbnbH.css",
-      "output": "site/game/assets/index-C0yMbnbH.css",
-      "originalSha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
-      "publishedSha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
-      "byteIdentical": true
+      "source": "dist/assets/index-BbJokAPr.js",
+      "output": "site/game/assets/index-BbJokAPr.js",
+      "originalSha256": "91682561cf1354ab8fbd50f903a518e39a4d4ebffe8f245f4cb7e39cde308f20",
+      "publishedSha256": "91682561cf1354ab8fbd50f903a518e39a4d4ebffe8f245f4cb7e39cde308f20",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "dist/assets/index-DYhpvtlV.js",
-      "output": "site/game/assets/index-DYhpvtlV.js",
-      "originalSha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
-      "publishedSha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
-      "byteIdentical": true
+      "source": "dist/assets/index-Dn8s1Vui.css",
+      "output": "site/game/assets/index-Dn8s1Vui.css",
+      "originalSha256": "fe2ce4aeba6befb4468c04a10b8aeb63fbb6c86cef5cd88aabe1c7d2902bbda9",
+      "publishedSha256": "fe2ce4aeba6befb4468c04a10b8aeb63fbb6c86cef5cd88aabe1c7d2902bbda9",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/assets/mission.worker-m4WSgatj.js",
       "output": "site/game/assets/mission.worker-m4WSgatj.js",
       "originalSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
       "publishedSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "dist/assets/OrbitalScene-B0I9aE-1.js",
-      "output": "site/game/assets/OrbitalScene-B0I9aE-1.js",
-      "originalSha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
-      "publishedSha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
-      "byteIdentical": true
+      "source": "dist/assets/OrbitalScene-DhtX6ump.js",
+      "output": "site/game/assets/OrbitalScene-DhtX6ump.js",
+      "originalSha256": "bb52db60632d9c4ebf898c2e1f5dd5f5c8b655c6d6aef019ef4b287334e2b9ab",
+      "publishedSha256": "bb52db60632d9c4ebf898c2e1f5dd5f5c8b655c6d6aef019ef4b287334e2b9ab",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "dist/assets/search-DiIaA0z6.js",
-      "output": "site/game/assets/search-DiIaA0z6.js",
-      "originalSha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
-      "publishedSha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
-      "byteIdentical": true
+      "source": "dist/assets/search-DHDLDh4z.js",
+      "output": "site/game/assets/search-DHDLDh4z.js",
+      "originalSha256": "c5cfd0f2a85caf4c606e55f17db28861bb40e9ac45d40ab81ca7e3fa2164b51b",
+      "publishedSha256": "c5cfd0f2a85caf4c606e55f17db28861bb40e9ac45d40ab81ca7e3fa2164b51b",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/cmr-mod13q1-granule-2.json",
       "output": "site/game/data/cmr-mod13q1-granule-2.json",
       "originalSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
       "publishedSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/cmr-mod13q1-granules.json",
       "output": "site/game/data/cmr-mod13q1-granules.json",
       "originalSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
       "publishedSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-A-raw.json",
       "output": "site/game/data/mod13q1-A-raw.json",
       "originalSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
       "publishedSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-A-retrieval.json",
       "output": "site/game/data/mod13q1-A-retrieval.json",
       "originalSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
       "publishedSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-B-raw.json",
       "output": "site/game/data/mod13q1-B-raw.json",
       "originalSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
       "publishedSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-B-retrieval.json",
       "output": "site/game/data/mod13q1-B-retrieval.json",
       "originalSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
       "publishedSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-bands.json",
       "output": "site/game/data/mod13q1-bands.json",
       "originalSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
       "publishedSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-C-raw.json",
       "output": "site/game/data/mod13q1-C-raw.json",
       "originalSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
       "publishedSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-C-retrieval.json",
       "output": "site/game/data/mod13q1-C-retrieval.json",
       "originalSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
       "publishedSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/data/mod13q1-research-pack.json",
       "output": "site/game/data/mod13q1-research-pack.json",
       "originalSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
       "publishedSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "dist/index.html",
       "output": "site/game/index.html",
-      "originalSha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
-      "publishedSha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
-      "byteIdentical": true
+      "originalSha256": "04a1b45152508a21937565f65872c682766c122576e26fe61b5f05bd16d04509",
+      "publishedSha256": "85cf78d7b366d3a46044fbef666f6db9cbea9ea25060839f4d500d927b0a5d21",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/mission-design-lab/dist/assets/draco_decoder-C32yEggz.wasm",
       "output": "site/lab/assets/draco_decoder-C32yEggz.wasm",
       "originalSha256": "c55a594e8ffd18426d36b27fea9618af3df5e173640a3e56d46f09d76f0574f2",
       "publishedSha256": "c55a594e8ffd18426d36b27fea9618af3df5e173640a3e56d46f09d76f0574f2",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/assets/draco_decoder-fzg4nYZr.js",
       "output": "site/lab/assets/draco_decoder-fzg4nYZr.js",
       "originalSha256": "30e4d486fa020737af10e3c56197693e5b904bdc05b8bfa5d7b06751dec6da04",
       "publishedSha256": "30e4d486fa020737af10e3c56197693e5b904bdc05b8bfa5d7b06751dec6da04",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/assets/draco_decoder-Z1_iN-Ht.wasm",
       "output": "site/lab/assets/draco_decoder-Z1_iN-Ht.wasm",
       "originalSha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
       "publishedSha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/assets/draco_wasm_wrapper-DxJM36Ib.js",
       "output": "site/lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
       "originalSha256": "e8049906ef3f8f75d3456c22a3f31bfdfe5b5b5bd09ccdec613b9e9a49d554d8",
       "publishedSha256": "e8049906ef3f8f75d3456c22a3f31bfdfe5b5b5bd09ccdec613b9e9a49d554d8",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/assets/draco_wasm_wrapper-fZCQGLGb.js",
       "output": "site/lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
       "originalSha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
       "publishedSha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-BVeqTvEn.css",
-      "output": "site/lab/assets/index-BVeqTvEn.css",
-      "originalSha256": "7c5feee8dfafc0c9467bad7a775487c54251792abc3c828c6daddf42127b68bc",
-      "publishedSha256": "7c5feee8dfafc0c9467bad7a775487c54251792abc3c828c6daddf42127b68bc",
-      "byteIdentical": true
+      "source": "experiments/mission-design-lab/dist/assets/index-BByYZSek.js",
+      "output": "site/lab/assets/index-BByYZSek.js",
+      "originalSha256": "31c13a44fa556ec63c6a4025aff82af40b5dc53a07e4bb90cec62de6b18b7750",
+      "publishedSha256": "31c13a44fa556ec63c6a4025aff82af40b5dc53a07e4bb90cec62de6b18b7750",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-eSJC0nAb.js",
-      "output": "site/lab/assets/index-eSJC0nAb.js",
-      "originalSha256": "0bdfa3a57f5fb9a4462ba653e0e82ce60848dd63134f8f1b218786cdf0f79c39",
-      "publishedSha256": "0bdfa3a57f5fb9a4462ba653e0e82ce60848dd63134f8f1b218786cdf0f79c39",
-      "byteIdentical": true
+      "source": "experiments/mission-design-lab/dist/assets/index-Bx40Y4-e.css",
+      "output": "site/lab/assets/index-Bx40Y4-e.css",
+      "originalSha256": "fe934b7b735a0f41c8e4c01d3ae372de38e5e518055f6652e187da7954592486",
+      "publishedSha256": "fe934b7b735a0f41c8e4c01d3ae372de38e5e518055f6652e187da7954592486",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/assets/mission.worker-m4WSgatj.js",
       "output": "site/lab/assets/mission.worker-m4WSgatj.js",
       "originalSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
       "publishedSha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-BhIhlDxs.js",
-      "output": "site/lab/assets/NASAReferenceScene-BhIhlDxs.js",
-      "originalSha256": "87c0e55dfb56bb7962fc5be322637a49b85691d4815bf08d89beafbf455274e1",
-      "publishedSha256": "87c0e55dfb56bb7962fc5be322637a49b85691d4815bf08d89beafbf455274e1",
-      "byteIdentical": true
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-vZ22jVGi.js",
+      "output": "site/lab/assets/NASAReferenceScene-vZ22jVGi.js",
+      "originalSha256": "13706ae0a75fab7dc8305402d40408c328a1b0ab69477fb218436b0977f61fb3",
+      "publishedSha256": "13706ae0a75fab7dc8305402d40408c328a1b0ab69477fb218436b0977f61fb3",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-7AHXHWhL.js",
-      "output": "site/lab/assets/OrbitalScene-7AHXHWhL.js",
-      "originalSha256": "7f46c7f1428114988da53c9a7f962707ffc7bd905f3e08d649331b81242a472c",
-      "publishedSha256": "7f46c7f1428114988da53c9a7f962707ffc7bd905f3e08d649331b81242a472c",
-      "byteIdentical": true
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-eb2WfDfo.js",
+      "output": "site/lab/assets/OrbitalScene-eb2WfDfo.js",
+      "originalSha256": "d236300e94396750c2953bab9cd1dbebfd0d9c71e911c7d4019e7247670bda56",
+      "publishedSha256": "d236300e94396750c2953bab9cd1dbebfd0d9c71e911c7d4019e7247670bda56",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/search-CedkBGt_.js",
-      "output": "site/lab/assets/search-CedkBGt_.js",
-      "originalSha256": "44564eb8e3ae66ef8a432ed00fbe3b469d70581e953c891ee6a1b86278585676",
-      "publishedSha256": "44564eb8e3ae66ef8a432ed00fbe3b469d70581e953c891ee6a1b86278585676",
-      "byteIdentical": true
+      "source": "experiments/mission-design-lab/dist/assets/search-Rhta8lDI.js",
+      "output": "site/lab/assets/search-Rhta8lDI.js",
+      "originalSha256": "0d47429c8fdfa333136214326fbf8d63eb6f95655033850c487119970f734ffd",
+      "publishedSha256": "0d47429c8fdfa333136214326fbf8d63eb6f95655033850c487119970f734ffd",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/brand-provenance-r14.json",
       "output": "site/lab/brand/brand-provenance-r14.json",
       "originalSha256": "41937ef07d217dc6ad67d9bfe53975f121dd93154a3384f783d91259edb5058a",
       "publishedSha256": "41937ef07d217dc6ad67d9bfe53975f121dd93154a3384f783d91259edb5058a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/brand-provenance-r17.json",
       "output": "site/lab/brand/brand-provenance-r17.json",
       "originalSha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70",
       "publishedSha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
       "output": "site/lab/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
       "originalSha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
       "publishedSha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/history/pre-r14-projeto-ipe-logo.svg",
       "output": "site/lab/brand/history/pre-r14-projeto-ipe-logo.svg",
       "originalSha256": "ceb9d7c849f6553d1a54013c916945ed9c28083dfe84e4ac38b73b23d3bff6f3",
       "publishedSha256": "ceb9d7c849f6553d1a54013c916945ed9c28083dfe84e4ac38b73b23d3bff6f3",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/history/pre-r14-projeto-ipe-symbol.svg",
       "output": "site/lab/brand/history/pre-r14-projeto-ipe-symbol.svg",
       "originalSha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
       "publishedSha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-on-light.svg",
       "output": "site/lab/brand/missao-ipe-logo-on-light.svg",
       "originalSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
       "publishedSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo.png",
       "output": "site/lab/brand/missao-ipe-logo.png",
       "originalSha256": "8c40a65741524fcd97d4f736c460c7b033ea4feb331e39c8c0f36023a8c0bffb",
       "publishedSha256": "8c40a65741524fcd97d4f736c460c7b033ea4feb331e39c8c0f36023a8c0bffb",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo.svg",
       "output": "site/lab/brand/missao-ipe-logo.svg",
       "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
       "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/missao-ipe-symbol-on-light.svg",
       "output": "site/lab/brand/missao-ipe-symbol-on-light.svg",
       "originalSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
       "publishedSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/missao-ipe-symbol.svg",
       "output": "site/lab/brand/missao-ipe-symbol.svg",
       "originalSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
       "publishedSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/originals/arte-original.svg",
       "output": "site/lab/brand/originals/arte-original.svg",
       "originalSha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d",
       "publishedSha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-logo-original.svg",
       "output": "site/lab/brand/originals/missao-ipe-logo-original.svg",
       "originalSha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
       "publishedSha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-symbol-original.svg",
       "output": "site/lab/brand/originals/missao-ipe-symbol-original.svg",
       "originalSha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
       "publishedSha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/originals/vector-original.svg",
       "output": "site/lab/brand/originals/vector-original.svg",
       "originalSha256": "85d0f8695854d4ae3285b74559e5d62367ea3c253f9cca12c42a9c87e183ddf2",
       "publishedSha256": "85d0f8695854d4ae3285b74559e5d62367ea3c253f9cca12c42a9c87e183ddf2",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/preview-r14.html",
       "output": "site/lab/brand/preview-r14.html",
       "originalSha256": "c201c80d565dd786cded376d6501b2f14ca9f27940261a4c7524412f439013eb",
-      "publishedSha256": "c201c80d565dd786cded376d6501b2f14ca9f27940261a4c7524412f439013eb",
-      "byteIdentical": true
+      "publishedSha256": "b92572a1587a2a984fdff5b736883344b16ed49280b0720a7eeb2e0ab71b37c7",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/preview-r17.html",
       "output": "site/lab/brand/preview-r17.html",
       "originalSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
-      "publishedSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
-      "byteIdentical": true
+      "publishedSha256": "bd2789aa242e4ad004f11877ca8dafe53764c2165cac2a9a17a77756f94f2a68",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo-on-light.svg",
       "output": "site/lab/brand/projeto-ipe-logo-on-light.svg",
       "originalSha256": "72439ae936ee895f45ded827fdd5edf10ddbb5fdc498a6e77db4966a3fcd6776",
       "publishedSha256": "72439ae936ee895f45ded827fdd5edf10ddbb5fdc498a6e77db4966a3fcd6776",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.png",
       "output": "site/lab/brand/projeto-ipe-logo.png",
       "originalSha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
       "publishedSha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-logo.svg",
       "output": "site/lab/brand/projeto-ipe-logo.svg",
       "originalSha256": "32377a37d746201ff32c6f01cb124a1e65d6d68798fe0600c34390e3fc9381cd",
       "publishedSha256": "32377a37d746201ff32c6f01cb124a1e65d6d68798fe0600c34390e3fc9381cd",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/brand/projeto-ipe-symbol.svg",
       "output": "site/lab/brand/projeto-ipe-symbol.svg",
       "originalSha256": "4cb1b84a04c3a34c96ae56943511342dc995dff90eae100ec2c26e6751ac7218",
       "publishedSha256": "4cb1b84a04c3a34c96ae56943511342dc995dff90eae100ec2c26e6751ac7218",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/cmr-mod13q1-granule-2.json",
       "output": "site/lab/data/cmr-mod13q1-granule-2.json",
       "originalSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
       "publishedSha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/cmr-mod13q1-granules.json",
       "output": "site/lab/data/cmr-mod13q1-granules.json",
       "originalSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
       "publishedSha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-A-raw.json",
       "output": "site/lab/data/mod13q1-A-raw.json",
       "originalSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
       "publishedSha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-A-retrieval.json",
       "output": "site/lab/data/mod13q1-A-retrieval.json",
       "originalSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
       "publishedSha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-B-raw.json",
       "output": "site/lab/data/mod13q1-B-raw.json",
       "originalSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
       "publishedSha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-B-retrieval.json",
       "output": "site/lab/data/mod13q1-B-retrieval.json",
       "originalSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
       "publishedSha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-bands.json",
       "output": "site/lab/data/mod13q1-bands.json",
       "originalSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
       "publishedSha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-C-raw.json",
       "output": "site/lab/data/mod13q1-C-raw.json",
       "originalSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
       "publishedSha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-C-retrieval.json",
       "output": "site/lab/data/mod13q1-C-retrieval.json",
       "originalSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
       "publishedSha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/mod13q1-research-pack.json",
       "output": "site/lab/data/mod13q1-research-pack.json",
       "originalSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
       "publishedSha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/bennu-provenance.json",
       "output": "site/lab/data/science/bennu-provenance.json",
       "originalSha256": "5b081779b0eee9ef38707d7f2154653f41c9ebdd385b9c14350db4ed6f5c1d96",
       "publishedSha256": "5b081779b0eee9ef38707d7f2154653f41c9ebdd385b9c14350db4ed6f5c1d96",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/bennu-records.json",
       "output": "site/lab/data/science/bennu-records.json",
       "originalSha256": "addb72ae1817e7f0600789d2167c426a3a622b4e8a5df18f8e3416a7ee9d4586",
       "publishedSha256": "addb72ae1817e7f0600789d2167c426a3a622b4e8a5df18f8e3416a7ee9d4586",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/bennu-table1.csv",
       "output": "site/lab/data/science/bennu-table1.csv",
       "originalSha256": "f93100752685e4842176bc6cd128866e35c24405e6e266fbacddde70f237251e",
       "publishedSha256": "f93100752685e4842176bc6cd128866e35c24405e6e266fbacddde70f237251e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/bennu-vesta-nasa-context.png",
       "output": "site/lab/data/science/bennu-vesta-nasa-context.png",
       "originalSha256": "899041d3abef7a88d8a779823451a93a6b4914d0655df28a4e44fca4bd4b18cb",
       "publishedSha256": "899041d3abef7a88d8a779823451a93a6b4914d0655df28a4e44fca4bd4b18cb",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/webb-firefly-nasa.tbl",
       "output": "site/lab/data/science/webb-firefly-nasa.tbl",
       "originalSha256": "49a41e9eacaec33457b5c5d249bb9803da1ab0a07ea99fa2b4b5a8d0e24de687",
       "publishedSha256": "49a41e9eacaec33457b5c5d249bb9803da1ab0a07ea99fa2b4b5a8d0e24de687",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/webb-provenance.json",
       "output": "site/lab/data/science/webb-provenance.json",
       "originalSha256": "45bc8dfa7c9e09999702d438223c2bcf2a4e7af887dc2d37d21cdd52ea879f18",
       "publishedSha256": "45bc8dfa7c9e09999702d438223c2bcf2a4e7af887dc2d37d21cdd52ea879f18",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/data/science/webb-spectrum-subset.json",
       "output": "site/lab/data/science/webb-spectrum-subset.json",
       "originalSha256": "4b1a43069299414298c2aeab5818fbf0d3acf5831ea25a31778789e7b8e0887e",
       "publishedSha256": "4b1a43069299414298c2aeab5818fbf0d3acf5831ea25a31778789e7b8e0887e",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/fonts/BricolageGrotesque-latin-variable.woff2",
       "output": "site/lab/fonts/BricolageGrotesque-latin-variable.woff2",
       "originalSha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
       "publishedSha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/fonts/BricolageGrotesque-OFL.txt",
       "output": "site/lab/fonts/BricolageGrotesque-OFL.txt",
       "originalSha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
       "publishedSha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/fonts/fonts.css",
       "output": "site/lab/fonts/fonts.css",
       "originalSha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9",
       "publishedSha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/fonts/manifest.json",
       "output": "site/lab/fonts/manifest.json",
       "originalSha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
       "publishedSha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/fonts/PlusJakartaSans-latin-variable.woff2",
       "output": "site/lab/fonts/PlusJakartaSans-latin-variable.woff2",
       "originalSha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
       "publishedSha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/fonts/PlusJakartaSans-OFL.txt",
       "output": "site/lab/fonts/PlusJakartaSans-OFL.txt",
       "originalSha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
       "publishedSha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/index.html",
       "output": "site/lab/index.html",
-      "originalSha256": "86523f04acf58fc0464224ecc91228b2921cdbe187cfb9786e3c5518dd736d12",
-      "publishedSha256": "86523f04acf58fc0464224ecc91228b2921cdbe187cfb9786e3c5518dd736d12",
-      "byteIdentical": true
+      "originalSha256": "9021a4d51f4a6d0efdccd07782beb2d0699c49f36b576d8898d8b2559997e2ea",
+      "publishedSha256": "a50af5492200035e4524fe5dba90c3a0602d86a2880742f7ab0740fce6306616",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/bennu-1999-rq36.glb",
       "output": "site/lab/models/nasa/bennu-1999-rq36.glb",
       "originalSha256": "644af15678447df90c2d9e85674809c7fc70f439e0865418aa6618a8483b7958",
       "publishedSha256": "644af15678447df90c2d9e85674809c7fc70f439e0865418aa6618a8483b7958",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/cubesat-generic-2ru.glb",
       "output": "site/lab/models/nasa/cubesat-generic-2ru.glb",
       "originalSha256": "30633496ef3aea790ec00782772757c78744ccaf08c9322eca380a6c4ad57ec9",
       "publishedSha256": "30633496ef3aea790ec00782772757c78744ccaf08c9322eca380a6c4ad57ec9",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/draco/draco_decoder.js",
       "output": "site/lab/models/nasa/draco/draco_decoder.js",
       "originalSha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
       "publishedSha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/draco/draco_decoder.wasm",
       "output": "site/lab/models/nasa/draco/draco_decoder.wasm",
       "originalSha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
       "publishedSha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/draco/draco_wasm_wrapper.js",
       "output": "site/lab/models/nasa/draco/draco_wasm_wrapper.js",
       "originalSha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
       "publishedSha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/draco/LICENSE-DRACO.txt",
       "output": "site/lab/models/nasa/draco/LICENSE-DRACO.txt",
       "originalSha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
       "publishedSha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/draco/README-upstream.md",
       "output": "site/lab/models/nasa/draco/README-upstream.md",
       "originalSha256": "839850a67c93f6b26d3cc038a45bd8289e3cfdf15531e69339e8eb1282b4eb76",
       "publishedSha256": "839850a67c93f6b26d3cc038a45bd8289e3cfdf15531e69339e8eb1282b4eb76",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/draco/THREE-LICENSE.txt",
       "output": "site/lab/models/nasa/draco/THREE-LICENSE.txt",
       "originalSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
       "publishedSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/dsn-70m.glb",
       "output": "site/lab/models/nasa/dsn-70m.glb",
       "originalSha256": "36ff56a7a2bfd1c278f6f4774d32128d5931f2c22fe58241d00ee7d1815634bb",
       "publishedSha256": "36ff56a7a2bfd1c278f6f4774d32128d5931f2c22fe58241d00ee7d1815634bb",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/inspection.json",
       "output": "site/lab/models/nasa/inspection.json",
       "originalSha256": "fbd4951a4ef5c759178b4cf4b659cedaf58c69c578bfba334c89aae0f9fcaeb6",
       "publishedSha256": "fbd4951a4ef5c759178b4cf4b659cedaf58c69c578bfba334c89aae0f9fcaeb6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/jwst-a.glb",
       "output": "site/lab/models/nasa/jwst-a.glb",
       "originalSha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750",
       "publishedSha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/manifest.json",
       "output": "site/lab/models/nasa/manifest.json",
       "originalSha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d",
       "publishedSha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/models/nasa/optimization.json",
       "output": "site/lab/models/nasa/optimization.json",
       "originalSha256": "6fdff61ffb30a692312afe5dcd260290a0f8985171f82fefb33f716d4b7b9715",
       "publishedSha256": "6fdff61ffb30a692312afe5dcd260290a0f8985171f82fefb33f716d4b7b9715",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/assets/briefing-desktop.jpg",
       "output": "site/lab/research/assets/briefing-desktop.jpg",
       "originalSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
       "publishedSha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/assets/briefing-mobile.jpg",
       "output": "site/lab/research/assets/briefing-mobile.jpg",
       "originalSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
       "publishedSha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/assets/laboratorio.jpg",
       "output": "site/lab/research/assets/laboratorio.jpg",
       "originalSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
       "publishedSha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/assets/retorno-cientifico.jpg",
       "output": "site/lab/research/assets/retorno-cientifico.jpg",
       "originalSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
       "publishedSha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/assets/retorno-mobile.jpg",
       "output": "site/lab/research/assets/retorno-mobile.jpg",
       "originalSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
       "publishedSha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/galeria.html",
       "output": "site/lab/research/galeria.html",
       "originalSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
-      "publishedSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
-      "byteIdentical": true
+      "publishedSha256": "9828ee198b2329e32aab8e32482e0a578246b7305140ee981cfb2e335f88d1ac",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/index.html",
       "output": "site/lab/research/index.html",
       "originalSha256": "e1b396b664e91149c305c120f238ac3f26b3a8dd9998a8dcedab7223a1629029",
-      "publishedSha256": "e1b396b664e91149c305c120f238ac3f26b3a8dd9998a8dcedab7223a1629029",
-      "byteIdentical": true
+      "publishedSha256": "cd051de6987e767b5793a93e5a9bc7523e0b3b29d11edc50744e92a2acce08e0",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/manifest.json",
       "output": "site/lab/research/manifest.json",
       "originalSha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
       "publishedSha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/a1-desafio.md",
       "output": "site/lab/research/originals/a1-desafio.md",
       "originalSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
       "publishedSha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/a2-fisica.md",
       "output": "site/lab/research/originals/a2-fisica.md",
       "originalSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
       "publishedSha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/a3-ux-tecnologia.md",
       "output": "site/lab/research/originals/a3-ux-tecnologia.md",
       "originalSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
       "publishedSha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/GUIA-DIDATICO-R9.md",
       "output": "site/lab/research/originals/GUIA-DIDATICO-R9.md",
       "originalSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
       "publishedSha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/PESQUISA-E-DECISOES-R9.md",
       "output": "site/lab/research/originals/PESQUISA-E-DECISOES-R9.md",
       "originalSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
       "publishedSha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/QA-NAVEGADOR-R9.md",
       "output": "site/lab/research/originals/QA-NAVEGADOR-R9.md",
       "originalSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
       "publishedSha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/QA-R9.md",
       "output": "site/lab/research/originals/QA-R9.md",
       "originalSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
       "publishedSha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/refinamento-conops.md",
       "output": "site/lab/research/originals/refinamento-conops.md",
       "originalSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
       "publishedSha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/REFINAMENTO-NASA-R10.md",
       "output": "site/lab/research/originals/REFINAMENTO-NASA-R10.md",
       "originalSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
       "publishedSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/refinamento-requisitos.md",
       "output": "site/lab/research/originals/refinamento-requisitos.md",
       "originalSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
       "publishedSha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "experiments/mission-design-lab/dist/research/originals/refinamento-risco-ux.md",
       "output": "site/lab/research/originals/refinamento-risco-ux.md",
       "originalSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
       "publishedSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "portable/Missao_Ipe_Local.html",
       "output": "site/portable/Missao_Ipe_Local.html",
       "originalSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
-      "publishedSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
-      "byteIdentical": true
+      "publishedSha256": "70147f861b8fdc37c8a8aa51f5a6a510c34b555c35d49c8fdf95ffa1ad88aee8",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "presentation/Missao_Ipe_Apresentacao.html",
       "output": "site/presentation/Missao_Ipe_Apresentacao.html",
-      "originalSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
-      "publishedSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
-      "byteIdentical": true
+      "originalSha256": "3fd4473614f285611edc8c75c73d7e0baa8b8ec8d4d7a9aae9490b26c9358538",
+      "publishedSha256": "61dbbf5d642e42f7185c542e2b7c96bb4814548bf48ad596c531bc426371d703",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
+    },
+    {
+      "source": "presentation/pitch/assets/3d-bennu-a.webp",
+      "output": "site/presentation/pitch/assets/3d-bennu-a.webp",
+      "originalSha256": "3c86086bc6a8c79e15c78973d0210849328ea2041a741d9ff6b0f63dc33b9e43",
+      "publishedSha256": "3c86086bc6a8c79e15c78973d0210849328ea2041a741d9ff6b0f63dc33b9e43",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "source": "presentation/pitch/assets/3d-bennu-b.webp",
+      "output": "site/presentation/pitch/assets/3d-bennu-b.webp",
+      "originalSha256": "646f1ed4ab2b03614b9772a02a69b8e1c3f5992624bc0bc88418052f4bf254d3",
+      "publishedSha256": "646f1ed4ab2b03614b9772a02a69b8e1c3f5992624bc0bc88418052f4bf254d3",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "source": "presentation/pitch/assets/3d-cerrado-indice.webp",
+      "output": "site/presentation/pitch/assets/3d-cerrado-indice.webp",
+      "originalSha256": "ecf194006dd43212d59a4ec2bac70e0f1a040054be818f43bf8c87d77bae9753",
+      "publishedSha256": "ecf194006dd43212d59a4ec2bac70e0f1a040054be818f43bf8c87d77bae9753",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "source": "presentation/pitch/assets/3d-webb-espectrometro.webp",
+      "output": "site/presentation/pitch/assets/3d-webb-espectrometro.webp",
+      "originalSha256": "faa3c0917ca1d1c3f2277067ec8a257610b9e10a9b961c66fa0d5cc044c413fe",
+      "publishedSha256": "faa3c0917ca1d1c3f2277067ec8a257610b9e10a9b961c66fa0d5cc044c413fe",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/alexandre-belo-monogram.svg",
       "output": "site/presentation/pitch/assets/alexandre-belo-monogram.svg",
       "originalSha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1",
       "publishedSha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/alexandre-belo-orbit.svg",
       "output": "site/presentation/pitch/assets/alexandre-belo-orbit.svg",
       "originalSha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324",
       "publishedSha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/bennu-osiris-rex.jpg",
       "output": "site/presentation/pitch/assets/bennu-osiris-rex.jpg",
       "originalSha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
       "publishedSha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/cerrado-terra-modis.jpg",
       "output": "site/presentation/pitch/assets/cerrado-terra-modis.jpg",
       "originalSha256": "2643965bf8a2f6e536f4abd2ada8aa55e5052efe69ad6bc0c54abf6ff5842120",
       "publishedSha256": "2643965bf8a2f6e536f4abd2ada8aa55e5052efe69ad6bc0c54abf6ff5842120",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/earth-mobile.webp",
       "output": "site/presentation/pitch/assets/earth-mobile.webp",
       "originalSha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
       "publishedSha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/earth.webp",
       "output": "site/presentation/pitch/assets/earth.webp",
       "originalSha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
       "publishedSha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/eb-garamond-italic-latin.woff2",
       "output": "site/presentation/pitch/assets/eb-garamond-italic-latin.woff2",
       "originalSha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
       "publishedSha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/eb-garamond-latin.woff2",
       "output": "site/presentation/pitch/assets/eb-garamond-latin.woff2",
       "originalSha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
       "publishedSha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/espectro-webb.svg",
       "output": "site/presentation/pitch/assets/espectro-webb.svg",
       "originalSha256": "1899025e61332175f581cf72ddb4058528efb22d392e287a953eac72ca4f84a0",
       "publishedSha256": "1899025e61332175f581cf72ddb4058528efb22d392e287a953eac72ca4f84a0",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/figtree-latin.woff2",
       "output": "site/presentation/pitch/assets/figtree-latin.woff2",
       "originalSha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
       "publishedSha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/LICENSE-EBGARAMOND-OFL.txt",
       "output": "site/presentation/pitch/assets/LICENSE-EBGARAMOND-OFL.txt",
       "originalSha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
       "publishedSha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/LICENSE-FIGTREE-OFL.txt",
       "output": "site/presentation/pitch/assets/LICENSE-FIGTREE-OFL.txt",
       "originalSha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
       "publishedSha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/LICENSE-MOTIONMAXXING-APACHE-2.0.txt",
       "output": "site/presentation/pitch/assets/LICENSE-MOTIONMAXXING-APACHE-2.0.txt",
       "originalSha256": "d6c7adc5950fb5aa2317a618b4619413f803e4e55554d01a99610904fec001a0",
       "publishedSha256": "d6c7adc5950fb5aa2317a618b4619413f803e4e55554d01a99610904fec001a0",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/missao-ipe-logo.svg",
       "output": "site/presentation/pitch/assets/missao-ipe-logo.svg",
       "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
       "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/NOTICE-MOTIONMAXXING.txt",
       "output": "site/presentation/pitch/assets/NOTICE-MOTIONMAXXING.txt",
       "originalSha256": "967cebd2a17f3c46589f7701d0cba0b8a8be42566e6b651e9f526c42c0b09569",
       "publishedSha256": "967cebd2a17f3c46589f7701d0cba0b8a8be42566e6b651e9f526c42c0b09569",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/assets/webb-model.png",
       "output": "site/presentation/pitch/assets/webb-model.png",
       "originalSha256": "e9f1e8e397e86f47b016d6a65a6c08e3848a36e35949d03972364c1fbc705ab6",
       "publishedSha256": "e9f1e8e397e86f47b016d6a65a6c08e3848a36e35949d03972364c1fbc705ab6",
-      "byteIdentical": true
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/index.html",
       "output": "site/presentation/pitch/index.html",
-      "originalSha256": "8e3af860cdd891d8ecd429926b00bf5ed1c8d815713347b507bf28133fa1bc1e",
-      "publishedSha256": "8e3af860cdd891d8ecd429926b00bf5ed1c8d815713347b507bf28133fa1bc1e",
-      "byteIdentical": true
+      "originalSha256": "2098f3df390cd5d19f207611752794a552168eb877f47ef5590304b9582acfc5",
+      "publishedSha256": "c691b79f02a34690c6e93c9c716676c5b7fd0d8cc616399583b40c96dc91b1a7",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "presentation/pitch/pitch.css",
       "output": "site/presentation/pitch/pitch.css",
-      "originalSha256": "705f7f2c1d97158cf5975b4f9c6d6635fe93bfa784f985f980310b10a3b1f976",
-      "publishedSha256": "705f7f2c1d97158cf5975b4f9c6d6635fe93bfa784f985f980310b10a3b1f976",
-      "byteIdentical": true
+      "originalSha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
+      "publishedSha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     },
     {
       "source": "presentation/pitch/pitch.js",
       "output": "site/presentation/pitch/pitch.js",
-      "originalSha256": "1eb1f5bcb6f7dc3535c7fe57639168e08a6261002a94c5ac53a061834f1b129d",
-      "publishedSha256": "1eb1f5bcb6f7dc3535c7fe57639168e08a6261002a94c5ac53a061834f1b129d",
-      "byteIdentical": true
+      "originalSha256": "26d48493ae5617540b9c42bd56f3f6048a542a55be8b5f1e2dd8e9a07e78c94a",
+      "publishedSha256": "26d48493ae5617540b9c42bd56f3f6048a542a55be8b5f1e2dd8e9a07e78c94a",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
     }
   ]
 }

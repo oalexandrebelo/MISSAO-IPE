@@ -1,4 +1,8 @@
-# MISSÃO IPÊ — Ciência que chega
+# MISSÃO IPÊ · R21 / Beta 0.12
+
+A R21 reúne a entrada imersiva **Nome → E-mail → Tipo de missão → Play**, tela cheia, métricas calculadas pelo servidor, painel privado da equipe e pitch de três minutos com exemplos reais do 3D. [Central de acessos](https://projeto-ipe.vercel.app/equipe/index.html) · [Jogo](https://projeto-ipe.vercel.app/lab/index.html) · [Pitch](https://projeto-ipe.vercel.app/pitch) · [Painel privado](https://projeto-ipe.vercel.app/dashboard/index.html).
+
+**Comece pela documentação atual:** [handoff e métricas R21](docs/54-METRICAS-E-HANDOFF-R21.md), [fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) e [acessos da equipe](docs/55-PAINEL-E-ACESSOS-R21.md). Os registros históricos abaixo preservam o contexto de cada edição.
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
@@ -40,7 +44,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R20. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R21. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -74,7 +78,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.11.0-beta.1 / R20 | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R21 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -86,7 +90,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
-Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada no motor nesta edição.
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, fila local e função de métricas na Vercel com armazenamento privado. O servidor recalcula as tentativas; nenhum SDK ou biblioteca nova foi adicionado nesta edição. O jogo medido exige rede para iniciar a participação; a fila de uma participação existente tolera interrupções.
 
 ## Executar e compilar
 
@@ -99,7 +103,7 @@ npm run build:release
 npm run start:beta
 ```
 
-Abra `http://127.0.0.1:4175/`. Para desenvolver o beta: `npm --prefix experiments/mission-design-lab run dev`. O arquivo `portable/Missao_Ipe_Local.html` é a alternativa autocontida do jogo clássico.
+Abra `http://127.0.0.1:4175/`. Para testar entrada e painel localmente, use `IPE_METRICS_TEST=1 npm run start:beta`; esse modo funciona apenas em loopback e mantém dados de teste em memória, conforme o handoff R21. Para desenvolver o beta: `npm --prefix experiments/mission-design-lab run dev`. O arquivo `portable/Missao_Ipe_Local.html` é a alternativa autocontida do jogo clássico.
 
 O build compila o beta para `/lab/`, preserva a versão clássica em `/game/`, monta apenas os materiais públicos em `site/` e calcula os hashes de scripts para a política CSP. O `dist/` da raiz é o runtime clássico preservado; alterações em `src/` da raiz exigem recompilação própria.
 
@@ -111,6 +115,7 @@ npm test
 npm --prefix experiments/mission-design-lab run verify
 npm run build:release
 npm run test:context
+npm run test:metrics
 npm run test:beta
 ```
 

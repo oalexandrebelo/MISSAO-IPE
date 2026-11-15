@@ -244,11 +244,15 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 ---
 
-# MISSÃO IPÊ — Ciência que chega
+# MISSÃO IPÊ · R21 / Beta 0.12
 
-Fonte: `README.md` · SHA-256 original: `eb9d5f0fb7b814c9c4b04d91cc146649e32cf7df2edfbe127886782aff0e1bbf` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `1eed3d4119f2e8ae4314635600483d2074cdc8a0554093490bf84d592dfe2c0e` · Ajustes de caminhos privados: 0
 
-# MISSÃO IPÊ — Ciência que chega
+# MISSÃO IPÊ · R21 / Beta 0.12
+
+A R21 reúne a entrada imersiva **Nome → E-mail → Tipo de missão → Play**, tela cheia, métricas calculadas pelo servidor, painel privado da equipe e pitch de três minutos com exemplos reais do 3D. [Central de acessos](https://projeto-ipe.vercel.app/equipe/index.html) · [Jogo](https://projeto-ipe.vercel.app/lab/index.html) · [Pitch](https://projeto-ipe.vercel.app/pitch) · [Painel privado](https://projeto-ipe.vercel.app/dashboard/index.html).
+
+**Comece pela documentação atual:** [handoff e métricas R21](docs/54-METRICAS-E-HANDOFF-R21.md), [fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) e [acessos da equipe](docs/55-PAINEL-E-ACESSOS-R21.md). Os registros históricos abaixo preservam o contexto de cada edição.
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
@@ -290,7 +294,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R20. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R21. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -324,7 +328,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.11.0-beta.1 / R20 | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R21 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -336,7 +340,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
-Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada no motor nesta edição.
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, fila local e função de métricas na Vercel com armazenamento privado. O servidor recalcula as tentativas; nenhum SDK ou biblioteca nova foi adicionado nesta edição. O jogo medido exige rede para iniciar a participação; a fila de uma participação existente tolera interrupções.
 
 ## Executar e compilar
 
@@ -349,7 +353,7 @@ npm run build:release
 npm run start:beta
 ```
 
-Abra `http://127.0.0.1:4175/`. Para desenvolver o beta: `npm --prefix experiments/mission-design-lab run dev`. O arquivo `portable/Missao_Ipe_Local.html` é a alternativa autocontida do jogo clássico.
+Abra `http://127.0.0.1:4175/`. Para testar entrada e painel localmente, use `IPE_METRICS_TEST=1 npm run start:beta`; esse modo funciona apenas em loopback e mantém dados de teste em memória, conforme o handoff R21. Para desenvolver o beta: `npm --prefix experiments/mission-design-lab run dev`. O arquivo `portable/Missao_Ipe_Local.html` é a alternativa autocontida do jogo clássico.
 
 O build compila o beta para `/lab/`, preserva a versão clássica em `/game/`, monta apenas os materiais públicos em `site/` e calcula os hashes de scripts para a política CSP. O `dist/` da raiz é o runtime clássico preservado; alterações em `src/` da raiz exigem recompilação própria.
 
@@ -361,6 +365,7 @@ npm test
 npm --prefix experiments/mission-design-lab run verify
 npm run build:release
 npm run test:context
+npm run test:metrics
 npm run test:beta
 ```
 
@@ -6780,6 +6785,384 @@ O Chrome local confirmou abertura direta do HTML, início, pausa e reinício do 
 Os totais e os IDs dos registros foram reexecutados no motor de cada ensaio. A varredura automatizada de acessibilidade no navegador ficou incompleta por uma limitação da configuração da ferramenta de teste. Esses resultados são locais e não medem legibilidade no projetor, uso com leitor de tela nem tocabilidade em dispositivo físico.
 
 A revisão R20 também corrigiu o atalho “Ir para a cena”: ele preserva a cena atual. `node --test scripts/test-pitch.mjs` passou em duas regressões DOM, cobrindo âncoras/atalho e a reversão completa de A/B (contagem, agenda, custo e lacunas). A conferência CUA percorreu as sete cenas, tabela Webb, notas, relógio e seleção dos papéis; a 390 px, as cenas de leitura e A/B permaneceram sem transbordamento horizontal. Nenhum erro de console foi observado nessas ações.
+
+
+---
+
+# MISSÃO IPÊ · Pitch para jurados e fala de Alexandre Belo
+
+Fonte: `docs/53-PITCH-JURADOS-E-FALA-R21.md` · SHA-256 original: `2a51d0bef6f6ea248b90a769eace7710e0474f7ace2faf6146eb3bcadc22619a` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · Pitch para jurados e fala de Alexandre Belo
+
+**R21 · 15/11/2026** · [Apresentação pública](https://projeto-ipe.vercel.app/pitch) · [Jogar MISSÃO IPÊ](https://projeto-ipe.vercel.app/jogar).
+
+## Fala de três minutos
+
+Seis blocos somam exatamente 180 segundos. A fala tem cerca de 331 palavras. Os tempos reservam espaço para transições e para a pausa de dois segundos na demonstração. Confirme a cadência no equipamento de apresentação.
+
+Selecione **Iniciar pitch de 3 min**. Use as setas ou os botões do rodapé para avançar. **Notas** mostra a fala da cena atual e permite reiniciar o relógio. Antes de começar, deixe Bennu em A e carregue o laboratório em outra aba, com uma tentativa pronta para inspeção.
+
+### 0:00–0:20 · Abertura (20 s)
+
+*Inicie o relógio. Olhe para a banca ao fazer a pergunta.*
+
+> Uma nave pode coletar seis arquivos e deixar a Terra sem resposta. Como saber se o problema foi o instrumento, a energia ou o contato com o solo? Sou Alexandre Belo, da MISSÃO IPÊ.
+
+### 0:20–0:50 · Problema (30 s)
+
+*Aponte a bateria e o instante do replay.*
+
+> Para quem está começando, projetar uma missão vira uma lista de peças e números. Se algo falha, a tela pode mostrar só uma nota. O aluno fica sem saber que decisão causou a falha, qual dado perdeu e se ainda pode responder à pergunta científica. Precisávamos tornar esse caminho visível para permitir uma segunda tentativa informada.
+
+### 0:50–1:30 · Solução (40 s)
+
+*Mostre os três casos na ordem Cerrado, Bennu e Webb.*
+
+> A MISSÃO IPÊ é um jogo de engenharia espacial em que você projeta, faz uma previsão e usa a evidência recebida para redesenhar a missão. Criamos o jogo para o desafio Space Mission Design Game. No Cerrado, dados reais do Terra MODIS ajudam a distinguir potência instantânea de energia armazenada. Em Bennu, separar dados produzidos dos que chegaram ao solo muda a comparação de tamanhos. No Webb, você escolhe o instrumento pela pergunta e lê um espectro com incerteza.
+
+### 1:30–2:20 · Demo (50 s)
+
+*Comece em A. Aponte T+85 min e o total. Deixe o laboratório aberto em outra aba.*
+
+> Em Bennu, usamos dimensões publicadas da missão OSIRIS-REx. Em A, aos oitenta e cinco minutos, o replay mostra a nave aguardando contato. No final, chegam dois registros. Com o mesmo rádio e um serviço de solo que abre antes e dura mais, quantos chegam?
+
+*Espere dois segundos. Selecione B e aponte a transmissão e as quatro medidas adicionais.*
+
+> Em B, a nave já transmite nesse mesmo instante. Chegam seis registros por seis créditos a mais. Aqui vemos capturas do replay. No laboratório, você pode repetir a comparação, abrir uma medida recebida e seguir o evento até a antena no 3D.
+
+### 2:20–2:45 · Validação (25 s)
+
+*Mostre a trilha da evidência e o alcance das verificações.*
+
+> Rodamos as três missões localmente e conferimos as decisões, os dados que chegam, a trilha e as respostas. Os testes cobriram o motor, a interface, o servidor e o painel privado. Já conseguimos rastrear a entrega até a decisão. Ainda precisamos observar se iniciantes explicam a falha e justificam uma mudança.
+
+### 2:45–3:00 · Fechamento (15 s)
+
+*Deixe as duas marcas, o endereço e o botão de jogo visíveis.*
+
+> Nosso próximo passo é observar iniciantes usando o jogo para justificar uma decisão. Escolham uma missão e mostrem qual evidência responde à sua pergunta. Obrigado.
+
+## O que a validação cobre
+
+A equipe jogou as três missões localmente. A rodada do candidato registrou 158 testes de domínio, 64 de interface do laboratório, 17 de servidor, 6 de painel e 17 verificações da distribuição. As verificações cobrem resultados, entrega de dados, trilha, registros e acesso do painel. A próxima validação é observar iniciantes explicando a causa de uma falha e justificando a revisão. [Métricas e critérios de aceite](54-METRICAS-E-HANDOFF-R21.md)
+
+## O que a banca vê em cada missão
+
+| Caso | Decisão e consequência | Aprendizagem e limite |
+| --- | --- | --- |
+| Cerrado · Terra/MODIS | Com contatos curtos e a mesma bateria, envie as bandas ou calcule o índice a bordo. Em B, a demanda de descarga atinge 29,58 W, acima do limite de 20 W, em T+10 min. Ainda há 13,96 Wh armazenados. A entrega final passa de 2 para 0 registros válidos. | Distinguir potência instantânea de energia armazenada. Os dois registros de A formam um par no mesmo ponto, em dois períodos de 2024. O exercício preserva lacunas e a diferença de índice por si só deixa a causa em aberto. [Índices de vegetação, NASA](https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/) |
+| Bennu · OSIRIS-REx | Troque o serviço de solo com o mesmo rádio de 1,2 Mbit/s. A primeira janela muda de T+90 para T+85 min e de 120 para 500 s. O custo de serviço sobe de 6 para 12 créditos. Aos 85 min, A aguarda e B começa a transmitir. No final, 2 e 6 registros chegam válidos, respectivamente. | Separar arquivos produzidos, arquivos recebidos e evidência disponível para a comparação. Os eixos maiores publicados informam tamanho. Composição, origem e segurança de pouso exigem outras evidências. [Estudo arquivado pela NASA](https://ntrs.nasa.gov/citations/20205007912) |
+| Webb · WASP-39 b | Escolha a câmera genérica ou o espectrômetro. Em T+15 min, o quadro mostra o espectrômetro processando o arquivo. Ao final, chegam seis pacotes nas duas tentativas. A câmera satisfaz o transporte, com 0 medidas compatíveis. O espectrômetro entrega 6 medidas válidas nesta configuração. | Escolher o instrumento a partir da pergunta e interpretar a luz bloqueada por faixa com as incertezas de 1σ. A câmera do jogo é genérica. O Webb possui modos de espectroscopia em seus instrumentos reais, e a detecção molecular depende da análise completa. [Dados FIREFLy](https://doi.org/10.5281/zenodo.6959427) · [Instrumentos do Webb](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) |
+
+Os valores científicos são recortes de observações históricas. A geometria da nave, o relógio, os recursos e os custos são parâmetros do exercício. A troca de configuração determina a entrega e a compatibilidade dos registros. [Proveniência das três missões](45-DADOS-REAIS-BENNU-WEBB-R18.md).
+
+## Leitura de jurado
+
+- **Relevância.** A fala abre com a dificuldade de ligar escolhas de engenharia a uma resposta científica. Apresenta o desafio Space Mission Design Game e mostra o percurso de um iniciante, da hipótese à interpretação. [Perfil oficial da MISSÃO IPÊ no Space Apps 2026](https://www.spaceappschallenge.org/2026/find-a-team/missao-ipe/?tab=details).
+- **Criatividade e execução.** Aos 85 minutos do ensaio de Bennu, trocar o serviço de solo muda o estado do enlace e a entrega final. No jogo, seguir um dado recebido de volta ao evento e ao componente permite justificar a próxima tentativa.
+- **Uso dos dados e validade.** Os três casos ligam uma decisão aos dados históricos que ela permite interpretar. A banca pode repetir os ensaios e conferir números, unidades e limites nas fontes e no motor.
+- **Impacto.** Uma pessoa, ou até quatro no mesmo dispositivo, pode projetar e revisar uma tentativa. Uma avaliação com iniciantes ainda precisa verificar se explicam uma falha e justificam uma nova escolha.
+- **Comunicação.** O pitch pede uma previsão antes de revelar B, mostra o estado da nave, abre as quatro dimensões adicionais e encerra com o endereço do jogo.
+
+A organização local de Rewari publica suas orientações de avaliação de 2026 no portal Space Apps. Os critérios locais de Rio Verde e o guia global ficaram indisponíveis na consulta desta revisão. [Orientações publicadas para Rewari](https://www.spaceappschallenge.org/2026/local-events/rewari/) · [Guia global de julgamento](https://www.spaceappschallenge.org/resources/judging-awards-guide/).
+
+## Para levar o 3D ao vivo
+
+No [laboratório](https://projeto-ipe.vercel.app/lab/), abra **Projetar missão do Cerrado**, **Explorar missão Bennu** ou **Projetar telescópio científico**. Abra **Investigar esta escolha**, registre uma previsão e execute os dois ensaios. **Investigar primeira diferença** leva ao subsistema e ao instante do replay. Em Bennu, compare A e B com o relógio em T+85 min e inspecione **Comunicação**. Para seguir uma medida da tentativa principal, abra sua entrega na trilha da evidência.
+
+Os quatro quadros do pitch foram recortados do laboratório público R20. O botão A/B alterna duas capturas do mesmo instante e seus resultados finais pré-calculados. A simulação, o relógio navegável e a inspeção das peças ficam no laboratório. A edição conserva a marca da equipe, a assinatura de Alexandre Belo e a adaptação das curvas da MotionMaxxing. [Créditos visuais e instruções de palco R20](52-PITCH-ALEXANDRE-BELO-R20.md).
+
+Na captura de Bennu, uma sessão no Chrome exibiu o canvas vazio ou conservou o quadro anterior após a troca. A abertura direta do laboratório antes de cada tentativa permitiu obter as duas cenas no tempo correto. Confira a renderização no equipamento de apresentação antes de usar o jogo ao vivo. Para apresentar offline, guarde a pasta do pitch com CSS, JavaScript e assets. A fala também está na cópia autocontida do painel da equipe. [Painel e fala offline](https://projeto-ipe.vercel.app/equipe/index.html)
+
+## Rastreabilidade dos quadros
+
+Os resultados foram reexecutados com `runLearningExperiment` e `summarizeLearningTrial`. Os arquivos e os estados do motor permitem conferir os exemplos usados nesta fala. [Código dos ensaios](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/mission-curriculum.ts).
+
+| Quadro | Evidência do motor |
+| --- | --- |
+| Cerrado B · T+10 min | Evento `PEAK_POWER`. Em A chegaram `A-A2024241` e `A-A2024257`. |
+| Bennu A/B · T+85 min | B registra `CONTACT_START`. A entrega sítios 1 e 2. B acrescenta os sítios 3, 5 e 6, além do clasto 4a. |
+| Webb B · T+15 min | Evento `JOB_START`. As seis faixas correspondem às linhas 25, 39, 54, 58, 65 e 80 da redução FIREFLy. |
+
+## Equipe MISSÃO IPÊ
+
+O perfil oficial consultado em 15/11/2026 informa o evento local de Rio Verde, Brasil, e o desafio Space Mission Design Game. O cadastro da equipe identifica os seis integrantes abaixo. [Perfil oficial da equipe](https://www.spaceappschallenge.org/2026/find-a-team/missao-ipe/?tab=details)
+
+- Alexandre Belo · @alexandrebelo
+- Bruno Assis Carvalho Meyer · @brunoassiscarvalho
+- Enzo Chaves Melo · @enzocmelo
+- Paulo Eduardo Canassa Monteiro · @paulo_canassa
+- Castanete Rodrigues Araújo de Vlagelaier · @cherry01
+- Rebecca Pádua Rocha · @rebeccapádua
+
+
+---
+
+# R21 · métricas, pitch e continuidade dos dois devs
+
+Fonte: `docs/54-METRICAS-E-HANDOFF-R21.md` · SHA-256 original: `a52c0fa13484e0ecbc806df0bec670abcfa4d40b107fb1d5faf6cc1f21cc4bcd` · Ajustes de caminhos privados: 0
+
+# R21 · métricas, pitch e continuidade dos dois devs
+
+O objetivo desta versão é tornar a proposta demonstrável: **o jogador escolhe, observa uma consequência na nave, recebe evidências e justifica uma conclusão**. A equipe acompanha tentativas e respostas com critérios explícitos. O jogo medido é o laboratório de três missões em `/lab/index.html`; os protótipos históricos `/game`, `/campanha` e FASTMODE não entram nesses indicadores.
+
+[Jogar](../lab/index.html) · [Painel privado](../dashboard/index.html) · [Pitch](../presentation/pitch/index.html) · [Fala de três minutos](53-PITCH-JURADOS-E-FALA-R21.md)
+
+## O que as missões ensinam
+
+| Missão | Decisão observável no 3D | O que o jogador pratica | O que a evidência não permite afirmar |
+| --- | --- | --- | --- |
+| Cerrado | Instrumento/processamento, painéis, bateria e rádio acompanham a configuração e o instante do motor. | Diferenciar potência (W) de energia (Wh); avaliar volume, memória e contato; comparar dois períodos de NDVI apenas após receber os registros. | Uma lacuna não equivale a vegetação ausente. Um índice isolado não estabelece desmatamento nem sua causa. |
+| Bennu | A câmera mede no exercício; rádio e agenda mostram quando os arquivos chegam ao solo. | Distinguir produzir, armazenar e entregar; selecionar o instrumento pela pergunta. O pacote de solo muda início, duração e custo conjuntamente. | Dimensões de seis rochas/clastos não demonstram composição ou origem. |
+| Webb | Instrumento, energia e comunicação condicionam a produção e a entrega dos bins. | Distinguir imagem e espectro; ler profundidade de trânsito e incerteza; compatibilizar massa, energia, lançamento e ciência. | Seis bins não refazem a descoberta molecular completa nem demonstram vida. |
+
+Os registros históricos NASA não são alterados para recompensar uma configuração. A nave montável, capacidades, agenda, massa e créditos são um modelo didático. O pitch precisa manter essa distinção próxima das demonstrações.
+
+## Entrada e privacidade
+
+O participante percorre **Nome → E-mail → Tipo de missão → Play**, com uma etapa por tela. “Tipo” escolhe entre Cerrado, Bennu e Webb, mostrando a pergunta científica e o aprendizado de cada caso. Voltar preserva os campos; a participação só é criada ao confirmar Play. O formulário informa a finalidade: registrar sua participação, decisões, resultados e respostas para análise privada da equipe. Não há disparo de e-mail nem inscrição de marketing. O e-mail é autodeclarado: não representa autenticação ou identidade verificada.
+
+A entrada ocupa a área disponível da tela. Play solicita o modo de tela cheia no próprio gesto do jogador, antes de aguardar a rede. Caso o navegador não ofereça ou permita esse modo, a partida continua na área disponível, sem bloquear o cadastro. O cabeçalho do jogo oferece o controle de tela cheia; Esc continua disponível. Uma participação restaurada apresenta **Retomar jogo** antes de entrar. Em dispositivos pequenos, conteúdo que excede a altura permanece alcançável por rolagem: não cortar controles para simular uma tela cheia.
+
+O servidor cria uma participação aleatória, com cookie de acesso exclusivo dessa participação. Digitar o mesmo e-mail em outro navegador não revela nem recupera um histórico anterior. Os rascunhos, o diário e o resumo local do jogo são separados por participação. Eventos antigos sem dono não são atribuídos ao próximo visitante.
+
+Nome e e-mail ficam no armazenamento privado; os eventos contêm somente o identificador da participação. O cliente não grava o e-mail no armazenamento do navegador. Hipóteses e reflexões livres não são transmitidas na telemetria. O painel da equipe exige uma chave administrativa distinta, com sessão de oito horas. A chave não pertence ao Git, ao HTML ou à configuração pública.
+
+Encerrar a participação limpa o acesso no aparelho; não apaga os dados já enviados à equipe. O responsável pode atender um pedido de remoção no armazenamento privado, selecionando o prefixo exato da participação. Não foi implementado um botão de exclusão automática: é necessário tratar revogação e gravações concorrentes antes de prometer apagamento completo. O adaptador solicita retenção de 90 dias ao serviço; sua confirmação em produção deve constar no recibo da implantação.
+
+## Dicionário de métricas
+
+| Indicador | Numerador / critério | Denominador / cuidado |
+| --- | --- | --- |
+| Participações | Sessões criadas pelo servidor. | Não são pessoas únicas; o mesmo visitante pode iniciar outra participação. |
+| Tentativas calculadas | Execuções próprias concluídas, identificadas por UUID novo a cada execução. | Exemplos A/B, buscas automáticas, replays e abertura de histórico não contam. |
+| Missões cumpridas | Resultado `success` recalculado no servidor com o motor original. | Todas as tentativas calculadas, incluindo projetos incompatíveis. Não significa aprendizagem comprovada. |
+| Projetos incompatíveis | Resultado `invalid` após checar as escolhas e restrições. | Separado da missão operacional que começou e falhou. |
+| Causas de engenharia | Cada código de erro aparece uma vez por tentativa. | `MISSION_END` é resumo e não conta como causa adicional. Diagnósticos podem incluir consequências: leia o primeiro evento e a configuração. |
+| Registros completos / válidos | Quantidade entregue e quantidade compatível com a pergunta científica. | Webb pode entregar seis pacotes com câmera e obter zero registros cientificamente válidos. |
+| Primeira resposta correta | Primeira resposta recebida por participação, missão, pergunta e versão; comparada ao critério do exercício. | Apenas perguntas respondidas. Não substitui avaliação humana ou desenho experimental de aprendizagem. |
+| Última resposta e revisões | Resposta mais recente e quantidade posterior à primeira. | Rever após feedback não reescreve o acerto inicial. |
+| Mudanças de configuração | Escolhas válidas diferentes da seleção anterior. | Uma escolha não é universalmente certa/errada; o resultado depende do projeto completo. |
+| Inspeções de evidência / 3D | Ações explícitas de inspeção de componente, evento, comparação ou registro. | Não conta quadros de animação, tempo de replay ou renderizações React. |
+| Revisão dos papéis | Registro dos papéis preenchidos. | Preenchimento não avalia automaticamente a qualidade de texto livre. |
+| Cancelamento / falha técnica | Execução interrompida ou erro do processamento. | Separados das falhas de engenharia; não entram na taxa de missões cumpridas. |
+
+A previsão guiada compara “mais/igual/menos” com a diferença real entre os dois ensaios. A interpretação científica compara a alternativa escolhida com a conclusão que respeita a evidência. A correção ocorre no servidor, sem aceitar um booleano de acerto enviado pelo cliente.
+
+## Como o painel calcula
+
+`dashboard/metrics.mjs` agrega apenas os registros carregados e filtrados. A lista é paginada em blocos de até 100 objetos; o botão “Carregar mais registros” permanece visível quando há outras páginas. Os números parciais ficam explicitamente identificados. “Atualizar registros” reinicia a consulta, sem somar novamente o mesmo evento.
+
+Cada tentativa usa um identificador próprio; duas execuções idênticas são duas tentativas. Um reenvio da mesma tentativa, inclusive após perda da confirmação de gravação, não duplica a contagem. O servidor recalcula o resultado usando os arquivos científicos e os motores já existentes. Isso reduz falsificação de métricas, mas não comprova que a atividade foi realizada por um humano e não constitui proteção completa contra fraude.
+
+O horário `receivedAt` é do servidor. `at` é informado pelo navegador. `completedAtS` é tempo simulado T+, não duração de uso. O painel não apresenta uma métrica de tempo ativo humano que não foi medida.
+
+O CSV exporta somente tentativas carregadas e filtradas. E-mail fica de fora por padrão; a equipe pode incluí-lo com o controle explícito. Células são protegidas contra fórmulas de planilha. Nenhuma exportação pública é gerada automaticamente.
+
+## Arquitetura e implantação
+
+| Camada | Local | Responsabilidade |
+| --- | --- | --- |
+| Entrada, fila e progresso | `experiments/mission-design-lab/src/ui/PlayerMetrics.tsx` e `src/metrics/player-metrics.ts` | Sessão, métricas locais por participação, envio, confirmação, reenvio e erros visíveis. |
+| Pontos de registro | `App.tsx`, `ScientificExpedition.tsx`, `MissionLearning.tsx`, `ExpeditionLearning.tsx`, `Scene.tsx` | Registrar ações aceitas; nunca registrar uma tentativa ao apenas ler ou renderizar. |
+| API privada | `api/metrics.mjs`, `server/metrics/handler.mjs` | Validação, cookies, autenticação da equipe, limite de pedido e respostas sem cache. |
+| Ciência e validação | `server/metrics/model.mjs` | Validar configurações e recalcular com os motores originais. |
+| Armazenamento | `server/metrics/blob.mjs` | Objetos privados e imutáveis por identificador, leitura paginada e retenção solicitada. |
+| Painel | `dashboard/` | Interface sem bibliotecas novas; autenticação antes de receber dados; filtros, causas, respostas, detalhes e CSV. |
+| Pitch | `presentation/pitch/` | Evidência visual, aprendizagem explícita e fala coerente com o que existe. |
+
+Variáveis exclusivas do servidor: `BLOB_STORE_ID`, `VERCEL_OIDC_TOKEN` temporário gerenciado pela Vercel, `METRICS_SIGNING_SECRET`, `METRICS_ADMIN_SECRET`. Nunca usar prefixo `VITE_` para elas. O armazenamento deve ser **privado**. A conexão usa OIDC; não foi criada chave permanente de leitura/gravação. A API mantém `Cache-Control: private, no-store`, valida a origem das mutações e usa cookies `HttpOnly; Secure; SameSite=Strict`. O limite por IP é uma proteção simples por instância; não é um sistema distribuído de prevenção de abuso.
+
+A distribuição agora contém uma função de servidor. **Publicar somente os arquivos do manifesto estático não ativa as métricas.** Use a implantação do repositório completo na Vercel, mantendo `api/metrics.mjs` como função. A pasta `site/` continua contendo somente os assets e documentos públicos; nenhum perfil, token ou evento de produção é copiado para ela.
+
+O serviço privado tem limites de uso e pode cobrar conforme o plano da Vercel. Esta versão não habilita upgrade nem altera limites de gasto. Consulte [uso e preços do Blob](https://vercel.com/docs/vercel-blob/usage-and-pricing) e monitore a quantidade de objetos/operações antes de ampliar o piloto. Não há promessa de operação ilimitada.
+
+## Pesquisa aplicada
+
+Foram lidos três arquivos do repositório [awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/tree/c6ca6c41c839b68319ffc08430b99ab768debc32), consultado em 15/11/2026:
+
+- [game-ui-ux](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/game-ui-ux/SKILL.md): atualização por ação, feedback próximo da decisão e números legíveis.
+- [save-systems](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/save-systems/SKILL.md): registros simples versionados, validação, recuperação e erro de persistência visível.
+- [prototype-fast](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/workflows/prototype-fast/SKILL.md): avaliar um ciclo observável de previsão, execução, inspeção e revisão.
+
+Nenhum pacote desse repositório foi instalado. As práticas foram aplicadas ao código existente; o repositório não fornece uma escala validada de aprendizagem nem uma solução pronta de analytics.
+
+## Divisão dos dois devs e aceite
+
+**Dev A — ciência, motor e métricas.** Mantém as regras de resultado, as unidades e o mapeamento de `normalizeEvent`. Para uma mudança no motor, verificar novamente o resumo das três missões e os ensaios usados pelo pitch. Não substituir dado histórico por pontuação sintética nem aceitar nota calculada pelo navegador.
+
+**Dev B — experiência, painel e operação.** Mantém a entrada Nome → E-mail → Tipo → Play, a escolha efetiva da missão, a retomada, a tela cheia, a fila por participação, os estados de envio, a privacidade do painel e o roteiro. Conferir foco/teclado, celular, alteração de jogador no mesmo aparelho e erro de conexão. Uma consulta parcial nunca pode parecer total.
+
+**Revisão conjunta.** Conferir cadastro → jogo → duas tentativas diferentes → resposta incorreta → revisão correta → painel privado. Reenviar a mesma tentativa e confirmar contagem estável. Abrir outro navegador com o mesmo e-mail e confirmar isolamento. Verificar que um visitante e um jogador comum não conseguem ler o painel. Conferir 6 pacotes / 0 válidos no Webb com câmera. Jogadores humanos ainda precisam testar se conseguem explicar uma falha e justificar a próxima decisão sem orientação.
+
+Comandos: `npm run test:metrics`; `npm --prefix experiments/mission-design-lab run verify`; `node scripts/test-pitch.mjs`; `npm run build:release`; `npm run test:beta`. Para QA local integrado, após a distribuição: `IPE_METRICS_TEST=1 node scripts/serve-beta.mjs --port 4180`. Esse modo usa dados sintéticos em memória e uma chave de teste documentada no código, disponível somente em localhost; não valida armazenamento de produção.
+
+Os recibos em `evidence/` e a conferência posterior à publicação devem registrar as verificações realmente executadas. Um teste local não comprova o funcionamento do Blob em produção, e screenshots não comprovam aprendizagem.
+
+## Verificação antes da publicação
+
+No percurso local integrado, um participante sintético executou as três missões: Cerrado 6/6 válido e sucesso; Bennu 2/6 válido e requisito de entrega não cumprido; Webb 6/6 válido, mas projeto incompatível com o lançador compacto (3,2 kg para 3 kg e 87 créditos para 80). O resumo e o painel receberam três tentativas, duas respostas e oito eventos no total, sem pendências ou recusas. A tentativa incompatível mostra por que ciência recebida não basta para aprovar toda a arquitetura.
+
+Foram corrigidos o seletor de missões do painel, o texto de diagnósticos que repetia o requisito positivo como erro e a limpeza de todos os dados visíveis/ocultos após sair do painel. Esses testes usaram armazenamento local em memória; a comprovação do serviço real depende de `evidence/metrics-production-r21.json` e do recibo da publicação.
+
+Um relato anterior de canvas intermitente na troca de missões não se reproduziu nesta passagem. O motor e os estados A/B concordaram, e não foi introduzida uma correção especulativa. Ainda é necessário um teste orientado com iniciantes e celulares físicos antes de afirmar aprendizagem ou desempenho amplo.
+
+## Pontuação do MVP e pré-banca
+
+A rubrica `r21-v1` soma até 60 pontos por ciência válida recebida, 30 pela compatibilidade inicial do projeto e 10 pela folga média de massa/orçamento. O motor compartilhado calcula a pontuação tanto no resumo local como na reavaliação do servidor. Cada tentativa guarda as parcelas e a versão da regra; uma nova execução é uma tentativa diferente, enquanto reenvios mantêm o mesmo identificador. Pontos não substituem o resultado da missão nem são uma nota validada de aprendizagem.
+
+[Kit da pré-banca: seis cenas, roteiro, demonstração e números com significado](57-KIT-PRE-BANCA-R21.md). A página oficial confirmou em 15/11/2026 a vinculação da MISSÃO IPÊ ao evento de Rio Verde e ao desafio Space Mission Design Game. O roteiro atualizado tem 331 palavras e blocos 20/30/40/50/25/15 segundos; Alexandre ainda deve ensaiar com o equipamento.
+
+
+---
+
+# MISSÃO IPÊ · painel e acessos da equipe R21
+
+Fonte: `docs/55-PAINEL-E-ACESSOS-R21.md` · SHA-256 original: `0de41094770f0d0a8ec9f68a091772d7eba5a62bec0ebfa686c5582b3e3bcf55` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · painel e acessos da equipe R21
+
+[Abrir painel da equipe](https://projeto-ipe.vercel.app/equipe/index.html) · [Recibo de publicação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md)
+
+O painel reúne os acessos, o checklist e a fala de Alexandre Belo. Abra `equipe/index.html` no navegador ou salve a página como **somente HTML**. A fala, o resumo das missões e o checklist funcionam sem conexão. Os links exigem internet. As marcações ficam no navegador que as fez, quando ele permite armazenamento local.
+
+## Acessos
+
+| Onde | O que abrir |
+| --- | --- |
+| [Portal público](https://projeto-ipe.vercel.app/) | Entrada do projeto e documentação. |
+| [Laboratório](https://projeto-ipe.vercel.app/lab/index.html) | Em R21, informe nome e e-mail e selecione **Dar play no jogo**. O cadastro depende do serviço de métricas. |
+| [Pitch](https://projeto-ipe.vercel.app/pitch) | Seis blocos de 20, 30, 40, 50, 25 e 15 segundos, relógio de três minutos e notas de palco. |
+| [Painel de métricas da equipe](https://projeto-ipe.vercel.app/dashboard/) | Acesso privado com chave administrativa. |
+| [Landing page](https://projeto-ipe-lp.vercel.app/) | Apresentação imersiva do projeto. |
+| [Repositório](https://github.com/oalexandrebelo/MISSAO-IPE) | Código, histórico e recibos. |
+| [Fala e fontes do pitch · R21](https://projeto-ipe.vercel.app/docs/53-PITCH-JURADOS-E-FALA-R21.html) | Roteiro de três minutos, dados e instruções de palco. |
+| [Handoff e métricas · R21](https://projeto-ipe.vercel.app/docs/54-METRICAS-E-HANDOFF-R21.html) | Critérios, privacidade, arquitetura e aceite para os dois devs. |
+| [Documentação pública](https://projeto-ipe.vercel.app/docs/index.html) | Índice das páginas publicáveis. |
+
+As rotas de documentos usam as páginas `.html` geradas por `scripts/build-beta-site.mjs`. O painel, o cadastro e os documentos da R21 têm como referência a implantação informada no recibo. Verifique a edição servida e o funcionamento do armazenamento privado antes da apresentação.
+
+## Ensaio e passagem de trabalho
+
+- **Cerrado.** Compare as bandas recebidas com o cálculo do índice a bordo. A bateria ainda guarda energia, mas a potência exigida impede o cálculo no ensaio.
+- **Bennu.** Compare os registros produzidos e os que chegam ao solo. Em T+85 min, A aguarda e B transmite com o mesmo rádio. No final chegam dois e seis registros válidos. A troca de serviço altera início, duração e custo.
+- **Webb.** Selecione o instrumento adequado para interpretar a luz bloqueada em cada faixa com sua incerteza. A câmera e o espectrômetro entregam seis pacotes cada. Os seis registros do espectrômetro servem à pergunta do exercício.
+
+Comece com o A/B em A e carregue o laboratório em outra aba. Avance na sequência Abertura, Problema, Solução, Demo, Validação e Fechamento. Na fala, peça à banca uma previsão antes de selecionar B. O pitch usa capturas pré-calculadas. A execução e a inspeção das peças acontecem no laboratório, com a renderização conferida no equipamento de apresentação. [Roteiro de palco e proveniência](53-PITCH-JURADOS-E-FALA-R21.md)
+
+O **Dev A** mantém a ciência, o motor e a validação das métricas. O **Dev B** mantém entrada, painel, privacidade e experiência da demo. Em conjunto, validem o cadastro, as duas tentativas próprias, a resposta revista e o painel com e sem chave. A aprendizagem ainda exige observação com iniciantes. [Critérios completos de aceite](54-METRICAS-E-HANDOFF-R21.md)
+
+
+---
+
+# Acessibilidade e Libras na MISSÃO IPÊ
+
+Fonte: `docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md` · SHA-256 original: `bc8d327cdff484e56a70df1cc038a5c6ef1d165e617a34e8336015ccb3f8a70c` · Ajustes de caminhos privados: 0
+
+# Acessibilidade e Libras na MISSÃO IPÊ
+
+## Como usar
+
+1. Selecione um trecho público em português na página e escolha **Libras**.
+2. Na janela, abra o botão azul do VLibras. Assim que o avatar estiver pronto, ative o botão com o trecho. Você pode usar Tab para navegar e Enter ou Espaço para acionar os botões.
+3. Use **Fechar Libras** ou Esc para voltar. Se o serviço estiver indisponível, use o link para o tradutor oficial. O texto e os controles do site continuam disponíveis.
+
+Sem seleção, a janela traz um breve guia de navegação. O laboratório com cadastro e o painel privado oferecem **Guia em Libras**, com instruções públicas preparadas para cada tela. Nomes, e-mails, chaves, sessões, respostas e resultados individuais ficam fora do guia.
+
+## Onde está disponível
+
+O acesso é gerado para o portal, apresentação e pitch, laboratório, campanha, jogo, central de equipe, painel, pesquisa, arquitetura, documentação e cópias públicas dos arquivos HTML históricos. A landing page imersiva oferece o mesmo recurso nas suas rotas, inclusive créditos e página 404. Os arquivos originais para uso local preservam seus bytes. A tradução automática precisa de internet.
+
+## Integração e dados
+
+O botão local abre uma janela com o widget oficial da Secretaria de Governo Digital e da UFPB. O navegador executa o widget em um iframe com origem isolada. O script remoto fica restrito ao guia e recebe apenas o trecho público selecionado antes da abertura, limitado a mil caracteres. Formulários e regiões marcadas como privadas ficam fora da seleção. No laboratório e no painel o iframe recebe apenas a indicação do guia público correspondente, sem ler a seleção ou consultar o serviço privado de métricas.
+
+O serviço do VLibras recebe os trechos enviados para sinalização. Segundo o aviso oficial, o conteúdo de tradução em tempo real é descartado após a exibição. Use textos públicos e mantenha dados pessoais e credenciais fora do campo livre do tradutor. Os domínios externos são autorizados apenas no guia isolado. [Termos de Uso e Aviso de Privacidade](https://www.vlibras.gov.br/privacy.html)
+
+A tradução se limita à leitura pontual de texto na interface. O conteúdo visual da cena 3D, imagens e vídeos requer alternativas próprias. Arquivos PDF e Markdown baixados dependem do leitor usado. Os termos do VLibras restringem o uso das traduções automáticas em aulas, palestras, filmes e outros contextos que exigem interpretação contextual. A integração não estabelece conformidade integral com WCAG nem comprova a qualidade da sinalização em Libras. [Apresentação do manual](https://vlibras.gov.br/doc/widget/introduction/presentation.html) · [Termos de Uso](https://www.vlibras.gov.br/privacy.html)
+
+## Fontes e continuidade
+
+Na revisão local R21, a inspeção estrutural verificou 81 páginas HTML: todas tinham título e idioma, sem IDs duplicados na marcação inicial. A análise automática de acessibilidade amostrou 18 endereços; também foram exercitados no Chrome o cadastro, a confirmação de encerramento, o painel privado e os controles do mapa por teclado, incluindo largura de 320 px. No guia isolado, o avatar oficial carregou e sinalizou um trecho público. Foram corrigidos contraste, foco, nome do cronômetro e a região de navegação do atalho Libras. Esse alcance não equivale a uma auditoria humana completa com leitores de tela e usuários de Libras.
+
+- O repositório vlibras-web-browsers implementa o widget e as extensões. A suíte também mantém os repositórios da API de tradução, núcleo de texto, portal e player. A referência de código conferida foi o pacote público v7.12.3. [Organização VLibras](https://github.com/spbgovbr-vlibras) · [Código do widget](https://github.com/spbgovbr-vlibras/vlibras-web-browsers/tree/v7.12.3)
+- A distribuição segue o endereço oficial e carrega o widget sob demanda. A documentação identifica o iframe do avatar e o redirecionamento de fontes para a CDN. A política de conteúdo do guia autoriza apenas as origens necessárias ao widget, ao avatar, à tradução e ao dicionário. [Instalação](https://vlibras.gov.br/doc/widget/installation/webpageintegration.html) · [Política de segurança de conteúdo](https://www.vlibras.gov.br/doc/widget/installation/content-security-policy.html)
+- Após atualizar o widget ou mudar as rotas, confira abertura, sinalização de uma frase pública, falha de rede, retorno de foco, resolução no celular e proteção do painel. Faça a revisão linguística com pessoas fluentes em Libras antes de tratar a tradução automática como validada para o projeto.
+
+
+---
+
+# MISSÃO IPÊ · kit da pré-banca local
+
+Fonte: `docs/57-KIT-PRE-BANCA-R21.md` · SHA-256 original: `84e42892092faffc3fe9fd45df5e0138cabce24deb4e273690f1c4a35a04f054` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · kit da pré-banca local
+
+A entrega apresenta um jogo de design de missões espaciais: o participante escolhe uma pergunta científica, projeta a nave, faz uma previsão, executa o modelo, investiga a evidência e redesenha a missão. A equipe está vinculada ao desafio **Space Mission Design Game**, em **Rio Verde, Brasil**, na [página oficial do Space Apps](https://www.spaceappschallenge.org/2026/find-a-team/missao-ipe/?tab=details), conferida em 15/11/2026.
+
+## O que levar
+
+| Entregável | Material | Conferência antes de entrar |
+| --- | --- | --- |
+| Pitch oral de 3 minutos | [Fala integral e tempos](53-PITCH-JURADOS-E-FALA-R21.md) | Alexandre ensaia em voz alta no equipamento, com as pausas e cliques. |
+| Até 7 slides | [Pitch interativo, 6 cenas](../presentation/pitch/index.html) | Abertura 20s; problema 30s; solução 40s; demo 50s; validação 25s; fechamento 15s. |
+| MVP/demo | [Jogo de três missões](../lab/index.html) | Percorra Nome → E-mail → Tipo → Play antes da banca; escolha Bennu e deixe o experimento guiado aberto. |
+| Evidências: número + aprendizado | [Recibos no GitHub](https://github.com/oalexandrebelo/MISSAO-IPE/tree/main/evidence) e [painel privado](../dashboard/index.html) | Diferencie teste automatizado, inspeção do protótipo e teste com participantes. |
+| Acessos e continuidade | [Central da equipe](../equipe/index.html) e [handoff de dois devs](54-METRICAS-E-HANDOFF-R21.md) | Compartilhe os links públicos. A chave do painel é entregue separadamente ao responsável. |
+
+## Uma história científica, três perguntas
+
+A história não depende de personagens ou descobertas inventadas. Ela acompanha a transformação de uma necessidade científica em dados utilizáveis. A marca IPÊ identifica a equipe; a árvore não é uma narrativa científica.
+
+**Cerrado — Como comparar a vegetação em dois períodos?** A base são arquivos históricos Terra/MODIS. O jogador escolhe entre transmitir as bandas ou calcular o índice a bordo. No ensaio guiado, produzir um arquivo menor exige um pico de potência maior: em T+10 min, a bateria ainda guarda energia, mas não consegue entregar a potência exigida. A conclusão é sobre o sistema completo e sobre as lacunas do conjunto recebido, sem atribuir automaticamente a causa de uma mudança de vegetação.
+
+**Bennu — Como tornar observações da superfície disponíveis aos cientistas?** A base são dimensões publicadas de seis rochas/clastos observados pela OSIRIS-REx. O jogador compara serviços de contato com a mesma antena e taxa de rádio. Arquivos produzidos a bordo não equivalem a arquivos disponíveis no solo. O tamanho recebido permite comparação geométrica; não certifica origem, composição ou segurança de pouso.
+
+**Webb — Qual instrumento permite responder à pergunta sobre a luz?** A base é um recorte publicado do espectro de WASP-39 b com incertezas. Câmera genérica e espectrômetro podem entregar seis pacotes; somente o instrumento compatível atende à pergunta do exercício. Seis faixas não reproduzem a análise molecular completa nem demonstram vida.
+
+[Fontes, seleção de dados e limites didáticos](45-DADOS-REAIS-BENNU-WEBB-R18.md).
+
+## Demonstração principal, em 50 segundos
+
+1. Mostre a pergunta de Bennu e o rádio de 1,2 Mbit/s.
+2. Selecione A: em T+85 min, a nave aguarda contato; ao final, 2/6 registros válidos chegam.
+3. Pergunte o que muda se o contato abrir antes e durar mais. Faça uma pausa curta.
+4. Selecione B: no mesmo T+85 min, a nave transmite; ao final, 6/6 registros chegam. O serviço custa seis créditos a mais. A antena e a taxa são iguais.
+5. No laboratório, mostre que o registro recebido leva ao evento e ao componente no 3D. Use esse percurso para as perguntas da banca; não tente percorrer três missões completas nos 50 segundos.
+
+O pitch alterna capturas identificadas do replay para a apresentação ser previsível. O laboratório executa a simulação e permite navegar pela evidência. Não apresentar as capturas como uma execução ao vivo. Não foi produzido um vídeo novo nesta entrega; o MVP atende à alternativa “protótipo funcionando”.
+
+## Evidência: número acompanhado de significado
+
+| Verificação | Número observado | O que aprendemos sobre o protótipo |
+| --- | --- | --- |
+| Percurso local de jogador | 3 tentativas próprias; 8 eventos confirmados; 0 pendentes e 0 recusados | O cadastro, as decisões, os resultados e o envio ao painel completaram o percurso integrado em ambiente local. |
+| Cerrado, ensaio A/B | 2 registros válidos com bandas; 0 com índice nessa configuração | Menos dados não garante melhor missão: a potência instantânea pode interromper a tarefa. |
+| Bennu, ensaio A/B | 2/6 → 6/6 válidos, com o mesmo rádio | Agenda e duração dos contatos alteram a evidência recebida. |
+| Webb, ensaio A/B | 6 pacotes recebidos em ambas; 0 → 6 válidos | Transporte bem-sucedido não torna o instrumento adequado à pergunta. |
+| Tentativa Webb incompatível | 3,2 kg para limite de 3 kg; 87 créditos para orçamento de 80 | Entrega científica e viabilidade da arquitetura precisam ser avaliadas separadamente. |
+
+As quantidades acima são verificações técnicas do modelo e de um participante sintético de teste. Não são tamanho de amostra de usuários nem comprovação de ganho de aprendizagem. Os recibos da publicação distinguem os testes locais da validação HTTP de produção.
+
+## Pontuação e administração da missão
+
+A rubrica do jogo soma até 100 pontos: **60** proporcionais aos registros científicos válidos recebidos, **30** por um projeto compatível com os requisitos iniciais e **10** pela folga média de massa e orçamento. Um projeto incompatível não recebe os pontos de compatibilidade ou folga. A pontuação não substitui os requisitos: o resultado ainda informa missão cumprida, não cumprida ou projeto incompatível. Cada parcela aparece explicada, e o servidor recalcula o resultado a partir das escolhas.
+
+O painel acompanha participações, tentativas, pontuações, primeiras respostas e revisões, escolhas, inspeções de evidência/3D, diagnósticos e preenchimento dos quatro papéis. Não atribui automaticamente acerto/erro a toda escolha isolada: uma escolha pode ser adequada em um projeto e inadequada em outro. Cancelamentos e falhas técnicas ficam separados de erros de engenharia.
+
+O modo equipe permite até quatro participantes no mesmo dispositivo. Os seis integrantes da MISSÃO IPÊ são a equipe de desenvolvimento/apresentação; não se trata de seis jogadores online simultâneos.
+
+## Preparação e contingência
+
+- Abra e teste o jogo, o pitch e os assets no computador da banca. Registre a participação e prepare o ensaio antes da fala.
+- Salve `equipe/index.html`: ele contém a fala e o checklist sem dependências externas. Links de acesso ainda exigem internet.
+- Para usar o pitch sem rede, leve a pasta `presentation/pitch` inteira, incluindo imagens, fontes, CSS e JavaScript. Teste o caminho escolhido antes da banca.
+- O laboratório medido exige rede para iniciar uma participação. A fila de uma participação existente conserva eventos durante uma interrupção; isso não transforma o jogo em aplicação offline instalada.
+- O jogo clássico portátil é uma contingência histórica, não representa as três missões atuais nem envia métricas ao painel.
+- Antes de dizer “validado com usuários”, conduza uma rodada observada com iniciantes: peça que expliquem uma falha, citem a evidência e justifiquem a próxima decisão. Registre participantes, método e resultado.
+
+A previsão de 180 segundos precisa do ensaio real de Alexandre. O conjunto de testes não é garantia de acessibilidade universal, elegibilidade ou premiação; os limites estão documentados para a equipe apresentar com precisão.
 
 
 ---

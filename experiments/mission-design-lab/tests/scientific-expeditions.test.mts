@@ -68,6 +68,21 @@ test('preflight checks instrument, launcher reach, mass and credits without exec
   const result = simulateExpedition('telescope', config);
   assert.deepEqual(result.totals, preflight.totals);
   assert.equal(result.outcome, 'invalid');
+  assert.match(result.events.find(event => event.code === 'LAUNCH_PROFILE')!.message, /incompatível com o perfil orbital/);
+});
+
+test('Webb reports measured mass and cost against the compact launcher limits', () => {
+  const config = { ...DEFAULT_EXPEDITION_CONFIGS.telescope, power: 'extended', ground: 'extended' } as const;
+  const result = simulateExpedition('telescope', config);
+  assert.equal(result.outcome, 'invalid');
+  assert.deepEqual(result.constraints.filter(item => !item.met).map(item => item.label), ['Massa dentro do envelope', 'Custo dentro do orçamento']);
+  const failures = result.events.filter(event => event.severity === 'error' && event.timeS === 0);
+  assert.deepEqual(failures.map(({ code, value, limit }) => ({ code, value, limit })), [
+    { code: 'MASS_LIMIT', value: 3.2, limit: 3 },
+    { code: 'BUDGET_LIMIT', value: 87, limit: 80 },
+  ]);
+  assert.match(failures[0]!.message, /3,2 kg excede o limite de 3 kg/);
+  assert.match(failures[1]!.message, /87 créditos excede o orçamento de 80 créditos/);
 });
 
 test('incompatible instruments cannot turn a full downlink into valid scientific delivery', () => {
@@ -77,7 +92,7 @@ test('incompatible instruments cannot turn a full downlink into valid scientific
     assert.equal(result.outcome, 'invalid');
     assert.equal(result.deliveredRecords, 0);
     assert.ok(result.observations.every(record => !record.valid));
-    assert.ok(result.events.some(event => event.code === 'INSTRUMENT_MISMATCH'));
+    assert.match(result.events.find(event => event.code === 'INSTRUMENT_MISMATCH')!.message, /não atende ao objetivo científico/);
     assert.deepEqual(getExpeditionVisualState(result, result.horizonS).deliveredRecordIds, []);
   }
 });

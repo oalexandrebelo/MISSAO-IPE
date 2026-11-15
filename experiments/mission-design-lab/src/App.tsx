@@ -1,8 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { GameFullscreenControl, PlayerGateway, PlayerDashboard, PlayerSyncStatus, usePlayerMetrics } from './ui/PlayerMetrics.tsx';
+import { summarizeAttempt } from './metrics/player-metrics.ts';
+import type { MetricMission } from './metrics/player-metrics.ts';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { CATALOG, DEFAULT_CONFIG } from './core/catalog.ts';
 import type { ConfigKey, MissionConfig, MissionResult, ScenarioId, SearchResult } from './core/contracts.ts';
 import { simulateAsync, searchAsync } from './workers/client.ts';
-import { DraftConflictError, listRuns, loadDraft, saveDraft, saveRun } from './persistence/store.ts';
+import { createMissionStore, DraftConflictError } from './persistence/store.ts';
 import type { SavedRun } from './persistence/store.ts';
 import { exportReplay, importReplay, MAX_REPLAY_BYTES } from './persistence/replay.ts';
 import { Icon } from './ui/Icon.tsx';
@@ -18,7 +21,7 @@ import { JOURNAL_KEY, newEntry, readJournal } from './ui/learning.ts';
 import type { LearningEntry, Prediction } from './ui/learning.ts';
 import { downloadText } from './ui/format.ts';
 
-type View = 'observatory' | 'workbench' | 'mission' | 'lab' | 'expedition';
+type View = 'observatory' | 'workbench' | 'mission' | 'lab' | 'expedition' | 'dashboard';
 type Notice = { tone: 'info' | 'success' | 'error'; message: string };
 type Busy = 'simulate' | 'search' | 'import' | null;
 function message(error: unknown): string { return error instanceof Error ? error.message : 'Não foi possível concluir esta operação.'; }
@@ -32,9 +35,15 @@ function completedScenarios(journal: readonly LearningEntry[]): Set<ScenarioId> 
   return completed;
 }
 
-export default function App() {
-  const [view, setView] = useState<View>('observatory');
-  const [expeditionId, setExpeditionId] = useState<ExpeditionId>('bennu');
+export default function App() { return <PlayerGateway>{firstMission => <PlayerGame firstMission={firstMission} />}</PlayerGateway>; }
+
+function PlayerGame({ firstMission }: { firstMission: MetricMission | null }) {
+  const metrics = usePlayerMetrics();
+  const sessionId = metrics.session!.sessionId;
+  const journalKey = `${JOURNAL_KEY}:${sessionId}`;
+  const { listRuns, loadDraft, saveDraft, saveRun } = useMemo(() => createMissionStore({ databaseName: `mission-ipe-player-${sessionId}` }), [sessionId]);
+  const [view, setView] = useState<View>(firstMission === 'cerrado' ? 'workbench' : firstMission ? 'expedition' : 'observatory');
+  const [expeditionId, setExpeditionId] = useState<ExpeditionId>(firstMission === 'telescope' ? 'telescope' : 'bennu');
   const [config, setConfig] = useState<MissionConfig>({ ...DEFAULT_CONFIG });
   const [scenarioId, setScenarioId] = useState<ScenarioId>('long-contact');
   const [result, setResult] = useState<MissionResult | null>(null);
@@ -49,7 +58,7 @@ export default function App() {
   const [dialog, setDialog] = useState<'sources' | 'history' | 'compare' | null>(null);
   const [runs, setRuns] = useState<SavedRun[]>([]);
   const [historyLoading, setHistoryLoading] = useState(true);
-  const [journal, setJournal] = useState<LearningEntry[]>(readJournal);
+  const [journal, setJournal] = useState<LearningEntry[]>(() => readJournal(journalKey));
   const journalRef = useRef(journal);
   const draftRevision = useRef(0);
   const historyRequest = useRef(0);
@@ -84,7 +93,7 @@ export default function App() {
     const next = [...journalRef.current, recorded];
     journalRef.current = next;
     setJournal(next);
-    try { localStorage.setItem(JOURNAL_KEY, JSON.stringify(next)); }
+    try { localStorage.setItem(journalKey, JSON.stringify(next)); }
     catch { setNotice({ tone: 'info', message: 'A decisão está preservada nesta sessão, mas o diário não pôde ser salvo no navegador. Exporte-o pelo caderno.' }); }
     return recorded;
   }
@@ -94,6 +103,7 @@ export default function App() {
     if (activeAttempt.current) {
       const attempt = activeAttempt.current; activeAttempt.current = null;
       appendJournal({ kind: 'cancelled', config: attempt.config, scenarioId: attempt.scenarioId, attemptId: attempt.id });
+      metrics.track('attempt', 'cerrado', { attemptId: attempt.id, status: 'cancelled', config: attempt.config, scenarioId: attempt.scenarioId });
     }
     setBusy(null);
   }
@@ -109,6 +119,7 @@ export default function App() {
   }
   function chooseComponent(key: ConfigKey, value: string) {
     if (config[key] === value || !CATALOG[key].some((item) => item.id === value)) return;
+    metrics.track('decision', 'cerrado', { key, from: config[key], to: value });
     userChanges.current += 1; invalidateResult(); setConfig((current) => ({ ...current, [key]: value }));
     if (prediction) { setPrediction(''); setNotice({ tone: 'info', message: 'Projeto alterado. Revise e selecione novamente sua previsão; sua justificativa foi preservada.' }); }
   }
@@ -137,12 +148,14 @@ export default function App() {
       if (token !== requestId.current || controller.signal.aborted) return;
       activeAttempt.current = null; abortController.current = null;
       appendJournal({ kind: 'completed', config: frozenConfig, scenarioId: frozenScenario, attemptId: attempt.id, outcome: next.outcome });
+      metrics.track('attempt', 'cerrado', { attemptId: attempt.id, status: 'completed', config: frozenConfig, scenarioId: frozenScenario }, summarizeAttempt(next));
       setResult(next); setResultKey((key) => key + 1); setBusy(null); setView('mission');
       void persistResult(next, token);
     } catch (error) {
       if (token !== requestId.current) return;
       activeAttempt.current = null; abortController.current = null; setBusy(null);
       appendJournal({ kind: controller.signal.aborted ? 'cancelled' : 'error', config: frozenConfig, scenarioId: frozenScenario, attemptId: attempt.id, text: controller.signal.aborted ? undefined : message(error) });
+      metrics.track('attempt', 'cerrado', { attemptId: attempt.id, status: controller.signal.aborted ? 'cancelled' : 'error', config: frozenConfig, scenarioId: frozenScenario });
       if (!controller.signal.aborted) setNotice({ tone: 'error', message: `A execução não foi concluída. ${message(error)}` });
     }
   }
@@ -208,11 +221,11 @@ export default function App() {
     downloadText(JSON.stringify({ format: 'mission-ipe-learning-journal', version: 1, note: 'Relatos e decisões locais do usuário. Este diário não é inviolável e não demonstra aprendizagem.', entries: journalRef.current }, null, 2), 'missao-ipe-diario-de-decisoes.json');
   }
 
-  return <div className="app-shell"><a className="skip-link" href="#main-content">Pular para o conteúdo</a><header className="site-header"><button className="brand" type="button" onClick={() => navigate('observatory')} aria-label="MISSÃO IPÊ, observatório"><img className="brand-logo" src="./brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" /></button>{view !== 'expedition' ? <nav className="main-nav" aria-label="Etapas da missão"><button type="button" aria-current={view === 'observatory' ? 'step' : undefined} onClick={() => navigate('observatory')}><span>01</span> Briefing</button><button type="button" aria-current={view === 'workbench' ? 'step' : undefined} onClick={() => navigate('workbench')}><span>02</span> Projetar</button><button type="button" aria-current={view === 'mission' ? 'step' : undefined} disabled={!result} onClick={() => navigate('mission')}><span>03</span> Sala de missão</button></nav> : null}<div className="header-tools"><span className="offline-badge"><i /> SIMULAÇÃO LOCAL</span><button className="header-lab" type="button" aria-label="Abrir laboratório de engenharia" aria-pressed={view === 'lab'} onClick={() => navigate('lab')}><Icon name="spark" size={16} /><span>Laboratório</span></button><button className="icon-button" type="button" aria-label="Abrir caderno de missões" onClick={() => setDialog('history')}><Icon name="history" /></button><button className="icon-button" type="button" aria-label="Abrir fontes e hipóteses" onClick={() => setDialog('sources')}><Icon name="book" /></button></div></header>
+  return <div className="app-shell"><a className="skip-link" href="#main-content">Pular para o conteúdo</a><header className="site-header"><button className="brand" type="button" onClick={() => navigate('observatory')} aria-label="MISSÃO IPÊ, observatório"><img className="brand-logo" src="./brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" /></button>{view !== 'expedition' && view !== 'dashboard' ? <nav className="main-nav" aria-label="Etapas da missão"><button type="button" aria-current={view === 'observatory' ? 'step' : undefined} onClick={() => navigate('observatory')}><span>01</span> Briefing</button><button type="button" aria-current={view === 'workbench' ? 'step' : undefined} onClick={() => navigate('workbench')}><span>02</span> Projetar</button><button type="button" aria-current={view === 'mission' ? 'step' : undefined} disabled={!result} onClick={() => navigate('mission')}><span>03</span> Sala de missão</button></nav> : null}<div className="header-tools"><PlayerSyncStatus /><GameFullscreenControl /><button className="button button-secondary player-progress-button" type="button" onClick={() => navigate('dashboard')}>Meu progresso</button><button className="header-lab" type="button" aria-label="Abrir laboratório de engenharia" aria-pressed={view === 'lab'} onClick={() => navigate('lab')}><Icon name="spark" size={16} /><span>Laboratório</span></button><button className="icon-button" type="button" aria-label="Abrir caderno de missões" onClick={() => setDialog('history')}><Icon name="history" /></button><button className="icon-button" type="button" aria-label="Abrir fontes e hipóteses" onClick={() => setDialog('sources')}><Icon name="book" /></button></div></header>
     {notice ? <div className={`notice notice-${notice.tone}`} role={notice.tone === 'error' ? 'alert' : 'status'}><Icon name={notice.tone === 'error' ? 'warning' : notice.tone === 'success' ? 'check' : 'info'} size={18} /><p>{notice.message}</p><button className="icon-button" type="button" onClick={() => setNotice(null)} aria-label="Dispensar aviso"><Icon name="close" size={17} /></button></div> : null}
     {busy === 'import' ? <div className="import-status" role="status"><span className="loading-spinner" /> Validando e recalculando replay…</div> : null}
-    <main id="main-content" className={`main-content view-${view}`} ref={mainRef} tabIndex={-1}>{view === 'observatory' ? <Observatory onChoose={(id) => chooseScenario(id, true)} onSources={() => setDialog('sources')} onLab={() => navigate('lab')} completed={completed} onExpedition={id => { cancelWork(); setExpeditionId(id); navigate('expedition'); }} /> : view === 'workbench' ? <Workbench config={config} scenarioId={scenarioId} onChoice={chooseComponent} onScenario={chooseScenario} prediction={prediction} onPrediction={setPrediction} rationale={rationale} onRationale={setRationale} firstAttempt={!completed.has(scenarioId)} onLaunch={() => void launch()} onSave={() => void saveProject()} busy={busy === 'simulate'} blocked={busy !== null} saving={saving || historyLoading} onCancel={() => { cancelWork(); setNotice({ tone: 'info', message: 'Execução cancelada. Sua previsão permanece no diário de decisões.' }); }} /> : view === 'expedition' ? <ScientificExpedition key={expeditionId} id={expeditionId} onBack={() => navigate('observatory')} /> : view === 'lab' ? <EngineeringLab onBack={() => navigate('observatory')} /> : result ? <MissionControl key={resultKey} result={result} searchResult={searchResult} searching={busy === 'search'} canSearch={completed.has(result.scenarioId)} onSearch={() => void search()} onCancelSearch={() => { cancelWork(); setSearchResult(null); }} onApply={applyCandidate} onRedesign={() => navigate('workbench')} onTransfer={() => chooseScenario('short-contact', true)} onExport={() => void exportResult()} exporting={exporting} onCompare={() => setDialog('compare')} canCompare={runs.length > 1} onReflect={(text, eventId) => appendJournal({ kind: 'reflection', config: result.config, scenarioId: result.scenarioId, text, eventId })} /> : null}</main>
-    <footer className="site-footer"><span><span className="footer-dot" /> Engenharia espacial para aprender · BETA 0.11</span><div><a href="../docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html" target="_blank" rel="noreferrer">Guia para aprender</a><a href="./research/index.html" target="_blank" rel="noreferrer">Pesquisa completa</a><button type="button" onClick={() => setDialog('sources')}>Fontes e hipóteses</button><span>AB · TEAM IPÊ / 2026</span></div></footer>
+    <main id="main-content" className={`main-content view-${view}`} ref={mainRef} tabIndex={-1}>{view === 'dashboard' ? <PlayerDashboard onBack={() => navigate('observatory')} /> : view === 'observatory' ? <Observatory onChoose={(id) => chooseScenario(id, true)} onSources={() => setDialog('sources')} onLab={() => navigate('lab')} completed={completed} onExpedition={id => { cancelWork(); setExpeditionId(id); navigate('expedition'); }} /> : view === 'workbench' ? <Workbench config={config} scenarioId={scenarioId} onChoice={chooseComponent} onScenario={chooseScenario} prediction={prediction} onPrediction={setPrediction} rationale={rationale} onRationale={setRationale} firstAttempt={!completed.has(scenarioId)} onLaunch={() => void launch()} onSave={() => void saveProject()} busy={busy === 'simulate'} blocked={busy !== null} saving={saving || historyLoading} onCancel={() => { cancelWork(); setNotice({ tone: 'info', message: 'Execução cancelada. Sua previsão permanece no diário de decisões.' }); }} /> : view === 'expedition' ? <ScientificExpedition key={expeditionId} id={expeditionId} onBack={() => navigate('observatory')} /> : view === 'lab' ? <EngineeringLab onBack={() => navigate('observatory')} /> : result ? <MissionControl key={resultKey} result={result} searchResult={searchResult} searching={busy === 'search'} canSearch={completed.has(result.scenarioId)} onSearch={() => void search()} onCancelSearch={() => { cancelWork(); setSearchResult(null); }} onApply={applyCandidate} onRedesign={() => navigate('workbench')} onTransfer={() => chooseScenario('short-contact', true)} onExport={() => void exportResult()} exporting={exporting} onCompare={() => setDialog('compare')} canCompare={runs.length > 1} onReflect={(text, eventId) => appendJournal({ kind: 'reflection', config: result.config, scenarioId: result.scenarioId, text, eventId })} /> : null}</main>
+    <footer className="site-footer"><span><span className="footer-dot" /> Engenharia espacial para aprender · BETA 0.12</span><div><a href="../docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html" target="_blank" rel="noreferrer">Guia para aprender</a><a href="./research/index.html" target="_blank" rel="noreferrer">Pesquisa completa</a><button type="button" onClick={() => setDialog('sources')}>Fontes e hipóteses</button><span>AB · TEAM IPÊ / 2026</span></div></footer>
     {dialog === 'compare' ? <CompareDialog runs={runs} onClose={() => setDialog(null)} /> : dialog === 'sources' ? <SourcesDialog onClose={() => setDialog(null)} /> : dialog === 'history' ? <HistoryDialog runs={runs} loading={historyLoading} onClose={() => setDialog(null)} onOpen={openRun} onImport={() => importInput.current?.click()} onExportJournal={exportJournal} journalCount={journal.length} /> : null}
     <input ref={importInput} type="file" accept="application/json,.json" className="sr-only" tabIndex={-1} aria-hidden="true" onChange={(event) => { const file = event.target.files?.[0]; event.target.value = ''; if (file) void importFile(file); }} />
   </div>;

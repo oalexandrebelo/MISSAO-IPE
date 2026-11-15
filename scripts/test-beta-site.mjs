@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { JSDOM, VirtualConsole } from 'jsdom';
 import * as ts from 'typescript/unstable/ast';
 import { API } from 'typescript/unstable/sync';
+import { decorateLibrasPage, librasGuide, librasScope } from './public-libras.mjs';
 
 const root = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
 const site = path.join(root, 'site');
@@ -230,8 +231,8 @@ async function run() {
     assert.equal(manifest.publicationReady, true);
     assert.deepEqual(manifest.missingRequired, []);
     assert.equal(manifest.project, 'PROJETO-IPE');
-    assert.equal(manifest.version, '0.11.0-beta.1');
-    assert.equal(manifest.edition, 'R20-beginner-journey-and-pitch');
+    assert.equal(manifest.version, '0.12.0-beta.1');
+    assert.equal(manifest.edition, 'R21-judging-pitch-and-private-metrics');
     assert.equal(manifest.files.length, manifest.fileCount);
     assert.deepEqual(manifest.files.map(file => file.path).sort(), files.filter(file => file !== 'publication-manifest.json').sort());
     for (const filename of ['presentation/pitch/index.html', 'presentation/pitch/pitch.css', 'presentation/pitch/pitch.js', 'docs/51-QA-INICIANTE-E-HANDOFF-R20.html', 'docs/52-PITCH-ALEXANDRE-BELO-R20.html', 'docs/48-HANDOFF-DOIS-DEVS-R19.html', 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html', 'lab/data/science/bennu-records.json', 'lab/data/science/webb-spectrum-subset.json', 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.html', 'docs/46-HANDOFF-DOIS-DEVS-R18.html', 'brand/missao-ipe-logo.svg', 'brand/brand-provenance-r17.json', 'docs/43-HANDOFF-GERAL-R17.html', 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html', 'research/nasa-mission-stories-r17.json', 'planet-jumping.html', 'research/technology-opportunities-r16.json', 'lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json', ...['35-REVISAO-PRS-E-DIRECAO-R16', '36-PORTAL-PLANET-JUMPING', '37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16', '38-HANDOFF-R16'].flatMap(name => [`docs/${name}.html`, `docs/${name}.md`])]) {
@@ -312,7 +313,10 @@ async function run() {
       assert.throws(() => resolveReference('planet-jumping.html', url, 'script'), /não autorizado/);
     }
     assert.throws(() => resolveReference('planet-jumping.html', `${portalOrigin}/different-file.mp4`, 'video'), /não autorizado/);
-    assert.equal(manifest.requiredRuntimeNetworkServices, 1);
+    assert.equal(manifest.requiredRuntimeNetworkServices, 2);
+    assert.equal(manifest.runtimeNetworkRequirements.measuredMissionLab.requiredServices, 1);
+    assert.equal(manifest.runtimeNetworkRequirements.measuredMissionLab.endpoint, '/api/metrics');
+    assert.ok(manifest.routeEntrypoints.includes('/dashboard/index.html'));
     assert.equal(manifest.runtimeNetworkRequirements.missionGames.requiredServices, 0);
     assert.equal(manifest.runtimeNetworkRequirements.experiments.length, 1);
     assert.equal(manifest.runtimeNetworkRequirements.experiments[0].route, '/planet-jumping.html');
@@ -371,12 +375,13 @@ async function run() {
     const preserved = [];
     for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
       const original = await readFile(path.join(root, file.source));
-      assert.equal(digest(bytesByFile.get(file.path)), digest(original), `Cópia alterou artefato: ${file.path}`);
-      preserved.push({ path: file.path, source: file.source, sha256: digest(original) });
+      const expected = file.libras ? decorateLibrasPage(original.toString('utf8'), file.path) : original;
+      assert.equal(digest(bytesByFile.get(file.path)), digest(expected), `Cópia alterou artefato fora da composição declarada: ${file.path}`);
+      preserved.push({ path: file.path, source: file.source, sha256: digest(original), ...(file.libras && { libras: file.libras }) });
     }
     for (const runtime of ['lab', 'campanha']) assert.ok(preserved.some(file => file.path === `${runtime}/index.html`), `Runtime não incluído na conferência de preservação: ${runtime}`);
     const presentationReceipt = JSON.parse(await readFile(path.join(root, 'evidence/presentation-qa.json'), 'utf8'));
-    assert.equal(digest(bytesByFile.get('presentation/Missao_Ipe_Apresentacao.html')), presentationReceipt.observations.artifact.sha256);
+    assert.equal(digest(await readFile(path.join(root, 'presentation/Missao_Ipe_Apresentacao.html'))), presentationReceipt.observations.artifact.sha256);
     for (const name of expectedData) {
       assert.ok(bytesByFile.has(`game/data/${name}`));
       assert.ok(bytesByFile.has(`public/data/${name}`));
@@ -386,6 +391,29 @@ async function run() {
     }
     observations.preservedArtifacts = preserved;
     observations.scientificFilesPerLocation = expectedData.length;
+  });
+
+  await check('Libras está disponível nas páginas e o guia isola cadastro e painel', async () => {
+    const coverage = { public: 0, lab: 0, dashboard: 0 };
+    for (const [filename, dom] of documents) {
+      const scope = librasScope(filename);
+      if (!scope) continue;
+      const document = dom.window.document;
+      const link = document.querySelector('a[data-ipe-libras]');
+      assert.ok(link, `Acesso em Libras ausente: ${filename}`);
+      assert.equal(link.dataset.ipeLibras, scope);
+      assert.equal(new URL(link.href).pathname, `/${librasGuide}`);
+      assert.ok(document.querySelector('script[src$="/acessibilidade/libras.js"],script[src^="acessibilidade/libras.js"]'), filename);
+      assert.equal(document.querySelector('script[src*="vlibras.gov.br"]'), null, filename);
+      coverage[scope]++;
+    }
+    assert.equal(coverage.lab, 1);
+    assert.equal(coverage.dashboard, 1);
+    assert.equal(coverage.public + 3, files.filter(file => file.endsWith('.html')).length);
+    assert.equal(manifest.runtimeNetworkRequirements.libras.requiredServices, 0);
+    const guide = documents.get(librasGuide).window.document;
+    assert.match(guide.querySelector('meta[http-equiv="Content-Security-Policy"]').getAttribute('content'), /frame-src https:\/\/vlibras\.gov\.br\/app\/unity\//);
+    observations.libras = coverage;
   });
 
   await check('mapa e planos existem como artefatos reais com fontes relativas e estado declarado', async () => {
@@ -412,7 +440,10 @@ async function run() {
     assert.equal(vercel.trailingSlash, false);
     const common = Object.fromEntries(vercel.headers.find(rule => rule.source === '/(.*)').headers.map(header => [header.key.toLowerCase(), header.value]));
     assert.equal(common['x-content-type-options'], 'nosniff');
-    assert.equal(common['x-frame-options'], 'DENY');
+    assert.equal(configuredHeaders('/lab/index.html')['x-frame-options'], 'DENY');
+    const guideHeaders = configuredHeaders(`/${librasGuide}`);
+    assert.equal(guideHeaders['x-frame-options'], 'SAMEORIGIN');
+    assert.equal(guideHeaders['content-security-policy'], "frame-ancestors 'self'; sandbox allow-scripts");
     assert.ok(common['referrer-policy']);
     assert.equal(common['content-security-policy'], undefined, 'CSP deve usar matchers exclusivos por rota');
     const csp = configuredHeaders('/lab/index.html')['content-security-policy'];
@@ -430,10 +461,11 @@ async function run() {
     assert.deepEqual(directives.get('img-src'), ["'self'", 'data:', 'blob:', portalOrigin]);
     assert.deepEqual(directives.get('media-src'), ["'self'", 'blob:', portalOrigin]);
     for (const [name, values] of directives) if (!['img-src', 'media-src'].includes(name)) assert.ok(!values.some(value => /^https?:/.test(value)), `Origem remota fora de mídia no portal: ${name}`);
-    for (const pathname of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumpingXhtml', '/planet-jumping.html/extra', '/other/planet-jumping.html']) {
+    for (const pathname of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumpingXhtml', '/planet-jumping.html/extra', '/other/planet-jumping.html', `/${librasGuide}`]) {
       const policies = matchingHeaderRules(pathname).flatMap(rule => rule.headers).filter(header => header.key.toLowerCase() === 'content-security-policy');
       assert.equal(policies.length, 1, `Mais de uma CSP ou ausência de política: ${pathname}`);
       assert.equal(policies[0].value.includes(portalOrigin), pathname === '/planet-jumping.html', `Exceção externa indevida: ${pathname}`);
+      assert.equal(configuredHeaders(pathname)['x-frame-options'], pathname === `/${librasGuide}` ? 'SAMEORIGIN' : 'DENY');
     }
     let checkedScripts = 0;
     for (const [filename, dom] of documents) {
@@ -512,7 +544,7 @@ async function run() {
     // Inspect configured headers independently, even if an earlier CSP assertion failed.
     const commonRule = vercel.headers.find(rule => rule.source === '/(.*)');
     assert.ok(commonRule, 'Cabeçalhos comuns não configurados');
-    for (const route of ['/planet-jumping.html', '/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html']) {
+    for (const route of ['/planet-jumping.html', '/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html', `/${librasGuide}`]) {
       const response = await fetchLocal(route, { method: 'HEAD' });
       assert.equal(response.status, 200, `HEAD da aplicação falhou: ${route}`);
       assert.equal((await response.arrayBuffer()).byteLength, 0);

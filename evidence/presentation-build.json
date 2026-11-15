@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-14T10:52:03.376Z",
+  "generatedAt": "2026-11-15T12:49:41.753Z",
   "output": "presentation/Missao_Ipe_Apresentacao.html",
   "bytes": 139710,
-  "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+  "sha256": "3fd4473614f285611edc8c75c73d7e0baa8b8ec8d4d7a9aae9490b26c9358538",
   "title": "Missão Ipê — Ciência que chega / IPÊ — Science Delivered",
   "mode": "Self-contained local HTML; deterministic product engine bundled as IIFE on main thread",
   "target": "ES2022",

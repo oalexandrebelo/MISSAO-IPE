@@ -1,8 +1,8 @@
 {
-  "startedAt": "2026-11-14T10:52:12.799Z",
-  "finishedAt": "2026-11-14T10:52:13.664Z",
+  "startedAt": "2026-11-15T12:49:42.006Z",
+  "finishedAt": "2026-11-15T12:49:42.621Z",
   "command": "node scripts/test-presentation.mjs",
-  "node": "v24.22.1",
+  "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
   "checksPassed": 25,
   "checksFailed": 0,
@@ -31,7 +31,7 @@
     "artifact": {
       "path": "presentation/Missao_Ipe_Apresentacao.html",
       "bytes": 139710,
-      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+      "sha256": "3fd4473614f285611edc8c75c73d7e0baa8b8ec8d4d7a9aae9490b26c9358538"
     },
     "runtimeDependencies": {
       "externalAssets": 0,
@@ -41,8 +41,8 @@
     },
     "buildReceipt": {
       "path": "evidence/presentation-build.json",
-      "generatedAt": "2026-11-14T10:52:03.376Z",
-      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
+      "generatedAt": "2026-11-15T12:49:41.753Z",
+      "sha256": "3fd4473614f285611edc8c75c73d7e0baa8b8ec8d4d7a9aae9490b26c9358538"
     },
     "linkAudit": {
       "uniqueIds": 118,
@@ -304,127 +304,127 @@
     {
       "name": "artefato compilado autocontido: nenhum recurso remoto obrigatório ou API de rede",
       "status": "passed",
-      "durationMs": 140.392
+      "durationMs": 82.59
     },
     {
       "name": "recibo do build corresponde ao HTML testado e inclui os módulos do núcleo real",
       "status": "passed",
-      "durationMs": 1.395
+      "durationMs": 0.33
     },
     {
       "name": "IDs únicos e todos os links internos/relativos resolvidos no diretório do pacote",
       "status": "passed",
-      "durationMs": 40.73
+      "durationMs": 16.044
     },
     {
       "name": "fontes do apêndice possuem identidade e links explícitos",
       "status": "passed",
-      "durationMs": 51.521
+      "durationMs": 45.129
     },
     {
       "name": "três JSONs de fonte incorporados preservam os bytes dos originais locais",
       "status": "passed",
-      "durationMs": 51.43
+      "durationMs": 26.056
     },
     {
       "name": "CSS de impressão seleciona apenas os quadros do modo ativo",
       "status": "passed",
-      "durationMs": 50.722
+      "durationMs": 30.701
     },
     {
       "name": "pitch inicial contém sete quadros; navegação, limites e contador concordam",
       "status": "passed",
-      "durationMs": 81.888
+      "durationMs": 64.346
     },
     {
       "name": "modo Exploração inclui apêndices e retorna ao pitch com contador consistente",
       "status": "passed",
-      "durationMs": 34.99
+      "durationMs": 42.223
     },
     {
       "name": "visão geral, notas, impressão e tela cheia têm handlers conectados",
       "status": "passed",
-      "durationMs": 55.597
+      "durationMs": 32.529
     },
     {
       "name": "notas PT/EN e cronômetro exigem ação e pausam ao fechar, ocultar ou imprimir",
       "status": "passed",
-      "durationMs": 46.346
+      "durationMs": 34.024
     },
     {
       "name": "atalhos respeitam campos e diálogo; intervalos não executam decisões ou navegam",
       "status": "passed",
-      "durationMs": 34.005
+      "durationMs": 31.66
     },
     {
       "name": "seis escolhas binárias e dois cenários correspondem ao catálogo real",
       "status": "passed",
-      "durationMs": 29.997
+      "durationMs": 25.516
     },
     {
       "name": "segmentos e seis registros científicos respondem a seleção com fonte e valores identificáveis",
       "status": "passed",
-      "durationMs": 43.234
+      "durationMs": 31.298
     },
     {
       "name": "reparo e catálogo permanecem fechados antes dos dois conflitos observados",
       "status": "passed",
-      "durationMs": 4.644
+      "durationMs": 3.213
     },
     {
       "name": "base longa entrega 6/6 calculados pelo núcleo incorporado",
       "status": "passed",
-      "durationMs": 9.204
+      "durationMs": 6.773
     },
     {
       "name": "base curta entrega 2/6 por contato, sem confundir falha de entrega e de potência",
       "status": "passed",
-      "durationMs": 6.168
+      "durationMs": 4.196
     },
     {
       "name": "ÍNDICE isolado falha por potência aos 600 s e só então libera a revelação",
       "status": "passed",
-      "durationMs": 2.949
+      "durationMs": 2.173
     },
     {
       "name": "reparo explícito bateria grande + ÍNDICE entrega 6/6 e não modifica o núcleo",
       "status": "passed",
-      "durationMs": 5.316
+      "durationMs": 4.343
     },
     {
       "name": "trace e botões de evento inspecionam estados sem recalcular ou alterar o resultado",
       "status": "passed",
-      "durationMs": 1.645
+      "durationMs": 0.932
     },
     {
       "name": "gate reconhece execuções manuais equivalentes e não simples troca dos seletores",
       "status": "passed",
-      "durationMs": 48.567
+      "durationMs": 34.74
     },
     {
       "name": "controles manuais recalculam uma combinação diferente com o núcleo real",
       "status": "passed",
-      "durationMs": 37.5
+      "durationMs": 29.509
     },
     {
       "name": "catálogo interativo enumera 64 casos e certifica mínimo 2 apenas no domínio declarado",
       "status": "passed",
-      "durationMs": 38.003
+      "durationMs": 28.655
     },
     {
       "name": "seleção no catálogo e aplicação da testemunha carregam projeto pendente, sem execução automática",
       "status": "passed",
-      "durationMs": 13.05
+      "durationMs": 10.855
     },
     {
       "name": "núcleo e fontes científicas preservam os hashes do gate anterior",
       "status": "passed",
-      "durationMs": 2.061
+      "durationMs": 2.536
     },
     {
       "name": "execuções DOM não geram erro JavaScript nem tentam conexão de rede",
       "status": "passed",
-      "durationMs": 0.061
+      "durationMs": 0.082
     }
   ]
 }

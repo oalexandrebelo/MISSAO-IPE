@@ -190,8 +190,17 @@ export function simulateExpedition(id: ExpeditionId, input: ExpeditionConfig): E
   const active = ([start, end]: readonly [number, number]) => cmp(time, q(start)) >= 0 && cmp(time, q(end)) < 0;
   const append = (mode: string, solarW = 0, loadW = 0) => trace.push({ timeS: toNumber(time), energyWh: toNumber(div(energy, q(3600))), queueBits, downlinkedBits, solarW, loadW, mode });
   emit('MISSION_START', 'Operação didática após chegada; processamento de seis registros históricos reais.');
-  const staticCodes: Record<string, string> = { instrument: 'INSTRUMENT_MISMATCH', 'launch-orbit': 'LAUNCH_PROFILE', mass: 'MASS_LIMIT', budget: 'BUDGET_LIMIT' };
-  for (const item of preflight) if (!item.met) emit(staticCodes[item.id]!, item.label, 'error', { value: item.measured, limit: item.limit });
+  const preflightFailures: Record<string, readonly [string, string]> = {
+    instrument: ['INSTRUMENT_MISMATCH', 'O instrumento selecionado não atende ao objetivo científico.'],
+    'launch-orbit': ['LAUNCH_PROFILE', 'O lançador escolhido é incompatível com o perfil orbital selecionado.'],
+    mass: ['MASS_LIMIT', `Massa total de ${totals.massKg.toLocaleString('pt-BR')} kg excede o limite de ${totals.maxMassKg.toLocaleString('pt-BR')} kg do lançador.`],
+    budget: ['BUDGET_LIMIT', `Custo total de ${totals.credits} créditos excede o orçamento de ${totals.budget} créditos.`],
+  };
+  for (const item of preflight) {
+    if (item.met) continue;
+    const [code, message] = preflightFailures[item.id]!;
+    emit(code, message, 'error', { value: item.measured, limit: item.limit });
+  }
   while (true) {
     const now = toNumber(time);
     for (let index = 0; index < observations.length; index++) {

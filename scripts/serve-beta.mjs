@@ -19,6 +19,21 @@ function headersFor(pathname) {
   return Object.fromEntries(headerRules.filter(rule => rule.source === pathname || rule.pattern?.test(pathname)).flatMap(rule => rule.headers.map(header => [header.key, header.value])));
 }
 const redirects = new Map(config.redirects.map(r => [r.source, r.destination]));
+// Explicit localhost-only QA mode. Production always uses the private Blob adapter.
+let metrics;
+if (process.env.IPE_METRICS_TEST === '1') {
+  const { createMetricsHandler } = await import('../server/metrics/handler.mjs');
+  const records = new Map();
+  const repository = {
+    get: async key => records.get(key) ?? null,
+    putIfAbsent: async (key, document) => {
+      if (records.has(key)) return { created: false, document: records.get(key) };
+      records.set(key, document); return { created: true, document };
+    },
+    list: async cursor => { const offset = Number(cursor ?? 0); const all = [...records.values()]; const end = offset + 100; return { documents: all.slice(offset, end), cursor: end < all.length ? String(end) : null, hasMore: end < all.length }; },
+  };
+  metrics = createMetricsHandler({ repository, development: true, signingSecret: 'localhost-test-signing-secret-not-for-production', adminSecret: 'localhost-test-admin-secret-not-for-production' });
+}
 const mime = new Map(Object.entries({
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.mjs': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
@@ -32,6 +47,7 @@ const mime = new Map(Object.entries({
 }));
 const server = http.createServer(async (req, res) => {
   let pathname = '/';
+  if (metrics && req.url?.split('?')[0] === '/api/metrics') return metrics(req, res);
   const finish = (status, body, extra = {}) => {
     const bytes = Buffer.byteLength(body);
     res.writeHead(status, { ...headersFor(pathname), 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': bytes, ...extra });

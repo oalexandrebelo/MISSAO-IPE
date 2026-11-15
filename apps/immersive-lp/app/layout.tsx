@@ -15,5 +15,16 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#080d10', colorScheme: 'dark' };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR" className={`${editorial.variable} ${sans.variable}`}><body>{children}</body></html>;
+  return (
+    <html lang="pt-BR" className={`${editorial.variable} ${sans.variable}`}>
+      <head><link rel="stylesheet" href="/acessibilidade/libras.css" /></head>
+      <body>
+        {children}
+        <nav aria-label="Acessibilidade">
+          <a className="ipe-libras-link vlibras-ignore" data-ipe-libras="public" href="/acessibilidade/guia.html" aria-haspopup="dialog" title="Selecione um trecho público para traduzir em Libras">Libras</a>
+        </nav>
+        <script src="/acessibilidade/libras.js" defer />
+      </body>
+    </html>
+  );
 }

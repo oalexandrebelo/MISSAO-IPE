@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090f18">
   <meta name="author" content="Alexandre Belo">
-  <meta name="description" content="Uma apresentação interativa da MISSÃO IPÊ. Três casos científicos e uma pergunta: qual evidência consegue chegar?">
+  <meta name="description" content="Pitch de Alexandre Belo para a MISSÃO IPÊ. Três casos científicos com dados históricos, decisões de engenharia e uma demonstração A/B do jogo.">
   <title>MISSÃO IPÊ · Pitch de Alexandre Belo</title>
   <link rel="icon" type="image/svg+xml" href="assets/missao-ipe-logo.svg">
   <link rel="stylesheet" href="pitch.css">
@@ -15,7 +15,7 @@
   <a class="skip-link" href="#palco">Ir para a cena</a>
   <div class="pitch">
     <main class="stage" id="palco" tabindex="-1" aria-label="Pitch MISSÃO IPÊ">
-      <section class="scene opening" id="inicio" aria-labelledby="inicio-titulo">
+      <section class="scene opening" id="inicio" data-duration="20" aria-labelledby="inicio-titulo">
         <div class="world" aria-hidden="true">
           <div class="stars"></div>
           <div class="horizon">
@@ -28,7 +28,7 @@
         <div class="scene-content opening-content">
           <img class="mission-mark" src="assets/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ">
           <h1 id="inicio-titulo" tabindex="-1">Qual ciência consegue<br class="wide-break"> <em>chegar à Terra?</em></h1>
-          <p class="lede">Um jogo de engenharia espacial em que a evidência depende das suas escolhas.</p>
+          <p class="lede">No Webb do jogo, duas configurações entregam seis pacotes. Só uma entrega medidas que respondem à pergunta.</p>
           <div class="presenter-signature">
             <div class="presenter-mark" role="img" aria-label="Marca de Alexandre Belo">
               <img class="presenter-monogram" src="assets/alexandre-belo-monogram.svg" width="664" height="420" alt="">
@@ -43,94 +43,87 @@
         </div>
       </section>
 
-      <section class="scene cerrado" id="cerrado" aria-labelledby="cerrado-titulo">
+      <section class="scene cerrado" id="problema" data-duration="30" aria-labelledby="problema-titulo">
         <div class="world cerrado-world" aria-hidden="true">
           <div class="cerrado-plate"><img src="assets/cerrado-terra-modis.jpg" width="1000" height="823" alt=""></div>
         </div>
         <div class="scene-content cerrado-content">
           <div class="reading">
-            <p class="source-tag">Cerrado · Terra/MODIS</p>
-            <h2 id="cerrado-titulo" tabindex="-1">O que mudou na vegetação?</h2>
-            <p class="lede">Compare dois períodos usando observações históricas. Para calcular o índice a bordo, a nave precisa sustentar um pico de potência.</p>
-            <dl class="case-facts" aria-label="Resultado do ensaio guiado do Cerrado">
-              <div><dt>Enviar bandas</dt><dd><strong>2</strong> registros válidos</dd></div>
-              <div><dt>Calcular o índice</dt><dd><strong>0</strong> registros válidos</dd></div>
-            </dl>
-            <p class="qualification">O índice usa menos dados. Neste ensaio, o processamento excede a potência disponível.</p>
+            <h2 id="problema-titulo" tabindex="-1">A missão falhou. <em>Onde?</em></h2>
+            <p class="lede">Uma pontuação deixa em aberto qual decisão interrompeu a missão, qual dado se perdeu e o que ainda podemos concluir.</p>
           </div>
+          <figure class="case-capture cerrado-capture">
+            <img src="assets/3d-cerrado-indice.webp" width="700" height="315" alt="Nave didática do Cerrado com o sistema de energia em destaque no replay do jogo.">
+            <figcaption><strong>Cerrado · captura do replay em T+10 min.</strong> A bateria ainda guarda 13,96 Wh quando o cálculo ultrapassa a potência de descarga.</figcaption>
+          </figure>
           <p class="image-credit">Brasil central · imagem de contexto Terra/MODIS, 2000</p>
         </div>
       </section>
 
-      <section class="scene bennu" id="bennu" aria-labelledby="bennu-titulo">
-        <div class="world bennu-world" aria-hidden="true">
-          <div class="stars"></div>
-          <div class="orbit"></div>
-          <img class="bennu-plate" src="assets/bennu-osiris-rex.jpg" width="1024" height="968" alt="">
-        </div>
-        <div class="scene-content bennu-content">
-          <div class="reading">
-            <p class="source-tag">Bennu · OSIRIS-REx</p>
-            <h2 id="bennu-titulo" tabindex="-1">Seis rochas medidas.<br><em>Quantas chegam?</em></h2>
-            <p class="lede">O estudo publicou as dimensões das rochas e dos clastos. No jogo, o que chega ao solo depende do tempo de contato para transmitir os dados.</p>
-            <p class="qualification">O exercício compara tamanhos. A composição e a origem exigem outras medidas.</p>
-          </div>
-          <p class="image-credit">Bennu · mosaico PolyCam, 2018 · NASA/Goddard/University of Arizona</p>
-        </div>
-      </section>
-
-      <section class="scene webb" id="webb" aria-labelledby="webb-titulo">
+      <section class="scene webb" id="solucao" data-duration="40" aria-labelledby="solucao-titulo">
         <div class="world webb-world" aria-hidden="true">
           <div class="stars"></div>
           <div class="webb-halo"></div>
           <img class="webb-plate" src="assets/webb-model.png" width="642" height="452" alt="">
         </div>
-        <div class="scene-content webb-content">
+        <div class="scene-content solution-content">
           <div class="reading">
-            <p class="source-tag">WASP-39 b · Webb/NIRSpec</p>
-            <h2 id="webb-titulo" tabindex="-1">A atmosfera muda <em>a luz.</em></h2>
-            <p class="lede">Quando o planeta passa diante da estrela, quanto da luz é bloqueado em cada faixa?</p>
+            <h2 id="solucao-titulo" tabindex="-1">Da previsão <em>à evidência.</em></h2>
+            <p class="lede">Um jogo de engenharia espacial em que você projeta, faz uma previsão e usa a evidência recebida para redesenhar a missão.</p>
           </div>
-          <figure class="spectrum">
-            <figcaption>
-              <strong>Um trânsito · seis faixas</strong>
-              <span>10 de julho de 2022 · FIREFLy</span>
-            </figcaption>
-            <img src="assets/espectro-webb.svg" width="650" height="230" alt="Gráfico da luz bloqueada em função do comprimento de onda. Seis pontos com barras de incerteza de um sigma. O maior ponto neste recorte é de 2,24669 por cento em 4,30310 micrômetros.">
-            <button class="text-button" data-open="dados-webb" type="button" data-enhanced>Ler as medidas e incertezas <span aria-hidden="true">↗</span></button>
-            <noscript><a href="https://zenodo.org/records/6959427">Consultar as medidas</a></noscript>
-          </figure>
-          <p class="qualification webb-qualification">No ensaio, câmera e espectrômetro recebem seis pacotes. Só o espectrômetro do jogo atende ao requisito científico. As seis faixas não reconstituem a análise molecular.</p>
-          <p class="image-credit">Representação do Webb · modelo NASA/Goddard</p>
+          <div class="mission-lessons">
+            <article class="mission-lesson">
+              <img src="assets/3d-cerrado-indice.webp" width="700" height="315" alt="Captura do sistema de energia da nave do Cerrado.">
+              <div><h3>Cerrado</h3>
+              <p>Compare enviar bandas e calcular um índice. Distinga potência instantânea de energia armazenada.</p>
+              <p class="mission-source">Terra/MODIS · dois períodos de 2024</p></div>
+            </article>
+            <article class="mission-lesson">
+              <img src="assets/bennu-osiris-rex.jpg" width="1024" height="968" alt="Mosaico da superfície rochosa de Bennu feito pela missão OSIRIS-REx.">
+              <div><h3>Bennu</h3>
+              <p>Compare dimensões. Diferencie os dados produzidos na nave dos registros que chegaram ao solo.</p>
+              <p class="mission-source">Mosaico PolyCam · NASA/Goddard/University of Arizona</p></div>
+            </article>
+            <article class="mission-lesson">
+              <img src="assets/3d-webb-espectrometro.webp" width="700" height="315" alt="Captura do espectrômetro infravermelho em destaque no replay do jogo.">
+              <div><h3>Webb</h3>
+              <p>Escolha o instrumento pela pergunta. Leia a luz bloqueada por faixa e a incerteza de cada medida.</p>
+              <button class="text-button" data-open="dados-webb" type="button" data-enhanced>Ver espectro e incertezas</button>
+              <noscript><a href="https://zenodo.org/records/6959427">Consultar as medidas do Webb</a></noscript></div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="scene decision" id="decisao" aria-labelledby="decisao-titulo">
+      <section class="scene decision" id="decisao" data-duration="50" aria-labelledby="decisao-titulo">
         <div class="world decision-world" aria-hidden="true"><div class="stars"></div><div class="relay-grid"></div></div>
         <div class="scene-content decision-content">
           <div class="reading decision-intro">
-            <h2 id="decisao-titulo" tabindex="-1">Mude o contato. <em>Veja o que chega.</em></h2>
-            <p class="lede">Ensaio de Bennu, com a mesma taxa de rádio nas duas tentativas.</p>
+            <h2 id="decisao-titulo" tabindex="-1">Mesmo rádio. <em>Outro contato.</em></h2>
+            <p class="lede">Qual serviço de solo entrega mais dados de Bennu? A taxa permanece em 1,2 Mbit/s.</p>
           </div>
           <div class="experiment" id="experimento" data-trial="a">
-            <div class="relay-projection" aria-hidden="true">
-              <div class="relay-label"><span>Nave</span><i></i></div>
-              <div class="relay-beam"><i class="signal"></i></div>
-              <div class="relay-label relay-label-ground"><i></i><span>Solo</span></div>
-            </div>
             <div class="trial-controls" role="group" aria-label="Serviço de solo do ensaio de Bennu">
               <button class="button trial-button" type="button" data-choice="a" aria-pressed="true" data-enhanced>A · Contatos curtos</button>
               <button class="button trial-button" type="button" data-choice="b" aria-pressed="false" data-enhanced>B · Contatos ampliados</button>
             </div>
-            <div class="trial-results">
-              <div class="trial-total" role="status" aria-atomic="true"><strong id="trial-count">2</strong> <span>registros<br>válidos no solo</span></div>
-              <div>
+            <div class="trial-body">
+              <figure class="case-capture trial-capture" data-capture="a">
+                <img src="assets/3d-bennu-a.webp" width="700" height="315" alt="Nave didática em Bennu, com a antena em destaque e à espera do primeiro contato.">
+                <figcaption><strong>3D do jogo · T+85 min</strong> — A nave ainda aguarda contato.</figcaption>
+              </figure>
+              <figure class="case-capture trial-capture" data-capture="b" hidden>
+                <img src="assets/3d-bennu-b.webp" width="700" height="315" alt="A mesma nave e antena em Bennu, com uma linha de transmissão saindo do rádio.">
+                <figcaption><strong>3D do jogo · T+85 min</strong> — A janela abre e a nave transmite.</figcaption>
+              </figure>
+              <div class="trial-results">
+                <div class="trial-total" role="status" aria-atomic="true"><strong id="trial-count">2</strong><span>de 6 registros válidos<br>no solo ao final</span></div>
                 <dl class="trial-meta">
                   <div><dt>Primeiro contato</dt><dd id="trial-start">T+90 min</dd></div>
                   <div><dt>Janela</dt><dd id="trial-window">120 s</dd></div>
                   <div><dt>Serviço</dt><dd id="trial-cost">6 créditos</dd></div>
                 </dl>
-                <p class="records-label">Eixo maior publicado · seis registros</p>
+                <p class="records-label">Dimensões publicadas · 6 registros</p>
                 <ol class="records" aria-label="Dimensões válidas recebidas por sítio">
                   <li><span>Sítio 1</span><strong>1,53 m</strong></li>
                   <li><span>Sítio 2</span><strong>3,93 m</strong></li>
@@ -142,22 +135,30 @@
               </div>
             </div>
           </div>
-          <p class="qualification decision-qualification">O serviço ampliado começa mais cedo, dura mais e custa mais. O ensaio compara o pacote completo. <span>Esquema do enlace · resultado final do jogo</span></p>
+          <p class="qualification decision-qualification">Mesmo rádio, duas capturas em T+85 min. O serviço ampliado muda início e duração das janelas e custa <strong>6 créditos a mais</strong>. As dimensões vêm de OSIRIS-REx.</p>
+          <a class="text-button lab-link demo-link" href="../../lab/index.html" data-online="https://projeto-ipe.vercel.app/lab/index.html" target="_blank" rel="noopener">Executar o ensaio e inspecionar o 3D no laboratório (nova aba) <span aria-hidden="true">↗</span></a>
           <noscript><p class="qualification">No cenário B, a primeira janela começa em T+85 min, dura 500 s e o serviço custa 12 créditos. Os seis registros chegam válidos.</p></noscript>
         </div>
       </section>
 
-      <section class="scene council" id="evidencia" aria-labelledby="evidencia-titulo">
+      <section class="scene council" id="evidencia" data-duration="25" aria-labelledby="evidencia-titulo">
         <div class="world council-world" aria-hidden="true"><div class="stars"></div><div class="council-glow"></div></div>
         <div class="scene-content council-content">
           <div class="reading">
-            <h2 id="evidencia-titulo" tabindex="-1">Quem defende <em>o resultado?</em></h2>
-            <p class="lede">Na cena 3D do jogo, a trilha leva do dado recebido ao evento que fez a diferença.</p>
+            <h2 id="evidencia-titulo" tabindex="-1">O que <em>verificamos.</em></h2>
+            <p class="lede">Jogamos as três missões localmente. Conferimos a entrega, a interpretação e o caminho da medida de volta à decisão.</p>
           </div>
           <ol class="evidence-chain" aria-label="Trilha da evidência">
-            <li>Pergunta</li><li>Requisito</li><li>Registro</li><li>Entrega</li><li>Interpretação</li>
+            <li>Pergunta</li><li>Escolha</li><li>Evento em 3D</li><li>Registro recebido</li><li>Conclusão</li>
           </ol>
-          <div class="council-panel">
+          <dl class="validation-counts" aria-label="Verificações do candidato R21">
+            <div><dt>Motor e laboratório</dt><dd>158 testes de domínio · 64 de interface</dd></div>
+            <div><dt>Métricas e painel</dt><dd>17 testes de servidor · 6 de painel</dd></div>
+            <div><dt>Distribuição</dt><dd>17 verificações</dd></div>
+          </dl>
+          <p class="qualification">A próxima verificação é com iniciantes: conseguem explicar uma falha e justificar o redesenho?</p>
+          <details class="council-panel">
+            <summary>Quatro papéis no mesmo dispositivo</summary>
             <div class="role-controls" role="group" aria-label="Quatro segmentos da missão" data-enhanced>
               <button class="button role-button" type="button" data-role="lancamento" aria-pressed="true">Lançamento</button>
               <button class="button role-button" type="button" data-role="espaco" aria-pressed="false">Espaço</button>
@@ -170,12 +171,11 @@
               <p id="role-solo"><strong>Solo</strong> Quais registros chegaram durante as janelas de contato?</p>
               <p id="role-usuarios"><strong>Usuários</strong> O que as medidas recebidas permitem concluir?</p>
             </div>
-          </div>
-          <p class="qualification">Cada papel registra uma conclusão e a evidência que a sustenta. Jogue sozinho ou em até quatro pessoas no mesmo dispositivo.</p>
+          </details>
         </div>
       </section>
 
-      <section class="scene closing" id="jogar" aria-labelledby="jogar-titulo">
+      <section class="scene closing" id="jogar" data-duration="15" aria-labelledby="jogar-titulo">
         <div class="world" aria-hidden="true">
           <div class="stars"></div>
           <div class="horizon closing-horizon">
@@ -187,19 +187,20 @@
         </div>
         <div class="scene-content closing-content">
           <img class="mission-mark" src="assets/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ">
-          <h2 id="jogar-titulo" tabindex="-1">Qual evidência sustenta<br class="wide-break"> <em>a sua decisão?</em></h2>
-          <p class="lede">Escolha um destino, faça uma previsão e confira o resultado.</p>
+          <h2 id="jogar-titulo" tabindex="-1"><em>Obrigado.</em></h2>
+          <p class="lede">Escolham uma missão e mostrem qual evidência responde à sua pergunta.</p>
           <div class="actions">
             <a class="button button-primary" href="../../lab/index.html" data-online="https://projeto-ipe.vercel.app/lab/">Jogar MISSÃO IPÊ <span aria-hidden="true">↗</span></a>
-            <button class="button button-subtle" data-open="fontes" type="button" data-enhanced>Fontes e créditos</button>
+            <button class="button button-subtle" data-open="fontes" type="button" data-enhanced>Equipe, fontes e créditos</button>
           </div>
-          <p class="qualification closing-qualification">Dados científicos históricos. Nave configurável, tempo e recursos didáticos. IPÊ é a equipe.</p>
+          <p class="play-address">projeto-ipe.vercel.app/jogar</p>
+          <p class="qualification closing-qualification">Dados científicos históricos. Nave, tempo e recursos do jogo são didáticos.</p>
           <div class="presenter-signature">
             <div class="presenter-mark" role="img" aria-label="Marca de Alexandre Belo">
               <img class="presenter-monogram" src="assets/alexandre-belo-monogram.svg" width="664" height="420" alt="">
               <img class="presenter-orbit" src="assets/alexandre-belo-orbit.svg" width="754" height="250" alt="">
             </div>
-            <div><p>Apresentado por <strong>Alexandre Belo</strong></p><a href="https://www.alexandrebelo.com.br/">alexandrebelo.com.br</a></div>
+            <div><p>Apresentado por <strong>Alexandre Belo</strong></p><a href="https://www.alexandrebelo.com.br/">www.alexandrebelo.com.br</a></div>
           </div>
         </div>
       </section>
@@ -213,7 +214,7 @@
       </div>
       <nav class="scene-navigation" aria-label="Navegação de cenas">
         <button class="tool-button arrow-button" id="previous" type="button" aria-label="Cena anterior">←</button>
-        <span id="scene-position" class="scene-position" aria-hidden="true">1 / 7</span>
+        <span id="scene-position" class="scene-position" aria-hidden="true">1 / 6</span>
         <button class="tool-button arrow-button" id="next" type="button" aria-label="Próxima cena">→</button>
       </nav>
       <div class="dock-tools settings">
@@ -227,13 +228,12 @@
   <dialog id="explorar" aria-labelledby="explorar-titulo">
     <header class="dialog-heading"><h2 id="explorar-titulo">Explorar cenas</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar índice">×</button></form></header>
     <nav class="scene-index" aria-label="Índice das cenas">
-      <a href="#inicio" data-scene-link><span>A pergunta</span><small>O que precisa chegar?</small></a>
-      <a href="#cerrado" data-scene-link><span>Cerrado</span><small>Energia, potência e volume</small></a>
-      <a href="#bennu" data-scene-link><span>Bennu</span><small>Medir e transmitir</small></a>
-      <a href="#webb" data-scene-link><span>Webb</span><small>Espectro e incerteza</small></a>
-      <a href="#decisao" data-scene-link><span>Decisão A/B</span><small>Teste o serviço de solo</small></a>
-      <a href="#evidencia" data-scene-link><span>Conselho da missão</span><small>Quatro papéis, uma evidência</small></a>
-      <a href="#jogar" data-scene-link><span>Jogar</span><small>Experimente uma missão</small></a>
+      <a href="#inicio" data-scene-link><span>Abertura · 20 s</span><small>Uma nave pode coletar seis arquivos e deixar a Terra sem resposta.</small></a>
+      <a href="#problema" data-scene-link><span>Problema · 30 s</span><small>Encontrar a causa de uma falha</small></a>
+      <a href="#solucao" data-scene-link><span>Solução · 40 s</span><small>O que cada missão ensina</small></a>
+      <a href="#decisao" data-scene-link><span>Demo · 50 s</span><small>Dois serviços de solo, dois resultados</small></a>
+      <a href="#evidencia" data-scene-link><span>Validação · 25 s</span><small>O que os testes verificaram</small></a>
+      <a href="#jogar" data-scene-link><span>Fechamento · 15 s</span><small>Próximo passo e obrigado</small></a>
     </nav>
     <p class="dialog-help">No palco, use <kbd>←</kbd> e <kbd>→</kbd> ou deslize para mudar de cena.</p>
   </dialog>
@@ -241,13 +241,38 @@
   <dialog id="notas" aria-labelledby="notas-titulo">
     <header class="dialog-heading"><h2 id="notas-titulo">Notas de Alexandre Belo</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar notas">×</button></form></header>
     <div class="speaker-notes">
-      <section data-note="inicio"><h3>0:00–0:25 · A pergunta</h3><p>“Sou Alexandre Belo, da equipe MISSÃO IPÊ. Ao desenhar uma missão espacial, o que precisamos entregar para que alguém na Terra consiga responder a sua pergunta? No jogo, cada recurso que você escolhe muda a evidência que chega.”</p></section>
-      <section data-note="cerrado"><h3>0:25–0:50 · Cerrado</h3><p>“Queremos comparar a vegetação em dois períodos. Mandar o índice ocupa menos espaço de memória. Só que calculá-lo a bordo pede mais potência de uma vez. Neste ensaio, enviar as bandas entrega dois registros válidos. Calcular o índice entrega zero. Energia acumulada e potência instantânea são coisas diferentes.”</p></section>
-      <section data-note="bennu"><h3>0:50–1:10 · Bennu</h3><p>“A OSIRIS-REx nos dá outro problema. O estudo mediu objetos reais em Bennu. A operação do jogo decide quais medições saem da nave. Você já observou os seis objetos. Agora precisa das janelas para transmitir.”</p></section>
-      <section data-note="webb"><h3>1:10–1:35 · Webb</h3><p>“Quando WASP-39 b cruza a estrela, o Webb mede quanta luz foi bloqueada em cada faixa. Aqui estão seis medidas com suas incertezas. No jogo, tanto a câmera quanto o espectrômetro entregam seis pacotes, mas só o espectrômetro satisfaz a pergunta.”</p></section>
-      <section data-note="decisao"><h3>1:35–2:15 · Decisão A/B</h3><p>“Na opção A, chegam dois registros. O que muda ao escolher o serviço ampliado?” Dê tempo para uma previsão e selecione B. “Agora chegam seis, com a mesma taxa de rádio. O serviço combina uma janela mais cedo, mais longa e um custo maior. As dimensões vieram do estudo. A consequência operacional veio do jogo.”</p></section>
-      <section data-note="evidencia"><h3>2:15–2:43 · Quatro papéis</h3><p>“No jogo, seleciono um registro e volto ao evento correspondente na cena 3D. Lançamento, espaço, solo e usuários defendem o resultado com evidências. Uma pessoa pode assumir os quatro papéis ou um grupo de até quatro pessoas pode discutir no mesmo dispositivo.”</p></section>
-      <section data-note="jogar"><h3>2:43–3:00 · Convite</h3><p>“Os dados são históricos. A nave, o tempo de operação e os recursos são didáticos. Escolha uma missão e teste uma decisão. Quando tiver o resultado, mostre qual evidência sustenta a sua conclusão.”</p></section>
+      <section data-note="inicio">
+        <h3>0:00–0:20 · Abertura (20 s)</h3>
+        <p class="speaker-cue">Inicie o relógio. Olhe para a banca ao fazer a pergunta.</p>
+        <p class="spoken">Uma nave pode coletar seis arquivos e deixar a Terra sem resposta. Como saber se o problema foi o instrumento, a energia ou o contato com o solo? Sou Alexandre Belo, da MISSÃO IPÊ.</p>
+      </section>
+      <section data-note="problema">
+        <h3>0:20–0:50 · Problema (30 s)</h3>
+        <p class="speaker-cue">Aponte a bateria e o instante do replay.</p>
+        <p class="spoken">Para quem está começando, projetar uma missão vira uma lista de peças e números. Se algo falha, a tela pode mostrar só uma nota. O aluno fica sem saber que decisão causou a falha, qual dado perdeu e se ainda pode responder à pergunta científica. Precisávamos tornar esse caminho visível para permitir uma segunda tentativa informada.</p>
+      </section>
+      <section data-note="solucao">
+        <h3>0:50–1:30 · Solução (40 s)</h3>
+        <p class="speaker-cue">Mostre os três casos na ordem Cerrado, Bennu e Webb.</p>
+        <p class="spoken">A MISSÃO IPÊ é um jogo de engenharia espacial em que você projeta, faz uma previsão e usa a evidência recebida para redesenhar a missão. Criamos o jogo para o desafio Space Mission Design Game. No Cerrado, dados reais do Terra MODIS ajudam a distinguir potência instantânea de energia armazenada. Em Bennu, separar dados produzidos dos que chegaram ao solo muda a comparação de tamanhos. No Webb, você escolhe o instrumento pela pergunta e lê um espectro com incerteza.</p>
+      </section>
+      <section data-note="decisao">
+        <h3>1:30–2:20 · Demo (50 s)</h3>
+        <p class="speaker-cue">Comece em A. Aponte T+85 min e o total. Deixe o laboratório aberto em outra aba.</p>
+        <p class="spoken">Em Bennu, usamos dimensões publicadas da missão OSIRIS-REx. Em A, aos oitenta e cinco minutos, o replay mostra a nave aguardando contato. No final, chegam dois registros. Com o mesmo rádio e um serviço de solo que abre antes e dura mais, quantos chegam?</p>
+        <p class="speaker-cue">Espere dois segundos. Selecione B e aponte a transmissão e as quatro medidas adicionais.</p>
+        <p class="spoken">Em B, a nave já transmite nesse mesmo instante. Chegam seis registros por seis créditos a mais. Aqui vemos capturas do replay. No laboratório, você pode repetir a comparação, abrir uma medida recebida e seguir o evento até a antena no 3D.</p>
+      </section>
+      <section data-note="evidencia">
+        <h3>2:20–2:45 · Validação (25 s)</h3>
+        <p class="speaker-cue">Mostre a trilha da evidência e o alcance das verificações.</p>
+        <p class="spoken">Rodamos as três missões localmente e conferimos as decisões, os dados que chegam, a trilha e as respostas. Os testes cobriram o motor, a interface, o servidor e o painel privado. Já conseguimos rastrear a entrega até a decisão. Ainda precisamos observar se iniciantes explicam a falha e justificam uma mudança.</p>
+      </section>
+      <section data-note="jogar">
+        <h3>2:45–3:00 · Fechamento (15 s)</h3>
+        <p class="speaker-cue">Deixe as duas marcas, o endereço e o botão de jogo visíveis.</p>
+        <p class="spoken">Nosso próximo passo é observar iniciantes usando o jogo para justificar uma decisão. Escolham uma missão e mostrem qual evidência responde à sua pergunta. Obrigado.</p>
+      </section>
     </div>
     <button class="button button-subtle" id="timer-reset" type="button">Reiniciar relógio em 03:00</button>
     <p class="dialog-help">O relógio no rodapé inicia ou pausa o ensaio. O avanço é manual.</p>
@@ -256,6 +281,9 @@
   <dialog id="dados-webb" aria-labelledby="dados-webb-titulo">
     <header class="dialog-heading"><h2 id="dados-webb-titulo">O espectro de WASP-39 b</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar tabela de medidas">×</button></form></header>
     <p>Seis faixas do mesmo trânsito observado pelo NIRSpec/PRISM. A incerteza publicada é de um sigma, em pontos percentuais.</p>
+    <figure class="spectrum">
+      <img src="assets/espectro-webb.svg" width="650" height="230" alt="Luz bloqueada por faixa de comprimento de onda. Seis pontos com barras de incerteza de um sigma.">
+    </figure>
     <table>
       <caption class="visually-hidden">Medidas do trânsito de WASP-39 b na redução FIREFLy</caption>
       <thead><tr><th scope="col">Faixa (µm)</th><th scope="col">Luz (%)</th><th scope="col">1σ (p.p.)</th></tr></thead>
@@ -272,16 +300,27 @@
   </dialog>
 
   <dialog id="fontes" aria-labelledby="fontes-titulo">
-    <header class="dialog-heading"><h2 id="fontes-titulo">Fontes e créditos</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar fontes">×</button></form></header>
+    <header class="dialog-heading"><h2 id="fontes-titulo">Fontes e créditos</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar fontes e créditos">×</button></form></header>
+    <p><a href="https://www.spaceappschallenge.org/2026/find-a-team/missao-ipe/?tab=details">MISSÃO IPÊ · Space Mission Design Game · Rio Verde, Brasil</a></p>
+    <ul class="credit-list">
+      <li>Alexandre Belo <span>@alexandrebelo</span></li>
+      <li>Bruno Assis Carvalho Meyer <span>@brunoassiscarvalho</span></li>
+      <li>Enzo Chaves Melo <span>@enzocmelo</span></li>
+      <li>Paulo Eduardo Canassa Monteiro <span>@paulo_canassa</span></li>
+      <li>Castanete Rodrigues Araújo de Vlagelaier <span>@cherry01</span></li>
+      <li>Rebecca Pádua Rocha <span>@rebeccapádua</span></li>
+    </ul>
+    <h3>Fontes das missões e da apresentação</h3>
     <ul class="credit-list">
       <li><strong>Cerrado.</strong> Três pares históricos Terra/MODIS, produto <a href="https://doi.org/10.5067/MODIS/MOD13Q1.061">MOD13Q1.061</a>. Imagem de contexto do <a href="https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/">Brasil central</a>, por Brian Montgomery, Reto Stöckli e Robert Simmon com dados da equipe MODIS.</li>
-      <li><strong>Bennu.</strong> Tabela Suplementar 1 de <a href="https://ntrs.nasa.gov/citations/20205007912">DellaGiustina e colaboradores</a>. <a href="https://science.nasa.gov/resource/bennu-mosaic/">Mosaico PolyCam</a> de NASA/Goddard/University of Arizona.</li>
+      <li><strong>Bennu.</strong> Tabela Suplementar 1 de <a href="https://ntrs.nasa.gov/citations/20205007912">DellaGiustina e colaboradores</a>. <a href="https://science.nasa.gov/resource/bennu-mosaic/">Mosaico PolyCam</a> de NASA/Goddard/University of Arizona. <a href="https://science.nasa.gov/3d-resources/1999-rq36-asteroid/">Modelo do asteroide no replay</a> de NASA/Christopher R. Meaney.</li>
       <li><strong>Webb.</strong> Redução FIREFLy publicada no <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&amp;planet=WASP-39%20b">NASA Exoplanet Archive</a>. Representação a partir do <a href="https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/">modelo Webb (A)</a>, NASA/Goddard Space Flight Center.</li>
       <li><strong>Terra.</strong> <a href="https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/">Blue Marble</a>, NASA/Goddard.</li>
+      <li><strong>Quadros do jogo.</strong> Capturas do replay dos três ensaios guiados. A troca A/B mostra dois estados pré-calculados. Para executar os ensaios, <a href="../../lab/index.html" data-online="https://projeto-ipe.vercel.app/lab/">abra o laboratório</a>.</li>
       <li><strong>Assinatura de Alexandre Belo.</strong> Monograma e órbita do componente <cite>AB/Logo/Reverse</cite> no Figma, fornecido pelo apresentador.</li>
     </ul>
     <p>As imagens contextualizam as missões reais. A operação é didática, sem telemetria NASA ao vivo. A equipe apresenta um protótipo independente para o contexto do NASA Space Apps Challenge.</p>
-    <p><a href="../../docs/52-PITCH-ALEXANDRE-BELO-R20.html" data-online="https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/docs/52-PITCH-ALEXANDRE-BELO-R20.md">Guia do pitch e proveniência</a></p>
+    <p><a href="../../docs/53-PITCH-JURADOS-E-FALA-R21.html" data-online="https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/docs/53-PITCH-JURADOS-E-FALA-R21.md">Fala de três minutos e proveniência</a></p>
   </dialog>
 </body>
 </html>

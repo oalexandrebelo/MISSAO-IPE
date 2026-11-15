@@ -30,7 +30,7 @@ export function Scene({ compact = false, progress = 0 }: { compact?: boolean; pr
   const selected = HOTSPOTS.find((item) => item.id === focus) ?? HOTSPOTS[1];
   return <section className={`scene ${compact ? 'scene-compact' : ''}`} aria-label="Modelo visual da missão">
     <div className="scene-grid" aria-hidden="true" />
-    <div className="scene-top"><span><i className="status-dot" /> SISTEMA IPÊ · DIORAMA</span><button type="button" className="scene-mode" onClick={() => setMode(mode === '3d' ? '2d' : '3d')} aria-label={`Usar visualização ${mode === '3d' ? '2D' : '3D'}`}><Icon name="layers" size={14} /> {mode === '3d' ? 'Ver em 2D' : 'Ver em 3D'}</button></div>
+    <div className="scene-top"><span><i className="status-dot" /> SISTEMA IPÊ · DIORAMA</span><button type="button" className="scene-mode" onClick={() => setMode(mode === '3d' ? '2d' : '3d')}><Icon name="layers" size={14} /> {mode === '3d' ? 'Ver em 2D' : 'Ver em 3D'}</button></div>
     {mode === '3d' ? <SceneBoundary fallback={<FlatScene />}><Suspense fallback={<FlatScene />}><OrbitalScene focus={focus} progress={progress} onUnavailable={useFallback} /></Suspense></SceneBoundary> : <FlatScene />}
     {!compact ? <>
       <div className="hotspots" aria-label="Explore a missão">{HOTSPOTS.map((item) => <button type="button" className={`hotspot hotspot-${item.id} ${item.id === focus ? 'is-active' : ''}`} key={item.id} aria-pressed={item.id === focus} onClick={() => setFocus(item.id)}><span>{item.number}</span><b>{item.name}</b></button>)}</div>
