@@ -1,0 +1,3124 @@
+{
+  "verifiedAt": "2026-11-15T10:16:32.346Z",
+  "base": "https://projeto-ipe.vercel.app",
+  "access": "Public; no cookies or authorization headers",
+  "deploymentId": "dpl_AeY179hA29psoAUZaF9Vn6hTPris",
+  "sourceCommit": "2dc6766fd4f690fb3f07c9a6c29beb6e67158cb1",
+  "version": "0.10.0-beta.1",
+  "edition": "R19-evidence-learning-3d",
+  "status": "passed",
+  "filesChecked": 345,
+  "documents": 111,
+  "failures": [],
+  "checks": [
+    {
+      "path": "architecture/index.html",
+      "status": 200,
+      "bytes": 1021364,
+      "sha256": "bd67abca2caa2110b67597f9c400585c06fc2e00c9133acb851add2e0bd5145e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "architecture/map.mmd",
+      "status": 200,
+      "bytes": 2137,
+      "sha256": "80efbbbaaebbb623f146f7cdd52d46b3d88ba388c696f7ce79c76d3de8d6de9b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "architecture/model.json",
+      "status": 200,
+      "bytes": 165126,
+      "sha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "brand/brand-provenance-r17.json",
+      "status": 200,
+      "bytes": 3848,
+      "sha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "brand/missao-ipe-logo-on-light.svg",
+      "status": 200,
+      "bytes": 23367,
+      "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/missao-ipe-logo.png",
+      "status": 200,
+      "bytes": 48743,
+      "sha256": "8c40a65741524fcd97d4f736c460c7b033ea4feb331e39c8c0f36023a8c0bffb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "brand/missao-ipe-logo.svg",
+      "status": 200,
+      "bytes": 23367,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/missao-ipe-symbol-on-light.svg",
+      "status": 200,
+      "bytes": 17984,
+      "sha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/missao-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/originals/missao-ipe-logo-original.svg",
+      "status": 200,
+      "bytes": 23279,
+      "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/originals/missao-ipe-symbol-original.svg",
+      "status": 200,
+      "bytes": 17870,
+      "sha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/preview-r17.html",
+      "status": 200,
+      "bytes": 4779,
+      "sha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "brand/projeto-ipe-logo-on-light.svg",
+      "status": 200,
+      "bytes": 47675,
+      "sha256": "72439ae936ee895f45ded827fdd5edf10ddbb5fdc498a6e77db4966a3fcd6776",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/projeto-ipe-logo.png",
+      "status": 200,
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "brand/projeto-ipe-logo.svg",
+      "status": 200,
+      "bytes": 47676,
+      "sha256": "32377a37d746201ff32c6f01cb124a1e65d6d68798fe0600c34390e3fc9381cd",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "brand/projeto-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 40836,
+      "sha256": "4cb1b84a04c3a34c96ae56943511342dc995dff90eae100ec2c26e6751ac7218",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "campanha/apresentacao/index.html",
+      "status": 200,
+      "bytes": 26689,
+      "sha256": "606d717bec4f08f3633cf5d90efb435558698c5e6e27e4fb38afc2b94d70223d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "campanha/apresentacao/presentation.js",
+      "status": 200,
+      "bytes": 6719,
+      "sha256": "4736f81b75a69e0eac3149639588c88097fad1048f6347e1bed99854037837ae",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "campanha/apresentacao/PROJETO-IPE-Pitch.pptx",
+      "status": 200,
+      "bytes": 207658,
+      "sha256": "01580db767d9bc8d4002cc75d179ea71886930c8211e3a1fa6978e9d3954af11",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    },
+    {
+      "path": "campanha/apresentacao/style.css",
+      "status": 200,
+      "bytes": 24786,
+      "sha256": "3948fad365bc3fa241c5b2c1fe49e64ff103abd27c87a70ca8779be115971857",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "campanha/assets/index-BqypOpJI.js",
+      "status": 200,
+      "bytes": 431895,
+      "sha256": "75ad500b8b5117215c335fe2069762d3284d91757dfb501300c02675b07f7c71",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "campanha/assets/index-CKsj43Du.css",
+      "status": 200,
+      "bytes": 148376,
+      "sha256": "bb1092c2d8ab91eee96d8f6aa9ff53b83f5e0a2cb0bcabe9cde70bd3e1c07ce6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "campanha/assets/mission.worker-m4WSgatj.js",
+      "status": 200,
+      "bytes": 20166,
+      "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "campanha/assets/OrbitalScene-XUox1LWo.js",
+      "status": 200,
+      "bytes": 934287,
+      "sha256": "a63a9e769cf27068c8d9596a1a759ebaf1db999c24905d7148664f069551ecea",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "campanha/brand/missao-ipe-logo-on-light.svg",
+      "status": 200,
+      "bytes": 23367,
+      "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "campanha/brand/missao-ipe-logo.svg",
+      "status": 200,
+      "bytes": 23367,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "campanha/brand/missao-ipe-symbol-on-light.svg",
+      "status": 200,
+      "bytes": 17984,
+      "sha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "campanha/brand/missao-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "campanha/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/index.html",
+      "status": 200,
+      "bytes": 905,
+      "sha256": "7f2ba9bd80de17186752ca0f95ba5ff9bb47962052c5740eca4595122bdabd2f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "campanha/kit/diagrams/01-user-flow.mmd",
+      "status": 200,
+      "bytes": 852,
+      "sha256": "a93c63940bcc082751187f3c195d36a28377c0112e24abe0d868e17a2c1f4450",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "campanha/kit/diagrams/02-game-state.mmd",
+      "status": 200,
+      "bytes": 1326,
+      "sha256": "6e3f7395dc8b0f6bebf8bea918bfcbf6e0ea040f1085ca5653501b1ad5512592",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "campanha/kit/diagrams/03-data-flow.mmd",
+      "status": 200,
+      "bytes": 869,
+      "sha256": "acd03273400e52b265231e21e754add4153ff4c807e4aeb8c0dc4dc5f87f7e9c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "campanha/kit/diagrams/04-deployment.mmd",
+      "status": 200,
+      "bytes": 830,
+      "sha256": "13368fd9b7447986dc02a02fdcb76d1337e68e363b4934d67ceb23a23c7d2d8b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "campanha/kit/diagrams/05-er-content.mmd",
+      "status": 200,
+      "bytes": 596,
+      "sha256": "dc69aae73d88b46795853fddec1b88ec44f351ff152dd3a6f551dcdfdd855387",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "campanha/kit/diagrams/06-er-player.mmd",
+      "status": 200,
+      "bytes": 1135,
+      "sha256": "9df96ac6d925015e64823c3563b657294fa5d342975f45141b1b3b4f64549c40",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/vnd.chipnuts.karaoke-mmd"
+    },
+    {
+      "path": "campanha/kit/schema.prisma",
+      "status": 200,
+      "bytes": 14472,
+      "sha256": "94febcdc03d58830da102d1af5a3f270e2b5120b9c64338b815094509302c521",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "campanha/release.json",
+      "status": 200,
+      "bytes": 371,
+      "sha256": "440c47b96a4c708fd1a485a6f6c38d952bc17f705cc759fe4c3ffbc391185c77",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/assets/briefing-desktop.jpg",
+      "status": 200,
+      "bytes": 95217,
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "campanha/research/assets/briefing-mobile.jpg",
+      "status": 200,
+      "bytes": 58629,
+      "sha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "campanha/research/assets/laboratorio.jpg",
+      "status": 200,
+      "bytes": 90299,
+      "sha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "campanha/research/assets/retorno-cientifico.jpg",
+      "status": 200,
+      "bytes": 89187,
+      "sha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "campanha/research/assets/retorno-mobile.jpg",
+      "status": 200,
+      "bytes": 68865,
+      "sha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "campanha/research/galeria.html",
+      "status": 200,
+      "bytes": 12110,
+      "sha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/index.html",
+      "status": 200,
+      "bytes": 542321,
+      "sha256": "2ab6b04ed37d15b487705dd3c015cfa265a59d75fad3518d3160e91f756c2689",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/manifest.json",
+      "status": 200,
+      "bytes": 16703,
+      "sha256": "bbc1faa41fb1b59634e572feb86989893ae1797608af93d9b02189bf4ba1afe0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/a1-desafio.md",
+      "status": 200,
+      "bytes": 23667,
+      "sha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/a2-fisica.md",
+      "status": 200,
+      "bytes": 30374,
+      "sha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/a3-ux-tecnologia.md",
+      "status": 200,
+      "bytes": 26249,
+      "sha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/ARQUITETURA.md",
+      "status": 200,
+      "bytes": 16135,
+      "sha256": "47ecd3deb0297d4a1fafe78496ec7e869ea9b7a3e94ce6edd53f34102bf2b9d0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/FLOWCHARTS.md",
+      "status": 200,
+      "bytes": 9640,
+      "sha256": "ef71683e2a35e6a758cb1b674749ebc39691245f8dfa0c37b106e6e49f9a9d37",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/GUIA-DIDATICO-R9.md",
+      "status": 200,
+      "bytes": 13690,
+      "sha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/HANDOFF.md",
+      "status": 200,
+      "bytes": 19603,
+      "sha256": "2287e81ea57cbf4093fa53a28599afec045d996441967b0d70e06a2ed44dbcaf",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/INSIGHTS-E-OPORTUNIDADES.md",
+      "status": 200,
+      "bytes": 17031,
+      "sha256": "130ad02bd0ed5a4bafa17a3d726bb661f9726091c24b0784ade332ab5e00f344",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/PESQUISA-E-DECISOES-R9.md",
+      "status": 200,
+      "bytes": 15716,
+      "sha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/PITCH.md",
+      "status": 200,
+      "bytes": 23458,
+      "sha256": "a75b16018519b016dcdca46c555f07935574eed9e7cf351d8e03b1a82efaa65a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/PRD.md",
+      "status": 200,
+      "bytes": 23277,
+      "sha256": "88e76cd3f38ef4eaa1fff0476485d7c75428a258f865905166c3652178fd9d17",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/PRISMA-README.md",
+      "status": 200,
+      "bytes": 15429,
+      "sha256": "5d46a919d1dac19f943288e1d6e60987ee44b594db4a2b2c59f7499f2260b08a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/PRT.md",
+      "status": 200,
+      "bytes": 17810,
+      "sha256": "98cd93c67ecfef8a0e16e3998ccca20a5907a231c9e0c11234adae73499e3ee5",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/QA-BETA-0.5.md",
+      "status": 200,
+      "bytes": 5189,
+      "sha256": "3fa57051ecd0ad1e3060ee1d14dc61b16af1ff72677b3287ac3f6b70775b6d4b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/QA-NAVEGADOR-R9.md",
+      "status": 200,
+      "bytes": 7503,
+      "sha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/QA-R9.md",
+      "status": 200,
+      "bytes": 19149,
+      "sha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/refinamento-conops.md",
+      "status": 200,
+      "bytes": 19091,
+      "sha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/REFINAMENTO-NASA-R10.md",
+      "status": 200,
+      "bytes": 15208,
+      "sha256": "65c9440391ab41218545cae82683ce90feed05d93edc89f0d871267ab57d86d9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/refinamento-requisitos.md",
+      "status": 200,
+      "bytes": 13529,
+      "sha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/refinamento-risco-ux.md",
+      "status": 200,
+      "bytes": 20372,
+      "sha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "campanha/research/originals/STORYTELLING-4-NIVEIS.md",
+      "status": 200,
+      "bytes": 23111,
+      "sha256": "551e20987e80721f9349f6632ce1e0a91669b5dd2f99e4769a6a683cb9775845",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "context/index.html",
+      "status": 200,
+      "bytes": 135908,
+      "sha256": "14e9a824685b159bb14e6e6314803b89adc15c9b22903b7f1ce811ba5ac1c9e7",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "context/project-context.json",
+      "status": 200,
+      "bytes": 70554,
+      "sha256": "a3bbfcab2ab013f5a195d13bba9b5223789885922b174cf72041bea1dd0c4dfd",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "context/research-library-index.json",
+      "status": 200,
+      "bytes": 57364,
+      "sha256": "bf1ea045d0b929cd2e2705ee1853f68c40b5836a80fe5bbafb008a19af900bc3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "context/research-library.html",
+      "status": 200,
+      "bytes": 2205049,
+      "sha256": "dea05a696fb9232d0d544f7df384ad2abbd97e7d3a14b3ba0720835b06929fae",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "context/research-library.md",
+      "status": 200,
+      "bytes": 1774118,
+      "sha256": "c5ede1bd218a4db926896035edb447e0ac09294669a25b5ab3ef5ec0ef034c96",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/09-VERIFICACAO.html",
+      "status": 200,
+      "bytes": 5230,
+      "sha256": "b09921ed3663447a47d40136abe80a2774e11aea9830e5ac8a14f5ac8352ccb2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/09-VERIFICACAO.md",
+      "status": 200,
+      "bytes": 3109,
+      "sha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/13-ARQUITETURA-ARCHIFY.html",
+      "status": 200,
+      "bytes": 14842,
+      "sha256": "bbb79544617c6c3aa2416657b04a71c6cc935725f14719d73f6860d0de85f6b2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/13-ARQUITETURA-ARCHIFY.md",
+      "status": 200,
+      "bytes": 11569,
+      "sha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/14-BETA-DEPLOY.html",
+      "status": 200,
+      "bytes": 9046,
+      "sha256": "8bc3d469bf4e6e0b0779c24743d4f44a33c09da8dccce57b3343569a8b550709",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/14-BETA-DEPLOY.md",
+      "status": 200,
+      "bytes": 6588,
+      "sha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/15-PLANO-RELEASE.html",
+      "status": 200,
+      "bytes": 17378,
+      "sha256": "1727293e5a4a3d1edc82816fbc59ef5dd3798e2385ef8a70450bd1bd13710ef8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/15-PLANO-RELEASE.md",
+      "status": 200,
+      "bytes": 14221,
+      "sha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/16-OPORTUNIDADES-BETA.html",
+      "status": 200,
+      "bytes": 13753,
+      "sha256": "389fb2a60b0ca7b310179811cb48cae5b9356f7d7fc0451b62178c6b77f18d0b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/16-OPORTUNIDADES-BETA.md",
+      "status": 200,
+      "bytes": 10745,
+      "sha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/18-CONTEXTO-COMPLETO.html",
+      "status": 200,
+      "bytes": 82763,
+      "sha256": "d9254bdf8e95c7542be2c0044cb8ec3ee19c79b10cc58d38f9c08b53433308a0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/18-CONTEXTO-COMPLETO.md",
+      "status": 200,
+      "bytes": 70671,
+      "sha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/19-REVISAO-EVIDENCIAS-R8.html",
+      "status": 200,
+      "bytes": 16863,
+      "sha256": "86741395d733dc97b8b4b6ef8bc71fa926ef8ea06b8c5a12542944a20b5a3ace",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/19-REVISAO-EVIDENCIAS-R8.md",
+      "status": 200,
+      "bytes": 14215,
+      "sha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
+      "status": 200,
+      "bytes": 12658,
+      "sha256": "67059faf1e6ace7a4d54e9fd0516326415abae379948a41c00b8bfac554710ce",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
+      "status": 200,
+      "bytes": 10437,
+      "sha256": "078806af108969d52f57752828a2369e943caeea2e224454e97dc7bda61c7693",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/21-OPORTUNIDADES-NASA.html",
+      "status": 200,
+      "bytes": 22597,
+      "sha256": "e6f81544a463b0cf0f60f2e016d5ded4a33abc4313c2eeec36442845e794003f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/21-OPORTUNIDADES-NASA.md",
+      "status": 200,
+      "bytes": 18391,
+      "sha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/22-PLANO-CONTINUIDADE.html",
+      "status": 200,
+      "bytes": 9619,
+      "sha256": "a89665d9fb230b6963a9c81d8e37cd395e76bcd196fa65b504c61609815d8400",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/22-PLANO-CONTINUIDADE.md",
+      "status": 200,
+      "bytes": 7087,
+      "sha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/23-IDENTIDADE-VISUAL.html",
+      "status": 200,
+      "bytes": 12480,
+      "sha256": "4d5503f730e4325decc1b163d17d181a50192591e2b85f9e0e8d39e0b2301fcc",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/23-IDENTIDADE-VISUAL.md",
+      "status": 200,
+      "bytes": 9426,
+      "sha256": "a9cf6f8c2b212a7bdaa3829b412e223fdf6f9c04897b77b958806a72e777e9ec",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/24-OPORTUNIDADES-ESTUDOS.html",
+      "status": 200,
+      "bytes": 18400,
+      "sha256": "2016f5b714f5147b0fb7369b82036c43a7c34710c6ac164e5a0792ddcda781fb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/24-OPORTUNIDADES-ESTUDOS.md",
+      "status": 200,
+      "bytes": 15240,
+      "sha256": "7ff28fd98e7552f35747ed6bae2fbe1ab0519082cd0773ed9d68a6912859da98",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/25-HANDOFF-DOIS-DEVS.html",
+      "status": 200,
+      "bytes": 37555,
+      "sha256": "03f57cab6ca8807d4aa98f155e358a1158823bf70fb8d0a321813ec5b11fd903",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/25-HANDOFF-DOIS-DEVS.md",
+      "status": 200,
+      "bytes": 29712,
+      "sha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/26-TIPOGRAFIA.html",
+      "status": 200,
+      "bytes": 8432,
+      "sha256": "9db423b218c0ed3a936067e8287a22075fef2dc4505352c77fda84a125cfd193",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/26-TIPOGRAFIA.md",
+      "status": 200,
+      "bytes": 5710,
+      "sha256": "12578e565405f28b081e5f377df6e497d575439150929b5138d753ba1d4f1bb1",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/27-ACERVO-VISUAL-NASA.html",
+      "status": 200,
+      "bytes": 11996,
+      "sha256": "ba00666c9ecb4d2f25e4ab1270efeb75c4b45d6c64502983187a1a1edce7fcc6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/27-ACERVO-VISUAL-NASA.md",
+      "status": 200,
+      "bytes": 9005,
+      "sha256": "b3f37533cf86510ab15756470875d3c9b4ead070576347362dd353494df1ea4e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/28-OPORTUNIDADES-NASA-3D.html",
+      "status": 200,
+      "bytes": 17266,
+      "sha256": "134619376c5c305fbaaa22efc43ad4b295cbc0a8c09aa054c30763f8df62aeb6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/28-OPORTUNIDADES-NASA-3D.md",
+      "status": 200,
+      "bytes": 13289,
+      "sha256": "96f0114d470b17ec2dc9bf3fcc0a70417f9a022585609c22cf12ebb719481bf2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/29-GAME-DESIGN-3D.html",
+      "status": 200,
+      "bytes": 25714,
+      "sha256": "f379db97b981e87fc37bdcf181cea92c8c9fe259e9aa70dcb7bd47a1043a3473",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/29-GAME-DESIGN-3D.md",
+      "status": 200,
+      "bytes": 21027,
+      "sha256": "40e098afe8bb369faad18fe57ff3e45659aa23b84d358054b192322c39292246",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.html",
+      "status": 200,
+      "bytes": 15775,
+      "sha256": "83c1205da13e3f72c994d3eeb81bb820329827dd441edf628755b7a8bf15024e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+      "status": 200,
+      "bytes": 12305,
+      "sha256": "e5102bb87323e3a02602dba33a574ea6b245076e8564e3bad632ad33a0b45250",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
+      "status": 200,
+      "bytes": 26707,
+      "sha256": "6ded28f7acc4029f443ea0d044f55bb47e3b13c1f3decf72545a4248306b83a3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
+      "status": 200,
+      "bytes": 21696,
+      "sha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
+      "status": 200,
+      "bytes": 6673,
+      "sha256": "801383b82eb3f8842ce7d1af3a15757c57c25c5b813a78a7d78579b2cfa22f58",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
+      "status": 200,
+      "bytes": 4091,
+      "sha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+      "status": 200,
+      "bytes": 48943,
+      "sha256": "5adfd92939dc3b0b69230e8c84ee5fabc13b4b0a8c2dfce208bf289507681b9c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+      "status": 200,
+      "bytes": 41531,
+      "sha256": "db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
+      "status": 200,
+      "bytes": 18111,
+      "sha256": "d1760b8850d7a7fba0569bb6b4c949fd256c875d62f0b980bf2d9e8fc57b5d02",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+      "status": 200,
+      "bytes": 14758,
+      "sha256": "dc1a2ad060017f33fa693d47018b39dcb32b4996e2cab51ba581e5adce6054fe",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+      "status": 200,
+      "bytes": 14619,
+      "sha256": "e0d25b9428666a3ef6a56dd25b6e05dc8b5c8da220365db1432c90d9e8efba03",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+      "status": 200,
+      "bytes": 11381,
+      "sha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+      "status": 200,
+      "bytes": 17959,
+      "sha256": "3aedb6d36dab79fc1222281ad998daa25922d1f89f34ce42867ee2120d16f1c0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+      "status": 200,
+      "bytes": 14081,
+      "sha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/36-PORTAL-PLANET-JUMPING.html",
+      "status": 200,
+      "bytes": 14160,
+      "sha256": "8e0c2379814458caa26f02a4268f05388e7e6af4daeca4380c76b05da9dd69b1",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/36-PORTAL-PLANET-JUMPING.md",
+      "status": 200,
+      "bytes": 11255,
+      "sha256": "a5349fdae2cc2f4ea29f0092d4099c314e871ee1815e44498726712547385165",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+      "status": 200,
+      "bytes": 33972,
+      "sha256": "f588291df72322a6e6c40f94672b40abab1146959e365545e8ea2336977ca796",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+      "status": 200,
+      "bytes": 28318,
+      "sha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/38-HANDOFF-R16.html",
+      "status": 200,
+      "bytes": 11639,
+      "sha256": "cb1dc035a0241c8f0e057afc7cdde05e01f3f974017238ba63276af19fde5f4b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/38-HANDOFF-R16.md",
+      "status": 200,
+      "bytes": 8729,
+      "sha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+      "status": 200,
+      "bytes": 11813,
+      "sha256": "4eb7430764bf375a4c21006ddfa84b498f032e1d3a6e3b360127bd703edeeb54",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+      "status": 200,
+      "bytes": 8589,
+      "sha256": "7366c45b792fecea48bd7d4bfef5b7f706b7c4e5b0d7608764105a1f4e1ce57d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/40-IDENTIDADE-MISSAO-IPE-R17.html",
+      "status": 200,
+      "bytes": 11488,
+      "sha256": "551e1f86bf5506019bb165f7562dd76cfe8af95eaa6db953cee16ffdc4b2fa23",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/40-IDENTIDADE-MISSAO-IPE-R17.md",
+      "status": 200,
+      "bytes": 8327,
+      "sha256": "5ab280ffe70ff7366083cf2dfdc238dccded71c4f13b026d65f849d116c3130f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/41-CONSOLIDACAO-REPOSITORIOS-R17.html",
+      "status": 200,
+      "bytes": 18278,
+      "sha256": "f31a0a6197df1ae98e44a185bf5b26589a3b9af42c97cebb1616f8c8d4463b50",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md",
+      "status": 200,
+      "bytes": 14477,
+      "sha256": "6b63590d59b7131ad941ecc8014c639e66ba35fd11ee3e55ad15ef9c9860bf03",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html",
+      "status": 200,
+      "bytes": 20594,
+      "sha256": "fe6ead044a84a487d84daf61309d3e20a1c1db24db675a17f80c3edeeb67e6f4",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md",
+      "status": 200,
+      "bytes": 16074,
+      "sha256": "d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/43-HANDOFF-GERAL-R17.html",
+      "status": 200,
+      "bytes": 14559,
+      "sha256": "ba0f8bd05c1e21fee1c44d4b8015b718c235e8fb9764809792419e02c426ee0e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/43-HANDOFF-GERAL-R17.md",
+      "status": 200,
+      "bytes": 10797,
+      "sha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html",
+      "status": 200,
+      "bytes": 10608,
+      "sha256": "7ef83275982053d5b6990e50a336fa045a949413d5f043f837f4a0e9b4dfee3d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
+      "status": 200,
+      "bytes": 7508,
+      "sha256": "6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.html",
+      "status": 200,
+      "bytes": 12527,
+      "sha256": "3ec5f9392a6982b7a6c9be5a04d18309f0eb64701ed85c9817e448a861aa0924",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
+      "status": 200,
+      "bytes": 9460,
+      "sha256": "8c0b3ac6e9d469a81a82b17aef5a27b8a93c5bf4895f5e6fa07265c295d10032",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
+      "status": 200,
+      "bytes": 14317,
+      "sha256": "3e8c6ee1ba753a1cd873f3812030fdcc38570e64e8e4bf1f953e3a2e1e79ea41",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
+      "status": 200,
+      "bytes": 11076,
+      "sha256": "f8e293499e448009c5a1e603aceaee79c233d4419dca9725f30f8883e1c3e747",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+      "status": 200,
+      "bytes": 26511,
+      "sha256": "f79a11508cc27b1905d23da1583f820cb43ff25d2a0cb9058f135f4e0ad20fc9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+      "status": 200,
+      "bytes": 21152,
+      "sha256": "3b493b79711edaf2a2dcbd01d4dd4b72135f2bce5f6e71d061a4979a10e93a49",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
+      "status": 200,
+      "bytes": 11966,
+      "sha256": "c51e8b352805e126b0d39655587bcd96ad726c5896ad7d6718cd5d773eb386c8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
+      "status": 200,
+      "bytes": 9177,
+      "sha256": "c32025e09c37dbe7dab227ad93d91d5ea7db85a112cf991fddd66bac47daf2bf",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
+      "status": 200,
+      "bytes": 6788,
+      "sha256": "7e292174827aae6892b9a3af34df054929ba415b8fd474ade49762a651aaadbe",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md",
+      "status": 200,
+      "bytes": 4844,
+      "sha256": "36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/AUTORIA-E-IA.html",
+      "status": 200,
+      "bytes": 3335,
+      "sha256": "32c935ccc99bdb4ef01b93e9c59997fbdcf7206b019b00ee362f2c964ae45bf9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/AUTORIA-E-IA.md",
+      "status": 200,
+      "bytes": 1594,
+      "sha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/COMO-USAR.html",
+      "status": 200,
+      "bytes": 6758,
+      "sha256": "52262f831196c310aa1970c5153f3cc7ad60a5915373158270454f43efad722d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/COMO-USAR.md",
+      "status": 200,
+      "bytes": 4803,
+      "sha256": "4cfbb0e3628fa54d1def900b2798a9ea06410545fa966ce2e8e56289fca9ffd9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/ESTADO-PUBLICO.html",
+      "status": 200,
+      "bytes": 7885,
+      "sha256": "7a5fbbbf95b50951680e474aa88cd2aaec7687aa68fa38fba0520f93162d56f3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/ESTADO-PUBLICO.md",
+      "status": 200,
+      "bytes": 5937,
+      "sha256": "566a632947dcfb436bba5ac3e023529d11d25c7f879188f2aa6f9fe7a285fda0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/index.html",
+      "status": 200,
+      "bytes": 14883,
+      "sha256": "b0483615fa8b91423045b6067ec9b645b9e0e2543872fe60ca229821500e001b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/MOTION-OPORTUNIDADES-R18.html",
+      "status": 200,
+      "bytes": 11121,
+      "sha256": "0e76507ddf960a26b22935446f279071a9fedc5df1c31f78825c7a15779126bf",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/MOTION-OPORTUNIDADES-R18.md",
+      "status": 200,
+      "bytes": 8564,
+      "sha256": "f67ff8c7ddeacdef661817519a5f29897ddfb4330c33eba77328e0cc337f9d4c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "docs/ORIGEM-DOS-DADOS.html",
+      "status": 200,
+      "bytes": 4624,
+      "sha256": "155e7c04d79dc887c4057e0700d80e8c3fbd5a5f2cba389c4bf1aedba9f53457",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "docs/ORIGEM-DOS-DADOS.md",
+      "status": 200,
+      "bytes": 2489,
+      "sha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "documentation.css",
+      "status": 200,
+      "bytes": 3827,
+      "sha256": "6bf5c3ef2cdfaca3f40ec38afbd485b050ca4090d43dd54f3300673f89330b0a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "evidence/ab-r3a-digest.json",
+      "status": 200,
+      "bytes": 1374,
+      "sha256": "d755ddd885a9178fd62481ee53df5beadf710c43d65a0b5d256de3d1b075da01",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/chronology.json",
+      "status": 200,
+      "bytes": 1043,
+      "sha256": "85a658b0934d06f2e3d630ab19557499a5a9272b6562f6d94809485ef129337b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/engine-benchmark.json",
+      "status": 200,
+      "bytes": 3149,
+      "sha256": "bffdec34f845924e60f4dcbaa2473c80ee45aa9ef8c42b8b4ef11aa4e3a2f468",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/presentation-build.json",
+      "status": 200,
+      "bytes": 1308,
+      "sha256": "323e74cebf5a588d26740e8bc3c2d7bc5c951c41383220339c3c2617be1ff98c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "evidence/presentation-qa.json",
+      "status": 200,
+      "bytes": 5273,
+      "sha256": "ff467a401f6e2c712327177b91801489c802a51871b22b23df0dff96c57a2464",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "examples/01-long-base.json",
+      "status": 200,
+      "bytes": 12876,
+      "sha256": "5c1a4ed08e34020d6e5d53f61b3778ef070ee028b0232be343fcd670763ccedb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "examples/02-short-base.json",
+      "status": 200,
+      "bytes": 11407,
+      "sha256": "23eaed7547930e9153a12f8ca9f24b1f5217c8ef533f2deeb7ac17fbfe4cf6d5",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "examples/03-short-repaired.json",
+      "status": 200,
+      "bytes": 11872,
+      "sha256": "b5c366d39d5274364d3afe525c494d4417323f43115c7b26cb019dc42b7cdeb5",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "fonts/BricolageGrotesque-latin-variable.woff2",
+      "status": 200,
+      "bytes": 76868,
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "fonts/BricolageGrotesque-OFL.txt",
+      "status": 200,
+      "bytes": 4403,
+      "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "fonts/fonts.css",
+      "status": 200,
+      "bytes": 929,
+      "sha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "fonts/manifest.json",
+      "status": 200,
+      "bytes": 1442,
+      "sha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "fonts/PlusJakartaSans-latin-variable.woff2",
+      "status": 200,
+      "bytes": 27272,
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "fonts/PlusJakartaSans-OFL.txt",
+      "status": 200,
+      "bytes": 4402,
+      "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "game-design.css",
+      "status": 200,
+      "bytes": 16102,
+      "sha256": "2e8b7bd26c39f765b2a31b35979d7eb4e881c52c6304d1f33c6f92626260d35d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "game-design.html",
+      "status": 200,
+      "bytes": 19836,
+      "sha256": "edc8936e10075f62b713077c5d72ddf7dae4ffb2f99a5cf00d0e091b08d21549",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "game-design.js",
+      "status": 200,
+      "bytes": 7367,
+      "sha256": "dacc67ca23a9dc51099be6877f78d34b27cebc4ca30ad9faa193a539e9b99235",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/index-C0yMbnbH.css",
+      "status": 200,
+      "bytes": 55259,
+      "sha256": "f8e75fbf2e9078b9965acf3b6e2f6d4683c2425f8348d91d96066a7aa77e0d94",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "game/assets/index-DYhpvtlV.js",
+      "status": 200,
+      "bytes": 311602,
+      "sha256": "05d8e54784c7cf25a911ff425a533112d763a4cdf817b3bbd6f7f329d04e7a50",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/mission.worker-m4WSgatj.js",
+      "status": 200,
+      "bytes": 20166,
+      "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/OrbitalScene-B0I9aE-1.js",
+      "status": 200,
+      "bytes": 567251,
+      "sha256": "31501e038a55dc0c6a44585403ba2ad3dbe810fbc9c0b8f0910f97bbb162ef5b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/assets/search-DiIaA0z6.js",
+      "status": 200,
+      "bytes": 1242,
+      "sha256": "a1c334a2a78868d469427c7d8c09c6aac3f509c07f7bd534cdf97fc9fd7214c4",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "game/index.html",
+      "status": 200,
+      "bytes": 797,
+      "sha256": "4abcbc5f9b66e255e98ed0e700b019e5a14ca4c00f10dd0c931d02cc91094969",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 59415,
+      "sha256": "c0e1080b6e13c0f62d3f692b71123c5c5f7733cbd14ecc29ad93959785ede0b0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/draco_decoder-C32yEggz.wasm",
+      "status": 200,
+      "bytes": 285747,
+      "sha256": "c55a594e8ffd18426d36b27fea9618af3df5e173640a3e56d46f09d76f0574f2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/wasm"
+    },
+    {
+      "path": "lab/assets/draco_decoder-fzg4nYZr.js",
+      "status": 200,
+      "bytes": 719410,
+      "sha256": "30e4d486fa020737af10e3c56197693e5b904bdc05b8bfa5d7b06751dec6da04",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
+      "status": 200,
+      "bytes": 192420,
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/wasm"
+    },
+    {
+      "path": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
+      "status": 200,
+      "bytes": 58763,
+      "sha256": "e8049906ef3f8f75d3456c22a3f31bfdfe5b5b5bd09ccdec613b9e9a49d554d8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
+      "status": 200,
+      "bytes": 58456,
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/index-BY-UfhGj.css",
+      "status": 200,
+      "bytes": 178090,
+      "sha256": "6d1ceeae98139cee887845b3524742731c45291050ec5e8625b32610acc9f989",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/index-DpP-g_2O.js",
+      "status": 200,
+      "bytes": 552629,
+      "sha256": "d8d97df86148a9ed95ff55e98ab074276185f3a30bb5efb8168bf3879e7ae049",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/mission.worker-m4WSgatj.js",
+      "status": 200,
+      "bytes": 20166,
+      "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
+      "status": 200,
+      "bytes": 7115,
+      "sha256": "cb99491fbf0e941479881d1c4ec12b6102df3768f427df95b05f4b10a108c72b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/OrbitalScene-09iJ1yim.js",
+      "status": 200,
+      "bytes": 1018114,
+      "sha256": "2f7c7d9198d439b10ce6885dce4e45f140e32713aeb9519a45a4aecd1e5a7238",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/assets/search-C-0xy1lZ.js",
+      "status": 200,
+      "bytes": 1247,
+      "sha256": "f8b525fdb9da1ce18910d570a86c41abaab38cd957b172e94446a71f1238aa3f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/brand/brand-provenance-r14.json",
+      "status": 200,
+      "bytes": 4464,
+      "sha256": "41937ef07d217dc6ad67d9bfe53975f121dd93154a3384f783d91259edb5058a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/brand/brand-provenance-r17.json",
+      "status": 200,
+      "bytes": 3848,
+      "sha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
+      "status": 200,
+      "bytes": 46175,
+      "sha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/history/pre-r14-projeto-ipe-logo.svg",
+      "status": 200,
+      "bytes": 46057,
+      "sha256": "ceb9d7c849f6553d1a54013c916945ed9c28083dfe84e4ac38b73b23d3bff6f3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/history/pre-r14-projeto-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/missao-ipe-logo-on-light.svg",
+      "status": 200,
+      "bytes": 23367,
+      "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/missao-ipe-logo.png",
+      "status": 200,
+      "bytes": 48743,
+      "sha256": "8c40a65741524fcd97d4f736c460c7b033ea4feb331e39c8c0f36023a8c0bffb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "lab/brand/missao-ipe-logo.svg",
+      "status": 200,
+      "bytes": 23367,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/missao-ipe-symbol-on-light.svg",
+      "status": 200,
+      "bytes": 17984,
+      "sha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/missao-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/originals/arte-original.svg",
+      "status": 200,
+      "bytes": 40510,
+      "sha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/originals/missao-ipe-logo-original.svg",
+      "status": 200,
+      "bytes": 23279,
+      "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/originals/missao-ipe-symbol-original.svg",
+      "status": 200,
+      "bytes": 17870,
+      "sha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/originals/vector-original.svg",
+      "status": 200,
+      "bytes": 6907,
+      "sha256": "85d0f8695854d4ae3285b74559e5d62367ea3c253f9cca12c42a9c87e183ddf2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/preview-r14.html",
+      "status": 200,
+      "bytes": 2649,
+      "sha256": "c201c80d565dd786cded376d6501b2f14ca9f27940261a4c7524412f439013eb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/brand/preview-r17.html",
+      "status": 200,
+      "bytes": 4779,
+      "sha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-logo-on-light.svg",
+      "status": 200,
+      "bytes": 47675,
+      "sha256": "72439ae936ee895f45ded827fdd5edf10ddbb5fdc498a6e77db4966a3fcd6776",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-logo.png",
+      "status": 200,
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-logo.svg",
+      "status": 200,
+      "bytes": 47676,
+      "sha256": "32377a37d746201ff32c6f01cb124a1e65d6d68798fe0600c34390e3fc9381cd",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/brand/projeto-ipe-symbol.svg",
+      "status": 200,
+      "bytes": 40836,
+      "sha256": "4cb1b84a04c3a34c96ae56943511342dc995dff90eae100ec2c26e6751ac7218",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "path": "lab/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/science/bennu-provenance.json",
+      "status": 200,
+      "bytes": 5463,
+      "sha256": "5b081779b0eee9ef38707d7f2154653f41c9ebdd385b9c14350db4ed6f5c1d96",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/science/bennu-records.json",
+      "status": 200,
+      "bytes": 9287,
+      "sha256": "addb72ae1817e7f0600789d2167c426a3a622b4e8a5df18f8e3416a7ee9d4586",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/science/bennu-table1.csv",
+      "status": 200,
+      "bytes": 362,
+      "sha256": "f93100752685e4842176bc6cd128866e35c24405e6e266fbacddde70f237251e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/csv; charset=utf-8"
+    },
+    {
+      "path": "lab/data/science/bennu-vesta-nasa-context.png",
+      "status": 200,
+      "bytes": 258664,
+      "sha256": "899041d3abef7a88d8a779823451a93a6b4914d0655df28a4e44fca4bd4b18cb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/png"
+    },
+    {
+      "path": "lab/data/science/webb-firefly-nasa.tbl",
+      "status": 200,
+      "bytes": 68673,
+      "sha256": "49a41e9eacaec33457b5c5d249bb9803da1ab0a07ea99fa2b4b5a8d0e24de687",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "lab/data/science/webb-provenance.json",
+      "status": 200,
+      "bytes": 8269,
+      "sha256": "45bc8dfa7c9e09999702d438223c2bcf2a4e7af887dc2d37d21cdd52ea879f18",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/data/science/webb-spectrum-subset.json",
+      "status": 200,
+      "bytes": 9637,
+      "sha256": "4b1a43069299414298c2aeab5818fbf0d3acf5831ea25a31778789e7b8e0887e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/fonts/BricolageGrotesque-latin-variable.woff2",
+      "status": 200,
+      "bytes": 76868,
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "lab/fonts/BricolageGrotesque-OFL.txt",
+      "status": 200,
+      "bytes": 4403,
+      "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "lab/fonts/fonts.css",
+      "status": 200,
+      "bytes": 929,
+      "sha256": "6563c3e1294fa3daba74b207c48810ccd9e54bffd85e8af45be61acec4ad86e9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "lab/fonts/manifest.json",
+      "status": 200,
+      "bytes": 1442,
+      "sha256": "5fdc55fde84c6eed98dfa3431f6f6549f82137c9e68d17a90de4fb8c5b3affc7",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/fonts/PlusJakartaSans-latin-variable.woff2",
+      "status": 200,
+      "bytes": 27272,
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "font/woff2"
+    },
+    {
+      "path": "lab/fonts/PlusJakartaSans-OFL.txt",
+      "status": 200,
+      "bytes": 4402,
+      "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 960,
+      "sha256": "c2cdccc119fcefcd7e76511226aafe1202f191ec82bdfafc268781620023ed85",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/bennu-1999-rq36.glb",
+      "status": 200,
+      "bytes": 329596,
+      "sha256": "644af15678447df90c2d9e85674809c7fc70f439e0865418aa6618a8483b7958",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "lab/models/nasa/cubesat-generic-2ru.glb",
+      "status": 200,
+      "bytes": 206108,
+      "sha256": "30633496ef3aea790ec00782772757c78744ccaf08c9322eca380a6c4ad57ec9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "lab/models/nasa/draco/draco_decoder.js",
+      "status": 200,
+      "bytes": 512465,
+      "sha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/draco/draco_decoder.wasm",
+      "status": 200,
+      "bytes": 192420,
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/wasm"
+    },
+    {
+      "path": "lab/models/nasa/draco/draco_wasm_wrapper.js",
+      "status": 200,
+      "bytes": 58456,
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/draco/LICENSE-DRACO.txt",
+      "status": 200,
+      "bytes": 13898,
+      "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/draco/README-upstream.md",
+      "status": 200,
+      "bytes": 1395,
+      "sha256": "839850a67c93f6b26d3cc038a45bd8289e3cfdf15531e69339e8eb1282b4eb76",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/draco/THREE-LICENSE.txt",
+      "status": 200,
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/dsn-70m.glb",
+      "status": 200,
+      "bytes": 2216584,
+      "sha256": "36ff56a7a2bfd1c278f6f4774d32128d5931f2c22fe58241d00ee7d1815634bb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "lab/models/nasa/inspection.json",
+      "status": 200,
+      "bytes": 4277,
+      "sha256": "fbd4951a4ef5c759178b4cf4b659cedaf58c69c578bfba334c89aae0f9fcaeb6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/jwst-a.glb",
+      "status": 200,
+      "bytes": 4710016,
+      "sha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "lab/models/nasa/manifest.json",
+      "status": 200,
+      "bytes": 17629,
+      "sha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/models/nasa/optimization.json",
+      "status": 200,
+      "bytes": 2597,
+      "sha256": "6fdff61ffb30a692312afe5dcd260290a0f8985171f82fefb33f716d4b7b9715",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/research/assets/briefing-desktop.jpg",
+      "status": 200,
+      "bytes": 95217,
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/briefing-mobile.jpg",
+      "status": 200,
+      "bytes": 58629,
+      "sha256": "143f0a0b16640af0bacdec81a0c74149165969c96e40f38a5996fea7a4f30545",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/laboratorio.jpg",
+      "status": 200,
+      "bytes": 90299,
+      "sha256": "725929a9e2dc042f4b124329e54789656e0020521532001f34e30bcf48491a64",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/retorno-cientifico.jpg",
+      "status": 200,
+      "bytes": 89187,
+      "sha256": "7184607acdb0b175135476a98f7cc945234ba88e7b677252a9dd408ed5496a44",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/assets/retorno-mobile.jpg",
+      "status": 200,
+      "bytes": 68865,
+      "sha256": "eabe67cc2d4014a1379402c5a8ab2e596cef76a11cd04518187dfae9fffc39ce",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "lab/research/galeria.html",
+      "status": 200,
+      "bytes": 12110,
+      "sha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/research/index.html",
+      "status": 200,
+      "bytes": 314513,
+      "sha256": "e1b396b664e91149c305c120f238ac3f26b3a8dd9998a8dcedab7223a1629029",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "lab/research/manifest.json",
+      "status": 200,
+      "bytes": 13265,
+      "sha256": "1020614405c344d80ce73948569004f0ce9a77ec15fba326427d1e41c4f2a274",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/a1-desafio.md",
+      "status": 200,
+      "bytes": 23667,
+      "sha256": "1f56adb22dfcb6ad1644ae77173c2af1982859bce3a3999868b7ffaea3c5345d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/a2-fisica.md",
+      "status": 200,
+      "bytes": 30374,
+      "sha256": "68b5e95ff7d8b4d330437aa36ebfef9b140a81a68a87090c98650270407cc23c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/a3-ux-tecnologia.md",
+      "status": 200,
+      "bytes": 26249,
+      "sha256": "414da43d82c909f498963829fe130387a5cdc2db062bbde1dda968b8254775cb",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/GUIA-DIDATICO-R9.md",
+      "status": 200,
+      "bytes": 13690,
+      "sha256": "e5fb7b4554790478c8e91b1d3c92c94f4a87325522ba13214fdc9f714b0771a3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/PESQUISA-E-DECISOES-R9.md",
+      "status": 200,
+      "bytes": 15716,
+      "sha256": "aa103ad1db6a2242aa0818e7b35fda32845f74deaa0f15ab75aa4c1fcf300222",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/QA-NAVEGADOR-R9.md",
+      "status": 200,
+      "bytes": 7503,
+      "sha256": "f2337a7d6591ce12ef9cfcab218ec2c28085d2db7ab7a1fe0d1c266d63798788",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/QA-R9.md",
+      "status": 200,
+      "bytes": 19149,
+      "sha256": "d71cd6a8afa5ac8c0e1762a6fa39a2a3435736b8487d01df3b7edac87405f1fc",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/refinamento-conops.md",
+      "status": 200,
+      "bytes": 19091,
+      "sha256": "fed2b7d939eef2447aaa83d204c851ae40a06abe1a9878ecae4a886fec901d3a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/REFINAMENTO-NASA-R10.md",
+      "status": 200,
+      "bytes": 14646,
+      "sha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/refinamento-requisitos.md",
+      "status": 200,
+      "bytes": 13529,
+      "sha256": "6e7f8d5019047ec70ca6b5fa73f3948f37d8ee202a873f2f39e0166cee521f94",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "lab/research/originals/refinamento-risco-ux.md",
+      "status": 200,
+      "bytes": 20372,
+      "sha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "LICENSE",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "licenses/React-MIT.txt",
+      "status": 200,
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/ReactDOM-MIT.txt",
+      "status": 200,
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/Scheduler-MIT.txt",
+      "status": 200,
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/Three-MIT.txt",
+      "status": 200,
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "media/bennu-osiris-rex.jpg",
+      "status": 200,
+      "bytes": 222697,
+      "sha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "media/cerrado-terra-modis.jpg",
+      "status": 200,
+      "bytes": 173985,
+      "sha256": "2643965bf8a2f6e536f4abd2ada8aa55e5052efe69ad6bc0c54abf6ff5842120",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "media/cubesats-iss.jpg",
+      "status": 200,
+      "bytes": 69467,
+      "sha256": "c1226fa2d43288dc5b78cf9584a8d3bf65f0c8fb4fb71c3f74c0296fa1fb8678",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "media/dsn-goldstone.jpg",
+      "status": 200,
+      "bytes": 82038,
+      "sha256": "a4c48d84a1f32391bd9308b122c24d4d5d2d61e4d934ae4497574e4c59a7f708",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "media/manifest.json",
+      "status": 200,
+      "bytes": 11229,
+      "sha256": "219ad860b2698b8571cc6797119470d6f2690fa9381e9a65f42e6155666ec6fe",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "media/sol-sdo.jpg",
+      "status": 200,
+      "bytes": 207346,
+      "sha256": "0dc21de757aa3e7e363ca7651fe187c5ff5d9c79b57e254320addf09e315c7a3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "media/terra-espaco.jpg",
+      "status": 200,
+      "bytes": 84122,
+      "sha256": "f4de5a26a2d612be9d2c968f1f0b307e8af1372227df0855e4dc35257f1c5fe4",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "image/jpeg"
+    },
+    {
+      "path": "mission-visuals.css",
+      "status": 200,
+      "bytes": 9520,
+      "sha256": "b403519811cb35c67656bb9a5fc8db7225aae363bc63be390dc9202dd6a90a78",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "path": "mission-visuals.js",
+      "status": 200,
+      "bytes": 22244,
+      "sha256": "4d62acbe4ff5c7e4d3b237c445ec112c556f7c33b3226089b91048c3049c985c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "NOTICE.md",
+      "status": 200,
+      "bytes": 4901,
+      "sha256": "60af10872b7871f08523562c1301d45f0cc247df792066929a1b249f0b50a7ef",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
+      "status": 200,
+      "bytes": 475437,
+      "sha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
+      "status": 200,
+      "bytes": 1200768,
+      "sha256": "451b82f97a4ad3bc1e76c49db97402035e4aab5cb891969eb491554e5b50d88a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/pdf"
+    },
+    {
+      "path": "planet-jumping.html",
+      "status": 200,
+      "bytes": 41749,
+      "sha256": "b8034acdfca446959485729767ea0abddcd16527eb823ce3b58b34188b7bcac7",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "portable/Missao_Ipe_Local.html",
+      "status": 200,
+      "bytes": 1008522,
+      "sha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/Missao_Ipe_Apresentacao.html",
+      "status": 200,
+      "bytes": 139710,
+      "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/PITCH_EN_7_SLIDES.html",
+      "status": 200,
+      "bytes": 17454,
+      "sha256": "5ed0b9dc0fab676ccf99a702f9a4cd53b313a8add1f4e424afd8269ce10cbe3a",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/PITCH_EN_7_SLIDES.md",
+      "status": 200,
+      "bytes": 13356,
+      "sha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "presentation/README_APRESENTADOR.html",
+      "status": 200,
+      "bytes": 11146,
+      "sha256": "522ce43118cf67ec0ca6290fbb7b95c2abffce39404e391d3d36498bfa8e9432",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/README_APRESENTADOR.md",
+      "status": 200,
+      "bytes": 8269,
+      "sha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "presentation/ROTEIRO_PT_EN.html",
+      "status": 200,
+      "bytes": 10321,
+      "sha256": "ce6b6053572df5a970092e38248f9a84c2acb551e60c418e12cc7d556273ee36",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "presentation/ROTEIRO_PT_EN.md",
+      "status": 200,
+      "bytes": 7849,
+      "sha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "public/data/cmr-mod13q1-granule-2.json",
+      "status": 200,
+      "bytes": 5720,
+      "sha256": "e46d7fb3ece4c140792fdd0fc3b87ba82fedbb1c0e102810167401e3d3450f8b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/cmr-mod13q1-granules.json",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "82fec0d068f4f959104b6bd55230bc37b9e5d79a3b2b9fc65b21e2531da3169f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-A-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "ffaa53eab7a43ce1c9e40ddcb3f21f4f37d30440dc0eab17f5e728bafeb8bd47",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-A-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "7e9fc57444d561f094145ea684cf5bbebe305f416dd2c7a089fe2cc73fcea99f",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-B-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "94662069c4560be7d1ef1991dacfe399e5c031b2f41bf3ad2fdb93a5531f6c10",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-B-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "cb611e590bd6c616ff84245798a066eaa5ffa8b8f6d516a67e90165170e1648b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-bands.json",
+      "status": 200,
+      "bytes": 2366,
+      "sha256": "d41dc06bed934ea5f032e0eb88b047c1c3c65df1c46db58aa6420be791475303",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-C-raw.json",
+      "status": 200,
+      "bytes": 4232,
+      "sha256": "1efe29e75b88fc4b84f557679b42b86908de0d60385077d7c9d12eab0565cfa6",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-C-retrieval.json",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "dc791cc18e8de03f9d806552093aea52be371297d6b954ccfe86e6cf8bfe863e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "public/data/mod13q1-research-pack.json",
+      "status": 200,
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "references/estudos/README.md",
+      "status": 200,
+      "bytes": 4286,
+      "sha256": "9bda603a2d9eb3a36e75531ba04e87b602f458a571e12addb1bfbf4210da467b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "references/estudos/SMARTCITY-DOSSIE-HISTORICO.md",
+      "status": 200,
+      "bytes": 40236,
+      "sha256": "b2eaadf5d825a313065b17dd8b1eec97acdd816899bd6dca2a49c6ffd6f74e8c",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "references/estudos/SMARTCITY-KIT-HISTORICO.md",
+      "status": 200,
+      "bytes": 202887,
+      "sha256": "0e464b3763e0b768f1af4c0d53f84b81ce285c3bedf79bd8879bd2607467b066",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "references/estudos/SMARTCITY-VALIDACAO-HISTORICA.md",
+      "status": 200,
+      "bytes": 4081,
+      "sha256": "5152881b935b2856059ffa284ad9ba4a81aceaeb3b38c14debb0712f5513f28d",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "research/01-regras-ciencia.html",
+      "status": 200,
+      "bytes": 27679,
+      "sha256": "e63959e0a16a8f745c8dfad411bddc6914ba36d32ba321c1ea4678714f76ac3b",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "research/01-regras-ciencia.md",
+      "status": 200,
+      "bytes": 22928,
+      "sha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "research/11-revisao-spaceapps-apresentacao.html",
+      "status": 200,
+      "bytes": 18916,
+      "sha256": "a94e386546769284ced5ce56b218ea397d34cdec0df610e1e428cc2149600ed9",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "research/11-revisao-spaceapps-apresentacao.md",
+      "status": 200,
+      "bytes": 15356,
+      "sha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "text/markdown; charset=utf-8"
+    },
+    {
+      "path": "research/bruno-consolidation-r17.json",
+      "status": 200,
+      "bytes": 24721,
+      "sha256": "856b65abac31c19897958c8b49c9ee46edd60797f06fc5cf0fc04619a5146fd0",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/evidence/evi3-validation.json",
+      "status": 200,
+      "bytes": 5313,
+      "sha256": "59f06f82cfa1f317eb6e0bdbeae2de0154d8e57b840309e68f130b1196a759e3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/evidence/resources-retrieval-20261114.json",
+      "status": 200,
+      "bytes": 2806,
+      "sha256": "cbbd3fa1c6102415b9844bf3347d3b8710a5b7334ea25b6f943e9088c4e6f400",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/evidence/validate-evi3-research.py",
+      "status": 200,
+      "bytes": 4384,
+      "sha256": "5a28d702d0ae91899b92130c184f3274fa147c8b790e6dfc64ad81bc6e5e8c00",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/octet-stream"
+    },
+    {
+      "path": "research/nasa-3d-catalog.json",
+      "status": 200,
+      "bytes": 24255,
+      "sha256": "b4e19162531da2b4eba41426c8fd898a2626519f23699919f0d46026820658c2",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/nasa-mission-stories-r17.json",
+      "status": 200,
+      "bytes": 7442,
+      "sha256": "09b5e5c1d2d60707f0e5fd0f5ffefd3cd43e6462f44e60f49a72b752966f278e",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/nasa-opportunities-r18.json",
+      "status": 200,
+      "bytes": 21800,
+      "sha256": "69a53a199af714a17e7a45429db5d06195ce9e0d51e081af973b1ffbecf1f5b3",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/nasa-science-opportunities.json",
+      "status": 200,
+      "bytes": 17381,
+      "sha256": "56ed771633de4df5140867498bbf76690cc6062d71b0c2cd1ed47f77b8f6a236",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/pr-assets-r16.json",
+      "status": 200,
+      "bytes": 92716,
+      "sha256": "622b829439af772b6ee5260eaf6fc4ee688acd667502c5079294a92b95e02694",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/readiness-r17.json",
+      "status": 200,
+      "bytes": 12318,
+      "sha256": "fb9cfdaf7be824bd3fa543d7b4d1182a461a507ba67e5460a6858da088c1d2ba",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "research/technology-opportunities-r16.json",
+      "status": 200,
+      "bytes": 18202,
+      "sha256": "44a1ab317df8f4d758788a6b3257c25f7edf16154d5391f3bb6f03c786fb1668",
+      "hashMatches": true,
+      "policyAndMimePass": true,
+      "contentType": "application/json; charset=utf-8"
+    }
+  ],
+  "limits": [
+    "Deployment ID and source SHA must be confirmed separately against the hosting API.",
+    "HTTP byte and policy checks do not execute the browser or certify external CDN availability, physical-device performance or learning outcomes."
+  ]
+}

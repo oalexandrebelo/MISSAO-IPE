@@ -27,7 +27,11 @@
     },
     "labBuild": "passed",
     "lpBuild": "passed",
-    "typeScript": "passed"
+    "typeScript": "passed",
+    "context": {
+      "passed": 24,
+      "failed": 0
+    }
   },
   "browserChecks": [
     "Local browser: Bennu guided comparison jumps to actual contact difference T+5100 and communications focus; own B run completes6/6; evidence delivery selects actualevent; expanded3D rendered.",
@@ -38,7 +42,8 @@
     "Fixed stale explicit component focus when freely navigating replay",
     "Preserved selected evidence record across return-to3D-to-trail transitions",
     "Fixed Earth ground cards to use actual delivered IDs",
-    "Separated ground service package causality from radio rate and isolated duration"
+    "Separated ground service package causality from radio rate and isolated duration",
+    "Return-to3D opens the same record AND selected delivery step; explicit question/conclusion steps remain selectable."
   ],
   "limits": [
     "Historical NASA records with unchanged values; engine remains educational",

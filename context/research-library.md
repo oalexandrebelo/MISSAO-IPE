@@ -65,7 +65,7 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `86d8309ed0e294406b8c366fa5ece4195383c40eba1de312e9bcd7d4220dc5cd` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `39c8cc40dcff05b1f3f27369959ea642b03d747306b88470d9e65ca01c6560f2` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
 
@@ -220,7 +220,7 @@ Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não 
 
 ## R19 · trilha da evidência, A/B e quatro papéis · 15/11/2026
 
-Versão 0.10.0-beta.1. A implementação das três prioridades está concluída nas três missões. A integração local passou 151 testes de domínio, 56 de interface, 17 verificações da distribuição e 18 jornadas da apresentação. O recibo técnico está em `evidence/revision-r19.json`. [Handoff R19](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md). Os recibos de produção anteriores conservam seus commits; a publicação R19 será conferida pelo commit do deploy e pelo manifesto público.
+Versão 0.10.0-beta.1. A implementação das três prioridades está concluída nas três missões. A integração local passou 151 testes de domínio, 56 de interface, 17 verificações da distribuição e 18 jornadas da apresentação. O recibo técnico está em `evidence/revision-r19.json`. [Handoff R19](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md). Primeira publicação R19 confirmada no commit `2dc6766fd4f690fb3f07c9a6c29beb6e67158cb1`: jogo `dpl_AeY179hA29psoAUZaF9Vn6hTPris` e apresentação `dpl_9XGthS5JJSQXdLKvTiqQS1JXowEv`, ambos READY na Vercel. A conferência pública de 345 arquivos e 111 documentos passou sem falhas; consulte `evidence/production-r19.json`. O ajuste final da etapa selecionada na trilha e este recibo são publicados no commit de fechamento; o recibo anterior conserva a identificação da versão conferida.
 
 
 ---

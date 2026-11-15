@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T10:14:32.072Z",
-  "finishedAt": "2026-11-15T10:14:34.496Z",
+  "startedAt": "2026-11-15T10:17:27.128Z",
+  "finishedAt": "2026-11-15T10:17:29.472Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "2e04792b7f3478ff5ff2102621827e4f81934cc1eb1a58c1da075a8049a7e6cb"
+        "sha256": "537a0b2bfde509003be4042b28b907f07495fb1518064ee96ef207c7c5030b46"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 346,
       "manifestedFiles": 345,
-      "bytes": 29638406,
+      "bytes": 29639635,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -12004,8 +12004,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-DpP-g_2O.js",
-          "requestPath": "/lab/assets/index-DpP-g_2O.js",
+          "target": "lab/assets/index-ghcM93T2.js",
+          "requestPath": "/lab/assets/index-ghcM93T2.js",
           "kind": "script"
         },
         {
@@ -14253,81 +14253,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
-          "target": "lab/assets/index-DpP-g_2O.js",
-          "requestPath": "/lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
+          "target": "lab/assets/index-ghcM93T2.js",
+          "requestPath": "/lab/assets/index-ghcM93T2.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
-          "target": "lab/assets/OrbitalScene-09iJ1yim.js",
-          "requestPath": "/lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
+          "target": "lab/assets/OrbitalScene-bJ8PSbfk.js",
+          "requestPath": "/lab/assets/OrbitalScene-bJ8PSbfk.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
-          "target": "lab/assets/index-DpP-g_2O.js",
-          "requestPath": "/lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
+          "target": "lab/assets/index-ghcM93T2.js",
+          "requestPath": "/lab/assets/index-ghcM93T2.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "requestPath": "/lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "requestPath": "/lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "requestPath": "/lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
-          "target": "lab/assets/search-C-0xy1lZ.js",
-          "requestPath": "/lab/assets/search-C-0xy1lZ.js",
+          "source": "lab/assets/index-ghcM93T2.js",
+          "target": "lab/assets/search-BdB8EXas.js",
+          "requestPath": "/lab/assets/search-BdB8EXas.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/index-ghcM93T2.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
-          "target": "lab/assets/OrbitalScene-09iJ1yim.js",
-          "requestPath": "/lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/index-ghcM93T2.js",
+          "target": "lab/assets/OrbitalScene-bJ8PSbfk.js",
+          "requestPath": "/lab/assets/OrbitalScene-bJ8PSbfk.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
-          "target": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-Cjd-gJyN.js",
+          "source": "lab/assets/index-ghcM93T2.js",
+          "target": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-dZvTF3sp.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-C-0xy1lZ.js",
-          "target": "lab/assets/index-DpP-g_2O.js",
-          "requestPath": "/lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/search-BdB8EXas.js",
+          "target": "lab/assets/index-ghcM93T2.js",
+          "requestPath": "/lab/assets/index-ghcM93T2.js",
           "kind": "module-import"
         }
       ]
@@ -14432,81 +14432,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
-          "specifier": "./index-DpP-g_2O.js",
-          "target": "lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
+          "specifier": "./index-ghcM93T2.js",
+          "target": "lab/assets/index-ghcM93T2.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
-          "specifier": "./OrbitalScene-09iJ1yim.js",
-          "target": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
+          "specifier": "./OrbitalScene-bJ8PSbfk.js",
+          "target": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
-          "specifier": "./index-DpP-g_2O.js",
-          "target": "lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
+          "specifier": "./index-ghcM93T2.js",
+          "target": "lab/assets/index-ghcM93T2.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "specifier": "draco_decoder-C32yEggz.wasm",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "specifier": "draco_wasm_wrapper-DxJM36Ib.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "specifier": "draco_decoder-fzg4nYZr.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "specifier": "draco_wasm_wrapper-fZCQGLGb.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "specifier": "draco_decoder-Z1_iN-Ht.wasm",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
-          "specifier": "./search-C-0xy1lZ.js",
-          "target": "lab/assets/search-C-0xy1lZ.js",
+          "source": "lab/assets/index-ghcM93T2.js",
+          "specifier": "./search-BdB8EXas.js",
+          "target": "lab/assets/search-BdB8EXas.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/index-ghcM93T2.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
-          "specifier": "./OrbitalScene-09iJ1yim.js",
-          "target": "lab/assets/OrbitalScene-09iJ1yim.js",
+          "source": "lab/assets/index-ghcM93T2.js",
+          "specifier": "./OrbitalScene-bJ8PSbfk.js",
+          "target": "lab/assets/OrbitalScene-bJ8PSbfk.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-DpP-g_2O.js",
-          "specifier": "./NASAReferenceScene-Cjd-gJyN.js",
-          "target": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
+          "source": "lab/assets/index-ghcM93T2.js",
+          "specifier": "./NASAReferenceScene-dZvTF3sp.js",
+          "target": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-C-0xy1lZ.js",
-          "specifier": "./index-DpP-g_2O.js",
-          "target": "lab/assets/index-DpP-g_2O.js",
+          "source": "lab/assets/search-BdB8EXas.js",
+          "specifier": "./index-ghcM93T2.js",
+          "target": "lab/assets/index-ghcM93T2.js",
           "kind": "module-import"
         }
       ]
@@ -14938,9 +14938,9 @@
         "sha256": "6d1ceeae98139cee887845b3524742731c45291050ec5e8625b32610acc9f989"
       },
       {
-        "path": "lab/assets/index-DpP-g_2O.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-DpP-g_2O.js",
-        "sha256": "d8d97df86148a9ed95ff55e98ab074276185f3a30bb5efb8168bf3879e7ae049"
+        "path": "lab/assets/index-ghcM93T2.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-ghcM93T2.js",
+        "sha256": "8f0b22c7e038b8dafb0a3ce16d5b1e8b09ba8dd33df2a43ec88f61859ff639c7"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -14948,19 +14948,19 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Cjd-gJyN.js",
-        "sha256": "cb99491fbf0e941479881d1c4ec12b6102df3768f427df95b05f4b10a108c72b"
+        "path": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-dZvTF3sp.js",
+        "sha256": "79a000958817824d5faf47e0428da5277fd05ec56e4494ef632289588ef8287b"
       },
       {
-        "path": "lab/assets/OrbitalScene-09iJ1yim.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-09iJ1yim.js",
-        "sha256": "2f7c7d9198d439b10ce6885dce4e45f140e32713aeb9519a45a4aecd1e5a7238"
+        "path": "lab/assets/OrbitalScene-bJ8PSbfk.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-bJ8PSbfk.js",
+        "sha256": "2706a79faf73e396ecaf649ded2d08d4403374b34a6fa59fce4cb6293c4d44f1"
       },
       {
-        "path": "lab/assets/search-C-0xy1lZ.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-C-0xy1lZ.js",
-        "sha256": "f8b525fdb9da1ce18910d570a86c41abaab38cd957b172e94446a71f1238aa3f"
+        "path": "lab/assets/search-BdB8EXas.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-BdB8EXas.js",
+        "sha256": "7f7bbd66a89500f8954f5834140f8599eb49fe5d760253d9ebecd36f767f4b2b"
       },
       {
         "path": "lab/brand/brand-provenance-r14.json",
@@ -15180,7 +15180,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "c2cdccc119fcefcd7e76511226aafe1202f191ec82bdfafc268781620023ed85"
+        "sha256": "c969a54b13b7f9696aeff62369c25697b5a8a3b36c2a62e32a60ea390150edb6"
       },
       {
         "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -16034,21 +16034,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 57364,
-        "sha256": "d41c0dc99e68b106a13cfdb880f05d69a563fdad5970e9bf2b5a00f467804e0f",
+        "sha256": "21b13dfc62f3105e36fc82a8ce64e2651e48b0ecf5924415dfca96b59c402c47",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2205049,
-        "sha256": "dea05a696fb9232d0d544f7df384ad2abbd97e7d3a14b3ba0720835b06929fae",
+        "bytes": 2205441,
+        "sha256": "be853bb560023308176f57539acaa61c5d14f5ed8d7ff16bb8168be189a47f07",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1774118,
-        "sha256": "c5ede1bd218a4db926896035edb447e0ac09294669a25b5ab3ef5ec0ef034c96",
+        "bytes": 1774466,
+        "sha256": "53dddae92be52b87bfd8e77c5d471fcefa459cb11c4dda1aca5bdc336e4b76f8",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -16906,17 +16906,17 @@
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-Cjd-gJyN.js",
+        "path": "lab/assets/NASAReferenceScene-dZvTF3sp.js",
         "status": 200,
         "bytes": 7115,
-        "sha256": "cb99491fbf0e941479881d1c4ec12b6102df3768f427df95b05f4b10a108c72b",
+        "sha256": "79a000958817824d5faf47e0428da5277fd05ec56e4494ef632289588ef8287b",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-09iJ1yim.js",
+        "path": "lab/assets/OrbitalScene-bJ8PSbfk.js",
         "status": 200,
         "bytes": 1018114,
-        "sha256": "2f7c7d9198d439b10ce6885dce4e45f140e32713aeb9519a45a4aecd1e5a7238",
+        "sha256": "2706a79faf73e396ecaf649ded2d08d4403374b34a6fa59fce4cb6293c4d44f1",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -16962,10 +16962,10 @@
         "contentType": "text/css; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-DpP-g_2O.js",
+        "path": "lab/assets/index-ghcM93T2.js",
         "status": 200,
-        "bytes": 552629,
-        "sha256": "d8d97df86148a9ed95ff55e98ab074276185f3a30bb5efb8168bf3879e7ae049",
+        "bytes": 553118,
+        "sha256": "8f0b22c7e038b8dafb0a3ce16d5b1e8b09ba8dd33df2a43ec88f61859ff639c7",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -16976,10 +16976,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-C-0xy1lZ.js",
+        "path": "lab/assets/search-BdB8EXas.js",
         "status": 200,
         "bytes": 1247,
-        "sha256": "f8b525fdb9da1ce18910d570a86c41abaab38cd957b172e94446a71f1238aa3f",
+        "sha256": "7f7bbd66a89500f8954f5834140f8599eb49fe5d760253d9ebecd36f767f4b2b",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -17287,7 +17287,7 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 960,
-        "sha256": "c2cdccc119fcefcd7e76511226aafe1202f191ec82bdfafc268781620023ed85",
+        "sha256": "c969a54b13b7f9696aeff62369c25697b5a8a3b36c2a62e32a60ea390150edb6",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -17756,7 +17756,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 148777,
-        "sha256": "2e04792b7f3478ff5ff2102621827e4f81934cc1eb1a58c1da075a8049a7e6cb",
+        "sha256": "537a0b2bfde509003be4042b28b907f07495fb1518064ee96ef207c7c5030b46",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -18014,87 +18014,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 12.998
+      "durationMs": 13.044
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.279
+      "durationMs": 0.276
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 64.744
+      "durationMs": 62.449
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.427
+      "durationMs": 1.11
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 79.037
+      "durationMs": 77.796
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1064.704
+      "durationMs": 1099.896
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.563
+      "durationMs": 0.52
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 539.717
+      "durationMs": 501.677
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 45.741
+      "durationMs": 41.169
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.517
+      "durationMs": 2.304
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 90.858
+      "durationMs": 86.14
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.874
+      "durationMs": 5.775
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 61.816
+      "durationMs": 59.538
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 213.82
+      "durationMs": 191.09
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 89.043
+      "durationMs": 71.044
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.198
+      "durationMs": 1.13
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 89.974
+      "durationMs": 83.726
     }
   ]
 }

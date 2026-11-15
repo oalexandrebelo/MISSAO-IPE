@@ -34,7 +34,7 @@ test('R19 evidence states preserve time, delivery validity, exact measurements a
     assert.ok(document.querySelector('.exp-trace-measure').textContent.includes(first.value.toLocaleString('pt-BR', { maximumFractionDigits: 5 })));
     await click(within(document.querySelector('.exp-trace-steps')).getByRole('button', { name: /04 · Solo/ }));
     const delivered = result.events.find(event => event.code === 'RECORD_DELIVERED' && event.recordId === first.id);
-    assert.deepEqual(inspections.at(-1), { eventId: delivered.id, segment: 'ground', subsystem: 'communications', recordId: first.id });
+    assert.deepEqual(inspections.at(-1), { eventId: delivered.id, segment: 'ground', subsystem: 'communications', recordId: first.id, step: 'delivery' });
     await click(within(document.querySelector('.exp-record-picker')).getByRole('button', { name: new RegExp(last.id) }));
     assert.match(document.querySelector('.exp-trace-measure').textContent, /indisponível/);
     await click(within(document.querySelector('.exp-trace-steps')).getByRole('button', { name: /04 · Solo/ }));
@@ -109,7 +109,10 @@ test('R19 real mission export carries four-role analysis and resets it only afte
   await click('Interpretar o retorno científico');
   await click(screen.getAllByRole('button', { name: 'Rever esta entrega no 3D' }).at(-1));
   assert.equal(within(document.querySelector('.exp-record-picker')).getByRole('button', { pressed: true }).textContent.startsWith('bennu-site-6'), true);
-  await click(within(document.querySelector('.exp-trace-steps')).getByRole('button', { name: /04 · Solo/ }));
+  assert.match(within(document.querySelector('.exp-trace-steps')).getByRole('button', { pressed: true }).textContent, /04 · Solo/);
+  assert.match(document.querySelector('.exp-trace-detail').textContent, /comprova a recepção completa/);
+  await click(within(document.querySelector('.exp-trace-steps')).getByRole('button', { name: /05 · Conclusão/ }));
+  assert.match(within(document.querySelector('.exp-trace-steps')).getByRole('button', { pressed: true }).textContent, /05 · Conclusão/);
   assert.equal(within(document.querySelector('.exp-record-picker')).getByRole('button', { pressed: true }).textContent.startsWith('bennu-site-6'), true);
   await click('Interpretar o retorno científico');
   await change('Nosso parecer: conclusão, evidência e próximo passo', 'Os tamanhos permitem comparação, mas não determinam a composição.');

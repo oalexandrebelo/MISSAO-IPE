@@ -7,7 +7,8 @@ import type { MissionSegment } from './Scene.tsx';
 import { bits, number, time } from './format.ts';
 import './expedition-learning.css';
 
-export type EvidenceInspection = { eventId: string; segment: MissionSegment; subsystem: SpacecraftInspection; recordId?: string };
+export type EvidenceStep = 'question' | 'requirement' | 'record' | 'delivery' | 'interpretation';
+export type EvidenceInspection = { eventId: string; segment: MissionSegment; subsystem: SpacecraftInspection; recordId?: string; step?: EvidenceStep };
 export const EXPEDITION_ROLES = ['launch', 'space', 'ground', 'user'] as const;
 export type ExpeditionRole = typeof EXPEDITION_ROLES[number];
 export type ExpeditionDebriefAnswers = Record<ExpeditionRole, { conclusion: string; eventId: string; recordId: string }>;
@@ -28,12 +29,14 @@ export function inspectionForEvent(event: MissionEvent): EvidenceInspection {
   return { eventId: event.id, segment: 'launch', subsystem: 'overview' };
 }
 
-export function ExpeditionEvidenceTrail({ result, timeS, onInspect, selectedRecordId, onSelectRecord }: { result: ExpeditionResult; timeS: number; onInspect: (inspection: EvidenceInspection) => void; selectedRecordId?: string; onSelectRecord?: (id: string) => void }) {
+export function ExpeditionEvidenceTrail({ result, timeS, onInspect, selectedRecordId, onSelectRecord, selectedStep, onSelectStep, selectedEventId }: { result: ExpeditionResult; timeS: number; onInspect: (inspection: EvidenceInspection) => void; selectedRecordId?: string; onSelectRecord?: (id: string) => void; selectedStep?: EvidenceStep; onSelectStep?: (step: EvidenceStep) => void; selectedEventId?: string }) {
   const id = useId();
   const [localRecordId, setLocalRecordId] = useState(result.observations[0]!.id);
   const recordId = selectedRecordId ?? localRecordId;
   function setRecordId(id: string) { setLocalRecordId(id); onSelectRecord?.(id); }
-  const [step, setStep] = useState('question');
+  const [localStep, setLocalStep] = useState<EvidenceStep>('question');
+  const step = selectedStep ?? localStep;
+  function setStep(next: EvidenceStep) { setLocalStep(next); onSelectStep?.(next); }
   const mission = EXPEDITIONS[result.expeditionId];
   const record = result.observations.find(item => item.id === recordId) ?? result.observations[0]!;
   const status = expeditionRecordStatus(record, timeS);
@@ -42,7 +45,7 @@ export function ExpeditionEvidenceTrail({ result, timeS, onInspect, selectedReco
   const instrument = result.events.find(event => event.code === 'INSTRUMENT_MISMATCH') ?? result.events.find(event => event.code === 'JOB_START' && event.recordId === record.id && event.timeS <= timeS);
   const latest = [...result.events].reverse().find(event => event.recordId === record.id && event.timeS <= timeS);
   const start = result.events[0]!;
-  const steps: { id: string; title: string; label: string; detail: string; event: MissionEvent; segment: MissionSegment; subsystem: SpacecraftInspection }[] = [
+  const steps: { id: EvidenceStep; title: string; label: string; detail: string; event: MissionEvent; segment: MissionSegment; subsystem: SpacecraftInspection }[] = [
     { id: 'question', title: '01 · Pergunta', label: 'O que queremos saber?', detail: mission.objective, event: start, segment: 'user', subsystem: 'overview' },
     { id: 'requirement', title: '02 · Requisito', label: result.expeditionId === 'bennu' ? 'Câmera + escala' : 'Espectrômetro + incerteza', detail: mission.requirements.space, event: instrument ?? start, segment: 'space', subsystem: 'instrument' },
     { id: 'record', title: '03 · Registro', label: record.id, detail: `${record.evidence.quantity}. ${STATUS[status]}.`, event: produced ?? latest ?? start, segment: 'space', subsystem: 'instrument' },
@@ -50,12 +53,13 @@ export function ExpeditionEvidenceTrail({ result, timeS, onInspect, selectedReco
     { id: 'interpretation', title: '05 · Conclusão', label: status === 'valid' ? 'Evidência disponível' : 'Conclusão limitada', detail: record.evidence.limitations, event: delivered ?? latest ?? start, segment: 'user', subsystem: 'overview' },
   ];
   const active = steps.find(item => item.id === step) ?? steps[0]!;
+  const inspectedEvent = result.events.find(event => event.id === selectedEventId && event.timeS <= timeS) ?? active.event;
   return <section className="exp-learning exp-evidence-trail" aria-labelledby={`${id}-title`}>
     <div className="exp-learning-heading"><div><p className="eyebrow">SIGA UM REGISTRO · DA PERGUNTA AO SOLO</p><h3 id={`${id}-title`}>Cada evidência tem um caminho.</h3></div><span className={`exp-status is-${status}`}>{STATUS[status]}</span></div>
     <p>Escolha um registro e toque em uma etapa. A cena acompanha o componente e um evento já ocorrido até T+{time(timeS)}.</p>
     <div className="exp-record-picker" aria-label="Registro da trilha">{result.observations.map(item => <button key={item.id} type="button" aria-pressed={record.id === item.id} onClick={() => setRecordId(item.id)}><span>{item.id}</span><small>{STATUS[expeditionRecordStatus(item, timeS)]}</small></button>)}</div>
-    <ol className="exp-trace-steps">{steps.map(item => <li key={item.id}><button type="button" aria-pressed={step === item.id} onClick={() => { setStep(item.id); onInspect({ eventId: item.event.id, segment: item.segment, subsystem: item.subsystem, recordId: record.id }); }}><small>{item.title}</small><strong>{item.label}</strong></button></li>)}</ol>
-    <div className="exp-trace-detail" aria-live="polite"><div><p className="eyebrow">{active.title} · {record.id}</p><p>{active.detail}</p><p className="exp-trace-measure">{status === 'valid' ? `${measurement(record.value)} ${record.unit}` : 'Medida ainda indisponível nesta tentativa'}</p>{status === 'valid' ? <p>{typeof record.evidence.uncertainty === 'number' ? `Incerteza publicada: ± ${measurement(record.evidence.uncertainty)} pontos percentuais (1σ).` : record.evidence.uncertainty}</p> : null}</div><div><p><strong>Evento selecionável</strong><br />{active.event.id} · T+{time(active.event.timeS)}<br />{active.event.message}</p><a href={record.evidence.sourceUrl} target="_blank" rel="noreferrer">Consultar fonte histórica ↗</a><p className="field-help">Linha {record.evidence.sourceRow} · {record.evidence.observedAt}. A fonte externa já existe; a disponibilidade no jogo depende da sua operação.</p></div></div>
+    <ol className="exp-trace-steps">{steps.map(item => <li key={item.id}><button type="button" aria-pressed={step === item.id} onClick={() => { setStep(item.id); onInspect({ eventId: item.event.id, segment: item.segment, subsystem: item.subsystem, recordId: record.id, step: item.id }); }}><small>{item.title}</small><strong>{item.label}</strong></button></li>)}</ol>
+    <div className="exp-trace-detail" aria-live="polite"><div><p className="eyebrow">{active.title} · {record.id}</p><p>{active.detail}</p><p className="exp-trace-measure">{status === 'valid' ? `${measurement(record.value)} ${record.unit}` : 'Medida ainda indisponível nesta tentativa'}</p>{status === 'valid' ? <p>{typeof record.evidence.uncertainty === 'number' ? `Incerteza publicada: ± ${measurement(record.evidence.uncertainty)} pontos percentuais (1σ).` : record.evidence.uncertainty}</p> : null}</div><div><p><strong>Evento selecionável</strong><br />{inspectedEvent.id} · T+{time(inspectedEvent.timeS)}<br />{inspectedEvent.message}</p><a href={record.evidence.sourceUrl} target="_blank" rel="noreferrer">Consultar fonte histórica ↗</a><p className="field-help">Linha {record.evidence.sourceRow} · {record.evidence.observedAt}. A fonte externa já existe; a disponibilidade no jogo depende da sua operação.</p></div></div>
   </section>;
 }
 
