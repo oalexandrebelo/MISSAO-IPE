@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T13:50:19.532Z",
+  "generatedAt": "2026-11-15T14:22:56.601Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 121,
+  "documentCount": 122,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 26200,
-      "originalSha256": "f2c670fffa5947b37dc7db6e2140d7be9c3b9a7c52b3e0de19602b2d63a39c2a",
-      "projectedSha256": "f2c670fffa5947b37dc7db6e2140d7be9c3b9a7c52b3e0de19602b2d63a39c2a",
+      "originalBytes": 27314,
+      "originalSha256": "6629b1865caf51262848b0f07bed1942134195539a544b250ecb1fbad240be0e",
+      "projectedSha256": "6629b1865caf51262848b0f07bed1942134195539a544b250ecb1fbad240be0e",
       "redactions": 0
     },
     {
@@ -709,6 +709,17 @@
       "redactions": 0
     },
     {
+      "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+      "id": "doc-docs-60-oportunidades-acervo-astral-md",
+      "title": "Acervo ASTRAL VITAL: o que aproveitar na MISSÃO IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 11115,
+      "originalSha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
+      "projectedSha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1339,13 +1350,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2323676,
-      "sha256": "d18275d756c22b0b11ef192b379f1ad0fd7890d3074b964b83798bf1c6b8659a"
+      "bytes": 2339201,
+      "sha256": "12469ebfb186a30768a559d31137d2df526756f7b10e193e177268cf47a07191"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1866302,
-      "sha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a"
+      "bytes": 1878767,
+      "sha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a"
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "verifiedAt": "2026-11-15T14:17:08.537Z",
+  "base": "https://projeto-ipe.vercel.app",
+  "deploymentId": "dpl_AdCLA4JZZxBc14eJE9CRssHqhv2A",
+  "sourceCommit": "6c3eeee2eec94a2c7aed1ac551ebce7d7b865463",
+  "status": "passed",
+  "transport": "curl HTTP/1.1 with certificate validation, read-only GET",
+  "checks": [
+    {
+      "path": "brand/missao-ipe-logo.svg",
+      "status": 200,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "matchesLocal": true
+    },
+    {
+      "path": "brand/missao-ipe-symbol.svg",
+      "status": 200,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "matchesLocal": true
+    },
+    {
+      "path": "brand/missao-ipe-logo-stacked.svg",
+      "status": 200,
+      "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "matchesLocal": true
+    },
+    {
+      "path": "brand/preview-r22.html",
+      "status": 200,
+      "sha256": "1c54b8021faffcbab200bfa3fbf581a1f13027e7765a8db51e024de19e980b63",
+      "matchesLocal": true
+    },
+    {
+      "path": "dashboard/index.html",
+      "status": 200,
+      "sha256": "b100f260485d66de17088bb1f84a48dec2fe1402cb024d8fed7353c9ef0cb7b6",
+      "matchesLocal": true
+    },
+    {
+      "path": "presentation/pitch/index.html",
+      "status": 200,
+      "sha256": "dd150f7f756b67141684ba217071b1c3c86dfb5c2231c72406dfbabcd421a6ba",
+      "matchesLocal": true
+    },
+    {
+      "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+      "status": 200,
+      "sha256": "cf4292fc3b996fea812cc26306b9f9f8e8c0ab1c2c0bf64c44a2e6209ff7e95f",
+      "matchesLocal": true
+    }
+  ]
+}

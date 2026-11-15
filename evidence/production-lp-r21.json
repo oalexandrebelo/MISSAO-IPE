@@ -1,0 +1,72 @@
+{
+  "verifiedAt": "2026-11-15T14:04:14.472Z",
+  "deploymentId": "dpl_EUTccHSM6WQJd85p22xo4yYf6wZp",
+  "sourceCommit": "6c3eeee2eec94a2c7aed1ac551ebce7d7b865463",
+  "alias": "https://projeto-ipe-lp.vercel.app",
+  "status": "passed",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200,
+      "sha256": "eaa05475caccd59c5aa75f0e7ab3c0ef6b0b2fce7fda4f99a751620314a6d957",
+      "passed": true,
+      "librasLink": true,
+      "pitchLink": true
+    },
+    {
+      "path": "/creditos/",
+      "status": 200,
+      "expected": 200,
+      "sha256": "4d41b5648905da63dd5cba58fb6d7691c431c57012c9cba5f6811d619f633fa6",
+      "passed": true,
+      "librasLink": true
+    },
+    {
+      "path": "/verificacao-rota-inexistente/",
+      "status": 404,
+      "expected": 404,
+      "sha256": "61686bb986ed699fb08f1aee0ba7f6e434863efd47d5e5aa6b206adcb13d1344",
+      "passed": true,
+      "librasLink": true
+    },
+    {
+      "path": "/acessibilidade/guia/",
+      "status": 200,
+      "expected": 200,
+      "sha256": "88121aed9f90e0308f905a3eb3bf1a3adb769c800b5922724804a9a225988ba0",
+      "passed": true,
+      "matchesLocal": true,
+      "isolated": true,
+      "assetsResolve": true
+    },
+    {
+      "path": "/acessibilidade/libras.js",
+      "status": 200,
+      "expected": 200,
+      "sha256": "610c114536c7bef78f744d097291e1764a603cc0e034e4672c7cb201177cdbcd",
+      "passed": true,
+      "matchesLocal": true
+    },
+    {
+      "path": "/acessibilidade/libras.css",
+      "status": 200,
+      "expected": 200,
+      "sha256": "7e12260af6c8947e3e66eb6625a59dd28d1e5320060fe7b2ce0dd8ecbd8cdbf7",
+      "passed": true,
+      "matchesLocal": true
+    },
+    {
+      "path": "/acessibilidade/guia.js",
+      "status": 200,
+      "expected": 200,
+      "sha256": "37cf028f5c957ce322572e4400fd31d625866adafbb506116760f58cbab238b0",
+      "passed": true,
+      "matchesLocal": true
+    }
+  ],
+  "limits": [
+    "Deployment ID and source SHA must be confirmed separately against the hosting API.",
+    "HTTP checks do not certify visual layout, human accessibility or external VLibras availability."
+  ]
+}

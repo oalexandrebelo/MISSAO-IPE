@@ -22,6 +22,7 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md', target: 'docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md', title: 'Acervo ASTRAL · oportunidades de assets', description: 'O que já está no Git, interfaces aproveitáveis, modelos NASA e próximos passos para os dois devs.' },
   { source: 'docs/59-MARCA-OFICIAL-E-DEPLOY.md', target: 'docs/59-MARCA-OFICIAL-E-DEPLOY.md', title: 'Marca oficial e publicação', description: 'Aplicação dos SVGs, diagnóstico de deploy e continuidade para os dois desenvolvedores.' },
   { source: 'docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md', target: 'docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md', title: 'Catálogo NASA · preparação da integração Bruno', description: 'Fontes verificadas para 18 equipamentos e limites da futura expansão para ISS, Lua e Marte.' },
   { source: 'docs/57-KIT-PRE-BANCA-R21.md', target: 'docs/57-KIT-PRE-BANCA-R21.md', title: 'Kit pré-banca · R21', description: 'Checklist, suíte executável, roteiro de demonstração e evidências para a banca.' },

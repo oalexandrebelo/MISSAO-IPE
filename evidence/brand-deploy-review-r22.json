@@ -1,0 +1,61 @@
+{
+  "reviewedAt": "2026-11-15T14:11:55.929278+00:00",
+  "sourceCommit": "6c3eeee2eec94a2c7aed1ac551ebce7d7b865463",
+  "scope": "Official SVG brand, landing accessibility route, publication and handoff",
+  "deployments": {
+    "main": {
+      "id": "dpl_AdCLA4JZZxBc14eJE9CRssHqhv2A",
+      "state": "READY",
+      "alias": "https://projeto-ipe.vercel.app"
+    },
+    "landing": {
+      "id": "dpl_EUTccHSM6WQJd85p22xo4yYf6wZp",
+      "state": "READY",
+      "alias": "https://projeto-ipe-lp.vercel.app"
+    }
+  },
+  "historicalAudit": {
+    "agent": "gpt-6-luna",
+    "reasoningLevel": "max (highest available for this model)",
+    "readOnly": true,
+    "landingErrorsReviewed": 14,
+    "missingRootDirectory": 12,
+    "oldMissingNextRoutesManifest": 2,
+    "currentDeploymentFailure": false
+  },
+  "checks": {
+    "localBuildMain": "passed",
+    "localBuildLanding": "passed",
+    "publicationChecks": 18,
+    "publicationFailures": 0,
+    "pitchAndLibrasTests": 5,
+    "pitchAndLibrasFailures": 0,
+    "anonymousPrivateDashboardApi": 401,
+    "publicGame": 200,
+    "currentDeploymentsRuntimeErrorGroups15m": 0,
+    "landingPublicHttpChecks": 7,
+    "landingPublicHttpFailures": 0,
+    "fullRemoteManifestAudit": "incomplete: local connection/transfer timeouts; prior SHA receipt retained separately"
+  },
+  "browser": {
+    "transport": "CUA",
+    "checked": [
+      "Official horizontal and vertical SVG preview",
+      "LP header at 375 px without horizontal overflow",
+      "Pitch closing at 375 px without horizontal overflow",
+      "Published LP guide opened and official VLibras widget loaded",
+      "Published dashboard official SVG loaded and required team access",
+      "Published pitch closing with team SVG and Alexandre Belo marks"
+    ],
+    "consoleErrorsInObservedPublishedPitch": 0
+  },
+  "limits": [
+    "HTTP/API and browser checks concern the listed deployments and actions, not a guarantee of zero future errors.",
+    "No human learning or comprehensive accessibility certification.",
+    "ISS, Moon and Mars remain planned; their NASA catalog is research, not new playable missions.",
+    "The large public-file audit had local Node timeouts and a curl HTTP/2 framing failure; the read-only audit was retried using curl HTTP/1.1 with certificate validation.",
+    "Full current-SHA remote manifest verification did not complete; no all-files-passed claim is made for this patch. Local publication checks, new landing HTTP routes and observed browser journeys passed."
+  ],
+  "brandGuidance": "https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md",
+  "runtimeWarning": "LP package.json engines.node >=22.14.0 resolves to Node 26.x on Vercel despite project preference 24.x; build passed. No Node version change in this brand patch."
+}

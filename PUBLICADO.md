@@ -2,6 +2,10 @@
 
 ## R21 — entrada imersiva, métricas privadas e pitch de 3 minutos
 
+**Correção posterior de marca e Libras:** commit `6c3eeee2eec94a2c7aed1ac551ebce7d7b865463`, principal `dpl_AdCLA4JZZxBc14eJE9CRssHqhv2A` e LP `dpl_EUTccHSM6WQJd85p22xo4yYf6wZp`, ambos READY. Os SVGs oficiais estão aplicados no cabeçalho, painel e pitch; a assinatura vertical e os originais estão na [galeria da marca](https://projeto-ipe.vercel.app/brand/preview-r22.html). O guia de Libras da LP abre na rota correta, com isolamento conferido. [Revisão e alcance](evidence/brand-deploy-review-r22.json).
+
+**Acervo ASTRAL:** o [levantamento para os dois devs](https://projeto-ipe.vercel.app/docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html) identifica 40 arquivos, 22 já idênticos ao repositório e nenhuma nova malha 3D. Prioriza bancada, recursos, comparação A/B e ligação aos modelos NASA existentes. Não houve importação duplicada nem alteração do motor. A conferência pública da marca passou em sete caminhos com conteúdo idêntico ao local; a conferência integral de todos os arquivos deste commit ficou incompleta por problemas de conexão, sem substituir o recibo completo do R21 anterior.
+
 Implementação `327710db39ce070991f01595a54b5800a4f97f64`, beta **0.12.0-beta.1**. Jogo `dpl_Aeq3CfXP1xHLYfAsSCCyoqH5Ag49` e LP `dpl_37udA3fCezmdSUCbgGkU8Q5KgNnN` concluídos como **READY**. O recibo do principal verificou 393 arquivos públicos e 119 documentos; o teste HTTP da API passou em 30 verificações, com uma participação sintética e três tentativas de teste, identificadas como testes técnicos, não participantes humanos.
 
 - Entrada em tela inteira: nome → e-mail → missão → play; alternativa funcional se o navegador não permitir tela cheia.

@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T13:50:19.573Z",
+  "generatedAt": "2026-11-15T14:22:56.640Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 409,
-  "bytes": 31617308,
+  "fileCount": 411,
+  "bytes": 31672830,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 183840,
-    "sha256": "3c0fa7e953351f1bf8fc690bfec8c10cc36f8058aabd20a12c4ba3fc841bd5e2"
+    "bytes": 184791,
+    "sha256": "35b124787b4a68ba5ff3286f98a5c5444be513995030c393a5cfbb906177e2d9"
   },
   "entries": [
     {
@@ -795,30 +795,30 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 62410,
-      "sha256": "773afa853acc9492c8e60cda80d5300159e2c013c2fcc6339ffe54722b85fb01",
+      "bytes": 62928,
+      "sha256": "87fdbd92b87494c75a26318c6430114925963f80113351c603821099c613fbb4",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "773afa853acc9492c8e60cda80d5300159e2c013c2fcc6339ffe54722b85fb01",
+      "sourceSha256": "87fdbd92b87494c75a26318c6430114925963f80113351c603821099c613fbb4",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2323943,
-      "sha256": "607cf7de21f963cefa977bab9d35fb37a696aa843d9bfd8b71f191091c63f0a5",
+      "bytes": 2339468,
+      "sha256": "8a85b8b0220966337837de4ddf5743d91db43ec429b75b585be677b943fb2218",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "d18275d756c22b0b11ef192b379f1ad0fd7890d3074b964b83798bf1c6b8659a",
+      "sourceSha256": "12469ebfb186a30768a559d31137d2df526756f7b10e193e177268cf47a07191",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "public"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1866302,
-      "sha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a",
+      "bytes": 1878767,
+      "sha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a",
+      "sourceSha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1771,6 +1771,25 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+      "bytes": 14634,
+      "sha256": "f7acb68706a24d9aba4ec18eeada2c0a9ce062dc37d1dc8f68822a526de92019",
+      "category": "rendered-public-document",
+      "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+      "sourceSha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
+      "libras": "public"
+    },
+    {
+      "path": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+      "bytes": 11115,
+      "sha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
+      "category": "public-document",
+      "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+      "sourceSha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "docs/AUTORIA-E-IA.html",
       "bytes": 3644,
       "sha256": "9fac34f5accfe0b399e9d0c20d7959d6b65b19c629455e0f3816c3c5edf74e50",
@@ -1829,8 +1848,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 18081,
-      "sha256": "b0da4cba518961885945c86fbfaa651e48dbfa21a262a7cab2706cd5dd60c7a2",
+      "bytes": 18395,
+      "sha256": "a461c2bf350e134b3ad117ce217f0dd993b1c50de3a7f5c39b5b4b5810530aa5",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
       "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy",

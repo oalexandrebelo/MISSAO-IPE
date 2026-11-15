@@ -1,0 +1,47 @@
+{
+  "reviewedOn": "2026-11-15",
+  "sourceLabel": "ASTRAL VITAL/MISSAO-IPE 2",
+  "repositoryCommit": "6c3eeee2eec94a2c7aed1ac551ebce7d7b865463",
+  "method": "Read-only file inventory, SHA-256 comparisons, manifest verification, static code inspection and screenshot inspection",
+  "inventory": {
+    "files": 40,
+    "bytes": 2890710,
+    "pngScreenshots": 9,
+    "manifestEntriesMatched": 39,
+    "manifestEntriesTotal": 39,
+    "filesIdenticalToRepository": 22,
+    "standalone3DModels": 0,
+    "dedicatedTextures": 0,
+    "videos": 0,
+    "recordedAudio": 0,
+    "standaloneSvgFiles": 0
+  },
+  "canonicalContribution": "fastmode/",
+  "contributionMerge": "6c8df63",
+  "newScreenshot": {
+    "pathWithinPackage": "missao-ipe/app/docs/pitch-demo.png",
+    "bytes": 302859,
+    "width": 1440,
+    "height": 757
+  },
+  "localPublicationAtSourceCommit": {
+    "publicManifestEntries": 408,
+    "fastmodeEntries": 0,
+    "fastmodeDirectoryPublished": false
+  },
+  "recommendations": [
+    "Reuse workbench and resource-panel visual hierarchy over the current scientific engine",
+    "Clarify existing A/B comparisons and causal explanations",
+    "Use the existing configurable spacecraft and NASA contextual models",
+    "Evaluate lightweight visual and optional audio feedback with accessible alternatives",
+    "Research individual assets for the planned ISS, Moon and Mars expansion"
+  ],
+  "changesFromAudit": "Documentation only; no copied asset pack, executed package scripts, installed dependencies or simulation changes",
+  "limits": [
+    "FASTMODE uses educational balance values without per-item NASA hardware citations",
+    "The package has Canvas2D and CSS effects, not choice-driven spacecraft meshes",
+    "External references in the package were not revalidated by this local audit",
+    "Model origins and licenses must be assessed for each future download",
+    "No human usability or learning study was performed"
+  ]
+}

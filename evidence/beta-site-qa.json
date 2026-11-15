@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T13:50:20.513Z",
-  "finishedAt": "2026-11-15T13:50:23.276Z",
+  "startedAt": "2026-11-15T14:26:43.713Z",
+  "finishedAt": "2026-11-15T14:26:46.584Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "3c0fa7e953351f1bf8fc690bfec8c10cc36f8058aabd20a12c4ba3fc841bd5e2"
+        "sha256": "35b124787b4a68ba5ff3286f98a5c5444be513995030c393a5cfbb906177e2d9"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 409,
-      "manifestedFiles": 408,
-      "bytes": 31617308,
+      "fileCount": 411,
+      "manifestedFiles": 410,
+      "bytes": 31672830,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -56,7 +56,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 361,
+      "inspectedFiles": 363,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -104,8 +104,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 2759,
-      "uniqueTargets": 301,
+      "count": 2785,
+      "uniqueTargets": 303,
       "entries": [
         {
           "source": "acessibilidade/guia.html",
@@ -4252,6 +4252,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-60-oportunidades-acervo-astral-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -5688,6 +5695,27 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-44-historias-reais-e-limites-didaticos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-45-dados-reais-bennu-webb-r18-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-51-qa-iniciante-e-handoff-r20-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-58-catalogo-nasa-e-integracao-bruno-r22-md"
         },
         {
           "source": "context/research-library.html",
@@ -12594,6 +12622,127 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "requestPath": "/docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
+          "requestPath": "/docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
+          "requestPath": "/docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/51-QA-INICIANTE-E-HANDOFF-R20.md",
+          "requestPath": "/docs/51-QA-INICIANTE-E-HANDOFF-R20.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+          "requestPath": "/docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+          "requestPath": "/docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/AUTORIA-E-IA.html",
           "target": "docs/AUTORIA-E-IA.html",
           "requestPath": "/docs/AUTORIA-E-IA.html",
@@ -13335,6 +13484,18 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "requestPath": "/docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+          "requestPath": "/docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
           "kind": "navigation"
         },
         {
@@ -19003,7 +19164,7 @@
     ],
     "scientificFilesPerLocation": 10,
     "libras": {
-      "public": 82,
+      "public": 83,
       "lab": 1,
       "dashboard": 1
     },
@@ -19681,22 +19842,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 62410,
-        "sha256": "773afa853acc9492c8e60cda80d5300159e2c013c2fcc6339ffe54722b85fb01",
+        "bytes": 62928,
+        "sha256": "87fdbd92b87494c75a26318c6430114925963f80113351c603821099c613fbb4",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2323943,
-        "sha256": "607cf7de21f963cefa977bab9d35fb37a696aa843d9bfd8b71f191091c63f0a5",
+        "bytes": 2339468,
+        "sha256": "8a85b8b0220966337837de4ddf5743d91db43ec429b75b585be677b943fb2218",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1866302,
-        "sha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a",
+        "bytes": 1878767,
+        "sha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -20400,6 +20561,20 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
+        "status": 200,
+        "bytes": 14634,
+        "sha256": "f7acb68706a24d9aba4ec18eeada2c0a9ce062dc37d1dc8f68822a526de92019",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
+        "status": 200,
+        "bytes": 11115,
+        "sha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/AUTORIA-E-IA.html",
         "status": 200,
         "bytes": 3644,
@@ -20472,8 +20647,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 18081,
-        "sha256": "b0da4cba518961885945c86fbfaa651e48dbfa21a262a7cab2706cd5dd60c7a2",
+        "bytes": 18395,
+        "sha256": "a461c2bf350e134b3ad117ce217f0dd993b1c50de3a7f5c39b5b4b5810530aa5",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -21781,8 +21956,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 183840,
-        "sha256": "3c0fa7e953351f1bf8fc690bfec8c10cc36f8058aabd20a12c4ba3fc841bd5e2",
+        "bytes": 184791,
+        "sha256": "35b124787b4a68ba5ff3286f98a5c5444be513995030c393a5cfbb906177e2d9",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -21927,7 +22102,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 323,
+      "linkedRoutesChecked": 325,
       "redirects": [
         {
           "source": "/campanha/research",
@@ -22062,92 +22237,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 14.253
+      "durationMs": 12.405
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.34
+      "durationMs": 0.727
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 70.645
+      "durationMs": 71.943
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.425
+      "durationMs": 2.65
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 72.965
+      "durationMs": 99.386
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1251.856
+      "durationMs": 1326.397
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.874
+      "durationMs": 0.683
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 525.642
+      "durationMs": 520.559
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 71.479
+      "durationMs": 83.481
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 35.109
+      "durationMs": 34.59
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.566
+      "durationMs": 2.457
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 85.559
+      "durationMs": 100.58
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.864
+      "durationMs": 6.061
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 61.856
+      "durationMs": 62.129
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 279.891
+      "durationMs": 261.986
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 126.646
+      "durationMs": 115.942
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.291
+      "durationMs": 1.351
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 98.762
+      "durationMs": 60.76
     }
   ]
 }
