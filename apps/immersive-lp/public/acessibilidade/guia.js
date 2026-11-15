@@ -1,44 +1,59 @@
 (() => {
   if (window === window.parent || window.origin !== 'null') return;
-
-  const guide = {
-    lab: 'No laboratório de missões, escolha Cerrado, Bennu ou Webb. Leia o objetivo, ajuste os componentes, execute a missão e compare o resultado com sua hipótese. Para registrar o progresso, use o formulário de participação no jogo.',
-    dashboard: 'O observatório é acessível à equipe com uma chave de acesso. Escolha uma missão para ver os indicadores. A lista de tentativas mostra o resultado, a evidência e a primeira causa registrada.',
-    public: 'Na Missão Ipê, você pode explorar o laboratório, a apresentação e a documentação. Para traduzir um trecho da página, selecione o texto e abra Libras novamente.',
-  };
-  const scriptUrl = 'https://vlibras.gov.br/app/vlibras-plugin.js';
   const status = document.querySelector('#ipe-libras-status');
   const text = document.querySelector('#ipe-libras-text');
-  function onInit(event) {
-    if (event.origin !== location.origin || event.source !== window.parent || event.data?.type !== 'ipe-libras:init') return;
-    window.removeEventListener('message', onInit);
-    document.querySelector('#ipe-libras-official').hidden = true;
-    const { scope, passage } = event.data;
-    text.textContent = scope === 'public' && typeof passage === 'string' && passage.trim()
-      ? passage.trim().slice(0, 1000)
-      : guide[scope === 'lab' || scope === 'dashboard' ? scope : 'public'];
-    text.parentElement.hidden = false;
-    status.textContent = 'Carregando o VLibras…';
-    const script = document.createElement('script');
-    script.src = scriptUrl;
-    script.referrerPolicy = 'no-referrer';
-    const unavailable = () => {
-      clearTimeout(timeout);
-      status.textContent = 'O VLibras está indisponível. Use o link Tradutor oficial no cabeçalho desta janela.';
-    };
-    const timeout = setTimeout(unavailable, 12000);
-    script.addEventListener('error', unavailable, { once: true });
-    script.addEventListener('load', () => {
-      if (typeof window.VLibras?.Widget !== 'function') return unavailable();
-      new window.VLibras.Widget({ rootPath: 'https://vlibras.gov.br/app', position: 'R' });
-      clearTimeout(timeout);
-      text.disabled = false;
-      status.textContent = 'Abra o botão azul do VLibras. Quando o avatar estiver pronto, ative o trecho abaixo.';
-    }, { once: true });
-    document.head.append(script);
+  const retry = document.querySelector('#ipe-libras-retry');
+  let initialized = false, paused = false, pending = '', current = '', busy = false, loaded = false, failed = false, startedAt = 0, holdUntil = 0, timer;
+  const message = value => { status.textContent = value; window.parent.postMessage({ type: 'ipe-libras:status', message: value }, location.origin); };
+  const unavailable = value => { failed = true; retry.hidden = false; message(value); };
+  const normalize = value => typeof value === 'string' ? value.replace(/\s+/g, ' ').trim().slice(0, 900) : '';
+  async function pump() {
+    if (failed || document.hidden || paused || busy) return;
+    const api = window.vlibras;
+    if (!api?.isLoaded || typeof api.translate !== 'function' || typeof api.play !== 'function') {
+      if (Date.now() - startedAt > 90000) unavailable('O avatar não ficou disponível. Tente novamente; a navegação continua funcionando.');
+      return;
+    }
+    if (!loaded) { loaded = true; window.parent.postMessage({ type: 'ipe-libras:ready' }, location.origin); message('Tradução contínua ativada. Acompanhe o avatar enquanto navega.'); }
+    if (api.isBroken) return unavailable('O avatar ficou indisponível. Tente carregar novamente.');
+    if (!pending || api.status === 'playing' || api.status === 'paused' || Date.now() < holdUntil) return;
+    const passage = pending; pending = ''; busy = true; current = passage; text.textContent = passage;
+    message('Traduzindo a orientação atual…');
+    try {
+      const gloss = await api.translate(passage);
+      if (paused) { if (!pending) pending = passage; return; }
+      if (typeof gloss !== 'string' || !gloss.trim()) return unavailable('A tradução não respondeu. Tente novamente para este trecho.');
+      window.vlibras.play(gloss); holdUntil = Date.now() + 1500;
+      message('Avatar sinalizando. A próxima orientação será traduzida em seguida.');
+    } catch { unavailable('Não foi possível traduzir este trecho. Tente novamente.'); }
+    finally { busy = false; }
   }
-  window.addEventListener('message', onInit);
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !event.defaultPrevented) window.parent.postMessage({ type: 'ipe-libras:close' }, location.origin);
-  });
+  function receive(event) {
+    if (event.origin !== location.origin || event.source !== window.parent) return;
+    const data = event.data;
+    if (data?.type === 'ipe-libras:init' && !initialized) {
+      initialized = true; paused = data.paused === true; pending = normalize(data.passage); startedAt = Date.now();
+      document.querySelector('#ipe-libras-passage').hidden = false;
+      message('Carregando o avatar oficial do VLibras…');
+      const script = document.createElement('script'); script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js'; script.referrerPolicy = 'no-referrer';
+      script.addEventListener('error', () => unavailable('O VLibras está indisponível. Tente novamente ou use o tradutor oficial.'), { once: true });
+      script.addEventListener('load', () => {
+        if (typeof window.VLibras?.Widget !== 'function') return unavailable('O serviço não disponibilizou o avatar. Tente novamente.');
+        new window.VLibras.Widget({ rootPath: 'https://vlibras.gov.br/app', position: 'R' });
+        window.setTimeout(() => { window.VLibrasWidget?.open?.(); }, 100);
+      }, { once: true });
+      document.head.append(script); timer = window.setInterval(pump, 400);
+    } else if (initialized && data?.type === 'ipe-libras:update') {
+      const passage = normalize(data.passage);
+      if (passage) pending = data.repeat || passage !== current ? passage : '';
+    } else if (initialized && data?.type === 'ipe-libras:pause') {
+      paused = data.paused === true;
+      if (paused) { if (window.vlibras?.status === 'playing') window.vlibras.pause(); message('Tradução pausada. Você pode continuar navegando.'); }
+      else { if (window.vlibras?.status === 'paused') window.vlibras.play(); message('Tradução retomada.'); void pump(); }
+    }
+  }
+  retry.addEventListener('click', () => location.reload());
+  window.addEventListener('message', receive);
+  window.addEventListener('pagehide', () => { clearInterval(timer); window.vlibras?.stop?.(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !event.defaultPrevented) window.parent.postMessage({ type: 'ipe-libras:close' }, location.origin); });
 })();

@@ -8,7 +8,7 @@ globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 dom.window.HTMLCanvasElement.prototype.getContext = () => null;
 const { render, fireEvent, act, cleanup, within } = await import('@testing-library/react');
 const { Scene } = await import('../src/ui/Scene.tsx');
-const { simulateExpedition, getExpeditionVisualState } = await import('../src/lab/scientific-expeditions.ts');
+const { simulateExpedition, getExpeditionVisualState, getExpeditionChoices } = await import('../src/lab/scientific-expeditions.ts');
 const config = { launch: 'science', orbit: 'far', duration: 'full', instrument: 'spectrometer', power: 'extended', ground: 'extended' };
 after(() => dom.window.close());
 
@@ -31,8 +31,16 @@ test('replay focuses the involved system and a rewind does not retain future rec
   await act(async () => view.rerender(React.createElement(Scene, props(job))));
   assert.equal(scene.dataset.inspection, 'instrument');
   assert.match(scene.querySelector('.orbit-resource-grid').textContent, /0 \/ 6 registros válidos/);
-  await act(async () => view.rerender(React.createElement(Scene, props(delivery, { inspectSubsystem: 'energy' }))));
+  const capacity = getExpeditionChoices('telescope').power.find(item => item.id === config.power);
+  const partialCharge = result.trace.find(point => point.energyWh < capacity.capacityWh);
+  assert.ok(partialCharge, 'The scenario contains a recorded battery state below capacity');
+  const observed = getExpeditionVisualState(result, partialCharge.timeS);
+  await act(async () => view.rerender(React.createElement(Scene, props(job, { visualState: observed, inspectSubsystem: 'energy' }))));
   assert.equal(scene.dataset.inspection, 'energy');
+  assert.notEqual(observed.energyWh, capacity.capacityWh, 'The recorded battery is not the configured capacity at this event');
+  assert.deepEqual([...scene.querySelector('[data-spacecraft-callout="energy"]').querySelectorAll('text')].map(node => node.textContent), ['Painéis + bateria', `${capacity.watts} W · ${capacity.capacityWh} Wh`]);
+  const battery = within(scene.querySelector('.orbit-resource-grid')).getByText('Bateria').parentElement.querySelector('strong');
+  assert.equal(battery.textContent, `${observed.energyWh.toLocaleString('pt-BR', { maximumFractionDigits: 2 })} Wh`, 'Replay readout still reports recorded energy, separately from the capacity label');
 });
 
 test('presentation enlargement remains inline, works in 2D and closes with Escape', async t => {

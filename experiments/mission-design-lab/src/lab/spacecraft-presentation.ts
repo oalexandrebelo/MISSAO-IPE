@@ -39,6 +39,15 @@ export interface SpacecraftPresentation {
   readonly totals: { readonly massKg: number; readonly credits: number };
 }
 
+/** The same capacity label accompanies the selected part in 3D and its 2D alternative. */
+export function getInspectionReadout(p: SpacecraftPresentation, inspection: SpacecraftInspection) {
+  const n = (value: number) => value.toLocaleString('pt-BR', { maximumFractionDigits: 2 });
+  if (inspection === 'energy') return { title: 'Painéis + bateria', value: `${n(p.energy.panelW)} W · ${n(p.energy.batteryWh)} Wh` };
+  if (inspection === 'communications') return { title: 'Rádio de comunicação', value: `${n(p.communications.rateBps / 1e6)} Mbit/s` };
+  if (inspection === 'instrument') return { title: p.payload.kind === 'processor' ? 'Processador científico' : p.payload.kind === 'camera' ? 'Câmera científica' : 'Espectrômetro', value: `${n(p.payload.totalLoadW)} W · ${n(p.payload.bitsPerRecord / 1e6)} Mbit/registro` };
+  return null;
+}
+
 function freeze<T>(value: T): T {
   if (value !== null && typeof value === 'object') { Object.values(value).forEach(freeze); Object.freeze(value); }
   return value;

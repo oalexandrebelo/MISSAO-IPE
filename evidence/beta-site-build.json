@@ -1,61 +1,62 @@
 {
-  "generatedAt": "2026-11-15T14:22:56.640Z",
+  "generatedAt": "2026-11-15T15:14:54.623Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 411,
-  "bytes": 31672830,
+  "fileCount": 416,
+  "bytes": 31851581,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 184791,
-    "sha256": "35b124787b4a68ba5ff3286f98a5c5444be513995030c393a5cfbb906177e2d9"
+    "bytes": 196852,
+    "sha256": "fbcd3609557ccba210cd3805ae4cdff10f8476f5a2bff2247b88454ee15cf581"
   },
   "entries": [
     {
       "path": "acessibilidade/guia.html",
-      "bytes": 1632,
-      "sha256": "88121aed9f90e0308f905a3eb3bf1a3adb769c800b5922724804a9a225988ba0",
+      "bytes": 1750,
+      "sha256": "de80e19a14c75f45b085946c8dcc1036b9d6474779b37df74164d057e0bb000c",
       "category": "libras-integration",
       "source": "apps/immersive-lp/public/acessibilidade/guia.html",
-      "sourceSha256": "88121aed9f90e0308f905a3eb3bf1a3adb769c800b5922724804a9a225988ba0",
+      "sourceSha256": "de80e19a14c75f45b085946c8dcc1036b9d6474779b37df74164d057e0bb000c",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "acessibilidade/guia.js",
-      "bytes": 2662,
-      "sha256": "37cf028f5c957ce322572e4400fd31d625866adafbb506116760f58cbab238b0",
+      "bytes": 4426,
+      "sha256": "1a994c3b24c91a93f46c44adea9cc158785752f1083919711c59ae8af0d5ed35",
       "category": "libras-integration",
       "source": "apps/immersive-lp/public/acessibilidade/guia.js",
-      "sourceSha256": "37cf028f5c957ce322572e4400fd31d625866adafbb506116760f58cbab238b0",
+      "sourceSha256": "1a994c3b24c91a93f46c44adea9cc158785752f1083919711c59ae8af0d5ed35",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "acessibilidade/libras.css",
-      "bytes": 2853,
-      "sha256": "7e12260af6c8947e3e66eb6625a59dd28d1e5320060fe7b2ce0dd8ecbd8cdbf7",
+      "bytes": 3664,
+      "sha256": "1340cbbae8d7814928d936c647137721c5aae051b264923b784acc787043ccda",
       "category": "libras-integration",
       "source": "apps/immersive-lp/public/acessibilidade/libras.css",
-      "sourceSha256": "7e12260af6c8947e3e66eb6625a59dd28d1e5320060fe7b2ce0dd8ecbd8cdbf7",
+      "sourceSha256": "1340cbbae8d7814928d936c647137721c5aae051b264923b784acc787043ccda",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "acessibilidade/libras.js",
-      "bytes": 3288,
-      "sha256": "610c114536c7bef78f744d097291e1764a603cc0e034e4672c7cb201177cdbcd",
+      "bytes": 10467,
+      "sha256": "d36f633a7a4954dd3c773970fdccb7db0d5a86b4fdc07f5f9a67f537f125a922",
       "category": "libras-integration",
       "source": "apps/immersive-lp/public/acessibilidade/libras.js",
-      "sourceSha256": "610c114536c7bef78f744d097291e1764a603cc0e034e4672c7cb201177cdbcd",
+      "sourceSha256": "d36f633a7a4954dd3c773970fdccb7db0d5a86b4fdc07f5f9a67f537f125a922",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "architecture/index.html",
-      "bytes": 1022688,
-      "sha256": "3bb577d957897f529d8a85d9680d1b95a2f02756009e677ab33316d6228731c2",
+      "bytes": 1022738,
+      "sha256": "d999370dc0aee87a494102c065701b507bd1ead2154efa2e1f74db0584fe808e",
       "category": "architecture",
       "source": "architecture/index.html",
       "sourceSha256": "3e06d16330cd48ce7ae251b19ae08a7ba253cfbc2fa4be02fe42e4add7ffa61d",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "architecture/map.mmd",
@@ -73,6 +74,15 @@
       "category": "architecture",
       "source": "architecture/model.json",
       "sourceSha256": "37e9b311d6cd26ef7cc37105aac4df568d4bdb6a581881c16ff31405724ef4a8",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "assets/analytics.js",
+      "bytes": 1030,
+      "sha256": "7c86a24a26056a5f32bbd29543874ff3b2073bc358b4a739abbd4bf062d191b2",
+      "category": "public-page-analytics",
+      "source": "web/assets/analytics.js",
+      "sourceSha256": "7c86a24a26056a5f32bbd29543874ff3b2073bc358b4a739abbd4bf062d191b2",
       "transformation": "none; bytes preserved"
     },
     {
@@ -176,23 +186,25 @@
     },
     {
       "path": "brand/preview-r17.html",
-      "bytes": 5046,
-      "sha256": "42a4b5853a4e87b30a82cf69f22b201ad028e0e522b22dd2caf0d442ea394a8a",
+      "bytes": 5096,
+      "sha256": "a60302a5bdcea5535c00c081696733fbec2ce9d53ff15d442b1687d7f97e025f",
       "category": "project-brand",
       "source": "experiments/mission-design-lab/public/brand/preview-r17.html",
       "sourceSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "brand/preview-r22.html",
-      "bytes": 5986,
-      "sha256": "1c54b8021faffcbab200bfa3fbf581a1f13027e7765a8db51e024de19e980b63",
+      "bytes": 6036,
+      "sha256": "6edbedf25574ad67f90b15f681cc01b9d3b19e7fcb955ae291a4cbbc702842d1",
       "category": "project-brand",
       "source": "experiments/mission-design-lab/public/brand/preview-r22.html",
       "sourceSha256": "2ac178e50144b64b08db961b0bc9aba58f8534549e7436870eb56fb91be930e3",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "brand/projeto-ipe-logo-on-light.svg",
@@ -232,13 +244,14 @@
     },
     {
       "path": "campanha/apresentacao/index.html",
-      "bytes": 26929,
-      "sha256": "ec4d5c1ecd18e65c122e0c0dd6476420e2f53e91ed0e60a2be7fba8bbca7fcce",
+      "bytes": 26979,
+      "sha256": "2d33096f6c723fcb4a079d118ba836a3e9fa23b74f284a8b40cdbf493d95ddc1",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/apresentacao/index.html",
       "sourceSha256": "0b896bb00e702e499acc0cb7a53c1b69ee3be214d448f3dfd3009f28fdf91cab",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "campanha/apresentacao/presentation.js",
@@ -431,13 +444,14 @@
     },
     {
       "path": "campanha/index.html",
-      "bytes": 1172,
-      "sha256": "3b4356ffe7f47c961d3e7032ce9605080e2d9c3692630b7ebccc9d8c22904993",
+      "bytes": 1222,
+      "sha256": "20350f1a8e34a77e576300444e129d1215a0dc2dc7c9f6f4193f5fbf62b045bb",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/index.html",
       "sourceSha256": "5af9d392b92ed60907ba1c372cd5acb51eef57f0a63562227ae9da4b2fa9d9b6",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "campanha/kit/diagrams/01-user-flow.mmd",
@@ -505,10 +519,10 @@
     {
       "path": "campanha/release.json",
       "bytes": 326,
-      "sha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
+      "sha256": "69edef708253b4fb6cfdf14fc567ab77e4d5b7d2b583c1c612d4015dbc7a9d54",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/release.json",
-      "sourceSha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
+      "sourceSha256": "69edef708253b4fb6cfdf14fc567ab77e4d5b7d2b583c1c612d4015dbc7a9d54",
       "transformation": "none; bytes preserved"
     },
     {
@@ -558,23 +572,25 @@
     },
     {
       "path": "campanha/research/galeria.html",
-      "bytes": 12386,
-      "sha256": "9828ee198b2329e32aab8e32482e0a578246b7305140ee981cfb2e335f88d1ac",
+      "bytes": 12436,
+      "sha256": "5cf8b4c43f13c4db02f9b55b72c71aa2a66648f6dc807da5058eeb71b11d1024",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/research/galeria.html",
       "sourceSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "campanha/research/index.html",
-      "bytes": 542597,
-      "sha256": "9e7832e1cf82eeb2397dc331ccbf9e5e6c74ff92ebd97e74addf059e5caf77bb",
+      "bytes": 542647,
+      "sha256": "babc55e1b6a719af943e15da5372f9e65b7bd2d3c2dcb5df86df368d1642ba27",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/research/index.html",
       "sourceSha256": "2ab6b04ed37d15b487705dd3c015cfa265a59d75fad3518d3160e91f756c2689",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "campanha/research/manifest.json",
@@ -776,13 +792,14 @@
     },
     {
       "path": "context/index.html",
-      "bytes": 136193,
-      "sha256": "19199b27a30bf179cbbe3b10103856b8eee61587ffd331d93e06aeedb5d82ceb",
+      "bytes": 136243,
+      "sha256": "a1d180b959ff875f3860536b0734f19a85241fe1ef8d79fe8e362610878976ee",
       "category": "context-runtime",
       "source": "context/index.html",
       "sourceSha256": "1a87e5526b12a7d80d7e48e3e85987acb699b4cf086b4bac899d9980de7218ad",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/project-context.json",
@@ -795,30 +812,31 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 62928,
-      "sha256": "87fdbd92b87494c75a26318c6430114925963f80113351c603821099c613fbb4",
+      "bytes": 63960,
+      "sha256": "42d2556435aa0be7e1d8980dff059d4a0628a0d320dea016a1eec41e6f35f99f",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "87fdbd92b87494c75a26318c6430114925963f80113351c603821099c613fbb4",
+      "sourceSha256": "42d2556435aa0be7e1d8980dff059d4a0628a0d320dea016a1eec41e6f35f99f",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2339468,
-      "sha256": "8a85b8b0220966337837de4ddf5743d91db43ec429b75b585be677b943fb2218",
+      "bytes": 2369941,
+      "sha256": "c196a466c9f483898c2c7cf49faa8f431216581184233bbf26a5f997786302f7",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "12469ebfb186a30768a559d31137d2df526756f7b10e193e177268cf47a07191",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "sourceSha256": "029818c4815c1d90f93994e19fbe10d5e49f22278d9011e8f84c56f5d8da881c",
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1878767,
-      "sha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a",
+      "bytes": 1902586,
+      "sha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a",
+      "sourceSha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366",
       "transformation": "none; bytes preserved"
     },
     {
@@ -841,8 +859,8 @@
     },
     {
       "path": "dashboard/index.html",
-      "bytes": 6706,
-      "sha256": "b100f260485d66de17088bb1f84a48dec2fe1402cb024d8fed7353c9ef0cb7b6",
+      "bytes": 6698,
+      "sha256": "9297a31c85af134bbdb069c059fa4ae0c761c33b7118cb520a7d50d36c34beaa",
       "category": "private-dashboard-shell",
       "source": "dashboard/index.html",
       "sourceSha256": "2c46d40c56ced0e387ce9408b340c03d90269f00c627665fdc876f0b65f3054c",
@@ -860,13 +878,14 @@
     },
     {
       "path": "docs/09-VERIFICACAO.html",
-      "bytes": 5539,
-      "sha256": "bde4eac5b4adfd3b2c54329e1e4fdcc112e9bd9b8df0004ae7b9b9ed39b88eb6",
+      "bytes": 5671,
+      "sha256": "c33886cb73fe00f751158cd16c14bc8400041b8dc63068488a741934f4fffd50",
       "category": "rendered-public-document",
       "source": "web/public-docs/09-VERIFICACAO.md",
       "sourceSha256": "c75e2eaf43fddbd1f54bf33f5476c932a3fb3a6c23d2681f2d6e9625cb1b7df6",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/09-VERIFICACAO.md",
@@ -879,13 +898,14 @@
     },
     {
       "path": "docs/13-ARQUITETURA-ARCHIFY.html",
-      "bytes": 15151,
-      "sha256": "14d1cd6e6c8ff56485d23132d3c109e9057e02ceddb0e0a6c2ce77d6f2589e69",
+      "bytes": 15283,
+      "sha256": "f91298574a795469058cedc3aec051acd615f8f2b74f7db829f5f993ce1cafb1",
       "category": "rendered-public-document",
       "source": "docs/13-ARQUITETURA-ARCHIFY.md",
       "sourceSha256": "ef5e81c2cd1a2c2e66342a966015b38c45e85860d0682e21ac3229edc2a13f04",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/13-ARQUITETURA-ARCHIFY.md",
@@ -898,13 +918,14 @@
     },
     {
       "path": "docs/14-BETA-DEPLOY.html",
-      "bytes": 9355,
-      "sha256": "4f42414b1e3b58d3e51056fd4cd71ad880706a9351f1abff12f352bc7a962ca0",
+      "bytes": 9487,
+      "sha256": "0a859d6aac8596d241ec3575a5237e01e1acc1c8cddeaf7cc8fc0c38a56474a8",
       "category": "rendered-public-document",
       "source": "docs/14-BETA-DEPLOY.md",
       "sourceSha256": "307f8fd3dca3c7677128b293beb8ee365a8b5a9890b0998236ceff7a8956e474",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/14-BETA-DEPLOY.md",
@@ -917,13 +938,14 @@
     },
     {
       "path": "docs/15-PLANO-RELEASE.html",
-      "bytes": 17687,
-      "sha256": "85c1b4b579102f9f44eda236580c9f5e946d022271e2b961c3fdd999c289fd31",
+      "bytes": 17819,
+      "sha256": "526ad3f869914d3d8a7d91cde8f5d903f0dace2ca154a02146f2b00419894803",
       "category": "rendered-public-document",
       "source": "docs/15-PLANO-RELEASE-20261115-0800.md",
       "sourceSha256": "74ab3daba099563ce8efd79d833a077e3a1b24bc9c1c7e42674dd573ebf2cd1e",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/15-PLANO-RELEASE.md",
@@ -936,13 +958,14 @@
     },
     {
       "path": "docs/16-OPORTUNIDADES-BETA.html",
-      "bytes": 14062,
-      "sha256": "d398dded062a1e819600594fa393125234fe62983503e8475bd84a124d414a67",
+      "bytes": 14194,
+      "sha256": "d5013afb8e800bbbb4c5280dfae297d97d5de3cb118471488f521c629886f2bd",
       "category": "rendered-public-document",
       "source": "docs/16-OPORTUNIDADES-BETA.md",
       "sourceSha256": "1363d26f9b9c3448a7e68221db473fcfdaf685bf1db65479a3636bd5828f7c29",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/16-OPORTUNIDADES-BETA.md",
@@ -955,13 +978,14 @@
     },
     {
       "path": "docs/18-CONTEXTO-COMPLETO.html",
-      "bytes": 83072,
-      "sha256": "f79e94ff16dc80054e4308dd18d1cfdb9e2f282bcf834318520b0d3bc47e2f8b",
+      "bytes": 83204,
+      "sha256": "ecc7f190c63c81d58c1e493bf24ccbc4529bb4d0ae58c23f50f4168b2311d66a",
       "category": "rendered-public-document",
       "source": "docs/18-CONTEXTO-COMPLETO.md",
       "sourceSha256": "60e4022aa1d0c0a2c549132cb5de6c2df9645fdfb7174c6380367b60a8b91a03",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/18-CONTEXTO-COMPLETO.md",
@@ -974,13 +998,14 @@
     },
     {
       "path": "docs/19-REVISAO-EVIDENCIAS-R8.html",
-      "bytes": 17172,
-      "sha256": "12877c1f53d5dc162e164c771fc458a8d4511b504d971991eefdc122de629028",
+      "bytes": 17304,
+      "sha256": "c1a283a31c005625cb58edf45da2df07edde673cebcfdb3b7e9a2697409fb4f9",
       "category": "rendered-public-document",
       "source": "docs/19-REVISAO-EVIDENCIAS-R8.md",
       "sourceSha256": "6256cef65400b4f1c9d4bd1c7b02ff81471e411ead373dd1f4adead6bb17daf2",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/19-REVISAO-EVIDENCIAS-R8.md",
@@ -993,13 +1018,14 @@
     },
     {
       "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.html",
-      "bytes": 12967,
-      "sha256": "6c71439cc9d384ac467f8a80eb49b9a27030a67889ccd6ca8822043e9c833037",
+      "bytes": 13099,
+      "sha256": "69c539dde04b6360ed2d981e5572405773831eb6c0c2d9813f23e004da6ab4c4",
       "category": "rendered-public-document",
       "source": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
       "sourceSha256": "078806af108969d52f57752828a2369e943caeea2e224454e97dc7bda61c7693",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/20-CENTRAL-CONTEXTO-CRONOGRAMA.md",
@@ -1012,13 +1038,14 @@
     },
     {
       "path": "docs/21-OPORTUNIDADES-NASA.html",
-      "bytes": 22906,
-      "sha256": "3b9b0f2e9297afca116da5b1ab200d1149aa445d03f2714629a8901d5e9082da",
+      "bytes": 23038,
+      "sha256": "5c278bb79a324690f6501ced553aec24460f963a4f563e4efe771ee3558d4d12",
       "category": "rendered-public-document",
       "source": "docs/21-OPORTUNIDADES-NASA.md",
       "sourceSha256": "92773a4afbd0306d2211a6db2ee9c19be0aa000508968a1694e16866f084e8c3",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/21-OPORTUNIDADES-NASA.md",
@@ -1031,13 +1058,14 @@
     },
     {
       "path": "docs/22-PLANO-CONTINUIDADE.html",
-      "bytes": 9928,
-      "sha256": "2450ec27c96146f4b53dc28e7fabd3d12020da0e6d235329191f9308daa13e0d",
+      "bytes": 10060,
+      "sha256": "808b9e378f7b80f779a6f94c5bdd5c1ec248188e42ee750c0c8a03fa9cbe489c",
       "category": "rendered-public-document",
       "source": "docs/22-PLANO-CONTINUIDADE.md",
       "sourceSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/22-PLANO-CONTINUIDADE.md",
@@ -1050,13 +1078,14 @@
     },
     {
       "path": "docs/23-IDENTIDADE-VISUAL.html",
-      "bytes": 12789,
-      "sha256": "18c205c52282f069f1eb9b6e2194b7f81a748b51eeac587628202b6d9025cfaa",
+      "bytes": 12921,
+      "sha256": "db624da36dfcd4f09e461c4596c7fb55b785b9fae779ccd8323e9eb92a3d727f",
       "category": "rendered-public-document",
       "source": "docs/23-IDENTIDADE-VISUAL.md",
       "sourceSha256": "a9cf6f8c2b212a7bdaa3829b412e223fdf6f9c04897b77b958806a72e777e9ec",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/23-IDENTIDADE-VISUAL.md",
@@ -1069,13 +1098,14 @@
     },
     {
       "path": "docs/24-OPORTUNIDADES-ESTUDOS.html",
-      "bytes": 18709,
-      "sha256": "f9414e638fff27a3ae3fab742e1698db61de8b08dc7dbbc246b166a48d920fb1",
+      "bytes": 18841,
+      "sha256": "0958b64b13a9d53f9d7763140f42c09d178f8e30e3605c87bdd1c6deb532e218",
       "category": "rendered-public-document",
       "source": "docs/24-OPORTUNIDADES-ESTUDOS.md",
       "sourceSha256": "7ff28fd98e7552f35747ed6bae2fbe1ab0519082cd0773ed9d68a6912859da98",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/24-OPORTUNIDADES-ESTUDOS.md",
@@ -1088,13 +1118,14 @@
     },
     {
       "path": "docs/25-HANDOFF-DOIS-DEVS.html",
-      "bytes": 37864,
-      "sha256": "3b0d7c4a5e17603a3af9c430d2f531b00b3bdd6b7af73bd3096c19453b7ee3a2",
+      "bytes": 37996,
+      "sha256": "d08eba8c53238e3d5470ad60b3b82a2f89281c1dd9ed63591874576b7baf7862",
       "category": "rendered-public-document",
       "source": "docs/25-HANDOFF-DOIS-DEVS.md",
       "sourceSha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/25-HANDOFF-DOIS-DEVS.md",
@@ -1107,13 +1138,14 @@
     },
     {
       "path": "docs/26-TIPOGRAFIA.html",
-      "bytes": 8741,
-      "sha256": "7715b3a3cd7b79b650e79d868b86e4077e5748a7506cc71218641e51f4729a4f",
+      "bytes": 8873,
+      "sha256": "456a23e90f06b6e1e6d0982557490d1fc56bcb0602a83648f5b60ff2bda61975",
       "category": "rendered-public-document",
       "source": "docs/26-TIPOGRAFIA.md",
       "sourceSha256": "12578e565405f28b081e5f377df6e497d575439150929b5138d753ba1d4f1bb1",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/26-TIPOGRAFIA.md",
@@ -1126,13 +1158,14 @@
     },
     {
       "path": "docs/27-ACERVO-VISUAL-NASA.html",
-      "bytes": 12305,
-      "sha256": "f2fcac33b1f7d12512a3d8deda1380099b69b5cd7ddb54d2dddb8003c89cd86b",
+      "bytes": 12437,
+      "sha256": "5c3e437ea7d2019eab6677ffc80bc120e14c596b124da6f61f9eda428921d016",
       "category": "rendered-public-document",
       "source": "docs/27-ACERVO-VISUAL-NASA.md",
       "sourceSha256": "b3f37533cf86510ab15756470875d3c9b4ead070576347362dd353494df1ea4e",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/27-ACERVO-VISUAL-NASA.md",
@@ -1145,13 +1178,14 @@
     },
     {
       "path": "docs/28-OPORTUNIDADES-NASA-3D.html",
-      "bytes": 17575,
-      "sha256": "4bc2069f70c586d5dd4ab418380d61c4a1b5882acf0444919c3eb17b90dd617c",
+      "bytes": 17707,
+      "sha256": "c0d9a7aa4cbeb3a00c3aed09af9f6d7cfd3f319a2893b9ad7ebea5d6500ddab2",
       "category": "rendered-public-document",
       "source": "docs/28-OPORTUNIDADES-NASA-3D.md",
       "sourceSha256": "96f0114d470b17ec2dc9bf3fcc0a70417f9a022585609c22cf12ebb719481bf2",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/28-OPORTUNIDADES-NASA-3D.md",
@@ -1164,13 +1198,14 @@
     },
     {
       "path": "docs/29-GAME-DESIGN-3D.html",
-      "bytes": 26023,
-      "sha256": "5687413fa948cd176ae1a34976ee05fdfb6e5b30d30c3b5974ae6ea38d6db9a4",
+      "bytes": 26155,
+      "sha256": "47a0116c536aece08676a1cde2856cb365a40a8728c240e3cd7d2f1e6bcc6f91",
       "category": "rendered-public-document",
       "source": "docs/29-GAME-DESIGN-3D.md",
       "sourceSha256": "40e098afe8bb369faad18fe57ff3e45659aa23b84d358054b192322c39292246",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/29-GAME-DESIGN-3D.md",
@@ -1183,13 +1218,14 @@
     },
     {
       "path": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.html",
-      "bytes": 16084,
-      "sha256": "3a1c44db0ef4287762ec59728130b97ff357ddfa16819c4b4c380ea8943e46fe",
+      "bytes": 16216,
+      "sha256": "366aeda5f818e7d7d356ca45138b509bfed954cef8b8777d51c8b2d58a31f4ec",
       "category": "rendered-public-document",
       "source": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
       "sourceSha256": "e5102bb87323e3a02602dba33a574ea6b245076e8564e3bad632ad33a0b45250",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
@@ -1202,13 +1238,14 @@
     },
     {
       "path": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.html",
-      "bytes": 27016,
-      "sha256": "2f4c644b879eba7e06c36640b8df8ac8f774d0d7dafadcfe95fd3dd67fb222cf",
+      "bytes": 27148,
+      "sha256": "cd6767f99b5ece232bc54ccf5271c1acf69f71524b39e484cb068524c8cc5e1a",
       "category": "rendered-public-document",
       "source": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
       "sourceSha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/31-TRES-MISSOES-CIENTIFICAS-R14.md",
@@ -1221,13 +1258,14 @@
     },
     {
       "path": "docs/32-CAMPANHA-QUATRO-NIVEIS.html",
-      "bytes": 6982,
-      "sha256": "e9a807e66a4d6aa005c5483ece3d8bd27804ca5037875269b226374a83ca9863",
+      "bytes": 7114,
+      "sha256": "7eb507e707cb2f7daa5257fa5d9e81b3caa17ad059573346b8c6890ef307ec5b",
       "category": "rendered-public-document",
       "source": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
       "sourceSha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/32-CAMPANHA-QUATRO-NIVEIS.md",
@@ -1240,13 +1278,14 @@
     },
     {
       "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
-      "bytes": 49252,
-      "sha256": "930fd6c5967946cff4c7bcf6f8d71ec05a105a2be99fe9d7a70deec0d6411720",
+      "bytes": 49384,
+      "sha256": "4e7ec7c780d4551e32667033795642766c7d6db000e0f0721ddb2428f8eec6f5",
       "category": "rendered-public-document",
       "source": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
       "sourceSha256": "db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
@@ -1259,13 +1298,14 @@
     },
     {
       "path": "docs/33-OPORTUNIDADES-NASA-SCIENCE.html",
-      "bytes": 18420,
-      "sha256": "121a464a923d40de64c66536c276e1ffd65db25fc3d86d9642609cc64fac5426",
+      "bytes": 18552,
+      "sha256": "480da10136a93b23346865b630fd460325d93bdb16b237d318caeedf17417d90",
       "category": "rendered-public-document",
       "source": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
       "sourceSha256": "dc1a2ad060017f33fa693d47018b39dcb32b4996e2cab51ba581e5adce6054fe",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
@@ -1278,13 +1318,14 @@
     },
     {
       "path": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
-      "bytes": 14928,
-      "sha256": "3af8cbf442c4b151ff46b86c3a17226f68fffd52911a7ecd74891412452f60b4",
+      "bytes": 15060,
+      "sha256": "b18aea77c12e1bdf69f19592fa241f7f02c58ccad36e2863928f74a0de6deb8e",
       "category": "rendered-public-document",
       "source": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
       "sourceSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
@@ -1297,13 +1338,14 @@
     },
     {
       "path": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
-      "bytes": 18268,
-      "sha256": "2731f8475c833c8ef6c01e1cc49175a2c422f07ac29891654c08424d2603a187",
+      "bytes": 18400,
+      "sha256": "bf83a4bd5ed66bfdf0a833aa576cf855df7d8a38c9c0df0dc2dfafa701f9934b",
       "category": "rendered-public-document",
       "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
       "sourceSha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
@@ -1316,13 +1358,14 @@
     },
     {
       "path": "docs/36-PORTAL-PLANET-JUMPING.html",
-      "bytes": 14469,
-      "sha256": "44fc3a8262acf86c602afbfd51c96b487089598493ab2071847487fa79d09f5d",
+      "bytes": 14601,
+      "sha256": "ed52feff06dd866668c00cac37b3d23e751554e6237ae907c62764ebb62671f9",
       "category": "rendered-public-document",
       "source": "docs/36-PORTAL-PLANET-JUMPING.md",
       "sourceSha256": "a5349fdae2cc2f4ea29f0092d4099c314e871ee1815e44498726712547385165",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/36-PORTAL-PLANET-JUMPING.md",
@@ -1335,13 +1378,14 @@
     },
     {
       "path": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
-      "bytes": 34281,
-      "sha256": "505299c3e9427fa796b19a7b9ec5be8e5fefda2acd96ba1ad0fcea8d8fb50fe6",
+      "bytes": 34413,
+      "sha256": "914bb0edabe212e4ad7e983990f8e828197120a8bce9863787b1544103a401a1",
       "category": "rendered-public-document",
       "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
       "sourceSha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
@@ -1354,13 +1398,14 @@
     },
     {
       "path": "docs/38-HANDOFF-R16.html",
-      "bytes": 11948,
-      "sha256": "6508d1ca359ec274581a4b0ac11a4edc15d3a66645e84ddb5e3c41c9ba989c48",
+      "bytes": 12080,
+      "sha256": "49400d8fc0be806bd6910ad0948e4cc5b7e12973b61d8d193f62862d917056d2",
       "category": "rendered-public-document",
       "source": "docs/38-HANDOFF-R16.md",
       "sourceSha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/38-HANDOFF-R16.md",
@@ -1373,13 +1418,14 @@
     },
     {
       "path": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
-      "bytes": 12122,
-      "sha256": "04d653fd2d5cfd27ba1991a2d41d2be5aeefb766f57a903bb5b6b92dde6ec64c",
+      "bytes": 12254,
+      "sha256": "0fb87fe87ea66a773d5c067c6e80c786fcbf9be3887a27aeebb04126ac05a5ad",
       "category": "rendered-public-document",
       "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
       "sourceSha256": "7366c45b792fecea48bd7d4bfef5b7f706b7c4e5b0d7608764105a1f4e1ce57d",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
@@ -1392,13 +1438,14 @@
     },
     {
       "path": "docs/40-IDENTIDADE-MISSAO-IPE-R17.html",
-      "bytes": 11797,
-      "sha256": "32547bbc55e6824abfab6d19844dd5b17dd2d8fcfa5311263413bb2f0a1fdcd5",
+      "bytes": 11929,
+      "sha256": "1af02050da77d922073dea618bb0ae9e6f119b1e0e8d09702be79c557a540cfb",
       "category": "rendered-public-document",
       "source": "docs/40-IDENTIDADE-MISSAO-IPE-R17.md",
       "sourceSha256": "5ab280ffe70ff7366083cf2dfdc238dccded71c4f13b026d65f849d116c3130f",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/40-IDENTIDADE-MISSAO-IPE-R17.md",
@@ -1411,13 +1458,14 @@
     },
     {
       "path": "docs/41-CONSOLIDACAO-REPOSITORIOS-R17.html",
-      "bytes": 18587,
-      "sha256": "aac15cd2727b30fa410593411d1c0bf197759a105d0eb4dc4e5b85be0e80dd8d",
+      "bytes": 18719,
+      "sha256": "e5eaf2371c659c69e4bd72bec2ac744e2ee2ee1573014cdd5fdb5592bfa94cc5",
       "category": "rendered-public-document",
       "source": "docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md",
       "sourceSha256": "6b63590d59b7131ad941ecc8014c639e66ba35fd11ee3e55ad15ef9c9860bf03",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md",
@@ -1430,13 +1478,14 @@
     },
     {
       "path": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html",
-      "bytes": 20903,
-      "sha256": "8a2b5c463eac336a53d7cee179cf0535e6d0ba81f84f5e7176ac687bc9119347",
+      "bytes": 21035,
+      "sha256": "eaaada2465da839796082c1c8f0858968a186407590e57995aa093933520d761",
       "category": "rendered-public-document",
       "source": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md",
       "sourceSha256": "d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md",
@@ -1449,13 +1498,14 @@
     },
     {
       "path": "docs/43-HANDOFF-GERAL-R17.html",
-      "bytes": 14868,
-      "sha256": "4f962e2528a958338483b169cfa55f2eee91d388572030a7155e056620afa2f6",
+      "bytes": 15000,
+      "sha256": "1be6c40ed0c12029f742602f3af338aa921e67e558039116a2ec4690c39ffbf3",
       "category": "rendered-public-document",
       "source": "docs/43-HANDOFF-GERAL-R17.md",
       "sourceSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/43-HANDOFF-GERAL-R17.md",
@@ -1468,13 +1518,14 @@
     },
     {
       "path": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html",
-      "bytes": 10917,
-      "sha256": "f2fdd8dedb7c9c2468a4b732dad6e56e33cf8af5bd137a287609b30fd0eaead5",
+      "bytes": 11049,
+      "sha256": "69ab4a597326a3b68e5c161c4486033f29d03b2502370b5b4ca67d7c65bed319",
       "category": "rendered-public-document",
       "source": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
       "sourceSha256": "6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
@@ -1487,13 +1538,14 @@
     },
     {
       "path": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.html",
-      "bytes": 12836,
-      "sha256": "5f736937f66c7601414500838ce3e63484ef36290fb9dae34e16f306a6c6202b",
+      "bytes": 12968,
+      "sha256": "ddf1ea5930132b827626c9b2b1116bae12125cc130871d04cd5f72fbf1be1e72",
       "category": "rendered-public-document",
       "source": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
       "sourceSha256": "8c0b3ac6e9d469a81a82b17aef5a27b8a93c5bf4895f5e6fa07265c295d10032",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
@@ -1506,13 +1558,14 @@
     },
     {
       "path": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
-      "bytes": 14626,
-      "sha256": "6fd39d0b01830d0090b9890ebe4460b9250548cc915731005313b0455f5b32dd",
+      "bytes": 14758,
+      "sha256": "a946ed3189ac6b57a123437d4d1d4637c8ee3dfffc131c86b96c345fa4fab99f",
       "category": "rendered-public-document",
       "source": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
       "sourceSha256": "f8e293499e448009c5a1e603aceaee79c233d4419dca9725f30f8883e1c3e747",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
@@ -1525,13 +1578,14 @@
     },
     {
       "path": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
-      "bytes": 26820,
-      "sha256": "02e2a414c15d0f469b9dbd2e4c29ea321eda0633fb8b62f890842685ccdd1254",
+      "bytes": 26952,
+      "sha256": "42ac45d5d999211a7d7b08933037fb77f4db5ff61ab4399e0d175984395389d9",
       "category": "rendered-public-document",
       "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
       "sourceSha256": "3b493b79711edaf2a2dcbd01d4dd4b72135f2bce5f6e71d061a4979a10e93a49",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
@@ -1544,13 +1598,14 @@
     },
     {
       "path": "docs/48-HANDOFF-DOIS-DEVS-R19.html",
-      "bytes": 12609,
-      "sha256": "7e2a1cb5c217e0087359f050d339edbc8d25644bf724c687fccef6e50bb25452",
+      "bytes": 12741,
+      "sha256": "18c22f294af5b161f32145fc9506ef22c0ea242cae9e7f63498815fa6e878cb6",
       "category": "rendered-public-document",
       "source": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
       "sourceSha256": "2d28b1eaac061f1e4556a62ab28ba1b23d55fb8d3e068ff119d655b30fc47f12",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/48-HANDOFF-DOIS-DEVS-R19.md",
@@ -1563,13 +1618,14 @@
     },
     {
       "path": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html",
-      "bytes": 7097,
-      "sha256": "5a8b037922afb2ba7c42b60db256c1bde83e8fbcba0ea57451e442c4f81b83bc",
+      "bytes": 7229,
+      "sha256": "1de5b5abac0f86879dd049c6e54fdac29e3dcad185e4f189634d1ea8a5de68e8",
       "category": "rendered-public-document",
       "source": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md",
       "sourceSha256": "36b3eda7418571854996b75f0ae69d39ce337ec263570116f47460aaee724eee",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md",
@@ -1582,13 +1638,14 @@
     },
     {
       "path": "docs/50-LP-E-404-R19.html",
-      "bytes": 5800,
-      "sha256": "01e2f15f3d8f37c84d8228ba7df6d7a08e5243fd85cf522002b342ff293d82f6",
+      "bytes": 5932,
+      "sha256": "c10c7f19608443fa9499f70e3c439627879ef31e7eaebe35d8f1b8cbadb2332b",
       "category": "rendered-public-document",
       "source": "docs/50-LP-E-404-R19.md",
       "sourceSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/50-LP-E-404-R19.md",
@@ -1601,13 +1658,14 @@
     },
     {
       "path": "docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
-      "bytes": 14719,
-      "sha256": "01984bcfcd5c3d6e82810eb20631dad657adc123b6509d43f65b99ffa5a189c9",
+      "bytes": 14851,
+      "sha256": "75f75f971432f74f87e2fef8835513f78f102e7331043953e76ec41e3bf4820d",
       "category": "rendered-public-document",
       "source": "docs/51-QA-INICIANTE-E-HANDOFF-R20.md",
       "sourceSha256": "8a75a43c111d4716c77a40b91b53cb914f888f441aaddd94c92a1d86d8040b10",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/51-QA-INICIANTE-E-HANDOFF-R20.md",
@@ -1620,13 +1678,14 @@
     },
     {
       "path": "docs/52-PITCH-ALEXANDRE-BELO-R20.html",
-      "bytes": 14848,
-      "sha256": "24be3933dd096b988d89a8c0c488ea443435939961d1d01d025de3df362adcfd",
+      "bytes": 14980,
+      "sha256": "c22919a27ad6fef04ef15779be3889505bd0ede0da070a7f16479857fb9b6cb1",
       "category": "rendered-public-document",
       "source": "docs/52-PITCH-ALEXANDRE-BELO-R20.md",
       "sourceSha256": "8342e86dc299ba93c2e460c67eec27e8bcd7be09370d0b6c695a151594e86043",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/52-PITCH-ALEXANDRE-BELO-R20.md",
@@ -1639,13 +1698,14 @@
     },
     {
       "path": "docs/53-PITCH-JURADOS-E-FALA-R21.html",
-      "bytes": 14290,
-      "sha256": "8f7e76c937101d250174e5838f84a059f54273081896eb3ca11e7b2d05b2caf3",
+      "bytes": 14422,
+      "sha256": "016b0f1883ee9372911cf5e199d5da3d5b3ed8098fb780e0488afb4213d3bbcb",
       "category": "rendered-public-document",
       "source": "docs/53-PITCH-JURADOS-E-FALA-R21.md",
       "sourceSha256": "2a51d0bef6f6ea248b90a769eace7710e0474f7ace2faf6146eb3bcadc22619a",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/53-PITCH-JURADOS-E-FALA-R21.md",
@@ -1658,13 +1718,14 @@
     },
     {
       "path": "docs/54-METRICAS-E-HANDOFF-R21.html",
-      "bytes": 19885,
-      "sha256": "207adc36d285666511d76b78e73e8be02683343f4a74618648624b99c8363628",
+      "bytes": 20017,
+      "sha256": "48f5efc597d2f78bcf9858622219c48935e53f79e4f8df3c31f991c366cf38ed",
       "category": "rendered-public-document",
       "source": "docs/54-METRICAS-E-HANDOFF-R21.md",
       "sourceSha256": "a52c0fa13484e0ecbc806df0bec670abcfa4d40b107fb1d5faf6cc1f21cc4bcd",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/54-METRICAS-E-HANDOFF-R21.md",
@@ -1677,13 +1738,14 @@
     },
     {
       "path": "docs/55-PAINEL-E-ACESSOS-R21.html",
-      "bytes": 6392,
-      "sha256": "7aee200a074cfcb2197489ecdacc4652ec4d53fee9296b354349cb0d7936c8ee",
+      "bytes": 6524,
+      "sha256": "ec9af50e05383bbeb4de8ead1b5f1f2de7c486c84deb19d7eb39a4ad1b58cb70",
       "category": "rendered-public-document",
       "source": "docs/55-PAINEL-E-ACESSOS-R21.md",
       "sourceSha256": "0de41094770f0d0a8ec9f68a091772d7eba5a62bec0ebfa686c5582b3e3bcf55",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/55-PAINEL-E-ACESSOS-R21.md",
@@ -1696,13 +1758,14 @@
     },
     {
       "path": "docs/56-ACESSIBILIDADE-E-LIBRAS-R21.html",
-      "bytes": 7038,
-      "sha256": "5593aaace6d700d6559b489319f49b5c32493ba5bd06e9cc98ebb749ead323b0",
+      "bytes": 7170,
+      "sha256": "38f34bcac4b60c931dfa549382a27b98dc56fc3f3426a8458324d4a987066a34",
       "category": "rendered-public-document",
       "source": "docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md",
       "sourceSha256": "bc8d327cdff484e56a70df1cc038a5c6ef1d165e617a34e8336015ccb3f8a70c",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md",
@@ -1715,13 +1778,14 @@
     },
     {
       "path": "docs/57-KIT-PRE-BANCA-R21.html",
-      "bytes": 10661,
-      "sha256": "9cb1cd4bddd9f11c08b2b41fcad668e7d4719c7cd6ec6522ae2bcb038498367c",
+      "bytes": 10793,
+      "sha256": "837a82a51f31a3ba89560937c790af676107df1bded5ee6e5b1d2d91f689b8c9",
       "category": "rendered-public-document",
       "source": "docs/57-KIT-PRE-BANCA-R21.md",
       "sourceSha256": "84e42892092faffc3fe9fd45df5e0138cabce24deb4e273690f1c4a35a04f054",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/57-KIT-PRE-BANCA-R21.md",
@@ -1734,13 +1798,14 @@
     },
     {
       "path": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
-      "bytes": 12622,
-      "sha256": "c4e4d1a49089242a89673cddabfc611493e0545b7201e163038665b80adebe83",
+      "bytes": 12754,
+      "sha256": "59de7a4dde09da8b9d7ddd44e1d91dc4a277073d25f5205fb4023b21a0ba84cc",
       "category": "rendered-public-document",
       "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
       "sourceSha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
@@ -1753,13 +1818,14 @@
     },
     {
       "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
-      "bytes": 7434,
-      "sha256": "cf4292fc3b996fea812cc26306b9f9f8e8c0ab1c2c0bf64c44a2e6209ff7e95f",
+      "bytes": 7566,
+      "sha256": "0b0e10cea970f5c748732bb77e882f8b24a312ca085e2583290420273dacc1b9",
       "category": "rendered-public-document",
       "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
       "sourceSha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
@@ -1772,13 +1838,14 @@
     },
     {
       "path": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.html",
-      "bytes": 14634,
-      "sha256": "f7acb68706a24d9aba4ec18eeada2c0a9ce062dc37d1dc8f68822a526de92019",
+      "bytes": 14766,
+      "sha256": "af796e77640e10433c3f33e58d50505ded3f259bc4a4021e0274d5ae76e7348d",
       "category": "rendered-public-document",
       "source": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
       "sourceSha256": "623eeb98d5b58a1dbece334f5b2953d810eb8f9fc0284710ed4c4293f7368f9a",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md",
@@ -1790,14 +1857,55 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html",
+      "bytes": 17634,
+      "sha256": "0377f4aa4defc575bc630c8a4d82e877c5c16c31a513312ac2dc7b448af94002",
+      "category": "rendered-public-document",
+      "source": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
+      "sourceSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
+      "bytes": 13498,
+      "sha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "category": "public-document",
+      "source": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
+      "sourceSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "docs/62-DOMINIO-E-CLOUDFLARE-R23.html",
+      "bytes": 12038,
+      "sha256": "1bc5d25decb39b984c72c59fe4624619faa5e78ee77cc433c6caf71972045558",
+      "category": "rendered-public-document",
+      "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
+      "sourceSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
+      "bytes": 8514,
+      "sha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "category": "public-document",
+      "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
+      "sourceSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "docs/AUTORIA-E-IA.html",
-      "bytes": 3644,
-      "sha256": "9fac34f5accfe0b399e9d0c20d7959d6b65b19c629455e0f3816c3c5edf74e50",
+      "bytes": 3776,
+      "sha256": "b44729c69624776016149d84882b1a711f963874d71739d2445b190ffbdda55f",
       "category": "rendered-public-document",
       "source": "web/public-docs/AUTORIA-E-IA.md",
       "sourceSha256": "cef1956c02be9939ec102d4931e15f8dfdca45df11bd6de2f93a5d4984927e8b",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/AUTORIA-E-IA.md",
@@ -1810,13 +1918,14 @@
     },
     {
       "path": "docs/COMO-USAR.html",
-      "bytes": 7067,
-      "sha256": "e6710c57e2f2431fced41db85e3fcd78dc8f83af8c0dfb1b3f1b0d9491970787",
+      "bytes": 7199,
+      "sha256": "21d42de3b6b47a809e890f84271439ddc3fc6b538fabf5d93ef647fc266d4b26",
       "category": "rendered-public-document",
       "source": "web/public-docs/COMO-USAR.md",
       "sourceSha256": "4cfbb0e3628fa54d1def900b2798a9ea06410545fa966ce2e8e56289fca9ffd9",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/COMO-USAR.md",
@@ -1829,13 +1938,14 @@
     },
     {
       "path": "docs/ESTADO-PUBLICO.html",
-      "bytes": 8194,
-      "sha256": "d64bbdd90d860dd42c2af6558ab8524d6f04a0aee9880449c764b6f756c583c7",
+      "bytes": 8326,
+      "sha256": "37acfe73a339ff50150dd58e04967694f06248d4a5b04224fdeeb304639d3f5b",
       "category": "rendered-public-document",
       "source": "web/public-docs/ESTADO-PUBLICO.md",
       "sourceSha256": "566a632947dcfb436bba5ac3e023529d11d25c7f879188f2aa6f9fe7a285fda0",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/ESTADO-PUBLICO.md",
@@ -1848,22 +1958,24 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 18395,
-      "sha256": "a461c2bf350e134b3ad117ce217f0dd993b1c50de3a7f5c39b5b4b5810530aa5",
+      "bytes": 19138,
+      "sha256": "3ceca6c39d7c315506d1062bd9201ae12c4882e94a52d5654251064e6b9c9f3c",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
-      "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/MOTION-OPORTUNIDADES-R18.html",
-      "bytes": 11430,
-      "sha256": "c119864e2bb462e401b1088d3b94a99456448153c58f4ceb823f1f01e4897527",
+      "bytes": 11562,
+      "sha256": "de4380e83e9389633908e84c8a0bd286cc2cf41ce5c52e1a5b218f2f2f096edb",
       "category": "rendered-public-document",
       "source": "research/motion-opportunities-r18.md",
       "sourceSha256": "f67ff8c7ddeacdef661817519a5f29897ddfb4330c33eba77328e0cc337f9d4c",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/MOTION-OPORTUNIDADES-R18.md",
@@ -1876,13 +1988,14 @@
     },
     {
       "path": "docs/ORIGEM-DOS-DADOS.html",
-      "bytes": 4933,
-      "sha256": "a82704db1abafba7865e0e4f1a06696945fa80be4d7f2c9de1ae11b6ce6cb355",
+      "bytes": 5065,
+      "sha256": "752c7ebc26638d15543127803aab9b8b410dfa6db3776b0c4f7629d212a1b1f2",
       "category": "rendered-public-document",
       "source": "web/public-docs/ORIGEM-DOS-DADOS.md",
       "sourceSha256": "61f51b228877b740f17314a8596a82a767d275ffc2f31771ae730485657c2b76",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/ORIGEM-DOS-DADOS.md",
@@ -2049,13 +2162,14 @@
     },
     {
       "path": "game-design.html",
-      "bytes": 20090,
-      "sha256": "1a7f6d35b8a830f01844ee3de439225537ed5e7d500c13577de9963d40846ffc",
+      "bytes": 20140,
+      "sha256": "c033336038f842fbb2d0a44a25c98d87e54006f1746c492142c8458357b7b329",
       "category": "interactive-game-design-study",
       "source": "web/game-design.html",
       "sourceSha256": "36b5f0e885331d6ce80ae75a705a91841dcd464b678f3c1b37229db73590e398",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "game-design.js",
@@ -2203,23 +2317,25 @@
     },
     {
       "path": "game/index.html",
-      "bytes": 1064,
-      "sha256": "85cf78d7b366d3a46044fbef666f6db9cbea9ea25060839f4d500d927b0a5d21",
+      "bytes": 1114,
+      "sha256": "be8b4040cd1814b035977da27e1cc7d1840b682dcbe53c8f7ad024f707c550d9",
       "category": "game-runtime",
       "source": "dist/index.html",
       "sourceSha256": "04a1b45152508a21937565f65872c682766c122576e26fe61b5f05bd16d04509",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "index.html",
-      "bytes": 59666,
-      "sha256": "8bb3a8bd29f9156ccc16019e72dc24ea2c34d40f7aba2c9526e358a33acc05a8",
+      "bytes": 59744,
+      "sha256": "8614d1e9d7f9ad58eaeed1d970c2c008d42e9afca9fdf4e94984e0b0ca2d253c",
       "category": "public-portal",
       "source": "web/index.html",
-      "sourceSha256": "8849392ecef5fb2ace76f2aaf0fdea6c7006ec218343b80fe383812d5d17f924",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "sourceSha256": "90016c67b3b7448833e73d88f58da07a55c21cd98b0caa531398cf7678e29384",
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/assets/draco_decoder-C32yEggz.wasm",
@@ -2267,21 +2383,21 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-BByYZSek.js",
-      "bytes": 586693,
-      "sha256": "31c13a44fa556ec63c6a4025aff82af40b5dc53a07e4bb90cec62de6b18b7750",
+      "path": "lab/assets/index-BUYTxSr5.css",
+      "bytes": 197479,
+      "sha256": "c11406f298ebf66555c6894bb3986906f3eff36118bb934eb0f94305b7651af3",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-BByYZSek.js",
-      "sourceSha256": "31c13a44fa556ec63c6a4025aff82af40b5dc53a07e4bb90cec62de6b18b7750",
+      "source": "experiments/mission-design-lab/dist/assets/index-BUYTxSr5.css",
+      "sourceSha256": "c11406f298ebf66555c6894bb3986906f3eff36118bb934eb0f94305b7651af3",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-Bx40Y4-e.css",
-      "bytes": 185743,
-      "sha256": "fe934b7b735a0f41c8e4c01d3ae372de38e5e518055f6652e187da7954592486",
+      "path": "lab/assets/index-kp27FpaS.js",
+      "bytes": 612861,
+      "sha256": "354de06b739d5e218cf8c374234b98888d6ac93333442b4c0987a74be8a302a2",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-Bx40Y4-e.css",
-      "sourceSha256": "fe934b7b735a0f41c8e4c01d3ae372de38e5e518055f6652e187da7954592486",
+      "source": "experiments/mission-design-lab/dist/assets/index-kp27FpaS.js",
+      "sourceSha256": "354de06b739d5e218cf8c374234b98888d6ac93333442b4c0987a74be8a302a2",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2294,30 +2410,30 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/NASAReferenceScene-vZ22jVGi.js",
-      "bytes": 7115,
-      "sha256": "13706ae0a75fab7dc8305402d40408c328a1b0ab69477fb218436b0977f61fb3",
+      "path": "lab/assets/NASAReferenceScene-Bmp7XhAy.js",
+      "bytes": 7110,
+      "sha256": "2c6121111f83c22edb75d5dce9944e6a28a3c25cb8b2b467cd6c8d9c0567948e",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-vZ22jVGi.js",
-      "sourceSha256": "13706ae0a75fab7dc8305402d40408c328a1b0ab69477fb218436b0977f61fb3",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Bmp7XhAy.js",
+      "sourceSha256": "2c6121111f83c22edb75d5dce9944e6a28a3c25cb8b2b467cd6c8d9c0567948e",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/OrbitalScene-eb2WfDfo.js",
-      "bytes": 1018114,
-      "sha256": "d236300e94396750c2953bab9cd1dbebfd0d9c71e911c7d4019e7247670bda56",
+      "path": "lab/assets/OrbitalScene-CmqdAmVd.js",
+      "bytes": 1019166,
+      "sha256": "f704797881a606badd1a242add0ab1ce2a97c98baf07c9c156002b211c39bf3e",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-eb2WfDfo.js",
-      "sourceSha256": "d236300e94396750c2953bab9cd1dbebfd0d9c71e911c7d4019e7247670bda56",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-CmqdAmVd.js",
+      "sourceSha256": "f704797881a606badd1a242add0ab1ce2a97c98baf07c9c156002b211c39bf3e",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/search-Rhta8lDI.js",
+      "path": "lab/assets/search-DnfBwmX4.js",
       "bytes": 1247,
-      "sha256": "0d47429c8fdfa333136214326fbf8d63eb6f95655033850c487119970f734ffd",
+      "sha256": "8b9d8d734bf87ae1536cfd70c7b491c6c88811e7517977f5dc610bc4c13dc155",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/search-Rhta8lDI.js",
-      "sourceSha256": "0d47429c8fdfa333136214326fbf8d63eb6f95655033850c487119970f734ffd",
+      "source": "experiments/mission-design-lab/dist/assets/search-DnfBwmX4.js",
+      "sourceSha256": "8b9d8d734bf87ae1536cfd70c7b491c6c88811e7517977f5dc610bc4c13dc155",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2475,33 +2591,36 @@
     },
     {
       "path": "lab/brand/preview-r14.html",
-      "bytes": 2925,
-      "sha256": "b92572a1587a2a984fdff5b736883344b16ed49280b0720a7eeb2e0ab71b37c7",
+      "bytes": 2975,
+      "sha256": "f0e3fa476e11f0e3f53ea7e880ff45739dea9841e98a8331c57b95f88d83be50",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/brand/preview-r14.html",
       "sourceSha256": "c201c80d565dd786cded376d6501b2f14ca9f27940261a4c7524412f439013eb",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/brand/preview-r17.html",
-      "bytes": 5055,
-      "sha256": "bd2789aa242e4ad004f11877ca8dafe53764c2165cac2a9a17a77756f94f2a68",
+      "bytes": 5105,
+      "sha256": "326ca4fdfcaa58d25054e32dcd59e14aa5832056421a2aabca50821d717176c7",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/brand/preview-r17.html",
       "sourceSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/brand/preview-r22.html",
-      "bytes": 5995,
-      "sha256": "981380917ce3c35585e47be2dfc22c33cde76020fa24d4a8bbe5c919c9ae9663",
+      "bytes": 6045,
+      "sha256": "f1bcfb6ec2b59bafedd43f98a5f991bd0e697258353b382135ad602ef5c97f5e",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/brand/preview-r22.html",
       "sourceSha256": "2ac178e50144b64b08db961b0bc9aba58f8534549e7436870eb56fb91be930e3",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/brand/projeto-ipe-logo-on-light.svg",
@@ -2748,13 +2867,14 @@
     },
     {
       "path": "lab/index.html",
-      "bytes": 1232,
-      "sha256": "a50af5492200035e4524fe5dba90c3a0602d86a2880742f7ab0740fce6306616",
+      "bytes": 1274,
+      "sha256": "470100643b24bc193360e7a19c707dfaa69625c8275c3e896508a99e6082ebc4",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/index.html",
-      "sourceSha256": "9021a4d51f4a6d0efdccd07782beb2d0699c49f36b576d8898d8b2559997e2ea",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "lab"
+      "sourceSha256": "041d16e46e62313ea4b1a85ea14d1407d85551a629941440379bc8ddc93d536d",
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "lab",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -2920,23 +3040,25 @@
     },
     {
       "path": "lab/research/galeria.html",
-      "bytes": 12386,
-      "sha256": "9828ee198b2329e32aab8e32482e0a578246b7305140ee981cfb2e335f88d1ac",
+      "bytes": 12436,
+      "sha256": "5cf8b4c43f13c4db02f9b55b72c71aa2a66648f6dc807da5058eeb71b11d1024",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/research/galeria.html",
       "sourceSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/research/index.html",
-      "bytes": 314789,
-      "sha256": "cd051de6987e767b5793a93e5a9bc7523e0b3b29d11edc50744e92a2acce08e0",
+      "bytes": 314839,
+      "sha256": "1169eeb9b8139d1831dfb63343c3fd7704c5c7377a194f30dcad26c5ade6b2f7",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/research/index.html",
       "sourceSha256": "e1b396b664e91149c305c120f238ac3f26b3a8dd9998a8dcedab7223a1629029",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/research/manifest.json",
@@ -3185,13 +3307,14 @@
     },
     {
       "path": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
-      "bytes": 475745,
-      "sha256": "25d21093824e5d6ca099a942bbcc204262f8c17d5179b4dcf1cb59a4205b401b",
+      "bytes": 475857,
+      "sha256": "63e3d1d94cd62f3790adb8ff11f412f89a9d07bbad1646858a9a1f09356704e7",
       "category": "historical-base-R4-reviewed",
       "source": "output/html/AB_Missao_Ipe_Estudo_Integral.html",
       "sourceSha256": "0fe60a4a19e09917af8ddc6b066c7efe568edefbb91bbc3cfa8b24d3c76669ba",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "output/pdf/AB_Missao_Ipe_Dossie_Implementacao.pdf",
@@ -3204,43 +3327,47 @@
     },
     {
       "path": "planet-jumping.html",
-      "bytes": 42007,
-      "sha256": "be9fda2642ef8688baf232ba3115890dd94d6f4f0963856ca85df49f4037d581",
+      "bytes": 42057,
+      "sha256": "e2a17d05db1a1b97e0e50db1c5e9d3717693072ae558e52bf6cff87386c5fa0b",
       "category": "standalone-remote-media-experiment",
       "source": "web/planet-jumping.html",
       "sourceSha256": "b8034acdfca446959485729767ea0abddcd16527eb823ce3b58b34188b7bcac7",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "portable/Missao_Ipe_Local.html",
-      "bytes": 1008821,
-      "sha256": "70147f861b8fdc37c8a8aa51f5a6a510c34b555c35d49c8fdf95ffa1ad88aee8",
+      "bytes": 1008933,
+      "sha256": "77df374b20c008419693424876cd031c8e55f9bb9fd9823594bbb044b3563830",
       "category": "portable-game",
       "source": "portable/Missao_Ipe_Local.html",
       "sourceSha256": "466a54ac69fc1b874f34822f66eb0ce981cbe4304cf10208bcae4e74c0346eac",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "presentation/Missao_Ipe_Apresentacao.html",
-      "bytes": 140009,
-      "sha256": "61dbbf5d642e42f7185c542e2b7c96bb4814548bf48ad596c531bc426371d703",
+      "bytes": 140121,
+      "sha256": "762d2ed8f61a513de14e6a19f869739aecb93158a462ef3b12cb19b2257ceb2e",
       "category": "presentation-runtime",
       "source": "presentation/Missao_Ipe_Apresentacao.html",
       "sourceSha256": "3fd4473614f285611edc8c75c73d7e0baa8b8ec8d4d7a9aae9490b26c9358538",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "presentation/PITCH_EN_7_SLIDES.html",
-      "bytes": 17763,
-      "sha256": "e9c0d37f22b52c3d210b38b35de0a7277a674c2705b46718837cd31f182b5357",
+      "bytes": 17895,
+      "sha256": "723592d3697ef6346fc574470c3f75eb447ab6c9fb989ca7afe3e4dd28b442b5",
       "category": "rendered-public-document",
       "source": "presentation/PITCH_EN_7_SLIDES.md",
       "sourceSha256": "7581742b1a417b8892c87da89471e85111ca6fa5ec05c479dd1dcdf829a2a155",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "presentation/PITCH_EN_7_SLIDES.md",
@@ -3451,13 +3578,14 @@
     },
     {
       "path": "presentation/pitch/index.html",
-      "bytes": 26318,
-      "sha256": "dd150f7f756b67141684ba217071b1c3c86dfb5c2231c72406dfbabcd421a6ba",
+      "bytes": 26368,
+      "sha256": "0879eaedc8445abce3d4b1f52e7f5b464cb561dcef76ea68d3864f9c845eb64c",
       "category": "interactive-pitch-runtime",
       "source": "presentation/pitch/index.html",
       "sourceSha256": "56400a0f241c325908d8f2801268c93c5038736103552af39ea0bd063b78d3dd",
-      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "presentation/pitch/pitch.css",
@@ -3479,13 +3607,14 @@
     },
     {
       "path": "presentation/README_APRESENTADOR.html",
-      "bytes": 11455,
-      "sha256": "a6821500373f78fe067d50ce97c203cc86a56ebdc12aed8371f31623b0dda66d",
+      "bytes": 11587,
+      "sha256": "93513677170a5d96e663344f6b96123158ce589fb90458b4b0263632d9674908",
       "category": "rendered-public-document",
       "source": "presentation/README_APRESENTADOR.md",
       "sourceSha256": "5638ba82176ab46c9259313d57073a5704f9150c3016160ccaa12dd2d6c19641",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "presentation/README_APRESENTADOR.md",
@@ -3498,13 +3627,14 @@
     },
     {
       "path": "presentation/ROTEIRO_PT_EN.html",
-      "bytes": 10630,
-      "sha256": "e2fca4592f2604aa03297ef6004f891e7059203f8d603d3e63988c5e26ee5b07",
+      "bytes": 10762,
+      "sha256": "44b30803ea35810c5e74b8a5185d9a34de5a27186edf8d419b1405485a19d4b8",
       "category": "rendered-public-document",
       "source": "presentation/ROTEIRO_PT_EN.md",
       "sourceSha256": "b35fcc693884a58e03be37dc70a2b1f61199ee4f806b0658561957b88d0b3dc6",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "presentation/ROTEIRO_PT_EN.md",
@@ -3643,13 +3773,14 @@
     },
     {
       "path": "research/01-regras-ciencia.html",
-      "bytes": 27988,
-      "sha256": "b3733b5ac391d4ef9559f7a8979808912a09668966a8e612990a10eb94530019",
+      "bytes": 28120,
+      "sha256": "99753c7ec833ae4e32fa3504d7b9b008f83cc52ec4aea32647a6e255c1fe9f2f",
       "category": "rendered-public-document",
       "source": "research/01-regras-ciencia.md",
       "sourceSha256": "9aab3ba8645620b85f3f60fcd7a5a532902c5875947e73c1f93d6a6bc3179a43",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "research/01-regras-ciencia.md",
@@ -3662,13 +3793,14 @@
     },
     {
       "path": "research/11-revisao-spaceapps-apresentacao.html",
-      "bytes": 19225,
-      "sha256": "f286879cf7365d5ebdfa4076789dbd5a781e843223c479c43077f4553fddf0aa",
+      "bytes": 19357,
+      "sha256": "677904901754b0a004902f4d117e4cff83bae2918816ea3be2952eb9006c3255",
       "category": "rendered-public-document",
       "source": "research/11-revisao-spaceapps-apresentacao.md",
       "sourceSha256": "3b710993ecedd23a65f6e7b83cfccfd9b1032e464a2e52c45b82abb54a40ac89",
-      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
-      "libras": "public"
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "research/11-revisao-spaceapps-apresentacao.md",

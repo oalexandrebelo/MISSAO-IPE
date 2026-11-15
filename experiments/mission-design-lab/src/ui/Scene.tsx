@@ -170,7 +170,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
   const metrics = usePlayerMetrics();
   function inspectManually(next: SpacecraftInspection) {
     if (next === 'energy' || next === 'communications' || next === 'instrument') metrics.track('inspection', world === 'earth' ? 'cerrado' : world, { target: next });
-    setInspection(next);
+    setInspection(next); setTurn(0);
   }
   const host = useRef<HTMLElement>(null);
   const [mode, setMode] = useState<'3d' | '2d'>('3d');
@@ -187,6 +187,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
 
   useEffect(() => {
     const before = previousPresentation.current;
+    setTurn(0);
     if (before.payload.id !== presentation.payload.id || before.storage.bufferBits !== presentation.storage.bufferBits) setInspection('instrument');
     else if (before.energy.panelW !== presentation.energy.panelW || before.energy.batteryWh !== presentation.energy.batteryWh) setInspection('energy');
     else if (JSON.stringify(before.communications) !== JSON.stringify(presentation.communications)) setInspection('communications');
@@ -197,7 +198,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
     const eventInspection = system === 'radio' ? 'communications' : system === 'panel' || system === 'battery' ? 'energy' : system === 'processing' || system === 'buffer' ? 'instrument' : undefined;
     const next = inspectSubsystem ?? eventInspection;
     if (next) { setInspection(next); setTurn(0); }
-  }, [inspectSubsystem, visualState?.timeS, visualState?.focusSubsystem]);
+  }, [inspectSubsystem, visualState?.timeS, visualState?.focusSubsystem, presentation.configurationKey]);
   useEffect(() => {
     if (!expanded) return;
     const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') setExpanded(false); };
@@ -225,14 +226,14 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
 
   return <section ref={host} className={`scene scene-orbit scene-${variant} ${compact ? 'scene-compact' : ''} ${recorded ? 'scene-recorded' : ''} ${configured ? 'scene-configured' : ''} ${expanded ? 'scene-expanded' : ''}`} aria-label={world === 'earth' && variant === 'hangar' ? 'Modelo visual do CubeSat' : 'Modelo visual da missão'} aria-describedby={descriptionId} data-visual-mode={checked && mode === '3d' ? '3d' : '2d'} data-mission-world={world} data-spacecraft-config={presentation.configurationKey} data-payload-id={presentation.payload.id} data-panel-w={presentation.energy.panelW} data-battery-wh={presentation.energy.batteryWh} data-radio-hardware={presentation.communications.radioHardware} data-inspection={inspection} data-exploded={exploded} data-state-time={visualState?.timeS} data-focus-subsystem={visualState?.focusSubsystem ?? undefined}>
     <div className="orbit-grid" aria-hidden="true" /><div className="orbit-corner orbit-corner-tl" aria-hidden="true" /><div className="orbit-corner orbit-corner-br" aria-hidden="true" />
-    <div className="orbit-topline"><span className="orbit-eyebrow"><i />{segment ? SEGMENT_NAMES[segment] : world === 'bennu' ? 'MISSÃO DIDÁTICA / BENNU' : world === 'telescope' ? 'OBSERVATÓRIO DIDÁTICO / REFERÊNCIA JWST' : variant === 'hangar' ? 'IPÊ–01 / SEU PROJETO' : 'MISSÃO IPÊ / TERRA'}</span><div className="orbit-display-tools">
+    <div className="orbit-topline"><span className="orbit-eyebrow"><i />{segment ? SEGMENT_NAMES[segment] : world === 'bennu' ? 'MISSÃO DIDÁTICA / BENNU' : world === 'telescope' ? 'OBSERVATÓRIO DIDÁTICO / REFERÊNCIA JWST' : variant === 'hangar' ? 'LAB–01 / SEU PROJETO' : 'MISSÃO IPÊ / TERRA'}</span><div className="orbit-display-tools">
       <button type="button" className="orbit-tool" onClick={() => setPaused(value => !value)} aria-label={recorded || segment ? 'Visualização estática do instante selecionado' : motionPaused ? 'Retomar animação ilustrativa' : 'Pausar animação ilustrativa'} aria-pressed={motionPaused} disabled={recorded || !!segment || mode === '2d' || reducedMotion} title={reducedMotion ? 'Movimento reduzido acompanha sua preferência do dispositivo' : undefined}><Icon name={motionPaused ? 'play' : 'pause'} size={13} /><span>{recorded ? 'Tempo registrado' : segment ? 'Vista estática' : motionPaused ? 'Pausada' : 'Pausar'}</span></button>
       {configured ? <button type="button" className="orbit-tool orbit-expand" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}>{expanded ? 'Reduzir cena' : 'Ampliar cena'}</button> : null}
       <button type="button" className="orbit-tool orbit-mode" onClick={() => setMode(value => value === '3d' ? '2d' : '3d')} disabled={unavailable}><Icon name="layers" size={13} /><span>{unavailable ? '2D ativo' : mode === '3d' ? 'Ver em 2D' : 'Ver em 3D'}</span></button>
     </div></div>
     <div className="orbit-render" aria-hidden="true">{checked && mode === '3d' ? <SceneBoundary fallback={fallback} onUnavailable={useFallback}><Suspense fallback={fallback}><OrbitalScene presentation={configured ? presentation : undefined} inspection={inspection} exploded={exploded} onInspect={configured ? inspectManually : undefined} focus={focus} progress={visualState?.progress ?? progress} visualState={visualState} segment={segment} world={world} scienceRecordCount={scienceRecordCount} config={config} variant={variant} animating={animating} active={active} reducedMotion={reducedMotion} turn={turn} onUnavailable={useFallback} /></Suspense></SceneBoundary> : fallback}</div>
     {world === 'earth' && variant === 'orbit' && (!segment || segment === 'user') ? <div className="orbit-map-label" aria-hidden="true"><span className="orbit-map-cross" /><span>CERRADO BRASILEIRO<small>ÁREA DE INTERESSE</small></span></div> : world === 'earth' && variant === 'hangar' ? <>
-      <span className="orbit-hangar-mark" aria-hidden="true">IPÊ<span>01</span></span>
+      <span className="orbit-hangar-mark" aria-hidden="true">LAB<span>01</span></span>
       <div className="orbit-part-label orbit-part-panel" aria-hidden="true"><span />PAINÉIS {config.panel === 'standard' ? '18 W' : '12 W'}</div>
       <div className="orbit-part-label orbit-part-battery" aria-hidden="true">BATERIA {config.battery === 'large' ? '24 Wh' : '16 Wh'}<span /></div>
     </> : null}
@@ -247,7 +248,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
       {!configured ? !compact ? <div className="orbit-explanation" aria-live="polite"><p>{selectedText}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selectedText}</p> : null}
       <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>{recorded ? 'Recursos do motor · posição ilustrativa sem escala' : 'Ilustração sem escala · física calculada separadamente'}</span></p>
     </div>
-    {configured ? <SpacecraftInspector presentation={presentation} inspection={inspection} state={visualState}/> : null}
+    {configured ? compact && variant === 'hangar' ? <details className="spacecraft-inspector-disclosure"><summary>Capacidades e função deste sistema</summary><SpacecraftInspector presentation={presentation} inspection={inspection} state={visualState}/></details> : <SpacecraftInspector presentation={presentation} inspection={inspection} state={visualState}/> : null}
     {visualState ? <RecordedState state={visualState} scienceRecordCount={scienceRecordCount}/> : null}
     {world !== 'earth' && !preview ? <p className="orbit-model-credit">Referência visual NASA · {world === 'bennu' ? 'Bennu: Christopher R. Meaney' : 'JWST: Goddard Space Flight Center'}. Exercício didático baseado em missão documentada; sem escala física. <a href={world === 'bennu' ? 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' : 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/'} target="_blank" rel="noopener noreferrer">Fonte do modelo</a></p> : null}
     <p className="sr-only">{world !== 'earth' ? `Modelo NASA de referência ${world === 'bennu' ? 'Bennu' : 'JWST'}, em modelo didático baseado em documentação científica; parâmetros não são telemetria NASA. ` : variant === 'hangar' ? 'CubeSat didático com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat didático. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>

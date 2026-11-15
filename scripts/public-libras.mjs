@@ -27,7 +27,7 @@ export function decorateLibrasPage(original, path) {
   if (!scope) return original;
   const folder = posix.relative(posix.dirname(path), 'acessibilidade');
   const assets = `<link rel="stylesheet" href="${folder}/libras.css"><script src="${folder}/libras.js" defer></script>`;
-  const label = scope === 'public' ? 'Libras' : 'Guia em Libras';
+  const label = 'Libras';
   const link = `<nav aria-label="Acessibilidade"><a class="ipe-libras-link vlibras-ignore" data-ipe-libras="${scope}" href="${folder}/guia.html">${label}</a></nav>`;
   const html = original.replace(/(<meta\b[^>]*\bhttp-equiv="Content-Security-Policy"[^>]*\bcontent=")([^"]*)"/gi,
     (_, start, policy) => `${start}${allowLocalAssets(policy)}"`);

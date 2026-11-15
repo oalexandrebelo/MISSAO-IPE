@@ -4,7 +4,7 @@ import { StorageUnavailable } from './blob.mjs';
 
 const PLAYER = 'ipe_player', ADMIN = 'ipe_metrics_admin';
 const BODY_LIMIT = 32_768, SESSION_SECONDS = 30 * 86400, ADMIN_SECONDS = 8 * 3600;
-const PRODUCTION_ORIGINS = ['https://projeto-ipe.vercel.app', 'https://missao-ipe-alexandrebelo.vercel.app', 'https://missao-ipe-git-main-alexandrebelo.vercel.app'];
+const PRODUCTION_ORIGINS = ['https://projeto-ipe.vercel.app', 'https://missao-ipe-alexandrebelo.vercel.app', 'https://missao-ipe-git-main-alexandrebelo.vercel.app', 'https://nasa-missaoipe.alexandrebelo.com'];
 class HttpError extends Error { constructor(status, message) { super(message); this.status = status; } }
 const profilePath = id => `r21/records/${id}/profile.json`;
 const eventPath = event => `r21/records/${event.sessionId}/${event.kind === 'attempt' ? `attempt-${event.payload.attemptId}` : `event-${event.id}`}.json`;

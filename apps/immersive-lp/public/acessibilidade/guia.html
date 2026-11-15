@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://vlibras.gov.br/app/ https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src data: https://vlibras.gov.br/app/ https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; font-src https://vlibras.gov.br/app/ https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; connect-src https://vlibras.gov.br/app/ https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/ https://traducao2.vlibras.gov.br https://dicionario2.vlibras.gov.br https://repositorio.vlibras.gov.br; frame-src https://vlibras.gov.br/app/unity/; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>Guia de Libras · MISSÃO IPÊ</title>
+  <title>Libras durante a navegação · MISSÃO IPÊ</title>
   <link rel="stylesheet" href="/acessibilidade/libras.css">
   <script src="/acessibilidade/guia.js" defer></script>
 </head>
 <body class="ipe-libras-guide">
   <main>
-    <h1>Guia de Libras</h1>
-    <p>Para traduzir um trecho público, selecione o texto na página antes de abrir o botão Libras.</p>
-    <p>O serviço oficial recebe o texto escolhido para tradução automática. Use apenas textos públicos.</p>
-    <p id="ipe-libras-status" role="status"></p>
-    <p id="ipe-libras-passage" hidden><button type="button" id="ipe-libras-text" disabled></button></p>
-    <p id="ipe-libras-official"><a href="https://www.vlibras.gov.br/app/">Abrir o tradutor oficial do VLibras</a></p>
+    <h1 class="ipe-libras-guide-title">Tradução da etapa atual</h1>
+    <p id="ipe-libras-status" role="status">Ative Libras na página do jogo ou na navegação.</p>
+    <p id="ipe-libras-passage" hidden><span id="ipe-libras-text"></span></p>
+    <button type="button" id="ipe-libras-retry" hidden>Tentar carregar novamente</button>
+    <p id="ipe-libras-official"><a href="https://www.vlibras.gov.br/app/" target="_blank" rel="noopener noreferrer">Tradutor oficial</a></p>
+    <p class="ipe-libras-guide-note">Tradução automática de conteúdo público. Nome, e-mail e respostas pessoais ficam fora do tradutor.</p>
   </main>
 </body>
 </html>

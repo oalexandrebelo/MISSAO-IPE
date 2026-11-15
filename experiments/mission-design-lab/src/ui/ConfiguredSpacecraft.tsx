@@ -4,6 +4,7 @@ import type { ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
 import type { MissionVisualState } from '../lab/mission-visual-state.ts';
 import type { SpacecraftInspection, SpacecraftPresentation } from '../lab/spacecraft-presentation.ts';
+import { getInspectionReadout } from '../lab/spacecraft-presentation.ts';
 export type { SpacecraftInspection } from '../lab/spacecraft-presentation.ts';
 
 export interface ConfiguredSpacecraftProps {
@@ -28,6 +29,28 @@ function Guide({ from, to }: { from: [number, number, number]; to: [number, numb
 }
 function Selection({ size, active }: { size: [number, number, number]; active: boolean }) {
   return active ? <mesh><boxGeometry args={size}/><meshBasicMaterial color={SELECTED} wireframe transparent opacity={.75} depthWrite={false}/></mesh> : null;
+}
+function SubsystemCallout({ presentation, inspection, anchor }: { presentation: SpacecraftPresentation; inspection: SpacecraftInspection; anchor: [number, number, number] }) {
+  const readout = getInspectionReadout(presentation, inspection);
+  const texture = useMemo(() => {
+    if (!readout) return null;
+    const canvas = document.createElement('canvas'); canvas.width = 512; canvas.height = 136;
+    const context = canvas.getContext('2d');
+    if (!context) return null;
+    context.fillStyle = '#0c1c2a'; context.fillRect(0, 0, 512, 136);
+    context.strokeStyle = '#f2c18c'; context.lineWidth = 3; context.strokeRect(2, 2, 508, 132);
+    context.textAlign = 'center'; context.fillStyle = '#f2c18c'; context.font = '600 30px sans-serif';
+    context.fillText(readout.title, 256, 52, 476);
+    context.fillStyle = '#edf3ed'; context.font = '28px sans-serif'; context.fillText(readout.value, 256, 100, 476);
+    const map = new THREE.CanvasTexture(canvas); map.colorSpace = THREE.SRGBColorSpace;
+    return map;
+  }, [readout?.title, readout?.value]);
+  useEffect(() => () => texture?.dispose(), [texture]);
+  if (!texture) return null;
+  return <group name={`capacity-label-${inspection}`}>
+    <Guide from={anchor} to={[1.15, .95, 1.25]}/>
+    <sprite position={[1.15,1.2,1.25]} scale={[1.9,.505,1]} renderOrder={2}><spriteMaterial map={texture} depthTest={false} depthWrite={false} toneMapped={false}/></sprite>
+  </group>;
 }
 function PanelWing({ side, ratio, separated, illuminated, active }: { side: -1 | 1; ratio: number; separated: boolean; illuminated: boolean; active: boolean }) {
   // Relative catalog ratios guide a conceptual surface, never physical dimensions.
@@ -161,5 +184,6 @@ export function ConfiguredSpacecraft({ presentation, visualState, inspection = '
       {exploded ? <Guide from={[0,.7,-.05]} to={[0,radioY,-.05]}/> : null}
       <group position={[0,radioY,-.05]}><Radio hardware={presentation.communications.radioHardware} transmitting={transmitting} active={active('communications')}/></group>
     </group>
+    <SubsystemCallout presentation={presentation} inspection={inspection} anchor={inspection === 'energy' ? [1.1,.05,.08] : inspection === 'communications' ? [0,radioY+.35,0] : [0,.02,payloadZ+.25]}/>
   </group>;
 }

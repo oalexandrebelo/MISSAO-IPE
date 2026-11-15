@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T14:22:56.601Z",
+  "generatedAt": "2026-11-15T15:14:54.591Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 122,
+  "documentCount": 124,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,20 +32,20 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 27314,
-      "originalSha256": "6629b1865caf51262848b0f07bed1942134195539a544b250ecb1fbad240be0e",
-      "projectedSha256": "6629b1865caf51262848b0f07bed1942134195539a544b250ecb1fbad240be0e",
+      "originalBytes": 29044,
+      "originalSha256": "378ff832395ca34145e64d14f6547de69a0b81bbf2a711808b0709a869ef0438",
+      "projectedSha256": "378ff832395ca34145e64d14f6547de69a0b81bbf2a711808b0709a869ef0438",
       "redactions": 0
     },
     {
       "source": "README.md",
       "id": "doc-readme-md",
-      "title": "MISSÃO IPÊ · R21 / Beta 0.12",
+      "title": "MISSÃO IPÊ · R23 / Beta 0.12",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 15274,
-      "originalSha256": "1eed3d4119f2e8ae4314635600483d2074cdc8a0554093490bf84d592dfe2c0e",
-      "projectedSha256": "1eed3d4119f2e8ae4314635600483d2074cdc8a0554093490bf84d592dfe2c0e",
+      "originalBytes": 14883,
+      "originalSha256": "04378df3c815a1aaf45c821745ebaaba42fb858647448272920e14f6a3c12064",
+      "projectedSha256": "04378df3c815a1aaf45c821745ebaaba42fb858647448272920e14f6a3c12064",
       "redactions": 0
     },
     {
@@ -720,6 +720,28 @@
       "redactions": 0
     },
     {
+      "source": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md",
+      "id": "doc-docs-61-bancada-comparacao-e-libras-r23-md",
+      "title": "MISSÃO IPÊ · bancada, comparação e Libras · R23",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 13498,
+      "originalSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "projectedSha256": "770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7",
+      "redactions": 0
+    },
+    {
+      "source": "docs/62-DOMINIO-E-CLOUDFLARE-R23.md",
+      "id": "doc-docs-62-dominio-e-cloudflare-r23-md",
+      "title": "R23 — domínio próprio e métricas Cloudflare",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8514,
+      "originalSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "projectedSha256": "78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1350,13 +1372,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2339201,
-      "sha256": "12469ebfb186a30768a559d31137d2df526756f7b10e193e177268cf47a07191"
+      "bytes": 2369624,
+      "sha256": "029818c4815c1d90f93994e19fbe10d5e49f22278d9011e8f84c56f5d8da881c"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1878767,
-      "sha256": "b497b89310436475e182c0e2314e10e95f123cf4f729d2393dd4ff00b612632a"
+      "bytes": 1902586,
+      "sha256": "14dc045f762f2fd04c8011e1b4dd992e0a94d41ae4162c0fbdda4f19eb483366"
     }
   ]
 }

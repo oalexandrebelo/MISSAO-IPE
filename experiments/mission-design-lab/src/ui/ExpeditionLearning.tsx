@@ -25,7 +25,7 @@ const STATUS = { valid: 'Evidência válida no solo', incompatible: 'Recebido, i
 
 export function inspectionForEvent(event: MissionEvent): EvidenceInspection {
   if (/CONTACT|DELIVERED|QUEUE/.test(event.code)) return { eventId: event.id, segment: 'ground', subsystem: 'communications' };
-  if (/ENERGY|POWER|SUNLIGHT/.test(event.code)) return { eventId: event.id, segment: 'space', subsystem: 'energy' };
+  if (/ENERGY|POWER|SUNLIGHT|RESERVE|BATTERY/.test(event.code)) return { eventId: event.id, segment: 'space', subsystem: 'energy' };
   if (/JOB|INSTRUMENT|BUFFER/.test(event.code)) return { eventId: event.id, segment: 'space', subsystem: 'instrument' };
   return { eventId: event.id, segment: 'launch', subsystem: 'overview' };
 }

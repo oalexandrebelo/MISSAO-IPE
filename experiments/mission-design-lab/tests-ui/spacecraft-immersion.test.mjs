@@ -28,7 +28,19 @@ const VIABLE = {
 const LABELS = { launch: /^Veículo de lançamento/, orbit: /^Perfil orbital/, instrument: /^Instrumento científico/, power: /^Energia e plataforma/, ground: /^Comunicação com o solo/, duration: /^Vida operacional do recorte/ };
 const button = name => screen.getByRole('button', { name });
 const click = async target => { await act(async () => fireEvent.click(typeof target === 'string' || target instanceof RegExp ? button(target) : target)); };
-const change = async (label, value) => { await act(async () => fireEvent.change(screen.getByLabelText(label, { selector: 'input, select, textarea' }), { target: { value } })); };
+const change = async (label, value) => {
+  const navigation = screen.queryByRole('navigation', { name: 'Escolher sistema da expedição' });
+  const category = navigation && within(navigation).queryByRole('button', { name: label });
+  if (category) {
+    await click(category);
+    const options = screen.getByRole('group', { name: label });
+    const radio = [...options.querySelectorAll('input[type="radio"]')].find(input => input.value === value);
+    assert.ok(radio, `Equipment option ${value} must be available in the selected category`);
+    await click(radio);
+    return;
+  }
+  await act(async () => fireEvent.change(screen.getByLabelText(label, { selector: 'input, select, textarea' }), { target: { value } }));
+};
 const cleanupView = async () => { await act(async () => cleanup()); };
 const designScene = () => document.querySelector('.assembly-scene .scene, .scientific-expedition .expedition-section .scene');
 const operationScene = () => document.querySelector('.scientific-expedition .expedition-section .scene[data-state-time]');
@@ -101,6 +113,7 @@ test('Cerrado assembly explains the selected processor, energy and radio without
   assert.match(inspector(scene).textContent, /não é uma câmera MODIS a bordo/);
   assert.equal(metric(scene, 'Volume por registro'), `${numeric(payload.bitsPerRecord / 1e6)} Mbit`);
   assert.equal(metric(scene, 'Carga total durante processamento'), `${payload.totalLoadW} W`);
+  assert.deepEqual([...scene.querySelector('[data-spacecraft-callout="instrument"]').querySelectorAll('text')].map(node => node.textContent), ['Processador científico', `${payload.totalLoadW} W · ${payload.bitsPerRecord / 1e6} Mbit/registro`]);
   assert.ok(inspector(scene).textContent.includes(payload.description));
   const panel = await earthChoice('panel', /Painéis solares/, 'compact');
   const battery = await earthChoice('battery', /Bateria/, 'large');
@@ -137,6 +150,7 @@ test('Bennu and telescope render actual instruments and power choices while cont
     assert.equal(scene.dataset.inspection, 'energy'); assert.equal(Number(scene.dataset.panelW), energy.watts);
     assert.equal(Number(scene.dataset.batteryWh), energy.capacityWh);
     assert.equal(metric(scene, 'Capacidade da bateria'), `${energy.capacityWh} Wh`);
+    assert.deepEqual([...scene.querySelector('[data-spacecraft-callout="energy"]').querySelectorAll('text')].map(node => node.textContent), ['Painéis + bateria', `${energy.watts} W · ${energy.capacityWh} Wh`]);
     await click(within(scene).getByRole('button', { name: 'Comunicação' }));
     const radio = scene.dataset.radioHardware; const rate = metric(scene, 'Taxa útil do rádio');
     assert.ok([...scene.querySelectorAll('.inspector-contact li')].every(node => /120 s previstos/.test(node.textContent)));

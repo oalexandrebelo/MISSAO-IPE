@@ -11,6 +11,7 @@ import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { librasGuide } from './public-libras.mjs';
 
 const project = fileURLToPath(new URL('../', import.meta.url));
 const fixture = await mkdtemp(join(tmpdir(), 'ipe-planet-policy-'));
@@ -19,8 +20,8 @@ const run = promisify(execFile);
 let child;
 try {
   await mkdir(join(fixture, 'scripts'));
-  for (const name of ['prepare-vercel-static.mjs', 'serve-beta.mjs']) await writeFile(join(fixture, 'scripts', name), await readFile(join(project, 'scripts', name)));
-  const pages = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
+  for (const name of ['package.json', 'scripts/prepare-vercel-static.mjs', 'scripts/serve-beta.mjs', 'scripts/public-libras.mjs', 'scripts/public-analytics.mjs']) await writeFile(join(fixture, name), await readFile(join(project, name)));
+  const pages = ['equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
   const portal = await readFile(join(project, 'web/planet-jumping.html'), 'utf8');
   for (const file of pages) {
     const destination = join(fixture, 'site', file);
@@ -32,7 +33,8 @@ try {
   const staticConfig = JSON.parse(await readFile(join(fixture, '.vercel/deploy-config.json'), 'utf8'));
   assert.deepEqual(config.headers, staticConfig.headers);
   assert.deepEqual(config.redirects, staticConfig.redirects);
-  assert.equal(JSON.parse(await readFile(join(fixture, '.vercel/upload-manifest.json'), 'utf8')).version, '0.7.0-beta.1');
+  const { version } = JSON.parse(await readFile(join(fixture, 'package.json'), 'utf8'));
+  assert.equal(JSON.parse(await readFile(join(fixture, '.vercel/upload-manifest.json'), 'utf8')).version, version);
   const policiesFor = route => config.headers.filter(rule => rule.source.includes('(') ? new RegExp(`^${rule.source}$`).test(route) : rule.source === route).flatMap(rule => rule.headers).filter(header => header.key.toLowerCase() === 'content-security-policy');
   for (const route of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumpingXhtml', '/other/planet-jumping.html', '/planet-jumping.html/extra']) {
     const policies = policiesFor(route); assert.equal(policies.length, 1, route);
@@ -46,9 +48,15 @@ try {
   const directives = new Map(portalCsp.split(';').map(part => { const [key,...values] = part.trim().split(/\s+/); return [key,values]; }));
   assert.deepEqual(directives.get('img-src'), ["'self'", 'data:', 'blob:', origin]);
   assert.deepEqual(directives.get('media-src'), ["'self'", 'blob:', origin]);
-  assert.deepEqual(directives.get('connect-src'), ["'self'", 'blob:']);
-  for (const [key,values] of directives) if (!['img-src', 'media-src'].includes(key)) assert.ok(!values.some(value => value.startsWith('https:')), key);
-  assert.doesNotMatch(globalCsp, /https?:\/\//);
+  assert.deepEqual(directives.get('connect-src'), ["'self'", 'blob:', 'https://cloudflareinsights.com']);
+  assert.deepEqual(directives.get('script-src').filter(value => value.startsWith('https:')), ['https://static.cloudflareinsights.com']);
+  for (const [key,values] of directives) if (!['img-src', 'media-src', 'script-src', 'connect-src'].includes(key)) assert.ok(!values.some(value => value.startsWith('https:')), key);
+  assert.deepEqual(globalCsp.match(/https?:\/\/[^;\s]+/g), ['https://static.cloudflareinsights.com', 'https://cloudflareinsights.com']);
+  for (const route of ['/equipe', '/equipe/index.html', '/dashboard', '/dashboard/index.html', '/acessibilidade/libras.js', '/api', '/api/metrics']) {
+    const policies = policiesFor(route); assert.equal(policies.length, 1, route);
+    assert.doesNotMatch(policies[0].value, /https?:\/\//, route);
+  }
+  assert.deepEqual(policiesFor(`/${librasGuide}`).map(policy => policy.value), ["frame-ancestors 'self'; sandbox allow-scripts"]);
   console.log('PASS Generated Vercel and static-upload policies isolate the exact portal path, media origin and inline hash');
 
   const reservation = createServer();
@@ -63,7 +71,7 @@ try {
     child.once('exit',code => { clearTimeout(timeout); reject(new Error(`Fixture server exited: ${code}`)); });
   });
   const local = `http://127.0.0.1:${port}`;
-  for (const route of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumping.html?test=1']) {
+  for (const route of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumping.html?test=1', '/equipe/index.html', '/dashboard/index.html', `/${librasGuide}`]) {
     const response = await fetch(local+route,{method:'HEAD',signal:AbortSignal.timeout(5000)});
     assert.equal(response.status,200,route);
     assert.equal(response.headers.get('content-security-policy'),policiesFor(route.split('?')[0])[0].value,route);

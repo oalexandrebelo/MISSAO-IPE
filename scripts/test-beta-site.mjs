@@ -14,6 +14,7 @@ import { JSDOM, VirtualConsole } from 'jsdom';
 import * as ts from 'typescript/unstable/ast';
 import { API } from 'typescript/unstable/sync';
 import { decorateLibrasPage, librasGuide, librasScope } from './public-libras.mjs';
+import { decorateAnalyticsPage } from './public-analytics.mjs';
 
 const root = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
 const site = path.join(root, 'site');
@@ -293,7 +294,7 @@ async function run() {
     const logo = new JSDOM(bytesByFile.get('brand/missao-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
     assert.ok(logo.querySelectorAll('path').length > 0, 'Marca vetorial sem contornos');
     assert.equal(logo.querySelectorAll('image,foreignObject,script').length, 0, 'Marca deve ser SVG real sem bitmap ou código incorporado');
-    assert.ok(destinations.includes('/docs/25-HANDOFF-DOIS-DEVS.html'), 'Guia da dupla deve estar acessível pelo portal');
+    assert.ok(destinations.includes('/docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html'), 'Guia da dupla deve estar acessível pelo portal');
     const library = JSON.parse(bytesByFile.get('context/research-library-index.json'));
     for (const source of ['docs/25-HANDOFF-DOIS-DEVS.md', 'docs/24-OPORTUNIDADES-ESTUDOS.md', 'experiments/mission-design-lab/docs/GUIA-DIDATICO-R9.md', 'references/estudos/SMARTCITY-KIT-HISTORICO.md']) {
       assert.ok(library.documents.some(entry => entry.source === source), `Contexto ausente da biblioteca: ${source}`);
@@ -375,9 +376,11 @@ async function run() {
     const preserved = [];
     for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
       const original = await readFile(path.join(root, file.source));
-      const expected = file.libras ? decorateLibrasPage(original.toString('utf8'), file.path) : original;
+      let expected = original;
+      if (file.libras) expected = decorateLibrasPage(expected.toString('utf8'), file.path);
+      if (file.analytics) expected = decorateAnalyticsPage(expected.toString('utf8'), file.path);
       assert.equal(digest(bytesByFile.get(file.path)), digest(expected), `Cópia alterou artefato fora da composição declarada: ${file.path}`);
-      preserved.push({ path: file.path, source: file.source, sha256: digest(original), ...(file.libras && { libras: file.libras }) });
+      preserved.push({ path: file.path, source: file.source, sha256: digest(original), ...(file.libras && { libras: file.libras }), ...(file.analytics && { analytics: file.analytics }) });
     }
     for (const runtime of ['lab', 'campanha']) assert.ok(preserved.some(file => file.path === `${runtime}/index.html`), `Runtime não incluído na conferência de preservação: ${runtime}`);
     const presentationReceipt = JSON.parse(await readFile(path.join(root, 'evidence/presentation-qa.json'), 'utf8'));
@@ -449,22 +452,32 @@ async function run() {
     const csp = configuredHeaders('/lab/index.html')['content-security-policy'];
     assert.ok(csp);
     const scriptDirective = csp.split(';').find(part => part.trim().startsWith('script-src '));
+    const connectDirective = csp.split(';').find(part => part.trim().startsWith('connect-src '));
+    const remoteSources = value => value?.match(/https?:[^;\s]*/g) ?? [];
+    const analyticsScriptOrigin = 'https://static.cloudflareinsights.com';
+    const analyticsConnectOrigin = 'https://cloudflareinsights.com';
     assert.ok(scriptDirective?.includes("'self'"));
-    assert.doesNotMatch(scriptDirective, /'unsafe-inline'|'unsafe-eval'|https?:/);
+    assert.doesNotMatch(scriptDirective, /'unsafe-inline'|'unsafe-eval'/);
+    assert.deepEqual(remoteSources(scriptDirective), [analyticsScriptOrigin]);
+    assert.deepEqual(remoteSources(connectDirective), [analyticsConnectOrigin]);
     assert.ok(scriptDirective.includes("'wasm-unsafe-eval'"), 'Draco local requer compilação WebAssembly; eval JavaScript continua bloqueado');
     assert.match(csp, /script-src-attr\s+'none'/);
     assert.match(csp, /worker-src\s+'self'/);
     assert.match(csp, /object-src\s+'none'/);
-    assert.doesNotMatch(csp, /https?:\/\//);
+    assert.deepEqual(remoteSources(csp), [analyticsScriptOrigin, analyticsConnectOrigin]);
     const portalCsp = configuredHeaders('/planet-jumping.html')['content-security-policy'];
     const directives = new Map(portalCsp.split(';').map(part => { const [name, ...values] = part.trim().split(/\s+/); return [name, values]; }));
     assert.deepEqual(directives.get('img-src'), ["'self'", 'data:', 'blob:', portalOrigin]);
     assert.deepEqual(directives.get('media-src'), ["'self'", 'blob:', portalOrigin]);
-    for (const [name, values] of directives) if (!['img-src', 'media-src'].includes(name)) assert.ok(!values.some(value => /^https?:/.test(value)), `Origem remota fora de mídia no portal: ${name}`);
-    for (const pathname of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumpingXhtml', '/planet-jumping.html/extra', '/other/planet-jumping.html', `/${librasGuide}`]) {
+    assert.deepEqual(remoteSources(directives.get('script-src').join(' ')), [analyticsScriptOrigin]);
+    assert.deepEqual(directives.get('connect-src'), ["'self'", 'blob:', analyticsConnectOrigin]);
+    for (const [name, values] of directives) if (!['img-src', 'media-src', 'script-src', 'connect-src'].includes(name)) assert.deepEqual(remoteSources(values.join(' ')), [], `Origem remota indevida no portal: ${name}`);
+    const privatePaths = ['/equipe', '/equipe/index.html', '/dashboard', '/dashboard/index.html', '/acessibilidade/libras.js', '/api', '/api/metrics', `/${librasGuide}`];
+    for (const pathname of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumpingXhtml', '/planet-jumping.html/extra', '/other/planet-jumping.html', ...privatePaths]) {
       const policies = matchingHeaderRules(pathname).flatMap(rule => rule.headers).filter(header => header.key.toLowerCase() === 'content-security-policy');
       assert.equal(policies.length, 1, `Mais de uma CSP ou ausência de política: ${pathname}`);
       assert.equal(policies[0].value.includes(portalOrigin), pathname === '/planet-jumping.html', `Exceção externa indevida: ${pathname}`);
+      if (privatePaths.includes(pathname)) assert.deepEqual(remoteSources(policies[0].value), [], `Origem remota em rota privada: ${pathname}`);
       assert.equal(configuredHeaders(pathname)['x-frame-options'], pathname === `/${librasGuide}` ? 'SAMEORIGIN' : 'DENY');
     }
     let checkedScripts = 0;

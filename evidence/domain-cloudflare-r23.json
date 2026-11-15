@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-15T14:57:26.442503+00:00",
+  "hostname": "nasa-missaoipe.alexandrebelo.com",
+  "vercel": {
+    "projectName": "missao-ipe",
+    "projectId": "prj_xpQBsKd7BQJZ4EByBUKaiG0p9X9J",
+    "teamId": "team_54JvyyNs6zR6e4xTuK0jN4Gh",
+    "added": true,
+    "verified": true,
+    "production": true,
+    "redirect": null,
+    "misconfigured": false,
+    "existingProductionAliasPreserved": "projeto-ipe.vercel.app",
+    "recommendedCname": "0bff73f6b8f9144a.vercel-dns-017.com",
+    "configuredBy": "CNAME",
+    "conflicts": []
+  },
+  "dns": {
+    "provider": "Cloudflare",
+    "nameservers": [
+      "maria.ns.cloudflare.com",
+      "piotr.ns.cloudflare.com"
+    ],
+    "authoritativeServerChecked": "maria.ns.cloudflare.com",
+    "authoritativeCnameStatus": "NOERROR",
+    "publicResolverChecked": "1.1.1.1",
+    "publicCnameStatus": "NOERROR",
+    "recordCreated": true,
+    "requiredRecord": {
+      "type": "CNAME",
+      "name": "nasa-missaoipe",
+      "content": "0bff73f6b8f9144a.vercel-dns-017.com",
+      "proxied": false,
+      "ttl": "auto"
+    },
+    "additionalPublicResolverChecked": "8.8.8.8",
+    "resolvedAddresses": [
+      "216.198.79.65",
+      "64.29.17.65"
+    ]
+  },
+  "https": {
+    "certificateVerified": true,
+    "routesVerified": true,
+    "stabilityVerified": false,
+    "verificationMethod": "curl --resolve using current public DNS answer with TLS verification enabled; local resolver temporarily cached previous NXDOMAIN",
+    "routeChecks": [
+      {
+        "path": "/",
+        "ip": "216.198.79.65",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "sslVerifyResult": "0",
+        "error": "curl: (28) Connection timed out after 15005 milliseconds",
+        "title": null
+      },
+      {
+        "path": "/lab/index.html",
+        "ip": "216.198.79.65",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "sslVerifyResult": "0",
+        "error": "curl: (28) Connection timed out after 15004 milliseconds",
+        "title": null
+      },
+      {
+        "path": "/presentation/pitch/index.html",
+        "ip": "216.198.79.65",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "sslVerifyResult": "0",
+        "error": "curl: (28) Connection timed out after 15006 milliseconds",
+        "title": null
+      },
+      {
+        "path": "/equipe/index.html",
+        "ip": "216.198.79.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "Painel da equipe · MISSÃO IPÊ"
+      },
+      {
+        "path": "/dashboard/index.html",
+        "ip": "216.198.79.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "Observatório de aprendizagem · MISSÃO IPÊ"
+      },
+      {
+        "path": "/api/metrics?action=admin",
+        "ip": "216.198.79.65",
+        "exitCode": 0,
+        "httpStatus": 401,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": null
+      },
+      {
+        "path": "/",
+        "ip": "64.29.17.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "MISSÃO IPÊ — Ciência que chega"
+      },
+      {
+        "path": "/lab/index.html",
+        "ip": "64.29.17.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "Missão Ipê — Laboratório de Missões Espaciais"
+      },
+      {
+        "path": "/presentation/pitch/index.html",
+        "ip": "64.29.17.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "MISSÃO IPÊ · Pitch de Alexandre Belo"
+      },
+      {
+        "path": "/equipe/index.html",
+        "ip": "64.29.17.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "Painel da equipe · MISSÃO IPÊ"
+      },
+      {
+        "path": "/dashboard/index.html",
+        "ip": "64.29.17.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": "Observatório de aprendizagem · MISSÃO IPÊ"
+      },
+      {
+        "path": "/api/metrics?action=admin",
+        "ip": "64.29.17.65",
+        "exitCode": 0,
+        "httpStatus": 401,
+        "sslVerifyResult": "0",
+        "error": "",
+        "title": null
+      }
+    ],
+    "remainingIssue": "Full HTTPS route sequence passed on 64.29.17.65. Intermittent connection timeouts remain on 216.198.79.65; local Mac resolver still returns cached NXDOMAIN. No TLS bypass used.",
+    "recheckedAfterPropagation": [
+      {
+        "path": "/",
+        "ip": "216.198.79.65",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "sslVerifyResult": "0",
+        "error": "curl: (28) Connection timed out after 10006 milliseconds"
+      },
+      {
+        "path": "/lab/index.html",
+        "ip": "216.198.79.65",
+        "exitCode": 28,
+        "httpStatus": 0,
+        "sslVerifyResult": "0",
+        "error": "curl: (28) Connection timed out after 10005 milliseconds"
+      },
+      {
+        "path": "/presentation/pitch/index.html",
+        "ip": "216.198.79.65",
+        "exitCode": 0,
+        "httpStatus": 200,
+        "sslVerifyResult": "0",
+        "error": ""
+      }
+    ],
+    "normalLocalResolver": {
+      "exitCode": 6,
+      "result": "000\t0",
+      "error": "curl: (6) Could not resolve host: nasa-missaoipe.alexandrebelo.com"
+    }
+  },
+  "cloudflareWebAnalytics": {
+    "configured": true,
+    "beaconTokenObtained": true,
+    "collectionVerified": false,
+    "intendedScope": "public traffic and page performance only",
+    "privateGameplayMetricsRemainInVercelBlob": true,
+    "siteTag": "c9b4c50132194ef29aa7e269794dee86",
+    "dashboardUrl": "https://dash.cloudflare.com/d64af6bb2dd0607566aed9f467eea464/web-analytics/overview?siteTag~in=c9b4c50132194ef29aa7e269794dee86&excludeBots=Yes",
+    "configurationEvidence": "Authenticated Cloudflare dashboard setup by integration owner; runtime deployment and beacon reception pending."
+  },
+  "applicationFindingAtInspection": {
+    "file": "server/metrics/handler.mjs",
+    "newHostnameMissingFromProductionOrigins": false,
+    "regressionTestPresent": true,
+    "testFile": "tests/metrics-server.test.mjs",
+    "publishedOriginVerified": false,
+    "requiresPublicationAndOriginTest": true
+  },
+  "scope": {
+    "changedOtherDnsRecords": false,
+    "changedNameservers": false,
+    "changedSeparateLandingProject": false,
+    "createdPaidResources": false,
+    "containsCredentialsOrPlayerData": false
+  }
+}

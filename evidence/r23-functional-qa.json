@@ -1,0 +1,79 @@
+{
+  "edition": "R23",
+  "verifiedAt": "2026-11-15",
+  "scope": "technical QA, not human learning validation",
+  "automated": {
+    "labDomain": {
+      "passed": 164,
+      "failed": 0
+    },
+    "labInterface": {
+      "passed": 83,
+      "failed": 0
+    },
+    "metrics": {
+      "passed": 26,
+      "failed": 0
+    },
+    "librasContinuous": {
+      "passed": 8,
+      "failed": 0
+    },
+    "analytics": {
+      "passed": 5,
+      "failed": 0
+    },
+    "pitch": {
+      "passed": 2,
+      "failed": 0
+    },
+    "librasPublicationExport": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "build": {
+    "release": "passed",
+    "landingPage": "passed"
+  },
+  "browser": {
+    "engine": "ChatGPT in-app browser with WebGL",
+    "physicalMobileTested": false,
+    "responsive": {
+      "width320": {
+        "cerradoDocumentWidth": 320,
+        "webbDocumentWidth": 320
+      }
+    },
+    "missions": [
+      {
+        "id": "cerrado",
+        "config": "long contacts, battery 24 Wh",
+        "validRecords": 6,
+        "score": 91
+      },
+      {
+        "id": "bennu",
+        "comparison": "short vs extended ground contacts, other choices fixed",
+        "validRecordsA": 2,
+        "validRecordsB": 6,
+        "scoreB": 90
+      },
+      {
+        "id": "telescope",
+        "comparison": "camera vs spectrometer; science launcher, conceptual L2, extended power and contacts",
+        "validRecordsA": 0,
+        "validRecordsB": 6,
+        "scoreB": 92
+      }
+    ],
+    "localProgress": "Six attempts listed with confirmation received by team on local test backend",
+    "console": "No application errors observed; dependency THREE.Clock deprecation and VLibras storage sandbox warnings observed"
+  },
+  "pending": [
+    "Production publication and metrics readback",
+    "VLibras avatar end-to-end confirmation",
+    "Rive authoring/export: no active file in desktop editor",
+    "Physical mobile and human learning validation"
+  ]
+}

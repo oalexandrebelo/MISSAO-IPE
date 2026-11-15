@@ -5,6 +5,7 @@ import { lstat, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/
 import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decorateLibrasPage, librasAssets, librasGuide, librasScope } from './public-libras.mjs';
+import { analyticsAsset, decorateAnalyticsPage, isAnalyticsPage } from './public-analytics.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 await import('./build-context-hub.mjs');
@@ -22,6 +23,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md', target: 'docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md', title: 'Bancada, comparação e Libras · R23', description: 'Ensaios das três missões, responsabilidades dos dois devs e verificação da experiência.' },
+  { source: 'docs/62-DOMINIO-E-CLOUDFLARE-R23.md', target: 'docs/62-DOMINIO-E-CLOUDFLARE-R23.md', title: 'Domínio e Web Analytics · R23', description: 'Configuração verificada do endereço oficial, alcance das métricas públicas e aceite em produção.' },
   { source: 'docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md', target: 'docs/60-OPORTUNIDADES-ACERVO-ASTRAL.md', title: 'Acervo ASTRAL · oportunidades de assets', description: 'O que já está no Git, interfaces aproveitáveis, modelos NASA e próximos passos para os dois devs.' },
   { source: 'docs/59-MARCA-OFICIAL-E-DEPLOY.md', target: 'docs/59-MARCA-OFICIAL-E-DEPLOY.md', title: 'Marca oficial e publicação', description: 'Aplicação dos SVGs, diagnóstico de deploy e continuidade para os dois desenvolvedores.' },
   { source: 'docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md', target: 'docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md', title: 'Catálogo NASA · preparação da integração Bruno', description: 'Fontes verificadas para 18 equipamentos e limites da futura expansão para ISS, Lua e Marte.' },
@@ -95,6 +98,11 @@ async function emit(target, bytes, metadata) {
     bytes = decorateLibrasPage(bytes.toString(), target);
     const base = metadata.transformation === 'none; bytes preserved' ? '' : metadata.transformation + '; ';
     metadata = { ...metadata, libras: scope, transformation: `${base}local Libras launcher and frame permissions in the public HTML copy` };
+  }
+  if (isAnalyticsPage(target)) {
+    bytes = decorateAnalyticsPage(bytes.toString(), target);
+    const base = metadata.transformation === 'none; bytes preserved' ? '' : metadata.transformation + '; ';
+    metadata = { ...metadata, analytics: 'custom-host-only; page performance; no private routes', transformation: `${base}local hostname-gated analytics loader` };
   }
   await mkdir(dirname(path), { recursive: true });
   await writeFile(path, bytes);
@@ -200,6 +208,7 @@ await rm(stage, { recursive: true, force: true });
 await mkdir(stage, { recursive: true });
 try {
   await copy('web/index.html', 'index.html', 'public-portal');
+  await copy(`web/${analyticsAsset}`, analyticsAsset, 'public-page-analytics');
   for (const name of librasAssets) {
     await copy(`apps/immersive-lp/public/acessibilidade/${name}`, `acessibilidade/${name}`, 'libras-integration');
   }
@@ -345,8 +354,10 @@ try {
     const original = await readFile(safePath(root, entry.source));
     const originalSha256 = digest(original);
     const publishedSha256 = digest(await readFile(safePath(output, entry.path)));
-    const expected = entry.libras ? digest(decorateLibrasPage(original.toString(), entry.path)) : originalSha256;
-    if (expected !== publishedSha256 || publishedSha256 !== entry.sha256) throw new Error(`Runtime alterado fora da composição declarada: ${entry.path}`);
+    let expected = original;
+    if (entry.libras) expected = decorateLibrasPage(expected.toString(), entry.path);
+    if (entry.analytics) expected = decorateAnalyticsPage(expected.toString(), entry.path);
+    if (digest(expected) !== publishedSha256 || publishedSha256 !== entry.sha256) throw new Error(`Runtime alterado fora da composição declarada: ${entry.path}`);
     preservedRuntimes.push({ source: entry.source, output: `site/${entry.path}`, originalSha256, publishedSha256, byteIdentical: originalSha256 === publishedSha256, transformation: entry.transformation });
   }
   await mkdir(resolve(root, 'evidence'), { recursive: true });

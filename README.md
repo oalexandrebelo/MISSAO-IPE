@@ -1,22 +1,16 @@
-# MISSÃO IPÊ · R21 / Beta 0.12
+# MISSÃO IPÊ · R23 / Beta 0.12
 
-A R21 reúne a entrada imersiva **Nome → E-mail → Tipo de missão → Play**, tela cheia, métricas calculadas pelo servidor, painel privado da equipe e pitch de três minutos com exemplos reais do 3D. [Central de acessos](https://projeto-ipe.vercel.app/equipe/index.html) · [Jogo](https://projeto-ipe.vercel.app/lab/index.html) · [Pitch](https://projeto-ipe.vercel.app/pitch) · [Painel privado](https://projeto-ipe.vercel.app/dashboard/index.html).
+Jogo educativo de engenharia de missões espaciais com três casos científicos. Investigue a vegetação do Cerrado, as dimensões de rochas em Bennu e um recorte do espectro de trânsito observado pelo Webb. Projete, execute e use os registros recebidos para revisar a missão.
 
-**Comece pela documentação atual:** [handoff e métricas R21](docs/54-METRICAS-E-HANDOFF-R21.md), [fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) e [acessos da equipe](docs/55-PAINEL-E-ACESSOS-R21.md). Os registros históricos abaixo preservam o contexto de cada edição.
+**R23 · validação local, publicação pendente.** A bancada mostra a mudança no equipamento e nos recursos; a comparação A/B usa a mesma cena e o mesmo tempo simulado. Os callouts identificam instrumento, energia e comunicação. O companheiro de Libras acompanha contextos do jogo após ativação do jogador. A animação Rive aguarda um arquivo ativo no editor.
 
-Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
+O domínio próprio já atende o projeto principal. A entrada usa **Nome → E-mail → Tipo de missão → Play**, com métricas de jogo calculadas no servidor e acesso administrativo autenticado. A coleta de desempenho público pelo Cloudflare será verificada após a publicação R23. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
 
-**Beta atual: 0.11.0-beta.1 · edição R20 · 15/11/2026.**
-
-**MVP R20:** escolhas apontam para o sistema correspondente na nave; resultado final e replay ficam separados, e os termos científicos são explicados na abertura. O [pitch interativo de Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html) apresenta a proposta.
-
-**Três missões:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+**Continuidade para dois desenvolvedores.** O handoff reúne os ensaios reproduzíveis, a divisão de trabalho e os critérios de aceite. [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
 
 A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/51-QA-INICIANTE-E-HANDOFF-R20.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
-
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/51-QA-INICIANTE-E-HANDOFF-R20.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+[Guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [Oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md) · [Biblioteca de pesquisa](https://nasa-missaoipe.alexandrebelo.com/context/research-library.html)
 
 ## Direção vigente — histórias reais, identidade da equipe
 
@@ -44,18 +38,18 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R21. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). A campanha tem rota e testes próprios. [Registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md)
 
 ## Explorar
 
-- [Portal interativo: contexto, etapas e fontes NASA](https://projeto-ipe.vercel.app/)
-- [Jogar o beta atual](https://projeto-ipe.vercel.app/lab/index.html)
-- [Contexto e cronograma detalhados](https://projeto-ipe.vercel.app/context/index.html)
-- [Biblioteca integral](https://projeto-ipe.vercel.app/context/research-library.html)
-- [Pitch interativo · Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html)
-- [Apresentação histórica preservada](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
-- [Documentação pública](https://projeto-ipe.vercel.app/docs/index.html)
-- [Jogo clássico preservado](https://projeto-ipe.vercel.app/game/index.html)
+- [Portal interativo](https://nasa-missaoipe.alexandrebelo.com/)
+- [Jogar a edição publicada](https://nasa-missaoipe.alexandrebelo.com/lab/index.html)
+- [Contexto e cronograma detalhados](https://nasa-missaoipe.alexandrebelo.com/context/index.html)
+- [Biblioteca integral](https://nasa-missaoipe.alexandrebelo.com/context/research-library.html)
+- [Pitch interativo · Alexandre Belo](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+- [Apresentação histórica](https://nasa-missaoipe.alexandrebelo.com/presentation/Missao_Ipe_Apresentacao.html)
+- [Documentação pública](https://nasa-missaoipe.alexandrebelo.com/docs/index.html)
+- [Jogo clássico](https://nasa-missaoipe.alexandrebelo.com/game/index.html)
 
 O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidências históricas não comprovam uma nova publicação por si só.
 
@@ -78,14 +72,14 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.12.0-beta.1 / R21 | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R23 em validação local | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
-| Entrada da equipe de dois devs | [Handoff](docs/25-HANDOFF-DOIS-DEVS.md) |
+| Entrada da equipe de dois devs | [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) |
 | Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |

@@ -1438,7 +1438,7 @@ var ADMIN = "ipe_metrics_admin";
 var BODY_LIMIT = 32768;
 var SESSION_SECONDS = 30 * 86400;
 var ADMIN_SECONDS = 8 * 3600;
-var PRODUCTION_ORIGINS = ["https://projeto-ipe.vercel.app", "https://missao-ipe-alexandrebelo.vercel.app", "https://missao-ipe-git-main-alexandrebelo.vercel.app"];
+var PRODUCTION_ORIGINS = ["https://projeto-ipe.vercel.app", "https://missao-ipe-alexandrebelo.vercel.app", "https://missao-ipe-git-main-alexandrebelo.vercel.app", "https://nasa-missaoipe.alexandrebelo.com"];
 var HttpError = class extends Error {
   constructor(status, message) {
     super(message);

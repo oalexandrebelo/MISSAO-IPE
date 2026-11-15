@@ -52,6 +52,15 @@ test('registration sets private session cookie and rejects public reading of all
   assert.equal(own.headers['access-control-allow-origin'], undefined);
 });
 
+test('custom mission origin registers players while sibling origins stay unauthorized', async () => {
+  const s = setup();
+  const body = { action: 'register', name: 'Domain Test', email: 'domain@example.invalid' };
+  const response = await s.request('POST', body, undefined, { headers: { origin: 'https://nasa-missaoipe.alexandrebelo.com', 'sec-fetch-site': 'same-origin' } });
+  assert.equal(response.statusCode, 201);
+  assert.match(response.headers['set-cookie'], /HttpOnly; SameSite=Strict; Max-Age=2592000; Secure/);
+  assert.equal((await s.request('POST', body, undefined, { headers: { origin: 'https://unrelated.alexandrebelo.com' } })).statusCode, 403);
+});
+
 test('same email in another browser does not grant an existing identity or history', async () => {
   const s = setup(), a = await s.register(), b = await s.register();
   assert.notEqual(a.sessionId, b.sessionId);

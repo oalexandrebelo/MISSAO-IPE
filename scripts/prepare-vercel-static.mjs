@@ -3,6 +3,7 @@ import { resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { librasGuide } from './public-libras.mjs';
+import { allowPublicAnalytics, analyticsPrivateRoutes } from './public-analytics.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const site = resolve(root, 'site');
@@ -43,7 +44,8 @@ const policy = (hashes, externalMedia = false) => [
   `media-src 'self' blob:${externalMedia ? ` ${portalOrigin}` : ''}`, "object-src 'none'", "base-uri 'none'",
   "frame-ancestors 'none'", "form-action 'none'"
 ].join('; ');
-const csp = policy(inlineHashes), portalCsp = policy(portalHashes, true);
+const privateCsp = policy(inlineHashes);
+const csp = allowPublicAnalytics(privateCsp), portalCsp = allowPublicAnalytics(policy(portalHashes, true));
 if (Math.max(Buffer.byteLength(csp), Buffer.byteLength(portalCsp)) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
 const routeConfig = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
@@ -77,7 +79,8 @@ const routeConfig = {
       { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }
     ] },
     // The VLibras guide declares its resource policy in HTML, for both hosts.
-    { source: `/((?!planet-jumping\\.html$|${guidePattern}$).*)`, headers: [{ key: 'X-Frame-Options', value: 'DENY' }, { key: 'Content-Security-Policy', value: csp }] },
+    { source: `/((?!planet-jumping\\.html$|${analyticsPrivateRoutes}).*)`, headers: [{ key: 'X-Frame-Options', value: 'DENY' }, { key: 'Content-Security-Policy', value: csp }] },
+    { source: `/((?!${guidePattern}$)${analyticsPrivateRoutes}.*)`, headers: [{ key: 'X-Frame-Options', value: 'DENY' }, { key: 'Content-Security-Policy', value: privateCsp }] },
     { source: '/planet-jumping.html', headers: [{ key: 'X-Frame-Options', value: 'DENY' }, { key: 'Content-Security-Policy', value: portalCsp }] },
     { source: `/${librasGuide}`, headers: [{ key: 'X-Frame-Options', value: 'SAMEORIGIN' }, { key: 'Content-Security-Policy', value: "frame-ancestors 'self'; sandbox allow-scripts" }] },
     { source: '/game/assets/(.*)', headers: [ { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' } ] },

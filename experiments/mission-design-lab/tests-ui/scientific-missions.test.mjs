@@ -29,7 +29,24 @@ const LABELS = { launch: /^Veículo de lançamento/, orbit: /^Perfil orbital/, i
 const CREW_LABELS = [/Ciência e usuários/, /Nave e recursos/, /Lançamento e trajetória/, /Solo e operações/];
 const button = name => screen.getByRole('button', { name });
 const click = async target => { await act(async () => fireEvent.click(typeof target === 'string' || target instanceof RegExp ? button(target) : target)); };
-const change = async (label, value) => { await act(async () => fireEvent.change(screen.getByLabelText(label, { selector: 'input, select, textarea' }), { target: { value } })); };
+const change = async (label, value) => {
+  const navigation = screen.queryByRole('navigation', { name: 'Escolher sistema da expedição' });
+  const category = navigation && within(navigation).queryByRole('button', { name: label });
+  if (category) {
+    await click(category);
+    const options = screen.getByRole('group', { name: label });
+    const radio = [...options.querySelectorAll('input[type="radio"]')].find(input => input.value === value);
+    assert.ok(radio, `Equipment option ${value} must be available in the selected category`);
+    await click(radio);
+    return;
+  }
+  await act(async () => fireEvent.change(screen.getByLabelText(label, { selector: 'input, select, textarea' }), { target: { value } }));
+};
+async function selectedEquipment(label) {
+  const navigation = screen.getByRole('navigation', { name: 'Escolher sistema da expedição' });
+  await click(within(navigation).getByRole('button', { name: label }));
+  return screen.getByRole('group', { name: label }).querySelector('input[type="radio"]:checked')?.value;
+}
 const cleanupView = async () => { await act(async () => cleanup()); };
 async function mount() {
   installMetricsApi();
@@ -166,13 +183,13 @@ test('saved project and rejected import preserve the result; A/B redesign shares
   assert.deepEqual(saved.config, VIABLE.bennu); assert.equal(saved.hypothesis, hypothesis);
   await importDesign(JSON.stringify({ ...saved, format: 'ipe-scientific-design-v1' }));
   await waitFor(() => assert.match(document.querySelector('.expedition-notice').textContent, /R18 usa novos dados reais/));
-  for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(screen.getByLabelText(LABELS[key]).value, value);
+  for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(await selectedEquipment(LABELS[key]), value);
   await importDesign(JSON.stringify({ ...saved, config: { ...saved.config, instrument: 'inventado' } }));
   await waitFor(() => assert.notEqual(document.querySelector('.expedition-notice').textContent, 'Projeto salvo neste navegador.'));
-  for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(screen.getByLabelText(LABELS[key]).value, value);
+  for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(await selectedEquipment(LABELS[key]), value);
   await click(/^05\s*·\s*Operação$/); assert.equal(currentCount(), '6 / 6'); assertSceneAt(first, first.completedAtS);
   await click('Redesenhar esta missão'); await change(LABELS.ground, 'short'); await click('Restaurar projeto salvo');
-  assert.equal(screen.getByLabelText(LABELS.ground).value, 'extended');
+  assert.equal(await selectedEquipment(LABELS.ground), 'extended');
   await click('Revisar para executar'); assert.equal(screen.getByLabelText(/^Hipótese da equipe/).value, hypothesis);
   await click('Rever escolhas'); await change(LABELS.ground, 'short');
   const second = simulateExpedition('bennu', { ...VIABLE.bennu, ground: 'short' });
@@ -181,8 +198,9 @@ test('saved project and rejected import preserve the result; A/B redesign shares
   await change(/^Tempo comum/, '4500'); await click('Ver tentativa A'); assertSceneAt(first, 4500, comparison.querySelector('.scene'));
   await click('Ver tentativa B'); assertSceneAt(second, 4500, comparison.querySelector('.scene'));
   assert.equal(screen.getByLabelText(/^Tempo comum/).value, '4500'); assert.notEqual(first.deliveredRecords, second.deliveredRecords);
-  const row = within(comparison).getByRole('row', { name: /Registros válidos no final/ });
-  assert.deepEqual([...row.querySelectorAll('td')].map(node => node.textContent), [`${first.deliveredRecords} / 6`, `${second.deliveredRecords} / 6`]);
+  const row = within(comparison).getByRole('row', { name: /Registros cientificamente válidos/ });
+  const difference = second.deliveredRecords - first.deliveredRecords;
+  assert.deepEqual([...row.querySelectorAll('td')].map(node => node.textContent), [`${first.deliveredRecords} registros`, `${second.deliveredRecords} registros`, `${difference > 0 ? '+' : ''}${difference} registros${difference === 0 ? ' · igual' : ''}`]);
 });
 
 test('a new pair of short attempts resets an older long comparison clock and selects the newest attempt', async t => {
@@ -227,17 +245,17 @@ test('a valid replay without trace preserves final science and labels temporal r
 test('expedition design choices focus the relevant system while manual inspection remains available', async t => {
   for (const id of ['bennu', 'telescope']) await t.test(id, async sub => {
     sub.after(cleanupView); await mount(); await openDesign(id);
-    const craft = () => document.querySelector('.expedition-design .scene');
+    const craft = () => document.querySelector('.equipment-workbench .scene');
     await change(LABELS.instrument, id === 'bennu' ? 'spectrometer' : 'camera');
     assert.equal(craft().dataset.inspection, 'instrument');
-    assert.match(document.querySelector('.expedition-choice-effect').textContent, /instrumento/);
+    assert.match(document.querySelector('.equipment-why').textContent, /instrumento/);
     await change(LABELS.power, 'compact');
     assert.equal(craft().dataset.inspection, 'energy');
     await click(within(craft()).getByRole('button', { name: 'Nave completa', exact: true }));
     assert.equal(craft().dataset.inspection, 'overview');
     await change(LABELS.ground, 'short');
     assert.equal(craft().dataset.inspection, 'communications');
-    assert.match(document.querySelector('.expedition-choice-effect').textContent, /mesma antena e a mesma taxa/);
+    assert.match(document.querySelector('.equipment-why').textContent, /mesma antena e a mesma taxa/);
     assert.equal(document.querySelector('.expedition-readout'), null, 'Changing a component does not execute a mission');
   });
 });

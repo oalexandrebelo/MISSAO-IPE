@@ -10,6 +10,7 @@ import { CONFIG_HINTS, CONFIG_LABELS, bits, number } from './format.ts';
 import { CrewReview, useCrewReview } from './CrewReview.tsx';
 import { PREDICTIONS } from './learning.ts';
 import type { Prediction } from './learning.ts';
+import './equipment-workbench.css';
 
 const ICONS: Record<ConfigKey, IconName> = { battery: 'battery', panel: 'sun', processing: 'chip', radio: 'signal', buffer: 'memory', policy: 'route' };
 const WHY: Record<ConfigKey, string> = {
@@ -36,6 +37,7 @@ export interface WorkbenchProps {
 export function Workbench({ config, scenarioId, onChoice, onScenario, prediction, onPrediction, rationale, onRationale, firstAttempt, onLaunch, onSave, busy, blocked, saving, onCancel }: WorkbenchProps) {
   const [active, setActive] = useState<ConfigKey>('battery');
   const [guide, setGuide] = useState(false);
+  const [lastChange, setLastChange] = useState<{ key: ConfigKey; before: MissionConfig; after: MissionConfig; scenarioId: ScenarioId } | null>(null);
   const [appliedExample, setAppliedExample] = useState('');
   const heading = useRef<HTMLHeadingElement>(null);
   const scenario = getScenario(scenarioId);
@@ -50,20 +52,40 @@ export function Workbench({ config, scenarioId, onChoice, onScenario, prediction
   const buffer = CATALOG.buffer.find(v => v.id === config.buffer)!;
   const demandW = Math.max(((processing.totalLoadW ?? 0) - (panel.watts ?? 0) * PHYSICS.workPanelFactorPercent / 100) / (PHYSICS.dischargeEfficiencyPercent / 100), (radio.totalLoadW ?? 0) / (PHYSICS.dischargeEfficiencyPercent / 100));
   const peakRisk = demandW > (battery.maxDischargeW ?? 0);
+  const currentChange = lastChange && lastChange.scenarioId === scenarioId && CONFIG_KEYS.every(key => lastChange.after[key] === config[key]) ? lastChange : null;
+  const resources = (value: MissionConfig) => {
+    const envelope = getConfigTotals(value);
+    return [
+      { label: 'Massa total', value: envelope.massKg, unit: 'kg' },
+      { label: 'Orçamento usado', value: envelope.credits, unit: 'créditos' },
+      { label: 'Energia armazenável', value: CATALOG.battery.find(item => item.id === value.battery)!.capacityWh!, unit: 'Wh' },
+      { label: 'Geração nominal', value: CATALOG.panel.find(item => item.id === value.panel)!.watts!, unit: 'W' },
+      { label: 'Memória', value: CATALOG.buffer.find(item => item.id === value.buffer)!.capacityBits! / 1_000_000, unit: 'Mbit' },
+    ];
+  };
+  const beforeResources = currentChange ? resources(currentChange.before) : null;
+  const librasContext = `Bancada do Cerrado. Sistema: ${CONFIG_LABELS[active]}. Opção selecionada: ${CATALOG[active].find(item => item.id === config[active])!.label}. ${WHY[active]} Projeto atual: ${number(totals.massKg)} quilogramas, ${number(totals.credits)} créditos, bateria de ${number(battery.capacityWh!)} watt-hora, geração nominal de ${number(panel.watts!)} watts e memória de ${bits(buffer.capacityBits!)}. Escolher uma peça atualiza o projeto, sem executar a missão. Os registros científicos históricos não mudam.`.slice(0, 900);
+  function choose(key: ConfigKey, value: string) {
+    if (config[key] === value) return;
+    setLastChange({ key, before: { ...config }, after: { ...config, [key]: value }, scenarioId });
+    onChoice(key, value);
+  }
   return <>
     <div className="page-heading workbench-heading"><div><p className="eyebrow">02 / HANGAR DE PROJETO</p><h1 id="workbench-title" ref={heading} tabIndex={-1}>Monte sua <em>missão.</em></h1><p className="page-intro">Seis decisões. Um objetivo: entregar seis registros válidos à Terra.</p></div><div className="scenario-switch" aria-label="Condição da missão"><button type="button" aria-pressed={scenarioId === 'long-contact'} onClick={() => onScenario('long-contact')} disabled={blocked}>Contato longo <span>2 × 10 min</span></button><button type="button" aria-pressed={scenarioId === 'short-contact'} onClick={() => onScenario('short-contact')} disabled={blocked}>Contato curto <span>2 × 4 min</span></button></div></div>
     {appliedExample ? <p className="context-guide applied-example-notice" role="status"><strong>Escolhas do ensaio copiadas · {appliedExample}.</strong> Você voltou ao projeto em edição. Revise os sistemas, registre sua previsão e execute sua própria tentativa; copiar o exemplo não executa nem salva uma missão.</p> : null}
     <MissionPurpose id="cerrado" />
-    <div className="hangar-toolbar"><span><i /> IPÊ-01 <b>PROJETO EM EDIÇÃO</b></span><button className="text-button" type="button" onClick={() => setGuide(!guide)} aria-expanded={guide}><Icon name="info" size={16} /> {guide ? 'Fechar orientação' : 'Como tomar a primeira decisão'}</button></div>
+    <div className="hangar-toolbar"><span><i /> LAB-01 <b>PROJETO EM EDIÇÃO</b></span><button className="text-button" type="button" onClick={() => setGuide(!guide)} aria-expanded={guide}><Icon name="info" size={16} /> {guide ? 'Fechar orientação' : 'Como tomar a primeira decisão'}</button></div>
     {guide ? <div className="context-guide" role="region" aria-label="Orientação do hangar"><strong>Comece com uma pergunta: o que pode impedir os dados de chegar?</strong><p>Selecione um sistema à esquerda, compare as duas opções e observe os limites à direita. A primeira configuração já permite explorar o cenário longo. Antes de executar, registre sua previsão. No cenário curto, investigue o relatório e experimente outro projeto.</p><button className="text-button" onClick={() => setGuide(false)}>Entendi <Icon name="check" size={15} /></button></div> : null}
     <CrewReview crew={crew} />
-    <div className="hangar-layout">
+    <p className="equipment-route"><span><b>01</b> Escolha um sistema</span><span><b>02</b> Compare as opções</span><span><b>03</b> Veja a nave e os recursos</span></p>
+    <div className="hangar-layout" data-ipe-libras-context={librasContext}>
       <section className="hangar-systems" aria-labelledby="systems-title"><div className="systems-heading"><h2 id="systems-title">Subsistemas</h2><span>06</span></div><nav aria-label="Escolher subsistema">{CONFIG_KEYS.map((key, i) => <button key={key} type="button" aria-pressed={active === key} onClick={() => setActive(key)} className={`system-tab ${active === key ? 'active' : ''}`}><span className="system-icon"><Icon name={ICONS[key]} size={21} /></span><span><small>0{i + 1}</small><strong>{CONFIG_LABELS[key]}</strong><em>{CATALOG[key].find(item => item.id === config[key])?.label}</em></span><Icon name="chevron" size={14} /></button>)}</nav><div className="systems-foot"><Icon name="layers" size={18} /><p><strong>64 combinações.</strong><br />Uma solução exige sistemas que funcionem juntos.</p></div></section>
       <section className="assembly-column" aria-label="Montagem e escolha dos módulos"><div className="assembly-scene"><Scene compact variant="hangar" config={config} scenarioId={scenarioId} inspectSubsystem={active === 'battery' || active === 'panel' ? 'energy' : active === 'radio' || active === 'policy' ? 'communications' : 'instrument'} /></div>
         <div className="module-editor"><div className="module-title"><div><p className="eyebrow">SISTEMA 0{CONFIG_KEYS.indexOf(active) + 1}</p><h2>{CONFIG_LABELS[active]}</h2></div><Icon name={ICONS[active]} size={26} /></div><p className="module-hint">{CONFIG_HINTS[active]}</p>
-          {CONFIG_KEYS.map(key => <fieldset className="module-options-fieldset" hidden={active !== key} key={key} disabled={blocked}><legend className="sr-only">{CONFIG_LABELS[key]}</legend><div className="module-options">{CATALOG[key].map((choice, index) => <label key={choice.id} className={`module-option ${config[key] === choice.id ? 'selected' : ''}`}><input type="radio" name={key} value={choice.id} checked={config[key] === choice.id} onChange={() => onChoice(key, choice.id)} /><span className="module-option-top"><span>OPÇÃO 0{index + 1}</span><span className="selection-circle">{config[key] === choice.id ? <Icon name="check" size={13} /> : null}</span></span><strong>{choice.label}</strong><span className="module-option-description">{choice.description}</span><span className="module-facts"><b>{number(choice.massKg)} <small>kg</small></b><b>{choice.credits} <small>créditos</small></b></span></label>)}</div></fieldset>)}
+          {CONFIG_KEYS.map(key => <fieldset className="module-options-fieldset" hidden={active !== key} key={key} disabled={blocked}><legend className="sr-only">{CONFIG_LABELS[key]}</legend><div className="module-options">{CATALOG[key].map((choice, index) => <label key={choice.id} className={`module-option ${config[key] === choice.id ? 'selected' : ''}`}><input type="radio" name={key} value={choice.id} checked={config[key] === choice.id} onChange={() => choose(key, choice.id)} /><span className="module-option-top"><span>OPÇÃO 0{index + 1}</span><span className="selection-circle">{config[key] === choice.id ? <Icon name="check" size={13} /> : null}</span></span><strong>{choice.label}</strong><span className="module-option-description">{choice.description}</span><span className="module-facts"><b>{number(choice.massKg)} <small>kg</small></b><b>{choice.credits} <small>créditos</small></b></span></label>)}</div></fieldset>)}
           <div className="tradeoff-note"><Icon name="route" size={19} /><div><strong>O que essa escolha muda?</strong><p>{WHY[active]}</p></div></div>
         </div>
+        <section className="workbench-change" aria-label="Impacto da última escolha no Cerrado"><p role="status">{currentChange ? <><strong>Última escolha: {CONFIG_LABELS[currentChange.key]}.</strong> {CATALOG[currentChange.key].find(item => item.id === currentChange.before[currentChange.key])!.label} → {CATALOG[currentChange.key].find(item => item.id === currentChange.after[currentChange.key])!.label}. {WHY[currentChange.key]}</> : <><strong>Uma peça muda o projeto inteiro.</strong> Escolha outra opção para comparar os recursos antes e depois. A nave mostra a configuração em edição; a seleção não executa a missão.</>}</p>{beforeResources ? <dl>{resources(config).map((resource, index) => { const previous = beforeResources[index]!.value; return <div key={resource.label}><dt>{resource.label}</dt><dd><span className="equipment-before">{number(previous)} → </span><strong>{number(resource.value)} {resource.unit}</strong><small>{resource.value === previous ? 'Sem alteração' : `${resource.value > previous ? '+' : '−'}${number(Math.abs(resource.value - previous))} ${resource.unit}`}</small></dd></div>; })}</dl> : null}<p className="equipment-model-note">Este é o efeito nas capacidades do projeto. A execução verifica o efeito sobre a entrega dos registros históricos.</p></section>
         <PreflightReview config={config} scenario={scenario} />
       </section>
       <aside className="project-dossier" aria-labelledby="dossier-title"><div className="dossier-top"><span className="eyebrow">REVISÃO PRÉ-VOO</span><Icon name="satellite" size={23} /></div><h2 id="dossier-title">Tudo precisa<br /><em>caber junto.</em></h2><p className="dossier-scenario">{scenario.title} · 180 min simulados</p><Gauge label="Massa total" value={totals.massKg} limit={scenario.maxMassKg} unit="kg" /><Gauge label="Orçamento" value={totals.credits} limit={scenario.budget} unit="créditos" />

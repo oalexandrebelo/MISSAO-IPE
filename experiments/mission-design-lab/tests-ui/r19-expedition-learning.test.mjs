@@ -14,7 +14,19 @@ const { ScientificExpedition } = await import('../src/ui/ScientificExpedition.ts
 const { ExpeditionEvidenceTrail, ExpeditionComparisonExplanation, ExpeditionRoleDebrief, expeditionRecordStatus, explainExpeditionComparison, emptyExpeditionDebrief } = await import('../src/ui/ExpeditionLearning.tsx');
 const viable = { bennu: { launch: 'compact', orbit: 'near', duration: 'full', instrument: 'camera', power: 'extended', ground: 'extended' }, telescope: { launch: 'science', orbit: 'far', duration: 'full', instrument: 'spectrometer', power: 'extended', ground: 'extended' } };
 const click = async (name) => { await act(async () => fireEvent.click(typeof name === 'string' || name instanceof RegExp ? screen.getByRole('button', { name }) : name)); };
-const change = async (name, value) => { await act(async () => fireEvent.change(screen.getByLabelText(name), { target: { value } })); };
+const change = async (label, value) => {
+  const navigation = screen.queryByRole('navigation', { name: 'Escolher sistema da expedição' });
+  const category = navigation && within(navigation).queryByRole('button', { name: label });
+  if (category) {
+    await click(category);
+    const options = screen.getByRole('group', { name: label });
+    const radio = [...options.querySelectorAll('input[type="radio"]')].find(input => input.value === value);
+    assert.ok(radio, `Equipment option ${value} must be available in the selected category`);
+    await click(radio);
+    return;
+  }
+  await act(async () => fireEvent.change(screen.getByLabelText(label, { selector: 'input, select, textarea' }), { target: { value } }));
+};
 const clear = async () => { await act(async () => cleanup()); };
 after(() => dom.window.close());
 

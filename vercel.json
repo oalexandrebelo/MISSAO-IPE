@@ -117,7 +117,20 @@
       ]
     },
     {
-      "source": "/((?!planet-jumping\\.html$|acessibilidade/guia\\.html$).*)",
+      "source": "/((?!planet-jumping\\.html$|(?:equipe|dashboard|acessibilidade|api)(?:/|$)).*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-92Ic8Wf9FTBrsYAd2QuY/54Uta0/FxzSEwtCACc/c54=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-fzVPE99bcHxN4Y3blMgazx0/FOHoXsngVIhffl4JwEQ=' 'sha256-mdWUxPhLndb/Ef9NgwcXSqexFAKu539gMKbU9disX1w=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/((?!acessibilidade/guia\\.html$)(?:equipe|dashboard|acessibilidade|api)(?:/|$).*)",
       "headers": [
         {
           "key": "X-Frame-Options",
@@ -138,7 +151,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-5zH2jHInwlBmvgN6XgTA2bfTu90yxKGQCMCCFWkXvvk='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://d2ol7oe51mr4n9.cloudfront.net; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob: https://d2ol7oe51mr4n9.cloudfront.net; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+          "value": "default-src 'self'; script-src 'self' 'sha256-5zH2jHInwlBmvgN6XgTA2bfTu90yxKGQCMCCFWkXvvk=' https://static.cloudflareinsights.com; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://d2ol7oe51mr4n9.cloudfront.net; font-src 'self' data:; connect-src 'self' blob: https://cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self'; media-src 'self' blob: https://d2ol7oe51mr4n9.cloudfront.net; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
         }
       ]
     },

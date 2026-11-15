@@ -1,4 +1,5 @@
 import type { SpacecraftPresentation, SpacecraftInspection } from '../lab/spacecraft-presentation.ts';
+import { getInspectionReadout } from '../lab/spacecraft-presentation.ts';
 import type { MissionVisualState } from '../lab/mission-visual-state.ts';
 import './spacecraft-inspector.css';
 
@@ -27,6 +28,7 @@ export function SpacecraftInspector({ presentation, inspection, state }: { prese
 
 /** Same configuration and recorded state as the WebGL craft; no hidden simulation. */
 export function FlatConfiguredCraft({ presentation: p, inspection, exploded, state }: { presentation: SpacecraftPresentation; inspection: SpacecraftInspection; exploded: boolean; state?: MissionVisualState }) {
+  const readout = getInspectionReadout(p, inspection);
   const wing = 86 + p.energy.panelRatio * 70;
   const batteryCells = Math.max(1, Math.ceil(Math.max(0, Math.min(1, p.energy.batteryRatio)) * 4));
   const highlight = (part: SpacecraftInspection) => inspection === part ? '#e5f6a0' : '#90a5b3';
@@ -59,6 +61,12 @@ export function FlatConfiguredCraft({ presentation: p, inspection, exploded, sta
       {active ? [1,2,3].map(i => <path key={i} d={`M${-i*12} ${-45-i*12}Q0 ${-58-i*12} ${i*12} ${-45-i*12}`} fill="none" stroke="#a6eafa" opacity={1-i*.18} strokeWidth="2"/>) : null}
     </g>
     {exploded ? <path d="M297 180H324M353 258V277M439 110H456" stroke="#d9e0c6" strokeDasharray="3 5"/> : null}
+    {readout ? <g data-spacecraft-callout={inspection}>
+      <path d={inspection === 'energy' ? 'M500 187L585 104V84' : inspection === 'communications' ? `M${410 + (exploded ? 55 : 0)} 88L500 104L530 84` : `M${353 - payloadOffset} 180L465 104L500 84`} fill="none" stroke="#f2c18c" strokeWidth="1.5"/>
+      <rect x="455" y="24" width="248" height="60" rx="6" fill="#0c1c2a" stroke="#f2c18c"/>
+      <text x="579" y="48" textAnchor="middle" fill="#f2c18c" fontSize="15" fontWeight="600">{readout.title}</text>
+      <text x="579" y="70" textAnchor="middle" fill="#edf3ed" fontSize="14">{readout.value}</text>
+    </g> : null}
     <text x="360" y="380" textAnchor="middle" fill="#bdcbd2" fontSize="14">{p.payload.label} · {p.energy.panelW} W / {p.energy.batteryWh} Wh · {numeric(p.communications.rateBps/1e6)} Mbit/s</text>
   </svg></div>;
 }

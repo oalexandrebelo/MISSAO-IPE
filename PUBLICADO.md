@@ -1,5 +1,17 @@
 # Publicação MISSÃO IPÊ
 
+## R23 — bancada de equipamentos, comparação e Libras
+
+**Validação local · publicação pendente.** A bancada liga as escolhas ao equipamento da nave e aos deltas de recursos. A comparação A/B permite alternar tentativas no mesmo T+ e investigar o primeiro evento diferente. Os callouts usam os valores do catálogo e Libras acompanha o contexto autorizado após ativação. A autoria Rive aguarda um arquivo ativo no editor.
+
+**Verificação local do candidato.** `npm run build:release` passou com o ajuste do cabeçalho em telas estreitas; o build da LP também passou. O laboratório passou em **164/164** testes de domínio e **83/83** de interface. A suíte de métricas passou em **26/26**. Em navegador com GPU e viewports desktop e móvel, o Cerrado entregou **6/6** com bateria de 24 Wh e contatos longos, Bennu passou de **2/6 para 6/6** ao ampliar os contatos e Webb passou de **0/6 para 6/6** ao trocar a câmera pelo espectrômetro. O reteste em 320 px confirmou ausência de overflow horizontal em Cerrado e Webb (largura do documento igual à viewport).
+
+**Domínio próprio.** O DNS foi configurado e as rotas principais responderam via HTTPS. A publicação R23 e a recepção do beacon Cloudflare aguardam confirmação. [Portal](https://nasa-missaoipe.alexandrebelo.com/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+
+[Handoff dos dois devs](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Recibo DNS/TLS](evidence/domain-cloudflare-r23.json)
+
+---
+
 ## R21 — entrada imersiva, métricas privadas e pitch de 3 minutos
 
 **Correção posterior de marca e Libras:** commit `6c3eeee2eec94a2c7aed1ac551ebce7d7b865463`, principal `dpl_AdCLA4JZZxBc14eJE9CRssHqhv2A` e LP `dpl_EUTccHSM6WQJd85p22xo4yYf6wZp`, ambos READY. Os SVGs oficiais estão aplicados no cabeçalho, painel e pitch; a assinatura vertical e os originais estão na [galeria da marca](https://projeto-ipe.vercel.app/brand/preview-r22.html). O guia de Libras da LP abre na rota correta, com isolamento conferido. [Revisão e alcance](evidence/brand-deploy-review-r22.json).

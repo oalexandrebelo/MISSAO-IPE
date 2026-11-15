@@ -65,9 +65,21 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `6629b1865caf51262848b0f07bed1942134195539a544b250ecb1fbad240be0e` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `378ff832395ca34145e64d14f6547de69a0b81bbf2a711808b0709a869ef0438` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R23 — bancada de equipamentos, comparação e Libras
+
+**Validação local · publicação pendente.** A bancada liga as escolhas ao equipamento da nave e aos deltas de recursos. A comparação A/B permite alternar tentativas no mesmo T+ e investigar o primeiro evento diferente. Os callouts usam os valores do catálogo e Libras acompanha o contexto autorizado após ativação. A autoria Rive aguarda um arquivo ativo no editor.
+
+**Verificação local do candidato.** `npm run build:release` passou com o ajuste do cabeçalho em telas estreitas; o build da LP também passou. O laboratório passou em **164/164** testes de domínio e **83/83** de interface. A suíte de métricas passou em **26/26**. Em navegador com GPU e viewports desktop e móvel, o Cerrado entregou **6/6** com bateria de 24 Wh e contatos longos, Bennu passou de **2/6 para 6/6** ao ampliar os contatos e Webb passou de **0/6 para 6/6** ao trocar a câmera pelo espectrômetro. O reteste em 320 px confirmou ausência de overflow horizontal em Cerrado e Webb (largura do documento igual à viewport).
+
+**Domínio próprio.** O DNS foi configurado e as rotas principais responderam via HTTPS. A publicação R23 e a recepção do beacon Cloudflare aguardam confirmação. [Portal](https://nasa-missaoipe.alexandrebelo.com/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+
+[Handoff dos dois devs](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Recibo DNS/TLS](evidence/domain-cloudflare-r23.json)
+
+---
 
 ## R21 — entrada imersiva, métricas privadas e pitch de 3 minutos
 
@@ -262,29 +274,23 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 ---
 
-# MISSÃO IPÊ · R21 / Beta 0.12
+# MISSÃO IPÊ · R23 / Beta 0.12
 
-Fonte: `README.md` · SHA-256 original: `1eed3d4119f2e8ae4314635600483d2074cdc8a0554093490bf84d592dfe2c0e` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `04378df3c815a1aaf45c821745ebaaba42fb858647448272920e14f6a3c12064` · Ajustes de caminhos privados: 0
 
-# MISSÃO IPÊ · R21 / Beta 0.12
+# MISSÃO IPÊ · R23 / Beta 0.12
 
-A R21 reúne a entrada imersiva **Nome → E-mail → Tipo de missão → Play**, tela cheia, métricas calculadas pelo servidor, painel privado da equipe e pitch de três minutos com exemplos reais do 3D. [Central de acessos](https://projeto-ipe.vercel.app/equipe/index.html) · [Jogo](https://projeto-ipe.vercel.app/lab/index.html) · [Pitch](https://projeto-ipe.vercel.app/pitch) · [Painel privado](https://projeto-ipe.vercel.app/dashboard/index.html).
+Jogo educativo de engenharia de missões espaciais com três casos científicos. Investigue a vegetação do Cerrado, as dimensões de rochas em Bennu e um recorte do espectro de trânsito observado pelo Webb. Projete, execute e use os registros recebidos para revisar a missão.
 
-**Comece pela documentação atual:** [handoff e métricas R21](docs/54-METRICAS-E-HANDOFF-R21.md), [fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) e [acessos da equipe](docs/55-PAINEL-E-ACESSOS-R21.md). Os registros históricos abaixo preservam o contexto de cada edição.
+**R23 · validação local, publicação pendente.** A bancada mostra a mudança no equipamento e nos recursos; a comparação A/B usa a mesma cena e o mesmo tempo simulado. Os callouts identificam instrumento, energia e comunicação. O companheiro de Libras acompanha contextos do jogo após ativação do jogador. A animação Rive aguarda um arquivo ativo no editor.
 
-Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
+O domínio próprio já atende o projeto principal. A entrada usa **Nome → E-mail → Tipo de missão → Play**, com métricas de jogo calculadas no servidor e acesso administrativo autenticado. A coleta de desempenho público pelo Cloudflare será verificada após a publicação R23. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
 
-**Beta atual: 0.11.0-beta.1 · edição R20 · 15/11/2026.**
-
-**MVP R20:** escolhas apontam para o sistema correspondente na nave; resultado final e replay ficam separados, e os termos científicos são explicados na abertura. O [pitch interativo de Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html) apresenta a proposta.
-
-**Três missões:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+**Continuidade para dois desenvolvedores.** O handoff reúne os ensaios reproduzíveis, a divisão de trabalho e os critérios de aceite. [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
 
 A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/51-QA-INICIANTE-E-HANDOFF-R20.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
-
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/51-QA-INICIANTE-E-HANDOFF-R20.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+[Guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [Oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md) · [Biblioteca de pesquisa](https://nasa-missaoipe.alexandrebelo.com/context/research-library.html)
 
 ## Direção vigente — histórias reais, identidade da equipe
 
@@ -312,18 +318,18 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R21. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). A campanha tem rota e testes próprios. [Registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md)
 
 ## Explorar
 
-- [Portal interativo: contexto, etapas e fontes NASA](https://projeto-ipe.vercel.app/)
-- [Jogar o beta atual](https://projeto-ipe.vercel.app/lab/index.html)
-- [Contexto e cronograma detalhados](https://projeto-ipe.vercel.app/context/index.html)
-- [Biblioteca integral](https://projeto-ipe.vercel.app/context/research-library.html)
-- [Pitch interativo · Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html)
-- [Apresentação histórica preservada](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
-- [Documentação pública](https://projeto-ipe.vercel.app/docs/index.html)
-- [Jogo clássico preservado](https://projeto-ipe.vercel.app/game/index.html)
+- [Portal interativo](https://nasa-missaoipe.alexandrebelo.com/)
+- [Jogar a edição publicada](https://nasa-missaoipe.alexandrebelo.com/lab/index.html)
+- [Contexto e cronograma detalhados](https://nasa-missaoipe.alexandrebelo.com/context/index.html)
+- [Biblioteca integral](https://nasa-missaoipe.alexandrebelo.com/context/research-library.html)
+- [Pitch interativo · Alexandre Belo](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html)
+- [Apresentação histórica](https://nasa-missaoipe.alexandrebelo.com/presentation/Missao_Ipe_Apresentacao.html)
+- [Documentação pública](https://nasa-missaoipe.alexandrebelo.com/docs/index.html)
+- [Jogo clássico](https://nasa-missaoipe.alexandrebelo.com/game/index.html)
 
 O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidências históricas não comprovam uma nova publicação por si só.
 
@@ -346,14 +352,14 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.12.0-beta.1 / R21 | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R23 em validação local | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
-| Entrada da equipe de dois devs | [Handoff](docs/25-HANDOFF-DOIS-DEVS.md) |
+| Entrada da equipe de dois devs | [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) |
 | Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
@@ -7363,6 +7369,182 @@ Mapa de integração, com caminhos relativos a `experiments/mission-design-lab/s
 **Aceite conjunto:** percorrer as três missões; trocar instrumento, energia e solo; executar A e B; apontar a consequência no 3D; explicar por que um resultado mudou. Rebobinar não revela registros futuros. Alterar recursos não muda o valor científico observado. Ampliar contatos não troca a antena silenciosamente. Um iniciante deve conseguir relatar a causa da falha e justificar a próxima tentativa; isso requer teste com pessoas, ainda não produzido por esta auditoria.
 
 Começar pela bancada e pela comparação, com uma missão de cada vez. ISS, Lua e Marte continuam em preparação, conforme o [catálogo e plano de integração](58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md). Este levantamento não muda o motor, não importa o pacote e não instala dependências.
+
+
+---
+
+# MISSÃO IPÊ · bancada, comparação e Libras · R23
+
+Fonte: `docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md` · SHA-256 original: `770612db759ddc99b4d494865deccbb45301a30ff19410e156dad653e19704e7` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · bancada, comparação e Libras · R23
+
+O laboratório propõe uma sequência para as três missões. Escolha um equipamento, examine o que ele muda na nave, preveja a consequência, execute e use os registros para justificar o próximo projeto. A revisão alterna A e B na mesma cena e no mesmo relógio simulado.
+
+[Laboratório](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Roteiro do MVP](49-ROTEIRO-APRESENTACAO-MVP-R19.md) · [Verificação do domínio e Cloudflare](62-DOMINIO-E-CLOUDFLARE-R23.md)
+
+## Como experimentar e aprender
+
+1. Entre por **Nome → E-mail → Tipo de missão → Play**. Na bancada, escolha o sistema antes de trocar a opção. Observe o destaque da peça e a variação de massa, créditos, capacidade de energia, geração ou memória. O cartão de impacto descreve a última troca efetiva do projeto em edição.
+2. Faça uma previsão e execute A. Abra o resultado, investigue a primeira restrição ou mudança operacional e guarde o código do evento e seu T+. Volte à edição, mude uma opção, revise a hipótese e execute B. O ensaio guiado é uma alternativa reproduzível para estudar o contraste antes de criar tentativas próprias.
+3. No Cerrado, use **Comparar missões** e selecione as duas execuções. Em Bennu e Webb, a comparação aparece na operação ou no retorno após a segunda execução. Selecione uma escolha alterada, alterne **A/B**, abra a primeira diferença no 3D e compare a leitura das duas tentativas no T+ comum. Volte ao início para verificar quais registros já estavam entregues naquele instante.
+4. Com o relatório em mãos, registre uma conclusão, o evento ou registro que a sustenta e o próximo ajuste. A equipe pode distribuir a revisão entre lançamento, espaço, solo e usuários. Um aprendiz deve conseguir explicar de onde veio a diferença antes de ajustar outra escolha.
+
+### Três ensaios reproduzíveis
+
+Os valores abaixo foram recalculados localmente com `runLearningExperiment` do próprio jogo. Os pares fixam as demais seleções do ensaio. Os resultados esperados se aplicam a essas configurações.
+
+| Missão | Mudança de A para B | O que observar no relógio e no resultado | Pergunta para o aprendiz |
+| --- | --- | --- | --- |
+| Cerrado | BANDAS → ÍNDICE, com bateria pequena e contatos curtos | O processador muda na nave. A alcança **2/6** válidos. A parada de B com **0/6** é o resultado esperado do ensaio: a demanda do processador excede o limite de descarga e gera `PEAK_POWER` em **T+600 s**. Examine o pico em W e a capacidade em Wh. | Por que reduzir volume pode piorar a entrega com este limite de descarga? |
+| Bennu | Contatos curtos → contatos ampliados | B abre a primeira janela em **T+5100 s** e A em **T+5400 s**. O contato total planejado passa de **240 s** para **1.000 s** e a entrega de **2/6** para **6/6**. Ambas as opções usam a mesma antena didática e **1,2 Mbit/s**. O pacote de solo muda início, duração e custo. | Em que instante os conjuntos de registros começam a diferir e como a agenda contribui? |
+| Webb | Câmera genérica → espectrômetro | O foco mostra a carga científica executada em cada lado. A e B recebem **6 pacotes**. O espectrômetro fornece **6 registros válidos** e a câmera genérica fornece **0** para esta pergunta. Inspecione a compatibilidade e os bins recebidos com suas incertezas. | Por que a contagem de pacotes sozinha é insuficiente para julgar o resultado científico? |
+
+No Cerrado os pares de NDVI vêm de arquivos Terra/MODIS e a leitura comparativa depende dos dois períodos válidos. Em Bennu, o recorte são dimensões publicadas de seis rochas ou clastos. No Webb, são seis bins do trânsito de WASP‑39 b com incertezas de 1σ. A discussão deve se restringir às medidas desses recortes. Desmatamento e sua causa, composição das rochas e identificação molecular exigem evidência adicional. A nave, a agenda, os créditos, os envelopes de massa e o rádio são parâmetros do exercício. O 3D é ilustrativo e usa os estados do motor, com modelos NASA de referência quando cabíveis. [Limites didáticos](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [Dados Bennu e Webb](45-DADOS-REAIS-BENNU-WEBB-R18.md)
+
+## Contratos para os dois devs
+
+| Área | Responsável | Implementação e critério de revisão |
+| --- | --- | --- |
+| Catálogo, ciência e tentativas | **Dev A** | `core/catalog.ts`, `lab/scientific-expeditions.ts` e `lab/mission-curriculum.ts` são as fontes de capacidades, agenda e ensaios. Confira valores, unidades, IDs, compatibilidade e limites com o motor. Use o catálogo para o rascunho e `result.config` para a tentativa executada, inclusive depois de editar ou reabrir um projeto. |
+| Comparação e replay | **Dev A** | `lab/learning-comparison.ts`, `lab/mission-visual-state.ts`, `ui/CompareDialog.tsx` e `ui/ExpeditionComparison.tsx` ligam evento, escolha e cena. Compare no mesmo T+ em segundos. A leitura usa a última amostra disponível de cada tentativa, até seu encerramento. Um replay sem amostras mostra as capacidades e marca leituras temporais como indisponíveis. Investigue diferenças em T+0 e identifique o conjunto de opções quando mais de uma muda. |
+| Bancada, cena, callouts e acessibilidade | **Dev B** | `ui/Workbench.tsx`, `ui/ExpeditionWorkbench.tsx`, `ui/Scene.tsx`, `ui/ConfiguredSpacecraft.tsx` e `ui/SpacecraftInspector.tsx`. A bancada projeta o antes/depois de uma escolha a partir do catálogo e do pré-voo. `getInspectionReadout` em `lab/spacecraft-presentation.ts` fornece título e unidade do callout para 3D e 2D. Os callouts exibem capacidades de projeto, enquanto ocupação, carga e transmissão vêm da amostra. O texto, a alternativa 2D e os controles por teclado devem permitir a mesma investigação. |
+| Libras, dados e publicação | **Dev B**, com revisão de **Dev A** | `apps/immersive-lp/public/acessibilidade/` e `scripts/public-libras.mjs` montam o companheiro opt-in. `web/assets/analytics.js`, `scripts/public-analytics.mjs` e os builders ligam desempenho público ao domínio oficial. Dev A confere o alcance do contexto e da telemetria em `metrics/player-metrics.ts` e `server/metrics/`. Dev B verifica o comportamento publicado, o beacon e a sessão privada no novo domínio. |
+
+Os caminhos `core/`, `lab/`, `ui/` e `metrics/` estão sob `experiments/mission-design-lab/src/`. A tabela final resume as execuções inteiras. Os cartões de instante e a nave usam `MissionVisualState`. No início, espere zero registros entregues em ambos os lados dos três ensaios. Uma janela disponível, um rádio transmitindo e um registro entregue são três estados com critérios próprios.
+
+### Libras durante o jogo
+
+Ative **Libras** e inspecione bancada, troca de lado A/B, evento no replay e retorno científico. O painel acompanha a interação com a página e permite **Pausar tradução**, **Repetir trecho** e **Fechar**. Mudanças rápidas são agrupadas. O avatar termina o trecho em andamento e recebe o contexto mais recente. Ao fechar, o foco retorna ao acionador. O texto continua disponível quando o serviço de tradução falha.
+
+No laboratório a entrada do tradutor é `data-ipe-libras-context`, preenchida com explicações do catálogo e estados calculados pelo jogo, limitada a 900 caracteres. O painel privado usa uma orientação fixa. Mantenha nome, e-mail, hipótese, reflexões, credenciais e linhas do painel fora desses atributos e use dados sintéticos no QA. O iframe tem origem opaca por sandbox e o pai valida a janela de origem das mensagens. A tradução chama o serviço oficial após o opt-in. A qualidade linguística, inclusive termos de ciência e engenharia, exige avaliação por pessoas fluentes em Libras. [Acessibilidade e Libras R21](56-ACESSIBILIDADE-E-LIBRAS-R21.md)
+
+### Rive no MacBook Pro
+
+**Aguardando arquivo ativo no Rive.app.** A consulta ao MCP do editor em 15/11/2026 retornou `activeFileId: null` e `openTabs: []`. O MVP usa a cena 3D/2D acima. A autoria, a exportação `.riv` e a integração web continuam pendentes.
+
+1. Abra um arquivo da MISSÃO IPÊ no Rive.app do MacBook Pro e confirme o nome do arquivo ativo via `session_info`. Use um artboard próprio para o indicador de energia e enlace. Confirme a aplicação das mudanças com **End Prompt** no editor.
+2. Use uma máquina de estados alimentada pela projeção do motor. O contrato proposto usa `available` e `energyFraction` para a leitura de energia e `illuminated`, `contactAvailable` e `transmitting` para o painel e o rádio. Mostre o estado neutro no rascunho ou quando faltar amostra. A transição de contato disponível para transmissão deve responder à amostra escolhida. Mova o relógio para trás e confirme que o indicador reflete a amostra anterior.
+3. Verifique a máquina no editor e exporte o `.riv` real com nome de artboard, máquina e propriedades registrados no handoff. O runtime web oficial deve carregar o arquivo e o WASM sob a mesma origem e ser opcional. Valide a CSP vigente, toque, redimensionamento, movimento reduzido, liberação da instância ao sair e queda para os controles existentes se a animação falhar. A fonte dos números continua sendo o motor. [MCP do editor](https://rive.app/docs/editor/ai/mcp) · [Runtime web oficial](https://rive.app/docs/runtimes/web/web-js)
+
+### Métricas no domínio oficial
+
+As métricas de jogo são da API própria e do armazenamento privado. Cada execução própria recebe um identificador de tentativa e o servidor recalcula o resultado. Um reenvio usa esse mesmo identificador. O painel apresenta participação, escolhas, diagnósticos e respostas. A comprovação de aprendizagem exige observação de participantes.
+
+O carregador Cloudflare é restrito às páginas públicas de nível superior em `nasa-missaoipe.alexandrebelo.com`. A equipe deve observar, após publicar, a carga de `beacon.min.js`, o envio RUM e o recebimento no painel Cloudflare. Confirme a exclusão de `/equipe`, `/dashboard`, `/acessibilidade` e `/api` e mantenha os dados dos jogadores somente na API privada. O novo hostname exige uma sessão própria. [DNS, CSP, estado do beacon e aceite em produção](62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário das métricas do jogo](54-METRICAS-E-HANDOFF-R21.md)
+
+## Como verificar a entrega
+
+```sh
+npm --prefix experiments/mission-design-lab run verify
+npm run test:metrics
+node --test tests/libras-continuous.test.mjs tests/cloudflare-analytics.test.mjs
+npm run build:beta && npm run prepare:vercel && npm run test:beta
+```
+
+O executor de UI usa um diretório temporário compartilhado. Execute uma instância por vez. `equipment-workbench.test.mjs`, `mission-comparison-r23.test.mjs` e `libras-context-ui.test.mjs` cobrem deltas, foco, contexto e comparação sob JSDOM. Os testes da API verificam a origem permitida, o recálculo e o reenvio. Os testes do beacon e do companheiro simulam scripts externos. Use os recibos da revisão para registrar as suítes de fato executadas e a versão publicada.
+
+### Verificação local do candidato
+
+O build de release passou antes do último ajuste de responsividade. As suítes registraram **164/164** no domínio do laboratório, **83/83** na UI e **26/26** na API de métricas. A equipe percorreu as três missões no navegador do Codex com WebGL, em viewports desktop e móvel.
+
+- **Cerrado.** Contatos longos e bateria de 24 Wh entregaram **6/6** registros válidos com **91/100**.
+- **Bennu.** Ampliar os contatos elevou a entrega de **2/6** para **6/6**.
+- **Webb.** No lançador científico, com L2 conceitual, energia e contatos ampliados, a tentativa com câmera resultou em **0** registros válidos. O espectrômetro entregou **6/6** com **92/100**.
+
+A inspeção móvel encontrou transbordamento no cabeçalho a **354 px**. A correção entrou em `orbit.css`. No reteste do build atualizado a **320 px**, Cerrado e Webb mantiveram documento e viewport com largura de 320 px. O teste em celular físico segue como etapa de aceite.
+
+| Aceite | Evidência a guardar |
+| --- | --- |
+| Navegador desktop e celular | Registre versão, navegador e viewport. Refaça os três contrastes, teste controles e textos em retrato, gire, reduza o movimento e comute 2D/3D. Anote em qual condição viu os callouts e o foco de cada peça. Asserções de DOM cobrem o fallback; aparência WebGL e toque precisam de navegador e dispositivo. |
+| Libras em serviço real | Ative por gesto, troque A/B, rebobine, pause, repita e feche. Observe trecho traduzido, ordem dos trechos e foco. Bloqueie a origem do tradutor para conferir a recuperação e preserve a legibilidade das explicações. Confirme com pessoa fluente se os sinais transmitem os conceitos. |
+| Métricas privadas publicadas | Inicie uma participação sintética no hostname novo, execute, confirme recebimento e consulte o painel autenticado. Repita uma entrega de evento e confirme uma única tentativa. O acesso administrativo sem autenticação deve retornar `401`. |
+| Cloudflare em produção | Confirme um único carregamento do script do beacon por documento nas páginas elegíveis, o envio de RUM e a visibilidade no painel. Repita com o beacon bloqueado e conclua o jogo. Confira a ausência do script nas rotas excluídas. |
+| Aprendizagem | Peça a um iniciante que compare as duas execuções, aponte um evento ou registro e justifique sua segunda escolha sem orientação. Guarde a resposta com consentimento e registre as dificuldades observadas. |
+
+
+---
+
+# R23 — domínio próprio e métricas Cloudflare
+
+Fonte: `docs/62-DOMINIO-E-CLOUDFLARE-R23.md` · SHA-256 original: `78f05e9071bac85f3e69b743ab79776d3ac949312c21bf4ecac42a6d846e192a` · Ajustes de caminhos privados: 0
+
+# R23 — domínio próprio e métricas Cloudflare
+
+Infraestrutura verificada em **15/11/2026, 14:57 UTC**. [Recibo de domínio e Cloudflare no repositório](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/domain-cloudflare-r23.json).
+
+## Estado real
+
+O endereço `nasa-missaoipe.alexandrebelo.com` foi associado ao projeto principal `missao-ipe` na Vercel, para produção, sem redirecionamento. A Vercel confirmou a propriedade (`verified: true`). O endereço anterior `projeto-ipe.vercel.app` continua associado ao mesmo projeto. A LP separada não foi alterada.
+
+**O DNS já foi configurado e propagado.** A criação do CNAME pelo painel Cloudflare foi confirmada por consulta independente ao servidor autoritativo e aos resolvedores públicos `1.1.1.1` e `8.8.8.8`. A Vercel informa `configuredBy: CNAME`, `misconfigured: false` e ausência de conflitos. Entre 14:54 e 14:57 UTC, todas as cinco páginas da tabela abaixo responderam `200` por HTTPS válido; a API administrativa respondeu `401` sem autenticação. A sequência completa passou no IP público `64.29.17.65`. No outro IP, houve respostas válidas e timeouts intermitentes. O resolvedor local do Mac ainda conservava a resposta negativa anterior, portanto as verificações HTTPS usaram os IPs do DNS público com `curl --resolve`, preservando a validação de certificado. Isso comprova certificado e rotas no endereço novo, mas ainda não a estabilidade por todos os resolvedores/rede local.
+
+A configuração DNS foi feita no painel autenticado da Cloudflare, pois não havia conector de gerenciamento ou sessão de CLI disponível para esta tarefa. Nenhum segredo foi lido ou incluído no repositório. O site também foi cadastrado no Web Analytics por esse mesmo painel. A instalação do beacon e a confirmação de recepção dos dados dependem da publicação R23.
+
+## Configuração DNS exata
+
+Registro criado na zona **alexandrebelo.com**, sem alterar registros adjacentes:
+
+| Campo | Valor |
+| --- | --- |
+| Tipo | `CNAME` |
+| Nome | `nasa-missaoipe` |
+| Destino | `0bff73f6b8f9144a.vercel-dns-017.com` |
+| Proxy | **Somente DNS / DNS only** |
+| TTL | Automático |
+
+O destino acima veio da recomendação de maior prioridade da API da Vercel para **este projeto e este hostname** em 15/11/2026. Reconsultar a Vercel se a configuração ocorrer em outra data. Não alterar os servidores de nomes, registros de e-mail, raiz do domínio, outros subdomínios ou os domínios da LP. Não é necessário comprar domínio, hospedar o jogo novamente na Cloudflare ou ativar seu proxy para utilizar Web Analytics.
+
+## Um endereço para o jogo e a equipe
+
+Caminhos que responderam no novo hostname com TLS válido (a funcionalidade R23 ainda depende da nova publicação):
+
+| Área | Caminho no novo endereço |
+| --- | --- |
+| Entrada principal | `/` |
+| Laboratório / três missões científicas | `/lab/index.html` |
+| Pitch | `/presentation/pitch/index.html` |
+| Links da equipe | `/equipe/index.html` |
+| Painel privado | `/dashboard/index.html` |
+| Registro e resultados privados | `/api/metrics` |
+
+Todos devem usar a mesma origem. A R23 já adicionou `https://nasa-missaoipe.alexandrebelo.com` à lista explícita `PRODUCTION_ORIGINS` em `server/metrics/handler.mjs`, preservando as origens anteriores, e acrescentou o caso correspondente em `tests/metrics-server.test.mjs`. Essa correção precisa estar na publicação servida pelo novo hostname. A aceitação final ainda requer uma gravação privada no ambiente publicado; teste local não comprova a persistência em produção.
+
+Os cookies são restritos ao hostname em que foram emitidos e a `/api/metrics`, com `HttpOnly`, `Secure` e `SameSite=Strict`. Um cookie criado em `projeto-ipe.vercel.app` não aparece automaticamente no domínio novo. O armazenamento privado é o mesmo; mudar o hostname não copia a sessão do navegador e não deve motivar a exposição de tokens na URL. O painel exige nova autenticação no novo endereço.
+
+## Separação das métricas
+
+| Pergunta | Sistema responsável |
+| --- | --- |
+| Quantas visitas chegaram e como a página carregou no celular? | Cloudflare Web Analytics, após ativação e validação |
+| Qual decisão o jogador tomou, qual tentativa terminou e qual foi a pontuação? | API própria e Vercel Blob privado já existentes |
+| Quem é o participante e qual seu e-mail? | Somente o armazenamento e painel privados |
+| Houve aprendizado comprovado em pessoas? | Avaliação e testes com participantes; não inferir de visitas nem de testes automatizados |
+
+Não enviar nome, e-mail, respostas abertas, hipóteses, identificadores de sessão, cookies nem chave administrativa ao beacon. Não colocar esses valores em URL, título da página ou eventos públicos. Não instrumentar o painel administrativo com analytics externo. Cloudflare Web Analytics não substitui a persistência dos eventos do jogo nem garante que todos os visitantes serão contados: bloqueadores, ausência de rede e políticas do navegador podem impedir o beacon.
+
+## Ativação de Web Analytics
+
+O site `nasa-missaoipe.alexandrebelo.com` já foi criado em **Web Analytics** e o token público do beacon foi obtido pelo responsável da integração. O painel autenticado da equipe é [Cloudflare Web Analytics — MISSÃO IPÊ](https://dash.cloudflare.com/d64af6bb2dd0607566aed9f467eea464/web-analytics/overview?siteTag~in=c9b4c50132194ef29aa7e269794dee86&excludeBots=Yes). A chave desse snippet é pública e específica do site; ela não é um API token de gerenciamento. **O cadastro do site não confirma coleta: a recepção de dados ainda precisa ser verificada depois da publicação R23.** O procedimento oficial permite instalação manual em sites sem proxy Cloudflare. [Documentação de configuração](https://developers.cloudflare.com/web-analytics/get-started/).
+
+A integração deve usar o snippet real emitido pelo painel, sem um token inventado, e carregar somente nas páginas públicas do hostname configurado. Evitar injeção automática e manual simultâneas, pois duplicariam a coleta. Para a política de conteúdo atual, autorizar de forma específica:
+
+```text
+script-src: adicionar https://static.cloudflareinsights.com
+connect-src: adicionar https://cloudflareinsights.com
+```
+
+Preservar as demais diretivas; não liberar curingas, `unsafe-eval` ou scripts inline por causa do analytics. O beacon oficial usa `https://static.cloudflareinsights.com/beacon.min.js` e, sem proxy Cloudflare, envia a `https://cloudflareinsights.com/cdn-cgi/rum`. As métricas de experiência podem ser enviadas ao ocultar a página pela primeira vez. [Origem e coleta](https://developers.cloudflare.com/web-analytics/data-metrics/data-origin-and-collection/) · [Política de conteúdo](https://developers.cloudflare.com/fundamentals/reference/policies-compliances/content-security-policies/).
+
+O rastreamento automático de navegação em SPA pode ser desativado com a opção pública `spa: false` no snippet manual se a navegação carregar parâmetros de projetos. Antes de habilitar, conferir as URLs reais emitidas pelo jogo. [Comportamento em SPA](https://developers.cloudflare.com/web-analytics/get-started/web-analytics-spa/).
+
+## Verificação de aceitação e divisão dos dois devs
+
+**Dev de aplicação:** adicionar a origem autorizada e o teste; integrar o snippet público nas páginas públicas quando disponível; manter os dados pessoais na API própria; validar cadastro, três missões, pontuação, reenvio após reconexão e painel privado no mesmo hostname. O carregamento do analytics não pode bloquear Play nem o salvamento.
+
+**Dev de publicação e qualidade:** preservar o CNAME já criado; conferir o destino DNS público e a configuração da Vercel; confirmar HTTPS estável sem ignorar erros de certificado; testar as rotas acima no desktop e em viewport móvel; confirmar que `/api/metrics?action=admin` responde `401` sem autenticação; registrar requisição do beacon e depois presença dos dados no painel Cloudflare.
+
+O domínio novo já tem DNS, certificado e rotas observados. Manter `https://projeto-ipe.vercel.app` como alternativa enquanto caches DNS e conexões se estabilizam. Não confundir disponibilidade das páginas com a publicação R23, a gravação privada no novo hostname ou a recepção do beacon: esses itens precisam de verificações após publicar. Atualizar este documento e o recibo com a evidência final, incluindo eventuais limitações de rede local.
 
 
 ---
