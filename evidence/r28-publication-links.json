@@ -1,0 +1,70 @@
+{
+  "release": "R28",
+  "implementationSha": "9f86436c73455682c049bb604dfda1e3762298b1",
+  "mainDeployment": "dpl_Cj6efJP8hTRpFoSYGTCTCxZ4mQhb",
+  "lpDeployment": "dpl_8EsSXZJpa21XVhsKXY1suS9fcMKp",
+  "presentationVersion": 4,
+  "presentationCommit": "ef1d88d3fc129888387c4e9d076a9235d59c9679",
+  "presentationDeployment": "appgdep_6af9f91fe4dc819196d969fd4b89dc3a",
+  "checks": [
+    {
+      "path": "lab/index.html",
+      "matchesBuild": true,
+      "sha256": "03d0ba7a53e2684dc11d3f3ea5115398a297355677832b4a18befaff93b88418"
+    },
+    {
+      "path": "docs/73-QA-MOVEL-E-HANDOFF-R28.html",
+      "matchesBuild": true,
+      "sha256": "991b9a78a2ada83847b1f2ffebc0bd8a177793461b85884ac3945d690aee6ea3"
+    },
+    {
+      "path": "brand/missao-ipe-logo.svg",
+      "matchesBuild": true,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a"
+    },
+    {
+      "path": "lab/assets/index-Po_WKAhb.js",
+      "matchesBuild": true,
+      "sha256": "dde6918a68a7b0c67dbf5f7185f6283ca4d30b1b07fc142cfa0df56acc62d507"
+    },
+    {
+      "path": "lab/assets/rolldown-runtime-XKyaHtl9.js",
+      "matchesBuild": true,
+      "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
+    },
+    {
+      "path": "lab/assets/catalog-sTDiLHi-.js",
+      "matchesBuild": true,
+      "sha256": "075d9a54ddedf59317ceced9a52b553fcf34ce9a5bf581010b65158b1ef14d24"
+    },
+    {
+      "path": "lab/assets/index-CpCfy-2W.css",
+      "matchesBuild": true,
+      "sha256": "87ff081a8aa10c603be9a1a54a637b47d343624aacfcecb3b43c1a3af780e85e"
+    },
+    {
+      "url": "https://nasa-missaoipe.alexandrebelo.com/pitch",
+      "status": 307,
+      "location": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/"
+    },
+    {
+      "url": "https://nasa-missaoipe.alexandrebelo.com/apresentacao",
+      "status": 307,
+      "location": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/"
+    },
+    {
+      "url": "https://pitch.nasa-missaoipe.alexandrebelo.com/",
+      "status": 307,
+      "location": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/"
+    }
+  ],
+  "browserPresentation": {
+    "pitchDurationSeconds": 180,
+    "playbackObserved": true,
+    "readyState": 4,
+    "mediaError": null,
+    "gameLinks": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html",
+    "mainLanding": "https://projeto-ipe-lp.vercel.app/"
+  },
+  "status": "passed"
+}

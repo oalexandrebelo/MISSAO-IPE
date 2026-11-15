@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T18:24:37.799Z",
+  "generatedAt": "2026-11-15T18:31:15.989Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 456,
-  "bytes": 79265020,
+  "bytes": 79275934,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 216156,
-    "sha256": "c54a8ce4cbdf0a64424f61b072f3f9384bfdbad7ed83128f2ea2ecf895173d94"
+    "sha256": "944804795e13cd41d619c72608304e551fbd868eb5ec6d6909aaa22e1c419692"
   },
   "entries": [
     {
@@ -813,30 +813,30 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 69424,
-      "sha256": "c6e92f303d4189e4bfadddcb4e9db23422e438e0d83c1323c6c033e7c7999b3d",
+      "sha256": "8cb885d1cc608621d687cf78223b1c686ade9e6d27a0cd679213c1c59c3bb550",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "c6e92f303d4189e4bfadddcb4e9db23422e438e0d83c1323c6c033e7c7999b3d",
+      "sourceSha256": "8cb885d1cc608621d687cf78223b1c686ade9e6d27a0cd679213c1c59c3bb550",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2509917,
-      "sha256": "4e886f8e1f8421aded00de6433d4fef58487ac6ef55a7737469dfd43d901162d",
+      "bytes": 2514150,
+      "sha256": "eec91bd7f758534ac3d83ca4714a2180e6ed9f1bbcc397329e27fe5da1bb9d54",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "4132dc942a1b2b8b360e04660390ddc5d92c14d3e79a66794d4f8b21a96d1c58",
+      "sourceSha256": "439ef4a0a0afcfa71a808682addca0c26a23619f1b028d1133b62ad3234a923c",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2010772,
-      "sha256": "9a1a897751185dd453fdc1afeac3c449aed555dd27444aef48bf73dbf13f0c1c",
+      "bytes": 2014349,
+      "sha256": "62b85436fc64a3bf103ee859c363364dd520031587eb93515ee25c5de2bc8ed5",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "9a1a897751185dd453fdc1afeac3c449aed555dd27444aef48bf73dbf13f0c1c",
+      "sourceSha256": "62b85436fc64a3bf103ee859c363364dd520031587eb93515ee25c5de2bc8ed5",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2098,22 +2098,22 @@
     },
     {
       "path": "docs/73-QA-MOVEL-E-HANDOFF-R28.html",
-      "bytes": 10516,
-      "sha256": "991b9a78a2ada83847b1f2ffebc0bd8a177793461b85884ac3945d690aee6ea3",
+      "bytes": 12171,
+      "sha256": "90bfb963923c3ec73577787cf5e10476df62f8e92488db8c403aa2be299009d0",
       "category": "rendered-public-document",
       "source": "docs/73-QA-MOVEL-E-HANDOFF-R28.md",
-      "sourceSha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+      "sourceSha256": "1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/73-QA-MOVEL-E-HANDOFF-R28.md",
-      "bytes": 7261,
-      "sha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+      "bytes": 8710,
+      "sha256": "1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94",
       "category": "public-document",
       "source": "docs/73-QA-MOVEL-E-HANDOFF-R28.md",
-      "sourceSha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+      "sourceSha256": "1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94",
       "transformation": "none; bytes preserved"
     },
     {

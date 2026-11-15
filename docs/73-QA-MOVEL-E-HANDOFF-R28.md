@@ -44,6 +44,14 @@ Configuração, hipótese e progresso local ficam vinculados à participação n
 
 O ensaio móvel usa viewport efetivo de 390 px em navegador no computador, sem overflow horizontal observado. A tentativa de ajustar para 320 px não alterou a largura efetiva neste navegador; essa medida não é reivindicada como verificada na R28. A validação em telefone físico e uma rodada com jogadores iniciantes seguem pendentes. Pontuação e relatórios sintéticos medem comportamento do jogo. O ensaio com pessoas precisa observar escolhas, dificuldades e justificativas para avaliar aprendizagem.
 
+## Publicação e prova durável
+
+Implementação `9f86436c73455682c049bb604dfda1e3762298b1` publicada em 15/11/2026. Principal `dpl_Cj6efJP8hTRpFoSYGTCTCxZ4mQhb` e LP `dpl_8EsSXZJpa21XVhsKXY1suS9fcMKp` ficaram READY. No domínio oficial, **344 verificações em 117 requisições** passaram no Blob privado, cobrindo as sete missões na mesma participação sintética, pontuação recalculada, reenvios sem duplicação, autorização, desgaste até exaustão e leitura pelo painel privado. A prova HTTP é independente das nove partidas realizadas no navegador local.
+
+A central de apresentação foi publicada como versão 4 do Site, commit `ef1d88d3fc129888387c4e9d076a9235d59c9679`. Todos os CTAs de jogar apontam ao jogo integrado; o vídeo de 180 segundos em português é a seleção inicial e reproduziu no navegador sem erro. Vídeos, slides, guia e ZIP são materiais da produção anterior, identificados como históricos: não foram reeditados nesta revisão. A central mantém sua própria fonte Git gerenciada pelo Sites; o repositório oficial reúne o handoff e o recibo dos acessos.
+
+[Recibo móvel](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r28-mobile-journey.json) · [Métricas em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r28-production-metrics.json) · [Publicação e links](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r28-publication-links.json)
+
 ## Continuidade para dois desenvolvedores
 
 - **Dev A · Motor e dados.** Reproduza os limites de massa, encaixes, energia, comunicação e validade com o motor atual. Ao verificar a API, compare o mesmo ID e o resultado recalculado no painel privado. Registre versão, pontuação e contagem de registros. Preserve a identidade da tentativa ao repetir um pedido.

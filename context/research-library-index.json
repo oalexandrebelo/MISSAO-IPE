@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T18:24:37.761Z",
+  "generatedAt": "2026-11-15T18:31:15.945Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 135,
   "documents": [
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 40114,
-      "originalSha256": "96aa25433dae91bbeee648925f8447ec08e168d2289aaf466dbd7978b4ff6af9",
-      "projectedSha256": "96aa25433dae91bbeee648925f8447ec08e168d2289aaf466dbd7978b4ff6af9",
+      "originalBytes": 42242,
+      "originalSha256": "f6586249816a25109f25b3f51eaa837efc90662f771915ae4dfa65ee8ec116a9",
+      "projectedSha256": "f6586249816a25109f25b3f51eaa837efc90662f771915ae4dfa65ee8ec116a9",
       "redactions": 0
     },
     {
@@ -857,9 +857,9 @@
       "title": "R28 · primeira jornada, QA móvel e handoff",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 7261,
-      "originalSha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
-      "projectedSha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+      "originalBytes": 8710,
+      "originalSha256": "1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94",
+      "projectedSha256": "1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94",
       "redactions": 0
     },
     {
@@ -1493,13 +1493,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2509600,
-      "sha256": "4132dc942a1b2b8b360e04660390ddc5d92c14d3e79a66794d4f8b21a96d1c58"
+      "bytes": 2513833,
+      "sha256": "439ef4a0a0afcfa71a808682addca0c26a23619f1b028d1133b62ad3234a923c"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2010772,
-      "sha256": "9a1a897751185dd453fdc1afeac3c449aed555dd27444aef48bf73dbf13f0c1c"
+      "bytes": 2014349,
+      "sha256": "62b85436fc64a3bf103ee859c363364dd520031587eb93515ee25c5de2bc8ed5"
     }
   ]
 }

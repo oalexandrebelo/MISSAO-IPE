@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T18:25:01.608Z",
-  "finishedAt": "2026-11-15T18:25:05.002Z",
+  "startedAt": "2026-11-15T18:31:17.255Z",
+  "finishedAt": "2026-11-15T18:31:21.661Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "c54a8ce4cbdf0a64424f61b072f3f9384bfdbad7ed83128f2ea2ecf895173d94"
+        "sha256": "944804795e13cd41d619c72608304e551fbd868eb5ec6d6909aaa22e1c419692"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 456,
       "manifestedFiles": 455,
-      "bytes": 79265020,
+      "bytes": 79275934,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -104,7 +104,7 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 3237,
+      "count": 3238,
       "uniqueTargets": 330,
       "entries": [
         {
@@ -4846,6 +4846,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-web-public-docs-origem-dos-dados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-73-qa-movel-e-handoff-r28-md"
         },
         {
           "source": "context/research-library.html",
@@ -23017,21 +23024,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 69424,
-        "sha256": "c6e92f303d4189e4bfadddcb4e9db23422e438e0d83c1323c6c033e7c7999b3d",
+        "sha256": "8cb885d1cc608621d687cf78223b1c686ade9e6d27a0cd679213c1c59c3bb550",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2509917,
-        "sha256": "4e886f8e1f8421aded00de6433d4fef58487ac6ef55a7737469dfd43d901162d",
+        "bytes": 2514150,
+        "sha256": "eec91bd7f758534ac3d83ca4714a2180e6ed9f1bbcc397329e27fe5da1bb9d54",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 2010772,
-        "sha256": "9a1a897751185dd453fdc1afeac3c449aed555dd27444aef48bf73dbf13f0c1c",
+        "bytes": 2014349,
+        "sha256": "62b85436fc64a3bf103ee859c363364dd520031587eb93515ee25c5de2bc8ed5",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -23919,15 +23926,15 @@
       {
         "path": "docs/73-QA-MOVEL-E-HANDOFF-R28.html",
         "status": 200,
-        "bytes": 10516,
-        "sha256": "991b9a78a2ada83847b1f2ffebc0bd8a177793461b85884ac3945d690aee6ea3",
+        "bytes": 12171,
+        "sha256": "90bfb963923c3ec73577787cf5e10476df62f8e92488db8c403aa2be299009d0",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/73-QA-MOVEL-E-HANDOFF-R28.md",
         "status": 200,
-        "bytes": 7261,
-        "sha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+        "bytes": 8710,
+        "sha256": "1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -25432,7 +25439,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 216156,
-        "sha256": "c54a8ce4cbdf0a64424f61b072f3f9384bfdbad7ed83128f2ea2ecf895173d94",
+        "sha256": "944804795e13cd41d619c72608304e551fbd868eb5ec6d6909aaa22e1c419692",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -25729,92 +25736,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 25.699
+      "durationMs": 27.033
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.275
+      "durationMs": 0.279
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 68.541
+      "durationMs": 71.574
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 0.912
+      "durationMs": 1.021
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 68.18
+      "durationMs": 71.294
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1138.08
+      "durationMs": 1733.469
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.44
+      "durationMs": 0.689
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 489.141
+      "durationMs": 707.643
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 173.655
+      "durationMs": 185.165
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 43.701
+      "durationMs": 67.762
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.18
+      "durationMs": 2.757
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 93.272
+      "durationMs": 132.524
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.634
+      "durationMs": 6.545
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 58.834
+      "durationMs": 70.495
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 903.518
+      "durationMs": 968.875
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 120.995
+      "durationMs": 139.289
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 6.907
+      "durationMs": 6.983
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 134.993
+      "durationMs": 147.61
     }
   ]
 }

@@ -1,5 +1,19 @@
 # Publicação MISSÃO IPÊ
 
+## R28 — sete jornadas e acessos oficiais
+
+**Publicada e conferida em 15/11/2026.** Implementação `9f86436c73455682c049bb604dfda1e3762298b1`; principal `dpl_Cj6efJP8hTRpFoSYGTCTCxZ4mQhb` e LP `dpl_8EsSXZJpa21XVhsKXY1suS9fcMKp` READY. A [LP principal](https://projeto-ipe-lp.vercel.app/) apresenta sete missões e encaminha o pitch para a [central de apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/). `/pitch`, `/apresentacao` e a raiz de `pitch.nasa-missaoipe.alexandrebelo.com` redirecionam à central. Jogo e painel preservam o domínio oficial.
+
+O hangar orienta comprar e equipar antes do 3D, diferencia orçamento e carteira e avisa o custo de lançar sem instrumentos. Cerrado mostra a pergunta científica antes da montagem. Bennu/Webb confirmam o rascunho junto ao comando e distinguem arquivos recebidos de registros válidos, inclusive no acervo e no gráfico.
+
+**Validação:** 180 testes de domínio, 113 de interface, 53 de métricas e 18 de distribuição passaram. No navegador com largura efetiva de 390 px, as sete missões foram cumpridas em nove tentativas. Pontuações finais: Cerrado 92, Bennu 90, Webb 92, ISS 92, Lua 92, Marte 91, Europa 93. Retomada após recarregar preservou nove tentativas, 32 eventos confirmados, seis unidades com desgaste e carteira de 9 créditos. A API de produção passou em **344 verificações / 117 requisições**, nas sete missões, com Blob privado, resultados recalculados, autorização, deduplicação e desgaste até exaustão.
+
+A central Sites versão 4, commit `ef1d88d3fc129888387c4e9d076a9235d59c9679`, foi publicada com o vídeo de três minutos selecionado e reprodução observada. Os downloads audiovisuais anteriores foram preservados e identificados como históricos. O ensaio técnico não substitui testes com iniciantes reais ou telefone físico; 320 px não foi verificado nesta rodada.
+
+[Handoff R28](docs/73-QA-MOVEL-E-HANDOFF-R28.md) · [Jornada móvel](evidence/r28-mobile-journey.json) · [Métricas privadas](evidence/r28-production-metrics.json) · [Rotas e publicação](evidence/r28-publication-links.json)
+
+---
+
 ## R27 — loja, inventário, desgaste e Europa
 
 **Publicada e conferida em 15/11/2026.** Implementação `fb89ec583ffc784fd4b58aebec8e5fd5d98fd33e`, correção de persistência `12617d6aeeb370262c12c63538b3c489571188e2`. Principal `dpl_Dzq9MroJhwXR3BERr94j3coX6Pue` e LP `dpl_GQmbZkWmU6JJQjQ85YcUh17sF5Mm` ficaram **READY** no mesmo commit. A API privada passou no aceite no domínio oficial.

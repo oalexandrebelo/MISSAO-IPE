@@ -65,9 +65,23 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `96aa25433dae91bbeee648925f8447ec08e168d2289aaf466dbd7978b4ff6af9` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `f6586249816a25109f25b3f51eaa837efc90662f771915ae4dfa65ee8ec116a9` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R28 — sete jornadas e acessos oficiais
+
+**Publicada e conferida em 15/11/2026.** Implementação `9f86436c73455682c049bb604dfda1e3762298b1`; principal `dpl_Cj6efJP8hTRpFoSYGTCTCxZ4mQhb` e LP `dpl_8EsSXZJpa21XVhsKXY1suS9fcMKp` READY. A [LP principal](https://projeto-ipe-lp.vercel.app/) apresenta sete missões e encaminha o pitch para a [central de apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/). `/pitch`, `/apresentacao` e a raiz de `pitch.nasa-missaoipe.alexandrebelo.com` redirecionam à central. Jogo e painel preservam o domínio oficial.
+
+O hangar orienta comprar e equipar antes do 3D, diferencia orçamento e carteira e avisa o custo de lançar sem instrumentos. Cerrado mostra a pergunta científica antes da montagem. Bennu/Webb confirmam o rascunho junto ao comando e distinguem arquivos recebidos de registros válidos, inclusive no acervo e no gráfico.
+
+**Validação:** 180 testes de domínio, 113 de interface, 53 de métricas e 18 de distribuição passaram. No navegador com largura efetiva de 390 px, as sete missões foram cumpridas em nove tentativas. Pontuações finais: Cerrado 92, Bennu 90, Webb 92, ISS 92, Lua 92, Marte 91, Europa 93. Retomada após recarregar preservou nove tentativas, 32 eventos confirmados, seis unidades com desgaste e carteira de 9 créditos. A API de produção passou em **344 verificações / 117 requisições**, nas sete missões, com Blob privado, resultados recalculados, autorização, deduplicação e desgaste até exaustão.
+
+A central Sites versão 4, commit `ef1d88d3fc129888387c4e9d076a9235d59c9679`, foi publicada com o vídeo de três minutos selecionado e reprodução observada. Os downloads audiovisuais anteriores foram preservados e identificados como históricos. O ensaio técnico não substitui testes com iniciantes reais ou telefone físico; 320 px não foi verificado nesta rodada.
+
+[Handoff R28](docs/73-QA-MOVEL-E-HANDOFF-R28.md) · [Jornada móvel](evidence/r28-mobile-journey.json) · [Métricas privadas](evidence/r28-production-metrics.json) · [Rotas e publicação](evidence/r28-publication-links.json)
+
+---
 
 ## R27 — loja, inventário, desgaste e Europa
 
@@ -8262,7 +8276,7 @@ As compras, reservas e partidas precisam de confirmação do servidor. Não reca
 
 # R28 · primeira jornada, QA móvel e handoff
 
-Fonte: `docs/73-QA-MOVEL-E-HANDOFF-R28.md` · SHA-256 original: `3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32` · Ajustes de caminhos privados: 0
+Fonte: `docs/73-QA-MOVEL-E-HANDOFF-R28.md` · SHA-256 original: `1ba7140025debe389614ba28e64ddbd9dba13912148ef5071c186867ba113b94` · Ajustes de caminhos privados: 0
 
 # R28 · primeira jornada, QA móvel e handoff
 
@@ -8309,6 +8323,14 @@ Configuração, hipótese e progresso local ficam vinculados à participação n
 - No navegador a 390 px, as sete missões foram concluídas em uma participação sintética: Cerrado 92, Bennu 90, Webb 92, ISS 92, Lua 92, Marte 91 e Europa 93 pontos. Foram nove tentativas: Bennu passou de 2/6 e 52 pontos para 6/6 e 90; Webb passou de 6 recebidos e 0 válidos para 6 válidos e 92 pontos. Após recarregar e retomar, as nove tentativas, 32 eventos confirmados, seis unidades com desgaste e carteira de 9 créditos permaneceram disponíveis. Não havia eventos pendentes nem recusados. O servidor desse ensaio local usa memória; a comprovação durável de produção está no recibo da API.
 
 O ensaio móvel usa viewport efetivo de 390 px em navegador no computador, sem overflow horizontal observado. A tentativa de ajustar para 320 px não alterou a largura efetiva neste navegador; essa medida não é reivindicada como verificada na R28. A validação em telefone físico e uma rodada com jogadores iniciantes seguem pendentes. Pontuação e relatórios sintéticos medem comportamento do jogo. O ensaio com pessoas precisa observar escolhas, dificuldades e justificativas para avaliar aprendizagem.
+
+## Publicação e prova durável
+
+Implementação `9f86436c73455682c049bb604dfda1e3762298b1` publicada em 15/11/2026. Principal `dpl_Cj6efJP8hTRpFoSYGTCTCxZ4mQhb` e LP `dpl_8EsSXZJpa21XVhsKXY1suS9fcMKp` ficaram READY. No domínio oficial, **344 verificações em 117 requisições** passaram no Blob privado, cobrindo as sete missões na mesma participação sintética, pontuação recalculada, reenvios sem duplicação, autorização, desgaste até exaustão e leitura pelo painel privado. A prova HTTP é independente das nove partidas realizadas no navegador local.
+
+A central de apresentação foi publicada como versão 4 do Site, commit `ef1d88d3fc129888387c4e9d076a9235d59c9679`. Todos os CTAs de jogar apontam ao jogo integrado; o vídeo de 180 segundos em português é a seleção inicial e reproduziu no navegador sem erro. Vídeos, slides, guia e ZIP são materiais da produção anterior, identificados como históricos: não foram reeditados nesta revisão. A central mantém sua própria fonte Git gerenciada pelo Sites; o repositório oficial reúne o handoff e o recibo dos acessos.
+
+[Recibo móvel](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r28-mobile-journey.json) · [Métricas em produção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r28-production-metrics.json) · [Publicação e links](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r28-publication-links.json)
 
 ## Continuidade para dois desenvolvedores
 
