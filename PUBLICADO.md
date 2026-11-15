@@ -1,5 +1,23 @@
 # Publicação MISSÃO IPÊ
 
+## R18 — registros reais de Bennu e Webb
+
+Beta **0.9.0-beta.1**, edição `R18-real-nasa-scientific-records`. **Publicada e conferida** no commit `1bb440801e2e6dcd3094c10878b5d643ba55dd83`. Implantação principal `dpl_2kU48qhgiXLNpKRCwNiryfCLzSXW`, READY, em [jogo e documentação](https://projeto-ipe.vercel.app/). LP `dpl_FLo1NQcrA3e9B4uaTrCYuwgQaZhq`, READY, em [entrada orbital](https://projeto-ipe-lp.vercel.app/). API da Vercel confirmou o mesmo commit e os dois domínios; acesso público sem login.
+
+- **Bennu:** dimensões reais de seis rochas/clastos, fonte NASA NTRS e Tabela Suplementar 1; sete linhas preservadas para auditoria, seleção e resolução documentadas. Imagem contextual oficial com crédito.
+- **Webb:** seis bins de um trânsito de WASP-39 b, redução FIREFLy/NIRSpec PRISM. Tabela NASA de 95 pontos conferida contra o arquivo dos autores. Grandeza em porcentagem de luz bloqueada, com incertezas de 1σ em pontos percentuais.
+- **Jogo e 3D:** registros por ID, gráfico com incertezas, lacunas preservadas e botão para rever a entrega no 3D. Escolhas de instrumento, energia e comunicação mudam a entrega; jamais os valores científicos.
+- **Continuidade:** [dados, fontes e limites](https://projeto-ipe.vercel.app/docs/45-DADOS-REAIS-BENNU-WEBB-R18.html) · [handoff dos dois devs](https://projeto-ipe.vercel.app/docs/46-HANDOFF-DOIS-DEVS-R18.html). Projetos antigos são recusados com explicação; novos contratos identificam R18/v2.
+- **Referência visual:** Cosmic Mapping inspecionado na prévia pública; fluxo original de evidência e uso dos modelos NASA existentes. Nenhum asset pago copiado ou dependência nova; REA/AB-R3A não foi necessário.
+
+**Validação:** laboratório 148 testes de domínio + 38 de interface; campanha 120 + 14; contexto 24; distribuição 17; portal 12; LP 18 jornadas de navegador. Builds estáticos aprovados. [Recibo local](evidence/revision-r18.json).
+
+**Produção:** 339 arquivos públicos com HTTP 200 e hashes/políticas conferidos; biblioteca de 108 documentos nessa implantação. LP: 15 assets públicos e duas páginas conferidos. Navegador abriu o espectro real na produção, sem erro de console observado. [Recibo principal](evidence/production-r18.json) · [recibo LP](evidence/production-lp-r18.json). O commit de encerramento republica estes recibos e o estudo de oportunidades, separa os JSON de execução das cópias públicas e esclarece a comparação dos pacotes de solo; os recibos preservam o corte das implantações acima.
+
+Os arquivos são históricos reais. A nave, a agenda e os recursos são didáticos; não há nova observação NASA, telemetria ao vivo, validação de voo ou comprovação de aprendizagem humana.
+
+---
+
 ## R17 — identidade oficial, fontes NASA e consolidação
 
 Beta **0.8.0-beta.1**, edição `R17-official-brand-and-evidence-based-stories`. **Publicada e conferida** no commit `5ecb1a44fcabf32c63741711a78bf3c17efff671`. Site principal: `dpl_FcoSRJ2J4fANM6wPjxdL8KQHJrsq`, READY, [jogo e documentação](https://projeto-ipe.vercel.app/). Página imersiva: `dpl_4ZXSCxTUUwutpU3MnfHNHHRDRwv3`, READY, [entrada orbital](https://projeto-ipe-lp.vercel.app/). Ambos públicos, sem login; a API confirmou o mesmo SHA e a atribuição dos domínios.

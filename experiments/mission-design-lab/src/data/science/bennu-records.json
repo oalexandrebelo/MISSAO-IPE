@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bennu-site-1",
+    "label": "Sítio 1 · rocha",
+    "goal": "Entregar seis registros de dimensões de rochas/clastos observados em Bennu e comparar suas escalas.",
+    "value": 1.53,
+    "unit": "m",
+    "evidence": {
+      "kind": "boulder",
+      "sourceTitle": "DellaGiustina et al. · dimensões PolyCam + OLA · Tabela Suplementar 1",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20205007912",
+      "datasetUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "observedAt": "2019 · Orbital A / Detailed Survey; a tabela não fornece um instante por dimensão",
+      "sourceRow": "Supplementary Table 1 · Site 1 · Long axis (m) · PDF p.12 / página impressa 11",
+      "quantity": "Eixo maior da rocha/clasto",
+      "uncertainty": "Limitada pela escala PolyCam de 5,25 cm/pixel; não declarada como ±1σ",
+      "latitudeDeg": -37.5,
+      "longitudeDeg": 52.6,
+      "limitations": "Dimensão publicada, não rugosidade, telemetria ao vivo ou descoberta produzida pelo jogo. Medida em imagens PolyCam registradas sobre terreno OLA. Escala de pixel limita a precisão dos eixos; não equivale a erro estatístico de 1σ. Coordenadas norte (+Z) positivo e longitude 0–360°; a tabela não explicita direção leste/oeste. Marcadores num GLB sem registro cartográfico devem ser esquemáticos."
+    },
+    "dimensions": {
+      "longAxisM": 1.53,
+      "shortAxisM": 0.818,
+      "heightM": 0.67
+    }
+  },
+  {
+    "id": "bennu-site-2",
+    "label": "Sítio 2 · rocha",
+    "goal": "Entregar seis registros de dimensões de rochas/clastos observados em Bennu e comparar suas escalas.",
+    "value": 3.93,
+    "unit": "m",
+    "evidence": {
+      "kind": "boulder",
+      "sourceTitle": "DellaGiustina et al. · dimensões PolyCam + OLA · Tabela Suplementar 1",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20205007912",
+      "datasetUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "observedAt": "2019 · Orbital A / Detailed Survey; a tabela não fornece um instante por dimensão",
+      "sourceRow": "Supplementary Table 1 · Site 2 · Long axis (m) · PDF p.12 / página impressa 11",
+      "quantity": "Eixo maior da rocha/clasto",
+      "uncertainty": "Limitada pela escala PolyCam de 5,25 cm/pixel; não declarada como ±1σ",
+      "latitudeDeg": -51.6,
+      "longitudeDeg": 60.9,
+      "limitations": "Dimensão publicada, não rugosidade, telemetria ao vivo ou descoberta produzida pelo jogo. Medida em imagens PolyCam registradas sobre terreno OLA. Escala de pixel limita a precisão dos eixos; não equivale a erro estatístico de 1σ. Coordenadas norte (+Z) positivo e longitude 0–360°; a tabela não explicita direção leste/oeste. Marcadores num GLB sem registro cartográfico devem ser esquemáticos."
+    },
+    "dimensions": {
+      "longAxisM": 3.93,
+      "shortAxisM": 2.11,
+      "heightM": 1.35
+    }
+  },
+  {
+    "id": "bennu-site-3",
+    "label": "Sítio 3 · rocha",
+    "goal": "Entregar seis registros de dimensões de rochas/clastos observados em Bennu e comparar suas escalas.",
+    "value": 2.62,
+    "unit": "m",
+    "evidence": {
+      "kind": "boulder",
+      "sourceTitle": "DellaGiustina et al. · dimensões PolyCam + OLA · Tabela Suplementar 1",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20205007912",
+      "datasetUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "observedAt": "2019 · Orbital A / Detailed Survey; a tabela não fornece um instante por dimensão",
+      "sourceRow": "Supplementary Table 1 · Site 3 · Long axis (m) · PDF p.12 / página impressa 11",
+      "quantity": "Eixo maior da rocha/clasto",
+      "uncertainty": "Limitada pela escala PolyCam de 5,25 cm/pixel; não declarada como ±1σ",
+      "latitudeDeg": -47.2,
+      "longitudeDeg": 68.1,
+      "limitations": "Dimensão publicada, não rugosidade, telemetria ao vivo ou descoberta produzida pelo jogo. Medida em imagens PolyCam registradas sobre terreno OLA. Escala de pixel limita a precisão dos eixos; não equivale a erro estatístico de 1σ. Coordenadas norte (+Z) positivo e longitude 0–360°; a tabela não explicita direção leste/oeste. Marcadores num GLB sem registro cartográfico devem ser esquemáticos."
+    },
+    "dimensions": {
+      "longAxisM": 2.62,
+      "shortAxisM": 0.842,
+      "heightM": 0.65
+    }
+  },
+  {
+    "id": "bennu-site-4a",
+    "label": "Sítio 4a · clasto",
+    "goal": "Entregar seis registros de dimensões de rochas/clastos observados em Bennu e comparar suas escalas.",
+    "value": 1.6,
+    "unit": "m",
+    "evidence": {
+      "kind": "boulder",
+      "sourceTitle": "DellaGiustina et al. · dimensões PolyCam + OLA · Tabela Suplementar 1",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20205007912",
+      "datasetUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "observedAt": "2019 · Orbital A / Detailed Survey; a tabela não fornece um instante por dimensão",
+      "sourceRow": "Supplementary Table 1 · Site 4a · Long axis (m) · PDF p.12 / página impressa 11",
+      "quantity": "Eixo maior da rocha/clasto",
+      "uncertainty": "Limitada pela escala PolyCam de 5,25 cm/pixel; não declarada como ±1σ",
+      "latitudeDeg": -4.4,
+      "longitudeDeg": 150.9,
+      "limitations": "Dimensão publicada, não rugosidade, telemetria ao vivo ou descoberta produzida pelo jogo. Medida em imagens PolyCam registradas sobre terreno OLA. Escala de pixel limita a precisão dos eixos; não equivale a erro estatístico de 1σ. Coordenadas norte (+Z) positivo e longitude 0–360°; a tabela não explicita direção leste/oeste. Marcadores num GLB sem registro cartográfico devem ser esquemáticos. O sítio 4 contém os clastos 4a e 4b; este registro representa somente 4a. O eixo maior de 4b é 0,927 m e sua linha permanece no CSV completo."
+    },
+    "dimensions": {
+      "longAxisM": 1.6,
+      "shortAxisM": 0.703,
+      "heightM": 0.37
+    }
+  },
+  {
+    "id": "bennu-site-5",
+    "label": "Sítio 5 · rocha",
+    "goal": "Entregar seis registros de dimensões de rochas/clastos observados em Bennu e comparar suas escalas.",
+    "value": 3.221,
+    "unit": "m",
+    "evidence": {
+      "kind": "boulder",
+      "sourceTitle": "DellaGiustina et al. · dimensões PolyCam + OLA · Tabela Suplementar 1",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20205007912",
+      "datasetUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "observedAt": "2019 · Orbital A / Detailed Survey; a tabela não fornece um instante por dimensão",
+      "sourceRow": "Supplementary Table 1 · Site 5 · Long axis (m) · PDF p.12 / página impressa 11",
+      "quantity": "Eixo maior da rocha/clasto",
+      "uncertainty": "Limitada pela escala PolyCam de 5,25 cm/pixel; não declarada como ±1σ",
+      "latitudeDeg": -44.6,
+      "longitudeDeg": 166.4,
+      "limitations": "Dimensão publicada, não rugosidade, telemetria ao vivo ou descoberta produzida pelo jogo. Medida em imagens PolyCam registradas sobre terreno OLA. Escala de pixel limita a precisão dos eixos; não equivale a erro estatístico de 1σ. Coordenadas norte (+Z) positivo e longitude 0–360°; a tabela não explicita direção leste/oeste. Marcadores num GLB sem registro cartográfico devem ser esquemáticos."
+    },
+    "dimensions": {
+      "longAxisM": 3.221,
+      "shortAxisM": 2.25,
+      "heightM": 0.494
+    }
+  },
+  {
+    "id": "bennu-site-6",
+    "label": "Sítio 6 · rocha",
+    "goal": "Entregar seis registros de dimensões de rochas/clastos observados em Bennu e comparar suas escalas.",
+    "value": 1.453,
+    "unit": "m",
+    "evidence": {
+      "kind": "boulder",
+      "sourceTitle": "DellaGiustina et al. · dimensões PolyCam + OLA · Tabela Suplementar 1",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20205007912",
+      "datasetUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "observedAt": "2019 · Orbital A / Detailed Survey; a tabela não fornece um instante por dimensão",
+      "sourceRow": "Supplementary Table 1 · Site 6 · Long axis (m) · PDF p.12 / página impressa 11",
+      "quantity": "Eixo maior da rocha/clasto",
+      "uncertainty": "Limitada pela escala PolyCam de 5,25 cm/pixel; não declarada como ±1σ",
+      "latitudeDeg": 11.7,
+      "longitudeDeg": 190.0,
+      "limitations": "Dimensão publicada, não rugosidade, telemetria ao vivo ou descoberta produzida pelo jogo. Medida em imagens PolyCam registradas sobre terreno OLA. Escala de pixel limita a precisão dos eixos; não equivale a erro estatístico de 1σ. Coordenadas norte (+Z) positivo e longitude 0–360°; a tabela não explicita direção leste/oeste. Marcadores num GLB sem registro cartográfico devem ser esquemáticos."
+    },
+    "dimensions": {
+      "longAxisM": 1.453,
+      "shortAxisM": 0.636,
+      "heightM": 0.771
+    }
+  }
+]

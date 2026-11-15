@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T09:39:16.138Z",
+  "generatedAt": "2026-11-15T09:54:04.762Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 108,
+  "documentCount": 109,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 17672,
-      "originalSha256": "e8a6d4aa4eb4116a7761f01735fe3cb21d85356f7d283f28bdc20f76cbeb9887",
-      "projectedSha256": "e8a6d4aa4eb4116a7761f01735fe3cb21d85356f7d283f28bdc20f76cbeb9887",
+      "originalBytes": 20403,
+      "originalSha256": "26f928b9a1cddb9770d20783b3b044a412c3123affa67903309583138e1ce931",
+      "projectedSha256": "26f928b9a1cddb9770d20783b3b044a412c3123affa67903309583138e1ce931",
       "redactions": 0
     },
     {
@@ -43,9 +43,9 @@
       "title": "MISSÃO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 13193,
-      "originalSha256": "9cdeb5cc178ccebe87d8ab8763d1932d892d32b6efd36302a1d114817c27288c",
-      "projectedSha256": "9cdeb5cc178ccebe87d8ab8763d1932d892d32b6efd36302a1d114817c27288c",
+      "originalBytes": 13315,
+      "originalSha256": "1bf8321d77a001b99ebdc7f6b980b84edb9326b28a53c8d0ff48fb7d630daeeb",
+      "projectedSha256": "1bf8321d77a001b99ebdc7f6b980b84edb9326b28a53c8d0ff48fb7d630daeeb",
       "redactions": 0
     },
     {
@@ -549,9 +549,9 @@
       "title": "R18 — Bennu e Webb: da fonte científica ao resultado do jogo",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 9259,
-      "originalSha256": "8726d1d06d198d635bb0c9481e9357cc5ec86a08327efa98ce57aad9e5225d9c",
-      "projectedSha256": "8726d1d06d198d635bb0c9481e9357cc5ec86a08327efa98ce57aad9e5225d9c",
+      "originalBytes": 9460,
+      "originalSha256": "8c0b3ac6e9d469a81a82b17aef5a27b8a93c5bf4895f5e6fa07265c295d10032",
+      "projectedSha256": "8c0b3ac6e9d469a81a82b17aef5a27b8a93c5bf4895f5e6fa07265c295d10032",
       "redactions": 0
     },
     {
@@ -560,9 +560,20 @@
       "title": "R18 — handoff de ciência, experiência e publicação",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 10211,
-      "originalSha256": "6a158ef6df5e78c8f87695bab1d7462baee4cdf7dddede6d1ce3b9ecaba60be8",
-      "projectedSha256": "6a158ef6df5e78c8f87695bab1d7462baee4cdf7dddede6d1ce3b9ecaba60be8",
+      "originalBytes": 10862,
+      "originalSha256": "52e12835207f543d6665224ef5824424843f8b3ab2101a21d6d67103e1ac6cc4",
+      "projectedSha256": "52e12835207f543d6665224ef5824424843f8b3ab2101a21d6d67103e1ac6cc4",
+      "redactions": 0
+    },
+    {
+      "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+      "id": "doc-docs-47-oportunidades-nasa-para-dois-devs-r18-md",
+      "title": "Oportunidades NASA e CSA para os dois devs do MISSÃO IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 21152,
+      "originalSha256": "3b493b79711edaf2a2dcbd01d4dd4b72135f2bce5f6e71d061a4979a10e93a49",
+      "projectedSha256": "3b493b79711edaf2a2dcbd01d4dd4b72135f2bce5f6e71d061a4979a10e93a49",
       "redactions": 0
     },
     {
@@ -1196,13 +1207,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2153099,
-      "sha256": "5ac61ebf25dd535838d30f3f4bd2ec5c109d9138e158b5ed64a609e48597a971"
+      "bytes": 2184673,
+      "sha256": "7e154d4d5a5ee4b2f9d432de7934d9acde5b64a5b2485400db3dce86d5232c84"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1733173,
-      "sha256": "37b4d2ade2108638c729e3597819c6a7610138a8c37a78ee9ec753a890983a64"
+      "bytes": 1758281,
+      "sha256": "f04be5bf8671a5c40aac744e22812f64f04607ec94207f94e9a1e495dbbc0c44"
     }
   ]
 }

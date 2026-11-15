@@ -1,5 +1,5 @@
-import bennuRecords from '../../public/data/science/bennu-records.json' with { type: 'json' };
-import webbData from '../../public/data/science/webb-spectrum-subset.json' with { type: 'json' };
+import bennuRecords from '../data/science/bennu-records.json' with { type: 'json' };
+import webbData from '../data/science/webb-spectrum-subset.json' with { type: 'json' };
 import type { MissionEvent, TracePoint } from '../core/contracts.ts';
 import { add, cmp, div, floorSafe, min, mul, q, sub, toNumber, ZERO } from '../core/exact.ts';
 import type { MissionVisualState, MissionVisualSubsystem } from './mission-visual-state.ts';

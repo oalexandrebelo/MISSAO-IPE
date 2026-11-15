@@ -65,5 +65,11 @@
     "No physical-device acceptance or orbital-navigation fidelity claim.",
     "3D models are references without geographic registration to Bennu coordinates.",
     "Production verification belongs to a separate deployment receipt."
-  ]
+  ],
+  "closingChanges": [
+    "Moved scientific runtime JSON imports into src/data/science; build publishes byte-identical downloadable copies and tests enforce parity.",
+    "Clarified that Bennu A/B changes ground service duration, first-window start and cost; no engine schedule or scientific value changed.",
+    "Added NASA opportunities research by explicitly requested gpt-6.1-sol with max reasoning; proposals remain separate from implemented functionality."
+  ],
+  "closingVerifiedAt": "2026-11-15T09:54:04.583815+00:00"
 }

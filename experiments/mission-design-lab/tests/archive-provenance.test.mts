@@ -5,6 +5,7 @@ import test from 'node:test';
 
 const scienceFile = (name: string) => new URL(`../public/data/science/${name}`, import.meta.url);
 const sha256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
+for (const name of ['bennu-records.json', 'webb-spectrum-subset.json']) assert.deepEqual(readFileSync(scienceFile(name)), readFileSync(new URL(`../src/data/science/${name}`, import.meta.url)), `Public download must match the simulation dataset: ${name}`);
 
 test('Webb published bins retain NASA units, uncertainty and exact source rows offline', () => {
   const raw = readFileSync(scienceFile('webb-firefly-nasa.tbl'));

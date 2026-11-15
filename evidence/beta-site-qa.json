@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T09:39:17.294Z",
-  "finishedAt": "2026-11-15T09:39:20.023Z",
+  "startedAt": "2026-11-15T09:54:05.701Z",
+  "finishedAt": "2026-11-15T09:54:08.276Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "3ba4aea71c44436be2c567c987a01535d282e260176db23f5c730ae6dc22bc44"
+        "sha256": "5a389230244425d7a186ddc11738015b48f5ae13262172c91d06e727b792f3d7"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 340,
-      "manifestedFiles": 339,
-      "bytes": 29384744,
+      "fileCount": 343,
+      "manifestedFiles": 342,
+      "bytes": 29514965,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 304,
+      "inspectedFiles": 307,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 2121,
-      "uniqueTargets": 237,
+      "count": 2148,
+      "uniqueTargets": 240,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -3917,6 +3917,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-47-oportunidades-nasa-para-dois-devs-r18-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -4345,6 +4352,13 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-46-handoff-dois-devs-r18-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-47-oportunidades-nasa-para-dois-devs-r18-md"
         },
         {
           "source": "context/research-library.html",
@@ -5101,6 +5115,34 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-42-prontidao-e-criterios-space-apps-r17-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-47-oportunidades-nasa-para-dois-devs-r18-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-45-dados-reais-bennu-webb-r18-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-46-handoff-dois-devs-r18-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-30-ativos-nasa-implementados-md"
         },
         {
           "source": "context/research-library.html",
@@ -9627,6 +9669,12 @@
         },
         {
           "source": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
+          "target": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+          "requestPath": "/docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
           "target": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
           "requestPath": "/docs/46-HANDOFF-DOIS-DEVS-R18.md",
           "kind": "navigation"
@@ -9669,6 +9717,115 @@
         },
         {
           "source": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "requestPath": "/docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
+          "requestPath": "/docs/46-HANDOFF-DOIS-DEVS-R18.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
+          "requestPath": "/docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
+          "requestPath": "/docs/46-HANDOFF-DOIS-DEVS-R18.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "research/nasa-opportunities-r18.json",
+          "requestPath": "/research/nasa-opportunities-r18.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+          "requestPath": "/docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
           "target": "documentation.css",
           "requestPath": "/documentation.css",
           "kind": "link-stylesheet"
@@ -10325,6 +10482,18 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "requestPath": "/docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+          "requestPath": "/docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
           "kind": "navigation"
         },
         {
@@ -11527,8 +11696,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-Ck1lRNh8.js",
-          "requestPath": "/lab/assets/index-Ck1lRNh8.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
+          "requestPath": "/lab/assets/index-BnZRkr7L.js",
           "kind": "script"
         },
         {
@@ -13776,81 +13945,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
-          "target": "lab/assets/index-Ck1lRNh8.js",
-          "requestPath": "/lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/NASAReferenceScene-CVf7g6__.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
+          "requestPath": "/lab/assets/index-BnZRkr7L.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
-          "target": "lab/assets/OrbitalScene-CjtL7sfV.js",
-          "requestPath": "/lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/NASAReferenceScene-CVf7g6__.js",
+          "target": "lab/assets/OrbitalScene-BYhNoMRP.js",
+          "requestPath": "/lab/assets/OrbitalScene-BYhNoMRP.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
-          "target": "lab/assets/index-Ck1lRNh8.js",
-          "requestPath": "/lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
+          "requestPath": "/lab/assets/index-BnZRkr7L.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "requestPath": "/lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "requestPath": "/lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "requestPath": "/lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
-          "target": "lab/assets/search-CQ8hTd5o.js",
-          "requestPath": "/lab/assets/search-CQ8hTd5o.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
+          "target": "lab/assets/search-CcWoZ6Ox.js",
+          "requestPath": "/lab/assets/search-CcWoZ6Ox.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
-          "target": "lab/assets/OrbitalScene-CjtL7sfV.js",
-          "requestPath": "/lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
+          "target": "lab/assets/OrbitalScene-BYhNoMRP.js",
+          "requestPath": "/lab/assets/OrbitalScene-BYhNoMRP.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
-          "target": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
+          "target": "lab/assets/NASAReferenceScene-CVf7g6__.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-CVf7g6__.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-CQ8hTd5o.js",
-          "target": "lab/assets/index-Ck1lRNh8.js",
-          "requestPath": "/lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/search-CcWoZ6Ox.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
+          "requestPath": "/lab/assets/index-BnZRkr7L.js",
           "kind": "module-import"
         }
       ]
@@ -13955,81 +14124,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
-          "specifier": "./index-Ck1lRNh8.js",
-          "target": "lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/NASAReferenceScene-CVf7g6__.js",
+          "specifier": "./index-BnZRkr7L.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
-          "specifier": "./OrbitalScene-CjtL7sfV.js",
-          "target": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/NASAReferenceScene-CVf7g6__.js",
+          "specifier": "./OrbitalScene-BYhNoMRP.js",
+          "target": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
-          "specifier": "./index-Ck1lRNh8.js",
-          "target": "lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
+          "specifier": "./index-BnZRkr7L.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "specifier": "draco_decoder-C32yEggz.wasm",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "specifier": "draco_wasm_wrapper-DxJM36Ib.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "specifier": "draco_decoder-fzg4nYZr.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "specifier": "draco_wasm_wrapper-fZCQGLGb.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "specifier": "draco_decoder-Z1_iN-Ht.wasm",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
-          "specifier": "./search-CQ8hTd5o.js",
-          "target": "lab/assets/search-CQ8hTd5o.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
+          "specifier": "./search-CcWoZ6Ox.js",
+          "target": "lab/assets/search-CcWoZ6Ox.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
-          "specifier": "./OrbitalScene-CjtL7sfV.js",
-          "target": "lab/assets/OrbitalScene-CjtL7sfV.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
+          "specifier": "./OrbitalScene-BYhNoMRP.js",
+          "target": "lab/assets/OrbitalScene-BYhNoMRP.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Ck1lRNh8.js",
-          "specifier": "./NASAReferenceScene-BTRQ_Hnp.js",
-          "target": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
+          "source": "lab/assets/index-BnZRkr7L.js",
+          "specifier": "./NASAReferenceScene-CVf7g6__.js",
+          "target": "lab/assets/NASAReferenceScene-CVf7g6__.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-CQ8hTd5o.js",
-          "specifier": "./index-Ck1lRNh8.js",
-          "target": "lab/assets/index-Ck1lRNh8.js",
+          "source": "lab/assets/search-CcWoZ6Ox.js",
+          "specifier": "./index-BnZRkr7L.js",
+          "target": "lab/assets/index-BnZRkr7L.js",
           "kind": "module-import"
         }
       ]
@@ -14461,9 +14630,9 @@
         "sha256": "f36f20f60f6b6fc4de4935f0f296fdb4a1a5999d1c69145d796903e38efefa29"
       },
       {
-        "path": "lab/assets/index-Ck1lRNh8.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-Ck1lRNh8.js",
-        "sha256": "243203936c80422a2e7728348d56c8818a853ad62090a47f186827ce32f6c299"
+        "path": "lab/assets/index-BnZRkr7L.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-BnZRkr7L.js",
+        "sha256": "00f8267b76d61dd40da71e3310fb20e06cfbaaf41b66d66e650948f44ddfce82"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -14471,14 +14640,14 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-BTRQ_Hnp.js",
-        "sha256": "00c1332ab5acaf7544bd950386ec0ba4806aba5f9f0a05019da427d5abaabad0"
+        "path": "lab/assets/NASAReferenceScene-CVf7g6__.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-CVf7g6__.js",
+        "sha256": "e03a7404dad2694e72d7e811e943f9256486a4b1e6cb0e30c03fe13e0332209f"
       },
       {
-        "path": "lab/assets/OrbitalScene-CjtL7sfV.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-CjtL7sfV.js",
-        "sha256": "ea2fd29eecb1243b5c3babc8936e01c0d5897f246d2cd2975d0ad3dc17168f9c"
+        "path": "lab/assets/OrbitalScene-BYhNoMRP.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BYhNoMRP.js",
+        "sha256": "e6b89ae4cb2ba821c2b1702a795cec6ae4256a39f59d987369623335b4edd9f0"
       },
       {
         "path": "lab/assets/OrbitalScene-DChm9aPx.css",
@@ -14486,9 +14655,9 @@
         "sha256": "73324a09a3ca908e67eb7d336bda0617b4b097de5c7a915446ad1ee73ffbe724"
       },
       {
-        "path": "lab/assets/search-CQ8hTd5o.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-CQ8hTd5o.js",
-        "sha256": "3930fb7b1461e9f61f4aa2d1abc32a5df42453b7eaf07323651818c25a0f7b53"
+        "path": "lab/assets/search-CcWoZ6Ox.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-CcWoZ6Ox.js",
+        "sha256": "4d38c6b64dc4b536589c16e8085e75ffa5522d9fa34f1d396471bff65c841c51"
       },
       {
         "path": "lab/brand/brand-provenance-r14.json",
@@ -14708,7 +14877,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "ac3cdae3b3f92627bc1c6270953e35ad32c601313ddbffb782b050a0f3eb6698"
+        "sha256": "b72e34a60c89aa516bc2b1f6d2adaaab6967e10dac2d42671a9579705cf85c3b"
       },
       {
         "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -15561,22 +15730,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 55819,
-        "sha256": "3ba26851be74783d431cd5e2d91b5d5b6fc2555e117837e84278b00aa527ac1c",
+        "bytes": 56362,
+        "sha256": "c26b2e657215cbc8e0bde5f26831b9ee8067b7630a331820400aee12daa4bff1",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2153099,
-        "sha256": "5ac61ebf25dd535838d30f3f4bd2ec5c109d9138e158b5ed64a609e48597a971",
+        "bytes": 2184673,
+        "sha256": "7e154d4d5a5ee4b2f9d432de7934d9acde5b64a5b2485400db3dce86d5232c84",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1733173,
-        "sha256": "37b4d2ade2108638c729e3597819c6a7610138a8c37a78ee9ec753a890983a64",
+        "bytes": 1758281,
+        "sha256": "f04be5bf8671a5c40aac744e22812f64f04607ec94207f94e9a1e495dbbc0c44",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -16044,29 +16213,43 @@
       {
         "path": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.html",
         "status": 200,
-        "bytes": 12326,
-        "sha256": "117c0e9d2644e0ee92d890ccb52dea4005672ffaeb18db9b1148b0dd3f3d3402",
+        "bytes": 12527,
+        "sha256": "81dba863ddcc0e456b5a9b3e83e7650027484015f9b390f8590bbc1212b7e161",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
         "status": 200,
-        "bytes": 9259,
-        "sha256": "8726d1d06d198d635bb0c9481e9357cc5ec86a08327efa98ce57aad9e5225d9c",
+        "bytes": 9460,
+        "sha256": "8c0b3ac6e9d469a81a82b17aef5a27b8a93c5bf4895f5e6fa07265c295d10032",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/46-HANDOFF-DOIS-DEVS-R18.html",
         "status": 200,
-        "bytes": 13355,
-        "sha256": "190a2451cce4254015b8ec5a4e99a54657c042bd0def46365e15d84d404115fd",
+        "bytes": 14050,
+        "sha256": "86d6365c5def83eab0cf3070bf7703dffe9a8c86903a3f9c39a907694f36f235",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
         "status": 200,
-        "bytes": 10211,
-        "sha256": "6a158ef6df5e78c8f87695bab1d7462baee4cdf7dddede6d1ce3b9ecaba60be8",
+        "bytes": 10862,
+        "sha256": "52e12835207f543d6665224ef5824424843f8b3ab2101a21d6d67103e1ac6cc4",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.html",
+        "status": 200,
+        "bytes": 26504,
+        "sha256": "889f2a75977b4f6b90b78e2b745e4915e795fb0c11b4d7565a0a1d955ed2e33c",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+        "status": 200,
+        "bytes": 21152,
+        "sha256": "3b493b79711edaf2a2dcbd01d4dd4b72135f2bce5f6e71d061a4979a10e93a49",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -16142,8 +16325,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 13972,
-        "sha256": "963cc0cf328a723454c05bac1c2107a96fef107f4b889407fea070ff385c8d58",
+        "bytes": 14300,
+        "sha256": "cb840d1d1cb35cb492829afb4e5bd9fc42eac30bed9ecc848361221d9a3753f6",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -16392,17 +16575,17 @@
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-BTRQ_Hnp.js",
+        "path": "lab/assets/NASAReferenceScene-CVf7g6__.js",
         "status": 200,
         "bytes": 7147,
-        "sha256": "00c1332ab5acaf7544bd950386ec0ba4806aba5f9f0a05019da427d5abaabad0",
+        "sha256": "e03a7404dad2694e72d7e811e943f9256486a4b1e6cb0e30c03fe13e0332209f",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-CjtL7sfV.js",
+        "path": "lab/assets/OrbitalScene-BYhNoMRP.js",
         "status": 200,
         "bytes": 1017148,
-        "sha256": "ea2fd29eecb1243b5c3babc8936e01c0d5897f246d2cd2975d0ad3dc17168f9c",
+        "sha256": "e6b89ae4cb2ba821c2b1702a795cec6ae4256a39f59d987369623335b4edd9f0",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -16455,10 +16638,10 @@
         "contentType": "text/css; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-Ck1lRNh8.js",
+        "path": "lab/assets/index-BnZRkr7L.js",
         "status": 200,
-        "bytes": 514015,
-        "sha256": "243203936c80422a2e7728348d56c8818a853ad62090a47f186827ce32f6c299",
+        "bytes": 514172,
+        "sha256": "00f8267b76d61dd40da71e3310fb20e06cfbaaf41b66d66e650948f44ddfce82",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -16469,10 +16652,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-CQ8hTd5o.js",
+        "path": "lab/assets/search-CcWoZ6Ox.js",
         "status": 200,
         "bytes": 1247,
-        "sha256": "3930fb7b1461e9f61f4aa2d1abc32a5df42453b7eaf07323651818c25a0f7b53",
+        "sha256": "4d38c6b64dc4b536589c16e8085e75ffa5522d9fa34f1d396471bff65c841c51",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -16780,7 +16963,7 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 960,
-        "sha256": "ac3cdae3b3f92627bc1c6270953e35ad32c601313ddbffb782b050a0f3eb6698",
+        "sha256": "b72e34a60c89aa516bc2b1f6d2adaaab6967e10dac2d42671a9579705cf85c3b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -17248,8 +17431,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 146226,
-        "sha256": "3ba4aea71c44436be2c567c987a01535d282e260176db23f5c730ae6dc22bc44",
+        "bytes": 147533,
+        "sha256": "5a389230244425d7a186ddc11738015b48f5ae13262172c91d06e727b792f3d7",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -17351,6 +17534,13 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "research/nasa-opportunities-r18.json",
+        "status": 200,
+        "bytes": 21800,
+        "sha256": "69a53a199af714a17e7a45429db5d06195ce9e0d51e081af973b1ffbecf1f5b3",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
         "path": "research/nasa-science-opportunities.json",
         "status": 200,
         "bytes": 17381,
@@ -17380,7 +17570,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 259,
+      "linkedRoutesChecked": 262,
       "redirects": [
         {
           "source": "/campanha/research",
@@ -17500,87 +17690,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 12.939
+      "durationMs": 12.091
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.273
+      "durationMs": 0.274
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 82.55
+      "durationMs": 66.182
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.138
+      "durationMs": 1.947
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 93.453
+      "durationMs": 79.653
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1292.351
+      "durationMs": 1228.511
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.854
+      "durationMs": 0.631
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 523.619
+      "durationMs": 518.774
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 51.698
+      "durationMs": 63.672
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 3.309
+      "durationMs": 2.864
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 139.368
+      "durationMs": 90.581
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 7.256
+      "durationMs": 5.964
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 78.198
+      "durationMs": 61.944
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 247.022
+      "durationMs": 228.414
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 91.021
+      "durationMs": 107.985
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.117
+      "durationMs": 1.297
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 57.135
+      "durationMs": 51.399
     }
   ]
 }

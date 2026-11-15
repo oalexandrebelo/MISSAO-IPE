@@ -21,6 +21,7 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md', target: 'docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md', title: 'Próximo ciclo · oportunidades NASA', description: 'Pesquisa Sol 6.1 max: recursos verificados, quatro segmentos e prioridades viáveis para dois devs.' },
   { source: 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.md', target: 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.md', title: 'Bennu e Webb · dados científicos reais', description: 'Fontes, unidades, incertezas e a ligação entre decisões, arquivos e 3D.' },
   { source: 'docs/46-HANDOFF-DOIS-DEVS-R18.md', target: 'docs/46-HANDOFF-DOIS-DEVS-R18.md', title: 'Comece aqui · handoff R18', description: 'Divisão dos dois devs, contratos e validação dos dados reais.' },
   { source: 'research/motion-opportunities-r18.md', target: 'docs/MOTION-OPORTUNIDADES-R18.md', title: 'Movimento a serviço da evidência', description: 'Análise Cosmic Mapping e aplicação original no jogo.' },
@@ -182,6 +183,7 @@ try {
   for (const extension of ['html', 'css', 'js']) await copy(`web/game-design.${extension}`, `game-design.${extension}`, 'interactive-game-design-study');
   await copy('web/planet-jumping.html', 'planet-jumping.html', 'standalone-remote-media-experiment');
   await copy('research/technology-opportunities-r16.json', 'research/technology-opportunities-r16.json', 'reviewed-technology-opportunities');
+  await copy('research/nasa-opportunities-r18.json', 'research/nasa-opportunities-r18.json', 'research-proposals-r18');
   for (const name of ['bruno-consolidation-r17', 'readiness-r17', 'nasa-mission-stories-r17']) await copy(`research/${name}.json`, `research/${name}.json`, 'reviewed-r17-evidence');
   await copy('research/pr-assets-r16.json', 'research/pr-assets-r16.json', 'reviewed-pr-asset-inventory');
   await copy('research/nasa-science-opportunities.json', 'research/nasa-science-opportunities.json', 'official-nasa-science-opportunities');

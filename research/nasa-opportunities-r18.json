@@ -1,0 +1,240 @@
+{
+  "checkedDate": "2026-11-15",
+  "baseline": {
+    "release": "R18",
+    "referenceCommit": "1bb440801e2e6dcd3094c10878b5d643ba55dd83",
+    "labUrl": "https://projeto-ipe.vercel.app/lab/index.html",
+    "handoff": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
+    "findingsDocument": "docs/47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md",
+    "comparisonMethod": "Leitura dos contratos do laboratório e execução local dos ensaios existentes com runLearningExperiment. As três simulações usam registros históricos congelados e decisões didáticas.",
+    "scope": "Pesquisa, documentação e reprodução de resultados de domínio. Estados de propostas não são entregas de software. Licenças e referências foram verificadas em documentação pública quando acessíveis."
+  },
+  "challengeSource": {
+    "primaryUrl": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/",
+    "resourcesUrl": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+    "status": "Enunciado devolveu 502 e Resources inacessível pela consulta web.",
+    "discoveryUrl": "https://hackathlone.com/challenges/space-mission-design-game",
+    "discoveryRole": "Espelho local usado para identificar fontes primárias. O regulamento global não foi integralmente recuperado."
+  },
+  "priorities": [
+    {
+      "id": "P1",
+      "title": "Trilha entre pergunta, requisito, evidência e evento",
+      "status": "proposto",
+      "effortPersonDaysEstimate": [2, 3],
+      "sources": ["nasa-system-segments", "science-traceability-matrix", "build-it-yourself"],
+      "reuses": ["MissionPurpose", "RequirementsReview", "ScienceReturn", "ArchivedEvidence", "MissionResult", "ExpeditionResult"],
+      "devA": "Mapear requisitos, IDs estáveis e classificação científica a partir de estados existentes.",
+      "devB": "Ligar pergunta e resultado nos dois sentidos, com foco acessível e evento legível em 2D.",
+      "acceptance": "Cada registro consultado leva à própria origem e ao evento correto na tentativa. Pares incompletos, IDs descontínuos e incompatibilidade têm estados explícitos. Valores futuros permanecem indisponíveis ao rebobinar."
+    },
+    {
+      "id": "P2",
+      "title": "Primeira diferença observável em duas tentativas",
+      "status": "proposto",
+      "effortPersonDaysEstimate": [2, 3],
+      "sources": ["concept-maturity-levels", "goddard-mission-design-lab", "cubesat-101"],
+      "reuses": ["runLearningExperiment", "MissionExperiment", "CompareDialog", "ScientificExpedition", "eventos originais e relógio comum"],
+      "devA": "Derivar atributos que mudam e localizar eventos a partir das configurações executadas.",
+      "devB": "Exibir delta, evento, instante e efeito na própria comparação, com alternativa textual.",
+      "acceptance": "Os três A/B reproduzem os resultados registrados. O painel distingue regra explícita de associação observada, declara mudanças compostas e conserva o estado real quando uma execução termina antes da outra."
+    },
+    {
+      "id": "P3",
+      "title": "Parecer dos quatro papéis sobre o resultado",
+      "status": "proposto; piloto humano pendente",
+      "effortPersonDaysEstimate": [1, 2],
+      "sources": ["nasa-system-segments", "build-it-yourself", "csa-games", "goddard-mission-design-lab"],
+      "reuses": ["CrewReview", "MissionReflection", "retorno científico", "mesmo dispositivo para até quatro pessoas"],
+      "devA": "Revisar conclusões e preparar critério de observação para cada caso.",
+      "devB": "Apoiar a passagem de resultado na tela de retorno e conduzir piloto local.",
+      "acceptance": "Com um caso completo e outro incompleto, iniciantes mostram um evento e seu efeito, formulam uma afirmação defensável e informam que evidência falta. Registrar dúvidas e intervenções sem dados pessoais."
+    }
+  ],
+  "observedTrials": [
+    {
+      "case": "cerrado",
+      "selectedChange": "BANDAS para ÍNDICE",
+      "validRecordsA": 2,
+      "validRecordsB": 0,
+      "receivedRecordsA": 2,
+      "receivedRecordsB": 0,
+      "changeDescription": "O seletor de processamento muda carga, volume previsto por lote, massa e custo. B encerra com PEAK_POWER em T+600 s; demanda de 29,57894736842105 W, limite de 20 W.",
+      "evidenceLimit": "Preservar os pares históricos Terra/MODIS e os indicadores de qualidade. A diferença de NDVI sozinha não identifica causa."
+    },
+    {
+      "case": "bennu",
+      "selectedChange": "serviço de solo curto para ampliado",
+      "validRecordsA": 2,
+      "validRecordsB": 6,
+      "receivedRecordsA": 2,
+      "receivedRecordsB": 6,
+      "changeDescription": "Janela de 120 para 500 s, primeiro início de T+5400 para 5100 s, segundo início fixo em T+9000 s, taxa fixa de 1,2 Mbit/s. O custo total muda de 71 para 77 créditos.",
+      "evidenceLimit": "O contraste compara o serviço inteiro. A extensão da janela e o início mais cedo da primeira variam juntos. Os eixos maiores em metros são dimensões históricas; 5,25 cm/pixel é uma escala, não uma incerteza de 1σ."
+    },
+    {
+      "case": "telescope",
+      "selectedChange": "câmera de superfície para espectrômetro infravermelho",
+      "validRecordsA": 0,
+      "validRecordsB": 6,
+      "receivedRecordsA": 6,
+      "receivedRecordsB": 6,
+      "changeDescription": "Pacotes de 120 para 180 Mbit, carga em processamento de 22 para 30 W, massa de 2,9 para 3,2 kg e custo total de 95 para 105 créditos. O requisito instrumental só é atendido por B.",
+      "evidenceLimit": "Os seis bins do mesmo trânsito conservam valores e incertezas originais. O exercício descreve o espectro; a detecção publicada de CO₂ requer sua própria análise."
+    }
+  ],
+  "resources": [
+    {
+      "id": "nasa-system-segments",
+      "title": "Design and Develop Science Missions",
+      "primaryUrls": ["https://ntrs.nasa.gov/citations/20250002492", "https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf"],
+      "status": "Metadados e apresentação consultados.",
+      "licenseFindings": "Distribuição pública. O NTRS indica possíveis partes protegidas por direitos autorais. Creditar Julie Levri/NASA Ames e verificar cada elemento de mídia.",
+      "application": "Os quatro segmentos orientam os papéis e o fluxo entre objetivo, projeto, operação e evidência.",
+      "risks": "Confundir segmentos com etapas do ciclo ou apresentar o recorte como processo de engenharia qualificado.",
+      "proposedAcceptance": "Cada papel aponta uma escolha, uma consequência e o próximo papel que usa o resultado."
+    },
+    {
+      "id": "science-traceability-matrix",
+      "title": "Science Traceability Matrix — NASA HESTO e PI Launchpad",
+      "primaryUrls": ["https://hesto.smce.nasa.gov/focused-topics/", "https://science.nasa.gov/researchers/pi-launchpad-sessions/"],
+      "status": "Orientação NASA consultada.",
+      "licenseFindings": "Usar síntese e exercícios próprios com crédito. Licença específica de figuras não avaliada.",
+      "application": "Uma trilha por caso entre pergunta, grandeza, instrumento, requisito, pacote, evento e dado aceito.",
+      "risks": "Duplicar requisitos ou depender de nova simulação para classificar a mesma evidência.",
+      "proposedAcceptance": "Os mesmos IDs da tentativa aparecem em requisito, retorno e evento, com fonte e unidades preservadas."
+    },
+    {
+      "id": "concept-maturity-levels",
+      "title": "Concept Maturity Levels — JPL",
+      "primaryUrls": ["https://dataverse.jpl.nasa.gov/dataset.xhtml?persistentId=hdl:2014/44299", "https://dataverse.jpl.nasa.gov/file.xhtml?fileId=50237&version=2.0", "https://ntrs.nasa.gov/citations/20170007239", "https://science.nasa.gov/astrophysics/programs/exep/resources/studies/astra-initiative/"],
+      "status": "Depósito e página do arquivo consultados. CML 1–4 confrontados com orientação NASA. Binário do artigo JPL não recuperado para validar avisos internos.",
+      "licenseFindings": "As páginas do depósito e do PDF exibem CC0 1.0. Escopo de eventuais itens de terceiros dentro do artigo não verificado. Creditar Wessen e colegas/JPL e elaborar texto próprio.",
+      "application": "Ideia com objetivo e abordagem, viabilidade inicial, exploração de alternativas e desenho de referência formam uma sequência de discussão local.",
+      "risks": "Confundir CML com TRL, fases A–F ou selo de prontidão do jogo.",
+      "proposedAcceptance": "Cada comparação consolida qual alternativa serve à pergunta e que evidência apoia a escolha."
+    },
+    {
+      "id": "goddard-mission-design-lab",
+      "title": "Mission Design Lab — NASA Goddard",
+      "primaryUrls": ["https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab"],
+      "status": "Modalidades oficiais consultadas: Office Hours, Concept Development, Tailored Trade Study e Point Design Study.",
+      "licenseFindings": "Página de serviço tomada como referência, com crédito a NASA Goddard. Acesso, contato com laboratório e direito de reproduzir mídias não foram estabelecidos.",
+      "application": "Usar papéis locais, comparação de projetos e justificativa escrita curta.",
+      "risks": "Transformar estudo em checklist longo ou inferir que uma única alteração na UI isola um parâmetro físico.",
+      "proposedAcceptance": "As consequências reproduzem os eventos e as premissas da configuração executada."
+    },
+    {
+      "id": "cubesat-101",
+      "title": "CubeSat 101 e Small Spacecraft State-of-the-Art",
+      "primaryUrls": ["https://www.nasa.gov/wp-content/uploads/2017/03/nasa_csli_cubesat_101_508.pdf", "https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/", "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/", "https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/", "https://www.nasa.gov/smallsat-institute/sst-soa/ground-data-systems-and-mission-operations/"],
+      "status": "Guia CSLI e capítulos técnicos S3VI consultados como referências.",
+      "licenseFindings": "Citar NASA CSLI/S3VI. Conferir titularidade de imagens, slides e dados de fabricantes por item. Sem material incorporado.",
+      "application": "Explicar envelope, integração espaço-solo, energia, armazenamento e downlink em rascunho e retorno.",
+      "risks": "Usar números didáticos como limites de voo ou aplicar o mesmo envelope de CubeSat à OSIRIS-REx e ao Webb reais.",
+      "proposedAcceptance": "As unidades e os compromissos são defensáveis e identificados como pertencentes ao cenário."
+    },
+    {
+      "id": "build-it-yourself",
+      "title": "Build It Yourself — NASA Science/Webb",
+      "primaryUrls": ["https://science.nasa.gov/mission/webb/game-build-it-yourself/"],
+      "status": "Página, mecânica e requisitos documentados. Jogo externo não executado neste estudo.",
+      "licenseFindings": "Licença de redistribuição do código e dos ativos não localizada. Usar link e roteiro próprio com crédito à NASA.",
+      "application": "Justificar comprimento de onda, tipo de medida ou instrumento antes de executar. Comparar depois com a medida histórica do Ipê.",
+      "risks": "A NASA documenta mínimo de 1024×768 para o seu jogo. Embutir a experiência adicionaria carga e dependência de rede.",
+      "proposedAcceptance": "O jogador completa a justificativa em uma tela pequena, inclusive sem abrir o jogo externo."
+    },
+    {
+      "id": "csa-games",
+      "title": "Jogos educacionais da Canadian Space Agency",
+      "primaryUrls": ["https://www.asc-csa.gc.ca/eng/youth-educators/digital-games-and-activities.asp", "https://www.asc-csa.gc.ca/eng/satellites/radarsat/activities/", "https://www.asc-csa.gc.ca/eng/satellites/osiris-rex/activities/game.asp", "https://www.asc-csa.gc.ca/eng/youth-educators/activities/game-mission-astronaut.asp", "https://www.asc-csa.gc.ca/eng/terms.asp"],
+      "status": "Catálogo, páginas dos jogos e termos consultados. Jogos externos não executados neste estudo.",
+      "licenseFindings": "Reprodução educacional ou informativa não comercial condicionada a precisão, crédito e ausência de associação ou endosso, com terceiros e símbolos sujeitos a termos próprios. Licença de código dos jogos não confirmada.",
+      "application": "Usar o padrão destinatário-tarefa do RADARSAT, decisão com evidência do OSIRIS-REx e devolutiva curta de Mission: Astronaut.",
+      "risks": "Tratar a tarefa de coleta da CSA como interpretação dos seis eixos de Bennu do Ipê. Uso por link exige internet.",
+      "proposedAcceptance": "O debrief pede um destinatário, uma afirmação e uma evidência faltante, preservando a pergunta científica de cada caso."
+    },
+    {
+      "id": "nasa-mission-viz",
+      "title": "Web-based Space Mission Visualization — NASA MissionViz",
+      "primaryUrls": ["https://nasa.github.io/mission-viz/", "https://nasa.github.io/mission-viz/X3Dom/WebMissionVisualizationTutorialSeries.html", "https://github.com/nasa/mission-viz"],
+      "status": "Índice, README e tutoriais consultados. Demos e dependências não executadas.",
+      "licenseFindings": "Licença de redistribuição não identificada na raiz/README. No escopo atual, citar e estudar o padrão sem copiar código ou ativos.",
+      "application": "Referência de cálculo GMAT local, conversão para JSON pequeno e playback sincronizado em cena própria.",
+      "risks": "Confundir exemplos legados em X3DOM/R/Three.js com um serviço de dados ou propagador web.",
+      "proposedAcceptance": "O leitor distingue a origem de dados, o instante apresentado e a transformação usada pela visualização."
+    },
+    {
+      "id": "space-apps-vr-2023",
+      "title": "Visualize a Space Mission Using Virtual Reality — Space Apps 2023",
+      "primaryUrls": ["https://www.spaceappschallenge.org/2023/challenges/visualize-a-space-mission-using-virtual-reality/"],
+      "discoveryUrl": "https://hackathlone.com/challenges/space-mission-design-game",
+      "status": "Página primária devolveu 502. Identificado como precedente pelo localizador secundário.",
+      "licenseFindings": "Nenhuma licença de arte, código ou projetos externos estabelecida.",
+      "application": "Referência histórica para apresentar conceito, tempo e visualização espacial. Usar as cenas já implementadas.",
+      "risks": "Adotar hardware XR ou interpretar a referência como requisito do desafio 2026.",
+      "proposedAcceptance": "A interpretação da tentativa é completa no navegador sem headset."
+    },
+    {
+      "id": "nasa-3d-assets",
+      "title": "NASA 3D Resources — modelos de contexto",
+      "primaryUrls": ["https://science.nasa.gov/3d-resources/", "https://www.nasa.gov/nasa-brand-center/images-and-media/"],
+      "status": "Acervo e diretrizes consultados. Quatro referências GLB já documentadas no projeto; nenhum ativo novo incluído.",
+      "licenseFindings": "Conservar crédito, avisos e condições por arquivo. Diretrizes da NASA distinguem mídia, material de terceiros e marcas protegidas.",
+      "application": "Manter referência visual local, nave didática e a trilha de registro já implementadas.",
+      "risks": "Inferir registro entre coordenadas publicadas e modelo, ou usar aparência como prova de desempenho.",
+      "proposedAcceptance": "Simulação e resultado são legíveis fora do canvas. Créditos permanecem rastreáveis por ativo."
+    },
+    {
+      "id": "gmat",
+      "title": "General Mission Analysis Tool R2026a",
+      "primaryUrls": ["https://software.nasa.gov/software/GSC-19640-1", "https://gmat.atlassian.net/wiki/spaces/GW/blog/2026/04/03/3619389450/Announcing%2BGMAT%2BR2026a%2BRelease", "https://github.com/nasa/GMAT/blob/main/License.txt", "https://raw.githubusercontent.com/nasa/GMAT/R2026a/application/samples/Ex_StationContactLocator.script", "https://raw.githubusercontent.com/nasa/GMAT/R2026a/src/base/subscriber/EphemerisFile.cpp"],
+      "status": "Catálogo R2026, release R2026a, licença e interfaces no código verificados. Software e saídas não executados.",
+      "licenseFindings": "Apache-2.0 para o GMAT consultado. Conservar avisos aplicáveis ao distribuir código e verificar dependências, kernels e dados separadamente.",
+      "application": "Posterior e opcional. Prototipar órbita terrestre de exemplo calculada fora do navegador, com relatório ContactLocator e exportação EphemerisFile em CCSDS-OEM.",
+      "risks": "Confundir linha de visada com janela alocada, qualidade RF, entrega ou órbita do R18. A convenção de eixos da cena exige uma transformação explícita a partir do referencial físico.",
+      "proposedAcceptance": "Publicado somente como recorte explicativo após provar versão, época, escala, unidades, referencial, transformação, cobertura e comparação independente. Paridade tabular e nenhuma dependência orbital no motor atual."
+    },
+    {
+      "id": "naif-horizons",
+      "title": "JPL Horizons, NAIF SPICE e SpiceyPy",
+      "primaryUrls": ["https://ssd-api.jpl.nasa.gov/doc/horizons.html", "https://ssd-api.jpl.nasa.gov/doc/index.php", "https://naif.jpl.nasa.gov/pub/naif/ORX/", "https://naif.jpl.nasa.gov/pub/naif/JWST/", "https://naif.jpl.nasa.gov/naif/rules.html", "https://github.com/AndrewAnnex/SpiceyPy"],
+      "status": "Documentação da API, diretórios de missão e repositório do wrapper consultados. Nenhuma consulta de efeméride, instalação ou validação de kernels executada.",
+      "licenseFindings": "Wrapper SpiceyPy MIT. Regras NAIF, cobertura/atribuição dos kernels e política de uso da API JPL são independentes. JPL SSD veda incorporar as APIs em sites.",
+      "application": "Candidato a referência independente pontual ou recorte histórico posterior. Verificar o centro, referencial, época, escala, intercepto e origem de cada posição conforme a pergunta.",
+      "risks": "Supor precisão universal ou interoperabilidade direta entre kernels, GLB e 3D Tiles. Usar dados com escala temporal ou cobertura inadequadas.",
+      "proposedAcceptance": "Se houver recorte, incluir versão, parâmetros, transformação, fonte, créditos, limites e comparação em condições equivalentes."
+    },
+    {
+      "id": "openmct-flight-software",
+      "title": "Open MCT, F´ e cFS",
+      "primaryUrls": ["https://github.com/nasa/openmct/blob/master/API.md", "https://github.com/nasa/openmct/blob/master/LICENSE.md", "https://github.com/nasa/fprime", "https://github.com/nasa/cFS"],
+      "status": "Repositórios, licenças e API de provider Open MCT consultados. Fora do ciclo de integração.",
+      "licenseFindings": "Apache-2.0 nos repositórios principais consultados. Verificar dependências e avisos por versão se houver uso futuro.",
+      "application": "Estudar relógio comum e visualização de históricos. openmct.telemetry.addProvider(provider) fornece integração de dados a um aplicativo Open MCT, não dados de missão por si.",
+      "risks": "Duplicar console, modelo de estado e telemetria, com manutenção adicional e maior custo de carregamento.",
+      "proposedAcceptance": "Manter o histórico atual como fonte de verdade. Só revisitar um console externo se houver demanda independente medida."
+    },
+    {
+      "id": "3d-tiles",
+      "title": "3DTilesRendererJS — NASA-AMMOS",
+      "primaryUrls": ["https://github.com/NASA-AMMOS/3DTilesRendererJS", "https://github.com/NASA-AMMOS/3DTilesRendererJS/blob/master/src/three/plugins/README.md"],
+      "status": "Suporte a Three.js, R3F e Babylon.js verificado no projeto. TopoLinesPlugin documentado para Three.js. Sem integração no R18.",
+      "licenseFindings": "Apache-2.0 no renderer. Licença, acesso e créditos do tileset e suas texturas, geometria e dados são separados.",
+      "application": "Candidato posterior apenas para um tileset com necessidade pedagógica, origem e registro espacial demonstrados.",
+      "risks": "Atribuir resolução inexistente, supor leitura de kernels SPICE ou introduzir maior tráfego e custo de GPU para substituir um GLB local.",
+      "proposedAcceptance": "Demonstrar alinhamento com pontos conhecidos, direitos e limite de transferência e de memória em dispositivo alvo, com alternativa 2D."
+    },
+    {
+      "id": "foundation-models-and-exominer",
+      "title": "Prithvi-EO-2.0, Prithvi-WxC e ExoMiner",
+      "primaryUrls": ["https://github.com/NASA-IMPACT/Prithvi-EO-2.0", "https://github.com/NASA-IMPACT/Prithvi-WxC", "https://github.com/NASA-IMPACT/Prithvi-WxC/blob/main/LICENSE", "https://github.com/nasa/ExoMiner"],
+      "status": "Escopos de produtos verificados em repositórios. Fora deste ciclo.",
+      "licenseFindings": "O código de Prithvi-WxC indica MIT. Licenças de pesos, dados e outras bibliotecas não inventariadas para redistribuição.",
+      "application": "Referência para perguntas futuras de observação da Terra, meteorologia ou triagem de candidatos fotométricos.",
+      "risks": "Trocar dados e pergunta do R18 por inferência, ampliar custo de computação e induzir anúncios de descoberta. Rádios, ingestão massiva, motores adicionais e demais pipelines do anexo não foram auditados individualmente.",
+      "proposedAcceptance": "Reavaliar apenas com uma pergunta nova, conjunto apropriado, validação proposta e licença confirmada."
+    }
+  ],
+  "browserAndOffline": "P1–P3 reutilizam os dados locais e a interface existente, sem dependência nova. Testar a partida sem requisições a terceiros; não presumir abertura a frio sem rede do site hospedado. Conferir teclado, leitor de tela, toque físico, movimento reduzido, alternativa sem WebGL e bytes iniciais."
+}

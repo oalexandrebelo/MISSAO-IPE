@@ -6,7 +6,7 @@
   "description": "Jogo educacional de engenharia de missões espaciais com dados históricos NASA, laboratório de física e hangar R3F.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run build:research && tsc --noEmit && vite build",
+    "build": "node scripts/sync-science-records.mjs && npm run build:research && tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.mts",
     "test:ui": "node scripts/test-ui.mjs",

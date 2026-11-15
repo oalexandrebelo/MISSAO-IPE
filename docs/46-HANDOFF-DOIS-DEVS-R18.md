@@ -39,7 +39,7 @@ Todos os caminhos `src/` a seguir pertencem a `experiments/mission-design-lab/`.
 | `src/ui/MissionStories.tsx` | História baseada em publicação científica; datas e limites do que foi incorporado |
 | `apps/immersive-lp/lib/content.ts`, na raiz | Resumo público das missões e perguntas frequentes; a LP é uma publicação separada |
 
-As tabelas distribuídas ficam em `/lab/data/science/`: `bennu-records.json`, `bennu-table1.csv`, `bennu-provenance.json`, `webb-spectrum-subset.json`, `webb-firefly-nasa.tbl` e `webb-provenance.json`. Os links de download estão no documento 45.
+Os JSON usados pelo motor ficam em `src/data/science/`; `scripts/sync-science-records.mjs` publica cópias idênticas antes do build. O teste de procedência impede divergência entre motor e download. As tabelas distribuídas ficam em `/lab/data/science/`: `bennu-records.json`, `bennu-table1.csv`, `bennu-provenance.json`, `webb-spectrum-subset.json`, `webb-firefly-nasa.tbl` e `webb-provenance.json`. Os links de download estão no documento 45.
 
 ## Contratos que não podem divergir
 
@@ -56,7 +56,7 @@ As tabelas distribuídas ficam em `/lab/data/science/`: `bennu-records.json`, `b
 
 1. Entrar em **Bennu**, ler a pergunta e identificar a unidade em metros. Abrir a fonte e localizar a Tabela Suplementar 1. Conferir a omissão explícita de 4b no jogo e sua presença no CSV completo.
 2. Usar câmera, energia ampliada e contatos curtos. Registrar uma hipótese, executar e comparar produção, fila e recepção. Dados incompletos devem permanecer indisponíveis no retorno.
-3. Ampliar apenas os contatos, executar novamente e comparar no mesmo T+. Os eixos maiores e a fonte precisam permanecer idênticos. O rádio e sua taxa não mudam com a duração do contato.
+3. Trocar apenas o seletor do serviço de solo, executar novamente e comparar no mesmo T+. O pacote altera duração, início da primeira janela e custo: não atribuir o resultado somente à duração. Os eixos maiores e a fonte precisam permanecer idênticos. O rádio e sua taxa não mudam com a duração do contato.
 4. Selecionar um registro recebido e **rever a entrega no 3D**. Conferir ID, evento, relógio e subsistema. Rebobinar para antes da entrega: o registro não pode aparecer recebido na cena daquele instante.
 5. Entrar em **Webb**. Confirmar que a tabela é de um único trânsito e a grandeza é porcentagem de luz bloqueada. Com câmera genérica, recepção completa não deve produzir evidência espectral válida.
 6. Trocar apenas para espectrômetro. Verificar os pontos recebidos e suas barras de incerteza. Conferir uma linha com a tabela de 95 bins, sem confundir porcentagem com fração absoluta ou erro percentual relativo.
@@ -86,3 +86,7 @@ Validação integrada R18: 148 testes de domínio e 38 de interface do laborató
 O projeto possui uma proposta educativa verificável, mas a implementação não prova aprendizagem nem classificação no Space Apps. Observar participantes iniciantes, registrar se conseguem explicar um gargalo sem ajuda, testar toque/leitura em aparelho físico e ensaiar o pitch continuam necessários. A colaboração disponível é local no mesmo dispositivo; multiplayer remoto não está implementado. Questões de elegibilidade e histórico pré-evento permanecem no [documento de prontidão](42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
 
 Próxima melhoria deve partir de um problema observado nessas sessões. O ganho desta revisão é permitir que a pessoa reconheça uma medida real, siga sua origem, veja por que ela chegou ou faltou e formule uma conclusão do tamanho da evidência.
+
+## Próximo ciclo de investigação
+
+Leia as [oportunidades NASA revisadas pelo Sol 6.1 max](47-OPORTUNIDADES-NASA-PARA-DOIS-DEVS-R18.md). Elas são propostas priorizadas, não funcionalidades já implementadas. O estudo distingue ferramentas de referência, dados para integrar e critérios para aceitar cada melhoria.

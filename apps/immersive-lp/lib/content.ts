@@ -30,7 +30,7 @@ export const LEVELS = [
     status: 'Caso disponível', live: true, tag: 'GEOLOGIA PLANETÁRIA · BENNU', icon: 'asteroid',
     text: 'Rochas brilhantes de Bennu motivaram uma investigação da OSIRIS-REx sobre material de outro asteroide. Compare dimensões reais publicadas e descubra por que produzir um registro não garante que ele chegue aos cientistas.',
     learning: 'Instrumento · memória a bordo · tempo de contato',
-    detail: 'Seis eixos maiores de rochas e clastos vêm da Tabela Suplementar 1 do estudo arquivado no NASA NTRS. Amplie somente o contato e compare quais registros chegam. Dimensões são reais; energia, pacotes e operação são didáticos. Tamanho sozinho não prova composição ou origem, e o modelo 3D não é um mapa de pouso.',
+    detail: 'Seis eixos maiores de rochas e clastos vêm da Tabela Suplementar 1 do estudo arquivado no NASA NTRS. Troque o serviço de solo e compare quais registros chegam: o pacote muda duração, início da primeira janela e custo, com a mesma taxa. Dimensões são reais; energia, pacotes e operação são didáticos. Tamanho sozinho não prova composição ou origem, e o modelo 3D não é um mapa de pouso.',
     source: 'https://ntrs.nasa.gov/citations/20205007912',
     sourceLabel: 'NASA NTRS · rochas de Bennu',
   },

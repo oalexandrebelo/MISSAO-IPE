@@ -1,0 +1,133 @@
+{
+  "verifiedAt": "2026-11-15T09:44:22.108Z",
+  "deploymentId": "dpl_FLo1NQcrA3e9B4uaTrCYuwgQaZhq",
+  "sourceCommit": "1bb440801e2e6dcd3094c10878b5d643ba55dd83",
+  "base": "https://projeto-ipe-lp.vercel.app",
+  "status": "passed",
+  "checks": [
+    {
+      "path": "assets/REMOTION-LICENSE.md",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/assets/REMOTION-LICENSE.md",
+      "sha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09",
+      "hashMatches": true
+    },
+    {
+      "path": "assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "sha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b",
+      "hashMatches": true
+    },
+    {
+      "path": "assets/earth-mobile.webp",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/assets/earth-mobile.webp",
+      "sha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+      "hashMatches": true
+    },
+    {
+      "path": "assets/earth.webp",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/assets/earth.webp",
+      "sha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+      "hashMatches": true
+    },
+    {
+      "path": "assets/game-preview.jpg",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/assets/game-preview.jpg",
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "hashMatches": true
+    },
+    {
+      "path": "assets/science-provenance.json",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/assets/science-provenance.json",
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "hashMatches": true
+    },
+    {
+      "path": "brand/projeto-ipe-logo.png",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/brand/projeto-ipe-logo.png",
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "hashMatches": true
+    },
+    {
+      "path": "brand/projeto-ipe-symbol.svg",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/brand/projeto-ipe-symbol.svg",
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/eb-garamond-italic-latin.woff2",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/fonts/eb-garamond-italic-latin.woff2",
+      "sha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/eb-garamond-latin.woff2",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/fonts/eb-garamond-latin.woff2",
+      "sha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/ebgaramond-OFL.txt",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/fonts/ebgaramond-OFL.txt",
+      "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/figtree-OFL.txt",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/fonts/figtree-OFL.txt",
+      "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/figtree-latin.woff2",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/fonts/figtree-latin.woff2",
+      "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "hashMatches": true
+    },
+    {
+      "path": "brand/missao-ipe-logo.svg",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/brand/missao-ipe-logo.svg",
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "hashMatches": true
+    },
+    {
+      "path": "brand/missao-ipe-symbol.svg",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/brand/missao-ipe-symbol.svg",
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "hashMatches": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/",
+      "public": true,
+      "newLogo": true,
+      "r18Science": true
+    },
+    {
+      "path": "/creditos/",
+      "status": 200,
+      "finalUrl": "https://projeto-ipe-lp.vercel.app/creditos/",
+      "public": true,
+      "newLogo": false,
+      "r18Science": null
+    }
+  ],
+  "limits": [
+    "HTTP bytes/content only. Local browser journeys passed separately. Canonical trailing slash redirects followed within the same origin."
+  ]
+}
