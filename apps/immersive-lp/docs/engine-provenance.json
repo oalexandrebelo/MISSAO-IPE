@@ -1,0 +1,35 @@
+{
+  "repository": "oalexandrebelo/PROJETO-IPE",
+  "base_commit": "b0cb7d7febec16dd97425070d72c21fde992436f",
+  "source_directory": "experiments/mission-design-lab/src",
+  "files": [
+    {
+      "path": "lib/mission/core/catalog.ts",
+      "sha256": "1533d5eedab7a3a7c5256f0e4a209afe19c45a40b0102de1d7d8ccf79be14ef8"
+    },
+    {
+      "path": "lib/mission/core/contracts.ts",
+      "sha256": "f9d77b4b80353aed182f4ec5e4d18d42611ab84362a98f0cf84c4db6155057e2"
+    },
+    {
+      "path": "lib/mission/core/engine.ts",
+      "sha256": "8f108777bb8e82586c703fcefb27a328dc4544b07e2cb2b6fd01f5310c722635"
+    },
+    {
+      "path": "lib/mission/core/exact.ts",
+      "sha256": "d0cc910dfced45a8b0cb556f0c161f72770e55f5aff64e73bf00fdd394d239b8"
+    },
+    {
+      "path": "lib/mission/core/power.ts",
+      "sha256": "9644ea401f16d94b5c248be7315c3d0b4ae6f6c5d6051c2c8ade89d834cac9d7"
+    },
+    {
+      "path": "lib/mission/core/science.ts",
+      "sha256": "a2b21f2311a3f491abf95c408f29b01e9d19bc23ca997565199710f245305e92"
+    },
+    {
+      "path": "lib/mission/data/science-data.ts",
+      "sha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66"
+    }
+  ]
+}

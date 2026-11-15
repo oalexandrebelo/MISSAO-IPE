@@ -1,0 +1,52 @@
+name: IPÊ · Immersive LP QA
+on:
+  pull_request:
+    paths:
+      - 'apps/immersive-lp/**'
+      - '.github/workflows/immersive-lp-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ipe-lp-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: apps/immersive-lp
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - name: Install pinned package manager
+        run: npm install --global pnpm@11.25.0
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Validate source and scientific demonstration
+        run: pnpm typecheck && pnpm test:engine && pnpm assets:verify
+      - name: Build static production site
+        run: pnpm build:offline-fonts
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+      - name: Install test browser
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Functional and accessibility tests
+        run: pnpm test
+        env:
+          CI: '1'
+      - name: Store test evidence and static site
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ipe-lp-validation
+          path: |
+            apps/immersive-lp/evidence/playwright-results.json
+            apps/immersive-lp/test-results/
+            apps/immersive-lp/out/
+          retention-days: 14
