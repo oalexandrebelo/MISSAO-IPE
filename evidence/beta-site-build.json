@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T16:37:57.873Z",
+  "generatedAt": "2026-11-15T17:11:30.968Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 438,
-  "bytes": 43120871,
+  "fileCount": 447,
+  "bytes": 43362762,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 207067,
-    "sha256": "0e544327f2bbcc4f00316808bd281dfdb189aa9a3ed92846c73b07a26e4e3075"
+    "bytes": 211677,
+    "sha256": "eee5ac5038a0d1017e0c723f0e8031f494248edec218792443e2730993b93499"
   },
   "entries": [
     {
@@ -519,10 +519,10 @@
     {
       "path": "campanha/release.json",
       "bytes": 326,
-      "sha256": "4742949fef298b0aae77b7e6951557ae4575f468535e5d868e4cba9f621cfa1f",
+      "sha256": "3f0e349f66b2fb77a8c115f87414ea741e855d8d705d2eb7b4c43001c4920c6a",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/release.json",
-      "sourceSha256": "4742949fef298b0aae77b7e6951557ae4575f468535e5d868e4cba9f621cfa1f",
+      "sourceSha256": "3f0e349f66b2fb77a8c115f87414ea741e855d8d705d2eb7b4c43001c4920c6a",
       "transformation": "none; bytes preserved"
     },
     {
@@ -812,31 +812,31 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 65960,
-      "sha256": "ec7ccecbeda5d7aaf82cf8d97496970aa9958e27c31c31a99654f6f4994f00ee",
+      "bytes": 67927,
+      "sha256": "afa4984d4540ee81465ce0382905241cfd33de748cbc6e4f21241e0dc7a523bf",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "ec7ccecbeda5d7aaf82cf8d97496970aa9958e27c31c31a99654f6f4994f00ee",
+      "sourceSha256": "afa4984d4540ee81465ce0382905241cfd33de748cbc6e4f21241e0dc7a523bf",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2411907,
-      "sha256": "3dab560d03b54d08ba4ad1b539a55d906ec4347c42be7826e97917a5634d966b",
+      "bytes": 2466006,
+      "sha256": "98505f83474680cee41d87f36e2e3b38b846b65dec8a389878f1608f9fc26ae0",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "6f5e294f00a9af67c9c65ba3b768fdd453608937395a70e4d3e795d63382e763",
+      "sourceSha256": "ced06f4004ff2e15fcbfc4d9670f06ee2ef43930b1de009e09c63f097ddf5242",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1934374,
-      "sha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687",
+      "bytes": 1975883,
+      "sha256": "2a5db26f567b8071dcff0f394040f372900f459ccc29f743b4f35e22c64878a0",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687",
+      "sourceSha256": "2a5db26f567b8071dcff0f394040f372900f459ccc29f743b4f35e22c64878a0",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1977,6 +1977,86 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "docs/67-AUDITORIA-BRUNO-FASTMODE-R26.html",
+      "bytes": 25266,
+      "sha256": "6d0680fcc926a564c114998b95b2d69f1866d44a31c44d0553a2344f7c1b52f9",
+      "category": "rendered-public-document",
+      "source": "docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md",
+      "sourceSha256": "f2ee4a206a56e1696e0ae8fc23886f6b4eb75abf4597f6b488a5a243f058ef69",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md",
+      "bytes": 19612,
+      "sha256": "f2ee4a206a56e1696e0ae8fc23886f6b4eb75abf4597f6b488a5a243f058ef69",
+      "category": "public-document",
+      "source": "docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md",
+      "sourceSha256": "f2ee4a206a56e1696e0ae8fc23886f6b4eb75abf4597f6b488a5a243f058ef69",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.html",
+      "bytes": 12561,
+      "sha256": "19e051cb78c05bcd0db6c36b1cba46d3a05604bffe946209066c8993df187f61",
+      "category": "rendered-public-document",
+      "source": "docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md",
+      "sourceSha256": "79b4f795c11cce99cd2a29f4ad0b19e58a936b6e29a92c287457224d3f572e15",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md",
+      "bytes": 8605,
+      "sha256": "79b4f795c11cce99cd2a29f4ad0b19e58a936b6e29a92c287457224d3f572e15",
+      "category": "public-document",
+      "source": "docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md",
+      "sourceSha256": "79b4f795c11cce99cd2a29f4ad0b19e58a936b6e29a92c287457224d3f572e15",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "docs/69-RIVE-MISSOES-R26.html",
+      "bytes": 6390,
+      "sha256": "66cc66c698c7993a248fe921abfd115917a69b42a2b5f34a98546018ab300dc7",
+      "category": "rendered-public-document",
+      "source": "docs/69-RIVE-MISSOES-R26.md",
+      "sourceSha256": "1fd78bc8398ab53f32ced2549ee1e7691e0d3ffc9b911b3e186bb9acf34cc159",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/69-RIVE-MISSOES-R26.md",
+      "bytes": 3400,
+      "sha256": "1fd78bc8398ab53f32ced2549ee1e7691e0d3ffc9b911b3e186bb9acf34cc159",
+      "category": "public-document",
+      "source": "docs/69-RIVE-MISSOES-R26.md",
+      "sourceSha256": "1fd78bc8398ab53f32ced2549ee1e7691e0d3ffc9b911b3e186bb9acf34cc159",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "docs/70-HANDOFF-GAME-R26.html",
+      "bytes": 11785,
+      "sha256": "0c083ac4c867b823d39cb700ba811855b6efa7ca374c4b1f9004ad170ee17261",
+      "category": "rendered-public-document",
+      "source": "docs/70-HANDOFF-GAME-R26.md",
+      "sourceSha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/70-HANDOFF-GAME-R26.md",
+      "bytes": 8619,
+      "sha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "category": "public-document",
+      "source": "docs/70-HANDOFF-GAME-R26.md",
+      "sourceSha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "docs/AUTORIA-E-IA.html",
       "bytes": 3917,
       "sha256": "3a82485b19804e230019ac3446c4fb016914da5a68c2d843011858f1b091fdb5",
@@ -2038,8 +2118,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 20360,
-      "sha256": "34618cde91693d495f2bbdd4c6e78f9c79f0c646dd63efbc5122617a217c5f52",
+      "bytes": 21437,
+      "sha256": "bfb4d42852a5c40fcf7146c858c4decc5ebc97dcffbab4dbddb2f46d8befcc04",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
       "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
@@ -2418,12 +2498,12 @@
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
-      "path": "lab/assets/BrunoHangarScene-BZWCZG03.js",
-      "bytes": 3807,
-      "sha256": "a87f3eaa2f2b2b8f7417477e568f4990ccd2810a2ce8709c5f1d03ad1d9c02ea",
+      "path": "lab/assets/BrunoHangarScene-DmLGlLwr.js",
+      "bytes": 4673,
+      "sha256": "70b04437a0d6a55f13d6c5f4f89b860709f529b24e39ebbcfc6797ad1c077177",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-BZWCZG03.js",
-      "sourceSha256": "a87f3eaa2f2b2b8f7417477e568f4990ccd2810a2ce8709c5f1d03ad1d9c02ea",
+      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DmLGlLwr.js",
+      "sourceSha256": "70b04437a0d6a55f13d6c5f4f89b860709f529b24e39ebbcfc6797ad1c077177",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2472,21 +2552,21 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-c0RwopvJ.css",
-      "bytes": 217356,
-      "sha256": "d5cb4c07a167a2a0d264ac29a274989c7261ce2f8cf08025432eb7b56337c3bc",
+      "path": "lab/assets/index-A72CBLpX.js",
+      "bytes": 664299,
+      "sha256": "0a7580b2e86372016404870ad17588ed97dbf95f82cd9b830823b303b7fc53fd",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-c0RwopvJ.css",
-      "sourceSha256": "d5cb4c07a167a2a0d264ac29a274989c7261ce2f8cf08025432eb7b56337c3bc",
+      "source": "experiments/mission-design-lab/dist/assets/index-A72CBLpX.js",
+      "sourceSha256": "0a7580b2e86372016404870ad17588ed97dbf95f82cd9b830823b303b7fc53fd",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-DJXBbedx.js",
-      "bytes": 647647,
-      "sha256": "562b84aade9af40a3a69b7f236b78406f6fbb0081552e93de63fe01988a36d37",
+      "path": "lab/assets/index-C_IR0o8g.css",
+      "bytes": 221592,
+      "sha256": "1d5fdd5d22d6c3cd5203b577faf5a7bec5587a1732bda35d62cd2e089fbead71",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-DJXBbedx.js",
-      "sourceSha256": "562b84aade9af40a3a69b7f236b78406f6fbb0081552e93de63fe01988a36d37",
+      "source": "experiments/mission-design-lab/dist/assets/index-C_IR0o8g.css",
+      "sourceSha256": "1d5fdd5d22d6c3cd5203b577faf5a7bec5587a1732bda35d62cd2e089fbead71",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2499,30 +2579,30 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/NASAReferenceScene-CfhbHDtL.js",
+      "path": "lab/assets/NASAReferenceScene-Z8ReTrgH.js",
       "bytes": 7234,
-      "sha256": "1543212cad0e226bd4ece898ff64a9f9d7da1f4cafd672efad428172390b1309",
+      "sha256": "37c055a35bcecd71b4e3d75012218c8d2cbb6eb9f612b5909d3ac3ca8a0501cb",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-CfhbHDtL.js",
-      "sourceSha256": "1543212cad0e226bd4ece898ff64a9f9d7da1f4cafd672efad428172390b1309",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Z8ReTrgH.js",
+      "sourceSha256": "37c055a35bcecd71b4e3d75012218c8d2cbb6eb9f612b5909d3ac3ca8a0501cb",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/OrbitalScene-8yrFEIka.js",
+      "path": "lab/assets/OrbitalScene-Dver_yFD.js",
       "bytes": 101336,
-      "sha256": "893cf453bfb5663495158f40541aeb2ee9555fdd936422173d26dc5b6ab3891b",
+      "sha256": "47bb80e0d95698d8cc1466210ac7e94a943009352caaa9fa4e5a52e76fd9126c",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-8yrFEIka.js",
-      "sourceSha256": "893cf453bfb5663495158f40541aeb2ee9555fdd936422173d26dc5b6ab3891b",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-Dver_yFD.js",
+      "sourceSha256": "47bb80e0d95698d8cc1466210ac7e94a943009352caaa9fa4e5a52e76fd9126c",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/react-three-fiber.esm-DPWbnqW6.js",
+      "path": "lab/assets/react-three-fiber.esm-D4zizS6z.js",
       "bytes": 918864,
-      "sha256": "fc24edde18b894982a67b15b772c26a59e952e3e04b1332a6eed31c942488e79",
+      "sha256": "e20a85284ec7332fd7a0628b964d72923ca0df7e61479bfd30ce8baf863cd0d0",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/react-three-fiber.esm-DPWbnqW6.js",
-      "sourceSha256": "fc24edde18b894982a67b15b772c26a59e952e3e04b1332a6eed31c942488e79",
+      "source": "experiments/mission-design-lab/dist/assets/react-three-fiber.esm-D4zizS6z.js",
+      "sourceSha256": "e20a85284ec7332fd7a0628b964d72923ca0df7e61479bfd30ce8baf863cd0d0",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2580,12 +2660,12 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/search-De5rs-5K.js",
+      "path": "lab/assets/search-BNTKBQNv.js",
       "bytes": 1247,
-      "sha256": "dda878edc309c027c3843b6e6c36a9d1ad5615dc7ba4abdefab535f8d9ee9307",
+      "sha256": "852ea18d3e2261eebd66c45d83d340734a558f120552bb668c0ede8deb0d9732",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/search-De5rs-5K.js",
-      "sourceSha256": "dda878edc309c027c3843b6e6c36a9d1ad5615dc7ba4abdefab535f8d9ee9307",
+      "source": "experiments/mission-design-lab/dist/assets/search-BNTKBQNv.js",
+      "sourceSha256": "852ea18d3e2261eebd66c45d83d340734a558f120552bb668c0ede8deb0d9732",
       "transformation": "none; bytes preserved"
     },
     {
@@ -3020,10 +3100,10 @@
     {
       "path": "lab/index.html",
       "bytes": 1380,
-      "sha256": "64fdccd98837e3c9ab93a664ace712ea28a9b971f4bc92b1468341db01995044",
+      "sha256": "d56560a4f37e5a7006974e51fa65716b43cc1bfd0f798385d79f60c85a9fde84",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/index.html",
-      "sourceSha256": "b82bc3827f6f6bdc10d4aac155c3175ec42ac00cad5ae78404d910381c2c59ff",
+      "sourceSha256": "3b28d402022e2d135c862b8de171819c7b548a8772c1bb55f1a7179dfa1eeea2",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "lab",
       "analytics": "custom-host-only; page performance; no private routes"
@@ -3354,6 +3434,15 @@
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/research/originals/refinamento-risco-ux.md",
       "sourceSha256": "89551835a9cd6090fd8867d514ddaed21216815e307452024515646d927957ea",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "lab/rive/ipe-mission-sequence.riv",
+      "bytes": 20637,
+      "sha256": "e0a7c87f9ce5177402e3ca5d5223edf1796cc614512ce33e6f1c6c4fc4a2437f",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/rive/ipe-mission-sequence.riv",
+      "sourceSha256": "e0a7c87f9ce5177402e3ca5d5223edf1796cc614512ce33e6f1c6c4fc4a2437f",
       "transformation": "none; bytes preserved"
     },
     {

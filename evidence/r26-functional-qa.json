@@ -1,0 +1,67 @@
+{
+  "edition": "R26",
+  "checkedAt": "2026-11-15T17:11:19.356803+00:00",
+  "scope": "localhost compiled game, synthetic participant, real browser UI",
+  "missions": [
+    {
+      "id": "iss",
+      "valid": 6,
+      "score": 92,
+      "checks": [
+        "AB 0 to 6 valid records with protection only",
+        "3D baseline separate from edited B",
+        "pause and manual events",
+        "four roles recorded"
+      ]
+    },
+    {
+      "id": "moon",
+      "valid": 6,
+      "score": 91,
+      "checks": [
+        "extended energy and directional link",
+        "390px no document overflow",
+        "reload restores report without duplicate attempt"
+      ]
+    },
+    {
+      "id": "mars",
+      "valid": 6,
+      "score": 91,
+      "checks": [
+        "default launch blocked 529kg vs 450kg",
+        "redesign 580kg vs 680kg",
+        "320px no document overflow",
+        "Rive stage2 acquisition and stage3 downlink",
+        "audio enable and mute controls"
+      ]
+    }
+  ],
+  "metrics": {
+    "attempts": 5,
+    "completed": 4,
+    "cancelled": 1,
+    "successes": 3,
+    "invalid": 1,
+    "inspections": 2,
+    "decisions": 7,
+    "rolesReviewedIss": 4,
+    "confirmedEvents": 18,
+    "pendingEvents": 0,
+    "rejectedEvents": 0
+  },
+  "runtime": {
+    "errorsObserved": 0,
+    "warnings": [
+      "THREE.Clock deprecation in existing R3F runtime"
+    ],
+    "rive": "real canvas rendered and followed engine stages",
+    "three": "real WebGL scene rendered, acquisition cone and communications changed with event"
+  },
+  "limits": [
+    "Desktop browser viewport test, not physical phone",
+    "Local API uses in-memory QA repository; production persistence is verified separately",
+    "Synthetic technical tests, not human learning evidence",
+    "No acoustic listening or signed-language linguistic certification"
+  ]
+}

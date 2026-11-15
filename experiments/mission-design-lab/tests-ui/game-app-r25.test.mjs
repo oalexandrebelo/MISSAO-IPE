@@ -122,9 +122,9 @@ test('the normal launch countdown completes once and persists the computed resul
     await resume(); await choose('ISS'); await click('Abrir hangar'); await click('Proteção');
     await act(async () => fireEvent.click(screen.getByRole('radio', { name: /Reforçada/ })));
     await click('Simular lançamento');
-    assert.ok(screen.getByRole('heading', { name: 'Transferência iniciada' }));
+    assert.ok(screen.getByRole('heading', { name: 'Operação da missão' }));
     assert.equal(saved().filter(entry => entry.event.kind === 'attempt').length, 0);
-    await screen.findByRole('heading', { name: 'Missão concluída' }, { timeout: 4000 });
+    await screen.findByRole('heading', { name: 'Missão concluída' }, { timeout: 10000 });
     const attempts = saved().filter(entry => entry.event.kind === 'attempt');
     assert.equal(attempts.length, 1);
     assert.deepEqual(attempts[0].summary, summarizeBrunoAttempt(simulateBrunoMission('iss', attempts[0].event.payload.config)));

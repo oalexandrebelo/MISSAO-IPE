@@ -1,0 +1,26 @@
+{
+  "name": "Missão Ipê",
+  "short_name": "Missão Ipê",
+  "description": "Jogo de exploração espacial com missões de ciência.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15303a",
+  "theme_color": "#15303a",
+  "icons": [
+    {
+      "src": "/missao-ipe.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icons/missao-ipe-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/missao-ipe-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

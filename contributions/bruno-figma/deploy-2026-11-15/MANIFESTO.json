@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "origem": {
+    "repositorio": "https://github.com/bruno-assis-carvalho/missao-ipe-deploy",
+    "branch": "main",
+    "commit": "fa18fd38439921f97286325b2bdf8c7545d7c776",
+    "tree": "2e8a7c5f7d85e35ea817ea12686a970ed1553347",
+    "autor": "Bruno A Carvalho",
+    "dataDoCommit": "2026-11-15T13:35:03-03:00",
+    "licencaDeclarada": null
+  },
+  "finalidade": "Snapshot de referência para revisão da contribuição. Fora do build oficial.",
+  "arquivos": [
+    {
+      "caminho": ".agents/instructions.md",
+      "gitBlob": "88925b0eed16ffafd20ecb682ff742b4b12f0213",
+      "sha256": "346a872ab89592455f33c7446f1e944f0c918cbeb359950851fbcba09a761da0",
+      "bytes": 1875,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".agents/skills/express5/SKILL.md",
+      "gitBlob": "e5c21e5f0986dafa4844c7d558fa1e0d862009cd",
+      "sha256": "8e8ef6f744e7020feb76bf5c3db1807edd8b95e02ce1bfa99c96697929aa10f7",
+      "bytes": 18824,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".agents/skills/reacjs/SKILL.md",
+      "gitBlob": "cab24a6c6052b6f97ae3098d8db05f926d3c3f23",
+      "sha256": "ec8a076621e31d2326ae61a3fa67291641f3de33cf19f909d819b701f678f15b",
+      "bytes": 5194,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".agents/skills/tests/SKILL.md",
+      "gitBlob": "96946745b8f5dfedbcf34d56914cd1af626eef36",
+      "sha256": "8821d296d7ae20ecbd13349f5d66f585cdb76af49669e5cb177eef2a1668ca90",
+      "bytes": 4580,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": ".agents/skills/ui-components/skill.md",
+      "gitBlob": "4096b3779a2c1fbf822b204740ad18c33d3ac9ce",
+      "sha256": "5195fab7220b5b45d6cc0803194bd6e27869e3db53bae430f1e78103cd2d8080",
+      "bytes": 7769,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/README.md",
+      "gitBlob": "07dc3e69f2562ac1fa069b8ba2dc46e8004c1714",
+      "sha256": "6ab2aa81b6dee16d3426441f67c7f0f1d4562ed358431aea232a543ad76bbdac",
+      "bytes": 664,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/analyze-routes",
+      "gitBlob": "70c75797b11d717545d6795aaea06e506568f1cb",
+      "sha256": "7a81578bcfa5ba5f2105d7165e0cd2d8d1c6151d2a0c5ba766b3ef1c824ee788",
+      "bytes": 70,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/deploy",
+      "gitBlob": "2ab04c068bc252144a2adfc4742469317b299236",
+      "sha256": "fe35b0aff744f5aa8bb16eb1590c720ff6b0ff4bce9ede78f73e02bbfd7e7f3f",
+      "bytes": 88,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/deploy-preview",
+      "gitBlob": "3b3bce3dc79560a1ffa56e44fd9151db1072c7b1",
+      "sha256": "3b82ce85bad03ce7b0e4e288a6e40e5caf119c41a392de3d3420ff17c42d0e8b",
+      "bytes": 163,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/deploy.json",
+      "gitBlob": "9a899ac1a1c17ec307661bc7082023d6ec5a55d6",
+      "sha256": "684b3b8d6086c8b0a68952482fb08d1990bae8a598e13626373388a7d8465b50",
+      "bytes": 26,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/dev",
+      "gitBlob": "95497ad67afa07c31e601a479a7639d0c8eecdc9",
+      "sha256": "91f795e632539988b0fe3de57084839f41a827ba5c274590388f7d0650ec2314",
+      "bytes": 52,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/dev.json",
+      "gitBlob": "6d95f38b265567696a3a25e8f453eeb717a7b0a9",
+      "sha256": "87edea5594390f94f1a476ac979fc262b4519173625ce41084dc58a93b0d520e",
+      "bytes": 929,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/format",
+      "gitBlob": "6a6e91a0b0c5aa2281a1dd1ba706fb443c982ad4",
+      "sha256": "254598ef0d1a61c3abc2a426c7065487ca140c8f9b90e4d66ea05dff20832335",
+      "bytes": 63,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/install",
+      "gitBlob": "700bc98be3bb4c5935c02b20890173d213ec8a76",
+      "sha256": "90705d33ffd6b0700def7f2f304fd24ae04e17af5fc7d8437df44cf546d64891",
+      "bytes": 90,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/langserver",
+      "gitBlob": "7e10e469e92efb9deabb5ee0cb1d5acf41a9ba8a",
+      "sha256": "e6b9034d28bbc82e6333a3b77f8d5fd593ac54eeed7e4e76569329fdbb534fff",
+      "bytes": 106,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".figma/make/site.json",
+      "gitBlob": "2fc2b89dbdd1d9c80cb8cd8f82385acf8f84b9b7",
+      "sha256": "5e81ea350c3e6ff6900dfd1e679ee6e7cb44d5b66d08f23ab97622e95e14196c",
+      "bytes": 358,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".gitattributes",
+      "gitBlob": "6ed7361cd45bf7b94bd43223704288d526f74c82",
+      "sha256": "fdd53ecc7bf79a69d3ef228ec98e0151f10e02702b90b553f04785b61db68354",
+      "bytes": 7728,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".gitignore",
+      "gitBlob": "d0cb07a22dec73889b4f2ec32cf47d94779d3aed",
+      "sha256": "6770e60e045a25964f62df2a396a19b3f5c402facbf43c73c125b021b2fc5674",
+      "bytes": 424,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": ".mise.toml",
+      "gitBlob": "4ea25bd92d4b1e31d775c55ac098d7ac530febba",
+      "sha256": "6d2834ef5f78a7dc4c384570a62b895137fdf63df171d237f0747932bd001435",
+      "bytes": 43,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "AGENTS.md",
+      "gitBlob": "1fb1771670a841ada84844df6aa5ba8ecc250388",
+      "sha256": "4889b3bef1ee10d5dee36fdc8a969ad5afa0e37ca8365e4c36c0cc4855675f24",
+      "bytes": 2496,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "CLAUDE.md",
+      "gitBlob": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "bytes": 11,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "GameRules.md",
+      "gitBlob": "b76aab52494d9d1c59154458d418959be4fb8f4e",
+      "sha256": "8024a5917a7ffc479a2aa657dc110f90ba645bdc2694b15fbd7814f0215273ca",
+      "bytes": 9256,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "index.html",
+      "gitBlob": "d7c00fe4aa3e293d5b05ca8efaac2ed983c3d041",
+      "sha256": "47669812703f29342a3a571c450cb3c64d390f43331599f354f51862c743264a",
+      "bytes": 497,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "package-lock.json",
+      "gitBlob": "c8e4e27b90721b4822ff3715c03866566307806b",
+      "sha256": "02c2e80e4389b04232170ed4889797b0a4a594cf5504e7d72862e2b324e9bed2",
+      "bytes": 64872,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "package.json",
+      "gitBlob": "4c019c245c8d6bfee3b75465d8822eddefb763a0",
+      "sha256": "e7b65e63a116d30cbd8e40bf95d6c12e9a5462bf41e407bf85fdcb4da70ce683",
+      "bytes": 723,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "public/.gitattributes",
+      "gitBlob": "dda155aaf287ba9b85ead0560fe16d3e850513b1",
+      "sha256": "cc5569403b253a8e7f72de4d8c16054cd36abbc68065e21678e5ed5ace1b42d6",
+      "bytes": 125,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "public/favicon.png",
+      "gitBlob": "cba01e731d48f9b88d455c25d2fc59067044883c",
+      "sha256": "5dc23bfa6877bbae4f6b9e04f65836007742bcf57617b47323a50f1a757ed2e8",
+      "bytes": 7154,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "public/icons/missao-ipe-192.png",
+      "gitBlob": "6d237bac1534da76579c6e1ff463c14daff0807f",
+      "sha256": "3a471602204e880fd4228a408c60b45bbb90b747b5eaae940fabbf18149571d1",
+      "bytes": 25462,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "public/icons/missao-ipe-512.png",
+      "gitBlob": "79fd85c43e0e54fdf4a1cdb2ed3ef0cd5848fa5b",
+      "sha256": "b86e7751d9b3aeccbc3701deef218c9bc7b5b30d864dac310d2ae4744e9ea1ce",
+      "bytes": 114421,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "public/manifest.webmanifest",
+      "gitBlob": "ec12fc6cee87b996df057e0b1c34bfb0eebbef82",
+      "sha256": "d2913283775c7ddc46164341e944134e90988f7623cd591519aa3e6f3d76adc7",
+      "bytes": 573,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "public/missao-ipe.svg",
+      "gitBlob": "80f4529b532070d2d3d0ff8a91b5e0b9a2dc9f4f",
+      "sha256": "be78f1ac73cc51051fda083aac54ddddf4591f8a195a9153b8cbcc2bd16f2899",
+      "bytes": 80613,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "src/App.tsx",
+      "gitBlob": "37bfbfa5c5ab010c6d8c9e875497bccaa26bc807",
+      "sha256": "0189482c9746f69c3de1e30df16a768b0a385b872fa06880e90e3f0cc65b74e7",
+      "bytes": 118028,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "src/index.css",
+      "gitBlob": "11266d5e9e95258a79383af5ef866b76709b8f13",
+      "sha256": "a66fe3363751db105357dbfceb204c835918b0d42484ea79a5972d35cc401c5d",
+      "bytes": 91595,
+      "modoGit": "100644"
+    },
+    {
+      "caminho": "src/main.tsx",
+      "gitBlob": "e5b369d352db2aa8354c459f6447932f5edd639c",
+      "sha256": "72d070222e862c8654590e96fce34f793b2f3bc485a37ab2290114ac4d8a8478",
+      "bytes": 392,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "src/vite-env.d.ts",
+      "gitBlob": "11f02fe2a0061d6e6e1f271b21da95423b448b32",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "tsconfig.json",
+      "gitBlob": "ce78eb3c2cd17c04c817b3008017124f7b89abc8",
+      "sha256": "9a1e96d63eaccd5416b2f78ecaccf2b3a27ca71e213fa5859cf5349c66123bf9",
+      "bytes": 556,
+      "modoGit": "100755"
+    },
+    {
+      "caminho": "vite.config.ts",
+      "gitBlob": "dfca3628d530be8f214c9e2c514cb068822d0e6f",
+      "sha256": "acb3a897df38247fcdc50918a0f5dc5c547723e513088daf527d4967c655c3fa",
+      "bytes": 16136,
+      "modoGit": "100755"
+    }
+  ],
+  "excluidos": [
+    {
+      "caminho": "missão ipe.zip",
+      "gitBlob": "517031d617e55fda4b9423add5fc5b546cf0d6bb",
+      "sha256": "16f93b5858d924c21c6c6e9880f4ac37ddc6886350c344aaac10bcfc01f06fdd",
+      "bytes": 945002,
+      "modoGit": "100644",
+      "motivo": "Arquivo compactado redundante, com diretório .git, configuração e checkpoints internos."
+    }
+  ],
+  "totalArquivosOrigem": 38
+}

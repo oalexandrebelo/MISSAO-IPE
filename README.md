@@ -2,6 +2,8 @@
 
 Jogo educativo com seis missões. ISS, Lua e Marte ampliam a campanha de engenharia proposta por Bruno. Cerrado, Bennu e Webb exploram registros científicos históricos. Comece na tela de jogo, informe nome e e-mail, escolha o destino, monte a nave e investigue o resultado no painel.
 
+**R26 — compare, acompanhe e explique.** ISS, Lua e Marte têm rascunho por participação, revisão A/B ligada à nave, operação por eventos, animação Rive, sons opcionais e revisão dos quatro segmentos. [Handoff para os dois devs](docs/70-HANDOFF-GAME-R26.md) · [auditoria do novo app Bruno](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [áudio e animação](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md).
+
 **R25 — início de jogo, seis missões e painel de operação.** A entrada tem Start, seleção de missão, menu e progresso. As tentativas de ISS, Lua e Marte são recalculadas no servidor e registradas no mesmo painel privado. [Campanha e handoff](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Pipeline de assets NASA e DCC](docs/66-PIPELINE-ASSETS-3D-R25.md).
 
 **R24 — escolhas visíveis e identidade consistente.** O arquivo criado no Rive.app acompanha instrumento, painel, bateria e comunicação nas três missões. A bancada, o 3D e as explicações usam a mesma configuração. LP, portal, páginas de leitura, equipe, painel e pitch compartilham marca, tipografia, navegação e foco. O estado da publicação está no [registro de deploy](PUBLICADO.md).

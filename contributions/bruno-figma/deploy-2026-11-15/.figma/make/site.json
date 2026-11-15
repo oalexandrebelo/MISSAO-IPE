@@ -1,0 +1,14 @@
+{
+  "title": "Missão Ipê",
+  "description": "Jogo 2D para navegadores com interface responsiva, acessível e sem rolagem, oferecendo uma experiência adaptável em diferentes telas.",
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

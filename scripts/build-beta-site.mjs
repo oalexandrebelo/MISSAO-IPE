@@ -25,6 +25,10 @@ const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'm
 const publicMarkdown = [
   { source: 'docs/63-RIVE-E-HANDOFF-R24.md', target: 'docs/63-RIVE-E-HANDOFF-R24.md', title: 'Animação e bancada · handoff R24', description: 'Contrato Rive, escolhas ligadas à nave, acessibilidade e validação para os dois devs.' },
   { source: 'docs/64-DESIGN-ACESSIVEL-R24.md', target: 'docs/64-DESIGN-ACESSIVEL-R24.md', title: 'Design acessível · R24', description: 'Identidade oficial, hierarquia comum, navegação e critérios de revisão das páginas.' },
+  { source: 'docs/70-HANDOFF-GAME-R26.md', target: 'docs/70-HANDOFF-GAME-R26.md', title: 'Game e integração · handoff R26', description: 'Retomada, comparação A/B ligada ao 3D, operação, métricas e divisão entre os dois devs.' },
+  { source: 'docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md', target: 'docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md', title: 'Bruno e Fastmode · auditoria R26', description: 'Origem, comparação de recursos e escopo da integração do app de Bruno.' },
+  { source: 'docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md', target: 'docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md', title: 'Áudio e animação · R26', description: 'Earshot, ManimGX, skills de game design e decisões para o navegador.' },
+  { source: 'docs/69-RIVE-MISSOES-R26.md', target: 'docs/69-RIVE-MISSOES-R26.md', title: 'Rive e eventos · R26', description: 'Artboard, contrato de estados e animação ligada à execução das missões.' },
   { source: 'docs/65-GAME-E-MISSOES-BRUNO-R25.md', target: 'docs/65-GAME-E-MISSOES-BRUNO-R25.md', title: 'Seis missões · handoff R25', description: 'Start, hangar 3D, simulação, pontuação e métricas das missões de Bruno.' },
   { source: 'docs/66-PIPELINE-ASSETS-3D-R25.md', target: 'docs/66-PIPELINE-ASSETS-3D-R25.md', title: 'Assets NASA e DCC · R25', description: 'Modelos oficiais, origem, licença e limites verificados do pipeline DCC.' },
   { source: 'docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md', target: 'docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md', title: 'Bancada, comparação e Libras · R23', description: 'Ensaios das três missões, responsabilidades dos dois devs e verificação da experiência.' },

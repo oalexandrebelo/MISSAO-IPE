@@ -300,11 +300,13 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 # MISSÃO IPÊ · R25 / Beta 0.12
 
-Fonte: `README.md` · SHA-256 original: `a3c1601b3eea175d202340a5ec210efcbb91a34c98b552866d1068c5db6e8adf` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `efc1f7929feb43d6194f93d1823c40d507a986b2bd3c68b0d850467d940497ca` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ · R25 / Beta 0.12
 
 Jogo educativo com seis missões. ISS, Lua e Marte ampliam a campanha de engenharia proposta por Bruno. Cerrado, Bennu e Webb exploram registros científicos históricos. Comece na tela de jogo, informe nome e e-mail, escolha o destino, monte a nave e investigue o resultado no painel.
+
+**R26 — compare, acompanhe e explique.** ISS, Lua e Marte têm rascunho por participação, revisão A/B ligada à nave, operação por eventos, animação Rive, sons opcionais e revisão dos quatro segmentos. [Handoff para os dois devs](docs/70-HANDOFF-GAME-R26.md) · [auditoria do novo app Bruno](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [áudio e animação](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md).
 
 **R25 — início de jogo, seis missões e painel de operação.** A entrada tem Start, seleção de missão, menu e progresso. As tentativas de ISS, Lua e Marte são recalculadas no servidor e registradas no mesmo painel privado. [Campanha e handoff](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Pipeline de assets NASA e DCC](docs/66-PIPELINE-ASSETS-3D-R25.md).
 
@@ -7782,6 +7784,259 @@ Quando houver conta conectada e orçamento para gerar um asset didático, confir
 2. Abra uma referência por vez. Observe a escala, a rotação, as texturas, o crédito e a URL sem dependência externa para o GLB ou o Draco.
 3. No celular, compare a primeira carga da bancada com a carga sob demanda da referência. Confira foco, toque, movimento reduzido e a alternativa HTML/2D com WebGL indisponível.
 4. Ao publicar, compare os hashes dos três arquivos servidos com o manifesto. Uma geometria decodificada no terminal comprova o conteúdo do arquivo. A inspeção móvel e do deploy completa a validação da experiência.
+
+
+---
+
+# Auditoria de Bruno e Fastmode · R26
+
+Fonte: `docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md` · SHA-256 original: `f2ee4a206a56e1696e0ae8fc23886f6b4eb75abf4597f6b488a5a243f058ef69` · Ajustes de caminhos privados: 0
+
+# Auditoria de Bruno e Fastmode · R26
+
+A base da comparação é a R25, com ISS, Lua, Marte, Cerrado, Bennu e Webb. A entrega oficial combina três simulações de engenharia inspiradas na contribuição de Bruno com três investigações que preservam registros históricos. Os dois protótipos oferecem fluxos complementares de formação e projeto. [Jogo R25](65-GAME-E-MISSOES-BRUNO-R25.md) · [Publicação verificada](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/PUBLICADO.md)
+
+## Referências e autoria
+
+| Fonte | Referência fixada | Inspeção |
+| --- | --- | --- |
+| Novo aplicativo de **Bruno A Carvalho** | `bruno-assis-carvalho/missao-ipe-deploy`, `main` em `fa18fd38439921f97286325b2bdf8c7545d7c776`, árvore `2e8a7c5f7d85e35ea817ea12686a970ed1553347` | Dez commits em `main` atribuídos a Bruno. Licença no GitHub `null` e árvore sem arquivo de licença. A home respondeu HTTP 200, o manifesto respondeu HTTP 200 e o acesso direto a `/mission/iss/context` retornou HTTP 404 nas sondagens. A jornada foi inspecionada no código. [Commit](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/commit/fa18fd38439921f97286325b2bdf8c7545d7c776) · [Home externa](https://missao-ipe-deploy.vercel.app/) |
+| Protótipo anterior de **Bruno A Carvalho** | `brunoassiscarvalho/missao-ipe`, `master` em `f54fb88a237216d6c1e72b75b400767fb3a75661` | O oficial preserva 32 arquivos do primeiro protótipo e o inventário de cinco commits. Autoria, escopo e licença externa constam da origem. [Origem preservada](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/contributions/bruno-figma/ORIGEM-E-INTEGRACAO.md) |
+| **Fastmode**, contribuição de **Alexandre Belo** | PR oficial #2, `feat/fastmode-mvp` em `416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3`, merge `6c8df630946c581c2a56d938d03386fd3ead111f` | O Git remoto anuncia `refs/pull/2/head`. `fastmode/` está em `main` com os mesmos arquivos da cabeça da PR. O repositório oficial declara Apache 2.0. [PR #2](https://github.com/oalexandrebelo/MISSAO-IPE/pull/2) · [Commit da PR](https://github.com/oalexandrebelo/MISSAO-IPE/commit/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3) · [Merge](https://github.com/oalexandrebelo/MISSAO-IPE/commit/6c8df630946c581c2a56d938d03386fd3ead111f) · [Licença oficial](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/LICENSE) |
+
+O `main` oficial consultado estava em `4ba5ddb92ef08ac283d1dc097766eebef045a3d1`. O snapshot da versão nova preserva **37 dos 38 blobs**. A exclusão é o ZIP redundante, com configuração e checkpoints em `.git`. O arquivo `contributions/bruno-figma/deploy-2026-11-15/MANIFESTO.json` registra Git blob, tamanho e SHA-256 de cada arquivo. SHA-256 do manifesto `f2a652005e440b1df7d71bca2e8ca31eb4236645a2f202eb353776bd3fcfeaff`. O snapshot preserva o código de persistência local, scripts e assets de referência fora da distribuição curada. [Árvore original](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/tree/fa18fd38439921f97286325b2bdf8c7545d7c776) · [Curadoria do build](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/scripts/build-beta-site.mjs)
+
+## Jornada de Bruno e cobertura nativa da R25
+
+| Fluxo | Versão nova e diferença em relação ao primeiro protótipo | Cobertura na base R25 |
+| --- | --- | --- |
+| Entrada e instrução | Start com Iniciar/Continuar, guia acionável com quatro etapas, dicas e reinício confirmado. O reinício abre o guia. [Entrada e guia](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L1232-L1393) | Start oficial já abre cadastro e escolha entre seis missões. O gateway retoma a participação. Guia de primeira partida e reinício do projeto têm escopo diferente do cadastro. [Gateway](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/ui/PlayerMetrics.tsx) |
+| Retomada | O perfil local `missao-ipe-engineer-v1` guarda saldo, inventário, durabilidade, nave, carga, carrinho, etapa e último lançamento por missão. Valida rotas, migra registros anteriores e guarda dados inválidos em uma chave de recuperação. [Estado e migração](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L809-L1055) | O progresso das tentativas já pertence à participação. Nas três missões Bruno, a montagem volta ao briefing e à configuração padrão quando o componente é montado de novo. Cerrado já tem rascunho em IndexedDB e Bennu/Webb têm Salvar/Carregar. [Campanha R25](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/ui/BrunoCampaign.tsx) · [Bennu e Webb](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/ui/ScientificExpedition.tsx) |
+| Seleção e contexto | ISS, Lua, Marte, Europa e Bennu, com desbloqueio sugerido pelos cartões após sucesso, briefing e navegação por etapa. A versão nova remove o XP mostrado no primeiro protótipo e mantém a recompensa de saldo. Grades e carrossel respondem a telas estreitas e baixas. [Catálogo](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L202-L339) · [Seleção](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L1124-L1230) | O catálogo oficial já cobre ISS, Lua e Marte, com nomes correspondentes, e Bennu por um caso científico próprio. Europa é um cenário adicional da referência. Preservar a escolha livre das seis missões oficiais. [Catálogo R25](65-GAME-E-MISSOES-BRUNO-R25.md) |
+| Montagem | Cinco grupos com seis veículos e três opções em cada um dos outros quatro grupos. Ficha combina propriedade, efeito de jogo e fato científico. A previsão reage a massa, reserva, custo, dias e capacidade científica. [Componentes](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L340-L692) · [Montagem](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L1517-L1707) | A R25 tem seis grupos com duas opções cada, cálculo ao trocar peça, nave 3D didática, esquema em fallback, inspeção de GLB NASA e controles de teclado. A ficha científica contextual é reaproveitável. [Campanha R25](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/ui/BrunoCampaign.tsx) |
+| Instrumentos e inventário | Sete fichas já existiam. A carga ocupa slots e peso, com ação por seta e arraste. A versão nova separa loja/carrinho, compra por quantidade antes do lançamento, seleção pelo inventário, contagem de unidades reservadas e devolução de unidade ainda elegível. [Catálogo](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L693-L808) · [Carga e loja](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L1926-L2526) · [Compra e devolução](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L2992-L3134) | `payload` da R25 já muda a evidência e a massa. Loja, slots múltiplos, saldo compartilhado, durabilidade e reserva de unidades entre missões permanecem como trabalho de domínio próprio. |
+| Revisão e lançamento | Revisão agrupa nave e carga, mostra saldo atual e previsto, aponta critérios abaixo da meta e permite voltar. A compra avulsa já foi debitada. O lançamento consome os componentes, a operação e um uso de cada unidade utilizada. [Revisão](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L2527-L2718) · [Lançamento](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L3192-L3275) | O hangar R25 mostra indicadores e permite simular inclusive combinações que bloqueiam em T+0. A revisão de projeto pode usar os indicadores e o cálculo existentes, com retorno sem perder escolhas. |
+| Execução, relatório e continuidade | A Lua tem introdução visual de três segundos. O relatório resume capacidade científica, dias, despesas, instrumentos e recompensa. A conclusão deposita a recompensa e amplia o nível uma única vez por lançamento. [Relatório](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L2719-L2833) · [Conclusão](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L3159-L3190) | A R25 tem contagem pulável, desvio com movimento reduzido, fases calculadas até a entrega, arquivos produzidos, recebidos e válidos, causas temporais e redesenho com as mesmas escolhas. Continuidade educacional pode aparecer como próxima missão sugerida. [Relatório R25](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/ui/BrunoCampaign.tsx) |
+
+Os sete instrumentos são monitor de ar da ISS, detector de nêutrons e radiômetro lunar, analisador ambiental marciano, espectrômetro infravermelho e radar de gelo de Europa e espectrômetro de amostras de Bennu. Cada ficha vincula uma fonte científica e diferencia afinidade, massa, slots, preço e durabilidade didáticos. A R25 tem analogias próprias para ISS, Diviner/LEND e MEDA e usa registros históricos no Bennu. Retorno Bennu do Bruno tem mecânica distinta da expedição histórica. [Catálogo de instrumentos](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L693-L808) · [Perguntas e limites R25](65-GAME-E-MISSOES-BRUNO-R25.md)
+
+### Regras e mídia da versão nova
+
+- O engenheiro começa com **US$ 25 milhões didáticos**. Lançar exige carga-base mais instrumentos dentro da capacidade, slots suficientes e saldo. Sucesso acrescenta massa total inferior a 1.800 kg, reserva de pelo menos 30, ciência de pelo menos 95% e eficiência de pelo menos 5 pontos percentuais por milhão. Capacidade científica soma 25% da confiabilidade média, proteção e bônus ajustados por afinidade. Dias resultam da massa acima de 800 kg e dos fatores de propulsão, proteção e navegação. O custo operacional é de $500 por dia didático. Os limiares e o núcleo do cálculo já estavam no protótipo anterior. [Regras](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/GameRules.md) · [Cálculo](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L1708-L1824)
+- A loja debita o valor no checkout e insere unidades com identificador próprio. A edição da nave só muda a previsão. A revisão usa disponibilidade depois das reservas dos outros projetos. Após uso, a unidade perde durabilidade e deixa de ser reembolsável. A recompensa de sucesso é US$ 5 milhões + US$ 1 milhão por nível + US$ 0,1 milhão por ponto percentual de capacidade científica. O código de lançamento ainda calcula custo de reposição para seleções antigas que excedem o estoque disponível. [Compra e devolução](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L2992-L3134) · [Lançamento](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L3192-L3275) · [Conclusão](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/App.tsx#L3159-L3190)
+- O visual usa CSS, ícones Lucide, DM Sans e Space Grotesk remotas, marca SVG, favicon e ícones PNG de 192 e 512 px ligados pelo manifesto para modo standalone. A árvore tem zero modelos 3D, áudio, Rive ou service worker. Vercel Analytics e Speed Insights entram pelo cliente. O jogo oficial já tem sistema visual, fontes locais, 3D e métricas próprios. [Estilos](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/index.css) · [Assets](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/tree/fa18fd38439921f97286325b2bdf8c7545d7c776/public) · [Entrada Vercel](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/fa18fd38439921f97286325b2bdf8c7545d7c776/src/main.tsx) · [Assets oficiais](66-PIPELINE-ASSETS-3D-R25.md)
+
+## Fastmode no repositório oficial
+
+O Fastmode é a implementação autônoma em HTML, CSS e JavaScript com M0 Semente, M1 Raízes, M2 Gelo e M3 Travessia tripulada. O código e os dados mostram quatro cenários. O trecho de limitações do README ainda lista itens de uma revisão anterior. O deck de pitch, as capturas e o design ficam em `fastmode/pitch/`, `fastmode/docs/` e `fastmode/design/`. [README](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/README.md) · [Dados de design](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/design/dados_missao_ipe.json)
+
+| Recurso | De onde tirar a mecânica | Delta para as missões ISS, Lua e Marte |
+| --- | --- | --- |
+| Objetivo e requisitos | Cartões de objetivos, registro de justificativa e matriz com níveis mín/esp/amb. Os requisitos custam massa e orçamento. A órbita altera cobertura, eclipse, dose e janela. [Fluxo](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/app.js) · [Cálculo](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/engine.js) | Tornar os critérios existentes de cada caso visíveis no pré-voo e explicá-los no retorno. Alterar requisitos ou órbita como entrada causal exigiria modelagem científica e versão do motor. |
+| Comparação A/B | Captura A e compara B com deltas de massa, custo, ciência, integridade e requisitos. Pode restaurar A. [Comparação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/app.js#L724-L753) | A/B pré-voo ou de tentativas para as três missões, usando o mesmo recálculo que a R25. Cerrado, Bennu e Webb já têm comparação própria. [Comparação R23](61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) |
+| Operações | Seis turnos com baralho por semente e escolhas que alteram integridade, ciência, custo, dano e, quando aplicável, saúde e dose. A régua Fastmode distribui 1.000 pontos em cinco blocos. [Turnos e pontuação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/engine.js) | A execução R25 já tem causalidade de lançamento à entrega. Decisões em voo com efeitos reais requerem entrada versionada do motor, eventos e recálculo no servidor. Uma revisão de quatro papéis pode registrar os papéis existentes somente ao concluir a revisão. [Contrato de métricas](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/server/metrics/model.mjs#L49-L86) |
+| Retomada e saída | Recorde por missão em armazenamento local, relatório com impressão e código do projeto na URL. O código e o rascunho guardam a semente e a arquitetura. Após restaurar, o Fastmode abre a bancada ou objetivo. O código de projeto não contém escolhas dos turnos. [Persistência](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/app.js) · [Codificação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/engine.js) | Retomar projeto da participação e exportar evidência usando mecanismos oficiais. Recorde já existe no lobby e o progresso tem exportação JSON. Impressão do relatório pode usar os resultados reais exibidos. [Progresso oficial](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/ui/PlayerMetrics.tsx) |
+
+O Fastmode usa paletas por destino, horizonte, partículas e animação de lançamento. O som é gerado por osciladores WebAudio. O modo de quatro papéis usa estado local para assinaturas e resolução de veto. O material de design descreve referências REA e CSA. A integração é verificável diretamente nessas fontes, nos motores oficiais e na interface publicada. [Motor visual](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/fx.js) · [Controles e estado](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/app.js) · [Referências do Fastmode](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/README.md)
+
+## Integração e aceite
+
+1. **Entrada, rascunho e revisão.** Mostrar o guia acessível no fluxo vigente. Salvar fase e escolhas válidas por missão e sessão, com reinício restrito à missão escolhida. Reusar a bancada 3D e o contexto de Libras. Conferir retorno à mesma montagem após recarga, manutenção das outras missões e acesso em 320/390 px, teclado, movimento reduzido e WebGL indisponível.
+2. **A/B, execução e entrega.** Comparar escolhas e diagnósticos do motor vigente. Conferir ISS inicial com 0 válidos e proteção reforçada com 6, Lua com distinção entre coleta e recepção e Marte com bloqueio em T+0 e sucesso após redesenho. O indicador de progresso deve distinguir prévia, execução e replay. [Reteste R25](65-GAME-E-MISSOES-BRUNO-R25.md)
+3. **Métricas.** O servidor aceita as seis missões oficiais e recalcula ISS/Lua/Marte a partir da configuração da tentativa. Preservar `ipe-bruno-r25-v1`, pontuação de 60/30/10 e `decision` apenas em mudança efetiva. Reservar `attempt` concluída para execução real, uma vez, e conferir o resultado atrás da sessão privada. Reabrir um resultado, comparar projetos e ver um replay são ações distintas da nova tentativa. O contrato de `role_review` já aceita lançamento, nave, solo e usuários. [Motor R25](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/experiments/mission-design-lab/src/lab/bruno-missions.ts) · [Contrato e recálculo](https://github.com/oalexandrebelo/MISSAO-IPE/blob/4ba5ddb92ef08ac283d1dc097766eebef045a3d1/server/metrics/model.mjs#L49-L86)
+4. **Carga múltipla e expansão.** Implementar inventário, loja e desgaste em conjunto se esses estados afetarem a tentativa. O aceite exige que compra, devolução, reserva, uso e limite de slots convirjam para um estado após recarregar e após repetir uma ação. Qualquer novo parâmetro causal precisa de versão e validação compatíveis com as configurações gravadas. Europa precisa de pergunta, fonte e limites próprios antes de entrar no catálogo oficial. A colaboração preservada permite a revisão por dois desenvolvedores. [Fonte de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/commit/fa18fd38439921f97286325b2bdf8c7545d7c776) · [Limites didáticos oficiais](65-GAME-E-MISSOES-BRUNO-R25.md)
+
+
+---
+
+# R26 — áudio, animação e skills de jogos
+
+Fonte: `docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md` · SHA-256 original: `79b4f795c11cce99cd2a29f4ad0b19e58a936b6e29a92c287457224d3f572e15` · Ajustes de caminhos privados: 0
+
+# R26 — áudio, animação e skills de jogos
+
+Leitura em 15 de novembro de 2026. O objetivo é reforçar a consequência das decisões de engenharia sem mudar a simulação, a pontuação ou a identidade da MISSÃO IPÊ. A revisão partiu de `.impeccable.md`: Plus Jakarta Sans, Bricolage Grotesque, assinatura SVG e paleta existentes.
+
+## Fontes inspecionadas
+
+| Referência | Estado consultado | Função e decisão para R26 |
+| --- | --- | --- |
+| [Earshot](https://github.com/Leonxlnx/earshot/tree/4ac3d2ac2b151e1c23376f9ce7f3047a17050013) | `0.4.1`, `4ac3d2ac2b151e1c23376f9ce7f3047a17050013` | Produção e avaliação de áudio por CLI, Python e MCP. Não incluído no runtime web. |
+| [ManimGX](https://github.com/academa-labs/manimgx/tree/1fb4dd7327bf5ed7d0c40d022c05cb816455ae1d) | `0.1.1`, `1fb4dd7327bf5ed7d0c40d022c05cb816455ae1d` | Geração de animações 2D/3D por Python e renderizador Rust/wgpu; possui player web. Não incluído no jogo. |
+| [Awesome game-dev agent skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/tree/c6ca6c41c839b68319ffc08430b99ab768debc32) | `c6ca6c41c839b68319ffc08430b99ab768debc32` | Três skills específicas foram lidas como orientação. Nenhum instalador remoto executado. |
+
+## Earshot: ferramenta de autoria, não biblioteca de reprodução
+
+O [README](https://github.com/Leonxlnx/earshot/blob/4ac3d2ac2b151e1c23376f9ce7f3047a17050013/README.md) descreve análise, comparação, síntese e avaliação de arquivos. Os comandos `sfx`, `kit` e `measure` não carregam modelos; o banco contém receitas de efeitos renderizáveis offline. Análises semânticas carregam CLAP/AST, com aproximadamente 1,1 GB no primeiro uso. A crítica opcional via Gemini depende de chave e consentimento de envio.
+
+O [manifesto](https://github.com/Leonxlnx/earshot/blob/4ac3d2ac2b151e1c23376f9ce7f3047a17050013/pyproject.toml) exige Python 3.10+ e inclui Torch, Transformers, NumPy, SciPy e bibliotecas de análise. O projeto declara [MIT](https://github.com/Leonxlnx/earshot/blob/4ac3d2ac2b151e1c23376f9ce7f3047a17050013/LICENSE); gravações de referência e modelos têm sua própria proveniência. Não há cobrança obrigatória pelo código local; há custo de instalação, armazenamento e processamento. A opção Gemini é separada.
+
+Decisão: uma futura trilha de produção pode renderizar WAVs localmente e revisar licenças dos materiais efetivamente usados. Para os sinais curtos desta entrega, não foi instalado Earshot, baixado modelo nem enviado áudio. Os efeitos desta R26 são síntese original com Web Audio; não são saída do Earshot.
+
+## ManimGX: útil para explicadores, excessivo para este feedback
+
+O [manifesto](https://github.com/academa-labs/manimgx/blob/1fb4dd7327bf5ed7d0c40d022c05cb816455ae1d/pyproject.toml) requer Python 3.13+ no fluxo nativo. O [player web](https://github.com/academa-labs/manimgx/blob/1fb4dd7327bf5ed7d0c40d022c05cb816455ae1d/browser/README.md) usa Python em Worker/Pyodide e WASM/WebGPU. O autor informa primeiro download de cerca de 6 MB para Python e 20 MB para ManimGX, além de exigir suporte do adaptador a `float32` blending e `depth32float-stencil8`. Suporte nominal do navegador não garante esses recursos em todo celular.
+
+O código próprio declara [MIT](https://github.com/academa-labs/manimgx/blob/1fb4dd7327bf5ed7d0c40d022c05cb816455ae1d/LICENSE). O [README](https://github.com/academa-labs/manimgx/blob/1fb4dd7327bf5ed7d0c40d022c05cb816455ae1d/README.md#license) diferencia os wheels nativos, GPL-3.0-or-later no conjunto com x264, e os componentes/fontes com avisos próprios. Não há serviço pago obrigatório no fluxo local descrito.
+
+Decisão: não adicionar um segundo runtime 3D e seu download a uma interação que o Rive existente e os dados do motor já atendem. Um vídeo didático pré-renderizado seria uma aplicação possível, mas não foi produzido nesta R26. Não há alegação de integração ManimGX, de paridade com Manim ou de compatibilidade física universal.
+
+## Skills realmente aplicadas
+
+O catálogo declara [Apache-2.0](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/LICENSE). Foram lidos os arquivos completos, sem instalar ou copiar implementações de engines externas:
+
+- [game-feel](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/game-feel/SKILL.md): ligar feedback a eventos discretos, preservar o relógio da simulação, manter intensidade proporcional e evitar efeitos que bloqueiem entradas.
+- [audio-design](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/audio-design/SKILL.md): ganho comum, margem para soma, silêncio real e limpeza de fontes. Não há música ou voz para justificar uma hierarquia de mixagem.
+- [game-ui-ux](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/game-ui-ux/SKILL.md): controle rotulado, acionável pelo teclado, informações equivalentes em texto e atualização pelos eventos do jogo.
+
+## Contrato da integração
+
+O navegador permanece silencioso até a ativação explícita. O contexto de áudio só é criado nesse gesto e é retomado segundo a [política de autoplay do Chrome](https://developer.chrome.com/blog/autoplay/#web_audio). A [API Web Audio](https://www.w3.org/TR/webaudio/) fornece osciladores, ganho e agendamento local; não há chamada de rede, chave, microfone, dependência nova ou arquivo sonoro externo.
+
+| Evento | Gatilho permitido | Informação equivalente |
+| --- | --- | --- |
+| `choice` | Uma peça realmente mudou | Rádio selecionado, nome e indicadores atualizados. |
+| `launch` | Uma tentativa válida iniciou | Estado de lançamento e comando para ir ao resultado. |
+| `success` | O motor devolveu `success` | Título, registros válidos, pontos e relatório. |
+| `failure` | O motor devolveu `failure` | Diagnóstico e linha da missão. |
+| `invalid` | O motor devolveu `invalid` | Lançamento bloqueado e motivo. |
+
+O áudio não decide sucesso a partir do botão, de CSS ou de pontuação. Sons curtos são suplementares ao texto; não há trilha contínua, leitura de texto em voz, flash, tremor ou alteração do tempo simulado. Mute interrompe os nós ativos. Ocultar a página cancela os sons pendentes, evitando reproduzir um resultado antigo ao voltar. Sair da campanha fecha o contexto.
+
+## Verificação e limites
+
+Arquivos: `R26MissionAudio.ts`, `R26MissionAudioControl.tsx` e `tests-ui/r26-mission-audio.test.mjs`, dentro de `experiments/mission-design-lab`. Os eventos foram ligados em `BrunoCampaign.tsx` à troca efetiva de peça, ao início da operação e a `attempt.outcome`. A referência `play` do hook é estável para não reiniciar o temporizador da operação ao renderizar o controle.
+
+O controlador e o controle React foram verificados isoladamente enquanto o componente Rive da integração era produzido. A primeira tentativa de empacotar a suíte completa parou no import então ausente `./MissionSequenceRive.tsx`; esse erro não foi mascarado por um substituto de Rive. Depois de o módulo existir, o arquivo de testes de áudio completo passou **9/9**. A suíte inclui execuções reais de ISS e Marte pelo `BrunoCampaign`, com resultados de sucesso, falha e bloqueio produzidos pelo motor, além de ativação recusada, desativação durante a ativação, ocultação da página, limpeza, limite de vozes e PCM a 44,1/48 kHz. O transporte Web Audio é simulado no teste. `tsc --noEmit` e `git diff --check` também passaram.
+
+O PCM real produzido pela mesma função usada pelo navegador foi enviado em memória ao FFmpeg local (`f32le`, mono, 48 kHz; filtro `astats`). Não houve download de mídia nem geração por modelo.
+
+| Sinal | Duração | Pico medido, dBFS | RMS medido, dBFS |
+| --- | --- | --- | --- |
+| Escolha | 85 ms | −28,82 | −38,64 |
+| Lançamento | 240 ms | −27,68 | −37,26 |
+| Sucesso | 370 ms | −27,54 | −37,01 |
+| Missão incompleta | 290 ms | −27,87 | −37,37 |
+| Lançamento bloqueado | 175 ms | −29,20 | −39,57 |
+
+Essas medidas são dos sinais isolados, antes do volume do aparelho; não representam LUFS de uma sessão, nível sonoro físico nem conforto auditivo validado. Testes com DOM e Web Audio simulados verificam contratos; não comprovam som físico ou a política de autoplay de todos os navegadores. Inspeção em navegador real e escuta em dispositivo são provas distintas.
+
+
+---
+
+# Sequência de missão no Rive · R26
+
+Fonte: `docs/69-RIVE-MISSOES-R26.md` · SHA-256 original: `1fd78bc8398ab53f32ced2549ee1e7691e0d3ffc9b911b3e186bb9acf34cc159` · Ajustes de caminhos privados: 0
+
+# Sequência de missão no Rive · R26
+
+Pulso Orbital, Eco Lunar e Horizonte Rubro usam a mesma sequência de decisão, lançamento, coleta e recepção. No hangar, a sequência marca a bancada. Durante a tentativa, o motor entrega os eventos à interface. No relatório, a mesma ilustração sinaliza o desfecho com um símbolo e uma legenda HTML.
+
+## Autoria e exportação
+
+O artboard **IpeMissionSequence**, de 680 × 224 px, foi desenhado no Rive.app 0.9.642 do MacBook Pro pelo MCP oficial. O desenho usa roxo `#905DC3`, amarelo `#ECA53C` e azul `#085D9D` como acentos do diagrama. Alexandre confirmou **End Prompt** na edição R26. O ID de revisão na nuvem permanece pendente de verificação. [Arquivo de autoria](https://editor.rive.app/file/untitled/2728718) · [Identidade visual](23-IDENTIDADE-VISUAL.md) · [MCP do Rive](https://rive.app/docs/editor/ai/mcp)
+
+O editor exportou [`ipe-mission-sequence.riv`](https://nasa-missaoipe.alexandrebelo.com/lab/rive/ipe-mission-sequence.riv) com **20.637 bytes** e SHA-256 `e0a7c87f9ce5177402e3ca5d5223edf1796cc614512ce33e6f1c6c4fc4a2437f`. A exportação inclui o novo artboard como componente e o runtime o abre pelo nome. O binário R24 `ipe-subsystems.riv` conserva seu SHA-256 `103b0ce860cf3b696dc6d9eaea3603ca24922a54f85fd862cda188348d37e5db`. A consulta da máquina **IpeAssembly** no editor retornou os mesmos estados, transições e condições antes e depois da autoria. [Handoff R24](63-RIVE-E-HANDOFF-R24.md)
+
+## Contrato com o jogo
+
+O componente `MissionSequenceRive` recebe `stage` do jogo e aplica o número ao View Model **IpeMissionSignal**, instância **Default**, na máquina **IpeMissionFlow**. As sete condições dirigem transições de 180 ms e poses de 24 quadros a 60 fps.
+
+| `stage` | Estado no editor | Entrada do jogo |
+| --- | --- | --- |
+| 0 | `Decision` | Configuração ou retorno ao hangar |
+| 1 | `Launch` | Eventos de lançamento e transferência |
+| 2 | `Acquisition` | Evento de coleta |
+| 3 | `Downlink` | Evento da janela de recepção |
+| 4 | `Complete` | Resultado concluído |
+| 5 | `Incomplete` | Resultado incompleto |
+| 6 | `Blocked` | Lançamento bloqueado |
+
+A etapa de recepção identifica a janela de enlace. O total recebido e a quantidade de registros válidos vêm do relatório do motor. Pausar a operação mantém o evento atual. Avançar ou ir ao resultado usa a mesma tentativa calculada.
+
+O runtime oficial `@rive-app/canvas@2.50.0` carrega o `.riv` e o WASM da própria origem. A janela inicial dá 3,2 segundos de avanço à abertura de marca e à primeira pose. As mudanças seguintes recebem até 0,65 segundo de avanço. O componente suspende a reprodução fora da área visível e conserva as etapas e o desfecho em HTML com movimento reduzido, sem Canvas2D ou em caso de falha do asset. [Runtime web do Rive](https://rive.app/docs/runtimes/web/web-js)
+
+## Verificações locais
+
+- O MCP validou a estrutura e a máquina percorreu `Decision → Launch → Acquisition → Downlink → Complete → Decision → Launch → Incomplete → Decision → Blocked → Decision`.
+- No Chrome, o runtime oficial exibiu a abertura de marca, as sete poses e o retorno à decisão depois de repouso. O fluxo integrado foi conferido nas etapas de coleta e recepção.
+- Dois testes de DOM exercitaram as etapas e os resultados em HTML com movimento reduzido e indisponibilidade de Canvas2D.
+
+
+---
+
+# MISSÃO IPÊ — handoff do game R26
+
+Fonte: `docs/70-HANDOFF-GAME-R26.md` · SHA-256 original: `3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ — handoff do game R26
+
+## O que esta entrega muda
+
+ISS, Lua e Marte mantêm o motor didático `ipe-bruno-r25-v1`, a pontuação calculada no servidor e os modelos NASA. Agora o jogador guarda sua montagem por participação/missão, compara A/B na nave, acompanha a operação em eventos e discute o resultado pelos quatro segmentos. Cerrado, Bennu e Webb continuam disponíveis com seus arquivos científicos verificáveis.
+
+O novo app de Bruno foi auditado no commit `fa18fd38439921f97286325b2bdf8c7545d7c776`. Seu código útil está em `contributions/bruno-figma`; a incorporação da fonte não equivale à migração de todas as regras para o motor oficial. A [matriz de origem](67-AUDITORIA-BRUNO-FASTMODE-R26.md) distingue as duas coisas. A antiga branch Fastmode foi incorporada pela PR #2 e não existe mais como branch remota ativa.
+
+## Fluxo para apresentar
+
+1. Iniciar jogo → nome → e-mail → tipo → Play; quem já participa pode retomar.
+2. Escolher ISS, Lua ou Marte. Ler a pergunta científica e abrir **Como jogar esta missão**.
+3. Abrir o hangar. Cada escolha destaca e altera a peça correspondente: capacidade do lançador, propulsor, banco de energia, proteção, antena e instrumento.
+4. Abrir **Revisar voo e comparar A/B**. A começa como projeto padrão ou última tentativa; **Fixar montagem atual como A** define outra referência. B é a montagem em edição.
+5. Usar **Ver A no 3D** e **Ver B no 3D**. A cena muda, mas a referência não altera o plano que será lançado. Fechar a comparação sempre retorna a B.
+6. Comparar massa, custo, energia de coleta, enlace, chegada e registros válidos. A comparação executa o mesmo motor, sem criar uma tentativa nem somar pontos. Ao mudar várias peças, o texto avisa que a causa não foi isolada.
+7. Simular. Os eventos reais do resultado calculado dirigem o Rive e o foco da nave: lançamento, transferência, coleta e recepção. Pausar/continuar, avançar evento e ir ao resultado estão disponíveis. Planos bloqueados vão diretamente ao diagnóstico. Movimento reduzido dispensa a sequência.
+8. Ler produção → recepção → validade, pontuação e primeira causa. Rever lançamento, segmento espacial, segmento terrestre e equipe científica. Redesenhar conserva a tentativa anterior como A.
+
+## O que se aprende
+
+| Missão | Pergunta e referência NASA | Decisão que ensina | Limite da conclusão |
+| --- | --- | --- | --- |
+| ISS — Pulso Orbital | Monitoramento de compostos voláteis no ar da ISS | Reforçar proteção conserva a calibração, com mais massa e custo | Receber seis leituras não basta se forem incomparáveis |
+| Lua — Eco Lunar | Temperatura (Diviner) e hidrogênio (LEND), LRO | Energia determina quantos registros podem ser produzidos; enlace determina quantos chegam | Temperatura e hidrogênio orientam investigação; não comprovam gelo sozinhos |
+| Marte — Horizonte Rubro | Meteorologia e poeira, MEDA/Perseverance em Jezero | Lançador, prazo e proteção de entrada precedem a capacidade de medir e comunicar | Uma série local não representa todo o clima de Marte |
+
+Os fatos e modelos têm fontes NASA no briefing. Cargas, créditos, prazos, janelas e seis registros dessas três missões são parâmetros didáticos. A geometria é ilustrativa, fora de escala e sem propagação orbital. As missões não são operações reais controladas pelo jogador.
+
+## Contratos para dois desenvolvedores
+
+### Dev 1 — regras, dados e métricas
+
+- `src/lab/bruno-missions.ts`: fonte única de regras, validação e resultados. Nesta entrega não houve mudança nos números nem na versão do motor.
+- `src/lab/bruno-flight-plan.ts`: comparação e leitura validada de rascunho. A e B são configurações completas; scores não são aceitos do armazenamento.
+- `src/App.tsx`: registra decisão, tentativa concluída/cancelada, inspeção de comparação e leitura de papéis. Cancelamento ao sair da operação não recebe score.
+- `server/metrics/model.mjs`: recalcula tentativas concluídas; o navegador não define a pontuação oficial. `server/metrics/runtime.mjs` é o bundle efetivamente utilizado pela API.
+- Rascunho local em `ipe-bruno-draft-v1:<sessionId>:<missionId>`. Contém configurações e etapa, sem nome/e-mail. Retomar um relatório o recalcula sem registrar outra tentativa. Uma execução interrompida retoma no hangar; não é premiada automaticamente.
+- Armazenamento local indisponível gera aviso e conserva o jogo na memória. A fila de métricas continua no fluxo existente, com reenvio e idempotência.
+- Marcar um segmento como revisado mede interação declarada. Não é teste de aprendizagem nem multiplayer em rede.
+
+### Dev 2 — experiência, Rive, 3D e áudio
+
+- `BrunoCampaign.tsx`: briefing, hangar, operação, resultado e persistência por participação.
+- `BrunoFlightReview.tsx`: tabela A/B e leitura dos quatro papéis. Todos os controles são botões/rádios HTML, utilizáveis sem arrastar.
+- `BrunoHangarScene.tsx`: muda geometrias por configuração; apresenta propulsão, cone de aquisição e enlace na etapa correspondente. WebGL usa renderização sob demanda. A cena não determina a simulação.
+- `MissionSequenceRive.tsx` + `public/rive/ipe-mission-sequence.riv`: contrato e autoria em [Rive R26](69-RIVE-MISSOES-R26.md). O Rive anterior permanece intacto.
+- `R26MissionAudio.ts` / `R26MissionAudioControl.tsx`: sinais originais gerados localmente por Web Audio; som desligado no início, ativação voluntária, mute, limpeza e alternativa textual. Não coleta microfone nem envia áudio.
+- O contexto público de Libras acompanha etapa/decisão/resultado; nome, e-mail e dados pessoais não entram no texto de tradução.
+
+## Oportunidades avaliadas, sem promessas de integração inexistente
+
+- [Earshot e ManimGX](68-AUDIO-ANIMACAO-E-SKILLS-R26.md): ferramentas de autoria/análise, não adicionadas ao runtime mobile. As técnicas de áudio e explicação causal foram aplicadas com APIs já disponíveis.
+- Skills concretas do catálogo `awesome-gamedev-agent-skills` orientaram feedback proporcional, áudio opcional e UI acessível. Não instalamos todo o catálogo nem dependências especulativas.
+- Loja, inventário de sete instrumentos, desgaste, reserva e Europa estão preservados na contribuição do Bruno. Sua migração ao jogo oficial requer um contrato versionado e recálculo no servidor, incluindo compatibilidade com tentativas existentes. Não são anunciados como regras ativas das seis missões.
+- Não há comprovação de equivalência ao GMAT, certificação WCAG, validação de tradução por pessoa surda ou teste em telefone físico. O modo em equipe atual compartilha o dispositivo.
+
+## Validação e publicação
+
+Validação local: 171 testes de domínio, 111 de interface e 33 de métricas passaram. O build de release passou e a distribuição passou em 18/18 verificações. O primeiro teste de distribuição encontrou um link do documento Rive apontando para uma pasta de fonte não publicada; o link foi corrigido para o asset público e a suíte passou integralmente.
+
+No navegador real, ISS entregou 6 registros/92 pontos, Lua 6/91 e Marte passou de bloqueado (529/450 kg) a 6/91 (580/680 kg). A/B alternou a nave sem modificar B; a operação pausou e avançou por coleta/recepção, e o Rive acompanhou os estados. A recarga retomou o relatório sem duplicar a tentativa. Uma saída durante a operação registrou cancelamento sem recompensa. O painel mostrou 5 tentativas, 18 eventos confirmados, zero pendentes e zero recusados. Viewports de 390 e 320 pixels ficaram sem overflow horizontal. Houve aviso de depreciação THREE.Clock; não foi observado erro de execução na sessão final. [Recibo funcional](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r26-functional-qa.json).
+
+A inspeção visual levou à redução do cabeçalho e ao posicionamento do Rive ao lado dele no desktop, mantendo nave e controles visíveis. O botão de áudio mantém descrição acessível sem ocupar a bancada inteira.
+
+Nunca substituir teste com jogadores por contagem de testes automatizados. O recibo de publicação será registrado em PUBLICADO.md depois de verificar o commit na Vercel.
+
+Links: [jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html), [painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html), [equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html), [pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html), [GitHub oficial](https://github.com/oalexandrebelo/MISSAO-IPE).
 
 
 ---

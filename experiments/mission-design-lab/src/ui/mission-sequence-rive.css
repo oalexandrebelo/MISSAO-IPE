@@ -1,0 +1,37 @@
+.mission-sequence {
+  width: min(100%, 24rem);
+  margin: 0 auto 1.25rem;
+  color: var(--bruno-muted, #b6c9d2);
+  font-size: .85rem;
+  text-align: center;
+}
+.mission-sequence canvas:not([hidden]) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 85 / 28;
+  pointer-events: none;
+}
+.mission-sequence-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mission-sequence-steps li {
+  border-block-start: 2px solid var(--bruno-line, #3b5565);
+  padding-block-start: .35rem;
+  overflow-wrap: anywhere;
+}
+.mission-sequence-steps li[aria-current] {
+  border-color: #eca53c;
+  color: var(--bruno-text, #f1f2ec);
+  font-weight: 700;
+}
+.mission-sequence figcaption { margin-top: .45rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-sequence canvas { display: none; }
+}

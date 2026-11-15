@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T16:37:57.833Z",
+  "generatedAt": "2026-11-15T17:11:30.919Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 128,
+  "documentCount": 132,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -43,9 +43,9 @@
       "title": "MISSÃO IPÊ · R25 / Beta 0.12",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 15556,
-      "originalSha256": "a3c1601b3eea175d202340a5ec210efcbb91a34c98b552866d1068c5db6e8adf",
-      "projectedSha256": "a3c1601b3eea175d202340a5ec210efcbb91a34c98b552866d1068c5db6e8adf",
+      "originalBytes": 15966,
+      "originalSha256": "efc1f7929feb43d6194f93d1823c40d507a986b2bd3c68b0d850467d940497ca",
+      "projectedSha256": "efc1f7929feb43d6194f93d1823c40d507a986b2bd3c68b0d850467d940497ca",
       "redactions": 0
     },
     {
@@ -786,6 +786,50 @@
       "redactions": 0
     },
     {
+      "source": "docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md",
+      "id": "doc-docs-67-auditoria-bruno-fastmode-r26-md",
+      "title": "Auditoria de Bruno e Fastmode · R26",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 19612,
+      "originalSha256": "f2ee4a206a56e1696e0ae8fc23886f6b4eb75abf4597f6b488a5a243f058ef69",
+      "projectedSha256": "f2ee4a206a56e1696e0ae8fc23886f6b4eb75abf4597f6b488a5a243f058ef69",
+      "redactions": 0
+    },
+    {
+      "source": "docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md",
+      "id": "doc-docs-68-audio-animacao-e-skills-r26-md",
+      "title": "R26 — áudio, animação e skills de jogos",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8605,
+      "originalSha256": "79b4f795c11cce99cd2a29f4ad0b19e58a936b6e29a92c287457224d3f572e15",
+      "projectedSha256": "79b4f795c11cce99cd2a29f4ad0b19e58a936b6e29a92c287457224d3f572e15",
+      "redactions": 0
+    },
+    {
+      "source": "docs/69-RIVE-MISSOES-R26.md",
+      "id": "doc-docs-69-rive-missoes-r26-md",
+      "title": "Sequência de missão no Rive · R26",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 3400,
+      "originalSha256": "1fd78bc8398ab53f32ced2549ee1e7691e0d3ffc9b911b3e186bb9acf34cc159",
+      "projectedSha256": "1fd78bc8398ab53f32ced2549ee1e7691e0d3ffc9b911b3e186bb9acf34cc159",
+      "redactions": 0
+    },
+    {
+      "source": "docs/70-HANDOFF-GAME-R26.md",
+      "id": "doc-docs-70-handoff-game-r26-md",
+      "title": "MISSÃO IPÊ — handoff do game R26",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8619,
+      "originalSha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "projectedSha256": "3ee709ace46fbbf10b03874cbf064dbdf79f8cc201be81090a91739c46cefd52",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1416,13 +1460,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2411590,
-      "sha256": "6f5e294f00a9af67c9c65ba3b768fdd453608937395a70e4d3e795d63382e763"
+      "bytes": 2465689,
+      "sha256": "ced06f4004ff2e15fcbfc4d9670f06ee2ef43930b1de009e09c63f097ddf5242"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1934374,
-      "sha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687"
+      "bytes": 1975883,
+      "sha256": "2a5db26f567b8071dcff0f394040f372900f459ccc29f743b4f35e22c64878a0"
     }
   ]
 }
