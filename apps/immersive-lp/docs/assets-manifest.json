@@ -88,6 +88,30 @@
       "bytes": 17984,
       "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
       "source": "Marca SVG fornecida pelo responsável; derivado canônico em experiments/mission-design-lab/public/brand; geometria e paleta preservadas."
+    },
+    {
+      "path": "public/fonts/BricolageGrotesque-latin-variable.woff2",
+      "bytes": 76868,
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447",
+      "source": "experiments/mission-design-lab/public/fonts/BricolageGrotesque-latin-variable.woff2"
+    },
+    {
+      "path": "public/fonts/PlusJakartaSans-latin-variable.woff2",
+      "bytes": 27272,
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "source": "experiments/mission-design-lab/public/fonts/PlusJakartaSans-latin-variable.woff2"
+    },
+    {
+      "path": "public/fonts/BricolageGrotesque-OFL.txt",
+      "bytes": 4403,
+      "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba",
+      "source": "experiments/mission-design-lab/public/fonts/BricolageGrotesque-OFL.txt"
+    },
+    {
+      "path": "public/fonts/PlusJakartaSans-OFL.txt",
+      "bytes": 4402,
+      "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99",
+      "source": "experiments/mission-design-lab/public/fonts/PlusJakartaSans-OFL.txt"
     }
   ]
 }

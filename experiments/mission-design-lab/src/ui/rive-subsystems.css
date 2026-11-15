@@ -1,0 +1,22 @@
+.rive-subsystems {
+  width: min(100%, 480px);
+  margin: 12px auto 4px;
+  color: #c6d8e2;
+  text-align: center;
+}
+.rive-subsystems[data-rive-active="false"] { visibility: hidden; }
+.rive-subsystems figcaption { font-size: 12px; }
+.rive-subsystems canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 32 / 9;
+  pointer-events: none;
+}
+.rive-subsystem-labels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 3px;
+  font-size: 11px;
+}

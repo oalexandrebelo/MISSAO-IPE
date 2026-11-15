@@ -43,7 +43,7 @@ const mime = new Map(Object.entries({
   '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.ico': 'image/x-icon',
   '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf',
-  '.glb': 'model/gltf-binary', '.wasm': 'application/wasm', '.pdf': 'application/pdf', '.zip': 'application/zip'
+  '.glb': 'model/gltf-binary', '.wasm': 'application/wasm', '.riv': 'application/octet-stream', '.pdf': 'application/pdf', '.zip': 'application/zip'
 }));
 const server = http.createServer(async (req, res) => {
   let pathname = '/';

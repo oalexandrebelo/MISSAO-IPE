@@ -53,7 +53,9 @@ async function mount() {
   installMetricsApi();
   localStorage.clear(); globalThis.indexedDB = new IDBFactory();
   await act(async () => render(React.createElement(App)));
+  await click('Iniciar jogo');
   await click('Retomar jogo');
+  await click('Abrir acervo e guia de ciência');
   await waitFor(() => assert.match(document.body.textContent, /3D indisponível · equivalente 2D ativo/));
 }
 async function openDesign(id, config = VIABLE[id]) {

@@ -35,7 +35,9 @@ async function mount(storage = true) {
   globalThis.indexedDB = storage ? new IDBFactory() : undefined;
   await act(async () => { render(React.createElement(App)); });
   // Wait for the real renderer's unavailable-context path. This is not visual QA.
+  await click('Iniciar jogo');
   await click('Retomar jogo');
+  await click('Abrir acervo e guia de ciência');
   await waitFor(() => assert.match(document.body.textContent, /3D indisponível · equivalente 2D ativo/));
 }
 async function predict(value = 'none') {

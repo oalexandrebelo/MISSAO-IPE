@@ -1,5 +1,19 @@
 # Publicação MISSÃO IPÊ
 
+## R25 — seis missões, Start, hangar e progresso
+
+Candidato validado localmente em 15/11/2026. A publicação e os identificadores de deploy serão registrados depois do aceite no domínio oficial. Inclui a revisão R24 de design, identidade SVG, navegação, fontes locais e Rive.
+
+Start abre o fluxo Nome → E-mail → Tipo → Play. O centro de comando reúne ISS, Lua, Marte, Cerrado, Bennu e Webb. Nas três adaptações de Bruno, seis escolhas alteram a nave e os recursos; lançamento e relatório permitem investigar e redesenhar. A pontuação é recalculada pelo servidor e os resultados alimentam o painel privado. A nave é didática; os três casos científicos preservam seus dados históricos.
+
+Verificação local: 169 testes de domínio, 98 de interface, 33 de métricas, 16 de Libras/analytics e 18 de distribuição aprovados. Em navegador: ISS 0→6 válidos/92 pontos, Lua 6/90, Marte bloqueado→6/91; cinco tentativas confirmadas e conservadas após reload. Os três GLBs NASA renderizaram, incluindo Perseverance a 390 px. Em 320 e 390 px não houve overflow horizontal. [Recibo funcional](evidence/r25-functional-qa.json).
+
+O DCC-MCP respondeu com zero hosts conectados. O pacote usa assets NASA locais; Meshy não foi conectado e nenhum crédito foi consumido. A exportação Rive mantém sua abertura de marca. O aceite em celular físico, a qualidade linguística de Libras e a aprendizagem humana permanecem pendentes.
+
+[Handoff dos dois devs](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Assets e DCC](docs/66-PIPELINE-ASSETS-3D-R25.md) · [Rive](docs/63-RIVE-E-HANDOFF-R24.md) · [Design acessível](docs/64-DESIGN-ACESSIVEL-R24.md)
+
+---
+
 ## R23 — bancada de equipamentos, comparação e Libras
 
 **Publicada em 15/11/2026.** Commit `80ce5ade8e566e3e3a6ff03ac998fff2814ac94f`. Principal `dpl_JzXF1uf9fG2y4erahFjXWe1rkriJ` e LP `dpl_e9YKvrsRVoMCy5SYPo1PonHFWPx5`, ambos **READY**. A bancada liga as escolhas ao equipamento e aos recursos. A comparação A/B usa o mesmo T+ e permite investigar o primeiro evento diferente. Os callouts usam valores do catálogo.

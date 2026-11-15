@@ -52,7 +52,9 @@ async function mount() {
   installMetricsApi();
   localStorage.clear(); globalThis.indexedDB = new IDBFactory();
   await act(async () => render(React.createElement(App)));
+  await click('Iniciar jogo');
   await click('Retomar jogo');
+  await click('Abrir acervo e guia de ciência');
   await waitFor(() => assert.match(document.body.textContent, /3D indisponível · equivalente 2D ativo/));
 }
 async function openDesign(id, config = VIABLE[id]) {
@@ -97,7 +99,7 @@ test('hub exposes all three missions; Cerrado rewind excludes future delivery; N
   await change('Estado registrado da missão', String(result.trace.length - 1));
   assert.equal(Number(scene.dataset.stateTime), result.trace.at(-1).timeS);
   assert.equal(within(scene).getByText('Recepção em solo').parentElement.querySelector('strong').textContent, '6 / 6 registros válidos');
-  await click('MISSÃO IPÊ, observatório'); await click('Explorar modelos NASA em 3D');
+  await click('MISSÃO IPÊ, observatório'); await click('Abrir acervo e guia de ciência'); await click('Explorar modelos NASA em 3D');
   const library = await screen.findByRole('region', { name: 'Modelos NASA de referência' });
   await waitFor(() => assert.match(library.textContent, /Esquema 2D · descrição equivalente disponível/));
   for (const name of ['Antena DSN de 70 m', 'Asteroide Bennu', 'CubeSat genérico 2RU', 'Telescópio James Webb']) {

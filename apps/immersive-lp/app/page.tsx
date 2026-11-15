@@ -9,11 +9,11 @@ import { VideoExperience } from '@/components/VideoExperience';
 
 export default function Home() {
   return <MotionSystem>
-    <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <a className="ipe-skip" href="#conteudo">Ir ao conteúdo</a>
     <div className="header-sentinel" aria-hidden="true" />
     <Navigation /><ChapterRail />
-    <main id="conteudo">
-      <section className="hero" id="inicio" aria-labelledby="hero-title">
+    <main id="conteudo" tabIndex={-1}>
+      <section className="hero" id="inicio" aria-labelledby="hero-title" tabIndex={-1}>
         <div className="starfield" aria-hidden="true" />
         <div className="hero-orbit-scene" aria-hidden="true">
           <div className="planet-parallax"><Planet className="hero-planet" priority /></div>
@@ -31,16 +31,18 @@ export default function Home() {
         <div className="hero-content container">
           <p className="hero-eyebrow eyebrow"><span className="accent-dash" /> DA ÓRBITA, PARA A VIDA</p>
           <h1 id="hero-title" className="hero-title">O espaço é só <br />{' '}o <em>começo.</em></h1>
-          <p className="hero-copy">Três casos reais da NASA. Perguntas sobre a Terra e o Universo.<br className="desktop-only" /> E você no centro de cada decisão.</p>
+          <p className="hero-copy">Seis missões para jogar. Três casos com arquivos reais da NASA.<br className="desktop-only" /> E você no centro de cada decisão.</p>
           <div className="hero-actions"><a href={LINKS.game} className="button button-primary" data-magnetic>Iniciar minha missão <Icon name="arrow-up" /></a><VideoExperience /></div>
           <p className="hero-footnote"><i className="status-dot" /> BETA ABERTO <span>NOME · E-MAIL · MISSÃO · PLAY</span></p>
         </div>
         <div className="hero-bottom container"><a className="scroll-invitation" href="#missao"><span className="scroll-line" />ROLE PARA EXPLORAR <Icon /></a><ExperienceControls /><span className="hero-image-credit">TERRA: NASA / BLUE MARBLE<br />{' '}COMPOSIÇÃO VISUAL ARTÍSTICA</span></div>
       </section>
 
-      <div className="mission-facts container" aria-label="O projeto em números"><div><span>03</span><p>casos científicos para explorar</p></div><div><span>04</span><p>segmentos que conectam a missão</p></div><div><span>06</span><p>registros para fazer chegar</p></div><a href="#laboratorio">E se uma escolha<br />{' '}mudasse toda a missão?<Icon name="arrow-up" /></a></div>
+      <noscript><div className="noscript-note">A leitura e os links continuam disponíveis. Para usar o laboratório, o filme e a timeline interativa, ative o JavaScript.</div></noscript>
 
-      <section className="mission-section section-pad" id="missao" aria-labelledby="mission-title">
+      <div className="mission-facts container" aria-label="O projeto em números"><div><span>06</span><p>missões para projetar e jogar</p></div><div><span>04</span><p>segmentos que conectam a missão</p></div><div><span>06</span><p>registros para fazer chegar</p></div><a href="#laboratorio">E se uma escolha<br />{' '}mudasse toda a missão?<Icon name="arrow-up" /></a></div>
+
+      <section className="mission-section section-pad" id="missao" aria-labelledby="mission-title" tabIndex={-1}>
         <div className="container">
           <div className="section-kicker"><span className="eyebrow">01 / NOSSA RAZÃO DE EXPLORAR</span><span className="small-orbit" aria-hidden="true">✳</span><span className="eyebrow muted">CIÊNCIA QUE CHEGA</span></div>
           <h2 id="mission-title" className="mission-statement">Não basta chegar ao espaço. <br />{' '}É preciso fazer a ciência <br />{' '}<em>chegar à Terra.</em></h2>
@@ -56,13 +58,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="laboratorio" className="lab-section section-pad" aria-labelledby="lab-title"><div className="container">
+      <section id="laboratorio" className="lab-section section-pad" aria-labelledby="lab-title" tabIndex={-1}><div className="container">
         <div className="section-heading"><div><p className="eyebrow"><span className="accent-dash" />02 / VOCÊ NO CONTROLE</p><h2 id="lab-title">Pequenas escolhas.<br />{' '}<em>Grandes descobertas.</em></h2></div><p>O mesmo satélite. Uma janela menor para transmitir.<br />{' '}Experimente mudar o projeto e veja o que chega à Terra.</p></div>
         <LabLoader />
         <p className="lab-disclaimer">Este é um recorte interativo do beta. Componentes, créditos e duração são didáticos; os registros científicos são históricos. <a href={LINKS.research}>Explore a origem dos dados <Icon name="arrow-up" /></a></p>
       </div></section>
 
-      <section id="jornada" className="journey-section section-pad" aria-labelledby="journey-title"><div className="container">
+      <section id="jornada" className="journey-section section-pad" aria-labelledby="journey-title" tabIndex={-1}><div className="container">
         <div className="section-heading"><div><p className="eyebrow">03 / CIÊNCIA REAL, ESCOLHAS PARA INVESTIGAR</p><h2 id="journey-title">Três perguntas.<br />{' '}<em>Um método científico.</em></h2></div><p>Cada caso começa em um fato da NASA.<br />{' '}O exercício mostra por que a engenharia muda a ciência que chega.</p></div>
         <div className="levels-grid">{LEVELS.map(level => <article className={`level-card ${level.live ? 'level-live' : ''}`} key={level.number} data-reveal>
           <div className="level-top"><span className="level-number">{level.number}</span><span className="level-state"><i />{level.status}</span></div>
@@ -72,7 +74,7 @@ export default function Home() {
           <a href={LINKS.game} className="level-link">Escolher missão no laboratório <Icon name="arrow-up" /></a>
         </article>)}</div>
         <div className="journey-demo"><p><strong>Apresente os três casos em seis minutos.</strong> O roteiro mostra como comparar duas escolhas, seguir um registro e concluir com os quatro papéis da missão.</p><a href={LINKS.roadmap} className="text-link">Abrir roteiro da demonstração <Icon name="arrow-up" /></a></div>
-        <p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
+        <div className="journey-demo"><p><strong>Mais três destinos: ISS, Lua e Marte.</strong> Entre no hangar, monte lançador, propulsão, energia, proteção, enlace e instrumento. Execute a missão e investigue a pontuação. Os desafios de engenharia adaptam a contribuição do Bruno com parâmetros didáticos.</p><a href={LINKS.game} className="text-link">Abrir seleção de missões <Icon name="arrow-up" /></a></div><p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
       </div></section>
 
       <section className="earth-interlude" aria-labelledby="earth-title">
@@ -80,7 +82,7 @@ export default function Home() {
         <div className="container earth-interlude-content" data-reveal><p className="eyebrow">DISTÂNCIA MUDA A PERSPECTIVA.</p><h2 id="earth-title">Quando olhamos de longe,<br />{' '}entendemos o que está <em>perto.</em></h2><p>O Cerrado é nosso ponto de partida.<br />{' '}A vontade de entender o mundo é o que nos move.</p><a className="text-link" href={LINKS.research}>Conheça a ciência por trás do Ipê <Icon name="arrow-up" /></a></div>
       </section>
 
-      <section id="segmentos" className="roadmap-section section-pad" aria-labelledby="roadmap-title"><div className="container">
+      <section id="segmentos" className="roadmap-section section-pad" aria-labelledby="roadmap-title" tabIndex={-1}><div className="container">
         <div className="section-heading"><div><p className="eyebrow"><span className="accent-dash" />04 / ENGENHARIA DE SISTEMAS</p><h2 id="roadmap-title">Quatro segmentos.<br />{' '}<em>Uma missão completa.</em></h2></div><p>Do lançamento à interpretação dos dados.<br />{' '}Entenda quem faz a ciência acontecer em cada etapa.</p></div>
         <Roadmap />
         <div className="research-link" data-reveal><div><span className="research-asterisk" aria-hidden="true">✳</span><div><h3>Curiosidade com fundamento.</h3><p>Fontes, decisões e limites à disposição de quem quer ir além.</p></div></div><a href={LINKS.research} className="button button-outline">Abrir biblioteca de pesquisa <Icon name="arrow-up" /></a></div>
@@ -91,6 +93,5 @@ export default function Home() {
       <section className="final-cta" aria-labelledby="cta-title"><div className="container"><div><p className="eyebrow">O PRÓXIMO PASSO É SEU.</p><h2 id="cta-title">O universo faz perguntas.<br />{' '}<em>Vamos procurar respostas?</em></h2><a href={LINKS.game} className="button button-ink" data-magnetic>Minha missão começa agora <Icon name="arrow-up" /></a><span className="cta-small">Explore. Questione. Redesenhe.</span></div><div className="cta-orbit" aria-hidden="true"><img src="/brand/missao-ipe-symbol.svg" width="488" height="488" alt="" /></div></div></section>
     </main>
     <footer className="site-footer"><div className="container"><div className="footer-top"><a href="#inicio" className="footer-brand"><img src="/brand/missao-ipe-logo-stacked.svg" width="890" height="1110" alt="MISSÃO IPÊ" /><span>Da órbita, para a vida.</span></a><nav aria-label="Mais sobre o projeto"><a href={LINKS.github}>GitHub <Icon name="arrow-up" /></a><a href={LINKS.pitch}>Pitch · Alexandre Belo <Icon name="arrow-up" /></a><a href="/creditos/">Fontes e créditos <Icon name="arrow-up" /></a></nav><a href="#inicio" className="back-to-top" aria-label="Voltar ao início"><Icon name="arrow-up" /></a></div><div className="footer-bottom"><span>© 2026 MISSÃO IPÊ · FEITO PARA EXPLORAR.</span><p>Experiência educativa independente. Referências à NASA não representam endosso institucional.</p><span>BRASIL <span className="footer-spark">✳</span> TERRA</span></div></div></footer>
-    <noscript><div className="noscript-note">A leitura e os links continuam disponíveis. Para usar o laboratório, o filme e a timeline interativa, ative o JavaScript.</div></noscript>
   </MotionSystem>;
 }

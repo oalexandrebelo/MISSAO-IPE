@@ -80,13 +80,13 @@ async function boot({ storage = {}, documentHtml = html, clock = data.project.as
       // Read only the exact local design assets; no external network is permitted.
       const url = new URL(request.url);
       const localAssets = new Map([
-        ['/fonts/fonts.css', ['fonts/fonts.css', 'text/css']],
-        ['/brand/projeto-ipe-logo.svg', ['brand/projeto-ipe-logo.svg', 'image/svg+xml']],
-        ['/brand/projeto-ipe-logo-on-light.svg', ['brand/projeto-ipe-logo-on-light.svg', 'image/svg+xml']],
-        ['/brand/projeto-ipe-symbol.svg', ['brand/projeto-ipe-symbol.svg', 'image/svg+xml']],
+        ['/site.css', ['apps/immersive-lp/public/site.css', 'text/css']],
+        ['/fonts/fonts.css', ['experiments/mission-design-lab/public/fonts/fonts.css', 'text/css']],
+        ['/brand/missao-ipe-logo-on-light.svg', ['experiments/mission-design-lab/public/brand/missao-ipe-logo-on-light.svg', 'image/svg+xml']],
+        ['/brand/missao-ipe-symbol.svg', ['experiments/mission-design-lab/public/brand/missao-ipe-symbol.svg', 'image/svg+xml']],
       ]);
       const asset = url.origin === 'https://ipe.test' && localAssets.get(url.pathname);
-      if (asset) return new Response(await readFile(resolve(root, 'experiments/mission-design-lab/public', asset[0])), { headers: { 'Content-Type': asset[1] } });
+      if (asset) return new Response(await readFile(resolve(root, asset[0])), { headers: { 'Content-Type': asset[1] } });
       requested.push(request.url);
       return new Response('Network prohibited in standalone verification', { status: 503 });
     })] },

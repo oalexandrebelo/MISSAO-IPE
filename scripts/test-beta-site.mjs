@@ -26,7 +26,7 @@ const slash = value => value.split(path.sep).join('/');
 const textExtensions = new Set(['.html', '.js', '.mjs', '.css', '.json', '.md', '.txt', '.mmd', '.prisma', '.svg', '.py']);
 const safeResearchEvidence = new Set(['research/evidence/validate-evi3-research.py', 'research/evidence/evi3-validation.json', 'research/evidence/resources-retrieval-20261114.json']);
 const expectedData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
-const mimeByExtension = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain', '.mmd': 'text/plain', '.prisma': 'text/plain', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.webp': 'image/webp', '.glb': 'model/gltf-binary', '.wasm': 'application/wasm' };
+const mimeByExtension = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.md': 'text/plain', '.txt': 'text/plain', '.mmd': 'text/plain', '.prisma': 'text/plain', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.webp': 'image/webp', '.glb': 'model/gltf-binary', '.wasm': 'application/wasm', '.riv': 'application/octet-stream' };
 let files = [];
 const bytesByFile = new Map();
 const documents = new Map();
@@ -148,7 +148,12 @@ function privateFindings(filename, text) {
       found.push({ path: filename, rule, line: text.slice(0, match.index).split('\n').length });
     }
   };
-  locate('personal-or-executor-absolute-path', /\/(?:Users|home|workspace)\/[A-Za-z0-9._-]+(?:\/[^\s<>"']*)?/g);
+  locate('personal-or-executor-absolute-path', /\/(?:Users|home|workspace)\/[A-Za-z0-9._-]+(?:\/[^\s<>"']*)?/g, match => {
+    // Emscripten's virtual HOME in the official Rive runtime is not a host path.
+    const virtualRiveHome = /^lab\/assets\/rive-[A-Za-z0-9_-]+\.js$/.test(filename)
+      && match[0] === '/home/web_user' && text.slice(match.index - 6, match.index) === 'HOME:`';
+    return !virtualRiveHome;
+  });
   locate('windows-personal-path', /\b[A-Za-z]:\\{1,2}(?:Users|Documents and Settings)\\{1,2}[A-Za-z0-9._-]+/g);
   locate('private-hostname', /\bAB-PCSRV\b|https?:\/\/(?!localhost(?::|\/))[A-Za-z][A-Za-z0-9_-]*:(?:\d{2,5})(?:\/|\b)|https?:\/\/[A-Za-z0-9_.-]+\.(?:local|lan|internal)(?::\d+)?/gi);
   locate('valid-private-ipv4', /(?<![\d.])(?:\d{1,3}\.){3}\d{1,3}(?![\d.])/g, match => {

@@ -1,12 +1,14 @@
-# MISSÃO IPÊ · R23 / Beta 0.12
+# MISSÃO IPÊ · R25 / Beta 0.12
 
-Jogo educativo de engenharia de missões espaciais com três casos científicos. Investigue a vegetação do Cerrado, as dimensões de rochas em Bennu e um recorte do espectro de trânsito observado pelo Webb. Projete, execute e use os registros recebidos para revisar a missão.
+Jogo educativo com seis missões. ISS, Lua e Marte ampliam a campanha de engenharia proposta por Bruno. Cerrado, Bennu e Webb exploram registros científicos históricos. Comece na tela de jogo, informe nome e e-mail, escolha o destino, monte a nave e investigue o resultado no painel.
 
-**R23 publicada em 15/11/2026.** O site principal e a LP estão `READY` na Vercel no commit `80ce5ad`. A bancada mostra a mudança no equipamento e nos recursos. A comparação A/B usa a mesma cena e o mesmo tempo simulado, com callouts de instrumento, energia e comunicação. A animação Rive aguarda um arquivo ativo no editor do MacBook Pro. [Registro da publicação](PUBLICADO.md)
+**R25 — início de jogo, seis missões e painel de operação.** A entrada tem Start, seleção de missão, menu e progresso. As tentativas de ISS, Lua e Marte são recalculadas no servidor e registradas no mesmo painel privado. [Campanha e handoff](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Pipeline de assets NASA e DCC](docs/66-PIPELINE-ASSETS-3D-R25.md).
+
+**R24 — escolhas visíveis e identidade consistente.** O arquivo criado no Rive.app acompanha instrumento, painel, bateria e comunicação nas três missões. A bancada, o 3D e as explicações usam a mesma configuração. LP, portal, páginas de leitura, equipe, painel e pitch compartilham marca, tipografia, navegação e foco. O estado da publicação está no [registro de deploy](PUBLICADO.md).
 
 No domínio oficial, o avatar do VLibras sinalizou no portal e acompanhou a passagem de **Nome** para **E-mail** dentro do jogo. A API privada confirmou três tentativas sintéticas distintas após reenvio, e o painel Cloudflare registrou uma visita técnica. Continuam pendentes os testes em celular físico e a avaliação com jogadores e pessoas fluentes em Libras. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
 
-**Continuidade para dois desenvolvedores.** O handoff reúne os ensaios reproduzíveis, a divisão de trabalho e os critérios de aceite. [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
+**Continuidade para dois desenvolvedores.** [Game e seis missões R25](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Rive, três missões e aceite R24](docs/63-RIVE-E-HANDOFF-R24.md) · [Design e acessibilidade R24](docs/64-DESIGN-ACESSIVEL-R24.md) · [Bancada e comparação R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
 
 A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
@@ -72,19 +74,19 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.12.0-beta.1 / R23 | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R25 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
-| Entrada da equipe de dois devs | [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) |
+| Entrada da equipe de dois devs | [Handoff R24](docs/63-RIVE-E-HANDOFF-R24.md) / [design](docs/64-DESIGN-ACESSIVEL-R24.md) |
 | Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
-Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, fila local e função de métricas na Vercel com armazenamento privado. O servidor recalcula as tentativas; nenhum SDK ou biblioteca nova foi adicionado nesta edição. O jogo medido exige rede para iniciar a participação; a fila de uma participação existente tolera interrupções.
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, fila local e função de métricas na Vercel com armazenamento privado. O servidor recalcula as tentativas; a edição R24 adiciona somente o runtime oficial `@rive-app/canvas`, com WASM e animação servidos pelo próprio site. O jogo medido exige rede para iniciar a participação; a fila de uma participação existente tolera interrupções.
 
 ## Executar e compilar
 

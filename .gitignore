@@ -24,3 +24,6 @@ recovery/
 references/user/
 evidence/ab-r3a-analysis.json.gz
 *.map
+
+# Generated UI test bundles
+**/.test-ui-cache/

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "edition": "R25",
+  "retrievedAt": "2026-11-15",
+  "rightsSourceUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "totalModelBytes": 6118668,
+  "transformations": "Nenhuma. Cada GLB preserva os bytes fornecidos pela NASA.",
+  "scope": "Referências visuais educativas. Geometria validada com o decoder Draco local. A renderização na aplicação e as texturas dependem de verificação no navegador.",
+  "models": [
+    {
+      "mission": "iss",
+      "title": "International Space Station (ISS) (B)",
+      "credit": "NASA/Michael D. Carbajal",
+      "sourceAssetDate": "2025-04-07",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/international-space-station-iss-b/",
+      "file": "iss-carbajal-b.glb",
+      "runtimePath": "models/nasa/iss-carbajal-b.glb",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/international-space-station-%28iss%29-%28b%29/International%20Space%20Station%20%28ISS%29%20%28B%29.glb",
+      "mimeType": "model/gltf-binary",
+      "bytes": 476992,
+      "sha256": "2ba4427413b0dd89a33d2acaf962dea8a96a3b1d8dceda05cc7aad547ffd3d16",
+      "glb": {
+        "version": 2,
+        "meshes": 10,
+        "primitives": 36,
+        "materials": 19,
+        "images": 0,
+        "imageFormats": [],
+        "externalUris": [],
+        "extensionsUsed": [
+          "KHR_draco_mesh_compression",
+          "KHR_materials_specular"
+        ],
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "dracoPrimitivesDecoded": 36,
+        "triangleCount": 174440,
+        "vertexCount": 103071,
+        "nodes": 11,
+        "animations": 11
+      }
+    },
+    {
+      "mission": "lua",
+      "title": "Lunar Reconnaissance Orbiter (A)",
+      "credit": "NASA/Christopher R. Meaney",
+      "sourceAssetDate": "2025-04-09",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/lunar-reconnaissance-orbiter-a/",
+      "file": "lro-meaney-a.glb",
+      "runtimePath": "models/nasa/lro-meaney-a.glb",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/lunar-reconnaissance-orbiter-%28a%29/Lunar%20Reconnaissance%20Orbiter%20%28A%29.glb",
+      "mimeType": "model/gltf-binary",
+      "bytes": 654500,
+      "sha256": "b9547bc7c8c37c44675a80c3c3e27b647a9ff1293cf40030ef36f806b9c616b1",
+      "glb": {
+        "version": 2,
+        "meshes": 5,
+        "primitives": 55,
+        "materials": 34,
+        "images": 0,
+        "imageFormats": [],
+        "externalUris": [],
+        "extensionsUsed": [
+          "KHR_draco_mesh_compression"
+        ],
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "dracoPrimitivesDecoded": 55,
+        "triangleCount": 76349,
+        "vertexCount": 229047,
+        "nodes": 11,
+        "animations": 0
+      }
+    },
+    {
+      "mission": "marte",
+      "title": "Mars 2020 Perseverance Rover",
+      "credit": "NASA/Jet Propulsion Laboratory",
+      "sourceAssetDate": "2025-04-10",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/",
+      "file": "mars-2020-perseverance.glb",
+      "runtimePath": "models/nasa/mars-2020-perseverance.glb",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/mars-2020-perseverance-rover/Mars%202020%20Perseverance%20Rover.glb",
+      "mimeType": "model/gltf-binary",
+      "bytes": 4987176,
+      "sha256": "10db7c03a5e63a5a3b3e7baa6243aa4918ba045fa8ff0a731d0217491adc727f",
+      "glb": {
+        "version": 2,
+        "meshes": 68,
+        "primitives": 252,
+        "materials": 47,
+        "images": 44,
+        "imageFormats": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ],
+        "externalUris": [],
+        "extensionsUsed": [
+          "KHR_draco_mesh_compression",
+          "KHR_materials_clearcoat",
+          "KHR_materials_transmission",
+          "KHR_materials_specular",
+          "KHR_materials_ior",
+          "EXT_texture_webp"
+        ],
+        "extensionsRequired": [
+          "KHR_draco_mesh_compression"
+        ],
+        "dracoPrimitivesDecoded": 252,
+        "triangleCount": 199521,
+        "vertexCount": 138783,
+        "nodes": 88,
+        "animations": 23
+      }
+    }
+  ]
+}

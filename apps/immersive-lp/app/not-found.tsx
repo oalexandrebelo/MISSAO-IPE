@@ -6,8 +6,8 @@ import styles from './not-found.module.css';
 
 export default function NotFound() {
   return <div className={styles.page}>
-    <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
-    <Navigation outsideHome />
+    <a className="ipe-skip" href="#conteudo">Ir ao conteúdo</a>
+    <Navigation page="not-found" />
     <main id="conteudo" className={styles.main} tabIndex={-1}>
       <h1 className={styles.heading}>
         <span className={styles.code}>404</span>

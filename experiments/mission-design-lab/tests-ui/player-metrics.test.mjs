@@ -11,8 +11,9 @@ dom.window.scrollTo=()=>{};dom.window.HTMLElement.prototype.scrollIntoView=()=>{
 dom.window.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};dom.window.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};
 const {render,screen,fireEvent,waitFor,cleanup,act}=await import('@testing-library/react');
 const {default:App}=await import('../src/App.tsx');
-const {PlayerGateway,usePlayerMetrics}=await import('../src/ui/PlayerMetrics.tsx');
-const {metricsKey}=await import('../src/metrics/player-metrics.ts');
+const {PlayerGateway,PlayerDashboard,usePlayerMetrics}=await import('../src/ui/PlayerMetrics.tsx');
+const {metricsKey,writeMetrics,summarizeBrunoAttempt}=await import('../src/metrics/player-metrics.ts');
+const {DEFAULT_BRUNO_CONFIG,simulateBrunoMission}=await import('../src/lab/bruno-missions.ts');
 const {EXPEDITIONS}=await import('../src/lab/scientific-expeditions.ts');
 const click=async name=>act(async()=>fireEvent.click(screen.getByRole('button',{name})));
 const change=async(label,value)=>act(async()=>fireEvent.change(screen.getByLabelText(label),{target:{value}}));
@@ -23,6 +24,7 @@ async function mount({resume=true,...options}={}) {
   globalThis.indexedDB=new IDBFactory();
   const api=installMetricsApi(options);
   await act(async()=>render(React.createElement(App)));
+  await click('Iniciar jogo');
   if(resume && api.getSession()) await click('Retomar jogo');
   return api;
 }
@@ -186,4 +188,29 @@ test('expired or replaced owner can leave the old UI without reassigning pending
   assert.equal(JSON.parse(localStorage.getItem(metricsKey(TEST_SESSION.sessionId))).entries[0].sync,'pending');
   await act(async()=>cleanup());
  }
+});
+
+test('progress summarizes all six missions and preserves first/latest Bruno scores without inventing assessments',async()=>{
+ localStorage.clear(); installMetricsApi();
+ const entries=[];
+ const scores=new Map();
+ for(const mission of ['iss','moon','mars']) {
+   const results=[DEFAULT_BRUNO_CONFIG,{...DEFAULT_BRUNO_CONFIG,launcher:'heavy',energy:'extended',protection:'reinforced',navigation:'deep-space'}].map(config=>simulateBrunoMission(mission,config));
+   scores.set(mission,results.map(result=>result.score.total));
+   for(const result of results) entries.push({event:{id:crypto.randomUUID(),kind:'attempt',mission,at:new Date(Date.UTC(2026,0,1,0,entries.length)).toISOString(),payload:{attemptId:crypto.randomUUID(),status:'completed',config:result.config}},summary:summarizeBrunoAttempt(result),sync:'synced'});
+ }
+ writeMetrics(localStorage,TEST_SESSION.sessionId,entries);
+ await act(async()=>render(React.createElement(PlayerGateway,null,()=>React.createElement(PlayerDashboard,{onBack(){}}))));
+ await click('Retomar jogo');
+ const cards=[...document.querySelectorAll('.player-mission-progress > article')];
+ assert.equal(cards.length,6);
+ for(const name of ['Cerrado','Bennu','Webb','ISS','Lua','Marte']) assert.ok(cards.some(card=>card.querySelector('h2').textContent===name));
+ for(const [mission,name] of [['iss','ISS'],['moon','Lua'],['mars','Marte']]) {
+   const card=cards.find(card=>card.querySelector('h2').textContent===name);
+   const [first,last]=scores.get(mission);
+   assert.ok(card.textContent.includes(`Primeira pontuação: ${first} de 100. Última pontuação: ${last} de 100.`));
+   assert.match(card.textContent,/Avaliação de aprendizagem ainda não disponível nesta missão/);
+   assert.doesNotMatch(card.textContent,/0 corretas|0 \/ 0/);
+ }
+ assert.equal(document.querySelector('.player-stat-grid article:nth-child(3) strong').textContent,'Sem respostas');
 });

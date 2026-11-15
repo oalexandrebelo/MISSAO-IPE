@@ -48,8 +48,8 @@ function SubsystemCallout({ presentation, inspection, anchor }: { presentation: 
   useEffect(() => () => texture?.dispose(), [texture]);
   if (!texture) return null;
   return <group name={`capacity-label-${inspection}`}>
-    <Guide from={anchor} to={[1.15, .95, 1.25]}/>
-    <sprite position={[1.15,1.2,1.25]} scale={[1.9,.505,1]} renderOrder={2}><spriteMaterial map={texture} depthTest={false} depthWrite={false} toneMapped={false}/></sprite>
+    <Guide from={anchor} to={[1.15, .55, 1.25]}/>
+    <sprite position={[1.15,.8,1.25]} scale={[1.9,.505,1]} renderOrder={2}><spriteMaterial map={texture} depthTest={false} depthWrite={false} toneMapped={false}/></sprite>
   </group>;
 }
 function PanelWing({ side, ratio, separated, illuminated, active }: { side: -1 | 1; ratio: number; separated: boolean; illuminated: boolean; active: boolean }) {

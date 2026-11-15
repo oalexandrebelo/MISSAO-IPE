@@ -17,8 +17,11 @@ export const viewport: Viewport = { width: 'device-width', initialScale: 1, them
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${editorial.variable} ${sans.variable}`}>
-      <head><link rel="stylesheet" href="/acessibilidade/libras.css" /></head>
-      <body>
+      <head>
+        <link rel="stylesheet" href="/site.css" />
+        <link rel="stylesheet" href="/acessibilidade/libras.css" />
+      </head>
+      <body className="ipe-surface" data-ipe-theme="dark">
         {children}
         <nav aria-label="Acessibilidade">
           <a className="ipe-libras-link vlibras-ignore" data-ipe-libras="public" href="/acessibilidade/guia/" title="Ativar tradução em Libras durante a navegação">Libras</a>

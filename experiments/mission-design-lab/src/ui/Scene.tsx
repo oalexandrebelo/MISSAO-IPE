@@ -6,6 +6,7 @@ import { getSpacecraftPresentation } from '../lab/spacecraft-presentation.ts';
 import type { SpacecraftInspection } from '../lab/spacecraft-presentation.ts';
 import { DEFAULT_EXPEDITION_CONFIGS } from '../lab/scientific-expeditions.ts';
 import type { ExpeditionConfig } from '../lab/scientific-expeditions.ts';
+import { RiveSubsystems } from './RiveSubsystems.tsx';
 import { FlatConfiguredCraft, INSPECTIONS, SpacecraftInspector } from './SpacecraftInspector.tsx';
 import type { MissionConfig, ScenarioId } from '../core/contracts.ts';
 import { CATALOG, CONFIG_KEYS, DEFAULT_CONFIG } from '../core/catalog.ts';
@@ -65,7 +66,7 @@ function useSceneActivity(host: RefObject<HTMLElement | null>) {
     const motion = typeof window.matchMedia === 'function' ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
     const onMotion = () => setReducedMotion(motion?.matches ?? false);
     motion?.addEventListener?.('change', onMotion);
-    const observer = typeof IntersectionObserver === 'function' ? new IntersectionObserver(([entry]) => setInViewport(entry?.isIntersecting ?? true), { rootMargin: '80px' }) : null;
+    const observer = typeof IntersectionObserver === 'function' ? new IntersectionObserver(entries => setInViewport(entries.at(-1)?.isIntersecting ?? true), { rootMargin: '80px' }) : null;
     if (host.current) observer?.observe(host.current);
     return () => {
       document.removeEventListener('visibilitychange', onVisibility);
@@ -240,6 +241,14 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
     <div className="orbit-bottom">
       {preview ? <div className="spacecraft-view-tools"><button type="button" aria-label="Girar destino à esquerda" onClick={() => setTurn(value => value - Math.PI / 6)} disabled={mode === '2d'}>↶ Girar</button><button type="button" aria-label="Girar destino à direita" onClick={() => setTurn(value => value + Math.PI / 6)} disabled={mode === '2d'}>Girar ↷</button></div> : configured ? <><div className="spacecraft-inspection-controls" role="group" aria-label="Inspecionar os sistemas da nave">{INSPECTIONS.map(item => <button key={item.id} type="button" aria-pressed={inspection === item.id} onClick={() => { inspectManually(item.id); setTurn(0); }}>{item.label}</button>)}</div><div className="spacecraft-view-tools"><button type="button" aria-pressed={exploded} onClick={() => setExploded(value => !value)}>{exploded ? 'Reunir componentes' : 'Separar componentes'}</button><button type="button" aria-label="Girar nave à esquerda" onClick={() => setTurn(value => value - Math.PI / 6)} disabled={mode === '2d'}>↶ Girar</button><button type="button" aria-label="Girar nave à direita" onClick={() => setTurn(value => value + Math.PI / 6)} disabled={mode === '2d'}>Girar ↷</button><button type="button" onClick={() => { setInspection('overview'); setExploded(false); setTurn(0); }}>Restaurar montagem</button></div></> : <div className="orbit-viewbar" role="group" aria-label="Explore a missão">{views.map(item => <button key={item.id} type="button" className={`orbit-view ${focus === item.id ? 'is-active' : ''}`} aria-pressed={focus === item.id} onClick={() => { setFocus(item.id); setTurn(0); }}><span>{item.number}</span>{item.name}</button>)}
       </div>}
+      {configured && !reducedMotion ? <RiveSubsystems
+        active={active}
+        world={world}
+        payloadAlternate={presentation.payload.id === 'index' || presentation.payload.kind === 'spectrometer'}
+        powerExpanded={presentation.energy.panelRatio === 1}
+        batteryExpanded={presentation.energy.batteryRatio === 1}
+        linkExpanded={world === 'earth' ? presentation.communications.radioHardware === 'fast' : (expeditionConfig ?? DEFAULT_EXPEDITION_CONFIGS[world]).ground === 'extended'}
+      /> : null}
       {configured ? <div className="orbit-focus-brief" aria-live="polite"><span>{inspection === 'overview' ? 'EXPLORE A MONTAGEM' : 'SISTEMA EM FOCO'}</span><strong>{focusLabel}</strong><p>{focusDetail}</p>
         {inspection === 'communications' && world !== 'earth' && firstContact ? <p>Mesma antena e taxa nas duas opções de solo; a escolha muda a agenda e o custo. Primeiro contato: T+{formatValue(firstContact[0] / 60, 'min')} a T+{formatValue(firstContact[1] / 60, 'min')}. Total planejado: {formatValue(plannedContactMinutes, 'min')}; a entrega depende de haver dados e a nave continuar operante.</p> : null}
         {inspection === 'instrument' && visualState?.available ? <p>{visualState.mode?.includes('processing') ? 'Neste instante: processando registros.' : 'Neste instante: instrumento sem processamento registrado.'} O brilho de operação acompanha esse estado, não a seleção da peça.</p> : null}

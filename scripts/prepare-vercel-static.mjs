@@ -19,7 +19,7 @@ async function walk(folder) {
 }
 await walk(site);
 files.sort();
-const required = ['equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
+const required = ['site.css', 'lab/rive/ipe-subsystems.riv', 'equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
 for (const file of required) await readFile(resolve(site, file));
 const inlineHashes = new Set();
 const portalHashes = new Set();

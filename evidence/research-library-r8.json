@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T15:26:25.149Z",
+  "generatedAt": "2026-11-15T16:32:42.379Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 124,
+  "documentCount": 128,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,20 +32,20 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 30389,
-      "originalSha256": "81933078a149cd0059633d3550da7668fac79e039fc60ce300c32ce8668f7350",
-      "projectedSha256": "81933078a149cd0059633d3550da7668fac79e039fc60ce300c32ce8668f7350",
+      "originalBytes": 32059,
+      "originalSha256": "9665441141ebad18617be6cd306d9ff8063d7e37c443721b1aaab53d4f111dd9",
+      "projectedSha256": "9665441141ebad18617be6cd306d9ff8063d7e37c443721b1aaab53d4f111dd9",
       "redactions": 0
     },
     {
       "source": "README.md",
       "id": "doc-readme-md",
-      "title": "MISSÃO IPÊ · R23 / Beta 0.12",
+      "title": "MISSÃO IPÊ · R25 / Beta 0.12",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 14959,
-      "originalSha256": "f4ac5b873ff519e9f324868f436a9592b9cac526eb68f499876ce55c19096813",
-      "projectedSha256": "f4ac5b873ff519e9f324868f436a9592b9cac526eb68f499876ce55c19096813",
+      "originalBytes": 15556,
+      "originalSha256": "a3c1601b3eea175d202340a5ec210efcbb91a34c98b552866d1068c5db6e8adf",
+      "projectedSha256": "a3c1601b3eea175d202340a5ec210efcbb91a34c98b552866d1068c5db6e8adf",
       "redactions": 0
     },
     {
@@ -742,6 +742,50 @@
       "redactions": 0
     },
     {
+      "source": "docs/63-RIVE-E-HANDOFF-R24.md",
+      "id": "doc-docs-63-rive-e-handoff-r24-md",
+      "title": "MISSÃO IPÊ · animações das três escolhas · R24",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 9773,
+      "originalSha256": "fa2616c504a53fd3f049286a36da44d666847beea5cae6f05096b895c02e8af6",
+      "projectedSha256": "fa2616c504a53fd3f049286a36da44d666847beea5cae6f05096b895c02e8af6",
+      "redactions": 0
+    },
+    {
+      "source": "docs/64-DESIGN-ACESSIVEL-R24.md",
+      "id": "doc-docs-64-design-acessivel-r24-md",
+      "title": "Design e acessibilidade da publicação R24",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 3819,
+      "originalSha256": "3855eacc373604c6250d924532180faaa5bdd7fc6d07b65417847381f6837137",
+      "projectedSha256": "3855eacc373604c6250d924532180faaa5bdd7fc6d07b65417847381f6837137",
+      "redactions": 0
+    },
+    {
+      "source": "docs/65-GAME-E-MISSOES-BRUNO-R25.md",
+      "id": "doc-docs-65-game-e-missoes-bruno-r25-md",
+      "title": "MVP do jogo e integração das missões de Bruno",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 7056,
+      "originalSha256": "24535ab61df69ca51f5c20f8a851d39a2c324795b9449944e944a79f6a48c337",
+      "projectedSha256": "24535ab61df69ca51f5c20f8a851d39a2c324795b9449944e944a79f6a48c337",
+      "redactions": 0
+    },
+    {
+      "source": "docs/66-PIPELINE-ASSETS-3D-R25.md",
+      "id": "doc-docs-66-pipeline-assets-3d-r25-md",
+      "title": "MISSÃO IPÊ · referências 3D e autoria · R25",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 5033,
+      "originalSha256": "bc0450bc524e7a2f04e3274dca68e91c760884312043fa62e22b1ff924e62c87",
+      "projectedSha256": "bc0450bc524e7a2f04e3274dca68e91c760884312043fa62e22b1ff924e62c87",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1372,13 +1416,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2372382,
-      "sha256": "2117fd53cdc29b758c6e1f624cd54aafa7e16734101d9198fa1e2115ffdf6f28"
+      "bytes": 2410481,
+      "sha256": "74fac4dec6e3e169ef1b8d2124ad5feeaac052ed6b7a59e671af3ef95929c59c"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1904536,
-      "sha256": "c58060ba0432f734023acd0ff63952be762c63bd74c914b94fab781e1dde4c38"
+      "bytes": 1933384,
+      "sha256": "39bb9885587088538464d840960f09a618def54ee464fa4d3356a7893c37b3e4"
     }
   ]
 }

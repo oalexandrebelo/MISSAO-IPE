@@ -65,9 +65,23 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `81933078a149cd0059633d3550da7668fac79e039fc60ce300c32ce8668f7350` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `9665441141ebad18617be6cd306d9ff8063d7e37c443721b1aaab53d4f111dd9` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R25 — seis missões, Start, hangar e progresso
+
+Candidato validado localmente em 15/11/2026. A publicação e os identificadores de deploy serão registrados depois do aceite no domínio oficial. Inclui a revisão R24 de design, identidade SVG, navegação, fontes locais e Rive.
+
+Start abre o fluxo Nome → E-mail → Tipo → Play. O centro de comando reúne ISS, Lua, Marte, Cerrado, Bennu e Webb. Nas três adaptações de Bruno, seis escolhas alteram a nave e os recursos; lançamento e relatório permitem investigar e redesenhar. A pontuação é recalculada pelo servidor e os resultados alimentam o painel privado. A nave é didática; os três casos científicos preservam seus dados históricos.
+
+Verificação local: 169 testes de domínio, 98 de interface, 33 de métricas, 16 de Libras/analytics e 18 de distribuição aprovados. Em navegador: ISS 0→6 válidos/92 pontos, Lua 6/90, Marte bloqueado→6/91; cinco tentativas confirmadas e conservadas após reload. Os três GLBs NASA renderizaram, incluindo Perseverance a 390 px. Em 320 e 390 px não houve overflow horizontal. [Recibo funcional](evidence/r25-functional-qa.json).
+
+O DCC-MCP respondeu com zero hosts conectados. O pacote usa assets NASA locais; Meshy não foi conectado e nenhum crédito foi consumido. A exportação Rive mantém sua abertura de marca. O aceite em celular físico, a qualidade linguística de Libras e a aprendizagem humana permanecem pendentes.
+
+[Handoff dos dois devs](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Assets e DCC](docs/66-PIPELINE-ASSETS-3D-R25.md) · [Rive](docs/63-RIVE-E-HANDOFF-R24.md) · [Design acessível](docs/64-DESIGN-ACESSIVEL-R24.md)
+
+---
 
 ## R23 — bancada de equipamentos, comparação e Libras
 
@@ -282,19 +296,21 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 ---
 
-# MISSÃO IPÊ · R23 / Beta 0.12
+# MISSÃO IPÊ · R25 / Beta 0.12
 
-Fonte: `README.md` · SHA-256 original: `f4ac5b873ff519e9f324868f436a9592b9cac526eb68f499876ce55c19096813` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `a3c1601b3eea175d202340a5ec210efcbb91a34c98b552866d1068c5db6e8adf` · Ajustes de caminhos privados: 0
 
-# MISSÃO IPÊ · R23 / Beta 0.12
+# MISSÃO IPÊ · R25 / Beta 0.12
 
-Jogo educativo de engenharia de missões espaciais com três casos científicos. Investigue a vegetação do Cerrado, as dimensões de rochas em Bennu e um recorte do espectro de trânsito observado pelo Webb. Projete, execute e use os registros recebidos para revisar a missão.
+Jogo educativo com seis missões. ISS, Lua e Marte ampliam a campanha de engenharia proposta por Bruno. Cerrado, Bennu e Webb exploram registros científicos históricos. Comece na tela de jogo, informe nome e e-mail, escolha o destino, monte a nave e investigue o resultado no painel.
 
-**R23 publicada em 15/11/2026.** O site principal e a LP estão `READY` na Vercel no commit `80ce5ad`. A bancada mostra a mudança no equipamento e nos recursos. A comparação A/B usa a mesma cena e o mesmo tempo simulado, com callouts de instrumento, energia e comunicação. A animação Rive aguarda um arquivo ativo no editor do MacBook Pro. [Registro da publicação](PUBLICADO.md)
+**R25 — início de jogo, seis missões e painel de operação.** A entrada tem Start, seleção de missão, menu e progresso. As tentativas de ISS, Lua e Marte são recalculadas no servidor e registradas no mesmo painel privado. [Campanha e handoff](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Pipeline de assets NASA e DCC](docs/66-PIPELINE-ASSETS-3D-R25.md).
+
+**R24 — escolhas visíveis e identidade consistente.** O arquivo criado no Rive.app acompanha instrumento, painel, bateria e comunicação nas três missões. A bancada, o 3D e as explicações usam a mesma configuração. LP, portal, páginas de leitura, equipe, painel e pitch compartilham marca, tipografia, navegação e foco. O estado da publicação está no [registro de deploy](PUBLICADO.md).
 
 No domínio oficial, o avatar do VLibras sinalizou no portal e acompanhou a passagem de **Nome** para **E-mail** dentro do jogo. A API privada confirmou três tentativas sintéticas distintas após reenvio, e o painel Cloudflare registrou uma visita técnica. Continuam pendentes os testes em celular físico e a avaliação com jogadores e pessoas fluentes em Libras. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html)
 
-**Continuidade para dois desenvolvedores.** O handoff reúne os ensaios reproduzíveis, a divisão de trabalho e os critérios de aceite. [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
+**Continuidade para dois desenvolvedores.** [Game e seis missões R25](docs/65-GAME-E-MISSOES-BRUNO-R25.md) · [Rive, três missões e aceite R24](docs/63-RIVE-E-HANDOFF-R24.md) · [Design e acessibilidade R24](docs/64-DESIGN-ACESSIVEL-R24.md) · [Bancada e comparação R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) · [Domínio e Cloudflare](docs/62-DOMINIO-E-CLOUDFLARE-R23.md) · [Dicionário de métricas](docs/54-METRICAS-E-HANDOFF-R21.md) · [Fala de três minutos](docs/53-PITCH-JURADOS-E-FALA-R21.md) · [Roteiro do MVP](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md)
 
 A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
@@ -360,19 +376,19 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.12.0-beta.1 / R23 | `experiments/mission-design-lab/` |
+| Beta 0.12.0-beta.1 / R25 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
-| Entrada da equipe de dois devs | [Handoff R23](docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.md) |
+| Entrada da equipe de dois devs | [Handoff R24](docs/63-RIVE-E-HANDOFF-R24.md) / [design](docs/64-DESIGN-ACESSIVEL-R24.md) |
 | Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
-Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, fila local e função de métricas na Vercel com armazenamento privado. O servidor recalcula as tentativas; nenhum SDK ou biblioteca nova foi adicionado nesta edição. O jogo medido exige rede para iniciar a participação; a fila de uma participação existente tolera interrupções.
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, fila local e função de métricas na Vercel com armazenamento privado. O servidor recalcula as tentativas; a edição R24 adiciona somente o runtime oficial `@rive-app/canvas`, com WASM e animação servidos pelo próprio site. O jogo medido exige rede para iniciar a participação; a fila de uma participação existente tolera interrupções.
 
 ## Executar e compilar
 
@@ -7559,6 +7575,211 @@ O rastreamento automático de navegação em SPA pode ser desativado com a opç�
 **Dev de publicação e qualidade.** Confira DNS, TLS e o commit da implantação. Verifique o beacon nas rotas públicas, as exclusões das rotas privadas e a entrada no painel de visitas. Registre as visitas de QA como tráfego técnico.
 
 O endereço `https://projeto-ipe.vercel.app` segue disponível para acesso ao projeto. Os recibos registram o alcance da sessão de teste, incluindo oscilações de conexão durante a verificação inicial de infraestrutura. [Handoff R23](61-BANCADA-COMPARACAO-E-LIBRAS-R23.md)
+
+
+---
+
+# MISSÃO IPÊ · animações das três escolhas · R24
+
+Fonte: `docs/63-RIVE-E-HANDOFF-R24.md` · SHA-256 original: `fa2616c504a53fd3f049286a36da44d666847beea5cae6f05096b895c02e8af6` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · animações das três escolhas · R24
+
+O laboratório permite investigar instrumento, energia e comunicação na bancada e no replay de Cerrado, Bennu e Webb. A animação Rive foi solicitada para reforçar a relação entre escolha, componente e estado do motor no navegador e no celular. Este guia registra o contrato e o roteiro de aceite da integração. A R24 foi integrada à edição R25; a R23 foi a base desta revisão. [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Handoff da bancada e comparação R23](61-BANCADA-COMPARACAO-E-LIBRAS-R23.md)
+
+## Arquivo do editor e exportação
+
+A ilustração foi criada no Rive.app do MacBook Pro, no artboard **IpeSubsystems** de 640 × 180 px. A máquina **IpeAssembly** tem quatro camadas independentes, dois estados por camada e transições de 200 ms. Alexandre confirmou **End Prompt** na primeira edição. A correção de bateria e do módulo foi exportada do estado atual do editor. O arquivo aberto no Rive.app é a fonte editável. A exportação `.rev` requer um plano Rive que a inclua. [Abrir o arquivo de autoria](https://editor.rive.app/file/untitled/2728718)
+
+O MCP oficial exportou `experiments/mission-design-lab/public/rive/ipe-subsystems.riv`, com **15.019 bytes** e SHA-256 `103b0ce860cf3b696dc6d9eaea3603ca24922a54f85fd862cda188348d37e5db`. O editor confirmou estrutura válida, gerou uma captura PNG e simulou as **16 combinações** dos quatro controles e o retorno aos estados iniciais. Em um ensaio da primeira versão com intervalo mais longo, o simulador encerrou o avanço em `Done`. O aceite no navegador inclui uma troca após a animação ficar em repouso.
+
+O runtime usa o View Model **IpeConfiguration**, instância **Default**, com vínculo automático. Os quatro booleanos começam em `false` no editor. O jogo inicializa cada escolha pela configuração em tela.
+
+| Propriedade | Base · `false` | Alternativa · `true` |
+| --- | --- | --- |
+| `payloadAlternate` | `bands` no Cerrado ou `camera` nas expedições | `index` no Cerrado ou `spectrometer` nas expedições |
+| `powerExpanded` | Painel de 12 W no Cerrado ou 10 W nas expedições | Painel de 18 W no Cerrado ou 22 W nas expedições |
+| `batteryExpanded` | Bateria de 16 Wh no Cerrado ou 6 Wh nas expedições | Bateria de 24 Wh nas três missões |
+| `linkExpanded` | Rádio econômico no Cerrado ou contatos curtos nas expedições | Rádio rápido no Cerrado ou contatos ampliados nas expedições |
+
+O Rive ilustra a seleção em bancada e A/B. A variante base do instrumento usa um chip genérico, e a legenda HTML identifica a escolha do catálogo. A bateria e os painéis se movem de forma independente no cartão de energia. As faixas do enlace representam capacidade no Cerrado e agenda nas expedições. Em Bennu e Webb a mesma antena serve os dois pacotes de contato. Os estados operacionais continuam nas leituras e na cena do motor.
+
+## O que cada escolha mostra
+
+| Missão | Instrumento e processamento | Energia | Comunicação |
+| --- | --- | --- | --- |
+| Cerrado | **BANDAS → ÍNDICE.** O desenho identifica o processador de 180 ou 60 Mbit por lote. A carga total durante processamento passa de 26 para 38 W. | **Bateria 16 → 24 Wh.** Mostre capacidade e limite de descarga, 20 ou 35 W. A leitura de energia restante começa no replay. | **Rádio econômico → rápido.** A capacidade do rádio muda de 0,96 para 2,4 Mbit/s. A transmissão depende da janela, do projeto e do estado da tentativa. |
+| Bennu | **Câmera → espectrômetro.** Mostre a troca na carga e a adequação da câmera ao levantamento visual das dimensões publicadas. | **Energia compacta → ampliada.** O pacote muda de 10 W / 6 Wh para 22 W / 24 Wh, com massa e custo do catálogo. | **Contatos curtos → ampliados.** Mostre a agenda de recepção mantendo o mesmo desenho de antena e a taxa de 1,2 Mbit/s. No ensaio guiado, chegam 2 e 6 registros válidos, respectivamente. |
+| Webb | **Câmera → espectrômetro.** Mostre imagem versus espectro conforme a pergunta. No ensaio guiado chegam seis pacotes dos dois lados e 0 ou 6 registros válidos. | **Energia compacta → ampliada.** Exiba geração e capacidade. O replay mostra se a descarga suporta a carga do espectrômetro na execução. | **Contatos curtos → ampliados.** A seleção atualiza a agenda. Ambos os pacotes usam a mesma antena e taxa. Compare quais registros estavam disponíveis no segundo escolhido. |
+
+Na bancada, mudar uma opção atualiza o rascunho e destaca o sistema. Em A/B, use a configuração executada de cada lado e o segundo comum do replay. Rascunhos e replays sem amostras mostram capacidades e agenda como previsão. Os estados de processamento, iluminação, energia, contato e transmissão vêm das amostras gravadas. Recuar no relógio reavalia a amostra e os IDs dos registros disponíveis no instante.
+
+Os desenhos representam o equipamento didático e seu estado. Os dados de vegetação Terra/MODIS, dimensões em Bennu e trânsito de WASP‑39 b vêm de arquivos históricos, com unidades e incertezas próprias. [Limites científicos e didáticos](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [Dados Bennu e Webb](45-DADOS-REAIS-BENNU-WEBB-R18.md)
+
+## Contrato de integração
+
+- **Dev de ciência e motor.** Confira os booleanos do Rive a partir de `SpacecraftPresentation` e o replay a partir de `MissionVisualState`. No replay, diferencie `contactAvailable` de `transmitting`, capacidade nominal de `energyFraction`, e seleção de instrumento de processamento efetivo. Compare os resultados com o motor e preserve o T+ e a configuração de cada lado.
+- **Dev de interface e autoria.** Registre o arquivo do Rive.app, o artboard, a máquina de estados, as propriedades expostas e a exportação `.riv` usada pelo site. Carregue apenas na cena configurada e use o runtime oficial. Inclua o asset e o WASM na mesma origem do jogo. Use a preferência de movimento reduzido e preserve os controles HTML, as legendas e a vista 2D. [MCP do editor Rive](https://rive.app/docs/editor/ai/mcp) · [runtime web oficial](https://rive.app/docs/runtimes/web/web-js)
+- **Revisão conjunta.** A animação acompanha escolhas e amostras do motor. Use a mesma explicação em HTML e Libras, com capacidades públicas e estados calculados. Dados pessoais, respostas e credenciais ficam nos fluxos de participação e API privada.
+
+Os módulos de referência do laboratório ficam em `experiments/mission-design-lab/src/`. `lab/spacecraft-presentation.ts` projeta o catálogo e os callouts. `lab/mission-visual-state.ts` e `lab/scientific-expeditions.ts` projetam os estados. `ui/Scene.tsx` conecta as cenas de `Workbench.tsx`, `ExpeditionWorkbench.tsx`, `CompareDialog.tsx` e `ExpeditionComparison.tsx`.
+
+## Revisão móvel a partir do CSS da R23
+
+- A bancada das expedições já coloca editor e nave em uma coluna a **720 px** ou menos. A comparação empilha as leituras A/B até **640 px**. O último reteste da R23 registrou documento e viewport com **320 px** no Cerrado e Webb. [Recibo funcional R23](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r23-functional-qa.json)
+- A cena reserva altura para a ilustração absoluta em `.orbit-render` e posiciona os controles em `.orbit-bottom`. Preserve a geometria atual se o Rive entrar nesse plano. Para um canvas complementar externo, use um bloco em fluxo com largura limitada ao contêiner. O desenho deve deixar os toques passarem à peça existente e a rolagem vertical seguir; mantenha a ação equivalente nos botões HTML.
+- Na comparação, **Investigar no 3D** leva o foco ao título da cena. Em mobile, teste com o painel de Libras aberto, pois ele pode cobrir a região central quando ocupa a área inferior. Caso o foco fique oculto, o ajuste pontual é alinhar ao início o `scrollIntoView` da comparação nessa condição.
+
+## Aceite da R24
+
+| Verificação | Evidência esperada |
+| --- | --- |
+| Editor e exportação | Arquivo aberto no Rive.app do MacBook Pro, máquina percorrida com os estados utilizados pelo jogo, arquivo `.riv` exportado e identificado pelo hash. |
+| Nove escolhas em navegador | No desktop e em viewports de 320 e 390 px, selecionar os três sistemas nas três missões. Verificar peça, legenda e números em bancada e em A/B. No Cerrado, alterar primeiro só a bateria e depois só o painel. Esperar a transição terminar, fazer uma pausa de pelo menos um segundo e alternar novamente. |
+| Replay e recursos | Alternar A/B, investigar um evento, avançar e rebobinar. Para energia e enlace, conferir amostra ausente, eclipse, janela sem transmissão e rádio transmitindo. Confirmar que os totais finais continuam identificados como totais da execução. |
+| Uso móvel e acessibilidade | Conferir foco, toque, rolagem, movimento reduzido, orientação retrato/paisagem e uso com Libras. Carregar a cena sem WebGL e com o asset de animação bloqueado para verificar a operação pela vista e pelos controles disponíveis. |
+| Publicação | Conferir o commit e o deploy, abrir o domínio oficial, verificar carregamento dos assets e repetir um contraste por missão. Registrar aparelho e navegador. Validação por viewport e uso em celular físico são observações distintas. |
+
+## Runtime publicado com a R25
+
+O runtime oficial é `@rive-app/canvas@2.50.0`, com WASM local. A exportação do plano gratuito inclui a abertura com a marca Rive; ela é preservada. A primeira reprodução recebe 3,2 segundos de avanço da engine e as trocas seguintes 0,6 segundo antes do repouso. A versão Lite não renderizava o texto dessa abertura, por isso foi substituída pela Canvas completa. O componente pausa fora de vista, respeita movimento reduzido e mantém alternativas em HTML.
+
+
+---
+
+# Design e acessibilidade da publicação R24
+
+Fonte: `docs/64-DESIGN-ACESSIVEL-R24.md` · SHA-256 original: `3855eacc373604c6250d924532180faaa5bdd7fc6d07b65417847381f6837137` · Ajustes de caminhos privados: 0
+
+# Design e acessibilidade da publicação R24
+
+A revisão segue as heurísticas de orientação, consistência e legibilidade de `lp-nng-premium` e o contexto de design do Impeccable. A skill `logo-designer` orienta o uso das variantes de fundo e do símbolo existente para favicon. A autoria do SVG oficial permanece registrada nos arquivos de procedência da marca. [Impeccable](https://impeccable.style/) · [Logo Designer](https://github.com/neonwatty/logo-designer-skill)
+
+## Estrutura das páginas ativas
+
+| Rota | Ajuste |
+| --- | --- |
+| LP imersiva, créditos e 404 | Cabeçalho compartilhado e menu de celular com destinos explícitos. O menu devolve o foco ao botão ao fechar e encaminha o foco ao capítulo escolhido. A abertura acomoda texto ampliado e os controles de som e movimento no fluxo da página. Créditos usam a mesma navegação e têm acesso ao início, à apresentação e à biblioteca. |
+| Portal e estudo de Game Design | Cabeçalho com marca, destinos e ação de jogar. Links de leitura e navegação têm espaço para toque. Os títulos quebram em telas estreitas. |
+| Documentação, contexto, biblioteca e arquitetura | Navegação com indicação de página atual, atalho para o conteúdo e cabeçalhos refluíveis. Índices, filtros e áreas de leitura mantêm foco visível. A arquitetura usa a variante da marca correspondente ao tema do inspetor. |
+| Equipe e observatório | Hierarquia tipográfica e foco consistentes. O painel da equipe conserva a marca embutida e o checklist para leitura offline. O observatório preserva a autenticação e os dados privados. |
+| Pitch | Mesma família de títulos e textos no site, controle de foco e área de toque dos botões. Os seis quadros preservam seus tempos e o total de 180 segundos. |
+| Laboratório | A integração da bancada e a continuidade da jornada do jogo têm registro específico no [handoff R24](63-RIVE-E-HANDOFF-R24.md). |
+
+O CSS compartilhado define foco, largura de leitura, navegação e área mínima de 44 px para as ações do cabeçalho na escala padrão. A tipografia segue a [decisão de fontes do projeto](26-TIPOGRAFIA.md). Os binários do mesmo par foram copiados com as licenças OFL para a LP, que tem raiz de build própria. As variantes SVG fornecidas continuam a identificar a equipe. A publicidade da página segue o contrato anterior de analytics e a navegação pública conserva o acesso a Libras.
+
+Campanha, jogo legado, arquivo portátil, demonstração planetária e fac-símiles históricos são experiências autônomas com composição e contratos próprios. O filme renderizado conserva sua tipografia original e seus créditos.
+
+## Verificação
+
+- A LP compilou e passou em 4 testes do motor e 21 verificações de SHA-256 dos assets. A central de contexto passou em 24 testes do DOM e o pitch em 2 regressões da navegação e da comparação A/B. A inspeção estática confirmou o atalho com destino focável em 11 páginas e a identidade dos SVGs compartilhados.
+- O AccessLint registrou zero achados nos estados inspecionados da LP, créditos, 404, portal, documentação, equipe, painel sem autenticação, pitch, contexto, arquitetura e Game Design, em navegador local. A inspeção da LP em viewport de 319 px confirmou o retorno do foco ao botão depois de fechar o menu.
+- Na arquitetura, o painel do diagrama usa uma seção nomeada dentro de `main` e o SVG interativo usa sua semântica nativa, com nome acessível e nós inspecionáveis. O reteste local com AccessLint registrou zero achados. [Mapeamento de acessibilidade SVG do W3C](https://www.w3.org/TR/svg-aam-1.0/#mapping_role_table)
+
+O escopo cobre as rotas e os estados observados. A conformidade integral exige avaliação manual de teclado, ampliação de texto, tecnologias assistivas e dispositivos físicos.
+
+
+---
+
+# MVP do jogo e integração das missões de Bruno
+
+Fonte: `docs/65-GAME-E-MISSOES-BRUNO-R25.md` · SHA-256 original: `24535ab61df69ca51f5c20f8a851d39a2c324795b9449944e944a79f6a48c337` · Ajustes de caminhos privados: 0
+
+# MVP do jogo e integração das missões de Bruno
+
+A R25 reúne seis missões na entrada do beta. Cerrado, Bennu e Webb seguem as investigações existentes com registros históricos. Pulso Orbital, Eco Lunar e Horizonte Rubro são três adaptações jogáveis da contribuição de **Bruno A Carvalho**. Os cenários foram conferidos no código público e na cópia preservada pelo projeto. [Contribuição de Bruno](https://github.com/brunoassiscarvalho/missao-ipe) · [Origem do snapshot](https://github.com/oalexandrebelo/MISSAO-IPE/blob/5ecb1a44fcabf32c63741711a78bf3c17efff671/contributions/bruno-figma/ORIGEM-E-INTEGRACAO.md)
+
+## O que se joga
+
+| Missão | Pergunta e limite didático | Referência |
+| --- | --- | --- |
+| **Pulso Orbital · ISS** | Quais leituras permitem comparar a composição do ar? A viagem exige proteção para conservar a calibração. Registros recebidos podem perder validade. | [NASA · Monitoramento do ar na ISS](https://www.nasa.gov/directorates/esdmd/hhp/toxicology-and-environmental-chemistry/) |
+| **Eco Lunar · polo sul** | Onde combinar temperaturas baixas e indícios de hidrogênio para priorizar uma investigação de gelo? Reserva na sombra limita a coleta e a janela de enlace limita a recepção. | [NASA · Diviner e LEND no LRO](https://science.nasa.gov/mission/lro/spacecraft-and-instruments/) |
+| **Horizonte Rubro · Jezero** | Como medir vento, temperatura e poeira durante uma frente marciana? A massa precisa caber no lançador, o prazo exige uma transferência adequada e o módulo precisa suportar a entrada. | [NASA · Perseverance e MEDA](https://science.nasa.gov/mission/mars-2020-perseverance/science-instruments/) |
+
+O briefing leva ao hangar, com seis escolhas entre lançador, propulsão, reserva de energia, proteção, navegação com enlace e instrumento. O painel recalcula massa transportada, orçamento, energia para coleta, prazo e capacidade da janela. A geometria da nave responde à escolha. A bancada usa um modelo 3D próprio, sem escala, e oferece um esquema com os mesmos controles e números quando WebGL está indisponível.
+
+A opção **Inspecionar referência NASA** carrega o modelo do caso sob demanda. A autoria e a fonte aparecem junto à referência. Os modelos são o contexto visual da ISS, do LRO e do Perseverance. A montagem do jogador conserva sua geometria didática.
+
+A execução passa por lançamento, transferência, coleta e recepção conforme o que o projeto permite. Se massa ou crédito extrapolam o limite do lançador ou do caso, o relatório começa pelo bloqueio em T+0. A contagem é pulável e fica desativada quando o navegador indica movimento reduzido. O relatório distingue arquivos produzidos, recebidos e válidos, identifica a primeira causa e permite redesenhar com as mesmas escolhas.
+
+## Motor e integração
+
+`experiments/mission-design-lab/src/lab/bruno-missions.ts` contém o catálogo `BRUNO_MISSIONS`, as opções `BRUNO_CHOICES`, a validação de configuração e a simulação determinística `ipe-bruno-r25-v1`. As janelas, massas, custos, números de registros e restrições são parâmetros didáticos. Cada caso usa seu próprio orçamento. Para teste dos limites, a reserva começa na janela crítica. O tempo da transferência é uma estimativa do exercício. A pontuação reutiliza a régua comum de 60 pontos de ciência, 30 de engenharia e 10 de eficiência.
+
+`BrunoCampaign.tsx` recebe o identificador, a função de voltar e os callbacks de decisão e conclusão. Uma conclusão calcula o resumo a partir da configuração efetivamente executada. O servidor pode recalcular a mesma configuração pelo motor puro. O contexto de Libras descreve o briefing, a peça e o efeito em edição ou o resultado calculado, com texto público limitado ao estado da tela.
+
+## Reteste local
+
+1. **ISS.** Execute o projeto inicial. Confira 6 recebidos e 0 válidos por perda da calibração. Redesenhe com proteção reforçada e confirme 6 válidos.
+2. **Lua.** Use proteção reforçada e enlace direcional com a reserva padrão. Investigue a coleta incompleta. Amplie só a reserva e execute novamente. Mude só o enlace para local e confira que a coleta pode permanecer completa enquanto a recepção cai.
+3. **Marte.** Execute com o lançador compacto e confira bloqueio em T+0. Selecione maior capacidade, propulsão química, reserva ampliada, proteção reforçada, enlace direcional e o instrumento da missão. Execute e confira 6 válidos. Troque a propulsão para elétrica e confira o limite de chegada.
+4. **Interface.** Repita com teclado, tela estreita, preferência de movimento reduzido e WebGL bloqueado. Abra a referência NASA para conferir carregamento sob demanda, créditos e retorno à montagem. Confira no painel privado se a tentativa está vinculada à missão correta.
+
+O teste de domínio conferiu as 64 combinações de cada caso, 192 no total, e as trajetórias causais acima. Os testes de DOM conferiram foco na mudança de tela, execução única, redesenho da ISS, bloqueio de lançamento e movimento reduzido.
+
+Nas três missões novas, a tentativa é registrada quando o relatório é concluído. Sair da missão durante a contagem interrompe essa execução e não registra uma tentativa cancelada. Por isso, o painel contabiliza conclusões dessas missões, sem medir todos os lançamentos iniciados ou abandonos; o Cerrado mantém seu registro próprio de cancelamentos.
+
+## Aceite observado no navegador
+
+| Verificação | Resultado local |
+| --- | --- |
+| Hangar em 1440 × 900 px | Os seis sistemas, os indicadores e **Simular lançamento** ficaram visíveis juntos. A borda inferior do botão estava em y = 744 px, dentro do conteúdo principal que terminava em y = 870 px. |
+| Pulso Orbital · ISS | A montagem inicial obteve 0 registros válidos. Após reforçar a proteção, entregou 6 e marcou 92 pontos. |
+| Eco Lunar · Lua | A montagem verificada entregou 6 registros válidos e marcou 90 pontos. |
+| Horizonte Rubro · Marte | O lançamento inicial foi bloqueado com 529 kg para uma capacidade de 450 kg. A montagem revista entregou 6 registros válidos e marcou 91 pontos. |
+| Referências NASA | ISS, LRO e Perseverance renderizaram no navegador. O Perseverance também foi conferido em viewport de 390 px. |
+
+O aceite cobre as execuções observadas no navegador local. A validação em celular físico, a avaliação linguística de Libras e o efeito sobre a aprendizagem permanecem pendentes.
+
+## Continuidade para dois desenvolvedores
+
+- **Motor e dados.** Manter o catálogo, os limites didáticos e o recálculo no servidor. Repetir os casos de bloqueio e recuperação e conferir se o observatório reproduz os resultados da execução.
+- **Interface e acessibilidade.** Manter a jornada da entrada ao relatório, verificar foco e movimento reduzido e testar o 3D, o esquema alternativo e Libras em celular físico.
+
+Na revisão conjunta, comparar o relatório do jogador com o evento salvo nas seis missões e conservar o crédito de Bruno e as referências NASA.
+
+
+---
+
+# MISSÃO IPÊ · referências 3D e autoria · R25
+
+Fonte: `docs/66-PIPELINE-ASSETS-3D-R25.md` · SHA-256 original: `bc0450bc524e7a2f04e3274dca68e91c760884312043fa62e22b1ff924e62c87` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · referências 3D e autoria · R25
+
+ISS, Lua e Marte têm referências visuais oficiais salvas no laboratório. A nave que o jogador monta usa a configuração do exercício. Os modelos de arquivo contextualizam o destino e os instrumentos reais, com crédito junto à visualização. [Catálogo científico e integração de Bruno](58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md)
+
+## Arquivos conferidos
+
+| Missão | Arquivo em `public/models/nasa/` | Crédito e uso | Bytes | Primitivas · triângulos |
+| --- | --- | --- | ---: | ---: |
+| ISS | `iss-carbajal-b.glb` | NASA/Michael D. Carbajal. Referência externa da estação. [Fonte do modelo](https://science.nasa.gov/3d-resources/international-space-station-iss-b/) | 476.992 | 36 · 174.440 |
+| Lua | `lro-meaney-a.glb` | NASA/Christopher R. Meaney. LRO como referência do levantamento lunar. [Fonte do modelo](https://science.nasa.gov/3d-resources/lunar-reconnaissance-orbiter-a/) | 654.500 | 55 · 76.349 |
+| Marte | `mars-2020-perseverance.glb` | NASA/Jet Propulsion Laboratory. Referência do rover e de sua missão em Jezero. [Fonte do modelo](https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/) | 4.987.176 | 252 · 199.521 |
+
+Baixamos os GLBs originais em 15/11/2026. Os três são GLB 2.0, autocontidos, com **6.118.668 bytes no total**. A leitura do cabeçalho e do JSON confirmou a presença de cenas, malhas e materiais. O decoder Draco já incluído no projeto decodificou **343/343 primitivas** e suas contagens corresponderam aos accessors. ISS e LRO usam materiais sem imagens. Perseverance tem 44 imagens JPEG, PNG e WebP embutidas. A aparência e as texturas devem ser verificadas no navegador da aplicação. Os hashes SHA-256, URLs diretos e contagens estão em `experiments/mission-design-lab/public/models/nasa/manifest-r25.json`.
+
+Carregue uma referência de cada vez, sob demanda, com `DRACOLoader` apontado para o decoder local. Preserve a escala e o enquadramento como decisões de apresentação. O arquivo do Perseverance tem 252 primitivas e 44 imagens, então verificar sua carga e a fluidez é parte do aceite móvel. O jogo usa os modelos como referências educativas com créditos, conforme as condições da NASA. [Diretrizes de uso de mídias 3D da NASA](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+
+## DCC-MCP no Mac
+
+O `dcc-mcp-cli 0.20.53` rodou via `uvx` em cache temporário fora do projeto. A lista de instâncias verificou o gateway local e retornou **zero hosts registrados**. A busca por Meshy no catálogo retornou itens por similaridade, sem uma entrada de provedor Meshy. A inspeção de PATH, diretórios de aplicativos e Spotlight também ficou sem um Blender operável neste Mac. A consulta ao catálogo e ao registro foi executada. Um host de autoria ainda precisa estar disponível para abrir, editar e exportar uma cena por MCP. [DCC-MCP Core e CLI](https://github.com/dcc-mcp/dcc-mcp-core) · [Catálogo DCC-MCP](https://dcc-mcp.github.io/marketplace/)
+
+Para operar Blender pela via DCC-MCP, use um host Blender 4.5 ou posterior compatível com o adaptador atual, instale a extensão de plataforma do projeto e valide a sessão em `dcc-mcp-cli list`. Em uma cena de trabalho, use as ferramentas tipadas de importar, inspecionar e exportar. Guarde a fonte editável e valide a reimportação do GLB. [Adaptador DCC-MCP para Blender](https://github.com/dcc-mcp/dcc-mcp-blender)
+
+## Meshy
+
+O servidor MCP oficial é `@meshy-ai/meshy-mcp-server`. Ele usa `MESHY_API_KEY` para a conta e as tarefas da API consomem créditos. A sessão atual não tem o servidor conectado nem a variável de credencial disponível. A entrega usa os GLBs da NASA e não produziu modelos nem consumiu créditos pelo Meshy. [Integração oficial Meshy MCP](https://docs.meshy.ai/en/api/ai) · [Autenticação e início da API](https://docs.meshy.ai/en/api/quick-start)
+
+Quando houver conta conectada e orçamento para gerar um asset didático, confira o saldo com `meshy_check_balance`, gere uma peça por vez e exporte o GLB com recursos embutidos. Registre a origem, o identificador da tarefa, a autorização de uso e o hash final. Teste separado dos originais NASA. Uma ilustração gerada pode representar o subsistema que o jogador escolhe, enquanto a fonte histórica sustenta as explicações científicas.
+
+## Aceite na aplicação
+
+1. Abra as três missões e confirme que a nave montável acompanha as escolhas antes de abrir a referência NASA.
+2. Abra uma referência por vez. Observe a escala, a rotação, as texturas, o crédito e a URL sem dependência externa para o GLB ou o Draco.
+3. No celular, compare a primeira carga da bancada com a carga sob demanda da referência. Confira foco, toque, movimento reduzido e a alternativa HTML/2D com WebGL indisponível.
+4. Ao publicar, compare os hashes dos três arquivos servidos com o manifesto. Uma geometria decodificada no terminal comprova o conteúdo do arquivo. A inspeção móvel e do deploy completa a validação da experiência.
 
 
 ---

@@ -19,6 +19,8 @@
   .scene.scene-orbit.scene-configured .orbit-render { top:70px; }
   .scene.scene-orbit.scene-configured .orbit-bottom { margin-top:330px; }
   .scene.scene-orbit.scene-configured.scene-expanded .orbit-bottom { margin-top:calc(clamp(440px,72vh,780px) - 15px); }
+  .scene.scene-orbit .spacecraft-inspection-controls button,
+  .scene.scene-orbit .spacecraft-view-tools button { min-height:44px; }
   .scene.scene-orbit .orbit-focus-brief { padding:12px; }
   .scene.scene-orbit .orbit-focus-brief>strong { font-size:16px; }
 }

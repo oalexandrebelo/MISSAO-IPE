@@ -94,5 +94,5 @@ console.log(JSON.stringify({
   sources: data.sources.length,
   chapters: data.chapters.length,
   embeddedDataAndLogic: true,
-  localDesignAssets: ['fonts/fonts.css', 'brand/missao-ipe-logo-on-light.svg', 'brand/missao-ipe-symbol.svg'],
+  localDesignAssets: ['site.css', 'fonts/fonts.css', 'brand/missao-ipe-logo-on-light.svg', 'brand/missao-ipe-symbol.svg'],
 }, null, 2));

@@ -101,6 +101,232 @@ var PHYSICS = Object.freeze({
   idlePanelFactorPercent: 85
 });
 
+// experiments/mission-design-lab/src/metrics/mission-score.ts
+var MISSION_SCORE_LIMITS = Object.freeze({ science: 60, engineering: 30, efficiency: 10 });
+var MISSION_SCORE_RUBRIC = "r21-v1";
+function boundedFraction(value, limit) {
+  return limit > 0 ? Math.max(0, Math.min(1, value / limit)) : 0;
+}
+function calculateMissionScore(input) {
+  const science = Math.round(MISSION_SCORE_LIMITS.science * boundedFraction(input.validRecords, input.requiredRecords));
+  const architectureCompatible = input.outcome !== "invalid";
+  const engineering = architectureCompatible ? MISSION_SCORE_LIMITS.engineering : 0;
+  const massHeadroom = boundedFraction(input.maxMassKg - input.massKg, input.maxMassKg);
+  const budgetHeadroom = boundedFraction(input.budget - input.credits, input.budget);
+  const efficiency = architectureCompatible ? Math.round(MISSION_SCORE_LIMITS.efficiency * (massHeadroom + budgetHeadroom) / 2) : 0;
+  return { total: science + engineering + efficiency, science, engineering, efficiency, max: 100, rubricVersion: MISSION_SCORE_RUBRIC };
+}
+function scoreMissionResult(result) {
+  const expedition = "expeditionId" in result;
+  const { massKg, credits } = expedition ? result.totals : result;
+  const { maxMassKg, budget } = expedition ? result.totals : getScenario(result.scenarioId);
+  return calculateMissionScore({
+    validRecords: result.deliveredRecords,
+    requiredRecords: result.requiredRecords,
+    outcome: result.outcome,
+    massKg,
+    maxMassKg,
+    credits,
+    budget
+  });
+}
+
+// experiments/mission-design-lab/src/lab/bruno-missions.ts
+var BRUNO_MODEL_VERSION = "ipe-bruno-r25-v1";
+var BRUNO_CHOICES = {
+  launcher: [
+    { id: "compact", label: "Compacto", description: "Menor custo e menor limite de massa transportada.", massKg: 0, credits: 9 },
+    { id: "heavy", label: "Maior capacidade", description: "Leva uma montagem mais pesada e ocupa mais do or\xE7amento.", massKg: 0, credits: 20 }
+  ],
+  propulsion: [
+    { id: "chemical", label: "Qu\xEDmica", description: "A transfer\xEAncia \xE9 mais r\xE1pida e o conjunto \xE9 mais pesado.", massKg: 24, credits: 5, travelFactor: 1, supportWh: 62 },
+    { id: "electric", label: "El\xE9trica", description: "Conjunto mais leve, com transfer\xEAncia mais longa no exerc\xEDcio.", massKg: 15, credits: 8, travelFactor: 1.25, supportWh: 84 }
+  ],
+  energy: [
+    { id: "standard", label: "Reserva padr\xE3o", description: "Banco mais leve com 360 Wh no in\xEDcio da janela cr\xEDtica.", massKg: 18, credits: 5, capacityWh: 360 },
+    { id: "extended", label: "Reserva ampliada", description: "Mais massa para iniciar a janela cr\xEDtica com 640 Wh.", massKg: 36, credits: 10, capacityWh: 640 }
+  ],
+  protection: [
+    { id: "light", label: "Leve", description: "Conserva margem de massa. Observe o requisito de chegada no briefing.", massKg: 9, credits: 3 },
+    { id: "reinforced", label: "Refor\xE7ada", description: "Absorve vibra\xE7\xE3o e inclui prote\xE7\xE3o t\xE9rmica com custo e massa maiores.", massKg: 29, credits: 8 }
+  ],
+  navigation: [
+    { id: "local", label: "Enlace local", description: "Pacote de orienta\xE7\xE3o com antena leve. O volume dispon\xEDvel depende do destino.", massKg: 8, credits: 3 },
+    { id: "deep-space", label: "Enlace direcional", description: "A antena precisa de apontamento e aumenta o volume entregue na janela.", massKg: 21, credits: 8 }
+  ],
+  payload: [
+    { id: "targeted", label: "Instrumento da miss\xE3o", description: "Registros compactos com a grandeza solicitada no briefing.", massKg: 10, credits: 7 },
+    { id: "survey", label: "C\xE2mera de reconhecimento", description: "Imagens para situar o alvo. Cada registro ocupa mais espa\xE7o.", massKg: 26, credits: 5 }
+  ]
+};
+var keys = Object.keys(BRUNO_CHOICES);
+var DEFAULT_BRUNO_CONFIG = Object.freeze({
+  launcher: "compact",
+  propulsion: "chemical",
+  energy: "standard",
+  protection: "light",
+  navigation: "local",
+  payload: "targeted"
+});
+var HOUR_S = 3600;
+var DAY_S = 24 * HOUR_S;
+var REQUIRED_RECORDS = 6;
+var BRUNO_MISSIONS = {
+  iss: {
+    id: "iss",
+    name: "Pulso Orbital",
+    destination: "Esta\xE7\xE3o Espacial Internacional",
+    question: "Como medir mudan\xE7as na composi\xE7\xE3o do ar ap\xF3s a entrega de um monitor \xE0 tripula\xE7\xE3o?",
+    learn: "Preserve a calibra\xE7\xE3o do monitor e entregue seis leituras de compostos vol\xE1teis.",
+    briefing: "A tripula\xE7\xE3o precisa de leituras do ar em hor\xE1rios diferentes. Transporte o monitor sem perder a calibra\xE7\xE3o durante a viagem.",
+    fact: "A NASA usa monitores da qualidade do ar na ISS para detectar e quantificar compostos org\xE2nicos vol\xE1teis.",
+    source: { label: "NASA \xB7 Monitoramento do ar da ISS", url: "https://www.nasa.gov/directorates/esdmd/hhp/toxicology-and-environmental-chemistry/" },
+    instrument: "Monitor de compostos vol\xE1teis",
+    evidence: "Seis leituras compar\xE1veis para acompanhar varia\xE7\xF5es. A causa de uma varia\xE7\xE3o exige outras evid\xEAncias.",
+    payloadKg: 120,
+    budget: 49,
+    operationCredits: 4,
+    baseDays: 30,
+    deadlineDays: 40,
+    launcherCapacity: { compact: 260, heavy: 470 },
+    supportWh: 165,
+    insulationSavingWh: 0,
+    recordEnergyWh: 18,
+    contactMb: { local: 54, "deep-space": 76 },
+    recordMb: { targeted: 5, survey: 10 }
+  },
+  moon: {
+    id: "moon",
+    name: "Eco Lunar",
+    destination: "Polo Sul da Lua",
+    question: "Que regi\xF5es frias e com ind\xEDcios de hidrog\xEAnio merecem uma investiga\xE7\xE3o de gelo?",
+    learn: "Planeje a reserva para a sombra e fa\xE7a os mapas chegarem na janela de contato.",
+    briefing: "Combine temperatura e ind\xEDcios de hidrog\xEAnio em seis setores do polo sul. Passagens em sombra reduzem a energia dispon\xEDvel para coletar os dados.",
+    fact: "No LRO, Diviner mede temperaturas. LEND mapeia a distribui\xE7\xE3o de hidrog\xEAnio a partir de n\xEAutrons.",
+    source: { label: "NASA \xB7 Diviner e LEND no LRO", url: "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/" },
+    instrument: "Conjunto t\xE9rmico e de n\xEAutrons",
+    evidence: "Seis cruzamentos de temperatura e hidrog\xEAnio ajudam a priorizar setores. Confirmar gelo requer evid\xEAncia adicional.",
+    payloadKg: 240,
+    budget: 57,
+    operationCredits: 7,
+    baseDays: 48,
+    deadlineDays: 64,
+    launcherCapacity: { compact: 365, heavy: 540 },
+    supportWh: 212,
+    insulationSavingWh: 48,
+    recordEnergyWh: 27,
+    contactMb: { local: 12, "deep-space": 64 },
+    recordMb: { targeted: 8, survey: 12 }
+  },
+  mars: {
+    id: "mars",
+    name: "Horizonte Rubro",
+    destination: "Cratera Jezero, Marte",
+    question: "Como medir vento, temperatura e poeira durante uma frente marciana?",
+    learn: "Chegue a tempo, proteja o m\xF3dulo na entrada e envie as medi\xE7\xF5es meteorol\xF3gicas.",
+    briefing: "A janela de observa\xE7\xE3o da frente de poeira \xE9 curta. A esta\xE7\xE3o precisa chegar \xE0 superf\xEDcie com prote\xE7\xE3o de entrada, reserva e enlace.",
+    fact: "Em Jezero, o MEDA do Perseverance mede vari\xE1veis meteorol\xF3gicas e monitora part\xEDculas de poeira.",
+    source: { label: "NASA \xB7 Instrumentos do Perseverance e MEDA", url: "https://science.nasa.gov/mission/mars-2020-perseverance/science-instruments/" },
+    instrument: "Esta\xE7\xE3o meteorol\xF3gica de superf\xEDcie",
+    evidence: "Seis amostras descrevem a varia\xE7\xE3o do tempo local. Previs\xF5es para outras regi\xF5es exigem outras observa\xE7\xF5es.",
+    payloadKg: 460,
+    budget: 74,
+    operationCredits: 12,
+    baseDays: 210,
+    deadlineDays: 232,
+    launcherCapacity: { compact: 450, heavy: 680 },
+    supportWh: 288,
+    insulationSavingWh: 20,
+    recordEnergyWh: 36,
+    contactMb: { local: 16, "deep-space": 76 },
+    recordMb: { targeted: 9, survey: 15 }
+  }
+};
+function validateBrunoConfig(value) {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) return false;
+  const config = value;
+  return Object.keys(config).length === keys.length && keys.every((key) => Object.hasOwn(config, key) && BRUNO_CHOICES[key].some((option) => config[key] === option.id));
+}
+function simulateBrunoMission(id, config) {
+  if (!Object.hasOwn(BRUNO_MISSIONS, id) || !validateBrunoConfig(config)) throw new RangeError("Projeto de miss\xE3o inv\xE1lido.");
+  const mission = BRUNO_MISSIONS[id];
+  const parts = keys.map((key) => BRUNO_CHOICES[key].find((option) => option.id === config[key]));
+  const propulsion = BRUNO_CHOICES.propulsion.find((option) => option.id === config.propulsion);
+  const power = BRUNO_CHOICES.energy.find((option) => option.id === config.energy);
+  const massKg = mission.payloadKg + parts.reduce((total, part) => total + part.massKg, 0);
+  const credits = mission.operationCredits + parts.reduce((total, part) => total + part.credits, 0);
+  const maxMassKg = mission.launcherCapacity[config.launcher];
+  const travelDays = Math.ceil(mission.baseDays * propulsion.travelFactor * (1 + Math.max(0, massKg - 320) / 5e3));
+  const reinforced = config.protection === "reinforced";
+  const supportWh = mission.supportWh + propulsion.supportWh - (reinforced ? mission.insulationSavingWh : 0);
+  const acquisitionEnergyWh = Math.max(0, power.capacityWh - supportWh);
+  const linkCapacityMb = mission.contactMb[config.navigation];
+  const dataSizeMb = mission.recordMb[config.payload];
+  const recordEnergyWh = mission.recordEnergyWh - (config.payload === "survey" ? 4 : 0);
+  let generatedRecords = 0, receivedRecords = 0, deliveredRecords = 0, minEnergyWh = power.capacityWh;
+  const diagnostics = [];
+  const timeline = [];
+  function diagnose(code, message, timeS) {
+    diagnostics.push({ code, message, timeS, severity: "error" });
+  }
+  if (massKg > maxMassKg) diagnose("MASS_LIMIT", `A montagem pesa ${massKg} kg e este lan\xE7ador suporta ${maxMassKg} kg neste destino.`, 0);
+  if (credits > mission.budget) diagnose("BUDGET_LIMIT", `O plano custa ${credits} cr\xE9ditos para um or\xE7amento de ${mission.budget}.`, 0);
+  const launchBlocked = diagnostics.length > 0;
+  timeline.push({ phase: "launch", timeS: 0, title: "Verifica\xE7\xE3o de lan\xE7amento", message: launchBlocked ? "O projeto ficou no hangar." : `Montagem de ${massKg} kg aprovada para a transfer\xEAncia.`, state: launchBlocked ? "blocked" : "ok" });
+  if (!launchBlocked) {
+    const arrival = travelDays * DAY_S;
+    if (travelDays > mission.deadlineDays) diagnose("ARRIVAL_WINDOW", `A chegada em ${travelDays} dias ultrapassou o limite de ${mission.deadlineDays} dias do briefing.`, arrival);
+    if (id === "mars" && !reinforced) diagnose("ENTRY_PROTECTION", "A prote\xE7\xE3o leve deixou o m\xF3dulo vulner\xE1vel na entrada atmosf\xE9rica. A esta\xE7\xE3o n\xE3o chegou operacional \xE0 superf\xEDcie.", arrival);
+    const arrivalBlocked = diagnostics.length > 0;
+    timeline.push({ phase: "transfer", timeS: arrival, title: arrivalBlocked ? "Chegada interrompida" : "Chegada ao destino", message: `Transfer\xEAncia did\xE1tica de ${travelDays} dias.`, state: arrivalBlocked ? "blocked" : "ok" });
+    if (!arrivalBlocked) {
+      const acquisition = arrival + 6 * HOUR_S;
+      const downlink = arrival + 9 * HOUR_S;
+      generatedRecords = Math.min(REQUIRED_RECORDS, Math.floor(acquisitionEnergyWh / recordEnergyWh));
+      minEnergyWh = acquisitionEnergyWh - generatedRecords * recordEnergyWh;
+      receivedRecords = Math.min(generatedRecords, Math.floor(linkCapacityMb / dataSizeMb));
+      const calibrationLost = id === "iss" && !reinforced;
+      if (calibrationLost) diagnose("CALIBRATION_LOST", "A vibra\xE7\xE3o do transporte deixou o monitor sem refer\xEAncia de calibra\xE7\xE3o. As leituras recebidas n\xE3o s\xE3o compar\xE1veis.", arrival);
+      if (config.payload === "survey") diagnose("PAYLOAD_MISMATCH", "As imagens situam o alvo. A pergunta do briefing exige a grandeza medida pelo instrumento da miss\xE3o.", acquisition);
+      if (generatedRecords < REQUIRED_RECORDS) diagnose("ENERGY_WINDOW", `A janela deixou ${acquisitionEnergyWh} Wh para coleta. Cada registro exige ${recordEnergyWh} Wh, limitando a coleta a ${generatedRecords} de ${REQUIRED_RECORDS} registros.`, acquisition);
+      if (receivedRecords < generatedRecords) diagnose("CONTACT_CAPACITY", `O enlace levou ${receivedRecords} de ${generatedRecords} registros de ${dataSizeMb} MB. A janela comportou ${linkCapacityMb} MB.`, downlink);
+      deliveredRecords = calibrationLost || config.payload === "survey" ? 0 : receivedRecords;
+      timeline.push({ phase: "acquisition", timeS: acquisition, title: "Coleta", message: `${generatedRecords} registros produzidos a bordo.`, state: generatedRecords === REQUIRED_RECORDS ? "ok" : "warning" });
+      timeline.push({ phase: "downlink", timeS: downlink, title: "Recep\xE7\xE3o e valida\xE7\xE3o", message: `${receivedRecords} recebidos \xB7 ${deliveredRecords} v\xE1lidos para a pergunta.`, state: deliveredRecords === REQUIRED_RECORDS ? "ok" : "warning" });
+    }
+  }
+  const outcome = launchBlocked ? "invalid" : deliveredRecords === REQUIRED_RECORDS ? "success" : "failure";
+  return {
+    missionId: id,
+    config: { ...config },
+    outcome,
+    receivedRecords,
+    deliveredRecords,
+    generatedRecords,
+    requiredRecords: REQUIRED_RECORDS,
+    massKg,
+    maxMassKg,
+    credits,
+    budget: mission.budget,
+    travelDays,
+    acquisitionEnergyWh,
+    linkCapacityMb,
+    dataSizeMb,
+    initialEnergyWh: power.capacityWh,
+    minEnergyWh,
+    finalEnergyWh: minEnergyWh,
+    generatedBits: generatedRecords * dataSizeMb * 8e6,
+    downlinkedBits: receivedRecords * dataSizeMb * 8e6,
+    lostBits: 0,
+    queueBits: (generatedRecords - receivedRecords) * dataSizeMb * 8e6,
+    simulatedSeconds: timeline.at(-1).timeS,
+    modelVersion: BRUNO_MODEL_VERSION,
+    score: calculateMissionScore({ validRecords: deliveredRecords, requiredRecords: REQUIRED_RECORDS, outcome, massKg, maxMassKg, credits, budget: mission.budget }),
+    diagnostics,
+    timeline
+  };
+}
+
 // experiments/mission-design-lab/src/core/contracts.ts
 var ENGINE_VERSION = "0.1.1-rd";
 var CATALOG_VERSION = "ipe-64-v1";
@@ -1241,43 +1467,14 @@ function summarizeLearningTrial(trial) {
   return { valid: r.deliveredRecords, received: r.observations.filter((o) => o.deliveredAtS !== null).length, mbit: Number(r.downlinkedBits) / 1e6, massKg: trial.kind === "cerrado" ? trial.result.massKg : trial.result.totals.massKg, credits: trial.kind === "cerrado" ? trial.result.credits : trial.result.totals.credits, outcome: r.outcome };
 }
 
-// experiments/mission-design-lab/src/metrics/mission-score.ts
-var MISSION_SCORE_LIMITS = Object.freeze({ science: 60, engineering: 30, efficiency: 10 });
-var MISSION_SCORE_RUBRIC = "r21-v1";
-function boundedFraction(value, limit) {
-  return limit > 0 ? Math.max(0, Math.min(1, value / limit)) : 0;
-}
-function calculateMissionScore(input) {
-  const science = Math.round(MISSION_SCORE_LIMITS.science * boundedFraction(input.validRecords, input.requiredRecords));
-  const architectureCompatible = input.outcome !== "invalid";
-  const engineering = architectureCompatible ? MISSION_SCORE_LIMITS.engineering : 0;
-  const massHeadroom = boundedFraction(input.maxMassKg - input.massKg, input.maxMassKg);
-  const budgetHeadroom = boundedFraction(input.budget - input.credits, input.budget);
-  const efficiency = architectureCompatible ? Math.round(MISSION_SCORE_LIMITS.efficiency * (massHeadroom + budgetHeadroom) / 2) : 0;
-  return { total: science + engineering + efficiency, science, engineering, efficiency, max: 100, rubricVersion: MISSION_SCORE_RUBRIC };
-}
-function scoreMissionResult(result) {
-  const expedition = "expeditionId" in result;
-  const { massKg, credits } = expedition ? result.totals : result;
-  const { maxMassKg, budget } = expedition ? result.totals : getScenario(result.scenarioId);
-  return calculateMissionScore({
-    validRecords: result.deliveredRecords,
-    requiredRecords: result.requiredRecords,
-    outcome: result.outcome,
-    massKg,
-    maxMassKg,
-    credits,
-    budget
-  });
-}
-
 // server/metrics/model.mjs
 var UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
-var MISSIONS = ["cerrado", "bennu", "telescope"];
+var MISSIONS = ["cerrado", "bennu", "telescope", "iss", "moon", "mars"];
+var isBruno = (mission) => ["iss", "moon", "mars"].includes(mission);
 var InvalidInput = class extends Error {
 };
-function object(value, keys, required = keys) {
-  if (!value || typeof value !== "object" || Array.isArray(value) || Object.keys(value).some((key) => !keys.includes(key)) || required.some((key) => !Object.hasOwn(value, key))) throw new InvalidInput("Formato inv\xE1lido.");
+function object(value, keys2, required = keys2) {
+  if (!value || typeof value !== "object" || Array.isArray(value) || Object.keys(value).some((key) => !keys2.includes(key)) || required.some((key) => !Object.hasOwn(value, key))) throw new InvalidInput("Formato inv\xE1lido.");
   return value;
 }
 function configFor(mission, config) {
@@ -1287,6 +1484,8 @@ function configFor(mission, config) {
     } catch {
       throw new InvalidInput("Escolhas do Cerrado inv\xE1lidas.");
     }
+  } else if (isBruno(mission)) {
+    if (!validateBrunoConfig(config)) throw new InvalidInput("Escolhas da campanha inv\xE1lidas.");
   } else {
     const choices2 = getExpeditionChoices(mission);
     object(config, Object.keys(choices2));
@@ -1295,6 +1494,10 @@ function configFor(mission, config) {
   return { ...config };
 }
 function summarizeResult(result, mission) {
+  if (isBruno(mission)) {
+    const diagnostics2 = result.diagnostics.map((d) => ({ ...d, severity: "error" }));
+    return { outcome: result.outcome, validRecords: result.deliveredRecords, deliveredRecords: result.receivedRecords, requiredRecords: result.requiredRecords, massKg: result.massKg, credits: result.credits, minEnergyWh: result.minEnergyWh, initialEnergyWh: result.initialEnergyWh, finalEnergyWh: result.finalEnergyWh, generatedBits: String(result.generatedBits), downlinkedBits: String(result.downlinkedBits), lostBits: String(result.lostBits), queueBits: String(result.queueBits), completedAtS: result.simulatedSeconds, engineVersion: result.modelVersion, diagnostics: diagnostics2, firstCause: diagnostics2[0] ?? null, score: result.score };
+  }
   const unique = /* @__PURE__ */ new Map();
   for (const event of result.events) if (event.severity !== "info" && event.code !== "MISSION_END" && !unique.has(event.code)) unique.set(event.code, { code: event.code, severity: event.severity, message: event.message, timeS: event.timeS });
   const diagnostics = [...unique.values()];
@@ -1330,14 +1533,15 @@ function normalizeEvent(input, sessionId, receivedAt) {
     const config = configFor(mission, p.config);
     if (mission === "cerrado" ? !["long-contact", "short-contact"].includes(p.scenarioId) : p.scenarioId !== void 0) throw new InvalidInput("Cen\xE1rio inv\xE1lido.");
     payload = { attemptId: p.attemptId, status: p.status, config, ...mission === "cerrado" ? { scenarioId: p.scenarioId } : {} };
-    if (p.status === "completed") result = summarizeResult(mission === "cerrado" ? simulateMission(config, p.scenarioId, { trace: false }) : simulateExpedition(mission, config), mission);
+    if (p.status === "completed") result = summarizeResult(mission === "cerrado" ? simulateMission(config, p.scenarioId, { trace: false }) : isBruno(mission) ? simulateBrunoMission(mission, config) : simulateExpedition(mission, config), mission);
   } else if (kind === "decision") {
     const p = object(input.payload, ["key", "from", "to"]);
-    const choices2 = mission === "cerrado" ? CATALOG : getExpeditionChoices(mission);
+    const choices2 = mission === "cerrado" ? CATALOG : isBruno(mission) ? BRUNO_CHOICES : getExpeditionChoices(mission);
     const options = typeof p.key === "string" && Object.hasOwn(choices2, p.key) ? choices2[p.key] : null;
     if (!options || p.from === p.to || !options.some((choice) => choice.id === p.from) || !options.some((choice) => choice.id === p.to)) throw new InvalidInput("Mudan\xE7a inv\xE1lida.");
     payload = { key: p.key, from: p.from, to: p.to };
   } else if (kind === "assessment") {
+    if (isBruno(mission)) throw new InvalidInput("Avalia\xE7\xE3o ainda n\xE3o dispon\xEDvel nesta campanha.");
     const p = object(input.payload, ["question", "answer", "questionVersion"]);
     if (p.questionVersion !== 1 || !["prediction", "interpretation"].includes(p.question) || !(p.question === "prediction" ? ["more", "same", "less"] : ["evidence", "overclaim", "missing"]).includes(p.answer)) throw new InvalidInput("Resposta inv\xE1lida.");
     let expected = "evidence";

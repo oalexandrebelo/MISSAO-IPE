@@ -22,7 +22,7 @@
   box-shadow: 0 2px 8px #0006;
 }
 .ipe-libras-link:visited, .ipe-libras-link:hover { color: #fff; }
-body:has(.player-entry) .ipe-libras-link { inset-block-start: 1rem; }
+body:has(.player-entry) .ipe-libras-link { inset-block-start: 1rem; inset-block-end: auto; }
 body.ipe-libras-active .ipe-libras-link { inset-block-start: auto; inset-block-end: .5rem; }
 .ipe-libras-link:focus-visible,
 .ipe-libras-panel :is(button, a):focus-visible,
@@ -69,6 +69,8 @@ body.ipe-libras-active .ipe-libras-link { inset-block-start: auto; inset-block-e
   body.ipe-libras-active { box-sizing: border-box; padding-inline-end: 376px; }
 }
 @media (max-width: 600px) {
+  .ipe-libras-link { inset-block-start: auto; inset-block-end: max(.5rem, env(safe-area-inset-bottom)); }
+  body:has(.scene):not(.ipe-libras-active) { padding-block-end: 4.5rem; }
   .ipe-libras-panel { inset-block-start: auto; inset-block-end: max(.5rem, env(safe-area-inset-bottom)); width: calc(100vw - 1rem); max-height: 55dvh; }
   .ipe-libras-panel iframe { height: 32dvh; min-height: 160px; }
   .ipe-libras-panel-status { margin-block: .25rem; }

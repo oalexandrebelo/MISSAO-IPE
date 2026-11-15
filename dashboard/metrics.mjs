@@ -1,4 +1,7 @@
 export const MISSIONS = {
+  iss: { name: 'ISS · Pulso orbital', lesson: 'Projetar acesso orbital, carga científica e energia para um experimento de monitoramento do ar. Parâmetros didáticos.' },
+  moon: { name: 'Lua · sinais do polo sul', lesson: 'Combinar energia, proteção e instrumento para investigar regiões lunares. Parâmetros didáticos.' },
+  mars: { name: 'Marte · diário de Jezero', lesson: 'Equilibrar autonomia, proteção e comunicação longe da Terra. Parâmetros didáticos.' },
   cerrado: { name: 'Cerrado · ler a Terra', lesson: 'Distinguir potência de energia; entregar os dois períodos antes de comparar o NDVI. Ausência de dados não é ausência de vegetação.' },
   bennu: { name: 'Bennu · ler uma superfície', lesson: 'Produzir não basta: os dados precisam chegar ao solo. O serviço de contatos muda agenda e custo, mantendo a taxa do rádio.' },
   telescope: { name: 'Webb · ler a luz', lesson: 'Escolher o instrumento pela pergunta e ler as incertezas do espectro. Seis bins não reproduzem a descoberta molecular completa.' },

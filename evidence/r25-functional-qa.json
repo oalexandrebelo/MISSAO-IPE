@@ -1,0 +1,94 @@
+{
+  "edition": "R25-game-shell-bruno-rive-design",
+  "verifiedAt": "2026-11-15T16:32:38.784580+00:00",
+  "stage": "local candidate; production tracked separately",
+  "tests": {
+    "labDomain": {
+      "passed": 169,
+      "failed": 0
+    },
+    "labUI": {
+      "passed": 98,
+      "failed": 0
+    },
+    "metricsHTTPAndModel": {
+      "passed": 33,
+      "failed": 0
+    },
+    "librasAndAnalytics": {
+      "passed": 16,
+      "failed": 0
+    },
+    "staticRelease": {
+      "passed": 18,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "surface": "CUA, Chromium; local release with real HTTP handler and in-memory QA repository",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 320,
+        "height": 740
+      }
+    ],
+    "entry": "Start → Nome → Email → Tipo (6 destinos) → Play; retomada conserva participação",
+    "iss": [
+      {
+        "validRecords": 0,
+        "receivedRecords": 6,
+        "score": 33
+      },
+      {
+        "validRecords": 6,
+        "receivedRecords": 6,
+        "score": 92,
+        "change": "reinforced protection"
+      }
+    ],
+    "moon": {
+      "validRecords": 6,
+      "score": 90,
+      "choices": "extended energy, reinforced protection, directional link"
+    },
+    "mars": [
+      {
+        "outcome": "invalid",
+        "massKg": 529,
+        "capacityKg": 450,
+        "score": 0
+      },
+      {
+        "validRecords": 6,
+        "score": 91,
+        "massKg": 580,
+        "choices": "higher launch capacity, extended energy, reinforced protection, directional link"
+      }
+    ],
+    "persistence": "5 attempts and 8 decisions acknowledged, 0 pending, 0 rejected; results preserved after reload",
+    "modelsRendered": [
+      "ISS NASA/Carbajal",
+      "LRO NASA/Meaney",
+      "Perseverance NASA/JPL-Caltech at390px"
+    ],
+    "desktopHangar": "launch bottom744px within main bottom870px; compact header, scene and controls visible",
+    "mobile": "document width320 and390 equals viewport, internal play area scrolls",
+    "rive": "official Canvas2.50.0, watermark preserved; 3.2s startup,0.6s change; color diagram visible; battery16→24Wh changes after idle without resize"
+  },
+  "limits": [
+    "viewport emulation is not a physical-phone test",
+    "no human learning study or Libras linguistic certification",
+    "new three missions have no comprehension-question assessment yet",
+    "leaving Bruno countdown does not record cancellation",
+    "DCC-MCP gateway:0 connectedhosts; Meshy not connected and no paid generation"
+  ],
+  "privacy": "only synthetic local QA; no credentials, cookies, real names or emails in receipt"
+}

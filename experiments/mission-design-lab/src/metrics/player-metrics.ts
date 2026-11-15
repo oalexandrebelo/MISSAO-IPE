@@ -1,9 +1,10 @@
+import type { BrunoResult } from '../lab/bruno-missions.ts';
 import type { MissionResult } from '../core/contracts.ts';
 import type { ExpeditionResult } from '../lab/scientific-expeditions.ts';
 import { MISSION_SCORE_LIMITS, MISSION_SCORE_RUBRIC, scoreMissionResult } from './mission-score.ts';
 import type { MissionScore } from './mission-score.ts';
 
-export type MetricMission = 'cerrado' | 'bennu' | 'telescope';
+export type MetricMission = 'cerrado' | 'bennu' | 'telescope' | 'iss' | 'moon' | 'mars';
 export type MetricKind = 'attempt' | 'decision' | 'assessment' | 'inspection' | 'role_review';
 export interface PlayerSession { sessionId: string; name: string; startedAt: string; }
 export interface MetricEvent { id: string; kind: MetricKind; mission: MetricMission; at: string; payload: Record<string, unknown>; }
@@ -24,7 +25,7 @@ export function isPlayerSession(value: unknown): value is PlayerSession {
 function validMetric(value: unknown): value is LocalMetric {
   if (!record(value) || !record(value.event)) return false;
   const event = value.event;
-  if (typeof event.id !== 'string' || !UUID.test(event.id) || !['attempt','decision','assessment','inspection','role_review'].includes(String(event.kind)) || !['cerrado','bennu','telescope'].includes(String(event.mission)) || typeof event.at !== 'string' || !Number.isFinite(Date.parse(event.at)) || !record(event.payload) || !['pending','synced','rejected'].includes(String(value.sync))) return false;
+  if (typeof event.id !== 'string' || !UUID.test(event.id) || !['attempt','decision','assessment','inspection','role_review'].includes(String(event.kind)) || !['cerrado','bennu','telescope','iss','moon','mars'].includes(String(event.mission)) || typeof event.at !== 'string' || !Number.isFinite(Date.parse(event.at)) || !record(event.payload) || !['pending','synced','rejected'].includes(String(value.sync))) return false;
   if (value.correct !== undefined && typeof value.correct !== 'boolean') return false;
   if (value.reason !== undefined && typeof value.reason !== 'string') return false;
   if (value.summary !== undefined) {
@@ -117,4 +118,8 @@ export function acknowledgeMetrics(entries: readonly LocalMetric[], response: un
   const accepted = new Set(response.acceptedIds);
   const rejected = new Map(response.rejected.map(item => [item.id as string, item.reason as string]));
   return entries.map(item => accepted.has(item.event.id) ? { ...item, sync: 'synced' } : rejected.has(item.event.id) ? { ...item, sync: 'rejected', reason: rejected.get(item.event.id) } : item);
+}
+
+export function summarizeBrunoAttempt(result: BrunoResult): AttemptSummary & { score: MissionScore } {
+  return { outcome: result.outcome, received: result.receivedRecords, valid: result.deliveredRecords, required: result.requiredRecords, massKg: result.massKg, credits: result.credits, simulatedSeconds: result.simulatedSeconds, minEnergyWh: result.minEnergyWh, modelVersion: result.modelVersion, diagnostics: result.diagnostics, score: result.score };
 }

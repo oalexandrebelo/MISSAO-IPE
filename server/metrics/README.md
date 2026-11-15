@@ -25,7 +25,7 @@
 
 `GET ?action=session` retorna `{session:{sessionId,name,startedAt}|null}`. `GET ?action=admin&cursor=...` exige cookie da equipe e retorna `{profiles,events,cursor,hasMore}`. Cada página contém até 100 objetos ao todo. O consumidor deve seguir o cursor, deduplicar registros pelo identificador e declarar quando os números representam apenas páginas carregadas. Não há total geral antecipado.
 
-Cada evento contém `{id,kind,mission,at,payload}`. `at` é o relógio declarado pelo cliente; `receivedAt` é atribuído pelo servidor. `batchId` e `receivedOrder` preservam a ordem de respostas de um mesmo lote, inclusive quando o relógio do servidor retorna o mesmo milissegundo. As missões são `cerrado`, `bennu` e `telescope`.
+Cada evento contém `{id,kind,mission,at,payload}`. `at` é o relógio declarado pelo cliente; `receivedAt` é atribuído pelo servidor. `batchId` e `receivedOrder` preservam a ordem de respostas de um mesmo lote, inclusive quando o relógio do servidor retorna o mesmo milissegundo. As missões são `cerrado`, `bennu`, `telescope`, `iss`, `moon` e `mars`. As três últimas usam o motor didático `bruno-missions.ts`, também recalculado no servidor; os resultados não são observações científicas NASA.
 
 O `sessionId` do corpo precisa coincidir com o cookie. Se outra aba iniciou uma nova participação, envios e saídas da aba anterior retornam `409`, sem atribuir eventos ou apagar o cookie da pessoa nova. A fila antiga permanece associada ao identificador antigo.
 

@@ -8,7 +8,7 @@ test('attempt identity preserves repeat plays and ignores replay duplicates and 
 test('cancelled and technical executions are separate from engineering attempts',()=>{const s=summarize([{id:'a',sessionId:'s',receivedAt:'x',kind:'attempt',payload:{attemptId:'1',status:'cancelled'}},{id:'b',sessionId:'s',receivedAt:'x',kind:'attempt',payload:{attemptId:'2',status:'error'}}]);assert.equal(s.calculated.length,0);assert.equal(s.cancelled,1);assert.equal(s.technicalErrors,1);assert.equal(s.answered,0);});
 test('CSV protects spreadsheet formulas and excludes email by default',()=>{assert.equal(csvCell('=HYPERLINK("x")'),'"\'=HYPERLINK(""x"")"');const e={id:'a',sessionId:'s',receivedAt:'x',mission:'bennu',kind:'attempt',payload:{attemptId:'1',status:'error'}};const csv=attemptsCsv([e],[{sessionId:'s',name:'=cmd',email:'private@example.invalid'}]);assert.ok(!csv.includes('private@example.invalid'));assert.ok(csv.includes("'=cmd"));assert.ok(attemptsCsv([e],[{sessionId:'s',email:'private@example.invalid'}],{includeEmail:true}).includes('private@example.invalid'));});
 
-test('mission filter exposes all three selectable missions in the actual dashboard HTML', async () => {
+test('mission filter exposes all six selectable missions in the actual dashboard HTML', async () => {
   const {readFile} = await import('node:fs/promises');
   const {createRequire} = await import('node:module');
   const require = createRequire(new URL('../experiments/mission-design-lab/package.json', import.meta.url));
@@ -16,8 +16,8 @@ test('mission filter exposes all three selectable missions in the actual dashboa
   const html = await readFile(new URL('../dashboard/index.html', import.meta.url), 'utf8');
   const dom = new JSDOM(html);
   const select = dom.window.document.getElementById('mission');
-  assert.deepEqual([...select.options].map(option => option.value), ['all', 'cerrado', 'bennu', 'telescope']);
-  for (const mission of ['cerrado', 'bennu', 'telescope']) { select.value = mission; assert.equal(select.selectedOptions[0].value, mission); }
+  assert.deepEqual([...select.options].map(option => option.value), ['all', 'iss', 'moon', 'mars', 'cerrado', 'bennu', 'telescope']);
+  for (const mission of ['iss', 'moon', 'mars', 'cerrado', 'bennu', 'telescope']) { select.value = mission; assert.equal(select.selectedOptions[0].value, mission); }
   dom.window.close();
 });
 
