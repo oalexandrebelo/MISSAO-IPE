@@ -8342,6 +8342,134 @@ O recibo de publicação reúne os commits, os deploys e as evidências correspo
 
 ---
 
+# R29 · missões e assets de Bruno e Fastmode
+
+Fonte: `docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md` · SHA-256 original: `8624efd52c501cc67e8ad8c64919b8cb87054055ee13128f62a5362b4d3f3378` · Ajustes de caminhos privados: 0
+
+# R29 · missões e assets de Bruno e Fastmode
+
+A base oficial da auditoria é `064141a7c7c9ed54720943236d15e4e26938b34e`. Na R28, as sete entradas do jogo já cobriam os cinco destinos de Bruno. A R29 reaproveita a escolha de quantidade da loja e mantém a origem das missões identificada no lobby. [GameShell na base R28](https://github.com/oalexandrebelo/MISSAO-IPE/blob/064141a7c7c9ed54720943236d15e4e26938b34e/experiments/mission-design-lab/src/ui/GameShell.tsx) · [Handoff do lobby R29](75-LOBBY-IMERSIVO-E-HANDOFF-R29.md)
+
+## Versões conferidas
+
+| Origem | Revisão e autoria | Diferença desde o snapshot |
+| --- | --- | --- |
+| Bruno · projeto de deploy | `main` em `f29ab8cca72bdf6d8d6dfb863c7670423b3400bf`, árvore `58154203996a09c1fc0f5024d1ab4b5119f107f7`. Bruno A Carvalho. | Três commits após `fa18fd3`, apenas em `App.tsx` e `index.css`. Ajustes de resposta ao toque, carrinho vazio, quebra de texto e rolagem. [Comparação do GitHub](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/compare/fa18fd38439921f97286325b2bdf8c7545d7c776...f29ab8cca72bdf6d8d6dfb863c7670423b3400bf) |
+| Bruno · repositório original | `master` em `53e031e82b8bd6c182ae5c37ea4ca6331ec4bdcf`, árvore `04dcc3923164ba88c3b11d3af764823ee9e8c2f5`. Bruno A Carvalho. | Um commit após `f54fb88` introduz loja, carrinho, devolução e troca do lockfile. Os blobs de App, CSS e regras são idênticos aos do primeiro deploy `5b2e42c080cdd332c397803c28a2076951603ff8`. [Comparação do GitHub](https://github.com/brunoassiscarvalho/missao-ipe/compare/f54fb88a237216d6c1e72b75b400767fb3a75661...53e031e82b8bd6c182ae5c37ea4ca6331ec4bdcf) · [Primeiro deploy](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/commit/5b2e42c080cdd332c397803c28a2076951603ff8) |
+| Fastmode · Alexandre Belo | Cabeça histórica `416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3`, anunciada em `refs/pull/2/head`. Merge `6c8df630946c581c2a56d938d03386fd3ead111f`. | A árvore `fastmode/` da PR é idêntica à da base oficial. A branch `feat/fastmode-mvp` está identificada na PR. [PR #2](https://github.com/oalexandrebelo/MISSAO-IPE/pull/2) |
+
+A contribuição filtrada do repositório original está em `contributions/bruno-figma/`. O snapshot de deploy contém 37 dos 38 blobs de `fa18fd3`, sob `deploy-2026-11-15/`. As duas árvores atuais de Bruno estão sem arquivo de licença. As fontes, créditos, hashes e exclusões originais estão no histórico. [Origem das contribuições](https://github.com/oalexandrebelo/MISSAO-IPE/blob/064141a7c7c9ed54720943236d15e4e26938b34e/contributions/bruno-figma/ORIGEM-E-INTEGRACAO.md) · [Manifesto R26](https://github.com/oalexandrebelo/MISSAO-IPE/blob/064141a7c7c9ed54720943236d15e4e26938b34e/contributions/bruno-figma/deploy-2026-11-15/MANIFESTO.json)
+
+## Cinco destinos de Bruno na campanha oficial
+
+| Cenário de Bruno | Entrada oficial | Ciência e asset de referência |
+| --- | --- | --- |
+| Pulso Orbital · ISS | `iss` | Proteção da calibração e monitor de ar. Modelo `iss-carbajal-b.glb`, NASA / Michael D. Carbajal. |
+| Eco Lunar · Lua | `moon` | LEND e Diviner cruzam indícios de hidrogênio e temperatura. Modelo `lro-meaney-a.glb`, NASA / Christopher R. Meaney. |
+| Horizonte Rubro · Marte | `mars` | MEDA, prazo e proteção de entrada. Modelo `mars-2020-perseverance.glb`, NASA / JPL-Caltech. |
+| Oceano Silencioso · Europa | `europa` | MISE e REASON orientam uma investigação de habitabilidade. A Europa Clipper é a referência de voo, e MISE e REASON são as peças da carga didática. Modelo `europa-clipper-vtad.glb`, NASA VTAD, aberto a pedido na missão. |
+| Retorno Bennu · Bennu | `bennu` | A entrada atual usa seis dimensões publicadas de rochas e clastos para investigar evidência e entrega de dados. Modelo `bennu-1999-rq36.glb`, com crédito no manifesto NASA. A contribuição fornece um objetivo de amostragem distinto. |
+
+Os quatro casos de engenharia já usam montagem, inventário, reserva, desgaste, recálculo e métricas oficiais. A loja mantém sete fichas, incluindo OVIRS como referência a Bennu. Cerrado e Webb completam o catálogo oficial com arquivos científicos próprios. [Catálogo de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/f29ab8cca72bdf6d8d6dfb863c7670423b3400bf/src/App.tsx#L202-L338) · [Missões no motor oficial](https://github.com/oalexandrebelo/MISSAO-IPE/blob/064141a7c7c9ed54720943236d15e4e26938b34e/experiments/mission-design-lab/src/lab/bruno-missions.ts) · [Handoff de inventário](71-INVENTARIO-EUROPA-E-HANDOFF-R27.md)
+
+### Retorno Bennu no briefing atual
+
+A fonte de Bruno descreve coleta e retorno à Terra em um briefing com a nave fictícia ÍCARO. O aplicativo aplica a montagem e a avaliação comuns a esse cenário. A representação das fases de coleta, retorno e recuperação exigiria um modelo próprio.
+
+O conteúdo foi integrado em **Bennu → Necessidade → história da missão**, em `MissionStories.tsx`, com fonte NASA ligada ao texto. A OSIRIS-REx coletou material de Bennu em 20 de outubro de 2020. A cápsula trouxe a amostra à Terra em 24 de setembro de 2023. No exercício, o jogador compara seis dimensões publicadas e investiga o que chega ao solo pelo enlace. A descrição histórica completa a pergunta que a missão oficial já calcula. [Caso original de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/f29ab8cca72bdf6d8d6dfb863c7670423b3400bf/src/App.tsx#L311-L337) · [Cronologia da OSIRIS-REx · NASA](https://science.nasa.gov/mission/osiris-rex/in-depth/) · [Expedição científica oficial](https://github.com/oalexandrebelo/MISSAO-IPE/blob/064141a7c7c9ed54720943236d15e4e26938b34e/experiments/mission-design-lab/src/lab/scientific-expeditions.ts#L77-L95)
+
+## Cenários de Fastmode
+
+| Cenário | Onde existe | O que cabe reaproveitar |
+| --- | --- | --- |
+| M0 · Semente | Um objetivo e dois requisitos no tutorial do runtime. | Orientação breve sobre projeto e verificação. A entrada oficial já permite começar diretamente por uma missão científica. |
+| M1 · Raízes | Quatro objetivos terrestres e cinco requisitos no runtime. | O caso Cerrado já trabalha observação e entrega com dados Terra/MODIS. Objetivos como metano, fogo e aerossóis dependeriam de outros dados e critérios. |
+| M2 · Gelo Lunar | Quatro objetivos e três requisitos no runtime. | A investigação polar já tem lugar em Eco Lunar com instrumentos coerentes com a pergunta. Profundidade de sondagem ou dose requerem um cálculo próprio. |
+| M3 · A Travessia | Missão com quatro tripulantes. Saúde, dose e eventos de decisão no runtime. | Tema distinto da estação meteorológica de Jezero. A revisão por quatro papéis da missão oficial é uma atividade no mesmo dispositivo. Uma campanha tripulada precisa de requisitos, decisões causais e pontuação próprios. |
+| M4 · Mensageiro | JSON de design. | Briefing de asteroides para pesquisa futura. O destino Bennu já tem caminho jogável com evidência identificada. |
+| M5 · Clima Extremo | JSON de design. | Briefing de clima espacial para pesquisa futura, com outra pergunta, dados científicos e modelo. |
+
+O seletor de Fastmode percorre os quatro casos de `fastmode/js/data.js`. O arquivo de design inclui seis propostas. O A/B do oficial usa a régua e a evidência de cada missão. As operações por turnos e a régua de mil pontos pertencem ao protótipo autônomo. [Seletor Fastmode](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/app.js#L138-L158) · [Dados do runtime](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/js/data.js) · [Catálogo de design](https://github.com/oalexandrebelo/MISSAO-IPE/blob/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/design/dados_missao_ipe.json)
+
+## Inventário de mídia
+
+| Origem | Itens auditados | Situação no oficial |
+| --- | --- | --- |
+| Deploy de Bruno | `public/missao-ipe.svg`, `public/favicon.png`, os PNGs de 192 e 512 px e o `manifest.webmanifest`. | Cinco blobs conferidos com o manifesto R26 e com os SHA-256 do snapshot local. São arquivos de identidade ou instalação do protótipo. O lobby usa a assinatura oficial da equipe. |
+| Repositório original | `mood board/image.png`, `image copy.png`, `image copy 2.png` e `public/favicon.png`. | Quatro blobs idênticos aos que constavam nas exclusões R17. O inventário registra o favicon de scaffold e as referências de moodboard sem licença atribuída, incluindo a marca d’água de uma das imagens. |
+| Fastmode | Oito capturas em `fastmode/docs/` de boot, bancada, Gelo, mobile, operações, relatório e duas versões do estudo A/B. | Oito blobs distintos já versionados. Horizonte, estrelas e movimento vêm de CSS, SVG e Canvas. O áudio vem de osciladores. As capturas documentam o protótipo. |
+| Acervo oficial | Modelos NASA do ISS, LRO, Perseverance, Europa Clipper, Bennu, Webb, CubeSat genérico e DSN. Rive de subsistemas e sequência em `public/rive`. Imagens da Terra na LP e imagens Terra, Cerrado, Bennu e Sol em `web/media/`. | Arquivos com origem própria, já usados no jogo ou no portal. O manifesto do lobby registra a procedência dos mapas equiretangulares novos. A fotografia da Terra na LP e os modelos de espaçonave têm funções visuais distintas. |
+
+Os novos commits de Bruno mantêm os blobs de mídia. As versões de deploy usam CSS, ícones, fontes remotas e arquivos de marca. A conferência das árvores encontrou os mesmos recursos listados no manifesto e nenhum novo modelo 3D, faixa de áudio, vídeo ou arquivo Rive para incorporar. O ZIP mantém o mesmo blob excluído no R26 e reúne uma cópia redundante da fonte com metadados Git. [Inventário R17](https://github.com/oalexandrebelo/MISSAO-IPE/blob/064141a7c7c9ed54720943236d15e4e26938b34e/research/bruno-consolidation-r17.json) · [Mídia Fastmode](https://github.com/oalexandrebelo/MISSAO-IPE/tree/416c1f93b2c6557f98c4e8e7f8dc2a20b6dea7b3/fastmode/docs) · [Fontes das superfícies do lobby](75-LOBBY-IMERSIVO-E-HANDOFF-R29.md)
+
+## Diferenças úteis de interface
+
+- **Compra por quantidade incorporada.** A ficha permite escolher várias unidades do instrumento selecionado e mostra o total em créditos. A quantidade respeita o saldo exibido e o limite de 20 unidades por pedido. A API recebe um único `buy` com a lista de IDs, aplica as regras de saldo e cria as unidades com identificadores próprios. O reenvio usa o mesmo recibo e a carga é equipada separadamente no hangar. No teste com handler local, três monitores custaram 15 créditos. O recibo recuperado manteve três unidades distintas, saldo de 10 e nenhuma reserva.
+- **Carrinho misto e troca de estado.** No protótipo, o carrinho agrupa quantidades de instrumentos diferentes. A R29 leva uma quantidade de um instrumento por pedido, com preço total antes de confirmar. O checkout do Bruno que apenas sai da loja quando o carrinho está vazio cede lugar à ação explícita **Voltar ao hangar** no jogo oficial.
+- **Cards bloqueados e rolagem.** A última revisão de Bruno acrescenta um aviso ao tocar em um cenário bloqueado e ajusta rolagem e quebras dos controles. O oficial oferece as sete missões desde a seleção. O aviso é aplicável a restrições reais, como saldo insuficiente, reserva indisponível ou operação ativa.
+- **Créditos, pontuação e cenário.** O protótipo usa saldo compartilhado e recompensa por nível e capacidade. O oficial usa carteira virtual, orçamento de engenharia próprio e recálculo por versão. Os números do protótipo e o sistema de pontuação Fastmode são documentos de referência. [Regras e crédito R27](71-INVENTARIO-EUROPA-E-HANDOFF-R27.md)
+
+
+---
+
+# R29 · seleção de missões, assets NASA e handoff
+
+Fonte: `docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md` · SHA-256 original: `024b785f7ccd0b114afb10035b5dc04f31d75c9bd8bb0d5f8e05afccdd14e7aa` · Ajustes de caminhos privados: 0
+
+# R29 · seleção de missões, assets NASA e handoff
+
+A seleção de missões apresenta um destino por vez, com a pergunta científica, o aprendizado e a ação **Jogar**. Os controles anterior/próximo e os sete nomes permitem trocar de destino sem iniciar uma partida. A referência de composição e movimento é [Space planet, do MotionSites](https://motionsites.ai/?prompt=space-planet), adaptada ao jogo e à identidade da MISSÃO IPÊ.
+
+## O que cada destino ensina
+
+| Destino | Pergunta e exercício | Evidência e limite |
+| --- | --- | --- |
+| ISS · Pulso Orbital | Entregar um monitor preservando a calibração e receber leituras de compostos voláteis. | Exercício de engenharia inspirado em hardware documentado; as leituras simuladas não são telemetria da ISS. |
+| Lua · Eco Lunar | Combinar observações de LEND e Diviner com energia e comunicação suficientes. | Os instrumentos têm referências reais; o voo e sua pontuação são didáticos. |
+| Marte · Horizonte Rubro | Operar MEDA, preservar o equipamento e entregar observações ambientais. | Referência científica à missão Mars 2020; não é controle de um rover real. |
+| Europa · Oceano Silencioso | Equipar MISE e REASON e equilibrar proteção, energia e enlace. | Baseado no contexto da Europa Clipper; não apresenta resultados futuros como descobertas. |
+| Cerrado · O que mudou aqui? | Interpretar registros de vegetação e distinguir consumo de potência, energia e entrega de dados. | Arquivo histórico MODIS; a imagem do planeta é apenas contexto visual. |
+| Bennu · Ler uma superfície | Escolher instrumento, memória e janelas de comunicação para entregar registros úteis. | Arquivo científico OSIRIS-REx; não simula uma manobra TAG ou uma cápsula de retorno. |
+| Webb · A luz guarda pistas | Distinguir o que uma imagem e um espectro podem responder. | Arquivo Webb/NIRSpec; compatibilidade científica e limites da evidência permanecem explícitos. |
+
+ISS, Lua, Marte e Europa preservam a contribuição de Bruno na campanha integrada. Bennu está na trilha científica existente. A árvore ipê identifica a equipe; não cria uma missão biológica ou uma narrativa científica fictícia. A comparação detalhada de repositórios, missões e arquivos está na [auditoria R29](74-AUDITORIA-BRUNO-E-IMERSAO-R29.md).
+
+## Fontes das superfícies 3D
+
+| Superfície | Fonte verificável | Crédito | Arquivo publicado |
+| --- | --- | --- | --- |
+| Terra / ISS / Cerrado | [Blue Marble](https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/) | NASA/Goddard; Reto Stöckli, Robert Simmon e equipes de dados | `earth.webp`, 510.254 bytes |
+| Lua | [CGI Moon Kit / LROC](https://svs.gsfc.nasa.gov/4720/) | NASA Scientific Visualization Studio; Ernie Wright; LRO/LROC, Arizona State University | `moon.webp`, 286.286 bytes |
+| Marte | [Mars Image Texture](https://science.nasa.gov/3d-resources/mars/) | NASA/JPL & Caltech; imagens Viking processadas no USGS | `mars.webp`, 177.056 bytes |
+| Europa | [Jupiter – Europa](https://science.nasa.gov/3d-resources/jupiter-europa/) | USGS, JPL & Caltech; mosaico Voyager | `europa.webp`, 140.342 bytes |
+
+São mapas equiretangulares de 2048 × 1024 pixels, convertidos para WebP com `cwebp -q 82 -resize 2048 1024`. Os quatro arquivos somam 1.113.938 bytes. O [manifesto publicado](https://nasa-missaoipe.alexandrebelo.com/lab/textures/lobby/manifest.json) registra URL original, crédito, transformação, data de coleta e SHA-256 do original e do derivado. As fotografias de disco da LP não foram usadas como mapas de uma esfera.
+
+Bennu e Webb reutilizam os modelos oficiais já distribuídos pelo jogo. As fontes e créditos permanecem em `public/models/nasa/manifest.json` e nos manifestos R25/R27. Iluminação, enquadramento, órbitas decorativas e escalas da seleção são composição visual. Não fornecem trajetórias calculadas, relevo validado ou observações em tempo real. O modelo da Europa Clipper de aproximadamente 35,7 MB continua uma referência de carregamento voluntário na missão; não integra o carregamento inicial do lobby. A NASA não endossa este projeto. [Diretrizes de mídia](https://www.nasa.gov/nasa-brand-center/images-and-media/).
+
+## Interface e continuidade
+
+**Dev A · Engenharia, ciência e métricas.** Preserve os IDs `iss`, `moon`, `mars`, `europa`, `cerrado`, `bennu` e `telescope`. Trocar o destino no lobby não compra instrumentos, não consome créditos e não cria uma tentativa. O clique em Jogar mantém o fluxo existente. Na loja, a compra em lote deve gerar uma única transação autoritativa e devolver o inventário confirmado; a interface não concede saldo ou unidades por conta própria. Pontuação, desgaste, identificação e regras de envio continuam no motor e na API.
+
+**Dev B · Experiência e cena.** `GameShell.tsx` controla o destino e a pausa. `LobbyScene.tsx` recebe `missionId` e `paused`; sua função é representar o destino. `game-shell.css` organiza título, pergunta, CTA e navegação responsiva. Não acople resultados do motor ao relógio de animação. Preserve foco visível, texto acessível, seleção por teclado, tradução contextual de Libras, movimento reduzido e a possibilidade de jogar quando WebGL não está disponível. Verifique celulares estreitos, orientação horizontal, troca rápida entre os sete destinos e retomada após sair de uma missão.
+
+O mapa de acesso permanece: [LP principal](https://projeto-ipe-lp.vercel.app/), [apresentação da equipe](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/), [jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html), [painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) e [documentação](https://nasa-missaoipe.alexandrebelo.com/docs/index.html).
+
+## Verificação desta revisão
+
+Passaram 180 testes de domínio, 121 de interface, 53 de métricas e 18 verificações da distribuição. Os testes novos cobrem seleção e foco por teclado, pausa, preferência por movimento reduzido, carregamento fora de ordem, perda do contexto WebGL, redução do DPR no celular e liberação de recursos. São verificações controladas de comportamento, não medições de FPS.
+
+No navegador, foram selecionados os sete destinos, conferindo pergunta, CTA e identificação da cena. O lobby foi inspecionado em 1512 × 949, 1280 × 720, 390 × 844 e 320 × 740, sem overflow horizontal observado. A câmera e os modelos são contexto de seleção; o botão Jogar continua abrindo o briefing correspondente. A pausa suspendeu a animação e a mudança de tamanho reduziu o DPR para 1 em largura de celular.
+
+A jornada sintética comprou dois monitores por 10 créditos. Depois de recarregar, havia duas unidades novas e saldo de 15. Uma unidade foi equipada na ISS e a proteção foi reforçada: a missão entregou 6 registros válidos, obteve 92 pontos e consumiu um ciclo apenas da unidade equipada. O painel do jogador confirmou dois eventos, sem pendências ou recusas. Uma segunda recarga preservou a pontuação. O reenvio de compra após perda de confirmação também foi exercitado com o handler real em teste, sem duplicar unidades.
+
+Esta rodada percorreu a seleção dos sete destinos e completou uma tentativa ISS. A rodada anterior com sete missões completas permanece no [handoff R28](73-QA-MOVEL-E-HANDOFF-R28.md). O navegador em tamanho de celular não substitui telefone físico nem avaliação com jogadores iniciantes. O ensaio local usa repositório em memória durante o processo; a prova durável anterior em Blob privado é identificada no recibo R28.
+
+[Recibo de QA R29](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r29-lobby-qa.json) · [Histórico de publicação e acessos](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md)
+
+
+---
+
 # Atribuição, licenças e autoria assistida
 
 Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0

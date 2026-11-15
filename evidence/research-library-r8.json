@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T18:31:15.945Z",
+  "generatedAt": "2026-11-15T19:03:33.040Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 135,
+  "documentCount": 137,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -863,6 +863,28 @@
       "redactions": 0
     },
     {
+      "source": "docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md",
+      "id": "doc-docs-74-auditoria-bruno-e-imersao-r29-md",
+      "title": "R29 · missões e assets de Bruno e Fastmode",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 11754,
+      "originalSha256": "8624efd52c501cc67e8ad8c64919b8cb87054055ee13128f62a5362b4d3f3378",
+      "projectedSha256": "8624efd52c501cc67e8ad8c64919b8cb87054055ee13128f62a5362b4d3f3378",
+      "redactions": 0
+    },
+    {
+      "source": "docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md",
+      "id": "doc-docs-75-lobby-imersivo-e-handoff-r29-md",
+      "title": "R29 · seleção de missões, assets NASA e handoff",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 7881,
+      "originalSha256": "024b785f7ccd0b114afb10035b5dc04f31d75c9bd8bb0d5f8e05afccdd14e7aa",
+      "projectedSha256": "024b785f7ccd0b114afb10035b5dc04f31d75c9bd8bb0d5f8e05afccdd14e7aa",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1493,13 +1515,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2513833,
-      "sha256": "439ef4a0a0afcfa71a808682addca0c26a23619f1b028d1133b62ad3234a923c"
+      "bytes": 2540199,
+      "sha256": "ccb95ab929f9d24dd764151e06492ae3b59b11428096a9944f38319b155c2cd2"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2014349,
-      "sha256": "62b85436fc64a3bf103ee859c363364dd520031587eb93515ee25c5de2bc8ed5"
+      "bytes": 2034448,
+      "sha256": "a278018dae2817364e84c6d995081f98f9bf01319b3bc2ced887ecf99b037390"
     }
   ]
 }

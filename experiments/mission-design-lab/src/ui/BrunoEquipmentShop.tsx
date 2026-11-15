@@ -12,6 +12,7 @@ import './bruno-equipment.css';
 
 const InstrumentScene = lazy(() => import('./BrunoHangarScene.tsx').then(module => ({ default: module.BrunoInstrumentScene })));
 const instruments = Object.entries(BRUNO_INSTRUMENTS) as [BrunoInstrumentId, typeof BRUNO_INSTRUMENTS[BrunoInstrumentId]][];
+const MAX_PURCHASE_UNITS = 20;
 type Equipment = NonNullable<BrunoInventoryController['snapshot']>['inventory'];
 
 function reservedFor(state: Equipment, itemId: string) {
@@ -55,6 +56,7 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
     const required: readonly BrunoInstrumentId[] = missionId ? BRUNO_MISSIONS[missionId].requiredInstruments : [];
     return instruments.find(([id]) => required.includes(id))?.[0] ?? instruments[0]![0];
   });
+  const [quantity, setQuantity] = useState(1);
   const [confirmReset, setConfirmReset] = useState(false);
   const stockTitle = useRef<HTMLHeadingElement>(null);
   const { snapshot, busy, uncertain } = controller;
@@ -62,18 +64,22 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
   const state = snapshot?.inventory;
   const active = snapshot?.attempts.filter(attempt => attempt.status === 'launched') ?? [];
   const available = !!state && !busy && !uncertain;
-  return <section className="bruno-campaign bruno-shop" aria-labelledby="bruno-shop-title" data-ipe-libras-context="Loja e inventário. Escolha um instrumento, compare a função científica e os encaixes e compre com créditos do jogo. No hangar, reserve e equipe as unidades para a missão. Cada partida efetiva consome um ciclo.">
+  const maxQuantity = state ? Math.min(MAX_PURCHASE_UNITS, Math.floor(state.balance / gear.priceCredits)) : 0;
+  const orderQuantity = state ? Math.min(quantity, Math.max(1, maxQuantity)) : quantity;
+  const totalCredits = orderQuantity * gear.priceCredits;
+  const canBuy = available && maxQuantity > 0;
+  return <section className="bruno-campaign bruno-shop" aria-labelledby="bruno-shop-title" data-ipe-libras-context="Loja e inventário. Escolha um instrumento e a quantidade. Confira os encaixes e o total em créditos antes de comprar. No hangar, reserve e equipe as unidades para a missão. Cada partida efetiva consome um ciclo.">
     <button type="button" className="bruno-action bruno-quiet" onClick={onBack}><Icon name="back" size={18}/>{backLabel}</button>
     <header className="bruno-shop-header">
       <div><h1 id="bruno-shop-title">Loja e inventário</h1><p>Depois de comprar, volte ao hangar. Em Instrumento, use Equipar para montar cada unidade na nave.</p></div>
       <dl className="bruno-wallet" aria-label="Carteira da loja"><dt>Créditos da loja</dt><dd>{state ? state.balance : 'Indisponível'}</dd></dl>
     </header>
-    <BrunoInventoryStatus controller={controller} />
+    <BrunoInventoryStatus controller={controller} onResolved={response => { if (response.receipt.operation === 'buy') setQuantity(1); }} />
     <div className="bruno-shop-catalogue">
       <section aria-labelledby="bruno-catalogue-title">
         <h2 id="bruno-catalogue-title">Instrumentos</h2>
         <div className="bruno-instrument-picker" role="group" aria-label="Catálogo de instrumentos">
-          {instruments.map(([id, equipment]) => <button key={id} type="button" className="bruno-action bruno-secondary" aria-pressed={id === selected} aria-controls="bruno-instrument-detail" onClick={() => setSelected(id)}>
+          {instruments.map(([id, equipment]) => <button key={id} type="button" className="bruno-action bruno-secondary" aria-pressed={id === selected} aria-controls="bruno-instrument-detail" onClick={() => { if (id !== selected) { setSelected(id); setQuantity(1); } }}>
             <strong>{equipment.label}</strong>{' '}<span>{equipment.priceCredits} créditos</span>
           </button>)}
         </div>
@@ -85,9 +91,21 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
         <dl className="bruno-instrument-spec"><div><dt>Massa</dt><dd>{gear.massKg} kg</dd></div><div><dt>Encaixes</dt><dd>{gear.slots}</dd></div><div><dt>Ciclos de fábrica</dt><dd>{gear.durability}</dd></div></dl>
         <p>{gear.missions.includes('bennu') ? 'Referência do acervo Bennu. Use para comparar cargas nas missões de engenharia. A peça não atende às perguntas dessas missões e não altera a investigação histórica de Bennu.' : `Indicado para ${gear.missions.map(id => id === 'bennu' ? 'Bennu' : BRUNO_MISSIONS[id].name).join(', ')}.`}</p>
         <a href={gear.source.url}>{gear.source.label}</a>
-        <button type="button" className="bruno-action bruno-primary" disabled={!available || state!.balance < gear.priceCredits}
-          onClick={() => void controller.execute({ kind: 'buy', instrumentIds: [selected] })}>Comprar {gear.label} · {gear.priceCredits} créditos</button>
-        {state && state.balance < gear.priceCredits ? <p>Créditos insuficientes para este instrumento.</p> : null}
+        <div className="bruno-shop-actions">
+          <label>Quantidade{' '}
+            <select className="bruno-action bruno-secondary" value={orderQuantity} disabled={!canBuy}
+              onChange={event => setQuantity(Number(event.target.value) || 1)}>
+              {Array.from({ length: Math.max(orderQuantity, maxQuantity) }, (_, index) =>
+                <option key={index + 1} value={index + 1}>{index + 1}</option>)}
+            </select>
+          </label>
+          <button type="button" className="bruno-action bruno-primary" disabled={!canBuy}
+            onClick={() => void controller.execute({ kind: 'buy', instrumentIds: Array.from({ length: orderQuantity }, () => selected) })
+              .then(response => { if (response) setQuantity(1); })}>
+            Comprar {gear.label}{orderQuantity > 1 ? ` (${orderQuantity} unidades)` : ''} · {totalCredits} créditos
+          </button>
+        </div>
+        {state && maxQuantity === 0 ? <p>Créditos insuficientes para este instrumento.</p> : null}
       </section>
     </div>
     <section className="bruno-panel bruno-owned-stock" aria-labelledby="bruno-stock-title">

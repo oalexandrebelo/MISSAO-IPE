@@ -1,10 +1,10 @@
 .game-title-screen{isolation:isolate;position:relative;min-height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:#080f15;color:#f3f0e5;padding:clamp(20px,4vw,64px)}
-.game-title-orbit{position:absolute;inset:0 0 0 25%;z-index:-2;pointer-events:none}.game-title-orbit .scene,.game-lobby-stage .scene{height:100%;min-height:100%;border:0;background:transparent}.game-title-orbit .scene-top,.game-title-orbit .orbit-bottom,.game-title-orbit .scene-description,.game-title-orbit .scene-caption,.game-lobby-stage .scene-top,.game-lobby-stage .orbit-bottom{display:none}.game-title-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#080f15 4%,#080f15df 28%,#080f1533 80%),linear-gradient(0deg,#080f15,transparent 40%)}
+.game-title-orbit{position:absolute;inset:0 0 0 25%;z-index:-2;pointer-events:none}.game-title-orbit .scene{height:100%;min-height:100%;border:0;background:transparent}.game-title-orbit .scene-top,.game-title-orbit .orbit-bottom,.game-title-orbit .scene-description,.game-title-orbit .scene-caption{display:none}.game-title-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#080f15 4%,#080f15df 28%,#080f1533 80%),linear-gradient(0deg,#080f15,transparent 40%)}
 .game-title-brand{display:flex;align-items:center;gap:30px}.game-title-brand img{width:clamp(145px,16vw,205px);height:auto}.game-title-brand span,.game-title-status{font:11px/1.6 'Space Mono',monospace;letter-spacing:.12em;color:#c2cbd0}.game-title-copy{margin:auto 0;padding:40px 0;max-width:650px}.game-title-copy h1{font-size:clamp(60px,8vw,120px);line-height:.93;letter-spacing:-.055em;margin:24px 0;font-weight:650}.game-title-copy h1 em{color:#e6b17f;font-style:normal}.game-title-copy>p:not(.eyebrow){font-size:clamp(16px,1.5vw,21px);line-height:1.5;max-width:400px}.game-title-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.game-title-actions button{min-height:54px;font-size:16px}.game-title-status{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.game-title-help{padding-left:20px;line-height:1.9;max-width:440px;color:#d5dce0}
 .game-shell{height:100dvh;max-height:100dvh;display:flex;flex-direction:column;overflow:hidden}.game-shell>.site-header{flex:none;position:relative;height:auto;min-height:72px;margin:0;padding:10px 24px;background:#0a141ddf;border-bottom:1px solid #34505f}.game-shell .brand-logo{width:117px;height:55px}.game-shell .main-nav{margin-left:18px;gap:16px}.game-shell .main-nav button{min-height:44px}.game-shell .header-tools{margin-left:auto}.game-shell>.main-content{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;width:100%;max-width:none;margin:0;padding:24px 32px 60px;scroll-padding:20px;scrollbar-gutter:stable}.game-shell>.main-content.view-observatory{padding:0;scrollbar-gutter:auto}.game-shell>.main-content:focus{outline:none}.game-hud-foot{flex:none;min-height:30px;background:#0a141d;border-top:1px solid #34505f;display:flex;justify-content:space-between;align-items:center;padding:5px 24px;font-size:10px;letter-spacing:.08em;color:#b7c6cb}.game-hud-foot span:last-child{color:#c8df9c}.game-pause-actions{display:grid;gap:12px;margin-top:24px}.game-pause-actions button{justify-content:flex-start;min-height:48px}.game-shell>.notice{margin:0;padding:10px 24px;flex:none}.game-shell .header-lab{display:none}.game-shell .game-menu-button{min-height:44px;min-width:60px}
-.game-lobby{position:relative;isolation:isolate;min-height:100%;display:grid;grid-template-columns:minmax(230px,.8fr) minmax(290px,1fr) minmax(300px,1fr);grid-template-rows:auto 1fr;gap:26px;padding:32px;overflow:hidden;background:radial-gradient(ellipse at 52% 55%,#173a4e66,transparent 60%),#091018}.game-lobby-stage{position:absolute;inset:5% 18% 0 18%;z-index:-1;pointer-events:none;opacity:.75}.game-lobby-stage .scene-description,.game-lobby-stage .scene-caption,.game-lobby-stage .scene-model-credit{display:none}.game-lobby-intro{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.game-lobby-intro>.eyebrow{flex-basis:100%;margin:0}.game-lobby-intro h1{font-size:clamp(26px,3vw,43px);line-height:1.1;margin:0}.game-career{display:flex;gap:24px;font-size:11px;color:#c4d1d7}.game-career b{display:block;font-size:26px;color:#f3f0e5;font-variant-numeric:tabular-nums}.game-mission-picker{display:grid;gap:9px;align-content:start}.game-mission-picker button{display:grid;grid-template-columns:30px 1fr;text-align:left;column-gap:9px;border:1px solid #36505c;background:#0e1b25e8;border-radius:4px;color:#f3f0e5;padding:13px 16px;min-height:72px}.game-mission-picker button>span{grid-row:span 2;color:#afc3cc;font:12px monospace;align-self:center}.game-mission-picker strong{font-size:16px;letter-spacing:.12em}.game-mission-picker small{color:#c3cdd2;line-height:1.5;font-size:11px}.game-mission-picker button[aria-pressed=true]{border-color:#e6b17f;background:#32271ee8;box-shadow:inset 3px 0 #e6b17f}.game-mission-brief{grid-column:3;padding:24px;align-self:center;border:1px solid #36505c;background:#0d1923ed;border-radius:5px}.game-mission-brief h2{font-size:36px;line-height:1.1;margin:12px 0}.game-mission-brief>p{line-height:1.65}.game-mission-brief dl{margin:22px 0;border-block:1px solid #36505c}.game-mission-brief dl>div{padding:14px 0}.game-mission-brief dt{color:#bdc9d0;font:10px monospace;letter-spacing:.1em}.game-mission-brief dd{margin:7px 0 0;font-size:14px;line-height:1.55}.game-mission-brief>.button{width:100%;min-height:52px;font-size:16px}.game-mission-note{font-size:11px;color:#bbc7cd}.game-brief-disclosure{border-bottom:1px solid #36505c;margin:0 0 18px}.game-brief-disclosure>summary{padding:12px 0;min-height:44px;cursor:pointer;color:#d8e3cf}.game-shell .workbench-heading{margin-top:0}.game-shell .workbench-heading h1{font-size:36px}
-@media(max-width:1050px){.game-lobby{grid-template-columns:240px 1fr;gap:20px}.game-mission-brief{grid-column:2}.game-lobby-stage{inset:15% 0 0 10%;opacity:.4}.game-shell>.site-header{padding-inline:16px}.game-shell .main-nav{gap:8px;margin-left:0}.game-shell .player-progress-button{padding:8px;font-size:11px}}
-@media(max-width:680px){.game-title-brand span{display:none}.game-title-orbit{inset:10% -40% 0 0;opacity:.65}.game-title-copy{padding:30px 0}.game-title-copy h1{font-size:clamp(58px,16vw,90px)}.game-title-copy .eyebrow{font-size:9px}.game-title-status{font-size:9px;gap:8px}.game-title-help{font-size:13px}.game-shell>.site-header{min-height:64px;padding:8px 12px;gap:6px 10px}.game-shell .brand-logo{width:89px;height:42px}.game-shell .header-tools{gap:6px;order:unset}.game-shell .header-tools .icon-button{width:44px;height:44px}.game-shell .main-nav{height:auto;order:3;flex-basis:100%;gap:10px;justify-content:space-between}.game-shell .main-nav button{font-size:11px;height:32px;min-height:32px}.game-shell>.main-content{padding:16px 14px 78px}.game-hud-foot{padding:5px 12px;font-size:8px;min-height:30px}.game-hud-foot span:first-child{max-width:67%}.game-lobby{display:flex;flex-direction:column;padding:22px 16px 80px;gap:22px;min-height:100%;overflow:visible}.game-lobby-intro h1{font-size:28px}.game-career{gap:20px}.game-career b{font-size:21px}.game-mission-picker{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.game-mission-picker button{display:flex;flex-direction:column;padding:10px 8px;gap:4px;min-height:92px}.game-mission-picker button>span{align-self:flex-start;font-size:10px}.game-mission-picker strong{font-size:12px;letter-spacing:.05em}.game-mission-picker small{font-size:10px;line-height:1.35}.game-mission-brief{padding:20px;width:100%;background:#0d1923f2}.game-mission-brief h2{font-size:31px}.game-lobby-stage{inset:24% -20% 25% -20%;opacity:.25}.game-shell .workbench-heading h1{font-size:30px}.game-shell .player-sync{font-size:9px}.game-pause-actions button{font-size:14px}}
+.game-shell .workbench-heading{margin-top:0}.game-shell .workbench-heading h1{font-size:36px}
+@media(max-width:1050px){.game-shell>.site-header{padding-inline:16px}.game-shell .main-nav{gap:8px;margin-left:0}.game-shell .player-progress-button{padding:8px;font-size:11px}}
+@media(max-width:680px){.game-title-brand span{display:none}.game-title-orbit{inset:10% -40% 0 0;opacity:.65}.game-title-copy{padding:30px 0}.game-title-copy h1{font-size:clamp(58px,16vw,90px)}.game-title-copy .eyebrow{font-size:9px}.game-title-status{font-size:9px;gap:8px}.game-title-help{font-size:13px}.game-shell>.site-header{min-height:64px;padding:8px 12px;gap:6px 10px}.game-shell .brand-logo{width:89px;height:42px}.game-shell .header-tools{gap:6px;order:unset}.game-shell .header-tools .icon-button{width:44px;height:44px}.game-shell .main-nav{height:auto;order:3;flex-basis:100%;gap:10px;justify-content:space-between}.game-shell .main-nav button{font-size:11px;height:32px;min-height:32px}.game-shell>.main-content{padding:16px 14px 78px}.game-hud-foot{padding:5px 12px;font-size:8px;min-height:30px}.game-hud-foot span:first-child{max-width:67%}.game-shell .workbench-heading h1{font-size:30px}.game-shell .player-sync{font-size:9px}.game-pause-actions button{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.game-title-screen *,.game-lobby *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
 /* The application scrolls inside its play area, including beside the Libras panel. */
@@ -12,6 +12,189 @@ body:has(.game-shell){overflow:hidden;padding-block-end:0!important}
 @media(min-width:601px){body.ipe-libras-active:has(.game-shell){padding-inline-end:min(376px,45vw)}}
 @media(max-width:600px){body.ipe-libras-active .game-shell{height:44dvh;max-height:44dvh}.game-shell .game-history-button{display:none}.game-shell .header-tools{gap:4px}.game-shell .player-progress-button{min-height:44px}}
 /* Decorative destinations fill the viewport; playable controls remain in the HUD. */
-.game-title-orbit .scene.scene-orbit.scene-compact,.game-lobby-stage .scene.scene-orbit.scene-compact{position:absolute;inset:0;width:100%;height:100%;padding:0;max-height:none}
-.game-title-orbit .scene.scene-orbit.scene-compact .orbit-render,.game-lobby-stage .scene.scene-orbit.scene-compact .orbit-render{inset:0;width:100%;height:100%;min-height:100%}
-.game-title-orbit .scene.scene-orbit .orbit-topline,.game-lobby-stage .scene.scene-orbit .orbit-topline,.game-title-orbit .orbit-map-label,.game-lobby-stage .orbit-map-label,.game-title-orbit .orbit-corner,.game-lobby-stage .orbit-corner{display:none}
+.game-title-orbit .scene.scene-orbit.scene-compact{position:absolute;inset:0;width:100%;height:100%;padding:0;max-height:none}
+.game-title-orbit .scene.scene-orbit.scene-compact .orbit-render{inset:0;width:100%;height:100%;min-height:100%}
+.game-title-orbit .scene.scene-orbit .orbit-topline,.game-title-orbit .orbit-map-label,.game-title-orbit .orbit-corner{display:none}
+
+/* Mission selection is staged over a single continuous horizon. */
+.game-lobby {
+  --lobby-gutter: clamp(1rem, 3.5vw, 3.75rem);
+  --lobby-accent: #a8e9f1;
+  --lobby-glow: #214b62;
+  position: relative;
+  isolation: isolate;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(min-content, 1fr) auto;
+  gap: clamp(.65rem, 2dvh, 1.5rem);
+  padding: clamp(.7rem, 2dvh, 1.5rem) var(--lobby-gutter) 1rem;
+  overflow: hidden;
+  color: #f7f7ef;
+  background: radial-gradient(ellipse at 50% 90%, var(--lobby-glow), #07121d 55%, #050b14);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+.game-lobby[data-destination="moon"] { --lobby-accent: #ded7f6; --lobby-glow: #36405e; }
+.game-lobby[data-destination="mars"] { --lobby-accent: #ffc9aa; --lobby-glow: #5f352d; }
+.game-lobby[data-destination="europa"] { --lobby-accent: #c6e0fa; --lobby-glow: #31516a; }
+.game-lobby[data-destination="cerrado"] { --lobby-accent: #cde2ba; --lobby-glow: #2e5364; }
+.game-lobby[data-destination="bennu"] { --lobby-accent: #dfd9cc; --lobby-glow: #343b50; }
+.game-lobby[data-destination="telescope"] { --lobby-accent: #f8dda0; --lobby-glow: #424058; }
+.game-lobby-stage, .game-lobby-shade { position: absolute; inset: 0; pointer-events: none; }
+.game-lobby-stage { z-index: -2; }
+.game-lobby-shade {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, #060e18b0, #06101b1a 27%, #06101b00 53%, #060e18ad 83%, #060e18),
+    radial-gradient(ellipse at center, transparent 32%, #060e1880 100%);
+}
+.game-lobby-controls { display: flex; align-items: center; justify-content: space-between; gap: .5rem 1rem; flex-wrap: wrap; }
+.game-career { display: flex; align-items: center; flex-wrap: wrap; gap: .24rem .9rem; color: #c3d5df; font-size: .8rem; }
+.game-career strong { color: #fbf5e6; font-variant-numeric: tabular-nums; }
+.game-lobby-motion {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 2.75rem;
+  padding: .35rem .55rem;
+  border: 1px solid #819ead85;
+  border-radius: 2rem;
+  color: #e7f4f7;
+  background: #0b1927ad;
+  font-size: .75rem;
+  font-weight: 650;
+}
+.game-lobby :is(button, a):focus-visible { outline: 2px solid #f3dda5; outline-offset: 3px; }
+.game-lobby-hero {
+  align-self: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 40rem) minmax(0, 1fr);
+  column-gap: clamp(.5rem, 2vw, 1.75rem);
+  align-items: end;
+  padding-block: 1rem clamp(.8rem, 8dvh, 4rem);
+}
+.game-mission-brief { grid-area: 1 / 2; min-width: 0; text-align: center; }
+.game-mission-description { text-shadow: 0 2px 13px #030a11, 0 4px 32px #030a11; }
+.game-mission-reveal { animation: game-mission-enter .36s cubic-bezier(.21,.7,.21,1) both; }
+.game-mission-name { font-size: clamp(.9rem, 2vw, 1.15rem); font-weight: 650; color: var(--lobby-accent); }
+.game-mission-brief h2 {
+  margin: .32rem 0 .25rem;
+  font: 720 clamp(3.3rem, 8.5vw, 8.5rem)/.94 "Bricolage Grotesque", system-ui, sans-serif;
+  letter-spacing: -.048em;
+  overflow-wrap: anywhere;
+}
+.game-mission-question { max-width: 35ch; margin: .85rem auto .45rem; font-size: clamp(1.04rem, 1.5vw, 1.32rem); font-weight: 600; line-height: 1.42; text-wrap: balance; }
+.game-mission-lesson { max-width: 49ch; margin-inline: auto; color: #d7e6ed; font-size: .875rem; line-height: 1.5; text-wrap: balance; }
+.game-mission-lesson strong { color: var(--lobby-accent); font-weight: 650; }
+.game-lobby .game-mission-play {
+  min-height: 3.15rem;
+  margin-top: 1.2rem;
+  padding: .7rem 1.4rem .7rem 1.6rem;
+  border: 1px solid #f8eace;
+  border-radius: 3rem;
+  background: #f0dfb9;
+  color: #0b1720;
+  font-size: .95rem;
+  font-weight: 750;
+}
+.game-lobby .game-mission-play:hover { background: #fff2d6; }
+.game-lobby-neighbor {
+  grid-area: 1 / 1;
+  justify-self: start;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  gap: clamp(.4rem, 1vw, .85rem);
+  min-width: 0;
+  min-height: 3.1rem;
+  padding: .3rem;
+  color: #e3f0f1;
+  text-align: left;
+  text-shadow: 0 2px 8px #030a11, 0 4px 22px #030a11;
+}
+.game-lobby-neighbor[data-side="next"] { grid-area: 1 / 3; justify-self: end; direction: rtl; text-align: right; }
+.game-lobby-neighbor:hover strong { color: var(--lobby-accent); text-decoration: underline; text-underline-offset: .25em; }
+.game-neighbor-label { min-width: 0; direction: ltr; }
+.game-neighbor-label small, .game-neighbor-label strong { display: block; }
+.game-neighbor-label small { color: #c3d5df; font-size: .75rem; }
+.game-neighbor-label strong { margin-top: .12rem; font: 700 clamp(.875rem, 1.7vw, 1.45rem)/1.12 "Bricolage Grotesque", system-ui, sans-serif; overflow-wrap: anywhere; }
+.game-neighbor-art {
+  --orb-surface: #6994a8;
+  position: relative;
+  inline-size: clamp(4.5rem, 10vw, 10rem);
+  aspect-ratio: 1;
+  flex: none;
+  overflow: hidden;
+  border-radius: 50%;
+  background: radial-gradient(circle at 29% 30%, var(--orb-surface), #112939 71%, #07121d);
+  border: 1px solid #b9d6e32e;
+}
+.game-neighbor-art img:not([hidden]) { display: block; width: 200%; max-width: none; height: 100%; margin-inline: -50%; object-fit: fill; }
+.game-neighbor-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 32% 29%, transparent 20%, #050d1866 62%, #050d18df 86%); }
+.game-neighbor-art[data-mission="moon"] { --orb-surface: #a9abb9; }
+.game-neighbor-art[data-mission="mars"] { --orb-surface: #d09370; }
+.game-neighbor-art[data-mission="europa"] { --orb-surface: #bacae2; }
+.game-neighbor-art[data-mission="bennu"] { --orb-surface: #a8a299; border-radius: 38% 52% 39% 51%; clip-path: polygon(41% 0, 65% 9%, 84% 26%, 98% 57%, 80% 79%, 50% 100%, 30% 90%, 6% 69%, 6% 38%, 21% 16%); }
+.game-neighbor-art[data-mission="telescope"] { --orb-surface: #e6bc78; border-radius: 0; clip-path: polygon(25% 7%, 75% 7%, 100% 50%, 75% 93%, 25% 93%, 0 50%); }
+.game-lobby-neighbor[data-side] .game-neighbor-art { margin-inline-start: calc(-1 * var(--lobby-gutter) - 1.35rem); }
+.game-lobby-navigation { display: grid; gap: .28rem; justify-items: center; }
+.game-mission-picker { max-width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: .35rem; }
+.game-mission-picker button {
+  min-height: 2.75rem;
+  padding: .35rem .78rem;
+  border: 1px solid #7b9aab88;
+  border-radius: 1.75rem;
+  background: #0b1b29c7;
+  color: #dae9ec;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.game-mission-picker button[aria-pressed="true"] { border-color: var(--lobby-accent); background: var(--lobby-accent); color: #08131d; }
+.game-lobby-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem 1.35rem; }
+.game-lobby-links .text-button { min-height: 2.75rem; padding: .45rem .1rem; color: #deedf2; font-size: .78rem; }
+.game-lobby-links .text-button:hover { color: var(--lobby-accent); text-decoration: underline; text-underline-offset: .22em; }
+.game-lobby-credit { display: flex; flex-wrap: wrap; justify-content: center; gap: .22rem .8rem; color: #b9cdd8; font-size: .72rem; line-height: 1.4; text-align: center; }
+.game-lobby-credit a { display: inline-flex; align-items: center; min-height: 1.5rem; text-underline-offset: .15em; }
+.game-lobby[data-motion-paused="true"] .game-mission-reveal { animation: none; }
+.game-lobby[data-motion-paused="true"] .game-mission-play:hover { transform: none; }
+
+@keyframes game-mission-enter {
+  from { opacity: 0; transform: translateY(.45rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 58rem) {
+  .game-lobby-hero { grid-template-columns: minmax(0, .6fr) minmax(0, 2.2fr) minmax(0, .6fr); }
+  .game-lobby-neighbor { grid-template-columns: minmax(0,1fr) auto; }
+  .game-neighbor-art { grid-column: span 2; justify-self: start; }
+}
+
+@media (max-width: 44rem) {
+  .game-lobby { --lobby-gutter: .9rem; gap: .6rem; }
+  .game-lobby-controls { gap: .25rem .5rem; }
+  .game-career { font-size: .72rem; gap: .16rem .55rem; }
+  .game-lobby-motion { font-size: .72rem; }
+  .game-lobby-hero { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem .35rem; padding-block: .6rem .15rem; }
+  .game-lobby-hero::before {
+    content: "";
+    grid-area: 2 / 1 / 3 / -1;
+    align-self: stretch;
+    margin: -.45rem calc(-1 * var(--lobby-gutter));
+    background: linear-gradient(transparent, #07121cc9 23%, #07121cc9 77%, transparent);
+    pointer-events: none;
+  }
+  .game-mission-brief { grid-area: 1 / 1 / 2 / -1; }
+  .game-mission-brief h2 { font-size: clamp(2.65rem, 12.5vw, 4.6rem); }
+  .game-mission-question { margin-top: .65rem; font-size: 1rem; }
+  .game-mission-lesson { font-size: .8rem; }
+  .game-lobby .game-mission-play { min-height: 2.95rem; margin-top: .85rem; }
+  .game-lobby-neighbor { position: relative; grid-area: 2 / 1; grid-template-columns: auto minmax(0,1fr) auto; gap: .4rem; max-width: 100%; }
+  .game-lobby-neighbor[data-side="next"] { grid-area: 2 / 2; }
+  .game-neighbor-art { grid-column: auto; inline-size: 2.55rem; }
+  .game-lobby-neighbor[data-side] .game-neighbor-art { margin-inline-start: 0; }
+  .game-neighbor-label small { color: #f0f6f8; font-size: .65rem; }
+  .game-mission-picker { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .game-mission-picker button { padding: .35rem .4rem; font-size: .71rem; }
+  .game-lobby-links { column-gap: .85rem; }
+  .game-lobby-credit { align-items: center; }
+}

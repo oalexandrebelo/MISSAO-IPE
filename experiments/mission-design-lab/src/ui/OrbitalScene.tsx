@@ -331,7 +331,7 @@ function ScienceWorld(props: OrbitalSceneProps) {
 export interface NASAAssetCanvasProps { url: string; turn: number; tilt: number; onLoaded: () => void; onUnavailable: () => void; }
 // The downloaded JWST remains unchanged. Batch its static meshes by compatible
 // material/layout for display, preserving triangles and reflected front faces.
-function mergeJWSTForDisplay(source: THREE.Group): THREE.Group {
+export function mergeJWSTForDisplay(source: THREE.Group): THREE.Group {
   source.updateMatrixWorld(true);
   const groups = new Map<string, { material: THREE.Material; geometries: THREE.BufferGeometry[] }>();
   const originals = new Set<THREE.BufferGeometry>();
@@ -365,7 +365,7 @@ function mergeJWSTForDisplay(source: THREE.Group): THREE.Group {
   }
   originals.forEach(geometry => geometry.dispose()); result.updateMatrixWorld(true); return result;
 }
-function disposeAsset(scene: THREE.Object3D) {
+export function disposeAsset(scene: THREE.Object3D) {
   const geometries = new Set<THREE.BufferGeometry>(), materials = new Set<THREE.Material>();
   const textures = new Set<THREE.Texture>(), bitmaps = new Set<ImageBitmap>();
   scene.traverse(node => {

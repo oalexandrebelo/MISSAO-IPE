@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "release": "R29",
+  "retrievedAt": "2026-11-15T18:47:40.214667+00:00",
+  "purpose": "Cenário didático do seletor de missões; não alimenta pontuação ou evidência científica.",
+  "usageGuidelines": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "endorsement": "A NASA não endossa a MISSÃO IPÊ.",
+  "assets": [
+    {
+      "id": "earth",
+      "file": "earth.webp",
+      "width": 2048,
+      "height": 1024,
+      "projection": "equirectangular",
+      "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/content-feature/bluemarble/images/land_ocean_ice_cloud_2048.jpg",
+      "sourcePage": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+      "credit": "NASA/Goddard Space Flight Center; Reto Stöckli, Robert Simmon e equipes Blue Marble",
+      "context": "Composição histórica Blue Marble com nuvens; não representa tempo real nem o registro MODIS do Cerrado.",
+      "sourceSha256": "fb67ac030214c1891994c8f976e7f6c9cd5b0f21586aba8567250781a4fe708e",
+      "sha256": "61d61a5f58005efa8e7cb2fd4b0e1329b92ec4b3faa567582faff7283c99cb8e",
+      "bytes": 510254,
+      "transformation": "cwebp -q 82 -resize 2048 1024; sem conteúdo gerado por IA"
+    },
+    {
+      "id": "moon",
+      "file": "moon.webp",
+      "width": 2048,
+      "height": 1024,
+      "projection": "equirectangular",
+      "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+      "sourcePage": "https://svs.gsfc.nasa.gov/4720/",
+      "credit": "NASA’s Scientific Visualization Studio; Ernie Wright; LRO/LROC, Arizona State University",
+      "context": "Mosaico de cor LROC. Sem mapa de relevo; a iluminação da cena é artística.",
+      "sourceSha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170",
+      "sha256": "d99c35a4d7f42af718c6e72b3c274f8788be2c60b3541eff26112d20e9f6b6f9",
+      "bytes": 286286,
+      "transformation": "cwebp -q 82 -resize 2048 1024; sem conteúdo gerado por IA"
+    },
+    {
+      "id": "mars",
+      "file": "mars.webp",
+      "width": 2048,
+      "height": 1024,
+      "projection": "equirectangular",
+      "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/mars/Mars.jpg",
+      "sourcePage": "https://science.nasa.gov/3d-resources/mars/",
+      "credit": "NASA/Jet Propulsion Laboratory & Caltech; imagens Viking processadas no USGS",
+      "context": "Mapa histórico Viking. Sem reconstrução do terreno ou da trajetória da missão.",
+      "sourceSha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+      "sha256": "f116894b1d2e22f9911bd4f45424cb9b5d3a5d0bd5a6bd298357e4492a2c81c3",
+      "bytes": 177056,
+      "transformation": "cwebp -q 82 -resize 2048 1024; sem conteúdo gerado por IA"
+    },
+    {
+      "id": "europa",
+      "file": "europa.webp",
+      "width": 2048,
+      "height": 1024,
+      "projection": "equirectangular",
+      "sourceUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/image/jupiter---europa/Jupiter%20-%20Europa.jpg",
+      "sourcePage": "https://science.nasa.gov/3d-resources/jupiter-europa/",
+      "credit": "USGS, JPL & Caltech; mosaico Voyager",
+      "context": "Mapa histórico da superfície. Não é dado da Europa Clipper nem evidência de vida.",
+      "sourceSha256": "50d01ca5c01352d1c507bb17fefd1c46ba11260305656250062c6cdac89c8ebf",
+      "sha256": "bfa8de034538663df50461ceee6cceaaa915b0c1f09ed9b9b79c61a0d4729889",
+      "bytes": 140342,
+      "transformation": "cwebp -q 82 -resize 2048 1024; sem conteúdo gerado por IA"
+    }
+  ]
+}

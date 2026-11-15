@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "release": "R29",
+  "recordedAt": "2026-11-15T19:03:07.855577+00:00",
+  "environment": "Chromium via in-app browser; localhost release build; private metrics handler with in-memory test repository",
+  "synthetic": true,
+  "humanLearningEvidence": false,
+  "physicalPhoneTest": false,
+  "viewports": [
+    {
+      "width": 1512,
+      "height": 949,
+      "mode": "desktop fullscreen"
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "mode": "desktop window"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "responsive browser"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mode": "responsive browser"
+    }
+  ],
+  "checks": {
+    "sevenDestinationsSelected": true,
+    "destinationQuestionAndPlayUpdated": true,
+    "keyboardArrowMovesFocusAndSelection": true,
+    "pauseStopsRenderer": true,
+    "mobileDprOne": true,
+    "horizontalOverflowObserved": false,
+    "purchaseTwoUnitsPrice": 10,
+    "balanceAfterPurchase": 15,
+    "unitsAfterReload": 2,
+    "initialCyclesAfterReload": [
+      3,
+      3
+    ],
+    "purchasedUnitEquippedInISS": true,
+    "issResult": {
+      "produced": 6,
+      "received": 6,
+      "valid": 6,
+      "score": 92,
+      "massKg": 217,
+      "budgetCredits": 34,
+      "equippedCyclesBefore": 3,
+      "equippedCyclesAfter": 2,
+      "launchFee": 2,
+      "reward": 8
+    },
+    "progressConfirmedEvents": 2,
+    "pendingEvents": 0,
+    "rejectedEvents": 0,
+    "scoreAfterReload": 92,
+    "consoleErrorsObserved": []
+  },
+  "tests": {
+    "domain": 180,
+    "ui": 121,
+    "metrics": 53,
+    "betaDistribution": 18
+  },
+  "limits": [
+    "Viewport emulation is not a physical mobile device.",
+    "Reduced motion, WebGL context loss and pending resource disposal have controlled automated coverage; they are not hardware performance benchmarks.",
+    "R29 exercises the new lobby across seven destinations and one complete ISS attempt. The previous full seven-mission journey is recorded separately in R28.",
+    "The localhost repository persists across browser reload within the server process, not across server restarts. Production Blob durability is covered in the prior R28 receipt; R29 publication checks are recorded separately."
+  ]
+}

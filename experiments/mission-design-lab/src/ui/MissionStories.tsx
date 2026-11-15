@@ -14,7 +14,7 @@ const stories = {
   },
   bennu: {
     title: 'OSIRIS-REx: rochas de Bennu guardam pistas de outro asteroide.',
-    opening: 'Imagens da OSIRIS-REx revelaram material brilhante entre as rochas escuras de Bennu. Em estudo publicado em 2020 e arquivado no NASA NTRS, DellaGiustina e colegas combinaram imagens e espectroscopia para investigar esse material. Os espectros de piroxênio se mostraram semelhantes aos de meteoritos associados a Vesta.',
+    opening: 'Imagens da OSIRIS-REx revelaram material brilhante entre as rochas escuras de Bennu. Em estudo publicado em 2020 e arquivado no NASA NTRS, DellaGiustina e colegas combinaram imagens e espectroscopia para investigar esse material. Os espectros de piroxênio se mostraram semelhantes aos de meteoritos associados a Vesta. A missão também coletou material do asteroide em 20 de outubro de 2020 e entregou a cápsula com amostras à Terra em 24 de setembro de 2023. Esse retorno real dá contexto ao cenário Retorno Bennu proposto por Bruno: neste exercício, você trabalha com os registros científicos, sem simular a coleta ou o voo da cápsula.',
     tension: 'O estudo apresenta dimensões de rochas e clastos em seis sítios. As imagens PolyCam foram registradas sobre modelos de terreno produzidos pelo altímetro OLA. O jogo incorpora os eixos maiores dos objetos 1, 2, 3, 4a, 5 e 6, entre 1,453 e 3,93 metros. A tabela completa tem sete objetos: o clasto 4b continua no arquivo de referência, mas não integra os seis registros jogáveis.',
     decision: 'Você trabalha com medidas publicadas e precisa disponibilizá-las aos cientistas. Câmera, energia, fila e duração dos contatos determinam quais registros arquivados ficam disponíveis no resultado da tentativa. O relógio T+ acompanha o processamento e o transporte didáticos; não recria o instante em que a OSIRIS-REx observou cada rocha.',
     question: 'Se a observação existe a bordo, mas não foi recebida, ela já pode sustentar uma decisão em solo?',
@@ -22,6 +22,7 @@ const stories = {
     sources: [
       { title: 'NASA NTRS · Exogenic basalt on asteroid (101955) Bennu · artigo e suplemento', url: 'https://ntrs.nasa.gov/citations/20205007912' },
       { title: 'NASA · pistas de Vesta em Bennu · 21/09/2020', url: 'https://www.nasa.gov/solar-system/nasas-osiris-rex-to-asteroid-bennu-youve-got-a-little-vesta-on-you/' },
+      { title: 'NASA · OSIRIS-REx · coleta e retorno das amostras', url: 'https://science.nasa.gov/mission/osiris-rex/in-depth/' },
     ],
   },
   telescope: {

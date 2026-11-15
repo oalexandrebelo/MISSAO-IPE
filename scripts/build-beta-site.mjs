@@ -23,6 +23,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md', target: 'docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md', title: 'Seleção imersiva e handoff · R29', description: 'Sete destinos, superfícies NASA, movimento acessível, compra em lote e continuidade dos dois devs.' },
+  { source: 'docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md', target: 'docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md', title: 'Missões e assets do Bruno · R29', description: 'Revisão dos repositórios, correspondência das missões e diferenças integradas ao jogo.' },
   { source: 'docs/73-QA-MOVEL-E-HANDOFF-R28.md', target: 'docs/73-QA-MOVEL-E-HANDOFF-R28.md', title: 'QA móvel e handoff · R28', description: 'Primeira tentativa, rota de acesso, verificação das métricas e continuidade dos dois devs.' },
   { source: 'docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md', target: 'docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md', title: 'Loja, inventário e Europa · handoff R27', description: 'Sete missões, montagem 3D, desgaste, métricas autoritativas e continuidade dos dois devs.' },
   { source: 'docs/72-DOMINIOS-E-ACESSOS-R27.md', target: 'docs/72-DOMINIOS-E-ACESSOS-R27.md', title: 'Links e subdomínios · R27', description: 'Jogo, pitch, painel privado, documentação e LP no domínio da equipe.' },
