@@ -8,7 +8,8 @@ const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': '
 createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url || '/', 'http://localhost').pathname);
-    let file = resolve(root, '.' + pathname);
+    const assetPath = pathname === '/acessibilidade/guia/' ? '/acessibilidade/guia.html' : pathname;
+    let file = resolve(root, '.' + assetPath);
     if (file !== root && !file.startsWith(root + sep)) { res.writeHead(403); res.end('Forbidden'); return; }
     const info = await stat(file);
     if (info.isDirectory()) file = resolve(file, 'index.html');

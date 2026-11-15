@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "evidenceType": "production-http-engineering-smoke",
+  "humanLearningEvidence": false,
+  "startedAt": "2026-11-15T13:11:38.483Z",
+  "origin": "https://projeto-ipe.vercel.app",
+  "status": "passed",
+  "checks": [
+    "admin_no_store",
+    "anonymous_admin_denied",
+    "admin-login_no_store",
+    "admin_login",
+    "ipe_metrics_admin_cookie_flags",
+    "admin_no_store",
+    "private_storage_read_before_any_registration",
+    "register_no_store",
+    "synthetic_registration",
+    "ipe_player_cookie_flags",
+    "session_no_store",
+    "session_has_no_email",
+    "admin_no_store",
+    "player_cannot_read_team_panel",
+    "events_no_store",
+    "three_attempts_accepted",
+    "events_no_store",
+    "same_event_retry_accepted",
+    "events_no_store",
+    "same_attempt_new_event_id_accepted",
+    "events_no_store",
+    "cross_tab_owner_mismatch_denied",
+    "exactly_one_profile_three_attempts_after_retries",
+    "cerrado_server_recomputation_exact",
+    "bennu_server_recomputation_exact",
+    "telescope_server_recomputation_exact",
+    "scientific_records_6_2_6",
+    "application_expiry_declared_90_days",
+    "logout_no_store",
+    "admin-logout_no_store"
+  ],
+  "cleanupPaths": [
+    "r21/records/654800d0-5adc-4f8d-adc3-bebd7784abd8/profile.json",
+    "r21/records/654800d0-5adc-4f8d-adc3-bebd7784abd8/attempt-885bfd27-dace-4654-b195-a7a16d9b8f39.json",
+    "r21/records/654800d0-5adc-4f8d-adc3-bebd7784abd8/attempt-3328a001-1c70-4590-8896-4ae66e72d42f.json",
+    "r21/records/654800d0-5adc-4f8d-adc3-bebd7784abd8/attempt-770cfce1-2f63-41ea-ad3c-a79b5a7a3d1b.json"
+  ],
+  "retention": {
+    "status": "not_verified",
+    "requestedDays": 90,
+    "note": "Application expiresAt and the PUT request are not proof of provider TTL. Run --retention before cleanup."
+  },
+  "sessionId": "654800d0-5adc-4f8d-adc3-bebd7784abd8",
+  "adminPagesVisited": 1,
+  "attempts": [
+    {
+      "mission": "cerrado",
+      "attemptId": "885bfd27-dace-4654-b195-a7a16d9b8f39",
+      "eventId": "8ef1e4ba-396d-4664-95be-09ce14c6ff09",
+      "configSha256": "f4fa26a749946ae7dfccd4c24210f7351647dcb30eff1a09fa3bf60b5c378c24",
+      "summary": {
+        "outcome": "success",
+        "validRecords": 6,
+        "deliveredRecords": 6,
+        "requiredRecords": 6,
+        "massKg": 3.05,
+        "credits": 71,
+        "minEnergyWh": 8.414868421052631,
+        "initialEnergyWh": 12.8,
+        "finalEnergyWh": 8.414868421052631,
+        "generatedBits": "1080000000",
+        "downlinkedBits": "1080000000",
+        "lostBits": "0",
+        "queueBits": "0",
+        "completedAtS": 10800,
+        "engineVersion": "0.1.1-rd",
+        "diagnostics": [],
+        "firstCause": null,
+        "score": {
+          "total": 92,
+          "science": 60,
+          "engineering": 30,
+          "efficiency": 2,
+          "max": 100,
+          "rubricVersion": "r21-v1"
+        }
+      }
+    },
+    {
+      "mission": "bennu",
+      "attemptId": "3328a001-1c70-4590-8896-4ae66e72d42f",
+      "eventId": "951fbe31-86fb-4c4c-bc4e-bcdf3733bfce",
+      "configSha256": "693349a095ebc5348d2e77970bc58593a3e8aa48036bc7d8a77ddccd8668c884",
+      "summary": {
+        "outcome": "failure",
+        "validRecords": 2,
+        "deliveredRecords": 2,
+        "requiredRecords": 6,
+        "massKg": 2.9,
+        "credits": 71,
+        "minEnergyWh": 19.2,
+        "initialEnergyWh": 19.2,
+        "finalEnergyWh": 24,
+        "generatedBits": "720000000",
+        "downlinkedBits": "288000000",
+        "lostBits": "0",
+        "queueBits": "432000000",
+        "completedAtS": 10800,
+        "engineVersion": "ipe-expeditions-r18-v1",
+        "diagnostics": [
+          {
+            "code": "DELIVERY_SHORTFALL",
+            "severity": "error",
+            "message": "Nem todos os seis registros válidos chegaram ao solo.",
+            "timeS": 10800
+          }
+        ],
+        "firstCause": {
+          "code": "DELIVERY_SHORTFALL",
+          "severity": "error",
+          "message": "Nem todos os seis registros válidos chegaram ao solo.",
+          "timeS": 10800
+        },
+        "score": {
+          "total": 51,
+          "science": 20,
+          "engineering": 30,
+          "efficiency": 1,
+          "max": 100,
+          "rubricVersion": "r21-v1"
+        }
+      }
+    },
+    {
+      "mission": "telescope",
+      "attemptId": "770cfce1-2f63-41ea-ad3c-a79b5a7a3d1b",
+      "eventId": "953197af-f8d4-4c60-a0d9-23189a33387e",
+      "configSha256": "c6898d7745bd5688ddb1667f8b3a60dd16df781d99854dc01bf96b8d70683965",
+      "summary": {
+        "outcome": "success",
+        "validRecords": 6,
+        "deliveredRecords": 6,
+        "requiredRecords": 6,
+        "massKg": 3.2,
+        "credits": 105,
+        "minEnergyWh": 19.2,
+        "initialEnergyWh": 19.2,
+        "finalEnergyWh": 24,
+        "generatedBits": "1080000000",
+        "downlinkedBits": "1080000000",
+        "lostBits": "0",
+        "queueBits": "0",
+        "completedAtS": 10800,
+        "engineVersion": "ipe-expeditions-r18-v1",
+        "diagnostics": [],
+        "firstCause": null,
+        "score": {
+          "total": 92,
+          "science": 60,
+          "engineering": 30,
+          "efficiency": 2,
+          "max": 100,
+          "rubricVersion": "r21-v1"
+        }
+      }
+    }
+  ],
+  "completedAt": "2026-11-15T13:11:47.668Z",
+  "deploymentId": "dpl_Aeq3CfXP1xHLYfAsSCCyoqH5Ag49",
+  "sourceCommit": "327710db39ce070991f01595a54b5800a4f97f64",
+  "cleanup": {
+    "status": "retained_identified_synthetic_fixture",
+    "records": 4,
+    "note": "One profile labeled as an automated R21 test and three attempts. These are technical QA data, not human participants. Local OIDC identity has no production Blob access; no grant was expanded for cleanup."
+  }
+}

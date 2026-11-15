@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         {children}
         <nav aria-label="Acessibilidade">
-          <a className="ipe-libras-link vlibras-ignore" data-ipe-libras="public" href="/acessibilidade/guia.html" aria-haspopup="dialog" title="Selecione um trecho público para traduzir em Libras">Libras</a>
+          <a className="ipe-libras-link vlibras-ignore" data-ipe-libras="public" href="/acessibilidade/guia/" aria-haspopup="dialog" title="Selecione um trecho público para traduzir em Libras">Libras</a>
         </nav>
         <script src="/acessibilidade/libras.js" defer />
       </body>

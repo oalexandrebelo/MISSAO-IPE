@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-15T13:07:58.150Z",
+  "generatedAt": "2026-11-15T13:50:19.573Z",
   "status": "passed",
   "scope": "Original and emitted runtime bytes reread after static build and checked against the declared HTML integration; no browser execution.",
-  "fileCount": 188,
+  "fileCount": 194,
   "allByteIdentical": false,
   "allMatchDeclaredTransformation": true,
   "files": [
@@ -249,8 +249,8 @@
     {
       "source": "experiments/four-level-campaign/dist/release.json",
       "output": "site/campanha/release.json",
-      "originalSha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
-      "publishedSha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
+      "originalSha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
+      "publishedSha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -719,6 +719,14 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "source": "experiments/mission-design-lab/dist/brand/brand-provenance-r22.json",
+      "output": "site/lab/brand/brand-provenance-r22.json",
+      "originalSha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+      "publishedSha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
       "source": "experiments/mission-design-lab/dist/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
       "output": "site/lab/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
       "originalSha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
@@ -747,6 +755,14 @@
       "output": "site/lab/brand/missao-ipe-logo-on-light.svg",
       "originalSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
       "publishedSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-stacked.svg",
+      "output": "site/lab/brand/missao-ipe-logo-stacked.svg",
+      "originalSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "publishedSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -791,6 +807,14 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-frame-11-original.svg",
+      "output": "site/lab/brand/originals/missao-ipe-frame-11-original.svg",
+      "originalSha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "publishedSha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
       "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-logo-original.svg",
       "output": "site/lab/brand/originals/missao-ipe-logo-original.svg",
       "originalSha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
@@ -827,6 +851,14 @@
       "output": "site/lab/brand/preview-r17.html",
       "originalSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
       "publishedSha256": "bd2789aa242e4ad004f11877ca8dafe53764c2165cac2a9a17a77756f94f2a68",
+      "byteIdentical": false,
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy"
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/preview-r22.html",
+      "output": "site/lab/brand/preview-r22.html",
+      "originalSha256": "2ac178e50144b64b08db961b0bc9aba58f8534549e7436870eb56fb91be930e3",
+      "publishedSha256": "981380917ce3c35585e47be2dfc22c33cde76020fa24d4a8bbe5c919c9ae9663",
       "byteIdentical": false,
       "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
@@ -1463,10 +1495,26 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "source": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+      "output": "site/presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+      "originalSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "publishedSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
       "source": "presentation/pitch/assets/missao-ipe-logo.svg",
       "output": "site/presentation/pitch/assets/missao-ipe-logo.svg",
       "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
       "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "byteIdentical": true,
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "source": "presentation/pitch/assets/missao-ipe-symbol.svg",
+      "output": "site/presentation/pitch/assets/missao-ipe-symbol.svg",
+      "originalSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "publishedSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },
@@ -1489,16 +1537,16 @@
     {
       "source": "presentation/pitch/index.html",
       "output": "site/presentation/pitch/index.html",
-      "originalSha256": "2098f3df390cd5d19f207611752794a552168eb877f47ef5590304b9582acfc5",
-      "publishedSha256": "c691b79f02a34690c6e93c9c716676c5b7fd0d8cc616399583b40c96dc91b1a7",
+      "originalSha256": "56400a0f241c325908d8f2801268c93c5038736103552af39ea0bd063b78d3dd",
+      "publishedSha256": "dd150f7f756b67141684ba217071b1c3c86dfb5c2231c72406dfbabcd421a6ba",
       "byteIdentical": false,
       "transformation": "local Libras launcher and frame permissions in the public HTML copy"
     },
     {
       "source": "presentation/pitch/pitch.css",
       "output": "site/presentation/pitch/pitch.css",
-      "originalSha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
-      "publishedSha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
+      "originalSha256": "96e3cdb5d7a1d59c078575654321ed0505368d926993036b23d2b241a106d1bf",
+      "publishedSha256": "96e3cdb5d7a1d59c078575654321ed0505368d926993036b23d2b241a106d1bf",
       "byteIdentical": true,
       "transformation": "none; bytes preserved"
     },

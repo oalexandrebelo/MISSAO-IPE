@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T13:07:58.100Z",
+  "generatedAt": "2026-11-15T13:50:19.532Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 119,
+  "documentCount": 121,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 24506,
-      "originalSha256": "74775bf0c05549fb6bc2aed1dd7b9908fba2499c5878bde2600b1bedda2c2e35",
-      "projectedSha256": "74775bf0c05549fb6bc2aed1dd7b9908fba2499c5878bde2600b1bedda2c2e35",
+      "originalBytes": 26200,
+      "originalSha256": "f2c670fffa5947b37dc7db6e2140d7be9c3b9a7c52b3e0de19602b2d63a39c2a",
+      "projectedSha256": "f2c670fffa5947b37dc7db6e2140d7be9c3b9a7c52b3e0de19602b2d63a39c2a",
       "redactions": 0
     },
     {
@@ -687,6 +687,28 @@
       "redactions": 0
     },
     {
+      "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+      "id": "doc-docs-58-catalogo-nasa-e-integracao-bruno-r22-md",
+      "title": "Catálogo de equipamentos e integração da contribuição de Bruno",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8537,
+      "originalSha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
+      "projectedSha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
+      "redactions": 0
+    },
+    {
+      "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+      "id": "doc-docs-59-marca-oficial-e-deploy-md",
+      "title": "Marca oficial e continuidade da publicação",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 4910,
+      "originalSha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
+      "projectedSha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1317,13 +1339,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2302371,
-      "sha256": "1fabc1c8457335afd048baa0169cbb9c395fabd6b5fb2df42d4f5d64626dfa9f"
+      "bytes": 2323676,
+      "sha256": "d18275d756c22b0b11ef192b379f1ad0fd7890d3074b964b83798bf1c6b8659a"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1850680,
-      "sha256": "44450d6b9a0279a6228aa540c75fdb068569ad8ec222bfb55f903f84132f5e1b"
+      "bytes": 1866302,
+      "sha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a"
     }
   ]
 }

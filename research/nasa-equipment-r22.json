@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 1,
+  "edition": "R22",
+  "language": "pt-BR",
+  "verifiedDate": "2026-11-15",
+  "scope": "Fatos e referências para o catálogo do MISSÃO IPÊ. Os valores de massa, custo, duração, slots e pontuação do simulador são parâmetros do jogo.",
+  "origin": {
+    "author": "Bruno A Carvalho",
+    "repository": "https://github.com/brunoassiscarvalho/missao-ipe",
+    "snapshot": "contributions/bruno-figma/src/App.tsx",
+    "rules": "contributions/bruno-figma/GameRules.md"
+  },
+  "sources": [
+    {
+      "id": "commercial-crew",
+      "title": "Commercial Crew Rockets",
+      "url": "https://www.nasa.gov/humans-in-space/spaceships-and-rockets/commercial-crew-rockets/",
+      "access": "Página oficial. Seções Atlas V e Falcon 9. A descrição do Atlas V é histórica."
+    },
+    {
+      "id": "commercial-resupply",
+      "title": "Commercial Resupply Rockets",
+      "url": "https://www.nasa.gov/humans-in-space/spaceships-and-rockets/commercial-resupply-rockets/",
+      "access": "Página oficial. Histórico de Antares/Cygnus e Falcon 9/Dragon."
+    },
+    {
+      "id": "lsp-rockets",
+      "title": "Launch Services Program Rockets",
+      "url": "https://www.nasa.gov/launch-services-program-rockets/",
+      "access": "Página oficial. Seções New Glenn e Vulcan."
+    },
+    {
+      "id": "lsp",
+      "title": "Launch Services Program",
+      "url": "https://www.nasa.gov/kennedy/launch-services-program/",
+      "access": "Página oficial do programa de serviços de lançamento de Kennedy."
+    },
+    {
+      "id": "smallsat-launch",
+      "title": "10.0 Integration, Launch, and Deployment",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/",
+      "access": "Página oficial. Requisitos de integração, lançamentos dedicados, compartilhados e veículos de transferência."
+    },
+    {
+      "id": "oig-launch-report",
+      "title": "NASA’s Launch Infrastructure (IG-26-010)",
+      "url": "https://oig.nasa.gov/wp-content/uploads/2026/06/final-report-ig-26-010-nasas-launch-infrastructure.pdf",
+      "access": "Trecho indexado do PDF oficial de 22/06/2026. Página 7, nota 12, sobre Antares 330."
+    },
+    {
+      "id": "oig-launch-index",
+      "title": "Página do relatório NASA’s Launch Infrastructure",
+      "url": "https://oig.nasa.gov/audits/nasas-launch-infrastructure/",
+      "access": "Página oficial do relatório, com PDF e data de publicação."
+    },
+    {
+      "id": "blue-ghost-launch",
+      "title": "Liftoff! NASA Sends Science, Tech to Moon on Firefly, SpaceX Flight",
+      "url": "https://www.nasa.gov/news-release/liftoff-nasa-sends-science-tech-to-moon-on-firefly-spacex-flight/",
+      "access": "Comunicado oficial de lançamento da Blue Ghost Mission 1."
+    },
+    {
+      "id": "perseverance-launch",
+      "title": "NASA’s Perseverance Rover Launches to Mars",
+      "url": "https://science.nasa.gov/resource/nasas-perseverance-rover-launches-to-mars/",
+      "access": "Registro oficial do lançamento em um Atlas V da ULA."
+    },
+    {
+      "id": "lro-launch",
+      "title": "About LRO",
+      "url": "https://science.nasa.gov/mission/lro/about/",
+      "access": "Página oficial. Registra o Atlas V 401 como lançador do LRO e LCROSS."
+    },
+    {
+      "id": "peregrine",
+      "title": "NASA Science, Astrobotic Peregrine Mission One Concludes",
+      "url": "https://www.nasa.gov/news-release/nasa-science-astrobotic-peregrine-mission-one-concludes/",
+      "access": "Comunicado oficial de encerramento da missão e resultado do voo."
+    },
+    {
+      "id": "capstone-launch",
+      "title": "CAPSTONE Launches to Test New Orbit for NASA’s Artemis Moon Missions",
+      "url": "https://www.nasa.gov/news-release/capstone-launches-to-test-new-orbit-for-nasas-artemis-moon-missions/",
+      "access": "Comunicado oficial. Electron e estágio Lunar Photon."
+    },
+    {
+      "id": "capstone",
+      "title": "CAPSTONE",
+      "url": "https://www.nasa.gov/mission/capstone/",
+      "access": "Página oficial. Inserção em órbita lunar e demonstração de navegação autônoma."
+    },
+    {
+      "id": "escapade",
+      "title": "ESCAPADE",
+      "url": "https://science.nasa.gov/mission/escapade/",
+      "access": "Página oficial. Objetivo científico, fases e veículo de lançamento."
+    },
+    {
+      "id": "escapade-update",
+      "title": "NASA’s ESCAPADE Completes Powered Earth Flybys, Now En Route to Mars",
+      "url": "https://science.nasa.gov/science-research/heliophysics/nasas-escapade-completes-powered-earth-flybys-now-en-route-to-mars/",
+      "access": "Atualização oficial de 09/11/2026."
+    },
+    {
+      "id": "smallsat-propulsion",
+      "title": "4.0 In-Space Propulsion",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/in-space_propulsion/",
+      "access": "Página oficial. Famílias de propulsão, critérios de escolha e exemplos."
+    },
+    {
+      "id": "dawn-ion",
+      "title": "Dawn — Ion Propulsion",
+      "url": "https://science.nasa.gov/mission/dawn/technology/ion-propulsion/",
+      "access": "Página oficial do sistema iônico usado em Vesta e Ceres."
+    },
+    {
+      "id": "cassini-engine",
+      "title": "Cassini — Engine",
+      "url": "https://science.nasa.gov/mission/cassini/engine/",
+      "access": "Página oficial sobre motores principais e propulsores menores da Cassini."
+    },
+    {
+      "id": "smallsat-power",
+      "title": "3.0 Power",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/",
+      "access": "Página oficial. Geração, armazenamento e gerenciamento de energia."
+    },
+    {
+      "id": "iss-battery",
+      "title": "International Space Station Lithium-Ion Battery Status",
+      "url": "https://ntrs.nasa.gov/citations/20200000004",
+      "access": "Registro técnico da NASA sobre a transição para Li-ion. Contém o ciclo de geração solar, recarga e descarga em eclipse."
+    },
+    {
+      "id": "smallsat-structures",
+      "title": "6.0 Structures, Materials, and Mechanisms",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/structures-materials-and-mechanisms/",
+      "access": "Página oficial. Projeto estrutural, integração e condições de lançamento e operação."
+    },
+    {
+      "id": "aris",
+      "title": "The Interplay Between Hardware and Control System Design in the Development of the Active Rack Isolation System",
+      "url": "https://ntrs.nasa.gov/citations/20000032438",
+      "access": "Registro técnico da NASA sobre isolamento ativo de vibração a bordo da ISS."
+    },
+    {
+      "id": "smallsat-thermal",
+      "title": "7.0 Thermal Control",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/",
+      "access": "Página oficial. Isolamento multicamada e métodos térmicos passivos e ativos."
+    },
+    {
+      "id": "smallsat-gnc",
+      "title": "5.0 Guidance, Navigation, and Control",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/guidance-navigation-and-control/",
+      "access": "Página oficial. Seções sobre sensores de atitude e receptores GPS."
+    },
+    {
+      "id": "smallsat-comms",
+      "title": "9.0 Communications",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/",
+      "access": "Página oficial. Banda S para rastreio, telemetria e comando."
+    },
+    {
+      "id": "orion-avionics",
+      "title": "Avionics and Software",
+      "url": "https://www.nasa.gov/reference/avionics-and-software/",
+      "access": "Página oficial. Sensores de navegação, computadores e redes redundantes da Orion."
+    },
+    {
+      "id": "lugre",
+      "title": "NASA Successfully Acquires GPS Signals on Moon",
+      "url": "https://www.nasa.gov/missions/artemis/clps/nasa-successfully-acquires-gps-signals-on-moon/",
+      "access": "Registro oficial do experimento LuGRE, realizado com GPS e Galileo."
+    },
+    {
+      "id": "iss-air",
+      "title": "Toxicology and Environmental Chemistry",
+      "url": "https://www.nasa.gov/directorates/esdmd/hhp/toxicology-and-environmental-chemistry/",
+      "access": "Página oficial. Monitoramento de compostos orgânicos voláteis no ar da ISS."
+    },
+    {
+      "id": "lro-instruments",
+      "title": "LRO Spacecraft & Instruments",
+      "url": "https://science.nasa.gov/mission/lro/spacecraft-and-instruments/",
+      "access": "Página oficial. Radiômetro Diviner e detector de nêutrons LEND."
+    },
+    {
+      "id": "perseverance-instruments",
+      "title": "Perseverance Science Instruments",
+      "url": "https://science.nasa.gov/mission/mars-2020-perseverance/science-instruments/",
+      "access": "Página oficial. Seções MEDA e PIXL."
+    }
+  ],
+  "equipment": [
+    {
+      "id": "falcon",
+      "category": "vehicle",
+      "label": "Falcon 9",
+      "status": "voo-documentado",
+      "contexts": ["iss", "lua"],
+      "fact": "O Falcon 9 da SpaceX lançou cápsulas Dragon para a ISS e o módulo lunar Blue Ghost Mission 1, que levava cargas da NASA.",
+      "scope": "Dragon realizou a aproximação da ISS. Blue Ghost foi a espaçonave da missão lunar. Cada carga teve seu próprio veículo de entrega.",
+      "teaching": "Escolher um lançador e identificar a espaçonave responsável pela aproximação ou pela entrega.",
+      "sourceIds": ["commercial-crew", "commercial-resupply", "blue-ghost-launch"]
+    },
+    {
+      "id": "atlas",
+      "category": "vehicle",
+      "label": "Atlas V",
+      "originalLabel": "Atlas L-2",
+      "originalStatus": "ficticio",
+      "status": "voo-documentado",
+      "contexts": ["iss", "lua", "marte"],
+      "fact": "O Atlas V da United Launch Alliance lançou o teste Starliner OFT-2 para a ISS, o LRO e a LCROSS para a Lua, e o Perseverance para Marte.",
+      "scope": "Atlas V é a opção real adotada no R22. O perfil de lançador leve do Atlas L-2 pertence ao protótipo de Bruno.",
+      "teaching": "Comparar dois voos que usaram o mesmo lançador para objetivos diferentes. Identificar a espaçonave, o destino e a fase em que a ciência começa.",
+      "sourceIds": ["commercial-crew", "lro-launch", "perseverance-launch"]
+    },
+    {
+      "id": "vulcan",
+      "category": "vehicle",
+      "label": "Vulcan Centaur",
+      "status": "voo-documentado",
+      "contexts": ["lua"],
+      "fact": "O Vulcan da United Launch Alliance está no catálogo do Launch Services Program e lançou o módulo lunar Peregrine Mission One em 2024.",
+      "scope": "O lançamento e a separação foram concluídos. Uma falha de propulsão do módulo impediu o pouso lunar. Houve coleta de dados durante o voo.",
+      "teaching": "Separar os resultados de lançamento, separação, entrega e coleta de dados no relatório da missão.",
+      "sourceIds": ["lsp-rockets", "peregrine"]
+    },
+    {
+      "id": "electron",
+      "category": "vehicle",
+      "label": "Electron",
+      "status": "voo-documentado",
+      "contexts": ["leo", "lua"],
+      "fact": "O Electron da Rocket Lab lança pequenos satélites. Na missão CAPSTONE, o estágio Lunar Photon se separou do Electron e enviou o CubeSat à trajetória de transferência para a Lua.",
+      "scope": "O precedente lunar inclui o Lunar Photon e um CubeSat compatível. CAPSTONE entrou em órbita lunar para testar navegação e caracterizar a órbita.",
+      "teaching": "Conferir dimensões, interface, massa e destino orbital da carga. Em uma missão lunar, identificar a função do estágio de transferência.",
+      "sourceIds": ["smallsat-launch", "capstone-launch", "capstone"]
+    },
+    {
+      "id": "antares",
+      "category": "vehicle",
+      "label": "Antares 330",
+      "status": "uso-previsto",
+      "contexts": ["iss"],
+      "fact": "O NASA Office of Inspector General descreve o Antares 330 com novo primeiro estágio e uso previsto em reabastecimento da ISS. Versões anteriores do Antares lançaram a nave de carga Cygnus.",
+      "scope": "A previsão consta do relatório de junho de 2026. Os voos de reabastecimento citados pela NASA pertencem à família anterior do Antares.",
+      "teaching": "Distinguir o uso planejado da variante 330 do histórico da família. Usar o histórico de Cygnus para discutir a entrega de instrumentos à estação.",
+      "sourceIds": ["oig-launch-report", "oig-launch-index", "commercial-resupply"]
+    },
+    {
+      "id": "newglenn",
+      "category": "vehicle",
+      "label": "New Glenn",
+      "status": "voo-documentado",
+      "contexts": ["marte"],
+      "fact": "O New Glenn da Blue Origin lançou as duas sondas ESCAPADE em 2025 para uma missão que estuda a interação do vento solar com o ambiente marciano.",
+      "scope": "A NASA confirmou em 09/11/2026 que as sondas seguiram rumo a Marte. Elas acionaram seus motores durante sobrevoos da Terra. O destino científico é a órbita marciana.",
+      "teaching": "Representar lançamento, manobras de transferência e observação orbital como fases com requisitos diferentes.",
+      "sourceIds": ["lsp-rockets", "escapade", "escapade-update"]
+    },
+    {
+      "id": "chemical",
+      "category": "propulsion",
+      "label": "Química bipropelente",
+      "status": "tecnologia-documentada",
+      "fact": "Um sistema bipropelente usa combustível e oxidante. Motores químicos são úteis quando a manobra exige empuxo elevado em pouco tempo. A Cassini usou motores principais bipropelentes para mudanças de velocidade e trajetória.",
+      "scope": "Empuxo, massa de propelente e janela da manobra dependem do motor e da missão. A duração total depende também da trajetória.",
+      "teaching": "Priorizar um requisito de manobra rápida e avaliar o efeito da reserva de propelente sobre a carga científica.",
+      "sourceIds": ["smallsat-propulsion", "cassini-engine"]
+    },
+    {
+      "id": "ion",
+      "category": "propulsion",
+      "label": "Propulsão iônica",
+      "status": "tecnologia-documentada",
+      "fact": "Campos elétricos aceleram íons e produzem empuxo baixo de forma sustentada. A missão Dawn usou essa tecnologia para visitar Vesta e Ceres com baixo consumo de propelente.",
+      "scope": "A aplicação depende de potência elétrica, tempo disponível para manobrar e trajetória. O caso Dawn é uma referência de cruzeiro e inserção orbital de longa duração.",
+      "teaching": "Comparar uma transferência prolongada com uma manobra de curta duração. Verificar a energia disponível durante o acionamento.",
+      "sourceIds": ["smallsat-propulsion", "dawn-ion"]
+    },
+    {
+      "id": "monoprop",
+      "category": "propulsion",
+      "label": "Monopropelente",
+      "status": "tecnologia-documentada",
+      "fact": "Propulsores monopropelentes usam um único propelente. Na Cassini, propulsores menores desse tipo controlavam a atitude e faziam pequenas mudanças de velocidade.",
+      "scope": "O exemplo da Cassini distingue a função dos propulsores menores da função dos motores principais.",
+      "teaching": "Escolher uma forma de ajustar o apontamento da câmera ou do sensor e conferir se a carga pode observar o alvo.",
+      "sourceIds": ["smallsat-propulsion", "cassini-engine"]
+    },
+    {
+      "id": "solar",
+      "category": "energy",
+      "label": "Painéis solares",
+      "status": "tecnologia-documentada",
+      "fact": "Células fotovoltaicas convertem luz em eletricidade. Na ISS, os painéis fornecem energia e carregam baterias durante a iluminação.",
+      "scope": "A geração depende de iluminação, apontamento e condições de operação. Durante um eclipse, a carga precisa recorrer à energia armazenada ou a outra fonte.",
+      "teaching": "Identificar quando é possível operar um instrumento com geração solar e quando é necessário usar a reserva.",
+      "sourceIds": ["smallsat-power", "iss-battery"]
+    },
+    {
+      "id": "battery",
+      "category": "energy",
+      "label": "Baterias Li-ion",
+      "status": "tecnologia-documentada",
+      "fact": "Baterias recarregáveis de íons de lítio armazenam energia. A ISS adotou essa tecnologia em substituição às baterias de níquel-hidrogênio de seu sistema elétrico.",
+      "scope": "A energia disponível depende do estado de carga e dos limites operacionais. A recarga requer uma fonte de geração.",
+      "teaching": "Usar a reserva para sustentar uma leitura em eclipse e planejar a próxima recarga.",
+      "sourceIds": ["smallsat-power", "iss-battery"]
+    },
+    {
+      "id": "hybrid",
+      "category": "energy",
+      "label": "Sistema híbrido (solar + bateria)",
+      "status": "tecnologia-documentada",
+      "fact": "Combina geração fotovoltaica e armazenamento. A ISS carrega baterias na parte iluminada de sua órbita e usa a energia armazenada no eclipse.",
+      "scope": "A combinação cobre o intervalo de sombra quando a reserva acumulada atende à demanda dos sistemas.",
+      "teaching": "Comparar geração, reserva e consumo ao longo de uma sequência de luz e sombra.",
+      "sourceIds": ["smallsat-power", "iss-battery"]
+    },
+    {
+      "id": "basic",
+      "category": "protection",
+      "label": "Estrutura básica",
+      "status": "conceito-documentado",
+      "fact": "A estrutura suporta e integra a carga. O projeto considera esforços do lançamento, interfaces e requisitos dos instrumentos em operação.",
+      "scope": "A adequação varia com a montagem, a carga e o ambiente de lançamento. Estrutura básica é uma categoria do jogo.",
+      "teaching": "Associar a estabilidade do suporte a uma medida que exige alinhamento, como a imagem de uma câmera óptica.",
+      "sourceIds": ["smallsat-structures", "smallsat-launch"]
+    },
+    {
+      "id": "damped",
+      "category": "protection",
+      "label": "Isolamento ativo de vibração",
+      "status": "tecnologia-documentada",
+      "fact": "Isolamento ativo de vibração usa controle para reduzir perturbações mecânicas. O ARIS foi desenvolvido para proteger experimentos sensíveis em racks a bordo da ISS.",
+      "scope": "O ARIS documenta isolamento durante experimentos em órbita. A proteção contra vibração durante o lançamento exige qualificação específica da montagem.",
+      "teaching": "Avaliar se uma leitura sensível melhora em uma etapa sujeita a vibração e considerar o consumo do sistema ativo.",
+      "sourceIds": ["aris", "smallsat-structures"]
+    },
+    {
+      "id": "thermal",
+      "category": "protection",
+      "label": "Manta multicamada (MLI)",
+      "status": "tecnologia-documentada",
+      "fact": "Uma manta multicamada reduz trocas térmicas por radiação no vácuo. É uma medida passiva de controle térmico.",
+      "scope": "A manta atua sobre calor. O dimensionamento térmico considera exposição, dissipação e faixa de operação do instrumento.",
+      "teaching": "Identificar uma leitura vulnerável a variações de temperatura e comparar qual proteção atende ao requisito de medida.",
+      "sourceIds": ["smallsat-thermal"]
+    },
+    {
+      "id": "startracker",
+      "category": "navigation",
+      "label": "Star tracker + banda S",
+      "status": "pacote-didatico",
+      "fact": "O sensor estelar determina a atitude a partir de padrões de estrelas. O rádio em banda S pode levar telemetria e comandos em um enlace compatível.",
+      "scope": "A atitude indica para onde a nave aponta. O sistema de rádio depende de uma rede compatível, visibilidade e orçamento de enlace. O jogo agrupa essas duas funções em uma escolha.",
+      "teaching": "Identificar se o dado faltante exige apontar melhor o instrumento ou restabelecer a comunicação com solo.",
+      "sourceIds": ["smallsat-gnc", "smallsat-comms"]
+    },
+    {
+      "id": "gps",
+      "category": "navigation",
+      "label": "GPS orbital",
+      "status": "tecnologia-documentada",
+      "fact": "Receptores GPS são usados para determinar a órbita de espaçonaves em órbita baixa terrestre. O experimento LuGRE demonstrou recepção e localização com GPS e Galileo na Lua.",
+      "scope": "Órbita baixa terrestre é o contexto operacional de referência. Na Lua, o resultado citado é uma demonstração. Marte demanda uma solução de navegação compatível com o ambiente e a missão.",
+      "teaching": "Conferir quais sinais estão disponíveis em cada fase e escolher o método de posição apropriado.",
+      "sourceIds": ["smallsat-gnc", "lugre", "escapade"]
+    },
+    {
+      "id": "redundant",
+      "category": "navigation",
+      "label": "Navegação redundante",
+      "status": "conceito-documentado",
+      "fact": "Sensores ou caminhos de processamento redundantes podem manter funções críticas quando ocorre uma falha prevista. A NASA descreve sensores e computadores de navegação redundantes na Orion.",
+      "scope": "A disponibilidade depois da falha depende das funções cobertas, dos recursos que os sistemas compartilham e do modo de recuperação.",
+      "teaching": "Simular a falha de um sensor e identificar qual caminho alternativo ainda entrega atitude ou posição.",
+      "sourceIds": ["orion-avionics", "smallsat-gnc"]
+    }
+  ],
+  "scienceApplications": [
+    {
+      "id": "iss",
+      "label": "Estação Espacial Internacional",
+      "topic": "Qualidade do ar interno",
+      "fact": "Os monitores de qualidade do ar da ISS detectam compostos orgânicos voláteis na atmosfera interna da estação.",
+      "question": "Que medida permite acompanhar a variação de um contaminante ao longo do tempo?",
+      "measure": "Série temporal de concentrações em amostras do ar da cabine, com identificação do composto e horário da leitura.",
+      "teaching": "Separar transporte do experimento, fornecimento de energia e recebimento do dado. Justificar a escolha do monitor a partir da medida.",
+      "sourceIds": ["iss-air", "commercial-resupply", "iss-battery"]
+    },
+    {
+      "id": "lua",
+      "label": "Lua",
+      "topic": "Gelo e condições polares",
+      "fact": "O radiômetro Diviner do LRO mapeia temperaturas. O LEND contabiliza nêutrons e ajuda a inferir a distribuição de hidrogênio no solo lunar.",
+      "question": "Quais regiões combinam temperaturas favoráveis à retenção de gelo e indícios de hidrogênio?",
+      "measure": "Mapa de temperaturas e mapa de indícios de hidrogênio sobre a mesma região. A sobreposição ajuda a escolher onde investigar a presença de gelo.",
+      "teaching": "Comparar duas cargas de observação para produzir evidências complementares e explicar o que cada produto permite concluir.",
+      "sourceIds": ["lro-instruments", "lro-launch"]
+    },
+    {
+      "id": "marte",
+      "label": "Marte",
+      "topic": "Tempo atmosférico e geologia",
+      "fact": "Em Jezero, o MEDA do Perseverance mede variáveis atmosféricas e poeira. O PIXL usa fluorescência de raios X para analisar a composição elementar de materiais.",
+      "question": "Que observação distingue uma mudança de vento e poeira de uma diferença entre duas rochas?",
+      "measure": "Série temporal de meteorologia local e mapa de distribuição de elementos em um alvo geológico.",
+      "teaching": "Vincular cada pergunta ao instrumento e ao produto. Uma escolha baseada na ciência explica por que cada leitura precisa chegar ao relatório.",
+      "sourceIds": ["perseverance-instruments", "perseverance-launch"]
+    }
+  ]
+}

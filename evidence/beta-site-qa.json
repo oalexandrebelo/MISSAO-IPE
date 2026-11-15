@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T13:07:59.100Z",
-  "finishedAt": "2026-11-15T13:08:02.152Z",
+  "startedAt": "2026-11-15T13:50:20.513Z",
+  "finishedAt": "2026-11-15T13:50:23.276Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "192e3ffcb9f041e0bfa4bff1fb08c504bd727e9b8aceaa7f0c80bf7c8efd1c49"
+        "sha256": "3c0fa7e953351f1bf8fc690bfec8c10cc36f8058aabd20a12c4ba3fc841bd5e2"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 394,
-      "manifestedFiles": 393,
-      "bytes": 31357088,
+      "fileCount": 409,
+      "manifestedFiles": 408,
+      "bytes": 31617308,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -56,7 +56,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 346,
+      "inspectedFiles": 361,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -104,8 +104,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 2679,
-      "uniqueTargets": 288,
+      "count": 2759,
+      "uniqueTargets": 301,
       "entries": [
         {
           "source": "acessibilidade/guia.html",
@@ -353,6 +353,114 @@
         },
         {
           "source": "brand/preview-r17.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/brand/missao-ipe-logo-stacked.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/brand-provenance-r22.json",
+          "requestPath": "/brand/brand-provenance-r22.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/originals/missao-ipe-frame-11-original.svg",
+          "requestPath": "/brand/originals/missao-ipe-frame-11-original.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/brand/missao-ipe-logo-stacked.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/brand/missao-ipe-logo-stacked.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "brand/preview-r22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "brand/preview-r22.html",
           "target": "acessibilidade/libras.css",
           "requestPath": "/acessibilidade/libras.css",
           "kind": "link-stylesheet"
@@ -4130,6 +4238,20 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-58-catalogo-nasa-e-integracao-bruno-r22-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-59-marca-oficial-e-deploy-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -5565,6 +5687,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-44-historias-reais-e-limites-didaticos-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-48-handoff-dois-devs-r19-md"
         },
         {
@@ -5883,8 +6012,14 @@
         },
         {
           "source": "dashboard/index.html",
-          "target": "presentation/pitch/assets/missao-ipe-logo.svg",
-          "requestPath": "/presentation/pitch/assets/missao-ipe-logo.svg",
+          "target": "brand/missao-ipe-logo.svg",
+          "requestPath": "/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "dashboard/index.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
           "kind": "link-icon"
         },
         {
@@ -12241,6 +12376,224 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "requestPath": "/docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
+          "requestPath": "/docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "research/nasa-equipment-r22.json",
+          "requestPath": "/research/nasa-equipment-r22.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
+          "requestPath": "/docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+          "requestPath": "/docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "requestPath": "/docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
+          "requestPath": "/docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+          "requestPath": "/docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/AUTORIA-E-IA.html",
           "target": "docs/AUTORIA-E-IA.html",
           "requestPath": "/docs/AUTORIA-E-IA.html",
@@ -12982,6 +13335,30 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "requestPath": "/docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+          "requestPath": "/docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "requestPath": "/docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+          "requestPath": "/docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
           "kind": "navigation"
         },
         {
@@ -14478,6 +14855,114 @@
         },
         {
           "source": "lab/brand/preview-r17.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-logo.svg",
+          "requestPath": "/lab/brand/missao-ipe-logo.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/lab/brand/missao-ipe-logo-stacked.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/brand-provenance-r22.json",
+          "requestPath": "/lab/brand/brand-provenance-r22.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/originals/missao-ipe-frame-11-original.svg",
+          "requestPath": "/lab/brand/originals/missao-ipe-frame-11-original.svg",
+          "kind": "navigation"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-logo.svg",
+          "requestPath": "/lab/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/lab/brand/missao-ipe-logo-stacked.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-logo.svg",
+          "requestPath": "/lab/brand/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-logo-stacked.svg",
+          "requestPath": "/lab/brand/missao-ipe-logo-stacked.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "img"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
+          "target": "lab/brand/missao-ipe-symbol.svg",
+          "requestPath": "/lab/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "lab/brand/preview-r22.html",
           "target": "acessibilidade/libras.css",
           "requestPath": "/acessibilidade/libras.css",
           "kind": "link-stylesheet"
@@ -16823,8 +17308,8 @@
         },
         {
           "source": "presentation/pitch/index.html",
-          "target": "presentation/pitch/assets/missao-ipe-logo.svg",
-          "requestPath": "/presentation/pitch/assets/missao-ipe-logo.svg",
+          "target": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+          "requestPath": "/presentation/pitch/assets/missao-ipe-logo-stacked.svg",
           "kind": "img"
         },
         {
@@ -16847,8 +17332,8 @@
         },
         {
           "source": "presentation/pitch/index.html",
-          "target": "presentation/pitch/assets/missao-ipe-logo.svg",
-          "requestPath": "/presentation/pitch/assets/missao-ipe-logo.svg",
+          "target": "presentation/pitch/assets/missao-ipe-symbol.svg",
+          "requestPath": "/presentation/pitch/assets/missao-ipe-symbol.svg",
           "kind": "link-icon"
         },
         {
@@ -17610,7 +18095,7 @@
       {
         "path": "campanha/release.json",
         "source": "experiments/four-level-campaign/dist/release.json",
-        "sha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc"
+        "sha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200"
       },
       {
         "path": "campanha/research/assets/briefing-desktop.jpg",
@@ -17921,6 +18406,11 @@
         "sha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70"
       },
       {
+        "path": "lab/brand/brand-provenance-r22.json",
+        "source": "experiments/mission-design-lab/dist/brand/brand-provenance-r22.json",
+        "sha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31"
+      },
+      {
         "path": "lab/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
         "source": "experiments/mission-design-lab/dist/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
         "sha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df"
@@ -17939,6 +18429,11 @@
         "path": "lab/brand/missao-ipe-logo-on-light.svg",
         "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-on-light.svg",
         "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73"
+      },
+      {
+        "path": "lab/brand/missao-ipe-logo-stacked.svg",
+        "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-stacked.svg",
+        "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41"
       },
       {
         "path": "lab/brand/missao-ipe-logo.png",
@@ -17966,6 +18461,11 @@
         "sha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d"
       },
       {
+        "path": "lab/brand/originals/missao-ipe-frame-11-original.svg",
+        "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-frame-11-original.svg",
+        "sha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04"
+      },
+      {
         "path": "lab/brand/originals/missao-ipe-logo-original.svg",
         "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-logo-original.svg",
         "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e"
@@ -17990,6 +18490,12 @@
         "path": "lab/brand/preview-r17.html",
         "source": "experiments/mission-design-lab/dist/brand/preview-r17.html",
         "sha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
+        "libras": "public"
+      },
+      {
+        "path": "lab/brand/preview-r22.html",
+        "source": "experiments/mission-design-lab/dist/brand/preview-r22.html",
+        "sha256": "2ac178e50144b64b08db961b0bc9aba58f8534549e7436870eb56fb91be930e3",
         "libras": "public"
       },
       {
@@ -18404,9 +18910,19 @@
         "sha256": "d6c7adc5950fb5aa2317a618b4619413f803e4e55554d01a99610904fec001a0"
       },
       {
+        "path": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+        "source": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+        "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41"
+      },
+      {
         "path": "presentation/pitch/assets/missao-ipe-logo.svg",
         "source": "presentation/pitch/assets/missao-ipe-logo.svg",
         "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a"
+      },
+      {
+        "path": "presentation/pitch/assets/missao-ipe-symbol.svg",
+        "source": "presentation/pitch/assets/missao-ipe-symbol.svg",
+        "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65"
       },
       {
         "path": "presentation/pitch/assets/NOTICE-MOTIONMAXXING.txt",
@@ -18421,13 +18937,13 @@
       {
         "path": "presentation/pitch/index.html",
         "source": "presentation/pitch/index.html",
-        "sha256": "2098f3df390cd5d19f207611752794a552168eb877f47ef5590304b9582acfc5",
+        "sha256": "56400a0f241c325908d8f2801268c93c5038736103552af39ea0bd063b78d3dd",
         "libras": "public"
       },
       {
         "path": "presentation/pitch/pitch.css",
         "source": "presentation/pitch/pitch.css",
-        "sha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007"
+        "sha256": "96e3cdb5d7a1d59c078575654321ed0505368d926993036b23d2b241a106d1bf"
       },
       {
         "path": "presentation/pitch/pitch.js",
@@ -18487,7 +19003,7 @@
     ],
     "scientificFilesPerLocation": 10,
     "libras": {
-      "public": 78,
+      "public": 82,
       "lab": 1,
       "dashboard": 1
     },
@@ -18563,8 +19079,8 @@
       {
         "path": "acessibilidade/guia.html",
         "status": 200,
-        "bytes": 1604,
-        "sha256": "0bfed32422987a69a1710b9b2a1fe1e567bcacc676e0aa2bd64203eeb0156743",
+        "bytes": 1632,
+        "sha256": "88121aed9f90e0308f905a3eb3bf1a3adb769c800b5922724804a9a225988ba0",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -18617,10 +19133,24 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "brand/brand-provenance-r22.json",
+        "status": 200,
+        "bytes": 5363,
+        "sha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
         "path": "brand/missao-ipe-logo-on-light.svg",
         "status": 200,
         "bytes": 23367,
         "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+        "contentType": "image/svg+xml"
+      },
+      {
+        "path": "brand/missao-ipe-logo-stacked.svg",
+        "status": 200,
+        "bytes": 23598,
+        "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
         "contentType": "image/svg+xml"
       },
       {
@@ -18652,6 +19182,13 @@
         "contentType": "image/svg+xml"
       },
       {
+        "path": "brand/originals/missao-ipe-frame-11-original.svg",
+        "status": 200,
+        "bytes": 22975,
+        "sha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+        "contentType": "image/svg+xml"
+      },
+      {
         "path": "brand/originals/missao-ipe-logo-original.svg",
         "status": 200,
         "bytes": 23279,
@@ -18670,6 +19207,13 @@
         "status": 200,
         "bytes": 5046,
         "sha256": "42a4b5853a4e87b30a82cf69f22b201ad028e0e522b22dd2caf0d442ea394a8a",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "brand/preview-r22.html",
+        "status": 200,
+        "bytes": 5986,
+        "sha256": "1c54b8021faffcbab200bfa3fbf581a1f13027e7765a8db51e024de19e980b63",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -18914,7 +19458,7 @@
         "path": "campanha/release.json",
         "status": 200,
         "bytes": 326,
-        "sha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
+        "sha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -19137,29 +19681,29 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 61363,
-        "sha256": "ae8c9f2ba457508113122cd8f64b41ab5d611f6ceebe21d538c9180b3d225791",
+        "bytes": 62410,
+        "sha256": "773afa853acc9492c8e60cda80d5300159e2c013c2fcc6339ffe54722b85fb01",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2302638,
-        "sha256": "18613b25cb08ef2feade04119e0fedec3ef26fcbb22dde7318f7a5a7bc5b1959",
+        "bytes": 2323943,
+        "sha256": "607cf7de21f963cefa977bab9d35fb37a696aa843d9bfd8b71f191091c63f0a5",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1850680,
-        "sha256": "44450d6b9a0279a6228aa540c75fdb068569ad8ec222bfb55f903f84132f5e1b",
+        "bytes": 1866302,
+        "sha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "dashboard/dashboard.css",
         "status": 200,
-        "bytes": 6512,
-        "sha256": "9a432847312d5246bab02b777417be474f868d8aa0d82b25d94a62787bed0d82",
+        "bytes": 6580,
+        "sha256": "414e8736d5a8515e82ff77211d41da8f29f5a728fd9c394fe28d94a27cefe0d6",
         "contentType": "text/css; charset=utf-8"
       },
       {
@@ -19172,8 +19716,8 @@
       {
         "path": "dashboard/index.html",
         "status": 200,
-        "bytes": 6625,
-        "sha256": "314df19a2a90d91df05365fd86d818f7ecd294687f5e4cea4c7601789b129040",
+        "bytes": 6706,
+        "sha256": "b100f260485d66de17088bb1f84a48dec2fe1402cb024d8fed7353c9ef0cb7b6",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -19828,6 +20372,34 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+        "status": 200,
+        "bytes": 12622,
+        "sha256": "c4e4d1a49089242a89673cddabfc611493e0545b7201e163038665b80adebe83",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+        "status": 200,
+        "bytes": 8537,
+        "sha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+        "status": 200,
+        "bytes": 7434,
+        "sha256": "cf4292fc3b996fea812cc26306b9f9f8e8c0ab1c2c0bf64c44a2e6209ff7e95f",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+        "status": 200,
+        "bytes": 4910,
+        "sha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/AUTORIA-E-IA.html",
         "status": 200,
         "bytes": 3644,
@@ -19900,8 +20472,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 17466,
-        "sha256": "d11974adeda35e3973c757b19fd262eb5aa7a19f04454440209301354895d160",
+        "bytes": 18081,
+        "sha256": "b0da4cba518961885945c86fbfaa651e48dbfa21a262a7cab2706cd5dd60c7a2",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -20248,6 +20820,13 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "lab/brand/brand-provenance-r22.json",
+        "status": 200,
+        "bytes": 5363,
+        "sha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
         "path": "lab/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
         "status": 200,
         "bytes": 46175,
@@ -20273,6 +20852,13 @@
         "status": 200,
         "bytes": 23367,
         "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+        "contentType": "image/svg+xml"
+      },
+      {
+        "path": "lab/brand/missao-ipe-logo-stacked.svg",
+        "status": 200,
+        "bytes": 23598,
+        "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
         "contentType": "image/svg+xml"
       },
       {
@@ -20311,6 +20897,13 @@
         "contentType": "image/svg+xml"
       },
       {
+        "path": "lab/brand/originals/missao-ipe-frame-11-original.svg",
+        "status": 200,
+        "bytes": 22975,
+        "sha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+        "contentType": "image/svg+xml"
+      },
+      {
         "path": "lab/brand/originals/missao-ipe-logo-original.svg",
         "status": 200,
         "bytes": 23279,
@@ -20343,6 +20936,13 @@
         "status": 200,
         "bytes": 5055,
         "sha256": "bd2789aa242e4ad004f11877ca8dafe53764c2165cac2a9a17a77756f94f2a68",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "lab/brand/preview-r22.html",
+        "status": 200,
+        "bytes": 5995,
+        "sha256": "981380917ce3c35585e47be2dfc22c33cde76020fa24d4a8bbe5c919c9ae9663",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -21060,10 +21660,24 @@
         "contentType": "font/woff2"
       },
       {
+        "path": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+        "status": 200,
+        "bytes": 23598,
+        "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+        "contentType": "image/svg+xml"
+      },
+      {
         "path": "presentation/pitch/assets/missao-ipe-logo.svg",
         "status": 200,
         "bytes": 23367,
         "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+        "contentType": "image/svg+xml"
+      },
+      {
+        "path": "presentation/pitch/assets/missao-ipe-symbol.svg",
+        "status": 200,
+        "bytes": 17984,
+        "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
         "contentType": "image/svg+xml"
       },
       {
@@ -21076,15 +21690,15 @@
       {
         "path": "presentation/pitch/index.html",
         "status": 200,
-        "bytes": 26287,
-        "sha256": "c691b79f02a34690c6e93c9c716676c5b7fd0d8cc616399583b40c96dc91b1a7",
+        "bytes": 26318,
+        "sha256": "dd150f7f756b67141684ba217071b1c3c86dfb5c2231c72406dfbabcd421a6ba",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "presentation/pitch/pitch.css",
         "status": 200,
-        "bytes": 21165,
-        "sha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
+        "bytes": 21347,
+        "sha256": "96e3cdb5d7a1d59c078575654321ed0505368d926993036b23d2b241a106d1bf",
         "contentType": "text/css; charset=utf-8"
       },
       {
@@ -21167,8 +21781,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 176986,
-        "sha256": "192e3ffcb9f041e0bfa4bff1fb08c504bd727e9b8aceaa7f0c80bf7c8efd1c49",
+        "bytes": 183840,
+        "sha256": "3c0fa7e953351f1bf8fc690bfec8c10cc36f8058aabd20a12c4ba3fc841bd5e2",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -21263,6 +21877,13 @@
         "contentType": "application/json; charset=utf-8"
       },
       {
+        "path": "research/nasa-equipment-r22.json",
+        "status": 200,
+        "bytes": 23449,
+        "sha256": "5f4549d51c663de6d657cfd7433a5eaccb55b15e775e64a80fb0dbaeba5de7e7",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
         "path": "research/nasa-mission-stories-r17.json",
         "status": 200,
         "bytes": 7442,
@@ -21306,7 +21927,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 310,
+      "linkedRoutesChecked": 323,
       "redirects": [
         {
           "source": "/campanha/research",
@@ -21441,92 +22062,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 13.941
+      "durationMs": 14.253
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.348
+      "durationMs": 0.34
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 69.597
+      "durationMs": 70.645
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.22
+      "durationMs": 1.425
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 73.392
+      "durationMs": 72.965
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1390.099
+      "durationMs": 1251.856
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.633
+      "durationMs": 0.874
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 660.488
+      "durationMs": 525.642
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 89.772
+      "durationMs": 71.479
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 46.61
+      "durationMs": 35.109
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.679
+      "durationMs": 2.566
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 99.553
+      "durationMs": 85.559
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 6.203
+      "durationMs": 5.864
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 62.645
+      "durationMs": 61.856
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 236.598
+      "durationMs": 279.891
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 142.689
+      "durationMs": 126.646
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.602
+      "durationMs": 1.291
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 85.425
+      "durationMs": 98.762
     }
   ]
 }

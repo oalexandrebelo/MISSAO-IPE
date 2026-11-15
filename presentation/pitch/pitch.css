@@ -601,3 +601,6 @@ dialog th { font-weight: 650; color: var(--gold); }
   .tool-button, .text-button { border: 1px solid ButtonText; }
   .button[aria-pressed="true"], .tool-button[aria-pressed="true"], .scene-index a[aria-current="step"] { border: 2px solid Highlight; color: Highlight; }
 }
+
+/* A assinatura vertical conserva a proporção do SVG oficial. */
+.closing .mission-mark-stacked { width:auto; height:clamp(100px,19vh,160px); margin-bottom:1rem; flex-shrink:0; }

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "edition": "R22",
+  "reviewedAt": "2026-11-15",
+  "brandName": "MISSÃO IPÊ",
+  "decision": "Aplicação da marca oficial fornecida e escolhida pelo responsável. Sem novos desenhos, fontes ou alterações nas curvas e cores.",
+  "sources": [
+    {
+      "file": "originals/missao-ipe-logo-original.svg",
+      "bytes": 23279,
+      "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
+      "viewBox": "0 0 1064 499",
+      "pathCount": 35,
+      "suppliedName": "LOGO_MISASO_IPE.svg",
+      "byteIdenticalToSupplied": true
+    },
+    {
+      "file": "originals/missao-ipe-symbol-original.svg",
+      "bytes": 17870,
+      "sha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
+      "viewBox": "0 0 488 414",
+      "pathCount": 25,
+      "suppliedName": "LOGO_MISSAO.svg",
+      "byteIdenticalToSupplied": true
+    },
+    {
+      "file": "originals/missao-ipe-frame-11-original.svg",
+      "bytes": 22975,
+      "sha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "viewBox": "0 0 1150 500",
+      "pathCount": 35,
+      "suppliedName": "Frame 11.svg",
+      "byteIdenticalToSupplied": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "missao-ipe-logo.svg",
+      "bytes": 23367,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "viewBox": "0 0 1064 499",
+      "pathCount": 35,
+      "geometryPreserved": true,
+      "palettePreserved": true,
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    },
+    {
+      "file": "missao-ipe-symbol.svg",
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "viewBox": "0 -37 488 488",
+      "pathCount": 25,
+      "geometryPreserved": true,
+      "palettePreserved": true,
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    },
+    {
+      "file": "missao-ipe-logo-stacked.svg",
+      "bytes": 23598,
+      "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "viewBox": "0 0 890 1110",
+      "pathCount": 35,
+      "geometryPreserved": true,
+      "palettePreserved": true,
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    }
+  ],
+  "stackedDerivation": {
+    "kind": "Recomposição vetorial da assinatura vertical de referência; não é cópia byte a byte de um SVG vertical fornecido.",
+    "reference": "Imagem quadrada fornecida, 1254 × 1254: símbolo grande acima, wordmark menor abaixo. O fundo cinza é somente referência e não integra a marca.",
+    "groups": [
+      {
+        "id": "brand-signature",
+        "transform": "translate(-200 -70)",
+        "purpose": "Recorta exclusivamente as margens vazias e normaliza a origem do viewBox."
+      },
+      {
+        "id": "brand-symbol",
+        "source": "originals/missao-ipe-symbol-original.svg",
+        "sourcePaths": "1–25, na ordem original",
+        "transform": "translate(255 118) scale(1.59)"
+      },
+      {
+        "id": "brand-wordmark",
+        "source": "originals/missao-ipe-logo-original.svg",
+        "sourcePaths": "1–10, na ordem original",
+        "transform": "translate(-253.55 659.2) scale(1.1)"
+      }
+    ],
+    "pathAttributesUnchanged": true,
+    "uniformScalesOnly": true,
+    "pathCount": 35,
+    "palette": [
+      "#F5F0E5",
+      "#508AA2",
+      "#E29A6F",
+      "#BF6C47"
+    ],
+    "intrinsicDimensions": [
+      890,
+      1110
+    ],
+    "fixedSvgDimensions": false,
+    "transparentBackground": true
+  },
+  "integration": {
+    "canonicalHorizontal": "missao-ipe-logo.svg permanece byte a byte igual ao canônico R17; proporção 1064:499.",
+    "canonicalSymbol": "missao-ipe-symbol.svg permanece byte a byte igual ao canônico R17; viewBox quadrado 0 -37 488 488 para ícones.",
+    "stackedUse": [
+      "apps/immersive-lp/public/brand/missao-ipe-logo-stacked.svg — assinatura do rodapé"
+    ],
+    "campaign": "Sem cópia da nova assinatura vertical: não há uso nesta superfície.",
+    "lightVariants": "Aliases *-on-light.svg legados da R17 preservados sem alterações nesta rodada; recoloração de contraste documentada em brand-provenance-r17.json.",
+    "originalFrame11": "Arquivo oficial arquivado sem alteração para rastreabilidade; não substitui a assinatura horizontal canônica."
+  },
+  "validation": {
+    "xmlParsed": true,
+    "stackedPathAttributesComparedToSources": true,
+    "canonicalPathAttributesComparedToSources": true,
+    "frame11OriginalBytesCompared": true,
+    "lpStackedBytesCompared": true,
+    "elementsAllowed": [
+      "svg",
+      "title",
+      "g",
+      "path"
+    ],
+    "preview": "preview-r22.html",
+    "scope": "Integridade vetorial, proporções e ausência de imagens, fontes externas e fundos embutidos. A aceitação visual no navegador é registrada separadamente."
+  },
+  "guidance": {
+    "url": "https://github.com/neonwatty/logo-designer-skill/blob/944106e2b6708d28154d3e8e9ddd42c651337cdf/skills/logo-designer/SKILL.md",
+    "revision": "944106e2b6708d28154d3e8e9ddd42c651337cdf"
+  }
+}

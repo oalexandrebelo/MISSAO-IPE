@@ -22,6 +22,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/59-MARCA-OFICIAL-E-DEPLOY.md', target: 'docs/59-MARCA-OFICIAL-E-DEPLOY.md', title: 'Marca oficial e publicação', description: 'Aplicação dos SVGs, diagnóstico de deploy e continuidade para os dois desenvolvedores.' },
+  { source: 'docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md', target: 'docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md', title: 'Catálogo NASA · preparação da integração Bruno', description: 'Fontes verificadas para 18 equipamentos e limites da futura expansão para ISS, Lua e Marte.' },
   { source: 'docs/57-KIT-PRE-BANCA-R21.md', target: 'docs/57-KIT-PRE-BANCA-R21.md', title: 'Kit pré-banca · R21', description: 'Checklist, suíte executável, roteiro de demonstração e evidências para a banca.' },
   { source: 'docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md', target: 'docs/56-ACESSIBILIDADE-E-LIBRAS-R21.md', title: 'Acessibilidade e Libras · R21', description: 'Como usar o VLibras, onde a tradução está disponível e como a sessão privada é protegida.' },
   { source: 'docs/53-PITCH-JURADOS-E-FALA-R21.md', target: 'docs/53-PITCH-JURADOS-E-FALA-R21.md', title: 'Pitch para jurados · fala de 3 minutos', description: 'Aprendizado por missão, decisões visíveis e fala de Alexandre Belo.' },
@@ -204,12 +206,13 @@ try {
   await copy('web/planet-jumping.html', 'planet-jumping.html', 'standalone-remote-media-experiment');
   await copy('research/technology-opportunities-r16.json', 'research/technology-opportunities-r16.json', 'reviewed-technology-opportunities');
   await copy('research/nasa-opportunities-r18.json', 'research/nasa-opportunities-r18.json', 'research-proposals-r18');
+  await copy('research/nasa-equipment-r22.json', 'research/nasa-equipment-r22.json', 'research-proposals-r22');
   for (const name of ['bruno-consolidation-r17', 'readiness-r17', 'nasa-mission-stories-r17']) await copy(`research/${name}.json`, `research/${name}.json`, 'reviewed-r17-evidence');
   await copy('research/pr-assets-r16.json', 'research/pr-assets-r16.json', 'reviewed-pr-asset-inventory');
   await copy('research/nasa-science-opportunities.json', 'research/nasa-science-opportunities.json', 'official-nasa-science-opportunities');
   await copy('research/nasa-3d-catalog.json', 'research/nasa-3d-catalog.json', 'official-3d-resource-catalog');
   await copy('web/documentation.css', 'documentation.css', 'documentation-style');
-  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo-on-light.svg', 'projeto-ipe-logo.png', 'missao-ipe-logo.svg', 'missao-ipe-logo-on-light.svg', 'missao-ipe-symbol.svg', 'missao-ipe-symbol-on-light.svg', 'missao-ipe-logo.png', 'brand-provenance-r17.json', 'preview-r17.html', 'originals/missao-ipe-logo-original.svg', 'originals/missao-ipe-symbol-original.svg']) {
+  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo-on-light.svg', 'projeto-ipe-logo.png', 'missao-ipe-logo.svg', 'missao-ipe-logo-on-light.svg', 'missao-ipe-symbol.svg', 'missao-ipe-symbol-on-light.svg', 'missao-ipe-logo.png', 'brand-provenance-r17.json', 'preview-r17.html', 'missao-ipe-logo-stacked.svg', 'brand-provenance-r22.json', 'preview-r22.html', 'originals/missao-ipe-frame-11-original.svg', 'originals/missao-ipe-logo-original.svg', 'originals/missao-ipe-symbol-original.svg']) {
     await copy(`experiments/mission-design-lab/public/brand/${name}`, `brand/${name}`, 'project-brand');
   }
   await copy('web/mission-visuals.css', 'mission-visuals.css', 'interactive-visual-style');

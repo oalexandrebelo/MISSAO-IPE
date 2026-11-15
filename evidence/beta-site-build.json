@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-15T13:07:58.150Z",
+  "generatedAt": "2026-11-15T13:50:19.573Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 394,
-  "bytes": 31357088,
+  "fileCount": 409,
+  "bytes": 31617308,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 176986,
-    "sha256": "192e3ffcb9f041e0bfa4bff1fb08c504bd727e9b8aceaa7f0c80bf7c8efd1c49"
+    "bytes": 183840,
+    "sha256": "3c0fa7e953351f1bf8fc690bfec8c10cc36f8058aabd20a12c4ba3fc841bd5e2"
   },
   "entries": [
     {
       "path": "acessibilidade/guia.html",
-      "bytes": 1604,
-      "sha256": "0bfed32422987a69a1710b9b2a1fe1e567bcacc676e0aa2bd64203eeb0156743",
+      "bytes": 1632,
+      "sha256": "88121aed9f90e0308f905a3eb3bf1a3adb769c800b5922724804a9a225988ba0",
       "category": "libras-integration",
       "source": "apps/immersive-lp/public/acessibilidade/guia.html",
-      "sourceSha256": "0bfed32422987a69a1710b9b2a1fe1e567bcacc676e0aa2bd64203eeb0156743",
+      "sourceSha256": "88121aed9f90e0308f905a3eb3bf1a3adb769c800b5922724804a9a225988ba0",
       "transformation": "none; bytes preserved"
     },
     {
@@ -85,12 +85,30 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "brand/brand-provenance-r22.json",
+      "bytes": 5363,
+      "sha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+      "category": "project-brand",
+      "source": "experiments/mission-design-lab/public/brand/brand-provenance-r22.json",
+      "sourceSha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "brand/missao-ipe-logo-on-light.svg",
       "bytes": 23367,
       "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
       "category": "project-brand",
       "source": "experiments/mission-design-lab/public/brand/missao-ipe-logo-on-light.svg",
       "sourceSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "brand/missao-ipe-logo-stacked.svg",
+      "bytes": 23598,
+      "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "category": "project-brand",
+      "source": "experiments/mission-design-lab/public/brand/missao-ipe-logo-stacked.svg",
+      "sourceSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
       "transformation": "none; bytes preserved"
     },
     {
@@ -130,6 +148,15 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "brand/originals/missao-ipe-frame-11-original.svg",
+      "bytes": 22975,
+      "sha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "category": "project-brand",
+      "source": "experiments/mission-design-lab/public/brand/originals/missao-ipe-frame-11-original.svg",
+      "sourceSha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "brand/originals/missao-ipe-logo-original.svg",
       "bytes": 23279,
       "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
@@ -154,6 +181,16 @@
       "category": "project-brand",
       "source": "experiments/mission-design-lab/public/brand/preview-r17.html",
       "sourceSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
+      "libras": "public"
+    },
+    {
+      "path": "brand/preview-r22.html",
+      "bytes": 5986,
+      "sha256": "1c54b8021faffcbab200bfa3fbf581a1f13027e7765a8db51e024de19e980b63",
+      "category": "project-brand",
+      "source": "experiments/mission-design-lab/public/brand/preview-r22.html",
+      "sourceSha256": "2ac178e50144b64b08db961b0bc9aba58f8534549e7436870eb56fb91be930e3",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "public"
     },
@@ -468,10 +505,10 @@
     {
       "path": "campanha/release.json",
       "bytes": 326,
-      "sha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
+      "sha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/release.json",
-      "sourceSha256": "c8714911fb2d3713e43179cf6ef4fb42dd65c03dd2c6af3fa8420dc118d328cc",
+      "sourceSha256": "e5ace5e827b8988f613d48d7ebdfc1d8e291eacb4bb16b666f8efa2e4270d200",
       "transformation": "none; bytes preserved"
     },
     {
@@ -758,39 +795,39 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 61363,
-      "sha256": "ae8c9f2ba457508113122cd8f64b41ab5d611f6ceebe21d538c9180b3d225791",
+      "bytes": 62410,
+      "sha256": "773afa853acc9492c8e60cda80d5300159e2c013c2fcc6339ffe54722b85fb01",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "ae8c9f2ba457508113122cd8f64b41ab5d611f6ceebe21d538c9180b3d225791",
+      "sourceSha256": "773afa853acc9492c8e60cda80d5300159e2c013c2fcc6339ffe54722b85fb01",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2302638,
-      "sha256": "18613b25cb08ef2feade04119e0fedec3ef26fcbb22dde7318f7a5a7bc5b1959",
+      "bytes": 2323943,
+      "sha256": "607cf7de21f963cefa977bab9d35fb37a696aa843d9bfd8b71f191091c63f0a5",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "1fabc1c8457335afd048baa0169cbb9c395fabd6b5fb2df42d4f5d64626dfa9f",
+      "sourceSha256": "d18275d756c22b0b11ef192b379f1ad0fd7890d3074b964b83798bf1c6b8659a",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "public"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1850680,
-      "sha256": "44450d6b9a0279a6228aa540c75fdb068569ad8ec222bfb55f903f84132f5e1b",
+      "bytes": 1866302,
+      "sha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "44450d6b9a0279a6228aa540c75fdb068569ad8ec222bfb55f903f84132f5e1b",
+      "sourceSha256": "16e30ae477ea84bbdb777babb592cde14dddf90287bbffc9b89157e5e9495f9a",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "dashboard/dashboard.css",
-      "bytes": 6512,
-      "sha256": "9a432847312d5246bab02b777417be474f868d8aa0d82b25d94a62787bed0d82",
+      "bytes": 6580,
+      "sha256": "414e8736d5a8515e82ff77211d41da8f29f5a728fd9c394fe28d94a27cefe0d6",
       "category": "private-dashboard-shell",
       "source": "dashboard/dashboard.css",
-      "sourceSha256": "9a432847312d5246bab02b777417be474f868d8aa0d82b25d94a62787bed0d82",
+      "sourceSha256": "414e8736d5a8515e82ff77211d41da8f29f5a728fd9c394fe28d94a27cefe0d6",
       "transformation": "none; bytes preserved"
     },
     {
@@ -804,11 +841,11 @@
     },
     {
       "path": "dashboard/index.html",
-      "bytes": 6625,
-      "sha256": "314df19a2a90d91df05365fd86d818f7ecd294687f5e4cea4c7601789b129040",
+      "bytes": 6706,
+      "sha256": "b100f260485d66de17088bb1f84a48dec2fe1402cb024d8fed7353c9ef0cb7b6",
       "category": "private-dashboard-shell",
       "source": "dashboard/index.html",
-      "sourceSha256": "018f2956a746f2c0c73e20e3098b12b2e9b2b7b536ef02f24ae89e0f468e7bba",
+      "sourceSha256": "2c46d40c56ced0e387ce9408b340c03d90269f00c627665fdc876f0b65f3054c",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "dashboard"
     },
@@ -1696,6 +1733,44 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.html",
+      "bytes": 12622,
+      "sha256": "c4e4d1a49089242a89673cddabfc611493e0545b7201e163038665b80adebe83",
+      "category": "rendered-public-document",
+      "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+      "sourceSha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
+      "libras": "public"
+    },
+    {
+      "path": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+      "bytes": 8537,
+      "sha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
+      "category": "public-document",
+      "source": "docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md",
+      "sourceSha256": "309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.html",
+      "bytes": 7434,
+      "sha256": "cf4292fc3b996fea812cc26306b9f9f8e8c0ab1c2c0bf64c44a2e6209ff7e95f",
+      "category": "rendered-public-document",
+      "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+      "sourceSha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy",
+      "libras": "public"
+    },
+    {
+      "path": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+      "bytes": 4910,
+      "sha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
+      "category": "public-document",
+      "source": "docs/59-MARCA-OFICIAL-E-DEPLOY.md",
+      "sourceSha256": "135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "docs/AUTORIA-E-IA.html",
       "bytes": 3644,
       "sha256": "9fac34f5accfe0b399e9d0c20d7959d6b65b19c629455e0f3816c3c5edf74e50",
@@ -1754,8 +1829,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 17466,
-      "sha256": "d11974adeda35e3973c757b19fd262eb5aa7a19f04454440209301354895d160",
+      "bytes": 18081,
+      "sha256": "b0da4cba518961885945c86fbfaa651e48dbfa21a262a7cab2706cd5dd60c7a2",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
       "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy",
@@ -2245,6 +2320,15 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "lab/brand/brand-provenance-r22.json",
+      "bytes": 5363,
+      "sha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/brand/brand-provenance-r22.json",
+      "sourceSha256": "ef13122978f13453d1e199134e482045389631c2486ffa99c14cb346a249db31",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "lab/brand/history/pre-r14-projeto-ipe-logo-on-light.svg",
       "bytes": 46175,
       "sha256": "22c7739fb90dd6690248d18152497a6365bb5cf0d6461b2ea78f1d4b33a392df",
@@ -2278,6 +2362,15 @@
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-on-light.svg",
       "sourceSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "lab/brand/missao-ipe-logo-stacked.svg",
+      "bytes": 23598,
+      "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-stacked.svg",
+      "sourceSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2326,6 +2419,15 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "lab/brand/originals/missao-ipe-frame-11-original.svg",
+      "bytes": 22975,
+      "sha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-frame-11-original.svg",
+      "sourceSha256": "8b1060c604091990f0ed76868f77350845206e50692d27338974ae67f7bd3c04",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "lab/brand/originals/missao-ipe-logo-original.svg",
       "bytes": 23279,
       "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
@@ -2369,6 +2471,16 @@
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/brand/preview-r17.html",
       "sourceSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
+      "transformation": "local Libras launcher and frame permissions in the public HTML copy",
+      "libras": "public"
+    },
+    {
+      "path": "lab/brand/preview-r22.html",
+      "bytes": 5995,
+      "sha256": "981380917ce3c35585e47be2dfc22c33cde76020fa24d4a8bbe5c919c9ae9663",
+      "category": "mission-lab-runtime",
+      "source": "experiments/mission-design-lab/dist/brand/preview-r22.html",
+      "sourceSha256": "2ac178e50144b64b08db961b0bc9aba58f8534549e7436870eb56fb91be930e3",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "public"
     },
@@ -3274,12 +3386,30 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+      "bytes": 23598,
+      "sha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "category": "interactive-pitch-runtime",
+      "source": "presentation/pitch/assets/missao-ipe-logo-stacked.svg",
+      "sourceSha256": "2f3df93c1e63aebd3ecfa5948473846deda94fde8b94ab313918cc3cc0b7cf41",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "presentation/pitch/assets/missao-ipe-logo.svg",
       "bytes": 23367,
       "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
       "category": "interactive-pitch-runtime",
       "source": "presentation/pitch/assets/missao-ipe-logo.svg",
       "sourceSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "presentation/pitch/assets/missao-ipe-symbol.svg",
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "category": "interactive-pitch-runtime",
+      "source": "presentation/pitch/assets/missao-ipe-symbol.svg",
+      "sourceSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
       "transformation": "none; bytes preserved"
     },
     {
@@ -3302,21 +3432,21 @@
     },
     {
       "path": "presentation/pitch/index.html",
-      "bytes": 26287,
-      "sha256": "c691b79f02a34690c6e93c9c716676c5b7fd0d8cc616399583b40c96dc91b1a7",
+      "bytes": 26318,
+      "sha256": "dd150f7f756b67141684ba217071b1c3c86dfb5c2231c72406dfbabcd421a6ba",
       "category": "interactive-pitch-runtime",
       "source": "presentation/pitch/index.html",
-      "sourceSha256": "2098f3df390cd5d19f207611752794a552168eb877f47ef5590304b9582acfc5",
+      "sourceSha256": "56400a0f241c325908d8f2801268c93c5038736103552af39ea0bd063b78d3dd",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy",
       "libras": "public"
     },
     {
       "path": "presentation/pitch/pitch.css",
-      "bytes": 21165,
-      "sha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
+      "bytes": 21347,
+      "sha256": "96e3cdb5d7a1d59c078575654321ed0505368d926993036b23d2b241a106d1bf",
       "category": "interactive-pitch-runtime",
       "source": "presentation/pitch/pitch.css",
-      "sourceSha256": "32ba8ecad9b20f83cc69d5cd547cfc6f76d2c0b72a48fcbb5819d8d9b7336007",
+      "sourceSha256": "96e3cdb5d7a1d59c078575654321ed0505368d926993036b23d2b241a106d1bf",
       "transformation": "none; bytes preserved"
     },
     {
@@ -3573,6 +3703,15 @@
       "category": "official-3d-resource-catalog",
       "source": "research/nasa-3d-catalog.json",
       "sourceSha256": "b4e19162531da2b4eba41426c8fd898a2626519f23699919f0d46026820658c2",
+      "transformation": "none; bytes preserved"
+    },
+    {
+      "path": "research/nasa-equipment-r22.json",
+      "bytes": 23449,
+      "sha256": "5f4549d51c663de6d657cfd7433a5eaccb55b15e775e64a80fb0dbaeba5de7e7",
+      "category": "research-proposals-r22",
+      "source": "research/nasa-equipment-r22.json",
+      "sourceSha256": "5f4549d51c663de6d657cfd7433a5eaccb55b15e775e64a80fb0dbaeba5de7e7",
       "transformation": "none; bytes preserved"
     },
     {

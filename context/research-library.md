@@ -65,9 +65,23 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `74775bf0c05549fb6bc2aed1dd7b9908fba2499c5878bde2600b1bedda2c2e35` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `f2c670fffa5947b37dc7db6e2140d7be9c3b9a7c52b3e0de19602b2d63a39c2a` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R21 — entrada imersiva, métricas privadas e pitch de 3 minutos
+
+Implementação `327710db39ce070991f01595a54b5800a4f97f64`, beta **0.12.0-beta.1**. Jogo `dpl_Aeq3CfXP1xHLYfAsSCCyoqH5Ag49` e LP `dpl_37udA3fCezmdSUCbgGkU8Q5KgNnN` concluídos como **READY**. O recibo do principal verificou 393 arquivos públicos e 119 documentos; o teste HTTP da API passou em 30 verificações, com uma participação sintética e três tentativas de teste, identificadas como testes técnicos, não participantes humanos.
+
+- Entrada em tela inteira: nome → e-mail → missão → play; alternativa funcional se o navegador não permitir tela cheia.
+- Três missões científicas atuais, pontuação calculada no servidor, painel privado, comparação A/B e análise por papéis.
+- Pitch: seis cenas, 180 segundos, fala de Alexandre Belo e assinatura final com as marcas.
+- Acesso a Libras sob demanda, separado dos campos privados. A revisão posterior identificou o link incorreto da LP e trata a URL de guia exportada pelo Next.
+- [Handoff das métricas](https://projeto-ipe.vercel.app/docs/54-METRICAS-E-HANDOFF-R21.html), [marca e deploy](https://projeto-ipe.vercel.app/docs/59-MARCA-OFICIAL-E-DEPLOY.html), [kit da pré-banca](https://projeto-ipe.vercel.app/docs/57-KIT-PRE-BANCA-R21.html).
+
+Os recibos em `evidence/production-r21.json`, `evidence/production-lp-r21.json` e `evidence/metrics-production-r21.json` identificam o commit e o escopo efetivamente conferidos. A prova da API não certifica aprendizado, acessibilidade humana ou prazo de retenção no provedor. A pesquisa da expansão ISS/Lua/Marte está no documento 58; essas novas missões ainda não integram o jogo publicado.
+
+---
 
 ## R20 — primeira experiência e pitch de Alexandre Belo
 
@@ -7163,6 +7177,104 @@ O modo equipe permite até quatro participantes no mesmo dispositivo. Os seis in
 - Antes de dizer “validado com usuários”, conduza uma rodada observada com iniciantes: peça que expliquem uma falha, citem a evidência e justifiquem a próxima decisão. Registre participantes, método e resultado.
 
 A previsão de 180 segundos precisa do ensaio real de Alexandre. O conjunto de testes não é garantia de acessibilidade universal, elegibilidade ou premiação; os limites estão documentados para a equipe apresentar com precisão.
+
+
+---
+
+# Catálogo de equipamentos e integração da contribuição de Bruno
+
+Fonte: `docs/58-CATALOGO-NASA-E-INTEGRACAO-BRUNO-R22.md` · SHA-256 original: `309684707d8031e15ba397e23a0ec4c2310cef8bf88508501c38b251f7354801` · Ajustes de caminhos privados: 0
+
+# Catálogo de equipamentos e integração da contribuição de Bruno
+
+**MISSÃO IPÊ · R22 · Fontes consultadas em 15/11/2026**
+
+O catálogo registra a fonte, o estado factual e o contexto de cada uma das 18 opções. Os identificadores acompanham a contribuição original de Bruno A Carvalho. No R22, a opção `atlas` apresenta o Atlas V. O nome Atlas L-2 e o perfil fictício de lançador leve pertencem ao protótipo original. [Catálogo em JSON](../research/nasa-equipment-r22.json) · [Origem da contribuição](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/contributions/bruno-figma/ORIGEM-E-INTEGRACAO.md) · [Ficha original](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/contributions/bruno-figma/src/App.tsx).
+
+## Veículos de lançamento
+
+As associações de destino descrevem um voo específico ou um uso previsto. Selecionar um lançador real exige considerar a órbita ou trajetória de entrega, a massa e o volume da carga, suas interfaces e as condições de separação. A aproximação da ISS, a transferência e o pouso têm seus próprios veículos ou sistemas, conforme a missão. [NASA Launch Services Program](https://www.nasa.gov/kennedy/launch-services-program/) · [NASA SmallSat, integração e lançamento](https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/).
+
+| Opção | Voo ou uso documentado | Fontes |
+| --- | --- | --- |
+| Falcon 9 | Lançou cápsulas Dragon para a ISS e a Blue Ghost Mission 1 rumo à Lua. | [Commercial Crew](https://www.nasa.gov/humans-in-space/spaceships-and-rockets/commercial-crew-rockets/) · [Commercial Resupply](https://www.nasa.gov/humans-in-space/spaceships-and-rockets/commercial-resupply-rockets/) · [Lançamento Blue Ghost](https://www.nasa.gov/news-release/liftoff-nasa-sends-science-tech-to-moon-on-firefly-spacex-flight/) |
+| Atlas V | Lançou o teste Starliner OFT-2 sem tripulação para a ISS, LRO e LCROSS para a Lua, e o Perseverance para Marte. | [Teste Starliner](https://www.nasa.gov/humans-in-space/spaceships-and-rockets/commercial-crew-rockets/) · [Lançamento LRO e LCROSS](https://science.nasa.gov/mission/lro/about/) · [Lançamento Perseverance](https://science.nasa.gov/resource/nasas-perseverance-rover-launches-to-mars/) |
+| Vulcan Centaur | Lançou a missão lunar Peregrine em 2024. O módulo se separou e coletou dados em voo. Uma falha do módulo impediu o pouso suave. | [LSP Rockets](https://www.nasa.gov/launch-services-program-rockets/) · [Encerramento Peregrine](https://www.nasa.gov/news-release/nasa-science-astrobotic-peregrine-mission-one-concludes/) |
+| Electron | Lança pequenos satélites. No caso CAPSTONE, o estágio Lunar Photon colocou o CubeSat na trajetória de transferência. CAPSTONE entrou em órbita lunar. | [Integração e lançamento](https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/) · [Lançamento CAPSTONE](https://www.nasa.gov/news-release/capstone-launches-to-test-new-orbit-for-nasas-artemis-moon-missions/) · [Missão CAPSTONE](https://www.nasa.gov/mission/capstone/) |
+| Antares 330 | Uso previsto para reabastecer a ISS no relatório de junho de 2026. As entregas Cygnus documentadas sob a família Antares ocorreram em versões anteriores. | [IG-26-010, p. 7, nota 12](https://oig.nasa.gov/wp-content/uploads/2026/06/final-report-ig-26-010-nasas-launch-infrastructure.pdf) · [Página do relatório](https://oig.nasa.gov/audits/nasas-launch-infrastructure/) · [Commercial Resupply](https://www.nasa.gov/humans-in-space/spaceships-and-rockets/commercial-resupply-rockets/) |
+| New Glenn | Lançou as sondas ESCAPADE em 2025. A atualização NASA de 09/11/2026 confirmou a partida em direção à órbita marciana, onde a missão estudará a interação do vento solar com Marte. | [Missão ESCAPADE](https://science.nasa.gov/mission/escapade/) · [Atualização de trajetória](https://science.nasa.gov/science-research/heliophysics/nasas-escapade-completes-powered-earth-flybys-now-en-route-to-mars/) |
+
+A nota sobre o Antares 330 foi conferida no trecho indexado do PDF oficial. A página do OIG permite abrir o relatório completo.
+
+## Subsistemas
+
+| Grupo | Fatos para as fichas | Fontes |
+| --- | --- | --- |
+| Propulsão | A química bipropelente usa combustível e oxidante e atende a manobras que exigem empuxo elevado. A iônica usa energia elétrica e oferece baixo empuxo sustentado, como na Dawn. A Cassini usou propulsores monopropelentes para controlar a atitude e realizar pequenas mudanças de velocidade. | [Propulsão no espaço](https://www.nasa.gov/smallsat-institute/sst-soa/in-space_propulsion/) · [Dawn](https://science.nasa.gov/mission/dawn/technology/ion-propulsion/) · [Cassini](https://science.nasa.gov/mission/cassini/engine/) |
+| Energia | Painéis solares geram eletricidade quando iluminados. Baterias Li-ion armazenam energia. Na ISS, a combinação recarrega baterias na luz e usa a reserva no eclipse. | [Sistemas de energia](https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/) · [Baterias da ISS](https://ntrs.nasa.gov/citations/20200000004) |
+| Estrutura e proteção | Uma estrutura suporta a carga e transmite os esforços da montagem. O ARIS é um exemplo de isolamento ativo de vibração para instrumentos em órbita. A manta multicamada reduz a troca de calor por radiação e é passiva. | [Estruturas](https://www.nasa.gov/smallsat-institute/sst-soa/structures-materials-and-mechanisms/) · [ARIS](https://ntrs.nasa.gov/citations/20000032438) · [Controle térmico](https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/) |
+| Atitude, navegação e rádio | O Star tracker determina para onde a nave aponta. A banda S pode transportar telemetria e comandos. GPS orbital tem uso estabelecido em órbita baixa da Terra. O LuGRE demonstrou localização com GPS e Galileo na Lua. A Orion exemplifica sensores e processamento redundantes. | [Guiagem, navegação e controle](https://www.nasa.gov/smallsat-institute/sst-soa/guidance-navigation-and-control/) · [Comunicações](https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/) · [LuGRE](https://www.nasa.gov/missions/artemis/clps/nasa-successfully-acquires-gps-signals-on-moon/) · [Aviônica Orion](https://www.nasa.gov/reference/avionics-and-software/) |
+
+## Decisões científicas no jogo
+
+- **ISS** · Acompanhar um composto orgânico volátil dentro da estação exige medidas ao longo do tempo. A decisão é escolher um monitor de ar e sustentar a aquisição das leituras. O experimento começa após a entrega. [Toxicologia e química ambiental da NASA](https://www.nasa.gov/directorates/esdmd/hhp/toxicology-and-environmental-chemistry/).
+- **Lua** · Comparar mapas de temperatura e de indícios de hidrogênio ajuda a escolher áreas para investigar gelo. Diviner mede temperaturas e LEND usa contagens de nêutrons para inferir a distribuição de hidrogênio. A sobreposição é uma evidência indireta para escolher o próximo ponto de investigação. [Instrumentos do LRO](https://science.nasa.gov/mission/lro/spacecraft-and-instruments/).
+- **Marte** · Investigar tempo local e geologia pede medidas diferentes. MEDA mede variáveis atmosféricas e poeira em Jezero. PIXL mapeia elementos por fluorescência de raios X. O exercício liga cada pergunta à escolha de instrumento e ao produto que chega à equipe. [Instrumentos do Perseverance](https://science.nasa.gov/mission/mars-2020-perseverance/science-instruments/).
+
+## Uso das fichas na aplicação
+
+1. Exibir **Referência NASA** com `fact`, o estado factual e o link correspondente em `sourceIds`. Usar **Uso previsto** para o Antares 330 e **Combinação didática** para a ficha de sensor estelar com rádio.
+2. Exibir massa, capacidade, compartimentos, duração, créditos, energia e pontuação da montagem sob **Regra do jogo**. Uma ficha genérica de tecnologia descreve o princípio e a fase de uso. Especificações de voo exigem referência a uma configuração e missão concretas.
+3. Na preparação, ligar uma escolha à pergunta e à medida previstas. No relatório, mostrar primeiro o dado recebido ou faltante e o evento que explica o resultado. Exemplos de comparação incluem reserva de energia na sombra, apontamento do instrumento e entrega de dados pelo rádio.
+
+O JSON é um registro de proveniência e sugestões de integração. As histórias já documentadas para Cerrado, Bennu e Webb têm seu próprio [registro de evidências](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md).
+
+
+---
+
+# Marca oficial e continuidade da publicação
+
+Fonte: `docs/59-MARCA-OFICIAL-E-DEPLOY.md` · SHA-256 original: `135d71656e068e3b392587f637a17cf8234e458677b3c6844a66d35b4cec0992` · Ajustes de caminhos privados: 0
+
+# Marca oficial e continuidade da publicação
+
+Revisão de 15/11/2026. Nome público: **MISSÃO IPÊ**. O ipê identifica a equipe; não substitui a evidência científica das missões.
+
+## Arquivos aprovados
+
+O responsável confirmou `LOGO_MISASO_IPE.svg` (marca horizontal), `LOGO_MISSAO.svg` (símbolo) e `Frame 11.svg` (outra composição horizontal). Os originais ficam preservados em `experiments/mission-design-lab/public/brand/originals/`.
+
+A marca horizontal e o símbolo já usados no R21 conservam os traços dos arquivos enviados. A assinatura vertical `missao-ipe-logo-stacked.svg` recompõe o símbolo e o lettering dos SVGs para seguir a referência vertical enviada. Ela é uma composição derivada, não um arquivo original byte a byte. O cinza da referência não integra o SVG. Não há imagem raster, fonte remota ou script nas marcas.
+
+Use a marca horizontal nos cabeçalhos; a vertical na assinatura final e em áreas com altura suficiente; o símbolo isolado nas abas e identificadores pequenos. Não comprima o lettering horizontal em um quadrado. Preserve proporção, transparência e as cores `#F5F0E5`, `#508AA2`, `#E29A6F` e `#BF6C47`. Não aplique filtros ou fundos retangulares à imagem.
+
+As variantes `*-on-light.svg` documentadas no R17 continuam como adaptações de contraste para as páginas claras de estudo. Elas não são novos originais enviados e não substituem a paleta das aplicações escuras. O manifesto `brand-provenance-r22.json` identifica fontes, transformações e hashes; `preview-r22.html` permite comparar as três aplicações e o símbolo em tamanhos pequenos.
+
+## Aplicação nesta revisão
+
+- LP: marca horizontal no cabeçalho, assinatura vertical no rodapé e retirada de lettering artificial sobre o símbolo do convite final. A entrada informa nome, e-mail, missão e play, conforme o jogo atual.
+- Jogo: marca horizontal e símbolo vetoriais oficiais preservados.
+- Pitch: símbolo na aba e assinatura vertical no encerramento, junto da marca de Alexandre Belo e do agradecimento.
+- Painel privado: marca horizontal oficial no cabeçalho e símbolo na aba. A política de acesso e as métricas não mudam.
+- Central da equipe: mantém a mesma marca horizontal oficial incorporada no HTML, para leitura local.
+
+## Diagnóstico dos deploys
+
+O último erro encontrado na LP antes desta revisão foi `NOW_SANDBOX_WORKER_ROOTDIR_NOT_EXIST`, na tentativa `dpl_Fco7AFQB9jTuSRX5VcRbThbG6LSG`, commit `bf8b099a5c2c2947786b4357a10c6825d152c794`. O log informa que `apps/immersive-lp` não existia naquele commit. Essa pasta já está incorporada na versão atual. Reexecutar aquele commit antigo reproduz a ausência; publique a versão atual de `main`.
+
+No R21, o jogo (`dpl_Aeq3CfXP1xHLYfAsSCCyoqH5Ag49`) e a LP (`dpl_37udA3fCezmdSUCbgGkU8Q5KgNnN`) chegaram a `READY` no commit `327710db39ce070991f01595a54b5800a4f97f64`. Isso comprova a compilação dessa versão; não significa que todos os links estejam corretos. A revisão encontrou um 404 no atalho de Libras da LP: o export Next serve o guia em `/acessibilidade/guia/`. O ajuste usa essa URL, resolve CSS/JS por caminhos absolutos e aplica a política de isolamento ao guia.
+
+## Handoff para os dois desenvolvedores
+
+**Front-end:** preservar a geometria dos originais; revisar logo, navegação e Libras em desktop e celular. Alterações em `apps/immersive-lp/public/acessibilidade/` também chegam ao site principal pelo empacotamento. Rodar a compilação da LP antes de `node --test tests/libras*.test.mjs`.
+
+**Integração/publicação:** o repositório oficial é [oalexandrebelo/MISSAO-IPE](https://github.com/oalexandrebelo/MISSAO-IPE). O projeto Vercel principal chama-se `missao-ipe`, mantém o domínio `projeto-ipe.vercel.app` e usa a raiz do repositório. O projeto `projeto-ipe-lp` usa `apps/immersive-lp` e o domínio `projeto-ipe-lp.vercel.app`. Um push pode iniciar um deploy por projeto. Consulte as tentativas do SHA antes de disparar novas: a revisão R21 encontrou tentativas duplicadas do mesmo commit, todas concluídas.
+
+Após a publicação, conferir o SHA e `READY` na Vercel; executar `scripts/verify-publication-r21.mjs` para o principal e `scripts/verify-lp-r21.mjs` para a LP, informando deployment ID e SHA completos. Os recibos verificam os arquivos e as políticas, sem certificar aprendizagem humana ou tradução humana em Libras. Um HTTP 401 em `/api/metrics?action=admin` sem autenticação é o comportamento esperado do painel privado.
+
+ISS, Lua e Marte continuam sendo integração em preparação. O catálogo do documento 58 é pesquisa de referência; esta correção de marca e publicação não anuncia essas três novas missões como jogáveis.
+
+Orientação de tratamento vetorial: [logo-designer-skill](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md), aplicada à marca já escolhida pelo responsável.
 
 
 ---

@@ -1,5 +1,19 @@
 # Publicação MISSÃO IPÊ
 
+## R21 — entrada imersiva, métricas privadas e pitch de 3 minutos
+
+Implementação `327710db39ce070991f01595a54b5800a4f97f64`, beta **0.12.0-beta.1**. Jogo `dpl_Aeq3CfXP1xHLYfAsSCCyoqH5Ag49` e LP `dpl_37udA3fCezmdSUCbgGkU8Q5KgNnN` concluídos como **READY**. O recibo do principal verificou 393 arquivos públicos e 119 documentos; o teste HTTP da API passou em 30 verificações, com uma participação sintética e três tentativas de teste, identificadas como testes técnicos, não participantes humanos.
+
+- Entrada em tela inteira: nome → e-mail → missão → play; alternativa funcional se o navegador não permitir tela cheia.
+- Três missões científicas atuais, pontuação calculada no servidor, painel privado, comparação A/B e análise por papéis.
+- Pitch: seis cenas, 180 segundos, fala de Alexandre Belo e assinatura final com as marcas.
+- Acesso a Libras sob demanda, separado dos campos privados. A revisão posterior identificou o link incorreto da LP e trata a URL de guia exportada pelo Next.
+- [Handoff das métricas](https://projeto-ipe.vercel.app/docs/54-METRICAS-E-HANDOFF-R21.html), [marca e deploy](https://projeto-ipe.vercel.app/docs/59-MARCA-OFICIAL-E-DEPLOY.html), [kit da pré-banca](https://projeto-ipe.vercel.app/docs/57-KIT-PRE-BANCA-R21.html).
+
+Os recibos em `evidence/production-r21.json`, `evidence/production-lp-r21.json` e `evidence/metrics-production-r21.json` identificam o commit e o escopo efetivamente conferidos. A prova da API não certifica aprendizado, acessibilidade humana ou prazo de retenção no provedor. A pesquisa da expansão ISS/Lua/Marte está no documento 58; essas novas missões ainda não integram o jogo publicado.
+
+---
+
 ## R20 — primeira experiência e pitch de Alexandre Belo
 
 **Beta 0.11.0-beta.1 publicada e conferida em 15/11/2026**, edição `R20-beginner-journey-and-pitch`. Commit de implementação e integração `4dfc9db57401f151541a47ea50fa5c9635b0a146`. Vercel principal `dpl_FzyYbNALWL3CH4fBZF4FiLPpfWaw`; LP `dpl_CAobAam3N7wixbP57HCcrDw766kz`: ambas **READY**, mesmo commit e domínios públicos confirmados pela API.
