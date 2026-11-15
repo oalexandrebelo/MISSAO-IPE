@@ -31,16 +31,22 @@ export default function Home() {
         <div className="hero-content container">
           <p className="hero-eyebrow eyebrow"><span className="accent-dash" /> DA ÓRBITA, PARA A VIDA</p>
           <h1 id="hero-title" className="hero-title">O espaço é só <br />{' '}o <em>começo.</em></h1>
-          <p className="hero-copy">Sete missões para jogar. Três casos com arquivos reais da NASA.<br className="desktop-only" /> E você no centro de cada decisão.</p>
-          <div className="hero-actions"><a href={LINKS.game} className="button button-primary" data-magnetic>Iniciar minha missão <Icon name="arrow-up" /></a><VideoExperience /></div>
-          <p className="hero-footnote"><i className="status-dot" /> BETA ABERTO <span>NOME · E-MAIL · MISSÃO · PLAY</span></p>
+          <p className="hero-copy">Monte sua nave, simule a operação e investigue quais dados chegam à Terra. Jogue sete missões, com três casos que usam registros históricos da NASA.</p>
+          <div className="hero-actions">
+            <a href={LINKS.game} className="button button-primary" data-magnetic>Jogar agora <Icon name="arrow-up" /></a>
+            <a href={LINKS.documentation} className="button button-outline">Documentação <Icon name="arrow-up" /></a>
+          </div>
+          <div className="hero-support">
+            <p className="hero-footnote"><i className="status-dot" aria-hidden="true" /> Beta aberto · entrada com nome e e-mail</p>
+            <VideoExperience />
+          </div>
         </div>
         <div className="hero-bottom container"><a className="scroll-invitation" href="#missao"><span className="scroll-line" />ROLE PARA EXPLORAR <Icon /></a><ExperienceControls /><span className="hero-image-credit">TERRA: NASA / BLUE MARBLE<br />{' '}COMPOSIÇÃO VISUAL ARTÍSTICA</span></div>
       </section>
 
       <noscript><div className="noscript-note">A leitura e os links continuam disponíveis. Para usar o laboratório, o filme e a timeline interativa, ative o JavaScript.</div></noscript>
 
-      <div className="mission-facts container" aria-label="O projeto em números"><div><span>07</span><p>missões para projetar e jogar</p></div><div><span>04</span><p>segmentos que conectam a missão</p></div><div><span>06</span><p>registros para fazer chegar</p></div><a href="#laboratorio">E se uma escolha<br />{' '}mudasse toda a missão?<Icon name="arrow-up" /></a></div>
+      <div className="mission-facts container" aria-label="O projeto em números"><div><span>07</span><p>missões para projetar e jogar</p></div><div><span>04</span><p>segmentos que conectam a missão</p></div><div><span>06</span><p>registros para fazer chegar</p></div><a href="#laboratorio">Experimentar no laboratório <Icon name="arrow-up" /></a></div>
 
       <section className="mission-section section-pad" id="missao" aria-labelledby="mission-title" tabIndex={-1}>
         <div className="container">
@@ -90,8 +96,8 @@ export default function Home() {
 
       <section className="faq-section section-pad" aria-labelledby="faq-title"><div className="container faq-layout"><div data-reveal><p className="eyebrow">ANTES DA PARTIDA</p><h2 id="faq-title">Boas missões<br />{' '}começam com<br />{' '}<em>boas perguntas.</em></h2></div><div className="faq-list">{FAQ.map(([question, answer]) => <details key={question}><summary>{question}<Icon name="plus" /></summary><p>{answer}</p></details>)}</div></div></section>
 
-      <section className="final-cta" aria-labelledby="cta-title"><div className="container"><div><p className="eyebrow">O PRÓXIMO PASSO É SEU.</p><h2 id="cta-title">O universo faz perguntas.<br />{' '}<em>Vamos procurar respostas?</em></h2><a href={LINKS.game} className="button button-ink" data-magnetic>Minha missão começa agora <Icon name="arrow-up" /></a><span className="cta-small">Explore. Questione. Redesenhe.</span></div><div className="cta-orbit" aria-hidden="true"><img src="/brand/missao-ipe-symbol.svg" width="488" height="488" alt="" /></div></div></section>
+      <section className="final-cta" aria-labelledby="cta-title"><div className="container"><div><p className="eyebrow">O PRÓXIMO PASSO É SEU.</p><h2 id="cta-title">O universo faz perguntas.<br />{' '}<em>Vamos procurar respostas?</em></h2><a href={LINKS.game} className="button button-ink" data-magnetic>Jogar Missão Ipê <Icon name="arrow-up" /></a><span className="cta-small">Explore. Questione. Redesenhe.</span></div><div className="cta-orbit" aria-hidden="true"><img src="/brand/missao-ipe-symbol.svg" width="488" height="488" alt="" /></div></div></section>
     </main>
-    <footer className="site-footer"><div className="container"><div className="footer-top"><a href="#inicio" className="footer-brand"><img src="/brand/missao-ipe-logo-stacked.svg" width="890" height="1110" alt="MISSÃO IPÊ" /><span>Da órbita, para a vida.</span></a><nav aria-label="Mais sobre o projeto"><a href={LINKS.github}>GitHub <Icon name="arrow-up" /></a><a href={LINKS.pitch}>Pitch · Alexandre Belo <Icon name="arrow-up" /></a><a href="/creditos/">Fontes e créditos <Icon name="arrow-up" /></a></nav><a href="#inicio" className="back-to-top" aria-label="Voltar ao início"><Icon name="arrow-up" /></a></div><div className="footer-bottom"><span>© 2026 MISSÃO IPÊ · FEITO PARA EXPLORAR.</span><p>Experiência educativa independente. Referências à NASA não representam endosso institucional.</p><span>BRASIL <span className="footer-spark">✳</span> TERRA</span></div></div></footer>
+    <footer className="site-footer"><div className="container"><div className="footer-top"><a href="#inicio" className="footer-brand"><img src="/brand/missao-ipe-logo-stacked.svg" width="890" height="1110" alt="MISSÃO IPÊ" /><span>Da órbita, para a vida.</span></a><nav aria-label="Mais sobre o projeto"><a href={LINKS.documentation}>Documentação <Icon name="arrow-up" /></a><a href={LINKS.github}>GitHub <Icon name="arrow-up" /></a><a href={LINKS.pitch}>Pitch · Alexandre Belo <Icon name="arrow-up" /></a><a href="/creditos/">Fontes e créditos <Icon name="arrow-up" /></a></nav><a href="#inicio" className="back-to-top" aria-label="Voltar ao início"><Icon name="arrow-up" /></a></div><div className="footer-bottom"><span>© 2026 MISSÃO IPÊ · FEITO PARA EXPLORAR.</span><p>Experiência educativa independente. Referências à NASA não representam endosso institucional.</p><span>BRASIL <span className="footer-spark">✳</span> TERRA</span></div></div></footer>
   </MotionSystem>;
 }

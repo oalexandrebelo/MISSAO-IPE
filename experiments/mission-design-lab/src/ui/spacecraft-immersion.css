@@ -24,3 +24,10 @@
   .scene.scene-orbit .orbit-focus-brief { padding:12px; }
   .scene.scene-orbit .orbit-focus-brief>strong { font-size:16px; }
 }
+
+.scene.scene-orbit .scene-optional-tools { border-top:1px solid #354b59; padding:0 2px; }
+.scene.scene-orbit .scene-optional-tools > summary { min-height:44px; padding:12px 0; color:#bed0da; font-size:13px; line-height:1.5; cursor:pointer; }
+.scene.scene-orbit .scene-optional-tools > summary:focus-visible { outline:3px solid #efcf86; outline-offset:3px; }
+.scene.scene-orbit .scene-optional-tools .spacecraft-view-tools { margin:0 0 12px; }
+.scene.scene-orbit.scene-compact .orbit-focus-brief { margin:0 0 12px; padding:12px 14px; }
+.scene.scene-orbit.scene-compact .spacecraft-inspection-controls { margin-bottom:12px; }

@@ -37,6 +37,7 @@ after(() => dom.window.close());
 
 const assetPath = 'public/models/kenney/structure-platform.glb';
 const assetUrl = './models/kenney/structure-platform.glb';
+const readManifest = async () => JSON.parse(await readFile('public/models/kenney/manifest.json', 'utf8'));
 const onUnavailable = () => assert.fail('the Kenney asset must not disable the 3D spacecraft');
 const platform = scene => scene.getObjectByName('kenney-structure-platform');
 const bounds = object => new THREE.Box3().setFromObject(object, true);
@@ -77,7 +78,7 @@ function orbital(world, options = {}) {
 
 test('the Kenney copy matches the verified GLB and its CC0 manifest', async () => {
   const asset = await readFile(assetPath);
-  const manifest = JSON.parse(await readFile('public/models/kenney/manifest.json', 'utf8'));
+  const manifest = await readManifest();
   assert.equal(asset.subarray(0, 4).toString(), 'glTF');
   assert.equal(asset.readUInt32LE(4), 2);
   assert.equal(asset.length, 17_200);
@@ -91,6 +92,49 @@ test('the Kenney copy matches the verified GLB and its CC0 manifest', async () =
   assert.equal(gltf.accessors[gltf.meshes[0].primitives[0].indices].count / 3, 96);
   assert.ok([...gltf.images, ...gltf.buffers].every(item => item.uri === undefined));
   assert.equal(gltf.extensionsRequired?.length ?? 0, 0);
+});
+
+test('the deck uses the placement and finish documented for runtime', async t => {
+  const loads = useLocalAsset(t);
+  const view = await mount(t, bruno('iss'));
+  await act(async () => { await loads[0]; });
+  const model = platform(view.scene);
+  const material = model.getObjectByName('structure_platform').material;
+  const { runtimeTransform: transform } = await readManifest();
+  assert.ok(model.position.distanceTo(new THREE.Vector3(...transform.position)) < .001);
+  assert.ok(model.scale.distanceTo(new THREE.Vector3(...transform.scale)) < .001);
+  assert.deepEqual(material.color.toArray(), transform.materialColorLinear);
+  assert.equal(material.roughness, transform.materialRoughness);
+  assert.equal(material.metalness, transform.materialMetalness);
+  assert.ok(material.map.image);
+});
+
+test('enlarged Bruno assembly stays inside narrow camera bounds when rotated', async t => {
+  const loads = useLocalAsset(t);
+  for (const [width, height] of [[242, 184], [315, 199]]) {
+    const view = await mount(t, bruno('iss', { exploded: false }), width, height);
+    await act(async () => { await loads.at(-1); });
+    const craft = view.scene.getObjectByName('configured-bruno-spacecraft');
+    const platformTop = bounds(platform(view.scene)).max.y;
+    for (let step = 0; step < 8; step++) {
+      await view.update(bruno('iss', { exploded: false, turn: step * Math.PI / 4 }));
+      assert.equal(craft.scale.x, 1.12);
+      assert.ok(bounds(craft).min.y > platformTop);
+      view.camera.updateMatrixWorld();
+      const projected = new THREE.Box3();
+      const vertex = new THREE.Vector3();
+      craft.traverse(node => {
+        if (!node.isMesh) return;
+        const positions = node.geometry.getAttribute('position');
+        for (let i = 0; i < positions.count; i++) {
+          vertex.fromBufferAttribute(positions, i).applyMatrix4(node.matrixWorld).project(view.camera);
+          projected.expandByPoint(vertex);
+        }
+      });
+      assert.ok(projected.min.x > -.95 && projected.max.x < .95 && projected.min.y > -.95 && projected.max.y < .95,
+        `width ${width}px, turn ${step}: ${projected.min.toArray()} / ${projected.max.toArray()}`);
+    }
+  }
 });
 
 for (const [mission, world] of Object.entries({ iss: 'iss', moon: 'moon', mars: 'mars', europa: 'europa', cerrado: 'earth', bennu: 'bennu', webb: 'telescope' })) {

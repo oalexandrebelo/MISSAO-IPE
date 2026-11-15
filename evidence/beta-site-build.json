@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T20:19:39.614Z",
+  "generatedAt": "2026-11-15T20:41:06.014Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
-  "fileCount": 484,
-  "bytes": 82542721,
+  "fileCount": 486,
+  "bytes": 82587936,
   "manifest": {
     "path": "site/publication-manifest.json",
-    "bytes": 229757,
-    "sha256": "5ae2ba6b0ff6f110a3f5d5c7fc5c38e7cac6b1586b0a76fda974974b80a7abbe"
+    "bytes": 230846,
+    "sha256": "e12a5fe72773099095550865c009350b407a259064a1d6c788ba53200b0778b1"
   },
   "entries": [
     {
@@ -519,10 +519,10 @@
     {
       "path": "campanha/release.json",
       "bytes": 326,
-      "sha256": "3d99bea651fc1d2f4c951ad499f6a070e512768f225e141c2d7aa993082f6d4c",
+      "sha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
       "category": "four-level-campaign-runtime",
       "source": "experiments/four-level-campaign/dist/release.json",
-      "sourceSha256": "3d99bea651fc1d2f4c951ad499f6a070e512768f225e141c2d7aa993082f6d4c",
+      "sourceSha256": "b5a9e33c7ee7aaa7a56340d62526b21f70084a8978b3116e2d108ec4a0761d01",
       "transformation": "none; bytes preserved"
     },
     {
@@ -812,31 +812,31 @@
     },
     {
       "path": "context/research-library-index.json",
-      "bytes": 73035,
-      "sha256": "50ccec37d3fc8cae301c64b550f05f665ab4d7ae4fd1a336919dc639df38f19f",
+      "bytes": 73546,
+      "sha256": "a88c07c015f88298d23c97d5b891bdff39638a3b2b7d9176dd615e1b83c92561",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "50ccec37d3fc8cae301c64b550f05f665ab4d7ae4fd1a336919dc639df38f19f",
+      "sourceSha256": "a88c07c015f88298d23c97d5b891bdff39638a3b2b7d9176dd615e1b83c92561",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2615507,
-      "sha256": "c6ecaaea8c23632609c7cce89daf2bb547c8c4c69db080576e3c6b9d78d96067",
+      "bytes": 2627581,
+      "sha256": "c88d6d7cfc36383141084a814fbc06915cd6ab6e538230ebf3638b8ec5234310",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "5345d7e1277af805b2ea25392262cccfd32da2de474b8683e1628c0687f809dc",
+      "sourceSha256": "3f322eb15b842ff6766146c4cad33014acc549a4c49ca28a5c7feb820fbc3c7d",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2092633,
-      "sha256": "abdeb4d0369d68785e7d771f4932668a7dbe5613db354791d4d0d9097914a4dd",
+      "bytes": 2101999,
+      "sha256": "651b9add245c3f559a65144eb5a7ac10ae7444141b63676527689125be51fd25",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "abdeb4d0369d68785e7d771f4932668a7dbe5613db354791d4d0d9097914a4dd",
+      "sourceSha256": "651b9add245c3f559a65144eb5a7ac10ae7444141b63676527689125be51fd25",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2078,22 +2078,22 @@
     },
     {
       "path": "docs/72-DOMINIOS-E-ACESSOS-R27.html",
-      "bytes": 6578,
-      "sha256": "268b262f1bf9b6c610d627a579fba59e2a8282d15e3f7cd6380cf4ed009d2fb6",
+      "bytes": 7887,
+      "sha256": "77cec2b16ebaa121d49a6171588747b51ca8d414c27004cbd7e66f059b037d08",
       "category": "rendered-public-document",
       "source": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
-      "sourceSha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
+      "sourceSha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
-      "bytes": 3767,
-      "sha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
+      "bytes": 4686,
+      "sha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
       "category": "public-document",
       "source": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
-      "sourceSha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
+      "sourceSha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2257,6 +2257,26 @@
       "transformation": "none; bytes preserved"
     },
     {
+      "path": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+      "bytes": 9595,
+      "sha256": "d45a07d13d53863f343e5ef163d72848eccca4d2c8053ccb75d0e71d24669aa7",
+      "category": "rendered-public-document",
+      "source": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md",
+      "sourceSha256": "b7ef44f5e51756acd5382f742fecd117705b2b121b4ac0b769ad75a2f8b0950a",
+      "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
+      "libras": "public",
+      "analytics": "custom-host-only; page performance; no private routes"
+    },
+    {
+      "path": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md",
+      "bytes": 6715,
+      "sha256": "b7ef44f5e51756acd5382f742fecd117705b2b121b4ac0b769ad75a2f8b0950a",
+      "category": "public-document",
+      "source": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md",
+      "sourceSha256": "b7ef44f5e51756acd5382f742fecd117705b2b121b4ac0b769ad75a2f8b0950a",
+      "transformation": "none; bytes preserved"
+    },
+    {
       "path": "docs/AUTORIA-E-IA.html",
       "bytes": 3942,
       "sha256": "f5792a4fb283c0f5849ad027889d733ec76cd4f913b3bc701379fc271d5bb7a7",
@@ -2318,8 +2338,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 24379,
-      "sha256": "2885d41a5ff2fe0e1094cf5196222586c48189ab71b2c22390751962df99ed4b",
+      "bytes": 24666,
+      "sha256": "c9f642c541891a898d9aec824b3e6cc0313f0e9c93b429639f43a8120efebd26",
       "category": "documentation-index",
       "source": "scripts/build-beta-site.mjs",
       "transformation": "generated from the explicit document allowlist; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
@@ -2698,12 +2718,12 @@
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
-      "path": "lab/assets/BrunoHangarScene-XzsOS52t.js",
-      "bytes": 16285,
-      "sha256": "9380264a7d51a65e956b40df62858b0235aeb2c091e025046cde8f458caf680c",
+      "path": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+      "bytes": 16323,
+      "sha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-XzsOS52t.js",
-      "sourceSha256": "9380264a7d51a65e956b40df62858b0235aeb2c091e025046cde8f458caf680c",
+      "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DQJ3x109.js",
+      "sourceSha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2788,39 +2808,39 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-CfTVjaWu.js",
-      "bytes": 709434,
-      "sha256": "0a19a780e1def33924e413be49c6c154404d837e74a74864be65e503e57fdd92",
+      "path": "lab/assets/index-7CMtLNql.css",
+      "bytes": 242611,
+      "sha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-CfTVjaWu.js",
-      "sourceSha256": "0a19a780e1def33924e413be49c6c154404d837e74a74864be65e503e57fdd92",
+      "source": "experiments/mission-design-lab/dist/assets/index-7CMtLNql.css",
+      "sourceSha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/index-Cp82tIRD.css",
-      "bytes": 241097,
-      "sha256": "1f6499748aaa81396c95662871039641348c7afcb886a2928f74f4b6f7660da4",
+      "path": "lab/assets/index-SFxDCbbV.js",
+      "bytes": 711121,
+      "sha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/index-Cp82tIRD.css",
-      "sourceSha256": "1f6499748aaa81396c95662871039641348c7afcb886a2928f74f4b6f7660da4",
+      "source": "experiments/mission-design-lab/dist/assets/index-SFxDCbbV.js",
+      "sourceSha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/LobbyScene-1gwaVCEp.js",
+      "path": "lab/assets/LobbyScene-q8FbWaEJ.js",
       "bytes": 2812,
-      "sha256": "c443fd3ee784021d53e151fedfc80ed67272e69e3ad4775f14a9b064b5d9d7e3",
+      "sha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/LobbyScene-1gwaVCEp.js",
-      "sourceSha256": "c443fd3ee784021d53e151fedfc80ed67272e69e3ad4775f14a9b064b5d9d7e3",
+      "source": "experiments/mission-design-lab/dist/assets/LobbyScene-q8FbWaEJ.js",
+      "sourceSha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+      "path": "lab/assets/LobbySceneRenderer-DEHn3g7X.js",
       "bytes": 7642,
-      "sha256": "bda47c525fd13ae734eb3c601b3df4f1c1582f9b7a9d8e8f01084a3356cdce12",
+      "sha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-BIH2zDGH.js",
-      "sourceSha256": "bda47c525fd13ae734eb3c601b3df4f1c1582f9b7a9d8e8f01084a3356cdce12",
+      "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-DEHn3g7X.js",
+      "sourceSha256": "0352ae45617d4f6a3597f09fa57f838f2be6bf851c249ca224d54105ca8b9802",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2833,21 +2853,21 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+      "path": "lab/assets/NASAReferenceScene-Du2jNw9H.js",
       "bytes": 7308,
-      "sha256": "0bcb357e4aa8c85f0d257315654f2dcd32192e68a794f69c4b1116da24477177",
+      "sha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Dgc2CcuL.js",
-      "sourceSha256": "0bcb357e4aa8c85f0d257315654f2dcd32192e68a794f69c4b1116da24477177",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Du2jNw9H.js",
+      "sourceSha256": "7eca8c17206c6ff4d10ad323fcbc88b3e04173dcec53c7c3b82719eb825598f6",
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/OrbitalScene-BKxBRlp0.js",
-      "bytes": 219899,
-      "sha256": "95242d1e293f490a3ade0b6d964c049b355bd8f55daf2533db1a02366942d4f5",
+      "path": "lab/assets/OrbitalScene-DLhsqcJS.js",
+      "bytes": 219963,
+      "sha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BKxBRlp0.js",
-      "sourceSha256": "95242d1e293f490a3ade0b6d964c049b355bd8f55daf2533db1a02366942d4f5",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DLhsqcJS.js",
+      "sourceSha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2905,12 +2925,12 @@
       "transformation": "none; bytes preserved"
     },
     {
-      "path": "lab/assets/search-DXLo764J.js",
+      "path": "lab/assets/search-CcYThNlJ.js",
       "bytes": 1280,
-      "sha256": "44906e2fbbb4d88e6f48408ec49073926c189e22d5a3d09b30effbc4f782f461",
+      "sha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
       "category": "mission-lab-runtime",
-      "source": "experiments/mission-design-lab/dist/assets/search-DXLo764J.js",
-      "sourceSha256": "44906e2fbbb4d88e6f48408ec49073926c189e22d5a3d09b30effbc4f782f461",
+      "source": "experiments/mission-design-lab/dist/assets/search-CcYThNlJ.js",
+      "sourceSha256": "02322339444cc79cb22ccc2191cfaf1d7119fd31b3b2b544c34ed80af76ba4d4",
       "transformation": "none; bytes preserved"
     },
     {
@@ -3372,21 +3392,21 @@
     {
       "path": "lab/index.html",
       "bytes": 1457,
-      "sha256": "2bec427fc81f3f10a0e3ffee27f9f8861f61241cb7d86451e3287df44a0d6355",
+      "sha256": "17d2b1abc965d0412e9343c909be4333150b9717a9405564cde1fcad0d36421f",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/index.html",
-      "sourceSha256": "6a2e166f15eec5ffec3f414fb3d46d751ee89c1d7f4e4240285b4dc45a985c52",
+      "sourceSha256": "7bc4063a7d41fe54f88e11aaa6b8a3919b653c925ba683ef84885425937e6fe6",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "lab",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "lab/models/kenney/manifest.json",
-      "bytes": 1010,
-      "sha256": "9111a8325a85015b636f74c46abe3ad87d6c87d190cf77e7524297917c97138c",
+      "bytes": 1057,
+      "sha256": "9e8fab57da22ed583e8053fec01bbc9f62625e1907b7dcb09e7ce03d1adf92ae",
       "category": "mission-lab-runtime",
       "source": "experiments/mission-design-lab/dist/models/kenney/manifest.json",
-      "sourceSha256": "9111a8325a85015b636f74c46abe3ad87d6c87d190cf77e7524297917c97138c",
+      "sourceSha256": "9e8fab57da22ed583e8053fec01bbc9f62625e1907b7dcb09e7ce03d1adf92ae",
       "transformation": "none; bytes preserved"
     },
     {

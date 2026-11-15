@@ -4,12 +4,14 @@
 
 | Área | Endereço |
 | --- | --- |
-| Portal oficial | https://nasa-missaoipe.alexandrebelo.com/ |
+| LP principal | [projeto-ipe-lp.vercel.app](https://projeto-ipe-lp.vercel.app/) |
+| Entrada no domínio oficial | [nasa-missaoipe.alexandrebelo.com](https://nasa-missaoipe.alexandrebelo.com/) |
+| Hub de documentação e contexto | [Abrir hub](https://nasa-missaoipe.alexandrebelo.com/documentacao) |
 | Jogo, cadastro e sete missões | https://jogo.nasa-missaoipe.alexandrebelo.com/ |
 | Pitch interativo de Alexandre Belo | https://pitch.nasa-missaoipe.alexandrebelo.com/ |
 | Painel privado das participações | https://painel.nasa-missaoipe.alexandrebelo.com/ |
-| Documentação e handoff | https://docs.nasa-missaoipe.alexandrebelo.com/ |
-| Landing page imersiva | https://lp.nasa-missaoipe.alexandrebelo.com/ |
+| Índice de documentação e handoff | https://docs.nasa-missaoipe.alexandrebelo.com/ |
+| Subdomínio da LP | https://lp.nasa-missaoipe.alexandrebelo.com/ |
 | Central da equipe | https://nasa-missaoipe.alexandrebelo.com/equipe/index.html |
 | Repositório oficial | https://github.com/oalexandrebelo/MISSAO-IPE |
 
@@ -19,7 +21,9 @@ O painel exige autenticação administrativa já configurada. Nome e e-mail dos 
 
 Os subdomínios **jogo**, **pitch**, **painel** e **docs** redirecionam para o endereço canônico da sua área no domínio principal. Assim, cadastro, jogo e painel mantêm cookies no mesmo host. Isso evita pedir novo cadastro porque alguém trocou de link. A LP tem projeto Vercel próprio e é servida diretamente em **lp**.
 
-Destinos canônicos: `/lab/index.html`, `/presentation/pitch/index.html`, `/dashboard/index.html` e `/docs/index.html`. Também há atalhos `/doc` e `/painel` para recuperar links usados anteriormente. Um caminho desconhecido continua levando à página 404; não se mascara um erro como página inicial.
+A raiz do domínio oficial encaminha para a LP principal com HTTP 307. **`/documentacao`** serve o conteúdo do hub anterior no mesmo domínio. Use o endereço sem barra final para compartilhar seções como [Contexto](https://nasa-missaoipe.alexandrebelo.com/documentacao#contexto), [Próximas etapas](https://nasa-missaoipe.alexandrebelo.com/documentacao#plano) e [Dados NASA](https://nasa-missaoipe.alexandrebelo.com/documentacao#fontes). `/documentacao/` e `/documentacao/index.html` encaminham para `/documentacao`.
+
+O jogo usa `/lab/index.html`, o painel usa `/dashboard/index.html` e o índice usa `/docs/index.html`. O pitch abre a [central de apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/). `/doc` abre o índice e `/painel` abre o painel. Caminhos desconhecidos retornam 404.
 
 ## Operação para os devs
 
@@ -29,6 +33,7 @@ O DNS é administrado na Cloudflare, zona `alexandrebelo.com`. Os cinco CNAMEs n
 - Projeto da landing page: `projeto-ipe-lp`; mesmo repositório, pasta `apps/immersive-lp`.
 - As regras de host estão em `scripts/prepare-vercel-static.mjs`, que gera `vercel.json`. Altere a fonte, gere de novo e execute os testes dos redirecionamentos.
 - O servidor local em `scripts/serve-beta.mjs` reproduz essas regras para a suíte de publicação.
+- `node scripts/test-planet-policy.mjs` confere a geração e as respostas de rota em um servidor local isolado. A matriz de produção é conferida após o deploy.
 
 Depois de publicar, verifique **HTTPS, status, destino do redirecionamento, conteúdo e SHA dos dois deployments**. O DNS correto não comprova que o jogo novo está em produção. O recibo corrente é `PUBLICADO.md`.
 

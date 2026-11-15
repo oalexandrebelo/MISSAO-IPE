@@ -7,9 +7,16 @@ test('a página completa não causa erros e mantém os assets locais', async ({ 
   page.on('response', r => { if (r.status() >= 400) badAssets.push(`${r.status()} ${r.url()}`); });
   page.on('request', r => { if (new URL(r.url()).origin !== 'http://127.0.0.1:4177') external.push(r.url()); });
   await page.goto('/'); await expect(page.getByRole('heading', { level:1 })).toContainText('O espaço é só');
+  const hero = page.locator('.hero-actions');
+  const play = hero.getByRole('link', { name:'Jogar agora', exact:true });
+  const documentation = hero.getByRole('link', { name:'Documentação', exact:true });
+  await expect(play).toHaveAttribute('href', 'https://nasa-missaoipe.alexandrebelo.com/lab/index.html');
+  await expect(documentation).toHaveAttribute('href', 'https://nasa-missaoipe.alexandrebelo.com/documentacao');
+  await expect(play).toBeInViewport(); await expect(documentation).toBeInViewport();
   await page.locator('#laboratorio').scrollIntoViewIfNeeded(); await expect(page.getByRole('button', {name:'Redesenhar',exact:true})).toBeVisible();
   await page.locator('.site-footer').scrollIntoViewIfNeeded();
   await expect(page.getByRole('link',{name:'Fontes e créditos'})).toBeVisible();
+  await expect(page.locator('.site-footer').getByRole('link', { name:'Documentação' })).toHaveAttribute('href', 'https://nasa-missaoipe.alexandrebelo.com/documentacao');
   expect(errors).toEqual([]); expect(badAssets).toEqual([]); expect(external).toEqual([]);
 });
 
@@ -38,13 +45,13 @@ test('os quatro segmentos funcionam com clique e teclado', async ({ page }) => {
 
 test('três casos distinguem fatos e exercício e levam à campanha disponível', async ({ page }) => {
   await page.goto('/');
-  const question = page.locator('summary').filter({hasText:'As três missões e a campanha já estão disponíveis?'});
+  const question = page.locator('summary').filter({hasText:'Quais missões estão disponíveis?'});
   await question.click(); await expect(question.locator('..')).toContainText('Primeiro sinal');
   await expect(page.locator('.level-card')).toHaveCount(3);
   const bennu = page.locator('.level-card').filter({has:page.getByRole('heading',{name:'Bennu / OSIRIS-REx',exact:true})});
   await bennu.locator('summary').click(); await expect(bennu).toContainText('Seis eixos maiores de rochas e clastos');
   await expect(bennu.getByRole('link',{name:/rochas de Bennu/})).toHaveAttribute('href','https://ntrs.nasa.gov/citations/20205007912');
-  await expect(page.getByRole('link',{name:/Jogue a campanha:/})).toHaveAttribute('href','https://projeto-ipe.vercel.app/campanha/index.html');
+  await expect(page.getByRole('link',{name:/Jogue a campanha:/})).toHaveAttribute('href','https://nasa-missaoipe.alexandrebelo.com/campanha/index.html');
   await expect(page.getByRole('link',{name:'MISSÃO IPÊ — início'}).locator('img')).toHaveAttribute('src','/brand/missao-ipe-logo.svg');
   await expect(page.getByRole('link',{name:'GitHub',exact:true})).toHaveAttribute('href','https://github.com/oalexandrebelo/MISSAO-IPE');
 });
@@ -93,9 +100,12 @@ test('auditoria WCAG A/AA na página e no laboratório', async ({ page }) => {
 });
 
 test('navegação responsiva mantém o foco e os destinos', async ({ page }, testInfo) => {
-  if (testInfo.project.name === 'desktop') { await page.goto('/'); await expect(page.getByRole('navigation',{name:'Navegação principal'})).toBeVisible(); await expect(page.getByRole('button',{name:'Abrir menu'})).not.toBeVisible(); return; }
+  if (testInfo.project.name === 'desktop') { await page.goto('/'); const navigation = page.getByRole('navigation',{name:'Navegação principal'}); await expect(navigation.getByRole('link',{name:'Documentação'})).toHaveAttribute('href', 'https://nasa-missaoipe.alexandrebelo.com/documentacao'); await expect(page.getByRole('button',{name:'Abrir menu'})).not.toBeVisible(); return; }
   await page.goto('/'); const trigger = page.getByRole('button',{name:'Abrir menu'}); await trigger.click();
-  await expect(page.getByRole('dialog',{name:'Menu de navegação'})).toBeVisible();
+  await expect(page.getByRole('dialog',{name:'Navegação'})).toBeVisible();
+  const navigation = page.getByRole('navigation',{name:'Navegação no celular'});
+  await expect(navigation.getByRole('link',{name:'Jogar o beta'})).toHaveAttribute('href', 'https://nasa-missaoipe.alexandrebelo.com/lab/index.html');
+  await expect(navigation.getByRole('link',{name:'Documentação'})).toHaveAttribute('href', 'https://nasa-missaoipe.alexandrebelo.com/documentacao');
   await page.keyboard.press('Escape'); await expect(trigger).toBeFocused();
   await trigger.click(); await page.getByRole('navigation',{name:'Navegação no celular'}).getByRole('link',{name:/Três casos NASA/}).click();
   await expect(page.getByRole('dialog')).not.toBeVisible(); await expect(page).toHaveURL(/#jornada$/);

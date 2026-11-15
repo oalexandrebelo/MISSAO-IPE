@@ -21,18 +21,20 @@ let child;
 try {
   await mkdir(join(fixture, 'scripts'));
   for (const name of ['package.json', 'scripts/prepare-vercel-static.mjs', 'scripts/serve-beta.mjs', 'scripts/public-libras.mjs', 'scripts/public-analytics.mjs']) await writeFile(join(fixture, name), await readFile(join(project, name)));
-  const pages = ['equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
+  const pages = ['site.css', 'lab/rive/ipe-subsystems.riv', 'equipe/index.html', 'dashboard/index.html', 'campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html', librasGuide];
   const portal = await readFile(join(project, 'web/planet-jumping.html'), 'utf8');
+  const documentaryHub = await readFile(join(project, 'web/index.html'), 'utf8');
   for (const file of pages) {
     const destination = join(fixture, 'site', file);
     await mkdir(dirname(destination), { recursive: true });
-    await writeFile(destination, file === 'planet-jumping.html' ? portal : '<!doctype html><title>Local fixture</title><script>window.localPolicyFixture=true;</script>');
+    await writeFile(destination, file === 'planet-jumping.html' ? portal : file === 'index.html' ? documentaryHub : '<!doctype html><title>Local fixture</title><script>window.localPolicyFixture=true;</script>');
   }
   await run(process.execPath, ['scripts/prepare-vercel-static.mjs'], { cwd: fixture, timeout: 5000 });
   const config = JSON.parse(await readFile(join(fixture, 'vercel.json'), 'utf8'));
   const staticConfig = JSON.parse(await readFile(join(fixture, '.vercel/deploy-config.json'), 'utf8'));
   assert.deepEqual(config.headers, staticConfig.headers);
   assert.deepEqual(config.redirects, staticConfig.redirects);
+  assert.deepEqual(config.rewrites, staticConfig.rewrites);
   const { version } = JSON.parse(await readFile(join(fixture, 'package.json'), 'utf8'));
   assert.equal(JSON.parse(await readFile(join(fixture, '.vercel/upload-manifest.json'), 'utf8')).version, version);
   const policiesFor = route => config.headers.filter(rule => rule.source.includes('(') ? new RegExp(`^${rule.source}$`).test(route) : rule.source === route).flatMap(rule => rule.headers).filter(header => header.key.toLowerCase() === 'content-security-policy');
@@ -71,7 +73,7 @@ try {
     child.once('exit',code => { clearTimeout(timeout); reject(new Error(`Fixture server exited: ${code}`)); });
   });
   const local = `http://127.0.0.1:${port}`;
-  for (const route of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumping.html?test=1', '/equipe/index.html', '/dashboard/index.html', `/${librasGuide}`]) {
+  for (const route of ['/documentacao', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumping.html?test=1', '/equipe/index.html', '/dashboard/index.html', `/${librasGuide}`]) {
     const response = await fetch(local+route,{method:'HEAD',signal:AbortSignal.timeout(5000)});
     assert.equal(response.status,200,route);
     assert.equal(response.headers.get('content-security-policy'),policiesFor(route.split('?')[0])[0].value,route);
@@ -79,6 +81,26 @@ try {
     assert.equal(response.headers.get('cache-control'),'no-store');
     assert.equal((await response.arrayBuffer()).byteLength,0);
   }
+  assert.deepEqual(config.rewrites?.find(rule => rule.source === '/documentacao'), { source: '/documentacao', destination: '/index.html' });
+  const rootRedirect = config.redirects.find(rule => rule.source === '/' && !rule.has);
+  assert.deepEqual(rootRedirect, { source: '/', destination: 'https://projeto-ipe-lp.vercel.app/', permanent: false });
+  assert.ok(config.redirects.filter(rule => rule.source === '/' && rule.has).every(rule => config.redirects.indexOf(rule) < config.redirects.indexOf(rootRedirect)));
+  for (const [route, status, location] of [
+    ['/', 307, 'https://projeto-ipe-lp.vercel.app/'],
+    ['/documentacao/', 308, '/documentacao'],
+    ['/documentacao/index.html', 307, '/documentacao'],
+    ['/docs', 307, '/docs/index.html'],
+  ]) {
+    const response = await fetch(local + route, { redirect: 'manual', signal: AbortSignal.timeout(5000) });
+    assert.equal(response.status, status, route);
+    assert.equal(response.headers.get('location'), location);
+  }
+  const hub = await fetch(local + '/documentacao', { redirect: 'manual', signal: AbortSignal.timeout(5000) });
+  assert.equal(await hub.text(), documentaryHub);
+  assert.equal(new URL('./site.css', hub.url).pathname, '/site.css');
+  assert.equal(new URL('#contexto', hub.url).pathname + new URL('#contexto', hub.url).hash, '/documentacao#contexto');
+  const docsIndex = await fetch(local + '/docs/index.html', { signal: AbortSignal.timeout(5000) });
+  assert.match(await docsIndex.text(), /Local fixture/);
   for (const route of ['/planet-jumpingXhtml', '/other/planet-jumping.html', '/planet-jumping.html/extra']) {
     const response = await fetch(local+route,{signal:AbortSignal.timeout(5000)});
     assert.equal(response.status,404,route);assert.equal(response.headers.get('content-security-policy'),globalCsp,route);

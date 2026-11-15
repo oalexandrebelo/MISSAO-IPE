@@ -1,5 +1,6 @@
 export const LINKS = {
   game: 'https://nasa-missaoipe.alexandrebelo.com/lab/index.html',
+  documentation: 'https://nasa-missaoipe.alexandrebelo.com/documentacao',
   campaign: 'https://nasa-missaoipe.alexandrebelo.com/campanha/index.html',
   research: 'https://nasa-missaoipe.alexandrebelo.com/context/research-library.html',
   roadmap: 'https://nasa-missaoipe.alexandrebelo.com/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html',

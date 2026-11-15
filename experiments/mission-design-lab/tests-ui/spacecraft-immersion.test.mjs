@@ -16,6 +16,7 @@ dom.window.HTMLDialogElement.prototype.showModal = function () { this.setAttribu
 dom.window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
 const { render, screen, fireEvent, waitFor, cleanup, act, within } = await import('@testing-library/react');
 const { default: App } = await import('../src/App.tsx');
+const { Scene } = await import('../src/ui/Scene.tsx');
 const { CATALOG, DEFAULT_CONFIG } = await import('../src/core/catalog.ts');
 const { simulateMission } = await import('../src/core/engine.ts');
 const { exportReplay } = await import('../src/persistence/replay.ts');
@@ -179,6 +180,12 @@ test('inspection, exploded assembly and restore remain usable in the real 2D fal
     assert.equal(within(scene).getByRole('button', { name }).getAttribute('aria-pressed'), 'true');
     assert.deepEqual([...scene.querySelectorAll('[data-inspector-part]')].map(node => node.dataset.inspectorPart), [part]);
   }
+  const viewDetails = [...scene.querySelectorAll('details')].find(node => node.querySelector('summary')?.textContent === 'Girar e separar a nave');
+  assert.equal(viewDetails.open, false);
+  const brief = scene.querySelector('.orbit-focus-brief');
+  assert.ok(brief.compareDocumentPosition(viewDetails) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING);
+  await click(viewDetails.querySelector('summary'));
+  assert.equal(viewDetails.open, true);
   await click(within(scene).getByRole('button', { name: 'Separar componentes' }));
   assert.equal(scene.dataset.exploded, 'true');
   assert.equal(within(scene).getByRole('button', { name: 'Reunir componentes' }).getAttribute('aria-pressed'), 'true');
@@ -188,6 +195,32 @@ test('inspection, exploded assembly and restore remain usable in the real 2D fal
   assert.equal(scene.dataset.exploded, 'false'); assert.equal(scene.dataset.inspection, 'overview');
   assert.equal(within(scene).getByRole('button', { name: 'Nave completa' }).getAttribute('aria-pressed'), 'true');
   assert.equal(scene.querySelectorAll('[data-inspector-part]').length, 3); assertNoTelemetry(scene);
+});
+
+test('the optional diagram preserves its disclosure when reduced motion is toggled', async t => {
+  const matchMedia = dom.window.matchMedia;
+  const listeners = new Set();
+  let reduced = false;
+  dom.window.matchMedia = () => ({
+    get matches() { return reduced; },
+    addEventListener(_, listener) { listeners.add(listener); },
+    removeEventListener(_, listener) { listeners.delete(listener); },
+  });
+  t.after(async () => { await cleanupView(); dom.window.matchMedia = matchMedia; });
+  const motion = matches => act(async () => { reduced = matches; for (const listener of listeners) listener(); });
+  const summary = () => screen.queryByText('Diagrama animado dos sistemas');
+  const diagram = () => summary()?.parentElement.querySelector('.rive-subsystems');
+  await act(async () => render(React.createElement(Scene, { compact: true, variant: 'hangar', config: DEFAULT_CONFIG })));
+  await click(summary());
+  await waitFor(() => assert.ok(diagram()));
+  assert.equal(summary().parentElement.open, true);
+  await motion(true);
+  assert.equal(summary(), null);
+  await motion(false);
+  assert.equal(summary().parentElement.open, true);
+  assert.ok(diagram());
+  await click(summary());
+  await waitFor(() => assert.equal(diagram(), null));
 });
 
 test('edited drafts never replace executed assembly; A/B keeps each input and receives no future records', async t => {

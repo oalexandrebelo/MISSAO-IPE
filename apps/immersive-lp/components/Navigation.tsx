@@ -31,8 +31,9 @@ export function Navigation({ page = 'home' }: { page?: 'home' | 'credits' | 'not
       <a className="brand ipe-brand" href={chapterHref('inicio')} aria-label="MISSÃO IPÊ — início" aria-current={isHome ? 'page' : undefined}><img src="/brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" /></a>
       <nav className="desktop-nav ipe-site-nav" aria-label="Navegação principal">
         <a href={chapterHref('missao')}>A missão</a>
+        <a href={chapterHref('laboratorio')}>Laboratório</a>
         <a href={chapterHref('jornada')}>Três casos NASA</a>
-        <a href={chapterHref('segmentos')}>A missão completa</a>
+        <a href={LINKS.documentation}>Documentação</a>
         <a href="/creditos/" aria-current={creditsCurrent}>Créditos</a>
       </nav>
       <div className="header-actions"><a className="header-cta ipe-nav-cta" href={LINKS.game}>Jogar o beta <Icon name="arrow-up" /></a>
@@ -43,6 +44,8 @@ export function Navigation({ page = 'home' }: { page?: 'home' | 'credits' | 'not
     <dialog id="mobile-menu" className="mobile-menu" ref={menu} aria-labelledby="mobile-menu-title" onClose={restoreFocus} onClick={event => { if (event.target === menu.current) close(); }}>
       <div className="mobile-menu-inner"><div className="mobile-menu-top"><h2 id="mobile-menu-title">Navegação</h2><button type="button" className="icon-button" onClick={close} aria-label="Fechar menu"><Icon name="close" /></button></div>
         <nav aria-label="Navegação no celular">
+          <a className="mobile-play" href={LINKS.game} onClick={close}>Jogar o beta<Icon name="arrow-up" /></a>
+          <a href={LINKS.documentation} onClick={close}>Documentação<Icon name="arrow-up" /></a>
           {CHAPTERS.map(chapter => <a href={chapterHref(chapter.id)} key={chapter.id} onClick={() => { if (isHome) menuDestination.current = chapter.id; close(); }}>{chapter.label}<Icon name="arrow-up" /></a>)}
           <a href={LINKS.pitch} onClick={close}>Apresentação<Icon name="arrow-up" /></a>
           <a href="/creditos/" aria-current={creditsCurrent} onClick={close}>Créditos<Icon name="arrow-up" /></a>

@@ -1,5 +1,17 @@
 # Publicação MISSÃO IPÊ
 
+## R31 — plataforma Kenney e escolhas claras
+
+**Publicada e conferida em 15/11/2026.** Código `9e1b0ed6ea49e63452122352ead86419753da7e0`; jogo `dpl_73UV1GTSejWc8XqxywZ5qjpZVhgy` e LP `dpl_BdSK8q6WBxbVXLqib9myPvJUeFSH` READY nesse commit. A plataforma Kenney CC0 foi integrada aos sete hangares; o GLB local tem 17.200 bytes. O plano em edição volta ao 3D ao trocar uma opção, os instrumentos faltantes têm nome e indicação de encaixes, e Meu progresso conta até sete destinos distintos com sucesso confirmado.
+
+Passaram 180 testes de domínio, 157 de interface, 53 de métricas e 20 de distribuição. Os sete hangares foram inspecionados em 390 px; ISS e Webb também em 320 px. A jornada ISS terminou com 92 pontos, 6/6 registros válidos, saldo de 26 créditos e monitor com 2/3 ciclos. Esses valores permaneceram após recarga no servidor local de QA. A rodada não repetiu as sete jornadas completas da R30.
+
+Em produção, 15 arquivos corresponderam ao build por SHA-256 e sete verificações confirmaram limites de acesso, 404, subdomínios e ligação da LP à apresentação. O navegador confirmou a plataforma no hangar ISS em 390 px, sem overflow ou erros de console observados. Telefone físico e testes educativos com pessoas seguem pendentes.
+
+[Handoff R31](docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md) · [Auditoria Bruno](docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md) · [QA móvel](evidence/r31-mobile-hangar.json) · [Publicação](evidence/r31-production-publication.json)
+
+---
+
 ## R30 — hangar, montagem e operação nas sete missões
 
 **Publicada e conferida em 15/11/2026.** Código `1409995812973de6b3bca0221b2a990b2087459f`; principal `dpl_2RdykrJGUsqe3wYZw76FfxUsFCBa` e LP `dpl_6taGqc6tojUb6SKBYSkVwYxKyPcY` **READY** no mesmo commit. O [jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) mostra montagem, instrumentos equipados, bateria, proteção, lançador e comunicação conforme a configuração. Eventos revelados orientam a cena; a trilha declara o que está atual, concluído ou pendente. O hangar usa iluminação Poly Haven CC0, com crédito e integridade local.

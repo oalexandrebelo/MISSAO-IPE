@@ -2,7 +2,8 @@ import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent, ReactNode } from 'react';
 import { BRUNO_MISSIONS } from '../lab/bruno-missions.ts';
 import type { BrunoMissionId } from '../lab/bruno-missions.ts';
-import type { MetricMission } from '../metrics/player-metrics.ts';
+import type { MetricMission, PlayerSession } from '../metrics/player-metrics.ts';
+import { usePlayerMetrics } from './PlayerMetrics.tsx';
 import { Scene } from './Scene.tsx';
 import { Icon } from './Icon.tsx';
 import './game-shell.css';
@@ -19,6 +20,7 @@ const MISSIONS: LobbyMission[] = [
   { id: 'telescope', title: 'A luz guarda pistas', destination: 'WEBB', question: 'Uma imagem responde à mesma pergunta que um espectro?', lesson: 'Compatibilidade científica e limites da evidência.', type: 'Arquivo científico · Webb/NIRSpec' },
 ];
 const LobbyScene = lazy(() => import('./LobbyScene.tsx'));
+const selectedBySession = new WeakMap<PlayerSession, number>();
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)';
 const THUMBNAILS: Partial<Record<MetricMission, string>> = { iss: 'earth', moon: 'moon', mars: 'mars', europa: 'europa', cerrado: 'earth' };
 const textures = `${import.meta.env?.BASE_URL ?? './'}textures/lobby/`;
@@ -54,7 +56,8 @@ function LobbyNeighbor({ mission, previous, onSelect }: { mission: LobbyMission;
 }
 
 export function GameLobby({ onChoose, onKnowledge, onShop, attempts, bestScore }: { onChoose: (id: MetricMission) => void; onKnowledge: () => void; onShop?: () => void; attempts: number; bestScore: number }) {
-  const [selected, setSelected] = useState(0);
+  const { session } = usePlayerMetrics();
+  const [selected, setSelected] = useState(() => session ? selectedBySession.get(session) ?? 0 : 0);
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(() => typeof window !== 'undefined' && Boolean(window.matchMedia?.(REDUCED_MOTION).matches));
   const picker = useRef<Array<HTMLButtonElement | null>>([]);
@@ -72,11 +75,16 @@ export function GameLobby({ onChoose, onKnowledge, onShop, attempts, bestScore }
     return () => preference.removeEventListener?.('change', update);
   }, []);
 
+  function selectDestination(index: number) {
+    if (session) selectedBySession.set(session, index);
+    setSelected(index);
+  }
+
   function movePicker(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
     event.preventDefault();
     const target = (index + (event.key === 'ArrowLeft' ? -1 : 1) + MISSIONS.length) % MISSIONS.length;
-    setSelected(target);
+    selectDestination(target);
     picker.current[target]?.focus();
   }
 
@@ -107,13 +115,13 @@ export function GameLobby({ onChoose, onKnowledge, onShop, attempts, bestScore }
           Jogar {mission.destination}<Icon name="arrow" size={18} />
         </button>
       </section>
-      <LobbyNeighbor mission={MISSIONS[previous]!} previous onSelect={() => setSelected(previous)} />
-      <LobbyNeighbor mission={MISSIONS[next]!} onSelect={() => setSelected(next)} />
+      <LobbyNeighbor mission={MISSIONS[previous]!} previous onSelect={() => selectDestination(previous)} />
+      <LobbyNeighbor mission={MISSIONS[next]!} onSelect={() => selectDestination(next)} />
     </div>
     <div className="game-lobby-navigation">
       <div className="game-mission-picker" role="group" aria-label="Selecionar missão">
         {MISSIONS.map((item, index) => <button type="button" key={item.id} aria-pressed={selected === index}
-          ref={button => { picker.current[index] = button; }} onClick={() => setSelected(index)} onKeyDown={event => movePicker(event, index)}>{item.destination}</button>)}
+          ref={button => { picker.current[index] = button; }} onClick={() => selectDestination(index)} onKeyDown={event => movePicker(event, index)}>{item.destination}</button>)}
       </div>
       <div className="game-lobby-links">
         {onShop ? <button className="text-button" type="button" onClick={onShop}>Loja e inventário</button> : null}

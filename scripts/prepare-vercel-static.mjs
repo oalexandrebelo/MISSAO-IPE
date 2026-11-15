@@ -47,6 +47,7 @@ const policy = (hashes, externalMedia = false) => [
 const privateCsp = policy(inlineHashes);
 const csp = allowPublicAnalytics(privateCsp), portalCsp = allowPublicAnalytics(policy(portalHashes, true));
 const presentationUrl = 'https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/';
+const landingPageUrl = 'https://projeto-ipe-lp.vercel.app/';
 if (Math.max(Buffer.byteLength(csp), Buffer.byteLength(portalCsp)) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
 const routeConfig = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
@@ -57,6 +58,7 @@ const routeConfig = {
       { source: '/', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: area === 'pitch' ? presentationUrl : `https://nasa-missaoipe.alexandrebelo.com${path}`, permanent: false },
       { source: '/:path*', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: 'https://nasa-missaoipe.alexandrebelo.com/:path*', permanent: false },
     ]),
+    { source: '/', destination: landingPageUrl, permanent: false },
     { source: '/doc', destination: '/docs/index.html', permanent: false },
     { source: '/painel', destination: '/dashboard/index.html', permanent: false },
     { source: '/campanha/research', destination: '/campanha/research/index.html', permanent: false },
@@ -73,11 +75,12 @@ const routeConfig = {
     { source: '/dashboard', destination: '/dashboard/index.html', permanent: false },
     { source: '/apresentacao', destination: presentationUrl, permanent: false },
     { source: '/docs', destination: '/docs/index.html', permanent: false },
-    { source: '/documentacao', destination: '/docs/index.html', permanent: false },
+    { source: '/documentacao/index.html', destination: '/documentacao', permanent: false },
     { source: '/contexto', destination: '/context/index.html', permanent: false },
     { source: '/cronograma', destination: '/context/index.html', permanent: false },
     { source: '/estudo', destination: '/context/research-library.html', permanent: false }
   ],
+  rewrites: [{ source: '/documentacao', destination: '/index.html' }],
   headers: [
     { source: '/(.*)', headers: [
       { key: 'X-Content-Type-Options', value: 'nosniff' },

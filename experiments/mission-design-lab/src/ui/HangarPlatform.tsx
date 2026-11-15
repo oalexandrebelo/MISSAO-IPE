@@ -8,9 +8,9 @@ import { disposeAsset } from './scene-asset.ts';
 const PLATFORM_URL = `${import.meta.env?.BASE_URL ?? './'}models/kenney/structure-platform.glb`;
 export const HANGAR_DECK_Y = -1.49;
 const DECK_WIDTH = 5.2;
-const DECK_DEPTH = 2.4;
+const DECK_DEPTH = 1.92;
 const DECK_HEIGHT = .6;
-const DECK_Z = -.22;
+const DECK_Z = -.25;
 const FLOOR_Y = HANGAR_DECK_Y - DECK_HEIGHT;
 const ignoreRaycast = () => undefined;
 
@@ -30,8 +30,10 @@ export function HangarPlatform() {
       }
       loaded = scene;
       mesh.raycast = ignoreRaycast;
-      mesh.material.color.set('#8fabc1');
-      mesh.material.roughness = .62;
+      // Balance the warm palette in linear RGB while keeping the original texture.
+      mesh.material.color.setRGB(.10, .56, 1.65);
+      mesh.material.roughness = .74;
+      mesh.material.metalness = .28;
       setPlatform(scene);
       invalidate();
     }).catch(() => { /* Keep the neutral deck if the optional GLB cannot load. */ });
@@ -45,7 +47,7 @@ export function HangarPlatform() {
   }, [gl, platform]);
 
   return <>
-    <gridHelper args={[8, 16, '#456277', '#263845']} position={[0, FLOOR_Y, DECK_Z]} raycast={ignoreRaycast} />
+    <gridHelper args={[8, 16, '#354a58', '#1d2e3a']} position={[0, FLOOR_Y, DECK_Z]} raycast={ignoreRaycast} />
     {platform ? (
       // The GLB occupies X[-.5,.5], Y[0,.8], Z[-.5,0] after its node scale.
       <group name="kenney-structure-platform" position={[0, FLOOR_Y, DECK_Z + DECK_DEPTH / 2]} scale={[DECK_WIDTH, DECK_HEIGHT / .8, DECK_DEPTH / .5]}>

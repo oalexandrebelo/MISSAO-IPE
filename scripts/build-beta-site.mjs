@@ -23,6 +23,7 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md', target: 'docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md', title: 'Design do jogo e handoff · R32', description: 'Hierarquia do cockpit, continuidade do destino, escolhas no 3D e revisão móvel.' },
   { source: 'docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md', target: 'docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md', title: 'Auditoria completa Bruno · R31', description: 'Versão atual, áreas integradas, assets e limites da incorporação.' },
   { source: 'docs/79-GAME-DESIGN-E-SKILLS-R31.md', target: 'docs/79-GAME-DESIGN-E-SKILLS-R31.md', title: 'Escolhas claras no hangar · R31', description: 'Skills de game design, usabilidade, previsão, componentes e próximo passo.' },
   { source: 'docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md', target: 'docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md', title: 'Hangar Kenney e handoff · R31', description: 'Sete bancadas, referência CC0, marcos de progresso e validação móvel.' },
@@ -348,7 +349,7 @@ try {
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { status: 'candidate; validate deployment receipt before claiming publication' },
     scientificEngineModified: false,
-    routeEntrypoints: ['/', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/dashboard/index.html', '/equipe/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/presentation/pitch/index.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html', `/${librasGuide}`],
+    routeEntrypoints: ['/', '/documentacao', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/dashboard/index.html', '/equipe/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/presentation/pitch/index.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html', `/${librasGuide}`],
     curation: 'Explicit allowlist of runtime assets, public documents, historical artifacts reviewed by coordination, scientific sources, licenses and field-projected evidence.',
     excludedClasses: ['raw static-analysis report', 'repository-sources', 'personal attachments and poster references', 'environment and credential files', 'source maps', 'private repository code', 'node_modules', 'git and Vercel local state'],
     eligibility: 'Pre-event specific development preserved; temporal eligibility and official Resources unresolved.',

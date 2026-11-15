@@ -47,8 +47,14 @@ test('Cerrado cockpit directs choices, prediction and cancellation to real contr
   await click('Ir à montagem');
   assert.match(flightStage(), /Montagem/);
   assert.equal(document.activeElement.id, 'systems-title');
-  await click(screen.getByRole('radio', { name: /Bateria 24 Wh/ }));
   const scene = document.querySelector('.assembly-scene .scene');
+  await click(within(scene).getByRole('button', { name: 'Comunicação', exact: true }));
+  assert.equal(scene.dataset.inspection, 'communications');
+  const editorAccess = within(scene.parentElement);
+  assert.ok(editorAccess.getByText('Editando · Bateria'));
+  await click(editorAccess.getByRole('button', { name: 'Ir às opções' }));
+  assert.equal(document.activeElement.textContent, 'Bateria');
+  await click(screen.getByRole('radio', { name: /Bateria 24 Wh/ }));
   assert.equal(scene.dataset.inspection, 'energy');
   assert.equal(scene.dataset.batteryWh, '24');
   await click('Inspecionar esta escolha na nave');
@@ -102,7 +108,12 @@ for (const id of ['bennu', 'telescope']) {
     assert.match(flightStage(), /Requisitos/);
     await click('Projetar a arquitetura');
     assert.match(flightStage(), /Projeto/);
-    await click('Ir às opções');
+    const designScene = document.querySelector('.equipment-assembly .scene');
+    await click(within(designScene).getByRole('button', { name: 'Energia', exact: true }));
+    assert.equal(designScene.dataset.inspection, 'energy');
+    const editorAccess = within(designScene.parentElement);
+    assert.ok(editorAccess.getByText('Editando · Instrumento científico'));
+    await click(editorAccess.getByRole('button', { name: 'Ir às opções' }));
     assert.equal(document.activeElement.textContent, 'Instrumento científico');
     const config = id === 'bennu'
       ? { launch: 'compact', orbit: 'near', duration: 'full', instrument: 'camera', power: 'extended', ground: 'extended' }

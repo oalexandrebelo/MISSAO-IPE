@@ -65,9 +65,21 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `07f08dfa10a823066e28a7d29e80c745f1e97afd75e5970c3e7a3134d06082cb` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `cbb63393c3cfd0123a90e4455453bb9b6754acbb4ae27051a9637452508ef44a` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R31 — plataforma Kenney e escolhas claras
+
+**Publicada e conferida em 15/11/2026.** Código `9e1b0ed6ea49e63452122352ead86419753da7e0`; jogo `dpl_73UV1GTSejWc8XqxywZ5qjpZVhgy` e LP `dpl_BdSK8q6WBxbVXLqib9myPvJUeFSH` READY nesse commit. A plataforma Kenney CC0 foi integrada aos sete hangares; o GLB local tem 17.200 bytes. O plano em edição volta ao 3D ao trocar uma opção, os instrumentos faltantes têm nome e indicação de encaixes, e Meu progresso conta até sete destinos distintos com sucesso confirmado.
+
+Passaram 180 testes de domínio, 157 de interface, 53 de métricas e 20 de distribuição. Os sete hangares foram inspecionados em 390 px; ISS e Webb também em 320 px. A jornada ISS terminou com 92 pontos, 6/6 registros válidos, saldo de 26 créditos e monitor com 2/3 ciclos. Esses valores permaneceram após recarga no servidor local de QA. A rodada não repetiu as sete jornadas completas da R30.
+
+Em produção, 15 arquivos corresponderam ao build por SHA-256 e sete verificações confirmaram limites de acesso, 404, subdomínios e ligação da LP à apresentação. O navegador confirmou a plataforma no hangar ISS em 390 px, sem overflow ou erros de console observados. Telefone físico e testes educativos com pessoas seguem pendentes.
+
+[Handoff R31](docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md) · [Auditoria Bruno](docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md) · [QA móvel](evidence/r31-mobile-hangar.json) · [Publicação](evidence/r31-production-publication.json)
+
+---
 
 ## R30 — hangar, montagem e operação nas sete missões
 
@@ -8253,7 +8265,7 @@ A NASA não endossa a MISSÃO IPÊ. As fontes oficiais sustentam os conceitos e 
 
 # R27 — acessos oficiais da MISSÃO IPÊ
 
-Fonte: `docs/72-DOMINIOS-E-ACESSOS-R27.md` · SHA-256 original: `dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2` · Ajustes de caminhos privados: 0
+Fonte: `docs/72-DOMINIOS-E-ACESSOS-R27.md` · SHA-256 original: `0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0` · Ajustes de caminhos privados: 0
 
 # R27 — acessos oficiais da MISSÃO IPÊ
 
@@ -8261,12 +8273,14 @@ Fonte: `docs/72-DOMINIOS-E-ACESSOS-R27.md` · SHA-256 original: `dfc4b20ea0d61d6
 
 | Área | Endereço |
 | --- | --- |
-| Portal oficial | https://nasa-missaoipe.alexandrebelo.com/ |
+| LP principal | [projeto-ipe-lp.vercel.app](https://projeto-ipe-lp.vercel.app/) |
+| Entrada no domínio oficial | [nasa-missaoipe.alexandrebelo.com](https://nasa-missaoipe.alexandrebelo.com/) |
+| Hub de documentação e contexto | [Abrir hub](https://nasa-missaoipe.alexandrebelo.com/documentacao) |
 | Jogo, cadastro e sete missões | https://jogo.nasa-missaoipe.alexandrebelo.com/ |
 | Pitch interativo de Alexandre Belo | https://pitch.nasa-missaoipe.alexandrebelo.com/ |
 | Painel privado das participações | https://painel.nasa-missaoipe.alexandrebelo.com/ |
-| Documentação e handoff | https://docs.nasa-missaoipe.alexandrebelo.com/ |
-| Landing page imersiva | https://lp.nasa-missaoipe.alexandrebelo.com/ |
+| Índice de documentação e handoff | https://docs.nasa-missaoipe.alexandrebelo.com/ |
+| Subdomínio da LP | https://lp.nasa-missaoipe.alexandrebelo.com/ |
 | Central da equipe | https://nasa-missaoipe.alexandrebelo.com/equipe/index.html |
 | Repositório oficial | https://github.com/oalexandrebelo/MISSAO-IPE |
 
@@ -8276,7 +8290,9 @@ O painel exige autenticação administrativa já configurada. Nome e e-mail dos 
 
 Os subdomínios **jogo**, **pitch**, **painel** e **docs** redirecionam para o endereço canônico da sua área no domínio principal. Assim, cadastro, jogo e painel mantêm cookies no mesmo host. Isso evita pedir novo cadastro porque alguém trocou de link. A LP tem projeto Vercel próprio e é servida diretamente em **lp**.
 
-Destinos canônicos: `/lab/index.html`, `/presentation/pitch/index.html`, `/dashboard/index.html` e `/docs/index.html`. Também há atalhos `/doc` e `/painel` para recuperar links usados anteriormente. Um caminho desconhecido continua levando à página 404; não se mascara um erro como página inicial.
+A raiz do domínio oficial encaminha para a LP principal com HTTP 307. **`/documentacao`** serve o conteúdo do hub anterior no mesmo domínio. Use o endereço sem barra final para compartilhar seções como [Contexto](https://nasa-missaoipe.alexandrebelo.com/documentacao#contexto), [Próximas etapas](https://nasa-missaoipe.alexandrebelo.com/documentacao#plano) e [Dados NASA](https://nasa-missaoipe.alexandrebelo.com/documentacao#fontes). `/documentacao/` e `/documentacao/index.html` encaminham para `/documentacao`.
+
+O jogo usa `/lab/index.html`, o painel usa `/dashboard/index.html` e o índice usa `/docs/index.html`. O pitch abre a [central de apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/). `/doc` abre o índice e `/painel` abre o painel. Caminhos desconhecidos retornam 404.
 
 ## Operação para os devs
 
@@ -8286,6 +8302,7 @@ O DNS é administrado na Cloudflare, zona `alexandrebelo.com`. Os cinco CNAMEs n
 - Projeto da landing page: `projeto-ipe-lp`; mesmo repositório, pasta `apps/immersive-lp`.
 - As regras de host estão em `scripts/prepare-vercel-static.mjs`, que gera `vercel.json`. Altere a fonte, gere de novo e execute os testes dos redirecionamentos.
 - O servidor local em `scripts/serve-beta.mjs` reproduz essas regras para a suíte de publicação.
+- `node scripts/test-planet-policy.mjs` confere a geração e as respostas de rota em um servidor local isolado. A matriz de produção é conferida após o deploy.
 
 Depois de publicar, verifique **HTTPS, status, destino do redirecionamento, conteúdo e SHA dos dois deployments**. O DNS correto não comprova que o jogo novo está em produção. O recibo corrente é `PUBLICADO.md`.
 
@@ -8774,6 +8791,64 @@ No navegador, os sete hangares foram inspecionados em 390 px sem rolagem horizon
 Uma jornada ISS comprou e equipou o monitor, reforçou a proteção e ampliou a reserva. A comparação A/B mostrou 179 → 235 kg, 29 → 39 créditos e 0 → 6 registros válidos previstos, explicando que três escolhas mudaram. A execução terminou com 92 pontos e 6/6 registros válidos. Ao sair do hangar, o GLB deixou a operação. Após recarga: uma tentativa, um destino cumprido, 26 créditos, monitor com 2/3 ciclos e sete eventos confirmados, zero pendentes ou recusados. Nenhum erro de console foi observado na jornada local.
 
 Esses resultados usam participação sintética e servidor de testes. As sete jornadas completas da R30 continuam documentadas; nesta revisão a prova fim a fim foi repetida na ISS. Não houve teste em telefone físico, medição de FPS nem validação educativa com pessoas. [Recibo da revisão móvel](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r31-mobile-hangar.json). A publicação é registrada em `PUBLICADO.md` após a Vercel confirmar o commit.
+
+
+---
+
+# R32 · revisão do design publicado e handoff
+
+Fonte: `docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md` · SHA-256 original: `b7ef44f5e51756acd5382f742fecd117705b2b121b4ac0b769ad75a2f8b0950a` · Ajustes de caminhos privados: 0
+
+# R32 · revisão do design publicado e handoff
+
+## A arquitetura já é interativa
+
+O endereço `/lab/index.html` serve a aplicação React 19, TypeScript, Vite e React Three Fiber/Three.js. O HTML é a entrada compilada. A API de métricas usa Node na Vercel. A LP principal usa Next.js, e os documentos públicos são estáticos. A revisão corrige a apresentação da experiência; não há migração de framework nem nova dependência.
+
+## O que mudou
+
+A tela deve priorizar a nave, a escolha atual e a próxima ação. Na versão anterior, ferramentas de câmera, referências e diagramas competiam visualmente com a montagem; no celular, era necessário rolar mais para encontrar as opções.
+
+- **Sete hangares:** a plataforma Kenney continua local e íntegra, com acabamento azul-aço fosco sobre sua textura original. A profundidade menor e a grade discreta deixam a nave em primeiro plano. Os lançadores continuam apoiados. A nave de ISS/Lua/Marte/Europa fica 12% maior na montagem normal, preservando tamanho e folgas na vista separada e no voo.
+- **Campanha Bruno:** a indicação da escolha fica junto à nave. “Ir às opções” recebe prioridade, e a referência NASA vira ação de apoio. Os nomes A/B aparecem quando há comparação. No celular, o evento e os controles da operação vêm antes da cena.
+- **Cerrado, Bennu e Webb:** o resumo HTML do sistema fica logo depois da imagem. Ferramentas de câmera, diagrama Rive e agenda têm seções expansíveis na bancada compacta; comunicação mantém a agenda visível. O diagrama só carrega quando aberto. Cerrado ganhou o retorno “Ir às opções” com foco no sistema em edição.
+- **Leitura em tela pequena:** plaquetas 3D são omitidas em canvas com menos de 480 px; o resumo HTML preserva os números, sem cobrir as peças. Botões de inspeção e alternativa 2D continuam disponíveis.
+- **Continuidade:** sair do lobby para loja, acervo ou progresso e voltar preserva o destino escolhido durante a participação. O fluxo Nome → E-mail → Tipo → Play é mantido. O rodapé móvel deixa de repetir a marca e corrige o singular de tentativa.
+
+## Contratos dos dois devs
+
+**Dev A · motor e registros.** Nenhum resultado científico, orçamento, inventário, pontuação ou regra de desgaste foi alterado. A memória do destino pertence apenas à navegação da participação ativa; não substitui persistência do progresso nem cria outra identidade. A confirmação de recebimento das métricas continua distinta do render da tela de resultado.
+
+**Dev B · cena e interface.** Mantenha controles equivalentes em HTML, foco visível, movimento reduzido e alternativa 2D. Se uma placa sair do canvas estreito, preserve seu conteúdo em texto legível. Uma seção recolhida não deve manter animação secundária consumindo recursos. Não adicione uma transição que esconda falha, cause espera obrigatória ou apresente previsão como sucesso executado.
+
+As escolhas científicas continuam explicadas no [handoff R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md). Proveniência da plataforma e integração do Bruno: [R31](80-HANGAR-KENNEY-E-HANDOFF-R31.md) e [auditoria](78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md). A revisão aplica hierarquia e divulgação progressiva do Impeccable e das [skills de game design consultadas](79-GAME-DESIGN-E-SKILLS-R31.md).
+
+## Validação e limites
+
+A aplicação passou nos **180 testes de domínio, 161 de interface e 53 de métricas**. O build completo e as **20 verificações da distribuição e das rotas** também passaram. No navegador, o candidato foi exercitado a **390 × 844 px** e em desktop. O ensaio local confirmou:
+
+- ISS: escolha de bateria de 360/640 Wh refletida no resumo junto da nave, plataforma Kenney carregada e comparação A/B com rótulos próprios.
+- Operação: evento e controles antes da cena na ordem móvel; conclusão com 92/100, seis registros válidos, prêmio confirmado e desgaste de 2 para 1 ciclo.
+- Nova aba na mesma participação: duas tentativas, carteira com 32 créditos e instrumento com 1/3 ciclos, preservados após a execução.
+- Progresso: 14 eventos confirmados, nenhum pendente ou recusado; duas execuções de ISS continuam contando como apenas um destino cumprido.
+- Cerrado: bateria de 24 Wh refletida na cena e no resumo; retorno às opções leva o foco ao título “Bateria”; controles expansíveis e alternativa 2D operantes.
+- Lobby: Webb continua selecionado ao voltar de Meu progresso. Nenhum erro de console nem transbordamento horizontal foi observado nesses percursos.
+
+A geometria também tem testes automatizados de enquadramento em canvas estreitos; isso não equivale a testar telefone físico. O servidor de QA usa armazenamento de teste em memória: a nova aba prova a retomada nessa sessão, não durabilidade após reiniciar o servidor. A publicação terá verificação separada de arquivos e limites de acesso. Os percursos completos anteriores das sete missões estão no handoff R30; nesta revisão não foram repetidos sete voos completos nem pesquisa educativa com participantes.
+
+## LP principal
+
+A abertura explica o percurso de montar, operar e investigar os dados. “Jogar agora” é a ação principal, acompanhada de “Documentação”; os dois caminhos aparecem também no menu móvel. Filme e fontes são apoios, com a identidade e os assets locais preservados.
+
+O export Next.js, TypeScript, quatro testes do motor e a integridade de 21 assets passaram. No navegador, a LP foi conferida em 1280 px, 390 px e 320 px: ações visíveis, sem transbordamento, menu com retorno de foco via Escape. O laboratório interativo respondeu à troca do projeto de 2/6 para 6/6 registros. O spec Playwright foi atualizado, mas não executado nesta rodada; a interação foi verificada com a automação nativa do navegador.
+
+## Entrada principal e documentação
+
+A LP principal permanece em `https://projeto-ipe-lp.vercel.app/`. A raiz `https://nasa-missaoipe.alexandrebelo.com/` abre essa LP por redirecionamento, preservando uma única entrada promocional. O antigo hub da raiz passa a ser acessado por `/documentacao`, e o índice de documentos técnicos continua em `/docs/index.html`. Jogo, API e painel permanecem nos caminhos existentes.
+
+## Acessos oficiais
+
+[Jogar](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [LP](https://projeto-ipe-lp.vercel.app/) · [Apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) · [Documentação geral](https://nasa-missaoipe.alexandrebelo.com/documentacao) · [Índice técnico](https://nasa-missaoipe.alexandrebelo.com/docs/index.html).
 
 
 ---

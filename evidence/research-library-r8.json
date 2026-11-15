@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T20:19:39.562Z",
+  "generatedAt": "2026-11-15T20:41:05.975Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 142,
+  "documentCount": 143,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 46992,
-      "originalSha256": "07f08dfa10a823066e28a7d29e80c745f1e97afd75e5970c3e7a3134d06082cb",
-      "projectedSha256": "07f08dfa10a823066e28a7d29e80c745f1e97afd75e5970c3e7a3134d06082cb",
+      "originalBytes": 48495,
+      "originalSha256": "cbb63393c3cfd0123a90e4455453bb9b6754acbb4ae27051a9637452508ef44a",
+      "projectedSha256": "cbb63393c3cfd0123a90e4455453bb9b6754acbb4ae27051a9637452508ef44a",
       "redactions": 0
     },
     {
@@ -846,9 +846,9 @@
       "title": "R27 — acessos oficiais da MISSÃO IPÊ",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 3767,
-      "originalSha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
-      "projectedSha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
+      "originalBytes": 4686,
+      "originalSha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
+      "projectedSha256": "0946217d741c863b1b337ea2ca4e3f5e428144e6e30c4b3f251f090802562fd0",
       "redactions": 0
     },
     {
@@ -937,6 +937,17 @@
       "originalBytes": 6806,
       "originalSha256": "59ecf4e6c14a2666183bd807dc13c0ed81f628052d9c016eb020b280c38eee53",
       "projectedSha256": "59ecf4e6c14a2666183bd807dc13c0ed81f628052d9c016eb020b280c38eee53",
+      "redactions": 0
+    },
+    {
+      "source": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md",
+      "id": "doc-docs-81-design-do-jogo-e-handoff-r32-md",
+      "title": "R32 · revisão do design publicado e handoff",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 6715,
+      "originalSha256": "b7ef44f5e51756acd5382f742fecd117705b2b121b4ac0b769ad75a2f8b0950a",
+      "projectedSha256": "b7ef44f5e51756acd5382f742fecd117705b2b121b4ac0b769ad75a2f8b0950a",
       "redactions": 0
     },
     {
@@ -1570,13 +1581,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2615190,
-      "sha256": "5345d7e1277af805b2ea25392262cccfd32da2de474b8683e1628c0687f809dc"
+      "bytes": 2627264,
+      "sha256": "3f322eb15b842ff6766146c4cad33014acc549a4c49ca28a5c7feb820fbc3c7d"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2092633,
-      "sha256": "abdeb4d0369d68785e7d771f4932668a7dbe5613db354791d4d0d9097914a4dd"
+      "bytes": 2101999,
+      "sha256": "651b9add245c3f559a65144eb5a7ac10ae7444141b63676527689125be51fd25"
     }
   ]
 }

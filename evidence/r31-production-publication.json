@@ -1,0 +1,154 @@
+{
+  "edition": "R31",
+  "codeCommit": "9e1b0ed6ea49e63452122352ead86419753da7e0",
+  "checkedAt": "2026-11-15T20:21:08.565Z",
+  "status": "passed",
+  "files": [
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 1457,
+      "sha256": "2bec427fc81f3f10a0e3ffee27f9f8861f61241cb7d86451e3287df44a0d6355"
+    },
+    {
+      "path": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+      "status": 200,
+      "bytes": 16285,
+      "sha256": "9380264a7d51a65e956b40df62858b0235aeb2c091e025046cde8f458caf680c"
+    },
+    {
+      "path": "lab/assets/LobbyScene-1gwaVCEp.js",
+      "status": 200,
+      "bytes": 2812,
+      "sha256": "c443fd3ee784021d53e151fedfc80ed67272e69e3ad4775f14a9b064b5d9d7e3"
+    },
+    {
+      "path": "lab/assets/OrbitalScene-BKxBRlp0.js",
+      "status": 200,
+      "bytes": 219899,
+      "sha256": "95242d1e293f490a3ade0b6d964c049b355bd8f55daf2533db1a02366942d4f5"
+    },
+    {
+      "path": "lab/assets/index-CfTVjaWu.js",
+      "status": 200,
+      "bytes": 709434,
+      "sha256": "0a19a780e1def33924e413be49c6c154404d837e74a74864be65e503e57fdd92"
+    },
+    {
+      "path": "lab/assets/index-Cp82tIRD.css",
+      "status": 200,
+      "bytes": 241097,
+      "sha256": "1f6499748aaa81396c95662871039641348c7afcb886a2928f74f4b6f7660da4"
+    },
+    {
+      "path": "lab/environments/polyhaven/studio-small-01-1k.hdr",
+      "status": 200,
+      "bytes": 1701440,
+      "sha256": "a2d308672f077b0872686a439d76dc3ace91274380ae2e5f02c653c3ccbc8407"
+    },
+    {
+      "path": "lab/environments/polyhaven/manifest.json",
+      "status": 200,
+      "bytes": 658,
+      "sha256": "4248f53c1195049ea762cb0972beb0eee90d208016e060c69aa4addd46672b3d"
+    },
+    {
+      "path": "lab/models/nasa/manifest.json",
+      "status": 200,
+      "bytes": 17629,
+      "sha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d"
+    },
+    {
+      "path": "lab/textures/lobby/manifest.json",
+      "status": 200,
+      "bytes": 3692,
+      "sha256": "40e4974d5353694ddc8fcc0ac52892488c8c9a3401ecdb1499c1328446bd8bc5"
+    },
+    {
+      "path": "lab/models/kenney/structure-platform.glb",
+      "status": 200,
+      "bytes": 17200,
+      "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99"
+    },
+    {
+      "path": "lab/models/kenney/manifest.json",
+      "status": 200,
+      "bytes": 1010,
+      "sha256": "9111a8325a85015b636f74c46abe3ad87d6c87d190cf77e7524297917c97138c"
+    },
+    {
+      "path": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+      "status": 200,
+      "bytes": 27094,
+      "sha256": "96e0153d25de582a509c4888a41514b91864b374e4a0b59883aab4c145ecbb6e"
+    },
+    {
+      "path": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+      "status": 200,
+      "bytes": 6894,
+      "sha256": "ec3ff02f7f381c0e4979f80eae848aba1f9a9e5e554877bcd85b3be833452b80"
+    },
+    {
+      "path": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+      "status": 200,
+      "bytes": 9600,
+      "sha256": "051cc0374ecb742f05b87052767d8f4f2686e0766dec1877027f56afbcabdcfb"
+    }
+  ],
+  "checks": [
+    {
+      "path": "/api/metrics?action=admin",
+      "status": 401
+    },
+    {
+      "path": "/api/metrics?action=session",
+      "status": 200
+    },
+    {
+      "path": "/r31-page-does-not-exist",
+      "status": 404
+    },
+    {
+      "host": "jogo",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html"
+    },
+    {
+      "host": "docs",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html"
+    },
+    {
+      "host": "painel",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html"
+    },
+    {
+      "host": "projeto-ipe-lp.vercel.app",
+      "status": 200,
+      "presentationLink": true
+    }
+  ],
+  "limits": [
+    "Seven hangars were inspected in local mobile viewport. Full baseline journeys are documented in R30. This receipt verifies current public assets and access boundaries, not a new production inventory campaign.",
+    "Physical phones and human learning efficacy remain untested."
+  ],
+  "deployments": {
+    "game": {
+      "id": "dpl_73UV1GTSejWc8XqxywZ5qjpZVhgy",
+      "state": "READY"
+    },
+    "lp": {
+      "id": "dpl_BdSK8q6WBxbVXLqib9myPvJUeFSH",
+      "state": "READY"
+    }
+  },
+  "browser": {
+    "route": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html",
+    "viewportWidth": 390,
+    "hangar": "ISS",
+    "kenneyLoaded": true,
+    "horizontalOverflow": false,
+    "consoleErrors": []
+  }
+}

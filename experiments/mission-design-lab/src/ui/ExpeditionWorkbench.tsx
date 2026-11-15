@@ -57,7 +57,7 @@ export function ExpeditionWorkbench({ id, config, onChoice }: ExpeditionWorkbenc
       <nav className="equipment-systems" aria-label="Escolher sistema da expedição">{SYSTEMS.map(item => <button type="button" key={item.key} aria-label={item.label} aria-pressed={active === item.key} onClick={() => setActive(item.key)}><Icon name={item.icon} size={20} /><span><strong>{item.short}</strong><small>{label(item.key, config[item.key])}</small></span><Icon name="chevron" size={14} /></button>)}</nav>
       <div className="equipment-assembly">
         <div className="equipment-scene-wrap scientific-cockpit-viewport scientific-focus-target" role="group" ref={sceneRef} tabIndex={-1} aria-label={`Visualização de ${system.label}`}>
-          <div className="equipment-scene-label"><strong>{system.label} em foco</strong><button className="text-button" type="button" onClick={() => focusCockpitSection(optionsHeading.current)}>Ir às opções <Icon name="arrow" size={16} /></button></div>
+          <div className="equipment-scene-label"><strong>Editando · {system.label}</strong><button className="text-button" type="button" onClick={() => focusCockpitSection(optionsHeading.current)}>Ir às opções <Icon name="arrow" size={16} /></button></div>
           <Scene compact world={id} expeditionConfig={config} variant="hangar" segment={active === 'launch' || active === 'orbit' ? 'launch' : 'space'} inspectSubsystem={system.inspection} scienceRecordCount={6} />
         </div>
         <div className="equipment-editor">

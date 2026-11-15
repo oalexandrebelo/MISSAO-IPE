@@ -91,7 +91,7 @@ function Assembly({ config, active, turn, onPart, paused, exploded = false, acti
   const aperture = config.payload === 'survey' ? .31 : .17, dish = config.navigation === 'deep-space' ? .43 : .2;
   const loadout = 'loadout' in config ? config.loadout : null;
   let slot = -(loadout?.reduce((total, item) => total + BRUNO_INSTRUMENTS[item.instrumentId].slots, 0) ?? 0) / 2;
-  return <group ref={group} name="configured-bruno-spacecraft" userData={{ phase: state.phase, conceptual: true }} position={[.45, .15, .2]}>
+  return <group ref={group} name="configured-bruno-spacecraft" userData={{ phase: state.phase, conceptual: true }} position={[.45, .15, .2]} scale={state.phase === 'assembly' && !exploded ? 1.12 : 1}>
     <mesh {...inspect('protection')}><boxGeometry args={[.88, 1.08, .88]} /><meshStandardMaterial color="#ad916a" metalness={.55} roughness={.42} /></mesh>
     {[-1, 1].map(side => <group key={side}>
       <mesh position={[side * (protection / 2 + (exploded ? .3 : 0)), 0, 0]} {...inspect('protection')}><boxGeometry args={[config.protection === 'reinforced' ? .14 : .045, 1.18, protection]} /><meshStandardMaterial color={color('protection', '#a8b8bd')} metalness={.55} roughness={.38} /></mesh>

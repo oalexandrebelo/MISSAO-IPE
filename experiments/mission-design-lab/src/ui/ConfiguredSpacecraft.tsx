@@ -31,9 +31,10 @@ function Selection({ size, active }: { size: [number, number, number]; active: b
   return active ? <mesh><boxGeometry args={size}/><meshBasicMaterial color={SELECTED} wireframe transparent opacity={.75} depthWrite={false}/></mesh> : null;
 }
 function SubsystemCallout({ presentation, inspection, anchor }: { presentation: SpacecraftPresentation; inspection: SpacecraftInspection; anchor: [number, number, number] }) {
+  const wideView = useThree(state => state.size.width >= 480);
   const readout = getInspectionReadout(presentation, inspection);
   const texture = useMemo(() => {
-    if (!readout) return null;
+    if (!readout || !wideView) return null;
     const canvas = document.createElement('canvas'); canvas.width = 512; canvas.height = 136;
     const context = canvas.getContext('2d');
     if (!context) return null;
@@ -44,7 +45,7 @@ function SubsystemCallout({ presentation, inspection, anchor }: { presentation: 
     context.fillStyle = '#edf3ed'; context.font = '28px sans-serif'; context.fillText(readout.value, 256, 100, 476);
     const map = new THREE.CanvasTexture(canvas); map.colorSpace = THREE.SRGBColorSpace;
     return map;
-  }, [readout?.title, readout?.value]);
+  }, [readout?.title, readout?.value, wideView]);
   useEffect(() => () => texture?.dispose(), [texture]);
   if (!texture) return null;
   return <group name={`capacity-label-${inspection}`}>

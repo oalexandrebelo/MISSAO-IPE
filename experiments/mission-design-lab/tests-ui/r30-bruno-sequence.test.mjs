@@ -60,7 +60,7 @@ test('a escolha na montagem só move o foco à nave quando o jogador pede a insp
   fireEvent.click(page.getByRole('button', { name: 'Ver esta escolha na nave' }));
   assert.equal(document.activeElement, craft);
   assert.deepEqual(scrolls, [craft]);
-  assert.ok(within(craft).getByText('Sua nave · plano B'));
+  assert.ok(within(craft).getByText('Sua nave'));
   assert.equal(craft.dataset.protection, 'reinforced');
 });
 
@@ -74,9 +74,12 @@ test('editar um componente atualiza a nave do plano B mesmo com a referência NA
   choice.focus();
   fireEvent.click(choice);
   assert.equal(document.activeElement, choice);
-  assert.ok(within(craft).getByText('Sua nave · plano B'));
+  assert.ok(within(craft).getByText('Sua nave'));
   assert.equal(craft.dataset.launcher, 'heavy');
-  assert.match(page.getByText('Previsão do plano B').parentElement.textContent, /470 kg/);
+  assert.match(within(craft).getByText(/^Previsto · /).textContent, /470 kg/);
+  assert.match(page.getByText('Previsão da montagem').parentElement.textContent, /470 kg/);
+  fireEvent.click(page.getByRole('button', { name: 'Revisar voo e comparar A/B' }));
+  assert.ok(within(craft).getByText('Sua nave · plano B'));
 });
 
 test('a vista da nave oferece retorno para a opção do sistema em foco', t => {
@@ -97,6 +100,9 @@ test('a régua só revela a transferência interrompida ao chegar a ela e marca 
   const page = openHangar('mars');
   fireEvent.click(page.getByRole('radio', { name: /Maior capacidade/ }));
   fireEvent.click(page.getByRole('button', { name: 'Simular lançamento' }));
+  const operation = within(page.container.querySelector('.bruno-operations')).getByRole('region', { name: 'Operação da missão' });
+  const craft = page.container.querySelector('[data-bruno-craft]');
+  assert.ok(operation.compareDocumentPosition(craft) & Node.DOCUMENT_POSITION_FOLLOWING);
   fireEvent.click(page.getByRole('button', { name: 'Pausar operação' }));
   const phases = page.getByRole('list', { name: 'Etapas da missão' });
   const getStep = name => within(phases).getByText(name, { exact: true }).closest('li');

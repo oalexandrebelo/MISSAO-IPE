@@ -17,12 +17,13 @@
   "modifications": "None to the distributed file.",
   "sourceBounds": { "min": [-0.5, 0, -0.5], "max": [0.5, 0.8, 0] },
   "runtimeTransform": {
-    "position": [0, -2.09, 0.98],
-    "scale": [5.2, 0.75, 4.8],
+    "position": [0, -2.09, 0.71],
+    "scale": [5.2, 0.75, 3.84],
     "rotation": [0, 0, 0],
     "deckY": -1.49,
-    "materialTint": "#8fabc1",
-    "materialRoughness": 0.62
+    "materialColorLinear": [0.1, 0.56, 1.65],
+    "materialRoughness": 0.74,
+    "materialMetalness": 0.28
   },
   "intendedUse": "Scenery for the assembly and ground integration views in the seven educational missions."
 }

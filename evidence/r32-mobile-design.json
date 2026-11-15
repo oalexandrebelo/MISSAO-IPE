@@ -1,0 +1,57 @@
+{
+  "edition": "R32",
+  "checkedAt": "2026-11-15T20:35:59.282693+00:00",
+  "environment": "local QA with synthetic player and in-memory server",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "uiTests": 161,
+  "checks": {
+    "kenneyPlatform": "loaded",
+    "energyChoice": "360 and 640 Wh rendered beside ISS craft",
+    "operation": "event controls precede craft on mobile",
+    "score": 92,
+    "validRecords": 6,
+    "attemptsAfterReopen": 2,
+    "walletAfterReopen": 32,
+    "instrumentCyclesAfterReopen": "1/3",
+    "confirmedEvents": 14,
+    "pendingEvents": 0,
+    "rejectedEvents": 0,
+    "distinctDestinations": 1,
+    "lobbyDestinationRetained": "Webb after progress",
+    "cerradoBattery": 24,
+    "cerradoFocusTarget": "H2 Bateria",
+    "fallback2d": true,
+    "horizontalOverflow": false,
+    "consoleErrors": []
+  },
+  "limits": [
+    "Viewport test, not physical phone.",
+    "No seven complete flights repeated in this revision; R30 baseline and R31 seven-hangar inspection remain separately recorded.",
+    "Local in-memory QA does not prove persistence across server restart.",
+    "No production player records were created by this test."
+  ],
+  "lp": {
+    "viewports": [
+      1280,
+      390,
+      320
+    ],
+    "overflow": false,
+    "heroActionsVisible": [
+      "Jogar agora",
+      "Documentação"
+    ],
+    "menuEscapeFocus": "Abrir menu",
+    "labResult": "2/6 to 6/6 after Redesenhar",
+    "consoleErrors": [],
+    "checks": {
+      "engineTests": 4,
+      "assetHashes": 21,
+      "typecheck": "passed",
+      "staticBuild": "passed"
+    }
+  }
+}

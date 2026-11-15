@@ -208,3 +208,8 @@ body:has(.game-shell){overflow:hidden;padding-block-end:0!important}
   .game-lobby-links { column-gap: .85rem; }
   .game-lobby-credit { align-items: center; }
 }
+
+@media(max-width:680px) {
+  .game-hud-foot { min-height:26px; justify-content:flex-start; padding-inline:14px 84px; font-size:10px; letter-spacing:.03em; }
+  .game-hud-foot span:first-child { display:none; }
+}

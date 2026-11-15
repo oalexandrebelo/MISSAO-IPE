@@ -19,6 +19,7 @@ function headersFor(pathname) {
   return Object.fromEntries(headerRules.filter(rule => rule.source === pathname || rule.pattern?.test(pathname)).flatMap(rule => rule.headers.map(header => [header.key, header.value])));
 }
 const redirects = new Map(config.redirects.filter(r => !r.has).map(r => [r.source, r.destination]));
+const rewrites = new Map((config.rewrites ?? []).map(rule => [rule.source, rule.destination]));
 // Explicit localhost-only QA mode. Production always uses the private Blob adapter.
 let metrics;
 if (process.env.IPE_METRICS_TEST === '1') {
@@ -59,14 +60,20 @@ const server = http.createServer(async (req, res) => {
     res.end(req.method === 'HEAD' ? undefined : body);
   };
   if (!['GET', 'HEAD'].includes(req.method)) return finish(405, 'Método não permitido.\n', { Allow: 'GET, HEAD' });
-  try { pathname = decodeURIComponent((req.url || '/').split('?')[0]); }
+  const uri = req.url || '/';
+  const rawPath = uri.split('?')[0];
+  const search = uri.slice(rawPath.length);
+  try { pathname = decodeURIComponent(rawPath); }
   catch { return finish(400, 'Caminho inválido.\n'); }
   if (!pathname.startsWith('/') || /[\x00-\x1f\\]/.test(pathname) || pathname.split('/').some(s => s.startsWith('.'))) return finish(400, 'Caminho inválido.\n');
   const host = String(req.headers.host ?? '').split(':')[0];
   const hostRedirect = config.redirects.find(r => r.has?.some(condition => condition.type === 'host' && condition.value === host) && (r.source === pathname || r.source === '/:path*'));
-  if (hostRedirect) return finish(307, 'Redirecionando.\n', { Location: hostRedirect.destination.replace('/:path*', pathname) });
-  if (redirects.has(pathname)) return finish(307, 'Redirecionando.\n', { Location: redirects.get(pathname) });
-  const requested = resolve(canonicalRoot, '.' + pathname, pathname.endsWith('/') ? 'index.html' : '');
+  if (hostRedirect) return finish(307, 'Redirecionando.\n', { Location: hostRedirect.destination.replace('/:path*', pathname) + search });
+  if (redirects.has(pathname)) return finish(307, 'Redirecionando.\n', { Location: redirects.get(pathname) + search });
+  const slashless = pathname.slice(0, -1);
+  if (config.trailingSlash === false && pathname.endsWith('/') && rewrites.has(slashless)) return finish(308, 'Redirecionando.\n', { Location: slashless + search });
+  const filePath = rewrites.get(pathname) ?? pathname;
+  const requested = resolve(canonicalRoot, '.' + filePath, filePath.endsWith('/') ? 'index.html' : '');
   try {
     const actual = await realpath(requested);
     const rel = relative(canonicalRoot, actual);
