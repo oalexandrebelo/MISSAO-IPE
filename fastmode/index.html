@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MISSAO IPE — design de missão espacial</title>
+<meta name="description" content="Jogo de projeto de missão espacial: objetivo, requisitos, espaçonave, órbita, lançamento e operações. NASA Space Apps 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hud.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="grain"></div>
+<div class="scan"></div>
+
+<header class="topbar">
+  <div class="brand"><span class="dot"></span>MISSAO IPE</div>
+  <span class="chip" id="top-mission">—</span>
+  <span class="chip">semente <b id="top-seed">—</b></span>
+  <div class="spacer"></div>
+  <span class="chip" style="opacity:.7">CML 1–4</span>
+  <button class="icon-btn" id="mute" title="som" aria-label="alternar som">◉</button>
+  <button class="icon-btn" id="reset" title="reiniciar" aria-label="reiniciar">↺</button>
+</header>
+
+<main id="stage">
+  <section class="screen" data-screen="boot" id="s-boot"></section>
+  <section class="screen" data-screen="select" id="s-select"></section>
+  <section class="screen" data-screen="brief" id="s-brief"></section>
+  <section class="screen" data-screen="objetivo" id="s-objetivo"></section>
+  <section class="screen" data-screen="requisitos" id="s-req"></section>
+  <section class="screen" data-screen="projeto" id="s-projeto"></section>
+  <section class="screen" data-screen="lancamento" id="s-launch"></section>
+  <section class="screen" data-screen="operacoes" id="s-ops"></section>
+  <section class="screen" data-screen="relatorio" id="s-report"></section>
+
+  <footer class="foot">
+    <span>MISSAO IPE · MVP · NASA Space Apps 2026</span>
+    <span>dados com fonte · simulação declarada</span>
+  </footer>
+</main>
+
+<div id="launch"></div>
+<div id="modal"></div>
+<div id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2410 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "jogo": "MISSAO IPE",
+    "desafio": "NASA Space Apps Challenge 2026 — Space Mission Design Game",
+    "versao": "1.0",
+    "data": "2026-11-15",
+    "idioma": "pt-BR",
+    "aviso": "Números calibrados por ordens de grandeza reais e ajustados para 45 min de jogo. Cada valor traz a âncora científica em 'ancora'.",
+    "nota_balanceamento": "Todos os custos em M$ (milhões) na escala do jogo. Massas em kg, potência em W, dados em GB/dia.",
+    "modulo_saude": "ASTRAL VITAL",
+    "tagline": "A tripulação é o instrumento mais frágil da missão.",
+    "origem_nome": "Ipê: a árvore que floresce na seca — projetar sob escassez e ainda florescer."
+  },
+  "balance": {
+    "margem_massa": 0.1,
+    "limite_carreira_msv": 600,
+    "dose_gcr_dia_espaco_profundo": 1.18,
+    "spe_1972_msv": 222.3,
+    "spe_1989_msv": 233.5,
+    "bateria_wh": 1400,
+    "profundidade_descarga": 0.7,
+    "buffer_dados_dias": 2,
+    "integração_pct": 0.12,
+    "custo_atraso_mes_pct": 0.08,
+    "penalidade_janela_perdida_vida_pct": 0.2,
+    "slots_por_barramento": {
+      "cubesat": 2,
+      "smallsat": 4,
+      "microsat": 6,
+      "midsize": 8,
+      "large": 10,
+      "hab": 10
+    },
+    "fator_blindagem_gcr": [
+      {
+        "densidade_g_cm2": 0.3,
+        "fator": 1.0
+      },
+      {
+        "densidade_g_cm2": 1.0,
+        "fator": 0.9
+      },
+      {
+        "densidade_g_cm2": 2.5,
+        "fator": 0.75
+      },
+      {
+        "densidade_g_cm2": 4.0,
+        "fator": 0.62
+      },
+      {
+        "densidade_g_cm2": 8.0,
+        "fator": 0.45
+      }
+    ],
+    "custo_operacional_mes_ms": {
+      "cubesat": 0.1,
+      "smallsat": 0.4,
+      "microsat": 0.8,
+      "midsize": 1.5,
+      "large": 3.0,
+      "hab": 8.0
+    },
+    "saude": {
+      "dano_por_fracao_carreira": 40,
+      "dano_por_hora_sono_abaixo_6_5": 8,
+      "dano_por_mmhg_co2_acima_3": 7.5,
+      "dano_por_turno_carga_alta": 3.3,
+      "kit_saude_reducao_dano_evento_pct": 0.5,
+      "sono_medio_iss_h": 6.09,
+      "co2_nominal_mmhg": 3.0
+    },
+    "latencia_min": {
+      "leo": 0.01,
+      "nrho": 0.02,
+      "dso": 12,
+      "marte": 12,
+      "lua": 0.02,
+      "l1": 0.02
+    },
+    "latencia_terra_lua_s": 1.3,
+    "latencia_marte_min": [
+      4,
+      24
+    ],
+    "moc_penalidade_anomalia_pct": 0.5
+  },
+  "orbits": [
+    {
+      "id": "leo400",
+      "nome": "LEO 400 km · 51,6°",
+      "dose_msv_dia": 0.4,
+      "eclipse_fracao": 0.36,
+      "downlink_h_dia": 8,
+      "latencia_min": 0.01,
+      "vida_meses": 24,
+      "frase": "Perto da Terra, longe do Sol a maior parte do tempo.",
+      "vantagem": "Baixo custo de lançamento, latência curta, retorno fácil.",
+      "risco": "Arrasto atmosférico limita a vida útil; 36% do tempo no escuro.",
+      "ancora": "Dose típica em LEO é ~10× menor que no espaço profundo por causa do campo geomagnético.",
+      "fator_solar": 1.0,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "sso600",
+      "nome": "SSO 600 km · órbita heliossíncrona",
+      "dose_msv_dia": 0.6,
+      "eclipse_fracao": 0.35,
+      "downlink_h_dia": 6,
+      "latencia_min": 0.01,
+      "vida_meses": 18,
+      "frase": "Passa sempre na mesma hora local — a órbita dos satélites de observação.",
+      "vantagem": "Iluminação constante entre passagens: ideal para comparar imagens.",
+      "risco": "Eclipse de 35 min por órbita; mais radiação que LEO baixa.",
+      "ancora": "Órbitas heliossíncronas são usadas por Landsat, Sentinel-2 e CBERS.",
+      "fator_solar": 1.0,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "gto",
+      "nome": "GTO · órbita de transferência",
+      "dose_msv_dia": 1.0,
+      "eclipse_fracao": 0.05,
+      "downlink_h_dia": 4,
+      "latencia_min": 0.02,
+      "vida_meses": 12,
+      "frase": "Atravessa o cinturão de prótons duas vezes por dia.",
+      "vantagem": "Cobertura ampla, poucos eclipses.",
+      "risco": "Cada travessia do cinturão custa dose; apontamento difícil.",
+      "ancora": "O trânsito pelo Van Allen interno custou 1,61 mSv na Artemis I (phantom Helga).",
+      "fator_solar": 1.0,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "nrho",
+      "nome": "NRHO · órbita lunar quase-retilínea",
+      "dose_msv_dia": 1.18,
+      "eclipse_fracao": 0.03,
+      "downlink_h_dia": 4,
+      "latencia_min": 0.02,
+      "vida_meses": 60,
+      "frase": "A órbita da Artemis: sempre vendo a Terra, sempre longe.",
+      "vantagem": "Acesso a polo sul lunar, contato quase contínuo, estabilidade orbital.",
+      "risco": "Fora da magnetosfera: dose de espaço profundo.",
+      "ancora": "1,18 mSv/dia medidos na Orion (Artemis I, Sci Adv 2026).",
+      "fator_solar": 1.0,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "dso",
+      "nome": "Espaço profundo · cruzeiro",
+      "dose_msv_dia": 1.18,
+      "eclipse_fracao": 0.0,
+      "downlink_h_dia": 2.5,
+      "latencia_min": 12,
+      "vida_meses": 60,
+      "frase": "Aqui a luz leva minutos para chegar — e o socorro, muito mais.",
+      "vantagem": "Nenhum eclipse; céu limpo para astronomia.",
+      "risco": "Latência de 4 a 24 min; dose máxima; sem retorno.",
+      "ancora": "Terra–Marte: 4 a 24 min de latência de ida, dependendo das órbitas.",
+      "fator_solar": 0.6,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "l1",
+      "nome": "L1 · ponto de Lagrange Sol–Terra",
+      "dose_msv_dia": 0.9,
+      "eclipse_fracao": 0.0,
+      "downlink_h_dia": 21,
+      "latencia_min": 0.02,
+      "vida_meses": 60,
+      "frase": "O ponto onde o Sol e a Terra se equilibram: sentinela do clima espacial.",
+      "vantagem": "Vê o Sol antes da Terra; downlink quase contínuo.",
+      "risco": "Fora da magnetosfera; sem eclipse, mas sem abrigo.",
+      "ancora": "DSCOVR e SOHO operam em L1; alertas de SPE ganham ~30–60 min de antecedência.",
+      "fator_solar": 1.0,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "mars_orbit",
+      "nome": "Órbita de Marte",
+      "dose_msv_dia": 0.9,
+      "eclipse_fracao": 0.04,
+      "downlink_h_dia": 3,
+      "latencia_min": 12,
+      "vida_meses": 48,
+      "frase": "Um atraso de 4 a 24 minutos em cada pergunta.",
+      "vantagem": "Cobertura global; atmosfera ajuda a blindar.",
+      "risco": "Poeira, latência e ausência de resgate.",
+      "ancora": "A atmosfera marciana (~6 mbar) reduz parte da dose, mas não os prótons de alta energia.",
+      "fator_solar": 0.43,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    },
+    {
+      "id": "mars_surface",
+      "nome": "Superfície de Marte",
+      "dose_msv_dia": 0.45,
+      "eclipse_fracao": 0.0,
+      "downlink_h_dia": 2,
+      "latencia_min": 12,
+      "vida_meses": 24,
+      "frase": "Chão firme, céu hostil: metade da dose, o dobro da solidão.",
+      "vantagem": "Atmosfera e solo blindam; ciência de campo.",
+      "risco": "Tempestades de poeira derrubam a geração solar por semanas.",
+      "ancora": "MSL/RAD mediu ~0,64 mSv/dia na superfície marciana; a blindagem do solo reduz.",
+      "fator_solar": 0.43,
+      "fonte_solar": "1,0 em 1 UA; 0,43 em Marte (inverso do quadrado)"
+    }
+  ],
+  "launchers": [
+    {
+      "id": "electron",
+      "nome": "Electron",
+      "custo_ms": 7.5,
+      "capacidade_kg": {
+        "leo400": 300,
+        "sso600": 200
+      },
+      "frase": "Pequeno, barato, sem perdão de massa."
+    },
+    {
+      "id": "vega_c",
+      "nome": "Vega-C",
+      "custo_ms": 37,
+      "capacidade_kg": {
+        "leo400": 2300,
+        "sso600": 1500,
+        "gto": 700
+      },
+      "frase": "O cavalo de batalha europeu para órbita baixa."
+    },
+    {
+      "id": "falcon9",
+      "nome": "Falcon 9",
+      "custo_ms": 67,
+      "capacidade_kg": {
+        "leo400": 22800,
+        "sso600": 15000,
+        "gto": 8300,
+        "nrho": 3500,
+        "dso": 3000,
+        "l1": 3500,
+        "mars_orbit": 2500
+      },
+      "frase": "A régua do mercado: capacidade enorme por um preço conhecido."
+    },
+    {
+      "id": "ariane6",
+      "nome": "Ariane 6",
+      "custo_ms": 90,
+      "capacidade_kg": {
+        "leo400": 21650,
+        "sso600": 14000,
+        "gto": 11500,
+        "nrho": 4000,
+        "dso": 3500,
+        "l1": 4000,
+        "mars_orbit": 3000
+      },
+      "frase": "Capacidade parecida, preço maior — escolha política."
+    },
+    {
+      "id": "falcon_heavy",
+      "nome": "Falcon Heavy",
+      "custo_ms": 150,
+      "capacidade_kg": {
+        "leo400": 63800,
+        "sso600": 40000,
+        "gto": 26700,
+        "nrho": 16800,
+        "dso": 12000,
+        "l1": 15000,
+        "mars_orbit": 10000
+      },
+      "frase": "Quando a missão não cabe em mais nada."
+    },
+    {
+      "id": "sls1",
+      "nome": "SLS Block 1",
+      "custo_ms": 900,
+      "capacidade_kg": {
+        "leo400": 95000,
+        "sso600": 60000,
+        "gto": 40000,
+        "nrho": 27000,
+        "dso": 20000,
+        "l1": 25000,
+        "mars_orbit": 15000
+      },
+      "frase": "Leva a tripulação à Lua — e leva o orçamento junto."
+    }
+  ],
+  "buses": [
+    {
+      "id": "cubesat",
+      "nome": "CubeSat 6U",
+      "massa_kg": 12,
+      "potencia_base_w": 15,
+      "custo_ms": 2,
+      "slots": 2,
+      "tripulacao_max": 0,
+      "blindagem_g_cm2": 0.3,
+      "descricao": "Barato e rápido; cabe na mão. Serve para provar um conceito."
+    },
+    {
+      "id": "smallsat",
+      "nome": "SmallSat",
+      "massa_kg": 180,
+      "potencia_base_w": 120,
+      "custo_ms": 18,
+      "slots": 4,
+      "tripulacao_max": 0,
+      "blindagem_g_cm2": 1.0,
+      "descricao": "O cavalo de batalha das missões científicas pequenas."
+    },
+    {
+      "id": "microsat",
+      "nome": "MicroSat",
+      "massa_kg": 450,
+      "potencia_base_w": 250,
+      "custo_ms": 45,
+      "slots": 6,
+      "tripulacao_max": 0,
+      "blindagem_g_cm2": 1.5,
+      "descricao": "Mais instrumentos, mais energia, mais custo."
+    },
+    {
+      "id": "midsize",
+      "nome": "Satélite de médio porte",
+      "massa_kg": 1100,
+      "potencia_base_w": 500,
+      "custo_ms": 120,
+      "slots": 8,
+      "tripulacao_max": 0,
+      "blindagem_g_cm2": 2.5,
+      "descricao": "Plataforma de missão científica de grande porte."
+    },
+    {
+      "id": "large",
+      "nome": "Plataforma tripulada",
+      "massa_kg": 2400,
+      "potencia_base_w": 900,
+      "custo_ms": 320,
+      "slots": 8,
+      "tripulacao_max": 4,
+      "blindagem_g_cm2": 4.0,
+      "descricao": "Cabine pressurizada para até quatro pessoas."
+    },
+    {
+      "id": "hab",
+      "nome": "Habitat de espaço profundo",
+      "massa_kg": 7800,
+      "potencia_base_w": 1500,
+      "custo_ms": 900,
+      "slots": 10,
+      "tripulacao_max": 4,
+      "blindagem_g_cm2": 8.0,
+      "descricao": "Casa para 900 dias fora da Terra: massa de sobra, custo idem."
+    }
+  ],
+  "power": [
+    {
+      "id": "body_solar",
+      "nome": "Painel no corpo",
+      "massa_kg": 0,
+      "potencia_w": 60,
+      "custo_ms": 1,
+      "orbitos": [
+        "leo400",
+        "sso600"
+      ],
+      "descricao": "Sem custo de massa; pouca energia."
+    },
+    {
+      "id": "deploy2",
+      "nome": "Painéis solares (2 asas)",
+      "massa_kg": 25,
+      "potencia_w": 400,
+      "custo_ms": 6,
+      "orbitos": "*",
+      "descricao": "Padrão para missões pequenas."
+    },
+    {
+      "id": "deploy4",
+      "nome": "Painéis solares (4 asas)",
+      "massa_kg": 60,
+      "potencia_w": 1100,
+      "custo_ms": 22,
+      "orbitos": "*",
+      "descricao": "Energia para vários instrumentos ao mesmo tempo."
+    },
+    {
+      "id": "rtg",
+      "nome": "RTG (gerador termoelétrico)",
+      "massa_kg": 45,
+      "potencia_w": 110,
+      "custo_ms": 18,
+      "orbitos": "*",
+      "descricao": "Funciona no escuro e longe do Sol; pouca potência."
+    },
+    {
+      "id": "reactor",
+      "nome": "Reator nuclear (Kilopower)",
+      "massa_kg": 1200,
+      "potencia_w": 3000,
+      "custo_ms": 120,
+      "orbitos": "*",
+      "descricao": "Energia de sobra para habitat e instrumentos pesados."
+    },
+    {
+      "id": "battery",
+      "nome": "Banco de baterias",
+      "massa_kg": 30,
+      "capacidade_wh": 1400,
+      "custo_ms": 3,
+      "orbitos": "*",
+      "descricao": "Guarda energia para o eclipse. Comprável em múltiplos."
+    }
+  ],
+  "comms": [
+    {
+      "id": "uhf",
+      "nome": "UHF",
+      "massa_kg": 3,
+      "potencia_w": 15,
+      "custo_ms": 0.5,
+      "mbps": 0.002,
+      "descricao": "Só telemetria e comandos. Não serve para imagem."
+    },
+    {
+      "id": "sband",
+      "nome": "Banda S",
+      "massa_kg": 8,
+      "potencia_w": 30,
+      "custo_ms": 5,
+      "mbps": 2,
+      "descricao": "A banda clássica de controle e dados de baixa taxa."
+    },
+    {
+      "id": "xband",
+      "nome": "Banda X",
+      "massa_kg": 14,
+      "potencia_w": 60,
+      "custo_ms": 14,
+      "mbps": 50,
+      "descricao": "Padrão de missões científicas: imagem e espectro em volume."
+    },
+    {
+      "id": "kaband",
+      "nome": "Banda Ka",
+      "massa_kg": 18,
+      "potencia_w": 90,
+      "custo_ms": 26,
+      "mbps": 150,
+      "descricao": "Alta taxa; exige apontamento preciso e consome energia."
+    },
+    {
+      "id": "laser",
+      "nome": "Comunicação óptica (laser)",
+      "massa_kg": 25,
+      "potencia_w": 120,
+      "custo_ms": 40,
+      "mbps": 1000,
+      "descricao": "Gbps, mas depende de céu limpo e estação dedicada."
+    }
+  ],
+  "instruments": [
+    {
+      "id": "cam_multi",
+      "nome": "Câmera multiespectral",
+      "massa_kg": 5,
+      "potencia_w": 15,
+      "custo_ms": 2.5,
+      "dados_gb_dia": 4,
+      "ciencia": 60,
+      "tripulacao_requerida": false,
+      "porque": "Cada banda vê uma assinatura diferente da vegetação e da água — é o instrumento mais barato por ponto científico."
+    },
+    {
+      "id": "cam_hr",
+      "nome": "Câmera de alta resolução",
+      "massa_kg": 12,
+      "potencia_w": 25,
+      "custo_ms": 4,
+      "dados_gb_dia": 18,
+      "ciencia": 70,
+      "tripulacao_requerida": false,
+      "porque": "Resolução custa dados: 18 GB/dia é 3× a câmera multiespectral."
+    },
+    {
+      "id": "spec_img",
+      "nome": "Espectrômetro de imagem",
+      "massa_kg": 25,
+      "potencia_w": 45,
+      "custo_ms": 9,
+      "dados_gb_dia": 12,
+      "ciencia": 90,
+      "tripulacao_requerida": false,
+      "porque": "Cada pixel carrega um espectro: 200 bandas × 1.000 pixels = 200 mil medidas por quadro."
+    },
+    {
+      "id": "spec_mass",
+      "nome": "Espectrômetro de massa",
+      "massa_kg": 18,
+      "potencia_w": 35,
+      "custo_ms": 7,
+      "dados_gb_dia": 3,
+      "ciencia": 80,
+      "tripulacao_requerida": false,
+      "porque": "Identifica moléculas pela massa: composição atmosférica e orgânicos."
+    },
+    {
+      "id": "radar",
+      "nome": "Radar de penetração",
+      "massa_kg": 40,
+      "potencia_w": 60,
+      "custo_ms": 14,
+      "dados_gb_dia": 8,
+      "ciencia": 85,
+      "tripulacao_requerida": false,
+      "porque": "Vê sob o solo e sob o gelo — o único que enxerga o que está enterrado."
+    },
+    {
+      "id": "lidar",
+      "nome": "LIDAR",
+      "massa_kg": 30,
+      "potencia_w": 55,
+      "custo_ms": 11,
+      "dados_gb_dia": 6,
+      "ciencia": 75,
+      "tripulacao_requerida": false,
+      "porque": "Mede altura de dossel e topografia com precisão de centímetros."
+    },
+    {
+      "id": "mag",
+      "nome": "Magnetômetro",
+      "massa_kg": 3,
+      "potencia_w": 5,
+      "custo_ms": 1.2,
+      "dados_gb_dia": 0.1,
+      "ciencia": 45,
+      "tripulacao_requerida": false,
+      "porque": "Barato, leve e conta a história do campo magnético."
+    },
+    {
+      "id": "plasma",
+      "nome": "Sonda de plasma",
+      "massa_kg": 6,
+      "potencia_w": 8,
+      "custo_ms": 2,
+      "dados_gb_dia": 0.5,
+      "ciencia": 55,
+      "tripulacao_requerida": false,
+      "porque": "Mede o vento solar que chega — contexto para cada evento."
+    },
+    {
+      "id": "dosimeter",
+      "nome": "Dosímetro",
+      "massa_kg": 2,
+      "potencia_w": 3,
+      "custo_ms": 0.8,
+      "dados_gb_dia": 0.05,
+      "ciencia": 40,
+      "tripulacao_requerida": false,
+      "porque": "Sem ele, você não sabe a dose — e dose é limite de carreira."
+    },
+    {
+      "id": "telescope_uv",
+      "nome": "Telescópio UV",
+      "massa_kg": 60,
+      "potencia_w": 90,
+      "custo_ms": 22,
+      "dados_gb_dia": 20,
+      "ciencia": 95,
+      "tripulacao_requerida": false,
+      "porque": "O instrumento de maior valor científico — e o que mais pesa, custa e gera dados."
+    },
+    {
+      "id": "sismometer",
+      "nome": "Sismômetro",
+      "massa_kg": 8,
+      "potencia_w": 6,
+      "custo_ms": 2.5,
+      "dados_gb_dia": 0.2,
+      "ciencia": 65,
+      "tripulacao_requerida": false,
+      "porque": "Revela o interior de um corpo por vibração — ciência de alto retorno por pouca massa."
+    },
+    {
+      "id": "drill",
+      "nome": "Perfuratriz / manipulação de amostras",
+      "massa_kg": 55,
+      "potencia_w": 70,
+      "custo_ms": 16,
+      "dados_gb_dia": 2,
+      "ciencia": 90,
+      "tripulacao_requerida": false,
+      "porque": "Sem amostra, não há retorno de amostra. Massa alta, valor alto."
+    },
+    {
+      "id": "xray_spec",
+      "nome": "Espectrômetro de raios-X",
+      "massa_kg": 22,
+      "potencia_w": 40,
+      "custo_ms": 8,
+      "dados_gb_dia": 5,
+      "ciencia": 80,
+      "tripulacao_requerida": false,
+      "porque": "Assinatura de elementos pesados em superfícies e atmosferas."
+    },
+    {
+      "id": "health_kit",
+      "nome": "Kit de saúde da tripulação",
+      "massa_kg": 15,
+      "potencia_w": 20,
+      "custo_ms": 5,
+      "dados_gb_dia": 1,
+      "ciencia": 50,
+      "tripulacao_requerida": true,
+      "porque": "Antecipa eventos médicos em 1 turno e corta o dano pela metade. Em Marte, 4 a 24 min de latência não esperam."
+    },
+    {
+      "id": "astro_rad",
+      "nome": "Colete AstroRad (por tripulante)",
+      "massa_kg": 12,
+      "potencia_w": 0,
+      "custo_ms": 1.5,
+      "dados_gb_dia": 0,
+      "ciencia": 0,
+      "tripulacao_requerida": true,
+      "porque": "−60,7% em SPE tipo 1972: 222,3 → 87,5 mSv. Pesa 12 kg — e cada quilo custa caro."
+    },
+    {
+      "id": "shelter",
+      "nome": "Abrigo contra tempestade",
+      "massa_kg": 350,
+      "potencia_w": 0,
+      "custo_ms": 8,
+      "dados_gb_dia": 0,
+      "ciencia": 0,
+      "tripulacao_requerida": true,
+      "porque": "−80% em SPE, mas custa 350 kg e 6 h de ciência a cada acionamento."
+    }
+  ],
+  "events": [
+    {
+      "id": "spe_1972",
+      "nivel": 1,
+      "titulo": "SPE tipo 1972",
+      "turno_min": 2,
+      "texto": "Um evento de partículas solares extremo atinge a espaçonave. Sem proteção, a dose adicional é de 222 mSv.",
+      "opcoes": [
+        {
+          "label": "Vestir AstroRad",
+          "efeito": {
+            "dose_msv": 87.5,
+            "ciencia_fracao": 0.05
+          }
+        },
+        {
+          "label": "Entrar no abrigo",
+          "efeito": {
+            "dose_msv": 44.5,
+            "ciencia_fracao": 0.12,
+            "instrumento_off": 1
+          }
+        },
+        {
+          "label": "Continuar operando",
+          "efeito": {
+            "dose_msv": 222.3
+          }
+        }
+      ],
+      "porque": "O SPE é agudo e blindável; o GCR é contínuo. O colete foi medido em phantom na Artemis I.",
+      "ancora": "Sci Adv 2026 (adz1892): 222,3 mSv sem colete; 87,5 mSv com AstroRad (−60,7%)."
+    },
+    {
+      "id": "spe_1989",
+      "nivel": 1,
+      "titulo": "SPE tipo 1989",
+      "turno_min": 3,
+      "texto": "Segundo evento solar do ciclo, com espectro mais duro. A dose sem proteção chega a 233,5 mSv.",
+      "opcoes": [
+        {
+          "label": "Vestir AstroRad",
+          "efeito": {
+            "dose_msv": 143.6,
+            "ciencia_fracao": 0.05
+          }
+        },
+        {
+          "label": "Entrar no abrigo",
+          "efeito": {
+            "dose_msv": 46.7,
+            "ciencia_fracao": 0.12
+          }
+        },
+        {
+          "label": "Continuar",
+          "efeito": {
+            "dose_msv": 233.5
+          }
+        }
+      ],
+      "porque": "No evento de 1989 o colete protege menos (−38,5%) porque os prótons são mais energéticos.",
+      "ancora": "Sci Adv 2026: 233,5 → 143,6 mSv com AstroRad."
+    },
+    {
+      "id": "van_allen",
+      "nivel": 1,
+      "titulo": "Cinturão de prótons",
+      "turno_min": 1,
+      "texto": "A trajetória atravessa o cinturão de radiação interno da Terra. Sem colete, 1,61 mSv em poucas horas.",
+      "opcoes": [
+        {
+          "label": "Aceitar",
+          "efeito": {
+            "dose_msv": 1.61
+          }
+        },
+        {
+          "label": "Vestir colete",
+          "efeito": {
+            "dose_msv": 1.19,
+            "ciencia_fracao": 0.02
+          }
+        }
+      ],
+      "porque": "Cada travessia do Van Allen custa dose — e o colete também reduz aqui (−25,8%).",
+      "ancora": "Artemis I: 1,61 mSv (Helga) → 1,19 mSv (Zohar)."
+    },
+    {
+      "id": "clima_elevado",
+      "nivel": 1,
+      "titulo": "Clima espacial elevado",
+      "turno_min": 2,
+      "texto": "Uma ejeção de massa coronal eleva o fluxo de partículas por 6 horas. Exposição adicional esperada.",
+      "opcoes": [
+        {
+          "label": "Adiar EVA",
+          "efeito": {
+            "ciencia_fracao": 0.05
+          }
+        },
+        {
+          "label": "Continuar",
+          "efeito": {
+            "dose_msv": 12
+          }
+        },
+        {
+          "label": "Abrigo",
+          "efeito": {
+            "dose_msv": 2,
+            "ciencia_fracao": 0.08
+          }
+        }
+      ],
+      "porque": "O DONKI avisa horas antes; a decisão é usar ou ignorar o aviso.",
+      "ancora": "Snapshot DONKI 2026: 65 notificações em 45 dias, incluindo RBE (Continued Radiation Belt Enhancement)."
+    },
+    {
+      "id": "micrometeoro",
+      "nivel": 1,
+      "titulo": "Micrometeoroide",
+      "turno_min": 2,
+      "texto": "Uma partícula a 15 km/s atinge a estrutura. Chance de danificar um instrumento.",
+      "opcoes": [
+        {
+          "label": "Inspecionar e reparar",
+          "efeito": {
+            "ciencia_fracao": 0.1,
+            "dano_instrumento": 0.3
+          }
+        },
+        {
+          "label": "Ignorar",
+          "efeito": {
+            "dano_instrumento": 0.6
+          }
+        }
+      ],
+      "porque": "Área e massa aumentam a probabilidade de impacto — mais instrumentos, mais alvos.",
+      "ancora": "Risco de micrometeoroide é um dos perigos ambientais listados pela NASA HRP."
+    },
+    {
+      "id": "eclipse_longo",
+      "nivel": 1,
+      "titulo": "Eclipse longo",
+      "turno_min": 1,
+      "texto": "A geometria da órbita produz um eclipse maior que o previsto. As baterias seguram?",
+      "opcoes": [
+        {
+          "label": "Desligar instrumentos",
+          "efeito": {
+            "ciencia_fracao": 0.15
+          }
+        },
+        {
+          "label": "Manter tudo",
+          "efeito": {
+            "risco_energia": 0.5
+          }
+        }
+      ],
+      "porque": "Bateria é seguro, não luxo: sem ela, o eclipse apaga a ciência.",
+      "ancora": "LEO tem ~36% do tempo em eclipse; SSO, ~35%."
+    },
+    {
+      "id": "poeira_marte",
+      "nivel": 1,
+      "titulo": "Tempestade de poeira",
+      "turno_min": 3,
+      "cenarios": [
+        "travessia"
+      ],
+      "texto": "Uma tempestade global de poeira cobre o céu de Marte por semanas. A geração solar cai 40%.",
+      "opcoes": [
+        {
+          "label": "Reduzir carga",
+          "efeito": {
+            "ciencia_fracao": 0.25
+          }
+        },
+        {
+          "label": "Usar reserva",
+          "efeito": {
+            "energia_fracao": 0.4
+          }
+        }
+      ],
+      "porque": "É por isso que missões marcianas consideram nuclear: o Sol some por semanas.",
+      "ancora": "Tempestades globais de poeira ocorreram em 2001, 2007 e 2018 (oportunidade perdeu contato)."
+    },
+    {
+      "id": "roda_reacao",
+      "nivel": 2,
+      "titulo": "Roda de reação travada",
+      "turno_min": 2,
+      "texto": "Uma das rodas de reação emperra. O apontamento degrada e a ciência cai 20% até o conserto.",
+      "opcoes": [
+        {
+          "label": "Consertar (2 turnos)",
+          "efeito": {
+            "ciencia_fracao": 0.2,
+            "turnos_extra": 2
+          }
+        },
+        {
+          "label": "Operar degradado",
+          "efeito": {
+            "ciencia_fracao": 0.35
+          }
+        }
+      ],
+      "porque": "Atitude é pré-requisito de tudo: sem apontar, não há observação.",
+      "ancora": "Falhas de roda de reação são uma das anomalias mais comuns em satélites."
+    },
+    {
+      "id": "falha_comms",
+      "nivel": 2,
+      "titulo": "Falha de comunicação",
+      "turno_min": 3,
+      "texto": "Uma janela de downlink é perdida por contenção da estação terrestre. O backlog cresce.",
+      "opcoes": [
+        {
+          "label": "Priorizar dados antigos",
+          "efeito": {
+            "backlog_dias": 2
+          }
+        },
+        {
+          "label": "Esperar próxima janela",
+          "efeito": {
+            "perda_dados_fracao": 0.15
+          }
+        }
+      ],
+      "porque": "A janela é um recurso tão escasso quanto a energia.",
+      "ancora": "Em espaço profundo, a janela depende da rede DSN e é compartilhada entre missões."
+    },
+    {
+      "id": "computador",
+      "nivel": 2,
+      "titulo": "Computador de bordo reinicia",
+      "turno_min": 2,
+      "texto": "Um bit flip reinicia o computador. O buffer de dados do turno é perdido.",
+      "opcoes": [
+        {
+          "label": "Reiniciar em modo seguro",
+          "efeito": {
+            "perda_dados_fracao": 0.25
+          }
+        },
+        {
+          "label": "Tentar recuperar buffer",
+          "efeito": {
+            "perda_dados_fracao": 0.1,
+            "turnos_extra": 1
+          }
+        }
+      ],
+      "porque": "Radiação também atinge a eletrônica — por isso computadores de voo são blindados e redundantes.",
+      "ancora": "SEUs (single event upsets) são esperados em órbita; memória é volátil."
+    },
+    {
+      "id": "instrumento_degrada",
+      "nivel": 2,
+      "titulo": "Instrumento degrada",
+      "turno_min": 3,
+      "texto": "Um detector perde sensibilidade. O valor científico daquele instrumento cai 30%.",
+      "opcoes": [
+        {
+          "label": "Recalibrar",
+          "efeito": {
+            "ciencia_fracao": 0.1
+          }
+        },
+        {
+          "label": "Aposentar o instrumento",
+          "efeito": {
+            "instrumento_off": 1
+          }
+        }
+      ],
+      "porque": "Vida útil é finita e duty cycle alto encurta.",
+      "ancora": "Degradação de detectores por radiação é documentada em missões de longa duração."
+    },
+    {
+      "id": "vazamento",
+      "nivel": 2,
+      "titulo": "Vazamento de cabine",
+      "turno_min": 3,
+      "cenarios": [
+        "travessia"
+      ],
+      "texto": "A pressão cai lentamente. Dois turnos para localizar o vazamento.",
+      "opcoes": [
+        {
+          "label": "Protocolo de hipóxia",
+          "efeito": {
+            "saude": -15,
+            "ciencia_fracao": 0.1
+          }
+        },
+        {
+          "label": "Evacuar módulo",
+          "efeito": {
+            "saude": -5,
+            "ciencia_fracao": 0.25
+          }
+        }
+      ],
+      "porque": "A SpO₂ só desaba no fim: sem predição, o alarme chega tarde.",
+      "ancora": "Simulação ASTRAL VITAL: alerta 11 min antes de a SpO₂ cruzar 90%."
+    },
+    {
+      "id": "co2",
+      "nivel": 2,
+      "titulo": "CO₂ acima do nominal",
+      "turno_min": 2,
+      "cenarios": [
+        "travessia"
+      ],
+      "texto": "O depurador de CO₂ perde eficiência. A cabine chega a 5 mmHg — dor de cabeça e erro humano.",
+      "opcoes": [
+        {
+          "label": "Reduzir atividade",
+          "efeito": {
+            "saude": -8,
+            "ciencia_fracao": 0.15
+          }
+        },
+        {
+          "label": "Continuar",
+          "efeito": {
+            "saude": -20
+          }
+        }
+      ],
+      "porque": "3 mmHg já é ~4.000 ppm: quatro a dez vezes uma casa terrestre.",
+      "ancora": "NASA HSRB: CO₂ nominal na ISS 3 mmHg ± 0,8; cefaleia entre 2 e 5 mmHg."
+    },
+    {
+      "id": "sono",
+      "nivel": 3,
+      "titulo": "Débito de sono",
+      "turno_min": 2,
+      "cenarios": [
+        "travessia"
+      ],
+      "texto": "A tripulação dormiu 5,4 h por noite no último mês. Erro humano aumenta.",
+      "opcoes": [
+        {
+          "label": "Reduzir ritmo",
+          "efeito": {
+            "saude": 5,
+            "ciencia_fracao": 0.1
+          }
+        },
+        {
+          "label": "Manter ritmo",
+          "efeito": {
+            "saude": -10,
+            "risco_erro": 0.15
+          }
+        }
+      ],
+      "porque": "Sono é contramedida: 6,09 h é a média real na ISS, e 52% das noites têm hipnótico.",
+      "ancora": "Lancet Neurol 2014: 6,09 h na ISS; 52% das noites com fármaco."
+    },
+    {
+      "id": "conflito",
+      "nivel": 3,
+      "titulo": "Conflito de tripulação",
+      "turno_min": 4,
+      "cenarios": [
+        "travessia"
+      ],
+      "texto": "Tensão no confinamento. Uma ação a menos no próximo turno.",
+      "opcoes": [
+        {
+          "label": "Mediação e descanso",
+          "efeito": {
+            "ciencia_fracao": 0.1,
+            "saude": 5
+          }
+        },
+        {
+          "label": "Seguir a rotina",
+          "efeito": {
+            "acao_menos": 1
+          }
+        }
+      ],
+      "porque": "Isolamento e confinamento são um dos cinco hazards humanos do voo espacial.",
+      "ancora": "NASA HRP — 5 Hazards: radiação, isolamento/confinamento, distância da Terra, gravidade, ambiente hostil."
+    },
+    {
+      "id": "corte_orcamento",
+      "nivel": 3,
+      "titulo": "Corte de orçamento",
+      "turno_min": 4,
+      "texto": "Uma revisão de programa corta 10% do orçamento restante. O que sai do escopo?",
+      "opcoes": [
+        {
+          "label": "Cortar instrumento",
+          "efeito": {
+            "instrumento_off": 1,
+            "orcamento_pct": 0.1
+          }
+        },
+        {
+          "label": "Cortar operações",
+          "efeito": {
+            "meses_menos": 1,
+            "orcamento_pct": 0.1
+          }
+        }
+      ],
+      "porque": "Orçamento é variável de projeto, não constante da física.",
+      "ancora": "Revisões de programa (senior reviews) são o ponto onde missões perdem escopo."
+    },
+    {
+      "id": "janela_perdida",
+      "nivel": 3,
+      "titulo": "Janela de lançamento perdida",
+      "turno_min": 5,
+      "texto": "Um atraso de integração empurra o lançamento. A próxima janela custa 20% da vida útil.",
+      "opcoes": [
+        {
+          "label": "Aceitar nova janela",
+          "efeito": {
+            "vida_pct": -0.2,
+            "custo_pct": 0.08
+          }
+        },
+        {
+          "label": "Lançar com margem reduzida",
+          "efeito": {
+            "risco_falha": 0.25
+          }
+        }
+      ],
+      "porque": "A física não negocia: a janela é definida por órbitas e iluminação.",
+      "ancora": "Janelas de lançamento para Marte se repetem a cada ~26 meses."
+    },
+    {
+      "id": "emergencia_medica",
+      "nivel": 3,
+      "titulo": "Emergência médica",
+      "turno_min": 4,
+      "cenarios": [
+        "travessia"
+      ],
+      "texto": "Um tripulante apresenta dor torácica e tontura. A Terra está a 12 minutos de distância.",
+      "opcoes": [
+        {
+          "label": "Protocolo autônomo de bordo",
+          "efeito": {
+            "saude": -20,
+            "ciencia_fracao": 0.15
+          }
+        },
+        {
+          "label": "Aguardar instrução da Terra",
+          "efeito": {
+            "saude": -35,
+            "ciencia_fracao": 0.25
+          }
+        }
+      ],
+      "porque": "Toda condição com risco em menos de 30 min não pode depender da resposta terrestre.",
+      "ancora": "Latência Terra–Marte: 4 a 24 min. Regra dos 30 minutos do ASTRAL VITAL."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "semente",
+      "codigo": "M0",
+      "nome": "Semente",
+      "nome_curto": "Semente",
+      "dificuldade_padrao": "cadete",
+      "orbitos": [
+        "leo400"
+      ],
+      "duracao_meses": 3,
+      "orcamento_ms": 60,
+      "tripulacao": 0,
+      "prazo_meses": 9,
+      "meta_ciencia": 80,
+      "referencia": {
+        "custo_ms": 40,
+        "massa_kg": 150,
+        "ciencia": 80
+      },
+      "briefing": "Toda missão começa pequena. Escolha um instrumento, uma órbita e um lançador — e veja, em três turnos, como uma decisão puxa a outra.",
+      "objetivos": [
+        {
+          "id": "A",
+          "titulo": "Primeira luz",
+          "criterio": "qualquer instrumento operando por 90 dias",
+          "meta_ciencia": 80,
+          "risco": "massa",
+          "frase": "Só quero ver funcionar."
+        }
+      ],
+      "requisitos": [
+        {
+          "id": "operacao",
+          "nome": "Operação contínua",
+          "unidade": "dias",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 60,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 90,
+              "efeito": {
+                "custo_ms": 2
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 120,
+              "efeito": {
+                "custo_ms": 4,
+                "massa_kg": 4
+              }
+            }
+          ],
+          "verificacao": "energia + vida útil"
+        },
+        {
+          "id": "ciencia",
+          "nome": "Primeira medição",
+          "unidade": "pts",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 60,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 80,
+              "efeito": {
+                "massa_kg": 3
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 100,
+              "efeito": {
+                "massa_kg": 6,
+                "custo_ms": 2
+              }
+            }
+          ],
+          "verificacao": "instrumento + órbita"
+        }
+      ],
+      "missao_analoga": [
+        "cubesat_csli"
+      ]
+    },
+    {
+      "id": "amazonia",
+      "nome": "Olhos sobre a Amazônia",
+      "dificuldade_padrao": "engenheiro",
+      "orbitos": [
+        "sso600",
+        "leo400"
+      ],
+      "duracao_meses": 12,
+      "orcamento_ms": 150,
+      "tripulacao": 0,
+      "prazo_meses": 18,
+      "meta_ciencia": 220,
+      "referencia": {
+        "custo_ms": 100,
+        "massa_kg": 330,
+        "ciencia": 245
+      },
+      "briefing": "O desmatamento avança mais rápido do que os satélites conseguem medir. Sua missão vai olhar a floresta de perto — e provar que dá para ver o que está sendo perdido.",
+      "objetivos": [
+        {
+          "id": "A",
+          "titulo": "Desmatamento",
+          "criterio": "cobertura ≥ 80% da área por 12 meses",
+          "meta_ciencia": 220,
+          "risco": "órbita e dados",
+          "frase": "Ver a floresta sumir, metro a metro."
+        },
+        {
+          "id": "B",
+          "titulo": "Metano",
+          "criterio": "detectar ≥ 3 hotspots",
+          "meta_ciencia": 200,
+          "risco": "instrumento e resolução",
+          "frase": "Encontrar o gás que ninguém vê."
+        },
+        {
+          "id": "C",
+          "titulo": "Fogo e aerossóis",
+          "criterio": "2 estações + série temporal",
+          "meta_ciencia": 240,
+          "risco": "energia e dados",
+          "frase": "Prever a fumaça antes do incêndio."
+        },
+        {
+          "id": "D",
+          "titulo": "Combinado",
+          "criterio": "2 dos 3 acima",
+          "meta_ciencia": 280,
+          "risco": "orçamento e massa",
+          "frase": "Três missões em uma — se couber."
+        }
+      ],
+      "codigo": "M1",
+      "nome_curto": "Raízes",
+      "requisitos": [
+        {
+          "id": "cobertura",
+          "nome": "Cobertura da área",
+          "unidade": "%",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 60,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 80,
+              "efeito": {
+                "custo_ms": 4
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 95,
+              "efeito": {
+                "custo_ms": 9,
+                "massa_kg": 6
+              }
+            }
+          ],
+          "verificacao": "passagens/dia × faixa imageada"
+        },
+        {
+          "id": "resolucao",
+          "nome": "Resolução no solo",
+          "unidade": "m",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 30,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 10,
+              "efeito": {
+                "massa_kg": 8,
+                "custo_ms": 3
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 5,
+              "efeito": {
+                "massa_kg": 18,
+                "custo_ms": 7,
+                "dados_gb_dia": 4
+              }
+            }
+          ],
+          "verificacao": "abertura óptica e GSD"
+        },
+        {
+          "id": "cadencia",
+          "nome": "Cadência de revisita",
+          "unidade": "dias",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 5,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 2,
+              "efeito": {
+                "potencia_w": 10,
+                "custo_ms": 3
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 1,
+              "efeito": {
+                "potencia_w": 20,
+                "custo_ms": 6,
+                "dados_gb_dia": 6
+              }
+            }
+          ],
+          "verificacao": "revisita orbital e agilidade de apontamento"
+        },
+        {
+          "id": "latencia",
+          "nome": "Latência de dados",
+          "unidade": "h",
+          "obrigatorio": false,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 72,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 24,
+              "efeito": {
+                "custo_ms": 5
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 6,
+              "efeito": {
+                "custo_ms": 11
+              }
+            }
+          ],
+          "verificacao": "segmento terrestre"
+        },
+        {
+          "id": "vida",
+          "nome": "Vida útil",
+          "unidade": "meses",
+          "obrigatorio": false,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 12,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 24,
+              "efeito": {
+                "massa_kg": 10,
+                "custo_ms": 4
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 36,
+              "efeito": {
+                "massa_kg": 22,
+                "custo_ms": 9
+              }
+            }
+          ],
+          "verificacao": "propelente e blindagem"
+        }
+      ],
+      "missao_analoga": [
+        "sentinel2",
+        "landsat9",
+        "cbers4a"
+      ]
+    },
+    {
+      "id": "gelo_lunar",
+      "nome": "Gelo Lunar",
+      "dificuldade_padrao": "engenheiro",
+      "orbitos": [
+        "nrho"
+      ],
+      "duracao_meses": 6,
+      "orcamento_ms": 380,
+      "tripulacao": 0,
+      "prazo_meses": 24,
+      "meta_ciencia": 300,
+      "referencia": {
+        "custo_ms": 326,
+        "massa_kg": 1512,
+        "ciencia": 300
+      },
+      "briefing": "As crateras do polo sul lunar nunca veem o Sol. Se houver gelo lá, há água — e água é o petróleo do espaço.",
+      "objetivos": [
+        {
+          "id": "A",
+          "titulo": "Mapear gelo",
+          "criterio": "cobertura ≥ 70% das crateras-alvo",
+          "meta_ciencia": 300,
+          "risco": "radar e órbita",
+          "frase": "Enxergar debaixo do gelo."
+        },
+        {
+          "id": "B",
+          "titulo": "Caracterizar o solo",
+          "criterio": "3 sítios com composição",
+          "meta_ciencia": 280,
+          "risco": "espectrômetro e massa",
+          "frase": "Saber do que a Lua é feita."
+        },
+        {
+          "id": "C",
+          "titulo": "Radiação",
+          "criterio": "série contínua de 6 meses",
+          "meta_ciencia": 240,
+          "risco": "dose e energia",
+          "frase": "Medir o preço de morar lá."
+        },
+        {
+          "id": "D",
+          "titulo": "Combinado",
+          "criterio": "2 dos 3 acima",
+          "meta_ciencia": 340,
+          "risco": "orçamento",
+          "frase": "Tudo ao mesmo tempo."
+        }
+      ],
+      "codigo": "M2",
+      "nome_curto": "Gelo",
+      "requisitos": [
+        {
+          "id": "cobertura",
+          "nome": "Cobertura das crateras-alvo",
+          "unidade": "%",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 50,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 70,
+              "efeito": {
+                "custo_ms": 6
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 90,
+              "efeito": {
+                "custo_ms": 14,
+                "massa_kg": 8
+              }
+            }
+          ],
+          "verificacao": "órbita NRHO e apontamento"
+        },
+        {
+          "id": "profundidade",
+          "nome": "Profundidade de sondagem",
+          "unidade": "m",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 1,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 3,
+              "efeito": {
+                "massa_kg": 10,
+                "custo_ms": 5
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 5,
+              "efeito": {
+                "massa_kg": 18,
+                "custo_ms": 9,
+                "potencia_w": 15
+              }
+            }
+          ],
+          "verificacao": "radar de penetração"
+        },
+        {
+          "id": "dose",
+          "nome": "Dose da missão",
+          "unidade": "mSv",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 300,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 150,
+              "efeito": {
+                "massa_kg": 12,
+                "custo_ms": 6
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 80,
+              "efeito": {
+                "massa_kg": 25,
+                "custo_ms": 12
+              }
+            }
+          ],
+          "verificacao": "blindagem e proteção"
+        }
+      ],
+      "missao_analoga": [
+        "lunar_trailblazer",
+        "capstone",
+        "lcross"
+      ]
+    },
+    {
+      "id": "travessia",
+      "nome": "A Travessia",
+      "dificuldade_padrao": "diretor",
+      "orbitos": [
+        "dso",
+        "mars_orbit"
+      ],
+      "duracao_meses": 30,
+      "orcamento_ms": 2800,
+      "tripulacao": 4,
+      "prazo_meses": 36,
+      "meta_ciencia": 260,
+      "referencia": {
+        "custo_ms": 2400,
+        "massa_kg": 12000,
+        "ciencia": 260
+      },
+      "briefing": "Quatro pessoas, 900 dias, nenhum resgate possível. A pergunta não é se a espaçonave aguenta — é se elas aguentam.",
+      "objetivos": [
+        {
+          "id": "A",
+          "titulo": "Chegar e voltar",
+          "criterio": "tripulação viva e saudável ao fim",
+          "meta_ciencia": 260,
+          "risco": "dose e latência",
+          "frase": "O objetivo é voltar."
+        },
+        {
+          "id": "B",
+          "titulo": "Ciência de Marte",
+          "criterio": "≥ 3 experiments concluídos",
+          "meta_ciencia": 300,
+          "risco": "massa e energia",
+          "frase": "Trazer respostas, não só fotos."
+        },
+        {
+          "id": "C",
+          "titulo": "Saúde humana",
+          "criterio": "dose < 80% e saúde > 60",
+          "meta_ciencia": 220,
+          "risco": "proteção e sono",
+          "frase": "A tripulação é o experimento."
+        },
+        {
+          "id": "D",
+          "titulo": "Autonomia",
+          "criterio": "nenhuma decisão crítica dependeu da Terra",
+          "meta_ciencia": 240,
+          "risco": "latência",
+          "frase": "A 20 minutos de casa, você decide sozinho."
+        }
+      ],
+      "codigo": "M3",
+      "nome_curto": "Travessia",
+      "requisitos": [
+        {
+          "id": "dose",
+          "nome": "Dose da tripulação",
+          "unidade": "% da carreira",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 80,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 60,
+              "efeito": {
+                "massa_kg": 350,
+                "custo_ms": 30
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 40,
+              "efeito": {
+                "massa_kg": 700,
+                "custo_ms": 70
+              }
+            }
+          ],
+          "verificacao": "blindagem + colete + escolha de ciclo solar"
+        },
+        {
+          "id": "autonomia",
+          "nome": "Autonomia de decisão",
+          "unidade": "min",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 30,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 15,
+              "efeito": {
+                "custo_ms": 25
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 5,
+              "efeito": {
+                "custo_ms": 60,
+                "massa_kg": 40
+              }
+            }
+          ],
+          "verificacao": "protocolos de bordo + kit de saúde"
+        },
+        {
+          "id": "vida",
+          "nome": "Duração suportada",
+          "unidade": "dias",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 700,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 900,
+              "efeito": {
+                "massa_kg": 200,
+                "custo_ms": 40
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 1100,
+              "efeito": {
+                "massa_kg": 400,
+                "custo_ms": 90
+              }
+            }
+          ],
+          "verificacao": "consumíveis, energia e vida útil"
+        }
+      ],
+      "missao_analoga": [
+        "artemis2",
+        "iss",
+        "mars_drm"
+      ]
+    },
+    {
+      "id": "mensageiro",
+      "nome": "Mensageiro",
+      "dificuldade_padrao": "engenheiro",
+      "orbitos": [
+        "dso"
+      ],
+      "duracao_meses": 60,
+      "orcamento_ms": 650,
+      "tripulacao": 0,
+      "prazo_meses": 30,
+      "meta_ciencia": 320,
+      "referencia": {
+        "custo_ms": 520,
+        "massa_kg": 900,
+        "ciencia": 320
+      },
+      "briefing": "Um asteroide passa perto o suficiente para ser tocado. Você tem uma chance — e cinco anos de viagem para não errar.",
+      "objetivos": [
+        {
+          "id": "A",
+          "titulo": "Sobrevoo",
+          "criterio": "aproximação < 1.000 km",
+          "meta_ciencia": 280,
+          "risco": "navegação e comms",
+          "frase": "Passar perto o suficiente para ver."
+        },
+        {
+          "id": "B",
+          "titulo": "Retorno de amostra",
+          "criterio": "≥ 100 g trazidos",
+          "meta_ciencia": 340,
+          "risco": "massa e autonomia",
+          "frase": "Trazer um pedaço do começo do Sistema Solar."
+        },
+        {
+          "id": "C",
+          "titulo": "Composição",
+          "criterio": "3 instrumentos concordantes",
+          "meta_ciencia": 300,
+          "risco": "dados e energia",
+          "frase": "Saber do que ele é feito, sem tocar."
+        },
+        {
+          "id": "D",
+          "titulo": "Deflexão",
+          "criterio": "medir mudança de órbita",
+          "meta_ciencia": 320,
+          "risco": "precisão",
+          "frase": "Aprender a empurrar uma rocha."
+        }
+      ],
+      "codigo": "M4",
+      "nome_curto": "Mensageiro",
+      "requisitos": [
+        {
+          "id": "aproximacao",
+          "nome": "Distância de aproximação",
+          "unidade": "km",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 5000,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 1000,
+              "efeito": {
+                "custo_ms": 12
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 200,
+              "efeito": {
+                "custo_ms": 30,
+                "massa_kg": 15
+              }
+            }
+          ],
+          "verificacao": "navegação e autonomia"
+        },
+        {
+          "id": "amostra",
+          "nome": "Massa de amostra",
+          "unidade": "g",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 10,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 100,
+              "efeito": {
+                "massa_kg": 30,
+                "custo_ms": 15
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 300,
+              "efeito": {
+                "massa_kg": 55,
+                "custo_ms": 30
+              }
+            }
+          ],
+          "verificacao": "perfuratriz e retorno"
+        },
+        {
+          "id": "vida",
+          "nome": "Vida útil",
+          "unidade": "anos",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 3,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 5,
+              "efeito": {
+                "massa_kg": 20,
+                "custo_ms": 10
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 7,
+              "efeito": {
+                "massa_kg": 40,
+                "custo_ms": 20
+              }
+            }
+          ],
+          "verificacao": "energia e comunicação"
+        }
+      ],
+      "missao_analoga": [
+        "osiris_rex",
+        "hayabusa2",
+        "psyche"
+      ]
+    },
+    {
+      "id": "clima_extremo",
+      "nome": "Clima Extremo",
+      "dificuldade_padrao": "engenheiro",
+      "orbitos": [
+        "l1"
+      ],
+      "duracao_meses": 36,
+      "orcamento_ms": 260,
+      "tripulacao": 0,
+      "prazo_meses": 24,
+      "meta_ciencia": 280,
+      "referencia": {
+        "custo_ms": 210,
+        "massa_kg": 700,
+        "ciencia": 280
+      },
+      "briefing": "Uma tempestade solar pode derrubar redes elétricas na Terra. Quem avisa primeiro ganha horas — e horas valem bilhões.",
+      "objetivos": [
+        {
+          "id": "A",
+          "titulo": "Alerta precoce",
+          "criterio": "≥ 30 min de antecedência em 3 eventos",
+          "meta_ciencia": 280,
+          "risco": "instrumentos e downlink",
+          "frase": "Ver o Sol antes que ele veja a Terra."
+        },
+        {
+          "id": "B",
+          "titulo": "Clima espacial contínuo",
+          "criterio": "cobertura > 95% do tempo",
+          "meta_ciencia": 300,
+          "risco": "confiabilidade",
+          "frase": "Nunca piscar."
+        },
+        {
+          "id": "C",
+          "titulo": "Física da reconexão",
+          "criterio": "série de plasma + campo",
+          "meta_ciencia": 260,
+          "risco": "instrumentos",
+          "frase": "Entender por que o Sol explode."
+        },
+        {
+          "id": "D",
+          "titulo": "Serviço operacional",
+          "criterio": "alertas enviados a 3 parceiros",
+          "meta_ciencia": 240,
+          "risco": "comunicações",
+          "frase": "Ciência que vira serviço."
+        }
+      ],
+      "codigo": "M5",
+      "nome_curto": "Sentinela",
+      "requisitos": [
+        {
+          "id": "antecedencia",
+          "nome": "Antecedência de alerta",
+          "unidade": "min",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 15,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 30,
+              "efeito": {
+                "custo_ms": 6
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 60,
+              "efeito": {
+                "custo_ms": 14,
+                "massa_kg": 6
+              }
+            }
+          ],
+          "verificacao": "posição L1 e cadência de medição"
+        },
+        {
+          "id": "cobertura",
+          "nome": "Cobertura temporal",
+          "unidade": "%",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 80,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 95,
+              "efeito": {
+                "massa_kg": 8,
+                "custo_ms": 6
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 99,
+              "efeito": {
+                "massa_kg": 16,
+                "custo_ms": 14
+              }
+            }
+          ],
+          "verificacao": "energia, redundância e downlink"
+        },
+        {
+          "id": "confiabilidade",
+          "nome": "Disponibilidade do serviço",
+          "unidade": "%",
+          "obrigatorio": true,
+          "niveis": [
+            {
+              "nivel": "min",
+              "valor": 90,
+              "efeito": {}
+            },
+            {
+              "nivel": "esperado",
+              "valor": 97,
+              "efeito": {
+                "custo_ms": 10
+              }
+            },
+            {
+              "nivel": "ambicioso",
+              "valor": 99.5,
+              "efeito": {
+                "custo_ms": 24,
+                "massa_kg": 12
+              }
+            }
+          ],
+          "verificacao": "redundância de instrumentos e comms"
+        }
+      ],
+      "missao_analoga": [
+        "dscovr",
+        "soho",
+        "ace"
+      ]
+    }
+  ],
+  "scoring": {
+    "total_maximo": 1000,
+    "blocos": {
+      "sucesso": {
+        "pleno": 400,
+        "parcial": 200,
+        "falha": 0
+      },
+      "ciencia": {
+        "max": 250,
+        "formula": "250 × min(1, ciencia_obtida / meta) × integridade_dados"
+      },
+      "eficiencia": {
+        "max": 200,
+        "formula": "200 × média(ef_custo, ef_massa, ef_energia, ef_dados)"
+      },
+      "decisao": {
+        "max": 150,
+        "formula": "15 × checkpoints_cumpridos"
+      },
+      "bonus": {
+        "missao_limpa": 50,
+        "descoberta": 50
+      },
+      "penalidades": {
+        "dose_acima_80_pct": -100,
+        "perda_dados_acima_30_pct": -50,
+        "falha_critica": -30
+      }
+    },
+    "eficiencia": {
+      "ef_custo": "clamp((ciencia/gasto) / (ciencia_ref/custo_ref), 0, 1)",
+      "ef_massa": "clamp((ciencia/massa) / (ciencia_ref/massa_ref), 0, 1)",
+      "ef_energia": "clamp(margem_energia / 0.35, 0, 1)",
+      "ef_dados": "integridade_dados (1 - perda/gerado)",
+      "nota": "Eficiência é converter recurso em resultado, não economizar."
+    },
+    "checkpoints": [
+      "Declarou o objetivo antes de abrir a bancada",
+      "Justificou a escolha do objetivo com pelo menos uma frase",
+      "Nenhum recurso estourou no commit do lançamento",
+      "Verificou a massa antes de lançar",
+      "Tinha plano de dados (downlink ≥ geração)",
+      "Manteve dose abaixo de 80% da carreira",
+      "Reagiu ao primeiro evento com decisão coerente",
+      "Não perdeu janela de comunicação em evento crítico",
+      "Registrou ao menos 3 assinaturas com justificativa (colaboração)",
+      "Resolveu um veto ou negociação sem escalar para o Diretor (colaboração)"
+    ]
+  },
+  "segmento_terrestre": [
+    {
+      "id": "propria",
+      "nome": "Estação própria",
+      "custo_ms": 4,
+      "downlink_h_dia": 4,
+      "mbps": 50,
+      "latencia_h": 6,
+      "requisito": null,
+      "observacao": "Barata e limitada; serve para LEO. Sem cobertura global."
+    },
+    {
+      "id": "comercial",
+      "nome": "Rede comercial",
+      "custo_ms": 8,
+      "downlink_h_dia": 8,
+      "mbps": 150,
+      "latencia_h": 2,
+      "requisito": null,
+      "observacao": "Cobertura global contratada por janela."
+    },
+    {
+      "id": "dsn34",
+      "nome": "DSN 34 m",
+      "custo_ms": 25,
+      "downlink_h_dia": 4,
+      "mbps": 50,
+      "latencia_h": 1,
+      "requisito": "espaco_profundo",
+      "observacao": "Obrigatória além da Lua; janela compartilhada entre missões."
+    },
+    {
+      "id": "dsn70",
+      "nome": "DSN 70 m",
+      "custo_ms": 55,
+      "downlink_h_dia": 6,
+      "mbps": 150,
+      "latencia_h": 0.5,
+      "requisito": "espaco_profundo",
+      "observacao": "Emergências e alta taxa; custo de hora altíssimo."
+    },
+    {
+      "id": "moc",
+      "nome": "Centro de controle (MOC)",
+      "custo_ms": 6,
+      "downlink_h_dia": 0,
+      "mbps": 0,
+      "latencia_h": 0,
+      "requisito": "obrigatorio",
+      "observacao": "Sem MOC, dano de anomalia +50% e reação a evento -1 turno."
+    }
+  ],
+  "niveis_dados": [
+    {
+      "id": "L0",
+      "nome": "Bruto",
+      "custo_ms_mes": 0.0,
+      "multiplicador": 0.85,
+      "observacao": "Sem calibração: ninguém consegue usar."
+    },
+    {
+      "id": "L1",
+      "nome": "Calibrado",
+      "custo_ms_mes": 0.5,
+      "multiplicador": 0.95,
+      "observacao": "Georreferenciado, mas ainda técnico."
+    },
+    {
+      "id": "L2",
+      "nome": "Arquivo aberto",
+      "custo_ms_mes": 1.0,
+      "multiplicador": 1.0,
+      "observacao": "Metadados e acesso público: padrão NASA/OSDR."
+    },
+    {
+      "id": "L3",
+      "nome": "Produtos derivados",
+      "custo_ms_mes": 2.0,
+      "multiplicador": 1.1,
+      "observacao": "Pronto para o usuário final (mapas, alertas, séries)."
+    }
+  ],
+  "incompatibilidades": [
+    {
+      "id": "deep_sband",
+      "condicao": "órbita em {dso,l1,nrho,mars_orbit} e comms em {sband,uhf}",
+      "efeito": "bloqueia_lancamento",
+      "porque": "O link não fecha: o dado não desce. Espaço profundo exige banda X ou maior."
+    },
+    {
+      "id": "drill_sem_solo",
+      "condicao": "instrumento drill e órbita diferente de mars_surface",
+      "efeito": "ciencia_zero",
+      "porque": "Não há solo para perfurar em órbita."
+    },
+    {
+      "id": "uv_barramento_pequeno",
+      "condicao": "instrumento telescope_uv e avionica != alta_precisao",
+      "efeito": "bloqueia",
+      "porque": "Sem apontamento fino, a imagem borra — o instrumento não entrega o que promete."
+    },
+    {
+      "id": "protecao_sem_tripulacao",
+      "condicao": "astro_rad ou shelter e tripulacao = 0",
+      "efeito": "sem_efeito",
+      "porque": "Não há quem proteger; o custo permanece."
+    },
+    {
+      "id": "reator_pequeno",
+      "condicao": "power reactor e barramento em {cubesat,smallsat,microsat}",
+      "efeito": "bloqueia",
+      "porque": "Não cabe nem dissipa o calor."
+    },
+    {
+      "id": "solar_marte",
+      "condicao": "power solar e órbita em {mars_orbit,mars_surface}",
+      "efeito": "geracao_x0_43",
+      "porque": "Lei do inverso do quadrado: em Marte o Sol entrega 43% do que entrega na Terra."
+    }
+  ],
+  "missoes_reais": [
+    {
+      "id": "sentinel2",
+      "nome": "Sentinel-2",
+      "agencia": "ESA",
+      "orbita": "sso600",
+      "tags": [
+        "cam_multi",
+        "spec_img"
+      ],
+      "nota": "Mesma órbita e mesma dupla câmera multiespectral/espectrômetro."
+    },
+    {
+      "id": "landsat9",
+      "nome": "Landsat 9",
+      "agencia": "NASA/USGS",
+      "orbita": "sso600",
+      "tags": [
+        "cam_multi",
+        "cam_hr"
+      ],
+      "nota": "Série de 50 anos de observação da Terra; mesma filosofia de arquivo aberto (L2)."
+    },
+    {
+      "id": "cbers4a",
+      "nome": "CBERS-4A",
+      "agencia": "INPE/China",
+      "orbita": "sso600",
+      "tags": [
+        "cam_multi",
+        "cam_hr"
+      ],
+      "nota": "Programa brasileiro; câmera de amplo campo e multiespectral."
+    },
+    {
+      "id": "lunar_trailblazer",
+      "nome": "Lunar Trailblazer",
+      "agencia": "NASA",
+      "orbita": "nrho",
+      "tags": [
+        "spec_img",
+        "radar"
+      ],
+      "nota": "Mapeamento de água lunar; mesma classe de massa e órbita."
+    },
+    {
+      "id": "capstone",
+      "nome": "CAPSTONE",
+      "agencia": "NASA",
+      "orbita": "nrho",
+      "tags": [
+        "uhf"
+      ],
+      "nota": "CubeSat 12U que validou a NRHO — prova de que barramento pequeno chega à Lua."
+    },
+    {
+      "id": "lcross",
+      "nome": "LCROSS",
+      "agencia": "NASA",
+      "orbita": "nrho",
+      "tags": [
+        "spec_img",
+        "dosimeter"
+      ],
+      "nota": "Impacto em cratera polar para detectar gelo."
+    },
+    {
+      "id": "artemis2",
+      "nome": "Artemis II",
+      "agencia": "NASA",
+      "orbita": "dso",
+      "tags": [
+        "dosimeter",
+        "health_kit"
+      ],
+      "nota": "Sobrevoo lunar tripulado; 1,18 mSv/dia medidos na Orion."
+    },
+    {
+      "id": "iss",
+      "nome": "Estação Espacial Internacional",
+      "agencia": "NASA/parceiros",
+      "orbita": "leo400",
+      "tags": [
+        "health_kit",
+        "dosimeter"
+      ],
+      "nota": "Laboratório de longa duração; referência de ConOps e saúde da tripulação."
+    },
+    {
+      "id": "mars_drm",
+      "nome": "Mars Design Reference Mission",
+      "agencia": "NASA",
+      "orbita": "mars_orbit",
+      "tags": [
+        "health_kit",
+        "drill"
+      ],
+      "nota": "Arquitetura de referência para 900 dias; dose e latência dominam o projeto."
+    },
+    {
+      "id": "osiris_rex",
+      "nome": "OSIRIS-REx",
+      "agencia": "NASA",
+      "orbita": "dso",
+      "tags": [
+        "drill",
+        "spec_mass"
+      ],
+      "nota": "Retorno de amostra de asteroide; mesma tensão entre autonomia e massa."
+    },
+    {
+      "id": "hayabusa2",
+      "nome": "Hayabusa2",
+      "agencia": "JAXA",
+      "orbita": "dso",
+      "tags": [
+        "drill",
+        "radar"
+      ],
+      "nota": "Amostra de asteroide com navegação autônoma."
+    },
+    {
+      "id": "psyche",
+      "nome": "Psyche",
+      "agencia": "NASA",
+      "orbita": "dso",
+      "tags": [
+        "mag",
+        "spec_img"
+      ],
+      "nota": "Missão a asteroide metálico; magnetômetro e imagem em espaço profundo."
+    },
+    {
+      "id": "dscovr",
+      "nome": "DSCOVR",
+      "agencia": "NOAA/NASA",
+      "orbita": "l1",
+      "tags": [
+        "plasma",
+        "mag"
+      ],
+      "nota": "Sentinela de clima espacial em L1; alerta com antecedência."
+    },
+    {
+      "id": "soho",
+      "nome": "SOHO",
+      "agencia": "ESA/NASA",
+      "orbita": "l1",
+      "tags": [
+        "telescope_uv",
+        "plasma"
+      ],
+      "nota": "29 anos em L1 observando o Sol."
+    },
+    {
+      "id": "ace",
+      "nome": "ACE",
+      "agencia": "NASA",
+      "orbita": "l1",
+      "tags": [
+        "plasma",
+        "dosimeter"
+      ],
+      "nota": "Partículas e campo magnético; referência de serviço operacional."
+    },
+    {
+      "id": "cubesat_csli",
+      "nome": "CubeSat CSLI",
+      "agencia": "NASA",
+      "orbita": "leo400",
+      "tags": [
+        "cam_multi"
+      ],
+      "nota": "Programa de lançamento de CubeSats educacionais — o degrau CML 1."
+    }
+  ],
+  "avionica": [
+    {
+      "id": "basica",
+      "nome": "Aviônica básica",
+      "massa_kg": 5,
+      "potencia_w": 10,
+      "custo_ms": 1,
+      "buffer_dias": 1,
+      "apontamento_graus": 0.5,
+      "falha_custo_turnos": 1
+    },
+    {
+      "id": "redundante",
+      "nome": "Aviônica redundante",
+      "massa_kg": 12,
+      "potencia_w": 20,
+      "custo_ms": 4,
+      "buffer_dias": 2,
+      "apontamento_graus": 0.1,
+      "falha_custo_turnos": 0
+    },
+    {
+      "id": "alta_precisao",
+      "nome": "Aviônica de alta precisão",
+      "massa_kg": 25,
+      "potencia_w": 35,
+      "custo_ms": 9,
+      "buffer_dias": 3,
+      "apontamento_graus": 0.01,
+      "falha_custo_turnos": 0
+    }
+  ]
+}
