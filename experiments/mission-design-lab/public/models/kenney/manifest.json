@@ -1,0 +1,28 @@
+{
+  "id": "structure-platform",
+  "title": "Structure Platform",
+  "file": "structure-platform.glb",
+  "author": "Kenney",
+  "provider": "Poly Pizza",
+  "sourcePage": "https://poly.pizza/m/ovwrUrwADe",
+  "downloadUrl": "https://static.poly.pizza/06432805-c90f-45ce-8949-16d1b88859f7.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "downloadedAt": "2026-11-15",
+  "format": "GLB 2.0",
+  "bytes": 17200,
+  "triangles": 96,
+  "embeddedImages": 1,
+  "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99",
+  "modifications": "None to the distributed file.",
+  "sourceBounds": { "min": [-0.5, 0, -0.5], "max": [0.5, 0.8, 0] },
+  "runtimeTransform": {
+    "position": [0, -2.09, 0.98],
+    "scale": [5.2, 0.75, 4.8],
+    "rotation": [0, 0, 0],
+    "deckY": -1.49,
+    "materialTint": "#8fabc1",
+    "materialRoughness": 0.62
+  },
+  "intendedUse": "Scenery for the assembly and ground integration views in the seven educational missions."
+}

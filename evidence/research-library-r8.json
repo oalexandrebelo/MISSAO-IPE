@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T19:51:26.587Z",
+  "generatedAt": "2026-11-15T20:19:39.562Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 139,
+  "documentCount": 142,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -901,9 +901,42 @@
       "title": "R30 · assets 3D para o hangar e a operação",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 8545,
-      "originalSha256": "aabaa1538ab434e2457b67271dff18fab5d7a678b7fc30a2a23dbd52e5ae93dd",
-      "projectedSha256": "aabaa1538ab434e2457b67271dff18fab5d7a678b7fc30a2a23dbd52e5ae93dd",
+      "originalBytes": 8725,
+      "originalSha256": "967818b3545b8534eb7b8e025c8b05df23dba8f3bea6187717b9bfda705af334",
+      "projectedSha256": "967818b3545b8534eb7b8e025c8b05df23dba8f3bea6187717b9bfda705af334",
+      "redactions": 0
+    },
+    {
+      "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+      "id": "doc-docs-78-auditoria-bruno-e-integracao-r31-md",
+      "title": "R31 · Auditoria do jogo de Bruno e integração na MISSÃO IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 20658,
+      "originalSha256": "cccb24e59a6c77bfe21da80d365920413916ec2545ea361705eb2ec245a8ef6a",
+      "projectedSha256": "cccb24e59a6c77bfe21da80d365920413916ec2545ea361705eb2ec245a8ef6a",
+      "redactions": 0
+    },
+    {
+      "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+      "id": "doc-docs-79-game-design-e-skills-r31-md",
+      "title": "R31 · Escolhas claras no hangar",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 4147,
+      "originalSha256": "aade04e4c08077955cfe669a9b3a350be1a7dd4fb4843a096293cb1d7bc49d33",
+      "projectedSha256": "aade04e4c08077955cfe669a9b3a350be1a7dd4fb4843a096293cb1d7bc49d33",
+      "redactions": 0
+    },
+    {
+      "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+      "id": "doc-docs-80-hangar-kenney-e-handoff-r31-md",
+      "title": "R31 · plataforma Kenney, escolhas no hangar e handoff",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 6806,
+      "originalSha256": "59ecf4e6c14a2666183bd807dc13c0ed81f628052d9c016eb020b280c38eee53",
+      "projectedSha256": "59ecf4e6c14a2666183bd807dc13c0ed81f628052d9c016eb020b280c38eee53",
       "redactions": 0
     },
     {
@@ -1537,13 +1570,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2573065,
-      "sha256": "33d77f06a6f674c01b406cd4722c7ac25d4b463f5b89e479abafc261170407c7"
+      "bytes": 2615190,
+      "sha256": "5345d7e1277af805b2ea25392262cccfd32da2de474b8683e1628c0687f809dc"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2060141,
-      "sha256": "43668d96e89b9cfecbe8987448774e5aeac5db82d84d325a45c394e4c8e6552d"
+      "bytes": 2092633,
+      "sha256": "abdeb4d0369d68785e7d771f4932668a7dbe5613db354791d4d0d9097914a4dd"
     }
   ]
 }

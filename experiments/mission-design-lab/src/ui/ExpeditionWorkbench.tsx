@@ -31,6 +31,7 @@ export function ExpeditionWorkbench({ id, config, onChoice }: ExpeditionWorkbenc
   const optionsHeading = useRef<HTMLHeadingElement>(null);
   const [change, setChange] = useState<Change | null>(null);
   const system = SYSTEMS.find(item => item.key === active)!;
+  const agendaChoice = active === 'ground' || active === 'orbit' || active === 'duration';
   const choices = getExpeditionChoices(id);
   const preflight = getExpeditionPreflight(id, config);
   const totals = preflight.totals;
@@ -45,7 +46,7 @@ export function ExpeditionWorkbench({ id, config, onChoice }: ExpeditionWorkbenc
     { label: 'Geração nominal', value: totals.panelW, previous: before?.panelW, unit: 'W' },
     { label: 'Memória', value: totals.bufferBits / 1_000_000, previous: before ? before.bufferBits / 1_000_000 : undefined, unit: 'Mbit' },
   ];
-  const librasContext = `Bancada de ${id === 'bennu' ? 'Bennu' : 'Webb'}. Sistema: ${system.label}. Opção selecionada: ${label(active, config[active])}. ${system.why} Projeto atual: ${number(totals.massKg)} quilogramas, ${number(totals.credits)} créditos, ${number(totals.capacityWh)} watt-hora, geração nominal de ${number(totals.panelW)} watts e ${bits(totals.bufferBits)} de memória. A seleção destaca a peça no modelo didático, mas não executa uma missão nem altera os dados históricos.`.slice(0, 900);
+  const librasContext = `Bancada de ${id === 'bennu' ? 'Bennu' : 'Webb'}. Sistema: ${system.label}. Opção selecionada: ${label(active, config[active])}. ${system.why} Projeto atual: ${number(totals.massKg)} quilogramas, ${number(totals.credits)} créditos, ${number(totals.capacityWh)} watt-hora, geração nominal de ${number(totals.panelW)} watts e ${bits(totals.bufferBits)} de memória. ${agendaChoice ? 'A seleção muda a agenda. O modelo destaca a função relacionada, sem trocar a peça.' : 'A seleção destaca a peça no modelo didático.'} Escolher não executa uma missão nem altera os dados históricos.`.slice(0, 900);
   function choose(key: ExpeditionConfigKey, value: string) {
     if (config[key] === value) return;
     setChange({ key, before: { ...config }, after: { ...config, [key]: value } });
@@ -62,7 +63,7 @@ export function ExpeditionWorkbench({ id, config, onChoice }: ExpeditionWorkbenc
         <div className="equipment-editor">
           <h3 className="scientific-focus-target" ref={optionsHeading} tabIndex={-1}>{system.label}</h3><p className="equipment-why">{system.why}</p>
           {SYSTEMS.map(item => <fieldset hidden={active !== item.key} key={item.key} className="equipment-choices"><legend className="sr-only">{item.label}</legend><div className="equipment-choice-grid">{choices[item.key].map(choice => <label key={choice.id} className={`equipment-choice ${config[item.key] === choice.id ? 'is-selected' : ''}`}><span className="equipment-choice-heading"><input type="radio" name={`equipment-${id}-${item.key}`} value={choice.id} checked={config[item.key] === choice.id} onChange={() => choose(item.key, choice.id)} /><strong>{choice.label}</strong><span className="equipment-selected">{config[item.key] === choice.id ? 'Selecionado' : 'Selecionar'}</span></span><span>{choice.detail}</span><span className="equipment-choice-facts"><b>{number(choice.massKg)} kg{choice.massKg === 0 ? ' na nave' : ''}</b><b>{number(choice.credits)} créditos</b></span></label>)}</div></fieldset>)}
-          <button type="button" className="text-button equipment-inspect-link" onClick={() => focusCockpitSection(sceneRef.current)}>Inspecionar esta escolha na nave <Icon name="arrow" size={16} /></button>
+          <button type="button" className="text-button equipment-inspect-link" onClick={() => focusCockpitSection(sceneRef.current)}>{agendaChoice ? 'Inspecionar agenda e função na nave' : 'Inspecionar esta escolha na nave'} <Icon name="arrow" size={16} /></button>
           <p className="equipment-learning"><Icon name="book" size={17} /><span>{id === 'bennu' ? 'Você investiga dimensões de rochas publicadas. A câmera representa a cadeia de imagem; o tamanho sozinho não demonstra composição.' : 'Você investiga seis faixas de um espectro publicado. O espectrômetro atende à pergunta; a câmera genérica deste exercício não o substitui.'}</span></p>
         </div>
       </div>

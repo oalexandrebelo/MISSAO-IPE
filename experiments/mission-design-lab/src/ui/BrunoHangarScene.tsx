@@ -7,6 +7,7 @@ import { BrunoInstrumentMesh } from './BrunoInstrumentMesh.tsx';
 import { NASAAsset } from './OrbitalScene.tsx';
 import { getBrunoSceneState } from './r30-scene-state.ts';
 import { HangarEnvironment } from './HangarEnvironment.tsx';
+import { HANGAR_DECK_Y, HangarPlatform } from './HangarPlatform.tsx';
 
 interface Props {
   config: BrunoSimulationConfig; active: BrunoConfigKey; turn: number;
@@ -15,8 +16,10 @@ interface Props {
   flightPhase?: BrunoTimelineEntry['phase']; flightEvent?: BrunoTimelineEntry; flightResult?: BrunoResult;
 }
 const BASE = import.meta.env?.BASE_URL ?? './';
+const HANGAR_CAMERA: [number, number, number] = [.35, 1.65, 7.1];
+const FLIGHT_CAMERA: [number, number, number] = [0, 1.1, 6.7];
 
-function ContextListener({ onUnavailable }: Pick<Props, 'onUnavailable'>) {
+function ContextListener({ onUnavailable, hangar }: Pick<Props, 'onUnavailable'> & { hangar?: boolean }) {
   const { gl, camera, size, setDpr, setFrameloop, invalidate } = useThree();
   useEffect(() => {
     const lost = (event: Event) => { event.preventDefault(); onUnavailable(); };
@@ -30,9 +33,10 @@ function ContextListener({ onUnavailable }: Pick<Props, 'onUnavailable'>) {
   }, [gl, setDpr, setFrameloop, invalidate, onUnavailable]);
   useEffect(() => {
     if (!(camera instanceof THREE.PerspectiveCamera)) return;
-    camera.zoom = Math.min(1, size.width / Math.max(size.height, 1) / 1.15);
-    camera.lookAt(0, 0, 0); camera.updateProjectionMatrix(); invalidate();
-  }, [camera, size.width, size.height, invalidate]);
+    if (hangar !== undefined) camera.position.fromArray(hangar ? HANGAR_CAMERA : FLIGHT_CAMERA);
+    camera.zoom = Math.min(1, size.width / Math.max(size.height, 1) / (hangar ? 1.32 : 1.15));
+    camera.lookAt(0, hangar ? -.36 : 0, 0); camera.updateProjectionMatrix(); invalidate();
+  }, [camera, size.width, size.height, hangar, invalidate]);
   return null;
 }
 
@@ -59,9 +63,9 @@ function Planet({ body }: { body: 'earth' | 'moon' | 'mars' | 'europa' }) {
 }
 
 /** A didactic envelope, not the dimensions or ascent of a named real launcher. */
-function Launcher({ heavy, highlighted, firing }: { heavy: boolean; highlighted: boolean; firing: boolean }) {
+function Launcher({ heavy, highlighted, firing, grounded }: { heavy: boolean; highlighted: boolean; firing: boolean; grounded: boolean }) {
   const radius = heavy ? .28 : .21;
-  return <group name={`launcher-${heavy ? 'heavy' : 'compact'}`} position={[-1.95, -.05, -.8]} rotation={[0, 0, -.08]}>
+  return <group name={`launcher-${heavy ? 'heavy' : 'compact'}`} position={[-1.95, grounded ? HANGAR_DECK_Y + 1.07 : -.05, -.8]} rotation={[0, 0, grounded ? 0 : -.08]}>
     <mesh><cylinderGeometry args={[radius, radius, 1.8, 24]} /><meshStandardMaterial color={highlighted ? '#f5ca91' : '#c6d0d1'} metalness={.35} roughness={.5} /></mesh>
     <mesh position={[0, 1.05, 0]}><coneGeometry args={[radius, .55, 24]} /><meshStandardMaterial color="#c0cbd0" metalness={.4} roughness={.5} /></mesh>
     {heavy ? [-1, 1].map(side => <mesh key={side} position={[side * .36, -.25, 0]}><cylinderGeometry args={[.13, .16, 1.3, 16]} /><meshStandardMaterial color="#9aaab4" metalness={.4} roughness={.5} /></mesh>) : null}
@@ -139,13 +143,14 @@ export function BrunoInstrumentScene({ id, turn, onUnavailable }: { id: BrunoIns
 export default function BrunoHangarScene(props: Props) {
   const { config, active, flightEvent, flightResult, missionId = 'iss' } = props;
   const state = getBrunoSceneState(config, flightEvent, flightResult);
-  return <Canvas frameloop="demand" dpr={1} camera={{ position: [0, 1.1, 6.7], fov: 38 }} gl={{ antialias: true, alpha: true, powerPreference: 'low-power', stencil: false }} aria-hidden="true">
-    <ContextListener onUnavailable={props.onUnavailable} /><ambientLight intensity={.55} />
-    {state.phase === 'assembly' || state.blocked && state.phase === 'launch' ? <HangarEnvironment /> : null}
+  const hangar = state.phase === 'assembly' || state.blocked && state.phase === 'launch';
+  return <Canvas frameloop="demand" dpr={1} camera={{ position: hangar ? HANGAR_CAMERA : FLIGHT_CAMERA, fov: 38 }} gl={{ antialias: true, alpha: true, powerPreference: 'low-power', stencil: false }} aria-hidden="true">
+    <ContextListener onUnavailable={props.onUnavailable} hangar={hangar} /><ambientLight intensity={.55} />
+    {hangar ? <HangarEnvironment /> : null}
     <directionalLight position={[-3, 5, 4]} intensity={3.1} color="#fff0d9" /><directionalLight position={[4, 1, -3]} intensity={1.1} color="#81c8e2" />
-    {state.phase === 'assembly' || state.blocked && state.phase === 'launch' ? <><gridHelper args={[8, 16, '#456277', '#263845']} position={[0, -1.6, 0]} /><mesh position={[0, -1.67, 0]}><boxGeometry args={[5.8, .1, 3.8]} /><meshStandardMaterial color="#122536" roughness={.8} /></mesh></> : <Planet body={state.atDestination ? missionId === 'iss' ? 'earth' : missionId : 'earth'} />}
+    {hangar ? <HangarPlatform /> : <Planet body={state.atDestination ? missionId === 'iss' ? 'earth' : missionId : 'earth'} />}
     {state.arrived && missionId === 'iss' ? <group position={[-1.8, .8, -1.9]} scale={.42} rotation={[.16, -.4, .1]}><NASAAsset url={`${BASE}models/nasa/iss-carbajal-b.glb`} onUnavailable={props.onUnavailable} /></group> : null}
-    {state.phase === 'assembly' || state.phase === 'launch' ? <Launcher heavy={config.launcher === 'heavy'} highlighted={active === 'launcher'} firing={state.plume} /> : null}
+    {state.phase === 'assembly' || state.phase === 'launch' ? <Launcher heavy={config.launcher === 'heavy'} highlighted={active === 'launcher'} firing={state.plume} grounded={hangar} /> : null}
     <Assembly {...props} />
     {state.transmitting ? <Guide from={[.45, 1.1, .3]} to={[-1.6, -1.1, 1]} color="#a4e3f2" /> : null}
     {state.receivedRecords !== null ? <group name="recorded-ground-reception" position={[-1.5, -1.25, .9]}>

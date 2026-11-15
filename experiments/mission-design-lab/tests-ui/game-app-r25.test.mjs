@@ -92,7 +92,10 @@ test('Europa purchases replay a lost receipt, reserve both instruments, consume 
   const api = await installInventoryApi();
   await resume(); await choose('EUROPA'); await click('Abrir hangar');
   const nextStep = screen.getByRole('group', { name: 'Próximo passo no hangar' });
-  assert.match(nextStep.textContent, /Compre.*REASON.*MISE/);
+  const requiredInstruments = within(nextStep).getByText(/Compre.*REASON.*MISE/);
+  const requiredSlots = within(nextStep).getByText(/precisa de 3 encaixes.*tem 2/);
+  assert.ok(!requiredInstruments.closest('.sr-only, [hidden]'), 'instrument names are visible in the hangar');
+  assert.ok(!requiredSlots.closest('.sr-only, [hidden]'), 'required slots are visible in the hangar');
   const launchButton = screen.getByRole('button', { name: 'Simular lançamento' });
   assert.equal(launchButton.disabled, false);
   assert.match(launchButton.getAttribute('aria-describedby') && document.getElementById(launchButton.getAttribute('aria-describedby')).textContent, /custa 2 créditos.*zero registros/);
@@ -211,6 +214,7 @@ test('the normal launch countdown completes once and persists the computed resul
     assert.ok(screen.getByRole('heading', { name: 'Operação da missão' }));
     assert.equal(saved().filter(entry => entry.event.kind === 'attempt').length, 0);
     await screen.findByRole('heading', { name: 'Missão concluída' }, { timeout: 10000 });
+    await waitFor(() => assert.equal(saved().filter(entry => entry.event.kind === 'attempt').length, 1));
     const attempts = saved().filter(entry => entry.event.kind === 'attempt');
     assert.equal(attempts.length, 1);
     assert.deepEqual(attempts[0].summary, summarizeBrunoAttempt(simulateBrunoMission('iss', attempts[0].event.payload.config)));

@@ -6,6 +6,8 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { ConfiguredSpacecraft } from './ConfiguredSpacecraft.tsx';
 import { HangarEnvironment } from './HangarEnvironment.tsx';
+import { HANGAR_DECK_Y, HangarPlatform } from './HangarPlatform.tsx';
+import { disposeAsset } from './scene-asset.ts';
 import type { SceneSchedule } from './r30-scene-state.ts';
 import type { SpacecraftInspection, SpacecraftPresentation } from '../lab/spacecraft-presentation.ts';
 import './spacecraft-immersion.css';
@@ -305,24 +307,7 @@ export function mergeJWSTForDisplay(source: THREE.Group): THREE.Group {
   }
   originals.forEach(geometry => geometry.dispose()); result.updateMatrixWorld(true); return result;
 }
-export function disposeAsset(scene: THREE.Object3D) {
-  const geometries = new Set<THREE.BufferGeometry>(), materials = new Set<THREE.Material>();
-  const textures = new Set<THREE.Texture>(), bitmaps = new Set<ImageBitmap>();
-  scene.traverse(node => {
-    if (!(node instanceof THREE.Mesh)) return;
-    geometries.add(node.geometry);
-    (Array.isArray(node.material) ? node.material : [node.material]).forEach(material => materials.add(material));
-  });
-  for (const material of materials) for (const value of Object.values(material)) if (value instanceof THREE.Texture) textures.add(value);
-  for (const texture of textures) {
-    const image = texture.source.data;
-    if (typeof ImageBitmap !== 'undefined' && image instanceof ImageBitmap) bitmaps.add(image);
-    texture.dispose();
-  }
-  // ImageBitmap data needs explicit release; several meshes may share one image.
-  bitmaps.forEach(bitmap => bitmap.close());
-  materials.forEach(material => material.dispose()); geometries.forEach(geometry => geometry.dispose());
-}
+export { disposeAsset };
 export function NASAAsset({ url, onLoaded, onUnavailable }: { url: string; onLoaded?: () => void; onUnavailable: () => void }) {
   const [asset,setAsset] = useState<{scene:THREE.Group; center:THREE.Vector3; scale:number}|null>(null);
   const { invalidate } = useThree();
@@ -412,7 +397,7 @@ function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: Space
     {!hangar ? world === 'earth' ? <group position={contextPosition} scale={contextScale}><Earth focus={props.focus} animating={false}/></group> : <group position={contextPosition} scale={contextScale} rotation={[world === 'telescope' ? -.12 : .12,world === 'telescope' ? -Math.PI/2 : .3,.04]}><NASAAsset url={`${import.meta.env.BASE_URL}models/nasa/${world === 'telescope' ? 'jwst-a.glb' : 'bennu-1999-rq36.glb'}`} onUnavailable={props.onUnavailable}/></group> : null}
     <group position={[craftX,craftY,.45]} scale={craftScale}><ConfiguredSpacecraft presentation={props.presentation} visualState={props.visualState} inspection={inspection} exploded={separated} turn={props.turn} reducedMotion={props.reducedMotion} onInspect={props.onInspect}/></group>
     {props.segment === 'launch' ? <mesh position={[craftX,craftY,.1]}><boxGeometry args={[separated ? 4.6 : 3.9,separated ? 3.3 : 2.7,2.2]}/><meshBasicMaterial color="#6c91a7" wireframe transparent opacity={.22} depthWrite={false}/></mesh> : null}
-    {(hangar && !inspect || props.segment === 'launch') && props.schedule && props.schedule.launcher !== 'fixed' ? <group name={`planned-launcher-${props.schedule.launcher}`} position={[-2.05,-.15,-.4]}>
+    {(hangar && !inspect || props.segment === 'launch') && props.schedule && props.schedule.launcher !== 'fixed' ? <group name={`planned-launcher-${props.schedule.launcher}`} position={[-2.05,hangar ? HANGAR_DECK_Y + .825 : -.15,-.4]}>
       <mesh><cylinderGeometry args={[props.schedule?.launcher === 'science' ? .32 : .23,props.schedule?.launcher === 'science' ? .32 : .23,1.65,20]}/><meshStandardMaterial color="#b0c3cd" metalness={.45} roughness={.45}/></mesh>
       <mesh position={[0,1,0]}><coneGeometry args={[props.schedule?.launcher === 'science' ? .32 : .23,.5,20]}/><meshStandardMaterial color="#d6d9cc" metalness={.3} roughness={.5}/></mesh>
       {props.schedule?.launcher === 'science' ? [-1,1].map(side=><mesh key={side} position={[side*.38,-.15,0]}><cylinderGeometry args={[.12,.15,1.25,16]}/><meshStandardMaterial color="#7593a9"/></mesh>) : null}
@@ -424,7 +409,6 @@ function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: Space
     </group> : null}
     {props.visualState?.available && props.visualState.transmitting ? <Transmission from={radioAnchor} to={props.segment === 'ground' ? [-1.7,-.8,.5] : [-2,-1.2,0]}/> : null}
     {props.segment === 'user' || props.segment === 'ground' ? world === 'earth' ? <EarthEvidenceCards state={props.visualState}/> : <ExpeditionEvidenceCards world={world} state={props.visualState}/> : null}
-    {hangar ? <group position={[0,-1.2,-.1]} rotation={[Math.PI/2,0,0]} scale={[1,.6,1]}><Curve points={HANGAR_RING} color="#6c8d9b" opacity={.24}/></group> : null}
   </>;
 }
 
@@ -453,7 +437,7 @@ function SceneLifecycle({ onUnavailable, active, ...state }: OrbitalSceneProps) 
   return null;
 }
 
-function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true }: { variant: SceneVariant; cameraDistance?: number; reducedMotion?: boolean }) {
+function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true, hangar = false }: { variant: SceneVariant; cameraDistance?: number; reducedMotion?: boolean; hangar?: boolean }) {
   const { camera, size, invalidate, frameloop, setDpr } = useThree();
   const initialized = useRef<THREE.PerspectiveCamera | null>(null);
   const transition = useRef<{ fromDistance: number; fromZoom: number; distance: number; zoom: number; elapsed: number } | null>(null);
@@ -464,17 +448,21 @@ function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true }: { 
     if (!(camera instanceof THREE.PerspectiveCamera) || !size.width || !size.height) return;
     const aspect = size.width / size.height;
     const distance = cameraDistance ?? camera.position.z;
-    const zoom = Math.min(1, aspect / (cameraDistance !== undefined ? 1.32 : variant === 'hangar' ? 1.12 : 1.04));
+    const zoom = Math.min(1, aspect / (hangar ? 1.46 : cameraDistance !== undefined ? 1.32 : variant === 'hangar' ? 1.12 : 1.04));
     transition.current = null;
-    if (cameraDistance !== undefined) { camera.position.x = 0; camera.position.y = 0; }
+    if (cameraDistance !== undefined) {
+      camera.position.x = hangar ? .35 : 0;
+      camera.position.y = hangar ? 1.55 : 0;
+    }
     if (initialized.current !== camera || reducedMotion || frameloop === 'never') {
       camera.position.z = distance; camera.zoom = zoom; camera.updateProjectionMatrix();
     } else if (camera.position.z !== distance || camera.zoom !== zoom) {
       transition.current = { fromDistance: camera.position.z, fromZoom: camera.zoom, distance, zoom, elapsed: 0 };
     }
+    if (cameraDistance !== undefined) camera.lookAt(0, hangar ? -.36 : 0, 0);
     initialized.current = camera;
     invalidate();
-  }, [camera, size.width, size.height, variant, cameraDistance, reducedMotion, frameloop, invalidate, setDpr]);
+  }, [camera, size.width, size.height, variant, cameraDistance, reducedMotion, hangar, frameloop, invalidate, setDpr]);
   useFrame((_, delta) => {
     const next = transition.current;
     if (!next || !(camera instanceof THREE.PerspectiveCamera)) return;
@@ -483,6 +471,7 @@ function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true }: { 
     const eased = 1 - (1 - next.elapsed / .28) ** 3;
     camera.position.z = THREE.MathUtils.lerp(next.fromDistance, next.distance, eased);
     camera.zoom = THREE.MathUtils.lerp(next.fromZoom, next.zoom, eased);
+    if (hangar) camera.lookAt(0, -.36, 0);
     camera.updateProjectionMatrix();
     if (next.elapsed < .28) invalidate();
     else transition.current = null;
@@ -504,13 +493,13 @@ export default function OrbitalScene(props: OrbitalSceneProps) {
     style={{ position: 'absolute', inset: 0, pointerEvents: props.onInspect && props.presentation ? 'auto' : 'none' }}
   >
     <ambientLight color="#aabfd0" intensity={isHangar ? .7 : .4} />
-    {props.variant === 'hangar' ? <HangarEnvironment /> : null}
+    {props.variant === 'hangar' ? <><HangarEnvironment /><HangarPlatform /></> : null}
     <directionalLight position={[-3.5, 4.5, 5]} color="#fff2d7" intensity={isHangar ? 3.8 : 3.3} />
     <directionalLight position={[4, .5, 1]} color="#7aa7cb" intensity={isHangar ? 1.4 : .5} />
     <directionalLight position={[-2, -1, -4]} color="#a5cbc3" intensity={1.2} />
     <StarField />
     {props.presentation ? <ConfiguredMissionWorld {...props} presentation={props.presentation}/> : props.segment === 'ground' ? <GroundWorld {...props}/> : props.world && props.world !== 'earth' ? <ReferenceMissionWorld {...props}/> : props.segment === 'launch' ? <LaunchWorld {...props}/> : props.segment === 'user' ? <ScienceWorld {...props}/> : isHangar ? <HangarWorld {...props} /> : <OrbitWorld {...props} />}
-    <ResponsiveFraming variant={isHangar ? 'hangar' : props.variant} cameraDistance={inspectionDistance} reducedMotion={props.reducedMotion}/>
+    <ResponsiveFraming variant={isHangar ? 'hangar' : props.variant} cameraDistance={inspectionDistance} reducedMotion={props.reducedMotion} hangar={props.variant === 'hangar'}/>
     <SceneLifecycle {...props} />
   </Canvas>;
 }

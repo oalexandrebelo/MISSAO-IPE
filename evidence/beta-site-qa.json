@@ -1,16 +1,16 @@
 {
-  "startedAt": "2026-11-15T19:51:27.741Z",
-  "finishedAt": "2026-11-15T19:51:31.240Z",
+  "startedAt": "2026-11-15T20:19:40.915Z",
+  "finishedAt": "2026-11-15T20:19:44.764Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
-  "checksPassed": 19,
+  "checksPassed": 20,
   "checksFailed": 0,
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 49189,
-    "sha256": "f5de180d6574d90252e93abd5c6abe3a455853131d8caa6012828314c8be1b0f"
+    "bytes": 50372,
+    "sha256": "bd5081c6a8a3c60c09855c4401101be32376c00eec8c585011dc46ed8c4bd262"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "4e274d73d77b382f0cacb7e10b0ced60f4f45f1280a2f32f124dd6788ac32423"
+        "sha256": "5ae2ba6b0ff6f110a3f5d5c7fc5c38e7cac6b1586b0a76fda974974b80a7abbe"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 476,
-      "manifestedFiles": 475,
-      "bytes": 82363724,
+      "fileCount": 484,
+      "manifestedFiles": 483,
+      "bytes": 82542721,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -56,7 +56,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 415,
+      "inspectedFiles": 422,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -104,8 +104,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 3348,
-      "uniqueTargets": 338,
+      "count": 3436,
+      "uniqueTargets": 344,
       "entries": [
         {
           "source": "acessibilidade/guia.html",
@@ -4481,6 +4481,27 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-78-auditoria-bruno-e-integracao-r31-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-79-game-design-e-skills-r31-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-80-hangar-kenney-e-handoff-r31-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -6399,6 +6420,13 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-80-hangar-kenney-e-handoff-r31-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
         },
         {
@@ -6407,6 +6435,83 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-75-lobby-imersivo-e-handoff-r29-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-74-auditoria-bruno-e-imersao-r29-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-notice-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-77-assets-3d-e-oportunidades-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-78-auditoria-bruno-e-integracao-r31-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-78-auditoria-bruno-e-integracao-r31-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-79-game-design-e-skills-r31-md"
         },
         {
           "source": "context/research-library.html",
@@ -15751,6 +15856,12 @@
         },
         {
           "source": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.html",
+          "target": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+          "requestPath": "/docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.html",
           "target": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
           "requestPath": "/docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
           "kind": "navigation"
@@ -15841,6 +15952,405 @@
         },
         {
           "source": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "requestPath": "/docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "equipe/index.html",
+          "requestPath": "/equipe/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "requestPath": "/docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "requestPath": "/docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "requestPath": "/docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md",
+          "requestPath": "/docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "NOTICE.md",
+          "requestPath": "/NOTICE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "research/bruno-consolidation-r17.json",
+          "requestPath": "/research/bruno-consolidation-r17.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md",
+          "requestPath": "/docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "requestPath": "/docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "requestPath": "/docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "equipe/index.html",
+          "requestPath": "/equipe/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "requestPath": "/docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "requestPath": "/docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+          "requestPath": "/docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "target": "acessibilidade/libras.css",
+          "requestPath": "/acessibilidade/libras.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "requestPath": "/docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "equipe/index.html",
+          "requestPath": "/equipe/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "requestPath": "/docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+          "requestPath": "/docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "requestPath": "/docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+          "requestPath": "/docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "acessibilidade/guia.html",
+          "requestPath": "/acessibilidade/guia.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "acessibilidade/libras.js",
+          "requestPath": "/acessibilidade/libras.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "brand/missao-ipe-logo-on-light.svg",
+          "requestPath": "/brand/missao-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "assets/analytics.js",
+          "requestPath": "/assets/analytics.js",
+          "kind": "script"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "brand/missao-ipe-symbol.svg",
+          "requestPath": "/brand/missao-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "site.css",
+          "requestPath": "/site.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
           "target": "acessibilidade/libras.css",
           "requestPath": "/acessibilidade/libras.css",
           "kind": "link-stylesheet"
@@ -16611,6 +17121,42 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "requestPath": "/docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "requestPath": "/docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "requestPath": "/docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+          "requestPath": "/docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "requestPath": "/docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+          "requestPath": "/docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
           "kind": "navigation"
         },
         {
@@ -18539,8 +19085,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "script"
         },
         {
@@ -18581,8 +19127,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-Ss44dq7b.css",
-          "requestPath": "/lab/assets/index-Ss44dq7b.css",
+          "target": "lab/assets/index-Cp82tIRD.css",
+          "requestPath": "/lab/assets/index-Cp82tIRD.css",
           "kind": "link-stylesheet"
         },
         {
@@ -21323,27 +21869,27 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "requestPath": "/lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "requestPath": "/lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "requestPath": "/lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
@@ -21407,207 +21953,207 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-BiSnTRtI.js",
+          "source": "lab/assets/LobbyScene-1gwaVCEp.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-BiSnTRtI.js",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/LobbyScene-1gwaVCEp.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-BiSnTRtI.js",
-          "target": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
-          "requestPath": "/lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbyScene-1gwaVCEp.js",
+          "target": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+          "requestPath": "/lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "requestPath": "/lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "requestPath": "/lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "requestPath": "/lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "requestPath": "/lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "requestPath": "/lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-9273Bayt.js",
+          "source": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-9273Bayt.js",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-9273Bayt.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "requestPath": "/lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "requestPath": "/lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "requestPath": "/lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "requestPath": "/lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "requestPath": "/lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "requestPath": "/lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "target": "lab/assets/HDRLoader-CzOMh6Id.js",
           "requestPath": "/lab/assets/HDRLoader-CzOMh6Id.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "requestPath": "/lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/search-27X8mwHu.js",
-          "requestPath": "/lab/assets/search-27X8mwHu.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/search-DXLo764J.js",
+          "requestPath": "/lab/assets/search-DXLo764J.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "requestPath": "/lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "requestPath": "/lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "requestPath": "/lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "requestPath": "/lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "requestPath": "/lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/LobbyScene-BiSnTRtI.js",
-          "requestPath": "/lab/assets/LobbyScene-BiSnTRtI.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/LobbyScene-1gwaVCEp.js",
+          "requestPath": "/lab/assets/LobbyScene-1gwaVCEp.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "requestPath": "/lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "requestPath": "/lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "requestPath": "/lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-          "requestPath": "/lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+          "requestPath": "/lab/assets/BrunoHangarScene-XzsOS52t.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-          "requestPath": "/lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+          "requestPath": "/lab/assets/BrunoHangarScene-XzsOS52t.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "requestPath": "/lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "requestPath": "/lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "target": "lab/assets/NASAReferenceScene-9273Bayt.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-9273Bayt.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "target": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-Dgc2CcuL.js",
           "kind": "dynamic-import"
         },
         {
@@ -21629,15 +22175,15 @@
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/search-27X8mwHu.js",
+          "source": "lab/assets/search-DXLo764J.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "requestPath": "/lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/search-27X8mwHu.js",
-          "target": "lab/assets/index-D2-b98VK.js",
-          "requestPath": "/lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/search-DXLo764J.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
+          "requestPath": "/lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
@@ -21748,27 +22294,27 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-          "specifier": "./OrbitalScene-BBhLhaOx.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+          "specifier": "./OrbitalScene-BKxBRlp0.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
           "specifier": "./three.module-Ctsc3Dhe.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-          "specifier": "./index-D2-b98VK.js",
-          "target": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+          "specifier": "./index-CfTVjaWu.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
@@ -21832,207 +22378,207 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-BiSnTRtI.js",
+          "source": "lab/assets/LobbyScene-1gwaVCEp.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-BiSnTRtI.js",
-          "specifier": "./index-D2-b98VK.js",
-          "target": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/LobbyScene-1gwaVCEp.js",
+          "specifier": "./index-CfTVjaWu.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbyScene-BiSnTRtI.js",
-          "specifier": "./LobbySceneRenderer-CX6ajUPZ.js",
-          "target": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbyScene-1gwaVCEp.js",
+          "specifier": "./LobbySceneRenderer-BIH2zDGH.js",
+          "target": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "specifier": "./three.module-Ctsc3Dhe.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
-          "specifier": "./index-D2-b98VK.js",
-          "target": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+          "specifier": "./index-CfTVjaWu.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "specifier": "./GLTFLoader-DZrvgIDN.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
           "specifier": "./DRACOLoader-BmJkKnDo.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
-          "specifier": "./OrbitalScene-BBhLhaOx.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+          "specifier": "./OrbitalScene-BKxBRlp0.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-9273Bayt.js",
+          "source": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-9273Bayt.js",
-          "specifier": "./index-D2-b98VK.js",
-          "target": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+          "specifier": "./index-CfTVjaWu.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-9273Bayt.js",
-          "specifier": "./OrbitalScene-BBhLhaOx.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+          "specifier": "./OrbitalScene-BKxBRlp0.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
-          "specifier": "./index-D2-b98VK.js",
-          "target": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
+          "specifier": "./index-CfTVjaWu.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "specifier": "./three.module-Ctsc3Dhe.js",
           "target": "lab/assets/three.module-Ctsc3Dhe.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "specifier": "./GLTFLoader-DZrvgIDN.js",
           "target": "lab/assets/GLTFLoader-DZrvgIDN.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "specifier": "./DRACOLoader-BmJkKnDo.js",
           "target": "lab/assets/DRACOLoader-BmJkKnDo.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "specifier": "./exact-BFEcRz5A.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "specifier": "./HDRLoader-CzOMh6Id.js",
           "target": "lab/assets/HDRLoader-CzOMh6Id.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./exact-BFEcRz5A.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./search-27X8mwHu.js",
-          "target": "lab/assets/search-27X8mwHu.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./search-DXLo764J.js",
+          "target": "lab/assets/search-DXLo764J.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rive-BApFqc81.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rive-C6TFBdW0.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rive_fallback-CbNVjUCh.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./OrbitalScene-BBhLhaOx.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./OrbitalScene-BKxBRlp0.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./LobbyScene-BiSnTRtI.js",
-          "target": "lab/assets/LobbyScene-BiSnTRtI.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./LobbyScene-1gwaVCEp.js",
+          "target": "lab/assets/LobbyScene-1gwaVCEp.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rive-BApFqc81.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rive-C6TFBdW0.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
           "specifier": "./rive_fallback-CbNVjUCh.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./BrunoHangarScene-DAN5E0NE.js",
-          "target": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./BrunoHangarScene-XzsOS52t.js",
+          "target": "lab/assets/BrunoHangarScene-XzsOS52t.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./BrunoHangarScene-DAN5E0NE.js",
-          "target": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./BrunoHangarScene-XzsOS52t.js",
+          "target": "lab/assets/BrunoHangarScene-XzsOS52t.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./OrbitalScene-BBhLhaOx.js",
-          "target": "lab/assets/OrbitalScene-BBhLhaOx.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./OrbitalScene-BKxBRlp0.js",
+          "target": "lab/assets/OrbitalScene-BKxBRlp0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-D2-b98VK.js",
-          "specifier": "./NASAReferenceScene-9273Bayt.js",
-          "target": "lab/assets/NASAReferenceScene-9273Bayt.js",
+          "source": "lab/assets/index-CfTVjaWu.js",
+          "specifier": "./NASAReferenceScene-Dgc2CcuL.js",
+          "target": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
           "kind": "dynamic-import"
         },
         {
@@ -22054,15 +22600,15 @@
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/search-27X8mwHu.js",
+          "source": "lab/assets/search-DXLo764J.js",
           "specifier": "./exact-BFEcRz5A.js",
           "target": "lab/assets/exact-BFEcRz5A.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/search-27X8mwHu.js",
-          "specifier": "./index-D2-b98VK.js",
-          "target": "lab/assets/index-D2-b98VK.js",
+          "source": "lab/assets/search-DXLo764J.js",
+          "specifier": "./index-CfTVjaWu.js",
+          "target": "lab/assets/index-CfTVjaWu.js",
           "kind": "module-import"
         },
         {
@@ -22231,7 +22777,7 @@
       {
         "path": "campanha/release.json",
         "source": "experiments/four-level-campaign/dist/release.json",
-        "sha256": "9a208fd0216ba20458b56ae213700076d451a290e7f0421a493925b5c55ba677"
+        "sha256": "3d99bea651fc1d2f4c951ad499f6a070e512768f225e141c2d7aa993082f6d4c"
       },
       {
         "path": "campanha/research/assets/briefing-desktop.jpg",
@@ -22480,9 +23026,9 @@
         "analytics": "custom-host-only; page performance; no private routes"
       },
       {
-        "path": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
-        "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DAN5E0NE.js",
-        "sha256": "9c698fe43f1a79b25de38726996ae4aafe34c89c0f69a9eea1290c09e96465d8"
+        "path": "lab/assets/BrunoHangarScene-XzsOS52t.js",
+        "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-XzsOS52t.js",
+        "sha256": "9380264a7d51a65e956b40df62858b0235aeb2c091e025046cde8f458caf680c"
       },
       {
         "path": "lab/assets/draco_decoder-C32yEggz.wasm",
@@ -22530,24 +23076,24 @@
         "sha256": "ef8d9695d0d736229ab0ffe64531d364a779c1fb95ab8c72e84988553e305685"
       },
       {
-        "path": "lab/assets/index-D2-b98VK.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-D2-b98VK.js",
-        "sha256": "6f185f53fa356954d341847246fed0ba98d451a27f62c7714024625edbc6a602"
+        "path": "lab/assets/index-CfTVjaWu.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-CfTVjaWu.js",
+        "sha256": "0a19a780e1def33924e413be49c6c154404d837e74a74864be65e503e57fdd92"
       },
       {
-        "path": "lab/assets/index-Ss44dq7b.css",
-        "source": "experiments/mission-design-lab/dist/assets/index-Ss44dq7b.css",
-        "sha256": "8b7f8e79c5a31323719b7f3f1a2f380de3afc1c1ef285821328a189fbc6a4935"
+        "path": "lab/assets/index-Cp82tIRD.css",
+        "source": "experiments/mission-design-lab/dist/assets/index-Cp82tIRD.css",
+        "sha256": "1f6499748aaa81396c95662871039641348c7afcb886a2928f74f4b6f7660da4"
       },
       {
-        "path": "lab/assets/LobbyScene-BiSnTRtI.js",
-        "source": "experiments/mission-design-lab/dist/assets/LobbyScene-BiSnTRtI.js",
-        "sha256": "6c1a12c4ac2724b0b2f9b33df8d37eff2a8565db3d13e9ed46b13755198a7074"
+        "path": "lab/assets/LobbyScene-1gwaVCEp.js",
+        "source": "experiments/mission-design-lab/dist/assets/LobbyScene-1gwaVCEp.js",
+        "sha256": "c443fd3ee784021d53e151fedfc80ed67272e69e3ad4775f14a9b064b5d9d7e3"
       },
       {
-        "path": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
-        "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-CX6ajUPZ.js",
-        "sha256": "6a66fce7ddff0cc3a2cb043d928295f39bf2ec36198980a5f4f3a1d2912d9cc6"
+        "path": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
+        "source": "experiments/mission-design-lab/dist/assets/LobbySceneRenderer-BIH2zDGH.js",
+        "sha256": "bda47c525fd13ae734eb3c601b3df4f1c1582f9b7a9d8e8f01084a3356cdce12"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -22555,14 +23101,14 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-9273Bayt.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-9273Bayt.js",
-        "sha256": "e553a7d6061adeeed575eba56c3aa84ee3261de7bd878b8d4c4d525d0036153d"
+        "path": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-Dgc2CcuL.js",
+        "sha256": "0bcb357e4aa8c85f0d257315654f2dcd32192e68a794f69c4b1116da24477177"
       },
       {
-        "path": "lab/assets/OrbitalScene-BBhLhaOx.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BBhLhaOx.js",
-        "sha256": "3901197d428fce2e3eda74c6410ffc094ce518efd780b483bcd0b74e8bdfd7ac"
+        "path": "lab/assets/OrbitalScene-BKxBRlp0.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BKxBRlp0.js",
+        "sha256": "95242d1e293f490a3ade0b6d964c049b355bd8f55daf2533db1a02366942d4f5"
       },
       {
         "path": "lab/assets/rive_fallback-CbNVjUCh.js",
@@ -22595,9 +23141,9 @@
         "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
       },
       {
-        "path": "lab/assets/search-27X8mwHu.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-27X8mwHu.js",
-        "sha256": "341bc40acc9dcbc8ee3feec6993ba89f6069fe3ad146f4acbc71af0cece07d79"
+        "path": "lab/assets/search-DXLo764J.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-DXLo764J.js",
+        "sha256": "44906e2fbbb4d88e6f48408ec49073926c189e22d5a3d09b30effbc4f782f461"
       },
       {
         "path": "lab/assets/three.module-Ctsc3Dhe.js",
@@ -22858,9 +23404,19 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "3e103798cece9ee405b84874c96ed743ec60c766e62c7aff8e9a8da2cf65e369",
+        "sha256": "6a2e166f15eec5ffec3f414fb3d46d751ee89c1d7f4e4240285b4dc45a985c52",
         "libras": "lab",
         "analytics": "custom-host-only; page performance; no private routes"
+      },
+      {
+        "path": "lab/models/kenney/manifest.json",
+        "source": "experiments/mission-design-lab/dist/models/kenney/manifest.json",
+        "sha256": "9111a8325a85015b636f74c46abe3ad87d6c87d190cf77e7524297917c97138c"
+      },
+      {
+        "path": "lab/models/kenney/structure-platform.glb",
+        "source": "experiments/mission-design-lab/dist/models/kenney/structure-platform.glb",
+        "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99"
       },
       {
         "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -23297,7 +23853,7 @@
     ],
     "scientificFilesPerLocation": 10,
     "libras": {
-      "public": 100,
+      "public": 103,
       "lab": 1,
       "dashboard": 1
     },
@@ -23353,6 +23909,13 @@
       "bytes": 1701440,
       "sha256": "a2d308672f077b0872686a439d76dc3ace91274380ae2e5f02c653c3ccbc8407",
       "resolution": "1024x512",
+      "license": "CC0-1.0",
+      "rendered": false
+    },
+    "hangarPlatform": {
+      "bytes": 17200,
+      "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99",
+      "triangles": 96,
       "license": "CC0-1.0",
       "rendered": false
     },
@@ -23766,7 +24329,7 @@
         "path": "campanha/release.json",
         "status": 200,
         "bytes": 326,
-        "sha256": "9a208fd0216ba20458b56ae213700076d451a290e7f0421a493925b5c55ba677",
+        "sha256": "3d99bea651fc1d2f4c951ad499f6a070e512768f225e141c2d7aa993082f6d4c",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -23989,22 +24552,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 71488,
-        "sha256": "61cf65d12daee43c889f8fd6e0436e8b1736299a82ef252cb18383b880616ebe",
+        "bytes": 73035,
+        "sha256": "50ccec37d3fc8cae301c64b550f05f665ab4d7ae4fd1a336919dc639df38f19f",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2573382,
-        "sha256": "26f683ebeca3d1536cda821288b5874f8b21b20761ca20f7e7ba32b59626de62",
+        "bytes": 2615507,
+        "sha256": "c6ecaaea8c23632609c7cce89daf2bb547c8c4c69db080576e3c6b9d78d96067",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 2060141,
-        "sha256": "43668d96e89b9cfecbe8987448774e5aeac5db82d84d325a45c394e4c8e6552d",
+        "bytes": 2092633,
+        "sha256": "abdeb4d0369d68785e7d771f4932668a7dbe5613db354791d4d0d9097914a4dd",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24948,15 +25511,57 @@
       {
         "path": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.html",
         "status": 200,
-        "bytes": 12762,
-        "sha256": "506c09b1879bb7a1bbb7f98754c7ae9195193a62abc139f8638c9c563bc1ace2",
+        "bytes": 12966,
+        "sha256": "8cbf1f3faaa703cb482f344cd1e52dd6cc305a60b2ead1d8926f2efb7573a481",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md",
         "status": 200,
-        "bytes": 8545,
-        "sha256": "aabaa1538ab434e2457b67271dff18fab5d7a678b7fc30a2a23dbd52e5ae93dd",
+        "bytes": 8725,
+        "sha256": "967818b3545b8534eb7b8e025c8b05df23dba8f3bea6187717b9bfda705af334",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+        "status": 200,
+        "bytes": 27094,
+        "sha256": "96e0153d25de582a509c4888a41514b91864b374e4a0b59883aab4c145ecbb6e",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md",
+        "status": 200,
+        "bytes": 20658,
+        "sha256": "cccb24e59a6c77bfe21da80d365920413916ec2545ea361705eb2ec245a8ef6a",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+        "status": 200,
+        "bytes": 6894,
+        "sha256": "ec3ff02f7f381c0e4979f80eae848aba1f9a9e5e554877bcd85b3be833452b80",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/79-GAME-DESIGN-E-SKILLS-R31.md",
+        "status": 200,
+        "bytes": 4147,
+        "sha256": "aade04e4c08077955cfe669a9b3a350be1a7dd4fb4843a096293cb1d7bc49d33",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+        "status": 200,
+        "bytes": 9600,
+        "sha256": "051cc0374ecb742f05b87052767d8f4f2686e0766dec1877027f56afbcabdcfb",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md",
+        "status": 200,
+        "bytes": 6806,
+        "sha256": "59ecf4e6c14a2666183bd807dc13c0ed81f628052d9c016eb020b280c38eee53",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -25032,8 +25637,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 23545,
-        "sha256": "638bfd8348e23332ac1de5d082120d846af2f1db1a499101d7a5ee73a563415c",
+        "bytes": 24379,
+        "sha256": "2885d41a5ff2fe0e1094cf5196222586c48189ab71b2c22390751962df99ed4b",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -25289,10 +25894,10 @@
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+        "path": "lab/assets/BrunoHangarScene-XzsOS52t.js",
         "status": 200,
-        "bytes": 16432,
-        "sha256": "9c698fe43f1a79b25de38726996ae4aafe34c89c0f69a9eea1290c09e96465d8",
+        "bytes": 16285,
+        "sha256": "9380264a7d51a65e956b40df62858b0235aeb2c091e025046cde8f458caf680c",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -25317,31 +25922,31 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/LobbyScene-BiSnTRtI.js",
+        "path": "lab/assets/LobbyScene-1gwaVCEp.js",
         "status": 200,
         "bytes": 2812,
-        "sha256": "6c1a12c4ac2724b0b2f9b33df8d37eff2a8565db3d13e9ed46b13755198a7074",
+        "sha256": "c443fd3ee784021d53e151fedfc80ed67272e69e3ad4775f14a9b064b5d9d7e3",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/LobbySceneRenderer-CX6ajUPZ.js",
+        "path": "lab/assets/LobbySceneRenderer-BIH2zDGH.js",
         "status": 200,
         "bytes": 7642,
-        "sha256": "6a66fce7ddff0cc3a2cb043d928295f39bf2ec36198980a5f4f3a1d2912d9cc6",
+        "sha256": "bda47c525fd13ae734eb3c601b3df4f1c1582f9b7a9d8e8f01084a3356cdce12",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-9273Bayt.js",
+        "path": "lab/assets/NASAReferenceScene-Dgc2CcuL.js",
         "status": 200,
         "bytes": 7308,
-        "sha256": "e553a7d6061adeeed575eba56c3aa84ee3261de7bd878b8d4c4d525d0036153d",
+        "sha256": "0bcb357e4aa8c85f0d257315654f2dcd32192e68a794f69c4b1116da24477177",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-BBhLhaOx.js",
+        "path": "lab/assets/OrbitalScene-BKxBRlp0.js",
         "status": 200,
-        "bytes": 218735,
-        "sha256": "3901197d428fce2e3eda74c6410ffc094ce518efd780b483bcd0b74e8bdfd7ac",
+        "bytes": 219899,
+        "sha256": "95242d1e293f490a3ade0b6d964c049b355bd8f55daf2533db1a02366942d4f5",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -25387,17 +25992,17 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-D2-b98VK.js",
+        "path": "lab/assets/index-CfTVjaWu.js",
         "status": 200,
-        "bytes": 707358,
-        "sha256": "6f185f53fa356954d341847246fed0ba98d451a27f62c7714024625edbc6a602",
+        "bytes": 709434,
+        "sha256": "0a19a780e1def33924e413be49c6c154404d837e74a74864be65e503e57fdd92",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-Ss44dq7b.css",
+        "path": "lab/assets/index-Cp82tIRD.css",
         "status": 200,
-        "bytes": 240063,
-        "sha256": "8b7f8e79c5a31323719b7f3f1a2f380de3afc1c1ef285821328a189fbc6a4935",
+        "bytes": 241097,
+        "sha256": "1f6499748aaa81396c95662871039641348c7afcb886a2928f74f4b6f7660da4",
         "contentType": "text/css; charset=utf-8"
       },
       {
@@ -25450,10 +26055,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-27X8mwHu.js",
+        "path": "lab/assets/search-DXLo764J.js",
         "status": 200,
         "bytes": 1280,
-        "sha256": "341bc40acc9dcbc8ee3feec6993ba89f6069fe3ad146f4acbc71af0cece07d79",
+        "sha256": "44906e2fbbb4d88e6f48408ec49073926c189e22d5a3d09b30effbc4f782f461",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -25810,8 +26415,22 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 1457,
-        "sha256": "6e8c3bb540c2183a0a9c26d9adf406f47f9c0b7c376eb46d88cb6048169c25dc",
+        "sha256": "2bec427fc81f3f10a0e3ffee27f9f8861f61241cb7d86451e3287df44a0d6355",
         "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "lab/models/kenney/manifest.json",
+        "status": 200,
+        "bytes": 1010,
+        "sha256": "9111a8325a85015b636f74c46abe3ad87d6c87d190cf77e7524297917c97138c",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "lab/models/kenney/structure-platform.glb",
+        "status": 200,
+        "bytes": 17200,
+        "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99",
+        "contentType": "model/gltf-binary"
       },
       {
         "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -26544,8 +27163,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 225678,
-        "sha256": "4e274d73d77b382f0cacb7e10b0ced60f4f45f1280a2f32f124dd6788ac32423",
+        "bytes": 229757,
+        "sha256": "5ae2ba6b0ff6f110a3f5d5c7fc5c38e7cac6b1586b0a76fda974974b80a7abbe",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -26697,7 +27316,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 370,
+      "linkedRoutesChecked": 376,
       "redirects": [
         {
           "source": "/doc",
@@ -26842,97 +27461,102 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 31.587
+      "durationMs": 32.249
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.281
+      "durationMs": 0.289
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 70.495
+      "durationMs": 74.619
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 1.267
+      "durationMs": 0.949
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 68.595
+      "durationMs": 71.575
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1193.357
+      "durationMs": 1255.595
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.474
+      "durationMs": 0.617
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 534.849
+      "durationMs": 605.713
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 125.147
+      "durationMs": 135.174
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 47.591
+      "durationMs": 56.492
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 8.086
+      "durationMs": 2.948
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 105.362
+      "durationMs": 118.162
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.357
+      "durationMs": 6.343
     },
     {
       "name": "iluminação CC0 do hangar é local e preserva origem e integridade",
       "status": "passed",
-      "durationMs": 0.569
+      "durationMs": 0.612
+    },
+    {
+      "name": "plataforma Kenney CC0 é local, íntegra e não exige arquivos externos",
+      "status": "passed",
+      "durationMs": 0.123
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 55.996
+      "durationMs": 57.095
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 926.547
+      "durationMs": 1078.116
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 123.075
+      "durationMs": 149.489
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 6.473
+      "durationMs": 6.77
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 123.795
+      "durationMs": 124.576
     }
   ]
 }

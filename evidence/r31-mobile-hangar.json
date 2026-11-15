@@ -1,0 +1,92 @@
+{
+  "edition": "R31",
+  "checkedAt": "2026-11-15T20:19:32.727396+00:00",
+  "environment": "Local browser viewport, synthetic participation, localhost metrics repository in memory",
+  "hangars": [
+    {
+      "mission": "ISS",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "instrument equipped; reinforced protection; 640 Wh; exploded view; plan A/B"
+    },
+    {
+      "mission": "Lua",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "640 Wh; LEND and Diviner named in missing equipment"
+    },
+    {
+      "mission": "Marte",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "heavy launcher; mass and slot prediction"
+    },
+    {
+      "mission": "Europa",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "directional antenna 90 MB; REASON and MISE named; 3 needed vs 2 slots"
+    },
+    {
+      "mission": "Cerrado",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "24 Wh battery; 2D fallback available"
+    },
+    {
+      "mission": "Bennu",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "extended contact agenda; radio unchanged at 1.2 Mbit/s"
+    },
+    {
+      "mission": "Webb",
+      "viewportWidth": 390,
+      "platform": "kenney GLB attached",
+      "horizontalOverflow": false,
+      "changeChecked": "camera versus infrared spectrometer; compatibility warning"
+    }
+  ],
+  "narrowViewport": {
+    "width": 320,
+    "missions": [
+      "ISS",
+      "Webb"
+    ],
+    "horizontalOverflow": false
+  },
+  "issAttempt": {
+    "score": 92,
+    "validRecords": 6,
+    "requiredRecords": 6,
+    "massKg": 235,
+    "projectCredits": 39,
+    "removedHangarInOperation": true,
+    "paused": true,
+    "inventoryCyclesBefore": 3,
+    "inventoryCyclesAfter": 2
+  },
+  "afterReload": {
+    "attempts": 1,
+    "confirmedDestinations": 1,
+    "score": 92,
+    "walletCredits": 26,
+    "units": 1,
+    "monitorCycles": 2,
+    "confirmedEventsAtReload": 7,
+    "pendingAtReload": 0,
+    "rejectedAtReload": 0
+  },
+  "consoleErrorsObserved": [],
+  "limits": [
+    "Seven hangars and representative choices inspected; only ISS executed end-to-end this round. R30 contains the previous seven full journeys.",
+    "Viewport simulation is not a physical phone, measured FPS, or learning validation with human participants.",
+    "Production persistence is checked separately; local in-memory QA repository is not durable across a server restart."
+  ]
+}

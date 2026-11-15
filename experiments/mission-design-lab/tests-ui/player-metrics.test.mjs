@@ -214,3 +214,25 @@ test('progress summarizes all seven missions and preserves first/latest Bruno sc
  }
  assert.equal(document.querySelector('.player-stat-grid article:nth-child(3) strong').textContent,'Sem respostas');
 });
+
+test('seven-destination milestone counts unique confirmed successes, preserves failure history and adds no reward',async()=>{
+ const missionIds=['iss','moon','mars','europa','cerrado','bennu','telescope'];
+ const makeEntry=(mission,sync='synced',outcome='success')=>({event:{id:crypto.randomUUID(),kind:'attempt',mission,at:new Date().toISOString(),payload:{attemptId:crypto.randomUUID(),status:'completed'}},summary:{...summarizeBrunoAttempt(simulateBrunoMission('iss',DEFAULT_BRUNO_CONFIG)),outcome},sync,...(sync==='rejected'?{reason:'fixture refusal'}:{})});
+ for(const allComplete of [false,true]) {
+  localStorage.clear(); installMetricsApi();
+  const fetchApi=globalThis.fetch;
+  globalThis.fetch=(url,options={})=>options.body && JSON.parse(options.body).action==='events' ? Promise.resolve(new Response('{}',{status:503})) : fetchApi(url,options);
+  const entries=allComplete ? missionIds.map(id=>makeEntry(id)) : [makeEntry('iss'),makeEntry('iss'),makeEntry('moon','synced','failure'),makeEntry('mars','rejected'),makeEntry('europa','synced','invalid'),makeEntry('telescope','pending')];
+  if (!allComplete) { const cancelled=makeEntry('bennu'); cancelled.event.payload.status='cancelled'; entries.push(cancelled); }
+  writeMetrics(localStorage,TEST_SESSION.sessionId,entries);
+  await act(async()=>render(React.createElement(PlayerGateway,null,()=>React.createElement(PlayerDashboard,{onBack(){}}))));
+  await click('Retomar jogo');
+  assert.ok(screen.getByRole('heading',{name:allComplete?'7 de 7 destinos cumpridos':'1 de 7 destinos cumpridos'}));
+  assert.equal(document.querySelectorAll('.player-campaign-milestone li[data-complete="true"]').length,allComplete?7:1);
+  assert.equal(screen.getByRole('progressbar',{name:'Destinos com missão cumprida e registro confirmado'}).getAttribute('max'),'7');
+  assert.match(document.querySelector('.player-campaign-milestone').textContent,/não concede créditos extras nem bloqueia missões/);
+  assert.equal(document.querySelectorAll('.player-attempt-list > li').length,entries.length);
+  assert.deepEqual(JSON.parse(localStorage.getItem(metricsKey(TEST_SESSION.sessionId))).entries,entries);
+  await act(async()=>cleanup());
+ }
+});

@@ -1,6 +1,6 @@
 # R30 · assets 3D para o hangar e a operação
 
-Consulta às fontes em 15/11/2026. O próximo ensaio visual proposto é usar uma plataforma de Kenney no hangar compartilhado. As escolhas do jogador definem a montagem, e o motor determina fases, telemetria e resultados. [Cockpit das sete missões e handoff R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md)
+Consulta às fontes em 15/11/2026. **Atualização R31:** o ensaio da plataforma foi implementado; veja o [handoff Kenney](80-HANGAR-KENNEY-E-HANDOFF-R31.md). A avaliação abaixo registra a seleção feita na R30. O próximo ensaio visual proposto é usar uma plataforma de Kenney no hangar compartilhado. As escolhas do jogador definem a montagem, e o motor determina fases, telemetria e resultados. [Cockpit das sete missões e handoff R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md)
 
 | Oportunidade | Aplicação na MISSÃO IPÊ | Licença, formato e disponibilidade |
 | --- | --- | --- |

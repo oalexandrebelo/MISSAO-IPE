@@ -64,6 +64,34 @@ test('a escolha na montagem só move o foco à nave quando o jogador pede a insp
   assert.equal(craft.dataset.protection, 'reinforced');
 });
 
+test('editar um componente atualiza a nave do plano B mesmo com a referência NASA aberta', t => {
+  t.after(cleanup);
+  const page = openHangar('iss');
+  const craft = page.getByRole('figure', { name: 'Vista da nave' });
+  fireEvent.click(within(craft).getByRole('button', { name: 'Inspecionar referência NASA' }));
+  assert.ok(within(craft).getByText('Referência NASA'));
+  const choice = page.getByRole('radio', { name: /Maior capacidade/ });
+  choice.focus();
+  fireEvent.click(choice);
+  assert.equal(document.activeElement, choice);
+  assert.ok(within(craft).getByText('Sua nave · plano B'));
+  assert.equal(craft.dataset.launcher, 'heavy');
+  assert.match(page.getByText('Previsão do plano B').parentElement.textContent, /470 kg/);
+});
+
+test('a vista da nave oferece retorno para a opção do sistema em foco', t => {
+  t.after(cleanup);
+  const page = openHangar('iss');
+  const craft = page.getByRole('figure', { name: 'Vista da nave' });
+  const energy = page.getByRole('button', { name: 'Energia', exact: true });
+  fireEvent.click(energy);
+  fireEvent.click(page.getByRole('button', { name: 'Ver esta escolha na nave' }));
+  assert.equal(document.activeElement, craft);
+  fireEvent.click(within(craft).getByRole('button', { name: 'Ir às opções' }));
+  assert.equal(document.activeElement, energy);
+  assert.equal(energy.getAttribute('aria-pressed'), 'true');
+});
+
 test('a régua só revela a transferência interrompida ao chegar a ela e marca as operações sem execução', t => {
   t.after(cleanup);
   const page = openHangar('mars');

@@ -542,6 +542,26 @@ async function run() {
     observations.hangarEnvironment = { bytes: bytes.length, sha256: manifest.sha256, resolution: manifest.resolution, license: manifest.license, rendered: false };
   });
 
+  await check('plataforma Kenney CC0 é local, íntegra e não exige arquivos externos', async () => {
+    const base = 'lab/models/kenney/';
+    const manifest = JSON.parse(bytesByFile.get(`${base}manifest.json`).toString());
+    const bytes = bytesByFile.get(`${base}structure-platform.glb`);
+    assert.ok(bytes, 'Plataforma ausente da distribuição');
+    assert.equal(bytes.length, 17200);
+    assert.equal(bytes.length, manifest.bytes);
+    assert.equal(digest(bytes), manifest.sha256);
+    assert.equal(bytes.toString('ascii', 0, 4), 'glTF');
+    assert.equal(bytes.readUInt32LE(4), 2);
+    assert.equal(bytes.readUInt32LE(8), bytes.length);
+    const gltf = JSON.parse(bytes.toString('utf8', 20, 20 + bytes.readUInt32LE(12)).trim());
+    assert.ok((gltf.buffers ?? []).every(item => !item.uri));
+    assert.ok((gltf.images ?? []).every(item => !item.uri && item.bufferView !== undefined));
+    assert.equal(manifest.author, 'Kenney');
+    assert.equal(manifest.license, 'CC0-1.0');
+    assert.equal(manifest.triangles, 96);
+    observations.hangarPlatform = { bytes: bytes.length, sha256: manifest.sha256, triangles: 96, license: manifest.license, rendered: false };
+  });
+
   await check('servidor de release inicia apenas em loopback para os testes HTTP', async () => {
     await startServer();
     const response = await fetchLocal('/');

@@ -8588,11 +8588,11 @@ Código `1409995812973de6b3bca0221b2a990b2087459f` publicado em 15/11/2026. Prin
 
 # R30 · assets 3D para o hangar e a operação
 
-Fonte: `docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md` · SHA-256 original: `aabaa1538ab434e2457b67271dff18fab5d7a678b7fc30a2a23dbd52e5ae93dd` · Ajustes de caminhos privados: 0
+Fonte: `docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md` · SHA-256 original: `967818b3545b8534eb7b8e025c8b05df23dba8f3bea6187717b9bfda705af334` · Ajustes de caminhos privados: 0
 
 # R30 · assets 3D para o hangar e a operação
 
-Consulta às fontes em 15/11/2026. O próximo ensaio visual proposto é usar uma plataforma de Kenney no hangar compartilhado. As escolhas do jogador definem a montagem, e o motor determina fases, telemetria e resultados. [Cockpit das sete missões e handoff R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md)
+Consulta às fontes em 15/11/2026. **Atualização R31:** o ensaio da plataforma foi implementado; veja o [handoff Kenney](80-HANGAR-KENNEY-E-HANDOFF-R31.md). A avaliação abaixo registra a seleção feita na R30. O próximo ensaio visual proposto é usar uma plataforma de Kenney no hangar compartilhado. As escolhas do jogador definem a montagem, e o motor determina fases, telemetria e resultados. [Cockpit das sete missões e handoff R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md)
 
 | Oportunidade | Aplicação na MISSÃO IPÊ | Licença, formato e disponibilidade |
 | --- | --- | --- |
@@ -8613,6 +8613,167 @@ O MCP da Hyper3D gera o modelo e devolve o download. A edição da cena usa um c
 3. Comparar a bancada com e sem a plataforma em 320 e 390 px. Confirmar que o veículo e os controles de montagem ficam legíveis, que a montagem funciona com WebGL indisponível e que a mesma configuração continua gerando os mesmos resultados. A tarefa da plataforma é orientar a vista da bancada.
 
 As malhas e texturas de referência ilustram destinos, componentes e etapas. O jogo obtém estado e desempenho do motor didático. Os arquivos das missões fornecem os dados científicos, com fonte e incertezas publicadas. Dimensões físicas, terreno, órbita real e desempenho de hardware exigem fontes e validações próprias. [Propósito e evidência das sete missões](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md)
+
+
+---
+
+# R31 · Auditoria do jogo de Bruno e integração na MISSÃO IPÊ
+
+Fonte: `docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md` · SHA-256 original: `cccb24e59a6c77bfe21da80d365920413916ec2545ea361705eb2ec245a8ef6a` · Ajustes de caminhos privados: 0
+
+# R31 · Auditoria do jogo de Bruno e integração na MISSÃO IPÊ
+
+A comparação usa o `main` de Bruno A Carvalho em **`891fe880d2e9b899431e80651e2e883be8f5afd8`**, de 15/11/2026 às 16h57 BRT, e o jogo oficial em `bf4f6ec9773ed3863f5c51ec12f48981c51662ef`. O GitHub e a árvore Git confirmaram o mesmo commit de Bruno, com 40 arquivos e árvore `28d051096fe38cd47e9a089fe02ffb2b1680fa2d`. Os 15 commits da linha principal são atribuídos a Bruno. A segunda branch remota contém uma proposta de integração do Speed Insights atribuída à Vercel. [Commit de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/commit/891fe880d2e9b899431e80651e2e883be8f5afd8) · [Branch Vercel](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/commit/d8f7c4cf7cf7243d06d0350fed5ab9bb36c5265a) · [Base oficial](https://github.com/oalexandrebelo/MISSAO-IPE/tree/bf4f6ec9773ed3863f5c51ec12f48981c51662ef)
+
+O commit acrescenta um roteiro Playwright em Chromium, configuração e dependências de teste e a transição de resultado dos cinco destinos. A revisão anterior, `8b10626`, já continha a carteira de US$ 35 milhões didáticos, o bônus de recompensa, a conquista e a confirmação de reinício. O GitHub retornou status de sucesso da Vercel para `891fe88`. O teste Playwright de Bruno foi inspecionado no código-fonte. [Diff desde R30](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/compare/8b106264abf578ac0fd39a70a077381c01ba42c3...891fe880d2e9b899431e80651e2e883be8f5afd8) · [Handoff R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md)
+
+## Fluxos e decisões de integração
+
+| Área | Comportamento implementado em Bruno | Aplicação oficial e decisão R31 |
+| --- | --- | --- |
+| Início e tutorial | Iniciar ou retomar a etapa salva. Guia em quatro passos com dicas de energia, afinidade e eficiência. O diálogo de reinício confirma a limpeza antes de voltar ao guia. [Início e guia](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L1311-L1578) | **Já existe.** Ajuda inicial opcional, entrada direta por missão e guia no briefing. Há ações distintas de recomeçar a carteira e encerrar a participação neste aparelho. [Entrada](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/GameShell.tsx) · [Carteira](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/BrunoEquipmentShop.tsx) |
+| Seleção e níveis | Cinco cards. Os futuros anunciam o nível necessário. Após sucesso, o card abre o relatório e a guarda de rotas redireciona contexto, montagem, carga e revisão para o resultado. [Seleção](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L1148-L1309) · [Guarda](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L3070-L3083) | **Já existem seleção e continuidade.** Os sete destinos estão abertos e os resultados permitem reprojetar. Restrições de loja e voo correspondem a saldo, encaixe, reserva, operação ativa e requisitos do modelo. [Lobby](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/GameShell.tsx) · [Campanha](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/BrunoCampaign.tsx) |
+| Briefing | Textos narrativos, distância, duração, carga e nomes ficcionais AERIS, SELENE, ARGO, NEREIDA e ÍCARO. [Cinco briefings](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L209-L345) | **Já incorporados os destinos e as perguntas adaptadas.** O oficial usa contexto documentado e identifica parâmetros e eventos didáticos. As histórias futuras ficam na referência de Bruno. [Histórias oficiais](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/MissionStories.tsx) |
+| Montagem e previsão | Cinco famílias de componentes. Fichas, ícones e indicadores de massa, saldo futuro, capacidade científica, dias e carga. [Montagem e fórmulas](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L1657-L2129) | **Já existe em 3D.** A escolha afeta módulo, envelope ou agenda. A inspeção, os indicadores HTML e a comparação A/B usam o resultado e as unidades do motor oficial. [Mapa R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md) |
+| Loja | Sete instrumentos. O carrinho agrega quantidades de modelos diferentes, mostra total e saldo futuro. Finalizar vazio volta à carga. [Loja e carrinho](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L2263-L2459) | **Quantidade já integrada. Carrinho misto diferido.** A ficha oficial compra um modelo por pedido. O serviço aceita de 1 a 20 IDs, inclusive mistos, em um recibo. LEND + Diviner e MISE + REASON seriam os casos prioritários para uma futura interface de composição. O saldo, o conflito de revisão e a confirmação incerta seguem o controle transacional atual. [Loja](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/BrunoEquipmentShop.tsx) · [Serviço de inventário](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/server/metrics/inventory.mjs) |
+| Carga e devolução | Equipar por arraste ou botão. Cada compra cria uma unidade com durabilidade, e a reserva entre missões usa contagem por tipo. Lançar consome um uso. Há devolução de unidade intacta compatível com as reservas. [Equipar e devolver](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L3266-L3406) · [Desgaste](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L3483-L3565) | **Já integrado.** Quatro missões usam reserva individual, encaixes, desgaste, devolução e recibos. O jogador equipa por controles de teclado, toque e mouse. OVIRS é uma ficha do acervo associada a Bennu. [Domínio do inventário](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/bruno-inventory.ts) |
+| Revisão, falha e nova tentativa | Distinção entre a condição de lançar e as metas de aprovação. Um lançamento parcial consome custo e uso, mostra o resultado e oferece reprojeto. O relatório exibe capacidade, dias, saldo, recompensa e instrumentos. [Revisão e resultado](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L2732-L3068) | **Já existe.** Projeto incompatível, missão não cumprida, sucesso, cancelamento e interrupção técnica têm estados próprios. O relatório mostra requisitos, dados válidos e diagnósticos. O histórico conserva tentativas repetidas. [Campanha](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/BrunoCampaign.tsx) · [Progresso](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/PlayerMetrics.tsx) |
+| Aproximação | Uma esfera com crateras e anel encena a aproximação, com a cor de cada destino. O relatório fica inerte por três segundos. A mensagem afirma entrada em órbita inclusive em resultado parcial. A regra de movimento reduzido encurta a animação CSS, e o temporizador permanece. [Transição](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L2934-L2985) · [CSS](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/index.css#L3043-L3188) · [Movimento reduzido](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/index.css#L5053-L5062) | **Já atendido por fases e eventos.** A continuidade se apoia na cena do destino, nas fases pausáveis de engenharia e na reprodução dos estados registrados. A opção de movimento reduzido encurta a apresentação de engenharia. Nas outras três missões, a operação começa após a chegada. [Sinais do cockpit](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/r30-scene-state.ts) · [Campanha](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/BrunoCampaign.tsx) · [Expedições](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/ScientificExpedition.tsx) |
+| Conquista e recompensa | Confirmar o relatório do primeiro sucesso concede recompensa e desbloqueia o próximo nível. Bennu abre a conclusão quando os outros quatro estão completos. A conquista aparece no relatório, catálogo e início. [Conquista](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L1452-L1462) · [Finalização](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L3433-L3477) | **Integrado na R31.** **Meu progresso** conta até sete destinos distintos, em qualquer ordem, a partir de tentativas próprias com registro confirmado pelo servidor (`synced`), status concluído (`completed`) e resultado bem-sucedido (`success`). O marco consulta o histórico da participação. Recompensa e avaliação de aprendizagem seguem seus critérios próprios. [Progresso](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/PlayerMetrics.tsx) · [Métricas](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/metrics/player-metrics.ts) |
+| Salvamento e retomada | Perfil local guarda saldo, carrinho, etapa, projetos e inventário. Migra o saldo inicial de 25 para 35 em perfil ainda sem design e tenta preservar JSON inválido. Guarda um lançamento por missão, substituído por novo lançamento. [Migração](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L824-L1080) · [Persistência](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L3085-L3217) | **Já existe pelos contratos oficiais.** Rascunho e histórico pertencem à participação. Voo e carteira de engenharia consultam o inventário autoritativo. Os eventos têm estados locais, confirmados e recusados. [Rascunho](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/bruno-flight-plan.ts) · [Controlador](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/ui/BrunoInventoryController.ts) |
+| Acessibilidade e instalação | Alternativa por botão ao arraste, mensagens de status, foco e Escape no diálogo, CSS responsivo e manifesto standalone. A árvore não registra service worker. O spec fica em Chromium a 1440 × 1000. [Carga](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L2518-L2585) · [Diálogo](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L1324-L1448) · [Manifesto](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/public/manifest.webmanifest) · [Configuração de teste](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/playwright.config.ts) | **Já existe o núcleo de interação.** Alternativas HTML sem WebGL, foco explícito, movimento reduzido e contexto Libras. A verificação R30 percorreu as sete missões em viewport emulado de 390 px e checou overflow em 320 px. [Prova R30](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md) |
+| Telemetria e fontes | O ponto de entrada instancia Vercel Analytics e Speed Insights. O cálculo do jogo lê o estado local. As páginas NASA são fontes documentais no catálogo. [Ponto de entrada](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/main.tsx) · [Catálogo](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L701-L815) | **A telemetria de página fica no protótipo.** O oficial registra tentativa, inspeção, decisão e aprendizagem conforme os próprios contratos. As fontes NASA dão origem aos arquivos históricos e ao contexto. [Métricas](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/metrics/player-metrics.ts) · [Handler](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/api/metrics.mjs) |
+
+## Os sete destinos
+
+| Destino e ID oficial | Entrada em Bruno | Exercício oficial |
+| --- | --- | --- |
+| ISS · `iss` | Pulso Orbital. Monitor AERIS e um briefing de 2031. | Proteção da calibração, energia e enlace do monitor. A operação acompanha registros simulados. |
+| Lua · `moon` | Eco Lunar, ID `luna`. SELENE e órbita polar no roteiro. | LEND e Diviner combinam indícios de hidrogênio e temperatura. O exercício verifica coleta e entrega didáticas. |
+| Marte · `mars` | Horizonte Rubro. ARGO e uma tempestade em Jezero no roteiro. | Prazo de chegada, proteção de entrada e medições simuladas do MEDA. |
+| Europa · `europa` | Oceano Silencioso. NEREIDA e análise de plumas no roteiro. | MISE e REASON orientam a investigação de habitabilidade. A Europa Clipper é a referência real dos instrumentos. Os eventos e medições da campanha são didáticos. |
+| Bennu · `bennu` | Retorno Bennu. ÍCARO, coleta e retorno no roteiro. | Seis registros históricos de dimensões de rochas e clastos. A coleta e o retorno da OSIRIS-REx integram o contexto com fonte NASA. |
+| Cerrado · `cerrado` | Ausente do catálogo de Bruno. | Seis registros históricos Terra/MODIS. A operação ensina a relação entre potência, energia, memória, rádio e NDVI. |
+| Webb · `telescope` | Ausente do catálogo de Bruno. | Bins históricos de trânsito de WASP-39 b, com incerteza e a escolha de instrumento correspondente. |
+
+Pouso, sobrevoo, órbita de chegada, amostragem TAG e retorno de cápsula pertencem ao contexto narrativo de Bruno. Os cinco cenários executam as mesmas etapas de decisão, débito, desgaste e relatório, com requisitos e instrumentos por missão. O oficial separa resultados simulados, dados históricos e fontes de contexto. [Catálogo de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L209-L345) · [Modelo de engenharia](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/bruno-missions.ts) · [Arquivos de Bennu e Webb](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/scientific-expeditions.ts) · [Mapa dos modelos NASA](74-AUDITORIA-BRUNO-E-IMERSAO-R29.md)
+
+## Regras e evidência de teste
+
+- Bruno estima energia com base de 64 unidades e pede pelo menos 30 disponíveis. A aprovação também exige massa total abaixo de 1.800 kg, ou 2.000 kg em Bennu, carga e encaixes compatíveis, saldo suficiente, capacidade científica de pelo menos 95% e eficiência de pelo menos cinco pontos percentuais por US$ milhão. O cálculo pondera confiabilidade, proteção e afinidade dos instrumentos. Custo de operação de US$ 500 didáticos por dia. Recompensa de `1,1 × (5 + nível + capacidade × 0,1)` em US$ milhões didáticos. [Fórmulas](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L1894-L2012) · [Recompensa](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/App.tsx#L817-L822)
+- A carteira oficial abre com 25 créditos. Nas quatro missões de engenharia, a partida efetiva custa dois créditos e a conclusão com sucesso recebe oito. A nota por simulação usa até 60 pontos por registros válidos, 30 por engenharia e 10 por eficiência. [Carteira](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/bruno-inventory.ts) · [Liquidação da tentativa](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/server/metrics/inventory.mjs) · [Régua](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/metrics/mission-score.ts)
+- O spec de Bruno cobre os cinco sucessos na ordem de desbloqueio, com compra de unidades repetidas ou complementares, montagem da carga, revisão, vinheta, recompensa e retorno à tela inicial com a conquista. Falha, devolução, recarregar e continuar, movimento reduzido e mobile ficam fora do spec. [Teste E2E](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/tests/campaign-happy-path.spec.ts)
+- A auditoria aplicou os dados do spec às duas funções puras de Bruno, `calculateMissionMetrics` e `calculateMissionReward`, em um contexto Node isolado. Os cinco projetos atingiram `ready=true` e capacidade científica de 100%. As recompensas calculadas foram 17,6, 18,7, 19,8, 20,9 e 22 milhões didáticos, com saldo final de 50,564. Esta prova abrange o cálculo. O percurso oficial no navegador em R30 tem recibo separado, com sete sucessos e um resultado incompleto no Cerrado. [Dados do spec](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/tests/campaign-happy-path.spec.ts#L20-L60) · [Jornada oficial R30](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r30-mobile-journey.json)
+
+- A suíte de interface R31 passou em **157 de 157 testes**. O teste do marco cobre 1/7 e 7/7, deduplicação por destino, exclusão de tentativas pendentes, recusadas ou malsucedidas e preservação do histórico. [Teste do marco](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/tests-ui/player-metrics.test.mjs) · [Recibo de interface R31](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/evidence/ui-dom-test.tap)
+
+## Mídia, marca e autoria
+
+Os cinco arquivos de identidade e manifesto de Bruno coincidem em SHA-256 com o snapshot de `fa18fd3`. A aproximação usa gradientes e formas CSS, e a interface usa Lucide e as fontes remotas DM Sans e Space Grotesk. A atualização acrescenta teste e estilos. A árvore não contém novos modelos 3D, arquivos Rive, texturas, áudio ou vídeo. [Snapshot](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/contributions/bruno-figma/deploy-2026-11-15/MANIFESTO.json) · [Arquivos públicos de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/tree/891fe880d2e9b899431e80651e2e883be8f5afd8/public) · [CSS](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/src/index.css)
+
+| Recurso | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `public/favicon.png` | 7.154 | `5dc23bfa6877bbae4f6b9e04f65836007742bcf57617b47323a50f1a757ed2e8` |
+| `public/icons/missao-ipe-192.png` | 25.462 | `3a471602204e880fd4228a408c60b45bbb90b747b5eaae940fabbf18149571d1` |
+| `public/icons/missao-ipe-512.png` | 114.421 | `b86e7751d9b3aeccbc3701deef218c9bc7b5b30d864dac310d2ae4744e9ea1ce` |
+| `public/manifest.webmanifest` | 573 | `d2913283775c7ddc46164341e944134e90988f7623cd591519aa3e6f3d76adc7` |
+| `public/missao-ipe.svg` | 80.613 | `be78f1ac73cc51051fda083aac54ddddf4591f8a195a9153b8cbcc2bd16f2899` |
+
+Bruno A Carvalho recebe crédito pelos cenários, pelo fluxo de montagem e compra e pela ideia da conquista. O GitHub retorna `license: null` e a árvore upstream está sem arquivo de licença. O Apache-2.0 oficial se aplica ao código próprio. A adaptação usa a marca e a implementação oficiais, com mídias de origem identificada. O ZIP upstream de 945.002 bytes segue excluído do snapshot de referência. Contém 314 entradas, incluindo 277 sob `.git`. As imagens de moodboard do repositório original têm licença pendente no inventário R17. [Metadados GitHub](https://api.github.com/repos/bruno-assis-carvalho/missao-ipe-deploy) · [Origem e autoria](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/contributions/bruno-figma/ORIGEM-E-INTEGRACAO.md) · [NOTICE oficial](../NOTICE.md) · [Inventário R17](../research/bruno-consolidation-r17.json) · [Acervo 3D oficial](77-ASSETS-3D-E-OPORTUNIDADES-R30.md)
+
+
+---
+
+# R31 · Escolhas claras no hangar
+
+Fonte: `docs/79-GAME-DESIGN-E-SKILLS-R31.md` · SHA-256 original: `aade04e4c08077955cfe669a9b3a350be1a7dd4fb4843a096293cb1d7bc49d33` · Ajustes de caminhos privados: 0
+
+# R31 · Escolhas claras no hangar
+
+O hangar ensina uma decisão por vez. O jogador identifica o sistema, escolhe uma opção, lê seu efeito previsto e inspeciona a montagem ou a agenda. A operação mostra o efeito calculado sobre a entrega. O resultado permite testar outra configuração para a mesma pergunta científica. [Sequência e contratos das sete missões](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md).
+
+## Skills aplicadas
+
+- **game-ui-ux.** Apliquei foco visível e ações explícitas de ida e volta entre a vista e a montagem. Os indicadores reagem ao plano selecionado. O texto dá acesso à escolha, aos limites e ao próximo controle em telas pequenas e no esquema 2D. [Arquivo da skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/game-ui-ux/SKILL.md).
+- **level-design.** Apliquei a sequência de ensinar e experimentar antes de cobrar um resultado. A pendência de instrumentos mostra o caminho até compra, equipagem ou revisão dos encaixes. O plano A oferece um ponto de comparação, e o relatório devolve o jogador ao hangar para outro teste. [Arquivo da skill](https://github.com/gamedev-skills/awesome-gamedev-agent-skills/blob/c6ca6c41c839b68319ffc08430b99ab768debc32/skills/disciplines/level-design/SKILL.md).
+
+A revisão de Bruno trouxe um teste que percorre os cinco destinos, da montagem à recompensa. A versão oficial também precisa provar pressupostos além do percurso de sucesso, como falta de encaixes, troca entre planos, tentativa incompleta e retomada após recarregar. [Teste de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/blob/891fe880d2e9b899431e80651e2e883be8f5afd8/tests/campaign-happy-path.spec.ts) · [Auditoria R31](78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md).
+
+## O que observar ao mudar uma escolha
+
+| Destino | Decisão para experimentar | Efeito para inspecionar |
+| --- | --- | --- |
+| ISS | Reforçar a proteção do monitor. | A peça ganha massa. Compare a previsão de registros válidos e a calibração no relatório. |
+| Lua | Trocar a reserva de 360 para 640 Wh com LEND e Diviner. | O banco de bateria cresce. Compare a energia restante para coleta e o limite do enlace. |
+| Marte | Selecionar um lançador de maior capacidade e rever a proteção. | Interprete massa transportada e capacidade antes de verificar a chegada prevista. |
+| Europa | Prever três encaixes para REASON e MISE. | O hangar informa os instrumentos pendentes e a capacidade inicial de dois. Outro lançador abre espaço para equipar os dois. |
+| Cerrado | Trocar de contato longo para curto. | A agenda muda de duas janelas de dez para duas de quatro minutos. Compare a fila e a entrega no replay. |
+| Bennu | Escolher a câmera e mudar o tempo de contato com o solo. | Diferencie a peça de imagem dos horários de envio dos registros históricos. |
+| Webb | Escolher o espectrômetro e revisar a duração da operação. | Veja a peça de espectrometria e confira quais janelas ainda cabem na agenda. |
+
+## Verificação de interação
+
+- Em 320 e 390 px, os nomes da carga pendente, a quantidade de encaixes e a primeira ação cabem na largura da coluna. A nave, as opções e seus indicadores podem ser alcançados por rolagem vertical.
+- Nas quatro missões da campanha, abrir a referência NASA e depois alterar uma opção retorna à nave do plano B. O foco permanece na opção. **Ver esta escolha na nave** leva o foco à figura e **Ir às opções** volta ao sistema em foco. Para ver o plano anterior, use a ação explícita na comparação A/B.
+- Com movimento reduzido, teclado ou WebGL indisponível, confirme que os controles HTML e o texto de efeito ainda permitem escolher, inspecionar e executar. A seleção e o foco se distinguem visualmente, e a Libras recebe os números da previsão em contexto.
+- Após executar, confira a diferença entre registros produzidos, recebidos e válidos. Recarregue para conferir a tentativa confirmada e, onde aplicável, saldo e condição dos instrumentos. O dado publicado pela NASA e a origem do modelo ficam disponíveis nas respectivas fontes.
+
+
+---
+
+# R31 · plataforma Kenney, escolhas no hangar e handoff
+
+Fonte: `docs/80-HANGAR-KENNEY-E-HANDOFF-R31.md` · SHA-256 original: `59ecf4e6c14a2666183bd807dc13c0ed81f628052d9c016eb020b280c38eee53` · Ajustes de caminhos privados: 0
+
+# R31 · plataforma Kenney, escolhas no hangar e handoff
+
+A bancada das sete missões agora usa a Structure Platform de Kenney como referência visual da montagem. O jogador inspeciona uma nave didática, altera o projeto e vê o que mudou antes de executar. O cenário não gera ciência, créditos ou desgaste.
+
+[Auditoria completa do Bruno](78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.md) · [Game design e skills](79-GAME-DESIGN-E-SKILLS-R31.md) · [Propósito e contratos das sete missões](76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md).
+
+## O que foi incorporado
+
+- Plataforma compartilhada entre ISS, Lua, Marte, Europa, Cerrado, Bennu e Webb, servida localmente. Seu uso termina no hangar; ela não acompanha a nave no espaço.
+- Instrumentos pendentes aparecem pelo nome, com encaixes necessários. Alterar um sistema retorna à nave do projeto em edição quando uma referência NASA ou o plano A estiver aberto.
+- Consequências são apresentadas como previsões calculadas. O botão de inspeção leva o foco à nave; o caminho de volta leva às opções. A troca de uma opção não desloca a página automaticamente.
+- Nas missões científicas, os rótulos distinguem alterações da agenda e alterações de peças. Mais tempo de contato não aumenta a antena nem a taxa do rádio.
+- Meu progresso mostra quantos destinos diferentes têm pelo menos uma tentativa própria bem-sucedida e confirmada. Repetir ISS sete vezes continua sendo um destino. Eventos recusados, falhas e ensaios guiados não avançam esse marco. Não existe recompensa adicional nem bloqueio dos demais destinos.
+
+## Asset e proveniência
+
+[Structure Platform](https://poly.pizza/m/ovwrUrwADe), de Kenney, CC0. GLB 2.0 com 17.200 bytes, 96 triângulos e PNG embutido, sem arquivos externos. SHA-256 `bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99`. Origem, crédito e transformação estão no manifesto `experiments/mission-design-lab/public/models/kenney/manifest.json`. A plataforma é cenografia, não um equipamento NASA. O HDRI Poly Haven e os modelos de contexto NASA mantêm seus manifestos próprios.
+
+## Dev A · motor, métricas e inventário
+
+Mantenha as funções de simulação como fonte das previsões e dos resultados. O carregamento de uma malha, um clique de inspeção ou a animação de câmera não pode gerar tentativa, gastar um ciclo ou conceder recompensa. Os recibos de compra, lançamento e desgaste continuam autoritativos no servidor. O marco de sete destinos é uma projeção de leitura dos eventos da participação ativa e só usa sucessos confirmados; não cria outro saldo ou armazenamento.
+
+Não transportar as cifras do catálogo de Bruno como especificações físicas de foguetes. Elas são parâmetros de jogo. ISS/Lua/Marte/Europa ensinam engenharia com simulação didática; Cerrado/Bennu/Webb trabalham com registros científicos históricos rastreáveis. O nome IPÊ identifica a equipe.
+
+## Dev B · interface, acessibilidade e 3D
+
+`HangarPlatform.tsx` é compartilhado pelas três famílias de cena. Preserve carregamento local, geometria de apoio durante falha, descarte de recursos, ausência na operação e espaço para visualizar painéis, bateria, antena e carga. Evite carregar modelos grandes de contexto automaticamente em telas pequenas. O catálogo já mantém Clipper sob demanda.
+
+Preserve o foco somente em ações explícitas de navegação, a descrição HTML da escolha, o contexto de Libras e a alternativa sem WebGL. O status de requisito deve dizer o nome do item faltante e a ação para resolver. A imagem 3D complementa a leitura dos recursos; não pode ser o único modo de entender a decisão.
+
+## Integração e próximos passos
+
+Bruno foi auditado no commit `891fe880d2e9b899431e80651e2e883be8f5afd8`. O incremento traz testes de percurso e uma vinheta por destino, sem novas mídias. O aplicativo oficial conserva operação pausável e etapas explícitas; não acrescenta uma espera de três segundos que alegue sucesso em tentativas incompletas. O marco de destinos aproveita a proposta de encerramento e continua permitindo redesenho e comparação A/B.
+
+A próxima integração candidata é um carrinho com instrumentos distintos na mesma compra. A API atual aceita múltiplos IDs; a interface oferece compra em quantidade por ficha. Essa evolução exige testar saldo, idempotência e falha de rede antes da entrega. Rodin, Meshy e DCC não foram necessários para a plataforma CC0 existente.
+
+## Acessos
+
+[Jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [LP](https://projeto-ipe-lp.vercel.app/) · [Apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) · [Documentação](https://nasa-missaoipe.alexandrebelo.com/docs/index.html) · [Repositório oficial](https://github.com/oalexandrebelo/MISSAO-IPE).
+
+## Verificação desta revisão
+
+O build de release passou, assim como 180 testes de domínio, 157 de interface, 53 de métricas e 20 de distribuição. Os dez testes novos de plataforma carregam o GLB real nas sete cenas, verificam afastamento da nave e do lançador, seleção sem interceptação, fallback, saída do hangar e descarte de recursos. Um teste de transição reproduziu a câmera retida no hangar; a posição agora é reaplicada ao entrar em operação.
+
+No navegador, os sete hangares foram inspecionados em 390 px sem rolagem horizontal. ISS e Webb também foram inspecionados em 320 px. Foram conferidas trocas de bateria, lançador, comunicação e instrumento, o retorno da referência NASA ao plano B, o foco de ida e volta, a montagem separada e a alternativa 2D. Bennu mantém o rádio de 1,2 Mbit/s quando os contatos aumentam; o que muda é a agenda.
+
+Uma jornada ISS comprou e equipou o monitor, reforçou a proteção e ampliou a reserva. A comparação A/B mostrou 179 → 235 kg, 29 → 39 créditos e 0 → 6 registros válidos previstos, explicando que três escolhas mudaram. A execução terminou com 92 pontos e 6/6 registros válidos. Ao sair do hangar, o GLB deixou a operação. Após recarga: uma tentativa, um destino cumprido, 26 créditos, monitor com 2/3 ciclos e sete eventos confirmados, zero pendentes ou recusados. Nenhum erro de console foi observado na jornada local.
+
+Esses resultados usam participação sintética e servidor de testes. As sete jornadas completas da R30 continuam documentadas; nesta revisão a prova fim a fim foi repetida na ISS. Não houve teste em telefone físico, medição de FPS nem validação educativa com pessoas. [Recibo da revisão móvel](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r31-mobile-hangar.json). A publicação é registrada em `PUBLICADO.md` após a Vercel confirmar o commit.
 
 
 ---

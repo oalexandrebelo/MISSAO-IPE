@@ -1,48 +1,48 @@
 TAP version 13
-# (node:97955) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+# (node:9607) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
 # Replace `const THREE = require("three")` with `import * as THREE from "three"`.
 # (Use `node --trace-deprecation ...` to show where the warning was created)
 # Subtest: real React journey: prediction, long 6/6, short 2/6, certified minimum 2, applied candidate 6/6, invalid import preservation
     # Subtest: prediction and minimum rationale are mandatory; solver is absent before a completed own attempt
     ok 1 - prediction and minimum rationale are mandatory; solver is absent before a completed own attempt
       ---
-      duration_ms: 48.6565
+      duration_ms: 47.210209
       type: 'test'
       ...
     # Subtest: long contact really delivers 6/6 and commits the prediction before completion
     ok 2 - long contact really delivers 6/6 and commits the prediction before completion
       ---
-      duration_ms: 58.744625
+      duration_ms: 61.010875
       type: 'test'
       ...
     # Subtest: transfer clears prediction and real short contact delivers only 2/6
     ok 3 - transfer clears prediction and real short contact delivers only 2/6
       ---
-      duration_ms: 81.801666
+      duration_ms: 88.147917
       type: 'test'
       ...
     # Subtest: search evaluates all 64 and certifies minimum two choices after the own attempt
     ok 4 - search evaluates all 64 and certifies minimum two choices after the own attempt
       ---
-      duration_ms: 21.167875
+      duration_ms: 20.794291
       type: 'test'
       ...
     # Subtest: invalid replay preserves the published result, candidate search and config
     ok 5 - invalid replay preserves the published result, candidate search and config
       ---
-      duration_ms: 41.371459
+      duration_ms: 46.540583
       type: 'test'
       ...
     # Subtest: applying a witness requires another prediction and really executes 6/6
     ok 6 - applying a witness requires another prediction and really executes 6/6
       ---
-      duration_ms: 58.888584
+      duration_ms: 65.260708
       type: 'test'
       ...
     1..6
 ok 1 - real React journey: prediction, long 6/6, short 2/6, certified minimum 2, applied candidate 6/6, invalid import preservation
   ---
-  duration_ms: 381.178291
+  duration_ms: 403.313125
   type: 'test'
   ...
 # An update to App inside a test was not wrapped in act(...).
@@ -62,44 +62,44 @@ ok 1 - real React journey: prediction, long 6/6, short 2/6, certified minimum 2,
 # Subtest: importing a valid replay without a personal attempt keeps the solver gated
 ok 2 - importing a valid replay without a personal attempt keeps the solver gated
   ---
-  duration_ms: 51.019458
+  duration_ms: 52.749209
   type: 'test'
   ...
 # Subtest: unavailable IndexedDB and localStorage keep the real result available and replay export enabled
 ok 3 - unavailable IndexedDB and localStorage keep the real result available and replay export enabled
   ---
-  duration_ms: 51.563375
+  duration_ms: 64.033833
   type: 'test'
   ...
 # Subtest: four-level campaign: own launches, level-specific help, budget gate and restored local progress
     # Subtest: first signal concludes only after an own predicted launch
     ok 1 - first signal concludes only after an own predicted launch
       ---
-      duration_ms: 37.274584
+      duration_ms: 67.586334
       type: 'test'
       ...
     # Subtest: memory chapter keeps compact storage in every suggested solution
     ok 2 - memory chapter keeps compact storage in every suggested solution
       ---
-      duration_ms: 111.211583
+      duration_ms: 120.064041
       type: 'test'
       ...
     # Subtest: short-window chapter preserves scientific bands instead of borrowing an incompatible free-play solution
     ok 3 - short-window chapter preserves scientific bands instead of borrowing an incompatible free-play solution
       ---
-      duration_ms: 116.02225
+      duration_ms: 80.674333
       type: 'test'
       ...
     # Subtest: successful 84-credit mission cannot finish the 78-credit chapter; eligible redesign can
     ok 4 - successful 84-credit mission cannot finish the 78-credit chapter; eligible redesign can
       ---
-      duration_ms: 100.641833
+      duration_ms: 116.787708
       type: 'test'
       ...
     1..4
 ok 4 - four-level campaign: own launches, level-specific help, budget gate and restored local progress
   ---
-  duration_ms: 377.123417
+  duration_ms: 405.152583
   type: 'test'
   ...
 1..4
@@ -110,4 +110,4 @@ ok 4 - four-level campaign: own launches, level-specific help, budget gate and r
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1311.202042
+# duration_ms 1442.618708
