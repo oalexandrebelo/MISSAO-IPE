@@ -1,6 +1,6 @@
 {
   "name": "projeto-ipe",
-  "version": "0.6.0-beta.1",
+  "version": "0.7.0-beta.1",
   "private": true,
   "type": "module",
   "description": "Missão Ipê BETA: jogo, apresentação, contexto integral, cronograma interativo e arquitetura rastreável.",
@@ -16,6 +16,7 @@
     "build:portable": "node scripts/build-portable.mjs",
     "build:beta": "node scripts/build-beta-site.mjs",
     "test:beta": "node scripts/test-beta-site.mjs",
+    "test:portal": "node scripts/test-planet-jumping.mjs && node scripts/test-planet-policy.mjs",
     "build:presentation": "node scripts/build-presentation.mjs",
     "start:beta": "node scripts/serve-beta.mjs",
     "prepare:vercel": "node scripts/prepare-vercel-static.mjs",

@@ -1,0 +1,74 @@
+{
+  "edition": "R16",
+  "version": "0.7.0-beta.1",
+  "recordedAt": "2026-11-15T08:30:01.442966+00:00",
+  "scope": "Purpose-driven three-mission learning flow, controlled experiments, finite camera framing and independent Planet Jumping reference.",
+  "scientificEngineModified": false,
+  "dependenciesAdded": false,
+  "automated": {
+    "labDomain": {
+      "passed": 145,
+      "failed": 0
+    },
+    "labSimulatedUI": {
+      "passed": 38,
+      "failed": 0
+    },
+    "preservedCampaignDomain": {
+      "passed": 120,
+      "failed": 0
+    },
+    "preservedCampaignSimulatedUI": {
+      "passed": 14,
+      "failed": 0
+    },
+    "context": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distribution": {
+      "passed": 17,
+      "failed": 0
+    },
+    "portalSimulatedDOM": {
+      "passed": 10,
+      "failed": 0
+    },
+    "portalPolicyAndLocalHTTP": {
+      "passed": 2,
+      "failed": 0
+    },
+    "typescriptAndBuild": "passed"
+  },
+  "environmentRetry": "The first distribution HTTP check could not bind loopback (EPERM); the same check passed 17/17 when loopback access was authorized. No application failure was hidden.",
+  "browser": {
+    "surface": "In-app browser; development and compiled local site",
+    "observed": [
+      "Three mission questions and learning objectives",
+      "NASA-reference and configured 3D views render without observed console error",
+      "Bennu: controlled contact comparison 2/6 vs 6/6, same radio at 1.2 Mbit/s",
+      "Telescope: camera receives 6 but has 0 scientifically valid records; spectrometer 6/6",
+      "Telescope: applying B enters design; review/hypothesis/execution/return yields 6/6 and causal reflection",
+      "Cerrado: BANDAS 2/6 vs INDEX 0/6; applying B changes short-contact draft without auto execution",
+      "375px game and experiment content fits viewport",
+      "Planet Jumping: actual video introduction and Mars → Earth → Venus sequence; final Mercury preview disabled",
+      "Portal at 375, 768 and 1440 widths has document dimensions matching viewport; menu and local links present",
+      "No error-level browser console messages captured during observed actions"
+    ],
+    "limits": [
+      "No physical touch-device acceptance",
+      "No measured FPS or load-performance claim",
+      "Reduced motion and unavailable media tested with simulated DOM/media, not OS preference controls",
+      "No validated educational-outcome study",
+      "Browser actions do not constitute exhaustive accessibility certification"
+    ]
+  },
+  "review": {
+    "pr": 1,
+    "head": "b628b429fe201e9445443c8205c4e4b4fee284f7",
+    "publishedReviewComments": false,
+    "merged": false,
+    "authorIdentity": "GitHub account oalexandrebelo; attribution to Bruno unconfirmed"
+  },
+  "distribution": "Curated public site; publication and exact deployed commit are recorded separately in production-r16.json."
+}

@@ -34,6 +34,11 @@
       "permanent": false
     },
     {
+      "source": "/planet-jumping",
+      "destination": "/planet-jumping.html",
+      "permanent": false
+    },
+    {
       "source": "/architecture",
       "destination": "/architecture/index.html",
       "permanent": false
@@ -95,12 +100,26 @@
           "value": "camera=(), microphone=(), geolocation=()"
         },
         {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
-        },
-        {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/((?!planet-jumping\\.html$).*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/planet-jumping.html",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-0zL7rgH26pYmTpK0f9Wdp+IA6+hXJbXKTnZHwx3fj4M='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://d2ol7oe51mr4n9.cloudfront.net; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob: https://d2ol7oe51mr4n9.cloudfront.net; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"
         }
       ]
     },

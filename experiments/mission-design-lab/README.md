@@ -1,6 +1,6 @@
 # Missão Ipê — laboratório de missões R9–R10
 
-**Atualização R15 · 0.6.0-beta.1:** [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.
+**Atualização R16 · 0.7.0-beta.1:** [propósito e experimentos das três missões](../../docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), [handoff atual](../../docs/38-HANDOFF-R16.md), [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.
 
 **Atualização R14 · 0.5.0-beta.1:** [guia atual das três missões](../../docs/31-TRES-MISSOES-CIENTIFICAS-R14.md), [modelos NASA e créditos](../../docs/30-ATIVOS-NASA-IMPLEMENTADOS.md), [recibo público](../../PUBLICADO.md). Novo domínio isolado em `src/lab/scientific-expeditions.ts`, cenas temporais e duas jornadas científicas; Cerrado mantém suas regras e persistência. Execute `npm run verify` neste diretório. O texto abaixo conserva os cortes anteriores.
 

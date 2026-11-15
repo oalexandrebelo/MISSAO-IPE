@@ -157,23 +157,37 @@ Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não 
 
 # PROJETO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `2f0a87873965e5f49a1bfcafe6f0c984a5f92f1ccbd09400c1fc976dc0ace4fd` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `a2db73364bcd9eb3aaa2e8209b2ab517337d2fedefb875a9f4ec133c63e846ca` · Ajustes de caminhos privados: 0
 
 # PROJETO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.6.0-beta.1 · edição R15 · 14/11/2026.**
+**Beta atual: 0.7.0-beta.1 · edição R16 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/34-HANDOFF-IMERSAO-3D-R15.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/38-HANDOFF-R16.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+
+## Descobrir antes de otimizar
+
+A R16 torna o propósito explícito e acrescenta três experimentos guiados, ligados ao mesmo motor e à nave 3D. O jogador faz uma previsão, executa A/B mudando um único fator, inspeciona ambos no mesmo segundo e decide se quer copiar aquelas escolhas para seu projeto. A aplicação não executa nem salva uma tentativa automaticamente.
+
+| Missão | Pergunta e aprendizagem | Experimento controlado |
+| --- | --- | --- |
+| Cerrado | Como comparar vegetação sem confundir ausência de dados com mudança? Potência, energia e limites do NDVI. | BANDAS → ÍNDICE: menos dados pode exigir um pico de potência que a bateria não suporta. |
+| Bennu | Como transformar observações da superfície em informação disponível aos cientistas? Produção, fila e recepção. | Contatos de 120 → 500 s: mais tempo de transmissão com a mesma antena e taxa. |
+| Telescópio | Que instrumento responde à pergunta sobre a luz? Imagem, espectro e evidência válida. | Câmera → espectrômetro: receber seis arquivos não garante seis medidas cientificamente compatíveis. |
+
+Após cada missão, uma interpretação orientada retoma a pergunta e preserva lacunas. Não há alegação de aprendizagem comprovada por concluir o exercício. Leia a [proposta pedagógica e análise das tecnologias](docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), a [revisão da PR #1](docs/35-REVISAO-PRS-E-DIRECAO-R16.md) o [handoff R16](docs/38-HANDOFF-R16.md) e a [análise dos assets da PR](docs/39-ATIVOS-DA-PR-E-APLICACOES.md).
+
+O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma experiência visual independente em um único HTML, com as mídias exatas da referência fornecida. Demonstra a transição Marte → Terra → Vênus; não é simulação orbital nem uma quarta missão. Depende do CDN externo. [Detalhes, créditos e limitações](docs/36-PORTAL-PLANET-JUMPING.md).
 
 ## Campanha didática de quatro níveis
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R15. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R16. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -206,7 +220,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.6.0-beta.1 / R15 | `experiments/mission-design-lab/` |
+| Beta 0.7.0-beta.1 / R16 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -4950,6 +4964,596 @@ Dev A deve planejar migração e identificação de origem antes de isolar os ba
 
 ---
 
+# 35 — Revisão da contribuição e direção de integração R16
+
+Fonte: `docs/35-REVISAO-PRS-E-DIRECAO-R16.md` · SHA-256 original: `33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582` · Ajustes de caminhos privados: 0
+
+# 35 — Revisão da contribuição e direção de integração R16
+
+**Revisão em 15/11/2026, 08:07 UTC.** Referência do projeto vigente: `110e1bd50c4bea1b4f566d445ac2c0dd7d33daec`. Contribuição examinada: [PR #1 — LP imersiva orbital](https://github.com/oalexandrebelo/PROJETO-IPE/pull/1), head `b628b429fe201e9445443c8205c4e4b4fee284f7`, branch `feat/immersive-lp-orbital`.
+
+## Parecer
+
+A contribuição pode fornecer a direção narrativa e visual da entrada do projeto. Não foi encontrado bloqueio P1 nem defeito P2 de cálculo no recorte examinado. Há uma pendência P2 de conteúdo para integrá-la como apresentação do estado atual: a campanha com progressão já foi publicada, enquanto a LP ainda a descreve genericamente como planejada. A proposta Semente/Raízes/Copa/Horizonte precisa ser distinguida da campanha implementada, sem trocar os nomes ou capacidades de uma pela outra.
+
+O PR é aditivo: 70 arquivos, 7.616 adições e nenhuma exclusão, concentrados em `apps/immersive-lp/` e um workflow próprio. Na consulta, estava aberto, não era draft, não estava mesclado e o GitHub o considerava mesclável. Isso não significa que a LP já esteja integrada à distribuição principal. A autoria exibida é a conta `oalexandrebelo`; esta revisão não confirma a atribuição pessoal a Bruno. O escopo examinado contém esse PR, sem pressupor que representa outras contribuições mencionadas fora do GitHub.
+
+## Achado acionável
+
+### P2 — Reconciliar o estado da campanha antes de promover a LP como entrada atual
+
+**Local principal:** [`apps/immersive-lp/lib/content.ts`, linha 34](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/lib/content.ts#L34). A resposta à pergunta sobre os quatro níveis afirma que a campanha com desbloqueios está em planejamento. A mesma ideia aparece na [descrição de Semente, linha 18](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/lib/content.ts#L18) e na [nota da jornada, `app/page.tsx`, linha 74](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/app/page.tsx#L74).
+
+**Condição e consequência:** ao apresentar essa versão como página atual do Projeto Ipê, o visitante recebe um estado incompleto: `/campanha/index.html` já contém quatro níveis com liberação por tentativa própria. A LP não oferece esse destino em seu objeto de links. A implementação existente é documentada em [Campanha de quatro níveis, na referência revisada](https://github.com/oalexandrebelo/PROJETO-IPE/blob/110e1bd50c4bea1b4f566d445ac2c0dd7d33daec/docs/32-CAMPANHA-QUATRO-NIVEIS.md). A defasagem decorre da evolução concorrente do projeto; não demonstra que o texto estava incorreto quando foi escrito.
+
+**Correção recomendada:** distinguir três ofertas: campanha atual do Cerrado, laboratório com Cerrado/Bennu/Telescópio e proposta editorial Semente/Raízes/Copa/Horizonte. Acrescentar acesso à campanha e atualizar FAQ, nota da jornada e roadmap. Manter como propostas as novas mecânicas de recuperação, dados JPL e trajetórias: a existência do caso didático Bennu não implementa essas integrações. Não renomear os quatro níveis existentes automaticamente.
+
+**Verificação necessária:** testar os destinos e a correspondência entre texto e funcionalidades disponíveis. Atualizar a expectativa que hoje exige a frase de planejamento em [`tests/experience.spec.ts`, linha 42](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/tests/experience.spec.ts#L42). Não resolver a divergência apenas removendo o teste.
+
+## O que foi verificado
+
+| Evidência | Resultado e limite |
+| --- | --- |
+| Metadados do PR e arquivos alterados | Consultados diretamente no GitHub, no head acima. A contribuição não altera os motores, rotas ou scripts da aplicação principal. |
+| GitHub Actions | [Execução 43633898942](https://github.com/oalexandrebelo/PROJETO-IPE/actions/runs/43633898942), job `validate`, concluída com `success`. O log confirma 4 testes do motor, 15 entradas do manifesto de assets, build e 18 testes Playwright aprovados. |
+| Status de implantação do head | `Vercel – projeto-ipe` e `Vercel – projeto-ipe-lp` retornaram `success`. São status de checks; esta revisão não realizou uma nova inspeção visual das implantações. |
+| Núcleo científico | Os sete arquivos de `lib/mission/core/` e `lib/mission/data/` listados no manifesto de procedência conferem com seus SHA-256 e são idênticos aos correspondentes do beta vigente. |
+| Reprodução independente | Os quatro testes do motor do PR passaram com Node, sem instalar dependências. Confirmam base/longo 6/6, base/curto 2/6, redesenho/curto 6/6 e determinismo/balanço de energia. |
+| Interface | Fonte e testes revisados. Os 18 resultados Playwright são evidência do CI; não foram repetidos no navegador nesta revisão. |
+| Assets opcionais | Manifestos e uso no código examinados. O CI verificou o hash do ZIP KayKit. A contagem de 57 modelos e a procedência CC0 constam no manifesto da contribuição; não houve nova abertura/renderização de cada modelo nesta revisão. |
+
+Os sete arquivos científicos são `catalog.ts`, `contracts.ts`, `engine.ts`, `exact.ts`, `power.ts`, `science.ts` e `science-data.ts`. A referência está em [`docs/engine-provenance.json`](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/docs/engine-provenance.json). A cópia atual não diverge do motor do Cerrado; futuras alterações precisam de conferência explícita de versão e identidade.
+
+### Limites da evidência de CI
+
+- O workflow usa `pnpm build:offline-fonts`; a configuração Vercel usa `pnpm build`. O primeiro substitui temporariamente `next/font/google` por `next/font/local`. Ambos são caminhos previstos, mas não produzem necessariamente os mesmos arquivos de fonte. Antes de unificar a publicação, escolher um caminho canônico e validar o artefato que será servido. Ver [workflow, linha 34](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/.github/workflows/immersive-lp-qa.yml#L34), [fonte padrão](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/lib/fonts.ts#L1) e [substituição de build](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/scripts/build-offline.mjs#L3).
+- As duas configurações Playwright iniciam com movimento reduzido. O teste de pausa alterna o estado, mas não substitui um percurso completo com animação normal, carga lenta e uso prolongado. A descrição do PR delimita a auditoria axe; não há certificação WCAG ou prova de desempenho em dispositivo físico.
+- O teste do filme confirma abertura, carregamento dos controles, Escape e devolução do foco. Ele não aperta Play nem verifica frames avançando. O PR relata reprodução observada manualmente; essa afirmação não foi reproduzida nesta revisão. Não há MP4 pré-renderizado.
+- `docs/QA-CI.md` preserva uma execução anterior, explicitamente associada a `4ae6c285...`. Para o head revisado, usar a execução `43633898942` acima. Não apresentar aquele recibo histórico como se tivesse sido gerado pelo head atual.
+
+## Arquitetura e comportamento observados
+
+A LP é uma aplicação independente Next.js com exportação estática. Usa React, GSAP e Remotion; não carrega Three.js/R3F. A Terra é uma imagem local com composição CSS, órbitas SVG e movimento ilustrativo. O motor do Cerrado é importado somente pelo laboratório carregado sob demanda. O player é importado ao abrir o diálogo. Não há banco, autenticação ou API de escrita na LP.
+
+O [`MiniLab`, linhas 11–16](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/MiniLab.tsx#L11) permite escolher dois cenários e duas estratégias fixas. “Redesenhar” muda simultaneamente bateria e processamento. É uma demonstração calculada, não uma exploração das 64 configurações nem um experimento que isola a causa de uma única mudança. A descrição informa as duas alterações. O download é um JSON de resultado; não implementa o envelope de replay importável do jogo completo e não deve ser anunciado como tal.
+
+O [`MotionSystem`](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/MotionSystem.tsx#L18) conserva texto visível antes da melhoria, respeita a preferência de movimento, oferece pausa, remove listeners e reverte o contexto GSAP. A órbita é pausada fora da tela ou com a aba oculta. Som é opt-in, sintetizado localmente, suspenso quando a página fica oculta. Essas decisões são reutilizáveis; não representam telemetria nem estado do motor.
+
+[`Navigation`](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/Navigation.tsx#L25) e [`Roadmap`](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/Roadmap.tsx#L8) usam diálogo nativo e navegação de tabs por setas/Home/End. O menu e o filme devolvem foco ao controle que os abriu. Essas implementações podem informar a entrada narrativa sem substituir os controles de inspeção e operação existentes no beta.
+
+## O que emprestar e o que preservar
+
+| Parte da contribuição | Direção recomendada |
+| --- | --- |
+| Hero planetário, narrativa em capítulos e caminho observar/projetar/entregar | Reaproveitar composição e sequência editorial na entrada, com ligações claras para a campanha e os três casos. Preservar os créditos da imagem NASA. |
+| Pausa, movimento reduzido, som opt-in e carregamento sob demanda | Reaproveitar o comportamento. Na integração, conferir teclado, foco, estado após falha de carregamento e ausência de movimento involuntário. |
+| MiniLab | Manter como degustação de quatro combinações. Conservar a explicação de que o redesenho muda duas variáveis e encaminhar à investigação completa. |
+| SVG estático de satélite da LP | Adequado à narrativa. Não substituir `ConfiguredSpacecraft`/`SpacecraftInspector`: no R15, as peças acompanham a configuração e a operação usa o estado registrado. |
+| Filme Remotion | Recurso opcional. O player não exige MP4; publicação e exploração do jogo não devem depender de uma renderização que ainda não existe. |
+| Pacote KayKit | Biblioteca opcional para protótipos, com origem e licença preservadas. Não é asset NASA nem demonstra integração ao game. Medir custo e vincular qualquer uso futuro ao estado do motor. |
+| Marca e tipografia | A LP usa logo horizontal PNG e EB Garamond/Figtree. O projeto vigente adotou SVG com contornos e Bricolage Grotesque/Plus Jakarta Sans. Conciliar a direção antes de promover a LP; reutilizar a marca SVG existente e evitar manter dois contratos visuais acidentais. |
+
+A marca PNG aparece em [`Navigation.tsx`, linha 20](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/Navigation.tsx#L20) e no [filme, linha 22](https://github.com/oalexandrebelo/PROJETO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/remotion/MissionFilm.tsx#L22). A diferença tipográfica é uma decisão de produto a reconciliar, não uma falha de legibilidade demonstrada nesta revisão. Ver [tipografia vigente](26-TIPOGRAFIA.md), [identidade](23-IDENTIDADE-VISUAL.md) e [contrato visual R15](34-HANDOFF-IMERSAO-3D-R15.md).
+
+## Caminho de integração executável
+
+1. Corrigir a informação P2 e estabelecer a função de cada entrada: LP para apresentar, campanha para progressão no Cerrado e `/lab/` para os três casos e a montagem configurável. Preservar as URLs públicas já existentes.
+2. Escolher explicitamente entre manter a LP no projeto Vercel próprio ou portar sua apresentação para o portal atual. O PR, sozinho, não acrescenta a LP ao `site/` da raiz; não há razão para migrar o motor ou os jogos para Next.js somente para reutilizar a composição.
+3. Se hospedar sob um subcaminho da distribuição atual, adaptar primeiro os caminhos absolutos `/assets/`, `/brand/`, `/creditos/` e os chunks Next. `next.config.ts` exporta para a raiz, com `trailingSlash: true` e sem `basePath`. Copiar `out/` para uma pasta não torna esses caminhos relativos automaticamente. Manter a allowlist e recalcular CSP para o artefato final, sem importar uma configuração Vercel por cima das rotas `/lab/` e `/campanha/`.
+4. Usar as fontes e a marca escolhidas na mesma construção que será testada/publicada. Conservar atribuição/licença dos assets; os 57 modelos opcionais não precisam entrar no carregamento inicial.
+5. Conferir paridade do motor copiado por hash e os resultados conhecidos. Testar links, laboratório, download, menu, filme e animação no artefato integrado, incluindo movimento normal/reduzido e rede lenta. Somar a validação específica à preservação de `/lab/`, `/campanha/`, documentação e apresentações.
+
+**Divisão sugerida:** Dev A mantém motor, versão, procedência e verificações de paridade; Dev B integra narrativa, contratos visuais, acessibilidade e publicação. As escolhas de configuração, os resultados e o relógio continuam sob responsabilidade do domínio existente. Os dois precisam revisar juntos qualquer texto que transforme uma demonstração, um recurso opcional ou uma proposta em capacidade anunciada.
+
+Esta rodada produziu uma revisão local e este documento. Não fez checkout na branch da contribuição, instalação de dependências, comentário, review, merge ou publicação no GitHub/Vercel. O parecer vale para os commits identificados; um novo head exige verificar o delta.
+
+
+---
+
+# 36 — Planet Jumping: experimento de portal cinematográfico
+
+Fonte: `docs/36-PORTAL-PLANET-JUMPING.md` · SHA-256 original: `a5349fdae2cc2f4ea29f0092d4099c314e871ee1815e44498726712547385165` · Ajustes de caminhos privados: 0
+
+# 36 — Planet Jumping: experimento de portal cinematográfico
+
+**R16 · implementação de 15/11/2026.** [Abrir o experimento](../planet-jumping.html) · [Jogar as três missões científicas](../lab/index.html) · [Guia didático das missões](32-GUIA-DIDATICO-MISSOES-3D.html) · [Biblioteca de estudo](../context/research-library.html).
+
+Planet Jumping é um experimento visual independente, construído a partir da referência integral fornecida pelo usuário. Um único HTML contém marcação, estilos e JavaScript. Não usa bibliotecas externas, instalação de pacotes ou compilação para funcionar. **As mídias continuam remotas:** código autocontido não significa funcionamento audiovisual sem internet.
+
+O experimento conserva a interface em inglês, a marca Ubernatural da referência, os identificadores de elementos, as seis URLs e a sequência **Marte → Terra → Vênus**. A imagem de Mercúrio encerra a experiência como prévia. O botão fica desabilitado em Vênus e o texto informa que a jornada terminou; não existe uma quarta viagem escondida.
+
+Essa marca não substitui a identidade do Projeto Ipê no laboratório ou na campanha. A página não afirma autoria NASA das mídias fornecidas e **não representa endosso da NASA**. Tampouco simula trajetória, tempo de voo, distância percorrida, combustível ou operações reais. Os fatos planetários são os textos aproximados da referência, não resultados do motor.
+
+## 1. O que foi implementado
+
+1. Abertura com vídeo de aproximação de Marte, marca central e progresso da própria reprodução. Quando os metadados permitem, a taxa é ajustada para uma introdução de aproximadamente três segundos.
+2. Marca deslocada para o cabeçalho, navegação revelada, lista dos oito planetas e fatos do destino atual.
+3. Janela arredondada desenhada em canvas, inclinada em resposta ao ponteiro e ampliada durante a viagem. O vídeo é amostrado em cobertura de toda a tela: a máscara se move sobre uma imagem fixa em relação à tela, em vez de transformar um cartão texturizado.
+4. Viagens para Terra e Vênus com vídeo a 1,3×, expansão da máscara, retenção do último quadro somente quando a reprodução realmente termina e atualização atômica do estado.
+5. Cursor com ponto, anel e indicação “Enter” em dispositivos com ponteiro preciso. Toque e teclado usam o mesmo botão de viagem.
+6. Menu e navegação funcionais: apresentação do experimento, foco no portal, descrição dos destinos e detalhes de falhas de mídia. Os links de saída levam às rotas públicas do laboratório e da documentação.
+
+O efeito de perspectiva é **fake 3D em canvas 2D**, calculado sobre os pontos de um retângulo arredondado. Não há WebGL, malha planetária, física orbital, terreno ou biblioteca Three.js nesta página. A área de amostragem permanece a tela inteira; a região de recorte acompanha o tamanho real do botão em cada viewport.
+
+## 2. Relação com as três missões
+
+O portal demonstra ritmo, transição de contexto e exploração visual. As missões do Ipê continuam responsáveis por conectar necessidade científica, decisão de engenharia, estado registrado e interpretação do resultado. O portal não acrescenta uma nova campanha ou altera as regras de Cerrado, Bennu e Telescópio.
+
+Uma adaptação ao jogo precisa preservar a distinção entre animação e evidência: abrir uma vista de instrumento não comprova observação; uma viagem visual não calcula lançamento; mostrar um enlace não comprova transmissão. O [contrato das naves configuráveis](34-HANDOFF-IMERSAO-3D-R15.html) descreve como a configuração e os estados calculados alimentam as representações existentes. O [guia didático](32-GUIA-DIDATICO-MISSOES-3D.html) continua a referência para os objetivos de aprendizagem.
+
+## 3. Fontes remotas preservadas
+
+Base exata: `https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P`.
+
+| Uso | Arquivo na base | Tipo recebido | Bytes informados pelo servidor |
+| --- | --- | --- | ---: |
+| Fundo de Marte | `3c83091e-4046-4fd6-adbb-2edb728be79a.mp4` | `video/mp4` | 5.558.213 |
+| Viagem / prévia da Terra | `fc3ded42-e845-41f3-a830-5cab512d79cd.mp4` | `video/mp4` | 11.560.881 |
+| Viagem / prévia de Vênus | `b30f64d9-1637-477a-83df-d0fc6461a422.mp4` | `video/mp4` | 14.475.698 |
+| Introdução de Marte | `5fc5651c-3b5d-4171-b507-87f7e635d1b4.mp4` | `video/mp4` | 15.860.826 |
+| Prévia de Mercúrio | `d6fb8b6b-c15e-4aaa-9cf7-45bbb5e33372.jpg` | `image/jpeg` | 1.039.184 |
+| Marca Ubernatural | `eb7e0f53-50cd-4af5-abc4-8b9a52cdc01b.svg` | `image/svg+xml` | 855 |
+
+Em 15/11/2026, as seis requisições **HEAD** responderam HTTP 200, `Access-Control-Allow-Origin: *` e `Accept-Ranges: bytes`. O total dos arquivos únicos é **48.495.657 bytes**, aproximadamente 48,50 MB. Isso não mede transferência efetiva: a página reutiliza URLs, o navegador pode fazer leituras parciais e o cache depende da resposta servida. A verificação de cabeçalhos não comprova decodificação audiovisual nem disponibilidade futura.
+
+Os elementos de vídeo usam `muted`, `playsinline` e `preload="auto"`, sem os atributos `controls` ou `autoplay`. A reprodução é comandada por JavaScript. Os vídeos e a imagem usados como fontes de pixels têm `crossorigin="anonymous"`. Não houve substituição de URLs nem cópia das mídias para o repositório. As respostas dependem do provedor externo e da rede do visitante.
+
+As quatro regras `@font-face` procuram somente fontes instaladas com `local()`: SF Pro regular/negrito, SF Pro Thin e Aalto. Sem essas fontes, a página usa Arial e Arial Narrow/sans-serif. Não requisita arquivos de fonte inexistentes nem CDN de tipografia. Aalto é reservado ao título do planeta.
+
+## 4. Recuperação e movimento reduzido
+
+O percentual da abertura deriva de `currentTime / duration`, não de um relógio fictício ou da porcentagem de bytes baixados. Somente uma introdução concluída apresenta 100%. Se a pessoa pula, pede movimento reduzido ou o vídeo falha, o contador apresenta um traço e a introdução é identificada como pulada.
+
+- A espera por metadados da introdução é limitada a cinco segundos; há limites adicionais para iniciar e concluir sua reprodução. Uma salvaguarda total de doze segundos libera a experiência se a abertura não concluir.
+- As esperas pelas prévias e pelo vídeo da viagem são limitadas a 1.600 ms. Ausência de quadro decodificável mantém a jornada textual disponível.
+- Rejeição ou demora de `play()`, erro de mídia e falta de evento `ended` têm saídas finitas. A viagem tem prazo de reprodução calculado e limitado a trinta segundos; nenhum desses casos deixa permanentemente o botão ocupado.
+- O último quadro é retido como cena final apenas após `ended`. Se a reprodução for interrompida ou pulada, a página não apresenta um quadro parcial como chegada comprovada.
+- Falhas aparecem em “Some visuals are unavailable”, com detalhes por recurso. O portal oferece instrução textual quando não consegue desenhar sua mídia. A falta de canvas também preserva a navegação entre destinos.
+- “Skip intro” permite sair da abertura. A preferência `prefers-reduced-motion` elimina inclinação, reduz transições e pula a reprodução em movimento, mantendo a sequência dos destinos. Se ativada durante uma viagem, cancela a reprodução de forma controlada.
+- O cursor personalizado depende de ponteiro preciso e de movimento detectado; a navegação por teclado preserva foco visível. Dispositivos de toque não dependem de hover.
+
+O código não pode impedir mensagens de erro de rede emitidas pelo próprio navegador quando um servidor externo falha. O critério de recuperação é ausência de exceções JavaScript não tratadas e continuidade utilizável, com informação verdadeira sobre a mídia indisponível.
+
+## 5. Ajustes pontuais de legibilidade
+
+A referência define altura mínima fixa e títulos grandes com fonte condensada. Quando a fonte não existe ou a tela é curta, essas regras podem cortar texto. O experimento preserva os valores de referência em viewports compatíveis e aplica duas salvaguardas: reduz horizontalmente o título apenas quando necessário e ajusta a janela ao espaço livre entre cabeçalho e conteúdo. Em telas baixas, elimina a altura mínima que ultrapassaria o viewport e reduz espaçamentos.
+
+O número **[06]** da prévia de Mercúrio foi preservado por fidelidade à referência. É um rótulo visual, não a ordem dos planetas em relação ao Sol. A lista dos oito planetas não promete oito destinos navegáveis. O aviso terminal e o menu explicam o alcance de três estados.
+
+## 6. Publicação e política de conteúdo
+
+O arquivo-fonte é [web/planet-jumping.html no GitHub](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/web/planet-jumping.html); a rota pública prevista é [planet-jumping.html](../planet-jumping.html). Ele pode ser servido diretamente por HTTP, sem compilação própria. A distribuição do projeto pode copiá-lo para o pacote estático.
+
+Uma política CSP aplicada pelo servidor precisa permitir **somente nesta rota**, além das regras locais já necessárias:
+
+- `media-src`: `https://d2ol7oe51mr4n9.cloudfront.net` para os MP4.
+- `img-src`: a mesma origem para JPG e SVG.
+- `script-src`: hash SHA-256 do script inline efetivamente publicado; o script não exige `eval`, bibliotecas externas ou permissão geral para scripts inline.
+- `style-src`: suporte aos estilos inline e às propriedades de estilo ajustadas pelo script, conforme a política do site.
+
+Não há `fetch` externo nesta implementação; portanto, não é necessário abrir `connect-src` para esse CDN. As fontes são locais. O canvas depende dos cabeçalhos CORS das mídias, além da CSP; uma política do servidor que bloqueie a origem produzirá a alternativa textual, não a experiência audiovisual completa. Recalcular o hash do script depois de qualquer edição e conferir os cabeçalhos realmente servidos.
+
+## 7. Evidência e limites da revisão
+
+O JavaScript inline foi extraído e passou em `node --check`. Uma inspeção estrutural confirmou um script inline, quatro regras de fonte, seis elementos de vídeo, nenhum script/estilo externo e ausência de atributos `autoplay`/`controls`.
+
+O ensaio em DOM simulado exercita o estado inicial, as duas viagens, clique duplicado, terminal, menu, fontes de pixels da máscara, recuperação sem mídia, rejeição de reprodução, ausência de `ended`, movimento reduzido e ausência de canvas. Esse ensaio usa mídia e relógio controlados: **não é prova de GPU, codec, aparência, tempo de rede ou desempenho no dispositivo**. A validação visual da distribuição deve cobrir 375, 768 e 1.440 pixels de largura, teclado, toque e as mídias reais. O [recibo de publicação](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) identifica a implantação efetivamente conferida.
+
+Não se acrescentaram dependências, autenticação, telemetria, pontuação, dados NASA ao vivo ou novas regras de missão. A integração pedagógica permanece no jogo e deve ser avaliada pela clareza da relação entre escolha, consequência e ciência recebida.
+
+
+---
+
+# 37 — Proposta pedagógica e tecnologias para as três missões · R16
+
+Fonte: `docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md` · SHA-256 original: `74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3` · Ajustes de caminhos privados: 0
+
+# 37 — Proposta pedagógica e tecnologias para as três missões · R16
+
+**Pesquisa e corte de código: 15/11/2026.** A R15 é a base publicada inspecionada. A R16 propõe tornar explícito, dentro do jogo, o que cada caso ensina: escolher uma pergunta, prever um efeito, observar evidências e explicar uma revisão do projeto. Os três miniexperimentos estão implementados no código local em `mission-curriculum.ts` e `MissionLearning.tsx`, com comparação A/B, previsão e reflexão. A integração do percurso e sua verificação são registradas separadamente; este documento não declara a publicação R16. O estado da entrega deve ser consultado em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md).
+
+A prioridade imediata é reutilizar o domínio, a cena e os componentes existentes. **Nenhuma nova dependência é necessária para realizar os três miniexperimentos propostos.** As bibliotecas pesquisadas entram como oportunidades condicionais, cada uma ligada a uma necessidade concreta e a limites verificáveis. O [catálogo estruturado R16](../research/technology-opportunities-r16.json) guarda oito oportunidades e os três experimentos.
+
+Este documento complementa o [guia didático extenso](32-GUIA-DIDATICO-MISSOES-3D.md), a [pesquisa NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md) e o [handoff R15](34-HANDOFF-IMERSAO-3D-R15.md).
+
+## 1. Para quem e para quê
+
+O público inicial proposto é formado por estudantes de ensino médio/técnico, graduação introdutória e visitantes de divulgação científica com mediação. Essa escolha orienta linguagem e profundidade; ainda não representa validação com essas pessoas nem alinhamento curricular certificado.
+
+A pessoa deve conseguir entrar sem conhecer astrodinâmica. Precisa entender a pergunta do caso e fazer uma previsão pequena antes de enfrentar o catálogo completo. Quem desejar aprofundar encontra unidades, contas e fontes. Quem tiver dificuldade com 3D deve realizar a mesma atividade por controles textuais e representação 2D.
+
+A aprendizagem procurada é observável: explicar uma decisão com o requisito, o mecanismo e a evidência correta. “Gostei da nave”, “cliquei em todas as peças” ou “obtive 6/6” não são suficientes para demonstrar essa compreensão.
+
+| Caso | Entrada por interesse | Pergunta científica | Aprendizado observável proposto |
+| --- | --- | --- | --- |
+| **Cerrado** | Vegetação, território e sensoriamento remoto | O que mudou entre dois períodos em três pontos, considerando apenas os registros recebidos e válidos? | Explicar que reduzir o volume de dados pode aumentar a exigência de potência; distinguir dado ausente de índice baixo. |
+| **Bennu** | Geologia planetária e exploração robótica | Como comparar duas observações de cada região didática da superfície? | Calcular ou explicar por que produzir um registro não garante sua recepção; relacionar taxa e tempo de contato. |
+| **Telescópio** | Luz, astronomia e instrumentos | Como comparar três faixas infravermelhas em duas exposições? | Distinguir arquivo recebido de evidência adequada: o instrumento precisa responder à pergunta. |
+
+Cerrado usa seis registros históricos Terra/MODIS. Bennu usa rugosidade sintética e telescópio usa fluxos relativos sintéticos. O jogador deve ver essa distinção antes de interpretar o resultado. Os modelos NASA são referências geométricas, não as naves parametrizadas nem provas de engenharia.
+
+## 2. A promessa didática de cada caso
+
+### Cerrado — economizar dados tem consequências na nave
+
+**Convite:** “Três pontos, dois períodos. Faça os registros chegarem e descubra o que é possível comparar.” O pedido é científico; as escolhas de energia, processamento e comunicação são meios para atendê-lo.
+
+**Decisão → efeito → evidência → reflexão:** trocar BANDAS por ÍNDICE reduz o lote de 180 para 60 Mbit, mas aumenta a carga total durante o processamento de 26 para 38 W. Com a bateria pequena, o evento de pico mostra a falha antes do primeiro lote terminar. A reflexão deve explicar por que o volume menor não resolveu tudo e qual recurso precisa ser revisto.
+
+O retorno científico exige pares completos e válidos. A interface deve distinguir o início do composto da data da observação e impedir que ausência seja interpretada como zero. Uma diferença de NDVI não determina, sozinha, seca, manejo ou outra causa ambiental.
+
+**Quatro segmentos:** usuários precisam dos pares; lançamento limita massa e orçamento; a nave escolhe processamento e alimentação; o solo precisa receber o conjunto. O lançador e o perfil do Cerrado continuam fixos no modelo atual.
+
+### Bennu — a descoberta só chega quando o enlace dá conta
+
+**Convite:** “Uma superfície, três regiões. Produza observações e enfrente o limite entre guardar e receber.” O instrumento exigido é a câmera de superfície; as regiões A/B/C e sua rugosidade são construções didáticas.
+
+**Decisão → efeito → evidência → reflexão:** ampliar contatos de 120 para 500 s aumenta o tempo de transmissão, mantendo taxa e antena. A fila e os horários de recepção demonstram a diferença. A reflexão deve separar registro produzido, parcialmente recebido e completo.
+
+O objetivo não é ensinar mineração nem escolher um pouso real. O caso trabalha com entrega e comparação de observações fictícias, situado num alvo visual de referência NASA.
+
+**Quatro segmentos:** usuários pedem seis registros; lançamento define envelope e compatibilidade do perfil; a nave precisa produzi-los e armazená-los; o solo determina as oportunidades de recepção.
+
+### Telescópio — mais arquivos não significam a informação certa
+
+**Convite:** “A luz carrega pistas. Escolha o instrumento capaz de responder à pergunta.” O pedido exige comparação por faixa infravermelha; a arquitetura precisa sustentar essa escolha.
+
+**Decisão → efeito → evidência → reflexão:** uma câmera pode transmitir seis arquivos completos sem atender ao objetivo. O evento de incompatibilidade e a contagem de registros válidos mostram a diferença. Trocar por espectrômetro na arquitetura de referência permite satisfazer o pedido. A reflexão deve reconhecer em que outra investigação uma câmera seria apropriada.
+
+Essa distinção tem apoio conceitual na explicação de [instrumentos científicos do Webb](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/). O Ipê não reproduz esses instrumentos: usa três faixas e seis fluxos sintéticos. Não detecta água, atmosfera ou vida.
+
+**Quatro segmentos:** usuários definem a informação procurada; lançamento suporta envelope e perfil; a nave fornece instrumento, potência e memória; o solo recebe os registros. LEO/L2 continuam nomes de agendas conceituais. As duas ou três horas começam depois da chegada, sem viagem orbital calculada.
+
+## 3. Uma experiência curta antes do projeto completo
+
+O seletor de três missões deve apresentar **pergunta, dado e aprendizado**, além da aparência do destino. A pessoa não deve precisar abrir um documento externo para descobrir o que fará no jogo.
+
+O percurso didático da R16 conecta os módulos locais ao projeto completo:
+
+1. **Escolher uma história:** destino, necessidade e origem dos dados em poucas frases.
+2. **Observar um contraste:** duas alternativas de uma única decisão, com a peça ou função correspondente em foco.
+3. **Prever:** escolher uma hipótese antes de ver o resultado; permitir justificar em linguagem simples.
+4. **Experimentar:** mostrar efeito, unidade e evidência; manter a explicação acessível sem animação.
+5. **Projetar a missão:** entrar no catálogo completo, usando a descoberta como ponto de partida.
+6. **Operar e interpretar:** inspecionar os quatro segmentos e os eventos da própria tentativa.
+7. **Explicar e revisar:** confrontar a previsão, localizar o limite e propor uma alteração.
+
+Isso complementa as etapas existentes de necessidade, requisitos, projeto, verificação, operação e retorno. Não substitui a navegação do Cerrado por seis abas que ele não possui.
+
+O miniexperimento implementado é uma atividade orientada com condições fixas, identificadas como exemplos independentes do projeto atual. `runLearningExperiment` chama os mesmos domínios do jogo, sem física paralela. A previsão vem antes da execução dos dois ensaios; o feedback compara a quantidade válida calculada.
+
+A comparação A/B mantém o mesmo segundo na linha do tempo e mostra a nave configurada de cada ensaio, obtida de `trial.result.config`. A tabela identifica seus valores como finais, separadamente do instante inspecionado. O término antecipado conserva o último estado e não cria novas observações.
+
+Abrir, prever e executar a prévia não alteram o projeto atual nem salvam uma missão no caderno. A ação explícita **Usar A/B como ponto de partida** entrega as escolhas ao projeto; pode copiar inclusive uma configuração que falha. O jogador ainda precisa justificar e executar sua própria tentativa. O feedback da missão completa deve usar esse resultado real, não a solução didática pré-escrita.
+
+## 4. Três miniexperimentos implementados localmente
+
+Os seis resultados abaixo foram reexecutados no domínio local em 15/11/2026. Não são ensaios de bibliotecas candidatas, GPU ou aprendizagem. O JSON desta pesquisa conserva as configurações e os resultados de referência. A chamada do novo `runLearningExperiment` também foi conferida para os seis resultados e para a separação entre registros recebidos e válidos.
+
+### Experimento 1 — ÍNDICE resolve sozinho?
+
+**Condições fixas:** Cerrado, contatos curtos, bateria 16 Wh, painel 18 W, rádio econômico, memória 1.536 Mbit e todos os contatos. Mudar somente o processamento.
+
+**Previsão:** “Trocar BANDAS por ÍNDICE fará os seis registros chegarem com esta bateria?” Respostas possíveis podem separar “sim, basta reduzir os bits”, “a potência pode impedir o processamento” e “o rádio ficará automaticamente mais rápido”. A explicação deve ser mostrada depois da escolha.
+
+| Alternativa | Registros válidos | Evidência verificada |
+| --- | --- | --- |
+| BANDAS | 2/6 | Recebe 460,8 Mbit; encerra com entrega insuficiente. |
+| ÍNDICE, sem outras mudanças | 0/6 | `PEAK_POWER` aos 600 s; nenhum lote termina. |
+
+Durante processamento, o painel fornece 18 × 0,55 = 9,9 W. A bateria precisa fornecer aproximadamente (38 − 9,9) / 0,95 = **29,58 W**, acima de seu limite de **20 W**. O problema é potência instantânea, não simplesmente quantidade de Wh disponível.
+
+**Feedback:** “O lote ficou menor, mas a nave passou a exigir mais potência para produzi-lo.” **Reflexão:** “O que você mudaria primeiro, e qual evento esperaria deixar de ocorrer?” O aprofundamento pode testar a bateria de 24 Wh, cujo limite de descarga é 35 W, preservando a hipótese antes da nova execução.
+
+### Experimento 2 — a mesma antena pode entregar mais?
+
+**Condições fixas:** Bennu, lançador compacto, perfil próximo, três horas, câmera e energia ampliada. Mudar somente solo curto/ampliado.
+
+**Previsão:** “Sem aumentar a taxa do rádio, ampliar a duração dos contatos pode mudar o retorno?” As alternativas devem diferenciar tempo disponível de velocidade e de quantidade produzida.
+
+| Alternativa | Registros válidos | Bits recebidos |
+| --- | --- | --- |
+| Duas janelas de 120 s | 2/6; falha de entrega | 288.000.000 |
+| Duas janelas de 500 s | 6/6; sucesso | 720.000.000 |
+
+A taxa permanece **1,2 Mbit/s**. O caso curto fornece 240 s de serviço: 288 Mbit. Isso completa dois lotes de 120 Mbit e parte do terceiro. A opção ampliada oferece mais tempo; não cria observações extras nem aumenta a potência do rádio.
+
+**Feedback:** “A fila teve mais tempo para sair durante os contatos.” **Reflexão:** “Qual registro estava completo no solo e qual ainda dependia da fila?” A vista deve manter a mesma antena e representar a agenda alterada. Não sugerir que uma antena visualmente maior foi comprada.
+
+### Experimento 3 — seis arquivos são seis evidências válidas?
+
+**Condições fixas:** telescópio, lançador científico, perfil distante, três horas, energia ampliada e contatos ampliados. Mudar somente câmera/espectrômetro.
+
+**Previsão:** “Se os seis arquivos da câmera chegarem, a pergunta sobre as faixas estará respondida?” Uma resposta correta precisa relacionar variável e instrumento, não somente o tamanho do arquivo.
+
+| Alternativa | Arquivos recebidos integralmente | Registros válidos para o objetivo | Resultado |
+| --- | --- | --- | --- |
+| Câmera | 6 | 0 | Inválido; `INSTRUMENT_MISMATCH` |
+| Espectrômetro | 6 | 6 | Sucesso |
+
+A câmera transmite **720 Mbit**; o espectrômetro, **1.080 Mbit**. O maior volume não é uma recompensa por si: decorre do instrumento escolhido. A arquitetura de referência consegue suportá-lo.
+
+**Feedback:** “A entrega funcionou, mas a câmera não produziu o tipo de informação pedido.” **Reflexão:** “Que pergunta poderia ser respondida por uma câmera?” A interface deve distinguir **recebidos** de **válidos**; mostrar apenas “0/6” sem a causa esconderia a descoberta central.
+
+O pico de energia do espectrômetro na configuração padrão permanece um aprofundamento útil. Ele mostra que instrumento correto e alimentação suficiente são condições diferentes, sem sobrecarregar o primeiro exercício com duas causas simultâneas.
+
+## 5. Componentes, mecânicas e estados
+
+| Componente da experiência | Estado comprovado na base R15 | Evolução R16 e estado local | Critério de aceite |
+| --- | --- | --- | --- |
+| Entrada por missão | Três histórias e destinos selecionáveis. | Seletor imersivo com pergunta, dados e aprendizado explícitos. | As três opções têm nome acessível e explicam a atividade antes de iniciar. |
+| Nave configurável | Instrumento, energia, comunicação e montagem seguem escolhas. | Usar a peça selecionada para explicar o contraste didático. | Aparência corresponde ao catálogo; vista não altera cálculo. |
+| Previsão | Hipótese e revisão prévia existem. | Implementada no módulo local: previsão por caso, execução de A/B e feedback calculado. | A resposta não aparece antes da previsão; erro não bloqueia aprender ou continuar. |
+| Execução | Dois domínios separados, estados e eventos determinísticos. | Implementado: `runLearningExperiment` chama os domínios existentes. | Exemplos não sobrescrevem o projeto nem inventam novos resultados. |
+| Operação | Quatro segmentos, linha do tempo e comparação A/B. | Implementada no módulo local: comparação A/B com relógio comum e nave de cada ensaio. | Evento, instante, unidade e significado aparecem juntos. |
+| Pós-missão | Requisitos, registros e reflexão disponíveis. | Implementado no componente local: interpretação por caso, com integração à tentativa a verificar. | O texto usa a tentativa executada, inclusive resultados inválidos e parciais. |
+| Equipe | Revisão local por até quatro pessoas. | Organizar discussão sobre previsão e evidência por papel. | Sem alegar contas, cooperação remota ou verificação de participação. |
+| Acesso | Controles HTML, alternativa 2D e movimento reduzido. | Manter equivalência do miniexperimento sem 3D. | Conteúdo e resposta continuam utilizáveis por teclado e sem animação. |
+
+“Implementado localmente” identifica código inspecionado; não substitui o aceite integrado da jornada. Os testes da R15 não certificam automaticamente a R16. O seletor, os pontos de aplicação no projeto e a reflexão da tentativa devem constar da verificação da rodada. A publicação é identificada pelo recibo, não pela existência deste plano.
+
+## 6. Feedback que explica sem inventar uma causa
+
+Uma explicação pós-missão precisa começar pelo resultado e pelo requisito relevante. Nas expedições, incompatibilidade estática, falha de potência e entrega insuficiente não são a mesma situação.
+
+A proposta é apresentar: **o que foi pedido → o que ocorreu → qual evidência sustenta isso → o que vale testar depois**. Um evento pode indicar um recurso envolvido sem provar causa única. Quando várias escolhas mudam, o texto deve reconhecer que a comparação não isolou uma variável.
+
+Três regras são essenciais:
+
+- Separar quantidade produzida, quantidade transmitida, recepção completa e validade científica.
+- Usar dados da tentativa executada. Editar o rascunho não muda retroativamente a explicação da execução anterior.
+- Preservar a fronteira temporal. Ao voltar no tempo, não revelar na cena uma observação que só chegou depois; o relatório final deve permanecer identificado como final.
+
+O objetivo é apoiar uma revisão justificada, não escrever uma conclusão ambiental ou astronômica que o modelo não mediu.
+
+## 7. Oito oportunidades tecnológicas, com prioridade e limites
+
+A consulta abaixo usou repositórios dos próprios projetos, documentação dos mantenedores e fontes NASA em **15/11/2026**. Não foram instaladas ou executadas as bibliotecas candidatas. Compatibilidade estrutural com Three/React não é prova de funcionamento na versão do Ipê.
+
+| ID | Oportunidade | Decisão para o Ipê | Esforço se adotada |
+| --- | --- | --- | --- |
+| T01 | Three.js e inspeção de câmera | Reutilizar agora o que já existe. | Baixo a médio |
+| T02 | Motionmaxxing / GSAP / Rive | Referência para comunicação; adoção posterior se necessária. | Médio |
+| T03 | 3DTilesRendererJS | Adiar até existir atividade que precise de terreno/tileset. | Alto |
+| T04 | three-geospatial | Adiar até justificar atmosfera e custo gráfico. | Alto |
+| T05 | satellite.js | Experimento orbital separado e versionado, se necessário. | Alto |
+| T06 | Astronomy Engine | Futuro exercício de orientação celeste. | Médio a alto |
+| T07 | Open MCT / Astro UXDS | Estudar padrões; manter a interface didática atual. | Baixo para estudo; alto para migração |
+| T08 | Assets NASA / CC0 | Reutilizar o acervo local com procedência. | Baixo para reuso; médio para novos itens |
+
+### T01 — interatividade de câmera com a base existente
+
+[OrbitControls](https://threejs.org/docs/pages/OrbitControls.html) oferece órbita de câmera, zoom e pan. É uma opção do ecossistema Three.js, não um propagador orbital. O Ipê já possui giro, enquadramento por inspeção e montagem separada; isso não significa que OrbitControls esteja integrado.
+
+A melhoria imediata é orientar a câmera para o componente relevante e manter um comando claro para voltar. Reutilizar os mecanismos existentes evita introduzir outra forma de interação sem necessidade. Se um controle adicional for escolhido, precisa respeitar toque, teclado, movimento reduzido e leitura das informações. A câmera não deve se mover autonomamente enquanto a pessoa tenta comparar números.
+
+### T02 — motionmaxxing é para filmes; uma interface precisa esperar o jogador
+
+[Motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing) se apresenta como skill de produção de filmes, peças de marca e motion graphics. Pode ajudar a planejar um convite ou uma explicação curta. Não é biblioteca de câmera interativa nem motor científico. Seus critérios de ritmo e movimento pertencem à produção audiovisual; aplicá-los como obrigação de movimento contínuo no jogo prejudicaria o tempo de observação e escolha. As comparações visuais descritas pelo autor não medem aprendizagem.
+
+[GSAP](https://gsap.com/docs/v3/) organiza animações e sequências; possui [licença própria](https://gsap.com/community/standard-license/), que não deve ser chamada de MIT ou CC0. [Rive](https://rive.app/features) oferece interação e ligação de dados, mas editor, runtime e arquivos artísticos são coisas distintas. Sua adoção precisaria de um contrato de estado e revisão dos recursos realmente usados. Nesta rodada, CSS, React e Three já atendem ao percurso proposto.
+
+### T03 — 3D Tiles precisa de dados e de uma pergunta geográfica
+
+[NASA-AMMOS/3DTilesRendererJS](https://github.com/NASA-AMMOS/3DTilesRendererJS) renderiza o formato 3D Tiles e oferece integrações e plugins. Não entrega automaticamente o terreno adequado à missão. Alguns exemplos usam provedores com chave e condições próprias; cache e nível de detalhe precisam de orçamento.
+
+A oportunidade futura seria comparar relevo ou cobertura em uma atividade que dependa de geografia. Antes de instalar: escolher um tileset, documentar origem/escala/condições, limitar download e medir memória no aparelho alvo. Os três casos atuais não precisam de streaming de terreno para ensinar potência, entrega e instrumento.
+
+### T04 — atmosfera visual não substitui o ambiente do modelo
+
+[three-geospatial](https://github.com/takram-design-engineering/three-geospatial) oferece módulos de renderização e se integra a outros projetos. O README consultado classifica módulos como alpha/beta e descreve uma transição de API ligada a WebGPU. Isso exige fixar versão e testar o backend, não presumir compatibilidade por usar Three.js.
+
+Atmosfera ou nuvens só devem entrar se ajudarem uma pergunta explícita. Nuvens renderizadas não são QA de MODIS; iluminação visual não deve passar a decidir o balanço elétrico. O ganho precisa justificar GPU, manutenção e alternativa sem o efeito.
+
+### T05 — satellite.js já calcula sombra, mas não certifica uma missão
+
+[satellite.js](https://github.com/shashwatak/satellite-js) propaga TLE/OMM e fornece transformações. A documentação atual inclui [Sun & Shadow](https://shashwatak.github.io/satellite-js/docs/sun-and-shadow), com `sunPos` e `shadowFraction`. Portanto, afirmar que a biblioteca não calcula sombra seria incorreto. O cálculo documentado trata a Terra como esfera e exige posições/unidades coerentes.
+
+Isso não torna eclipse observado ou contato operacional certos. Para janelas terrestres, ainda é preciso definir elementos e época, estação, máscara de elevação, critérios temporais e testes. Visibilidade geométrica não garante disponibilidade da antena nem enlace RF. A oportunidade é uma prova separada de geometria terrestre; não substituir silenciosamente as agendas didáticas nem aplicar esse fluxo a uma transferência para Bennu/L2.
+
+### T06 — Astronomy Engine orienta fenômenos; não navega uma sonda
+
+[Astronomy Engine](https://github.com/cosinekitty/astronomy) calcula posições, eventos e transformações astronômicas, incluindo uma implementação JavaScript. O próprio autor explica que sua meta de precisão não é adequada à navegação de sondas.
+
+Um uso futuro seria relacionar observador, data e direção de uma observação. Não forneceria desempenho Webb, espectros reais ou trajetória do telescópio fictício. Qualquer resultado precisaria de referência temporal visível e validação independente. O exercício instrumental atual já funciona sem essa dependência.
+
+### T07 — Open MCT e Astro UXDS são referências de operação, não o jogo pronto
+
+[Open MCT](https://github.com/nasa/openmct) é um framework NASA de visualização de dados, extensível por plugins. Pode inspirar contexto temporal, inspeção de séries e estados. Não fornece automaticamente o motor do Ipê, telemetria de uma missão específica ou colaboração remota.
+
+[Astro UXDS](https://github.com/RocketCommunicationsInc/astro) reúne padrões e componentes de interfaces espaciais; não é o framework web Astro. O [arquivo de licença do repositório](https://raw.githubusercontent.com/RocketCommunicationsInc/astro/master/LICENSE) possui condições próprias, incluindo aviso de copyright na redistribuição. Não presumir que essa licença cobre qualquer linha Nova: a [página de termos Nova](https://www.astrouxds.com/license-agreement) não forneceu texto integral legível nesta consulta.
+
+A aplicação imediata é estudar clareza de unidades, alerta e horário do dado. Migrar a interface inteira acrescentaria outro sistema para manter sem resolver o principal problema didático.
+
+### T08 — NASA e CC0 exigem procedência por item
+
+[NASA 3D Resources](https://science.nasa.gov/3d-resources/) é uma fonte de modelos; as [diretrizes de mídia NASA](https://www.nasa.gov/nasa-brand-center/images-and-media/) distinguem usos e materiais de terceiros. Não é correto declarar toda imagem, marca ou arquivo NASA como CC0 ou irrestrito. Os créditos de cada item precisam acompanhar a decisão de uso.
+
+[Poly Haven](https://polyhaven.com/license) declara CC0 para seus assets, mas isso não transfere a mesma condição a qualquer site, ferramenta ou arquivo externo. Uma textura ilustrativa continua sendo ilustração, não medição do Cerrado ou de Bennu.
+
+O Ipê já possui quatro GLBs oficiais auditados. Reutilizá-los e explicar suas funções tem prioridade. Só incorporar outro asset se ele resolver uma necessidade concreta; registrar página, crédito, condição, tamanho, hash e transformação. O logo NASA não deve virar identidade do projeto.
+
+## 8. Critérios de aceite pedagógico e técnico
+
+A primeira verificação é de comportamento observável, sem presumir eficácia educacional:
+
+1. A pessoa identifica, no seletor, a pergunta e a origem dos dados de cada caso.
+2. Cada miniexperimento pede previsão antes de revelar explicação; errar permite continuar e revisar.
+3. O contraste muda somente a decisão declarada. As demais condições ficam disponíveis para consulta.
+4. O feedback mostra unidade, evento ou contagem que sustenta a conclusão. Bits recebidos e registros válidos não são fundidos.
+5. A atividade funciona em 2D/texto, teclado e movimento reduzido. A animação não avança escolhas nem responde pelo jogador.
+6. A explicação pós-missão usa a configuração executada e não muda quando o rascunho é editado.
+7. Os resultados de referência dos três casos permanecem iguais; não há mudança silenciosa do catálogo para favorecer uma narrativa.
+8. O recibo separa teste de domínio, interface, observação em navegador e publicação. Aprendizagem e desempenho físico precisam de ensaios próprios.
+
+Um piloto pode pedir quatro respostas curtas: “qual era o requisito?”, “qual evidência você usou?”, “por que a escolha alterou o resultado?” e “o que não é possível concluir?”. A comparação dessas respostas antes/depois oferece material de avaliação formativa. Não é uma alegação antecipada de ganho educacional, e não exige coletar nomes ou dados pessoais.
+
+## 9. Fontes locais e fronteira desta entrega
+
+A base foi conferida em [catálogo do Cerrado](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/catalog.ts), [motor do Cerrado](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/core/engine.ts), [domínio das expedições](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/lab/scientific-expeditions.ts), [cena 3D](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/ui/OrbitalScene.tsx), [miniexperimentos](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/lab/mission-curriculum.ts), [interação didática](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/src/ui/MissionLearning.tsx) e [dependências do laboratório](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/experiments/mission-design-lab/package.json). A consulta encontrou React, Three, R3F e Drei já presentes.
+
+Esta pesquisa produziu documentação e um catálogo JSON. Não instalou dependências, não importou terrenos, não executou prompts dos repositórios consultados e não publicou arquivos. Os exemplos numéricos foram calculados pelos domínios existentes; as tecnologias candidatas não foram submetidas a ensaios de integração. A implementação R16 precisa registrar seu próprio aceite e recibo, preservando os limites científicos e a cooperação local.
+
+
+---
+
+# Handoff R16 — propósito, investigação e transições
+
+Fonte: `docs/38-HANDOFF-R16.md` · SHA-256 original: `5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703` · Ajustes de caminhos privados: 0
+
+# Handoff R16 — propósito, investigação e transições
+
+Edição 0.7.0-beta.1 · 15/11/2026. Este documento descreve a implementação. O estado de publicação verificável fica em PUBLICADO.md e nos recibos de evidência da edição.
+
+## O produto em uma frase
+
+Uma equipe recebe uma pergunta científica, projeta uma missão para respondê-la, executa as escolhas e investiga se a evidência chegou completa e dentro de seus limites. O espaço desperta a curiosidade; a cadeia entre necessidade, escolha e resultado sustenta o aprendizado.
+
+## Três casos com propósitos diferentes
+
+| Caso | Quem precisa da informação | Conceito central | O que se pode concluir |
+| --- | --- | --- | --- |
+| Cerrado | Equipe de estudo da vegetação próxima de Rio Verde | Potência não é energia; processar menos bits pode exigir mais potência | Comparar pares de índices recebidos, com qualidade e lacunas explícitas. Não inferir a causa de uma alteração somente pelo NDVI. |
+| Bennu | Equipe fictícia de levantamento da superfície | Produzir dados a bordo não equivale a recebê-los no solo | Comparar registros didáticos válidos, sem certificar um local real de pouso. |
+| Telescópio | Equipe fictícia de astronomia | O objetivo determina a medição e o instrumento | Comparar intensidades sintéticas em faixas infravermelhas. Não detectar água ou vida. |
+
+A origem científica, os roteiros e as tecnologias avaliadas estão no [documento 37](37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md). O [guia didático 32](32-GUIA-DIDATICO-MISSOES-3D.md) oferece o contexto completo. Dados históricos Terra/MODIS, registros sintéticos das expedições e modelos NASA são categorias diferentes.
+
+## O que mudou nesta edição
+
+A entrada do laboratório permite escolher o destino, ler sua pergunta e visualizar Terra, Bennu ou a referência Webb. Quatro segmentos interativos explicam usuários, lançamento, espaço e solo. A marca SVG do Projeto Ipê é mantida.
+
+Cada missão ganhou uma introdução de propósito, um experimento guiado e uma reflexão sobre interpretação. O experimento exige previsão antes do cálculo. A e B usam o mesmo motor do jogo e mudam um único campo; a comparação final distingue registros recebidos e cientificamente válidos. A cena possui um relógio comum e usa a configuração de cada ensaio. Copiar um exemplo para o projeto exige uma ação explícita. O jogador ainda precisa justificar e executar a própria tentativa.
+
+O enquadramento da nave usa uma transição finita de 280 ms para distância e zoom. A primeira montagem e a preferência de movimento reduzido usam enquadramento imediato. Nenhum recurso físico é interpolado pela câmera.
+
+O portal Planet Jumping permanece independente, em um único HTML. As mídias e a marca daquela referência não foram atribuídas à NASA nem incorporadas como identidade do Ipê. Há recuperação quando o vídeo não carrega e caminhos de teclado e movimento reduzido. Leia o [documento 36](36-PORTAL-PLANET-JUMPING.md).
+
+## Mapa para os dois desenvolvedores
+
+| Responsabilidade sugerida | Arquivos principais | Contrato a preservar |
+| --- | --- | --- |
+| Dev A — ciência, simulação e conteúdo | `experiments/mission-design-lab/src/lab/mission-curriculum.ts`; `src/lab/scientific-expeditions.ts`; `src/core/engine.ts` | Experimentos chamam os motores originais; não existe física concorrente no componente visual. Preservar unidades, falhas e evidência ausente. |
+| Dev B — interação, cena e apresentação | `src/ui/MissionGateway.tsx`; `MissionLearning.tsx`; `Scene.tsx`; `OrbitalScene.tsx`; `mission-gateway.css`; `mission-learning.css` dentro do laboratório | A cena apresenta configuração executada e último estado disponível no tempo selecionado. Movimento de câmera não altera bateria, fila ou recepção. |
+| Ambos — integração | `Workbench.tsx`, `ScientificExpedition.tsx`, `MissionControl.tsx`; scripts de distribuição na raiz | Aplicar um ensaio altera o rascunho, não a tentativa preservada. Executar exige o fluxo normal de revisão. |
+
+A [análise dos assets da PR](39-ATIVOS-DA-PR-E-APLICACOES.md) distingue o que a apresentação realmente carrega da biblioteca opcional. Consulte `research/pr-assets-r16.json` para o inventário e verifique o hash/head antes de importar qualquer item.
+
+O catálogo de oportunidades está em `research/technology-opportunities-r16.json`. Reaproveitar R3F/drei já instalado. motionmaxxing foi avaliado como referência de movimento, não incluído como dependência. NASA 3D Tiles, geospatial, propagadores, Open MCT e Astro UXDS têm critérios e limites registrados; não estão integrados por apenas constarem no estudo.
+
+## Reproduzir os três experimentos
+
+1. Cerrado: entrar em **Projetar missão do Cerrado**, abrir **Investigar esta escolha**, prever e executar os dois ensaios. A usa BANDAS, B usa ÍNDICE; os demais parâmetros e contatos curtos são iguais. A entrega 2/6; B falha por potência aos 600 s e entrega 0/6. Selecione B e o evento chave; a leitura não deve inventar estados depois do encerramento.
+2. Bennu: entrar em **Explorar missão Bennu**, abrir o experimento e comparar contato curto/ampliado. A entrega 2/6; B entrega 6/6. A taxa é 1,2 Mbit/s em ambos. Mover o relógio e alternar A/B mantém o mesmo segundo; a fila deve refletir os registros de cada ensaio.
+3. Telescópio: abrir **Receber tudo é suficiente?**. A câmera recebe seis registros, mas nenhum é válido para a pergunta; o espectrômetro entrega seis válidos. O resultado físico da recepção deve continuar separado da compatibilidade científica.
+4. Em qualquer caso, **Usar A/B como ponto de partida** copia somente a configuração; não gera uma missão concluída, não grava caderno nem atribui nota.
+5. Execute uma tentativa própria e responda **O que você pode afirmar?**. A reflexão é um exercício formativo; não constitui avaliação validada de aprendizagem.
+
+## Verificação reproduzível
+
+Na raiz do repositório:
+
+```sh
+npm --prefix experiments/mission-design-lab run test
+npm --prefix experiments/mission-design-lab run test:ui
+npm run build:release
+npm run test:context
+npm run test:beta
+npm run test:portal
+npm run start:beta
+```
+
+Os novos contratos são cobertos por `tests/mission-curriculum.test.mts` e `tests-ui/mission-learning.test.mjs` do laboratório. Eles verificam os pares reais, mudança de apenas um fator, configuração e tempo da cena, recebimento versus validade e ação explícita de aplicação. DOM simulado não comprova GPU, layout, toque físico ou aprendizado humano. A inspeção de navegador e o manifesto remoto são evidências separadas.
+
+## Distribuição e ambientes
+
+- `/lab/index.html`: três missões e experimentos desta edição.
+- `/campanha/index.html`: campanha de quatro níveis já publicada, preservada.
+- `/planet-jumping.html`: demonstração visual sem bibliotecas externas; as mídias dependem do CloudFront indicado no briefing.
+- `/docs/index.html` e `/context/research-library.html`: documentação navegável e acervo.
+- O build é uma seleção explícita de arquivos públicos; não publica a raiz de trabalho, credenciais ou fontes privadas.
+- A permissão de mídia externa do portal deve ser restrita à sua rota. O jogo continua com seus recursos locais e política de origem própria.
+
+A limitação de armazenamento compartilhado entre laboratório/campanha registrada no [handoff R15](34-HANDOFF-IMERSAO-3D-R15.md) permanece. A R16 não altera schemas de caderno. Os ensaios guiados vivem apenas na tela e não acrescentam persistência.
+
+## Revisão da contribuição e próximos passos
+
+A busca no repositório encontrou a PR #1, de autoria GitHub `oalexandrebelo`. A associação com Bruno ainda precisa de confirmação; a revisão não atribui autoria presumida. O [documento 35](35-REVISAO-PRS-E-DIRECAO-R16.md) registra o hash analisado, testes e observações. A PR não foi integrada por esta revisão.
+
+Prioridade seguinte: observar pessoas iniciantes jogando. Peça uma previsão antes de cada experimento e uma explicação depois; identifique se distinguiram energia/potência, produção/recepção e imagem/espectro. Registrar resultado dessa sessão antes de ampliar animações, pontuação ou serviços externos.
+
+Depois disso: melhorar as interpretações onde houve confusão; testar desempenho em celular real; decidir quais modelos NASA precisam de otimização; elaborar contrato de sala/reconexão antes de colaboração remota. O modo atual é solo ou equipe local de até quatro participantes. Órbita e lançamento das expedições são regras didáticas; não há navegação de voo, reserva DSN ou telemetria operacional ao vivo.
+
+
+---
+
+# Ativos da PR #1 e aplicações no MISSÃO IPÊ
+
+Fonte: `docs/39-ATIVOS-DA-PR-E-APLICACOES.md` · SHA-256 original: `7366c45b792fecea48bd7d4bfef5b7f706b7c4e5b0d7608764105a1f4e1ce57d` · Ajustes de caminhos privados: 0
+
+# Ativos da PR #1 e aplicações no MISSÃO IPÊ
+
+Auditoria de 15/11/2026. A [PR #1](https://github.com/oalexandrebelo/MISSAO-IPE/pull/1) permanece aberta no repositório canônico **oalexandrebelo/MISSAO-IPE**, anteriormente PROJETO-IPE, no head `b628b429fe201e9445443c8205c4e4b4fee284f7`. A conta autora exibida é `oalexandrebelo`; isso não confirma a atribuição humana a Bruno.
+
+**Decisão recomendada:** manter os modelos NASA e a nave configurável atuais. A contribuição mais fácil de reaproveitar depois é a imagem editorial terrestre de 800 px. KayKit é uma biblioteca opcional para cenários fictícios; não acrescenta dados científicos ou mecânicas às três missões. Esta auditoria não importou ativos, instalou dependências, alterou o aplicativo ou publicou uma entrega.
+
+## O que existe e o que é usado
+
+Os 69 arquivos da pasta `apps/immersive-lp/` foram conferidos contra os identificadores Git do head. Os **15 itens do manifesto**, somando **1.268.290 bytes**, conferem em tamanho e SHA-256. O [inventário JSON](../research/pr-assets-r16.json) contém caminhos, hashes, uso e todos os modelos; os números abaixo são bytes de arquivo, não transferência comprimida ou memória de GPU.
+
+| Ativo da PR | Tamanho | Uso constatado / aplicação recomendada |
+| --- | ---: | --- |
+| `public/assets/earth-mobile.webp` / `earth.webp` | 96.344 / 379.916 B | Blue Marble de 800² / 1600² px. `Planet.tsx` usa seleção responsiva; a versão maior também aparece no filme e nos metadados sociais. Candidata a introdução terrestre; não é textura equiretangular nem mapa dos seis registros. |
+| `public/assets/game-preview.jpg` | 95.217 B | Captura de 1348×926 da interface antiga, inspecionada visualmente. Disponível, sem consumidor no código de execução. Atualizar a captura antes de apresentar funcionalidades atuais. |
+| `public/assets/science-provenance.json` | 5.942 B | Metadados disponíveis, sem consumidor no código de execução. O minilaboratório importa os seis registros de `lib/mission/data/science-data.ts`. Preferir a procedência canônica do jogo. |
+| `public/brand/projeto-ipe-logo.png` / `projeto-ipe-symbol.svg` | 13.315 / 42.871 B | PNG 300×100 no cabeçalho/filme; símbolo no rodapé/favicon. Preservar a identidade vetorial atual do MISSÃO IPÊ ao reaproveitar a composição. |
+| Três WOFF2: EB Garamond normal/itálico e Figtree | 69.444 B | Licenças SIL OFL incluídas. O build offline usa esses arquivos; o build padrão usa `next/font/google`. Remotion referencia duas fontes locais. Manter Bricolage Grotesque e Plus Jakarta Sans atuais, salvo mudança deliberada de direção visual. |
+| `components/Planet.tsx` / `Icon.tsx` | 3.054 / 2.253 B de código | Satélite SVG ilustrativo, 12 ícones e glifos botânicos usados na contribuição. Úteis em explicações e navegação, sem substituir a nave cujo desenho acompanha a configuração executada. |
+| `remotion/MissionFilm.tsx` | 3.338 B de código | Composição de 24 s, 1080p/30 fps; **nenhum MP4 versionado**. Movimento e reprodução exigem código/dependências; não são um vídeo pronto. O áudio da página é sintetizado após ação do visitante, sem arquivo de gravação. |
+| `asset-packs/kaykit-space-base-gltf.zip` | 533.500 B | Fora de `public/`, sem carregador na LP. Biblioteca opcional, não custo do carregamento inicial. |
+
+Os arquivos de `public/` somam **715.939 B**, mas nem todos são solicitados pelo visitante. A imagem Blue Marble é uma composição histórica NASA/Goddard, com créditos a Reto Stöckli, Robert Simmon e equipes de dados; não representa telemetria ou uma fotografia atual do Cerrado. Preservar os créditos e as condições de uso NASA, sem tratar o conjunto como CC0 ou sugerir endosso. [Fonte e créditos](https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/), [diretrizes NASA](https://www.nasa.gov/nasa-brand-center/images-and-media/).
+
+## KayKit: conteúdo e custo reais
+
+O ZIP foi aberto e **117 arquivos internos** conferiram com o manifesto: **57 GLTF + 57 BIN + uma textura + licença + README**, totalizando **1.796.600 B**. Não há imagens separadas de preview, apesar dessa menção no README da PR. Os 57 GLTF foram analisados: dependências locais resolvidas, nenhuma animação e 27.652 triângulos somados nas malhas únicas. Isso não mede draw calls, instâncias ou FPS.
+
+O atlas compartilhado mede 1024² px e ocupa 25.749 B. Cada custo inicial abaixo inclui GLTF, BIN e esse atlas uma vez; usos seguintes podem compartilhar a textura.
+
+| Modelo | Primeiro uso | Triângulos | Aplicação adequada / limite |
+| --- | ---: | ---: | --- |
+| `solarpanel` | 35.475 B | 118 | Adereço de energia de uma base fictícia. Os painéis configuráveis de voo já existem. |
+| `roofmodule_solarpanels` | 45.293 B | 284 | Cenário de solo, sem acrescentar geração ao motor por aparência. |
+| `rock_A` / `terrain_low` | 30.452 / 29.536 B | 30 / 12 | Ilustração genérica; não são relevo medido de Bennu. |
+| `landingpad_small` / `lander_A` | 55.300 / 110.072 B | 454 / 1.464 | Reservar para um futuro exercício de pouso. Os três casos atuais não simulam pouso. |
+| `windturbine_low` | 75.033 B | 826 | Apenas cenário com atmosfera; inadequado para vácuo espacial/Bennu. |
+
+O pacote é de **Kay Lousberg/KayKit, CC0-1.0**, não NASA. A licença interna e o [repositório do autor](https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0) confirmam a condição. Conservar origem, licença e hashes ao selecionar peças. Nenhuma dessas peças determina capacidade, potência, taxa de rádio ou valor científico. Não houve renderização dos 57 modelos nem teste de desempenho nesta auditoria.
+
+## Reaproveitar primeiro o que já funciona
+
+A PR não adiciona modelos NASA. O aplicativo atual já possui os quatro originais abaixo, novamente conferidos por tamanho e hash. A procedência e a otimização estão em [Ativos NASA implementados](30-ATIVOS-NASA-IMPLEMENTADOS.md).
+
+| Ativo atual em `public/models/nasa/` do beta | Bytes / triângulos | Uso atual e decisão |
+| --- | --- | --- |
+| `cubesat-generic-2ru.glb` | 206.108 / 36.896 | Visualizador de referência. Manter separado da nave didática configurável. |
+| `dsn-70m.glb` | 2.216.584 / 14.852 | Visualizador de referência de comunicação. Não representa disponibilidade DSN nem a estação efetiva do Cerrado. |
+| `bennu-1999-rq36.glb` | 329.596 / 18.240 | Referência e contexto da missão Bennu. Preferir sua geometria a rochas genéricas. |
+| `jwst-a.glb` | 4.710.016 / 493.785 | Referência e contexto do telescópio. Manter carregamento sob demanda e união de malhas já implementada; arquivo pequeno não implica render barato. |
+
+Os quatro GLBs somam **7.462.304 B**, mais **779.715 B** do decodificador e avisos compartilhados. Os modelos não produzem resultados científicos. O atlas KayKit 1024², por exemplo, pode ocupar cerca de 4 MiB em RGBA8 antes de mipmaps: tamanho de download e custo gráfico são medidas diferentes.
+
+| Missão | Próxima aplicação concreta, ainda proposta | Limite obrigatório |
+| --- | --- | --- |
+| Cerrado | Reaproveitar Blue Marble de 800 px num cartão editorial, com crédito, e manter a nave configurável e os registros históricos atuais. | A imagem não posiciona precisamente a área de estudo nem substitui MOD13Q1; não sustenta diagnóstico de desmatamento. |
+| Bennu | Usar a geometria já carregada para explicar setores e contrastar dados a bordo com registros recebidos no instante escolhido. | Observações continuam explicitamente sintéticas; rocha KayKit não é dado de superfície ou local de pouso. |
+| Telescópio | Usar a referência Webb e a inspeção câmera/espectrômetro existentes para ligar instrumento, entrega e validade científica. | Nem Webb nem KayKit fornecem medições das faixas sintéticas do exercício ou descoberta de moléculas/vida. |
+
+**Identidade e integração:** não transplantar branding Ubernatural para o IPÊ; a pasta auditada não contém ativo identificado com essa marca. Aproveitar princípios de hierarquia/movimento preservando nome, logotipos e fontes aprovados. Reutilizar imagens/SVG não exige importar Next, GSAP ou Remotion. Estes últimos têm termos próprios; a licença Apache-2.0 do código da contribuição não substitui licenças de fontes, mídia ou dependências. Qualquer integração futura deve registrar apenas os arquivos selecionados, adaptar seus caminhos e manter créditos, alternativa 2D e leitura fiel do estado executado.
+
+
+---
+
 # Atribuição, licenças e autoria assistida
 
 Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0
@@ -5037,11 +5641,11 @@ A versão 0.4.0-beta.2 acrescenta ConOps didático, revisão pré-voo, requisito
 
 # Missão Ipê — laboratório de missões R9–R10
 
-Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `a23d94f8f0eb011916ae9863d2014d6726e450b1fa4dd191098ad55f840bd59e` · Ajustes de caminhos privados: 0
+Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `792d827063f24e3392e3023d8a721ce8012070ecb23b3ee9bb36bafd415597ed` · Ajustes de caminhos privados: 0
 
 # Missão Ipê — laboratório de missões R9–R10
 
-**Atualização R15 · 0.6.0-beta.1:** [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.
+**Atualização R16 · 0.7.0-beta.1:** [propósito e experimentos das três missões](../../docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), [handoff atual](../../docs/38-HANDOFF-R16.md), [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.
 
 **Atualização R14 · 0.5.0-beta.1:** [guia atual das três missões](../../docs/31-TRES-MISSOES-CIENTIFICAS-R14.md), [modelos NASA e créditos](../../docs/30-ATIVOS-NASA-IMPLEMENTADOS.md), [recibo público](../../PUBLICADO.md). Novo domínio isolado em `src/lab/scientific-expeditions.ts`, cenas temporais e duas jornadas científicas; Cerrado mantém suas regras e persistência. Execute `npm run verify` neste diretório. O texto abaixo conserva os cortes anteriores.
 

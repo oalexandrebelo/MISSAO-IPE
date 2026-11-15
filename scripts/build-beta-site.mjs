@@ -21,6 +21,11 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/39-ATIVOS-DA-PR-E-APLICACOES.md', target: 'docs/39-ATIVOS-DA-PR-E-APLICACOES.md', title: 'Assets da contribuição · aplicações', description: 'Inventário, procedência, custos e aplicação dos recursos visuais nas três missões.' },
+  { source: 'docs/35-REVISAO-PRS-E-DIRECAO-R16.md', target: 'docs/35-REVISAO-PRS-E-DIRECAO-R16.md', title: 'Revisão das PRs e direção · R16', description: 'Contribuições revisadas, estado do projeto e prioridades para tornar o aprendizado explícito.' },
+  { source: 'docs/36-PORTAL-PLANET-JUMPING.md', target: 'docs/36-PORTAL-PLANET-JUMPING.md', title: 'Planet Jumping · experimento visual', description: 'Portal cinematográfico independente, mídias externas, acessibilidade, recuperação e limites.' },
+  { source: 'docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md', target: 'docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md', title: 'Propósito e descobertas · R16', description: 'O que cada missão ensina, consequências das escolhas e oportunidades tecnológicas avaliadas.' },
+  { source: 'docs/38-HANDOFF-R16.md', target: 'docs/38-HANDOFF-R16.md', title: 'Continuidade para dois devs · R16', description: 'Integração, contratos, evidências e próximos passos da experiência educativa.' },
   { source: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', target: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', title: 'Aprenda com o Projeto Ipê', description: 'Guia completo: histórias, escolhas, conceitos, experimentos e roteiros de aula para as três missões.' },
   { source: 'docs/33-OPORTUNIDADES-NASA-SCIENCE.md', target: 'docs/33-OPORTUNIDADES-NASA-SCIENCE.md', title: 'Oportunidades NASA Science', description: 'Oito recursos oficiais, aplicações didáticas, limites e sequência recomendada de integração.' },
   { source: 'docs/34-HANDOFF-IMERSAO-3D-R15.md', target: 'docs/34-HANDOFF-IMERSAO-3D-R15.md', title: 'Dois devs · montagem 3D R15', description: 'Estado atual, contratos de apresentação, vínculo com o motor, mapa do código e critérios de continuidade.' },
@@ -165,6 +170,9 @@ await mkdir(stage, { recursive: true });
 try {
   await copy('web/index.html', 'index.html', 'public-portal');
   for (const extension of ['html', 'css', 'js']) await copy(`web/game-design.${extension}`, `game-design.${extension}`, 'interactive-game-design-study');
+  await copy('web/planet-jumping.html', 'planet-jumping.html', 'standalone-remote-media-experiment');
+  await copy('research/technology-opportunities-r16.json', 'research/technology-opportunities-r16.json', 'reviewed-technology-opportunities');
+  await copy('research/pr-assets-r16.json', 'research/pr-assets-r16.json', 'reviewed-pr-asset-inventory');
   await copy('research/nasa-science-opportunities.json', 'research/nasa-science-opportunities.json', 'official-nasa-science-opportunities');
   await copy('research/nasa-3d-catalog.json', 'research/nasa-3d-catalog.json', 'official-3d-resource-catalog');
   await copy('web/documentation.css', 'documentation.css', 'documentation-style');
@@ -259,15 +267,19 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R15-configured-spacecraft-plus-four-level-campaign', version: '0.6.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R16-purpose-and-discovery-plus-four-level-campaign', version: '0.7.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,
-    routeEntrypoints: ['/', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
+    routeEntrypoints: ['/', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
     curation: 'Explicit allowlist of runtime assets, public documents, historical artifacts reviewed by coordination, scientific sources, licenses and field-projected evidence.',
     excludedClasses: ['raw static-analysis report', 'repository-sources', 'personal attachments and poster references', 'environment and credential files', 'source maps', 'private repository code', 'node_modules', 'git and Vercel local state'],
     eligibility: 'Pre-event specific development preserved; temporal eligibility and official Resources unresolved.',
-    fullBrowserValidation: false, requiredRuntimeNetworkServices: 0,
+    fullBrowserValidation: false, requiredRuntimeNetworkServices: 1,
+    runtimeNetworkRequirements: {
+      missionGames: { requiredServices: 0, routes: ['/lab/index.html', '/game/index.html', '/campanha/index.html'] },
+      experiments: [{ route: '/planet-jumping.html', requiredServices: 1, mediaOrigin: 'https://d2ol7oe51mr4n9.cloudfront.net', mediaFiles: 6, withoutNetwork: 'Text journey remains available; external audiovisual media are unavailable.' }],
+    },
     fileCount: entries.length, files: entries, missingRequired,
     selfHashNote: 'The manifest lists all emitted files except itself to avoid a recursive hash. The local build receipt records its hash.',
   };

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T22:10:00.986Z",
+  "generatedAt": "2026-11-15T08:31:28.950Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 93,
+  "documentCount": 98,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -43,9 +43,9 @@
       "title": "PROJETO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 9526,
-      "originalSha256": "2f0a87873965e5f49a1bfcafe6f0c984a5f92f1ccbd09400c1fc976dc0ace4fd",
-      "projectedSha256": "2f0a87873965e5f49a1bfcafe6f0c984a5f92f1ccbd09400c1fc976dc0ace4fd",
+      "originalBytes": 11445,
+      "originalSha256": "a2db73364bcd9eb3aaa2e8209b2ab517337d2fedefb875a9f4ec133c63e846ca",
+      "projectedSha256": "a2db73364bcd9eb3aaa2e8209b2ab517337d2fedefb875a9f4ec133c63e846ca",
       "redactions": 0
     },
     {
@@ -434,6 +434,61 @@
       "redactions": 0
     },
     {
+      "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+      "id": "doc-docs-35-revisao-prs-e-direcao-r16-md",
+      "title": "35 — Revisão da contribuição e direção de integração R16",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 14081,
+      "originalSha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
+      "projectedSha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
+      "redactions": 0
+    },
+    {
+      "source": "docs/36-PORTAL-PLANET-JUMPING.md",
+      "id": "doc-docs-36-portal-planet-jumping-md",
+      "title": "36 — Planet Jumping: experimento de portal cinematográfico",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 11255,
+      "originalSha256": "a5349fdae2cc2f4ea29f0092d4099c314e871ee1815e44498726712547385165",
+      "projectedSha256": "a5349fdae2cc2f4ea29f0092d4099c314e871ee1815e44498726712547385165",
+      "redactions": 0
+    },
+    {
+      "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+      "id": "doc-docs-37-proposta-pedagogica-e-tecnologias-r16-md",
+      "title": "37 — Proposta pedagógica e tecnologias para as três missões · R16",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 28318,
+      "originalSha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
+      "projectedSha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
+      "redactions": 0
+    },
+    {
+      "source": "docs/38-HANDOFF-R16.md",
+      "id": "doc-docs-38-handoff-r16-md",
+      "title": "Handoff R16 — propósito, investigação e transições",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8729,
+      "originalSha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
+      "projectedSha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
+      "redactions": 0
+    },
+    {
+      "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+      "id": "doc-docs-39-ativos-da-pr-e-aplicacoes-md",
+      "title": "Ativos da PR #1 e aplicações no MISSÃO IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8589,
+      "originalSha256": "7366c45b792fecea48bd7d4bfef5b7f706b7c4e5b0d7608764105a1f4e1ce57d",
+      "projectedSha256": "7366c45b792fecea48bd7d4bfef5b7f706b7c4e5b0d7608764105a1f4e1ce57d",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -450,9 +505,9 @@
       "title": "Missão Ipê — laboratório de missões R9–R10",
       "category": "Laboratório R9–R10",
       "editionGroup": "current",
-      "originalBytes": 13243,
-      "originalSha256": "a23d94f8f0eb011916ae9863d2014d6726e450b1fa4dd191098ad55f840bd59e",
-      "projectedSha256": "a23d94f8f0eb011916ae9863d2014d6726e450b1fa4dd191098ad55f840bd59e",
+      "originalBytes": 13394,
+      "originalSha256": "792d827063f24e3392e3023d8a721ce8012070ecb23b3ee9bb36bafd415597ed",
+      "projectedSha256": "792d827063f24e3392e3023d8a721ce8012070ecb23b3ee9bb36bafd415597ed",
       "redactions": 0
     },
     {
@@ -1031,13 +1086,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 1917568,
-      "sha256": "d06bfa3389d8388668a41d52daec26ef7593f8974d69dbe4c655ea7d4a5339f9"
+      "bytes": 2009651,
+      "sha256": "ab393c9b09cec3ad93c91a4c8dc2b1c1fba9891efca3501df28731d24d3fda51"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1545955,
-      "sha256": "202db07fb5ae922523ac706097af532671c658cb2d4f4d0496d1c3904a4314d2"
+      "bytes": 1620196,
+      "sha256": "1c6c6679f4a0c281087049e6d1176f925d43435f318e9e82f045a36383adeb1b"
     }
   ]
 }

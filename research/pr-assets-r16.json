@@ -1,0 +1,2260 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-11-15T08:29:46.607216+00:00",
+  "repository": {
+    "id": 1457998168,
+    "canonicalName": "oalexandrebelo/MISSAO-IPE",
+    "previousName": "oalexandrebelo/PROJETO-IPE",
+    "prNumber": 1,
+    "prUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/pull/1",
+    "headSha": "b628b429fe201e9445443c8205c4e4b4fee284f7",
+    "stateObserved": "open",
+    "authorAccountObserved": "oalexandrebelo",
+    "humanContributorAttribution": "Not independently established"
+  },
+  "scope": {
+    "sourceBlobsVerified": 69,
+    "assetManifestEntriesVerified": 15,
+    "archiveEntriesVerified": 117,
+    "gltfModelsParsed": 57,
+    "renderedKaykitModels": 0,
+    "applicationFilesChanged": 0,
+    "assetsImportedIntoApplication": 0,
+    "newDependenciesInstalled": 0,
+    "publicationPerformed": false
+  },
+  "totals": {
+    "manifestBytes": 1268290,
+    "publicAssetBytes": 715939,
+    "optionalZipBytes": 533500,
+    "kaykitExtractedBytes": 1796600,
+    "kaykitUniqueGeometryTriangles": 27652,
+    "kaykitAnimationCount": 0,
+    "sharedTextureBytes": 25749,
+    "sharedTextureDimensions": [
+      1024,
+      1024
+    ],
+    "prFontBinaryBytes": 69444,
+    "currentFontBinaryBytes": 104140,
+    "currentNasaModelBytes": 7462304,
+    "currentNasaDecoderAndNoticeBytes": 779715
+  },
+  "measurementNotes": [
+    "Sizes are raw repository bytes, not compressed HTTP transfer or GPU memory.",
+    "Triangle counts for KayKit sum indexed triangles in unique mesh primitives, not scene instance draws.",
+    "A first-use model total includes its GLTF, BIN and shared PNG once.",
+    "The optional ZIP is not under public/ and has no runtime loader in the PR.",
+    "No mobile FPS, texture rendering or licence eligibility assessment was performed.",
+    "All 57 GLTF dependency URI references are relative and resolve inside the archive; no external URI was found.",
+    "All 69 PR-directory files matched Git blob IDs at the pinned head."
+  ],
+  "inventory": [
+    {
+      "path": "public/assets/REMOTION-LICENSE.md",
+      "bytes": 2849,
+      "sha256": "53e92b6560f26f9d913a8ac97e4861e013c99ee9164fa0b11c25d8a02672fc09",
+      "repositoryPath": "apps/immersive-lp/public/assets/REMOTION-LICENSE.md",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/assets/REMOTION-LICENSE.md",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "software-license-notice",
+      "license": "Remotion own licence and third-party notices; not project Apache licence",
+      "usage": "license-notice",
+      "usedBy": [],
+      "recommendation": "Retain if reusing the Remotion player/composition; eligibility is not established by this audit"
+    },
+    {
+      "path": "public/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "bytes": 1255,
+      "sha256": "b643dd255291602f7c60cca4dbd203a1aaa2c2961227d23ab7a6a5e1de2c8a2b",
+      "repositoryPath": "apps/immersive-lp/public/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "software-license-notice",
+      "license": "Remotion own licence and third-party notices; not project Apache licence",
+      "usage": "license-notice",
+      "usedBy": [],
+      "recommendation": "Retain if reusing the Remotion player/composition; eligibility is not established by this audit"
+    },
+    {
+      "path": "public/assets/earth-mobile.webp",
+      "bytes": 96344,
+      "sha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+      "repositoryPath": "apps/immersive-lp/public/assets/earth-mobile.webp",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/assets/earth-mobile.webp",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "nasa-editorial-image",
+      "dimensions": [
+        800,
+        800
+      ],
+      "originUrl": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license": "NASA media usage guidelines; not labelled CC0",
+      "attribution": "NASA/Goddard; Reto Stöckli; Robert Simmon; contributing data teams",
+      "usage": "used-in-source",
+      "usedBy": [
+        "components/Planet.tsx:5-8"
+      ],
+      "scientificRole": "Historical global composite for context, not the six MOD13Q1 records or live telemetry",
+      "recommendation": "Candidate for a later locally hosted Earth introduction; no import in this audit"
+    },
+    {
+      "path": "public/assets/earth.webp",
+      "bytes": 379916,
+      "sha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+      "repositoryPath": "apps/immersive-lp/public/assets/earth.webp",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/assets/earth.webp",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "nasa-editorial-image",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "originUrl": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license": "NASA media usage guidelines; not labelled CC0",
+      "attribution": "NASA/Goddard; Reto Stöckli; Robert Simmon; contributing data teams",
+      "usage": "used-in-source",
+      "usedBy": [
+        "components/Planet.tsx:5-8",
+        "remotion/MissionFilm.tsx:19",
+        "app/layout.tsx:11-12"
+      ],
+      "scientificRole": "Historical global composite for context, not the six MOD13Q1 records or live telemetry",
+      "recommendation": "Candidate for a later locally hosted Earth introduction; no import in this audit"
+    },
+    {
+      "path": "public/assets/game-preview.jpg",
+      "bytes": 95217,
+      "sha256": "da4cc52e57ac09d3e18dd2eb6dcd7707e4f27a9b264634eed6157e0af75729d1",
+      "repositoryPath": "apps/immersive-lp/public/assets/game-preview.jpg",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/assets/game-preview.jpg",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "historical-project-screenshot",
+      "dimensions": [
+        1348,
+        926
+      ],
+      "license": "Existing project screenshot; preserve project attribution",
+      "usage": "available-unused-in-runtime-source",
+      "usedBy": [],
+      "scientificRole": "Historical UI illustration, not a new observation",
+      "recommendation": "Replace with a current screenshot before presenting current functionality"
+    },
+    {
+      "path": "public/assets/science-provenance.json",
+      "bytes": 5942,
+      "sha256": "6f49100126a82e1783281083e2c268bcf7b4661b500280de4dc96123036b2a1e",
+      "repositoryPath": "apps/immersive-lp/public/assets/science-provenance.json",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/assets/science-provenance.json",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "scientific-provenance",
+      "license": "Project provenance metadata; underlying source conditions retained",
+      "usage": "available-unused-in-runtime-source",
+      "usedBy": [],
+      "scientificRole": "Documents historical data origin; simulation imports lib/mission/data/science-data.ts instead",
+      "recommendation": "Reuse the canonical current provenance rather than create another copy"
+    },
+    {
+      "path": "public/brand/projeto-ipe-logo.png",
+      "bytes": 13315,
+      "sha256": "470c8038334270ecad0cb42f87b6a7d730c38753f6caaa84c5e4a8e4113c399f",
+      "repositoryPath": "apps/immersive-lp/public/brand/projeto-ipe-logo.png",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/brand/projeto-ipe-logo.png",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "project-brand",
+      "license": "Project supplied identity; do not treat as a third-party asset licence",
+      "usage": "used-in-source",
+      "usedBy": [
+        "components/Navigation.tsx:20",
+        "remotion/MissionFilm.tsx:22"
+      ],
+      "scientificRole": "None",
+      "recommendation": "Use current approved vector identity and naming; do not copy the old PNG or another brand",
+      "dimensions": [
+        300,
+        100
+      ]
+    },
+    {
+      "path": "public/brand/projeto-ipe-symbol.svg",
+      "bytes": 42871,
+      "sha256": "7652796936239bc0622e7bd0b0b0e2fd8fb57698ec16988b95006e6f3918faaf",
+      "repositoryPath": "apps/immersive-lp/public/brand/projeto-ipe-symbol.svg",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/brand/projeto-ipe-symbol.svg",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "project-brand",
+      "license": "Project supplied identity; do not treat as a third-party asset licence",
+      "usage": "used-in-source",
+      "usedBy": [
+        "app/layout.tsx:13",
+        "app/page.tsx:92"
+      ],
+      "scientificRole": "None",
+      "recommendation": "Use current approved vector identity and naming; do not copy the old PNG or another brand"
+    },
+    {
+      "path": "public/fonts/eb-garamond-italic-latin.woff2",
+      "bytes": 25412,
+      "sha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+      "repositoryPath": "apps/immersive-lp/public/fonts/eb-garamond-italic-latin.woff2",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/fonts/eb-garamond-italic-latin.woff2",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "font",
+      "license": "SIL-OFL-1.1",
+      "originUrl": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL99U6i1hGFJRvw.woff2",
+      "usage": "local-build-option",
+      "usedBy": [
+        "lib/fonts.offline.ts"
+      ],
+      "scientificRole": "None",
+      "recommendation": "Keep existing Bricolage Grotesque / Plus Jakarta Sans unless visual direction is explicitly changed",
+      "buildCaveat": "Default lib/fonts.ts uses next/font/google; the offline build uses these exact local files"
+    },
+    {
+      "path": "public/fonts/eb-garamond-latin.woff2",
+      "bytes": 23848,
+      "sha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+      "repositoryPath": "apps/immersive-lp/public/fonts/eb-garamond-latin.woff2",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/fonts/eb-garamond-latin.woff2",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "font",
+      "license": "SIL-OFL-1.1",
+      "originUrl": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkBI9_WamXgHlI.woff2",
+      "usage": "local-build-option-and-remotion",
+      "usedBy": [
+        "lib/fonts.offline.ts",
+        "remotion/MissionFilm.tsx:18"
+      ],
+      "scientificRole": "None",
+      "recommendation": "Keep existing Bricolage Grotesque / Plus Jakarta Sans unless visual direction is explicitly changed",
+      "buildCaveat": "Default lib/fonts.ts uses next/font/google; the offline build uses these exact local files"
+    },
+    {
+      "path": "public/fonts/ebgaramond-OFL.txt",
+      "bytes": 4398,
+      "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+      "repositoryPath": "apps/immersive-lp/public/fonts/ebgaramond-OFL.txt",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/fonts/ebgaramond-OFL.txt",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "font-license",
+      "license": "SIL-OFL-1.1",
+      "usage": "license-notice",
+      "usedBy": [],
+      "recommendation": "Retain when distributing the corresponding font"
+    },
+    {
+      "path": "public/fonts/figtree-OFL.txt",
+      "bytes": 4388,
+      "sha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+      "repositoryPath": "apps/immersive-lp/public/fonts/figtree-OFL.txt",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/fonts/figtree-OFL.txt",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "font-license",
+      "license": "SIL-OFL-1.1",
+      "usage": "license-notice",
+      "usedBy": [],
+      "recommendation": "Retain when distributing the corresponding font"
+    },
+    {
+      "path": "public/fonts/figtree-latin.woff2",
+      "bytes": 20184,
+      "sha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "repositoryPath": "apps/immersive-lp/public/fonts/figtree-latin.woff2",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/public/fonts/figtree-latin.woff2",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "font",
+      "license": "SIL-OFL-1.1",
+      "originUrl": "https://fonts.gstatic.com/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DaRvzig.woff2",
+      "usage": "local-build-option-and-remotion",
+      "usedBy": [
+        "lib/fonts.offline.ts",
+        "remotion/MissionFilm.tsx:18"
+      ],
+      "scientificRole": "None",
+      "recommendation": "Keep existing Bricolage Grotesque / Plus Jakarta Sans unless visual direction is explicitly changed",
+      "buildCaveat": "Default lib/fonts.ts uses next/font/google; the offline build uses these exact local files"
+    },
+    {
+      "path": "asset-packs/kaykit-manifest.json",
+      "bytes": 18851,
+      "sha256": "43666b129f5bb8c611f1a0839f7ffbb6a57b46c2ec50356db9c8611b999ad6f2",
+      "repositoryPath": "apps/immersive-lp/asset-packs/kaykit-manifest.json",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/asset-packs/kaykit-manifest.json",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "optional-library-manifest",
+      "license": "CC0-1.0 for packaged KayKit content",
+      "originUrl": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0",
+      "usage": "not-loaded-by-lp",
+      "usedBy": [],
+      "scientificRole": "None; fictional scene components, no NASA measurements",
+      "recommendation": "Keep outside runtime; select individual models only for a concrete educational interaction"
+    },
+    {
+      "path": "asset-packs/kaykit-space-base-gltf.zip",
+      "bytes": 533500,
+      "sha256": "73f4cc5c231a1df8fefeddd00debef3d8dd91df8a0f6df047668c34372ebbee3",
+      "repositoryPath": "apps/immersive-lp/asset-packs/kaykit-space-base-gltf.zip",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/asset-packs/kaykit-space-base-gltf.zip",
+      "verification": "local-bytes-and-sha256-match-pr-manifest",
+      "category": "optional-model-library",
+      "license": "CC0-1.0 for packaged KayKit content",
+      "originUrl": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0",
+      "usage": "not-loaded-by-lp",
+      "usedBy": [],
+      "scientificRole": "None; fictional scene components, no NASA measurements",
+      "recommendation": "Keep outside runtime; select individual models only for a concrete educational interaction"
+    }
+  ],
+  "codeAssets": [
+    {
+      "repositoryPath": "apps/immersive-lp/components/Planet.tsx",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/Planet.tsx",
+      "fileBytes": 3054,
+      "sha256": "be8d918edf9ad8b71ff6b18df9389bed9e265bc5e7de8f3711d2053a795c251a",
+      "license": "Apache-2.0 project contribution; external dependencies keep their own licences",
+      "purpose": "Original illustrative SVG satellite and local Blue Marble picture",
+      "usage": "used-in-source",
+      "scientificRole": "Illustration, interface or presentation; no scientific measurements"
+    },
+    {
+      "repositoryPath": "apps/immersive-lp/components/Icon.tsx",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/Icon.tsx",
+      "fileBytes": 2253,
+      "sha256": "0cb19cf8aa651d106fa5ff19f74ab9c41684fbca82786fc7ef1cee04bcef613c",
+      "license": "Apache-2.0 project contribution; external dependencies keep their own licences",
+      "purpose": "12 UI icons and botanical SVG glyphs",
+      "usage": "used-in-source",
+      "scientificRole": "Illustration, interface or presentation; no scientific measurements"
+    },
+    {
+      "repositoryPath": "apps/immersive-lp/components/MotionSystem.tsx",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/components/MotionSystem.tsx",
+      "fileBytes": 7882,
+      "sha256": "b168689081b1c6d767a8f21ccf179d8939552082a3306f9d7c2523ff874f8e46",
+      "license": "Apache-2.0 project contribution; external dependencies keep their own licences",
+      "purpose": "Motion behaviour and opt-in synthesized audio; no audio recording",
+      "usage": "used-in-source",
+      "scientificRole": "Illustration, interface or presentation; no scientific measurements"
+    },
+    {
+      "repositoryPath": "apps/immersive-lp/remotion/MissionFilm.tsx",
+      "sourceUrl": "https://github.com/oalexandrebelo/MISSAO-IPE/blob/b628b429fe201e9445443c8205c4e4b4fee284f7/apps/immersive-lp/remotion/MissionFilm.tsx",
+      "fileBytes": 3338,
+      "sha256": "c406fdaba037912381d68f8539ce54f642b86877ecb3c73dccdeb6f57653af38",
+      "license": "Apache-2.0 project contribution; external dependencies keep their own licences",
+      "purpose": "24-second 1080p/30fps composition; no committed MP4",
+      "usage": "used-in-source",
+      "scientificRole": "Illustration, interface or presentation; no scientific measurements"
+    }
+  ],
+  "kaykit": {
+    "name": "KayKit Space Base Bits 1.0",
+    "author": "Kay Lousberg",
+    "sourceUrl": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0",
+    "sourceCommit": "6dfbcac9927d06283752c4defd4882cfe0d29666",
+    "license": "CC0-1.0",
+    "archivePrefix": "kaykit-space-base/",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "bytes": 826,
+        "sha256": "e1c732edc054bcc23fcee2409304f03fe0f15c9e5150bfd6a72a0f09d513e93f"
+      },
+      {
+        "path": "UPSTREAM-README.md",
+        "bytes": 2112,
+        "sha256": "a951c351b6de155573aa1302b79f335d26e84fef40f28d9e5773e8da98b9e6d9"
+      },
+      {
+        "path": "gltf/basemodule_A.bin",
+        "bytes": 37052,
+        "sha256": "37c8fbcabe0f1dc30b1054767798c9c7c1caefd02b44027769183ccd30b5ed3d"
+      },
+      {
+        "path": "gltf/basemodule_A.gltf",
+        "bytes": 3064,
+        "sha256": "d35b464e862ea0cea36733b0e60b0ca645677615bd8393f598ef27fe19c3938e"
+      },
+      {
+        "path": "gltf/basemodule_B.bin",
+        "bytes": 39752,
+        "sha256": "7281e6eeb82e956b08a5de68f6a742719809d25597454eb136802dc8246adba5"
+      },
+      {
+        "path": "gltf/basemodule_B.gltf",
+        "bytes": 3078,
+        "sha256": "3bea817d7a2f35f211f47a429e261d46d5d23d6a09f59cc5ef176804d7256c7b"
+      },
+      {
+        "path": "gltf/basemodule_C.bin",
+        "bytes": 41304,
+        "sha256": "188bbe7cec55a07578350512d4b10377b87ea51d9f1bd4747c0f5c32a1baf2bb"
+      },
+      {
+        "path": "gltf/basemodule_C.gltf",
+        "bytes": 3028,
+        "sha256": "72b3901e37e6ef38855c1dd6110242bd66b962e9b1640275048ec32c69ef1f70"
+      },
+      {
+        "path": "gltf/basemodule_D.bin",
+        "bytes": 50632,
+        "sha256": "ce857e5ecb3a28758c58bf6a2a041bdddefcd6d79502aaa21834c0d560e5db70"
+      },
+      {
+        "path": "gltf/basemodule_D.gltf",
+        "bytes": 3079,
+        "sha256": "0593d967b076c323ac8d2736a1c332f02f7ad2bc8292b3de387417dcd5d00de0"
+      },
+      {
+        "path": "gltf/basemodule_E.bin",
+        "bytes": 47464,
+        "sha256": "995f7e1e8be046d36ea9c28145468670b35296b9e0b4c4e7c9185b92e5acfb68"
+      },
+      {
+        "path": "gltf/basemodule_E.gltf",
+        "bytes": 3080,
+        "sha256": "25b65713f5c37dfad44a64551fe2b1832258926135bbec115f2d1f12089cff6a"
+      },
+      {
+        "path": "gltf/basemodule_garage.bin",
+        "bytes": 49452,
+        "sha256": "e69d529c31358bef7da10da19fe71e2c31a5c945a444d22d246e288e53794e5a"
+      },
+      {
+        "path": "gltf/basemodule_garage.gltf",
+        "bytes": 5022,
+        "sha256": "1e0bd62b0dc863f89d56d3bba7dc9d2f9118c39a4b12e907c2e6eb95518da95f"
+      },
+      {
+        "path": "gltf/cargo_A.bin",
+        "bytes": 6912,
+        "sha256": "76a3a6623b639e39be8a02132ab897cf30db037dbe5d8fc07c24acad0db5a9ac"
+      },
+      {
+        "path": "gltf/cargo_A.gltf",
+        "bytes": 3007,
+        "sha256": "1e502a13961e9f46da9e876f21a2951c8c70d01eca4fa03b0001bb3b3322177a"
+      },
+      {
+        "path": "gltf/cargo_A_packed.bin",
+        "bytes": 9248,
+        "sha256": "44fcb35f15fc00745175adc3c945a0d6d386ecee8e08685a92c749ddc8c7f732"
+      },
+      {
+        "path": "gltf/cargo_A_packed.gltf",
+        "bytes": 3069,
+        "sha256": "1aed2167450a444f5b2f5248384e8337ffac900f786248a4163462345dc883da"
+      },
+      {
+        "path": "gltf/cargo_A_stacked.bin",
+        "bytes": 28528,
+        "sha256": "32712a2ae797c7304e1d9641e5d26c93f1405292eea00c3764de1eba5fead868"
+      },
+      {
+        "path": "gltf/cargo_A_stacked.gltf",
+        "bytes": 3075,
+        "sha256": "bea2bee3b1f4a9da3735ae0da6ffc1ce481468def3b8d8eb9664f5f308656e1a"
+      },
+      {
+        "path": "gltf/cargo_B.bin",
+        "bytes": 6912,
+        "sha256": "badf8ae30528c9a75bf46005aef956415c7e90f0d90dc55ec323ec320fa14040"
+      },
+      {
+        "path": "gltf/cargo_B.gltf",
+        "bytes": 3007,
+        "sha256": "ee7e58f34fac3f5b18322122d09d09d87b0313785cf3918d1b25d3895ff71cf3"
+      },
+      {
+        "path": "gltf/cargo_B_packed.bin",
+        "bytes": 9248,
+        "sha256": "88351224e397fd9ef2b535f551290b7afe0b89a7a20878291249d5ee178815da"
+      },
+      {
+        "path": "gltf/cargo_B_packed.gltf",
+        "bytes": 3069,
+        "sha256": "fe8b1851646194da0b7a4dc9cda14f10c5d16285177f448de9e7a241156d648c"
+      },
+      {
+        "path": "gltf/cargo_B_stacked.bin",
+        "bytes": 28528,
+        "sha256": "a2088df9f54a088cbcc70b5914588fd0854c2cd2b1886c11c55bd697c20ceaf0"
+      },
+      {
+        "path": "gltf/cargo_B_stacked.gltf",
+        "bytes": 3075,
+        "sha256": "543c5b6777ab6ee41c1090308822fd64a5bb279471cad941cfe7f548a42eed1e"
+      },
+      {
+        "path": "gltf/cargodepot_A.bin",
+        "bytes": 54216,
+        "sha256": "f76de41c52cd868bb9f7e95a9d771866b2d76f2bc174b0ca33cec5d904d76d02"
+      },
+      {
+        "path": "gltf/cargodepot_A.gltf",
+        "bytes": 3079,
+        "sha256": "ebed5b7362bfc98e36396edcca6c653a1a51dd8f31ecf7e305f70ab12e7de128"
+      },
+      {
+        "path": "gltf/cargodepot_B.bin",
+        "bytes": 57060,
+        "sha256": "3e1c124065c8ff0bbc828346be25defa587597ad4f56c1ed15ffa82b0b5cce5f"
+      },
+      {
+        "path": "gltf/cargodepot_B.gltf",
+        "bytes": 3076,
+        "sha256": "657ab2e1baa6e2e2c72e8bc4fe52d8388b54f7063f7538b78da4faeecfaad29d"
+      },
+      {
+        "path": "gltf/cargodepot_C.bin",
+        "bytes": 72980,
+        "sha256": "b9cc326e133366ccc05357effda2b49c6efe53e0b5a3362634504b546eff65d8"
+      },
+      {
+        "path": "gltf/cargodepot_C.gltf",
+        "bytes": 3064,
+        "sha256": "741c4511f53cea9e250ebf12c74293660a6e33dee76d9acd760098ee766a54b4"
+      },
+      {
+        "path": "gltf/containers_A.bin",
+        "bytes": 14352,
+        "sha256": "0cda4c02879269a6c0471b14b8b3aed5ea7ca9a31f218e472ecc6ef4e7ec5966"
+      },
+      {
+        "path": "gltf/containers_A.gltf",
+        "bytes": 3031,
+        "sha256": "b6b91a095e780704904a9d4d63bd48b8983482ccdbea6d69a14c420a9d83994d"
+      },
+      {
+        "path": "gltf/containers_B.bin",
+        "bytes": 14352,
+        "sha256": "6b4967d012463a24e48f85cbadb303af7b1a00d1b2b47dbbd5450b69b1b94527"
+      },
+      {
+        "path": "gltf/containers_B.gltf",
+        "bytes": 3031,
+        "sha256": "2f2b3658f900d8c16c827d25ed3b82c4dfab5a63a8fb06b9a4defa329469c24e"
+      },
+      {
+        "path": "gltf/containers_C.bin",
+        "bytes": 14352,
+        "sha256": "ce192f9436f131b26f390cc474302a65d10df14373a99f635a3ba1816f193682"
+      },
+      {
+        "path": "gltf/containers_C.gltf",
+        "bytes": 3031,
+        "sha256": "44dd2a6195a11fbf6970f62418fd7628c94d87547c866c582311e94fc5ffa343"
+      },
+      {
+        "path": "gltf/containers_D.bin",
+        "bytes": 14352,
+        "sha256": "d2996c621adaa2e39372a12b624c980f717389f307e949d250f66e2e0a7a9bb6"
+      },
+      {
+        "path": "gltf/containers_D.gltf",
+        "bytes": 3031,
+        "sha256": "b44923aacaa5257c0908208c1a995cc594933c1b61771d2bfa5846c4f37713ca"
+      },
+      {
+        "path": "gltf/drill_structure.bin",
+        "bytes": 68212,
+        "sha256": "140dc0e66630ee54f78fd7f923054eba3393fca004abfc15b3c41d12b21946c9"
+      },
+      {
+        "path": "gltf/drill_structure.gltf",
+        "bytes": 5127,
+        "sha256": "23ab7f68d8bf61dc5b56ab080860f9551fd40edca95442bfb9d3319d183803e6"
+      },
+      {
+        "path": "gltf/lander_A.bin",
+        "bytes": 81264,
+        "sha256": "951679da262411b504f2fda981b75b34f7a69326cde0ee1f9c14212a986190bc"
+      },
+      {
+        "path": "gltf/lander_A.gltf",
+        "bytes": 3059,
+        "sha256": "630723b9703f9dbc74cd7d456f83b1173af08837713f6ca6d51bdf358e97a0a6"
+      },
+      {
+        "path": "gltf/lander_B.bin",
+        "bytes": 71440,
+        "sha256": "745d8df9c75eb55bd7c1688fa92cf53b73931043120d712336d7985b9369e5d8"
+      },
+      {
+        "path": "gltf/lander_B.gltf",
+        "bytes": 3059,
+        "sha256": "ff5bedc311964269c3020f4fd709f2c32abbd27f02be9513759b05dcb35f56fe"
+      },
+      {
+        "path": "gltf/lander_base.bin",
+        "bytes": 36692,
+        "sha256": "9d9caa103609644b318848f252ecb92123c5f93ad40a050f74ae7d60b41ce577"
+      },
+      {
+        "path": "gltf/lander_base.gltf",
+        "bytes": 3079,
+        "sha256": "3c6526d4115ad0c7d3b89a633ac4b0c3b4155ee16e51c6b747db7bfdbe75019c"
+      },
+      {
+        "path": "gltf/landingpad_large.bin",
+        "bytes": 27476,
+        "sha256": "5f89a75d0e706d4a565c2757efd2026f40275d500302c95f0624365b7e5ca4dd"
+      },
+      {
+        "path": "gltf/landingpad_large.gltf",
+        "bytes": 3067,
+        "sha256": "bf2c624804fa462cf3cbf464f3f4f9bf0aaae2e2d66280e218802d0c683ead02"
+      },
+      {
+        "path": "gltf/landingpad_small.bin",
+        "bytes": 26468,
+        "sha256": "f5a293988a8115520192c337865c9daf9f52773cb4fefe7fb86f06a7d4c2eafc"
+      },
+      {
+        "path": "gltf/landingpad_small.gltf",
+        "bytes": 3083,
+        "sha256": "0b2d3294910e8c23798e2211a701c25a299b174fb7832b053555e42e7a38771b"
+      },
+      {
+        "path": "gltf/lights.bin",
+        "bytes": 18264,
+        "sha256": "6edc13b5efa016b8020dda7bdc8f57798fd1608129b14dfeceb30f827aeb631a"
+      },
+      {
+        "path": "gltf/lights.gltf",
+        "bytes": 3064,
+        "sha256": "029a1d553214b256a8c57e3c04f4799ed8610e37fa8645fbfc3d4ce423fed915"
+      },
+      {
+        "path": "gltf/rock_A.bin",
+        "bytes": 1716,
+        "sha256": "3ebba6eb5c2b945460bdf7f9b8f707f664c719a88b78e8b8b3a1e4890db27290"
+      },
+      {
+        "path": "gltf/rock_A.gltf",
+        "bytes": 2987,
+        "sha256": "08cbebe114ca799161eac0d9f0c8c7f7478ccc5dec164a0102368fb0b77e9bb1"
+      },
+      {
+        "path": "gltf/rock_B.bin",
+        "bytes": 1880,
+        "sha256": "f7bab5b32b1d758724be9d1d0b2b6604840dc9dab392024b85a5c4a53e147f72"
+      },
+      {
+        "path": "gltf/rock_B.gltf",
+        "bytes": 3032,
+        "sha256": "19219bf496926951ed7c9188e02dfab55233b5b51afb571211747ddd485fc9d3"
+      },
+      {
+        "path": "gltf/rocks_A.bin",
+        "bytes": 5200,
+        "sha256": "fb76b5ba35e2ee7875f47b57696d6cf52f3f6719aa7796bd8cc19f5a15ec44e7"
+      },
+      {
+        "path": "gltf/rocks_A.gltf",
+        "bytes": 3038,
+        "sha256": "08ad445724788d6f746dabb663c04e58811a78882d1b2989051f194ce429d06f"
+      },
+      {
+        "path": "gltf/rocks_B.bin",
+        "bytes": 8736,
+        "sha256": "5ab05abefc2595be9598dab83c4e9bfb02f4682dbc2d21bfe30f3643eb77225a"
+      },
+      {
+        "path": "gltf/rocks_B.gltf",
+        "bytes": 3059,
+        "sha256": "f38dd2d88419a05ba3118c6eb272346f306448a274e026b9321acf529eae5faa"
+      },
+      {
+        "path": "gltf/roofmodule_base.bin",
+        "bytes": 3136,
+        "sha256": "8eb6708de7b91ecde59216999d5bcc0baa9294b8f3b517eaf1cfa06ace23b618"
+      },
+      {
+        "path": "gltf/roofmodule_base.gltf",
+        "bytes": 3068,
+        "sha256": "d0a9c2df819ff1e6ae8da8ff0b3628ad55ed10a0ef0339d7965dfd7e43091585"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_A.bin",
+        "bytes": 41088,
+        "sha256": "d677640af2b9385ed3d9fb8c33bd4bcc3351acb630262bf13fc9906d99d3cdf2"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_A.gltf",
+        "bytes": 3088,
+        "sha256": "0c5fba67eba76ba52b099cec80402d490a22c3170fd3f1b2d0890c59c4ce9726"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_B.bin",
+        "bytes": 40560,
+        "sha256": "98aa6c9ac4dd4f97316e1058e878b70f714c195c2547379f8540b8b45da30d74"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_B.gltf",
+        "bytes": 3088,
+        "sha256": "846560a850d24584920ba3a148a86aa293426cf320f2607ac386800f4b67c403"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_C.bin",
+        "bytes": 61572,
+        "sha256": "971c150c2fba8552bd856b31e18288f48d1764bb8d7779648cf7241c56ae5a05"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_C.gltf",
+        "bytes": 3089,
+        "sha256": "d8e35a713e6a5e50122fc0bff1e40003fe88dabe3c62ae7076cc1a74fce9109a"
+      },
+      {
+        "path": "gltf/roofmodule_solarpanels.bin",
+        "bytes": 16456,
+        "sha256": "e48e242860b63b02e720736a1b4c4a20898820bf1a336af3171fe9ed75952216"
+      },
+      {
+        "path": "gltf/roofmodule_solarpanels.gltf",
+        "bytes": 3088,
+        "sha256": "fe28dc153c7f8b402edb788ef70b3f10b0f2132e1d96720c59cde06565b2e35d"
+      },
+      {
+        "path": "gltf/solarpanel.bin",
+        "bytes": 6660,
+        "sha256": "ebdd5ece824fa0e46c331764590c51297f2799a3bf9d628214cce6930147c270"
+      },
+      {
+        "path": "gltf/solarpanel.gltf",
+        "bytes": 3066,
+        "sha256": "55ff7bb1e8171b9882547bce0f29a4dd711ed3f097e33c05dab9dd3eceb36c9a"
+      },
+      {
+        "path": "gltf/spacebits_texture.png",
+        "bytes": 25749,
+        "sha256": "f19fe5ced42f72104a3c2e9f15d591622723695dd461a380691a8a21ebb01ae9"
+      },
+      {
+        "path": "gltf/spacetruck.bin",
+        "bytes": 49524,
+        "sha256": "b99230dc223a9839be665f908146687b9811249232d41c22bac0736ce7553dd5"
+      },
+      {
+        "path": "gltf/spacetruck.gltf",
+        "bytes": 10917,
+        "sha256": "4bf9dcd2eb32b547ece2d9323ab86eea6d7b2f44abf30dc936d613b42e2e874b"
+      },
+      {
+        "path": "gltf/spacetruck_large.bin",
+        "bytes": 67708,
+        "sha256": "4cacc7909e3c752a3cd9902bb86798449c36cde51ecc108bedacc8bd6887d1ed"
+      },
+      {
+        "path": "gltf/spacetruck_large.gltf",
+        "bytes": 10963,
+        "sha256": "b7dffb0fd40d92efd2def7e6b8093a5b5331c8fea7a276f40aa0282d29729642"
+      },
+      {
+        "path": "gltf/spacetruck_trailer.bin",
+        "bytes": 32656,
+        "sha256": "469ec96c4bc99d19f8baff359ceeb4da99ab2c5de9bc230ca13d4883f4119382"
+      },
+      {
+        "path": "gltf/spacetruck_trailer.gltf",
+        "bytes": 10945,
+        "sha256": "402e7f492d496162ec7e6e33c6471b6b6bdbb34f2a4a3d9865185767b66c34b1"
+      },
+      {
+        "path": "gltf/structure_low.bin",
+        "bytes": 26084,
+        "sha256": "89d8d514e9d5685e7e31bf150f3d9be13a602ce0a624013ba9cf74d4910c7503"
+      },
+      {
+        "path": "gltf/structure_low.gltf",
+        "bytes": 3038,
+        "sha256": "11b2b4f4afaa4bdb68be35a46390ac498f02b116f3cf62e832f46a796e1d573f"
+      },
+      {
+        "path": "gltf/structure_tall.bin",
+        "bytes": 41524,
+        "sha256": "1199b0f4abb9491ecadcfb4539d908a84daa4ab1f0beb5ef83ed1123e4a7defb"
+      },
+      {
+        "path": "gltf/structure_tall.gltf",
+        "bytes": 3062,
+        "sha256": "29e92416379ef83c107d00090ff142cc5a8cddae76defce94cfb1e89bf357ac7"
+      },
+      {
+        "path": "gltf/terrain_low.bin",
+        "bytes": 840,
+        "sha256": "b50a9a3aa71883d982d2134f67fec85282d94f72856a8c6f87235fb0bcbaeea3"
+      },
+      {
+        "path": "gltf/terrain_low.gltf",
+        "bytes": 2947,
+        "sha256": "1b9846a156f729da1e66cc186d38393125532f521dc76c6bbadf6fe31f77e598"
+      },
+      {
+        "path": "gltf/terrain_low_curved.bin",
+        "bytes": 2136,
+        "sha256": "35019280cb245174e5db2761e94eb09f800c439b2f26e630597d37d0d3d30297"
+      },
+      {
+        "path": "gltf/terrain_low_curved.gltf",
+        "bytes": 2966,
+        "sha256": "d41f15257ca87b87bf179f2358f87abb24de282f6ea76ae8b1783b976935c0a9"
+      },
+      {
+        "path": "gltf/terrain_mining.bin",
+        "bytes": 4424,
+        "sha256": "2bcb357a01facbd009c2ca736e9f1ccb9783d2a985b80a792cb6b50c46835714"
+      },
+      {
+        "path": "gltf/terrain_mining.gltf",
+        "bytes": 2979,
+        "sha256": "32a61b860fe1bb6eda5ece94a26f4f78d72b4071d335dc9e256f115b5ea669eb"
+      },
+      {
+        "path": "gltf/terrain_slope.bin",
+        "bytes": 1448,
+        "sha256": "9254e2e360b1c4a9e9a54167afc4ea32ca59653d792dcc76948de4ef36ca6e18"
+      },
+      {
+        "path": "gltf/terrain_slope.gltf",
+        "bytes": 2954,
+        "sha256": "216182192aaac8af1a07f3f631b043a7f518d51ec41d08cf8eb820c445622e73"
+      },
+      {
+        "path": "gltf/terrain_slope_inner_corner.bin",
+        "bytes": 1740,
+        "sha256": "d9dee310fcb3f5b9c88b8602bbe6ac5f2b0d233f23bb42dec82db72dc8452945"
+      },
+      {
+        "path": "gltf/terrain_slope_inner_corner.gltf",
+        "bytes": 2981,
+        "sha256": "06821257f9e30b69968a9be2666f33b5ea6e267d6a66d20b3aa6098ce0397a72"
+      },
+      {
+        "path": "gltf/terrain_slope_outer_corner.bin",
+        "bytes": 1740,
+        "sha256": "59dba7d543faf70d79585b94b4ae49dbcfc902e6e9711b1f5c5b8181a5cb64c8"
+      },
+      {
+        "path": "gltf/terrain_slope_outer_corner.gltf",
+        "bytes": 2981,
+        "sha256": "33d7dc097faf3215940fd57b37f476baf320d2482a30437652b9bf90ed9a5606"
+      },
+      {
+        "path": "gltf/terrain_tall.bin",
+        "bytes": 840,
+        "sha256": "e2e32ced6e5e45955a15136d8d84744bed0267777da793758c7e44483d16f94f"
+      },
+      {
+        "path": "gltf/terrain_tall.gltf",
+        "bytes": 2949,
+        "sha256": "879dbfe6ede0cf2ba372ca7f6e62b7f0707d0626c095d4cbdf2e19b42e859095"
+      },
+      {
+        "path": "gltf/terrain_tall_curved.bin",
+        "bytes": 2136,
+        "sha256": "21a194f6fa76bbe42dd88a7aec4144ef375f6d3a2cb5c88d4eae168beca27ef9"
+      },
+      {
+        "path": "gltf/terrain_tall_curved.gltf",
+        "bytes": 2968,
+        "sha256": "f0fb326616563bc9088ca2debbc38c4c7f583b5fa6f8a2dc9c524d6601061fe5"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_long_A.bin",
+        "bytes": 42048,
+        "sha256": "ebf6034b2a37cad4ae06cc8719b45f36a7a382dcb73cd4328ed0ee74f46647d1"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_long_A.gltf",
+        "bytes": 3094,
+        "sha256": "92a3232818685937195c7dc15b85e98cd1c40849ef6d174a673962ff09bf1ce1"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_long_B.bin",
+        "bytes": 20136,
+        "sha256": "11041de832434948e0bed0cb38c92892e0b5b46d0f585d31b714ed8a8216e40b"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_long_B.gltf",
+        "bytes": 3087,
+        "sha256": "878f591087177c5acaf079839546c756ba6d491cb872b7d37c7f82aaac72c17f"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_short_A.bin",
+        "bytes": 11368,
+        "sha256": "c8278ace0fdffbdd0452a998b49a9f9c5e70d2963a3f8fae9e679e2724ca0bce"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_short_A.gltf",
+        "bytes": 3095,
+        "sha256": "54e763a65cc5d2bbf0d202c0872d26cb887a201815f6ff6fe5dda7fa839515b6"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_short_B.bin",
+        "bytes": 11368,
+        "sha256": "74b4ba127e62bdc2258b9ebbca5f9f5589341cb988baad8c052b3e62d1d9f74e"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_short_B.gltf",
+        "bytes": 3095,
+        "sha256": "d8cce0aab32b9d34f9d21e17617309807d453475acf483a3f6e81abec521494e"
+      },
+      {
+        "path": "gltf/tunnel_straight_A.bin",
+        "bytes": 38976,
+        "sha256": "632805e794d9f799f52df64ba38fdef32d63278fc29d2013cc9a668409ca7af4"
+      },
+      {
+        "path": "gltf/tunnel_straight_A.gltf",
+        "bytes": 3053,
+        "sha256": "2605eede590fca98d12679389e089bb08e8ece31338a63886387fd09729a4360"
+      },
+      {
+        "path": "gltf/tunnel_straight_B.bin",
+        "bytes": 18088,
+        "sha256": "21640c6f10d9661820b910c671701f2a18a4a11841f8e31703c090a30d5e1ba9"
+      },
+      {
+        "path": "gltf/tunnel_straight_B.gltf",
+        "bytes": 3046,
+        "sha256": "1c638ab710c6f5ddf94f8f25057a3bf6d5d4ef2ccb7a6c6de9c72c9992acde4e"
+      },
+      {
+        "path": "gltf/windturbine_low.bin",
+        "bytes": 44124,
+        "sha256": "7290b430d03e4cd57b64f20806f8a71d006f334831aad0940559813f93cd38c5"
+      },
+      {
+        "path": "gltf/windturbine_low.gltf",
+        "bytes": 5160,
+        "sha256": "9bc0489b551010b165b59d3e6f037a6f6c3d92bb7ed971a2a3a9fd662391e4b9"
+      },
+      {
+        "path": "gltf/windturbine_tall.bin",
+        "bytes": 29904,
+        "sha256": "15e0b6d7a47e6cebe5261605b1563abb29df44b9615ac0d334c71e383d8543ad"
+      },
+      {
+        "path": "gltf/windturbine_tall.gltf",
+        "bytes": 5168,
+        "sha256": "5dfde3ac3bb695a4938dcdb2546f1ef6148aebb9f82700a20e2eb2d635174f7d"
+      }
+    ],
+    "models": [
+      {
+        "path": "gltf/basemodule_A.gltf",
+        "gltfBytes": 3064,
+        "dependencyBytes": 62801,
+        "dependencies": [
+          "basemodule_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 586,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "d35b464e862ea0cea36733b0e60b0ca645677615bd8393f598ef27fe19c3938e",
+        "totalFirstUseBytes": 65865,
+        "marginalBytesWithSharedTextureCached": 40116,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/basemodule_B.gltf",
+        "gltfBytes": 3078,
+        "dependencyBytes": 65501,
+        "dependencies": [
+          "basemodule_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 620,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "3bea817d7a2f35f211f47a429e261d46d5d23d6a09f59cc5ef176804d7256c7b",
+        "totalFirstUseBytes": 68579,
+        "marginalBytesWithSharedTextureCached": 42830,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/basemodule_C.gltf",
+        "gltfBytes": 3028,
+        "dependencyBytes": 67053,
+        "dependencies": [
+          "basemodule_C.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 644,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "72b3901e37e6ef38855c1dd6110242bd66b962e9b1640275048ec32c69ef1f70",
+        "totalFirstUseBytes": 70081,
+        "marginalBytesWithSharedTextureCached": 44332,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/basemodule_D.gltf",
+        "gltfBytes": 3079,
+        "dependencyBytes": 76381,
+        "dependencies": [
+          "basemodule_D.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 780,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "0593d967b076c323ac8d2736a1c332f02f7ad2bc8292b3de387417dcd5d00de0",
+        "totalFirstUseBytes": 79460,
+        "marginalBytesWithSharedTextureCached": 53711,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/basemodule_E.gltf",
+        "gltfBytes": 3080,
+        "dependencyBytes": 73213,
+        "dependencies": [
+          "basemodule_E.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 732,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "25b65713f5c37dfad44a64551fe2b1832258926135bbec115f2d1f12089cff6a",
+        "totalFirstUseBytes": 76293,
+        "marginalBytesWithSharedTextureCached": 50544,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/basemodule_garage.gltf",
+        "gltfBytes": 5022,
+        "dependencyBytes": 75201,
+        "dependencies": [
+          "basemodule_garage.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 770,
+        "primitives": 2,
+        "animations": 0,
+        "meshes": 2,
+        "sha256": "1e0bd62b0dc863f89d56d3bba7dc9d2f9118c39a4b12e907c2e6eb95518da95f",
+        "totalFirstUseBytes": 80223,
+        "marginalBytesWithSharedTextureCached": 54474,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargo_A.gltf",
+        "gltfBytes": 3007,
+        "dependencyBytes": 32661,
+        "dependencies": [
+          "cargo_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 128,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "1e502a13961e9f46da9e876f21a2951c8c70d01eca4fa03b0001bb3b3322177a",
+        "totalFirstUseBytes": 35668,
+        "marginalBytesWithSharedTextureCached": 9919,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargo_A_packed.gltf",
+        "gltfBytes": 3069,
+        "dependencyBytes": 34997,
+        "dependencies": [
+          "cargo_A_packed.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 176,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "1aed2167450a444f5b2f5248384e8337ffac900f786248a4163462345dc883da",
+        "totalFirstUseBytes": 38066,
+        "marginalBytesWithSharedTextureCached": 12317,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargo_A_stacked.gltf",
+        "gltfBytes": 3075,
+        "dependencyBytes": 54277,
+        "dependencies": [
+          "cargo_A_stacked.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 488,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "bea2bee3b1f4a9da3735ae0da6ffc1ce481468def3b8d8eb9664f5f308656e1a",
+        "totalFirstUseBytes": 57352,
+        "marginalBytesWithSharedTextureCached": 31603,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargo_B.gltf",
+        "gltfBytes": 3007,
+        "dependencyBytes": 32661,
+        "dependencies": [
+          "cargo_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 128,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "ee7e58f34fac3f5b18322122d09d09d87b0313785cf3918d1b25d3895ff71cf3",
+        "totalFirstUseBytes": 35668,
+        "marginalBytesWithSharedTextureCached": 9919,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargo_B_packed.gltf",
+        "gltfBytes": 3069,
+        "dependencyBytes": 34997,
+        "dependencies": [
+          "cargo_B_packed.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 176,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "fe8b1851646194da0b7a4dc9cda14f10c5d16285177f448de9e7a241156d648c",
+        "totalFirstUseBytes": 38066,
+        "marginalBytesWithSharedTextureCached": 12317,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargo_B_stacked.gltf",
+        "gltfBytes": 3075,
+        "dependencyBytes": 54277,
+        "dependencies": [
+          "cargo_B_stacked.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 488,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "543c5b6777ab6ee41c1090308822fd64a5bb279471cad941cfe7f548a42eed1e",
+        "totalFirstUseBytes": 57352,
+        "marginalBytesWithSharedTextureCached": 31603,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargodepot_A.gltf",
+        "gltfBytes": 3079,
+        "dependencyBytes": 79965,
+        "dependencies": [
+          "cargodepot_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 924,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "ebed5b7362bfc98e36396edcca6c653a1a51dd8f31ecf7e305f70ab12e7de128",
+        "totalFirstUseBytes": 83044,
+        "marginalBytesWithSharedTextureCached": 57295,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargodepot_B.gltf",
+        "gltfBytes": 3076,
+        "dependencyBytes": 82809,
+        "dependencies": [
+          "cargodepot_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 966,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "657ab2e1baa6e2e2c72e8bc4fe52d8388b54f7063f7538b78da4faeecfaad29d",
+        "totalFirstUseBytes": 85885,
+        "marginalBytesWithSharedTextureCached": 60136,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/cargodepot_C.gltf",
+        "gltfBytes": 3064,
+        "dependencyBytes": 98729,
+        "dependencies": [
+          "cargodepot_C.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1310,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "741c4511f53cea9e250ebf12c74293660a6e33dee76d9acd760098ee766a54b4",
+        "totalFirstUseBytes": 101793,
+        "marginalBytesWithSharedTextureCached": 76044,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/containers_A.gltf",
+        "gltfBytes": 3031,
+        "dependencyBytes": 40101,
+        "dependencies": [
+          "containers_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 280,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "b6b91a095e780704904a9d4d63bd48b8983482ccdbea6d69a14c420a9d83994d",
+        "totalFirstUseBytes": 43132,
+        "marginalBytesWithSharedTextureCached": 17383,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/containers_B.gltf",
+        "gltfBytes": 3031,
+        "dependencyBytes": 40101,
+        "dependencies": [
+          "containers_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 280,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "2f2b3658f900d8c16c827d25ed3b82c4dfab5a63a8fb06b9a4defa329469c24e",
+        "totalFirstUseBytes": 43132,
+        "marginalBytesWithSharedTextureCached": 17383,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/containers_C.gltf",
+        "gltfBytes": 3031,
+        "dependencyBytes": 40101,
+        "dependencies": [
+          "containers_C.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 280,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "44dd2a6195a11fbf6970f62418fd7628c94d87547c866c582311e94fc5ffa343",
+        "totalFirstUseBytes": 43132,
+        "marginalBytesWithSharedTextureCached": 17383,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/containers_D.gltf",
+        "gltfBytes": 3031,
+        "dependencyBytes": 40101,
+        "dependencies": [
+          "containers_D.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 280,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "b44923aacaa5257c0908208c1a995cc594933c1b61771d2bfa5846c4f37713ca",
+        "totalFirstUseBytes": 43132,
+        "marginalBytesWithSharedTextureCached": 17383,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/drill_structure.gltf",
+        "gltfBytes": 5127,
+        "dependencyBytes": 93961,
+        "dependencies": [
+          "drill_structure.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1198,
+        "primitives": 2,
+        "animations": 0,
+        "meshes": 2,
+        "sha256": "23ab7f68d8bf61dc5b56ab080860f9551fd40edca95442bfb9d3319d183803e6",
+        "totalFirstUseBytes": 99088,
+        "marginalBytesWithSharedTextureCached": 73339,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/lander_A.gltf",
+        "gltfBytes": 3059,
+        "dependencyBytes": 107013,
+        "dependencies": [
+          "lander_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1464,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "630723b9703f9dbc74cd7d456f83b1173af08837713f6ca6d51bdf358e97a0a6",
+        "totalFirstUseBytes": 110072,
+        "marginalBytesWithSharedTextureCached": 84323,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Future landing exercise only; current three missions do not simulate landing"
+      },
+      {
+        "path": "gltf/lander_B.gltf",
+        "gltfBytes": 3059,
+        "dependencyBytes": 97189,
+        "dependencies": [
+          "lander_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1208,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "ff5bedc311964269c3020f4fd709f2c32abbd27f02be9513759b05dcb35f56fe",
+        "totalFirstUseBytes": 100248,
+        "marginalBytesWithSharedTextureCached": 74499,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Future landing exercise only; current three missions do not simulate landing"
+      },
+      {
+        "path": "gltf/lander_base.gltf",
+        "gltfBytes": 3079,
+        "dependencyBytes": 62441,
+        "dependencies": [
+          "lander_base.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 638,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "3c6526d4115ad0c7d3b89a633ac4b0c3b4155ee16e51c6b747db7bfdbe75019c",
+        "totalFirstUseBytes": 65520,
+        "marginalBytesWithSharedTextureCached": 39771,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Future landing exercise only; current three missions do not simulate landing"
+      },
+      {
+        "path": "gltf/landingpad_large.gltf",
+        "gltfBytes": 3067,
+        "dependencyBytes": 53225,
+        "dependencies": [
+          "landingpad_large.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 478,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "bf2c624804fa462cf3cbf464f3f4f9bf0aaae2e2d66280e218802d0c683ead02",
+        "totalFirstUseBytes": 56292,
+        "marginalBytesWithSharedTextureCached": 30543,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Future landing exercise only; current three missions do not simulate landing"
+      },
+      {
+        "path": "gltf/landingpad_small.gltf",
+        "gltfBytes": 3083,
+        "dependencyBytes": 52217,
+        "dependencies": [
+          "landingpad_small.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 454,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "0b2d3294910e8c23798e2211a701c25a299b174fb7832b053555e42e7a38771b",
+        "totalFirstUseBytes": 55300,
+        "marginalBytesWithSharedTextureCached": 29551,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Future landing exercise only; current three missions do not simulate landing"
+      },
+      {
+        "path": "gltf/lights.gltf",
+        "gltfBytes": 3064,
+        "dependencyBytes": 44013,
+        "dependencies": [
+          "lights.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 356,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "029a1d553214b256a8c57e3c04f4799ed8610e37fa8645fbfc3d4ce423fed915",
+        "totalFirstUseBytes": 47077,
+        "marginalBytesWithSharedTextureCached": 21328,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/rock_A.gltf",
+        "gltfBytes": 2987,
+        "dependencyBytes": 27465,
+        "dependencies": [
+          "rock_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 30,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "08cbebe114ca799161eac0d9f0c8c7f7478ccc5dec164a0102368fb0b77e9bb1",
+        "totalFirstUseBytes": 30452,
+        "marginalBytesWithSharedTextureCached": 4703,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/rock_B.gltf",
+        "gltfBytes": 3032,
+        "dependencyBytes": 27629,
+        "dependencies": [
+          "rock_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 36,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "19219bf496926951ed7c9188e02dfab55233b5b51afb571211747ddd485fc9d3",
+        "totalFirstUseBytes": 30661,
+        "marginalBytesWithSharedTextureCached": 4912,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/rocks_A.gltf",
+        "gltfBytes": 3038,
+        "dependencyBytes": 30949,
+        "dependencies": [
+          "rocks_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 88,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "08ad445724788d6f746dabb663c04e58811a78882d1b2989051f194ce429d06f",
+        "totalFirstUseBytes": 33987,
+        "marginalBytesWithSharedTextureCached": 8238,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/rocks_B.gltf",
+        "gltfBytes": 3059,
+        "dependencyBytes": 34485,
+        "dependencies": [
+          "rocks_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 160,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "f38dd2d88419a05ba3118c6eb272346f306448a274e026b9321acf529eae5faa",
+        "totalFirstUseBytes": 37544,
+        "marginalBytesWithSharedTextureCached": 11795,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/roofmodule_base.gltf",
+        "gltfBytes": 3068,
+        "dependencyBytes": 28885,
+        "dependencies": [
+          "roofmodule_base.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 48,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "d0a9c2df819ff1e6ae8da8ff0b3628ad55ed10a0ef0339d7965dfd7e43091585",
+        "totalFirstUseBytes": 31953,
+        "marginalBytesWithSharedTextureCached": 6204,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_A.gltf",
+        "gltfBytes": 3088,
+        "dependencyBytes": 66837,
+        "dependencies": [
+          "roofmodule_cargo_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 784,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "0c5fba67eba76ba52b099cec80402d490a22c3170fd3f1b2d0890c59c4ce9726",
+        "totalFirstUseBytes": 69925,
+        "marginalBytesWithSharedTextureCached": 44176,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_B.gltf",
+        "gltfBytes": 3088,
+        "dependencyBytes": 66309,
+        "dependencies": [
+          "roofmodule_cargo_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 760,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "846560a850d24584920ba3a148a86aa293426cf320f2607ac386800f4b67c403",
+        "totalFirstUseBytes": 69397,
+        "marginalBytesWithSharedTextureCached": 43648,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/roofmodule_cargo_C.gltf",
+        "gltfBytes": 3089,
+        "dependencyBytes": 87321,
+        "dependencies": [
+          "roofmodule_cargo_C.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1158,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "d8e35a713e6a5e50122fc0bff1e40003fe88dabe3c62ae7076cc1a74fce9109a",
+        "totalFirstUseBytes": 90410,
+        "marginalBytesWithSharedTextureCached": 64661,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/roofmodule_solarpanels.gltf",
+        "gltfBytes": 3088,
+        "dependencyBytes": 42205,
+        "dependencies": [
+          "roofmodule_solarpanels.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 284,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "fe28dc153c7f8b402edb788ef70b3f10b0f2132e1d96720c59cde06565b2e35d",
+        "totalFirstUseBytes": 45293,
+        "marginalBytesWithSharedTextureCached": 19544,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-energy prop only; existing configured flight panels already encode selected capacity"
+      },
+      {
+        "path": "gltf/solarpanel.gltf",
+        "gltfBytes": 3066,
+        "dependencyBytes": 32409,
+        "dependencies": [
+          "solarpanel.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 118,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "55ff7bb1e8171b9882547bce0f29a4dd711ed3f097e33c05dab9dd3eceb36c9a",
+        "totalFirstUseBytes": 35475,
+        "marginalBytesWithSharedTextureCached": 9726,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-energy prop only; existing configured flight panels already encode selected capacity"
+      },
+      {
+        "path": "gltf/spacetruck.gltf",
+        "gltfBytes": 10917,
+        "dependencyBytes": 75273,
+        "dependencies": [
+          "spacetruck.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1118,
+        "primitives": 5,
+        "animations": 0,
+        "meshes": 5,
+        "sha256": "4bf9dcd2eb32b547ece2d9323ab86eea6d7b2f44abf30dc936d613b42e2e874b",
+        "totalFirstUseBytes": 86190,
+        "marginalBytesWithSharedTextureCached": 60441,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/spacetruck_large.gltf",
+        "gltfBytes": 10963,
+        "dependencyBytes": 93457,
+        "dependencies": [
+          "spacetruck_large.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 1434,
+        "primitives": 5,
+        "animations": 0,
+        "meshes": 5,
+        "sha256": "b7dffb0fd40d92efd2def7e6b8093a5b5331c8fea7a276f40aa0282d29729642",
+        "totalFirstUseBytes": 104420,
+        "marginalBytesWithSharedTextureCached": 78671,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/spacetruck_trailer.gltf",
+        "gltfBytes": 10945,
+        "dependencyBytes": 58405,
+        "dependencies": [
+          "spacetruck_trailer.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 824,
+        "primitives": 5,
+        "animations": 0,
+        "meshes": 5,
+        "sha256": "402e7f492d496162ec7e6e33c6471b6b6bdbb34f2a4a3d9865185767b66c34b1",
+        "totalFirstUseBytes": 69350,
+        "marginalBytesWithSharedTextureCached": 43601,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/structure_low.gltf",
+        "gltfBytes": 3038,
+        "dependencyBytes": 51833,
+        "dependencies": [
+          "structure_low.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 422,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "11b2b4f4afaa4bdb68be35a46390ac498f02b116f3cf62e832f46a796e1d573f",
+        "totalFirstUseBytes": 54871,
+        "marginalBytesWithSharedTextureCached": 29122,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/structure_tall.gltf",
+        "gltfBytes": 3062,
+        "dependencyBytes": 67273,
+        "dependencies": [
+          "structure_tall.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 670,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "29e92416379ef83c107d00090ff142cc5a8cddae76defce94cfb1e89bf357ac7",
+        "totalFirstUseBytes": 70335,
+        "marginalBytesWithSharedTextureCached": 44586,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/terrain_low.gltf",
+        "gltfBytes": 2947,
+        "dependencyBytes": 26589,
+        "dependencies": [
+          "terrain_low.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 12,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "1b9846a156f729da1e66cc186d38393125532f521dc76c6bbadf6fe31f77e598",
+        "totalFirstUseBytes": 29536,
+        "marginalBytesWithSharedTextureCached": 3787,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_low_curved.gltf",
+        "gltfBytes": 2966,
+        "dependencyBytes": 27885,
+        "dependencies": [
+          "terrain_low_curved.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 36,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "d41f15257ca87b87bf179f2358f87abb24de282f6ea76ae8b1783b976935c0a9",
+        "totalFirstUseBytes": 30851,
+        "marginalBytesWithSharedTextureCached": 5102,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_mining.gltf",
+        "gltfBytes": 2979,
+        "dependencyBytes": 30173,
+        "dependencies": [
+          "terrain_mining.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 76,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "32a61b860fe1bb6eda5ece94a26f4f78d72b4071d335dc9e256f115b5ea669eb",
+        "totalFirstUseBytes": 33152,
+        "marginalBytesWithSharedTextureCached": 7403,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_slope.gltf",
+        "gltfBytes": 2954,
+        "dependencyBytes": 27197,
+        "dependencies": [
+          "terrain_slope.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 28,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "216182192aaac8af1a07f3f631b043a7f518d51ec41d08cf8eb820c445622e73",
+        "totalFirstUseBytes": 30151,
+        "marginalBytesWithSharedTextureCached": 4402,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_slope_inner_corner.gltf",
+        "gltfBytes": 2981,
+        "dependencyBytes": 27489,
+        "dependencies": [
+          "terrain_slope_inner_corner.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 34,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "06821257f9e30b69968a9be2666f33b5ea6e267d6a66d20b3aa6098ce0397a72",
+        "totalFirstUseBytes": 30470,
+        "marginalBytesWithSharedTextureCached": 4721,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_slope_outer_corner.gltf",
+        "gltfBytes": 2981,
+        "dependencyBytes": 27489,
+        "dependencies": [
+          "terrain_slope_outer_corner.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 34,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "33d7dc097faf3215940fd57b37f476baf320d2482a30437652b9bf90ed9a5606",
+        "totalFirstUseBytes": 30470,
+        "marginalBytesWithSharedTextureCached": 4721,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_tall.gltf",
+        "gltfBytes": 2949,
+        "dependencyBytes": 26589,
+        "dependencies": [
+          "terrain_tall.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 12,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "879dbfe6ede0cf2ba372ca7f6e62b7f0707d0626c095d4cbdf2e19b42e859095",
+        "totalFirstUseBytes": 29538,
+        "marginalBytesWithSharedTextureCached": 3789,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/terrain_tall_curved.gltf",
+        "gltfBytes": 2968,
+        "dependencyBytes": 27885,
+        "dependencies": [
+          "terrain_tall_curved.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 36,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "f0fb326616563bc9088ca2debbc38c4c7f583b5fa6f8a2dc9c524d6601061fe5",
+        "totalFirstUseBytes": 30853,
+        "marginalBytesWithSharedTextureCached": 5104,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional illustrative terrain; never replace Bennu geometry or imply measured geology"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_long_A.gltf",
+        "gltfBytes": 3094,
+        "dependencyBytes": 67797,
+        "dependencies": [
+          "tunnel_diagonal_long_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 608,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "92a3232818685937195c7dc15b85e98cd1c40849ef6d174a673962ff09bf1ce1",
+        "totalFirstUseBytes": 70891,
+        "marginalBytesWithSharedTextureCached": 45142,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_long_B.gltf",
+        "gltfBytes": 3087,
+        "dependencyBytes": 45885,
+        "dependencies": [
+          "tunnel_diagonal_long_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 284,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "878f591087177c5acaf079839546c756ba6d491cb872b7d37c7f82aaac72c17f",
+        "totalFirstUseBytes": 48972,
+        "marginalBytesWithSharedTextureCached": 23223,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_short_A.gltf",
+        "gltfBytes": 3095,
+        "dependencyBytes": 37117,
+        "dependencies": [
+          "tunnel_diagonal_short_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 188,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "54e763a65cc5d2bbf0d202c0872d26cb887a201815f6ff6fe5dda7fa839515b6",
+        "totalFirstUseBytes": 40212,
+        "marginalBytesWithSharedTextureCached": 14463,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/tunnel_diagonal_short_B.gltf",
+        "gltfBytes": 3095,
+        "dependencyBytes": 37117,
+        "dependencies": [
+          "tunnel_diagonal_short_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 188,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "d8cce0aab32b9d34f9d21e17617309807d453475acf483a3f6e81abec521494e",
+        "totalFirstUseBytes": 40212,
+        "marginalBytesWithSharedTextureCached": 14463,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/tunnel_straight_A.gltf",
+        "gltfBytes": 3053,
+        "dependencyBytes": 64725,
+        "dependencies": [
+          "tunnel_straight_A.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 608,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "2605eede590fca98d12679389e089bb08e8ece31338a63886387fd09729a4360",
+        "totalFirstUseBytes": 67778,
+        "marginalBytesWithSharedTextureCached": 42029,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/tunnel_straight_B.gltf",
+        "gltfBytes": 3046,
+        "dependencyBytes": 43837,
+        "dependencies": [
+          "tunnel_straight_B.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 284,
+        "primitives": 1,
+        "animations": 0,
+        "meshes": 1,
+        "sha256": "1c638ab710c6f5ddf94f8f25057a3bf6d5d4ef2ccb7a6c6de9c72c9992acde4e",
+        "totalFirstUseBytes": 46883,
+        "marginalBytesWithSharedTextureCached": 21134,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Optional fictional ground-base scenery; no current three-mission requirement"
+      },
+      {
+        "path": "gltf/windturbine_low.gltf",
+        "gltfBytes": 5160,
+        "dependencyBytes": 69873,
+        "dependencies": [
+          "windturbine_low.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 826,
+        "primitives": 2,
+        "animations": 0,
+        "meshes": 2,
+        "sha256": "9bc0489b551010b165b59d3e6f037a6f6c3d92bb7ed971a2a3a9fd662391e4b9",
+        "totalFirstUseBytes": 75033,
+        "marginalBytesWithSharedTextureCached": 49284,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Atmospheric ground scenery only; unsuitable for Bennu or space vacuum"
+      },
+      {
+        "path": "gltf/windturbine_tall.gltf",
+        "gltfBytes": 5168,
+        "dependencyBytes": 55653,
+        "dependencies": [
+          "windturbine_tall.bin",
+          "spacebits_texture.png"
+        ],
+        "triangles": 632,
+        "primitives": 2,
+        "animations": 0,
+        "meshes": 2,
+        "sha256": "5dfde3ac3bb695a4938dcdb2546f1ef6148aebb9f82700a20e2eb2d635174f7d",
+        "totalFirstUseBytes": 60821,
+        "marginalBytesWithSharedTextureCached": 35072,
+        "licence": "CC0-1.0",
+        "origin": "Kay Lousberg / KayKit; not NASA",
+        "usage": "not-loaded-by-lp",
+        "scientificRole": "No measured data, orbit, power, radio or instrument parameters",
+        "proposedApplication": "Atmospheric ground scenery only; unsuitable for Bennu or space vacuum"
+      }
+    ],
+    "correctionToPrReadme": "The ZIP contains 57 GLTF + 57 BIN + one texture + licence + README; no separate preview images."
+  },
+  "existingNasaAssets": [
+    {
+      "id": "cubesat-generic-2ru",
+      "title": "CubeSat – 2 RU Generic",
+      "file": "cubesat-generic-2ru.glb",
+      "bytes": 206108,
+      "sha256": "30633496ef3aea790ec00782772757c78744ccaf08c9322eca380a6c4ad57ec9",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/cubesat-2-ru-generic/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/cubesat---2-ru-generic/CubeSat%20-%202%20RU%20Generic.glb",
+      "credit": "NASA/Christopher R. Meaney",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "repositoryPath": "experiments/mission-design-lab/public/models/nasa/cubesat-generic-2ru.glb",
+      "usage": "Reference viewer; distinct from configurable game hardware",
+      "triangles": 36896,
+      "primitives": 18,
+      "scientificRole": "Geometric reference only; no generated measurements or simulator parameters",
+      "verification": "local-bytes-and-sha256-match-current-manifest",
+      "recommendation": "Retain current asset and presentation; do not replace with KayKit"
+    },
+    {
+      "id": "dsn-70m",
+      "title": "70 meter dish",
+      "file": "dsn-70m.glb",
+      "bytes": 2216584,
+      "sha256": "36ff56a7a2bfd1c278f6f4774d32128d5931f2c22fe58241d00ee7d1815634bb",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/70-meter-dish/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/70-meter-dish/70%20meter%20dish.glb",
+      "credit": "NASA/Ames Research Center",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "repositoryPath": "experiments/mission-design-lab/public/models/nasa/dsn-70m.glb",
+      "usage": "Reference viewer; distinct from configurable game hardware",
+      "triangles": 14852,
+      "primitives": 1,
+      "scientificRole": "Geometric reference only; no generated measurements or simulator parameters",
+      "verification": "local-bytes-and-sha256-match-current-manifest",
+      "recommendation": "Retain current asset and presentation; do not replace with KayKit"
+    },
+    {
+      "id": "bennu-1999-rq36",
+      "title": "1999 RQ36 asteroid",
+      "file": "bennu-1999-rq36.glb",
+      "bytes": 329596,
+      "sha256": "644af15678447df90c2d9e85674809c7fc70f439e0865418aa6618a8483b7958",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/1999-rq36-asteroid/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/1999-rq36-asteroid/1999%20RQ36%20asteroid.glb",
+      "credit": "NASA/Christopher R. Meaney",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "repositoryPath": "experiments/mission-design-lab/public/models/nasa/bennu-1999-rq36.glb",
+      "usage": "Reference viewer plus contextual geometry in the corresponding mission",
+      "triangles": 18240,
+      "primitives": 1,
+      "scientificRole": "Geometric reference only; no generated measurements or simulator parameters",
+      "verification": "local-bytes-and-sha256-match-current-manifest",
+      "recommendation": "Retain current asset and presentation; do not replace with KayKit"
+    },
+    {
+      "id": "jwst-a",
+      "title": "James Webb Space Telescope (A)",
+      "file": "jwst-a.glb",
+      "bytes": 4710016,
+      "sha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750",
+      "sourceUrl": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+      "assetUrl": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/james-webb-space-telescope-(a)/James%20Webb%20Space%20Telescope%20(A).glb",
+      "credit": "NASA/Goddard Space Flight Center",
+      "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "repositoryPath": "experiments/mission-design-lab/public/models/nasa/jwst-a.glb",
+      "usage": "Reference viewer plus contextual geometry in the corresponding mission",
+      "triangles": 493785,
+      "primitives": 1657,
+      "scientificRole": "Geometric reference only; no generated measurements or simulator parameters",
+      "verification": "local-bytes-and-sha256-match-current-manifest",
+      "recommendation": "Retain current asset and presentation; do not replace with KayKit"
+    }
+  ],
+  "recommendations": [
+    {
+      "mission": "cerrado",
+      "retain": "Current configured spacecraft, original science provenance and six historical MOD13Q1 records",
+      "candidate": "earth-mobile.webp, 96344 bytes, for a future editorial introduction",
+      "doNotInfer": "Blue Marble does not supply the six records or a precise Cerrado location overlay",
+      "implementedByThisAudit": false
+    },
+    {
+      "mission": "bennu",
+      "retain": "Current Bennu NASA GLB and six clearly synthetic observations",
+      "candidate": "Use existing geometry with temporal delivery/sector explanations; no new model necessary",
+      "doNotInfer": "KayKit rocks are not sampled Bennu topography; landers do not establish a landing simulation",
+      "implementedByThisAudit": false
+    },
+    {
+      "mission": "telescope",
+      "retain": "Current Webb reference and configurable camera/spectrometer with synthetic spectra",
+      "candidate": "Inspection and evidence explanations using existing geometry; no new model necessary",
+      "doNotInfer": "KayKit supplies neither a scientific telescope instrument nor molecular measurements",
+      "implementedByThisAudit": false
+    }
+  ],
+  "identity": {
+    "decision": "Preserve approved MISSÃO IPÊ identity, vector marks and existing local fonts; do not transplant Ubernatural branding",
+    "prBranding": "Historical PROJETO IPÊ PNG/SVG is present; no Ubernatural-labelled asset was found in the pinned PR directory",
+    "prWebsiteReferences": "ONU and Space Force references are documented; PR source does not bundle their audio/video"
+  },
+  "sources": {
+    "nasaBlueMarble": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+    "nasaMediaGuidelines": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "kaykit": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0",
+    "kaykitPinnedLicense": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0/blob/6dfbcac9927d06283752c4defd4882cfe0d29666/LICENSE.txt",
+    "fonts": [
+      "https://github.com/google/fonts/tree/main/ofl/ebgaramond",
+      "https://github.com/google/fonts/tree/main/ofl/figtree"
+    ],
+    "currentNasaManifest": "experiments/mission-design-lab/public/models/nasa/manifest.json"
+  }
+}

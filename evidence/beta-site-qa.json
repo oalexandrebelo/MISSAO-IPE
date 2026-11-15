@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-14T22:10:04.262Z",
-  "finishedAt": "2026-11-14T22:10:06.015Z",
+  "startedAt": "2026-11-15T08:31:45.026Z",
+  "finishedAt": "2026-11-15T08:31:49.099Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -9,8 +9,8 @@
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 36455,
-    "sha256": "353578459e05d6148887d6c697bc71cfb915040f56e62e79b6b959c192d8ff8c"
+    "bytes": 41201,
+    "sha256": "58619e157ed3ecf2026943dc290d2dbb760a04f2cbe9b3e7c20c29d37d9b2ac1"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,18 +24,18 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "e80d25597f4aecb3085d942a770496bb06d5217c28a4f85304d7bbc3eb80b419"
+        "sha256": "4f44173e6437ecd5a5ed691813d87a36da6d5f411985c8a85c1b087121c50598"
       },
       "vercelConfig": {
         "path": "vercel.json",
-        "sha256": "4f54107ae58d68ba45596161dfefa92dbf5ff04af948a818ac45c109cae9a115"
+        "sha256": "3bcff249ca7fbeb6978e8397aee028fc2d30ab75829aae574984f9e3402333ae"
       }
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 279,
-      "manifestedFiles": 278,
-      "bytes": 27493898,
+      "fileCount": 292,
+      "manifestedFiles": 291,
+      "bytes": 28006168,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 248,
+      "inspectedFiles": 261,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 1735,
-      "uniqueTargets": 187,
+      "count": 1872,
+      "uniqueTargets": 200,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -3688,6 +3688,41 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
+          "fragment": "doc-docs-35-revisao-prs-e-direcao-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-36-portal-planet-jumping-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-37-proposta-pedagogica-e-tecnologias-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-38-handoff-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-39-ativos-da-pr-e-aplicacoes-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
           "fragment": "doc-experiments-mission-design-lab-notice-md"
         },
         {
@@ -4080,7 +4115,7 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+          "fragment": "doc-docs-38-handoff-r16-md"
         },
         {
           "source": "context/research-library.html",
@@ -4095,6 +4130,41 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-25-handoff-dois-devs-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-37-proposta-pedagogica-e-tecnologias-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-35-revisao-prs-e-direcao-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-38-handoff-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-39-ativos-da-pr-e-aplicacoes-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-36-portal-planet-jumping-md"
         },
         {
           "source": "context/research-library.html",
@@ -4613,6 +4683,111 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-docs-32-campanha-quatro-niveis-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-26-tipografia-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-23-identidade-visual-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-33-oportunidades-nasa-science-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-37-proposta-pedagogica-e-tecnologias-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-32-guia-didatico-missoes-3d-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-36-portal-planet-jumping-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-39-ativos-da-pr-e-aplicacoes-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-34-handoff-imersao-3d-r15-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-35-revisao-prs-e-direcao-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-30-ativos-nasa-implementados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-37-proposta-pedagogica-e-tecnologias-r16-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-38-handoff-r16-md"
         },
         {
           "source": "context/research-library.html",
@@ -7735,6 +7910,563 @@
           "kind": "link-stylesheet"
         },
         {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "requestPath": "/docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/26-TIPOGRAFIA.md",
+          "requestPath": "/docs/26-TIPOGRAFIA.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/23-IDENTIDADE-VISUAL.md",
+          "requestPath": "/docs/23-IDENTIDADE-VISUAL.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+          "requestPath": "/docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.md",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "research/technology-opportunities-r16.json",
+          "requestPath": "/research/technology-opportunities-r16.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "requestPath": "/docs/33-OPORTUNIDADES-NASA-SCIENCE.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/38-HANDOFF-R16.html",
+          "requestPath": "/docs/38-HANDOFF-R16.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.md",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+          "requestPath": "/docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/38-HANDOFF-R16.md",
+          "requestPath": "/docs/38-HANDOFF-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/38-HANDOFF-R16.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "kind": "navigation",
+          "fragment": "content"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "docs/25-HANDOFF-DOIS-DEVS.html",
+          "requestPath": "/docs/25-HANDOFF-DOIS-DEVS.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "docs/index.html",
+          "requestPath": "/docs/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "research/pr-assets-r16.json",
+          "requestPath": "/research/pr-assets-r16.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "requestPath": "/docs/30-ATIVOS-NASA-IMPLEMENTADOS.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "publication-manifest.json",
+          "requestPath": "/publication-manifest.json",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "index.html",
+          "requestPath": "/",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "docs/AUTORIA-E-IA.html",
+          "requestPath": "/docs/AUTORIA-E-IA.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "brand/projeto-ipe-logo-on-light.svg",
+          "requestPath": "/brand/projeto-ipe-logo-on-light.svg",
+          "kind": "img"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "brand/projeto-ipe-symbol.svg",
+          "requestPath": "/brand/projeto-ipe-symbol.svg",
+          "kind": "link-icon"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "fonts/fonts.css",
+          "requestPath": "/fonts/fonts.css",
+          "kind": "link-stylesheet"
+        },
+        {
+          "source": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "target": "documentation.css",
+          "requestPath": "/documentation.css",
+          "kind": "link-stylesheet"
+        },
+        {
           "source": "docs/AUTORIA-E-IA.html",
           "target": "docs/AUTORIA-E-IA.html",
           "requestPath": "/docs/AUTORIA-E-IA.html",
@@ -8301,6 +9033,66 @@
           "source": "docs/index.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "requestPath": "/docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+          "requestPath": "/docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.md",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/38-HANDOFF-R16.html",
+          "requestPath": "/docs/38-HANDOFF-R16.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "docs/index.html",
+          "target": "docs/38-HANDOFF-R16.md",
+          "requestPath": "/docs/38-HANDOFF-R16.md",
           "kind": "navigation"
         },
         {
@@ -9023,6 +9815,24 @@
         },
         {
           "source": "index.html",
+          "target": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "requestPath": "/docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "requestPath": "/docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "index.html",
           "target": "docs/32-GUIA-DIDATICO-MISSOES-3D.html",
           "requestPath": "/docs/32-GUIA-DIDATICO-MISSOES-3D.html",
           "kind": "navigation"
@@ -9041,8 +9851,8 @@
         },
         {
           "source": "index.html",
-          "target": "docs/34-HANDOFF-IMERSAO-3D-R15.html",
-          "requestPath": "/docs/34-HANDOFF-IMERSAO-3D-R15.html",
+          "target": "docs/38-HANDOFF-R16.html",
+          "requestPath": "/docs/38-HANDOFF-R16.html",
           "kind": "navigation"
         },
         {
@@ -9197,8 +10007,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-Bg4_LhxS.js",
-          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
+          "requestPath": "/lab/assets/index-CvKzFtJg.js",
           "kind": "script"
         },
         {
@@ -9215,8 +10025,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-DZxOWY_c.css",
-          "requestPath": "/lab/assets/index-DZxOWY_c.css",
+          "target": "lab/assets/index-C5BACCk4.css",
+          "requestPath": "/lab/assets/index-C5BACCk4.css",
           "kind": "link-stylesheet"
         },
         {
@@ -10740,6 +11550,51 @@
           "fragment": "cap-21"
         },
         {
+          "source": "planet-jumping.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation",
+          "fragment": "about"
+        },
+        {
+          "source": "planet-jumping.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation",
+          "fragment": "explore"
+        },
+        {
+          "source": "planet-jumping.html",
+          "target": "planet-jumping.html",
+          "requestPath": "/planet-jumping.html",
+          "kind": "navigation",
+          "fragment": "planets"
+        },
+        {
+          "source": "planet-jumping.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "planet-jumping.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "planet-jumping.html",
+          "target": "docs/36-PORTAL-PLANET-JUMPING.html",
+          "requestPath": "/docs/36-PORTAL-PLANET-JUMPING.html",
+          "kind": "navigation"
+        },
+        {
+          "source": "planet-jumping.html",
+          "target": "lab/index.html",
+          "requestPath": "/lab/index.html",
+          "kind": "navigation"
+        },
+        {
           "source": "presentation/Missao_Ipe_Apresentacao.html",
           "target": "presentation/Missao_Ipe_Apresentacao.html",
           "requestPath": "/presentation/Missao_Ipe_Apresentacao.html",
@@ -11389,84 +12244,126 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
-          "target": "lab/assets/index-Bg4_LhxS.js",
-          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/NASAReferenceScene-DlSwFouX.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
+          "requestPath": "/lab/assets/index-CvKzFtJg.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
-          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
-          "requestPath": "/lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/NASAReferenceScene-DlSwFouX.js",
+          "target": "lab/assets/OrbitalScene-9gG9H69b.js",
+          "requestPath": "/lab/assets/OrbitalScene-9gG9H69b.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
-          "target": "lab/assets/index-Bg4_LhxS.js",
-          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
+          "requestPath": "/lab/assets/index-CvKzFtJg.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "requestPath": "/lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "requestPath": "/lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "requestPath": "/lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
-          "target": "lab/assets/search-Bt_K2iOV.js",
-          "requestPath": "/lab/assets/search-Bt_K2iOV.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
+          "target": "lab/assets/search-BhoHTrfD.js",
+          "requestPath": "/lab/assets/search-BhoHTrfD.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
-          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
-          "requestPath": "/lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
+          "target": "lab/assets/OrbitalScene-9gG9H69b.js",
+          "requestPath": "/lab/assets/OrbitalScene-9gG9H69b.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
-          "target": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
+          "target": "lab/assets/NASAReferenceScene-DlSwFouX.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-DlSwFouX.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-Bt_K2iOV.js",
-          "target": "lab/assets/index-Bg4_LhxS.js",
-          "requestPath": "/lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/search-BhoHTrfD.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
+          "requestPath": "/lab/assets/index-CvKzFtJg.js",
           "kind": "module-import"
         }
       ]
+    },
+    "externalRuntimeMedia": {
+      "requests": [
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/3c83091e-4046-4fd6-adbb-2edb728be79a.mp4",
+          "kind": "video"
+        },
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/fc3ded42-e845-41f3-a830-5cab512d79cd.mp4",
+          "kind": "video"
+        },
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/b30f64d9-1637-477a-83df-d0fc6461a422.mp4",
+          "kind": "video"
+        },
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/5fc5651c-3b5d-4171-b507-87f7e635d1b4.mp4",
+          "kind": "video"
+        },
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/eb7e0f53-50cd-4af5-abc4-8b9a52cdc01b.svg",
+          "kind": "img"
+        },
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/fc3ded42-e845-41f3-a830-5cab512d79cd.mp4",
+          "kind": "video"
+        },
+        {
+          "source": "planet-jumping.html",
+          "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/d6fb8b6b-c15e-4aaa-9cf7-45bbb5e33372.jpg",
+          "kind": "img"
+        }
+      ],
+      "uniqueUrls": 6,
+      "scope": "Only the standalone Planet Jumping experiment; mission games retain local runtime assets.",
+      "externalFetchPerformed": false
     },
     "visualCollection": {
       "images": 6,
@@ -11526,81 +12423,81 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
-          "specifier": "./index-Bg4_LhxS.js",
-          "target": "lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/NASAReferenceScene-DlSwFouX.js",
+          "specifier": "./index-CvKzFtJg.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
-          "specifier": "./OrbitalScene-DsueDMe_.js",
-          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/NASAReferenceScene-DlSwFouX.js",
+          "specifier": "./OrbitalScene-9gG9H69b.js",
+          "target": "lab/assets/OrbitalScene-9gG9H69b.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
-          "specifier": "./index-Bg4_LhxS.js",
-          "target": "lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
+          "specifier": "./index-CvKzFtJg.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "specifier": "draco_decoder-C32yEggz.wasm",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "specifier": "draco_wasm_wrapper-DxJM36Ib.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "specifier": "draco_decoder-fzg4nYZr.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "specifier": "draco_wasm_wrapper-fZCQGLGb.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/OrbitalScene-9gG9H69b.js",
           "specifier": "draco_decoder-Z1_iN-Ht.wasm",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
-          "specifier": "./search-Bt_K2iOV.js",
-          "target": "lab/assets/search-Bt_K2iOV.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
+          "specifier": "./search-BhoHTrfD.js",
+          "target": "lab/assets/search-BhoHTrfD.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
-          "specifier": "./OrbitalScene-DsueDMe_.js",
-          "target": "lab/assets/OrbitalScene-DsueDMe_.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
+          "specifier": "./OrbitalScene-9gG9H69b.js",
+          "target": "lab/assets/OrbitalScene-9gG9H69b.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-Bg4_LhxS.js",
-          "specifier": "./NASAReferenceScene-BjpH6oFl.js",
-          "target": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+          "source": "lab/assets/index-CvKzFtJg.js",
+          "specifier": "./NASAReferenceScene-DlSwFouX.js",
+          "target": "lab/assets/NASAReferenceScene-DlSwFouX.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/search-Bt_K2iOV.js",
-          "specifier": "./index-Bg4_LhxS.js",
-          "target": "lab/assets/index-Bg4_LhxS.js",
+          "source": "lab/assets/search-BhoHTrfD.js",
+          "specifier": "./index-CvKzFtJg.js",
+          "target": "lab/assets/index-CvKzFtJg.js",
           "kind": "module-import"
         }
       ]
@@ -11739,7 +12636,7 @@
       {
         "path": "campanha/release.json",
         "source": "experiments/four-level-campaign/dist/release.json",
-        "sha256": "1f56f1ffc668f9a1dc8275f33bfc7603ee5471bb0478bf58f2c458e0974ebd96"
+        "sha256": "fdb91ba4b7aae3c56018d57d1edebd7011080cf99c30bab9e8a0faad4c95e91d"
       },
       {
         "path": "campanha/research/assets/briefing-desktop.jpg",
@@ -12007,14 +12904,14 @@
         "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
       },
       {
-        "path": "lab/assets/index-Bg4_LhxS.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-Bg4_LhxS.js",
-        "sha256": "986ae0430db5f08970be40cdb27b098a90329a61b9b3734fc227daf960490db7"
+        "path": "lab/assets/index-C5BACCk4.css",
+        "source": "experiments/mission-design-lab/dist/assets/index-C5BACCk4.css",
+        "sha256": "472f583fe5e67f59183e0a128e011585c9c833ed4a4d123e59d584d6e98c3cb4"
       },
       {
-        "path": "lab/assets/index-DZxOWY_c.css",
-        "source": "experiments/mission-design-lab/dist/assets/index-DZxOWY_c.css",
-        "sha256": "c64584146ca7cf4a2038701dae28427d4430bf23881e5f01f485b73bfd88bd0e"
+        "path": "lab/assets/index-CvKzFtJg.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-CvKzFtJg.js",
+        "sha256": "9cdce27a457ac38f0ff0450806ac820f735d18d16ef8bc6dc619038c8bcd89f1"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -12022,9 +12919,14 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-BjpH6oFl.js",
-        "sha256": "4032255d0e1847a6a904f51611088542ac28cd7c5151011f23d6d9b3065cf4c4"
+        "path": "lab/assets/NASAReferenceScene-DlSwFouX.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-DlSwFouX.js",
+        "sha256": "b2870bfb3e367be2cba642f6b6da89c9968d4c7298e0a0c0d84e861ea5f84035"
+      },
+      {
+        "path": "lab/assets/OrbitalScene-9gG9H69b.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-9gG9H69b.js",
+        "sha256": "4e347099e00c165a56fd307c3c175364db2741adb9e30ba20ead951caa6a6001"
       },
       {
         "path": "lab/assets/OrbitalScene-DChm9aPx.css",
@@ -12032,14 +12934,9 @@
         "sha256": "73324a09a3ca908e67eb7d336bda0617b4b097de5c7a915446ad1ee73ffbe724"
       },
       {
-        "path": "lab/assets/OrbitalScene-DsueDMe_.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DsueDMe_.js",
-        "sha256": "47de78c222fd4f4daac1db457d8efe3e4b5642f598084dd31142c36bb243a8ff"
-      },
-      {
-        "path": "lab/assets/search-Bt_K2iOV.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-Bt_K2iOV.js",
-        "sha256": "51d227ba4db779b9b2704e9c10e054bed60441b1a7920c88bd6c2565a27566a7"
+        "path": "lab/assets/search-BhoHTrfD.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-BhoHTrfD.js",
+        "sha256": "cd4ebce140c98e6957db07344ba591758f2060e230bdead800d6d6cae42f85f6"
       },
       {
         "path": "lab/brand/brand-provenance-r14.json",
@@ -12179,7 +13076,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "040cb0cd7ad133c628326d3be8ca5354aa778310974d2848e69595bdf63e54e1"
+        "sha256": "937fdbbfc315bac59e2bd4510387f0bf72650aec09234ec81e60f72628f5df6f"
       },
       {
         "path": "lab/models/nasa/bennu-1999-rq36.glb",
@@ -12440,10 +13337,11 @@
         "referrer-policy": "strict-origin-when-cross-origin",
         "x-frame-options": "DENY",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
-        "content-security-policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
         "cache-control": "public, max-age=0, must-revalidate"
       },
-      "checkedInlineScripts": 11,
+      "defaultCsp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-+bpDaIlzQyW7zmIpps7/191wxNfuFHLm6UtcIIusskk=' 'sha256-1kadMFCieLjmVjetX8bp/q9prriEEQAbGnmHrR2dSEY=' 'sha256-2bHRpy6NCJnBMLP1uWLpzCNclUMg79W5Fzj8fNLlOAI=' 'sha256-37ltMNNRQAzKLanCV1jwjOqC3V35Cr6v7b6m1CmCQuQ=' 'sha256-RcgFKx91TLhayBETt2IozZMIsB2kgH3dEfCd2FZM6O4=' 'sha256-YF/XxQDrYR51i//BPYWjlNeP2IcCBRgJKYp1iENS5o0=' 'sha256-ZmNCwbZ1H6AP+hhx28QxqO8VhbisE58wPzKUvJ5MHDQ=' 'sha256-afXCL44ksSIv+5Dqbu7IX2ljkOtcEJ6HShXjJlS1IC0=' 'sha256-fKQ4/a0vflsB+HvAAMhe12bNhKzDI8JB7loKSsdjOFg=' 'sha256-lVykhsgxzJVGZnffQkG91MJXEuJsIqq3gRQWgY7XTRc='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+      "planetJumpingCsp": "default-src 'self'; script-src 'self' 'sha256-0zL7rgH26pYmTpK0f9Wdp+IA6+hXJbXKTnZHwx3fj4M='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://d2ol7oe51mr4n9.cloudfront.net; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; media-src 'self' blob: https://d2ol7oe51mr4n9.cloudfront.net; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'",
+      "checkedInlineScripts": 12,
       "assetCacheRule": {
         "source": "/game/assets/(.*)",
         "headers": [
@@ -12717,7 +13615,7 @@
         "path": "campanha/release.json",
         "status": 200,
         "bytes": 326,
-        "sha256": "1f56f1ffc668f9a1dc8275f33bfc7603ee5471bb0478bf58f2c458e0974ebd96",
+        "sha256": "fdb91ba4b7aae3c56018d57d1edebd7011080cf99c30bab9e8a0faad4c95e91d",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -12940,22 +13838,22 @@
       {
         "path": "context/research-library-index.json",
         "status": 200,
-        "bytes": 48102,
-        "sha256": "f6398b25326a522d8e72774b69eada3526c728531c4e8f603c5a43aadc0372ef",
+        "bytes": 50694,
+        "sha256": "7bab63cd92820e02e819828264b498c298af26f735196edf5fbbc094be70683c",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 1917568,
-        "sha256": "d06bfa3389d8388668a41d52daec26ef7593f8974d69dbe4c655ea7d4a5339f9",
+        "bytes": 2009651,
+        "sha256": "ab393c9b09cec3ad93c91a4c8dc2b1c1fba9891efca3501df28731d24d3fda51",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1545955,
-        "sha256": "202db07fb5ae922523ac706097af532671c658cb2d4f4d0496d1c3904a4314d2",
+        "bytes": 1620196,
+        "sha256": "1c6c6679f4a0c281087049e6d1176f925d43435f318e9e82f045a36383adeb1b",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -13281,6 +14179,76 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "docs/35-REVISAO-PRS-E-DIRECAO-R16.html",
+        "status": 200,
+        "bytes": 17594,
+        "sha256": "e31124ca9481fd66194532c115a250b22b0ed4dda632e13873af98f3438776d6",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/35-REVISAO-PRS-E-DIRECAO-R16.md",
+        "status": 200,
+        "bytes": 14081,
+        "sha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/36-PORTAL-PLANET-JUMPING.html",
+        "status": 200,
+        "bytes": 14157,
+        "sha256": "5bc4d93d069c731d232d2d117809dc2ee8f4c77fc349e640fa680d832550d15f",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/36-PORTAL-PLANET-JUMPING.md",
+        "status": 200,
+        "bytes": 11255,
+        "sha256": "a5349fdae2cc2f4ea29f0092d4099c314e871ee1815e44498726712547385165",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.html",
+        "status": 200,
+        "bytes": 33607,
+        "sha256": "4b9a454e0017f531e70f389c4922b178fccdccd6baa843172d88be4786cef6ae",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md",
+        "status": 200,
+        "bytes": 28318,
+        "sha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/38-HANDOFF-R16.html",
+        "status": 200,
+        "bytes": 11274,
+        "sha256": "d21503d796ad559263e1ff9471e31b95d081ceecce723eeb57f3d8ab0b557923",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/38-HANDOFF-R16.md",
+        "status": 200,
+        "bytes": 8729,
+        "sha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
+        "path": "docs/39-ATIVOS-DA-PR-E-APLICACOES.html",
+        "status": 200,
+        "bytes": 11810,
+        "sha256": "d86a7743c8e9c33578f56d699dfdb0114c410a851c7e778cc776babe89c96e2d",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
+        "path": "docs/39-ATIVOS-DA-PR-E-APLICACOES.md",
+        "status": 200,
+        "bytes": 8589,
+        "sha256": "7366c45b792fecea48bd7d4bfef5b7f706b7c4e5b0d7608764105a1f4e1ce57d",
+        "contentType": "text/plain; charset=utf-8"
+      },
+      {
         "path": "docs/AUTORIA-E-IA.html",
         "status": 200,
         "bytes": 3332,
@@ -13339,8 +14307,8 @@
       {
         "path": "docs/index.html",
         "status": 200,
-        "bytes": 10390,
-        "sha256": "196fef6187ed28866df2ed1f9a5b93ca8144205026f4d88b59696c32667730df",
+        "bytes": 11856,
+        "sha256": "dd5f981a7eb0b8092b176d0d51349dd149658ca2adf570a687eef04a98a86f45",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -13584,15 +14552,22 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 58698,
-        "sha256": "9b8579302176cfa4daeef3b4049b9ebaf109ad811bed4d4f62a5091593386bd7",
+        "bytes": 59110,
+        "sha256": "037e249017f248161f239f4f989f501c5c7e1ac3020a86f7f39f64bddcc8b1c2",
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-BjpH6oFl.js",
+        "path": "lab/assets/NASAReferenceScene-DlSwFouX.js",
         "status": 200,
         "bytes": 7069,
-        "sha256": "4032255d0e1847a6a904f51611088542ac28cd7c5151011f23d6d9b3065cf4c4",
+        "sha256": "b2870bfb3e367be2cba642f6b6da89c9968d4c7298e0a0c0d84e861ea5f84035",
+        "contentType": "text/javascript; charset=utf-8"
+      },
+      {
+        "path": "lab/assets/OrbitalScene-9gG9H69b.js",
+        "status": 200,
+        "bytes": 1015588,
+        "sha256": "4e347099e00c165a56fd307c3c175364db2741adb9e30ba20ead951caa6a6001",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -13601,13 +14576,6 @@
         "bytes": 245,
         "sha256": "73324a09a3ca908e67eb7d336bda0617b4b097de5c7a915446ad1ee73ffbe724",
         "contentType": "text/css; charset=utf-8"
-      },
-      {
-        "path": "lab/assets/OrbitalScene-DsueDMe_.js",
-        "status": 200,
-        "bytes": 1014962,
-        "sha256": "47de78c222fd4f4daac1db457d8efe3e4b5642f598084dd31142c36bb243a8ff",
-        "contentType": "text/javascript; charset=utf-8"
       },
       {
         "path": "lab/assets/draco_decoder-C32yEggz.wasm",
@@ -13645,18 +14613,18 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-Bg4_LhxS.js",
+        "path": "lab/assets/index-C5BACCk4.css",
         "status": 200,
-        "bytes": 473809,
-        "sha256": "986ae0430db5f08970be40cdb27b098a90329a61b9b3734fc227daf960490db7",
-        "contentType": "text/javascript; charset=utf-8"
+        "bytes": 163550,
+        "sha256": "472f583fe5e67f59183e0a128e011585c9c833ed4a4d123e59d584d6e98c3cb4",
+        "contentType": "text/css; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-DZxOWY_c.css",
+        "path": "lab/assets/index-CvKzFtJg.js",
         "status": 200,
-        "bytes": 154625,
-        "sha256": "c64584146ca7cf4a2038701dae28427d4430bf23881e5f01f485b73bfd88bd0e",
-        "contentType": "text/css; charset=utf-8"
+        "bytes": 487669,
+        "sha256": "9cdce27a457ac38f0ff0450806ac820f735d18d16ef8bc6dc619038c8bcd89f1",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -13666,10 +14634,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-Bt_K2iOV.js",
+        "path": "lab/assets/search-BhoHTrfD.js",
         "status": 200,
         "bytes": 1247,
-        "sha256": "51d227ba4db779b9b2704e9c10e054bed60441b1a7920c88bd6c2565a27566a7",
+        "sha256": "cd4ebce140c98e6957db07344ba591758f2060e230bdead800d6d6cae42f85f6",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -13865,7 +14833,7 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 961,
-        "sha256": "040cb0cd7ad133c628326d3be8ca5354aa778310974d2848e69595bdf63e54e1",
+        "sha256": "937fdbbfc315bac59e2bd4510387f0bf72650aec09234ec81e60f72628f5df6f",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -14198,6 +15166,13 @@
         "contentType": "application/pdf"
       },
       {
+        "path": "planet-jumping.html",
+        "status": 200,
+        "bytes": 41749,
+        "sha256": "64e392cdaf36446d47fc0b42dbe795370a323403d34e92c35e2ad14fd96a58a6",
+        "contentType": "text/html; charset=utf-8"
+      },
+      {
         "path": "portable/Missao_Ipe_Local.html",
         "status": 200,
         "bytes": 1008522,
@@ -14326,8 +15301,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 119452,
-        "sha256": "e80d25597f4aecb3085d942a770496bb06d5217c28a4f85304d7bbc3eb80b419",
+        "bytes": 125436,
+        "sha256": "4f44173e6437ecd5a5ed691813d87a36da6d5f411985c8a85c1b087121c50598",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -14420,10 +15395,24 @@
         "bytes": 17381,
         "sha256": "56ed771633de4df5140867498bbf76690cc6062d71b0c2cd1ed47f77b8f6a236",
         "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "research/pr-assets-r16.json",
+        "status": 200,
+        "bytes": 92716,
+        "sha256": "622b829439af772b6ee5260eaf6fc4ee688acd667502c5079294a92b95e02694",
+        "contentType": "application/json; charset=utf-8"
+      },
+      {
+        "path": "research/technology-opportunities-r16.json",
+        "status": 200,
+        "bytes": 18202,
+        "sha256": "44a1ab317df8f4d758788a6b3257c25f7edf16154d5391f3bb6f03c786fb1668",
+        "contentType": "application/json; charset=utf-8"
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 209,
+      "linkedRoutesChecked": 222,
       "redirects": [
         {
           "source": "/campanha/research",
@@ -14453,6 +15442,11 @@
         {
           "source": "/lab",
           "destination": "/lab/index.html",
+          "status": 307
+        },
+        {
+          "source": "/planet-jumping",
+          "destination": "/planet-jumping.html",
           "status": 307
         },
         {
@@ -14538,87 +15532,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 9.42
+      "durationMs": 11.944
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.236
+      "durationMs": 0.321
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 49.498
+      "durationMs": 97.104
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 0.853
+      "durationMs": 5.301
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 61.96
+      "durationMs": 123.532
     },
     {
-      "name": "todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas",
+      "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 740.332
+      "durationMs": 1849.618
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.501
+      "durationMs": 0.889
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 452.964
+      "durationMs": 734.137
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 33.29
+      "durationMs": 123.258
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.041
+      "durationMs": 3.949
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 67.91
+      "durationMs": 161.989
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.252
+      "durationMs": 8.15
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 46.784
+      "durationMs": 110.382
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 146.164
+      "durationMs": 407.286
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 59.62
+      "durationMs": 260.377
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 1.054
+      "durationMs": 2.877
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 42.152
+      "durationMs": 77.295
     }
   ]
 }

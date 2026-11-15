@@ -16,28 +16,32 @@ async function walk(folder) {
 }
 await walk(site);
 files.sort();
-const required = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
+const required = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
 for (const file of required) await readFile(resolve(site, file));
 const inlineHashes = new Set();
+const portalHashes = new Set();
 let executableScripts = 0;
 for (const path of files.filter(f => f.endsWith('.html'))) {
   const html = await readFile(path, 'utf8');
   for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
     if (/\bsrc\s*=/i.test(match[1]) || /\btype\s*=\s*["'](?:application\/(?:ld\+)?json|text\/plain)["']/i.test(match[1])) continue;
     if (match[2].trim()) {
-      inlineHashes.add(`'sha256-${createHash('sha256').update(match[2], 'utf8').digest('base64')}'`);
+      const hashes = relative(site, path) === 'planet-jumping.html' ? portalHashes : inlineHashes;
+      hashes.add(`'sha256-${createHash('sha256').update(match[2], 'utf8').digest('base64')}'`);
       executableScripts++;
     }
   }
 }
-const csp = [
-  "default-src 'self'", `script-src 'self' 'wasm-unsafe-eval' ${[...inlineHashes].sort().join(' ')}`,
-  "script-src-attr 'none'", "style-src 'self' 'unsafe-inline'", "img-src 'self' data: blob:",
+const portalOrigin = 'https://d2ol7oe51mr4n9.cloudfront.net';
+const policy = (hashes, externalMedia = false) => [
+  "default-src 'self'", `script-src 'self' ${externalMedia ? '' : "'wasm-unsafe-eval' "}${[...hashes].sort().join(' ')}`,
+  "script-src-attr 'none'", "style-src 'self' 'unsafe-inline'", `img-src 'self' data: blob:${externalMedia ? ` ${portalOrigin}` : ''}`,
   "font-src 'self' data:", "connect-src 'self' blob:", "worker-src 'self' blob:",
-  "media-src 'self' blob:", "object-src 'none'", "base-uri 'none'",
+  `media-src 'self' blob:${externalMedia ? ` ${portalOrigin}` : ''}`, "object-src 'none'", "base-uri 'none'",
   "frame-ancestors 'none'", "form-action 'none'"
 ].join('; ');
-if (Buffer.byteLength(csp) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
+const csp = policy(inlineHashes), portalCsp = policy(portalHashes, true);
+if (Math.max(Buffer.byteLength(csp), Buffer.byteLength(portalCsp)) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
 const routeConfig = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
   cleanUrls: false,
@@ -49,6 +53,7 @@ const routeConfig = {
     { source: '/game', destination: '/game/index.html', permanent: false },
     { source: '/jogar', destination: '/lab/index.html', permanent: false },
     { source: '/lab', destination: '/lab/index.html', permanent: false },
+    { source: '/planet-jumping', destination: '/planet-jumping.html', permanent: false },
     { source: '/architecture', destination: '/architecture/index.html', permanent: false },
     { source: '/arquitetura', destination: '/architecture/index.html', permanent: false },
     { source: '/apresentacao', destination: '/presentation/Missao_Ipe_Apresentacao.html', permanent: false },
@@ -64,9 +69,11 @@ const routeConfig = {
       { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
       { key: 'X-Frame-Options', value: 'DENY' },
       { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-      { key: 'Content-Security-Policy', value: csp },
       { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }
     ] },
+    // Exclusive matchers avoid combining a restrictive policy with the media exception.
+    { source: '/((?!planet-jumping\\.html$).*)', headers: [ { key: 'Content-Security-Policy', value: csp } ] },
+    { source: '/planet-jumping.html', headers: [ { key: 'Content-Security-Policy', value: portalCsp } ] },
     { source: '/game/assets/(.*)', headers: [ { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' } ] }
   ]
 };
@@ -80,5 +87,5 @@ for (const path of [...files, staticConfigPath]) {
   const buffer = await readFile(path);
   upload.push({ file: path === staticConfigPath ? 'vercel.json' : relative(site, path).replaceAll('\\', '/'), source: relative(root, path).replaceAll('\\', '/'), size: buffer.length, sha: createHash('sha1').update(buffer).digest('hex'), sha256: createHash('sha256').update(buffer).digest('hex') });
 }
-await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version: '0.6.0-beta.1', files: upload }, null, 2) + '\n');
-console.log(JSON.stringify({ files: upload.length, bytes: upload.reduce((a,f)=>a+f.size,0), executableInlineScripts: executableScripts, uniqueInlineHashes: inlineHashes.size, cspBytes: Buffer.byteLength(csp), config: 'vercel.json', uploadManifest: '.vercel/upload-manifest.json' }, null, 2));
+await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version: '0.7.0-beta.1', files: upload }, null, 2) + '\n');
+console.log(JSON.stringify({ files: upload.length, bytes: upload.reduce((a,f)=>a+f.size,0), executableInlineScripts: executableScripts, uniqueInlineHashes: inlineHashes.size + portalHashes.size, cspBytes: Buffer.byteLength(csp), portalCspBytes: Buffer.byteLength(portalCsp), config: 'vercel.json', uploadManifest: '.vercel/upload-manifest.json' }, null, 2));

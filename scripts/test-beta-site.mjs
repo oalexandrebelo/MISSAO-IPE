@@ -29,6 +29,17 @@ let files = [];
 const bytesByFile = new Map();
 const documents = new Map();
 const references = [];
+const remoteReferences = [];
+const portalOrigin = 'https://d2ol7oe51mr4n9.cloudfront.net';
+const portalAssetBase = `${portalOrigin}/user_38xzZboKViGWJOttwIXH07lWA1P/`;
+const portalAssets = new Map([
+  ['3c83091e-4046-4fd6-adbb-2edb728be79a.mp4', 'video'],
+  ['fc3ded42-e845-41f3-a830-5cab512d79cd.mp4', 'video'],
+  ['b30f64d9-1637-477a-83df-d0fc6461a422.mp4', 'video'],
+  ['5fc5651c-3b5d-4171-b507-87f7e635d1b4.mp4', 'video'],
+  ['d6fb8b6b-c15e-4aaa-9cf7-45bbb5e33372.jpg', 'img'],
+  ['eb7e0f53-50cd-4af5-abc4-8b9a52cdc01b.svg', 'img'],
+].map(([file, kind]) => [portalAssetBase + file, kind]));
 const gameDependencies = [];
 let manifest;
 let vercel;
@@ -74,7 +85,10 @@ function resolveReference(source, value, kind) {
   assert.doesNotMatch(value, /^\s*(?:javascript|vbscript):/i, `Protocolo executável em ${source}`);
   const url = new URL(value, `https://beta.invalid/${source}`);
   if (url.origin !== 'https://beta.invalid') {
-    if (kind !== 'navigation') throw new Error(`Recurso remoto de runtime em ${source}: ${kind}`);
+    if (kind !== 'navigation') {
+      assert.ok(source === 'planet-jumping.html' && portalAssets.get(url.href) === kind, `Recurso remoto de runtime não autorizado em ${source}: ${kind} · ${url.href}`);
+      remoteReferences.push({ source, url: url.href, kind });
+    }
     return;
   }
   const target = decodeURIComponent(url.pathname).replace(/^\//, '') || 'index.html';
@@ -193,6 +207,13 @@ async function fetchLocal(route, options = {}) {
   return fetch(origin + route, { redirect: 'manual', signal: AbortSignal.timeout(5_000), ...options });
 }
 
+function matchingHeaderRules(pathname) {
+  return vercel.headers.filter(rule => rule.source.includes('(') ? new RegExp(`^${rule.source}$`).test(pathname) : rule.source === pathname);
+}
+function configuredHeaders(pathname) {
+  return Object.fromEntries(matchingHeaderRules(pathname).flatMap(rule => rule.headers.map(header => [header.key.toLowerCase(), header.value])));
+}
+
 async function run() {
   files = await inventory(site);
   for (const filename of files) bytesByFile.set(filename, await readFile(path.join(site, filename)));
@@ -204,9 +225,11 @@ async function run() {
     assert.equal(manifest.publicationReady, true);
     assert.deepEqual(manifest.missingRequired, []);
     assert.equal(manifest.project, 'PROJETO-IPE');
+    assert.equal(manifest.version, '0.7.0-beta.1');
+    assert.equal(manifest.edition, 'R16-purpose-and-discovery-plus-four-level-campaign');
     assert.equal(manifest.files.length, manifest.fileCount);
     assert.deepEqual(manifest.files.map(file => file.path).sort(), files.filter(file => file !== 'publication-manifest.json').sort());
-    for (const filename of ['lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json']) {
+    for (const filename of ['planet-jumping.html', 'research/technology-opportunities-r16.json', 'lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json', ...['35-REVISAO-PRS-E-DIRECAO-R16', '36-PORTAL-PLANET-JUMPING', '37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16', '38-HANDOFF-R16'].flatMap(name => [`docs/${name}.html`, `docs/${name}.md`])]) {
       assert.ok(bytesByFile.has(filename), `Entrega integrada ausente: ${filename}`);
     }
     for (const file of manifest.files) {
@@ -272,13 +295,27 @@ async function run() {
     observations.portal = { language: 'pt-BR', beta: true, forms: 0 };
   });
 
-  await check('todos os links e recursos HTML/CSS locais resolvem; portal e mapa não exigem CDN/fontes remotas', async () => {
+  await check('links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas', async () => {
     for (const filename of files.filter(file => file.endsWith('.html'))) {
       const document = documents.get(filename)?.window.document || parseHtml(filename);
       inspectHtml(filename, document);
     }
     for (const filename of files.filter(file => file.endsWith('.css'))) inspectCss(filename, bytesByFile.get(filename).toString('utf8'));
+    assert.deepEqual([...new Set(remoteReferences.map(reference => reference.url))].sort(), [...portalAssets.keys()].sort());
+    for (const [url, kind] of portalAssets) {
+      assert.throws(() => resolveReference('lab/index.html', url, kind), /não autorizado/);
+      assert.throws(() => resolveReference('planet-jumping.html', url, 'script'), /não autorizado/);
+    }
+    assert.throws(() => resolveReference('planet-jumping.html', `${portalOrigin}/different-file.mp4`, 'video'), /não autorizado/);
+    assert.equal(manifest.requiredRuntimeNetworkServices, 1);
+    assert.equal(manifest.runtimeNetworkRequirements.missionGames.requiredServices, 0);
+    assert.equal(manifest.runtimeNetworkRequirements.experiments.length, 1);
+    assert.equal(manifest.runtimeNetworkRequirements.experiments[0].route, '/planet-jumping.html');
+    assert.equal(manifest.runtimeNetworkRequirements.experiments[0].mediaOrigin, portalOrigin);
+    assert.equal(manifest.runtimeNetworkRequirements.experiments[0].mediaFiles, 6);
+    assert.ok(manifest.routeEntrypoints.includes('/planet-jumping.html'));
     observations.localReferences = { count: references.length, uniqueTargets: new Set(references.map(reference => reference.target)).size, entries: references };
+    observations.externalRuntimeMedia = { requests: remoteReferences, uniqueUrls: 6, scope: 'Only the standalone Planet Jumping experiment; mission games retain local runtime assets.', externalFetchPerformed: false };
   });
 
   await check('acervo visual publica imagens locais com crédito, dimensões e integridade', async () => {
@@ -370,7 +407,8 @@ async function run() {
     assert.equal(common['x-content-type-options'], 'nosniff');
     assert.equal(common['x-frame-options'], 'DENY');
     assert.ok(common['referrer-policy']);
-    const csp = common['content-security-policy'];
+    assert.equal(common['content-security-policy'], undefined, 'CSP deve usar matchers exclusivos por rota');
+    const csp = configuredHeaders('/lab/index.html')['content-security-policy'];
     assert.ok(csp);
     const scriptDirective = csp.split(';').find(part => part.trim().startsWith('script-src '));
     assert.ok(scriptDirective?.includes("'self'"));
@@ -379,18 +417,31 @@ async function run() {
     assert.match(csp, /script-src-attr\s+'none'/);
     assert.match(csp, /worker-src\s+'self'/);
     assert.match(csp, /object-src\s+'none'/);
+    assert.doesNotMatch(csp, /https?:\/\//);
+    const portalCsp = configuredHeaders('/planet-jumping.html')['content-security-policy'];
+    const directives = new Map(portalCsp.split(';').map(part => { const [name, ...values] = part.trim().split(/\s+/); return [name, values]; }));
+    assert.deepEqual(directives.get('img-src'), ["'self'", 'data:', 'blob:', portalOrigin]);
+    assert.deepEqual(directives.get('media-src'), ["'self'", 'blob:', portalOrigin]);
+    for (const [name, values] of directives) if (!['img-src', 'media-src'].includes(name)) assert.ok(!values.some(value => /^https?:/.test(value)), `Origem remota fora de mídia no portal: ${name}`);
+    for (const pathname of ['/', '/lab/index.html', '/game/index.html', '/campanha/index.html', '/planet-jumping.html', '/planet-jumpingXhtml', '/planet-jumping.html/extra', '/other/planet-jumping.html']) {
+      const policies = matchingHeaderRules(pathname).flatMap(rule => rule.headers).filter(header => header.key.toLowerCase() === 'content-security-policy');
+      assert.equal(policies.length, 1, `Mais de uma CSP ou ausência de política: ${pathname}`);
+      assert.equal(policies[0].value.includes(portalOrigin), pathname === '/planet-jumping.html', `Exceção externa indevida: ${pathname}`);
+    }
     let checkedScripts = 0;
     for (const [filename, dom] of documents) {
       const document = dom.window.document;
+      const documentScriptDirective = configuredHeaders(`/${filename}`)['content-security-policy'].split(';').find(part => part.trim().startsWith('script-src '));
       for (const element of document.querySelectorAll('*')) for (const attr of element.attributes) assert.ok(!/^on[a-z]+$/i.test(attr.name), `Handler HTML inline bloqueado pela CSP em ${filename}`);
       for (const script of document.querySelectorAll('script:not([src])')) {
         if (/^(?:application\/(?:ld\+)?json|text\/plain)$/i.test(script.type) || !script.textContent.trim()) continue;
         const hash = createHash('sha256').update(script.textContent).digest('base64');
-        assert.ok(scriptDirective.includes(`'sha256-${hash}'`), `Hash inline ausente da CSP: ${filename}`);
+        assert.ok(documentScriptDirective.includes(`'sha256-${hash}'`), `Hash inline ausente da CSP: ${filename}`);
+        if (filename === 'planet-jumping.html') assert.ok(!scriptDirective.includes(`'sha256-${hash}'`), 'Script do experimento não deve ampliar os hashes autorizados nos jogos');
         checkedScripts++;
       }
     }
-    observations.configuredHeaders = { common, checkedInlineScripts: checkedScripts, assetCacheRule: vercel.headers.find(rule => rule.source === '/game/assets/(.*)'), limitation: 'Static configuration and local server. Does not prove Vercel applied these headers or a browser enforced CSP.' };
+    observations.configuredHeaders = { common, defaultCsp: csp, planetJumpingCsp: portalCsp, checkedInlineScripts: checkedScripts, assetCacheRule: vercel.headers.find(rule => rule.source === '/game/assets/(.*)'), limitation: 'Static configuration and local server. Does not prove Vercel applied these headers or a browser enforced CSP.' };
   });
 
   await check('modelos NASA e decodificador local preservam bytes, créditos e referências', async () => {
@@ -454,16 +505,16 @@ async function run() {
     // Inspect configured headers independently, even if an earlier CSP assertion failed.
     const commonRule = vercel.headers.find(rule => rule.source === '/(.*)');
     assert.ok(commonRule, 'Cabeçalhos comuns não configurados');
-    const common = Object.fromEntries(commonRule.headers.map(header => [header.key.toLowerCase(), header.value]));
-    for (const route of ['/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html']) {
+    for (const route of ['/planet-jumping.html', '/game/index.html', '/lab/index.html', '/campanha/index.html', '/campanha/research/index.html', '/campanha/apresentacao/index.html']) {
       const response = await fetchLocal(route, { method: 'HEAD' });
       assert.equal(response.status, 200, `HEAD da aplicação falhou: ${route}`);
       assert.equal((await response.arrayBuffer()).byteLength, 0);
-      for (const [name, value] of Object.entries(common)) {
+      for (const [name, value] of Object.entries(configuredHeaders(route))) {
         if (name === 'cache-control') continue; // The local server deliberately uses no-store; production cache is a separate route policy.
         assert.equal(response.headers.get(name), value, `Cabeçalho local divergente: ${route} · ${name}`);
       }
     }
+    assert.ok(vercel.redirects.some(redirect => redirect.source === '/planet-jumping' && redirect.destination === '/planet-jumping.html' && redirect.permanent === false));
     for (const source of ['/campanha', '/campanha/research', '/campanha/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && redirect.destination === `${source}/index.html` && redirect.permanent === false), `Redirecionamento explícito da campanha ausente: ${source}`);
     const redirects = [];
     for (const redirect of vercel.redirects) {

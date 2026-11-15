@@ -465,18 +465,39 @@ function SceneLifecycle({ onUnavailable, active, ...state }: OrbitalSceneProps) 
   return null;
 }
 
-function ResponsiveFraming({ variant, cameraDistance }: { variant: SceneVariant; cameraDistance?: number }) {
-  const { camera, size, invalidate } = useThree();
+function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true }: { variant: SceneVariant; cameraDistance?: number; reducedMotion?: boolean }) {
+  const { camera, size, invalidate, frameloop } = useThree();
+  const initialized = useRef<THREE.PerspectiveCamera | null>(null);
+  const transition = useRef<{ fromDistance: number; fromZoom: number; distance: number; zoom: number; elapsed: number } | null>(null);
   useEffect(() => {
     // Keep the satellite and its wings inside a narrow viewport. Wide layouts
     // retain the large globe; changing the visual zoom never changes the model.
-    if (!(camera instanceof THREE.PerspectiveCamera) || !size.height) return;
+    if (!(camera instanceof THREE.PerspectiveCamera) || !size.width || !size.height) return;
     const aspect = size.width / size.height;
-    if (cameraDistance !== undefined) camera.position.set(0, 0, cameraDistance);
-    camera.zoom = Math.min(1, aspect / (cameraDistance !== undefined ? 1.32 : variant === 'hangar' ? 1.12 : 1.04));
-    camera.updateProjectionMatrix();
+    const distance = cameraDistance ?? camera.position.z;
+    const zoom = Math.min(1, aspect / (cameraDistance !== undefined ? 1.32 : variant === 'hangar' ? 1.12 : 1.04));
+    transition.current = null;
+    if (cameraDistance !== undefined) { camera.position.x = 0; camera.position.y = 0; }
+    if (initialized.current !== camera || reducedMotion || frameloop === 'never') {
+      camera.position.z = distance; camera.zoom = zoom; camera.updateProjectionMatrix();
+    } else if (camera.position.z !== distance || camera.zoom !== zoom) {
+      transition.current = { fromDistance: camera.position.z, fromZoom: camera.zoom, distance, zoom, elapsed: 0 };
+    }
+    initialized.current = camera;
     invalidate();
-  }, [camera, size.width, size.height, variant, cameraDistance, invalidate]);
+  }, [camera, size.width, size.height, variant, cameraDistance, reducedMotion, frameloop, invalidate]);
+  useFrame((_, delta) => {
+    const next = transition.current;
+    if (!next || !(camera instanceof THREE.PerspectiveCamera)) return;
+    // A demand-rendered canvas can resume with a large delta after being idle.
+    next.elapsed = Math.min(.28, next.elapsed + Math.min(delta, .05));
+    const eased = 1 - (1 - next.elapsed / .28) ** 3;
+    camera.position.z = THREE.MathUtils.lerp(next.fromDistance, next.distance, eased);
+    camera.zoom = THREE.MathUtils.lerp(next.fromZoom, next.zoom, eased);
+    camera.updateProjectionMatrix();
+    if (next.elapsed < .28) invalidate();
+    else transition.current = null;
+  });
   return null;
 }
 
@@ -499,7 +520,7 @@ export default function OrbitalScene(props: OrbitalSceneProps) {
     <directionalLight position={[-2, -1, -4]} color="#a5cbc3" intensity={1.2} />
     <StarField />
     {props.presentation ? <ConfiguredMissionWorld {...props} presentation={props.presentation}/> : props.segment === 'ground' ? <GroundWorld {...props}/> : props.world && props.world !== 'earth' ? <ReferenceMissionWorld {...props}/> : props.segment === 'launch' ? <LaunchWorld {...props}/> : props.segment === 'user' ? <ScienceWorld {...props}/> : isHangar ? <HangarWorld {...props} /> : <OrbitWorld {...props} />}
-    <ResponsiveFraming variant={isHangar ? 'hangar' : props.variant} cameraDistance={inspectionDistance}/>
+    <ResponsiveFraming variant={isHangar ? 'hangar' : props.variant} cameraDistance={inspectionDistance} reducedMotion={props.reducedMotion}/>
     <SceneLifecycle {...props} />
   </Canvas>;
 }

@@ -4,6 +4,7 @@ import type { ConfigKey, MissionConfig, ScenarioId } from '../core/contracts.ts'
 import { Icon } from './Icon.tsx';
 import type { IconName } from './Icon.tsx';
 import { Scene } from './Scene.tsx';
+import { MissionPurpose, MissionExperiment } from './MissionLearning.tsx';
 import { PreflightReview } from './PreflightReview.tsx';
 import { CONFIG_HINTS, CONFIG_LABELS, bits, number } from './format.ts';
 import { CrewReview, useCrewReview } from './CrewReview.tsx';
@@ -49,6 +50,7 @@ export function Workbench({ config, scenarioId, onChoice, onScenario, prediction
   const peakRisk = demandW > (battery.maxDischargeW ?? 0);
   return <>
     <div className="page-heading workbench-heading"><div><p className="eyebrow">02 / HANGAR DE PROJETO</p><h1>Monte sua <em>missão.</em></h1><p className="page-intro">Seis decisões. Um objetivo: entregar seis registros válidos à Terra.</p></div><div className="scenario-switch" aria-label="Condição da missão"><button type="button" aria-pressed={scenarioId === 'long-contact'} onClick={() => onScenario('long-contact')} disabled={blocked}>Contato longo <span>2 × 10 min</span></button><button type="button" aria-pressed={scenarioId === 'short-contact'} onClick={() => onScenario('short-contact')} disabled={blocked}>Contato curto <span>2 × 4 min</span></button></div></div>
+    <MissionPurpose id="cerrado" />
     <div className="hangar-toolbar"><span><i /> IPÊ-01 <b>PROJETO EM EDIÇÃO</b></span><button className="text-button" type="button" onClick={() => setGuide(!guide)} aria-expanded={guide}><Icon name="info" size={16} /> {guide ? 'Fechar orientação' : 'Como tomar a primeira decisão'}</button></div>
     {guide ? <div className="context-guide" role="region" aria-label="Orientação do hangar"><strong>Comece com uma pergunta: o que pode impedir os dados de chegar?</strong><p>Selecione um sistema à esquerda, compare as duas opções e observe os limites à direita. A primeira configuração já permite explorar o cenário longo. Antes de executar, registre sua previsão. No cenário curto, investigue o relatório e experimente outro projeto.</p><button className="text-button" onClick={() => setGuide(false)}>Entendi <Icon name="check" size={15} /></button></div> : null}
     <CrewReview crew={crew} />
@@ -68,6 +70,7 @@ export function Workbench({ config, scenarioId, onChoice, onScenario, prediction
         <button className="button button-primary launch-button" type="button" onClick={onLaunch} disabled={blocked || !predictionReady || !crew.ready}>{busy ? <><span className="loading-spinner" /> Executando missão…</> : <>{envelopeExceeded ? 'Verificar este projeto' : 'Registrar e executar'} <Icon name="arrow" /></>}</button>{envelopeExceeded ? <p className="field-help limit-help">Este projeto excede os limites. A execução vai registrar as restrições.</p> : null}{busy ? <button className="text-button cancel-button" type="button" onClick={onCancel}>Cancelar execução</button> : <button className="text-button save-button" type="button" onClick={onSave} disabled={saving}><Icon name="save" size={15} /> {saving ? 'Salvando projeto…' : 'Salvar projeto neste navegador'}</button>}
       </aside>
     </div>
+    <MissionExperiment id="cerrado" disabled={busy || blocked} onApply={trial => { if (trial.kind !== 'cerrado') return; onScenario(trial.result.scenarioId); for (const key of CONFIG_KEYS) onChoice(key, trial.result.config[key]); setActive('processing'); }} />
     <div className="fixed-brief"><Icon name="info" size={18} /><p><strong>Sobre esta campanha:</strong> o lançador, o perfil orbital e os seis registros históricos são fixos. Capacidades, massas, créditos e agendas são parâmetros didáticos. Cada configuração muda os cálculos da missão; a visualização 3D apenas ilustra a montagem.</p></div>
   </>;
 }

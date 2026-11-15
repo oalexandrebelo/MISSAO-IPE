@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Planet Jumping — a standalone cinematic portal experiment. Explore Mars, Earth and Venus through a screen-locked canvas window.">
+<title>Planet Jumping — An immersive space portal</title>
+<style>
+@font-face{font-family:'SF Pro';src:local('SF Pro Text Regular'),local('SF Pro Display Regular');font-weight:400;font-display:swap}
+@font-face{font-family:'SF Pro';src:local('SF Pro Text Bold'),local('SF Pro Display Bold');font-weight:700;font-display:swap}
+@font-face{font-family:'SF Pro Thin';src:local('SF Pro Display Thin'),local('Helvetica Neue Thin');font-weight:100;font-display:swap}
+@font-face{font-family:Aalto;src:local('Aalto'),local('Aalto Regular');font-weight:400;font-display:swap}
+:root{font-family:'SF Pro',Arial,sans-serif;color:#fff;background:#090807;font-synthesis:none}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:6px}button:disabled{cursor:default}
+.experience{position:relative;width:100%;height:100%;min-height:540px;overflow:hidden;background:#0a0908}
+.backgrounds,.background,.shade,.transition-layer,.transition-layer video{position:absolute;inset:0;width:100%;height:100%}
+.background{object-fit:cover;opacity:0;transition:opacity .8s ease}.background.is-visible{opacity:1}
+.shade{z-index:1;background:linear-gradient(to bottom,transparent 52%,rgba(0,0,0,.88) 100%);pointer-events:none}
+.chrome{position:absolute;z-index:4;transition:opacity .45s ease,filter .45s ease}
+.experience.is-transitioning .chrome{opacity:0!important;filter:blur(8px);pointer-events:none}
+.header{left:clamp(18px,1.95vw,28px);right:clamp(18px,1.95vw,28px);top:clamp(18px,3.1vh,28px);display:flex;justify-content:space-between;align-items:center}
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:8px}.nav{display:flex;align-items:center;height:42px;padding:4px 5px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border-radius:999px}.nav a{color:#fff;text-decoration:none;padding:8px 19px;border-radius:999px;line-height:1}.nav a.active{background:#fff;color:#000}.menu{height:42px;padding:0 20px;border:0;border-radius:999px;background:#fff;color:#000;cursor:pointer}
+.planet-list{left:clamp(18px,1.95vw,28px);top:50%;transform:translateY(-43%);display:flex;flex-direction:column;gap:6px;font-size:16px}.planet-item{display:flex;align-items:center;min-height:20px}.planet-item.active{font-size:18px;font-weight:700;gap:8px}.planet-item.active:before{content:'';width:16px;height:16px;border-radius:50%;background:#fff}
+.portal-wrap{left:50%;top:50%;width:min(320px,31vw);transform:translate(-50%,-54%);perspective:none}.portal-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:16px;opacity:0}.portal-heading strong{font-size:18px;margin-left:8px}.portal{position:relative;display:block;width:100%;aspect-ratio:320/350;padding:0;overflow:visible;border:0;border-radius:90px;background:transparent;cursor:pointer;box-shadow:none;transform:none!important}.portal video,.portal img{visibility:hidden;position:absolute;width:1px;height:1px;pointer-events:none}.portal-canvas{position:fixed;inset:0;z-index:3;width:100%;height:100%;pointer-events:none}
+.portal-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;border:1px solid rgba(255,255,255,.4);border-radius:inherit;font-size:14px;line-height:1.4;text-align:center;background:rgba(255,255,255,.035)}.portal-fallback small{font-size:12px;color:#c7c4c1}.portal.has-media .portal-fallback{display:none}.terminal-note{margin:10px 0 0;text-align:center;font-size:12px;color:#ddd;line-height:1.4}.terminal-note[hidden]{display:none}
+.planet-content{left:clamp(28px,4vw,58px);right:clamp(28px,3vw,44px);bottom:clamp(24px,3vh,30px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px}.planet-content h1{--title-offset:-32px;--title-scale:1;flex:1;min-width:0;white-space:nowrap;font-family:Aalto,'Arial Narrow',sans-serif;font-size:clamp(128px,21.8vw,314px);font-weight:400;line-height:.72;margin:0 0 -.04em;letter-spacing:0;transform:translateX(var(--title-offset)) scaleX(var(--title-scale));transform-origin:left bottom;opacity:0}.planet-content dl{flex-shrink:0;width:min(447px,34vw);margin:0;font-size:16px}.fact{display:grid;grid-template-columns:138px 1fr;gap:18px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.48);opacity:0}.fact:last-child{border-bottom:0}.fact dt{font-weight:700}.fact dd{margin:0}
+.transition-layer,.scene-canvas{display:none}.loading{position:absolute;z-index:12;left:50%;bottom:30px;transform:translateX(-50%);opacity:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:opacity .2s}.experience.is-loading .loading{opacity:.8}.experience.is-transitioning .header,.experience.is-transitioning .planet-list{opacity:1!important;filter:none;pointer-events:auto}.experience.is-transitioning .shade{opacity:1}.experience.is-committing .background{transition:none!important}
+.preloader{position:absolute;inset:0;z-index:20;background:#000;overflow:hidden}.preloader video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.preloader-shade{position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(to bottom,transparent,#000)}.preloader.is-background{z-index:0}.preloader.is-background .preloader-shade{opacity:0}.floating-logo{position:fixed;z-index:22;left:50%;top:50%;width:59px;height:58px;object-fit:contain;transform:translate(-50%,-50%);will-change:left,top,width,height,transform;transition:left 2s cubic-bezier(.16,1,.3,1),top 2s cubic-bezier(.16,1,.3,1),width 2s cubic-bezier(.16,1,.3,1),height 2s cubic-bezier(.16,1,.3,1),transform 2s cubic-bezier(.16,1,.3,1)}.floating-logo.is-docked{left:clamp(18px,1.95vw,28px);top:clamp(18px,3.1vh,28px);width:37px;height:36px;transform:none}.floating-logo.is-settled{z-index:5}.preloader-count{position:fixed;z-index:22;left:50%;bottom:clamp(22px,3.1vh,28px);display:flex;align-items:flex-end;gap:4px;transform:translateX(-50%);font-family:'SF Pro',Arial,sans-serif;line-height:1}.preloader-count>span:first-child{font-family:'SF Pro Thin','SF Pro',Arial,sans-serif;font-size:64px;font-weight:100}.preloader-count .percent{font-size:24px;padding-bottom:4px}.preloader-count.is-leaving{animation:preload-count-out .75s cubic-bezier(.22,1,.36,1) both}@keyframes preload-count-out{to{opacity:0;filter:blur(7px);transform:translate(-50%,-34px)}}body:not(.preload-complete) .custom-cursor{opacity:0!important}
+.skip-intro{position:fixed;z-index:23;right:20px;bottom:24px;padding:10px 14px;background:rgba(0,0,0,.5);color:white;border:1px solid #777;border-radius:999px;font-size:13px}.media-status{position:absolute;z-index:15;right:clamp(18px,1.95vw,28px);top:78px;max-width:min(280px,65vw);margin:0;padding:8px 12px;background:rgba(0,0,0,.78);border:1px solid #6c6056;border-radius:8px;font-size:12px;line-height:1.4}.media-status:empty{display:none}.media-status button{border:0;background:transparent;color:inherit;text-decoration:underline;padding:0 0 0 5px;font-size:inherit}
+.custom-cursor{display:none;position:fixed;left:0;top:0;z-index:100;width:1px;height:1px;pointer-events:none;opacity:0;transition:opacity .2s ease}.custom-cursor.is-visible{opacity:1}.cursor-dot,.cursor-orbit{position:absolute;left:0;top:0;border-radius:50%;transform:translate(-50%,-50%)}.cursor-dot{width:12px;height:12px;background:#fff}.cursor-orbit{width:36px;height:36px;border:1px solid #fff;background:rgba(255,255,255,.4);transition:transform .3s cubic-bezier(.22,1,.36,1)}.custom-cursor.is-enter .cursor-orbit{transform:translate(-50%,-50%) scale(1.16)}.cursor-label{position:absolute;top:26px;left:0;transform:translateX(-50%) translateY(-4px);font:16px/1.2 'SF Pro',Arial,sans-serif;white-space:nowrap;opacity:0;transition:opacity .2s ease,transform .3s cubic-bezier(.22,1,.36,1)}.custom-cursor.is-enter .cursor-label{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(hover:hover) and (pointer:fine){body.preload-complete.custom-pointer,body.preload-complete.custom-pointer button,body.preload-complete.custom-pointer a{cursor:none!important}.custom-cursor{display:block}}
+body:not(.intro-ready) .header,body:not(.intro-ready) .planet-list,.planet-content h1,.planet-content .fact{opacity:0}.intro-ready .header{animation:reveal-down .9s cubic-bezier(.22,1,.36,1) .1s both}.intro-ready .planet-list{animation:reveal-side .9s cubic-bezier(.22,1,.36,1) .65s both}.content-revealing h1{animation:title-rise 1.05s cubic-bezier(.16,1,.3,1) both}.content-revealing .fact{animation:fact-rise .72s cubic-bezier(.22,1,.36,1) both}.fact:nth-child(1){animation-delay:.52s}.fact:nth-child(2){animation-delay:.68s}.fact:nth-child(3){animation-delay:.84s}.fact:nth-child(4){animation-delay:1s}.mask-revealing .portal-heading{animation:portal-caption .85s cubic-bezier(.22,1,.36,1) both}.planet-list.is-switching .planet-item{animation:menu-row .58s cubic-bezier(.22,1,.36,1) both}.planet-list.is-switching .planet-item:nth-child(1){animation-delay:.02s}.planet-list.is-switching .planet-item:nth-child(2){animation-delay:.05s}.planet-list.is-switching .planet-item:nth-child(3){animation-delay:.08s}.planet-list.is-switching .planet-item:nth-child(4){animation-delay:.11s}.planet-list.is-switching .planet-item:nth-child(5){animation-delay:.14s}.planet-list.is-switching .planet-item:nth-child(6){animation-delay:.17s}.planet-list.is-switching .planet-item:nth-child(7){animation-delay:.2s}.planet-list.is-switching .planet-item:nth-child(8){animation-delay:.23s}.planet-list.is-switching .planet-item.active:before{animation:active-dot .55s cubic-bezier(.22,1,.36,1) .18s both}
+@keyframes reveal-down{from{opacity:0;filter:blur(8px);transform:translateY(-18px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}@keyframes reveal-side{from{opacity:0;filter:blur(8px);transform:translate(-20px,-43%)}to{opacity:1;filter:blur(0);transform:translate(0,-43%)}}@keyframes title-rise{from{opacity:0;filter:blur(12px);transform:translate(var(--title-offset),42px) scaleX(var(--title-scale))}to{opacity:1;filter:blur(0);transform:translate(var(--title-offset),0) scaleX(var(--title-scale))}}@keyframes fact-rise{from{opacity:0;filter:blur(7px);transform:translateY(18px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}@keyframes portal-caption{from{opacity:0;filter:blur(7px);transform:translateY(22px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}@keyframes menu-row{from{opacity:.35;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}@keyframes active-dot{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+dialog{max-width:min(600px,calc(100vw - 36px));max-height:calc(100dvh - 36px);padding:28px;background:#151311;color:#fff;border:1px solid #69625b;border-radius:18px;line-height:1.65}dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(8px)}dialog h2{font-size:28px;line-height:1.15;margin:0 0 16px}dialog p{margin:12px 0}dialog a{color:#e9c7a7}dialog button{border:1px solid #aaa;background:transparent;color:#fff;border-radius:999px;padding:9px 18px}.dialog-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:22px}.asset-errors{padding-left:20px;font-size:14px}.asset-errors li{margin:8px 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}noscript{position:fixed;z-index:30;inset:20%;background:#151311;padding:24px;line-height:1.6}
+@media(max-width:900px){.nav{display:none}.portal-wrap{width:min(300px,48vw)}.planet-content h1{font-size:clamp(105px,24vw,190px)}.planet-content dl{width:43vw}.fact{grid-template-columns:110px 1fr}.planet-list{font-size:14px}.planet-item.active{font-size:16px}}
+@media(max-width:640px){.experience{min-height:600px}.planet-list{display:none}.portal-wrap{top:44%;width:min(260px,66vw)}.planet-content{left:18px;right:18px;bottom:18px;display:block}.planet-content h1{--title-offset:0px;font-size:clamp(98px,30vw,160px);margin-bottom:20px}.planet-content dl{width:100%;font-size:13px}.fact{grid-template-columns:92px 1fr;padding:5px 0}.portal-heading{font-size:14px}.portal-heading strong{font-size:16px}.menu{height:38px}.portal{border-radius:70px}.terminal-note{font-size:11px}.media-status{top:66px;font-size:11px;padding:6px 9px}}
+@media(max-height:600px){.experience{min-height:0}.planet-list{display:none}.planet-content{bottom:12px}.planet-content h1{font-size:clamp(72px,16vw,150px)}.planet-content dl{font-size:12px}.fact{padding:4px 0;gap:10px}.portal-heading{font-size:12px;margin-bottom:8px}.portal-heading strong{font-size:14px}.header{top:14px}.floating-logo.is-docked{top:14px}.media-status{top:62px}.terminal-note{margin-top:5px}}
+@media(max-height:420px) and (max-width:640px){.planet-content{left:18px;right:18px;display:flex;align-items:flex-end;gap:16px}.planet-content h1{font-size:clamp(45px,12vw,72px);margin-bottom:0}.planet-content dl{width:60%;font-size:11px}.fact{grid-template-columns:65px 1fr;gap:6px;padding:3px 0}.portal-wrap{left:21%}.media-status{max-width:55vw;font-size:10px}.terminal-note{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-delay:0s!important}.portal{transform:none!important}.custom-cursor{display:none!important}body.custom-pointer,body.custom-pointer button,body.custom-pointer a{cursor:auto!important}}
+</style>
+</head>
+<body>
+<main class="experience" data-planet="mars">
+  <div class="backgrounds" aria-hidden="true">
+    <video id="mars-background" class="background is-visible" crossorigin="anonymous" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/3c83091e-4046-4fd6-adbb-2edb728be79a.mp4" muted playsinline preload="auto"></video>
+    <video id="earth-background" class="background" crossorigin="anonymous" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/fc3ded42-e845-41f3-a830-5cab512d79cd.mp4" muted playsinline preload="auto"></video>
+    <video id="venus-background" class="background" crossorigin="anonymous" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/b30f64d9-1637-477a-83df-d0fc6461a422.mp4" muted playsinline preload="auto"></video>
+  </div>
+  <div class="preloader" id="preloader" aria-label="Loading Mars"><video id="preloader-video" crossorigin="anonymous" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/5fc5651c-3b5d-4171-b507-87f7e635d1b4.mp4" muted playsinline preload="auto"></video><div class="preloader-shade"></div></div>
+  <img class="floating-logo" id="floating-logo" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/eb7e0f53-50cd-4af5-abc4-8b9a52cdc01b.svg" alt="Ubernatural" width="59" height="58">
+  <div class="preloader-count" id="preloader-count" aria-live="polite" aria-label="Introduction progress"><span id="preloader-value">0</span><span class="percent">%</span></div>
+  <canvas id="scene-canvas" class="scene-canvas" aria-hidden="true"></canvas><div class="shade" aria-hidden="true"></div>
+  <header class="header chrome"><div class="header-actions"><nav class="nav" aria-label="Primary navigation"><a class="active" href="#about">About</a><a href="#explore">Explore</a><a href="#planets">Planets</a></nav><button class="menu" type="button" aria-haspopup="dialog">Menu</button></div></header>
+  <aside class="planet-list chrome" id="planets" aria-label="Planets"></aside>
+  <canvas id="portal-canvas" class="portal-canvas" aria-hidden="true"></canvas>
+  <section class="portal-wrap chrome" id="explore" aria-label="Next destination"><div class="portal-heading"><span>Next:</span><span><span id="next-number">[03]</span> <strong id="next-name">Earth</strong></span></div><button class="portal" id="portal" type="button" aria-label="Travel to Earth" aria-describedby="terminal-note"><video id="portal-video" crossorigin="anonymous" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/fc3ded42-e845-41f3-a830-5cab512d79cd.mp4" muted playsinline preload="auto"></video><img id="portal-image" crossorigin="anonymous" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/d6fb8b6b-c15e-4aaa-9cf7-45bbb5e33372.jpg" alt="Mercury"><span class="portal-fallback" aria-hidden="true"><span>Enter Earth</span><small>Preparing the view…</small></span></button><p class="terminal-note" id="terminal-note" hidden>Journey complete. Mercury is a preview only.</p></section>
+  <section class="planet-content chrome" aria-live="polite"><h1 id="planet-title">MARS</h1><dl id="facts"></dl></section>
+  <div class="transition-layer" aria-hidden="true"><video id="transition-video" crossorigin="anonymous" muted playsinline preload="auto"></video></div>
+  <div class="loading" aria-hidden="true">Preparing orbit…</div><div class="custom-cursor" aria-hidden="true"><span class="cursor-orbit"></span><span class="cursor-dot"></span><span class="cursor-label">Enter</span></div>
+  <button class="skip-intro" type="button">Skip intro</button><p class="media-status" role="status"></p><span class="sr-only" id="journey-status" role="status"></span>
+</main>
+<dialog id="information" aria-labelledby="information-title"><h2 id="information-title">Planet Jumping</h2><div id="about"><div id="information-body"></div></div><div class="dialog-actions"><button type="button" id="close-information">Close</button><a href="./lab/index.html">Explore the three science missions</a><a href="./docs/36-PORTAL-PLANET-JUMPING.html">Experiment notes</a></div></dialog>
+<noscript>This visual experiment needs JavaScript for its canvas and travel controls. <a href="./docs/36-PORTAL-PLANET-JUMPING.html">Read the accessible experiment notes</a> or <a href="./lab/index.html">open the science missions</a>.</noscript>
+<script>
+(() => {
+  'use strict';
+  const BASE = 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P';
+  const TO_EARTH = `${BASE}/fc3ded42-e845-41f3-a830-5cab512d79cd.mp4`;
+  const TO_VENUS = `${BASE}/b30f64d9-1637-477a-83df-d0fc6461a422.mp4`;
+  const MERCURY = `${BASE}/d6fb8b6b-c15e-4aaa-9cf7-45bbb5e33372.jpg`;
+  const planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
+  const states = {
+    mars: { name:'Mars', next:'Earth', number:'[03]', portal:TO_EARTH, background:'mars-background', facts:[['Distance:','About 228 million km (1.5 astronomical units).'],['Year:','One Martian year is equal to 687 Earth days.'],['Temperature:','Around -60 °C, dropping to -125 °C at the poles in winter.'],['Atmosphere:','Very thin, consisting of 95% carbon dioxide, with frequent dust storms.']] },
+    earth: { name:'Earth', next:'Venus', number:'[02]', portal:TO_VENUS, background:'earth-background', facts:[['Distance:','149.6 million km from the Sun.'],['Year:','365.25 Earth days.'],['Temperature:','Average surface temperature around 15 °C.'],['Atmosphere:','Mostly nitrogen and oxygen, supporting life and liquid water.']] },
+    venus: { name:'Venus', next:'Mercury', number:'[06]', image:MERCURY, background:'venus-background', facts:[['Distance:','108.2 million km from the Sun.'],['Year:','225 Earth days.'],['Temperature:','Around 465 °C — the hottest planet in the Solar System.'],['Atmosphere:','Extremely dense, mostly carbon dioxide, with clouds of sulfuric acid.']] }
+  };
+  const $ = id => document.getElementById(id);
+  const experience = document.querySelector('.experience'), portal = $('portal'), portalVideo = $('portal-video'), portalImage = $('portal-image'), transitionVideo = $('transition-video');
+  const canvas = $('portal-canvas'), sceneCanvas = $('scene-canvas');
+  let ctx = null, sceneContext = null;
+  try { ctx = canvas.getContext('2d'); sceneContext = sceneCanvas.getContext('2d'); } catch { /* Text controls remain available without canvas. */ }
+  const preloader = $('preloader'), introVideo = $('preloader-video'), counter = $('preloader-count'), logo = $('floating-logo'), skipIntro = document.querySelector('.skip-intro');
+  const cursor = document.querySelector('.custom-cursor'), reduce = matchMedia('(prefers-reduced-motion: reduce)'), fine = matchMedia('(hover: hover) and (pointer: fine)');
+  const problems = new Map(), mediaLabels = new Map([['mars-background','Mars background'],['earth-background','Earth background'],['venus-background','Venus background'],['preloader-video','Mars introduction'],['portal-video','Destination preview'],['transition-video','Travel video'],['portal-image','Mercury image'],['floating-logo','Ubernatural logo']]);
+  let current = 'mars', busy = true, firstRender = true, introFinished = false, transitionActive = false, frozen = false, expansion = 0, maskScale = 0, canvasOpacity = 1;
+  let targetX = 0, targetY = 0, rotX = 0, rotY = 0, lastFrame = 0, pointerX = 0, pointerY = 0, cursorX = 0, cursorY = 0, cursorSeen = false;
+  const frame = () => new Promise(resolve => requestAnimationFrame(resolve));
+  const delay = ms => new Promise(resolve => setTimeout(resolve, reduce.matches ? 0 : ms));
+  const readable = media => media instanceof HTMLVideoElement ? media.readyState >= 2 && media.videoWidth > 0 : media.complete && media.naturalWidth > 0;
+  function report(media, reason) {
+    const label = mediaLabels.get(media?.id) || 'Canvas';
+    problems.set(`${label}:${media?.currentSrc || media?.src || ''}`, `${label}: ${reason}`);
+    const status = document.querySelector('.media-status');
+    status.replaceChildren(document.createTextNode('Some visuals are unavailable. Travel still works.'));
+    const details = document.createElement('button'); details.type = 'button'; details.textContent = 'Details'; details.addEventListener('click', () => openInformation('media')); status.append(details);
+    if (media === logo) logo.hidden = true;
+  }
+  function retrigger(element, name) { element.classList.remove(name); void element.offsetWidth; element.classList.add(name); }
+  function refreshPortalFallback() {
+    const media = states[current].image ? portalImage : portalVideo;
+    const ready = !!ctx && readable(media);
+    portal.classList.toggle('has-media', ready);
+    portal.querySelector('.portal-fallback > span').textContent = current === 'venus' ? 'Mercury preview' : `Enter ${states[current].next}`;
+    portal.querySelector('.portal-fallback small').textContent = ready ? '' : 'Visual unavailable · text journey available';
+  }
+  function fitLayout() {
+    const title = $('planet-title'); title.style.setProperty('--title-scale','1');
+    const available = title.clientWidth + (innerWidth > 640 ? 32 : 0);
+    if (available > 0 && title.scrollWidth > available) title.style.setProperty('--title-scale', String(available / title.scrollWidth));
+    const wrap = document.querySelector('.portal-wrap'); wrap.style.removeProperty('width'); wrap.style.removeProperty('top'); wrap.style.removeProperty('transform');
+    const box = wrap.getBoundingClientRect();
+    const content = document.querySelector('.planet-content').getBoundingClientRect();
+    const lower = innerHeight <= 420 && innerWidth <= 640 ? title.getBoundingClientRect().top : content.top;
+    const upper = document.querySelector('.header').getBoundingClientRect().bottom + 24;
+    if (box.bottom > lower - 20 || box.top < upper) {
+      const caption = wrap.querySelector('.portal-heading').getBoundingClientRect().height + 12;
+      const note = current === 'venus' ? 30 : 0;
+      const gap = Math.max(70, lower - upper - 20);
+      wrap.style.width = `${Math.min(box.width, Math.max(60, (gap - caption - note) * 320 / 350))}px`;
+      wrap.style.top = `${upper + gap / 2}px`; wrap.style.transform = 'translate(-50%,-50%)';
+    }
+  }
+  function render() {
+    const state = states[current]; experience.dataset.planet = current;
+    $('planet-title').textContent = state.name.toUpperCase(); $('next-name').textContent = state.next; $('next-number').textContent = state.number;
+    portal.setAttribute('aria-label', `Travel to ${state.next}`); portal.disabled = current === 'venus'; portal.setAttribute('aria-disabled', String(busy || current === 'venus'));
+    $('terminal-note').hidden = current !== 'venus'; cursor.classList.remove('is-enter');
+    $('facts').replaceChildren(...state.facts.map(([key,value]) => { const row = document.createElement('div'); row.className = 'fact'; const dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = key; dd.textContent = value; row.append(dt,dd); return row; }));
+    const list = document.querySelector('.planet-list'); list.replaceChildren(...planets.map(name => { const item = document.createElement('span'); item.className = `planet-item${name === state.name ? ' active' : ''}`; item.textContent = name; if (name === state.name) item.setAttribute('aria-current','location'); return item; }));
+    if (!firstRender) retrigger(list,'is-switching'); firstRender = false;
+    document.querySelectorAll('.background').forEach(video => video.classList.toggle('is-visible', video.id === state.background));
+    portalImage.hidden = !state.image; portalVideo.hidden = !!state.image;
+    if (!state.image && portalVideo.src !== state.portal) { portalVideo.pause(); portalVideo.src = state.portal; portalVideo.load(); }
+    if (state.image) portalVideo.pause();
+    if (current !== 'mars') preloader.hidden = true;
+    refreshPortalFallback(); fitLayout();
+  }
+  function waitForMedia(media, timeout = 1600, metadataOnly = false) {
+    const ready = () => media instanceof HTMLVideoElement ? media.readyState >= (metadataOnly ? 1 : 2) : readable(media);
+    if (ready()) return Promise.resolve(true);
+    if (media.error || (media instanceof HTMLImageElement && media.complete && !media.naturalWidth)) return Promise.resolve(false);
+    return new Promise(resolve => {
+      const events = media instanceof HTMLVideoElement ? [metadataOnly ? 'loadedmetadata' : 'loadeddata','canplaythrough'] : ['load'];
+      const done = value => { clearTimeout(timer); events.forEach(event => media.removeEventListener(event,check)); media.removeEventListener('error',failed); resolve(value); };
+      const check = () => { if (ready()) done(true); }, failed = () => done(false);
+      const timer = setTimeout(() => done(ready()),timeout);
+      events.forEach(event => media.addEventListener(event,check)); media.addEventListener('error',failed);
+    });
+  }
+  async function safePlay(video) {
+    let timer;
+    try { await Promise.race([Promise.resolve(video.play()),new Promise((_,reject) => { timer = setTimeout(() => reject(new Error('Playback did not start')),2000); })]); return true; }
+    catch { video.pause(); report(video,'playback could not start; the journey remains available without this video.'); return false; }
+    finally { clearTimeout(timer); }
+  }
+  function playToEnd(video, rate, deadline = 30000) {
+    return new Promise(resolve => {
+      let finished = false;
+      const done = result => { if (finished) return; finished = true; clearTimeout(timer); video.removeEventListener('ended',ended); video.removeEventListener('error',failed); video.removeEventListener('cancel-playback',cancelled); video.pause(); resolve(result); };
+      const ended = () => done('ended'), cancelled = () => done('skipped'), failed = () => { report(video,'media failed during playback.'); done('failed'); };
+      const timer = setTimeout(() => { report(video,'playback timed out; the video was skipped.'); done('timeout'); },deadline);
+      video.addEventListener('ended',ended); video.addEventListener('error',failed); video.addEventListener('cancel-playback',cancelled);
+      try { video.currentTime = 0; video.playbackRate = rate; } catch { failed(); return; }
+      safePlay(video).then(ok => { if (finished) video.pause(); else if (!ok) done('failed'); else if (video.ended) ended(); });
+    });
+  }
+  async function preview() {
+    const media = states[current].image ? portalImage : portalVideo;
+    const loaded = await waitForMedia(media);
+    if (!loaded) report(media,'did not become ready within the loading window.');
+    if (loaded && media === portalVideo && !reduce.matches) { portalVideo.loop = true; await safePlay(portalVideo); }
+    refreshPortalFallback();
+  }
+  function resizeCanvas() {
+    const d = Math.min(devicePixelRatio || 1,2);
+    canvas.width = Math.round(innerWidth*d); canvas.height = Math.round(innerHeight*d); canvas.style.width = `${innerWidth}px`; canvas.style.height = `${innerHeight}px`; ctx?.setTransform(d,0,0,d,0,0);
+    if (!frozen) { sceneCanvas.width = canvas.width; sceneCanvas.height = canvas.height; sceneContext?.setTransform(d,0,0,d,0,0); }
+    fitLayout();
+  }
+  function drawCover(context, media) {
+    if (!readable(media)) return false;
+    const mw = media.videoWidth || media.naturalWidth, mh = media.videoHeight || media.naturalHeight;
+    const scale = Math.max(innerWidth/mw,innerHeight/mh), w = mw*scale, h = mh*scale;
+    try { context.drawImage(media,(innerWidth-w)/2,(innerHeight-h)/2,w,h); return true; }
+    catch { report(media,'could not be drawn into the canvas.'); return false; }
+  }
+  function drawShade(context) { const shade = context.createLinearGradient(0,innerHeight*.52,0,innerHeight); shade.addColorStop(0,'rgba(0,0,0,0)'); shade.addColorStop(1,'rgba(0,0,0,.88)'); context.fillStyle = shade; context.fillRect(0,innerHeight*.52,innerWidth,innerHeight*.48); }
+  function roundedPath(cx,cy,w,h,r,rx,ry) {
+    r = Math.max(0,Math.min(r,w/2,h/2)); const ax = rx*Math.PI/180, ay = ry*Math.PI/180;
+    const corners = [[w/2-r,-h/2+r,-Math.PI/2,0],[w/2-r,h/2-r,0,Math.PI/2],[-w/2+r,h/2-r,Math.PI/2,Math.PI],[-w/2+r,-h/2+r,Math.PI,Math.PI*1.5]];
+    ctx.beginPath(); let first = true;
+    corners.forEach(([x,y,start,end]) => { for (let i=0;i<=10;i++) { const angle = start+(end-start)*i/10, px = x+Math.cos(angle)*r, py = y+Math.sin(angle)*r; const xx = px*Math.cos(ay), yy = py*Math.cos(ax), z = px*Math.sin(ay)-py*Math.sin(ax), p = 850/(850+z); if (first) {ctx.moveTo(cx+xx*p,cy+yy*p);first=false;} else ctx.lineTo(cx+xx*p,cy+yy*p); } }); ctx.closePath();
+  }
+  function draw(time) {
+    requestAnimationFrame(draw);
+    const dt = Math.min(40,Math.max(0,time-lastFrame)); lastFrame = time;
+    if (!ctx || document.hidden) return;
+    rotX += (targetX-rotX)*Math.min(1,dt*.009); rotY += (targetY-rotY)*Math.min(1,dt*.009);
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    if (frozen) { ctx.drawImage(sceneCanvas,0,0,innerWidth,innerHeight); drawShade(ctx); }
+    const rect = portal.getBoundingClientRect(), e = expansion, scale = e ? 1 : maskScale;
+    const cx = rect.left+rect.width/2+(innerWidth/2-rect.left-rect.width/2)*e, cy = rect.top+rect.height/2+(innerHeight/2-rect.top-rect.height/2)*e;
+    const w = (rect.width+(innerWidth-rect.width)*e)*scale, h = (rect.height+(innerHeight-rect.height)*e)*scale;
+    if (w > 1 && h > 1) { roundedPath(cx,cy,w,h,90*(1-e)*scale,rotX*(1-e),rotY*(1-e)); ctx.save(); ctx.globalAlpha = canvasOpacity; ctx.clip(); ctx.fillStyle = '#030303'; ctx.fillRect(0,0,innerWidth,innerHeight); drawCover(ctx,transitionActive ? transitionVideo : states[current].image ? portalImage : portalVideo); if (transitionActive) drawShade(ctx); ctx.restore(); }
+  }
+  function animateValue(setter,duration) {
+    if (reduce.matches) { setter(1); return Promise.resolve(); }
+    return new Promise(resolve => { const start = performance.now(); const tick = now => { const t = Math.min(1,(now-start)/duration); setter(t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2); if (t<1) requestAnimationFrame(tick); else resolve(); }; requestAnimationFrame(tick); });
+  }
+  async function revealMask() { retrigger(experience,'mask-revealing'); maskScale = 0; await animateValue(value => { maskScale = value; },1050); }
+  function revealPlanetContent() { retrigger(experience,'content-revealing'); }
+  async function startExperience() { await preview(); await revealMask(); document.body.classList.add('intro-ready'); await delay(850); revealPlanetContent(); busy = false; portal.setAttribute('aria-disabled',String(current === 'venus')); }
+  function finishIntro(reason = 'ended') {
+    if (introFinished) return; introFinished = true; introVideo.pause(); introVideo.dispatchEvent(new Event('cancel-playback'));
+    $('preloader-value').textContent = reason === 'ended' ? '100' : '—';
+    if (reason !== 'ended') { counter.querySelector('.percent').hidden = true; counter.setAttribute('aria-label','Introduction skipped'); }
+    counter.classList.add('is-leaving'); logo.classList.add('is-docked'); preloader.classList.add('is-background'); if (!readable(introVideo)) preloader.hidden = true;
+    document.body.classList.add('preload-complete'); skipIntro.hidden = true;
+    setTimeout(() => counter.remove(),reduce.matches ? 0 : 750); setTimeout(() => logo.classList.add('is-settled'),reduce.matches ? 0 : 2000);
+    startExperience().catch(() => { busy = false; maskScale = 1; document.body.classList.add('intro-ready'); revealPlanetContent(); report(null,'the cinematic introduction was skipped.'); });
+  }
+  async function runPreloader() {
+    if (reduce.matches) { finishIntro('reduced-motion'); return; }
+    const watchdog = setTimeout(() => { if (!introFinished) { report(introVideo,'introduction timed out and was skipped.'); finishIntro('timeout'); } },12000);
+    const loaded = await waitForMedia(introVideo,5000,true);
+    if (introFinished) { clearTimeout(watchdog); return; }
+    if (!loaded || !Number.isFinite(introVideo.duration) || introVideo.duration <= 0) { clearTimeout(watchdog); report(introVideo,'introduction unavailable; it was skipped.'); finishIntro('failed'); return; }
+    const update = () => { if (introFinished) return; $('preloader-value').textContent = String(Math.max(0,Math.min(100,Math.round(introVideo.currentTime/introVideo.duration*100)))); requestAnimationFrame(update); };
+    requestAnimationFrame(update);
+    const result = await playToEnd(introVideo,Math.max(.25,introVideo.duration/3),6500); clearTimeout(watchdog); finishIntro(result);
+  }
+  async function travel() {
+    if (busy || current === 'venus') return;
+    busy = true; portal.setAttribute('aria-disabled','true'); targetX = targetY = 0; portalVideo.pause();
+    const next = current === 'mars' ? 'earth' : 'venus';
+    try {
+      transitionVideo.src = states[current].portal; transitionVideo.load(); experience.classList.add('is-loading');
+      const ready = reduce.matches ? false : await waitForMedia(transitionVideo,1600);
+      if (!ready && !reduce.matches) report(transitionVideo,'travel footage unavailable; destination will open without playback.');
+      experience.classList.remove('is-loading','content-revealing','mask-revealing'); experience.classList.add('is-transitioning');
+      canvasOpacity = 1; transitionActive = ready;
+      const duration = Number.isFinite(transitionVideo.duration) ? transitionVideo.duration/1.3*1000+4000 : 15000;
+      const playback = ready ? playToEnd(transitionVideo,1.3,Math.min(30000,Math.max(6000,duration))) : Promise.resolve('skipped');
+      await animateValue(value => { expansion = value; },ready ? 1100 : 250);
+      const result = await playback;
+      frozen = false;
+      if (result === 'ended' && sceneContext && readable(transitionVideo)) { const d = Math.min(devicePixelRatio||1,2); sceneCanvas.width = Math.round(innerWidth*d); sceneCanvas.height = Math.round(innerHeight*d); sceneContext.setTransform(d,0,0,d,0,0); frozen = drawCover(sceneContext,transitionVideo); }
+      current = next; experience.classList.add('is-committing'); render(); await frame(); await frame();
+      transitionActive = false; expansion = 0; maskScale = 0; canvasOpacity = 1; experience.classList.remove('is-transitioning','is-committing');
+      $('journey-status').textContent = current === 'venus' ? 'Arrived at Venus. Journey complete. Mercury is a preview only.' : `Arrived at ${states[current].name}. Next destination: ${states[current].next}.`;
+      const maskReveal = revealMask(); void preview(); await delay(100); revealPlanetContent(); await maskReveal; await delay(450);
+    } catch { transitionActive = false; expansion = 0; maskScale = 1; canvasOpacity = 1; experience.classList.remove('is-loading','is-transitioning','is-committing'); revealPlanetContent(); report(transitionVideo,'travel animation interrupted; controls have been restored.'); }
+    finally { transitionVideo.pause(); transitionVideo.removeAttribute('src'); transitionVideo.load(); busy = false; portal.setAttribute('aria-disabled',String(current === 'venus')); }
+  }
+  function openInformation(topic) {
+    const body = $('information-body'); body.replaceChildren();
+    const add = text => { const p = document.createElement('p'); p.textContent = text; body.append(p); };
+    $('information-title').textContent = topic === 'planets' ? 'A three-stop journey' : topic === 'media' ? 'Media status' : 'Planet Jumping';
+    if (topic === 'planets') { add('Mercury · Venus · Earth · Mars · Jupiter · Saturn · Uranus · Neptune'); add(`You are at ${states[current].name}. This cinematic route travels Mars → Earth → Venus. The Mercury image is a final preview, not a fourth destination. The bracketed numbers are visual labels from the supplied reference, not orbital positions.`); }
+    else if (topic === 'media') { add('Media are streamed from the external source supplied for this experiment. Text and destination controls remain available when a file or playback fails.'); const ul = document.createElement('ul'); ul.className = 'asset-errors'; problems.forEach(message => { const li = document.createElement('li'); li.textContent = message; ul.append(li); }); body.append(ul); }
+    else { add('A cinematic window between worlds. Move your pointer to tilt the portal, or use Tab and Enter to travel. Touch works with a tap.'); add('This is a standalone visual experiment, not a flight simulator. Its imagery, timings and route do not calculate a physical trajectory. The percentage measures the introduction’s playback, not a download.'); add('Reduced motion skips moving footage and keeps the destination journey. The Ubernatural logo belongs only to this supplied visual reference; Projeto Ipê retains its identity in the science missions. This experiment is not endorsed by NASA.'); }
+    if (!$('information').open) $('information').showModal();
+  }
+  function cursorLoop() { requestAnimationFrame(cursorLoop); if (!fine.matches || reduce.matches || document.hidden) return; cursorX += (pointerX-cursorX)*.2; cursorY += (pointerY-cursorY)*.2; cursor.style.transform = `translate3d(${cursorX}px,${cursorY}px,0)`; }
+  document.addEventListener('pointermove',event => { if (!fine.matches || reduce.matches || event.pointerType === 'touch') return; pointerX = event.clientX; pointerY = event.clientY; if (!cursorSeen) { cursorSeen = true; cursorX = pointerX; cursorY = pointerY; } cursor.classList.add('is-visible'); document.body.classList.add('custom-pointer'); if (!busy) { targetY = (event.clientX/innerWidth-.5)*37.4; targetX = (event.clientY/innerHeight-.5)*-33; } });
+  document.documentElement.addEventListener('pointerleave',() => { targetX = targetY = 0; cursor.classList.remove('is-visible'); document.body.classList.remove('custom-pointer'); });
+  portal.addEventListener('pointerenter',() => { if (!busy && current !== 'venus') cursor.classList.add('is-enter'); }); portal.addEventListener('pointerleave',() => cursor.classList.remove('is-enter'));
+  portal.addEventListener('click',travel); skipIntro.addEventListener('click',() => finishIntro('user-skipped'));
+  document.querySelector('.menu').addEventListener('click',() => openInformation('about')); $('close-information').addEventListener('click',() => $('information').close());
+  document.querySelectorAll('.nav a').forEach(link => link.addEventListener('click',event => { event.preventDefault(); document.querySelectorAll('.nav a').forEach(item => item.classList.toggle('active',item === link)); const topic = link.getAttribute('href').slice(1); if (topic === 'explore') portal.focus(); else openInformation(topic); }));
+  document.querySelectorAll('video,img').forEach(media => { if (media instanceof HTMLVideoElement) media.muted = true; media.addEventListener('error',() => { if (media instanceof HTMLVideoElement && !media.getAttribute('src')) return; report(media,'remote file could not be loaded.'); refreshPortalFallback(); }); });
+  [portalVideo,portalImage].forEach(media => media.addEventListener(media instanceof HTMLVideoElement ? 'loadeddata' : 'load',refreshPortalFallback));
+  reduce.addEventListener('change',() => { targetX = targetY = rotX = rotY = 0; cursor.classList.remove('is-visible'); document.body.classList.remove('custom-pointer'); if (reduce.matches) { portalVideo.pause(); transitionVideo.dispatchEvent(new Event('cancel-playback')); if (!introFinished) finishIntro('reduced-motion'); } else if (introFinished && !busy) void preview(); });
+  addEventListener('resize',resizeCanvas); document.fonts?.ready.then(fitLayout);
+  if (!ctx || !sceneContext) report(null,'canvas rendering is unavailable; use the text journey.');
+  document.querySelectorAll('.background').forEach(video => { video.pause(); try { video.currentTime = 0; } catch { /* No frame exists yet. */ } });
+  resizeCanvas(); render(); requestAnimationFrame(draw); requestAnimationFrame(cursorLoop); runPreloader();
+})();
+</script>
+</body>
+</html>

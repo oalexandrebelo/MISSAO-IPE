@@ -2,17 +2,31 @@
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.6.0-beta.1 · edição R15 · 14/11/2026.**
+**Beta atual: 0.7.0-beta.1 · edição R16 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/34-HANDOFF-IMERSAO-3D-R15.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/38-HANDOFF-R16.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
 **Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+
+## Descobrir antes de otimizar
+
+A R16 torna o propósito explícito e acrescenta três experimentos guiados, ligados ao mesmo motor e à nave 3D. O jogador faz uma previsão, executa A/B mudando um único fator, inspeciona ambos no mesmo segundo e decide se quer copiar aquelas escolhas para seu projeto. A aplicação não executa nem salva uma tentativa automaticamente.
+
+| Missão | Pergunta e aprendizagem | Experimento controlado |
+| --- | --- | --- |
+| Cerrado | Como comparar vegetação sem confundir ausência de dados com mudança? Potência, energia e limites do NDVI. | BANDAS → ÍNDICE: menos dados pode exigir um pico de potência que a bateria não suporta. |
+| Bennu | Como transformar observações da superfície em informação disponível aos cientistas? Produção, fila e recepção. | Contatos de 120 → 500 s: mais tempo de transmissão com a mesma antena e taxa. |
+| Telescópio | Que instrumento responde à pergunta sobre a luz? Imagem, espectro e evidência válida. | Câmera → espectrômetro: receber seis arquivos não garante seis medidas cientificamente compatíveis. |
+
+Após cada missão, uma interpretação orientada retoma a pergunta e preserva lacunas. Não há alegação de aprendizagem comprovada por concluir o exercício. Leia a [proposta pedagógica e análise das tecnologias](docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), a [revisão da PR #1](docs/35-REVISAO-PRS-E-DIRECAO-R16.md) o [handoff R16](docs/38-HANDOFF-R16.md) e a [análise dos assets da PR](docs/39-ATIVOS-DA-PR-E-APLICACOES.md).
+
+O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma experiência visual independente em um único HTML, com as mídias exatas da referência fornecida. Demonstra a transição Marte → Terra → Vênus; não é simulação orbital nem uma quarta missão. Depende do CDN externo. [Detalhes, créditos e limitações](docs/36-PORTAL-PLANET-JUMPING.md).
 
 ## Campanha didática de quatro níveis
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R15. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R16. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -45,7 +59,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.6.0-beta.1 / R15 | `experiments/mission-design-lab/` |
+| Beta 0.7.0-beta.1 / R16 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |

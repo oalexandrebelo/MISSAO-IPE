@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "edition": "R16",
+  "verifiedDate": "2026-11-15",
+  "language": "pt-BR",
+  "scope": "Proposta pedagógica e triagem tecnológica com fontes primárias; nenhuma dependência instalada.",
+  "statusAtCut": "R15 é a base publicada inspecionada. Os três miniexperimentos R16 estão implementados no código local e seus resultados foram conferidos. Integração da jornada, verificação e publicação são registradas separadamente no recibo público.",
+  "verification": "Fontes primárias abertas; catálogos e código locais lidos; seis execuções de domínio e os resultados de runLearningExperiment conferidos em Node. Componente local inspecionado para previsão, comparação temporal, nave por ensaio e aplicação explícita. Sem ensaio das bibliotecas candidatas nem certificação de aprendizagem.",
+  "dependencyDecision": "A proposta imediata pode ser implementada com React, Three/R3F, CSS e domínios já presentes.",
+  "opportunities": [
+    {
+      "id": "T01",
+      "title": "Câmera e inspeção com Three.js existente",
+      "priority": "agora",
+      "adoption": "reutilizar",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sources": [
+        {
+          "title": "Three.js OrbitControls",
+          "url": "https://threejs.org/docs/pages/OrbitControls.html"
+        }
+      ],
+      "verifiedCapability": "OrbitControls permite órbita da câmera, zoom e pan; é um addon de Three.js.",
+      "correction": "Controle de câmera não é propagação orbital nem cálculo científico. A base do Ipê já tem enquadramento, giro e inspeção próprios.",
+      "opportunity": "Concentrar a vista na peça relacionada à decisão, preservando botões HTML, foco e alternativa 2D.",
+      "newDependencyNeededForR16": false,
+      "effort": "baixo a médio",
+      "acceptance": [
+        "Mudança de vista não altera o domínio.",
+        "Foco e unidade do dado continuam legíveis.",
+        "Controle por teclado e movimento reduzido preservam a atividade."
+      ],
+      "limits": [
+        "Não declarar OrbitControls instalado ou integrado apenas por existir no ecossistema.",
+        "Não forçar câmera automática durante leitura ou escolha."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T02",
+      "title": "Motionmaxxing, GSAP e Rive para comunicação dirigida",
+      "priority": "posterior",
+      "adoption": "referencia_de_producao",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sources": [
+        {
+          "title": "Motionmaxxing README",
+          "url": "https://github.com/Tejashmakwana/motionmaxxing"
+        },
+        {
+          "title": "GSAP documentation",
+          "url": "https://gsap.com/docs/v3/"
+        },
+        {
+          "title": "GSAP Standard License",
+          "url": "https://gsap.com/community/standard-license/"
+        },
+        {
+          "title": "Rive Features",
+          "url": "https://rive.app/features"
+        }
+      ],
+      "verifiedCapability": "Motionmaxxing é uma skill de produção de filmes; GSAP organiza animações; Rive oferece recursos de interação e ligação de dados.",
+      "correction": "Motionmaxxing não é biblioteca de câmera ou motor de jogo. Evidência de qualidade de filme não demonstra aprendizagem. GSAP usa licença própria, não CC0; editor, runtime e assets Rive têm condições distintas.",
+      "opportunity": "Usar storyboard para um convite curto ou uma explicação opcional após a descoberta; reutilizar CSS/Three para a interação atual.",
+      "newDependencyNeededForR16": false,
+      "effort": "médio se adotado",
+      "acceptance": [
+        "A apresentação pode ser pausada ou ignorada.",
+        "A versão textual contém a mesma informação.",
+        "A animação recebe o estado do domínio, sem produzir placares próprios."
+      ],
+      "limits": [
+        "Regras de movimento contínuo de um filme não são requisitos de interface didática.",
+        "Nenhum runtime, skill, pacote ou arquivo Rive foi instalado nesta pesquisa."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T03",
+      "title": "3DTilesRendererJS para uma futura atividade de terreno",
+      "priority": "posterior_condicional",
+      "adoption": "adiar_ate_haver_tileset",
+      "missions": [
+        "cerrado",
+        "bennu"
+      ],
+      "sources": [
+        {
+          "title": "NASA-AMMOS 3DTilesRendererJS",
+          "url": "https://github.com/NASA-AMMOS/3DTilesRendererJS"
+        }
+      ],
+      "verifiedCapability": "Renderizador de 3D Tiles com integrações Three.js/R3F, plugins e gerenciamento de detalhe/cache.",
+      "correction": "A biblioteca não inclui automaticamente um terreno NASA adequado. Exemplos com provedores externos podem exigir chave e condições próprias.",
+      "opportunity": "Somente se uma pergunta futura depender de relevo ou cobertura geográfica, preparar um tileset pequeno com origem e escala documentadas.",
+      "newDependencyNeededForR16": false,
+      "effort": "alto",
+      "acceptance": [
+        "Fonte e direitos do tileset definidos.",
+        "Tamanho, cache, erro visual e memória medidos no aparelho alvo.",
+        "Sem rede, a atividade mantém uma alternativa utilizável."
+      ],
+      "limits": [
+        "Adicionar o renderizador não cria dados científicos.",
+        "Os três casos atuais usam geometrias e agendas pequenas; streaming não resolve seu problema pedagógico."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T04",
+      "title": "three-geospatial para atmosfera com propósito",
+      "priority": "posterior_condicional",
+      "adoption": "adiar",
+      "missions": [
+        "cerrado"
+      ],
+      "sources": [
+        {
+          "title": "Takram three-geospatial",
+          "url": "https://github.com/takram-design-engineering/three-geospatial"
+        }
+      ],
+      "verifiedCapability": "Módulos de renderização geoespacial, atmosfera e nuvens que trabalham com Three.js e bibliotecas complementares.",
+      "correction": "O README classifica módulos como alpha/beta e descreve migração de API WebGPU. Renderização atmosférica não é um modelo de clima ou visibilidade científica.",
+      "opportunity": "Avaliar apenas se atmosfera ou iluminação forem objeto de uma atividade e houver orçamento gráfico.",
+      "newDependencyNeededForR16": false,
+      "effort": "alto",
+      "acceptance": [
+        "Versão e backend gráfico fixados.",
+        "Comparação de desempenho e fallback documentados.",
+        "A visualização não decide o balanço elétrico."
+      ],
+      "limits": [
+        "Não prometer compatibilidade apenas por usar Three.js.",
+        "Nuvens visuais não substituem QA de um produto MODIS."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T05",
+      "title": "satellite.js para futura comparação de geometria terrestre",
+      "priority": "posterior_condicional",
+      "adoption": "prova_separada",
+      "missions": [
+        "cerrado"
+      ],
+      "sources": [
+        {
+          "title": "satellite.js",
+          "url": "https://github.com/shashwatak/satellite-js"
+        },
+        {
+          "title": "Sun & Shadow",
+          "url": "https://shashwatak.github.io/satellite-js/docs/sun-and-shadow"
+        },
+        {
+          "title": "Quick Start",
+          "url": "https://shashwatak.github.io/satellite-js/docs/intro"
+        }
+      ],
+      "verifiedCapability": "Propaga elementos TLE/OMM com SGP4/SDP4, transforma coordenadas e oferece sunPos/shadowFraction.",
+      "correction": "A versão consultada calcula sombra: negar essa capacidade seria incorreto. O cálculo usa premissas geométricas; não certifica eclipse observado nem fornece disponibilidade de estação ou enlace pronto.",
+      "opportunity": "Comparar uma órbita terrestre de referência com agendas didáticas, em experimento separado e versionado.",
+      "newDependencyNeededForR16": false,
+      "effort": "alto",
+      "acceptance": [
+        "Fonte e época dos elementos registradas.",
+        "Unidades e referenciais conferidos por testes.",
+        "Estação, máscara de elevação e intervalos têm critérios explícitos.",
+        "Disponibilidade geométrica é separada de capacidade RF e agendamento."
+      ],
+      "limits": [
+        "shadowFraction trata a Terra como esfera de raio 6378,135 km.",
+        "Precisão depende de entradas, época e modelo; não reutilizar como transferência para Bennu/L2."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T06",
+      "title": "Astronomy Engine para orientação celeste futura",
+      "priority": "posterior_condicional",
+      "adoption": "prova_separada",
+      "missions": [
+        "telescope",
+        "cerrado"
+      ],
+      "sources": [
+        {
+          "title": "Astronomy Engine",
+          "url": "https://github.com/cosinekitty/astronomy"
+        }
+      ],
+      "verifiedCapability": "Calcula posições e eventos astronômicos e transforma coordenadas, com implementação JavaScript e licença MIT.",
+      "correction": "O autor explicita que a meta de precisão não serve à navegação de sondas. A biblioteca não calcula capacidade instrumental Webb nem transforma fluxos fictícios em observações reais.",
+      "opportunity": "Criar uma atividade futura de orientação e horário de observação, com data e observador explícitos.",
+      "newDependencyNeededForR16": false,
+      "effort": "médio a alto",
+      "acceptance": [
+        "Instante, referencial e localização visíveis.",
+        "Limite de precisão contextualizado.",
+        "Resultados de referência independentes usados na validação."
+      ],
+      "limits": [
+        "Eventos astronômicos não substituem as agendas do motor atual.",
+        "Sem contrato novo, a biblioteca não deve alterar a pontuação."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T07",
+      "title": "Open MCT e Astro UXDS como referências de operação",
+      "priority": "referencia_agora_adocao_posterior",
+      "adoption": "estudar_padroes",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sources": [
+        {
+          "title": "NASA Open MCT",
+          "url": "https://github.com/nasa/openmct"
+        },
+        {
+          "title": "Astro UXDS repository",
+          "url": "https://github.com/RocketCommunicationsInc/astro"
+        },
+        {
+          "title": "Astro UXDS legacy repository license",
+          "url": "https://raw.githubusercontent.com/RocketCommunicationsInc/astro/master/LICENSE"
+        },
+        {
+          "title": "Astro UXDS Nova terms",
+          "url": "https://www.astrouxds.com/license-agreement"
+        }
+      ],
+      "verifiedCapability": "Open MCT é framework extensível de visualização de dados; Astro UXDS reúne padrões e componentes para interfaces espaciais.",
+      "correction": "Nenhum deles fornece automaticamente a simulação do Ipê, controle real ou cooperação remota. Astro UXDS não é Astro web framework; seu repositório tem licença específica, e não se deve transferir essa licença a outros produtos Nova.",
+      "opportunity": "Estudar unidades explícitas, contexto temporal e estados de alerta; manter a interface didática pequena em React.",
+      "newDependencyNeededForR16": false,
+      "effort": "baixo para estudo; alto para migração",
+      "acceptance": [
+        "Uma indicação de falha sempre mostra evidência e unidade.",
+        "O instante do dado é distinguido do instante da animação.",
+        "Nenhuma migração sem necessidade concreta e orçamento de manutenção."
+      ],
+      "limits": [
+        "A licença do repositório consultado requer aviso de copyright na redistribuição.",
+        "A página Nova respondeu sem texto legível completo; condições dessa linha não foram validadas integralmente."
+      ],
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "T08",
+      "title": "Assets NASA e CC0 com procedência por item",
+      "priority": "agora",
+      "adoption": "reutilizar_acervo_local",
+      "missions": [
+        "cerrado",
+        "bennu",
+        "telescope"
+      ],
+      "sources": [
+        {
+          "title": "NASA 3D Resources",
+          "url": "https://science.nasa.gov/3d-resources/"
+        },
+        {
+          "title": "NASA Images and Media Usage Guidelines",
+          "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+        },
+        {
+          "title": "Poly Haven Asset License",
+          "url": "https://polyhaven.com/license"
+        }
+      ],
+      "verifiedCapability": "O acervo NASA oferece modelos de referência; Poly Haven declara CC0 para seus assets.",
+      "correction": "Não é correto declarar todo asset NASA, arquivo encontrado na internet, código ou marca como domínio público/CC0. A NASA também publica material de terceiros; marcas têm condições próprias.",
+      "opportunity": "Usar os quatro GLBs já auditados e somente adicionar uma imagem ou textura se ela explicar uma pergunta científica.",
+      "newDependencyNeededForR16": false,
+      "effort": "baixo para reutilizar; médio para novo item",
+      "acceptance": [
+        "URL, crédito, condição de uso, hash e transformação registrados.",
+        "Textura ilustrativa não é apresentada como medição.",
+        "Nenhum logo NASA vira marca do Ipê."
+      ],
+      "limits": [
+        "CC0 de um asset não determina a licença da ferramenta que o utiliza.",
+        "Não foram baixados assets nesta pesquisa."
+      ],
+      "verifiedDate": "2026-11-15"
+    }
+  ],
+  "miniExperiments": [
+    {
+      "mission": "cerrado",
+      "learningGoal": "Explicar a troca entre quantidade de dados e potência instantânea.",
+      "predictionQuestion": "Trocar somente BANDAS por ÍNDICE com a bateria de 16 Wh resolverá os contatos curtos?",
+      "controlledChange": {
+        "processing": [
+          "bands",
+          "index"
+        ]
+      },
+      "baseline": {
+        "battery": "small",
+        "panel": "standard",
+        "processing": "bands",
+        "radio": "economy",
+        "buffer": "large",
+        "policy": "every-contact",
+        "scenario": "short-contact"
+      },
+      "observed": {
+        "before": {
+          "outcome": "failure",
+          "validRecords": 2,
+          "receivedBits": 460800000
+        },
+        "after": {
+          "outcome": "failure",
+          "validRecords": 0,
+          "receivedBits": 0,
+          "event": "PEAK_POWER",
+          "timeS": 600
+        }
+      },
+      "feedback": "O lote cai de 180 para 60 Mbit, mas a demanda passa de 26 para 38 W; com o painel de 18 W durante processamento, a bateria precisa de cerca de 29,58 W e permite apenas 20 W.",
+      "reflection": "Que recurso precisa ser revisto antes de testar a entrega novamente?",
+      "implementationStatus": "implemented_local_integration_verified_separately"
+    },
+    {
+      "mission": "bennu",
+      "learningGoal": "Distinguir produção, taxa, tempo de contato e recepção completa.",
+      "predictionQuestion": "Com a mesma taxa de rádio, ampliar o contato pode fazer os seis registros chegarem?",
+      "controlledChange": {
+        "ground": [
+          "short",
+          "extended"
+        ]
+      },
+      "baseline": {
+        "launch": "compact",
+        "orbit": "near",
+        "duration": "full",
+        "instrument": "camera",
+        "power": "extended",
+        "ground": "short"
+      },
+      "observed": {
+        "before": {
+          "outcome": "failure",
+          "validRecords": 2,
+          "receivedBits": 288000000
+        },
+        "after": {
+          "outcome": "success",
+          "validRecords": 6,
+          "receivedBits": 720000000
+        }
+      },
+      "feedback": "Duas janelas de 120 s fornecem 288 Mbit de serviço a 1,2 Mbit/s. A opção de 500 s amplia o tempo; não muda antena nem taxa.",
+      "reflection": "Qual evidência distingue dados ainda na fila de dados que não foram produzidos?",
+      "implementationStatus": "implemented_local_integration_verified_separately"
+    },
+    {
+      "mission": "telescope",
+      "learningGoal": "Distinguir registros recebidos de registros que respondem ao objetivo científico.",
+      "predictionQuestion": "Se todas as imagens chegarem, a pergunta sobre as faixas infravermelhas estará respondida?",
+      "controlledChange": {
+        "instrument": [
+          "camera",
+          "spectrometer"
+        ]
+      },
+      "baseline": {
+        "launch": "science",
+        "orbit": "far",
+        "duration": "full",
+        "instrument": "camera",
+        "power": "extended",
+        "ground": "extended"
+      },
+      "observed": {
+        "before": {
+          "outcome": "invalid",
+          "receivedRecords": 6,
+          "validRecords": 0,
+          "receivedBits": 720000000,
+          "event": "INSTRUMENT_MISMATCH"
+        },
+        "after": {
+          "outcome": "success",
+          "receivedRecords": 6,
+          "validRecords": 6,
+          "receivedBits": 1080000000
+        }
+      },
+      "feedback": "A câmera envia os arquivos, mas não satisfaz o objetivo definido. O espectrômetro é compatível e, nessa arquitetura, seus seis registros chegam.",
+      "reflection": "Em que outra pergunta uma câmera seria a escolha adequada?",
+      "implementationStatus": "implemented_local_integration_verified_separately"
+    }
+  ],
+  "learningInteraction": {
+    "comparison": "A/B usa o mesmo instante em segundos e a configuração preservada em cada resultado.",
+    "previewIsolation": "Abrir, prever e executar o exemplo não alteram o projeto nem salvam uma missão no caderno.",
+    "apply": "Somente Usar A/B como ponto de partida encaminha escolhas ao projeto; nova justificativa e execução continuam necessárias.",
+    "sources": [
+      "experiments/mission-design-lab/src/lab/mission-curriculum.ts",
+      "experiments/mission-design-lab/src/ui/MissionLearning.tsx"
+    ]
+  }
+}

@@ -14,7 +14,10 @@ if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('Por
 const canonicalRoot = await realpath(root).catch(() => { throw new Error('site/ ausente. Execute npm run build:beta.'); });
 await stat(resolve(canonicalRoot, 'index.html'));
 const config = JSON.parse(await readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
-const common = Object.fromEntries(config.headers.find(h => h.source === '/(.*)').headers.map(h => [h.key, h.value]));
+const headerRules = config.headers.map(rule => ({ ...rule, pattern: rule.source.includes('(') ? new RegExp(`^${rule.source}$`) : null }));
+function headersFor(pathname) {
+  return Object.fromEntries(headerRules.filter(rule => rule.source === pathname || rule.pattern?.test(pathname)).flatMap(rule => rule.headers.map(header => [header.key, header.value])));
+}
 const redirects = new Map(config.redirects.map(r => [r.source, r.destination]));
 const mime = new Map(Object.entries({
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
@@ -28,13 +31,13 @@ const mime = new Map(Object.entries({
   '.glb': 'model/gltf-binary', '.wasm': 'application/wasm', '.pdf': 'application/pdf', '.zip': 'application/zip'
 }));
 const server = http.createServer(async (req, res) => {
+  let pathname = '/';
   const finish = (status, body, extra = {}) => {
     const bytes = Buffer.byteLength(body);
-    res.writeHead(status, { ...common, 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': bytes, ...extra });
+    res.writeHead(status, { ...headersFor(pathname), 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': bytes, ...extra });
     res.end(req.method === 'HEAD' ? undefined : body);
   };
   if (!['GET', 'HEAD'].includes(req.method)) return finish(405, 'Método não permitido.\n', { Allow: 'GET, HEAD' });
-  let pathname;
   try { pathname = decodeURIComponent((req.url || '/').split('?')[0]); }
   catch { return finish(400, 'Caminho inválido.\n'); }
   if (!pathname.startsWith('/') || /[\x00-\x1f\\]/.test(pathname) || pathname.split('/').some(s => s.startsWith('.'))) return finish(400, 'Caminho inválido.\n');
@@ -46,7 +49,7 @@ const server = http.createServer(async (req, res) => {
     if (rel.startsWith('..') || isAbsolute(rel)) return finish(403, 'Acesso recusado.\n');
     const info = await stat(actual);
     if (!info.isFile()) return finish(404, 'Arquivo não encontrado.\n');
-    res.writeHead(200, { ...common, 'Cache-Control': 'no-store', 'Content-Type': mime.get(extname(actual).toLowerCase()) || 'application/octet-stream', 'Content-Length': info.size });
+    res.writeHead(200, { ...headersFor(pathname), 'Cache-Control': 'no-store', 'Content-Type': mime.get(extname(actual).toLowerCase()) || 'application/octet-stream', 'Content-Length': info.size });
     if (req.method === 'HEAD') return res.end();
     const stream = createReadStream(actual);
     stream.on('error', () => res.destroy());
