@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090f18">
+  <meta name="author" content="Alexandre Belo">
+  <meta name="description" content="Uma apresentação interativa da MISSÃO IPÊ. Três casos científicos e uma pergunta: qual evidência consegue chegar?">
+  <title>MISSÃO IPÊ · Pitch de Alexandre Belo</title>
+  <link rel="icon" type="image/svg+xml" href="assets/missao-ipe-logo.svg">
+  <link rel="stylesheet" href="pitch.css">
+  <script src="pitch.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#palco">Ir para a cena</a>
+  <div class="pitch">
+    <main class="stage" id="palco" tabindex="-1" aria-label="Pitch MISSÃO IPÊ">
+      <section class="scene opening" id="inicio" aria-labelledby="inicio-titulo">
+        <div class="world" aria-hidden="true">
+          <div class="stars"></div>
+          <div class="horizon">
+            <picture class="earth">
+              <source media="(max-width: 680px)" srcset="assets/earth-mobile.webp">
+              <img src="assets/earth.webp" width="1600" height="1600" fetchpriority="high" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="scene-content opening-content">
+          <img class="mission-mark" src="assets/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ">
+          <h1 id="inicio-titulo" tabindex="-1">Qual ciência consegue<br class="wide-break"> <em>chegar à Terra?</em></h1>
+          <p class="lede">Um jogo de engenharia espacial em que a evidência depende das suas escolhas.</p>
+          <p class="presenter">Apresentado por <strong>Alexandre Belo</strong></p>
+          <div class="actions opening-actions">
+            <button class="button button-primary" id="start-pitch" type="button" data-enhanced>Iniciar pitch de 3 min</button>
+            <button class="button button-subtle" data-open="explorar" type="button" data-enhanced>Explorar cenas</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene cerrado" id="cerrado" aria-labelledby="cerrado-titulo">
+        <div class="world cerrado-world" aria-hidden="true">
+          <div class="cerrado-plate"><img src="assets/cerrado-terra-modis.jpg" width="1000" height="823" alt=""></div>
+        </div>
+        <div class="scene-content cerrado-content">
+          <div class="reading">
+            <p class="source-tag">Cerrado · Terra/MODIS</p>
+            <h2 id="cerrado-titulo" tabindex="-1">O que mudou na vegetação?</h2>
+            <p class="lede">Compare dois períodos usando observações históricas. Para calcular o índice a bordo, a nave precisa sustentar um pico de potência.</p>
+            <dl class="case-facts" aria-label="Resultado do ensaio guiado do Cerrado">
+              <div><dt>Enviar bandas</dt><dd><strong>2</strong> registros válidos</dd></div>
+              <div><dt>Calcular o índice</dt><dd><strong>0</strong> registros válidos</dd></div>
+            </dl>
+            <p class="qualification">O índice usa menos dados. Neste ensaio, o processamento excede a potência disponível.</p>
+          </div>
+          <p class="image-credit">Brasil central · imagem de contexto Terra/MODIS, 2000</p>
+        </div>
+      </section>
+
+      <section class="scene bennu" id="bennu" aria-labelledby="bennu-titulo">
+        <div class="world bennu-world" aria-hidden="true">
+          <div class="stars"></div>
+          <div class="orbit"></div>
+          <img class="bennu-plate" src="assets/bennu-osiris-rex.jpg" width="1024" height="968" alt="">
+        </div>
+        <div class="scene-content bennu-content">
+          <div class="reading">
+            <p class="source-tag">Bennu · OSIRIS-REx</p>
+            <h2 id="bennu-titulo" tabindex="-1">Seis rochas medidas.<br><em>Quantas chegam?</em></h2>
+            <p class="lede">O estudo publicou as dimensões das rochas e dos clastos. No jogo, o que chega ao solo depende do tempo de contato para transmitir os dados.</p>
+            <p class="qualification">O exercício compara tamanhos. A composição e a origem exigem outras medidas.</p>
+          </div>
+          <p class="image-credit">Bennu · mosaico PolyCam, 2018 · NASA/Goddard/University of Arizona</p>
+        </div>
+      </section>
+
+      <section class="scene webb" id="webb" aria-labelledby="webb-titulo">
+        <div class="world webb-world" aria-hidden="true">
+          <div class="stars"></div>
+          <div class="webb-halo"></div>
+          <img class="webb-plate" src="assets/webb-model.png" width="642" height="452" alt="">
+        </div>
+        <div class="scene-content webb-content">
+          <div class="reading">
+            <p class="source-tag">WASP-39 b · Webb/NIRSpec</p>
+            <h2 id="webb-titulo" tabindex="-1">A atmosfera muda <em>a luz.</em></h2>
+            <p class="lede">Quando o planeta passa diante da estrela, quanto da luz é bloqueado em cada faixa?</p>
+          </div>
+          <figure class="spectrum">
+            <figcaption>
+              <strong>Um trânsito · seis faixas</strong>
+              <span>10 de julho de 2022 · FIREFLy</span>
+            </figcaption>
+            <img src="assets/espectro-webb.svg" width="650" height="230" alt="Gráfico da luz bloqueada em função do comprimento de onda. Seis pontos com barras de incerteza de um sigma. O maior ponto neste recorte é de 2,24669 por cento em 4,30310 micrômetros.">
+            <button class="text-button" data-open="dados-webb" type="button" data-enhanced>Ler as medidas e incertezas <span aria-hidden="true">↗</span></button>
+            <noscript><a href="https://zenodo.org/records/6959427">Consultar as medidas</a></noscript>
+          </figure>
+          <p class="qualification webb-qualification">No ensaio, câmera e espectrômetro recebem seis pacotes. Só o espectrômetro do jogo atende ao requisito científico. As seis faixas não reconstituem a análise molecular.</p>
+          <p class="image-credit">Representação do Webb · modelo NASA/Goddard</p>
+        </div>
+      </section>
+
+      <section class="scene decision" id="decisao" aria-labelledby="decisao-titulo">
+        <div class="world decision-world" aria-hidden="true"><div class="stars"></div><div class="relay-grid"></div></div>
+        <div class="scene-content decision-content">
+          <div class="reading decision-intro">
+            <h2 id="decisao-titulo" tabindex="-1">Mude o contato. <em>Veja o que chega.</em></h2>
+            <p class="lede">Ensaio de Bennu, com a mesma taxa de rádio nas duas tentativas.</p>
+          </div>
+          <div class="experiment" id="experimento" data-trial="a">
+            <div class="relay-projection" aria-hidden="true">
+              <div class="relay-label"><span>Nave</span><i></i></div>
+              <div class="relay-beam"><i class="signal"></i></div>
+              <div class="relay-label relay-label-ground"><i></i><span>Solo</span></div>
+            </div>
+            <div class="trial-controls" role="group" aria-label="Serviço de solo do ensaio de Bennu">
+              <button class="button trial-button" type="button" data-choice="a" aria-pressed="true" data-enhanced>A · Contatos curtos</button>
+              <button class="button trial-button" type="button" data-choice="b" aria-pressed="false" data-enhanced>B · Contatos ampliados</button>
+            </div>
+            <div class="trial-results">
+              <div class="trial-total" role="status" aria-atomic="true"><strong id="trial-count">2</strong> <span>registros<br>válidos no solo</span></div>
+              <div>
+                <dl class="trial-meta">
+                  <div><dt>Primeiro contato</dt><dd id="trial-start">T+90 min</dd></div>
+                  <div><dt>Janela</dt><dd id="trial-window">120 s</dd></div>
+                  <div><dt>Serviço</dt><dd id="trial-cost">6 créditos</dd></div>
+                </dl>
+                <p class="records-label">Eixo maior publicado · seis registros</p>
+                <ol class="records" aria-label="Dimensões válidas recebidas por sítio">
+                  <li><span>Sítio 1</span><strong>1,53 m</strong></li>
+                  <li><span>Sítio 2</span><strong>3,93 m</strong></li>
+                  <li class="conditional-record"><span>Sítio 3</span><strong hidden>2,62 m</strong><span class="not-received">Sem entrega</span></li>
+                  <li class="conditional-record"><span>Clasto 4a</span><strong hidden>1,6 m</strong><span class="not-received">Sem entrega</span></li>
+                  <li class="conditional-record"><span>Sítio 5</span><strong hidden>3,221 m</strong><span class="not-received">Sem entrega</span></li>
+                  <li class="conditional-record"><span>Sítio 6</span><strong hidden>1,453 m</strong><span class="not-received">Sem entrega</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <p class="qualification decision-qualification">O serviço ampliado começa mais cedo, dura mais e custa mais. O ensaio compara o pacote completo. <span>Esquema do enlace · resultado final do jogo</span></p>
+          <noscript><p class="qualification">No cenário B, a primeira janela começa em T+85 min, dura 500 s e o serviço custa 12 créditos. Os seis registros chegam válidos.</p></noscript>
+        </div>
+      </section>
+
+      <section class="scene council" id="evidencia" aria-labelledby="evidencia-titulo">
+        <div class="world council-world" aria-hidden="true"><div class="stars"></div><div class="council-glow"></div></div>
+        <div class="scene-content council-content">
+          <div class="reading">
+            <h2 id="evidencia-titulo" tabindex="-1">Quem defende <em>o resultado?</em></h2>
+            <p class="lede">Na cena 3D do jogo, a trilha leva do dado recebido ao evento que fez a diferença.</p>
+          </div>
+          <ol class="evidence-chain" aria-label="Trilha da evidência">
+            <li>Pergunta</li><li>Requisito</li><li>Registro</li><li>Entrega</li><li>Interpretação</li>
+          </ol>
+          <div class="council-panel">
+            <div class="role-controls" role="group" aria-label="Quatro segmentos da missão" data-enhanced>
+              <button class="button role-button" type="button" data-role="lancamento" aria-pressed="true">Lançamento</button>
+              <button class="button role-button" type="button" data-role="espaco" aria-pressed="false">Espaço</button>
+              <button class="button role-button" type="button" data-role="solo" aria-pressed="false">Solo</button>
+              <button class="button role-button" type="button" data-role="usuarios" aria-pressed="false">Usuários</button>
+            </div>
+            <div class="role-notes" aria-live="polite">
+              <p id="role-lancamento"><strong>Lançamento</strong> A massa da configuração cabe no limite do lançador?</p>
+              <p id="role-espaco"><strong>Espaço</strong> Qual evento a bordo explica o resultado?</p>
+              <p id="role-solo"><strong>Solo</strong> Quais registros chegaram durante as janelas de contato?</p>
+              <p id="role-usuarios"><strong>Usuários</strong> O que as medidas recebidas permitem concluir?</p>
+            </div>
+          </div>
+          <p class="qualification">Cada papel registra uma conclusão e a evidência que a sustenta. Jogue sozinho ou em até quatro pessoas no mesmo dispositivo.</p>
+        </div>
+      </section>
+
+      <section class="scene closing" id="jogar" aria-labelledby="jogar-titulo">
+        <div class="world" aria-hidden="true">
+          <div class="stars"></div>
+          <div class="horizon closing-horizon">
+            <picture class="earth">
+              <source media="(max-width: 680px)" srcset="assets/earth-mobile.webp">
+              <img src="assets/earth.webp" width="1600" height="1600" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="scene-content closing-content">
+          <img class="mission-mark" src="assets/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ">
+          <h2 id="jogar-titulo" tabindex="-1">Qual evidência sustenta<br class="wide-break"> <em>a sua decisão?</em></h2>
+          <p class="lede">Escolha um destino, faça uma previsão e confira o resultado.</p>
+          <div class="actions">
+            <a class="button button-primary" href="../../lab/index.html" data-online="https://projeto-ipe.vercel.app/lab/">Jogar MISSÃO IPÊ <span aria-hidden="true">↗</span></a>
+            <button class="button button-subtle" data-open="fontes" type="button" data-enhanced>Fontes e créditos</button>
+          </div>
+          <p class="qualification closing-qualification">Dados científicos históricos. Nave configurável, tempo e recursos didáticos. IPÊ é a equipe.</p>
+          <p class="presenter">Alexandre Belo</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="dock" data-enhanced aria-label="Controles da apresentação">
+      <div class="dock-tools">
+        <button class="tool-button" data-open="explorar" type="button">Cenas</button>
+        <button class="tool-button" data-open="notas" type="button">Notas</button>
+        <button class="tool-button timer-toggle" id="timer-toggle" type="button" aria-label="Iniciar relógio de 3 minutos" aria-pressed="false"><time id="timer-value" datetime="PT3M">03:00</time><span id="timer-symbol" aria-hidden="true">▶</span></button>
+      </div>
+      <nav class="scene-navigation" aria-label="Navegação de cenas">
+        <button class="tool-button arrow-button" id="previous" type="button" aria-label="Cena anterior">←</button>
+        <span id="scene-position" class="scene-position" aria-hidden="true">1 / 7</span>
+        <button class="tool-button arrow-button" id="next" type="button" aria-label="Próxima cena">→</button>
+      </nav>
+      <div class="dock-tools settings">
+        <button class="tool-button" id="motion-toggle" type="button" aria-pressed="false">Reduzir movimento</button>
+        <button class="tool-button" id="fullscreen-toggle" type="button" aria-pressed="false">Tela cheia</button>
+      </div>
+    </footer>
+    <p class="visually-hidden" id="feedback" role="status"></p>
+  </div>
+
+  <dialog id="explorar" aria-labelledby="explorar-titulo">
+    <header class="dialog-heading"><h2 id="explorar-titulo">Explorar cenas</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar índice">×</button></form></header>
+    <nav class="scene-index" aria-label="Índice das cenas">
+      <a href="#inicio" data-scene-link><span>A pergunta</span><small>O que precisa chegar?</small></a>
+      <a href="#cerrado" data-scene-link><span>Cerrado</span><small>Energia, potência e volume</small></a>
+      <a href="#bennu" data-scene-link><span>Bennu</span><small>Medir e transmitir</small></a>
+      <a href="#webb" data-scene-link><span>Webb</span><small>Espectro e incerteza</small></a>
+      <a href="#decisao" data-scene-link><span>Decisão A/B</span><small>Teste o serviço de solo</small></a>
+      <a href="#evidencia" data-scene-link><span>Conselho da missão</span><small>Quatro papéis, uma evidência</small></a>
+      <a href="#jogar" data-scene-link><span>Jogar</span><small>Experimente uma missão</small></a>
+    </nav>
+    <p class="dialog-help">No palco, use <kbd>←</kbd> e <kbd>→</kbd> ou deslize para mudar de cena.</p>
+  </dialog>
+
+  <dialog id="notas" aria-labelledby="notas-titulo">
+    <header class="dialog-heading"><h2 id="notas-titulo">Notas de Alexandre Belo</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar notas">×</button></form></header>
+    <div class="speaker-notes">
+      <section data-note="inicio"><h3>0:00–0:25 · A pergunta</h3><p>“Sou Alexandre Belo, da equipe MISSÃO IPÊ. Ao desenhar uma missão espacial, o que precisamos entregar para que alguém na Terra consiga responder a sua pergunta? No jogo, cada recurso que você escolhe muda a evidência que chega.”</p></section>
+      <section data-note="cerrado"><h3>0:25–0:50 · Cerrado</h3><p>“Queremos comparar a vegetação em dois períodos. Mandar o índice ocupa menos espaço de memória. Só que calculá-lo a bordo pede mais potência de uma vez. Neste ensaio, enviar as bandas entrega dois registros válidos. Calcular o índice entrega zero. Energia acumulada e potência instantânea são coisas diferentes.”</p></section>
+      <section data-note="bennu"><h3>0:50–1:10 · Bennu</h3><p>“A OSIRIS-REx nos dá outro problema. O estudo mediu objetos reais em Bennu. A operação do jogo decide quais medições saem da nave. Você já observou os seis objetos. Agora precisa das janelas para transmitir.”</p></section>
+      <section data-note="webb"><h3>1:10–1:35 · Webb</h3><p>“Quando WASP-39 b cruza a estrela, o Webb mede quanta luz foi bloqueada em cada faixa. Aqui estão seis medidas com suas incertezas. No jogo, tanto a câmera quanto o espectrômetro entregam seis pacotes, mas só o espectrômetro satisfaz a pergunta.”</p></section>
+      <section data-note="decisao"><h3>1:35–2:15 · Decisão A/B</h3><p>“Na opção A, chegam dois registros. O que muda ao escolher o serviço ampliado?” Dê tempo para uma previsão e selecione B. “Agora chegam seis, com a mesma taxa de rádio. O serviço combina uma janela mais cedo, mais longa e um custo maior. As dimensões vieram do estudo. A consequência operacional veio do jogo.”</p></section>
+      <section data-note="evidencia"><h3>2:15–2:43 · Quatro papéis</h3><p>“No jogo, seleciono um registro e volto ao evento correspondente na cena 3D. Lançamento, espaço, solo e usuários defendem o resultado com evidências. Uma pessoa pode assumir os quatro papéis ou um grupo de até quatro pessoas pode discutir no mesmo dispositivo.”</p></section>
+      <section data-note="jogar"><h3>2:43–3:00 · Convite</h3><p>“Os dados são históricos. A nave, o tempo de operação e os recursos são didáticos. Escolha uma missão e teste uma decisão. Quando tiver o resultado, mostre qual evidência sustenta a sua conclusão.”</p></section>
+    </div>
+    <button class="button button-subtle" id="timer-reset" type="button">Reiniciar relógio em 03:00</button>
+    <p class="dialog-help">O relógio no rodapé inicia ou pausa o ensaio. O avanço é manual.</p>
+  </dialog>
+
+  <dialog id="dados-webb" aria-labelledby="dados-webb-titulo">
+    <header class="dialog-heading"><h2 id="dados-webb-titulo">O espectro de WASP-39 b</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar tabela de medidas">×</button></form></header>
+    <p>Seis faixas do mesmo trânsito observado pelo NIRSpec/PRISM. A incerteza publicada é de um sigma, em pontos percentuais.</p>
+    <table>
+      <caption class="visually-hidden">Medidas do trânsito de WASP-39 b na redução FIREFLy</caption>
+      <thead><tr><th scope="col">Faixa (µm)</th><th scope="col">Luz (%)</th><th scope="col">1σ (p.p.)</th></tr></thead>
+      <tbody>
+        <tr><td>3,59308</td><td>2,13814</td><td>0,01009</td></tr>
+        <tr><td>3,89121</td><td>2,10084</td><td>0,01222</td></tr>
+        <tr><td>4,19111</td><td>2,13836</td><td>0,01171</td></tr>
+        <tr><td>4,30310</td><td>2,24669</td><td>0,01259</td></tr>
+        <tr><td>4,49196</td><td>2,22426</td><td>0,01393</td></tr>
+        <tr><td>4,89040</td><td>2,15689</td><td>0,01512</td></tr>
+      </tbody>
+    </table>
+    <p><a href="https://zenodo.org/records/6959427">Dados originais dos autores</a></p>
+  </dialog>
+
+  <dialog id="fontes" aria-labelledby="fontes-titulo">
+    <header class="dialog-heading"><h2 id="fontes-titulo">Fontes e créditos</h2><form method="dialog"><button class="tool-button close-button" aria-label="Fechar fontes">×</button></form></header>
+    <ul class="credit-list">
+      <li><strong>Cerrado.</strong> Três pares históricos Terra/MODIS, produto <a href="https://doi.org/10.5067/MODIS/MOD13Q1.061">MOD13Q1.061</a>. Imagem de contexto do <a href="https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/">Brasil central</a>, por Brian Montgomery, Reto Stöckli e Robert Simmon com dados da equipe MODIS.</li>
+      <li><strong>Bennu.</strong> Tabela Suplementar 1 de <a href="https://ntrs.nasa.gov/citations/20205007912">DellaGiustina e colaboradores</a>. <a href="https://science.nasa.gov/resource/bennu-mosaic/">Mosaico PolyCam</a> de NASA/Goddard/University of Arizona.</li>
+      <li><strong>Webb.</strong> Redução FIREFLy publicada no <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&amp;planet=WASP-39%20b">NASA Exoplanet Archive</a>. Representação a partir do <a href="https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/">modelo Webb (A)</a>, NASA/Goddard Space Flight Center.</li>
+      <li><strong>Terra.</strong> <a href="https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/">Blue Marble</a>, NASA/Goddard.</li>
+    </ul>
+    <p>As imagens contextualizam as missões reais. A operação é didática, sem telemetria NASA ao vivo. A equipe apresenta um protótipo independente para o contexto do NASA Space Apps Challenge.</p>
+    <p><a href="../../docs/52-PITCH-ALEXANDRE-BELO-R20.html" data-online="https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/docs/52-PITCH-ALEXANDRE-BELO-R20.md">Guia do pitch e proveniência</a></p>
+  </dialog>
+</body>
+</html>

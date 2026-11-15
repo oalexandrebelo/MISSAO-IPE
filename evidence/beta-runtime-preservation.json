@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-15T10:25:30.208Z",
+  "generatedAt": "2026-11-15T10:58:13.495Z",
   "status": "passed",
   "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
-  "fileCount": 165,
+  "fileCount": 182,
   "allByteIdentical": true,
   "files": [
     {
@@ -573,17 +573,17 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-BY-UfhGj.css",
-      "output": "site/lab/assets/index-BY-UfhGj.css",
-      "originalSha256": "6d1ceeae98139cee887845b3524742731c45291050ec5e8625b32610acc9f989",
-      "publishedSha256": "6d1ceeae98139cee887845b3524742731c45291050ec5e8625b32610acc9f989",
+      "source": "experiments/mission-design-lab/dist/assets/index-BVeqTvEn.css",
+      "output": "site/lab/assets/index-BVeqTvEn.css",
+      "originalSha256": "7c5feee8dfafc0c9467bad7a775487c54251792abc3c828c6daddf42127b68bc",
+      "publishedSha256": "7c5feee8dfafc0c9467bad7a775487c54251792abc3c828c6daddf42127b68bc",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-ghcM93T2.js",
-      "output": "site/lab/assets/index-ghcM93T2.js",
-      "originalSha256": "8f0b22c7e038b8dafb0a3ce16d5b1e8b09ba8dd33df2a43ec88f61859ff639c7",
-      "publishedSha256": "8f0b22c7e038b8dafb0a3ce16d5b1e8b09ba8dd33df2a43ec88f61859ff639c7",
+      "source": "experiments/mission-design-lab/dist/assets/index-eSJC0nAb.js",
+      "output": "site/lab/assets/index-eSJC0nAb.js",
+      "originalSha256": "0bdfa3a57f5fb9a4462ba653e0e82ce60848dd63134f8f1b218786cdf0f79c39",
+      "publishedSha256": "0bdfa3a57f5fb9a4462ba653e0e82ce60848dd63134f8f1b218786cdf0f79c39",
       "byteIdentical": true
     },
     {
@@ -594,24 +594,24 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-dZvTF3sp.js",
-      "output": "site/lab/assets/NASAReferenceScene-dZvTF3sp.js",
-      "originalSha256": "79a000958817824d5faf47e0428da5277fd05ec56e4494ef632289588ef8287b",
-      "publishedSha256": "79a000958817824d5faf47e0428da5277fd05ec56e4494ef632289588ef8287b",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-BhIhlDxs.js",
+      "output": "site/lab/assets/NASAReferenceScene-BhIhlDxs.js",
+      "originalSha256": "87c0e55dfb56bb7962fc5be322637a49b85691d4815bf08d89beafbf455274e1",
+      "publishedSha256": "87c0e55dfb56bb7962fc5be322637a49b85691d4815bf08d89beafbf455274e1",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-bJ8PSbfk.js",
-      "output": "site/lab/assets/OrbitalScene-bJ8PSbfk.js",
-      "originalSha256": "2706a79faf73e396ecaf649ded2d08d4403374b34a6fa59fce4cb6293c4d44f1",
-      "publishedSha256": "2706a79faf73e396ecaf649ded2d08d4403374b34a6fa59fce4cb6293c4d44f1",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-7AHXHWhL.js",
+      "output": "site/lab/assets/OrbitalScene-7AHXHWhL.js",
+      "originalSha256": "7f46c7f1428114988da53c9a7f962707ffc7bd905f3e08d649331b81242a472c",
+      "publishedSha256": "7f46c7f1428114988da53c9a7f962707ffc7bd905f3e08d649331b81242a472c",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/search-BdB8EXas.js",
-      "output": "site/lab/assets/search-BdB8EXas.js",
-      "originalSha256": "7f7bbd66a89500f8954f5834140f8599eb49fe5d760253d9ebecd36f767f4b2b",
-      "publishedSha256": "7f7bbd66a89500f8954f5834140f8599eb49fe5d760253d9ebecd36f767f4b2b",
+      "source": "experiments/mission-design-lab/dist/assets/search-CedkBGt_.js",
+      "output": "site/lab/assets/search-CedkBGt_.js",
+      "originalSha256": "44564eb8e3ae66ef8a432ed00fbe3b469d70581e953c891ee6a1b86278585676",
+      "publishedSha256": "44564eb8e3ae66ef8a432ed00fbe3b469d70581e953c891ee6a1b86278585676",
       "byteIdentical": true
     },
     {
@@ -918,8 +918,8 @@
     {
       "source": "experiments/mission-design-lab/dist/index.html",
       "output": "site/lab/index.html",
-      "originalSha256": "c969a54b13b7f9696aeff62369c25697b5a8a3b36c2a62e32a60ea390150edb6",
-      "publishedSha256": "c969a54b13b7f9696aeff62369c25697b5a8a3b36c2a62e32a60ea390150edb6",
+      "originalSha256": "86523f04acf58fc0464224ecc91228b2921cdbe187cfb9786e3c5518dd736d12",
+      "publishedSha256": "86523f04acf58fc0464224ecc91228b2921cdbe187cfb9786e3c5518dd736d12",
       "byteIdentical": true
     },
     {
@@ -1158,6 +1158,125 @@
       "output": "site/presentation/Missao_Ipe_Apresentacao.html",
       "originalSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
       "publishedSha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/bennu-osiris-rex.jpg",
+      "output": "site/presentation/pitch/assets/bennu-osiris-rex.jpg",
+      "originalSha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
+      "publishedSha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/cerrado-terra-modis.jpg",
+      "output": "site/presentation/pitch/assets/cerrado-terra-modis.jpg",
+      "originalSha256": "2643965bf8a2f6e536f4abd2ada8aa55e5052efe69ad6bc0c54abf6ff5842120",
+      "publishedSha256": "2643965bf8a2f6e536f4abd2ada8aa55e5052efe69ad6bc0c54abf6ff5842120",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/earth-mobile.webp",
+      "output": "site/presentation/pitch/assets/earth-mobile.webp",
+      "originalSha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+      "publishedSha256": "fbe3fc357a61003298940eb60aba185a7f54feb1b01e945414f9b6e19741ffaf",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/earth.webp",
+      "output": "site/presentation/pitch/assets/earth.webp",
+      "originalSha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+      "publishedSha256": "323b32aa1ddaa3f2b44305821e62836ec54e2ad4c6530c8c26d263f9fb0e9214",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/eb-garamond-italic-latin.woff2",
+      "output": "site/presentation/pitch/assets/eb-garamond-italic-latin.woff2",
+      "originalSha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+      "publishedSha256": "078bb1c082255b93ded45a05e4009221edb4727f64a77d4f19c9d4715d02e297",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/eb-garamond-latin.woff2",
+      "output": "site/presentation/pitch/assets/eb-garamond-latin.woff2",
+      "originalSha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+      "publishedSha256": "fcb1ddc47671824923040518bfa64a5780b242f33602ea3a4b665fbfb4ef9366",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/espectro-webb.svg",
+      "output": "site/presentation/pitch/assets/espectro-webb.svg",
+      "originalSha256": "1899025e61332175f581cf72ddb4058528efb22d392e287a953eac72ca4f84a0",
+      "publishedSha256": "1899025e61332175f581cf72ddb4058528efb22d392e287a953eac72ca4f84a0",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/figtree-latin.woff2",
+      "output": "site/presentation/pitch/assets/figtree-latin.woff2",
+      "originalSha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "publishedSha256": "8330490a01c60c196eae00b823de8102275aaa5862e7b76a7af21b8745338928",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/LICENSE-EBGARAMOND-OFL.txt",
+      "output": "site/presentation/pitch/assets/LICENSE-EBGARAMOND-OFL.txt",
+      "originalSha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+      "publishedSha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/LICENSE-FIGTREE-OFL.txt",
+      "output": "site/presentation/pitch/assets/LICENSE-FIGTREE-OFL.txt",
+      "originalSha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+      "publishedSha256": "140d37233e7f3ce7313798befa9600893bcceaf41a55fa0fa5ad52f7f657a268",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/LICENSE-MOTIONMAXXING-APACHE-2.0.txt",
+      "output": "site/presentation/pitch/assets/LICENSE-MOTIONMAXXING-APACHE-2.0.txt",
+      "originalSha256": "d6c7adc5950fb5aa2317a618b4619413f803e4e55554d01a99610904fec001a0",
+      "publishedSha256": "d6c7adc5950fb5aa2317a618b4619413f803e4e55554d01a99610904fec001a0",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/missao-ipe-logo.svg",
+      "output": "site/presentation/pitch/assets/missao-ipe-logo.svg",
+      "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/NOTICE-MOTIONMAXXING.txt",
+      "output": "site/presentation/pitch/assets/NOTICE-MOTIONMAXXING.txt",
+      "originalSha256": "967cebd2a17f3c46589f7701d0cba0b8a8be42566e6b651e9f526c42c0b09569",
+      "publishedSha256": "967cebd2a17f3c46589f7701d0cba0b8a8be42566e6b651e9f526c42c0b09569",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/webb-model.png",
+      "output": "site/presentation/pitch/assets/webb-model.png",
+      "originalSha256": "e9f1e8e397e86f47b016d6a65a6c08e3848a36e35949d03972364c1fbc705ab6",
+      "publishedSha256": "e9f1e8e397e86f47b016d6a65a6c08e3848a36e35949d03972364c1fbc705ab6",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/index.html",
+      "output": "site/presentation/pitch/index.html",
+      "originalSha256": "b1871a73a8fa2bc0c9d87f2a7953b0ca4dbfe58ca70f0c2032d26b152b39c866",
+      "publishedSha256": "b1871a73a8fa2bc0c9d87f2a7953b0ca4dbfe58ca70f0c2032d26b152b39c866",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/pitch.css",
+      "output": "site/presentation/pitch/pitch.css",
+      "originalSha256": "7b9c4807378051ec85fe727eddc6a40e2fa771933ca05f2a7d96abd804eaf76c",
+      "publishedSha256": "7b9c4807378051ec85fe727eddc6a40e2fa771933ca05f2a7d96abd804eaf76c",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/pitch.js",
+      "output": "site/presentation/pitch/pitch.js",
+      "originalSha256": "1eb1f5bcb6f7dc3535c7fe57639168e08a6261002a94c5ac53a061834f1b129d",
+      "publishedSha256": "1eb1f5bcb6f7dc3535c7fe57639168e08a6261002a94c5ac53a061834f1b129d",
       "byteIdentical": true
     }
   ]

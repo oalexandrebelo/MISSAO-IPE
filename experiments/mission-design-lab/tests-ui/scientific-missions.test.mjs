@@ -65,10 +65,14 @@ test('hub exposes all three missions; Cerrado rewind excludes future delivery; N
   await waitFor(() => assert.equal(document.querySelector('.result-number')?.textContent, '6/6'));
   const result = simulateMission({ ...DEFAULT_CONFIG }, 'long-contact');
   await change('Estado registrado da missão', '0');
+  assert.match(document.querySelector('.no-events').textContent, /Selecione um evento/);
+  assert.doesNotMatch(document.querySelector('.no-events').textContent, /Nenhum evento foi retornado/);
   const scene = document.querySelector('.mission-stage .scene');
   assert.equal(scene.dataset.stateTime, '0');
   assert.equal(within(scene).getByText('Recepção em solo').parentElement.querySelector('strong').textContent, '0 / 6 registros válidos');
   assert.equal(document.querySelector('.result-number').textContent, '6/6', 'The separately labelled final report remains unchanged');
+  assert.ok(screen.getByRole('region', { name: 'Resultado final da tentativa' }));
+  assert.match(document.querySelector('.result-final-label').textContent, /instante anterior/);
   await change('Estado registrado da missão', String(result.trace.length - 1));
   assert.equal(Number(scene.dataset.stateTime), result.trace.at(-1).timeS);
   assert.equal(within(scene).getByText('Recepção em solo').parentElement.querySelector('strong').textContent, '6 / 6 registros válidos');
@@ -90,6 +94,7 @@ test('both new scientific missions execute viable inputs and reject incompatible
     sub.after(cleanupView); await mount(); await openDesign(id);
     const valid = simulateExpedition(id, VIABLE[id]); assert.equal(valid.outcome, 'success');
     await execute(); assert.equal(currentCount(), '0 / 6'); assertSceneAt(valid, 0);
+    assert.match(document.querySelector('.expedition-replay-help').textContent, /A simulação já terminou/);
     assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
     assert.equal(document.querySelectorAll('.archive-point').length, 0);
     assert.doesNotMatch(mainScene().textContent, /MODIS|PAINÉIS 18 W|O Cerrado/);
@@ -206,4 +211,34 @@ test('a valid replay without trace preserves final science and labels temporal r
   assert.doesNotMatch(stage.querySelector('.stage-context').textContent, /0 Mbit recebidos|Amostra em T\+000:00/);
   assert.match(document.querySelector('.empty-trace').textContent, /não tem estados temporais/);
   assert.equal(document.querySelector('.result-number').textContent, '6/6', 'Missing trace does not erase the verified final result.');
+});
+
+
+test('expedition design choices focus the relevant system while manual inspection remains available', async t => {
+  for (const id of ['bennu', 'telescope']) await t.test(id, async sub => {
+    sub.after(cleanupView); await mount(); await openDesign(id);
+    const craft = () => document.querySelector('.expedition-design .scene');
+    await change(LABELS.instrument, id === 'bennu' ? 'spectrometer' : 'camera');
+    assert.equal(craft().dataset.inspection, 'instrument');
+    assert.match(document.querySelector('.expedition-choice-effect').textContent, /instrumento/);
+    await change(LABELS.power, 'compact');
+    assert.equal(craft().dataset.inspection, 'energy');
+    await click(within(craft()).getByRole('button', { name: 'Nave completa', exact: true }));
+    assert.equal(craft().dataset.inspection, 'overview');
+    await change(LABELS.ground, 'short');
+    assert.equal(craft().dataset.inspection, 'communications');
+    assert.match(document.querySelector('.expedition-choice-effect').textContent, /mesma antena e a mesma taxa/);
+    assert.equal(document.querySelector('.expedition-readout'), null, 'Changing a component does not execute a mission');
+  });
+});
+
+test('the beginner can return from a guided Cerrado example to the edited hangar without executing it', async t => {
+  t.after(cleanupView); await mount(); await click('Projetar missão do Cerrado');
+  await click('Investigar esta escolha'); await click(screen.getByRole('radio', { name: 'B entrega menos' }));
+  await click('Executar os dois ensaios');
+  await click('Usar A como ponto de partida');
+  await waitFor(() => assert.equal(document.activeElement.id, 'workbench-title'));
+  assert.match(document.querySelector('.applied-example-notice').textContent, /Escolhas do ensaio copiadas/);
+  assert.equal(document.querySelector('.result-banner'), null, 'The example is a draft, not a saved or executed personal attempt');
+  assert.equal(screen.getByLabelText('Minha previsão').value, '');
 });

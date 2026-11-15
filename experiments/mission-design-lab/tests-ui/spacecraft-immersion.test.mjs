@@ -43,6 +43,7 @@ async function mount() {
 }
 async function openDesign(id, config = VIABLE[id]) {
   await click(id === 'bennu' ? 'Explorar missão Bennu' : 'Projetar telescópio científico');
+  assert.equal(screen.queryByRole('navigation', { name: 'Etapas da missão' }), null, 'expeditions use their own six-step navigation, not disabled Cerrado steps');
   await click('Definir esta missão científica'); await click('Projetar a arquitetura');
   for (const [key, value] of Object.entries(config)) await change(LABELS[key], value);
 }

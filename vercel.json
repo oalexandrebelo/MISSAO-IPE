@@ -49,6 +49,11 @@
       "permanent": false
     },
     {
+      "source": "/pitch",
+      "destination": "/presentation/pitch/index.html",
+      "permanent": false
+    },
+    {
       "source": "/apresentacao",
       "destination": "/presentation/Missao_Ipe_Apresentacao.html",
       "permanent": false

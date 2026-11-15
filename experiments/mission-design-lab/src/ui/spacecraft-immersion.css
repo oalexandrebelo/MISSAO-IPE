@@ -13,6 +13,7 @@
 .scene.scene-orbit .orbit-focus-brief p { margin:0; max-width:80ch; font-size:13px; line-height:1.65; color:#b9cbd4; }
 .scene.scene-orbit .orbit-focus-brief small { max-width:85ch; font-size:11px; line-height:1.6; color:#a9bcc8; }
 .scene.scene-orbit .orbit-display-tools { flex-wrap:wrap; }
+.scene.scene-orbit .orbit-visual-key { margin:8px 0; max-width:85ch; color:#b5c8d2; font-size:12px; line-height:1.6; }
 @media(max-width:600px) {
   .scene.scene-orbit.scene-configured .orbit-topline { position:relative; inset:auto; padding:8px 12px; }
   .scene.scene-orbit.scene-configured .orbit-render { top:70px; }

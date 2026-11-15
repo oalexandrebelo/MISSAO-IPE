@@ -227,21 +227,23 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 # MISSÃO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `0dca759c55fc562aed7919f314a793d4d9511a4e8f12457295ff655970750acb` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `eb9d5f0fb7b814c9c4b04d91cc146649e32cf7df2edfbe127886782aff0e1bbf` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.10.0-beta.1 · edição R19 · 15/11/2026.**
+**Beta atual: 0.11.0-beta.1 · edição R20 · 15/11/2026.**
 
-**MVP R19:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+**MVP R20:** escolhas apontam para o sistema correspondente na nave; resultado final e replay ficam separados, e os termos científicos são explicados na abertura. O [pitch interativo de Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html) apresenta a proposta.
+
+**Três missões:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
 
 A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/51-QA-INICIANTE-E-HANDOFF-R20.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/48-HANDOFF-DOIS-DEVS-R19.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/51-QA-INICIANTE-E-HANDOFF-R20.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
 ## Direção vigente — histórias reais, identidade da equipe
 
@@ -269,7 +271,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R19. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R20. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -277,7 +279,8 @@ O código e os documentos completos dessa experiência ficam em [`experiments/fo
 - [Jogar o beta atual](https://projeto-ipe.vercel.app/lab/index.html)
 - [Contexto e cronograma detalhados](https://projeto-ipe.vercel.app/context/index.html)
 - [Biblioteca integral](https://projeto-ipe.vercel.app/context/research-library.html)
-- [Apresentação e pitch](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
+- [Pitch interativo · Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html)
+- [Apresentação histórica preservada](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
 - [Documentação pública](https://projeto-ipe.vercel.app/docs/index.html)
 - [Jogo clássico preservado](https://projeto-ipe.vercel.app/game/index.html)
 
@@ -302,7 +305,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.10.0-beta.1 / R19 | `experiments/mission-design-lab/` |
+| Beta 0.11.0-beta.1 / R20 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -6578,6 +6581,185 @@ O Next.js exporta `404.html`, que o servidor de prévia local usa em endereços 
 Use `npm run build` e `npm test` nessa pasta. A prévia estática é servida por `scripts/serve.mjs`; ela entrega o HTML de erro sem converter a ausência em sucesso HTTP. A publicação da LP é separada do jogo: os dois projetos Vercel devem apontar para o mesmo commit do repositório oficial. O build principal publica este documento em HTML e Markdown.
 
 A revisão preservou as fontes locais Figtree e EB Garamond, a logo SVG oficial e os componentes existentes. A composição da referência foi adaptada ao projeto, sem adicionar formulários de cadastro ou contas de hospedagem. A disponibilidade do vídeo externo não é garantida; o caminho de retorno funciona sem ele.
+
+
+---
+
+# Primeira experiência nas três missões · handoff R20
+
+Fonte: `docs/51-QA-INICIANTE-E-HANDOFF-R20.md` · SHA-256 original: `c387f7675e85df17ca0b992c21e1fd8c74a84ec30e87f991ab3db79ef23ec212` · Ajustes de caminhos privados: 0
+
+# Primeira experiência nas três missões · handoff R20
+
+Esta revisão percorre o jogo com a pergunta de um iniciante: **o que devo fazer agora, o que minha escolha muda e o que posso aprender com o resultado?** As correções mantêm os arquivos científicos e o motor existentes. A inspeção foi conduzida por agentes no navegador e por testes de regressão; ainda não é um estudo de usabilidade ou aprendizagem com participantes humanos.
+
+[Jogar](https://projeto-ipe.vercel.app/lab/) · [Pitch de Alexandre Belo](../presentation/pitch/index.html) · [Guia do pitch de três minutos](52-PITCH-ALEXANDRE-BELO-R20.md) · [Handoff da trilha e dos quatro papéis](48-HANDOFF-DOIS-DEVS-R19.md) · [Dados reais e limites](45-DADOS-REAIS-BENNU-WEBB-R18.md).
+
+## O propósito de cada missão
+
+| Caso | O que o jogador decide | O que deve observar | O que aprende a explicar |
+| --- | --- | --- | --- |
+| Cerrado · Terra/MODIS | Processar bandas ou índice; escolher bateria, painel, rádio, memória e plano de transmissão | Instrumento/processador, energia e rádio da nave; instante em que um registro chega ou uma restrição interrompe a operação | Potência em W e energia em Wh são limites diferentes. Um par de períodos só permite comparar o índice quando os dois registros chegam válidos. Ausência de dados não equivale a ausência de vegetação. |
+| Bennu · OSIRIS-REx | Carga científica, energia, agenda de contatos, acesso, perfil e duração | Câmera ou espectrômetro; painéis e bateria; rádio e horário do contato | Produzir ou armazenar dados não garante recebê-los no solo. Ampliar o serviço de solo muda início, duração e custo dos contatos, mantendo antena e taxa. As dimensões de rochas recebidas não provam sua composição. |
+| Webb · WASP-39 b | Compatibilidade do instrumento com a pergunta e recursos que sustentam sua operação | Carga científica e registros recebidos no relógio da cena | Uma imagem e um espectro respondem a perguntas diferentes. Seis pacotes podem chegar sem constituir seis medidas compatíveis. Os bins publicados mantêm unidade e incerteza; o recorte não reproduz a detecção molecular do estudo completo. |
+
+A nave configurável, as capacidades, o orçamento e a agenda continuam didáticos. Os registros históricos mantêm suas fontes NASA. Alterar uma escolha muda o transporte ou a validade operacional do registro no exercício; não reescreve o valor científico publicado.
+
+## Confusões encontradas e correções
+
+### Termos científicos apareciam antes da explicação
+
+A abertura de Bennu agora explica “clasto” como fragmento de rocha e identifica o eixo maior como a maior dimensão medida. A abertura do Webb explica que cada bin é uma pequena faixa de comprimento de onda e que o espectro mostra a luz da estrela bloqueada em cada faixa. Os termos dos arquivos científicos permanecem preservados, com uma tradução próxima para quem está começando.
+
+### A escolha não apontava para a peça correspondente
+
+No projeto de Bennu e Webb, os seletores já mudavam a configuração, mas a cena permanecia no segmento de lançamento. Trocar energia ainda mostrava o envelope de integração. A edição agora aponta para o instrumento, para energia ou para comunicação, conforme a escolha, e mostra uma explicação breve junto aos seletores.
+
+O foco é um convite à inspeção, não uma trava: o jogador pode tocar em outra peça ou escolher “Nave completa”. Lançamento, perfil e duração recebem explicações sobre limites, agenda e prazo; a interface não inventa uma mudança geométrica para toda escolha. Comunicação mantém explicitamente a mesma antena e taxa nas duas opções de solo.
+
+### O resultado final parecia contradizer o relógio
+
+A simulação calcula a tentativa antes da inspeção. Nas expedições, a cena começa em T+0; por isso pode mostrar zero registros enquanto o resumo já informa seis no final. A interface agora anuncia essa diferença antes da cena e aponta para os controles de reprodução e estado final.
+
+No Cerrado, o resumo ganhou o rótulo “Resultado final da tentativa”. Rebobinar o 3D preserva o resumo final e reduz os registros disponíveis na cena ao instante correto. Isso permite investigar a história da missão sem antecipar evidências no replay.
+
+### Um diário existente aparecia como ausente
+
+Ao mover o relógio do Cerrado, a seleção de evento era limpa. A mensagem dizia que o motor não havia retornado eventos, mesmo com o diário preenchido. Agora convida a selecionar um evento. A mensagem de ausência só aparece quando a lista realmente está vazia.
+
+### Copiar um ensaio não indicava onde continuar
+
+Aplicar A ou B do experimento guiado do Cerrado deixava o visitante ao fim da página. A ação agora retorna o foco e a rolagem ao título do hangar, confirma a cópia e explica a próxima ação: revisar, prever e executar sua própria tentativa. Não há execução, salvamento ou nota automática ao copiar o exemplo.
+
+### Instrumento incompatível citava o caso errado
+
+A câmera selecionada no Webb citava dimensões de Bennu, e o espectrômetro escolhido em Bennu citava o espectro do Webb. O texto agora respeita a missão: explica por que imagem não substitui o espectro exigido no Webb e por que o espectrômetro não atende ao levantamento visual deste caso de Bennu. Uma regressão cobre as quatro combinações, sem mudar valores ou regras do motor.
+
+### Ler o 3D sem adivinhar
+
+O foco de comunicação agora traz o primeiro intervalo e o total planejado de contato junto à nave. A legenda distingue contorno de inspeção de transmissão registrada; selecionar uma peça não indica falha. O instrumento informa se está processando no instante escolhido. O desenho da bateria usa a mesma quantidade de segmentos proporcionais em 2D e 3D, sem apresentá-los como células reais. Apenas a legenda curta anuncia mudanças ao leitor de tela, evitando repetir o inspetor inteiro.
+
+Nas expedições, o cabeçalho deixou de mostrar as etapas desabilitadas do Cerrado: a navegação válida é a sequência própria de seis etapas. Os arquivos adicionais desta revisão são `src/App.tsx`, `src/ui/Scene.tsx`, `SpacecraftInspector.tsx`, `spacecraft-immersion.css` e `tests-ui/spacecraft-immersion.test.mjs`.
+
+### Percurso observado no navegador
+
+- Cerrado: configuração inicial em contatos longos entregou 6/6. Rever a primeira entrega em T+93:07 mostrou somente um registro recebido na cena e a comparação aguardou o segundo período.
+- Bennu: a configuração inicial entregou 2/6. Alterar somente o serviço de solo para contatos ampliados entregou 6/6; a opção muda agenda e custo conjuntamente, mantendo rádio e instrumento.
+- Webb: a configuração inicial com espectrômetro e energia compacta parou em T+10:00 por descarga insuficiente. Ampliar energia e contatos excedeu o envelope de massa/orçamento; selecionar o lançador científico permitiu uma tentativa com 6/6 válidos. A sequência mostra que resolver um recurso pode exigir rever outro segmento.
+
+Este percurso inicial foi observado na R19 pública para localizar problemas. Na candidata R20 local, a conferência visual confirmou os focos de comunicação e energia em Bennu, uma execução com 6/6 e a distinção explícita entre resultado final e T+0; a explicação dos bins e a incompatibilidade da câmera no Webb; e o ensaio Cerrado 2/0 com retorno de foco ao hangar ao copiar A. O pitch foi percorrido nas sete cenas, com tabela de incertezas, comparação 2→6, papéis, relógio, notas, teclado e modo de movimento reduzido. As cenas de leitura e A/B foram conferidas a 390 px, sem transbordamento horizontal. Não foram observados erros de console nessas ações.
+
+## Divisão para os dois desenvolvedores
+
+Os caminhos seguintes são relativos a `experiments/mission-design-lab/`.
+
+| Responsável | Código | Contrato de continuidade |
+| --- | --- | --- |
+| Dev A · ciência e simulação | `src/lab/scientific-expeditions.ts`, `src/lab/mission-curriculum.ts`, `src/lab/spacecraft-presentation.ts`, arquivos científicos | Manter unidades, IDs e fontes. Os textos de consequência devem acompanhar as capacidades do catálogo. Não alterar dados científicos para recompensar uma decisão de engenharia. |
+| Dev B · percurso e apresentação | `src/ui/ScientificExpedition.tsx`, `Workbench.tsx`, `MissionControl.tsx`, `scientific-missions.css` | Escolha → foco correto, explicação próxima e retorno de foco. Separar resumo final de leitura do instante. Não executar o projeto ao aplicar um exemplo. |
+| Revisão conjunta | `tests-ui/scientific-missions.test.mjs` e percurso no navegador | Conferir as três missões, alteração de instrumento/energia/solo, inspeção manual, reprodução temporal, origem dos registros e próxima decisão. |
+
+As cenas 3D usam a propriedade existente `inspectSubsystem`. Nenhum contrato de projeto, replay ou arquivo científico precisou mudar por estas correções. A primeira tentativa continua livre: uma hipótese pode estar errada, e o relatório deve ajudar a explicá-la.
+
+## Aceite e regressões
+
+- Em Bennu e Webb, trocar instrumento, energia e solo destaca o sistema correspondente; a inspeção manual continua funcionando.
+- No solo, ampliar contatos não passa a prometer uma antena ou taxa maior.
+- O resumo final permanece rotulado quando o relógio volta ao início. A cena continua sem registros recebidos no T+0.
+- Mover o relógio não declara o diário inexistente.
+- Copiar A/B no Cerrado retorna ao hangar, conserva a seleção e exige previsão e execução próprias.
+- Os testes DOM usam a alternativa 2D real e o motor real. Eles não comprovam renderização GPU, desempenho físico, leitor de tela ou aprendizagem humana.
+
+A regressão concentrada em `scientific-missions.test.mjs` deve ser executada junto à suíte de UI antes de publicar. Apenas um executor deve usar a pasta temporária global da suíte por vez. O recibo da publicação registra o commit e os testes efetivamente conferidos; não atribua resultados de uma implantação anterior a uma nova versão sem verificá-la.
+
+## Validação da candidata R20
+
+Em 15/11/2026: **152 testes de domínio, 60 de interface do laboratório, 17 de distribuição e 24 do contexto passaram**, junto com TypeScript e compilação do laboratório. A LP passou na compilação/exportação, em **22 testes de navegador**, 4 de motor e na integridade dos 17 assets. A distribuição contém 114 documentos na biblioteca e inclui licenças e atribuição do pitch. [Recibo de revisão](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/revision-r20.json).
+
+Para repetir: `npm --prefix experiments/mission-design-lab run verify`; depois `npm run build:beta && npm run prepare:vercel && npm run test:beta`. A preparação gera as rotas usadas no teste de distribuição. A conferência pública é posterior à implantação e usa `node scripts/verify-publication-r20.mjs <deployment-id> <commit-completo> <recibo.json>`, após conferir esses identificadores na Vercel.
+
+Dev A mantém a correspondência entre os exemplos do pitch e `runLearningExperiment`; Dev B mantém a apresentação em `presentation/pitch/`, os controles, créditos e responsividade. O pitch adapta duas curvas da MotionMaxxing para Web Animations, sem dependência nova. O site e a logo pessoal de Alexandre não foram fornecidos; a apresentação usa seu nome e a marca oficial da equipe. O próximo aceite de produto é um piloto com iniciantes humanos, registrando se conseguem explicar uma falha e justificar a segunda tentativa sem orientação.
+
+
+---
+
+# MISSÃO IPÊ · pitch de Alexandre Belo
+
+Fonte: `docs/52-PITCH-ALEXANDRE-BELO-R20.md` · SHA-256 original: `9ad7667c6551297184118ad16208adadbbeb8ac907ea56c4bfa2b69b0571df2a` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ · pitch de Alexandre Belo
+
+**R20 · 15/11/2026.** Pitch em português para jurados do NASA Space Apps Challenge e pessoas começando em engenharia espacial. [Abrir apresentação](../presentation/pitch/index.html) · [Jogar](../lab/index.html) · [Roteiro estendido](49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+
+## Apresentar em três minutos
+
+Abra a apresentação e selecione **Iniciar pitch de 3 min**. O relógio começa no primeiro quadro. A fala é de Alexandre Belo, ao vivo. Use as setas ← e →, os botões do rodapé ou deslize horizontalmente na cena. **Cenas** abre o índice para explorar fora da ordem. **Notas** abre a fala sugerida do quadro atual e permite reiniciar o relógio.
+
+A tela cheia é acionada pelo rodapé quando há suporte do navegador. **Reduzir movimento** desliga o deslocamento da câmera e os efeitos do ensaio. A preferência de movimento do sistema é respeitada na abertura e quando muda. O avanço sempre depende de quem apresenta. Ensaie em tela cheia no equipamento da apresentação e deixe o jogo carregado em outra aba se for abrir a experiência completa.
+
+| Tempo | Cena | O que mostrar |
+| --- | --- | --- |
+| 0:00–0:25 | A pergunta | No horizonte da Terra, pergunte qual evidência precisa chegar ao solo. Apresente o jogo e a equipe. |
+| 0:25–0:50 | Cerrado | Aponte o ensaio BANDAS versus ÍNDICE. Calcular o índice reduz volume e aumenta o pico de potência. |
+| 0:50–1:10 | Bennu | Mostre o mosaico histórico. Situe a pergunta sobre tamanhos e a janela de transmissão. |
+| 1:10–1:35 | Webb | Mostre seis pontos com incerteza. Explique por que a adequação do instrumento importa mesmo quando os seis pacotes chegam. |
+| 1:35–2:15 | Decisão A/B | Mostre A com dois registros válidos. Peça uma previsão, selecione B e deixe os identificadores e as quatro medidas adicionais aparecerem. |
+| 2:15–2:43 | Conselho | Aponte a trilha que vincula o registro ao evento do 3D. Selecione Solo ou Usuários para exemplificar uma responsabilidade. |
+| 2:43–3:00 | Convite | Convide o público a escolher um destino, prever o resultado e defender uma conclusão com evidência. |
+
+## O que o pitch reproduz do jogo
+
+Resultados obtidos com `runLearningExperiment` e `summarizeLearningTrial` de [mission-curriculum.ts](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/lab/mission-curriculum.ts). Os quadros exibem estados finais dos ensaios guiados. O visual do enlace em perspectiva mostra a mudança de estado e a entrega dos registros. Seu movimento é ilustrativo. Para investigar quando cada registro chegou, com o motor em operação e a cena 3D selecionando o componente, abra [o laboratório](../lab/index.html).
+
+| Caso | Configuração do catálogo e IDs | Resultado |
+| --- | --- | --- |
+| Cerrado | `short-contact`, `DEFAULT_CONFIG`, `processing: bands` → `index`. | 2 → 0 registros válidos. Em A chegaram `A-A2024241` e `A-A2024257`. |
+| Bennu | `compact` / `near` / `full` / `camera` / `extended` para lançador, perfil, duração, instrumento e energia. `ground: short` → `extended`. | 2 → 6 registros válidos. A entrega `bennu-site-1` e `bennu-site-2`. B também entrega `bennu-site-3`, `bennu-site-4a`, `bennu-site-5` e `bennu-site-6`. |
+| Webb | `science` / `far` / `full` / `extended` / `extended` para lançador, perfil, duração, energia e solo. `instrument: camera` → `spectrometer`. | Seis pacotes recebidos em cada lado. 0 → 6 registros válidos. Os bins de B vêm das linhas 25, 39, 54, 58, 65 e 80 da redução FIREFLy. |
+
+O rádio de Bennu permanece em 1,2 Mbit/s. O seletor de solo muda em conjunto o início da primeira janela, de T+90 para T+85 min, a duração, de 120 para 500 s, e o custo do serviço, de 6 para 12 créditos. A comparação é entre os dois serviços completos. A configuração de cada nova tentativa pode produzir outro resultado.
+
+Em Webb, `camera` é a câmera genérica do catálogo didático. Os seis bins de um único trânsito em 10/07/2022 conservam as incertezas publicadas de 1σ. O recorte serve para interpretar um espectro, com a detecção molecular documentada na fonte completa. No Cerrado, os dois períodos são de 2024. A imagem do Brasil central é de 2000 e contextualiza o instrumento.
+
+IPÊ é o nome da equipe. Os dados de ciência são históricos. A nave configurável, o tempo operacional, os recursos e os custos são didáticos. O laboratório representa a nave sem escala física e sem telemetria NASA ao vivo. Os quatro papéis (lançamento, espaço, solo e usuários) podem ser conduzidos por uma pessoa ou por até quatro no mesmo dispositivo. Essa colaboração ocorre no local, sem multiplayer online. O piloto com iniciantes ainda é uma etapa de avaliação da aprendizagem.
+
+## Direção e movimento
+
+O palco segue o caminho da observação até a evidência no solo. No Cerrado, o volume economizado encontra um limite físico. Em Bennu, os registros produzidos aguardam contato. No Webb, o mesmo número de pacotes pode gerar resultados científicos diferentes. O gesto que fecha a demonstração é trocar o serviço de solo e ler quais registros chegaram.
+
+A composição usa o horizonte amplo e a tipografia editorial observados em *Space planet*, além da passagem entre destinos de *Space Voyage*, referências do catálogo MotionSites. As imagens usadas no pitch estão no acervo da equipe e da NASA. Os palcos alternam imagem integral, órbita lateral, gráfico e mesa de decisão. As imagens de contexto permanecem estáticas durante a leitura.
+
+Apliquei a versão [8c8ec0f da MotionMaxxing](https://github.com/Tejashmakwana/motionmaxxing/tree/8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c). A direção aproveita o fio visual entre cenas e concentra o movimento no gesto que torna a consequência visível. A adaptação usa as funções medidas `softLand` e `accelExit` de [runtime/motion.js](https://github.com/Tejashmakwana/motionmaxxing/blob/8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c/runtime/motion.js#L16-L39), de Tejas Makwana, Apache 2.0. O código da apresentação calcula poses de partida e chegada com amostras em 30 fps, interpoladas pelas Web Animations nativas. São 8 frames para deslocar a câmera antes do corte, 15 para assentá-la depois do corte e 12 para o texto. Não há animação contínua durante a leitura. [Licença da adaptação](../presentation/pitch/assets/LICENSE-MOTIONMAXXING-APACHE-2.0.txt).
+
+O navegador renderiza uma cena estável até receber uma ação, inclusive no modo de movimento reduzido. Os medidores de quadros parados, cadência e duração de cartões finais do fluxo de MP4 da MotionMaxxing não se aplicam ao pitch controlado ao vivo. Os controles de navegação e tempo ficam abaixo do palco e as notas abrem sob demanda. A página usa CSS, JavaScript e fontes locais, sem GSAP nem Three no navegador da apresentação.
+
+## Créditos dos ativos
+
+| Ativo | Origem e tratamento |
+| --- | --- |
+| Marca MISSÃO IPÊ | SVG canônico da equipe, de `experiments/mission-design-lab/public/brand/`. Alexandre Belo recebe crédito textual na abertura e no fechamento. |
+| Terra | [NASA/Goddard, Blue Marble](https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/). Reuso dos WebP prontos de `apps/immersive-lp/public/assets/`, com enquadramento, sombra e atmosfera em CSS. |
+| Cerrado | [Terra/MODIS, Brasil central](https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/). Brian Montgomery, Reto Stöckli e Robert Simmon com dados da equipe MODIS. Reuso do JPEG de `web/media/`. |
+| Bennu | [Mosaico PolyCam](https://science.nasa.gov/resource/bennu-mosaic/), NASA/Goddard/University of Arizona. Reuso do JPEG de `web/media/`. |
+| Webb | [Modelo Webb (A)](https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/), NASA/Goddard Space Flight Center. Imagem renderizada do GLB local com câmera em perspectiva (2,5, 1,4, 2,5), Three existente e iluminação de apresentação. PNG com alfa e recorte. |
+| Espectro | Gráfico do pitch a partir dos seis intervalos FIREFLy, com barras de 1σ. [Arquivo científico NASA](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b) e [dados dos autores](https://doi.org/10.5281/zenodo.6959427). |
+| Tipografia | EB Garamond e Figtree do acervo local da landing page. Licenças SIL OFL 1.1 inclusas na pasta `assets/`. |
+
+O [handoff R19](48-HANDOFF-DOIS-DEVS-R19.md) e a [extração das fontes científicas](45-DADOS-REAIS-BENNU-WEBB-R18.md) descrevem a mecânica e os limites de conclusão. A publicação usa [as diretrizes de imagens e mídia da NASA](https://www.nasa.gov/nasa-brand-center/images-and-media/).
+
+## Manutenção
+
+A entrada é `presentation/pitch/index.html`. O diretório é autossuficiente para renderizar o pitch, inclusive aberto como arquivo local. Links de aprofundamento e do jogo precisam de rede se abertos desse modo. Na distribuição, os links do jogo e do guia apontam para as páginas no mesmo site. Os IDs de cena são âncoras copiáveis, como [Decisão A/B](../presentation/pitch/index.html#decisao).
+
+Ao atualizar o laboratório, rode os ensaios guiados novamente e confira os valores nesta página e no pitch. A troca A/B usa os resultados finais do ensaio de Bennu. As páginas históricas da apresentação têm seus próprios arquivos e roteiro.
+
+## Verificação local
+
+O Chrome local confirmou abertura direta do HTML, início, pausa e reinício do relógio, setas, Home e End, índice de cenas, notas e saída por Escape, troca de papéis, A/B reversível e entrada e saída de tela cheia. A cena de Bennu revela as quatro novas medidas ao selecionar B. Com movimento reduzido, a troca de cena não gerou animações. O mesmo instante de uma transição produziu a mesma posição antes e depois de saltar para outro instante.
+
+Os totais e os IDs dos registros foram reexecutados no motor de cada ensaio. A varredura automatizada de acessibilidade no navegador ficou incompleta por uma limitação da configuração da ferramenta de teste. Esses resultados são locais e não medem legibilidade no projetor, uso com leitor de tela nem tocabilidade em dispositivo físico.
+
+A revisão R20 também corrigiu o atalho “Ir para a cena”: ele preserva a cena atual. `node --test scripts/test-pitch.mjs` passou em duas regressões DOM, cobrindo âncoras/atalho e a reversão completa de A/B (contagem, agenda, custo e lacunas). A conferência CUA percorreu as sete cenas, tabela Webb, notas, relógio e seleção dos papéis; a 390 px, as cenas de leitura e A/B permaneceram sem transbordamento horizontal. Nenhum erro de console foi observado nessas ações.
 
 
 ---

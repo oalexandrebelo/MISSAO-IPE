@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "edition": "R8",
-  "startedAt": "2026-11-15T10:15:09.336Z",
-  "finishedAt": "2026-11-15T10:15:10.200Z",
+  "startedAt": "2026-11-15T10:54:54.921Z",
+  "finishedAt": "2026-11-15T10:54:55.909Z",
   "status": "passed",
   "summary": {
     "total": 24,
@@ -43,12 +43,12 @@
     {
       "name": "modelo mantém versão, prazo BRT e oito temas sem confundir planejamento com conclusão",
       "status": "passed",
-      "durationMs": 8.17
+      "durationMs": 7.24
     },
     {
       "name": "tarefas e gates formam DAG válido; concluídas possuem aceite e evidência",
       "status": "passed",
-      "durationMs": 0.229,
+      "durationMs": 0.231,
       "detail": {
         "vertices": 18,
         "dependencies": 22,
@@ -58,7 +58,7 @@
     {
       "name": "referências da pesquisa resolvem para fontes identificadas e URLs não executáveis",
       "status": "passed",
-      "durationMs": 0.186,
+      "durationMs": 0.239,
       "detail": {
         "sources": 49,
         "sourceReferencesResolved": true
@@ -67,77 +67,77 @@
     {
       "name": "HTML embarca o modelo completo e não inclui scripts/handlers de terceiros",
       "status": "passed",
-      "durationMs": 84.085
+      "durationMs": 129.516
     },
     {
       "name": "inicialização com recursos locais, sem rede externa nem exceções DOM",
       "status": "passed",
-      "durationMs": 0.512
+      "durationMs": 0.477
     },
     {
       "name": "navegação troca cada painel e mantém o conteúdo acessível no DOM",
       "status": "passed",
-      "durationMs": 18.943
+      "durationMs": 18.381
     },
     {
       "name": "links diretos possuem destino semântico e abrem a seção correta em nova sessão",
       "status": "passed",
-      "durationMs": 275.725
+      "durationMs": 280.639
     },
     {
       "name": "teclado muda a aba selecionada e mantém uma única parada de tabulação",
       "status": "passed",
-      "durationMs": 6.374
+      "durationMs": 11.947
     },
     {
       "name": "janela até o release recorta o conjunto sem excluir o backlog do projeto",
       "status": "passed",
-      "durationMs": 18.904
+      "durationMs": 21.117
     },
     {
       "name": "cronograma filtra status e trilha em conjunto, sem tarefas de outro grupo",
       "status": "passed",
-      "durationMs": 17.338
+      "durationMs": 17.978
     },
     {
       "name": "busca vazia tem estado explícito; limpar filtros recupera as tarefas",
       "status": "passed",
-      "durationMs": 11.881
+      "durationMs": 10.872
     },
     {
       "name": "alternar lista e trilhas preserva o conjunto filtrado e a identidade das tarefas",
       "status": "passed",
-      "durationMs": 13.005
+      "durationMs": 11.792
     },
     {
       "name": "detalhe da tarefa informa descrição, aceite e dependências resolvidas",
       "status": "passed",
-      "durationMs": 8.981
+      "durationMs": 7.974
     },
     {
       "name": "marcação pessoal altera somente estado local e preserva o progresso oficial",
       "status": "passed",
-      "durationMs": 5.108
+      "durationMs": 6.156
     },
     {
       "name": "marcações pessoais persistem em nova sessão sem concluir tarefas oficiais",
       "status": "passed",
-      "durationMs": 33.867
+      "durationMs": 41.345
     },
     {
       "name": "exportação contém somente contrato público de checklist e IDs conhecidos",
       "status": "passed",
-      "durationMs": 1.931
+      "durationMs": 3.758
     },
     {
       "name": "importação válida substitui marcações, sem alterar estado oficial",
       "status": "passed",
-      "durationMs": 16.308
+      "durationMs": 17.16
     },
     {
       "name": "importações inválidas são rejeitadas atomicamente e informam o erro",
       "status": "passed",
-      "durationMs": 152.325,
+      "durationMs": 153.555,
       "detail": {
         "rejectedPayloads": 9,
         "byteLimit": 262144
@@ -146,32 +146,32 @@
     {
       "name": "reset remove só a checklist desta aplicação",
       "status": "passed",
-      "durationMs": 0.948
+      "durationMs": 0.956
     },
     {
       "name": "armazenamento indisponível não impede leitura do contexto ou cronograma",
       "status": "passed",
-      "durationMs": 39.238
+      "durationMs": 46.307
     },
     {
       "name": "JSON pessoal corrompido não contamina o estado oficial nem quebra a inicialização",
       "status": "passed",
-      "durationMs": 28.018
+      "durationMs": 32.09
     },
     {
       "name": "passagem do prazo não conclui tarefas automaticamente",
       "status": "passed",
-      "durationMs": 41.581
+      "durationMs": 47.691
     },
     {
       "name": "pesquisa, contexto e fontes possuem busca com retorno vazio e recuperação",
       "status": "passed",
-      "durationMs": 12.367
+      "durationMs": 18.218
     },
     {
       "name": "nenhuma interação testada acessou rede ou produziu exceção assíncrona",
       "status": "passed",
-      "durationMs": 0.626
+      "durationMs": 0.61
     }
   ]
 }

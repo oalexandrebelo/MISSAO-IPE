@@ -127,7 +127,12 @@ function inspectHtml(source, document) {
   for (const element of document.querySelectorAll('[poster]')) resolveReference(source, element.getAttribute('poster'), 'poster');
   for (const element of document.querySelectorAll('[srcset]')) {
     const sourceSet = element.getAttribute('srcset');
-    assert.ok(!sourceSet || sourceSet.startsWith('data:'), `srcset precisa de inspeção explícita em ${source}`);
+    if (!sourceSet || sourceSet.startsWith('data:')) continue;
+    for (const candidate of sourceSet.split(',')) {
+      const match = candidate.trim().match(/^(\S+)(?:\s+\d+(?:\.\d+)?[wx])?$/);
+      assert.ok(match, `srcset inválido em ${source}`);
+      resolveReference(source, match[1], 'srcset');
+    }
   }
   for (const style of document.querySelectorAll('style')) inspectCss(source, style.textContent);
   for (const element of document.querySelectorAll('[style]')) inspectCss(source, element.getAttribute('style'));
@@ -225,11 +230,11 @@ async function run() {
     assert.equal(manifest.publicationReady, true);
     assert.deepEqual(manifest.missingRequired, []);
     assert.equal(manifest.project, 'PROJETO-IPE');
-    assert.equal(manifest.version, '0.10.0-beta.1');
-    assert.equal(manifest.edition, 'R19-evidence-learning-3d');
+    assert.equal(manifest.version, '0.11.0-beta.1');
+    assert.equal(manifest.edition, 'R20-beginner-journey-and-pitch');
     assert.equal(manifest.files.length, manifest.fileCount);
     assert.deepEqual(manifest.files.map(file => file.path).sort(), files.filter(file => file !== 'publication-manifest.json').sort());
-    for (const filename of ['docs/48-HANDOFF-DOIS-DEVS-R19.html', 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html', 'lab/data/science/bennu-records.json', 'lab/data/science/webb-spectrum-subset.json', 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.html', 'docs/46-HANDOFF-DOIS-DEVS-R18.html', 'brand/missao-ipe-logo.svg', 'brand/brand-provenance-r17.json', 'docs/43-HANDOFF-GERAL-R17.html', 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html', 'research/nasa-mission-stories-r17.json', 'planet-jumping.html', 'research/technology-opportunities-r16.json', 'lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json', ...['35-REVISAO-PRS-E-DIRECAO-R16', '36-PORTAL-PLANET-JUMPING', '37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16', '38-HANDOFF-R16'].flatMap(name => [`docs/${name}.html`, `docs/${name}.md`])]) {
+    for (const filename of ['presentation/pitch/index.html', 'presentation/pitch/pitch.css', 'presentation/pitch/pitch.js', 'docs/51-QA-INICIANTE-E-HANDOFF-R20.html', 'docs/52-PITCH-ALEXANDRE-BELO-R20.html', 'docs/48-HANDOFF-DOIS-DEVS-R19.html', 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html', 'lab/data/science/bennu-records.json', 'lab/data/science/webb-spectrum-subset.json', 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.html', 'docs/46-HANDOFF-DOIS-DEVS-R18.html', 'brand/missao-ipe-logo.svg', 'brand/brand-provenance-r17.json', 'docs/43-HANDOFF-GERAL-R17.html', 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html', 'research/nasa-mission-stories-r17.json', 'planet-jumping.html', 'research/technology-opportunities-r16.json', 'lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json', ...['35-REVISAO-PRS-E-DIRECAO-R16', '36-PORTAL-PLANET-JUMPING', '37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16', '38-HANDOFF-R16'].flatMap(name => [`docs/${name}.html`, `docs/${name}.md`])]) {
       assert.ok(bytesByFile.has(filename), `Entrega integrada ausente: ${filename}`);
     }
     for (const file of manifest.files) {
@@ -253,7 +258,7 @@ async function run() {
     const findings = [];
     let inspected = 0;
     for (const filename of files) {
-      if (!textExtensions.has(path.extname(filename)) && !['LICENSE', 'NOTICE'].includes(filename)) continue;
+      if (!textExtensions.has(path.extname(filename)) && !/^(?:LICENSE|NOTICE)(?:[-.].*)?$/.test(path.basename(filename))) continue;
       inspected++;
       findings.push(...privateFindings(filename, bytesByFile.get(filename).toString('utf8')));
     }
@@ -281,7 +286,7 @@ async function run() {
     assert.match(document.title, /IPÊ/i);
     for (const pattern of [/beta/i, /Cerrado/i, /planejad|propost/i, /NASA/, /elegibilidade/i]) assert.match(text, pattern);
     const destinations = [...document.querySelectorAll('a[href]')].map(link => new URL(link.getAttribute('href'), 'https://beta.invalid/').pathname);
-    for (const href of ['/lab/index.html', '/campanha/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html']) assert.ok(destinations.includes(href), `Destino principal ausente: ${href}`);
+    for (const href of ['/lab/index.html', '/campanha/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html', '/presentation/pitch/index.html']) assert.ok(destinations.includes(href), `Destino principal ausente: ${href}`);
     assert.equal(document.querySelectorAll('form').length, 0, 'Portal não deve introduzir coleta de dados nesta rodada');
     assert.match(document.querySelector('.brand img')?.getAttribute('src') || '', /missao-ipe-logo-on-light\.svg$/);
     const logo = new JSDOM(bytesByFile.get('brand/missao-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
@@ -314,6 +319,8 @@ async function run() {
     assert.equal(manifest.runtimeNetworkRequirements.experiments[0].mediaOrigin, portalOrigin);
     assert.equal(manifest.runtimeNetworkRequirements.experiments[0].mediaFiles, 6);
     assert.ok(manifest.routeEntrypoints.includes('/planet-jumping.html'));
+    assert.ok(manifest.routeEntrypoints.includes('/presentation/pitch/index.html'));
+    assert.equal(manifest.runtimeNetworkRequirements.presentations.requiredServices, 0);
     observations.localReferences = { count: references.length, uniqueTargets: new Set(references.map(reference => reference.target)).size, entries: references };
     observations.externalRuntimeMedia = { requests: remoteReferences, uniqueUrls: 6, scope: 'Only the standalone Planet Jumping experiment; mission games retain local runtime assets.', externalFetchPerformed: false };
   });
@@ -362,7 +369,7 @@ async function run() {
 
   await check('runtime, apresentação e dados preservam os artefatos já verificados', async () => {
     const preserved = [];
-    for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
+    for (const file of manifest.files.filter(file => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime', 'scientific-source', 'replay-example', 'historical-base-R4-reviewed'].includes(file.category))) {
       const original = await readFile(path.join(root, file.source));
       assert.equal(digest(bytesByFile.get(file.path)), digest(original), `Cópia alterou artefato: ${file.path}`);
       preserved.push({ path: file.path, source: file.source, sha256: digest(original) });
@@ -514,6 +521,7 @@ async function run() {
         assert.equal(response.headers.get(name), value, `Cabeçalho local divergente: ${route} · ${name}`);
       }
     }
+    assert.ok(vercel.redirects.some(redirect => redirect.source === '/pitch' && redirect.destination === '/presentation/pitch/index.html' && redirect.permanent === false));
     assert.ok(vercel.redirects.some(redirect => redirect.source === '/planet-jumping' && redirect.destination === '/planet-jumping.html' && redirect.permanent === false));
     for (const source of ['/campanha', '/campanha/research', '/campanha/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && redirect.destination === `${source}/index.html` && redirect.permanent === false), `Redirecionamento explícito da campanha ausente: ${source}`);
     const redirects = [];

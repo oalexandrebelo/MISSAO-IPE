@@ -21,6 +21,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/51-QA-INICIANTE-E-HANDOFF-R20.md', target: 'docs/51-QA-INICIANTE-E-HANDOFF-R20.md', title: 'Comece aqui · percurso iniciante R20', description: 'Confusões corrigidas, escolhas ligadas ao 3D, aprendizagem nas três missões e continuidade para dois devs.' },
+  { source: 'docs/52-PITCH-ALEXANDRE-BELO-R20.md', target: 'docs/52-PITCH-ALEXANDRE-BELO-R20.md', title: 'Pitch interativo · Alexandre Belo', description: 'Roteiro, apresentação imersiva, movimento, créditos e instruções para apresentar.' },
   { source: 'docs/50-LP-E-404-R19.md', target: 'docs/50-LP-E-404-R19.md', title: 'LP imersiva e rota 404 · R19', description: 'Referência visual, recuperação de navegação, movimento acessível e continuidade para dois devs.' },
   { source: 'docs/48-HANDOFF-DOIS-DEVS-R19.md', target: 'docs/48-HANDOFF-DOIS-DEVS-R19.md', title: 'Comece aqui · handoff R19', description: 'Trilha da evidência, comparação explicada, quatro papéis e imersão 3D nas três missões.' },
   { source: 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md', target: 'docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md', title: 'Apresente o MVP · roteiro de 6 minutos', description: 'Percurso demonstrável, decisões e aprendizagem em cada caso científico.' },
@@ -165,7 +167,7 @@ function renderMarkdown(markdown) {
   return out.join('\n');
 }
 function page(title, content, { source, index = false } = {}) {
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · MISSÃO IPÊ</title><link rel="icon" type="image/svg+xml" href="../brand/missao-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="MISSÃO IPÊ, início"><img src="../brand/missao-ipe-logo-on-light.svg" width="1064" height="499" alt="MISSÃO IPÊ"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/48-HANDOFF-DOIS-DEVS-R19.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>MISSÃO IPÊ · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · MISSÃO IPÊ</title><link rel="icon" type="image/svg+xml" href="../brand/missao-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="MISSÃO IPÊ, início"><img src="../brand/missao-ipe-logo-on-light.svg" width="1064" height="499" alt="MISSÃO IPÊ"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/51-QA-INICIANTE-E-HANDOFF-R20.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>MISSÃO IPÊ · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
 }
 async function addMarkdown(entry, { index = true, category = 'public-document' } = {}) {
   if (!(await copy(entry.source, entry.target, category))) return;
@@ -235,6 +237,13 @@ try {
   if (!entries.some(entry => /game\/assets\/mission\.worker-[^/]+\.js$/.test(entry.path))) throw new Error('Worker compilado ausente.');
   await copy('portable/Missao_Ipe_Local.html', 'portable/Missao_Ipe_Local.html', 'portable-game');
   await copy('presentation/Missao_Ipe_Apresentacao.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation-runtime');
+  for (const source of await tree('presentation/pitch')) {
+    const name = source.split('/').pop();
+    if (/\.(?:html|js|css|json|svg|png|jpg|jpeg|webp|woff2)$/.test(name) || /^(?:LICENSE|NOTICE)(?:[-.].*)?$/.test(name)) {
+      await copy(source, source, 'interactive-pitch-runtime');
+    }
+  }
+  if (!entries.some(entry => entry.path === 'presentation/pitch/index.html')) throw new Error('Apresentação interativa R20 ausente.');
   for (const name of ['README_APRESENTADOR', 'ROTEIRO_PT_EN', 'PITCH_EN_7_SLIDES']) {
     await addMarkdown({ source: `presentation/${name}.md`, target: `presentation/${name}.md`, title: name === 'README_APRESENTADOR' ? 'Guia do apresentador' : name === 'ROTEIRO_PT_EN' ? 'Roteiro PT/EN' : 'Pitch em inglês, sete quadros' }, { index: false, category: 'presentation-guide' });
   }
@@ -283,17 +292,18 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R19-evidence-learning-3d', version: '0.10.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R20-beginner-journey-and-pitch', version: '0.11.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,
-    routeEntrypoints: ['/', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
+    routeEntrypoints: ['/', '/planet-jumping.html', '/campanha/index.html', '/campanha/apresentacao/index.html', '/lab/index.html', '/game/index.html', '/presentation/Missao_Ipe_Apresentacao.html', '/presentation/pitch/index.html', '/architecture/index.html', '/context/index.html', '/context/research-library.html', '/docs/index.html'],
     curation: 'Explicit allowlist of runtime assets, public documents, historical artifacts reviewed by coordination, scientific sources, licenses and field-projected evidence.',
     excludedClasses: ['raw static-analysis report', 'repository-sources', 'personal attachments and poster references', 'environment and credential files', 'source maps', 'private repository code', 'node_modules', 'git and Vercel local state'],
     eligibility: 'Pre-event specific development preserved; temporal eligibility and official Resources unresolved.',
     fullBrowserValidation: false, requiredRuntimeNetworkServices: 1,
     runtimeNetworkRequirements: {
       missionGames: { requiredServices: 0, routes: ['/lab/index.html', '/game/index.html', '/campanha/index.html'] },
+      presentations: { requiredServices: 0, routes: ['/presentation/pitch/index.html', '/presentation/Missao_Ipe_Apresentacao.html'] },
       experiments: [{ route: '/planet-jumping.html', requiredServices: 1, mediaOrigin: 'https://d2ol7oe51mr4n9.cloudfront.net', mediaFiles: 6, withoutNetwork: 'Text journey remains available; external audiovisual media are unavailable.' }],
     },
     fileCount: entries.length, files: entries, missingRequired,
@@ -305,7 +315,7 @@ try {
   await rename(stage, output);
   const receipt = { generatedAt: now, command: `node scripts/build-beta-site.mjs${allowIncomplete ? ' --allow-incomplete' : ''}`, output: 'site/', publicationReady: manifest.publicationReady, fileCount: entries.length + 1, bytes: entries.reduce((sum, file) => sum + file.bytes, 0) + Buffer.byteLength(manifestBytes), manifest: { path: 'site/publication-manifest.json', bytes: Buffer.byteLength(manifestBytes), sha256: digest(manifestBytes) }, entries, omissions, limitations: ['Static build only; does not publish to a remote service', 'No real-browser inspection or restriction bypass', 'Public projections are not complete internal receipts', 'Release target is planned, not a completed qualification'] };
   const preservedRuntimes = [];
-  for (const entry of entries.filter(item => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime'].includes(item.category))) {
+  for (const entry of entries.filter(item => ['game-runtime', 'mission-lab-runtime', 'four-level-campaign-runtime', 'portable-game', 'presentation-runtime', 'interactive-pitch-runtime'].includes(item.category))) {
     const originalSha256 = digest(await readFile(safePath(root, entry.source)));
     const publishedSha256 = digest(await readFile(safePath(output, entry.path)));
     if (originalSha256 !== publishedSha256 || publishedSha256 !== entry.sha256) throw new Error(`Runtime não preservado: ${entry.path}`);

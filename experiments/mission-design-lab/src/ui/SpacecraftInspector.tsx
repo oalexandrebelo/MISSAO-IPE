@@ -11,7 +11,7 @@ const numeric = (value: number) => value.toLocaleString('pt-BR', { maximumFracti
 export function SpacecraftInspector({ presentation, inspection, state }: { presentation: SpacecraftPresentation; inspection: SpacecraftInspection; state?: MissionVisualState }) {
   const parts = [{ id: 'instrument', part: presentation.payload }, { id: 'energy', part: presentation.energy }, { id: 'communications', part: presentation.communications }];
   const visible = inspection === 'overview' ? parts : parts.filter(item => item.id === inspection);
-  return <div className={`spacecraft-inspector ${inspection === 'overview' ? 'inspector-overview' : ''}`} aria-label="Escolhas representadas na nave" aria-live="polite">
+  return <div className={`spacecraft-inspector ${inspection === 'overview' ? 'inspector-overview' : ''}`} aria-label="Escolhas representadas na nave">
     <p className="inspector-intro">{state ? 'Montagem da tentativa executada. ' : 'Montagem do projeto em edição. '}Selecione uma peça na cena ou use os botões para entender sua função.</p>
     <div className="inspector-parts">{visible.map(({ id, part }) => <article key={id} data-inspector-part={id}>
       <p className="inspector-kicker">{id === 'instrument' ? '01 / O que produz a evidência' : id === 'energy' ? '02 / O que sustenta a operação' : '03 / O que faz os dados chegarem'}</p>
@@ -28,7 +28,7 @@ export function SpacecraftInspector({ presentation, inspection, state }: { prese
 /** Same configuration and recorded state as the WebGL craft; no hidden simulation. */
 export function FlatConfiguredCraft({ presentation: p, inspection, exploded, state }: { presentation: SpacecraftPresentation; inspection: SpacecraftInspection; exploded: boolean; state?: MissionVisualState }) {
   const wing = 86 + p.energy.panelRatio * 70;
-  const batteryCells = p.energy.batteryRatio > .7 ? 4 : 2;
+  const batteryCells = Math.max(1, Math.ceil(Math.max(0, Math.min(1, p.energy.batteryRatio)) * 4));
   const highlight = (part: SpacecraftInspection) => inspection === part ? '#e5f6a0' : '#90a5b3';
   const energy = state?.available ? state.energyFraction : null;
   const active = state?.available && state.transmitting;

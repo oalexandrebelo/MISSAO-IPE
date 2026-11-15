@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T10:25:30.150Z",
+  "generatedAt": "2026-11-15T10:58:13.451Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 112,
+  "documentCount": 114,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -43,9 +43,9 @@
       "title": "MISSÃO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 13761,
-      "originalSha256": "0dca759c55fc562aed7919f314a793d4d9511a4e8f12457295ff655970750acb",
-      "projectedSha256": "0dca759c55fc562aed7919f314a793d4d9511a4e8f12457295ff655970750acb",
+      "originalBytes": 14182,
+      "originalSha256": "eb9d5f0fb7b814c9c4b04d91cc146649e32cf7df2edfbe127886782aff0e1bbf",
+      "projectedSha256": "eb9d5f0fb7b814c9c4b04d91cc146649e32cf7df2edfbe127886782aff0e1bbf",
       "redactions": 0
     },
     {
@@ -607,6 +607,28 @@
       "originalBytes": 3337,
       "originalSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
       "projectedSha256": "9027b2eb45aa0e0d8bfb0fbe85aaad1f4f3dd71591cd21a3d56e65584deeee37",
+      "redactions": 0
+    },
+    {
+      "source": "docs/51-QA-INICIANTE-E-HANDOFF-R20.md",
+      "id": "doc-docs-51-qa-iniciante-e-handoff-r20-md",
+      "title": "Primeira experiência nas três missões · handoff R20",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 11639,
+      "originalSha256": "c387f7675e85df17ca0b992c21e1fd8c74a84ec30e87f991ab3db79ef23ec212",
+      "projectedSha256": "c387f7675e85df17ca0b992c21e1fd8c74a84ec30e87f991ab3db79ef23ec212",
+      "redactions": 0
+    },
+    {
+      "source": "docs/52-PITCH-ALEXANDRE-BELO-R20.md",
+      "id": "doc-docs-52-pitch-alexandre-belo-r20-md",
+      "title": "MISSÃO IPÊ · pitch de Alexandre Belo",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 10734,
+      "originalSha256": "9ad7667c6551297184118ad16208adadbbeb8ac907ea56c4bfa2b69b0571df2a",
+      "projectedSha256": "9ad7667c6551297184118ad16208adadbbeb8ac907ea56c4bfa2b69b0571df2a",
       "redactions": 0
     },
     {
@@ -1240,13 +1262,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2211088,
-      "sha256": "794afe4b0d79184042fede940f33d370e63b41583508ab14db9638eb61893364"
+      "bytes": 2240280,
+      "sha256": "a0f79193044b81fc942c088045018ed90d6eedb5a9abbeaa5be4d543469ee5f6"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1778536,
-      "sha256": "bbf41520dfbcf13aa71c233815125fc2dd19e96dca028c96f69795ca9ffaef7c"
+      "bytes": 1801786,
+      "sha256": "0e9f74bc58712355f453edc79952d428a71ac6a1898bdd9e7087c319af0af3bb"
     }
   ]
 }

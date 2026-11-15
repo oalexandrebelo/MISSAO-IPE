@@ -2,15 +2,17 @@
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.10.0-beta.1 · edição R19 · 15/11/2026.**
+**Beta atual: 0.11.0-beta.1 · edição R20 · 15/11/2026.**
 
-**MVP R19:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
+**MVP R20:** escolhas apontam para o sistema correspondente na nave; resultado final e replay ficam separados, e os termos científicos são explicados na abertura. O [pitch interativo de Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html) apresenta a proposta.
+
+**Três missões:** siga um registro até o evento e o componente 3D, investigue a primeira diferença entre A/B e registre a análise de lançamento, espaço, solo e usuários. [Roteiro de apresentação](docs/49-ROTEIRO-APRESENTACAO-MVP-R19.md).
 
 A [LP imersiva](https://projeto-ipe-lp.vercel.app/) oferece uma 404 espacial com caminhos de retorno ao jogo e à documentação. [Implementação, créditos e handoff da LP](docs/50-LP-E-404-R19.md).
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/48-HANDOFF-DOIS-DEVS-R19.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/51-QA-INICIANTE-E-HANDOFF-R20.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/48-HANDOFF-DOIS-DEVS-R19.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/51-QA-INICIANTE-E-HANDOFF-R20.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
 ## Direção vigente — histórias reais, identidade da equipe
 
@@ -38,7 +40,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R19. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R20. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -46,7 +48,8 @@ O código e os documentos completos dessa experiência ficam em [`experiments/fo
 - [Jogar o beta atual](https://projeto-ipe.vercel.app/lab/index.html)
 - [Contexto e cronograma detalhados](https://projeto-ipe.vercel.app/context/index.html)
 - [Biblioteca integral](https://projeto-ipe.vercel.app/context/research-library.html)
-- [Apresentação e pitch](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
+- [Pitch interativo · Alexandre Belo](https://projeto-ipe.vercel.app/presentation/pitch/index.html)
+- [Apresentação histórica preservada](https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html)
 - [Documentação pública](https://projeto-ipe.vercel.app/docs/index.html)
 - [Jogo clássico preservado](https://projeto-ipe.vercel.app/game/index.html)
 
@@ -71,7 +74,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.10.0-beta.1 / R19 | `experiments/mission-design-lab/` |
+| Beta 0.11.0-beta.1 / R20 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |

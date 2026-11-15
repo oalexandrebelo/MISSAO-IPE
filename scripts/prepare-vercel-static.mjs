@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const site = resolve(root, 'site');
+const { version } = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
 const files = [];
 async function walk(folder) {
   for (const entry of await readdir(folder, { withFileTypes: true })) {
@@ -16,7 +17,7 @@ async function walk(folder) {
 }
 await walk(site);
 files.sort();
-const required = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
+const required = ['campanha/index.html', 'campanha/apresentacao/index.html', 'campanha/research/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'index.html', 'planet-jumping.html', 'lab/index.html', 'game/index.html', 'presentation/Missao_Ipe_Apresentacao.html', 'presentation/pitch/index.html', 'architecture/index.html', 'context/index.html', 'context/research-library.html', 'docs/index.html'];
 for (const file of required) await readFile(resolve(site, file));
 const inlineHashes = new Set();
 const portalHashes = new Set();
@@ -56,6 +57,7 @@ const routeConfig = {
     { source: '/planet-jumping', destination: '/planet-jumping.html', permanent: false },
     { source: '/architecture', destination: '/architecture/index.html', permanent: false },
     { source: '/arquitetura', destination: '/architecture/index.html', permanent: false },
+    { source: '/pitch', destination: '/presentation/pitch/index.html', permanent: false },
     { source: '/apresentacao', destination: '/presentation/Missao_Ipe_Apresentacao.html', permanent: false },
     { source: '/docs', destination: '/docs/index.html', permanent: false },
     { source: '/documentacao', destination: '/docs/index.html', permanent: false },
@@ -87,5 +89,5 @@ for (const path of [...files, staticConfigPath]) {
   const buffer = await readFile(path);
   upload.push({ file: path === staticConfigPath ? 'vercel.json' : relative(site, path).replaceAll('\\', '/'), source: relative(root, path).replaceAll('\\', '/'), size: buffer.length, sha: createHash('sha1').update(buffer).digest('hex'), sha256: createHash('sha256').update(buffer).digest('hex') });
 }
-await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version: '0.7.0-beta.1', files: upload }, null, 2) + '\n');
+await writeFile(resolve(root, '.vercel/upload-manifest.json'), JSON.stringify({ version, files: upload }, null, 2) + '\n');
 console.log(JSON.stringify({ files: upload.length, bytes: upload.reduce((a,f)=>a+f.size,0), executableInlineScripts: executableScripts, uniqueInlineHashes: inlineHashes.size + portalHashes.size, cspBytes: Buffer.byteLength(csp), portalCspBytes: Buffer.byteLength(portalCsp), config: 'vercel.json', uploadManifest: '.vercel/upload-manifest.json' }, null, 2));

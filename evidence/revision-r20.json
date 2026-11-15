@@ -1,0 +1,64 @@
+{
+  "edition": "R20-beginner-journey-and-pitch",
+  "version": "0.11.0-beta.1",
+  "checkedAt": "2026-11-15T10:56:41.720588+00:00",
+  "features": [
+    "Choice selects relevant spacecraft subsystem and explains expected consequence",
+    "Scientific terms explained at mission entry, incompatible instruments retain their own mission context",
+    "Final result distinguished from replay time and diary selection",
+    "Guided example copy returns focus and explains next action",
+    "Seven-scene interactive pitch for Alexandre Belo with MotionMaxxing curve adaptation, local NASA imagery and verified A/B outcomes",
+    "Keyboard skip-to-scene preserves the current scene"
+  ],
+  "validation": {
+    "labDomain": {
+      "passed": 152,
+      "failed": 0
+    },
+    "labDOM": {
+      "passed": 60,
+      "failed": 0
+    },
+    "publication": {
+      "passed": 17,
+      "failed": 0
+    },
+    "context": {
+      "passed": 24,
+      "failed": 0
+    },
+    "lpBrowser": {
+      "passed": 22,
+      "failed": 0
+    },
+    "lpDomain": {
+      "passed": 4,
+      "failed": 0
+    },
+    "lpAssets": {
+      "passed": 17,
+      "failed": 0
+    },
+    "labBuild": "passed",
+    "lpBuild": "passed",
+    "typeScript": "passed",
+    "pitchDOM": {
+      "passed": 2,
+      "failed": 0
+    }
+  },
+  "browserChecks": [
+    "Baseline R19: completed Cerrado6/6, Bennu2/6 then6/6 by changing ground service, Webb battery failure then6/6 after redesign.",
+    "R20 local: Bennu choices focus hardware and explain contact schedule; completed6/6; final result and T0 explicitly separated.",
+    "R20 local: Webb defines bins and warns incompatible camera; Cerrado guided2/0 copies A with focus returned to hangar and no automatic execution.",
+    "Pitch: seven scenes, real Webb table, Bennu2 to6 display, roles, timer, notes, keyboard and reduced motion; 390px reading and A/B without horizontal overflow.",
+    "No console errors observed during the described CUA journeys."
+  ],
+  "limits": [
+    "Agent walkthrough is not a human learning or usability study.",
+    "No physical mobile device, touch or GPU performance certification.",
+    "Pitch reproduces guided final outcomes; it is not a second runtime engine or a live orbital simulation.",
+    "Pitch automated accessibility audit was incomplete; LP automated audit passed within its22tests.",
+    "Production receipt follows deployment and identifies exact deployment and commit."
+  ]
+}

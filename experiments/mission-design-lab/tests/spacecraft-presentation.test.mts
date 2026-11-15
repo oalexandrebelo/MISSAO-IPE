@@ -86,6 +86,19 @@ test('expeditions render the instrument actually chosen, including an incompatib
   }
 });
 
+test('instrument explanations stay in the selected mission and explain incompatible choices', () => {
+  for (const world of ['bennu', 'telescope'] as const) {
+    for (const instrument of ['camera', 'spectrometer'] as const) {
+      const { payload } = getSpacecraftPresentation({
+        world, expeditionConfig: { ...DEFAULT_EXPEDITION_CONFIGS[world], instrument },
+      });
+      assert.match(payload.principle, world === 'bennu' ? /Bennu/ : /WASP-39 b/);
+      assert.doesNotMatch(payload.principle, world === 'bennu' ? /WASP-39|Webb/ : /Bennu/);
+      if (!payload.goalCompatible) assert.match(payload.principle, /não atende/);
+    }
+  }
+});
+
 test('expedition energy is one package: capacities scale but package mass/credits are not counted twice', () => {
   for (const world of ['bennu', 'telescope'] as const) {
     const compact = getSpacecraftPresentation({ world, expeditionConfig: { ...DEFAULT_EXPEDITION_CONFIGS[world], power: 'compact' } });

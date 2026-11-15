@@ -1,0 +1,8 @@
+motionmaxxing: looksmaxxing for motion graphics
+Made by Tejas Makwana (x.com/makwanatejas170) · github.com/Tejashmakwana/motionmaxxing
+Lives inside FinalMotion · finalmotion.video
+
+This presentation adapts the softLand and accelExit timing formulas from
+runtime/motion.js, commit 8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c, licensed under
+the Apache License, Version 2.0. The timing formulas are evaluated as frame
+samples for the Web Animations API in pitch.js. See LICENSE-MOTIONMAXXING-APACHE-2.0.txt.

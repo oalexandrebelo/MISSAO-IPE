@@ -4,7 +4,7 @@ export const LINKS = {
   research: 'https://projeto-ipe.vercel.app/context/research-library.html',
   roadmap: 'https://projeto-ipe.vercel.app/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html',
   github: 'https://github.com/oalexandrebelo/MISSAO-IPE',
-  pitch: 'https://projeto-ipe.vercel.app/presentation/Missao_Ipe_Apresentacao.html',
+  pitch: 'https://projeto-ipe.vercel.app/presentation/pitch/index.html',
 } as const;
 
 export const CHAPTERS = [

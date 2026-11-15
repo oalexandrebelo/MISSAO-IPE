@@ -108,7 +108,13 @@ export function getSpacecraftPresentation(input: SpacecraftPresentationInput): S
     source: { label: 'Catálogo didático com evidência NASA', version: EXPEDITION_MODEL_VERSION, note: 'Registros científicos de arquivo são reais. Massa, energia, pacotes e contatos são parâmetros didáticos. Os modelos NASA contextualizam o alvo; não fornecem capacidades ou dimensões da nave do jogo.' },
     payload: {
       id: config.instrument, kind: config.instrument, label: payload.label,
-      principle: config.instrument === 'camera' ? 'A câmera representa o tipo de observação usado no levantamento visual. O exercício processa dimensões de Bennu já publicadas; não faz uma nova medição nas imagens.' : 'O espectrômetro representa a separação da luz por comprimento de onda. O exercício processa bins publicados de WASP-39 b, com incerteza; não realiza uma nova observação do Webb.',
+      principle: input.world === 'bennu'
+        ? config.instrument === 'camera'
+          ? 'A câmera representa o tipo de observação usado no levantamento visual. O exercício processa dimensões de Bennu já publicadas; não faz uma nova medição nas imagens.'
+          : 'O espectrômetro representa a separação da luz por comprimento de onda. Neste exercício de Bennu, ele não atende ao levantamento visual exigido para interpretar as dimensões publicadas; transmitir seus pacotes não gera evidência válida para essa pergunta.'
+        : config.instrument === 'spectrometer'
+          ? 'O espectrômetro representa a separação da luz por comprimento de onda. O exercício processa bins publicados de WASP-39 b, com incerteza; não realiza uma nova observação do Webb.'
+          : 'A câmera representa imagens, mas não o espectro exigido neste exercício de WASP-39 b. Ela não atende ao objetivo científico: transmitir uma imagem não substitui os registros espectrais publicados do Webb.',
       effect: `${payload.detail} ${goalCompatible ? 'O instrumento atende ao objetivo deste caso.' : 'Este instrumento não atende ao objetivo deste caso, mesmo que seus dados sejam transmitidos.'}`,
       bitsPerRecord: payload.bitsPerRecord!, totalLoadW: payload.totalLoadW!, goalCompatible,
       metrics: [metric('Pacote didático por registro', payload.bitsPerRecord! / 1_000_000, 'Mbit'), metric('Carga total durante processamento', payload.totalLoadW!, 'W')],
