@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T18:02:56.568Z",
+  "generatedAt": "2026-11-15T18:24:37.761Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 134,
+  "documentCount": 135,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -40,12 +40,12 @@
     {
       "source": "README.md",
       "id": "doc-readme-md",
-      "title": "MISSÃO IPÊ · R27",
+      "title": "MISSÃO IPÊ · R28",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 16850,
-      "originalSha256": "a6593b390801bde1df7b7a0f9211bc6bbd84fca484162d8618cd04b9811c6fe8",
-      "projectedSha256": "a6593b390801bde1df7b7a0f9211bc6bbd84fca484162d8618cd04b9811c6fe8",
+      "originalBytes": 17479,
+      "originalSha256": "5df3b619dad156d7f2358dcb184b55e834fde2fcd2c6c001f9a26e7c431d84bb",
+      "projectedSha256": "5df3b619dad156d7f2358dcb184b55e834fde2fcd2c6c001f9a26e7c431d84bb",
       "redactions": 0
     },
     {
@@ -852,6 +852,17 @@
       "redactions": 0
     },
     {
+      "source": "docs/73-QA-MOVEL-E-HANDOFF-R28.md",
+      "id": "doc-docs-73-qa-movel-e-handoff-r28-md",
+      "title": "R28 · primeira jornada, QA móvel e handoff",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 7261,
+      "originalSha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+      "projectedSha256": "3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1482,13 +1493,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2498766,
-      "sha256": "20d287b37312dea9483e298a0b2be29d21f83a1aaee5b90f9201c9b06eefc078"
+      "bytes": 2509600,
+      "sha256": "4132dc942a1b2b8b360e04660390ddc5d92c14d3e79a66794d4f8b21a96d1c58"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2002660,
-      "sha256": "547d1269a7f5628dd2ac79d8d706ca94aab775ae42bbbbacd51b59aabe192ede"
+      "bytes": 2010772,
+      "sha256": "9a1a897751185dd453fdc1afeac3c449aed555dd27444aef48bf73dbf13f0c1c"
     }
   ]
 }

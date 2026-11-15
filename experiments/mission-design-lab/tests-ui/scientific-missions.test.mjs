@@ -19,6 +19,7 @@ const { metricsKey } = await import('../src/metrics/player-metrics.ts');
 const { simulateExpedition, getExpeditionVisualState, EXPEDITIONS } = await import('../src/lab/scientific-expeditions.ts');
 const { DEFAULT_CONFIG } = await import('../src/core/catalog.ts');
 const { simulateMission } = await import('../src/core/engine.ts');
+const { MISSION_CURRICULUM } = await import('../src/lab/mission-curriculum.ts');
 const { exportReplay } = await import('../src/persistence/replay.ts');
 const { number } = await import('../src/ui/format.ts');
 const VIABLE = {
@@ -84,7 +85,9 @@ after(() => dom.window.close());
 test('hub exposes all three missions; Cerrado rewind excludes future delivery; NASA fallback never claims GPU loading', async t => {
   t.after(cleanupView); await mount();
   for (const name of ['Projetar missão do Cerrado', 'Explorar missão Bennu', 'Projetar telescópio científico']) assert.ok(button(name));
-  await click('Projetar missão do Cerrado'); await change('Minha previsão', 'none'); await change('Por quê?', 'O contato longo deve permitir entregar os seis registros completos.'); await click('Registrar e executar');
+  await click('Projetar missão do Cerrado');
+  assert.ok(document.querySelector('.workbench-heading .page-intro').textContent.includes(MISSION_CURRICULUM.cerrado.question));
+  await change('Minha previsão', 'none'); await change('Por quê?', 'O contato longo deve permitir entregar os seis registros completos.'); await click('Registrar e executar');
   await waitFor(() => assert.equal(document.querySelector('.result-number')?.textContent, '6/6'));
   const result = simulateMission({ ...DEFAULT_CONFIG }, 'long-contact');
   await change('Estado registrado da missão', '0');
@@ -133,6 +136,7 @@ test('both new scientific missions execute viable inputs and reject incompatible
     await change(/^Instante da missão/, '0'); assert.equal(currentCount(), '0 / 6'); assertSceneAt(valid, 0);
     assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
     await click('Interpretar o retorno científico'); assert.ok(screen.getByRole('heading', { name: '6 de 6 registros válidos.' }));
+    assert.ok(screen.getByText(/6 de 6 registros chegaram ao solo/));
     assert.equal(document.querySelectorAll('.archive-record.is-received').length, 6);
     for (const record of valid.observations) assert.ok(document.querySelector(`[data-record-id="${record.id}"] .archive-value`).textContent.includes(record.value.toLocaleString('pt-BR', { maximumFractionDigits: 5 })));
     assert.match(document.querySelector('.archive-evidence').textContent, /ARQUIVO CIENTÍFICO REAL/);
@@ -142,6 +146,7 @@ test('both new scientific missions execute viable inputs and reject incompatible
     await change(LABELS.launch, wrong.launch); await change(LABELS.instrument, wrong.instrument);
     const condition = [...document.querySelectorAll('.expedition-constraints li')].find(item => item.textContent.includes('Instrumento atende ao objetivo'));
     assert.match(condition.textContent, /^Revisar/);
+    assert.doesNotMatch(condition.textContent, /0 \/ 1 compatibilidade/);
     await execute('Quero verificar se receber arquivos basta quando o instrumento não responde à pergunta.');
     const twoAttempts = JSON.parse(localStorage.getItem(metricsKey(TEST_SESSION.sessionId))).entries.filter(item => item.event.kind === 'attempt');
     assert.equal(twoAttempts.length, 2); assert.notEqual(twoAttempts[0].event.payload.attemptId, twoAttempts[1].event.payload.attemptId);
@@ -149,6 +154,15 @@ test('both new scientific missions execute viable inputs and reject incompatible
     const invalid = simulateExpedition(id, wrong); assert.equal(invalid.outcome, 'invalid'); assert.equal(invalid.deliveredRecords, 0);
     await click('Ir ao estado final'); assert.equal(currentCount(), '0 / 6'); assertSceneAt(invalid, invalid.completedAtS);
     await click('Interpretar o retorno científico'); assert.ok(screen.getByRole('heading', { name: '0 de 6 registros válidos.' }));
+    const received = invalid.observations.filter(record => record.deliveredAtS !== null).length;
+    assert.equal(received, 6);
+    assert.ok(screen.getByText(new RegExp(`${received} de 6 registros chegaram ao solo`)));
+    const archive = document.querySelector('.archive-evidence');
+    assert.equal(archive.querySelector('.archive-count').textContent, '0 / 6 válidos disponíveis');
+    if (id === 'telescope') {
+      const chart = within(archive).getByRole('img', { name: /0 de 6 medidas válidas disponíveis/ });
+      assert.match(chart.textContent, /Sem registros válidos neste instante/);
+    }
     assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
     assert.ok([...document.querySelectorAll('.archive-value')].every(node => node.textContent.startsWith('—')));
   });
@@ -181,13 +195,15 @@ test('saved project and rejected import preserve the result; A/B redesign shares
   await execute(hypothesis); await click('Ir ao estado final');
   const first = simulateExpedition('bennu', VIABLE.bennu);
   await click('Redesenhar esta missão'); await click('Salvar projeto');
+  const saveFeedback = document.querySelector('.expedition-draft-tools + [role="status"]');
+  assert.match(saveFeedback?.textContent ?? '', /Configuração e hipótese salvas neste navegador/);
   const saved = JSON.parse(localStorage.getItem(`ipe:expedition:bennu:${TEST_SESSION.sessionId}`));
   assert.deepEqual(saved.config, VIABLE.bennu); assert.equal(saved.hypothesis, hypothesis);
   await importDesign(JSON.stringify({ ...saved, format: 'ipe-scientific-design-v1' }));
   await waitFor(() => assert.match(document.querySelector('.expedition-notice').textContent, /R18 usa novos dados reais/));
   for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(await selectedEquipment(LABELS[key]), value);
   await importDesign(JSON.stringify({ ...saved, config: { ...saved.config, instrument: 'inventado' } }));
-  await waitFor(() => assert.notEqual(document.querySelector('.expedition-notice').textContent, 'Projeto salvo neste navegador.'));
+  await waitFor(() => assert.match(document.querySelector('.expedition-notice').textContent, /A expedição exige exatamente seis escolhas válidas/));
   for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(await selectedEquipment(LABELS[key]), value);
   await click(/^05\s*·\s*Operação$/); assert.equal(currentCount(), '6 / 6'); assertSceneAt(first, first.completedAtS);
   await click('Redesenhar esta missão'); await change(LABELS.ground, 'short'); await click('Restaurar projeto salvo');

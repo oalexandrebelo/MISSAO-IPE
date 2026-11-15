@@ -46,14 +46,15 @@ const policy = (hashes, externalMedia = false) => [
 ].join('; ');
 const privateCsp = policy(inlineHashes);
 const csp = allowPublicAnalytics(privateCsp), portalCsp = allowPublicAnalytics(policy(portalHashes, true));
+const presentationUrl = 'https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/';
 if (Math.max(Buffer.byteLength(csp), Buffer.byteLength(portalCsp)) > 12_000) throw new Error('CSP excede o limite local de 12KB; dividir política por rota.');
 const routeConfig = {
   $schema: 'https://openapi.vercel.sh/vercel.json',
   cleanUrls: false,
   trailingSlash: false,
   redirects: [
-    ...Object.entries({ jogo: '/lab/index.html', pitch: '/presentation/pitch/index.html', painel: '/dashboard/index.html', docs: '/docs/index.html' }).flatMap(([area, path]) => [
-      { source: '/', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: `https://nasa-missaoipe.alexandrebelo.com${path}`, permanent: false },
+    ...Object.entries({ jogo: '/lab/index.html', pitch: presentationUrl, painel: '/dashboard/index.html', docs: '/docs/index.html' }).flatMap(([area, path]) => [
+      { source: '/', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: area === 'pitch' ? presentationUrl : `https://nasa-missaoipe.alexandrebelo.com${path}`, permanent: false },
       { source: '/:path*', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: 'https://nasa-missaoipe.alexandrebelo.com/:path*', permanent: false },
     ]),
     { source: '/doc', destination: '/docs/index.html', permanent: false },
@@ -67,10 +68,10 @@ const routeConfig = {
     { source: '/planet-jumping', destination: '/planet-jumping.html', permanent: false },
     { source: '/architecture', destination: '/architecture/index.html', permanent: false },
     { source: '/arquitetura', destination: '/architecture/index.html', permanent: false },
-    { source: '/pitch', destination: '/presentation/pitch/index.html', permanent: false },
+    { source: '/pitch', destination: presentationUrl, permanent: false },
     { source: '/equipe', destination: '/equipe/index.html', permanent: false },
     { source: '/dashboard', destination: '/dashboard/index.html', permanent: false },
-    { source: '/apresentacao', destination: '/presentation/Missao_Ipe_Apresentacao.html', permanent: false },
+    { source: '/apresentacao', destination: presentationUrl, permanent: false },
     { source: '/docs', destination: '/docs/index.html', permanent: false },
     { source: '/documentacao', destination: '/docs/index.html', permanent: false },
     { source: '/contexto', destination: '/context/index.html', permanent: false },

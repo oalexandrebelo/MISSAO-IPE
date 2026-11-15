@@ -1,5 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
-import { BRUNO_CHOICES, BRUNO_INSTRUMENTS, BRUNO_INVENTORY_MODEL_VERSION, BRUNO_MISSIONS, BRUNO_MODEL_VERSION, DEFAULT_BRUNO_CONFIG, simulateBrunoMission } from '../lab/bruno-missions.ts';
+import { BRUNO_CHOICES, BRUNO_INSTRUMENTS, BRUNO_INVENTORY_MODEL_VERSION, BRUNO_LAUNCHER_SLOTS, BRUNO_MISSIONS, BRUNO_MODEL_VERSION, DEFAULT_BRUNO_CONFIG, simulateBrunoMission } from '../lab/bruno-missions.ts';
 import type { BrunoConfig, BrunoConfigKey, BrunoDecision, BrunoMissionId, BrunoResult, BrunoSimulationConfig } from '../lab/bruno-missions.ts';
 import { BRUNO_LAUNCH_FEE, BRUNO_SUCCESS_REWARD, buildBrunoInventoryConfig } from '../lab/bruno-inventory.ts';
 import type { InventoryAttempt, InventoryCommandResponse } from '../metrics/inventory-client.ts';
@@ -29,7 +29,7 @@ type Phase = keyof typeof steps;
 
 const context: Record<Phase, string> = {
   briefing: 'Leia a pergunta científica e os requisitos do destino. Abra o hangar para configurar a nave.',
-  hangar: 'Escolha lançador, propulsão, energia, proteção, navegação e instrumento. Confira massa, orçamento, energia e enlace antes de simular.',
+  hangar: 'Comece pela carga de instrumentos. Os outros sistemas já têm uma opção inicial. Confira os limites antes de simular.',
   launch: 'Acompanhe os eventos calculados. Pause para inspecionar a nave, avance uma etapa ou vá ao resultado.',
   result: 'Compare registros produzidos, recebidos e válidos. Leia o primeiro limite observado e redesenhe a nave para testar outra decisão.',
 };
@@ -126,6 +126,7 @@ function MissionReport({ id, result, onEdit, confirmed }: { id: BrunoMissionId; 
   ] as const;
   const loadout = 'loadout' in result.config ? result.config.loadout : null;
   return <>
+    {confirmed ? <p className="bruno-report-saved" role="status">Tentativa registrada. Veja o resultado em Meu progresso.</p> : null}
     <div className="bruno-report" data-outcome={result.outcome}>
       <dl className="bruno-report-counts">{counts.map(([label, count]) => <div key={label}><dt>{label}</dt><dd>{count}<span>/{result.requiredRecords}</span></dd></div>)}</dl>
       <div className="bruno-score"><strong>{result.score.total}<span>/100</span></strong><p>Pontos da missão</p></div>
@@ -176,12 +177,14 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
   const [result, setResult] = useState<BrunoResult | null>(() => draft?.resultConfig ? simulateBrunoMission(id, draft.resultConfig) : null);
   const [confirmedResult, setConfirmedResult] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
+  const instrumentTab = useRef<HTMLButtonElement>(null);
   const pending = useRef<BrunoResult | null>(null);
   const pendingAttemptId = useRef<string | null>(null);
   const execute = inventory?.execute;
   const snapshot = inventory?.snapshot;
   const resumable = snapshot?.attempts.find(attempt => attempt.missionId === id && attempt.status === 'launched');
-  const assembly = snapshot ? buildBrunoInventoryConfig(snapshot.inventory, id, config) : inventory ? null : config;
+  const inventoryAssembly = snapshot ? buildBrunoInventoryConfig(snapshot.inventory, id, config) : null;
+  const assembly = inventoryAssembly ?? (inventory ? null : config);
   const preview = assembly ? simulateBrunoMission(id, assembly) : null;
   const baselineResult = simulateBrunoMission(id, baseline);
   const flightConnected = !inventory || Boolean(snapshot && !inventory.busy);
@@ -297,12 +300,23 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
     : phase === 'launch' ? 'Operação da missão' : outcomeTitle[result!.outcome];
   const activeChoice = BRUNO_CHOICES[part].find(option => option.id === config[part])!;
   const lowBalance = Boolean(snapshot && preview?.outcome !== 'invalid' && snapshot.inventory.balance < BRUNO_LAUNCH_FEE);
+  const loadout = inventoryAssembly?.loadout;
+  const missing = loadout ? mission.requiredInstruments.filter(needed => !loadout.some(unit => unit.instrumentId === needed)) : [];
+  const toBuy = missing.filter(needed => !snapshot?.inventory.items.some(unit => unit.instrumentId === needed));
+  const showInstrumentGuide = phase === 'hangar' && Boolean(onShop && !resumable && missing.length);
+  const showShopShortcut = showInstrumentGuide && toBuy.length > 0;
+  const neededSlots = mission.requiredInstruments.reduce((total, instrument) => total + BRUNO_INSTRUMENTS[instrument].slots, 0);
+  const missingWarning = preview && loadout?.length === 0 && preview.outcome !== 'invalid'
+    ? `Uma partida sem instrumentos custa ${BRUNO_LAUNCH_FEE} créditos e produz zero registros.` : '';
+  const instrumentGuide = showShopShortcut
+    ? `Compre ${toBuy.map(instrument => BRUNO_INSTRUMENTS[instrument].label).join(' e ')}. Volte ao hangar e use Equipar em Instrumento.`
+    : showInstrumentGuide ? 'Você já tem os instrumentos que faltam na nave. Abra Instrumento e use Equipar.' : '';
   const readout = phase === 'hangar' && preview
     ? `${partLabels[part]}. ${activeChoice.id === 'targeted' ? mission.instrument : activeChoice.label}. ${activeChoice.description} Massa: ${preview.massKg} de ${preview.maxMassKg} kg. Custo: ${preview.credits} de ${preview.budget} créditos. Energia para coleta: ${preview.acquisitionEnergyWh} Wh. Enlace: ${preview.linkCapacityMb} megabytes.`
     : phase === 'result' && result
       ? `${title}. Produzidos: ${result.generatedRecords}. Recebidos: ${result.receivedRecords}. Válidos: ${result.deliveredRecords} de ${result.requiredRecords}. Pontuação: ${result.score.total} de 100. ${result.diagnostics[0]?.message ?? mission.evidence}`
       : phase === 'briefing' ? `${mission.question} Parâmetros e registros simulados.` : `${event?.title ?? ''}. ${event?.message ?? ''}`;
-  const libras = `${mission.name}. ${steps[phase]}. ${context[phase]} ${readout} ${inventory?.notice ?? ''}`.trim();
+  const libras = `${mission.name}. ${steps[phase]}. ${context[phase]} ${instrumentGuide} ${readout} ${inventory?.notice ?? ''}`.trim();
   return <section className="bruno-campaign" data-bruno-mission={id} data-stage={phase} aria-labelledby="bruno-title"
     data-ipe-libras-context={libras}>
     <div className="bruno-toolbar">
@@ -318,6 +332,11 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
       {phase === 'hangar' ? <p className="bruno-lead">{mission.learn}</p> : null}
     </header>
     {storageIssue ? <p role="status">Não foi possível guardar o rascunho neste aparelho. O plano continua disponível nesta tela.</p> : draftKey && phase === 'hangar' ? <p className="bruno-draft-note">Montagem guardada neste aparelho para sua participação.</p> : null}
+    {showInstrumentGuide ? <div className="bruno-instrument-guide" role="group" aria-label="Próximo passo no hangar">
+      <p>{instrumentGuide}{neededSlots > BRUNO_LAUNCHER_SLOTS[config.launcher] ? ` A carga precisa de ${neededSlots} encaixes. Escolha um lançador de maior capacidade.` : ''}</p>
+      {showShopShortcut ? <button type="button" className="bruno-action bruno-primary" onClick={onShop}>Loja e inventário</button>
+        : <button type="button" className="bruno-action bruno-primary" onClick={() => { setPart('payload'); instrumentTab.current?.focus(); }}>Abrir instrumentos</button>}
+    </div> : null}
     {phase !== 'briefing' ? <MissionSequenceRive stage={riveStage} /> : null}
     {inventory && (phase !== 'briefing' || resumable) ? <BrunoInventoryStatus controller={inventory} onResolved={acceptResponse} /> : null}
     {inventory && resumable && phase !== 'launch' ? <div className="bruno-attempt-resume">
@@ -329,11 +348,11 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
       <div className="bruno-briefing-copy">
         <h2>{mission.question}</h2>
         <p>{mission.briefing}</p>
-        <details className="bruno-howto"><summary>Como jogar esta missão</summary><ol><li>Abra o hangar e escolha um sistema. A peça correspondente muda na nave.</li><li>Fixe um plano A, altere uma decisão e compare os recursos e registros previstos de B.</li><li>Simule, pause nos eventos e leia o motivo do resultado. Redesenhe para testar outra hipótese.</li></ol></details>
+        <details className="bruno-howto"><summary>Como jogar esta missão</summary><ol><li>{inventory ? 'Abra o hangar, compre os instrumentos na loja e use Equipar em Instrumento.' : 'Abra o hangar e escolha o instrumento.'}</li><li>Os outros sistemas já têm uma opção inicial. Quando quiser comparar uma mudança, use Revisar voo e comparar A/B.</li><li>Simule o lançamento e acompanhe o que chegou à Terra. A tentativa aparece em Meu progresso.</li></ol></details>
         <dl className="bruno-briefing-limits">
           <div><dt>Carga de referência</dt><dd>{mission.payloadKg} kg</dd></div>
           <div><dt>Limite para chegar</dt><dd>{mission.deadlineDays} dias</dd></div>
-          <div><dt>Orçamento</dt><dd>{mission.budget} créditos</dd></div>
+          <div><dt>Orçamento do projeto</dt><dd>{mission.budget} créditos</dd></div>
         </dl>
         <button type="button" className="bruno-action bruno-primary" onClick={() => setPhase('hangar')}>Abrir hangar <Icon name="arrow" size={18}/></button>
       </div>
@@ -351,9 +370,9 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
         <h2 id="bruno-builder-title">Montar nave</h2>
         {comparisonOpen ? <p>Você edita o plano B. O plano A é a referência guardada.</p> : null}
         <div className="bruno-parts" aria-label="Sistemas da montagem" role="group">
-          {partKeys.map(key => <button type="button" className="bruno-action bruno-secondary" key={key} aria-pressed={part === key} onClick={() => setPart(key)}>{partLabels[key]}</button>)}
+          {partKeys.map(key => <button type="button" className="bruno-action bruno-secondary" key={key} ref={key === 'payload' ? instrumentTab : undefined} aria-pressed={part === key} onClick={() => setPart(key)}>{partLabels[key]}</button>)}
         </div>
-        {part === 'payload' && inventory && onShop ? <BrunoLoadoutEditor controller={inventory} missionId={id} config={config} onShop={onShop} onChanged={() => setViewingA(false)} /> : <fieldset className="bruno-choices">
+        {part === 'payload' && inventory && onShop ? <BrunoLoadoutEditor controller={inventory} missionId={id} config={config} onShop={showShopShortcut ? undefined : onShop} onChanged={() => setViewingA(false)} /> : <fieldset className="bruno-choices">
           <legend>{partLabels[part]}</legend>
           {BRUNO_CHOICES[part].map(option => <label key={option.id}>
             <input type="radio" name={`bruno-${id}-${part}`} checked={config[part] === option.id} onChange={() => select(part, option.id)} />
@@ -363,7 +382,7 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
         </fieldset>}
         {preview ? <dl className="bruno-readout" aria-label="Indicadores do plano">
           <div><dt>Massa transportada</dt><dd data-limit={preview.massKg > preview.maxMassKg}>{preview.massKg} / {preview.maxMassKg} kg</dd></div>
-          <div><dt>Orçamento</dt><dd data-limit={preview.credits > preview.budget}>{preview.credits} / {preview.budget} créditos</dd></div>
+          <div><dt>Orçamento do projeto</dt><dd data-limit={preview.credits > preview.budget}>{preview.credits} / {preview.budget} créditos</dd></div>
           <div><dt>Energia para coleta</dt><dd>{preview.acquisitionEnergyWh} Wh</dd></div>
           <div><dt>Enlace da janela</dt><dd>{preview.linkCapacityMb} MB</dd></div>
           <div><dt>Chegada estimada</dt><dd data-limit={preview.travelDays > mission.deadlineDays}>{preview.travelDays} / {mission.deadlineDays} dias</dd></div>
@@ -371,14 +390,15 @@ export function BrunoCampaign({ id, onBack, onDecision, onComplete, sessionId, o
           {preview.maxSlots !== undefined ? <div><dt>Encaixes da carga</dt><dd data-limit={Number(preview.usedSlots) > preview.maxSlots}>{preview.usedSlots} / {preview.maxSlots}</dd></div> : null}
         </dl> : <p>Conecte-se para calcular os indicadores com a carga reservada.</p>}
         {inventory ? <div className="bruno-wallet-note">
-          <p><strong>Carga necessária:</strong> {mission.requiredInstruments.map(instrument => BRUNO_INSTRUMENTS[instrument].label).join(' e ')}.</p>
-          <p><strong>Partida efetiva:</strong> {BRUNO_LAUNCH_FEE} créditos da loja e um ciclo de cada unidade equipada. Projetos bloqueados em T+0 preservam saldo e condição.</p>
+          <p>O orçamento limita a montagem. A carteira paga compras e partidas.</p>
+          <p><strong>Partida efetiva:</strong> {BRUNO_LAUNCH_FEE} créditos da carteira e um ciclo de cada unidade equipada. Projetos barrados na verificação inicial preservam saldo e condição.</p>
           {lowBalance ? <p>Saldo insuficiente para uma partida. Abra a loja para revisar suas unidades e a carteira.</p> : null}
+          {missingWarning ? <p className="bruno-launch-warning" id="bruno-launch-warning">{missingWarning}</p> : null}
         </div> : null}
         <div className="bruno-shop-actions">
-          {inventory && onShop && part !== 'payload' ? <button type="button" className="bruno-action bruno-secondary" onClick={onShop}>Loja e inventário</button> : null}
+          {inventory && onShop && !showShopShortcut && part !== 'payload' ? <button type="button" className="bruno-action bruno-secondary" onClick={onShop}>Loja e inventário</button> : null}
           <button type="button" className="bruno-action bruno-secondary" disabled={!preview} aria-expanded={comparisonOpen} onClick={() => { setComparisonOpen(value => !value); setViewingA(false); if (!comparisonOpen) onInspect?.(); }}>Revisar voo e comparar A/B</button>
-          <button type="button" className="bruno-action bruno-primary" disabled={!preview || !flightConnected || !!resumable || lowBalance} onClick={launch}>Simular lançamento <Icon name="play" size={18}/></button>
+          <button type="button" className={`bruno-action ${showInstrumentGuide ? 'bruno-secondary' : 'bruno-primary'}`} aria-describedby={missingWarning ? 'bruno-launch-warning' : undefined} disabled={!preview || !flightConnected || !!resumable || lowBalance} onClick={launch}>Simular lançamento <Icon name="play" size={18}/></button>
         </div>
       </section>
     </div> : null}

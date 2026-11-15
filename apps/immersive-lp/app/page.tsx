@@ -40,7 +40,7 @@ export default function Home() {
 
       <noscript><div className="noscript-note">A leitura e os links continuam disponíveis. Para usar o laboratório, o filme e a timeline interativa, ative o JavaScript.</div></noscript>
 
-      <div className="mission-facts container" aria-label="O projeto em números"><div><span>06</span><p>missões para projetar e jogar</p></div><div><span>04</span><p>segmentos que conectam a missão</p></div><div><span>06</span><p>registros para fazer chegar</p></div><a href="#laboratorio">E se uma escolha<br />{' '}mudasse toda a missão?<Icon name="arrow-up" /></a></div>
+      <div className="mission-facts container" aria-label="O projeto em números"><div><span>07</span><p>missões para projetar e jogar</p></div><div><span>04</span><p>segmentos que conectam a missão</p></div><div><span>06</span><p>registros para fazer chegar</p></div><a href="#laboratorio">E se uma escolha<br />{' '}mudasse toda a missão?<Icon name="arrow-up" /></a></div>
 
       <section className="mission-section section-pad" id="missao" aria-labelledby="mission-title" tabIndex={-1}>
         <div className="container">

@@ -149,7 +149,7 @@ export function PlayerGateway({ children }: { children: (firstMission: MetricMis
   const busy = checking || entering;
   const librasContext = session ? 'Entrada da MISSÃO IPÊ. Uma participação está disponível neste navegador. Use Retomar jogo para voltar às missões. Nome, e-mail e registros pessoais não são enviados ao guia de Libras.' : `Entrada da MISSÃO IPÊ. Etapa ${step + 1} de quatro: ${current.label}. ${current.title} ${current.story} ${step === 1 ? 'O e-mail informado ficará no painel privado da equipe.' : step === 2 ? `Escolha entre ${ENTRY_MISSIONS.map(mission => MISSION_NAMES[mission.id]).join(', ')}. Cada missão pede uma evidência diferente.` : step === 3 ? 'Play registra a participação e inicia a missão escolhida.' : 'Use Continuar para avançar.'} O guia traduz esta orientação, sem receber o conteúdo dos campos.`;
   return <main className="player-entry" data-ipe-libras-context={librasContext.slice(0, 900)}>
-    <a href="../presentation/pitch/index.html" className="player-entry-brand" aria-label="MISSÃO IPÊ, apresentação"><img src="./brand/missao-ipe-logo.svg" width="178" height="84" alt="MISSÃO IPÊ" /></a>
+    <a href="https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/" className="player-entry-brand" aria-label="MISSÃO IPÊ, apresentação"><img src="./brand/missao-ipe-logo.svg" width="178" height="84" alt="MISSÃO IPÊ" /></a>
     <div className="player-entry-layout">
       <div className="player-entry-story">
         <h1>A ciência precisa <em>chegar.</em></h1>

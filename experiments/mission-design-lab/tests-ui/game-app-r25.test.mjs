@@ -90,7 +90,14 @@ async function buy(id) {
 test('Europa purchases replay a lost receipt, reserve both instruments, consume condition and record one confirmed attempt', async () => {
   localStorage.clear(); globalThis.indexedDB = new IDBFactory();
   const api = await installInventoryApi();
-  await resume(); await choose('EUROPA'); await click('Abrir hangar'); await click('Loja e inventário');
+  await resume(); await choose('EUROPA'); await click('Abrir hangar');
+  const nextStep = screen.getByRole('group', { name: 'Próximo passo no hangar' });
+  assert.match(nextStep.textContent, /Compre.*REASON.*MISE/);
+  const launchButton = screen.getByRole('button', { name: 'Simular lançamento' });
+  assert.equal(launchButton.disabled, false);
+  assert.match(launchButton.getAttribute('aria-describedby') && document.getElementById(launchButton.getAttribute('aria-describedby')).textContent, /custa 2 créditos.*zero registros/);
+  assert.ok(nextStep.compareDocumentPosition(document.querySelector('[data-bruno-craft]')) & dom.window.Node.DOCUMENT_POSITION_FOLLOWING);
+  await click('Loja e inventário');
   await screen.findByRole('heading', { name: 'Loja e inventário' });
   assert.equal(document.querySelector('.bruno-wallet dd').textContent, '25');
   assert.equal(screen.getByRole('group', { name: 'Catálogo de instrumentos' }).querySelectorAll('button').length, 7);
@@ -112,7 +119,9 @@ test('Europa purchases replay a lost receipt, reserve both instruments, consume 
   assert.equal(document.querySelector('.bruno-wallet dd').textContent, '9');
 
   await click('Voltar ao hangar');
-  await click('Instrumento'); await click(/^Equipar Espectrômetro infravermelho/);
+  await click('Abrir instrumentos');
+  assert.equal(document.activeElement, screen.getByRole('button', { name: 'Instrumento' }));
+  await click(/^Equipar Espectrômetro infravermelho/);
   assert.equal(screen.getByRole('button', { name: /^Equipar Radar do gelo/ }).disabled, true);
   assert.ok(screen.getByText(/A carga ocupa 3 espaços/));
   await part('Lançador', /Maior capacidade/);
@@ -128,6 +137,7 @@ test('Europa purchases replay a lost receipt, reserve both instruments, consume 
   assert.equal(screen.getByRole('button', { name: 'Inspecionar referência NASA · 34 MiB' }).getAttribute('aria-pressed'), 'false');
   await click('Simular lançamento');
   assert.ok(await screen.findByRole('heading', { name: 'Missão concluída' }));
+  assert.ok(screen.getByText('Tentativa registrada. Veja o resultado em Meu progresso.'));
   assert.equal(screen.getAllByText('3 → 2 ciclos').length, 2);
   assert.ok(screen.getByText(/Partida: 2 créditos.*Prêmio confirmado: 8 créditos/));
 

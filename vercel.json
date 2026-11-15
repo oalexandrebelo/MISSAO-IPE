@@ -33,7 +33,7 @@
           "value": "pitch.nasa-missaoipe.alexandrebelo.com"
         }
       ],
-      "destination": "https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html",
+      "destination": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/",
       "permanent": false
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "source": "/pitch",
-      "destination": "/presentation/pitch/index.html",
+      "destination": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/",
       "permanent": false
     },
     {
@@ -163,7 +163,7 @@
     },
     {
       "source": "/apresentacao",
-      "destination": "/presentation/Missao_Ipe_Apresentacao.html",
+      "destination": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/",
       "permanent": false
     },
     {

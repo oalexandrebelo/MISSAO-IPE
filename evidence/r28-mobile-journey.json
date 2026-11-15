@@ -1,0 +1,83 @@
+{
+  "revision": "R28",
+  "date": "2026-11-15",
+  "kind": "synthetic-browser-journey",
+  "origin": "http://127.0.0.1:4184",
+  "effectiveViewportWidth": 390,
+  "physicalPhoneTested": false,
+  "humanLearningValidated": false,
+  "missions": {
+    "cerrado": {
+      "scores": [
+        92
+      ],
+      "valid": 6
+    },
+    "bennu": {
+      "scores": [
+        52,
+        90
+      ],
+      "valid": 6
+    },
+    "telescope": {
+      "scores": [
+        0,
+        92
+      ],
+      "valid": 6,
+      "incompatibleReceived": 6,
+      "incompatibleValid": 0
+    },
+    "iss": {
+      "scores": [
+        92
+      ],
+      "valid": 6
+    },
+    "lua": {
+      "scores": [
+        92
+      ],
+      "valid": 6
+    },
+    "marte": {
+      "scores": [
+        91
+      ],
+      "valid": 6
+    },
+    "europa": {
+      "scores": [
+        93
+      ],
+      "valid": 6
+    }
+  },
+  "reload": {
+    "attempts": 9,
+    "confirmedEvents": 32,
+    "pendingEvents": 0,
+    "rejectedEvents": 0,
+    "walletCredits": 9,
+    "inventoryUnits": 6,
+    "cycles": [
+      2,
+      2,
+      3,
+      2,
+      2,
+      2
+    ]
+  },
+  "persistenceScope": "Browser storage and local server in memory; see separate production HTTP receipt for durable Blob persistence",
+  "consoleErrors": 0,
+  "abSceneSwitch": "Europa A without instruments / B with MISE+REASON",
+  "fixes": [
+    "Beginner shop/equip guidance",
+    "Cerrado scientific question visible",
+    "Scientific draft confirmation near controls",
+    "Received vs valid evidence labels",
+    "Canonical LP and presentation links"
+  ]
+}

@@ -4,7 +4,7 @@ export const LINKS = {
   research: 'https://nasa-missaoipe.alexandrebelo.com/context/research-library.html',
   roadmap: 'https://nasa-missaoipe.alexandrebelo.com/docs/49-ROTEIRO-APRESENTACAO-MVP-R19.html',
   github: 'https://github.com/oalexandrebelo/MISSAO-IPE',
-  pitch: 'https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html',
+  pitch: 'https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/',
 } as const;
 
 export const CHAPTERS = [
@@ -55,7 +55,7 @@ export const MILESTONES = [
 export const FAQ = [
   ['Preciso entender de engenharia espacial?', 'Não. Comece pela pergunta científica, faça uma previsão e teste uma escolha. Siga um registro até o evento e o componente em 3D, investigue a primeira diferença entre duas tentativas e conclua com os quatro papéis da missão. Você pode voltar, redesenhar e comparar.'],
   ['O jogo usa dados reais?', 'Sim. O Cerrado usa arquivos históricos MOD13Q1.061; Bennu incorpora dimensões publicadas de rochas e clastos; Webb incorpora seis bins reais de WASP-39 b com incertezas. Fontes e seleção são verificáveis. Componentes, pacotes, recursos e operação são didáticos; não há telemetria ao vivo nem validação de voo.'],
-  ['Quais missões estão disponíveis?', 'O jogo agora também inclui ISS, Lua e Marte, com montagem, lançamento e pontuação didáticos. Sim. O laboratório reúne Cerrado, Bennu e Telescópio. A campanha do Cerrado também está disponível em quatro etapas: Primeiro sinal, Memória em disputa, Janela estreita e Ciência que chega. São experiências distintas, com links nesta página.'],
+  ['Quais missões estão disponíveis?', 'São sete missões: Cerrado, Bennu, Telescópio Webb, ISS, Lua, Marte e Europa. Os quatro destinos de engenharia incluem montagem, lançamento e pontuação didáticos. A campanha do Cerrado também está disponível em quatro etapas: Primeiro sinal, Memória em disputa, Janela estreita e Ciência que chega. São experiências distintas, com links nesta página.'],
   ['Posso jogar em equipe?', 'É possível discutir decisões e dividir responsabilidades no mesmo dispositivo. A colaboração remota sincronizada para quatro jogadores ainda não está disponível. O aprendizado envolve os quatro segmentos: lançamento, espaço, solo e usuários.'],
   ['O nome IPÊ faz parte da história científica?', 'IPÊ identifica nossa equipe e sua marca. As histórias partem de missões e descobertas documentadas da NASA. A árvore não é um modelo de engenharia, uma etapa de missão ou um acontecimento científico.'],
   ['Preciso criar uma conta para explorar?', 'O experimento desta página e as fontes podem ser explorados livremente. Para registrar seu progresso no jogo principal, informe nome e e-mail, escolha uma missão e dê play. Não é necessário criar senha. Seus dados de participação ficam no painel privado da equipe; a campanha do Cerrado mantém progresso local.'],

@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { CATALOG, CONFIG_KEYS, PHYSICS, getConfigTotals, getScenario } from '../core/catalog.ts';
 import type { ConfigKey, MissionConfig, ScenarioId } from '../core/contracts.ts';
+import { MISSION_CURRICULUM } from '../lab/mission-curriculum.ts';
 import { Icon } from './Icon.tsx';
 import type { IconName } from './Icon.tsx';
 import { Scene } from './Scene.tsx';
@@ -71,7 +72,7 @@ export function Workbench({ config, scenarioId, onChoice, onScenario, prediction
     onChoice(key, value);
   }
   return <>
-    <div className="page-heading workbench-heading"><div><p className="eyebrow">02 / HANGAR DE PROJETO</p><h1 id="workbench-title" ref={heading} tabIndex={-1}>Monte sua <em>missão.</em></h1><p className="page-intro">Seis decisões. Um objetivo: entregar seis registros válidos à Terra.</p></div><div className="scenario-switch" aria-label="Condição da missão"><button type="button" aria-pressed={scenarioId === 'long-contact'} onClick={() => onScenario('long-contact')} disabled={blocked}>Contato longo <span>2 × 10 min</span></button><button type="button" aria-pressed={scenarioId === 'short-contact'} onClick={() => onScenario('short-contact')} disabled={blocked}>Contato curto <span>2 × 4 min</span></button></div></div>
+    <div className="page-heading workbench-heading"><div><p className="eyebrow">02 / HANGAR DE PROJETO</p><h1 id="workbench-title" ref={heading} tabIndex={-1}>Monte sua <em>missão.</em></h1><p className="page-intro">{MISSION_CURRICULUM.cerrado.question} Entregue os seis registros válidos ao solo.</p></div><div className="scenario-switch" aria-label="Condição da missão"><button type="button" aria-pressed={scenarioId === 'long-contact'} onClick={() => onScenario('long-contact')} disabled={blocked}>Contato longo <span>2 × 10 min</span></button><button type="button" aria-pressed={scenarioId === 'short-contact'} onClick={() => onScenario('short-contact')} disabled={blocked}>Contato curto <span>2 × 4 min</span></button></div></div>
     {appliedExample ? <p className="context-guide applied-example-notice" role="status"><strong>Escolhas do ensaio copiadas · {appliedExample}.</strong> Você voltou ao projeto em edição. Revise os sistemas, registre sua previsão e execute sua própria tentativa; copiar o exemplo não executa nem salva uma missão.</p> : null}
     <details className="game-brief-disclosure"><summary>Briefing científico · o que vamos aprender</summary><MissionPurpose id="cerrado" /></details>
     <div className="hangar-toolbar"><span><i /> LAB-01 <b>PROJETO EM EDIÇÃO</b></span><button className="text-button" type="button" onClick={() => setGuide(!guide)} aria-expanded={guide}><Icon name="info" size={16} /> {guide ? 'Fechar orientação' : 'Como tomar a primeira decisão'}</button></div>

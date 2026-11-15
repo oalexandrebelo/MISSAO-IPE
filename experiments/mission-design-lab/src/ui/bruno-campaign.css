@@ -129,6 +129,14 @@
 .bruno-timeline li[data-state="blocked"] span, .bruno-diagnostics span { color: var(--bruno-error); }
 .bruno-panel > p { color: var(--bruno-muted); margin-top: .8rem; max-width: 62ch; }
 .bruno-report-details .bruno-primary { margin-top: 1.1rem; }
+.bruno-report-saved { color: var(--bruno-accent); padding-block: .4rem .7rem; }
+.bruno-instrument-guide {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .55rem 1rem;
+  margin-block: .1rem .85rem; padding: .65rem .8rem;
+  border: 1px solid var(--bruno-line); border-radius: .35rem; background: var(--bruno-panel);
+}
+.bruno-instrument-guide p { flex: 1 1 24rem; color: var(--bruno-text); font-size: .875rem; }
+.bruno-launch-warning { color: var(--bruno-error); font-weight: 650; }
 
 @media (min-width: 56rem) {
   .game-shell > .view-bruno:has(.bruno-campaign[data-stage="hangar"]) { padding: .75rem 1.375rem 1rem; }
@@ -209,6 +217,7 @@
     column-gap: 1.25rem; padding: .75rem 1.375rem 1rem;
   }
   .bruno-campaign:is([data-stage="hangar"], [data-stage="launch"]) > .bruno-toolbar,
+  .bruno-campaign[data-stage="hangar"] > .bruno-instrument-guide,
   .bruno-campaign:is([data-stage="hangar"], [data-stage="launch"]) > .bruno-hangar,
   .bruno-campaign:is([data-stage="hangar"], [data-stage="launch"]) > .bruno-operations,
   .bruno-campaign:is([data-stage="hangar"], [data-stage="launch"]) > .bruno-comparison { grid-column: 1 / -1; }

@@ -1,12 +1,14 @@
-# MISSÃO IPÊ · R27
+# MISSÃO IPÊ · R28
 
 Jogo educativo com sete missões: Cerrado, Bennu, Webb, ISS, Lua, Marte e Europa. A campanha de engenharia integra a contribuição de Bruno à interface oficial, com loja, inventário persistente, montagem 3D, comparação A/B e desgaste dos instrumentos.
 
+[LP principal](https://projeto-ipe-lp.vercel.app/) · [Apresentação central](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Documentação](https://nasa-missaoipe.alexandrebelo.com/docs/index.html)
+
+**R28 — primeira partida e retomada.** O hangar orienta compra e montagem antes da nave 3D. Os exercícios científicos explicam a pergunta, o rascunho e a diferença entre resultado final e estado do replay. Meu progresso mostra a tentativa e a situação do envio. [QA móvel e handoff da R28](docs/73-QA-MOVEL-E-HANDOFF-R28.md) · [Recibo de publicação](PUBLICADO.md)
+
 **R27 — monte, opere, aprenda e tente novamente.** Compras, reservas, lançamentos, desgaste e recompensas são validados no servidor e registrados no painel privado. Europa combina radar e espectrometria para investigar gelo e composição: habitabilidade não equivale a detecção de vida. Créditos, ciclos de uso, pontuação e desempenho da nave são regras didáticas, não especificações operacionais da NASA.
 
-[Handoff dos dois devs R27](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Todos os acessos e subdomínios](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Recibo de publicação e limites verificados](PUBLICADO.md)
-
-Jogo: https://jogo.nasa-missaoipe.alexandrebelo.com · Pitch: https://pitch.nasa-missaoipe.alexandrebelo.com · Painel privado: https://painel.nasa-missaoipe.alexandrebelo.com · Documentação: https://docs.nasa-missaoipe.alexandrebelo.com · LP: https://lp.nasa-missaoipe.alexandrebelo.com
+[Handoff dos dois devs R27](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Configuração dos subdomínios na R27](docs/72-DOMINIOS-E-ACESSOS-R27.md)
 
 **R26 — compare, acompanhe e explique.** ISS, Lua e Marte têm rascunho por participação, revisão A/B ligada à nave, operação por eventos, animação Rive, sons opcionais e revisão dos quatro segmentos. [Handoff para os dois devs](docs/70-HANDOFF-GAME-R26.md) · [auditoria do novo app Bruno](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [áudio e animação](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md).
 
@@ -52,6 +54,8 @@ O código e os documentos completos dessa experiência ficam em [`experiments/fo
 
 ## Explorar
 
+- [LP principal](https://projeto-ipe-lp.vercel.app/)
+- [Apresentação central da equipe](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/)
 - [Portal interativo](https://nasa-missaoipe.alexandrebelo.com/)
 - [Jogar a edição publicada](https://nasa-missaoipe.alexandrebelo.com/lab/index.html)
 - [Contexto e cronograma detalhados](https://nasa-missaoipe.alexandrebelo.com/context/index.html)
@@ -89,7 +93,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
-| Entrada da equipe de dois devs | [Handoff R24](docs/63-RIVE-E-HANDOFF-R24.md) / [design](docs/64-DESIGN-ACESSIVEL-R24.md) |
+| Entrada da equipe de dois devs | [Handoff R28](docs/73-QA-MOVEL-E-HANDOFF-R28.md) / [design](docs/64-DESIGN-ACESSIVEL-R24.md) |
 | Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |

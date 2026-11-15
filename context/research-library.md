@@ -338,19 +338,21 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 ---
 
-# MISSÃO IPÊ · R27
+# MISSÃO IPÊ · R28
 
-Fonte: `README.md` · SHA-256 original: `a6593b390801bde1df7b7a0f9211bc6bbd84fca484162d8618cd04b9811c6fe8` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `5df3b619dad156d7f2358dcb184b55e834fde2fcd2c6c001f9a26e7c431d84bb` · Ajustes de caminhos privados: 0
 
-# MISSÃO IPÊ · R27
+# MISSÃO IPÊ · R28
 
 Jogo educativo com sete missões: Cerrado, Bennu, Webb, ISS, Lua, Marte e Europa. A campanha de engenharia integra a contribuição de Bruno à interface oficial, com loja, inventário persistente, montagem 3D, comparação A/B e desgaste dos instrumentos.
 
+[LP principal](https://projeto-ipe-lp.vercel.app/) · [Apresentação central](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/) · [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) · [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Documentação](https://nasa-missaoipe.alexandrebelo.com/docs/index.html)
+
+**R28 — primeira partida e retomada.** O hangar orienta compra e montagem antes da nave 3D. Os exercícios científicos explicam a pergunta, o rascunho e a diferença entre resultado final e estado do replay. Meu progresso mostra a tentativa e a situação do envio. [QA móvel e handoff da R28](docs/73-QA-MOVEL-E-HANDOFF-R28.md) · [Recibo de publicação](PUBLICADO.md)
+
 **R27 — monte, opere, aprenda e tente novamente.** Compras, reservas, lançamentos, desgaste e recompensas são validados no servidor e registrados no painel privado. Europa combina radar e espectrometria para investigar gelo e composição: habitabilidade não equivale a detecção de vida. Créditos, ciclos de uso, pontuação e desempenho da nave são regras didáticas, não especificações operacionais da NASA.
 
-[Handoff dos dois devs R27](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Todos os acessos e subdomínios](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Recibo de publicação e limites verificados](PUBLICADO.md)
-
-Jogo: https://jogo.nasa-missaoipe.alexandrebelo.com · Pitch: https://pitch.nasa-missaoipe.alexandrebelo.com · Painel privado: https://painel.nasa-missaoipe.alexandrebelo.com · Documentação: https://docs.nasa-missaoipe.alexandrebelo.com · LP: https://lp.nasa-missaoipe.alexandrebelo.com
+[Handoff dos dois devs R27](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Configuração dos subdomínios na R27](docs/72-DOMINIOS-E-ACESSOS-R27.md)
 
 **R26 — compare, acompanhe e explique.** ISS, Lua e Marte têm rascunho por participação, revisão A/B ligada à nave, operação por eventos, animação Rive, sons opcionais e revisão dos quatro segmentos. [Handoff para os dois devs](docs/70-HANDOFF-GAME-R26.md) · [auditoria do novo app Bruno](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [áudio e animação](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md).
 
@@ -396,6 +398,8 @@ O código e os documentos completos dessa experiência ficam em [`experiments/fo
 
 ## Explorar
 
+- [LP principal](https://projeto-ipe-lp.vercel.app/)
+- [Apresentação central da equipe](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/)
 - [Portal interativo](https://nasa-missaoipe.alexandrebelo.com/)
 - [Jogar a edição publicada](https://nasa-missaoipe.alexandrebelo.com/lab/index.html)
 - [Contexto e cronograma detalhados](https://nasa-missaoipe.alexandrebelo.com/context/index.html)
@@ -433,7 +437,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 | Prisma proposto, sem banco implantado | [schema.prisma](prisma/schema.prisma) |
 | Pesquisa atual de APIs e materiais | [Oportunidades NASA](docs/21-OPORTUNIDADES-NASA.md) |
 | Estado e sequência de trabalho | [Plano de continuidade](docs/22-PLANO-CONTINUIDADE.md) |
-| Entrada da equipe de dois devs | [Handoff R24](docs/63-RIVE-E-HANDOFF-R24.md) / [design](docs/64-DESIGN-ACESSIVEL-R24.md) |
+| Entrada da equipe de dois devs | [Handoff R28](docs/73-QA-MOVEL-E-HANDOFF-R28.md) / [design](docs/64-DESIGN-ACESSIVEL-R24.md) |
 | Oportunidades dos Estudos | [Análise](docs/24-OPORTUNIDADES-ESTUDOS.md) / [fontes históricas](references/estudos/README.md) |
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
@@ -8252,6 +8256,66 @@ No painel, selecione uma missão para ver seus resultados. Compras e devoluçõe
 ## Quando a internet falhar
 
 As compras, reservas e partidas precisam de confirmação do servidor. Não recadastre a mesma pessoa apenas para tentar resolver uma requisição pendente. Reabra o jogo na mesma participação e use a recuperação do pedido, preservando seu recibo. Rascunhos e explicações podem ser consultados conforme o cache local, mas isso não equivale a ter o inventário online confirmado.
+
+
+---
+
+# R28 · primeira jornada, QA móvel e handoff
+
+Fonte: `docs/73-QA-MOVEL-E-HANDOFF-R28.md` · SHA-256 original: `3fd942c8cf84fb1463236262eec64eae674e9101dbf269968b115cb20cac0c32` · Ajustes de caminhos privados: 0
+
+# R28 · primeira jornada, QA móvel e handoff
+
+## Endereços atuais
+
+| Área | Acesso |
+| --- | --- |
+| Landing page principal | [LP Missão Ipê](https://projeto-ipe-lp.vercel.app/) |
+| Apresentação | [Central de apresentação da equipe](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/) |
+| Jogo | [Laboratório e sete missões](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) |
+| Equipe | [Página da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) |
+| Documentação | [Índice público](https://nasa-missaoipe.alexandrebelo.com/docs/index.html) |
+| Métricas e pontuação da equipe | [Painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html) |
+
+O jogo e o painel ficam no mesmo host. A apresentação central e a LP abrem em seus próprios endereços. O pitch interativo segue disponível como material de ensaio. A R27 registra o provisionamento anterior dos atalhos. [Pitch interativo](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html) · [Domínios e acessos R27](72-DOMINIOS-E-ACESSOS-R27.md)
+
+## Primeira tentativa
+
+O hangar da ISS, Lua, Marte e Europa indica os instrumentos faltantes antes da nave 3D. Quando falta comprar, o atalho abre a loja com um instrumento da missão selecionado. Com as unidades no inventário, **Abrir instrumentos** leva ao controle **Instrumento**. Use **Equipar** em cada unidade. A nave e os indicadores refletem a carga reservada.
+
+Os demais sistemas começam com opções iniciais. Troque apenas o necessário para atender massa, encaixes, energia e comunicação. **Revisar voo e comparar A/B** permite investigar uma alteração antes de lançar. Uma partida aprovada desconta 2 créditos da carteira e um ciclo por unidade equipada. Partir sem instrumentos produz zero registros. Se a verificação inicial barrar o projeto, a carteira e a condição das unidades são preservadas. O orçamento do projeto mede quanto o plano consome do limite de engenharia. A carteira paga compras e partidas. [Regras e contrato R27](71-INVENTARIO-EUROPA-E-HANDOFF-R27.md)
+
+| Missão | Comprar e equipar | Ajustes a partir das opções iniciais | Resultado do motor local com peças novas |
+| --- | --- | --- | --- |
+| ISS | Monitor de compostos voláteis | Proteção reforçada | 6 válidos · 92 pontos |
+| Lua | LEND e Diviner | Lançador de maior capacidade, reserva ampliada e enlace direcional | 6 válidos · 92 pontos |
+| Marte | MEDA | Lançador de maior capacidade, reserva ampliada, proteção reforçada e enlace direcional | 6 válidos · 91 pontos |
+| Europa | MISE e REASON | Lançador de maior capacidade, reserva ampliada e enlace direcional | 6 válidos · 93 pontos |
+
+Os quatro planos foram calculados com a propulsão química inicial. Com 25 créditos iniciais e as recompensas de 8 créditos por sucesso confirmado, a sequência prevista deixa 26 após a ISS, 20 após a Lua, 19 após Marte e 9 após Europa. A condição de cada unidade altera a energia necessária para medir em tentativas futuras.
+
+Cerrado, Bennu e Webb oferecem as peças na bancada. O Cerrado mostra sua pergunta no topo do projeto. Em Bennu e Webb, **Salvar projeto** guarda configuração e hipótese neste navegador. **Restaurar projeto salvo** reabre o rascunho da missão. Após simular, leia o resumo final e use o relógio do replay para investigar o que já estava disponível na nave ou no solo a cada instante. Compare o total recebido com os registros que respondem à pergunta. O acervo e seu gráfico contam **válidos disponíveis**, evitando confundir seis arquivos recebidos com seis medidas adequadas.
+
+## Onde conferir a tentativa
+
+O relatório de engenharia confirmado indica **Meu progresso**. Abra esse painel no jogo e procure a missão na lista de tentativas. Compare resultado, pontuação e estado do envio. Para retomar a mesma participação, abra o jogo no mesmo navegador e use **Retomar jogo**. Nome e e-mail identificam a participação no painel da equipe. Digitar o mesmo e-mail em outro aparelho cria outra participação e um novo histórico local.
+
+Configuração, hipótese e progresso local ficam vinculados à participação neste navegador. A equipe consulta os registros recebidos no painel privado, com autenticação administrativa. A carteira, as reservas e as tentativas da campanha de engenharia são consultadas no servidor. Durante indisponibilidade, o jogo sinaliza a falta de confirmação do saldo e bloqueia compras e partidas da campanha. Procure **Recebido pela equipe** na lista de tentativas e os totais de pendências em **Seu registro na equipe**.
+
+## Verificações e alcance
+
+- Os 53 testes de métricas passaram localmente, incluindo o percurso HTTP sintético de sete missões, recálculo da pontuação, reenvio com o mesmo ID, desgaste e leitura paginada.
+- Os 113 testes de interface em DOM simulado passaram, incluindo os 30 da área afetada pelo ajuste do hangar. O fluxo de Europa cobre a instrução antes do 3D, compra, foco em Instrumento, reserva, desgaste, resultado e o mesmo ID da tentativa no progresso. Esse teste usa o DOM simulado e o handler real com armazenamento em memória.
+- No navegador a 390 px, as sete missões foram concluídas em uma participação sintética: Cerrado 92, Bennu 90, Webb 92, ISS 92, Lua 92, Marte 91 e Europa 93 pontos. Foram nove tentativas: Bennu passou de 2/6 e 52 pontos para 6/6 e 90; Webb passou de 6 recebidos e 0 válidos para 6 válidos e 92 pontos. Após recarregar e retomar, as nove tentativas, 32 eventos confirmados, seis unidades com desgaste e carteira de 9 créditos permaneceram disponíveis. Não havia eventos pendentes nem recusados. O servidor desse ensaio local usa memória; a comprovação durável de produção está no recibo da API.
+
+O ensaio móvel usa viewport efetivo de 390 px em navegador no computador, sem overflow horizontal observado. A tentativa de ajustar para 320 px não alterou a largura efetiva neste navegador; essa medida não é reivindicada como verificada na R28. A validação em telefone físico e uma rodada com jogadores iniciantes seguem pendentes. Pontuação e relatórios sintéticos medem comportamento do jogo. O ensaio com pessoas precisa observar escolhas, dificuldades e justificativas para avaliar aprendizagem.
+
+## Continuidade para dois desenvolvedores
+
+- **Dev A · Motor e dados.** Reproduza os limites de massa, encaixes, energia, comunicação e validade com o motor atual. Ao verificar a API, compare o mesmo ID e o resultado recalculado no painel privado. Registre versão, pontuação e contagem de registros. Preserve a identidade da tentativa ao repetir um pedido.
+- **Dev B · Interface e publicação.** Percorra início, projeto, execução e Meu progresso em 320 e 390 px com uma participação sintética. Passe pelas sete missões, retome a participação no mesmo navegador e confira as tentativas, o inventário e o saldo. Registre navegador, viewport, comportamento de foco e a revisão servida. Confirme LP, apresentação, jogo e painel pelos endereços acima.
+
+O recibo de publicação reúne os commits, os deploys e as evidências correspondentes. [Histórico e recibos no GitHub](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md)
 
 
 ---

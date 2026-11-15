@@ -572,7 +572,12 @@ async function run() {
         assert.equal(response.headers.get(name), value, `Cabeçalho local divergente: ${route} · ${name}`);
       }
     }
-    assert.ok(vercel.redirects.some(redirect => redirect.source === '/pitch' && redirect.destination === '/presentation/pitch/index.html' && redirect.permanent === false));
+    const presentationUrl = 'https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/';
+    for (const source of ['/pitch', '/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && !redirect.has && redirect.destination === presentationUrl && redirect.permanent === false));
+    assert.equal(vercel.redirects.some(redirect => redirect.source === '/' && !redirect.has), false, 'A raiz canônica continua sendo o portal de acesso.');
+    for (const [area, destination] of Object.entries({ jogo: 'https://nasa-missaoipe.alexandrebelo.com/lab/index.html', pitch: presentationUrl, painel: 'https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html', docs: 'https://nasa-missaoipe.alexandrebelo.com/docs/index.html' })) {
+      assert.ok(vercel.redirects.some(redirect => redirect.source === '/' && redirect.has?.some(condition => condition.type === 'host' && condition.value === `${area}.nasa-missaoipe.alexandrebelo.com`) && redirect.destination === destination), `Destino do subdomínio divergente: ${area}`);
+    }
     assert.ok(vercel.redirects.some(redirect => redirect.source === '/planet-jumping' && redirect.destination === '/planet-jumping.html' && redirect.permanent === false));
     for (const source of ['/campanha', '/campanha/research', '/campanha/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && redirect.destination === `${source}/index.html` && redirect.permanent === false), `Redirecionamento explícito da campanha ausente: ${source}`);
     const redirects = [];
@@ -584,9 +589,11 @@ async function run() {
       assert.equal(head.status, 307);
       assert.equal(head.headers.get('location'), redirect.destination);
       assert.equal((await head.arrayBuffer()).byteLength, 0);
-      const destination = await fetchLocal(redirect.destination, { method: 'HEAD' });
-      assert.equal(destination.status, 200);
-      assert.equal((await destination.arrayBuffer()).byteLength, 0);
+      if (redirect.destination.startsWith('/')) {
+        const destination = await fetchLocal(redirect.destination, { method: 'HEAD' });
+        assert.equal(destination.status, 200);
+        assert.equal((await destination.arrayBuffer()).byteLength, 0);
+      } else assert.equal(redirect.destination, presentationUrl, 'Destino externo não previsto.');
       redirects.push({ source: redirect.source, destination: redirect.destination, status: result.status });
     }
     for (const redirect of vercel.redirects.filter(r => r.has)) {

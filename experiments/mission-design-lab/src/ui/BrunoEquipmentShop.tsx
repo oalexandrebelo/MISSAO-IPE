@@ -65,7 +65,7 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
   return <section className="bruno-campaign bruno-shop" aria-labelledby="bruno-shop-title" data-ipe-libras-context="Loja e inventário. Escolha um instrumento, compare a função científica e os encaixes e compre com créditos do jogo. No hangar, reserve e equipe as unidades para a missão. Cada partida efetiva consome um ciclo.">
     <button type="button" className="bruno-action bruno-quiet" onClick={onBack}><Icon name="back" size={18}/>{backLabel}</button>
     <header className="bruno-shop-header">
-      <div><h1 id="bruno-shop-title">Loja e inventário</h1><p>Escolha os instrumentos. Equipe as unidades compradas no hangar da missão.</p></div>
+      <div><h1 id="bruno-shop-title">Loja e inventário</h1><p>Depois de comprar, volte ao hangar. Em Instrumento, use Equipar para montar cada unidade na nave.</p></div>
       <dl className="bruno-wallet" aria-label="Carteira da loja"><dt>Créditos da loja</dt><dd>{state ? state.balance : 'Indisponível'}</dd></dl>
     </header>
     <BrunoInventoryStatus controller={controller} />
@@ -118,14 +118,14 @@ export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }:
   </section>;
 }
 
-export function BrunoLoadoutEditor({ controller, missionId, config, onShop, onChanged }: { controller: BrunoInventoryController; missionId: BrunoMissionId; config: BrunoConfig; onShop: () => void; onChanged: () => void }) {
+export function BrunoLoadoutEditor({ controller, missionId, config, onShop, onChanged }: { controller: BrunoInventoryController; missionId: BrunoMissionId; config: BrunoConfig; onShop?: () => void; onChanged: () => void }) {
   const state = controller.snapshot?.inventory;
   const selected = state?.reservations[missionId] ?? [];
   const used = state?.items.filter(item => selected.includes(item.id)).reduce((sum, item) => sum + BRUNO_INSTRUMENTS[item.instrumentId].slots, 0) ?? 0;
   const capacity = BRUNO_LAUNCHER_SLOTS[config.launcher];
   const locked = controller.snapshot?.attempts.some(attempt => attempt.status === 'launched' && attempt.missionId === missionId);
   return <section className="bruno-loadout" aria-labelledby="bruno-loadout-title">
-    <div className="bruno-loadout-heading"><h3 id="bruno-loadout-title">Carga de instrumentos</h3><button type="button" className="bruno-action bruno-secondary" onClick={onShop}>Loja e inventário</button></div>
+    <div className="bruno-loadout-heading"><h3 id="bruno-loadout-title">Carga de instrumentos</h3>{onShop ? <button type="button" className="bruno-action bruno-secondary" onClick={onShop}>Loja e inventário</button> : null}</div>
     {state ? <p><strong>{used} de {capacity} encaixes ocupados</strong>. Equipar reserva a unidade para esta missão.</p> : null}
     {locked ? <p>A tentativa em andamento mantém a carga reservada.</p> : null}
     {state && !state.items.length ? <p>Compre instrumentos na loja para equipar sua nave.</p> : null}
