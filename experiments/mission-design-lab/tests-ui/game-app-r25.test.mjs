@@ -53,6 +53,25 @@ test('the real App routes all seven lobby choices to their mission, without reco
   assert.equal(api.received.filter(event => event.kind === 'attempt').length, 0);
 });
 
+test('the shop selects a mission instrument from each hangar and opens on the catalog default from the lobby', async () => {
+  localStorage.clear(); globalThis.indexedDB = new IDBFactory();
+  installMetricsApi();
+  await resume();
+  const expectSelected = id => {
+    const item = BRUNO_INSTRUMENTS[id];
+    const catalog = screen.getByRole('group', { name: 'Catálogo de instrumentos' });
+    assert.equal(within(catalog).getByRole('button', { name: `${item.label} ${item.priceCredits} créditos` }).getAttribute('aria-pressed'), 'true');
+    assert.ok(screen.getByRole('heading', { name: item.label }));
+  };
+  for (const [mission, instrument] of [['ISS', 'iss-air-quality'], ['LUA', 'lunar-neutron'], ['MARTE', 'mars-meda'], ['EUROPA', 'europa-mise']]) {
+    await choose(mission); await click('Abrir hangar'); await click('Loja e inventário');
+    expectSelected(instrument);
+    await click('Voltar ao hangar'); await lobby();
+  }
+  await click('Loja e inventário');
+  expectSelected('iss-air-quality');
+});
+
 async function part(label, option) {
   await click(label);
   await act(async () => fireEvent.click(screen.getByRole('radio', { name: option })));

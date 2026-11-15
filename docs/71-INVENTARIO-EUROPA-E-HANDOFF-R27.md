@@ -4,7 +4,7 @@
 
 A MISSÃO IPÊ reúne sete missões. Cerrado, Bennu e Webb preservam os exercícios com arquivos científicos históricos. ISS, Lua, Marte e Europa formam a campanha de engenharia derivada da contribuição de Bruno, agora conectada à interface oficial, à nave 3D e à participação cadastrada.
 
-O percurso é **Start → Nome → E-mail → missão → loja e montagem → comparação → lançamento → operação → relatório**. A pergunta científica vem antes da compra. Cada instrumento tem uma finalidade: comprar mais peças não garante responder melhor. A pessoa vê o que instalou, o custo da partida, a condição das unidades e por que um projeto consegue ou não entregar a evidência exigida.
+O percurso é **Start → Nome → E-mail → missão → loja e montagem → comparação → lançamento → operação → relatório**. A pergunta científica vem antes da compra. Ao abrir a loja pelo hangar, o primeiro instrumento exigido pela missão já fica selecionado. Cada instrumento tem uma finalidade: comprar mais peças não garante responder melhor. A pessoa vê o que instalou, o custo da partida, a condição das unidades e por que um projeto consegue ou não entregar a evidência exigida.
 
 A árvore IPÊ identifica a equipe. As perguntas e referências vêm das fontes NASA; personagens, descobertas e operações reais não são inventados. A simulação tem recursos, duração, créditos, massa e desgaste didáticos, identificados como tais. Não é um propagador de alta fidelidade nem telemetria de uma sonda em operação.
 
@@ -63,7 +63,7 @@ O modelo oficial da **Europa Clipper**, de NASA VTAD, está disponível como ref
 - `src/lab/bruno-missions.ts`: catálogo, requisitos, simulação e resultados. O modelo `ipe-bruno-r27-v2` preserva a chave estrutural `payload` com o valor `targeted`. Os tipos e condições em `loadout` determinam a carga usada no cálculo.
 - `src/lab/bruno-inventory.ts`: funções puras de comprar, devolver, equipar, lançar e reiniciar. Os IDs das unidades são criados pelo servidor.
 - `server/metrics/inventory.mjs`: estado por participação, revisão, recibos idempotentes, operações ativas, recompensa e projeção dos eventos.
-- `server/metrics/blob.mjs`: persistência privada. Leitura com ETag e escrita condicional com `x-if-match`; concorrência entre abas não pode vender, gastar ou premiar duas vezes.
+- `server/metrics/blob.mjs`: persistência privada. Leitura com `Accept-Encoding: identity`, ETag forte e escrita condicional com `x-if-match`; concorrência entre abas não pode vender, gastar ou premiar duas vezes.
 - `dashboard/metrics.mjs`: agrega os eventos carregados e deduplica por versão, participação, tipo e ID. O detalhe da tentativa identifica a versão legada.
 
 A API usa `GET /api/metrics?action=inventory&sessionId=...` e `POST /api/metrics` com `action: inventory-command`, `sessionId`, `requestId`, `expectedRevision` e `command`. Comandos: `buy`, `return`, `equip`, `launch`, `complete`, `cancel`, `reset`. O cliente não envia saldo, preço, desgaste, recompensa nem pontuação autoritativos.
@@ -91,7 +91,11 @@ Execute `npm --prefix experiments/mission-design-lab test`, `npm --prefix experi
 
 No navegador: cadastro, compra, devolução, montagem, A/B, partida, cancelamento, conclusão, desgaste, retomada e reinício; repita em 390 px e 320 px. Confira foco, rolagem, explicações e peças visíveis. Na API de produção, confira repetição de recibo, concorrência, isolamento de participação e recusa de métricas forjadas. Use apenas participantes técnicos identificados como testes, não como pessoas reais.
 
-O estado efetivamente verificado e os links dos deployments ficam em `PUBLICADO.md`. DNS configurado, testes locais, commit publicado e deploy validado são provas diferentes.
+Na revisão local R27, passaram 180 testes de domínio, 113 de interface, 51 de métricas e 18 de distribuição. As quatro missões de engenharia foram concluídas no navegador; a comparação de Europa demonstrou dois versus seis registros e o desgaste reduziu a previsão de coleta para cinco registros. Os viewports de 320 e 390 px não apresentaram rolagem horizontal. A referência 3D oficial da Europa Clipper também foi aberta voluntariamente no desktop. Esses ensaios técnicos não são testes com jogadores humanos.
+
+No domínio oficial, 183 verificações em 72 requisições confirmaram as quatro missões, 31 eventos de inventário, seis tentativas autoritativas e uma tentativa legada da participação sintética. A API recusou acessos indevidos, repetição com conteúdo alterado e pontuação forjada. Compra, devolução, desgaste, cancelamento, recompensa e recuperação foram conferidos. O primeiro ensaio revelou conflito de atualização; a correção passou a ler a representação sem compressão e exigir um ETag forte, mantendo a escrita condicional. Não remover `W/` de um validador nem substituir CAS por sobrescrita incondicional.
+
+O estado efetivamente verificado e os links dos deployments ficam em `PUBLICADO.md`, no [repositório oficial](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md). DNS configurado, testes locais, commit publicado e deploy validado são provas diferentes. Os recibos funcionais e de produção ficam em `evidence/r27-*.json`; os dados privados dos participantes técnicos não são publicados.
 
 ## Origem e fontes
 

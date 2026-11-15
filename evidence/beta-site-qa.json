@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T17:50:34.584Z",
-  "finishedAt": "2026-11-15T17:50:37.864Z",
+  "startedAt": "2026-11-15T18:02:57.486Z",
+  "finishedAt": "2026-11-15T18:03:00.530Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "4c896dfa99c654d4f01266c172ba7af4b613c7a99fb0f162fb036218f809ebb7"
+        "sha256": "2faa257439d498837b5d180caa80d584b4f80de765b26ee72a77f9326af4a7da"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 454,
       "manifestedFiles": 453,
-      "bytes": 79209833,
+      "bytes": 79222019,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -4845,14 +4845,14 @@
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-72-dominios-e-acessos-r27-md"
+          "fragment": "doc-docs-71-inventario-europa-e-handoff-r27-md"
         },
         {
           "source": "context/research-library.html",
           "target": "context/research-library.html",
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
-          "fragment": "doc-docs-71-inventario-europa-e-handoff-r27-md"
+          "fragment": "doc-docs-72-dominios-e-acessos-r27-md"
         },
         {
           "source": "context/research-library.html",
@@ -18108,8 +18108,8 @@
         },
         {
           "source": "lab/index.html",
-          "target": "lab/assets/index-BI8tuzD-.js",
-          "requestPath": "/lab/assets/index-BI8tuzD-.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
+          "requestPath": "/lab/assets/index-DoKFQ-Fw.js",
           "kind": "script"
         },
         {
@@ -20922,189 +20922,189 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
+          "source": "lab/assets/BrunoHangarScene-DnyvuftC.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-          "target": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
-          "requestPath": "/lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+          "source": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+          "target": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
+          "requestPath": "/lab/assets/react-three-fiber.esm-H9TOKSXl.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
-          "requestPath": "/lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
+          "requestPath": "/lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
+          "source": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
-          "requestPath": "/lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
+          "requestPath": "/lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
-          "target": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "requestPath": "/lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
+          "target": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "requestPath": "/lab/assets/OrbitalScene-DAe7wv_W.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
-          "requestPath": "/lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
+          "requestPath": "/lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "target": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
-          "requestPath": "/lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "target": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
+          "requestPath": "/lab/assets/react-three-fiber.esm-H9TOKSXl.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "requestPath": "/lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "requestPath": "/lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "requestPath": "/lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "requestPath": "/lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/catalog-sTDiLHi-.js",
           "requestPath": "/lab/assets/catalog-sTDiLHi-.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "target": "lab/assets/search-DFbSKRgX.js",
-          "requestPath": "/lab/assets/search-DFbSKRgX.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "target": "lab/assets/search-B6Q2yOcA.js",
+          "requestPath": "/lab/assets/search-B6Q2yOcA.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "requestPath": "/lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "requestPath": "/lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "requestPath": "/lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "requestPath": "/lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "target": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "requestPath": "/lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "target": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "requestPath": "/lab/assets/OrbitalScene-DAe7wv_W.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "requestPath": "/lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "requestPath": "/lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "requestPath": "/lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "target": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-          "requestPath": "/lab/assets/BrunoHangarScene-B_BIqY7u.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "target": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+          "requestPath": "/lab/assets/BrunoHangarScene-DnyvuftC.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "target": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-          "requestPath": "/lab/assets/BrunoHangarScene-B_BIqY7u.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "target": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+          "requestPath": "/lab/assets/BrunoHangarScene-DnyvuftC.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "target": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "requestPath": "/lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "target": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "requestPath": "/lab/assets/OrbitalScene-DAe7wv_W.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "target": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
-          "requestPath": "/lab/assets/NASAReferenceScene-M6JkOy0a.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "target": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
+          "requestPath": "/lab/assets/NASAReferenceScene-CQQ56xSD.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+          "source": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "requestPath": "/lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
-          "requestPath": "/lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
+          "requestPath": "/lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
@@ -21126,15 +21126,15 @@
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/search-DFbSKRgX.js",
+          "source": "lab/assets/search-B6Q2yOcA.js",
           "target": "lab/assets/catalog-sTDiLHi-.js",
           "requestPath": "/lab/assets/catalog-sTDiLHi-.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/search-DFbSKRgX.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
-          "requestPath": "/lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/search-B6Q2yOcA.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
+          "requestPath": "/lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         }
       ]
@@ -21239,189 +21239,189 @@
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
+          "source": "lab/assets/BrunoHangarScene-DnyvuftC.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-          "specifier": "./react-three-fiber.esm-DPmtUoBu.js",
-          "target": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+          "source": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+          "specifier": "./react-three-fiber.esm-H9TOKSXl.js",
+          "target": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-          "specifier": "./index-BI8tuzD-.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+          "specifier": "./index-DoKFQ-Fw.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
+          "source": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
-          "specifier": "./index-BI8tuzD-.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
+          "specifier": "./index-DoKFQ-Fw.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
-          "specifier": "./OrbitalScene-D4ehhcim.js",
-          "target": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
+          "specifier": "./OrbitalScene-DAe7wv_W.js",
+          "target": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "specifier": "./index-BI8tuzD-.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "specifier": "./index-DoKFQ-Fw.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
-          "specifier": "./react-three-fiber.esm-DPmtUoBu.js",
-          "target": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
+          "specifier": "./react-three-fiber.esm-H9TOKSXl.js",
+          "target": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "specifier": "draco_decoder-C32yEggz.wasm",
           "target": "lab/assets/draco_decoder-C32yEggz.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "specifier": "draco_wasm_wrapper-DxJM36Ib.js",
           "target": "lab/assets/draco_wasm_wrapper-DxJM36Ib.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "specifier": "draco_decoder-fzg4nYZr.js",
           "target": "lab/assets/draco_decoder-fzg4nYZr.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "specifier": "draco_wasm_wrapper-fZCQGLGb.js",
           "target": "lab/assets/draco_wasm_wrapper-fZCQGLGb.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "specifier": "draco_decoder-Z1_iN-Ht.wasm",
           "target": "lab/assets/draco_decoder-Z1_iN-Ht.wasm",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./catalog-sTDiLHi-.js",
           "target": "lab/assets/catalog-sTDiLHi-.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "specifier": "./search-DFbSKRgX.js",
-          "target": "lab/assets/search-DFbSKRgX.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "specifier": "./search-B6Q2yOcA.js",
+          "target": "lab/assets/search-B6Q2yOcA.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "mission.worker-m4WSgatj.js",
           "target": "lab/assets/mission.worker-m4WSgatj.js",
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rive-BApFqc81.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rive-C6TFBdW0.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rive_fallback-CbNVjUCh.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "specifier": "./OrbitalScene-D4ehhcim.js",
-          "target": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "specifier": "./OrbitalScene-DAe7wv_W.js",
+          "target": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rive-BApFqc81.js",
           "target": "lab/assets/rive-BApFqc81.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rive-C6TFBdW0.js",
           "target": "lab/assets/rive-C6TFBdW0.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
           "specifier": "./rive_fallback-CbNVjUCh.js",
           "target": "lab/assets/rive_fallback-CbNVjUCh.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "specifier": "./BrunoHangarScene-B_BIqY7u.js",
-          "target": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "specifier": "./BrunoHangarScene-DnyvuftC.js",
+          "target": "lab/assets/BrunoHangarScene-DnyvuftC.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "specifier": "./BrunoHangarScene-B_BIqY7u.js",
-          "target": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "specifier": "./BrunoHangarScene-DnyvuftC.js",
+          "target": "lab/assets/BrunoHangarScene-DnyvuftC.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "specifier": "./OrbitalScene-D4ehhcim.js",
-          "target": "lab/assets/OrbitalScene-D4ehhcim.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "specifier": "./OrbitalScene-DAe7wv_W.js",
+          "target": "lab/assets/OrbitalScene-DAe7wv_W.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/index-BI8tuzD-.js",
-          "specifier": "./NASAReferenceScene-M6JkOy0a.js",
-          "target": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
+          "source": "lab/assets/index-DoKFQ-Fw.js",
+          "specifier": "./NASAReferenceScene-CQQ56xSD.js",
+          "target": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
           "kind": "dynamic-import"
         },
         {
-          "source": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+          "source": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
           "specifier": "./rolldown-runtime-XKyaHtl9.js",
           "target": "lab/assets/rolldown-runtime-XKyaHtl9.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
-          "specifier": "./index-BI8tuzD-.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
+          "specifier": "./index-DoKFQ-Fw.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         },
         {
@@ -21443,15 +21443,15 @@
           "kind": "module-url"
         },
         {
-          "source": "lab/assets/search-DFbSKRgX.js",
+          "source": "lab/assets/search-B6Q2yOcA.js",
           "specifier": "./catalog-sTDiLHi-.js",
           "target": "lab/assets/catalog-sTDiLHi-.js",
           "kind": "module-import"
         },
         {
-          "source": "lab/assets/search-DFbSKRgX.js",
-          "specifier": "./index-BI8tuzD-.js",
-          "target": "lab/assets/index-BI8tuzD-.js",
+          "source": "lab/assets/search-B6Q2yOcA.js",
+          "specifier": "./index-DoKFQ-Fw.js",
+          "target": "lab/assets/index-DoKFQ-Fw.js",
           "kind": "module-import"
         }
       ]
@@ -21614,7 +21614,7 @@
       {
         "path": "campanha/release.json",
         "source": "experiments/four-level-campaign/dist/release.json",
-        "sha256": "53ac21c3d095723d8127289ab1a7e1445ae573419e923125a981e466d2ca34d4"
+        "sha256": "bc87dfc8fda67d9a2a1679f407071768e4471dbe9c16eba48159422f16295f3d"
       },
       {
         "path": "campanha/research/assets/briefing-desktop.jpg",
@@ -21863,9 +21863,9 @@
         "analytics": "custom-host-only; page performance; no private routes"
       },
       {
-        "path": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
-        "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-B_BIqY7u.js",
-        "sha256": "3751a57dd3f065d5ba689e72b60eb729c5ea166b67e308a5907a261a59d38a07"
+        "path": "lab/assets/BrunoHangarScene-DnyvuftC.js",
+        "source": "experiments/mission-design-lab/dist/assets/BrunoHangarScene-DnyvuftC.js",
+        "sha256": "9e3b569bf6c4785d2432cdbf997669a4596e897b4ee800c93eeb04e7ab8556b1"
       },
       {
         "path": "lab/assets/catalog-sTDiLHi-.js",
@@ -21898,14 +21898,14 @@
         "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
       },
       {
-        "path": "lab/assets/index-BI8tuzD-.js",
-        "source": "experiments/mission-design-lab/dist/assets/index-BI8tuzD-.js",
-        "sha256": "b1d089b8d8c3e7cc9fe7aec65cc04504cd7c5646d8a07402e3936863013b05e1"
-      },
-      {
         "path": "lab/assets/index-CP6kuOMK.css",
         "source": "experiments/mission-design-lab/dist/assets/index-CP6kuOMK.css",
         "sha256": "ac8972e71b9d4fb930e49e5abf964a9646732607ef16c14cb0e8e308ac0adf80"
+      },
+      {
+        "path": "lab/assets/index-DoKFQ-Fw.js",
+        "source": "experiments/mission-design-lab/dist/assets/index-DoKFQ-Fw.js",
+        "sha256": "c2a6792eef3878df33b4c9c99d1021d69eec83d9b0b0afcc1504b4b4a487481c"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -21913,19 +21913,19 @@
         "sha256": "b24187c67eb11b91ba945bba004318b7367b400c9919b4091dbf7569dd50a786"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
-        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-M6JkOy0a.js",
-        "sha256": "808ee5decb29cf82fc89523604fdc9913d70cb0f3cae118d0c197b1db5b79a17"
+        "path": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
+        "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-CQQ56xSD.js",
+        "sha256": "ef958c5ee741a985b88b30b822f9bbc6a189df1518f868dddcc4789b5be641b8"
       },
       {
-        "path": "lab/assets/OrbitalScene-D4ehhcim.js",
-        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-D4ehhcim.js",
-        "sha256": "af246d76a8e2d7d02dbd993a007346b4466622503fa18ad965b69b3ceb3a2cbb"
+        "path": "lab/assets/OrbitalScene-DAe7wv_W.js",
+        "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-DAe7wv_W.js",
+        "sha256": "c6754f24c5a329b545ccc4faf438ab0d2e3e9c73ed4ebf34ad49217e3fd4d373"
       },
       {
-        "path": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
-        "source": "experiments/mission-design-lab/dist/assets/react-three-fiber.esm-DPmtUoBu.js",
-        "sha256": "33d6008a7579c59781bd4815beb959e8eb7d55abb29f415b5bc07120b8d7fb64"
+        "path": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
+        "source": "experiments/mission-design-lab/dist/assets/react-three-fiber.esm-H9TOKSXl.js",
+        "sha256": "e24214a30bec3c08f051c55db9147c31eba93d100abe82402d34c5f874cd0c29"
       },
       {
         "path": "lab/assets/rive_fallback-CbNVjUCh.js",
@@ -21958,9 +21958,9 @@
         "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
       },
       {
-        "path": "lab/assets/search-DFbSKRgX.js",
-        "source": "experiments/mission-design-lab/dist/assets/search-DFbSKRgX.js",
-        "sha256": "82c438231a1d003e5d91104c801cc5cf145ee745243487b4acee1090a9119d1a"
+        "path": "lab/assets/search-B6Q2yOcA.js",
+        "source": "experiments/mission-design-lab/dist/assets/search-B6Q2yOcA.js",
+        "sha256": "83ae558a6f23036e93d3eb2a2974c96a584216454886024235b770d8cd7cf203"
       },
       {
         "path": "lab/brand/brand-provenance-r14.json",
@@ -22206,7 +22206,7 @@
       {
         "path": "lab/index.html",
         "source": "experiments/mission-design-lab/dist/index.html",
-        "sha256": "772fd1e3ac7095d44c6a8bebddf964f734582b112df4836d61af2666ce699313",
+        "sha256": "e3f488942ba6ed3f806c84d86b4f32ef4d9b78d31a7cc125fd8a965a4b08c6d2",
         "libras": "lab",
         "analytics": "custom-host-only; page performance; no private routes"
       },
@@ -23082,7 +23082,7 @@
         "path": "campanha/release.json",
         "status": 200,
         "bytes": 326,
-        "sha256": "53ac21c3d095723d8127289ab1a7e1445ae573419e923125a981e466d2ca34d4",
+        "sha256": "bc87dfc8fda67d9a2a1679f407071768e4471dbe9c16eba48159422f16295f3d",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -23306,21 +23306,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 68926,
-        "sha256": "b1c7225453d2162af69fe0dcffcf569ef0331751cf1649d5ad185712a204692d",
+        "sha256": "f9452b28b5641b9c40293fda3e3d45b14662b3bba9a98b72b880e6532e0f998a",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2494312,
-        "sha256": "8bf939756c4a29f3857d4274239dc42c092af8982b67b88c31cef08663eb1680",
+        "bytes": 2499083,
+        "sha256": "3a552a952a8d9f1fb1643e84a8ab1398c1d15ce72360f51f238244422476171c",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1998518,
-        "sha256": "673c5714aa294f88e4d68a03364461f10a73fe67700869f6320effd322b2170f",
+        "bytes": 2002660,
+        "sha256": "547d1269a7f5628dd2ac79d8d706ca94aab775ae42bbbbacd51b59aabe192ede",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24180,29 +24180,29 @@
       {
         "path": "docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.html",
         "status": 200,
-        "bytes": 16406,
-        "sha256": "c0dc97492d4fa5c66f9854830a05e80ee101ea98c36dbf253e0d85a6a33925c3",
+        "bytes": 18023,
+        "sha256": "37f8862bd79c9deff7ec370435d69dc8dc061dac3a60e6093d5d5359dcfdd1ff",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md",
         "status": 200,
-        "bytes": 12597,
-        "sha256": "3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611",
+        "bytes": 14127,
+        "sha256": "8476ccf2fc03c592e170713345a2f6780d20a1767f3e7bb729cf1b706006caa4",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/72-DOMINIOS-E-ACESSOS-R27.html",
         "status": 200,
-        "bytes": 6554,
-        "sha256": "a3a172408dbe0aedf3d68aa2195e923d2a0553d5fb510356bfefbfd326654d28",
+        "bytes": 6553,
+        "sha256": "6e0bf2fc6664c92548d9a7f3df2c935556285bcce2641f039ecc276342dfb91b",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
         "status": 200,
-        "bytes": 3768,
-        "sha256": "1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646",
+        "bytes": 3767,
+        "sha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24535,24 +24535,24 @@
         "contentType": "text/html; charset=utf-8"
       },
       {
-        "path": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
+        "path": "lab/assets/BrunoHangarScene-DnyvuftC.js",
         "status": 200,
         "bytes": 9098,
-        "sha256": "3751a57dd3f065d5ba689e72b60eb729c5ea166b67e308a5907a261a59d38a07",
+        "sha256": "9e3b569bf6c4785d2432cdbf997669a4596e897b4ee800c93eeb04e7ab8556b1",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/NASAReferenceScene-M6JkOy0a.js",
+        "path": "lab/assets/NASAReferenceScene-CQQ56xSD.js",
         "status": 200,
         "bytes": 7260,
-        "sha256": "808ee5decb29cf82fc89523604fdc9913d70cb0f3cae118d0c197b1db5b79a17",
+        "sha256": "ef958c5ee741a985b88b30b822f9bbc6a189df1518f868dddcc4789b5be641b8",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/OrbitalScene-D4ehhcim.js",
+        "path": "lab/assets/OrbitalScene-DAe7wv_W.js",
         "status": 200,
         "bytes": 101336,
-        "sha256": "af246d76a8e2d7d02dbd993a007346b4466622503fa18ad965b69b3ceb3a2cbb",
+        "sha256": "c6754f24c5a329b545ccc4faf438ab0d2e3e9c73ed4ebf34ad49217e3fd4d373",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -24598,18 +24598,18 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/index-BI8tuzD-.js",
-        "status": 200,
-        "bytes": 689660,
-        "sha256": "b1d089b8d8c3e7cc9fe7aec65cc04504cd7c5646d8a07402e3936863013b05e1",
-        "contentType": "text/javascript; charset=utf-8"
-      },
-      {
         "path": "lab/assets/index-CP6kuOMK.css",
         "status": 200,
         "bytes": 225765,
         "sha256": "ac8972e71b9d4fb930e49e5abf964a9646732607ef16c14cb0e8e308ac0adf80",
         "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "path": "lab/assets/index-DoKFQ-Fw.js",
+        "status": 200,
+        "bytes": 689788,
+        "sha256": "c2a6792eef3878df33b4c9c99d1021d69eec83d9b0b0afcc1504b4b4a487481c",
+        "contentType": "text/javascript; charset=utf-8"
       },
       {
         "path": "lab/assets/mission.worker-m4WSgatj.js",
@@ -24619,10 +24619,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/react-three-fiber.esm-DPmtUoBu.js",
+        "path": "lab/assets/react-three-fiber.esm-H9TOKSXl.js",
         "status": 200,
         "bytes": 918864,
-        "sha256": "33d6008a7579c59781bd4815beb959e8eb7d55abb29f415b5bc07120b8d7fb64",
+        "sha256": "e24214a30bec3c08f051c55db9147c31eba93d100abe82402d34c5f874cd0c29",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -24668,10 +24668,10 @@
         "contentType": "text/javascript; charset=utf-8"
       },
       {
-        "path": "lab/assets/search-DFbSKRgX.js",
+        "path": "lab/assets/search-B6Q2yOcA.js",
         "status": 200,
         "bytes": 1282,
-        "sha256": "82c438231a1d003e5d91104c801cc5cf145ee745243487b4acee1090a9119d1a",
+        "sha256": "83ae558a6f23036e93d3eb2a2974c96a584216454886024235b770d8cd7cf203",
         "contentType": "text/javascript; charset=utf-8"
       },
       {
@@ -25007,7 +25007,7 @@
         "path": "lab/index.html",
         "status": 200,
         "bytes": 1459,
-        "sha256": "ec266a81cbad7fd9a75f39d9d9fef00c9b78ed4b4a04a0fc8a648ac463fbbcde",
+        "sha256": "bc6737a8596a5af46d7d92db6622625fe9ab0b27817b3d3e1b2501ab129c27b0",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -25707,7 +25707,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 215111,
-        "sha256": "4c896dfa99c654d4f01266c172ba7af4b613c7a99fb0f162fb036218f809ebb7",
+        "sha256": "2faa257439d498837b5d180caa80d584b4f80de765b26ee72a77f9326af4a7da",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -26004,92 +26004,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 26.044
+      "durationMs": 24.357
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.252
+      "durationMs": 0.254
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 64.832
+      "durationMs": 64.382
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 5.143
+      "durationMs": 1.013
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 61.101
+      "durationMs": 62.872
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1144.684
+      "durationMs": 989.414
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.607
+      "durationMs": 0.449
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 505.738
+      "durationMs": 464.537
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 144.671
+      "durationMs": 111.075
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 38.156
+      "durationMs": 39.512
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.282
+      "durationMs": 2.226
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 94.528
+      "durationMs": 95.966
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.301
+      "durationMs": 5.092
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 54.641
+      "durationMs": 54.343
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 840.303
+      "durationMs": 843.342
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 113.245
+      "durationMs": 106.941
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 5.775
+      "durationMs": 5.863
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 113.555
+      "durationMs": 119.459
     }
   ]
 }

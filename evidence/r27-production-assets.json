@@ -1,0 +1,137 @@
+{
+  "edition": "R27",
+  "checkedAt": "2026-11-15T17:54:58.756Z",
+  "origin": "https://nasa-missaoipe.alexandrebelo.com",
+  "routes": [
+    {
+      "path": "/presentation/pitch/index.html",
+      "status": 200
+    },
+    {
+      "path": "/docs/index.html",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/missing-r27.html",
+      "status": 404
+    },
+    {
+      "path": "/doc",
+      "status": 307,
+      "location": "/docs/index.html"
+    },
+    {
+      "path": "/painel",
+      "status": 307,
+      "location": "/dashboard/index.html"
+    }
+  ],
+  "assets": [
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 1459,
+      "sha256": "ec266a81cbad7fd9a75f39d9d9fef00c9b78ed4b4a04a0fc8a648ac463fbbcde"
+    },
+    {
+      "path": "dashboard/index.html",
+      "status": 200,
+      "bytes": 8331,
+      "sha256": "855b7d257f188dca2e5ac476db09e666271d68b3bded9592484c84ea43ec16ca"
+    },
+    {
+      "path": "dashboard/dashboard.js",
+      "status": 200,
+      "bytes": 14144,
+      "sha256": "a4fedee699378aa1d7594b81395cbc909882e955e3756e694e138eb832a686da"
+    },
+    {
+      "path": "dashboard/metrics.mjs",
+      "status": 200,
+      "bytes": 5608,
+      "sha256": "73388fabc7a98edfe8f0ae2ba544f5a3352306e70cf1330f514bae6e79c4d3dd"
+    },
+    {
+      "path": "docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.html",
+      "status": 200,
+      "bytes": 16406,
+      "sha256": "c0dc97492d4fa5c66f9854830a05e80ee101ea98c36dbf253e0d85a6a33925c3"
+    },
+    {
+      "path": "docs/72-DOMINIOS-E-ACESSOS-R27.html",
+      "status": 200,
+      "bytes": 6554,
+      "sha256": "a3a172408dbe0aedf3d68aa2195e923d2a0553d5fb510356bfefbfd326654d28"
+    },
+    {
+      "path": "equipe/index.html",
+      "status": 200,
+      "bytes": 53569,
+      "sha256": "502d6c6c50aee533a2d5afff7d79a0b3a21322e8c26e79d538cef56b8e8c6ccd"
+    },
+    {
+      "path": "lab/models/nasa/europa-clipper-vtad.glb",
+      "status": 200,
+      "bytes": 35706144,
+      "sha256": "a3f5e4533b31bf4bb25f4332f6879055dfd744f3ff9add23bfa9bdfbefd4f7fe"
+    },
+    {
+      "path": "lab/models/nasa/manifest-r27.json",
+      "status": 200,
+      "bytes": 745,
+      "sha256": "5893e9dd15097397a5eb60fdbb5c03a4b3c0221bb9e86545719aaf08922dfa95"
+    },
+    {
+      "path": "lab/assets/BrunoHangarScene-B_BIqY7u.js",
+      "status": 200,
+      "bytes": 9098,
+      "sha256": "3751a57dd3f065d5ba689e72b60eb729c5ea166b67e308a5907a261a59d38a07"
+    },
+    {
+      "path": "lab/assets/index-BI8tuzD-.js",
+      "status": 200,
+      "bytes": 689660,
+      "sha256": "b1d089b8d8c3e7cc9fe7aec65cc04504cd7c5646d8a07402e3936863013b05e1"
+    },
+    {
+      "path": "lab/assets/index-CP6kuOMK.css",
+      "status": 200,
+      "bytes": 225765,
+      "sha256": "ac8972e71b9d4fb930e49e5abf964a9646732607ef16c14cb0e8e308ac0adf80"
+    }
+  ],
+  "subdomains": [
+    {
+      "url": "https://jogo.nasa-missaoipe.alexandrebelo.com/",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html"
+    },
+    {
+      "url": "https://pitch.nasa-missaoipe.alexandrebelo.com/",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html"
+    },
+    {
+      "url": "https://painel.nasa-missaoipe.alexandrebelo.com/",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html"
+    },
+    {
+      "url": "https://docs.nasa-missaoipe.alexandrebelo.com/",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html"
+    },
+    {
+      "url": "https://lp.nasa-missaoipe.alexandrebelo.com/",
+      "status": 200,
+      "content": "Europa in published landing page"
+    }
+  ],
+  "status": "passed",
+  "codeCommit": "fb89ec583ffc784fd4b58aebec8e5fd5d98fd33e",
+  "deploymentId": "dpl_51vBqNG2K9dvz7FtSbmb65TYjBBN"
+}

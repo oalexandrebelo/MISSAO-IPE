@@ -25,7 +25,7 @@ Destinos canônicos: `/lab/index.html`, `/presentation/pitch/index.html`, `/dash
 
 O DNS é administrado na Cloudflare, zona `alexandrebelo.com`. Os cinco CNAMEs novos usam modo **DNS only**, com TLS e hospedagem na Vercel. Os nameservers e os outros registros da zona foram preservados. Os nomes foram associados aos respectivos projetos antes da criação dos CNAMEs.
 
-- Projeto principal: `projeto-ipe`; repositório oficial, branch `main`; build estático curado e API privada de métricas.
+- Projeto principal: `missao-ipe`; repositório oficial, branch `main`; build estático curado e API privada de métricas.
 - Projeto da landing page: `projeto-ipe-lp`; mesmo repositório, pasta `apps/immersive-lp`.
 - As regras de host estão em `scripts/prepare-vercel-static.mjs`, que gera `vercel.json`. Altere a fonte, gere de novo e execute os testes dos redirecionamentos.
 - O servidor local em `scripts/serve-beta.mjs` reproduz essas regras para a suíte de publicação.

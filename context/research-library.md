@@ -65,17 +65,27 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `31edb2a6da8a8cea25ff58bb8f06117423835469197048de31e8de93f57ec714` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `96aa25433dae91bbeee648925f8447ec08e168d2289aaf466dbd7978b4ff6af9` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
 
 ## R27 — loja, inventário, desgaste e Europa
 
-**Candidato validado localmente; publicação em verificação.** A campanha de Bruno inclui ISS, Lua, Marte e Europa com compra, devolução de unidades intactas, reserva por missão, desgaste na partida e recompensa confirmada pelo servidor. Cerrado, Bennu e Webb permanecem disponíveis. O painel privado mostra operações da carteira e ciclos consumidos, além das tentativas.
+**Publicada e conferida em 15/11/2026.** Implementação `fb89ec583ffc784fd4b58aebec8e5fd5d98fd33e`, correção de persistência `12617d6aeeb370262c12c63538b3c489571188e2`. Principal `dpl_Dzq9MroJhwXR3BERr94j3coX6Pue` e LP `dpl_GQmbZkWmU6JJQjQ85YcUh17sF5Mm` ficaram **READY** no mesmo commit. A API privada passou no aceite no domínio oficial.
 
-No navegador de teste, as quatro missões chegaram a seis registros válidos: Europa 92, ISS 92, Lua 92 e Marte 91 pontos nas configurações registradas. Europa demonstrou A/B de comunicação de dois para seis registros; a condição gasta reduziu a previsão para cinco. Compra, reembolso, cancelamento, retomada e reinício sem apagar métricas foram exercitados. Viewports de 320 e 390 px ficaram sem overflow horizontal; celular físico continua pendente. [Recibo funcional R27](evidence/r27-functional-qa.json).
+A campanha de Bruno inclui **ISS, Lua, Marte e Europa**, com compra, devolução de unidades intactas, reserva por missão, desgaste na partida e recompensa confirmada pelo servidor. Cerrado, Bennu e Webb permanecem disponíveis. Instrumentos, energia e comunicação alteram a montagem 3D; a comparação A/B guarda os equipamentos e a condição de cada plano. O painel privado mostra operações da carteira, ciclos consumidos e tentativas. A loja aberta pelo hangar destaca primeiro um instrumento exigido pela missão.
 
-Foram adicionados os subdomínios jogo, pitch, painel, docs e lp sob `nasa-missaoipe.alexandrebelo.com`. A confirmação final de HTTPS, redirecionamentos e armazenamento em produção será registrada após o deployment desta versão. [Acessos da equipe](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Handoff dos dois devs](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md).
+**Aceite local:** 180 testes de domínio, 113 de interface, 51 de métricas e 18 de distribuição passaram, com builds do jogo e da LP. No navegador, as quatro missões chegaram a seis registros válidos: Europa 92, ISS 92, Lua 92 e Marte 91 pontos nas configurações registradas. Europa demonstrou A/B de comunicação de dois para seis registros; a condição gasta reduziu a previsão para cinco. Compra, reembolso, cancelamento, retomada e reinício sem apagar métricas foram exercitados. Viewports de 320 e 390 px ficaram sem overflow horizontal; celular físico continua pendente. [Recibo funcional R27](evidence/r27-functional-qa.json).
+
+**Aceite de produção:** 183 verificações em 72 requisições passaram no armazenamento Blob privado. Foram persistidos 31 eventos de inventário, seis tentativas autoritativas e uma tentativa legada da participação sintética. As quatro missões tiveram resultado recalculado pelo servidor. Concorrência, repetição do mesmo pedido, desgaste único, recompensa única, cancelamento, bloqueio em T+0 e retomada foram conferidos. O painel recusou visitante e sessão de jogador; estados de outra participação e pontuação/condição forjadas foram recusados. [Recibo das métricas](evidence/r27-production-metrics.json).
+
+A primeira verificação de produção revelou conflito na devolução após o crescimento do documento do inventário. A leitura agora solicita a representação sem compressão e exige ETag forte para a escrita condicional. O mesmo inventário do teste no navegador aceitou o estorno após a correção, sem reset ou migração. O teste completo de produção passou em seguida. [Primeira falha preservada](evidence/r27-production-first-failure.json).
+
+**Domínios:** os cinco subdomínios responderam por HTTPS. `jogo`, `pitch`, `painel` e `docs` redirecionam para suas áreas no host canônico; `lp` serve o projeto separado. Doze assets/páginas foram comparados por SHA-256 ao build, incluindo o GLB oficial da Europa Clipper, além de seis rotas. [Assets, rotas e subdomínios](evidence/r27-production-assets.json).
+
+[Jogar](https://jogo.nasa-missaoipe.alexandrebelo.com/) · [Pitch](https://pitch.nasa-missaoipe.alexandrebelo.com/) · [Painel privado](https://painel.nasa-missaoipe.alexandrebelo.com/) · [Documentação](https://docs.nasa-missaoipe.alexandrebelo.com/) · [LP](https://lp.nasa-missaoipe.alexandrebelo.com/) · [Central da equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html) · [Handoff dos dois devs](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Operação dos domínios](docs/72-DOMINIOS-E-ACESSOS-R27.md).
+
+As verificações usam participações técnicas identificadas como testes; não são evidência de aprendizagem humana. O modelo Clipper é referência visual, carregado voluntariamente; créditos e desgaste são didáticos. A publicação documental posterior inclui os recibos e o ajuste de seleção inicial da loja. Cada recibo identifica seu corte de código e alcance.
 
 ---
 
@@ -8081,7 +8091,7 @@ Links: [jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html), [painel 
 
 # R27 — loja, inventário, desgaste e Europa
 
-Fonte: `docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md` · SHA-256 original: `3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611` · Ajustes de caminhos privados: 0
+Fonte: `docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md` · SHA-256 original: `8476ccf2fc03c592e170713345a2f6780d20a1767f3e7bb729cf1b706006caa4` · Ajustes de caminhos privados: 0
 
 # R27 — loja, inventário, desgaste e Europa
 
@@ -8089,7 +8099,7 @@ Fonte: `docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md` · SHA-256 original: `3de346
 
 A MISSÃO IPÊ reúne sete missões. Cerrado, Bennu e Webb preservam os exercícios com arquivos científicos históricos. ISS, Lua, Marte e Europa formam a campanha de engenharia derivada da contribuição de Bruno, agora conectada à interface oficial, à nave 3D e à participação cadastrada.
 
-O percurso é **Start → Nome → E-mail → missão → loja e montagem → comparação → lançamento → operação → relatório**. A pergunta científica vem antes da compra. Cada instrumento tem uma finalidade: comprar mais peças não garante responder melhor. A pessoa vê o que instalou, o custo da partida, a condição das unidades e por que um projeto consegue ou não entregar a evidência exigida.
+O percurso é **Start → Nome → E-mail → missão → loja e montagem → comparação → lançamento → operação → relatório**. A pergunta científica vem antes da compra. Ao abrir a loja pelo hangar, o primeiro instrumento exigido pela missão já fica selecionado. Cada instrumento tem uma finalidade: comprar mais peças não garante responder melhor. A pessoa vê o que instalou, o custo da partida, a condição das unidades e por que um projeto consegue ou não entregar a evidência exigida.
 
 A árvore IPÊ identifica a equipe. As perguntas e referências vêm das fontes NASA; personagens, descobertas e operações reais não são inventados. A simulação tem recursos, duração, créditos, massa e desgaste didáticos, identificados como tais. Não é um propagador de alta fidelidade nem telemetria de uma sonda em operação.
 
@@ -8148,7 +8158,7 @@ O modelo oficial da **Europa Clipper**, de NASA VTAD, está disponível como ref
 - `src/lab/bruno-missions.ts`: catálogo, requisitos, simulação e resultados. O modelo `ipe-bruno-r27-v2` preserva a chave estrutural `payload` com o valor `targeted`. Os tipos e condições em `loadout` determinam a carga usada no cálculo.
 - `src/lab/bruno-inventory.ts`: funções puras de comprar, devolver, equipar, lançar e reiniciar. Os IDs das unidades são criados pelo servidor.
 - `server/metrics/inventory.mjs`: estado por participação, revisão, recibos idempotentes, operações ativas, recompensa e projeção dos eventos.
-- `server/metrics/blob.mjs`: persistência privada. Leitura com ETag e escrita condicional com `x-if-match`; concorrência entre abas não pode vender, gastar ou premiar duas vezes.
+- `server/metrics/blob.mjs`: persistência privada. Leitura com `Accept-Encoding: identity`, ETag forte e escrita condicional com `x-if-match`; concorrência entre abas não pode vender, gastar ou premiar duas vezes.
 - `dashboard/metrics.mjs`: agrega os eventos carregados e deduplica por versão, participação, tipo e ID. O detalhe da tentativa identifica a versão legada.
 
 A API usa `GET /api/metrics?action=inventory&sessionId=...` e `POST /api/metrics` com `action: inventory-command`, `sessionId`, `requestId`, `expectedRevision` e `command`. Comandos: `buy`, `return`, `equip`, `launch`, `complete`, `cancel`, `reset`. O cliente não envia saldo, preço, desgaste, recompensa nem pontuação autoritativos.
@@ -8176,7 +8186,11 @@ Execute `npm --prefix experiments/mission-design-lab test`, `npm --prefix experi
 
 No navegador: cadastro, compra, devolução, montagem, A/B, partida, cancelamento, conclusão, desgaste, retomada e reinício; repita em 390 px e 320 px. Confira foco, rolagem, explicações e peças visíveis. Na API de produção, confira repetição de recibo, concorrência, isolamento de participação e recusa de métricas forjadas. Use apenas participantes técnicos identificados como testes, não como pessoas reais.
 
-O estado efetivamente verificado e os links dos deployments ficam em `PUBLICADO.md`. DNS configurado, testes locais, commit publicado e deploy validado são provas diferentes.
+Na revisão local R27, passaram 180 testes de domínio, 113 de interface, 51 de métricas e 18 de distribuição. As quatro missões de engenharia foram concluídas no navegador; a comparação de Europa demonstrou dois versus seis registros e o desgaste reduziu a previsão de coleta para cinco registros. Os viewports de 320 e 390 px não apresentaram rolagem horizontal. A referência 3D oficial da Europa Clipper também foi aberta voluntariamente no desktop. Esses ensaios técnicos não são testes com jogadores humanos.
+
+No domínio oficial, 183 verificações em 72 requisições confirmaram as quatro missões, 31 eventos de inventário, seis tentativas autoritativas e uma tentativa legada da participação sintética. A API recusou acessos indevidos, repetição com conteúdo alterado e pontuação forjada. Compra, devolução, desgaste, cancelamento, recompensa e recuperação foram conferidos. O primeiro ensaio revelou conflito de atualização; a correção passou a ler a representação sem compressão e exigir um ETag forte, mantendo a escrita condicional. Não remover `W/` de um validador nem substituir CAS por sobrescrita incondicional.
+
+O estado efetivamente verificado e os links dos deployments ficam em `PUBLICADO.md`, no [repositório oficial](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md). DNS configurado, testes locais, commit publicado e deploy validado são provas diferentes. Os recibos funcionais e de produção ficam em `evidence/r27-*.json`; os dados privados dos participantes técnicos não são publicados.
 
 ## Origem e fontes
 
@@ -8193,7 +8207,7 @@ A NASA não endossa a MISSÃO IPÊ. As fontes oficiais sustentam os conceitos e 
 
 # R27 — acessos oficiais da MISSÃO IPÊ
 
-Fonte: `docs/72-DOMINIOS-E-ACESSOS-R27.md` · SHA-256 original: `1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646` · Ajustes de caminhos privados: 0
+Fonte: `docs/72-DOMINIOS-E-ACESSOS-R27.md` · SHA-256 original: `dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2` · Ajustes de caminhos privados: 0
 
 # R27 — acessos oficiais da MISSÃO IPÊ
 
@@ -8222,7 +8236,7 @@ Destinos canônicos: `/lab/index.html`, `/presentation/pitch/index.html`, `/dash
 
 O DNS é administrado na Cloudflare, zona `alexandrebelo.com`. Os cinco CNAMEs novos usam modo **DNS only**, com TLS e hospedagem na Vercel. Os nameservers e os outros registros da zona foram preservados. Os nomes foram associados aos respectivos projetos antes da criação dos CNAMEs.
 
-- Projeto principal: `projeto-ipe`; repositório oficial, branch `main`; build estático curado e API privada de métricas.
+- Projeto principal: `missao-ipe`; repositório oficial, branch `main`; build estático curado e API privada de métricas.
 - Projeto da landing page: `projeto-ipe-lp`; mesmo repositório, pasta `apps/immersive-lp`.
 - As regras de host estão em `scripts/prepare-vercel-static.mjs`, que gera `vercel.json`. Altere a fonte, gere de novo e execute os testes dos redirecionamentos.
 - O servidor local em `scripts/serve-beta.mjs` reproduz essas regras para a suíte de publicação.

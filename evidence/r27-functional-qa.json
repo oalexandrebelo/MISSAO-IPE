@@ -71,12 +71,18 @@
   ],
   "automatedTests": {
     "domain": 180,
-    "ui": 112,
-    "metrics": 49,
+    "ui": 113,
+    "metrics": 51,
     "distribution": 18
   },
   "builds": {
     "release": "passed",
     "landingPage": "passed"
-  }
+  },
+  "productionBrowserChecks": [
+    "Canonical game subdomain redirects successfully",
+    "New synthetic browser registration and Europa briefing",
+    "MISE purchase25 to17, refund17 to25 after validator correction",
+    "Responsive shop document width390"
+  ]
 }

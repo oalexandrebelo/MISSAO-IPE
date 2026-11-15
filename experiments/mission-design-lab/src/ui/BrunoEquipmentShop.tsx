@@ -50,8 +50,11 @@ function InstrumentPreview({ id }: { id: BrunoInstrumentId }) {
   </figure>;
 }
 
-export function BrunoEquipmentShop({ controller, onBack, backLabel }: { controller: BrunoInventoryController; onBack: () => void; backLabel: string }) {
-  const [selected, setSelected] = useState<BrunoInstrumentId>(instruments[0]![0]);
+export function BrunoEquipmentShop({ controller, onBack, backLabel, missionId }: { controller: BrunoInventoryController; onBack: () => void; backLabel: string; missionId?: BrunoMissionId }) {
+  const [selected, setSelected] = useState<BrunoInstrumentId>(() => {
+    const required: readonly BrunoInstrumentId[] = missionId ? BRUNO_MISSIONS[missionId].requiredInstruments : [];
+    return instruments.find(([id]) => required.includes(id))?.[0] ?? instruments[0]![0];
+  });
   const [confirmReset, setConfirmReset] = useState(false);
   const stockTitle = useRef<HTMLHeadingElement>(null);
   const { snapshot, busy, uncertain } = controller;

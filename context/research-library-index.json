@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T17:50:21.324Z",
+  "generatedAt": "2026-11-15T18:02:56.568Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 134,
   "documents": [
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 37501,
-      "originalSha256": "31edb2a6da8a8cea25ff58bb8f06117423835469197048de31e8de93f57ec714",
-      "projectedSha256": "31edb2a6da8a8cea25ff58bb8f06117423835469197048de31e8de93f57ec714",
+      "originalBytes": 40114,
+      "originalSha256": "96aa25433dae91bbeee648925f8447ec08e168d2289aaf466dbd7978b4ff6af9",
+      "projectedSha256": "96aa25433dae91bbeee648925f8447ec08e168d2289aaf466dbd7978b4ff6af9",
       "redactions": 0
     },
     {
@@ -835,9 +835,9 @@
       "title": "R27 — loja, inventário, desgaste e Europa",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 12597,
-      "originalSha256": "3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611",
-      "projectedSha256": "3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611",
+      "originalBytes": 14127,
+      "originalSha256": "8476ccf2fc03c592e170713345a2f6780d20a1767f3e7bb729cf1b706006caa4",
+      "projectedSha256": "8476ccf2fc03c592e170713345a2f6780d20a1767f3e7bb729cf1b706006caa4",
       "redactions": 0
     },
     {
@@ -846,9 +846,9 @@
       "title": "R27 — acessos oficiais da MISSÃO IPÊ",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 3768,
-      "originalSha256": "1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646",
-      "projectedSha256": "1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646",
+      "originalBytes": 3767,
+      "originalSha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
+      "projectedSha256": "dfc4b20ea0d61d6fc6f0c4354f7e770051ced4e6e556b2575787d996d0dbbbe2",
       "redactions": 0
     },
     {
@@ -1482,13 +1482,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2493995,
-      "sha256": "c7c97026e13efef661de0fada23ebbaafcb16ef4d086337d1136c2b3da6a57b7"
+      "bytes": 2498766,
+      "sha256": "20d287b37312dea9483e298a0b2be29d21f83a1aaee5b90f9201c9b06eefc078"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1998518,
-      "sha256": "673c5714aa294f88e4d68a03364461f10a73fe67700869f6320effd322b2170f"
+      "bytes": 2002660,
+      "sha256": "547d1269a7f5628dd2ac79d8d706ca94aab775ae42bbbbacd51b59aabe192ede"
     }
   ]
 }
