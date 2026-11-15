@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-15T10:58:13.495Z",
+  "generatedAt": "2026-11-15T11:10:08.587Z",
   "status": "passed",
   "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
-  "fileCount": 182,
+  "fileCount": 184,
   "allByteIdentical": true,
   "files": [
     {
@@ -1161,6 +1161,20 @@
       "byteIdentical": true
     },
     {
+      "source": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+      "output": "site/presentation/pitch/assets/alexandre-belo-monogram.svg",
+      "originalSha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1",
+      "publishedSha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1",
+      "byteIdentical": true
+    },
+    {
+      "source": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+      "output": "site/presentation/pitch/assets/alexandre-belo-orbit.svg",
+      "originalSha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324",
+      "publishedSha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324",
+      "byteIdentical": true
+    },
+    {
       "source": "presentation/pitch/assets/bennu-osiris-rex.jpg",
       "output": "site/presentation/pitch/assets/bennu-osiris-rex.jpg",
       "originalSha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe",
@@ -1261,15 +1275,15 @@
     {
       "source": "presentation/pitch/index.html",
       "output": "site/presentation/pitch/index.html",
-      "originalSha256": "b1871a73a8fa2bc0c9d87f2a7953b0ca4dbfe58ca70f0c2032d26b152b39c866",
-      "publishedSha256": "b1871a73a8fa2bc0c9d87f2a7953b0ca4dbfe58ca70f0c2032d26b152b39c866",
+      "originalSha256": "8e3af860cdd891d8ecd429926b00bf5ed1c8d815713347b507bf28133fa1bc1e",
+      "publishedSha256": "8e3af860cdd891d8ecd429926b00bf5ed1c8d815713347b507bf28133fa1bc1e",
       "byteIdentical": true
     },
     {
       "source": "presentation/pitch/pitch.css",
       "output": "site/presentation/pitch/pitch.css",
-      "originalSha256": "7b9c4807378051ec85fe727eddc6a40e2fa771933ca05f2a7d96abd804eaf76c",
-      "publishedSha256": "7b9c4807378051ec85fe727eddc6a40e2fa771933ca05f2a7d96abd804eaf76c",
+      "originalSha256": "705f7f2c1d97158cf5975b4f9c6d6635fe93bfa784f985f980310b10a3b1f976",
+      "publishedSha256": "705f7f2c1d97158cf5975b4f9c6d6635fe93bfa784f985f980310b10a3b1f976",
       "byteIdentical": true
     },
     {

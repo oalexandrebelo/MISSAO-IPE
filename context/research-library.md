@@ -65,9 +65,28 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `39c8cc40dcff05b1f3f27369959ea642b03d747306b88470d9e65ca01c6560f2` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `74775bf0c05549fb6bc2aed1dd7b9908fba2499c5878bde2600b1bedda2c2e35` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R20 — primeira experiência e pitch de Alexandre Belo
+
+**Beta 0.11.0-beta.1 publicada e conferida em 15/11/2026**, edição `R20-beginner-journey-and-pitch`. Commit de implementação e integração `4dfc9db57401f151541a47ea50fa5c9635b0a146`. Vercel principal `dpl_FzyYbNALWL3CH4fBZF4FiLPpfWaw`; LP `dpl_CAobAam3N7wixbP57HCcrDw766kz`: ambas **READY**, mesmo commit e domínios públicos confirmados pela API.
+
+- [Jogar as três missões](https://projeto-ipe.vercel.app/lab/index.html): escolha destaca o sistema correspondente; termos científicos são explicados; resultado final e relógio do replay ficam separados. Copiar o ensaio A/B orienta o retorno ao projeto, sem executar automaticamente.
+- [Pitch de Alexandre Belo](https://projeto-ipe.vercel.app/pitch): sete cenas, roteiro de três minutos, notas, teclado, tela cheia, movimento reduzido, fontes NASA e comparação interativa de Bennu. Duas curvas da MotionMaxxing adaptadas para Web Animations, com licença e atribuição locais.
+- [Handoff dos dois devs](https://projeto-ipe.vercel.app/docs/51-QA-INICIANTE-E-HANDOFF-R20.html) e [guia do apresentador](https://projeto-ipe.vercel.app/docs/52-PITCH-ALEXANDRE-BELO-R20.html). Alexandre recebe crédito nominal; a marca principal é a logo oficial da equipe. Como complemento solicitado após esta conferência, o pitch inclui a assinatura pessoal AB exportada do brandbook Figma e o link para alexandrebelo.com.br. Os recibos abaixo preservam o corte anterior a esse complemento.
+- [LP imersiva](https://projeto-ipe-lp.vercel.app/) conecta o novo pitch, mantendo jogo, créditos e 404.
+
+**Verificação:** 152 testes de domínio e 60 de interface no laboratório, 2 regressões do pitch, 17 da distribuição e 24 do contexto. LP: build, 22 testes de navegador, 4 de motor e 17 assets íntegros. [Recibo local](evidence/revision-r20.json). Percurso de iniciante realizado por agentes nas três missões; não constitui estudo com participantes humanos.
+
+**Produção:** 368 arquivos com HTTP 200, hashes e políticas corretos; biblioteca de 114 documentos; `/pitch` redireciona para a apresentação canônica. No navegador público, A/B de Bennu mudou de 2 para 6 e a câmera incompatível do Webb manteve a explicação do próprio caso, sem erro de console observado. [Recibo principal](evidence/production-r20.json) · [recibo LP](evidence/production-lp-r20.json).
+
+A PR #2 de FASTMODE chegou ao repositório durante esta revisão e foi preservada integralmente em `fastmode/`, por merge sem conflitos. Seus casos e pitch são uma contribuição paralela, não fazem parte da validação ou da distribuição curada desta R20. O próximo trabalho é revisar essa contribuição antes de associá-la à jornada científica principal.
+
+Este registro identifica as implantações verificadas acima. Seu commit documental aciona outra implantação com os mesmos runtimes. Aprendizagem humana, toque em celular físico e desempenho GPU continuam sem certificação. A auditoria automatizada de acessibilidade do pitch ficou incompleta; os testes de acessibilidade da LP pertencem à suíte própria.
+
+---
 
 ## R18 — registros reais de Bennu e Webb
 
@@ -6587,7 +6606,7 @@ A revisão preservou as fontes locais Figtree e EB Garamond, a logo SVG oficial 
 
 # Primeira experiência nas três missões · handoff R20
 
-Fonte: `docs/51-QA-INICIANTE-E-HANDOFF-R20.md` · SHA-256 original: `c387f7675e85df17ca0b992c21e1fd8c74a84ec30e87f991ab3db79ef23ec212` · Ajustes de caminhos privados: 0
+Fonte: `docs/51-QA-INICIANTE-E-HANDOFF-R20.md` · SHA-256 original: `8a75a43c111d4716c77a40b91b53cb914f888f441aaddd94c92a1d86d8040b10` · Ajustes de caminhos privados: 0
 
 # Primeira experiência nas três missões · handoff R20
 
@@ -6678,14 +6697,14 @@ Em 15/11/2026: **152 testes de domínio, 60 de interface do laboratório, 17 de 
 
 Para repetir: `npm --prefix experiments/mission-design-lab run verify`; depois `npm run build:beta && npm run prepare:vercel && npm run test:beta`. A preparação gera as rotas usadas no teste de distribuição. A conferência pública é posterior à implantação e usa `node scripts/verify-publication-r20.mjs <deployment-id> <commit-completo> <recibo.json>`, após conferir esses identificadores na Vercel.
 
-Dev A mantém a correspondência entre os exemplos do pitch e `runLearningExperiment`; Dev B mantém a apresentação em `presentation/pitch/`, os controles, créditos e responsividade. O pitch adapta duas curvas da MotionMaxxing para Web Animations, sem dependência nova. O site e a logo pessoal de Alexandre não foram fornecidos; a apresentação usa seu nome e a marca oficial da equipe. O próximo aceite de produto é um piloto com iniciantes humanos, registrando se conseguem explicar uma falha e justificar a segunda tentativa sem orientação.
+Dev A mantém a correspondência entre os exemplos do pitch e `runLearningExperiment`; Dev B mantém a apresentação em `presentation/pitch/`, os controles, créditos e responsividade. O pitch adapta duas curvas da MotionMaxxing para Web Animations, sem dependência nova. Após a primeira publicação, Alexandre forneceu seu site e o brandbook do Figma. O pitch acrescenta a assinatura pessoal AB em SVG e o link alexandrebelo.com.br, preservando a marca MISSÃO IPÊ como identidade do jogo. A origem e a variante constam no guia do pitch. O próximo aceite de produto é um piloto com iniciantes humanos, registrando se conseguem explicar uma falha e justificar a segunda tentativa sem orientação.
 
 
 ---
 
 # MISSÃO IPÊ · pitch de Alexandre Belo
 
-Fonte: `docs/52-PITCH-ALEXANDRE-BELO-R20.md` · SHA-256 original: `9ad7667c6551297184118ad16208adadbbeb8ac907ea56c4bfa2b69b0571df2a` · Ajustes de caminhos privados: 0
+Fonte: `docs/52-PITCH-ALEXANDRE-BELO-R20.md` · SHA-256 original: `8342e86dc299ba93c2e460c67eec27e8bcd7be09370d0b6c695a151594e86043` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ · pitch de Alexandre Belo
 
@@ -6737,7 +6756,8 @@ O navegador renderiza uma cena estável até receber uma ação, inclusive no mo
 
 | Ativo | Origem e tratamento |
 | --- | --- |
-| Marca MISSÃO IPÊ | SVG canônico da equipe, de `experiments/mission-design-lab/public/brand/`. Alexandre Belo recebe crédito textual na abertura e no fechamento. |
+| Marca MISSÃO IPÊ | SVG canônico da equipe, de `experiments/mission-design-lab/public/brand/`. É a marca principal do palco. |
+| Assinatura de Alexandre Belo | SVGs originais do monograma e da órbita do componente `AB/Logo/Reverse` no Figma, instância `7:8` do componente principal `5:11`. A composição transparente preserva as posições do Figma no quadro de referência de 840 × 504. A assinatura acompanha nome e site na abertura e no fechamento. [Site de Alexandre Belo](https://www.alexandrebelo.com.br/). |
 | Terra | [NASA/Goddard, Blue Marble](https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/). Reuso dos WebP prontos de `apps/immersive-lp/public/assets/`, com enquadramento, sombra e atmosfera em CSS. |
 | Cerrado | [Terra/MODIS, Brasil central](https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/). Brian Montgomery, Reto Stöckli e Robert Simmon com dados da equipe MODIS. Reuso do JPEG de `web/media/`. |
 | Bennu | [Mosaico PolyCam](https://science.nasa.gov/resource/bennu-mosaic/), NASA/Goddard/University of Arizona. Reuso do JPEG de `web/media/`. |

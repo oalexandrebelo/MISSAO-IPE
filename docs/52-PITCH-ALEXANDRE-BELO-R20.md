@@ -48,7 +48,8 @@ O navegador renderiza uma cena estável até receber uma ação, inclusive no mo
 
 | Ativo | Origem e tratamento |
 | --- | --- |
-| Marca MISSÃO IPÊ | SVG canônico da equipe, de `experiments/mission-design-lab/public/brand/`. Alexandre Belo recebe crédito textual na abertura e no fechamento. |
+| Marca MISSÃO IPÊ | SVG canônico da equipe, de `experiments/mission-design-lab/public/brand/`. É a marca principal do palco. |
+| Assinatura de Alexandre Belo | SVGs originais do monograma e da órbita do componente `AB/Logo/Reverse` no Figma, instância `7:8` do componente principal `5:11`. A composição transparente preserva as posições do Figma no quadro de referência de 840 × 504. A assinatura acompanha nome e site na abertura e no fechamento. [Site de Alexandre Belo](https://www.alexandrebelo.com.br/). |
 | Terra | [NASA/Goddard, Blue Marble](https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/). Reuso dos WebP prontos de `apps/immersive-lp/public/assets/`, com enquadramento, sombra e atmosfera em CSS. |
 | Cerrado | [Terra/MODIS, Brasil central](https://science.nasa.gov/earth/earth-observatory/central-brazil-1111/). Brian Montgomery, Reto Stöckli e Robert Simmon com dados da equipe MODIS. Reuso do JPEG de `web/media/`. |
 | Bennu | [Mosaico PolyCam](https://science.nasa.gov/resource/bennu-mosaic/), NASA/Goddard/University of Arizona. Reuso do JPEG de `web/media/`. |

@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T10:58:14.608Z",
-  "finishedAt": "2026-11-15T10:58:17.865Z",
+  "startedAt": "2026-11-15T11:10:09.492Z",
+  "finishedAt": "2026-11-15T11:10:12.943Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "0207425302e1985a49101297e1c8396fcfd0ded67cde23e13bcaca736827878a"
+        "sha256": "d21206e9e29aff0de903fe1ebf686572c20fe38ca2fba472a958dfb378b5a641"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -33,9 +33,9 @@
     },
     "publication": {
       "publicationReady": true,
-      "fileCount": 369,
-      "manifestedFiles": 368,
-      "bytes": 30913209,
+      "fileCount": 371,
+      "manifestedFiles": 370,
+      "bytes": 30927751,
       "releaseTarget": {
         "local": "2026-11-15T08:00:00-03:00",
         "utc": "2026-11-15T11:00:00Z",
@@ -58,7 +58,7 @@
       "research/evidence/validate-evi3-research.py"
     ],
     "publicTextAudit": {
-      "inspectedFiles": 325,
+      "inspectedFiles": 327,
       "findings": [],
       "method": "Boundary-aware credential signatures; valid IPv4 octets and private/link-local ranges; private path/host patterns. Loopback instructions and formatted non-IP numbers are not treated as secrets.",
       "pdfLimit": "PDF binary integrity checked. Historical R4 PDF/text were separately cleared by coordination; this scanner does not extract PDF text or certify comprehensive security."
@@ -106,8 +106,8 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 2297,
-      "uniqueTargets": 264,
+      "count": 2301,
+      "uniqueTargets": 266,
       "entries": [
         {
           "source": "architecture/index.html",
@@ -14540,6 +14540,18 @@
         },
         {
           "source": "presentation/pitch/index.html",
+          "target": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+          "requestPath": "/presentation/pitch/assets/alexandre-belo-monogram.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/pitch/index.html",
+          "target": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+          "requestPath": "/presentation/pitch/assets/alexandre-belo-orbit.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/pitch/index.html",
           "target": "presentation/pitch/assets/cerrado-terra-modis.jpg",
           "requestPath": "/presentation/pitch/assets/cerrado-terra-modis.jpg",
           "kind": "img"
@@ -14572,6 +14584,18 @@
           "source": "presentation/pitch/index.html",
           "target": "presentation/pitch/assets/missao-ipe-logo.svg",
           "requestPath": "/presentation/pitch/assets/missao-ipe-logo.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/pitch/index.html",
+          "target": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+          "requestPath": "/presentation/pitch/assets/alexandre-belo-monogram.svg",
+          "kind": "img"
+        },
+        {
+          "source": "presentation/pitch/index.html",
+          "target": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+          "requestPath": "/presentation/pitch/assets/alexandre-belo-orbit.svg",
           "kind": "img"
         },
         {
@@ -15987,6 +16011,16 @@
         "sha256": "4f9fe6084bdac407acf466720b567e66ba7787e84c2d5d812531d35ba7a97774"
       },
       {
+        "path": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+        "source": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+        "sha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1"
+      },
+      {
+        "path": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+        "source": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+        "sha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324"
+      },
+      {
         "path": "presentation/pitch/assets/bennu-osiris-rex.jpg",
         "source": "presentation/pitch/assets/bennu-osiris-rex.jpg",
         "sha256": "d01672fc353c10fa5c101dc885f77fa66fb5b5e0ede1366f5dcbb2b0018ccfbe"
@@ -16059,12 +16093,12 @@
       {
         "path": "presentation/pitch/index.html",
         "source": "presentation/pitch/index.html",
-        "sha256": "b1871a73a8fa2bc0c9d87f2a7953b0ca4dbfe58ca70f0c2032d26b152b39c866"
+        "sha256": "8e3af860cdd891d8ecd429926b00bf5ed1c8d815713347b507bf28133fa1bc1e"
       },
       {
         "path": "presentation/pitch/pitch.css",
         "source": "presentation/pitch/pitch.css",
-        "sha256": "7b9c4807378051ec85fe727eddc6a40e2fa771933ca05f2a7d96abd804eaf76c"
+        "sha256": "705f7f2c1d97158cf5975b4f9c6d6635fe93bfa784f985f980310b10a3b1f976"
       },
       {
         "path": "presentation/pitch/pitch.js",
@@ -16743,21 +16777,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 58860,
-        "sha256": "b32c7815475ab331960b2f6121497ba0c9238f763126a9128e90a36a5062d90f",
+        "sha256": "088f6df792e0bef34cff77820960b8429b932326fe09fe564a7dcc06f1e293c1",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2240280,
-        "sha256": "a0f79193044b81fc942c088045018ed90d6eedb5a9abbeaa5be4d543469ee5f6",
+        "bytes": 2244544,
+        "sha256": "4917f5da947059a962f7a1664296b6993cdf46f70ade5f4385947911293286d2",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1801786,
-        "sha256": "0e9f74bc58712355f453edc79952d428a71ac6a1898bdd9e7087c319af0af3bb",
+        "bytes": 1805417,
+        "sha256": "dba2d48e28a3480f17bdc6665fbc3e2c146ab07dd16c9b90b96b8d01ca1ec71f",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -17309,29 +17343,29 @@
       {
         "path": "docs/51-QA-INICIANTE-E-HANDOFF-R20.html",
         "status": 200,
-        "bytes": 14264,
-        "sha256": "40ba264e5a0a83b5ce89d6fbae15d9443184ea380273d8ea47f2554419fd677f",
+        "bytes": 14415,
+        "sha256": "ec55293d04671c8fb79c295f7a9ff75178258c9ee598f8c1e8f013d1b0c64585",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/51-QA-INICIANTE-E-HANDOFF-R20.md",
         "status": 200,
-        "bytes": 11639,
-        "sha256": "c387f7675e85df17ca0b992c21e1fd8c74a84ec30e87f991ab3db79ef23ec212",
+        "bytes": 11790,
+        "sha256": "8a75a43c111d4716c77a40b91b53cb914f888f441aaddd94c92a1d86d8040b10",
         "contentType": "text/plain; charset=utf-8"
       },
       {
         "path": "docs/52-PITCH-ALEXANDRE-BELO-R20.html",
         "status": 200,
-        "bytes": 14095,
-        "sha256": "70ea613216c0e832998c31c5a15d0cc0d2d12a7d1ca9841d47e7e1e3cc98aa1c",
+        "bytes": 14544,
+        "sha256": "9535370483e611d56ed282c5967ffc3aeee94b69621cd03553a28fd597f49911",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/52-PITCH-ALEXANDRE-BELO-R20.md",
         "status": 200,
-        "bytes": 10734,
-        "sha256": "9ad7667c6551297184118ad16208adadbbeb8ac907ea56c4bfa2b69b0571df2a",
+        "bytes": 11089,
+        "sha256": "8342e86dc299ba93c2e460c67eec27e8bcd7be09370d0b6c695a151594e86043",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -18462,6 +18496,20 @@
         "contentType": "text/plain; charset=utf-8"
       },
       {
+        "path": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+        "status": 200,
+        "bytes": 1883,
+        "sha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1",
+        "contentType": "image/svg+xml"
+      },
+      {
+        "path": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+        "status": 200,
+        "bytes": 1076,
+        "sha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324",
+        "contentType": "image/svg+xml"
+      },
+      {
         "path": "presentation/pitch/assets/bennu-osiris-rex.jpg",
         "status": 200,
         "bytes": 222697,
@@ -18534,15 +18582,15 @@
       {
         "path": "presentation/pitch/index.html",
         "status": 200,
-        "bytes": 21590,
-        "sha256": "b1871a73a8fa2bc0c9d87f2a7953b0ca4dbfe58ca70f0c2032d26b152b39c866",
+        "bytes": 22719,
+        "sha256": "8e3af860cdd891d8ecd429926b00bf5ed1c8d815713347b507bf28133fa1bc1e",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "presentation/pitch/pitch.css",
         "status": 200,
-        "bytes": 22373,
-        "sha256": "7b9c4807378051ec85fe727eddc6a40e2fa771933ca05f2a7d96abd804eaf76c",
+        "bytes": 22938,
+        "sha256": "705f7f2c1d97158cf5975b4f9c6d6635fe93bfa784f985f980310b10a3b1f976",
         "contentType": "text/css; charset=utf-8"
       },
       {
@@ -18625,8 +18673,8 @@
       {
         "path": "publication-manifest.json",
         "status": 200,
-        "bytes": 158801,
-        "sha256": "0207425302e1985a49101297e1c8396fcfd0ded67cde23e13bcaca736827878a",
+        "bytes": 159689,
+        "sha256": "d21206e9e29aff0de903fe1ebf686572c20fe38ca2fba472a958dfb378b5a641",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -18764,7 +18812,7 @@
       }
     ],
     "httpRoutes": {
-      "linkedRoutesChecked": 286,
+      "linkedRoutesChecked": 288,
       "redirects": [
         {
           "source": "/campanha/research",
@@ -18889,87 +18937,87 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 13.691
+      "durationMs": 14.454
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.34
+      "durationMs": 0.28
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 82.583
+      "durationMs": 78.736
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 2.348
+      "durationMs": 1.838
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 115.352
+      "durationMs": 86.051
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1407.897
+      "durationMs": 1623.573
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.625
+      "durationMs": 1.217
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 680.55
+      "durationMs": 728.394
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 57.733
+      "durationMs": 54.721
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 4.091
+      "durationMs": 4.671
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 111.534
+      "durationMs": 115.104
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 6.727
+      "durationMs": 9.944
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 72.224
+      "durationMs": 87.361
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 335.523
+      "durationMs": 317.211
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 152.29
+      "durationMs": 170.472
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 3.871
+      "durationMs": 3.558
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 133.339
+      "durationMs": 76.651
     }
   ]
 }

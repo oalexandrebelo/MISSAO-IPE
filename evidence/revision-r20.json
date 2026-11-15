@@ -60,5 +60,38 @@
     "Pitch reproduces guided final outcomes; it is not a second runtime engine or a live orbital simulation.",
     "Pitch automated accessibility audit was incomplete; LP automated audit passed within its22tests.",
     "Production receipt follows deployment and identifies exact deployment and commit."
-  ]
+  ],
+  "presenterBrand": {
+    "requestedAfterInitialPublication": true,
+    "site": "https://alexandrebelo.com.br/",
+    "siteHttp": 200,
+    "source": "https://www.figma.com/design/VTETqqBjYKD3bNACqqwS0A?node-id=7-8",
+    "variant": "AB/Logo/Reverse",
+    "nodeId": "7:8",
+    "minimumRenderedWidthPx": 96,
+    "modifications": "none",
+    "assets": [
+      {
+        "path": "presentation/pitch/assets/alexandre-belo-monogram.svg",
+        "bytes": 1883,
+        "sha256": "bae570b934d441f9aea0bf7584c48f7d072b1aec7e430b9b27d4c6de0db6c7e1"
+      },
+      {
+        "path": "presentation/pitch/assets/alexandre-belo-orbit.svg",
+        "bytes": 1076,
+        "sha256": "87a777c566cec9ac63dd3cb41e2ea89b8f8634e0259893a5a8d8b75c23842324"
+      }
+    ],
+    "composition": "Two original Figma SVG layers, positioned according to design context; no background rectangle, path edits or recoloring.",
+    "visualCheck": {
+      "openingAndClosing": "passed",
+      "desktop": "1280x720",
+      "mobile": "390x844",
+      "renderedWidthPx": 108,
+      "renderedHeightPx": 64.8,
+      "transparentComposition": true,
+      "horizontalOverflow": false,
+      "consoleErrorsObserved": 0
+    }
+  }
 }
