@@ -1,4 +1,22 @@
-# Publicação PROJETO IPÊ — R16
+# Publicação MISSÃO IPÊ
+
+## R17 — identidade oficial, fontes NASA e consolidação
+
+Beta **0.8.0-beta.1**, edição `R17-official-brand-and-evidence-based-stories`. Esta seção registra a preparação R17; os IDs de implantação e recibos serão acrescentados após a conferência pública.
+
+- Marca **MISSÃO IPÊ** em SVG transparente, originais preservados e variante para fundo claro. O ipê identifica a equipe; a narrativa científica não usa a árvore como tema.
+- Três histórias reais: Terra/MODIS, OSIRIS-REx/Nightingale e Webb/WASP-39 b, com fontes NASA, datas e limites dos exercícios sintéticos. Personagens inventados também foram retirados da campanha.
+- PR #1 incorporada com histórico em `apps/immersive-lp/`, corrigindo a pasta ausente que causava erros no projeto Vercel da LP. O site principal mantém seu endereço.
+- Contribuição de Bruno consolidada como snapshot revisado de 32 arquivos, autoria e cinco commits referenciados. Três moodboards e favicon excluídos; código de referência fora do motor e do build oficial.
+- [Handoff R17](https://projeto-ipe.vercel.app/docs/43-HANDOFF-GERAL-R17.html), [histórias reais](https://projeto-ipe.vercel.app/docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html), [marca e Figma](https://projeto-ipe.vercel.app/docs/40-IDENTIDADE-MISSAO-IPE-R17.html), [avaliação de prontidão](https://projeto-ipe.vercel.app/docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html).
+
+**Verificação local:** 145 testes de domínio + 38 de interface no laboratório; 120 + 14 na campanha; 24 de contexto; 17 de distribuição; 12 do portal. LP: 4 de motor, 18 de interface e 17 assets conferidos. Compilações e TypeScript aprovados. [Recibo R17](evidence/revision-r17.json).
+
+A candidatura ainda exige comprovação de aprendizagem, verificação em aparelho físico, pacote de submissão e esclarecimento da elegibilidade temporal. Nenhuma promessa de premiação ou decisão dos organizadores é inferida dos testes.
+
+---
+
+## Histórico R16
 
 ## R16 — propósito, investigação e assets · 15/11/2026
 

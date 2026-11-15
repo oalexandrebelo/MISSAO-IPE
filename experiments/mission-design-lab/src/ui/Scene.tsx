@@ -21,7 +21,7 @@ export interface SceneProps { preview?: boolean; compact?: boolean; progress?: n
 
 const ORBIT_VIEWS: readonly { id: SceneFocus; number: string; name: string; text: string }[] = [
   { id: 'science', number: '01', name: 'O Cerrado', text: 'A pergunta científica parte de seis registros históricos de vegetação Terra/MODIS.' },
-  { id: 'satellite', number: '02', name: 'Seu CubeSat', text: 'Um satélite fictício. Você decide como ele usa energia, processa e transporta os arquivos.' },
+  { id: 'satellite', number: '02', name: 'Seu CubeSat', text: 'Um satélite didático. Você decide como ele usa energia, processa e transporta os arquivos.' },
   { id: 'ground', number: '03', name: 'A estação', text: 'Cada registro precisa chegar completo ao solo e passar pela validação científica.' },
 ];
 const HANGAR_VIEWS: readonly { id: SceneFocus; number: string; name: string; text: string }[] = [
@@ -190,7 +190,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
   useEffect(() => { if (!canRenderWebGL()) useFallback(); setChecked(true); }, [useFallback]);
   const views = world !== 'earth' ? [{ id: 'science' as const, number: '01', name: 'Ciência', text: '' }, { id: 'satellite' as const, number: '02', name: 'Nave didática', text: '' }, { id: 'ground' as const, number: '03', name: 'Solo', text: '' }] : variant === 'hangar' ? HANGAR_VIEWS : ORBIT_VIEWS;
   const selected = views.find(item => item.id === focus) ?? views[0]!;
-  const selectedText = world === 'earth' ? selected.text : `${world === 'bennu' ? 'Bennu' : 'JWST'}: modelo NASA de referência para uma missão didática fictícia. Recursos e entregas vêm do caso selecionado; a geometria não calcula a missão.`;
+  const selectedText = world === 'earth' ? selected.text : `${world === 'bennu' ? 'Bennu' : 'JWST'}: modelo NASA de referência em um exercício baseado em documentação científica. Os parâmetros didáticos não são telemetria NASA; a geometria não calcula a missão.`;
   const recorded = visualState !== undefined;
   const configured = !preview && (variant === 'hangar' || recorded || !!segment || world !== 'earth');
   const animating = !recorded && !segment && !paused && !reducedMotion && active && mode === '3d';
@@ -218,7 +218,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
     </div>
     {configured ? <SpacecraftInspector presentation={presentation} inspection={inspection} state={visualState}/> : null}
     {visualState ? <RecordedState state={visualState} scienceRecordCount={scienceRecordCount}/> : null}
-    {world !== 'earth' && !preview ? <p className="orbit-model-credit">Referência visual NASA · {world === 'bennu' ? 'Bennu: Christopher R. Meaney' : 'JWST: Goddard Space Flight Center'}. Missão fictícia, sem escala física. <a href={world === 'bennu' ? 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' : 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/'} target="_blank" rel="noopener noreferrer">Fonte do modelo</a></p> : null}
-    <p className="sr-only">{world !== 'earth' ? `Modelo NASA de referência ${world === 'bennu' ? 'Bennu' : 'JWST'}, para missão científica fictícia. ` : variant === 'hangar' ? 'CubeSat fictício com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat fictício. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
+    {world !== 'earth' && !preview ? <p className="orbit-model-credit">Referência visual NASA · {world === 'bennu' ? 'Bennu: Christopher R. Meaney' : 'JWST: Goddard Space Flight Center'}. Exercício didático baseado em missão documentada; sem escala física. <a href={world === 'bennu' ? 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' : 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/'} target="_blank" rel="noopener noreferrer">Fonte do modelo</a></p> : null}
+    <p className="sr-only">{world !== 'earth' ? `Modelo NASA de referência ${world === 'bennu' ? 'Bennu' : 'JWST'}, em modelo didático baseado em documentação científica; parâmetros não são telemetria NASA. ` : variant === 'hangar' ? 'CubeSat didático com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat didático. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
   </section>;
 }

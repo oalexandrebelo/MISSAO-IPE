@@ -32,3 +32,7 @@
 .view-campaign>.page-heading{align-items:center}
 @media(max-width:1200px){.main-nav{gap:16px}.offline-badge{display:none}.site-header{gap:18px}.brand>span:last-child{font-size:25px}}
 @media(max-width:700px){.hero-campaign-note{font-size:12px}.campaign-fixed-scenario{margin-top:18px;align-self:flex-start}.main-nav{gap:0}.main-nav button{padding-left:8px;padding-right:8px}.main-nav button>span{display:inline}.view-campaign>.page-heading{align-items:flex-start}.view-campaign>.page-heading>.button{margin-top:18px}.campaign-storage-note{font-size:12px}.site-footer>div{gap:12px 20px}}
+
+/* Identidade oficial: proporção preservada, sem fundo aplicado à marca. */
+.site-header .brand-logo{display:block;width:145px;height:68px;object-fit:contain}
+@media(max-width:700px){.site-header .brand-logo{width:128px;height:60px}}

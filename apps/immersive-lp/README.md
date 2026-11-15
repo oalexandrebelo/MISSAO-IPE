@@ -1,6 +1,6 @@
-# PROJETO IPÊ — LP imersiva orbital
+# MISSÃO IPÊ — LP imersiva orbital
 
-Landing page Next.js independente, criada para o conceito **Missão Ipê — Ciência que chega**. Edição 14/11/2026, versão 1.0.0-beta.1.
+Landing page Next.js independente, criada para o conceito **Missão Ipê — Ciência que chega**. Contribuição original de 14/11/2026; integração R17 em 15/11/2026. Veja `docs/R17-INTEGRACAO.md` para o estado atual.
 
 ## Executar
 
@@ -10,7 +10,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Desenvolvimento em `http://localhost:3000`. Requer Node >=22.14; verificado com Node 24.22.1 e pnpm 11.25.0.
+Desenvolvimento em `http://localhost:3000`. Requer Node >=22.14; a versão de pnpm declarada no pacote é 11.25.0. Os recibos da entrega original estão preservados; a verificação R17 é registrada separadamente.
 
 ## Publicar
 
@@ -21,13 +21,13 @@ pnpm start
 
 `pnpm build` gera `out/`, uma distribuição estática completa. `pnpm start` a serve em `http://localhost:4177`. Um servidor HTTP estático é necessário; abrir o HTML por `file://` não é suportado. Na Vercel, configure **Root Directory = apps/immersive-lp**, preset **Next.js**, Node 24, install `pnpm install --frozen-lockfile`, build `pnpm build` e mantenha **Output Directory sem override**: o adaptador Next.js identifica a exportação. Em hospedagem estática genérica, publique o conteúdo de `out/`. O app não precisa de banco, API key ou variáveis secretas. `NEXT_PUBLIC_SITE_URL` pode ajustar a base de metadados antes da compilação.
 
-Por padrão, `next/font/google` obtém as fontes durante o build e as serve localmente ao visitante. Para reconstruir sem consultar Google Fonts, depois de instalar as dependências:
+O build padrão R17 usa as fontes WOFF2 versionadas por `next/font/local`, sem consultar Google Fonts. O comando de compatibilidade também continua disponível:
 
 ```bash
 pnpm build:offline-fonts
 ```
 
-O script usa as fontes WOFF2 incluídas via `next/font/local`, restaura `lib/fonts.ts` ao terminar e mantém a tipografia. A instalação inicial de dependências requer rede; o ZIP não contém `node_modules`. O `out/` incluído no pacote pode ser servido diretamente sem instalar dependências. Links para o jogo completo e a pesquisa abrem serviços externos; o pequeno laboratório da LP roda localmente.
+O script mantém a tipografia local e restaura o arquivo de configuração ao terminar. A instalação inicial de dependências requer rede; o ZIP não contém `node_modules`. O `out/` gerado pode ser servido diretamente sem instalar dependências. Links para o jogo completo e a pesquisa abrem serviços externos; o pequeno laboratório da LP roda localmente.
 
 ## Stack entregue
 
@@ -41,8 +41,9 @@ Não há dependências shadcn, Radix, Framer Motion, Lottie, Three.js ou React T
 - Narrativa editorial, entradas de texto por SplitText, linhas desenhadas e parallax de baixa amplitude.
 - Navegação por capítulos, progresso de leitura e menu móvel em dialog nativo.
 - Laboratório carregado sob demanda, usando o motor determinístico do beta e download do resultado JSON.
-- Quatro capítulos educativos com estados claros: Semente/Raízes apresentam cenários existentes; Copa/Horizonte são planos.
-- Timeline operável por clique e teclado, FAQs nativas, fontes/créditos, CTA para o beta real.
+- Três casos disponíveis baseados em fatos NASA: Terra/MODIS, Bennu/OSIRIS-REx e Webb/NIRSpec. Fontes e limites do exercício acompanham cada caso.
+- Link para a campanha do Cerrado já disponível: Primeiro sinal, Memória em disputa, Janela estreita e Ciência que chega.
+- Quatro segmentos de engenharia operáveis por clique e teclado: lançamento, espaço, solo e usuários. FAQs, créditos e acesso ao laboratório.
 - Remotion Player carregado apenas ao abrir o manifesto de 24 s. A reprodução é iniciada pelo visitante.
 - Som sintetizado localmente, opcional, sem autoplay. Movimento respeita `prefers-reduced-motion` e tem controle explícito de pausa.
 
@@ -57,7 +58,7 @@ pnpm exec playwright install --with-deps chromium
 pnpm test
 ```
 
-O workflow `.github/workflows/immersive-lp-qa.yml` faz essas verificações para PRs desta pasta. Não usa segredos nem publica produção. Há 18 casos de interface em desktop e celular e quatro casos do motor. Consulte `docs/RELATORIO.md` para distinguir verificações executadas de verificações bloqueadas ou pendentes.
+O workflow `.github/workflows/immersive-lp-qa.yml` faz essas verificações para PRs desta pasta. Não usa segredos nem publica produção. Há 18 casos de interface em desktop e celular e quatro casos do motor. Consulte `docs/R17-INTEGRACAO.md` para verificações atuais; `docs/RELATORIO.md` preserva o recibo original da PR.
 
 ## Filme
 

@@ -26,22 +26,27 @@ test('o laboratório calcula a falha, o redesenho e exporta o resultado real', a
   await page.getByRole('button',{name:'Contatos longos',exact:true}).click(); await expect(result).toContainText('6/6');
 });
 
-test('timeline funciona com clique e teclado, incluindo os estados planejados', async ({ page }) => {
-  await page.goto('/'); const tab = page.getByRole('tab',{name:/A experiência/}); await tab.scrollIntoViewIfNeeded();
+test('os quatro segmentos funcionam com clique e teclado', async ({ page }) => {
+  await page.goto('/'); const tab = page.getByRole('tab',{name:/Espaço/}); await tab.scrollIntoViewIfNeeded();
   await expect(tab).toHaveAttribute('aria-selected','true'); await tab.focus(); await tab.press('ArrowRight');
-  await expect(page.getByRole('tab',{name:/A escuta/})).toHaveAttribute('aria-selected','true');
-  await expect(page.getByRole('tabpanel')).toContainText('Aprender com quem aprende');
-  await page.getByRole('tab',{name:/A escuta/}).press('End');
-  await expect(page.getByRole('tabpanel')).toContainText('Mais perguntas');
-  await page.getByRole('tab',{name:/A semente/}).click(); await expect(page.getByRole('tabpanel')).toContainText('64 configurações');
+  await expect(page.getByRole('tab',{name:/Solo/})).toHaveAttribute('aria-selected','true');
+  await expect(page.getByRole('tabpanel')).toContainText('Observar não é o mesmo que entregar');
+  await page.getByRole('tab',{name:/Solo/}).press('End');
+  await expect(page.getByRole('tabpanel')).toContainText('A descoberta depende de quem interpreta');
+  await page.getByRole('tab',{name:/Lançamento/}).click(); await expect(page.getByRole('tabpanel')).toContainText('Capacidade de carga');
 });
 
-test('perguntas e capítulos têm conteúdo real expandível', async ({ page }) => {
+test('três casos distinguem fatos e exercício e levam à campanha disponível', async ({ page }) => {
   await page.goto('/');
-  const question = page.locator('summary').filter({hasText:'Os quatro níveis já estão disponíveis?'});
-  await question.click(); await expect(question.locator('..')).toContainText('estão em planejamento');
-  const copa = page.locator('.level-card').filter({has:page.getByRole('heading',{name:'Copa',exact:true})});
-  await copa.locator('summary').click(); await expect(copa).toContainText('ainda não é jogável');
+  const question = page.locator('summary').filter({hasText:'As três missões e a campanha já estão disponíveis?'});
+  await question.click(); await expect(question.locator('..')).toContainText('Primeiro sinal');
+  await expect(page.locator('.level-card')).toHaveCount(3);
+  const bennu = page.locator('.level-card').filter({has:page.getByRole('heading',{name:'Bennu / OSIRIS-REx',exact:true})});
+  await bennu.locator('summary').click(); await expect(bennu).toContainText('setores, medições e recursos são sintéticos');
+  await expect(bennu.getByRole('link',{name:/escolha de Nightingale/})).toHaveAttribute('href','https://www.nasa.gov/news-release/x-marks-the-spot-nasa-selects-site-for-asteroid-sample-collection/');
+  await expect(page.getByRole('link',{name:/Jogue a campanha:/})).toHaveAttribute('href','https://projeto-ipe.vercel.app/campanha/index.html');
+  await expect(page.getByRole('link',{name:'MISSÃO IPÊ — início'}).locator('img')).toHaveAttribute('src','/brand/missao-ipe-logo.svg');
+  await expect(page.getByRole('link',{name:'GitHub',exact:true})).toHaveAttribute('href','https://github.com/oalexandrebelo/MISSAO-IPE');
 });
 
 test('movimento reduzido e o controle de pausa preservam a leitura', async ({ page }) => {
@@ -92,6 +97,6 @@ test('navegação responsiva mantém o foco e os destinos', async ({ page }, tes
   await page.goto('/'); const trigger = page.getByRole('button',{name:'Abrir menu'}); await trigger.click();
   await expect(page.getByRole('dialog',{name:'Menu de navegação'})).toBeVisible();
   await page.keyboard.press('Escape'); await expect(trigger).toBeFocused();
-  await trigger.click(); await page.getByRole('navigation',{name:'Navegação no celular'}).getByRole('link',{name:/Sua jornada/}).click();
+  await trigger.click(); await page.getByRole('navigation',{name:'Navegação no celular'}).getByRole('link',{name:/Três casos NASA/}).click();
   await expect(page.getByRole('dialog')).not.toBeVisible(); await expect(page).toHaveURL(/#jornada$/);
 });

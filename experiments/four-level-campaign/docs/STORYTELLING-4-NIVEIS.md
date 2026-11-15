@@ -1,10 +1,12 @@
-# PROJETO-IPÊ — storytelling de quatro níveis
+# MISSÃO IPÊ — narrativa científica de quatro níveis
 
-Versão editorial 1.0 · 14/11/2026 · America/Sao_Paulo. Direção de produto: AB / Alexandre Belo; conteúdo e verificação do contrato com assistência de IA. Narrativa original proposta para o beta. Todos os personagens e pedidos operacionais abaixo são fictícios.
+Versão editorial 1.1 · atualização R17 em 15/11/2026 · America/Sao_Paulo. Direção de produto: AB / Alexandre Belo; conteúdo e verificação do contrato com assistência de IA. Documento vigente da campanha. Os dados científicos são reais e históricos; as configurações, os contatos, os limites e os créditos pertencem ao exercício didático.
 
 ## 1. Arco da campanha
 
-Uma equipe fictícia de estudo da vegetação precisa comparar dois períodos históricos em três pontos próximos a Rio Verde. Os arquivos Terra/MODIS já existem. O jogador recebe um laboratório de transporte de dados por CubeSat e passa de uma primeira entrega orientada a decisões de processamento, armazenamento, comunicação e uso de recursos.
+O instrumento MODIS, a bordo do satélite Terra da NASA, observa a vegetação terrestre. O produto MOD13Q1 V6.1 reúne índices de vegetação em períodos compostos de 16 dias e resolução de 250 m. A campanha usa um recorte de seis registros históricos de 2024: dois períodos em três pontos próximos a Rio Verde. O participante investiga como os valores de NDVI variam e quais decisões permitem que os dados necessários à comparação cheguem completos ao solo.
+
+Os registros já existem no arquivo científico. O CubeSat é um modelo didático de processamento e transporte desses arquivos. A experiência progride de uma primeira entrega orientada para decisões de armazenamento, comunicação e uso de recursos; ela não recria a aquisição de dados pela missão Terra.
 
 A história avança quando surge uma necessidade nova: compreender o caminho do dado; trabalhar com memória compacta; preservar bandas sob contatos curtos; e produzir a mesma entrega com folga de créditos. As necessidades são conhecidas antes da execução. Nenhum incidente exige uma falha aleatória, um desastre ambiental inventado ou uma recuperação que o motor não oferece.
 
@@ -12,16 +14,16 @@ A história avança quando surge uma necessidade nova: compreender o caminho do 
 
 As condições particulares dos níveis são escolhas pedagógicas da campanha. O envelope do motor permanece em 3,6 kg, 86 créditos e 180 minutos simulados. O nível 4 acrescenta uma meta de custo de 78 créditos; isso não altera retroativamente o teto de 86 créditos do motor.
 
-## 2. Personagens e linguagem
+## 2. Funções científicas e linguagem
 
-| Personagem fictício | Papel na história | Função didática | Forma de falar |
+| Função exercida pelo participante | Instrução do briefing | Função didática | Linguagem de orientação |
 |---|---|---|---|
-| Lina Duarte | Coordenação da missão | Relacionar finalidade, etapas e resultado | Uma pergunta concreta e um próximo passo claro |
-| Caio Mendes | Engenharia de dados | Tornar visível o acúmulo na memória | Aponta volume, limite e instante, sem culpar o jogador |
-| Joana Costa | Operação de solo | Conectar pedido científico e comunicação | Explica por que a representação do dado importa neste exercício |
-| Ravi Almeida | Revisão do projeto e ciência | Pedir evidência, comparar folgas e limitar conclusões | Convida a defender uma escolha sem dar nota à pessoa |
+| Planejamento de missão | Defina a informação que precisa chegar | Relacionar finalidade, etapas e resultado | Uma pergunta concreta e um próximo passo claro |
+| Engenharia de dados | Escolha o que processar e armazenar | Tornar visível o acúmulo na memória | Aponta volume, limite e instante, sem culpar o jogador |
+| Operação de solo | Dimensione o caminho até a análise | Conectar requisito científico e comunicação | Explica por que a representação do dado importa neste exercício |
+| Revisão de projeto e ciência | Defenda a decisão e os limites da conclusão | Pedir evidência, comparar folgas e limitar conclusões | Convida a defender uma escolha sem dar nota à pessoa |
 
-Os personagens não representam funcionários, parceiros ou porta-vozes de instituições reais. A narrativa não atribui a eles medições de campo, missões de voo ou uma equipe escolar que não existiu. Orientação e créditos são de jogo.
+Cada função é uma perspectiva de trabalho que o participante assume. Os briefings são instruções pedagógicas da MISSÃO IPÊ, sem falas atribuídas a pessoas ou equipes da NASA. O símbolo da árvore pertence à identidade da equipe; a progressão da campanha se fundamenta nas perguntas científicas e nos compromissos de engenharia.
 
 O feedback deve seguir **ocorrência observada → consequência → oportunidade de investigação**. Evitar “você errou tudo”, “missão segura”, “risco zero” ou “aprovado pela NASA”. Uma tentativa incompleta continua disponível para estudo; nunca é necessário falhar deliberadamente para obter a conquista.
 
@@ -42,13 +44,13 @@ O apoio muda de orientação inicial para perguntas de investigação e, por fim
 
 ## 4. Nível 1 — Primeiro sinal
 
-**Personagem:** Lina Duarte, coordenação fictícia. **Intenção pedagógica:** reconhecer que o valor científico depende de chegar ao solo com integridade e qualidade.
+**Função:** planejamento de missão. **Intenção pedagógica:** reconhecer que o valor científico depende de chegar ao solo com integridade e qualidade.
 
-**Incidente de abertura:** o laboratório acaba de receber o pacote histórico. A equipe já tem um projeto inicial plausível e precisa verificar se o fluxo completo funciona. Este nível oferece uma primeira experiência de sucesso; não apresenta um componente quebrado ou uma falsa urgência.
+**Situação de aprendizagem:** examine o pacote histórico e o projeto inicial que já atende à operação simulada. A primeira tarefa é acompanhar o fluxo completo e entender por que ele funciona. A comparação entre dois períodos só fica disponível quando ambos os registros de um ponto chegam completos e válidos.
 
-**Briefing proposto:**
+**Orientação ao participante:**
 
-> “Temos seis registros históricos de três pontos do Cerrado. Antes de interpretar qualquer mudança, precisamos recebê-los por inteiro. Vamos acompanhar o caminho de cada lote até o solo.”
+> Examine seis registros históricos Terra/MODIS de três pontos próximos a Rio Verde. Antes de interpretar a variação de NDVI, faça os pares chegarem completos. Acompanhe o caminho de cada lote até o solo.
 
 **Objetivo mensurável:** entregar os seis registros válidos no cenário de contatos longos, sem violação do motor. O jogador pode manter ou alterar o projeto inicial; a configuração vencedora não precisa ser única.
 
@@ -68,19 +70,19 @@ O apoio muda de orientação inicial para perguntas de investigação e, por fim
 
 **Pergunta de debrief:** “Qual é a diferença entre produzir um lote e disponibilizar sua ciência no solo?”
 
-**Transição:** Caio apresenta um novo pedido de projeto: manter uma memória menor. O jogador leva o raciocínio sobre volume e agenda para um limite mais apertado.
+**Transição:** o segundo exercício exige manter uma memória menor. Leve o raciocínio sobre volume e agenda para esse novo limite do modelo.
 
 **Conceitos:** cadeia de dados; lote completo; tempo de contato; projeto versus operação; dados históricos versus simulação; primeira leitura de evidência.
 
 ## 5. Nível 2 — Memória em disputa
 
-**Personagem:** Caio Mendes, engenharia de dados fictícia. **Intenção pedagógica:** investigar armazenamento antes do contato e perceber que reduzir volume exige uma decisão de processamento e potência.
+**Função:** engenharia de dados. **Intenção pedagógica:** investigar armazenamento antes do contato e perceber que reduzir volume exige uma decisão de processamento e potência.
 
-**Incidente de abertura:** o novo exercício fixa a memória compacta de 512 Mbit. Mantidos os demais componentes iniciais, seis lotes de bandas não cabem antes do primeiro contato. Não é uma pane de fabricação: é uma incompatibilidade entre a agenda e o projeto.
+**Situação de aprendizagem:** o novo exercício fixa a memória compacta de 512 Mbit. Mantidos os demais componentes iniciais, seis lotes de bandas não cabem antes do primeiro contato. Não é uma pane de fabricação: é uma incompatibilidade entre a agenda e o projeto.
 
-**Briefing proposto:**
+**Orientação ao participante:**
 
-> “Neste ensaio, a memória será de 512 Mbit. Os trabalhos terminam antes do primeiro contato com o solo. Como entregar todos os registros sem ampliar a memória?”
+> Neste exercício, a memória disponível é de 512 Mbit. Os trabalhos terminam antes do primeiro contato com o solo. Investigue como entregar todos os registros mantendo essa capacidade.
 
 **Objetivo mensurável:** sucesso 6/6 no cenário longo **mantendo `buffer: compact`**. Uma execução bem-sucedida com memória grande cumpre a operação, mas deixa este pedido pendente.
 
@@ -103,19 +105,19 @@ As frases só aparecem quando a evidência da execução corresponder. O motor e
 
 **Pergunta de debrief:** “Que escolha reduziu o volume, e que outro requisito precisou ser atendido para ela funcionar?”
 
-**Transição:** Joana apresenta uma condição diferente: a equipe do próximo exercício precisa receber as bandas para calcular NDVI no solo, e os contatos serão menores. A solução aprendida continua válida para a missão anterior, mas o pedido mudou.
+**Transição:** o próximo exercício exige receber as bandas para calcular NDVI no solo, com contatos menores. A solução aprendida continua válida para o exercício anterior; agora o requisito de representação mudou.
 
 **Conceitos:** acúmulo antes do contato; perda de lote novo; processamento a bordo; representação de dados; potência instantânea versus energia; solução que depende do objetivo.
 
 ## 6. Nível 3 — Janela estreita
 
-**Personagem:** Joana Costa, operação de solo fictícia. **Intenção pedagógica:** coordenar comunicação, potência e envelope quando o pedido científico restringe uma alternativa.
+**Função:** operação de solo. **Intenção pedagógica:** coordenar comunicação, potência e envelope quando o pedido científico restringe uma alternativa.
 
-**Incidente de abertura:** neste exercício, os contatos duram quatro minutos cada e a representação precisa permanecer em bandas. As janelas menores são uma condição do cenário anunciada no briefing, não uma estação que falha ao acaso.
+**Situação de aprendizagem:** neste exercício, os contatos duram quatro minutos cada e a representação precisa permanecer em bandas. As janelas menores são uma condição do cenário anunciada no briefing, não uma estação que falha ao acaso.
 
-**Briefing proposto:**
+**Orientação ao participante:**
 
-> “Agora precisamos receber as bandas e calcular o NDVI no solo. Teremos dois contatos de quatro minutos. Revise o projeto para entregar os seis registros nesse tempo.”
+> Preserve as bandas vermelha e infravermelha próxima para calcular o NDVI no solo. O cenário oferece dois contatos de quatro minutos. Revise o projeto para entregar os seis registros nesse tempo.
 
 O pedido de bandas é uma restrição pedagógica de representação. O motor mantém a mesma pergunta NDVI; não simula automaticamente uma nova análise científica apenas por preservar as bandas.
 
@@ -138,19 +140,19 @@ O pedido de bandas é uma restrição pedagógica de representação. O motor ma
 
 **Pergunta de debrief:** “Por que aumentar a taxa de rádio exigiu rever a alimentação e outra escolha do projeto?”
 
-**Transição:** a equipe aceita agora receber o índice para a mesma pergunta NDVI. Ravi pede uma decisão autônoma de projeto com oito créditos de folga. O jogador volta a escolher a representação com base no pedido, em vez de tratar a solução anterior como universal.
+**Transição:** o exercício final permite receber o índice para responder à mesma pergunta sobre NDVI e exige oito créditos de folga. Escolha a representação conforme os requisitos e justifique a decisão usando o resultado da execução.
 
 **Conceitos:** taxa e duração; recepção parcial; capacidade útil de contato; potência do rádio; compromissos de massa e orçamento; representação solicitada; comparação com múltiplas mudanças.
 
 ## 7. Nível 4 — Ciência que chega
 
-**Personagem:** Ravi Almeida, revisão fictícia do projeto e da ciência. **Intenção pedagógica:** otimizar sob uma necessidade explícita, defender uma alternativa e reconhecer o limite do que os dados permitem afirmar.
+**Função:** revisão de projeto e ciência. **Intenção pedagógica:** otimizar sob uma necessidade explícita, defender uma alternativa e reconhecer o limite do que os dados permitem afirmar.
 
-**Incidente de abertura:** o projeto de partida já entrega 6/6 nos contatos curtos por 84 créditos. O novo pedido é reservar ao menos oito dos 86 créditos totais. A missão funciona; a pergunta agora é como atingir a mesma entrega usando no máximo 78 créditos.
+**Situação de aprendizagem:** o projeto de partida já entrega 6/6 nos contatos curtos por 84 créditos. O novo pedido é reservar ao menos oito dos 86 créditos totais. A missão funciona; a pergunta agora é como atingir a mesma entrega usando no máximo 78 créditos.
 
-**Briefing proposto:**
+**Orientação ao participante:**
 
-> “Já temos uma entrega completa, mas precisamos reservar oito créditos. Escolha um projeto de até 78 créditos e mostre, no relatório, o que sustenta sua decisão. Depois confira o que os dados permitem dizer.”
+> O projeto inicial já entrega todos os registros. Encontre uma configuração de até 78 créditos e mostre, no relatório, o que sustenta sua decisão. Descreva a diferença de NDVI dos pares recebidos e indique o limite dessa conclusão.
 
 **Objetivo mensurável:** sucesso 6/6 em contatos curtos com **custo ≤ 78 créditos**. A explicação acompanha a reflexão e não vira uma condição de aprovação automática de texto.
 
@@ -176,7 +178,7 @@ O pedido de bandas é uma restrição pedagógica de representação. O motor ma
 
 Essas perguntas podem ser respondidas por texto, fala em atividade mediada ou discussão fora da aplicação. O beta não presume gravar áudio nem interpretar automaticamente a resposta. Concluir a campanha demonstra cumprimento dos desafios; aprendizagem continua sendo uma questão de pesquisa.
 
-**Encerramento:** a equipe fictícia recebe os três pares, apresenta fontes e convida o jogador a comparar outra solução ou explorar o laboratório. A conquista é o conjunto de decisões verificadas; não há certificado de engenharia de voo, nota de inteligência ou classificação NASA.
+**Encerramento:** o participante examina os três pares recebidos, consulta as fontes e compara outra solução ou explora o laboratório. O resultado reúne decisões verificadas dentro do modelo e uma leitura descritiva dos dados. A conclusão da campanha não equivale a certificação de engenharia de voo ou classificação NASA.
 
 **Conceitos:** objetivos e restrições; folga de recursos; comparação de alternativas; evidência e raciocínio; dado versus inferência; limite do modelo; autonomia com possibilidade de ajuda.
 
@@ -201,9 +203,9 @@ As contagens de soluções foram verificadas por enumeração das 64 configuraç
 
 | ID | Verificação |
 |---|---|
-| ST-01 | Os quatro níveis apresentam pessoa fictícia, necessidade, objetivo mensurável, escolha, feedback, conclusão e transição |
+| ST-01 | Os quatro níveis apresentam função científica, necessidade, objetivo mensurável, escolha, feedback, conclusão e transição |
 | ST-02 | Cenário e restrição particular são anunciados antes da tentativa; nenhum requisito surge apenas no relatório |
-| ST-03 | Fala do personagem corresponde ao resultado atual; o roteiro nunca substitui eventos reais |
+| ST-03 | Feedback corresponde ao resultado da execução; a orientação pedagógica nunca substitui a evidência do motor |
 | ST-04 | “Sucesso operacional” e “nível concluído” permanecem separados quando necessário |
 | ST-05 | A ajuda não exige penalidade, não remove conclusão e respeita o pedido particular do nível |
 | ST-06 | Reflexão tem caráter formativo; nenhuma heurística de texto produz uma alegação de compreensão |
@@ -214,6 +216,8 @@ As contagens de soluções foram verificadas por enumeração das 64 configuraç
 
 ## 10. Referências e alcance
 
-O [Appendix S do NASA Systems Engineering Handbook](https://www.nasa.gov/reference/appendix-s-concept-of-operations-annotated-outline/) inspira a ligação entre necessidade, atores e operação. [My NASA Data — Building Claims from Evidence](https://mynasadata.larc.nasa.gov/lesson-plans/introduction-building-claims-evidence) informa a separação entre afirmação, evidência e raciocínio. A aplicação desses princípios à campanha, os personagens e as falas são autorais, sem endosso das instituições.
+A base científica é o [produto MOD13Q1 V6.1, NASA Earthdata](https://doi.org/10.5067/MODIS/MOD13Q1.061). A página [MODIS — missão Terra](https://terra.nasa.gov/about/terra-instruments/modis) explica o instrumento e suas observações da vegetação. Os seis registros usados no jogo, suas bandas, qualidade, coordenadas de consulta e hashes estão em `public/data/mod13q1-research-pack.json`; o contrato executável conserva esses dados em `src/data/science-data.ts`. O [MOD13 User Guide V6.1](https://modis-land.gsfc.nasa.gov/pdf/MOD13_User_Guide_V61.pdf) detalha produto e indicadores de qualidade.
 
-Consultas: **14/11/2026, America/Sao_Paulo**. O código do catálogo e do motor fornece a evidência dos números do jogo. O roteiro propõe uma experiência educativa; revisão humana, clareza com o público e transferência de aprendizagem permanecem pendentes de pesquisa. O [PRD](PRD.md) define o produto e [INSIGHTS-E-OPORTUNIDADES](INSIGHTS-E-OPORTUNIDADES.md) registra hipóteses de evolução.
+O [Appendix S do NASA Systems Engineering Handbook](https://www.nasa.gov/reference/appendix-s-concept-of-operations-annotated-outline/) inspira a ligação entre necessidade, usuários e operação. [My NASA Data — Building Claims from Evidence](https://mynasadata.larc.nasa.gov/lesson-plans/introduction-building-claims-evidence) informa a separação entre afirmação, evidência e raciocínio. As funções, instruções e condições pedagógicas da campanha são uma adaptação autoral, sem endosso das instituições.
+
+Referências pedagógicas consultadas em **14/11/2026**; produto MOD13Q1 e instrumento Terra/MODIS reconferidos em **15/11/2026, America/Sao_Paulo**. O código do catálogo e do motor fornece a evidência dos números do jogo. O roteiro propõe uma experiência educativa; revisão humana, clareza com o público e transferência de aprendizagem permanecem pendentes de pesquisa. O [PRD](PRD.md) define o produto e [INSIGHTS-E-OPORTUNIDADES](INSIGHTS-E-OPORTUNIDADES.md) registra hipóteses de evolução.

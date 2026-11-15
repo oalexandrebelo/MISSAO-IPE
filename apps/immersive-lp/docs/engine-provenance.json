@@ -1,5 +1,5 @@
 {
-  "repository": "oalexandrebelo/PROJETO-IPE",
+  "repository": "oalexandrebelo/MISSAO-IPE",
   "base_commit": "b0cb7d7febec16dd97425070d72c21fde992436f",
   "source_directory": "experiments/mission-design-lab/src",
   "files": [
@@ -31,5 +31,6 @@
       "path": "lib/mission/data/science-data.ts",
       "sha256": "1e4db799ecec5a4ed08906f8c759d59c2cbb6cc2324298c5ef6b45e184ab0a66"
     }
-  ]
+  ],
+  "repositoryNameAtOriginalImport": "oalexandrebelo/PROJETO-IPE"
 }

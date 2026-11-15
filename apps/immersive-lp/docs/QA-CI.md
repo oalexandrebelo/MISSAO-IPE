@@ -1,6 +1,6 @@
 # Evidência de validação em CI
 
-Execução: https://github.com/oalexandrebelo/PROJETO-IPE/actions/runs/43632846898
+Execução: https://github.com/oalexandrebelo/MISSAO-IPE/actions/runs/43632846898
 
 Commit verificado: `4ae6c2855d55322583d20e5e751a9099370fef8f`.
 Ambiente: GitHub Actions, Ubuntu 24.04, Node 24, Chromium Playwright.
@@ -34,7 +34,7 @@ O teste de overflow verifica 360, 768 e 1440 px. A auditoria automática não su
 2026-11-14T19:36:17.2483979Z   ✓  18 [mobile] › tests/experience.spec.ts:85:1 › navegação responsiva mantém o foco e os destinos (922ms)
 2026-11-14T19:36:17.8696994Z   ✓  17 [mobile] › tests/experience.spec.ts:79:1 › auditoria WCAG A/AA na página e no laboratório (2.5s)
 2026-11-14T19:36:17.9766803Z   18 passed (39.7s)
-2026-11-14T19:36:19.6896591Z Artifact download URL: https://github.com/oalexandrebelo/PROJETO-IPE/actions/runs/43632846898/artifacts/14129041834
+2026-11-14T19:36:19.6896591Z Artifact download URL: https://github.com/oalexandrebelo/MISSAO-IPE/actions/runs/43632846898/artifacts/14129041834
 ```
 
 O artefato do workflow conserva o resultado JSON, arquivos de teste e build estático por 14 dias. O código da suíte permanece no repositório e pode ser executado novamente.

@@ -18,4 +18,4 @@ createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-cache');
     res.writeHead(200); res.end(req.method === 'HEAD' ? undefined : data);
   } catch { res.writeHead(404, { 'Content-Type':'text/plain' }); res.end('Not found'); }
-}).listen(port, '0.0.0.0', () => process.stdout.write(`Projeto Ipê em http://localhost:${port}\n`));
+}).listen(port, '0.0.0.0', () => process.stdout.write(`MISSÃO IPÊ em http://localhost:${port}\n`));

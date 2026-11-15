@@ -1,12 +1,14 @@
 # Relatório de implementação e verificação
 
+> Recibo histórico da contribuição original, não a homologação R17. As descrições de marca e campanha abaixo retratam aquela entrega; consulte [R17-INTEGRACAO.md](R17-INTEGRACAO.md) para o estado atual.
+
 Data: 14/11/2026. Entrega: nova LP imersiva PROJETO IPÊ, em aplicação Next.js independente.
 
 ## Resultado entregue
 
 Experiência orbital com Terra NASA local, tipografia EB Garamond/Figtree, narrativa em capítulos, experimento real do beta, quatro horizontes de aprendizagem, timeline, perguntas frequentes e filme Remotion de 24 segundos. A marca original foi preservada. A leitura do repositório determinou o tema correto: engenharia de missões educativas e dados históricos da vegetação do Cerrado.
 
-PR: https://github.com/oalexandrebelo/PROJETO-IPE/pull/1
+PR: https://github.com/oalexandrebelo/MISSAO-IPE/pull/1
 
 Prévia da branch: https://projeto-ipe-lp-git-feat-immersive-lp-orbital-alexandrebelo.vercel.app
 

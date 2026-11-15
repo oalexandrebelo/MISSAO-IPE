@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T08:35:14.144Z",
+  "generatedAt": "2026-11-15T09:08:13.390Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 98,
+  "documentCount": 103,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -29,23 +29,23 @@
     {
       "source": "PUBLICADO.md",
       "id": "doc-publicado-md",
-      "title": "Publicação PROJETO IPÊ — R16",
+      "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 14803,
-      "originalSha256": "a9840b1760bf360ad1f87a9aeabbfdea2f2caf7f1f0bd7c67b715825563e5cab",
-      "projectedSha256": "a9840b1760bf360ad1f87a9aeabbfdea2f2caf7f1f0bd7c67b715825563e5cab",
+      "originalBytes": 16772,
+      "originalSha256": "10242a3b6af761e74c2638ae4fdf1c21086d46a93848ebf40617e2198d1e2574",
+      "projectedSha256": "10242a3b6af761e74c2638ae4fdf1c21086d46a93848ebf40617e2198d1e2574",
       "redactions": 0
     },
     {
       "source": "README.md",
       "id": "doc-readme-md",
-      "title": "PROJETO IPÊ — Ciência que chega",
+      "title": "MISSÃO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 11445,
-      "originalSha256": "a2db73364bcd9eb3aaa2e8209b2ab517337d2fedefb875a9f4ec133c63e846ca",
-      "projectedSha256": "a2db73364bcd9eb3aaa2e8209b2ab517337d2fedefb875a9f4ec133c63e846ca",
+      "originalBytes": 12743,
+      "originalSha256": "1b7cc6ebbc13a53c2becff4b3153664b2ffaeee5040bcc74e5f196d55d4021be",
+      "projectedSha256": "1b7cc6ebbc13a53c2becff4b3153664b2ffaeee5040bcc74e5f196d55d4021be",
       "redactions": 0
     },
     {
@@ -284,7 +284,7 @@
       "id": "doc-docs-22-plano-continuidade-md",
       "title": "PROJETO IPÊ — contexto e próximas etapas",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 7087,
       "originalSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
       "projectedSha256": "03fdf1002826f82df2eaa3e79ffe780bd8cd934deca36ef84af81772c5f20b0b",
@@ -317,7 +317,7 @@
       "id": "doc-docs-25-handoff-dois-devs-md",
       "title": "25 — Handoff do PROJETO IPÊ para dois desenvolvedores",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 29712,
       "originalSha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
       "projectedSha256": "01952c77097e2ba3149d208f02299009b3b950b82a14436a23fd84e750d2b9c5",
@@ -361,7 +361,7 @@
       "id": "doc-docs-29-game-design-3d-md",
       "title": "29 — Game Design: a missão termina quando a ciência chega",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 21027,
       "originalSha256": "40e098afe8bb369faad18fe57ff3e45659aa23b84d358054b192322c39292246",
       "projectedSha256": "40e098afe8bb369faad18fe57ff3e45659aa23b84d358054b192322c39292246",
@@ -383,7 +383,7 @@
       "id": "doc-docs-31-tres-missoes-cientificas-r14-md",
       "title": "31 — Três missões científicas: implementação e continuidade R14",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 21696,
       "originalSha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
       "projectedSha256": "37feb7221177be985b27a2d0ca2afdd8aaf0767479bf794abbb8898ca5617193",
@@ -394,7 +394,7 @@
       "id": "doc-docs-32-campanha-quatro-niveis-md",
       "title": "Campanha didática de quatro níveis — PROJETO-IPÊ",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 4091,
       "originalSha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
       "projectedSha256": "bcae351b709a8377897175e5b0f6bb78d87c28b835c0ffd9f2712382b95ceece",
@@ -406,9 +406,9 @@
       "title": "32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 39349,
-      "originalSha256": "a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522",
-      "projectedSha256": "a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522",
+      "originalBytes": 41531,
+      "originalSha256": "db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8",
+      "projectedSha256": "db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8",
       "redactions": 0
     },
     {
@@ -438,7 +438,7 @@
       "id": "doc-docs-35-revisao-prs-e-direcao-r16-md",
       "title": "35 — Revisão da contribuição e direção de integração R16",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 14081,
       "originalSha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
       "projectedSha256": "33d7bf3802424330db274860a8a4689bd5bcce6ffc71e1d6e60819a4457ce582",
@@ -489,6 +489,61 @@
       "redactions": 0
     },
     {
+      "source": "docs/40-IDENTIDADE-MISSAO-IPE-R17.md",
+      "id": "doc-docs-40-identidade-missao-ipe-r17-md",
+      "title": "MISSÃO IPÊ — identidade oficial e aplicação R17",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8327,
+      "originalSha256": "5ab280ffe70ff7366083cf2dfdc238dccded71c4f13b026d65f849d116c3130f",
+      "projectedSha256": "5ab280ffe70ff7366083cf2dfdc238dccded71c4f13b026d65f849d116c3130f",
+      "redactions": 0
+    },
+    {
+      "source": "docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md",
+      "id": "doc-docs-41-consolidacao-repositorios-r17-md",
+      "title": "Consolidação das contribuições — R17",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 14477,
+      "originalSha256": "6b63590d59b7131ad941ecc8014c639e66ba35fd11ee3e55ad15ef9c9860bf03",
+      "projectedSha256": "6b63590d59b7131ad941ecc8014c639e66ba35fd11ee3e55ad15ef9c9860bf03",
+      "redactions": 0
+    },
+    {
+      "source": "docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md",
+      "id": "doc-docs-42-prontidao-e-criterios-space-apps-r17-md",
+      "title": "42 — Prontidão e critérios do NASA Space Apps",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 16074,
+      "originalSha256": "d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522",
+      "projectedSha256": "d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522",
+      "redactions": 0
+    },
+    {
+      "source": "docs/43-HANDOFF-GERAL-R17.md",
+      "id": "doc-docs-43-handoff-geral-r17-md",
+      "title": "MISSÃO IPÊ — handoff para os dois desenvolvedores",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 10746,
+      "originalSha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
+      "projectedSha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
+      "redactions": 0
+    },
+    {
+      "source": "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
+      "id": "doc-docs-44-historias-reais-e-limites-didaticos-md",
+      "title": "44 — Histórias reais e limites dos exercícios",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 7508,
+      "originalSha256": "6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e",
+      "projectedSha256": "6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -505,9 +560,9 @@
       "title": "Missão Ipê — laboratório de missões R9–R10",
       "category": "Laboratório R9–R10",
       "editionGroup": "current",
-      "originalBytes": 13394,
-      "originalSha256": "792d827063f24e3392e3023d8a721ce8012070ecb23b3ee9bb36bafd415597ed",
-      "projectedSha256": "792d827063f24e3392e3023d8a721ce8012070ecb23b3ee9bb36bafd415597ed",
+      "originalBytes": 13489,
+      "originalSha256": "139e3f47c850cec15f3b6615592c1b3019b2b016865ae8c66deaf64adbbbc8f5",
+      "projectedSha256": "139e3f47c850cec15f3b6615592c1b3019b2b016865ae8c66deaf64adbbbc8f5",
       "redactions": 0
     },
     {
@@ -1086,13 +1141,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2013987,
-      "sha256": "44e13ced91488cd83fb5c89023d240e5a3eb5b58088d6e499c0c4745fc1fdba7"
+      "bytes": 2095229,
+      "sha256": "fca36d6965a14026b93e4bb4362a39648500cbbf4a24d4df3b2fbac2380af8e0"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1623748,
-      "sha256": "54e30c78f7bee78eeda350f94d2fd7918af68259f3557603e82ddca70e7e86bf"
+      "bytes": 1687584,
+      "sha256": "bed38a63a196d1721e9e5442602ae207a3df9969d970ab6b94e3612d700edf9b"
     }
   ]
 }

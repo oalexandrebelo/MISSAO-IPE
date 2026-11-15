@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-15T08:35:14.203Z",
+  "generatedAt": "2026-11-15T09:08:13.423Z",
   "status": "passed",
   "scope": "Actual original and emitted runtime bytes reread after static build; no browser execution",
-  "fileCount": 146,
+  "fileCount": 159,
   "allByteIdentical": true,
   "files": [
     {
       "source": "experiments/four-level-campaign/dist/apresentacao/index.html",
       "output": "site/campanha/apresentacao/index.html",
-      "originalSha256": "5b254bed40e07dda99e938d6968ac68cb4aa6aa63e3c2a8357560da48b916286",
-      "publishedSha256": "5b254bed40e07dda99e938d6968ac68cb4aa6aa63e3c2a8357560da48b916286",
+      "originalSha256": "606d717bec4f08f3633cf5d90efb435558698c5e6e27e4fb38afc2b94d70223d",
+      "publishedSha256": "606d717bec4f08f3633cf5d90efb435558698c5e6e27e4fb38afc2b94d70223d",
       "byteIdentical": true
     },
     {
@@ -29,22 +29,22 @@
     {
       "source": "experiments/four-level-campaign/dist/apresentacao/style.css",
       "output": "site/campanha/apresentacao/style.css",
-      "originalSha256": "1ede1a9bce47b1bbb9cd0e437bb28457e990d9e3c8e5bdfa1c6f5a5d93baa14b",
-      "publishedSha256": "1ede1a9bce47b1bbb9cd0e437bb28457e990d9e3c8e5bdfa1c6f5a5d93baa14b",
+      "originalSha256": "3948fad365bc3fa241c5b2c1fe49e64ff103abd27c87a70ca8779be115971857",
+      "publishedSha256": "3948fad365bc3fa241c5b2c1fe49e64ff103abd27c87a70ca8779be115971857",
       "byteIdentical": true
     },
     {
-      "source": "experiments/four-level-campaign/dist/assets/index-BrzQQ6mI.js",
-      "output": "site/campanha/assets/index-BrzQQ6mI.js",
-      "originalSha256": "3e8daa41144123a48ca774ce493afb85fe6241fab153550e16765d0c17898d74",
-      "publishedSha256": "3e8daa41144123a48ca774ce493afb85fe6241fab153550e16765d0c17898d74",
+      "source": "experiments/four-level-campaign/dist/assets/index-BqypOpJI.js",
+      "output": "site/campanha/assets/index-BqypOpJI.js",
+      "originalSha256": "75ad500b8b5117215c335fe2069762d3284d91757dfb501300c02675b07f7c71",
+      "publishedSha256": "75ad500b8b5117215c335fe2069762d3284d91757dfb501300c02675b07f7c71",
       "byteIdentical": true
     },
     {
-      "source": "experiments/four-level-campaign/dist/assets/index-BwTlPwHE.css",
-      "output": "site/campanha/assets/index-BwTlPwHE.css",
-      "originalSha256": "4ea4810a520de84094523e2c2885df9444c0aae3ef3148e0956d2dd06998ea82",
-      "publishedSha256": "4ea4810a520de84094523e2c2885df9444c0aae3ef3148e0956d2dd06998ea82",
+      "source": "experiments/four-level-campaign/dist/assets/index-CKsj43Du.css",
+      "output": "site/campanha/assets/index-CKsj43Du.css",
+      "originalSha256": "bb1092c2d8ab91eee96d8f6aa9ff53b83f5e0a2cb0bcabe9cde70bd3e1c07ce6",
+      "publishedSha256": "bb1092c2d8ab91eee96d8f6aa9ff53b83f5e0a2cb0bcabe9cde70bd3e1c07ce6",
       "byteIdentical": true
     },
     {
@@ -55,10 +55,38 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/four-level-campaign/dist/assets/OrbitalScene-OhTu6p_-.js",
-      "output": "site/campanha/assets/OrbitalScene-OhTu6p_-.js",
-      "originalSha256": "ee5723920d1f27fe3ec64f3cb37faed7de140466c58257f765a72e2e7f33a45f",
-      "publishedSha256": "ee5723920d1f27fe3ec64f3cb37faed7de140466c58257f765a72e2e7f33a45f",
+      "source": "experiments/four-level-campaign/dist/assets/OrbitalScene-XUox1LWo.js",
+      "output": "site/campanha/assets/OrbitalScene-XUox1LWo.js",
+      "originalSha256": "a63a9e769cf27068c8d9596a1a759ebaf1db999c24905d7148664f069551ecea",
+      "publishedSha256": "a63a9e769cf27068c8d9596a1a759ebaf1db999c24905d7148664f069551ecea",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/four-level-campaign/dist/brand/missao-ipe-logo-on-light.svg",
+      "output": "site/campanha/brand/missao-ipe-logo-on-light.svg",
+      "originalSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "publishedSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/four-level-campaign/dist/brand/missao-ipe-logo.svg",
+      "output": "site/campanha/brand/missao-ipe-logo.svg",
+      "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/four-level-campaign/dist/brand/missao-ipe-symbol-on-light.svg",
+      "output": "site/campanha/brand/missao-ipe-symbol-on-light.svg",
+      "originalSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "publishedSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/four-level-campaign/dist/brand/missao-ipe-symbol.svg",
+      "output": "site/campanha/brand/missao-ipe-symbol.svg",
+      "originalSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "publishedSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
       "byteIdentical": true
     },
     {
@@ -134,8 +162,8 @@
     {
       "source": "experiments/four-level-campaign/dist/index.html",
       "output": "site/campanha/index.html",
-      "originalSha256": "71b1b009ddcf07d9346a26230f039bea758facbf221599be651c108205f3d3c2",
-      "publishedSha256": "71b1b009ddcf07d9346a26230f039bea758facbf221599be651c108205f3d3c2",
+      "originalSha256": "7f2ba9bd80de17186752ca0f95ba5ff9bb47962052c5740eca4595122bdabd2f",
+      "publishedSha256": "7f2ba9bd80de17186752ca0f95ba5ff9bb47962052c5740eca4595122bdabd2f",
       "byteIdentical": true
     },
     {
@@ -190,8 +218,8 @@
     {
       "source": "experiments/four-level-campaign/dist/release.json",
       "output": "site/campanha/release.json",
-      "originalSha256": "fdb91ba4b7aae3c56018d57d1edebd7011080cf99c30bab9e8a0faad4c95e91d",
-      "publishedSha256": "fdb91ba4b7aae3c56018d57d1edebd7011080cf99c30bab9e8a0faad4c95e91d",
+      "originalSha256": "d9c70e2d878647b20e17f6c1a6b100e60af995b754bc9981a96e232a9b308ee1",
+      "publishedSha256": "d9c70e2d878647b20e17f6c1a6b100e60af995b754bc9981a96e232a9b308ee1",
       "byteIdentical": true
     },
     {
@@ -232,22 +260,22 @@
     {
       "source": "experiments/four-level-campaign/dist/research/galeria.html",
       "output": "site/campanha/research/galeria.html",
-      "originalSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
-      "publishedSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "originalSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
+      "publishedSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
       "byteIdentical": true
     },
     {
       "source": "experiments/four-level-campaign/dist/research/index.html",
       "output": "site/campanha/research/index.html",
-      "originalSha256": "de19ec411920c80a0b53cc10a0b79c07aa750261a68eceb638c0f3fcc20872a4",
-      "publishedSha256": "de19ec411920c80a0b53cc10a0b79c07aa750261a68eceb638c0f3fcc20872a4",
+      "originalSha256": "2ab6b04ed37d15b487705dd3c015cfa265a59d75fad3518d3160e91f756c2689",
+      "publishedSha256": "2ab6b04ed37d15b487705dd3c015cfa265a59d75fad3518d3160e91f756c2689",
       "byteIdentical": true
     },
     {
       "source": "experiments/four-level-campaign/dist/research/manifest.json",
       "output": "site/campanha/research/manifest.json",
-      "originalSha256": "e165a85416e0d3aead85b5b10912f339c78aa267a5726e9a8a26ab6e4ac678b8",
-      "publishedSha256": "e165a85416e0d3aead85b5b10912f339c78aa267a5726e9a8a26ab6e4ac678b8",
+      "originalSha256": "bbc1faa41fb1b59634e572feb86989893ae1797608af93d9b02189bf4ba1afe0",
+      "publishedSha256": "bbc1faa41fb1b59634e572feb86989893ae1797608af93d9b02189bf4ba1afe0",
       "byteIdentical": true
     },
     {
@@ -372,8 +400,8 @@
     {
       "source": "experiments/four-level-campaign/dist/research/originals/REFINAMENTO-NASA-R10.md",
       "output": "site/campanha/research/originals/REFINAMENTO-NASA-R10.md",
-      "originalSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
-      "publishedSha256": "fea230a559e9f966c3e630f6056696c8eb995d35c427c6af712c7dbd77b8e2e9",
+      "originalSha256": "65c9440391ab41218545cae82683ce90feed05d93edc89f0d871267ab57d86d9",
+      "publishedSha256": "65c9440391ab41218545cae82683ce90feed05d93edc89f0d871267ab57d86d9",
       "byteIdentical": true
     },
     {
@@ -393,8 +421,8 @@
     {
       "source": "experiments/four-level-campaign/dist/research/originals/STORYTELLING-4-NIVEIS.md",
       "output": "site/campanha/research/originals/STORYTELLING-4-NIVEIS.md",
-      "originalSha256": "e163896899193cfae7a83d6c7d06110c2bebbe2743cfe0cab7069229e37670e4",
-      "publishedSha256": "e163896899193cfae7a83d6c7d06110c2bebbe2743cfe0cab7069229e37670e4",
+      "originalSha256": "551e20987e80721f9349f6632ce1e0a91669b5dd2f99e4769a6a683cb9775845",
+      "publishedSha256": "551e20987e80721f9349f6632ce1e0a91669b5dd2f99e4769a6a683cb9775845",
       "byteIdentical": true
     },
     {
@@ -545,17 +573,17 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-C5BACCk4.css",
-      "output": "site/lab/assets/index-C5BACCk4.css",
-      "originalSha256": "472f583fe5e67f59183e0a128e011585c9c833ed4a4d123e59d584d6e98c3cb4",
-      "publishedSha256": "472f583fe5e67f59183e0a128e011585c9c833ed4a4d123e59d584d6e98c3cb4",
+      "source": "experiments/mission-design-lab/dist/assets/index-D9Vk1G0_.css",
+      "output": "site/lab/assets/index-D9Vk1G0_.css",
+      "originalSha256": "6548034bd4922644381124b4b7c77a030463e3b939df8cfc24249fcb4865dc2d",
+      "publishedSha256": "6548034bd4922644381124b4b7c77a030463e3b939df8cfc24249fcb4865dc2d",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/index-CvKzFtJg.js",
-      "output": "site/lab/assets/index-CvKzFtJg.js",
-      "originalSha256": "9cdce27a457ac38f0ff0450806ac820f735d18d16ef8bc6dc619038c8bcd89f1",
-      "publishedSha256": "9cdce27a457ac38f0ff0450806ac820f735d18d16ef8bc6dc619038c8bcd89f1",
+      "source": "experiments/mission-design-lab/dist/assets/index-DPqEsTXM.js",
+      "output": "site/lab/assets/index-DPqEsTXM.js",
+      "originalSha256": "a55c8bbb7bc2df20179c59d961f8884a773d244b9a35ddb112f5b1a379d5537e",
+      "publishedSha256": "a55c8bbb7bc2df20179c59d961f8884a773d244b9a35ddb112f5b1a379d5537e",
       "byteIdentical": true
     },
     {
@@ -566,17 +594,17 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-DlSwFouX.js",
-      "output": "site/lab/assets/NASAReferenceScene-DlSwFouX.js",
-      "originalSha256": "b2870bfb3e367be2cba642f6b6da89c9968d4c7298e0a0c0d84e861ea5f84035",
-      "publishedSha256": "b2870bfb3e367be2cba642f6b6da89c9968d4c7298e0a0c0d84e861ea5f84035",
+      "source": "experiments/mission-design-lab/dist/assets/NASAReferenceScene-lY0J4_07.js",
+      "output": "site/lab/assets/NASAReferenceScene-lY0J4_07.js",
+      "originalSha256": "7b4debf6268e15efab87c5e56e51cb9544b66a91af22bd9c9fbc3b0d947ae684",
+      "publishedSha256": "7b4debf6268e15efab87c5e56e51cb9544b66a91af22bd9c9fbc3b0d947ae684",
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-9gG9H69b.js",
-      "output": "site/lab/assets/OrbitalScene-9gG9H69b.js",
-      "originalSha256": "4e347099e00c165a56fd307c3c175364db2741adb9e30ba20ead951caa6a6001",
-      "publishedSha256": "4e347099e00c165a56fd307c3c175364db2741adb9e30ba20ead951caa6a6001",
+      "source": "experiments/mission-design-lab/dist/assets/OrbitalScene-BE9_du6k.js",
+      "output": "site/lab/assets/OrbitalScene-BE9_du6k.js",
+      "originalSha256": "bfbabb826c9a5d3e54042eb8b8a76e7adedf3d1290c7fe6fb0ae5a8e8b6a8455",
+      "publishedSha256": "bfbabb826c9a5d3e54042eb8b8a76e7adedf3d1290c7fe6fb0ae5a8e8b6a8455",
       "byteIdentical": true
     },
     {
@@ -587,10 +615,10 @@
       "byteIdentical": true
     },
     {
-      "source": "experiments/mission-design-lab/dist/assets/search-BhoHTrfD.js",
-      "output": "site/lab/assets/search-BhoHTrfD.js",
-      "originalSha256": "cd4ebce140c98e6957db07344ba591758f2060e230bdead800d6d6cae42f85f6",
-      "publishedSha256": "cd4ebce140c98e6957db07344ba591758f2060e230bdead800d6d6cae42f85f6",
+      "source": "experiments/mission-design-lab/dist/assets/search-bp08Lz48.js",
+      "output": "site/lab/assets/search-bp08Lz48.js",
+      "originalSha256": "945207fae996369b79678a27f2ce0b193ae00cf1464e4c754e7f46ef049eff6e",
+      "publishedSha256": "945207fae996369b79678a27f2ce0b193ae00cf1464e4c754e7f46ef049eff6e",
       "byteIdentical": true
     },
     {
@@ -598,6 +626,13 @@
       "output": "site/lab/brand/brand-provenance-r14.json",
       "originalSha256": "41937ef07d217dc6ad67d9bfe53975f121dd93154a3384f783d91259edb5058a",
       "publishedSha256": "41937ef07d217dc6ad67d9bfe53975f121dd93154a3384f783d91259edb5058a",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/brand-provenance-r17.json",
+      "output": "site/lab/brand/brand-provenance-r17.json",
+      "originalSha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70",
+      "publishedSha256": "3773457e02e5ff80e22e7a460546f8f1a2f00e86033df766b382983ae9014f70",
       "byteIdentical": true
     },
     {
@@ -622,10 +657,59 @@
       "byteIdentical": true
     },
     {
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo-on-light.svg",
+      "output": "site/lab/brand/missao-ipe-logo-on-light.svg",
+      "originalSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "publishedSha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo.png",
+      "output": "site/lab/brand/missao-ipe-logo.png",
+      "originalSha256": "8c40a65741524fcd97d4f736c460c7b033ea4feb331e39c8c0f36023a8c0bffb",
+      "publishedSha256": "8c40a65741524fcd97d4f736c460c7b033ea4feb331e39c8c0f36023a8c0bffb",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-logo.svg",
+      "output": "site/lab/brand/missao-ipe-logo.svg",
+      "originalSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "publishedSha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-symbol-on-light.svg",
+      "output": "site/lab/brand/missao-ipe-symbol-on-light.svg",
+      "originalSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "publishedSha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/missao-ipe-symbol.svg",
+      "output": "site/lab/brand/missao-ipe-symbol.svg",
+      "originalSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "publishedSha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "byteIdentical": true
+    },
+    {
       "source": "experiments/mission-design-lab/dist/brand/originals/arte-original.svg",
       "output": "site/lab/brand/originals/arte-original.svg",
       "originalSha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d",
       "publishedSha256": "b6dac71b893afa8a4dede7b103106366b5e2ca617faa63999049fc9e88251d1d",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-logo-original.svg",
+      "output": "site/lab/brand/originals/missao-ipe-logo-original.svg",
+      "originalSha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
+      "publishedSha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/originals/missao-ipe-symbol-original.svg",
+      "output": "site/lab/brand/originals/missao-ipe-symbol-original.svg",
+      "originalSha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
+      "publishedSha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
       "byteIdentical": true
     },
     {
@@ -640,6 +724,13 @@
       "output": "site/lab/brand/preview-r14.html",
       "originalSha256": "c201c80d565dd786cded376d6501b2f14ca9f27940261a4c7524412f439013eb",
       "publishedSha256": "c201c80d565dd786cded376d6501b2f14ca9f27940261a4c7524412f439013eb",
+      "byteIdentical": true
+    },
+    {
+      "source": "experiments/mission-design-lab/dist/brand/preview-r17.html",
+      "output": "site/lab/brand/preview-r17.html",
+      "originalSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
+      "publishedSha256": "b091f28a285ae7a7a1ce9bc22c7bc4a89787b60004708d7dded5b4d84240ba28",
       "byteIdentical": true
     },
     {
@@ -785,8 +876,8 @@
     {
       "source": "experiments/mission-design-lab/dist/index.html",
       "output": "site/lab/index.html",
-      "originalSha256": "937fdbbfc315bac59e2bd4510387f0bf72650aec09234ec81e60f72628f5df6f",
-      "publishedSha256": "937fdbbfc315bac59e2bd4510387f0bf72650aec09234ec81e60f72628f5df6f",
+      "originalSha256": "1844482ae3740b5a0b21f43d2448308bc74e337cc59c578078ba3ea7060abd29",
+      "publishedSha256": "1844482ae3740b5a0b21f43d2448308bc74e337cc59c578078ba3ea7060abd29",
       "byteIdentical": true
     },
     {
@@ -918,15 +1009,15 @@
     {
       "source": "experiments/mission-design-lab/dist/research/galeria.html",
       "output": "site/lab/research/galeria.html",
-      "originalSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
-      "publishedSha256": "1711b0c961df6f2e5285bfddbb1a0e85a1b72829569c98a6b98ccf01751cc1b9",
+      "originalSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
+      "publishedSha256": "b60b3e028917cc598bd547a9fbcba37fbfe385337ca3198118cd8ef2f84d2996",
       "byteIdentical": true
     },
     {
       "source": "experiments/mission-design-lab/dist/research/index.html",
       "output": "site/lab/research/index.html",
-      "originalSha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
-      "publishedSha256": "5a31ee55a1eef5f54a192a410cc882efefe2996b23a2357b96499bbc665eb716",
+      "originalSha256": "e1b396b664e91149c305c120f238ac3f26b3a8dd9998a8dcedab7223a1629029",
+      "publishedSha256": "e1b396b664e91149c305c120f238ac3f26b3a8dd9998a8dcedab7223a1629029",
       "byteIdentical": true
     },
     {

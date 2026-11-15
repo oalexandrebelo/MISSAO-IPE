@@ -2,6 +2,8 @@
 
 Rodada 10 · 14 de novembro de 2026 · Missão Ipê / Space Mission Design Game.
 
+**Nota editorial R17 · 15/11/2026:** a orientação atual usa funções científicas assumidas pelo participante e registros reais Terra/MODIS, sem personagens ou equipes inventadas. O roteiro vigente está em [Narrativa científica de quatro níveis](STORYTELLING-4-NIVEIS.md). Essa atualização de apresentação preserva o contrato do motor e as evidências técnicas da Rodada 10; contatos, capacidades, créditos e duração continuam sendo parâmetros didáticos.
+
 ## 1. A oportunidade principal
 
 As referências enviadas por AB reforçam um caminho de produto: **cada escolha de engenharia precisa responder a uma necessidade da missão e produzir uma consequência verificável**. Isso orienta a evolução do beta: explicitar para quem os dados servem, antecipar limites, verificar requisitos e mostrar o retorno científico realmente disponível.
@@ -32,7 +34,7 @@ As NPRs possuem escopo institucional próprio. A [NPR 8705.4B, Preface](https://
 
 ### Plano da missão: começar pela necessidade
 
-O destinatário narrativo é uma equipe fictícia que estuda vegetação no Cerrado. A pergunta é comparar o NDVI entre dois períodos em três pontos do pacote. O jogador projeta o processamento e a entrega dos arquivos históricos por um CubeSat fictício.
+Na orientação vigente R17, o participante assume as funções de planejamento, engenharia de dados, operação de solo e revisão científica. A pergunta é comparar o NDVI entre dois períodos em três pontos do pacote real Terra/MODIS. O jogador projeta o processamento e a entrega desses arquivos históricos em um modelo didático de CubeSat.
 
 A ficha de missão apresenta a cadeia de operações: preparar o projeto, processar os arquivos, armazenar entre contatos, transmitir e verificar o que chegou ao solo. O limite de 180 minutos pertence ao relógio da simulação; as datas dos dados pertencem ao arquivo histórico.
 

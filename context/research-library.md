@@ -56,11 +56,29 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 ---
 
-# Publicação PROJETO IPÊ — R16
+# Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `a9840b1760bf360ad1f87a9aeabbfdea2f2caf7f1f0bd7c67b715825563e5cab` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `10242a3b6af761e74c2638ae4fdf1c21086d46a93848ebf40617e2198d1e2574` · Ajustes de caminhos privados: 0
 
-# Publicação PROJETO IPÊ — R16
+# Publicação MISSÃO IPÊ
+
+## R17 — identidade oficial, fontes NASA e consolidação
+
+Beta **0.8.0-beta.1**, edição `R17-official-brand-and-evidence-based-stories`. Esta seção registra a preparação R17; os IDs de implantação e recibos serão acrescentados após a conferência pública.
+
+- Marca **MISSÃO IPÊ** em SVG transparente, originais preservados e variante para fundo claro. O ipê identifica a equipe; a narrativa científica não usa a árvore como tema.
+- Três histórias reais: Terra/MODIS, OSIRIS-REx/Nightingale e Webb/WASP-39 b, com fontes NASA, datas e limites dos exercícios sintéticos. Personagens inventados também foram retirados da campanha.
+- PR #1 incorporada com histórico em `apps/immersive-lp/`, corrigindo a pasta ausente que causava erros no projeto Vercel da LP. O site principal mantém seu endereço.
+- Contribuição de Bruno consolidada como snapshot revisado de 32 arquivos, autoria e cinco commits referenciados. Três moodboards e favicon excluídos; código de referência fora do motor e do build oficial.
+- [Handoff R17](https://projeto-ipe.vercel.app/docs/43-HANDOFF-GERAL-R17.html), [histórias reais](https://projeto-ipe.vercel.app/docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html), [marca e Figma](https://projeto-ipe.vercel.app/docs/40-IDENTIDADE-MISSAO-IPE-R17.html), [avaliação de prontidão](https://projeto-ipe.vercel.app/docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html).
+
+**Verificação local:** 145 testes de domínio + 38 de interface no laboratório; 120 + 14 na campanha; 24 de contexto; 17 de distribuição; 12 do portal. LP: 4 de motor, 18 de interface e 17 assets conferidos. Compilações e TypeScript aprovados. [Recibo R17](evidence/revision-r17.json).
+
+A candidatura ainda exige comprovação de aprendizagem, verificação em aparelho físico, pacote de submissão e esclarecimento da elegibilidade temporal. Nenhuma promessa de premiação ou decisão dos organizadores é inferida dos testes.
+
+---
+
+## Histórico R16
 
 ## R16 — propósito, investigação e assets · 15/11/2026
 
@@ -175,19 +193,27 @@ Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não 
 
 ---
 
-# PROJETO IPÊ — Ciência que chega
+# MISSÃO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `a2db73364bcd9eb3aaa2e8209b2ab517337d2fedefb875a9f4ec133c63e846ca` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `1b7cc6ebbc13a53c2becff4b3153664b2ffaeee5040bcc74e5f196d55d4021be` · Ajustes de caminhos privados: 0
 
-# PROJETO IPÊ — Ciência que chega
+# MISSÃO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.7.0-beta.1 · edição R16 · 15/11/2026.**
+**Beta atual: 0.8.0-beta.1 · edição R17 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/38-HANDOFF-R16.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/43-HANDOFF-GERAL-R17.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/43-HANDOFF-GERAL-R17.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+
+## Direção vigente — histórias reais, identidade da equipe
+
+**IPÊ é o nome da equipe.** A árvore identifica a marca; os três casos partem de fatos NASA: Terra/MODIS e vegetação; reconhecimento de Bennu pela OSIRIS-REx; espectroscopia do Webb em WASP-39 b. As introduções trazem fontes e datas, sem equipes ou acontecimentos inventados. O Cerrado usa registros históricos reais; Bennu e telescópio continuam exercícios com dados sintéticos explicitamente separados da história real.
+
+[Histórias e limites](docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [logo SVG oficial e Figma](docs/40-IDENTIDADE-MISSAO-IPE-R17.md) · [prontidão para Space Apps](docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
+
+A página orbital da PR #1 foi incorporada em `apps/immersive-lp/`, corrigindo a pasta ausente no projeto Vercel separado. A contribuição de **Bruno A Carvalho** foi consolidada em `contributions/bruno-figma/` como fonte revisada: 32 arquivos, autoria e cinco commits referenciados, com quatro assets excluídos e justificados. O motor oficial permanece a base das três missões. [Inventário, procedência e reaproveitamento](docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md).
 
 ## Descobrir antes de otimizar
 
@@ -207,7 +233,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R16. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R17. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -240,7 +266,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.7.0-beta.1 / R16 | `experiments/mission-design-lab/` |
+| Beta 0.8.0-beta.1 / R17 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -252,7 +278,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
-Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada nesta edição.
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada no motor nesta edição.
 
 ## Executar e compilar
 
@@ -260,6 +286,7 @@ Requer Node 24. Instalação e compilação da distribuição completa:
 
 ```bash
 npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund
+npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund
 npm run build:release
 npm run start:beta
 ```
@@ -4404,17 +4431,17 @@ Personagens, nave e catálogo operacional são didáticos. Os seis registros MOD
 
 # 32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica
 
-Fonte: `docs/32-GUIA-DIDATICO-MISSOES-3D.md` · SHA-256 original: `a3325ccb047a6fa3eaced5ccc2488354d53f8a57bfc6c1596468a91aa6910522` · Ajustes de caminhos privados: 0
+Fonte: `docs/32-GUIA-DIDATICO-MISSOES-3D.md` · SHA-256 original: `db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8` · Ajustes de caminhos privados: 0
 
 # 32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica
 
-**14/11/2026 · edição R15.** Este guia explica o projeto para quem vai jogar, facilitar uma atividade ou continuar seu desenvolvimento. Parte dos três casos e dos contratos implementados na R14. A implementação da montagem 3D configurável R15 e sua verificação integrada local estão concluídas. O status da publicação e a implantação efetivamente conferida devem ser consultados em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) e no [recibo de produção R15](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/production-r15.json).
+**Base de 14/11/2026 · R15; revisão factual das histórias em 15/11/2026 · R17.** Este guia explica o projeto para quem vai jogar, facilitar uma atividade ou continuar seu desenvolvimento. Parte dos três casos e dos contratos implementados na R14. A implementação da montagem 3D configurável R15 e sua verificação integrada local estão concluídas. O status da publicação e a implantação efetivamente conferida devem ser consultados em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) e no [recibo de produção R15](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/production-r15.json).
 
-O ponto de entrada é o [beta de três missões](../lab/index.html). Para detalhes de implementação, leia [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.md). Para ampliar o repertório, consulte [33 — Oportunidades NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md).
+O ponto de entrada é o [beta de três missões](../lab/index.html). Para detalhes de implementação, leia [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.md). Para ampliar o repertório, consulte [33 — Oportunidades NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md). A revisão das narrativas e seus limites está em [44 — Histórias reais](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md).
 
 ## 1. O que estamos construindo
 
-O Ipê é um jogo de projeto de missões científicas. O jogador recebe uma pergunta, escolhe uma arquitetura limitada por recursos, prevê o resultado, executa o modelo e verifica quais evidências chegaram ao solo. Depois explica o resultado e tenta uma alteração. A proposta é aprender como decisões de engenharia interferem no que pode ser conhecido cientificamente.
+O Ipê é um jogo de projeto de missões científicas. **Ipê é o nome da equipe; a árvore não constitui o tema científico ou a história das missões.** Os casos partem de documentação NASA sobre Terra/MODIS, OSIRIS-REx e Webb. O jogador recebe uma pergunta, escolhe uma arquitetura limitada por recursos, prevê o resultado, executa o modelo e verifica quais evidências chegaram ao solo. Depois explica o resultado e tenta uma alteração. A proposta é aprender como decisões de engenharia interferem no que pode ser conhecido cientificamente.
 
 O desafio central é fazer a ciência chegar. Um instrumento pode produzir um registro e a missão ainda falhar porque a bateria não sustenta a operação, a memória não comporta os dados ou o contato acaba antes da recepção completa. Também é possível transmitir tudo e não responder à pergunta, se o instrumento escolhido não atende ao objetivo.
 
@@ -4424,11 +4451,11 @@ O projeto trabalha com três perguntas científicas. Elas compartilham uma forma
 
 Não se trata de software de voo, planejamento de uma missão real ou reprodução completa de um veículo NASA. Aprender com um modelo exige compreender tanto suas regras quanto o que ficou fora dele.
 
-## 2. Três histórias e três tipos de retorno
+## 2. Três histórias reais e três exercícios com limites explícitos
 
 ### Cerrado — observar mudança sem inventar a causa
 
-Uma equipe precisa comparar vegetação em três pontos próximos a Rio Verde, Goiás, em dois períodos. São seis registros históricos Terra/MODIS do produto MOD13Q1 Collection 061. O jogo transporta e processa esses arquivos em uma operação didática de 180 minutos; a nave fictícia não faz uma nova aquisição MODIS durante a partida.
+O MODIS, a bordo do satélite Terra, fornece observações usadas no estudo da vegetação. A explicação NASA de NDVI relaciona o índice à luz vermelha e infravermelha próxima refletida pela superfície. O projeto utiliza um recorte de seis registros históricos do produto MOD13Q1 Collection 061: três pontos próximos a Rio Verde, Goiás, em dois períodos de 2024. Não há um pedido fictício atribuído a uma equipe NASA. O jogo transporta e processa esses arquivos em uma operação didática de 180 minutos; sua nave não reproduz o Terra nem faz uma nova aquisição MODIS durante a partida.
 
 Os compostos têm início em **28/08/2024** e **13/09/2024**. No pacote local, as observações selecionadas são de **01/09/2024** e **23/09/2024**. Essas datas não são intercambiáveis: o início do composto identifica o período do produto, enquanto a data de observação identifica o registro escolhido dentro desse contexto.
 
@@ -4440,21 +4467,25 @@ A explicação conceitual de índices de vegetação pode ser aprofundada no art
 
 ### Bennu — escolher uma observação que responda à pergunta
 
-Uma equipe fictícia quer estudar a morfologia de uma superfície. Pede dois registros de cada uma de três regiões didáticas, A, B e C. A pergunta exige a câmera de superfície. O jogador precisa sustentar a produção e a entrega de seis registros dentro da vida operacional escolhida.
+A OSIRIS-REx encontrou uma superfície de Bennu inesperadamente coberta por rochas. A equipe real ampliou o reconhecimento e comparou possíveis locais de coleta usando imagens recebidas da sonda. Depois de avaliar mais de 50 possibilidades e chegar a quatro candidatos, escolheu Nightingale em dezembro de 2019. O relato NASA descreve as restrições de terreno, material disponível e navegação; são fatos documentados, sem personagens ou emergências criados pelo jogo. [NASA, relato de 29/03/2023](https://science.nasa.gov/blogs/osiris-rex/2023/03/29/2019-2020-choosing-a-touchdown-site-from-a-sea-of-hazards/).
+
+A atividade extrai desse episódio a relação entre observar e entregar evidência. O catálogo pede dois registros de cada uma de três regiões didáticas, A, B e C, com a câmera de superfície. O jogador sustenta a produção e a entrega de seis registros dentro da vida operacional escolhida. Isso é um exercício de recursos; não reencena as decisões históricas da OSIRIS-REx.
 
 A rugosidade usada no exercício é **sintética**, em unidades arbitrárias. Os seis valores não são medições NASA, as regiões não são locais nomeados de Bennu e o resultado não escolhe um lugar seguro para pousar. O modelo 3D oficial fornece contexto visual do alvo.
 
-A história real da OSIRIS-REx ajuda a distinguir observação remota, amostra e análise: a missão coletou material em 2020 e entregou a amostra à Terra em 2023. O Ipê não simula esse retorno físico. Seu exercício entrega registros digitais de uma pesquisa fictícia. [Fonte: missão OSIRIS-REx](https://science.nasa.gov/mission/osiris-rex/).
+A OSIRIS-REx coletou material em **20/10/2020** e a cápsula entregou a amostra à Terra em **24/09/2023**. O Ipê não simula esse retorno físico. Seu exercício entrega registros digitais sintéticos, separados dos dados e da cronologia da missão real. [Fonte: missão OSIRIS-REx](https://science.nasa.gov/mission/osiris-rex/).
 
 Uma boa resposta ao final é: “Recebi seis registros compatíveis com a pergunta e posso comparar a variável do exercício; isso não é uma caracterização científica real de Bennu.”
 
 ### Telescópio — ler luz não é apenas produzir uma imagem
 
-Uma equipe fictícia quer comparar três faixas infravermelhas em duas exposições. O pedido exige o espectrômetro. A câmera pode produzir dados dentro do modelo, mas não atende à pergunta especificada.
+Em **25/08/2022**, a NASA anunciou evidência de dióxido de carbono na atmosfera de **WASP-39 b**, baseada no espectro registrado pelo **NIRSpec em 10/07/2022**. A característica espectral entre **4,1 e 4,6 µm** ajudou a identificar a molécula. Esse resultado real mostra por que instrumento, modo de observação e análise precisam corresponder à pergunta científica. [NASA: detecção em WASP-39 b](https://science.nasa.gov/missions/webb/nasas-webb-detects-carbon-dioxide-in-exoplanet-atmosphere/).
+
+A atividade do Ipê compara três faixas infravermelhas em duas exposições didáticas. Seu requisito exige o espectrômetro genérico do catálogo. A opção câmera pode produzir pacotes, mas não atende ao requisito deste modelo. Ela não representa o NIRCam real.
 
 As faixas didáticas são **1,2 µm, 2,0 µm e 3,5 µm**. Os seis valores de fluxo relativo foram inventados para o exercício. Nenhuma diferença demonstra água, atmosfera, composição ou vida. O modelo do Webb é uma referência visual; não representa uma reprodução de seus instrumentos, massa, refrigeração ou desempenho.
 
-Na astronomia real, observações por imagem e por espectroscopia respondem a necessidades diferentes. A página [Webb’s Scientific Instruments](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) ajuda a estudar essa distinção. No Ipê, a regra instrumental é deliberadamente pequena e explícita para que o jogador possa justificá-la.
+Na astronomia real, imagem e espectroscopia são modos de observação diferentes, que podem coexistir no mesmo instrumento. **Todos os quatro instrumentos científicos do Webb têm recursos espectroscópicos, inclusive o NIRCam.** A página [Webb’s Scientific Instruments](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) documenta essas capacidades. Portanto, a escolha binária do jogo é uma simplificação do catálogo, e não uma descrição completa do observatório. As faixas sintéticas abaixo de 4 µm não reproduzem o sinal histórico de CO₂ acima citado.
 
 As duas ou três horas de Bennu e telescópio representam **operação depois da chegada**. Não são o tempo de viagem para um asteroide ou para L2. Os perfis LEO/L2 são conceituais e mudam agendas didáticas; não há cálculo de transferência orbital.
 
@@ -4604,7 +4635,7 @@ Uma configuração de referência usa lançador científico, L2 conceitual, espe
 
 Essa referência altera várias decisões em relação ao padrão. Serve para mostrar uma possibilidade viável, mas não permite atribuir a melhora a uma única mudança. Para investigar uma causa, crie uma sequência de tentativas mudando uma decisão por vez e registrando quando o evento limitante muda.
 
-Perguntas: o que a câmera permitiria perguntar em outra missão? Por que ela não atende a esta? Qual dado adicional seria necessário antes de associar um espectro real a uma substância? O que, entre os resultados apresentados, foi inventado para aprender engenharia?
+Perguntas: o que a câmera permitiria perguntar em outra missão? Por que ela não atende a esta? Qual dado adicional seria necessário antes de associar um espectro real a uma substância? Quais números foram definidos apenas para o exercício de engenharia, e quais fatos podem ser conferidos na fonte NASA?
 
 ## 9. Como explicar sucesso, falha e projeto inválido
 
@@ -4688,7 +4719,7 @@ As atividades abaixo avaliam raciocínio sobre o modelo. Não pressupõem domín
 | Instrumento | Transmitir uma imagem atende a qualquer pergunta? | Relacionar instrumento, variável e requisito científico. |
 | Tempo | Três horas significam viagem até Bennu? | Identificar a janela operacional após chegada e a ausência de transferência calculada. |
 | Comparação | Duas tentativas mudaram quatro escolhas. Qual mudança causou o sucesso? | Reconhecer que não se isolou uma variável; propor sequência controlada. |
-| 3D | A presença de um modelo Webb valida a potência do telescópio fictício? | Distinguir referência geométrica de parâmetros do domínio. |
+| 3D | A presença de um modelo Webb valida a potência do telescópio didático? | Distinguir referência geométrica de parâmetros do domínio. |
 
 Para avaliar uma explicação, use quatro critérios simples: identifica o requisito, aponta evidência concreta, conecta mecanismo e consequência, e reconhece um limite. Um relato pode ser bom mesmo quando a missão falha. Da mesma forma, alcançar 6/6 sem entender por quê não demonstra sozinho aprendizagem.
 
@@ -4708,7 +4739,7 @@ Durante uma atividade, prefira nomes de equipe que não precisem identificar pes
 
 | Camada | O que existe | O que não se pode deduzir |
 | --- | --- | --- |
-| Arquivos do Cerrado | Seis registros históricos reais Terra/MODIS, com origem e qualidade. | Aquisição em tempo real pelo CubeSat fictício ou causa ambiental determinada apenas pelo NDVI. |
+| Arquivos do Cerrado | Seis registros históricos reais Terra/MODIS, com origem e qualidade. | Aquisição em tempo real pelo CubeSat didático ou causa ambiental determinada apenas pelo NDVI. |
 | Observações de Bennu | Seis valores de rugosidade sintéticos, em unidades arbitrárias. | Mapa científico, segurança de pouso ou medição real das regiões A/B/C. |
 | Observações do telescópio | Seis fluxos relativos sintéticos em três faixas didáticas. | Detecção de água, vida, atmosfera ou desempenho instrumental Webb. |
 | Engenharia | Catálogos finitos, agendas e balanços versionados. | Certificação de hardware, orçamento real ou projeto pronto para voar. |
@@ -5574,6 +5605,513 @@ Os quatro GLBs somam **7.462.304 B**, mais **779.715 B** do decodificador e avis
 
 ---
 
+# MISSÃO IPÊ — identidade oficial e aplicação R17
+
+Fonte: `docs/40-IDENTIDADE-MISSAO-IPE-R17.md` · SHA-256 original: `5ab280ffe70ff7366083cf2dfdc238dccded71c4f13b026d65f849d116c3130f` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ — identidade oficial e aplicação R17
+
+Data da revisão: 15/11/2026. Nome público da equipe e do jogo: **MISSÃO IPÊ**. Repositório oficial: [oalexandrebelo/MISSAO-IPE](https://github.com/oalexandrebelo/MISSAO-IPE).
+
+Referência compartilhada de design: [Figma — Frame 12, nó 8:318](https://www.figma.com/design/PNfT0QT7VVO0Dl6vgR9pts/NASA-HACKATON---MISSAO-IPE---HUB-RIO-VERDE---GO?node-id=8-318). O frame de 1064 × 499 corresponde à composição completa usada nesta edição. Os SVGs recebidos são a fonte preservada dos arquivos publicados.
+
+A identidade utiliza a logo escolhida e enviada pelo responsável. A árvore integra a marca da equipe; a explicação das missões e seus objetivos de aprendizagem deve partir das perguntas científicas, dos instrumentos e das evidências da NASA. A logo não significa participação institucional, validação ou endosso da NASA.
+
+## 1. O que foi preservado
+
+Os arquivos originais estão guardados integralmente em `experiments/mission-design-lab/public/brand/originals/`. As versões de uso conservam todas as coordenadas dos caminhos vetoriais, incluindo o desenho das letras. Não há substituição de tipografia por fonte do sistema, redesenho do símbolo, achatamento de proporções, bitmap embutido ou retângulo de fundo.
+
+| Arquivo enviado | Cópia preservada | Tamanho | SHA-256 |
+| --- | --- | ---: | --- |
+| `LOGO_MISASO_IPE.svg` | `missao-ipe-logo-original.svg` | 23.279 bytes | `b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e` |
+| `LOGO_MISSAO.svg` | `missao-ipe-symbol-original.svg` | 17.870 bytes | `d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab` |
+
+O nome `LOGO_MISASO_IPE.svg` contém a grafia do arquivo recebido; ela é mantida no registro de origem. A marca completa tem 35 caminhos e `viewBox="0 0 1064 499"`. O símbolo tem 25 caminhos e `viewBox="0 0 488 414"` no original.
+
+O PNG de referência fornecido foi copiado para `missao-ipe-logo.png`. Ele serve como referência/compatibilidade; os cabeçalhos usam SVG.
+
+## 2. Arquivos de uso
+
+Origem canônica dos assets: `experiments/mission-design-lab/public/brand/`. Os quatro SVGs também são copiados para `experiments/four-level-campaign/public/brand/`, para que o experimento funcione isoladamente. A publicação principal disponibiliza a mesma família em `/brand/`.
+
+| Asset | Aplicação |
+| --- | --- |
+| `missao-ipe-logo.svg` | Marca completa sobre cabeçalhos escuros. Cores originais. |
+| `missao-ipe-logo-on-light.svg` | Marca completa sobre páginas claras. |
+| `missao-ipe-symbol.svg` | Símbolo isolado para favicon e pequenos identificadores sobre fundo escuro. |
+| `missao-ipe-symbol-on-light.svg` | Símbolo isolado sobre fundo claro. |
+| `brand-provenance-r17.json` | Hashes, tamanhos, origem, transformação e limites da validação. |
+| `preview-r17.html` | Comparação sobre fundos claro/escuro e aplicações a 16, 32 e 64 px. |
+
+A variante clara troca somente os preenchimentos creme `#F5F0E5` por azul escuro `#173C51`. Os outros tons — azul `#508AA2`, cobre `#E29A6F` e cobre escuro `#BF6C47` — permanecem iguais. Não usar filtro CSS para inverter toda a logo.
+
+O símbolo de uso adota `viewBox="0 -37 488 488"`: são 37 unidades transparentes acima e abaixo. Isso produz um ícone quadrado sem esticar, cortar ou transformar as curvas. A marca completa mantém a proporção 1064:499, aproximadamente 2,132:1.
+
+As versões de uso acrescentam título acessível e agrupamento simples. São SVGs independentes: nenhuma referência externa, fonte, script, imagem ou recurso de rede é necessário para desenhá-los.
+
+## 3. Aplicação nas superfícies
+
+| Superfície | Fonte que controla a aplicação |
+| --- | --- |
+| Laboratório com três missões | `experiments/mission-design-lab/src/App.tsx`, `src/orbit.css` e `index.html` |
+| Entrada das missões | `experiments/mission-design-lab/src/ui/MissionGateway.tsx` |
+| Campanha de quatro níveis | `experiments/four-level-campaign/src/App.tsx`, `src/orbit.css` e `index.html` |
+| Apresentação da campanha | `experiments/four-level-campaign/public/apresentacao/index.html` e `style.css` |
+| Pesquisa de cada experimento | Os respectivos `scripts/build-research.mjs` |
+| Portal e estudo de Game Design | `web/index.html`, `web/game-design.html` e `web/game-design.css` |
+| Contexto e biblioteca | `context/index.template.html`, `scripts/build-context-hub.mjs` e `scripts/build-research-library.mjs` |
+| Páginas documentais da publicação | `scripts/build-beta-site.mjs` |
+
+Os cabeçalhos dos jogos reservam uma caixa de 145 × 68 px para a marca completa; em telas menores, 128 × 60 px. `object-fit: contain` preserva a proporção exata do original. O portal claro usa uma caixa maior, 170 × 80 px, e reduz para 136 × 64 px. O SVG permanece transparente em todos esses usos.
+
+Nos elementos HTML, informar `width="1064" height="499"` e `alt="MISSÃO IPÊ"`. Quando a marca estiver em um link ou botão de retorno, descrever também o destino em `aria-label`, como “MISSÃO IPÊ, observatório”. A função é voltar à página de origem; não iniciar animação ou esconder a navegação.
+
+Para novos cabeçalhos, reutilizar os arquivos e as dimensões acima. Não remontar a palavra IPÊ usando uma fonte, não substituir o símbolo por um emoji, não aplicar sombra/fundo à imagem e não usar uma ilustração de árvore diferente.
+
+## 4. O que continua histórico
+
+Os assets `projeto-ipe-*`, a proveniência R14 e seus originais permanecem preservados. São evidências da identidade anterior e não devem receber conteúdo diferente sob o mesmo nome. Os novos nomes `missao-ipe-*` também evitam que o cache exiba a marca antiga.
+
+Relatórios anteriores, capturas, recibos de publicação, apresentações exportadas e documentos datados conservam o nome que tinham quando foram produzidos. O cabeçalho atual da biblioteca muda; o conteúdo histórico dentro dela não é reescrito. A demonstração visual `Planet Jumping` mantém os assets exigidos em sua especificação; a menção ao projeto foi atualizada para MISSÃO IPÊ.
+
+URLs históricas e chaves de armazenamento não são nomes da marca visível. Não renomeá-las automaticamente: isso poderia quebrar links compartilhados e projetos salvos. Migrações de domínio/rotas são decisões de publicação separadas.
+
+## 5. Handoff para os dois desenvolvedores
+
+**Dev de interface:** usar a variante adequada ao fundo; manter espaço livre ao redor da logo; verificar o cabeçalho a 375, 768 e 1440 px; confirmar foco visível, nome acessível e ausência de deslocamento ao carregar. A 16 px, o símbolo funciona como identificador: os detalhes internos não se tornam texto legível.
+
+**Dev de integração/publicação:** publicar os arquivos canônicos de `/brand/`, incluindo proveniência e originais; manter as cópias SVG da campanha iguais às do laboratório; gerar os wrappers documentais a partir dos scripts; verificar HTTP 200 e o tipo `image/svg+xml` nas rotas da marca. A publicação não deve depender dos caminhos absolutos da máquina onde os originais foram recebidos.
+
+O arquivo `brand-provenance-r17.json` registra SHA-256 por asset. Após qualquer alteração intencional, atualizar seu hash e descrever a transformação. Não alterar somente uma das cópias.
+
+## 6. Verificação e referências
+
+A conferência estrutural compara a sequência completa de atributos `d` de todos os caminhos de cada versão com o original correspondente. A variante de fundo claro difere somente nos preenchimentos indicados. O documento de proveniência registra o resultado dessa inspeção. A conformidade estrutural não substitui a inspeção visual do site publicado.
+
+A aplicação segue as orientações pertinentes da [logo-designer-skill](https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md): SVG autossuficiente, `viewBox`, letras em caminhos, ícone isolado quadrado e conferência em tamanhos pequenos. A arte foi fornecida pelo responsável; não foi necessário gerar uma nova marca ou executar scripts remotos.
+
+As fontes de interface não alteram o desenho da logo. Manter as famílias já adotadas no projeto e seus fallbacks; a mudança de identidade não introduz dependências, novas fontes ou chamadas externas.
+
+
+---
+
+# Consolidação das contribuições — R17
+
+Fonte: `docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md` · SHA-256 original: `6b63590d59b7131ad941ecc8014c639e66ba35fd11ee3e55ad15ef9c9860bf03` · Ajustes de caminhos privados: 0
+
+# Consolidação das contribuições — R17
+
+Revisão em 15 de novembro de 2026. Repositório oficial: [oalexandrebelo/MISSAO-IPE](https://github.com/oalexandrebelo/MISSAO-IPE). Marca de produto: **MISSÃO IPÊ**. A árvore identifica a equipe; as histórias científicas precisam partir de fatos e fontes da NASA.
+
+## O que foi encontrado
+
+A contribuição de [Bruno](https://github.com/brunoassiscarvalho/missao-ipe) é um aplicativo React/Vite independente, com cinco cenários, montagem de veículo, seleção de instrumentos, inventário persistente, orçamento e avaliação de missão. Ela oferece boas soluções de interação para estudar e adaptar. Não contém modelos tridimensionais NASA nem integração de telemetria ao vivo.
+
+| Origem | Referência inspecionada | Resultado |
+| --- | --- | --- |
+| Oficial | `bf8b099a5c2c2947786b4357a10c6825d152c794` | Base R16 desta comparação; o trabalho R17 ocorre em paralelo |
+| Bruno | `master`, `f54fb88a237216d6c1e72b75b400767fb3a75661` | Cinco commits, 36 arquivos, 2.850.272 bytes de conteúdo |
+| PR #1 do oficial | `b628b429fe201e9445443c8205c4e4b4fee284f7` | Comparação com inventário fixado na revisão R16; aplicativo Next/Remotion `apps/immersive-lp` |
+
+A consulta ao GitHub encontrou apenas `master` no repositório de Bruno, sem PRs, tags ou releases. O nome de autor gravado nos cinco commits é **Bruno A Carvalho**. Não há commits em comum entre seu histórico e o histórico local oficial inspecionado. Nenhum dos 36 arquivos de Bruno tem conteúdo Git idêntico a um arquivo da árvore oficial ou do inventário consultado da PR #1. Isso não atribui a PR #1 ao Bruno e não prova ausência de ideias compartilhadas: são três fontes que precisam permanecer identificadas.
+
+O inventário verificável, com SHA Git, SHA-256, tamanho, origem e destinação de cada arquivo, está em [bruno-consolidation-r17.json](../research/bruno-consolidation-r17.json).
+
+## Autoria e histórico
+
+| Commit original | Data UTC | Contribuição registrada |
+| --- | --- | --- |
+| [676ee80](https://github.com/brunoassiscarvalho/missao-ipe/commit/676ee80d3a5b63956c7522d8099bb8c4407a553f) | 14/11/2026 20:55 | first commit |
+| [bfbc241](https://github.com/brunoassiscarvalho/missao-ipe/commit/bfbc24158b99aaa77c0b224eb687769f742d537e) | 15/11/2026 01:44 | acertos css |
+| [8cb6bea](https://github.com/brunoassiscarvalho/missao-ipe/commit/8cb6beab58640f3c88b8d6cb5620819984a2a2a8) | 15/11/2026 02:43 | painel mostrador da missão |
+| [38c18a9](https://github.com/brunoassiscarvalho/missao-ipe/commit/38c18a9d12c5578e276b4e9e314c66eb2a150d78) | 15/11/2026 03:34 | inclusão de itens cientificos |
+| [f54fb88](https://github.com/brunoassiscarvalho/missao-ipe/commit/f54fb88a237216d6c1e72b75b400767fb3a75661) | 15/11/2026 03:41 | melhorias nas letras e animações |
+
+O upstream não declara licença em um arquivo LICENSE. A licença Apache do repositório oficial não deve ser apresentada como se tivesse sido declarada por Bruno para esse código. Manter autoria, links e essa condição no diretório de importação. O trabalho técnico de consolidação pedido pelo responsável pelo projeto não resolve automaticamente a procedência dos assets de terceiros.
+
+## Importação integrada e limites
+
+Foi integrado um **snapshot filtrado**, sem instalar dependências ou executar código do upstream, em `contributions/bruno-figma/`. Os 32 arquivos extraídos foram conferidos por tamanho e SHA-256; todos correspondem ao manifesto. O aviso `ORIGEM-E-INTEGRACAO.md` foi acrescentado ao diretório. Ele contém os 32 arquivos de código, regras e configuração, com 268.299 bytes antes da compressão. O arquivo temporário de entrega à integração está em `/tmp/ipe-bruno-r17-reviewed-source.tar.gz`, SHA-256 `bfdc64b4a6228ee0835dd383068ac71d0a25df7cdd1177da9b52170b3868f18a`.
+
+Os quatro arquivos excluídos estão integralmente identificados por hash e URL no inventário:
+
+| Arquivo | Observação da inspeção | Destinação |
+| --- | --- | --- |
+| `mood board/image.png` | Referência visual de painel com planeta; fonte e licença não documentadas | Link ao upstream; não distribuir como arte do produto |
+| `mood board/image copy.png` | Referência visual com marca d’água **Creative Market** visível | Não importar o binário nem remover a marca d’água |
+| `mood board/image copy 2.png` | Referência de painel de energia; fonte e licença não documentadas | Link ao upstream; não distribuir como arte do produto |
+| `public/favicon.png` | Asset padrão sem procedência documentada | Usar a identidade MISSÃO IPÊ fornecida pelo responsável |
+
+As três imagens são moodboards, não modelos NASA. A inspeção não encontrou `.glb`, `.gltf`, `.obj` ou outra malha 3D nesse repositório. O fato de um arquivo estar em um repositório público não informa, por si só, a licença de reutilização dele.
+
+Uma importação por `git subtree` sem squash preservaria os cinco commits exatos, mas também republicaria as imagens no histórico. Excluí-las em um commit posterior não retiraria os binários ancestrais. Por esse motivo, a entrega preparada é o snapshot filtrado; o histórico original permanece acessível pelos links e pelo clone local de auditoria. **Não chamar essa operação de merge ou afirmar que os cinco objetos de commit foram incorporados.**
+
+Procedimento documentado para repetir a integração em uma cópia limpa:
+
+1. Conferir que `contributions/bruno-figma/` ainda não existe, verificar o SHA-256 do pacote e extrair ali os 32 arquivos. Se o destino existir, comparar primeiro; não sobrescrever trabalho existente.
+2. Adicionar um documento de origem no diretório, com autor, repositório, SHA de origem, cinco commits, exclusões e situação da licença. A importação é de fonte histórica, sem ativação no produto.
+3. Conferir todos os arquivos extraídos contra o manifesto. Preservar conteúdo e registrar adaptações futuras em commits separados, atribuindo a contribuição original.
+4. Manter o diretório fora da seleção de aplicações e cópia de assets do build oficial. Nenhum `package.json`, lockfile, configuração Vercel ou schema de persistência da aplicação principal deve ser substituído pelo arquivo homônimo importado.
+5. Adaptar oportunidades ao motor e à identidade do oficial por mudanças pequenas e verificadas. Cada adaptação precisa explicitar o que veio de Bruno e o que mudou.
+
+O clone temporário completo para comparação está em `/tmp/ipe-bruno-r17`, destacado no SHA revisado. Não é uma dependência do build nem um caminho permanente de documentação. O manifesto versionado e os links de origem são os registros duráveis.
+
+## O que aproveitar nas três missões
+
+O principal ganho é tornar a cadeia **necessidade científica → instrumento → recursos → resultado** compreensível. Não é necessário acrescentar cinco destinos ao jogo oficial para aproveitar a contribuição.
+
+| Solução de Bruno | Aplicação no oficial | Critério para considerar integrada |
+| --- | --- | --- |
+| Briefing com objetivo, carga, desafio e contexto | Apresentar Terra/MODIS, Bennu/OSIRIS-REx e Webb com pergunta científica e fato histórico verificável | Jogador consegue dizer o que investigará, para quem e com qual evidência |
+| Comparação imediata da montagem | Atualizar massa, potência, armazenamento e comunicação junto da peça 3D selecionada | Uma mudança exibe seu benefício e o recurso que passa a limitar a missão |
+| Seleção de instrumento por arrastar ou botão | Manter alternativas por toque e teclado e destacar a peça correspondente na nave | A missão inteira permanece operável sem arrastar |
+| Inventário e orçamento visíveis | Comparar configurações e explicar o custo das decisões | Reutilização representa projetos/configurações; não sugere transporte mágico do mesmo hardware entre planetas |
+| Resumo antes do lançamento | Revisão dos quatro segmentos: lançamento, espaço, solo e usuários | Requisitos inviáveis e consequências são explicados antes de executar |
+| Resultado e progressão | Debrief com evidência recebida, falha causal e nova tentativa | O jogador aprende por que falhou e consegue testar uma alteração específica |
+| `GameRules.md` explícito | Manter regras, unidades e critérios do oficial documentados | Regras públicas correspondem ao motor executado e às evidências de teste |
+
+Não há telemetria remota em `src/App.tsx`: foram encontrados sete links de referência NASA, sem chamada `fetch`. Também não há Three.js/R3F ou multiplayer no pacote. Esses requisitos não podem ser marcados como entregues por importar esse código.
+
+## Narrativas que não devem migrar como fatos
+
+As histórias abaixo constam literalmente do protótipo de Bruno. Elas são propostas ficcionais, não registros históricos verificados. No produto ativo, substituí-las por acontecimentos e perguntas científicas documentados; manter o original apenas como contribuição histórica identificada.
+
+| Linha de `src/App.tsx` no SHA revisado | Conteúdo | Tratamento |
+| --- | --- | --- |
+| 205 | ISS em 2031, anomalia no ar, janela de 72 horas e monitor **AERIS** | Não afirmar ocorrência NASA; usar fonte de instrumento/experimento real se esta temática for adotada |
+| 233 | Espectrômetro **SELENE**, missão lunar em 2034 | Não atribuir esse voo ou hardware à NASA; distinguir hipótese de design do que LRO observou |
+| 261 | **ARGO** em 2037 chegando a Jezero antes de uma tempestade | Remover a ocorrência inventada da narrativa científica; ancorar aprendizado em dados e instrumentos de missão real |
+| 289 | **NEREIDA** entrando em órbita de Europa em 2042 | Não confundir com arquitetura da Europa Clipper; qualificar evidências sobre plumas com fonte primária |
+| 317 | **ÍCARO** trazendo amostras de Bennu em 2048 | Para o caso Bennu, partir da cronologia e dos resultados documentados da OSIRIS-REx |
+
+`Semente`, `Raízes` e `Copa` não foram encontrados como nomes de missões nesse upstream. `Horizonte Rubro` é o título ficcional do caso Marte. Não atribuir a Bruno a campanha arbórea existente em outros materiais. IPÊ permanece o nome da equipe; as etapas didáticas devem ser nomeadas pela atividade científica ou de engenharia que realmente ensinam.
+
+## Diferenças técnicas que exigem adaptação
+
+O cálculo de Bruno em `src/App.tsx:1487` é uma regra de jogo: energia limitada a 0–99, calculada como `64 - energyDraw`; duração multiplicada por fatores; ciência como combinação de bônus e confiabilidade. A condição `ready` exige, entre outros limites, ciência ≥95 e eficiência ≥5. `canLaunch` verifica carga e orçamento, permitindo lançamento que depois pode ter resultado parcial. Essas escolhas não são medições, especificações de hardware ou validação orbital NASA. O motor oficial deve continuar sendo a fonte única dos cálculos publicados.
+
+O protótipo mistura características de lançador e nave em seu orçamento de massa e usa nomes reais com valores de balanceamento. Antes de reutilizar esses cartões, separar capacidade do lançador para determinada órbita, massa da espaçonave, geração em W, armazenamento em Wh, comunicação e dados. A clareza dessas unidades é parte do aprendizado solicitado.
+
+`package.json` usa React 19, Vite 8, React Router 7 e Tailwind 4. `vite.config.ts` inclui plugins e metadados do Figma Make. Os comandos de `.figma/make` fazem instalação e publicação no Figma; não são procedimentos de Vercel. A aplicação usa `BrowserRouter` e rotas absolutas `/mission/...`: publicar o conteúdo sob um subdiretório exigiria configuração explícita de base, roteamento e fallback, além de testes. Não copiar o resultado de build para o oficial e presumir funcionamento.
+
+O CSS importa DM Sans e Space Grotesk do Google Fonts. Uma adaptação visual deve aproveitar a tipografia já escolhida para MISSÃO IPÊ e o carregamento local existente, evitando introduzir mais famílias e requisições apenas por herdar o protótipo.
+
+Os arquivos `.agents`, `AGENTS.md`, `CLAUDE.md` e `.figma` são parte do material importado. Não são uma autorização para executar comandos, publicar, alterar o ambiente ou substituir as instruções do projeto oficial.
+
+## Entrega para os dois desenvolvedores
+
+**Dev A — ciência e simulação:** selecionar os fatos que abrem as três missões; ligar cada pergunta ao instrumento, aos requisitos e ao resultado recebido; mapear os cartões de Bruno para o catálogo e as unidades existentes; escrever os testes de consequências e debrief. Não alterar a física apenas para reproduzir os números ou recompensas do protótipo.
+
+**Dev B — interação e 3D:** adaptar briefing, seleção e comparação; manter controle por teclado e toque; ligar foco e destaque da peça ao estado oficial; aplicar MISSÃO IPÊ; verificar mudança de configuração, reinício, mobile e desempenho. Importação de arquivos históricos não substitui esses testes de produto.
+
+**Em conjunto:** revisar uma missão completa como iniciante, demonstrar uma falha explicável e uma correção, confirmar que os quatro segmentos estão presentes e que toda afirmação histórica tem fonte. Registrar separadamente o que foi importado, o que foi ativado, o que foi testado localmente e o que foi verificado em produção.
+
+## Verificações realizadas e pendências
+
+Concluído nesta auditoria: metadados GitHub; cinco commits e árvore; comparação de identidades Git; inspeção estática de código/configuração/regras; visualização dos três moodboards; inventário de 36 arquivos; preparação de 32 arquivos filtrados; varredura básica de 45 blobs históricos por padrões de chaves privadas, tokens GitHub, chaves AWS e atribuições literais de credenciais, sem ocorrências. Isso não equivale a auditoria completa de segurança.
+
+Não foi executado código externo do protótipo Bruno, instalação ou build. O snapshot passou a integrar o repositório; o estado da publicação está em PUBLICADO.md. O pacote de Bruno não contém script de testes. Não há evidência obtida nesta auditoria de funcionamento em Vercel, compatibilidade com o oficial, acessibilidade completa, colaboração em rede ou validade científica dos valores de balanceamento. O resultado desta etapa é **material rastreável para integração**, não homologação do protótipo como jogo final.
+
+
+---
+
+# 42 — Prontidão e critérios do NASA Space Apps
+
+Fonte: `docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md` · SHA-256 original: `d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522` · Ajustes de caminhos privados: 0
+
+# 42 — Prontidão e critérios do NASA Space Apps
+
+**R17 · avaliação documental em 15/11/2026 · base de produto: R16, 0.7.0-beta.1.** Esta avaliação usa fontes primárias e evidências locais. Não é parecer dos organizadores, inscrição, avaliação de jurados ou previsão de prêmio. A revisão factual das histórias da R17 está descrita no [documento 44](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md); sua publicação deve ser conferida no [registro atual](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md).
+
+## A resposta franca
+
+**Há um protótipo demonstrável e uma proposta educacional coerente. Ainda não há evidência suficiente para declarar a candidatura pronta ou o jogo em nível de vencer a competição.** A melhor parte é a cadeia entre escolha, falha explicável, comparação e redesenho. As lacunas decisivas estão na elegibilidade, correspondência ao enunciado completo, demonstração de aprendizagem e qualidade de uso no equipamento do público.
+
+O risco mais importante não se resolve com mais 3D: o próprio projeto registra desenvolvimento específico anterior ao início permitido. O GO Team informa que trabalhar antecipadamente pode causar desclassificação. O fato da antecipação está documentado; uma decisão dos organizadores sobre a equipe não foi observada. Não se deve apagar o histórico nem tratar uma nova versão como regularização. [Cronologia do projeto](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/chronology.json), [orientação do GO Team sobre início](https://github.com/nasa/spaceapps/discussions/1827), [orientação sobre UI e funcionalidades](https://github.com/nasa/spaceapps/discussions/1872).
+
+Isso não impede a continuidade do produto educacional. Impede afirmar, com a evidência disponível, que ele já está habilitado a concorrer ou que sua maturidade técnica garante um prêmio.
+
+## O que foi confirmado sobre a edição
+
+| Item | Confirmação e limite |
+| --- | --- |
+| Ano e tema | A NASA e a página institucional identificam **2026**, tema **The Next Frontier**, em **14 e 15 de novembro**. A data foi pesquisada, não inferida do relógio da máquina. |
+| Janela geral | A página 2026 informa abertura de edição/envio em **14/11 às 09h** e encerramento em **15/11 às 23h59**, no horário local. Equipes de até seis participantes. Isso não prova que a equipe Ipê esteja inscrita ou tenha enviado um projeto. |
+| Rio Verde | A agenda local recuperada indica pré-apresentações às **15h30**, envio às **17h** e apresentações às **18h** em 15/11. É conteúdo do organizador local; confirmar o corte aplicável com a organização, sem substituir a agenda local pelo teto geral. |
+| Desafio escolhido | “Space Mission Design Game” aparece no contexto de equipes 2026 no domínio oficial. O resumo trata de projetar, gerir e simular uma missão com decisões de engenharia e recursos limitados. O enunciado integral e a lista Resources não foram recuperados nesta rodada. |
+
+Fontes: [anúncio NASA de 15/10/2026](https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/), [página institucional 2026](https://www.spaceappschallenge.org/2026/), [agenda Rio Verde](https://www.spaceappschallenge.org/2026/local-events/rio-verde/), [bloco contextual do desafio em página de equipe](https://www.spaceappschallenge.org/2026/find-a-team/missionforge/).
+
+A página de uma equipe não substitui o texto normativo do desafio. A [URL do desafio](https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/) retornou 502 nesta recuperação; a [aba Resources](https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources) não foi acessível pela ferramenta. Isso não demonstra indisponibilidade para todos os usuários.
+
+## Requisitos de candidatura: evidência e pendências
+
+| Requisito | Estado comprovado | O que encerra a pendência |
+| --- | --- | --- |
+| Cronologia compatível | O registro local declara início antecipado; elegibilidade não estabelecida. | Decisão aplicável dos organizadores, com a cronologia apresentada integralmente. Sem resposta, manter a condição explícita. |
+| Inscrição, evento, equipe e envio | Não foram observadas página da equipe Ipê, confirmação de participantes ou submissão concluída. | Recibo/página oficial com equipe, evento, desafio e estado do envio, preservando dados pessoais desnecessários. |
+| Responder ao desafio | Há alinhamento ao resumo: objetivos, engenharia, limites e consequências. | Matriz do enunciado integral com cada exigência apontando para funcionalidade ou limitação declarada. |
+| Fonte NASA da lista Resources | MODIS e modelos NASA estão incorporados, mas sua presença na lista específica não foi comprovada. | Identificar ao menos uma fonte da lista oficial, mostrar onde é usada e citá-la no envio. Mais APIs não substituem essa correspondência. |
+| Autoria, créditos e licença | Há Apache-2.0, NOTICE, manifestos e registros de assistência por IA. | Conferir se o pacote final e o formulário refletem todos os recursos e ferramentas efetivamente usados. |
+| Demonstração exigida | Existe jogo público e material de apresentação; não foi observado pacote final aceito pelo formulário. | Abrir os links sem login e conferir formato, idioma, duração/número de slides e envio efetivo. |
+
+O GO Team exige, para Global Awards, ao menos uma fonte NASA incluída nos Resources do desafio e referência aos materiais utilizados. A origem NASA de um arquivo é uma condição diferente de sua presença nessa lista. [Orientação oficial sobre recursos](https://github.com/nasa/spaceapps/discussions/1849).
+
+Os [termos 2026](https://www.spaceappschallenge.org/legal/) requerem direitos sobre o material submetido e disponibilização do conteúdo original de forma livre ou sob licença de código aberto compatível com OSI. Também incluem regras de participação e proteção de dados/imagens de pessoas. O código Apache do projeto ajuda, mas não relicencia materiais de terceiros nem substitui a conferência do pacote final.
+
+## Uso de IA e apresentação
+
+A orientação do GO Team permite IA, exige declarar onde e como foi usada e prevê tratamento específico para mídias geradas: marca visível em imagens/vídeos; reconhecimento em descrição e metadados para áudio, código e dados. Conteúdo gerado não deve usar, conter ou modificar elementos de marca NASA. A avaliação considera a contribuição original e a execução da equipe; não há garantia de pontuação por quantidade de código ou automação. [Resposta do GO Team](https://github.com/nasa/spaceapps/discussions/1849).
+
+Nesta revisão não foi feita uma auditoria completa de cada arquivo audiovisual, metadado e campo do formulário. O [NOTICE](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/NOTICE.md) documenta assistência por IA, porém sua existência não prova que todas as condições do envio final foram satisfeitas.
+
+Uma resposta de suporte no repositório NASA orienta vídeo de até **30 segundos** ou apresentação de até **sete slides**, com texto em inglês ou legendas inglesas. Essa é orientação de Navigator; o [Project Submission Guide](https://www.spaceappschallenge.org/resources/project-submission-guide/) e o formulário vigente continuam sendo a referência final. O guia não foi recuperado integralmente nesta sessão. Um HTML de apoio ou um pitch histórico de dez slides não deve ser apresentado como automaticamente aceito. [Resposta de suporte sobre envio](https://github.com/nasa/spaceapps/discussions/1973).
+
+## Como avaliar a qualidade sem inventar uma nota
+
+O evento Ajmer 2026 publica cinco eixos: impacto, criatividade, validade, relevância e apresentação. É uma página de organização local, identificada como conteúdo de participante/Local Lead. O [guia global de julgamento](https://www.spaceappschallenge.org/resources/judging-awards-guide/) retornou 502. Portanto, a matriz abaixo usa esses eixos como **estrutura de avaliação**, sem atribuir pesos, escala ou rubrica oficial específica de Rio Verde. [Critérios publicados por Ajmer](https://www.spaceappschallenge.org/2026/local-events/ajmer/).
+
+| Eixo | Força real da R16 | Lacuna competitiva | Evidência que aumentaria a confiança |
+| --- | --- | --- | --- |
+| Impacto | Atividades para compreender potência, transmissão e adequação de instrumento. | Aprendizagem e necessidade do público ainda não medidas. | Sessões com estudantes/educadores, tarefa antes/depois e explicação causal registrada, sem transformar um piloto pequeno em eficácia universal. |
+| Criatividade | Prever → comparar um fator → ver a nave no mesmo instante → redesenhar. | Não há demonstração de novidade mundial; um acervo 3D isolado não é inovação pedagógica. | Demonstração curta em que o visitante entende uma consequência que antes parecia contraditória. |
+| Validade | Domínios determinísticos, resultados conferíveis e separação entre dados reais e sintéticos. | Sem propagação orbital, óptica real ou validação independente de engenharia. | Revisão por educador/especialista e rastreio de cada afirmação científica à fonte correta. |
+| Relevância | Três casos e quatro segmentos; escolhas afetam o retorno da ciência. | Enunciado completo ainda não mapeado; lançamento/órbita são fixos ou conceituais. | Matriz de cobertura do texto oficial, com justificativa das simplificações. |
+| Apresentação | Jogo público, cenários comparáveis, fontes e biblioteca. | Muitas rotas podem dispersar a demonstração; ausência de teste com visitante novo e pacote global final. | Uma entrada recomendada, um percurso completo sem ajuda e pitch compatível com o formulário. |
+
+### Categorias de premiação: limite da confirmação
+
+A [página oficial de prêmios de 2025](https://www.spaceappschallenge.org/2025/awards/) lista dez categorias: Best Use of Science, Best Use of Data, Best Use of Technology, Galactic Impact, Best Mission Concept, Most Inspirational, Best Use of Storytelling, Global Connection, Art & Technology e Local Impact. **Essa lista é histórica, não confirmação das categorias de 2026.** A URL 2026 não forneceu conteúdo verificável nesta consulta.
+
+Como posicionamento editorial, o Ipê tem material mais defensável para explicar método científico, uso responsável de dados e aprendizagem por decisões. Isso não significa enquadramento garantido, indicação ou vitória em qualquer categoria. A lista de vencedores anteriores não fornece a taxa de sucesso desta equipe nem uma comparação válida com concorrentes atuais.
+
+## O que o produto realmente entrega
+
+O [recibo local R16](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/revision-r16.json) registra **145 testes de domínio e 38 de interface** no laboratório, além de verificações de contexto, distribuição e campanha preservada. O [recibo público R16](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/production-r16.json) registra **291 arquivos**, HTTP, hashes e políticas na implantação identificada. São evidências do build conferido, não promessa sobre qualquer deploy futuro.
+
+| Capacidade | Evidência disponível | Alcance |
+| --- | --- | --- |
+| Cerrado | Arquivos Terra/MODIS históricos; comparação BANDAS/ÍNDICE e gargalo de potência. | Transporte e processamento didáticos; não operação real do Terra nem diagnóstico ambiental. |
+| Bennu | Contatos curtos/ampliados produzem 2/6 e 6/6 registros no ensaio controlado. | Seis registros sintéticos; nenhuma seleção real de local de coleta. |
+| Telescópio | Câmera recebe seis pacotes, mas não satisfaz o requisito; espectrômetro entrega seis válidos. | Catálogo genérico; não descreve todas as capacidades do NIRCam nem reproduz espectros Webb. |
+| Cooperação | Quatro papéis de revisão no mesmo dispositivo. | Colaboração local; sem sessão online ou comprovação da contribuição de cada pessoa. |
+| Histórias | R17 substitui equipes inventadas por fatos NASA datados e fontes. | Alteração editorial local; os valores sintéticos não viram telemetria por associação. |
+| 3D e acesso | Modelos locais, montagem configurável, alternativa 2D e ações em navegador registradas. | Não há medição de FPS, teste físico de toque ou certificação integral de acessibilidade. |
+| Dados e persistência | Projetos/relatórios e caderno têm contratos documentados. | Tentativas de expedições não persistem automaticamente; escrita simultânea em abas tem limitação conhecida. |
+
+O volume de testes comprova comportamentos selecionados do software. Ele não mede compreensão, motivação, clareza, tempo de carregamento ou sucesso de alunos. A aparência de uma cena 3D também não comprova fidelidade física.
+
+## Ordem recomendada de fechamento
+
+| Prioridade | Pendência | Tipo | Aceite verificável |
+| --- | --- | --- | --- |
+| P0 | Elegibilidade temporal | Risco comprovado; decisão externa desconhecida. | Cronologia integral e resposta dos organizadores aplicável ao projeto; sem resposta, nenhuma alegação de habilitação. |
+| P0 | Enunciado, Resources, inscrição e prazo | Evidência ausente nesta revisão. | Página oficial/recibo e matriz de cobertura; fonte NASA qualificada explicitamente citada. |
+| P0 | Pacote de submissão | Aceitação/formato não demonstrados. | Formulário completo, links públicos, autoria/créditos, demonstração no formato atual e confirmação do envio. |
+| P1 | Uma jornada principal | O produto tem múltiplas rotas; confusão de visitante não foi medida. | Pessoa nova encontra a missão, prevê, executa, explica uma falha e refaz sem instrução do desenvolvedor. Registrar obstáculos. |
+| P1 | Narrativa e dados separados | R17 corrige fatos e fontes localmente. | Conferência de todas as telas e do guia; nenhuma frase atribui os registros sintéticos à NASA ou o exercício a uma missão real. |
+| P1 | Aprendizagem inicial | Não medida. | Piloto pequeno com protocolo declarado, respostas antes/depois e exemplos de transferência para um caso novo. Registrar também erros e desistências. |
+| P1 | Equipamento e conexão | Celular físico, FPS e carga não medidos. | Medir uma missão completa em computador e telefone representativos; registrar aparelho, navegador, rede, tempos e falhas. Verificar alternativa 2D e recuperação. |
+| P2 | Novos dados e física | Oportunidades futuras, não pré-requisito automaticamente confirmado. | Só integrar um novo produto se melhorar a pergunta e houver unidade, qualidade, proveniência e validação. |
+
+As metas de teste acima são propostas do projeto, não limites oficiais da competição. Um piloto de cinco pessoas pode revelar problemas concretos, mas não provar impacto educacional em escala. Mais modelos, bibliotecas ou APIs devem esperar uma lacuna pedagógica clara; não substituem a verificação do caminho principal.
+
+## Decisão de prontidão
+
+**Demonstração de P&D:** há base publicada e verificável na R16, sujeita a conferir a implantação atual e os equipamentos de apresentação. **Candidatura competitiva:** prontidão não estabelecida devido às pendências acima. **Nível vencedor:** não determinável com a evidência disponível; não há pontuação oficial, comparação válida com os concorrentes ou resultado de jurados.
+
+O próximo avanço convincente é demonstrar que alguém aprende a justificar uma decisão usando evidência real e limites claros, enquanto o pacote cumpre as regras aplicáveis. A honestidade sobre o que é histórico, simulado e desconhecido faz parte da qualidade científica do produto.
+
+O [registro estruturado desta avaliação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/research/readiness-r17.json) conserva fontes, limites de recuperação, evidências e critérios de aceite. Nenhuma mensagem foi enviada aos organizadores nesta avaliação.
+
+
+---
+
+# MISSÃO IPÊ — handoff para os dois desenvolvedores
+
+Fonte: `docs/43-HANDOFF-GERAL-R17.md` · SHA-256 original: `fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45` · Ajustes de caminhos privados: 0
+
+# MISSÃO IPÊ — handoff para os dois desenvolvedores
+
+**R17 · 15/11/2026 · beta 0.8.0-beta.1.** Repositório oficial: [oalexandrebelo/MISSAO-IPE](https://github.com/oalexandrebelo/MISSAO-IPE). Leia [PUBLICADO.md](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md) para a implantação efetivamente conferida; a presença do código não certifica publicação.
+
+## O produto em uma frase
+
+Um jogo educativo em que a pessoa parte de uma pergunta científica, escolhe os recursos de uma nave e descobre por que uma observação pode ser coletada, mas não chegar como evidência útil aos cientistas.
+
+**IPÊ identifica a equipe.** A árvore está na marca. As histórias vêm de fatos documentados da NASA, sem personagens, emergências ou missões inventadas apresentados como reais. O jogo usa modelos didáticos de engenharia explicitamente identificados.
+
+## Três casos, três descobertas
+
+| Caso | Fato que fundamenta a história | O que o participante aprende | O que não é reproduzido |
+| --- | --- | --- | --- |
+| Cerrado / Terra-MODIS | Medição de vegetação por luz vermelha e infravermelha; seis registros históricos de 2024 incorporados | Diferença entre W e Wh; processamento, memória e comunicação; ausência de dado não é vegetação zero | Hardware/órbita real do Terra, nova aquisição NASA ou diagnóstico de desmatamento |
+| Bennu / OSIRIS-REx | Reconhecimento da superfície rochosa e seleção de Nightingale em 2019 | Produção a bordo e recepção em solo são etapas diferentes; contato maior não exige uma antena diferente | Trajetória, telemetria ou coleta real da OSIRIS-REx; as rugosidades A/B/C são sintéticas |
+| Telescópio / Webb | NIRSpec mediu o espectro de WASP-39 b em 2022 | A pergunta define o tipo de medida; entregar arquivos não basta se o instrumento é inadequado | Detecção de moléculas a partir do jogo; fluxos são sintéticos e a câmera genérica não representa o NIRCam |
+
+[Histórias, datas e fontes NASA](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [guia didático completo](32-GUIA-DIDATICO-MISSOES-3D.md).
+
+## A jornada e os quatro segmentos
+
+1. **Usuários:** formular a pergunta e identificar a evidência necessária. Ler o fato documentado e os limites do exercício.
+2. **Espaço:** selecionar instrumento, processamento, memória, energia e comunicação. A peça 3D e os indicadores acompanham a configuração.
+3. **Lançamento:** verificar massa, custo e compatibilidade com o perfil. Bennu/telescópio têm escolhas didáticas de lançador; o Cerrado usa envelope fixo. Não há cálculo de trajetória real.
+4. **Solo:** planejar contatos e receber os registros. A simulação guarda eventos determinísticos, com estados e diagnósticos causais.
+5. Retornar aos **usuários:** comparar o que chegou com o requisito, preservar lacunas, prever uma mudança e repetir o ensaio A/B no mesmo instante.
+
+A cena 3D apresenta escolhas e eventos do motor; não calcula ciência por conta própria. Modelo NASA, nave configurável e registro científico são camadas diferentes. O modo equipe distribui papéis entre até quatro participantes no mesmo dispositivo. Colaboração online não está implementada.
+
+## Uma base oficial, aplicações com limites claros
+
+| Caminho no repositório | Responsabilidade | Publicação |
+| --- | --- | --- |
+| `experiments/mission-design-lab/` | Jogo principal: três missões, configuração 3D, execução e comparação | `/lab/index.html` |
+| `experiments/four-level-campaign/` | Quatro exercícios progressivos do caso Cerrado | `/campanha/index.html` |
+| `web/`, `context/`, `docs/`, `research/` | Portal, estudo, fontes e continuidade | Site principal e biblioteca |
+| `apps/immersive-lp/` | Página orbital da PR #1, preservada em aplicação separada | Projeto Vercel `projeto-ipe-lp` |
+| `contributions/bruno-figma/` | 32 arquivos de Bruno, snapshot de referência com autoria e inventário | Somente repositório; não é o motor ativo |
+| `dist/`, `portable/` | Distribuição clássica conservada | `/game/` e alternativa local |
+| `web/planet-jumping.html` | Referência de transição cinematográfica com mídias fornecidas | Experimento visual, não uma missão NASA |
+
+A PR #1 foi incorporada localmente preservando seus quatro commits. A publicação no branch oficial fecha sua integração. O repositório independente de Bruno tem cinco commits de outra origem; não se deve atribuir a PR #1 a ele. Seu snapshot filtrado mantém código, regras, configurações e proveniência, sem republicar os moodboards de terceiros. [Inventário e decisões](41-CONSOLIDACAO-REPOSITORIOS-R17.md).
+
+## Identidade e Figma
+
+A marca oficial é **MISSÃO IPÊ**, com lettering do SVG fornecido. Não redigitar o logotipo com uma fonte, deformar a proporção ou colocar um retângulo atrás dele. O arquivo claro muda somente o creme para azul escuro, para assegurar contraste em superfícies claras. Os originais estão preservados e têm hashes registrados.
+
+[Guia da marca](40-IDENTIDADE-MISSAO-IPE-R17.md) · [Figma, Frame 12](https://www.figma.com/design/PNfT0QT7VVO0Dl6vgR9pts/NASA-HACKATON---MISSAO-IPE---HUB-RIO-VERDE---GO?node-id=8-318). O frame foi conferido visualmente com a marca entregue. Não foi alterado nesta revisão. Fontes da interface continuam locais; a tipografia da marca é vetorial.
+
+## Divisão prática dos dois devs
+
+| Responsável | Área principal | Entrega seguinte | Critério de aceite |
+| --- | --- | --- | --- |
+| Dev 1 — experiência e visualização | Componentes UI, cenas 3D, acessibilidade e interação | Revisão guiada dos quatro segmentos e melhoria das peças 3D aproveitando o inventário do Bruno | Cada decisão é operável por toque/teclado; a cena corresponde ao projeto executado; não depende só da cor |
+| Dev 2 — ciência e simulação | Catálogos, motor, dados/proveniência, persistência e testes | Selecionar um produto real para substituir um conjunto sintético, sem mudar contratos silenciosamente | Unidade, data, qualidade e fonte preservadas; cálculo conferido contra referência independente |
+| Ambos | Integração, teste com pessoas e publicação | Sessões curtas com iniciantes, ensaio de demonstração e revisão de conteúdo | Pessoa explica uma relação causal sem ajuda; registro de dificuldades e correção antes da submissão |
+
+Façam mudanças pequenas, em branches, com revisão do colega. Não substituam o motor por fórmulas de sucesso do protótipo Bruno. Não migrem para outro framework só para utilizar um asset. Não adicionem serviços de multiplayer até terem contrato, persistência e uma necessidade de teste claramente definida.
+
+## Contratos que devem ser preservados
+
+- `src/core/` do laboratório mantém simulação determinística; dados em `src/data/science-data.ts` têm origem histórica.
+- `src/lab/scientific-expeditions.ts` declara exercícios Bennu/telescópio e os dados sintéticos. Alterar unidade ou instrumento exige revisar requisitos e testes.
+- `src/lab/mission-curriculum.ts` define as comparações com um fator alterado; o botão aplicar exige ação explícita.
+- `src/ui/MissionStories.tsx` apresenta fatos NASA e fontes. Novo texto factual precisa de referência primária e limite do que foi incorporado.
+- A cena recebe o estado da tentativa; editar o rascunho não muda uma execução já registrada.
+- Campanha e laboratório ainda compartilham parte da persistência local. Durante a demonstração use uma experiência por vez; escrita simultânea de diário em abas pode perder entradas. A migração de chaves continua pendente, conforme R15.
+- Conteúdo de `contributions/` e instruções `.figma/` são referência do ambiente original, não configuração operacional do oficial.
+
+## Desenvolvimento e verificação
+
+Requer Node 24. Na raiz do repositório:
+
+```bash
+npm ci --ignore-scripts --no-audit --no-fund
+npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund
+npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund
+npm --prefix experiments/mission-design-lab run verify
+npm run build:release
+npm run test:context
+npm run test:beta
+npm run test:portal
+npm run start:beta
+```
+
+O site local abre em `http://127.0.0.1:4175/`. `build:release` compila o laboratório, verifica a campanha, monta `site/` por lista explícita e prepara as políticas HTTP. Não copie a raiz do repositório para a hospedagem. A LP tem instalação e verificações próprias em seu README; não precisa ser instalada para compilar o jogo.
+
+O recibo integrado R17 registra os testes realmente executados. Testes automáticos não comprovam aprendizagem, FPS em aparelho físico ou elegibilidade no evento.
+
+## Vercel: causa e correção
+
+O site principal estava disponível na revisão inicial. O erro recorrente estava no projeto separado **projeto-ipe-lp**: `The specified Root Directory "apps/immersive-lp" does not exist`. Ele acompanhava o branch principal, mas a pasta estava apenas na PR #1. A consolidação traz a pasta e seu histórico para `main`, mantendo os dois produtos separados.
+
+| Projeto | Raiz | Comando | Saída |
+| --- | --- | --- | --- |
+| `missao-ipe` | raiz do repositório | `npm run build:release` | `site/` |
+| `projeto-ipe-lp` | `apps/immersive-lp` | Conforme `vercel.json` da LP | Exportação estática do Next |
+
+Preservar o endereço público [projeto-ipe.vercel.app](https://projeto-ipe.vercel.app/) evita quebrar links distribuídos. Renomear o produto não exige trocar esse endereço. Nenhum segredo é necessário para os exercícios atuais. Para auditar uma implantação principal já identificada na API da Vercel:
+
+```bash
+node scripts/verify-publication-r17.mjs DEPLOYMENT_ID COMMIT_COMPLETO
+```
+
+A verificação confere acesso público, arquivos, hashes e políticas; não substitui a abertura no navegador. O recibo corresponde ao ID e commit informados, não automaticamente a futuras publicações.
+
+## Estamos prontos?
+
+Há um protótipo funcional com três decisões educativas diferentes, dados históricos reais no Cerrado, fontes e modelos NASA, comparação causal e documentação. Isso sustenta demonstração e avaliação com usuários. Não sustenta prometer vitória.
+
+Antes de apresentar como candidato pronto: demonstrar os três casos de ponta a ponta, testar leitura e controle em celular físico, registrar aprendizagem com iniciantes, fechar vídeo/pitch e pacote de submissão. A cronologia anterior ao início do evento é um risco de elegibilidade que deve ser esclarecido com organizadores; não esconder o histórico nem afirmar desclassificação sem decisão deles. [Avaliação documentada](42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
+
+
+---
+
+# 44 — Histórias reais e limites dos exercícios
+
+Fonte: `docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md` · SHA-256 original: `6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e` · Ajustes de caminhos privados: 0
+
+# 44 — Histórias reais e limites dos exercícios
+
+**R17 · fontes conferidas em 15/11/2026.** As três histórias do laboratório passam a partir de fatos NASA identificáveis. Foram retirados pedidos e equipes fictícias da narrativa. Ipê é o nome da equipe; a árvore não é a explicação científica das missões.
+
+Essa mudança altera textos, referências e o guia de leitura. Não troca os registros do domínio nem transforma o simulador em uma reprodução histórica. A implementação e a implantação conferida são estados diferentes: consulte o [registro de publicação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md).
+
+## Uma distinção que o jogador precisa enxergar
+
+| Camada | O que significa | Exemplo |
+| --- | --- | --- |
+| Fato documentado | Uma missão, observação ou resultado que a fonte NASA descreve. | A escolha de Nightingale pela OSIRIS-REx em 2019. |
+| Dado incorporado | Um valor efetivamente presente no pacote local, com origem. | Os seis registros históricos Terra/MODIS do Cerrado. |
+| Exercício didático | Um conjunto pequeno de regras para investigar uma decisão. | Contatos de 120 ou 500 segundos no caso Bennu. |
+| Referência visual | Um objeto 3D que ajuda a reconhecer o contexto. | O modelo NASA do Webb; sua geometria não valida a energia do catálogo. |
+
+Um fato verdadeiro na introdução não torna verdadeiros os números sintéticos da partida. Por isso a história e a explicação dos resultados mantêm seus limites próximos à atividade.
+
+## Terra/MODIS: observar vegetação ao longo do tempo
+
+O caso se apoia no uso de observações de luz refletida para estudar vegetação. O artigo do NASA Earth Observatory, publicado em **30/08/2000**, explica NDVI e EVI. O [catálogo Earthdata de MOD13](https://search.earthdata.nasa.gov/search?q=mod13) identifica o MOD13Q1 como produto Terra/MODIS composto a cada 16 dias, com resolução de 250 m. [Conceito NASA de índices de vegetação](https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/).
+
+O recorte já incorporado tem três pontos próximos a Rio Verde e dois períodos de 2024. Os compostos começam em **28/08** e **13/09**; as datas selecionadas das observações são **01/09** e **23/09**. Esses campos foram conferidos no [arquivo de dados do jogo](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/experiments/mission-design-lab/src/data/science-data.ts). O [NOTICE](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/NOTICE.md) conserva DOI, origem ORNL DAAC e alcance do subset.
+
+O exercício pergunta como processar e entregar esse arquivo com recursos limitados. Não há uma encomenda real da NASA para a equipe Ipê, uma nova aquisição MODIS durante a partida ou uma reprodução do satélite Terra. A diferença de NDVI é uma observação a investigar; não identifica por si só desmatamento, manejo ou chuva. Uma lacuna de entrega permanece lacuna.
+
+## Bennu: reconhecimento antes da coleta
+
+A OSIRIS-REx encontrou terreno mais rochoso do que o esperado. A análise dos locais de coleta passou por mais de 50 possibilidades e chegou a quatro candidatos. Nightingale foi selecionado em dezembro de 2019; a NASA descreve a necessidade de avaliar material acessível e obstáculos na aproximação. Esse episódio substitui a equipe de cartografia inventada. [Relato NASA de 29/03/2023](https://science.nasa.gov/blogs/osiris-rex/2023/03/29/2019-2020-choosing-a-touchdown-site-from-a-sea-of-hazards/).
+
+A coleta ocorreu em **20/10/2020**, e a cápsula com a amostra retornou à Terra em **24/09/2023**. O jogo não simula esse transporte físico. [Cronologia oficial da OSIRIS-REx](https://science.nasa.gov/mission/osiris-rex/).
+
+A ligação pedagógica é observar → transmitir → avaliar evidência. **Os setores A/B/C e as seis rugosidades do jogo são sintéticos**, em unidades arbitrárias. Não correspondem a Nightingale, Osprey ou aos demais candidatos reais. Os tempos, contatos e capacidades não são telemetria da OSIRIS-REx. O resultado não certifica local de coleta, pouso ou navegação.
+
+## Webb: instrumento, espectro e uma descoberta documentada
+
+Em **25/08/2022**, a NASA divulgou evidência de CO₂ na atmosfera do exoplaneta **WASP-39 b**. O espectro usado foi observado pelo **NIRSpec em 10/07/2022**, com uma característica entre **4,1 e 4,6 µm**. É um exemplo concreto da relação entre pergunta, instrumento e medida. [Publicação NASA sobre WASP-39 b](https://science.nasa.gov/missions/webb/nasas-webb-detects-carbon-dioxide-in-exoplanet-atmosphere/).
+
+O exercício mantém seus seis fluxos relativos sintéticos, nas faixas de **1,2, 2,0 e 3,5 µm**. Eles não são o espectro acima, não contêm sua característica de CO₂ e não permitem anunciar moléculas, água ou vida. A atividade avalia se o instrumento genérico escolhido atende ao requisito e se os pacotes chegam completos.
+
+Há uma correção conceitual importante: **o NIRCam também faz espectroscopia**. Todos os quatro instrumentos científicos do Webb possuem recursos espectroscópicos. A opção “câmera” do catálogo Ipê é deliberadamente mais simples e não representa o NIRCam. Nome de instrumento e modo de observação não são sinônimos. [Instrumentos científicos do Webb](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/).
+
+## O que esta revisão alterou
+
+| Material | Alteração | Preservado |
+| --- | --- | --- |
+| `MissionStories.tsx` | Três introduções factuais, fontes NASA clicáveis, datas, títulos de contexto e limites. | Seleção das missões e comportamento de expansão. |
+| `mission-curriculum.ts` | Contexto histórico, distinção entre instrumento genérico e NIRCam, limites dos dados. | Funções, ensaios A/B, parâmetros, tipos e resultados. |
+| [Guia didático](32-GUIA-DIDATICO-MISSOES-3D.md) | Capítulo das histórias e referências, sem personagens inventados. | Catálogos, cálculos, exercícios e contratos operacionais. |
+| Registro factual | [JSON de fatos e fontes](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/research/nasa-mission-stories-r17.json). | Separação entre fonte documental e dado integrado. |
+
+Os cinco testes existentes do domínio dos experimentos guiados e os 12 testes de interface do módulo de aprendizagem passaram após a revisão; TypeScript também. A interface foi exercitada em DOM simulado, não em navegador real. O corpo das funções de ensaio e seus tipos foi comparado com a base e permanece byte a byte idêntico. Isso verifica preservação dos resultados e compilação, não valida uma missão NASA ou aprendizagem humana. O recibo da rodada integrada documenta os demais testes quando executados.
+
+## Continuidade científica
+
+Para substituir um conjunto sintético, a próxima entrega precisa selecionar um produto real, preservar unidade, qualidade, data, licença e proveniência, definir uma pergunta compatível e testar o cálculo com uma referência independente. Acrescentar nomes de alvos reais aos valores atuais seria incorreto. Também não basta importar um modelo 3D ou uma imagem científica: a presença visual não torna esses valores parte do motor.
+
+O arquivo de fatos registra as fontes efetivamente consultadas, incluindo o limite de recuperação do catálogo Earthdata: o índice foi legível, mas a página individual do produto retornou 403 nesta sessão. Não houve coleta de novas observações NASA nesta revisão.
+
+
+---
+
 # Atribuição, licenças e autoria assistida
 
 Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0
@@ -5661,11 +6199,11 @@ A versão 0.4.0-beta.2 acrescenta ConOps didático, revisão pré-voo, requisito
 
 # Missão Ipê — laboratório de missões R9–R10
 
-Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `792d827063f24e3392e3023d8a721ce8012070ecb23b3ee9bb36bafd415597ed` · Ajustes de caminhos privados: 0
+Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `139e3f47c850cec15f3b6615592c1b3019b2b016865ae8c66deaf64adbbbc8f5` · Ajustes de caminhos privados: 0
 
 # Missão Ipê — laboratório de missões R9–R10
 
-**Atualização R16 · 0.7.0-beta.1:** [propósito e experimentos das três missões](../../docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), [handoff atual](../../docs/38-HANDOFF-R16.md), [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.
+**Atualização R17 · 0.8.0-beta.1:** [histórias reais NASA e limites](../../docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md), [propósito e experimentos das três missões](../../docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), [handoff atual](../../docs/43-HANDOFF-GERAL-R17.md), [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.
 
 **Atualização R14 · 0.5.0-beta.1:** [guia atual das três missões](../../docs/31-TRES-MISSOES-CIENTIFICAS-R14.md), [modelos NASA e créditos](../../docs/30-ATIVOS-NASA-IMPLEMENTADOS.md), [recibo público](../../PUBLICADO.md). Novo domínio isolado em `src/lab/scientific-expeditions.ts`, cenas temporais e duas jornadas científicas; Cerrado mantém suas regras e persistência. Execute `npm run verify` neste diretório. O texto abaixo conserva os cortes anteriores.
 

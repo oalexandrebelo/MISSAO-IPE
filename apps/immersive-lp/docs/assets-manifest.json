@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "date": "2026-11-14",
+  "version": 2,
+  "date": "2026-11-15",
   "files": [
     {
       "path": "public/assets/REMOTION-LICENSE.md",
@@ -76,6 +76,18 @@
       "path": "asset-packs/kaykit-space-base-gltf.zip",
       "bytes": 533500,
       "sha256": "73f4cc5c231a1df8fefeddd00debef3d8dd91df8a0f6df047668c34372ebbee3"
+    },
+    {
+      "path": "public/brand/missao-ipe-logo.svg",
+      "bytes": 23367,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "source": "Marca SVG fornecida pelo responsável; derivado canônico em experiments/mission-design-lab/public/brand; geometria e paleta preservadas."
+    },
+    {
+      "path": "public/brand/missao-ipe-symbol.svg",
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "source": "Marca SVG fornecida pelo responsável; derivado canônico em experiments/mission-design-lab/public/brand; geometria e paleta preservadas."
     }
   ]
 }

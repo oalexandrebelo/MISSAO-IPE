@@ -18,12 +18,11 @@ export function Icon({ name = 'arrow', ...props }: Props) {
   return <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{paths[name]}</svg>;
 }
 
-export function BotanicalGlyph({ kind, ...props }: SVGProps<SVGSVGElement> & { kind: string }) {
+export function MissionGlyph({ kind, ...props }: SVGProps<SVGSVGElement> & { kind: string }) {
   return <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true" {...props}>
-    <circle cx="50" cy="50" r="45" strokeOpacity=".22" /><circle cx="50" cy="50" r="34" strokeOpacity=".1" />
-    {kind === 'seed' ? <><path d="M50 77V42c-18 0-24-11-24-24 16 0 28 6 28 24M50 58c0-22 11-33 26-33 0 20-11 33-26 33" /><circle cx="50" cy="77" r="2" /></> :
-      kind === 'roots' ? <><path d="M50 22v44m0-29L35 25m15 23 18-17M50 59 29 74m21-9 17 13m-30-9-11-3m35 7 12-5M50 65v18" /><circle cx="50" cy="22" r="3" /></> :
-      kind === 'crown' ? <><path d="M50 84V45m0 10L30 42m20 18 21-17" /><path d="M50 16c-10 0-14 7-15 12-15-1-22 18-12 26 2 15 21 19 27 12 15 9 29-1 28-13 9-10 0-25-13-25-1-9-6-12-15-12Z" /></> :
-      <><path d="M18 65h64M25 57a25 25 0 0 1 50 0M50 13v13M20 31l10 9m50-9-10 9M32 74h36" /><circle cx="50" cy="50" r="8" /></>}
+    <circle cx="50" cy="50" r="45" strokeOpacity=".22" />
+    {kind === 'earth' ? <><circle cx="50" cy="50" r="29" /><ellipse cx="50" cy="50" rx="13" ry="29" /><path d="M21 50h58M26 35h48M26 65h48M9 68 91 32" strokeDasharray="3 4" /></> :
+      kind === 'asteroid' ? <><path d="m22 35 20-15 27 8 13 27-20 23-30-7-14-21Z" /><path d="m22 35 25 10 22-17M47 45l15 33M47 45 18 50M47 45l35 10" /><circle cx="62" cy="41" r="4" /><circle cx="34" cy="55" r="5" /></> :
+      <><path d="m35 27 15-9 15 9v18l-15 9-15-9Zm-15 27 15-9 15 9v18l-15 9-15-9Zm30 0 15-9 15 9v18l-15 9-15-9Z" /><path d="m16 83 68-67M72 16h12v12" /></>}
   </svg>;
 }

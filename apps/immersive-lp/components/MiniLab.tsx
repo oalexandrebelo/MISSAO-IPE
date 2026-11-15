@@ -12,7 +12,7 @@ export default function MiniLab() {
   const [redesign, setRedesign] = useState(false);
   const result = useMemo(() => simulateMission(redesign ? { ...DEFAULT_CONFIG, battery: 'large', processing: 'index' } : DEFAULT_CONFIG, scenario, { trace: false }), [scenario, redesign]);
   function download() {
-    const blob = new Blob([JSON.stringify({ description: 'Demonstração educativa PROJETO IPÊ. Não é uma especificação de voo.', ...result }, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify({ description: 'Demonstração educativa MISSÃO IPÊ. Não é uma especificação de voo.', ...result }, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = `ipe-${scenario}-${redesign ? 'redesenho' : 'base'}.json`; anchor.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   return <div className="lab-console" data-reveal>

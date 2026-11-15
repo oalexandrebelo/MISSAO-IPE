@@ -1,5 +1,7 @@
 # Decisões de implementação — LP IPÊ
 
+> Registro histórico da PR de 14/11/2026. Na integração R17, os quatro capítulos arbóreos foram substituídos pelos três casos NASA e pelos quatro segmentos de missão; campanha já existente passou a ter link. Marca, fontes locais e estado de verificação atuais: [R17-INTEGRACAO.md](R17-INTEGRACAO.md).
+
 Data: 14/11/2026, horário de referência America/Sao_Paulo. Execução individual, sem subagentes e sem perguntas, conforme o briefing.
 
 1. **Tema e fonte de verdade.** A leitura do repositório público `oalexandrebelo/PROJETO-IPE`, commit-base `b0cb7d7febec16dd97425070d72c21fde992436f`, prevaleceu sobre resumos anteriores conflitantes. O tema é projeto de missões com dados de vegetação do Cerrado; não é o projeto separado ASTRAL VITAIS nem um jogo de trânsito. Fontes: README, docs/22-PLANO-CONTINUIDADE.md, experiments/mission-design-lab/src/core/catalog.ts.

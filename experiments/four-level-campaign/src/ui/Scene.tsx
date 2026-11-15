@@ -13,7 +13,7 @@ export interface SceneProps { compact?: boolean; progress?: number; config?: Mis
 
 const ORBIT_VIEWS: readonly { id: SceneFocus; number: string; name: string; text: string }[] = [
   { id: 'science', number: '01', name: 'O Cerrado', text: 'A pergunta científica parte de seis registros históricos de vegetação Terra/MODIS.' },
-  { id: 'satellite', number: '02', name: 'Seu CubeSat', text: 'Um satélite fictício. Você decide como ele usa energia, processa e transporta os arquivos.' },
+  { id: 'satellite', number: '02', name: 'Seu CubeSat', text: 'Um satélite didático. Você decide como ele usa energia, processa e transporta os arquivos.' },
   { id: 'ground', number: '03', name: 'A estação', text: 'Cada registro precisa chegar completo ao solo e passar pela validação científica.' },
 ];
 const HANGAR_VIEWS: readonly { id: SceneFocus; number: string; name: string; text: string }[] = [
@@ -173,6 +173,6 @@ export function Scene({ compact = false, progress = 0, config = DEFAULT_CONFIG, 
       {!compact ? <div className="orbit-explanation" aria-live="polite"><p>{selected.text}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selected.text}</p>}
       <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>Ilustração sem escala · física calculada separadamente</span></p>
     </div>
-    <p className="sr-only">{variant === 'hangar' ? 'CubeSat fictício com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat fictício. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
+    <p className="sr-only">{variant === 'hangar' ? 'CubeSat didático com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat didático. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
   </section>;
 }

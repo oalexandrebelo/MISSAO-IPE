@@ -1,0 +1,115 @@
+{
+  "edition": "R17",
+  "version": "0.8.0-beta.1",
+  "recordedAt": "2026-11-15T09:08:13.241553+00:00",
+  "scope": "Official MISSÃO IPÊ SVG identity; factual NASA mission narratives; source consolidation and repair of missing Vercel LP root.",
+  "scientificEngineModified": false,
+  "newDependenciesInGame": false,
+  "applicationsConsolidated": [
+    "apps/immersive-lp: PR1 merged preserving its commits",
+    "contributions/bruno-figma: filtered 32-file snapshot with five original commit links, not active runtime"
+  ],
+  "automated": {
+    "labDomain": {
+      "passed": 145,
+      "failed": 0
+    },
+    "labSimulatedUI": {
+      "passed": 38,
+      "failed": 0
+    },
+    "campaignDomain": {
+      "passed": 120,
+      "failed": 0
+    },
+    "campaignSimulatedUI": {
+      "passed": 14,
+      "failed": 0
+    },
+    "context": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distribution": {
+      "passed": 17,
+      "failed": 0
+    },
+    "portalSimulatedDOM": {
+      "passed": 10,
+      "failed": 0
+    },
+    "portalPolicyAndLocalHTTP": {
+      "passed": 2,
+      "failed": 0
+    },
+    "typescriptAndBuild": "passed",
+    "landingPage": {
+      "typecheck": "passed",
+      "engine": {
+        "passed": 4,
+        "failed": 0
+      },
+      "assets": {
+        "verified": 17
+      },
+      "build": "passed-static-export",
+      "playwright": {
+        "passed": 18,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 8993.143,
+        "reportSha256": "1dea6e9d17361b67e5a8f5b3ec85b55923879702e6f311792102381524fe8d07"
+      },
+      "visual": {
+        "viewports": [
+          [
+            1440,
+            1000
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "localScreenshots": [
+          "/tmp/ipe-r17-lp-review/desktop-decoded.png",
+          "/tmp/ipe-r17-lp-review/cases.png",
+          "/tmp/ipe-r17-lp-review/mobile-decoded.png"
+        ]
+      }
+    }
+  },
+  "initialFailuresResolved": [
+    "Two lab UI expectations failed: old brand accessible name and missing explicit molecular-limit phrase. Brand expectation updated; no-water/no-life sentence restored; all 38 UI tests then passed."
+  ],
+  "sourceVerification": {
+    "brunoOriginalFiles": 32,
+    "allSha256Match": true,
+    "excludedAssets": 4,
+    "brand": "Original path geometry and transparent backgrounds retained; contrast variant documented. Figma frame 8:318 visually inspected."
+  },
+  "browser": {
+    "surface": "In-app browser at compiled local /lab/",
+    "observed": [
+      "New SVG brand accessible name",
+      "All three mission entries",
+      "MODIS factual story expansion and NASA sources",
+      "OSIRIS-REx Nightingale story, timeline and synthetic-sector boundary",
+      "Webb WASP-39 b story, NIRCam capability and synthetic-data boundary",
+      "No error-level console messages captured during observed actions"
+    ],
+    "limits": [
+      "Local checks before publication; production recorded separately",
+      "Not a physical-device or measured-FPS validation",
+      "No certified learning outcome or full accessibility certification"
+    ]
+  },
+  "vercelDiagnosis": {
+    "project": "projeto-ipe-lp",
+    "failedDeployment": "dpl_Fco7AFQB9jTuSRX5VcRbThbG6LSG",
+    "message": "The specified Root Directory \"apps/immersive-lp\" does not exist. Please update your Project Settings.",
+    "repair": "Bring reviewed PR1 app folder into main; keep app-specific build and local fonts."
+  },
+  "readiness": "Demonstrable educational prototype. Competition eligibility, submission, human learning outcomes and physical-device acceptance remain unproven. See docs42.",
+  "publication": "Production ID, exact SHA and HTTP receipts are recorded separately after publication."
+}

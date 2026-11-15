@@ -1,12 +1,12 @@
 # 32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica
 
-**14/11/2026 · edição R15.** Este guia explica o projeto para quem vai jogar, facilitar uma atividade ou continuar seu desenvolvimento. Parte dos três casos e dos contratos implementados na R14. A implementação da montagem 3D configurável R15 e sua verificação integrada local estão concluídas. O status da publicação e a implantação efetivamente conferida devem ser consultados em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) e no [recibo de produção R15](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/production-r15.json).
+**Base de 14/11/2026 · R15; revisão factual das histórias em 15/11/2026 · R17.** Este guia explica o projeto para quem vai jogar, facilitar uma atividade ou continuar seu desenvolvimento. Parte dos três casos e dos contratos implementados na R14. A implementação da montagem 3D configurável R15 e sua verificação integrada local estão concluídas. O status da publicação e a implantação efetivamente conferida devem ser consultados em [PUBLICADO.md](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/PUBLICADO.md) e no [recibo de produção R15](https://github.com/oalexandrebelo/PROJETO-IPE/blob/main/evidence/production-r15.json).
 
-O ponto de entrada é o [beta de três missões](../lab/index.html). Para detalhes de implementação, leia [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.md). Para ampliar o repertório, consulte [33 — Oportunidades NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md).
+O ponto de entrada é o [beta de três missões](../lab/index.html). Para detalhes de implementação, leia [31 — Três missões científicas](31-TRES-MISSOES-CIENTIFICAS-R14.md). Para ampliar o repertório, consulte [33 — Oportunidades NASA Science](33-OPORTUNIDADES-NASA-SCIENCE.md). A revisão das narrativas e seus limites está em [44 — Histórias reais](44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md).
 
 ## 1. O que estamos construindo
 
-O Ipê é um jogo de projeto de missões científicas. O jogador recebe uma pergunta, escolhe uma arquitetura limitada por recursos, prevê o resultado, executa o modelo e verifica quais evidências chegaram ao solo. Depois explica o resultado e tenta uma alteração. A proposta é aprender como decisões de engenharia interferem no que pode ser conhecido cientificamente.
+O Ipê é um jogo de projeto de missões científicas. **Ipê é o nome da equipe; a árvore não constitui o tema científico ou a história das missões.** Os casos partem de documentação NASA sobre Terra/MODIS, OSIRIS-REx e Webb. O jogador recebe uma pergunta, escolhe uma arquitetura limitada por recursos, prevê o resultado, executa o modelo e verifica quais evidências chegaram ao solo. Depois explica o resultado e tenta uma alteração. A proposta é aprender como decisões de engenharia interferem no que pode ser conhecido cientificamente.
 
 O desafio central é fazer a ciência chegar. Um instrumento pode produzir um registro e a missão ainda falhar porque a bateria não sustenta a operação, a memória não comporta os dados ou o contato acaba antes da recepção completa. Também é possível transmitir tudo e não responder à pergunta, se o instrumento escolhido não atende ao objetivo.
 
@@ -16,11 +16,11 @@ O projeto trabalha com três perguntas científicas. Elas compartilham uma forma
 
 Não se trata de software de voo, planejamento de uma missão real ou reprodução completa de um veículo NASA. Aprender com um modelo exige compreender tanto suas regras quanto o que ficou fora dele.
 
-## 2. Três histórias e três tipos de retorno
+## 2. Três histórias reais e três exercícios com limites explícitos
 
 ### Cerrado — observar mudança sem inventar a causa
 
-Uma equipe precisa comparar vegetação em três pontos próximos a Rio Verde, Goiás, em dois períodos. São seis registros históricos Terra/MODIS do produto MOD13Q1 Collection 061. O jogo transporta e processa esses arquivos em uma operação didática de 180 minutos; a nave fictícia não faz uma nova aquisição MODIS durante a partida.
+O MODIS, a bordo do satélite Terra, fornece observações usadas no estudo da vegetação. A explicação NASA de NDVI relaciona o índice à luz vermelha e infravermelha próxima refletida pela superfície. O projeto utiliza um recorte de seis registros históricos do produto MOD13Q1 Collection 061: três pontos próximos a Rio Verde, Goiás, em dois períodos de 2024. Não há um pedido fictício atribuído a uma equipe NASA. O jogo transporta e processa esses arquivos em uma operação didática de 180 minutos; sua nave não reproduz o Terra nem faz uma nova aquisição MODIS durante a partida.
 
 Os compostos têm início em **28/08/2024** e **13/09/2024**. No pacote local, as observações selecionadas são de **01/09/2024** e **23/09/2024**. Essas datas não são intercambiáveis: o início do composto identifica o período do produto, enquanto a data de observação identifica o registro escolhido dentro desse contexto.
 
@@ -32,21 +32,25 @@ A explicação conceitual de índices de vegetação pode ser aprofundada no art
 
 ### Bennu — escolher uma observação que responda à pergunta
 
-Uma equipe fictícia quer estudar a morfologia de uma superfície. Pede dois registros de cada uma de três regiões didáticas, A, B e C. A pergunta exige a câmera de superfície. O jogador precisa sustentar a produção e a entrega de seis registros dentro da vida operacional escolhida.
+A OSIRIS-REx encontrou uma superfície de Bennu inesperadamente coberta por rochas. A equipe real ampliou o reconhecimento e comparou possíveis locais de coleta usando imagens recebidas da sonda. Depois de avaliar mais de 50 possibilidades e chegar a quatro candidatos, escolheu Nightingale em dezembro de 2019. O relato NASA descreve as restrições de terreno, material disponível e navegação; são fatos documentados, sem personagens ou emergências criados pelo jogo. [NASA, relato de 29/03/2023](https://science.nasa.gov/blogs/osiris-rex/2023/03/29/2019-2020-choosing-a-touchdown-site-from-a-sea-of-hazards/).
+
+A atividade extrai desse episódio a relação entre observar e entregar evidência. O catálogo pede dois registros de cada uma de três regiões didáticas, A, B e C, com a câmera de superfície. O jogador sustenta a produção e a entrega de seis registros dentro da vida operacional escolhida. Isso é um exercício de recursos; não reencena as decisões históricas da OSIRIS-REx.
 
 A rugosidade usada no exercício é **sintética**, em unidades arbitrárias. Os seis valores não são medições NASA, as regiões não são locais nomeados de Bennu e o resultado não escolhe um lugar seguro para pousar. O modelo 3D oficial fornece contexto visual do alvo.
 
-A história real da OSIRIS-REx ajuda a distinguir observação remota, amostra e análise: a missão coletou material em 2020 e entregou a amostra à Terra em 2023. O Ipê não simula esse retorno físico. Seu exercício entrega registros digitais de uma pesquisa fictícia. [Fonte: missão OSIRIS-REx](https://science.nasa.gov/mission/osiris-rex/).
+A OSIRIS-REx coletou material em **20/10/2020** e a cápsula entregou a amostra à Terra em **24/09/2023**. O Ipê não simula esse retorno físico. Seu exercício entrega registros digitais sintéticos, separados dos dados e da cronologia da missão real. [Fonte: missão OSIRIS-REx](https://science.nasa.gov/mission/osiris-rex/).
 
 Uma boa resposta ao final é: “Recebi seis registros compatíveis com a pergunta e posso comparar a variável do exercício; isso não é uma caracterização científica real de Bennu.”
 
 ### Telescópio — ler luz não é apenas produzir uma imagem
 
-Uma equipe fictícia quer comparar três faixas infravermelhas em duas exposições. O pedido exige o espectrômetro. A câmera pode produzir dados dentro do modelo, mas não atende à pergunta especificada.
+Em **25/08/2022**, a NASA anunciou evidência de dióxido de carbono na atmosfera de **WASP-39 b**, baseada no espectro registrado pelo **NIRSpec em 10/07/2022**. A característica espectral entre **4,1 e 4,6 µm** ajudou a identificar a molécula. Esse resultado real mostra por que instrumento, modo de observação e análise precisam corresponder à pergunta científica. [NASA: detecção em WASP-39 b](https://science.nasa.gov/missions/webb/nasas-webb-detects-carbon-dioxide-in-exoplanet-atmosphere/).
+
+A atividade do Ipê compara três faixas infravermelhas em duas exposições didáticas. Seu requisito exige o espectrômetro genérico do catálogo. A opção câmera pode produzir pacotes, mas não atende ao requisito deste modelo. Ela não representa o NIRCam real.
 
 As faixas didáticas são **1,2 µm, 2,0 µm e 3,5 µm**. Os seis valores de fluxo relativo foram inventados para o exercício. Nenhuma diferença demonstra água, atmosfera, composição ou vida. O modelo do Webb é uma referência visual; não representa uma reprodução de seus instrumentos, massa, refrigeração ou desempenho.
 
-Na astronomia real, observações por imagem e por espectroscopia respondem a necessidades diferentes. A página [Webb’s Scientific Instruments](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) ajuda a estudar essa distinção. No Ipê, a regra instrumental é deliberadamente pequena e explícita para que o jogador possa justificá-la.
+Na astronomia real, imagem e espectroscopia são modos de observação diferentes, que podem coexistir no mesmo instrumento. **Todos os quatro instrumentos científicos do Webb têm recursos espectroscópicos, inclusive o NIRCam.** A página [Webb’s Scientific Instruments](https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/) documenta essas capacidades. Portanto, a escolha binária do jogo é uma simplificação do catálogo, e não uma descrição completa do observatório. As faixas sintéticas abaixo de 4 µm não reproduzem o sinal histórico de CO₂ acima citado.
 
 As duas ou três horas de Bennu e telescópio representam **operação depois da chegada**. Não são o tempo de viagem para um asteroide ou para L2. Os perfis LEO/L2 são conceituais e mudam agendas didáticas; não há cálculo de transferência orbital.
 
@@ -196,7 +200,7 @@ Uma configuração de referência usa lançador científico, L2 conceitual, espe
 
 Essa referência altera várias decisões em relação ao padrão. Serve para mostrar uma possibilidade viável, mas não permite atribuir a melhora a uma única mudança. Para investigar uma causa, crie uma sequência de tentativas mudando uma decisão por vez e registrando quando o evento limitante muda.
 
-Perguntas: o que a câmera permitiria perguntar em outra missão? Por que ela não atende a esta? Qual dado adicional seria necessário antes de associar um espectro real a uma substância? O que, entre os resultados apresentados, foi inventado para aprender engenharia?
+Perguntas: o que a câmera permitiria perguntar em outra missão? Por que ela não atende a esta? Qual dado adicional seria necessário antes de associar um espectro real a uma substância? Quais números foram definidos apenas para o exercício de engenharia, e quais fatos podem ser conferidos na fonte NASA?
 
 ## 9. Como explicar sucesso, falha e projeto inválido
 
@@ -280,7 +284,7 @@ As atividades abaixo avaliam raciocínio sobre o modelo. Não pressupõem domín
 | Instrumento | Transmitir uma imagem atende a qualquer pergunta? | Relacionar instrumento, variável e requisito científico. |
 | Tempo | Três horas significam viagem até Bennu? | Identificar a janela operacional após chegada e a ausência de transferência calculada. |
 | Comparação | Duas tentativas mudaram quatro escolhas. Qual mudança causou o sucesso? | Reconhecer que não se isolou uma variável; propor sequência controlada. |
-| 3D | A presença de um modelo Webb valida a potência do telescópio fictício? | Distinguir referência geométrica de parâmetros do domínio. |
+| 3D | A presença de um modelo Webb valida a potência do telescópio didático? | Distinguir referência geométrica de parâmetros do domínio. |
 
 Para avaliar uma explicação, use quatro critérios simples: identifica o requisito, aponta evidência concreta, conecta mecanismo e consequência, e reconhece um limite. Um relato pode ser bom mesmo quando a missão falha. Da mesma forma, alcançar 6/6 sem entender por quê não demonstra sozinho aprendizagem.
 
@@ -300,7 +304,7 @@ Durante uma atividade, prefira nomes de equipe que não precisem identificar pes
 
 | Camada | O que existe | O que não se pode deduzir |
 | --- | --- | --- |
-| Arquivos do Cerrado | Seis registros históricos reais Terra/MODIS, com origem e qualidade. | Aquisição em tempo real pelo CubeSat fictício ou causa ambiental determinada apenas pelo NDVI. |
+| Arquivos do Cerrado | Seis registros históricos reais Terra/MODIS, com origem e qualidade. | Aquisição em tempo real pelo CubeSat didático ou causa ambiental determinada apenas pelo NDVI. |
 | Observações de Bennu | Seis valores de rugosidade sintéticos, em unidades arbitrárias. | Mapa científico, segurança de pouso ou medição real das regiões A/B/C. |
 | Observações do telescópio | Seis fluxos relativos sintéticos em três faixas didáticas. | Detecção de água, vida, atmosfera ou desempenho instrumental Webb. |
 | Engenharia | Catálogos finitos, agendas e balanços versionados. | Certificação de hardware, orçamento real ou projeto pronto para voar. |

@@ -21,12 +21,17 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/40-IDENTIDADE-MISSAO-IPE-R17.md', target: 'docs/40-IDENTIDADE-MISSAO-IPE-R17.md', title: 'Marca oficial · MISSÃO IPÊ', description: 'SVG transparente, procedência, contraste e aplicação.' },
+  { source: 'docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md', target: 'docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md', title: 'Contribuições e repositório oficial', description: 'Origem do trabalho do Bruno, importação revisada e oportunidades.' },
+  { source: 'docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md', target: 'docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md', title: 'Estamos prontos?', description: 'Evidências, lacunas e critérios documentados do desafio.' },
+  { source: 'docs/43-HANDOFF-GERAL-R17.md', target: 'docs/43-HANDOFF-GERAL-R17.md', title: 'Comece aqui · handoff dos dois devs', description: 'Mapa do produto, responsabilidades, publicação e aceite.' },
+  { source: 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md', target: 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md', title: 'Três histórias reais NASA', description: 'Fatos, fontes e diferenças entre missões reais e exercícios.' },
   { source: 'docs/39-ATIVOS-DA-PR-E-APLICACOES.md', target: 'docs/39-ATIVOS-DA-PR-E-APLICACOES.md', title: 'Assets da contribuição · aplicações', description: 'Inventário, procedência, custos e aplicação dos recursos visuais nas três missões.' },
   { source: 'docs/35-REVISAO-PRS-E-DIRECAO-R16.md', target: 'docs/35-REVISAO-PRS-E-DIRECAO-R16.md', title: 'Revisão das PRs e direção · R16', description: 'Contribuições revisadas, estado do projeto e prioridades para tornar o aprendizado explícito.' },
   { source: 'docs/36-PORTAL-PLANET-JUMPING.md', target: 'docs/36-PORTAL-PLANET-JUMPING.md', title: 'Planet Jumping · experimento visual', description: 'Portal cinematográfico independente, mídias externas, acessibilidade, recuperação e limites.' },
   { source: 'docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md', target: 'docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md', title: 'Propósito e descobertas · R16', description: 'O que cada missão ensina, consequências das escolhas e oportunidades tecnológicas avaliadas.' },
   { source: 'docs/38-HANDOFF-R16.md', target: 'docs/38-HANDOFF-R16.md', title: 'Continuidade para dois devs · R16', description: 'Integração, contratos, evidências e próximos passos da experiência educativa.' },
-  { source: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', target: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', title: 'Aprenda com o Projeto Ipê', description: 'Guia completo: histórias, escolhas, conceitos, experimentos e roteiros de aula para as três missões.' },
+  { source: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', target: 'docs/32-GUIA-DIDATICO-MISSOES-3D.md', title: 'Aprenda com o MISSÃO IPÊ', description: 'Guia completo: histórias, escolhas, conceitos, experimentos e roteiros de aula para as três missões.' },
   { source: 'docs/33-OPORTUNIDADES-NASA-SCIENCE.md', target: 'docs/33-OPORTUNIDADES-NASA-SCIENCE.md', title: 'Oportunidades NASA Science', description: 'Oito recursos oficiais, aplicações didáticas, limites e sequência recomendada de integração.' },
   { source: 'docs/34-HANDOFF-IMERSAO-3D-R15.md', target: 'docs/34-HANDOFF-IMERSAO-3D-R15.md', title: 'Dois devs · montagem 3D R15', description: 'Estado atual, contratos de apresentação, vínculo com o motor, mapa do código e critérios de continuidade.' },
   { source: 'docs/32-CAMPANHA-QUATRO-NIVEIS.md', target: 'docs/32-CAMPANHA-QUATRO-NIVEIS.md', title: 'Campanha didática · quatro níveis', description: 'Progressão jogável, PRD, PRT, Mermaid, schema, pesquisa, pitch e handoff próprios.' },
@@ -40,7 +45,7 @@ const publicMarkdown = [
   { source: 'docs/23-IDENTIDADE-VISUAL.md', target: 'docs/23-IDENTIDADE-VISUAL.md', title: 'Marca e arquivos SVG', description: 'Origem da identidade, aplicação vetorial, paleta e arquivos editáveis.' },
   { source: 'docs/26-TIPOGRAFIA.md', target: 'docs/26-TIPOGRAFIA.md', title: 'Tipografia e leitura', description: 'Comparação das cinco famílias sugeridas, fontes locais, licenças e critérios de aplicação.' },
   { source: 'docs/21-OPORTUNIDADES-NASA.md', target: 'docs/21-OPORTUNIDADES-NASA.md', title: 'APIs e oportunidades NASA', description: 'Pesquisa oficial, correções, prioridades e limites das futuras integrações.' },
-  { source: 'docs/22-PLANO-CONTINUIDADE.md', target: 'docs/22-PLANO-CONTINUIDADE.md', title: 'Etapas do PROJETO IPÊ', description: 'Estado atual, quatro níveis narrativos, próximos passos e critérios de aceite.' },
+  { source: 'docs/22-PLANO-CONTINUIDADE.md', target: 'docs/22-PLANO-CONTINUIDADE.md', title: 'Etapas da MISSÃO IPÊ', description: 'Estado atual, quatro níveis narrativos, próximos passos e critérios de aceite.' },
   { source: 'web/public-docs/ESTADO-PUBLICO.md', target: 'docs/ESTADO-PUBLICO.md', title: 'Estado público da BETA', description: 'Escopo, cronologia, elegibilidade e limites de uso.' },
   { source: 'web/public-docs/COMO-USAR.md', target: 'docs/COMO-USAR.md', title: 'Como usar', description: 'Jogo, apresentação, arquitetura e alternativa local.' },
   { source: 'web/public-docs/ORIGEM-DOS-DADOS.md', target: 'docs/ORIGEM-DOS-DADOS.md', title: 'Origem dos dados', description: 'MOD13Q1.061, arquivos de 2024 e hipóteses didáticas.' },
@@ -153,13 +158,15 @@ function renderMarkdown(markdown) {
   return out.join('\n');
 }
 function page(title, content, { source, index = false } = {}) {
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · Projeto Ipê</title><link rel="icon" type="image/svg+xml" href="../brand/projeto-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="Projeto Ipê, início"><img src="../brand/projeto-ipe-logo-on-light.svg" width="900" height="320" alt="Projeto Ipê"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/25-HANDOFF-DOIS-DEVS.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>Projeto Ipê · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · MISSÃO IPÊ</title><link rel="icon" type="image/svg+xml" href="../brand/missao-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="MISSÃO IPÊ, início"><img src="../brand/missao-ipe-logo-on-light.svg" width="1064" height="499" alt="MISSÃO IPÊ"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/43-HANDOFF-GERAL-R17.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>MISSÃO IPÊ · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
 }
 async function addMarkdown(entry, { index = true, category = 'public-document' } = {}) {
   if (!(await copy(entry.source, entry.target, category))) return;
   const raw = await readFile(safePath(root, entry.source), 'utf8');
   const target = entry.target.replace(/\.md$/, '.html');
-  const html = page(entry.title, renderMarkdown(raw), { source: entry.target.split('/').pop() });
+  const superseded = /docs\/(?:22-|25-|29-|31-|32-CAMPANHA|35-)/.test(entry.source);
+  const historyNote = superseded ? '<p class="historical"><strong>Registro de uma edição anterior.</strong> A direção atual usa histórias reais NASA e IPÊ somente como nome da equipe. Consulte o <a href="43-HANDOFF-GERAL-R17.html">handoff R17</a> e as <a href="44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html">histórias e fontes atuais</a>. Propostas e estados abaixo conservam o corte original.</p>' : '';
+  const html = page(entry.title, historyNote + renderMarkdown(raw), { source: entry.target.split('/').pop() });
   await emit(target, html, { category: 'rendered-public-document', source: entry.source, sourceSha256: digest(raw), transformation: 'escaped static HTML rendering of selected Markdown' });
   if (index) docs.push({ ...entry, html: target });
 }
@@ -172,11 +179,12 @@ try {
   for (const extension of ['html', 'css', 'js']) await copy(`web/game-design.${extension}`, `game-design.${extension}`, 'interactive-game-design-study');
   await copy('web/planet-jumping.html', 'planet-jumping.html', 'standalone-remote-media-experiment');
   await copy('research/technology-opportunities-r16.json', 'research/technology-opportunities-r16.json', 'reviewed-technology-opportunities');
+  for (const name of ['bruno-consolidation-r17', 'readiness-r17', 'nasa-mission-stories-r17']) await copy(`research/${name}.json`, `research/${name}.json`, 'reviewed-r17-evidence');
   await copy('research/pr-assets-r16.json', 'research/pr-assets-r16.json', 'reviewed-pr-asset-inventory');
   await copy('research/nasa-science-opportunities.json', 'research/nasa-science-opportunities.json', 'official-nasa-science-opportunities');
   await copy('research/nasa-3d-catalog.json', 'research/nasa-3d-catalog.json', 'official-3d-resource-catalog');
   await copy('web/documentation.css', 'documentation.css', 'documentation-style');
-  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo-on-light.svg', 'projeto-ipe-logo.png']) {
+  for (const name of ['projeto-ipe-symbol.svg', 'projeto-ipe-logo.svg', 'projeto-ipe-logo-on-light.svg', 'projeto-ipe-logo.png', 'missao-ipe-logo.svg', 'missao-ipe-logo-on-light.svg', 'missao-ipe-symbol.svg', 'missao-ipe-symbol-on-light.svg', 'missao-ipe-logo.png', 'brand-provenance-r17.json', 'preview-r17.html', 'originals/missao-ipe-logo-original.svg', 'originals/missao-ipe-symbol-original.svg']) {
     await copy(`experiments/mission-design-lab/public/brand/${name}`, `brand/${name}`, 'project-brand');
   }
   await copy('web/mission-visuals.css', 'mission-visuals.css', 'interactive-visual-style');
@@ -267,7 +275,7 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R16-purpose-and-discovery-plus-four-level-campaign', version: '0.7.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R17-official-brand-and-evidence-based-stories', version: '0.8.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,

@@ -75,18 +75,18 @@ const fixture = (prefix: string, labels: readonly string[], values: readonly num
 export const EXPEDITIONS: Readonly<Record<ExpeditionId, ExpeditionMetadata>> = freeze({
   bennu: {
     id: 'bennu', title: 'Bennu: ler uma superfície', subtitle: 'Imagem, morfologia e entrega científica', objective: cameraGoal,
-    backstory: 'Uma equipe fictícia solicita dois registros de cada região A, B e C. O índice de rugosidade é uma variável criada para comparar as vistas; não constitui mapa medido de Bennu.',
-    dataNotice, facts: ['A nave Ipê é fictícia; o modelo NASA representa somente o contexto do alvo.', 'Órbitas, lançadores, massa, créditos e agendas abaixo são escolhas didáticas, sem C3 ou trajetória real.', modelAssumptions],
+    backstory: 'A OSIRIS-REx usou observações de Bennu para selecionar Nightingale em 2019. O exercício investiga a entrega de imagens ao solo com setores A, B e C e rugosidades sintéticos; eles não representam os locais reais de coleta.',
+    dataNotice, facts: ['A nave configurável é um modelo didático; o modelo NASA contextualiza o alvo, sem reproduzir a OSIRIS-REx.', 'Órbitas, lançadores, massa, créditos e agendas abaixo são escolhas didáticas, sem C3 ou trajetória real.', modelAssumptions],
     origins: [{ title: 'NASA 3D Resources · 1999 RQ36 (Bennu)', url: 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' }],
     requirements: { user: 'Receber dois registros válidos de cada uma das três regiões.', space: 'Usar câmera, energia e memória suficientes para seis registros.', launch: 'Respeitar massa, orçamento e compatibilidade do lançador com o perfil escolhido.', ground: 'Receber cada registro inteiro antes do fim da vida operacional escolhida.' },
     dataFixture: fixture('bennu', ['Região A', 'Região B', 'Região C'], [0.32, 0.61, 0.47, 0.35, 0.58, 0.49], cameraGoal, 'rugosidade didática (u.a.)'),
   },
   telescope: {
     id: 'telescope', title: 'Telescópio: ler a luz', subtitle: 'Espectro infravermelho e exposição', objective: spectrumGoal,
-    backstory: 'Uma equipe fictícia pede duas exposições em três faixas infravermelhas. O fluxo foi inventado para o exercício; nenhuma diferença demonstra composição, água ou bioassinatura.',
+    backstory: 'Em 2022, o NIRSpec do Webb identificou CO₂ na atmosfera de WASP-39 b por espectroscopia. Aqui, duas exposições em três faixas sintéticas ensinam a escolher a medida adequada; não reproduzem essa descoberta nem demonstram composição, água ou vida.',
     dataNotice, facts: ['O modelo de telescópio NASA é referência visual, não a nave simulada nem uma reprodução de seu desempenho.', 'LEO e L2 identificam perfis conceituais; o relógio começa na operação, após a chegada.', modelAssumptions],
     origins: [{ title: 'NASA 3D Resources · James Webb Space Telescope (A)', url: 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/' }],
-    requirements: { user: 'Receber dois valores válidos para cada uma das três faixas.', space: 'Usar espectrômetro; uma câmera não satisfaz este requisito.', launch: 'Escolher um lançador que suporte o perfil e os limites do projeto.', ground: 'Transmitir seis registros completos durante as janelas previstas.' },
+    requirements: { user: 'Receber dois valores válidos para cada uma das três faixas.', space: 'Usar espectrômetro; a câmera genérica deste catálogo não mede o espectro exigido.', launch: 'Escolher um lançador que suporte o perfil e os limites do projeto.', ground: 'Transmitir seis registros completos durante as janelas previstas.' },
     dataFixture: fixture('spectrum', ['Faixa 1,2 µm', 'Faixa 2,0 µm', 'Faixa 3,5 µm'], [0.82, 0.55, 0.29, 0.79, 0.57, 0.31], spectrumGoal, 'fluxo relativo (u.a.)'),
   },
 });

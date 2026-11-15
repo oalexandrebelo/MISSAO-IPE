@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "edition": "R17",
+  "reviewedAt": "2026-11-15",
+  "brandName": "MISSÃO IPÊ",
+  "decision": "Marca selecionada pelo responsável; a árvore representa a identidade da equipe, não um modelo científico ou narrativa das missões.",
+  "sources": [
+    {
+      "suppliedName": "LOGO_MISASO_IPE.svg",
+      "file": "originals/missao-ipe-logo-original.svg",
+      "bytes": 23279,
+      "sha256": "b89bc728ccf8cb1324c9e0459d43cbcd9156b21d23091d5c39542ff7af814d8e",
+      "viewBox": "0 0 1064 499",
+      "pathCount": 35,
+      "byteIdenticalToSupplied": true
+    },
+    {
+      "suppliedName": "LOGO_MISSAO.svg",
+      "file": "originals/missao-ipe-symbol-original.svg",
+      "bytes": 17870,
+      "sha256": "d9a87607d9a1709818abfa01d488aed2aa6ba29d163471376932999a1982ceab",
+      "viewBox": "0 0 488 414",
+      "pathCount": 25,
+      "byteIdenticalToSupplied": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "missao-ipe-logo.svg",
+      "bytes": 23367,
+      "sha256": "8846be976e6826a5c6295c6391295aeb043a8982ee538d6d088019335e67464a",
+      "viewBox": "0 0 1064 499",
+      "pathCount": 35,
+      "geometryPreserved": true,
+      "palettePreserved": true,
+      "paletteAdjustment": null,
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    },
+    {
+      "file": "missao-ipe-logo-on-light.svg",
+      "bytes": 23367,
+      "sha256": "80eab1f4d537fa76a78146cfc0787d3c54f97baef93faebbfaee118ef4e01c73",
+      "viewBox": "0 0 1064 499",
+      "pathCount": 35,
+      "geometryPreserved": true,
+      "palettePreserved": false,
+      "paletteAdjustment": {
+        "#F5F0E5": "#173C51"
+      },
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    },
+    {
+      "file": "missao-ipe-symbol.svg",
+      "bytes": 17984,
+      "sha256": "73773f09b241f5ec803a9f0f145db015a526d17fd4df0226032c23d1b4a1cf65",
+      "viewBox": "0 -37 488 488",
+      "pathCount": 25,
+      "geometryPreserved": true,
+      "palettePreserved": true,
+      "paletteAdjustment": null,
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    },
+    {
+      "file": "missao-ipe-symbol-on-light.svg",
+      "bytes": 17984,
+      "sha256": "12867e4c76c1858b77b65dba89a0fe89069e9a85daec2271509074f837f621e8",
+      "viewBox": "0 -37 488 488",
+      "pathCount": 25,
+      "geometryPreserved": true,
+      "palettePreserved": false,
+      "paletteAdjustment": {
+        "#F5F0E5": "#173C51"
+      },
+      "backgroundElement": false,
+      "externalReferences": false,
+      "embeddedBitmap": false,
+      "externalFonts": false,
+      "scripts": false
+    }
+  ],
+  "integration": {
+    "canonicalAssets": "missao-ipe-*",
+    "legacyFiles": "projeto-ipe-* permanecem como histórico da identidade R14; superfícies atuais usam os novos nomes.",
+    "fullLogoAspectRatio": 2.132264529058116,
+    "symbolFraming": "viewBox quadrado adiciona 37 unidades vazias acima/abaixo; curvas e proporções preservadas.",
+    "lightUse": "Somente elementos originalmente creme recebem azul escuro; nenhuma geometria muda.",
+    "png": "Cópia byte a byte da referência enviada, mantida para metadados/compatibilidade; renderização ativa usa SVG."
+  },
+  "validation": {
+    "xmlParsed": true,
+    "pathsComparedToOriginal": true,
+    "elementsAllowed": [
+      "svg",
+      "title",
+      "g",
+      "path"
+    ],
+    "scope": "Integridade estrutural e comparação de geometria; conferência visual do aplicativo registrada separadamente."
+  },
+  "guidance": "https://github.com/neonwatty/logo-designer-skill/blob/main/skills/logo-designer/SKILL.md"
+}

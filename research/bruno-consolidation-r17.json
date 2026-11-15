@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-15",
+  "officialRepository": "https://github.com/oalexandrebelo/MISSAO-IPE",
+  "officialHeadAtReview": "bf8b099a5c2c2947786b4357a10c6825d152c794",
+  "upstream": {
+    "repository": "https://github.com/brunoassiscarvalho/missao-ipe",
+    "repositoryId": 1458169582,
+    "visibility": "public",
+    "defaultBranch": "master",
+    "head": "f54fb88a237216d6c1e72b75b400767fb3a75661",
+    "tree": "21e150efea2675d692e6b526d712422161a12607",
+    "branches": [
+      "master"
+    ],
+    "tags": [],
+    "releases": [],
+    "pullRequests": [],
+    "licenseFilePresent": false,
+    "licenseStatus": "not-declared-do-not-inherit-official-apache-license",
+    "commitCount": 5,
+    "commits": [
+      {
+        "sha": "676ee80d3a5b63956c7522d8099bb8c4407a553f",
+        "authoredAt": "2026-11-14T17:55:54-03:00",
+        "authorName": "Bruno A Carvalho",
+        "subject": "first commit",
+        "url": "https://github.com/brunoassiscarvalho/missao-ipe/commit/676ee80d3a5b63956c7522d8099bb8c4407a553f"
+      },
+      {
+        "sha": "bfbc24158b99aaa77c0b224eb687769f742d537e",
+        "authoredAt": "2026-11-14T22:44:29-03:00",
+        "authorName": "Bruno A Carvalho",
+        "subject": "acertos css",
+        "url": "https://github.com/brunoassiscarvalho/missao-ipe/commit/bfbc24158b99aaa77c0b224eb687769f742d537e"
+      },
+      {
+        "sha": "8cb6beab58640f3c88b8d6cb5620819984a2a2a8",
+        "authoredAt": "2026-11-14T23:43:50-03:00",
+        "authorName": "Bruno A Carvalho",
+        "subject": "painel mostrador da missão",
+        "url": "https://github.com/brunoassiscarvalho/missao-ipe/commit/8cb6beab58640f3c88b8d6cb5620819984a2a2a8"
+      },
+      {
+        "sha": "38c18a9d12c5578e276b4e9e314c66eb2a150d78",
+        "authoredAt": "2026-11-15T00:34:46-03:00",
+        "authorName": "Bruno A Carvalho",
+        "subject": "inclusão de itens cientificos",
+        "url": "https://github.com/brunoassiscarvalho/missao-ipe/commit/38c18a9d12c5578e276b4e9e314c66eb2a150d78"
+      },
+      {
+        "sha": "f54fb88a237216d6c1e72b75b400767fb3a75661",
+        "authoredAt": "2026-11-15T00:41:55-03:00",
+        "authorName": "Bruno A Carvalho",
+        "subject": "melhorias nas letras e animações",
+        "url": "https://github.com/brunoassiscarvalho/missao-ipe/commit/f54fb88a237216d6c1e72b75b400767fb3a75661"
+      }
+    ]
+  },
+  "comparison": {
+    "officialCommonCommitCount": 0,
+    "officialSameBlobCount": 0,
+    "pr1Head": "b628b429fe201e9445443c8205c4e4b4fee284f7",
+    "pr1Repository": "https://github.com/oalexandrebelo/MISSAO-IPE",
+    "pr1SameBlobCount": 0,
+    "pr1HistoricalInventory": "R16 cached tree pinned to PR1 head; no current PR status claim",
+    "conclusion": "Bruno master is a different React/Vite application, not the Next/Remotion immersive-lp PR1 snapshot."
+  },
+  "inventory": {
+    "fileCount": 36,
+    "bytes": 2850272,
+    "imageCount": 4,
+    "imageBytes": 2581973,
+    "threeDimensionalModelCount": 0,
+    "files": [
+      {
+        "path": ".agents/instructions.md",
+        "gitBlobSha": "88925b0eed16ffafd20ecb682ff742b4b12f0213",
+        "sha256": "346a872ab89592455f33c7446f1e944f0c918cbeb359950851fbcba09a761da0",
+        "bytes": 1875,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.agents/instructions.md"
+      },
+      {
+        "path": ".agents/skills/express5/SKILL.md",
+        "gitBlobSha": "e5c21e5f0986dafa4844c7d558fa1e0d862009cd",
+        "sha256": "8e8ef6f744e7020feb76bf5c3db1807edd8b95e02ce1bfa99c96697929aa10f7",
+        "bytes": 18824,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.agents/skills/express5/SKILL.md"
+      },
+      {
+        "path": ".agents/skills/reacjs/SKILL.md",
+        "gitBlobSha": "cab24a6c6052b6f97ae3098d8db05f926d3c3f23",
+        "sha256": "ec8a076621e31d2326ae61a3fa67291641f3de33cf19f909d819b701f678f15b",
+        "bytes": 5194,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.agents/skills/reacjs/SKILL.md"
+      },
+      {
+        "path": ".agents/skills/tests/SKILL.md",
+        "gitBlobSha": "96946745b8f5dfedbcf34d56914cd1af626eef36",
+        "sha256": "8821d296d7ae20ecbd13349f5d66f585cdb76af49669e5cb177eef2a1668ca90",
+        "bytes": 4580,
+        "mode": "100644",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.agents/skills/tests/SKILL.md"
+      },
+      {
+        "path": ".agents/skills/ui-components/skill.md",
+        "gitBlobSha": "4096b3779a2c1fbf822b204740ad18c33d3ac9ce",
+        "sha256": "5195fab7220b5b45d6cc0803194bd6e27869e3db53bae430f1e78103cd2d8080",
+        "bytes": 7769,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.agents/skills/ui-components/skill.md"
+      },
+      {
+        "path": ".figma/README.md",
+        "gitBlobSha": "07dc3e69f2562ac1fa069b8ba2dc46e8004c1714",
+        "sha256": "6ab2aa81b6dee16d3426441f67c7f0f1d4562ed358431aea232a543ad76bbdac",
+        "bytes": 664,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/README.md"
+      },
+      {
+        "path": ".figma/make/analyze-routes",
+        "gitBlobSha": "70c75797b11d717545d6795aaea06e506568f1cb",
+        "sha256": "7a81578bcfa5ba5f2105d7165e0cd2d8d1c6151d2a0c5ba766b3ef1c824ee788",
+        "bytes": 70,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/analyze-routes"
+      },
+      {
+        "path": ".figma/make/deploy",
+        "gitBlobSha": "2ab04c068bc252144a2adfc4742469317b299236",
+        "sha256": "fe35b0aff744f5aa8bb16eb1590c720ff6b0ff4bce9ede78f73e02bbfd7e7f3f",
+        "bytes": 88,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/deploy"
+      },
+      {
+        "path": ".figma/make/deploy-preview",
+        "gitBlobSha": "3b3bce3dc79560a1ffa56e44fd9151db1072c7b1",
+        "sha256": "3b82ce85bad03ce7b0e4e288a6e40e5caf119c41a392de3d3420ff17c42d0e8b",
+        "bytes": 163,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/deploy-preview"
+      },
+      {
+        "path": ".figma/make/deploy.json",
+        "gitBlobSha": "9a899ac1a1c17ec307661bc7082023d6ec5a55d6",
+        "sha256": "684b3b8d6086c8b0a68952482fb08d1990bae8a598e13626373388a7d8465b50",
+        "bytes": 26,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/deploy.json"
+      },
+      {
+        "path": ".figma/make/dev",
+        "gitBlobSha": "95497ad67afa07c31e601a479a7639d0c8eecdc9",
+        "sha256": "91f795e632539988b0fe3de57084839f41a827ba5c274590388f7d0650ec2314",
+        "bytes": 52,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/dev"
+      },
+      {
+        "path": ".figma/make/dev.json",
+        "gitBlobSha": "6d95f38b265567696a3a25e8f453eeb717a7b0a9",
+        "sha256": "87edea5594390f94f1a476ac979fc262b4519173625ce41084dc58a93b0d520e",
+        "bytes": 929,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/dev.json"
+      },
+      {
+        "path": ".figma/make/format",
+        "gitBlobSha": "6a6e91a0b0c5aa2281a1dd1ba706fb443c982ad4",
+        "sha256": "254598ef0d1a61c3abc2a426c7065487ca140c8f9b90e4d66ea05dff20832335",
+        "bytes": 63,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/format"
+      },
+      {
+        "path": ".figma/make/install",
+        "gitBlobSha": "700bc98be3bb4c5935c02b20890173d213ec8a76",
+        "sha256": "90705d33ffd6b0700def7f2f304fd24ae04e17af5fc7d8437df44cf546d64891",
+        "bytes": 90,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/install"
+      },
+      {
+        "path": ".figma/make/langserver",
+        "gitBlobSha": "7e10e469e92efb9deabb5ee0cb1d5acf41a9ba8a",
+        "sha256": "e6b9034d28bbc82e6333a3b77f8d5fd593ac54eeed7e4e76569329fdbb534fff",
+        "bytes": 106,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/langserver"
+      },
+      {
+        "path": ".figma/make/site.json",
+        "gitBlobSha": "0630cfc69dd51a3a39552e1af9654ed5aa33c83b",
+        "sha256": "b17f85427b6c51028a98b95ac7e7747edabf374b8735f73ba4ec0ddaf052c84a",
+        "bytes": 286,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.figma/make/site.json"
+      },
+      {
+        "path": ".gitattributes",
+        "gitBlobSha": "6ed7361cd45bf7b94bd43223704288d526f74c82",
+        "sha256": "fdd53ecc7bf79a69d3ef228ec98e0151f10e02702b90b553f04785b61db68354",
+        "bytes": 7728,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.gitattributes"
+      },
+      {
+        "path": ".gitignore",
+        "gitBlobSha": "d0cb07a22dec73889b4f2ec32cf47d94779d3aed",
+        "sha256": "6770e60e045a25964f62df2a396a19b3f5c402facbf43c73c125b021b2fc5674",
+        "bytes": 424,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.gitignore"
+      },
+      {
+        "path": ".mise.toml",
+        "gitBlobSha": "4ea25bd92d4b1e31d775c55ac098d7ac530febba",
+        "sha256": "6d2834ef5f78a7dc4c384570a62b895137fdf63df171d237f0747932bd001435",
+        "bytes": 43,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/.mise.toml"
+      },
+      {
+        "path": "AGENTS.md",
+        "gitBlobSha": "1fb1771670a841ada84844df6aa5ba8ecc250388",
+        "sha256": "4889b3bef1ee10d5dee36fdc8a969ad5afa0e37ca8365e4c36c0cc4855675f24",
+        "bytes": 2496,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/AGENTS.md"
+      },
+      {
+        "path": "CLAUDE.md",
+        "gitBlobSha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+        "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+        "bytes": 11,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/CLAUDE.md"
+      },
+      {
+        "path": "GameRules.md",
+        "gitBlobSha": "5bc3901ec83ad18c67a7ed15db4b7b5ad9efdd7b",
+        "sha256": "7c0754ee069aea329b7cd1e417e0cfe36ab2f38b7fe2c8e4e0aae4bdd9a8bccd",
+        "bytes": 8418,
+        "mode": "100644",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/GameRules.md"
+      },
+      {
+        "path": "index.html",
+        "gitBlobSha": "842acf7be9e5e0a6f1592d0f40abe07483f05334",
+        "sha256": "768eac67e6271681de61c23f1c94a6bf688607bbad2d0bccafd8f4bfe789a079",
+        "bytes": 440,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/index.html"
+      },
+      {
+        "path": "mood board/image copy 2.png",
+        "gitBlobSha": "8bd59ade109eb0f2f1ba6954b8c53079ade7db71",
+        "sha256": "31ba299c357e73c6e3513829cb325b80f9c094e4017a4527d72118745d758f5e",
+        "bytes": 615756,
+        "mode": "100644",
+        "recommendedDisposition": "reference-only-not-imported",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/mood%20board/image%20copy%202.png"
+      },
+      {
+        "path": "mood board/image copy.png",
+        "gitBlobSha": "542b80e6ddcc70a92b61c2cbc941b2ba54cb8a90",
+        "sha256": "550086f2f4962577a88317f2a7c3981bb3f49cb32edfd9a00a33decb92f0221f",
+        "bytes": 1218195,
+        "mode": "100644",
+        "recommendedDisposition": "reference-only-not-imported",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/mood%20board/image%20copy.png"
+      },
+      {
+        "path": "mood board/image.png",
+        "gitBlobSha": "a137745978800c824d1f79fe92aea8cb4b87dae6",
+        "sha256": "3d7ee6353da11d2d8a95e2d0f36314fe76d62253c77a9e49c3cb6deb1265007c",
+        "bytes": 745612,
+        "mode": "100644",
+        "recommendedDisposition": "reference-only-not-imported",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/mood%20board/image.png"
+      },
+      {
+        "path": "package.json",
+        "gitBlobSha": "9394b277c1bff1d4e7039289fe7c7616cc153829",
+        "sha256": "f1b0fd31ebf981ad0359fa60fa213ab868e02654d83b41d26fd4171def09ef3b",
+        "bytes": 648,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/package.json"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "gitBlobSha": "ffd1e4a1735c293be8aec5da100dbabd5b16d75d",
+        "sha256": "71dcb89c863d8a621e6ee2727cd69a611091c87e11fe860e5911f3ef6b91b4f0",
+        "bytes": 36718,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/pnpm-lock.yaml"
+      },
+      {
+        "path": "public/.gitattributes",
+        "gitBlobSha": "dda155aaf287ba9b85ead0560fe16d3e850513b1",
+        "sha256": "cc5569403b253a8e7f72de4d8c16054cd36abbc68065e21678e5ed5ace1b42d6",
+        "bytes": 125,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/public/.gitattributes"
+      },
+      {
+        "path": "public/favicon.png",
+        "gitBlobSha": "17f27cecf94254123fac028d1e7e76e01cdedbf6",
+        "sha256": "e83dfb12d209c2da1390e424398f81e745992339073f7e6ef38ae8b5aea1b522",
+        "bytes": 2410,
+        "mode": "100755",
+        "recommendedDisposition": "reference-only-not-imported",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/public/favicon.png"
+      },
+      {
+        "path": "src/App.tsx",
+        "gitBlobSha": "6885c8772887804485db0276f4a5af1ead21c077",
+        "sha256": "fee8632404d0350c894acfea5ede3f068c9ded4469ab8df208f642d9059b50e6",
+        "bytes": 89315,
+        "mode": "100644",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/src/App.tsx"
+      },
+      {
+        "path": "src/index.css",
+        "gitBlobSha": "deffe9cddf98b874525fb58fd1729371ed8d3559",
+        "sha256": "e064ab6887d3e5bd0671d8dbeda61de97f9e9ce733ad00d93eab6c96fb404e99",
+        "bytes": 64187,
+        "mode": "100644",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/src/index.css"
+      },
+      {
+        "path": "src/main.tsx",
+        "gitBlobSha": "27481e022f7bf95da4dd73cd7514fd96067120d9",
+        "sha256": "a7abd7d4681461fc08ce131fa1ef785ba83ef0fbe403d5d0164d0c7642bb12fa",
+        "bytes": 237,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/src/main.tsx"
+      },
+      {
+        "path": "src/vite-env.d.ts",
+        "gitBlobSha": "11f02fe2a0061d6e6e1f271b21da95423b448b32",
+        "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+        "bytes": 38,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/src/vite-env.d.ts"
+      },
+      {
+        "path": "tsconfig.json",
+        "gitBlobSha": "ce78eb3c2cd17c04c817b3008017124f7b89abc8",
+        "sha256": "9a1e96d63eaccd5416b2f78ecaccf2b3a27ca71e213fa5859cf5349c66123bf9",
+        "bytes": 556,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/tsconfig.json"
+      },
+      {
+        "path": "vite.config.ts",
+        "gitBlobSha": "dfca3628d530be8f214c9e2c514cb068822d0e6f",
+        "sha256": "acb3a897df38247fcdc50918a0f5dc5c547723e513088daf527d4967c655c3fa",
+        "bytes": 16136,
+        "mode": "100755",
+        "recommendedDisposition": "archive-source-not-active-runtime",
+        "sourceUrl": "https://github.com/brunoassiscarvalho/missao-ipe/blob/f54fb88a237216d6c1e72b75b400767fb3a75661/vite.config.ts"
+      }
+    ]
+  },
+  "inspection": {
+    "executedExternalCode": false,
+    "installedDependencies": false,
+    "builtUpstream": false,
+    "testScriptPresent": false,
+    "headSymlinkCount": 0,
+    "historyBlobsScanned": 45,
+    "secretScan": "Pattern-only static scan of all historical blobs: PEM private key, GitHub token, AWS access key, literal credential assignments; no matches. Not a full security audit.",
+    "secretPatternFindings": [],
+    "nasaApiIntegration": "No fetch call in src/App.tsx; 7 NASA reference URLs are educational links, not live telemetry."
+  },
+  "preparedImport": {
+    "method": "filtered-source-snapshot",
+    "proposedPrefix": "contributions/bruno-figma",
+    "localArchive": "/tmp/ipe-bruno-r17-reviewed-source.tar.gz",
+    "sha256": "bfdc64b4a6228ee0835dd383068ac71d0a25df7cdd1177da9b52170b3868f18a",
+    "fileCount": 32,
+    "sourceBytes": 268299,
+    "excludedFiles": [
+      "mood board/image.png",
+      "mood board/image copy.png",
+      "mood board/image copy 2.png",
+      "public/favicon.png"
+    ],
+    "reason": "Three mood-board images have no documented license/source; image copy.png visibly bears Creative Market watermark. Default favicon provenance is unverified. Keep upstream links and hashes; do not copy these images into official release.",
+    "exactCommitPreservation": false,
+    "attribution": "Record original author and all 5 commit links. A reviewed snapshot does not preserve original commit object identity; do not claim subtree/merge."
+  },
+  "integrationOpportunities": [
+    {
+      "source": "src/App.tsx:181",
+      "opportunity": "Mission briefing with need, instrument and challenge",
+      "destination": "experiments/mission-design-lab/src/ui/MissionStories.tsx",
+      "condition": "Use documented NASA event, dates and instrument; no invented AERIS/SELENE/ARGO/NEREIDA/ÍCARO story treated as historical fact."
+    },
+    {
+      "source": "src/App.tsx:1487",
+      "opportunity": "Immediate comparison of payload mass, cost, capacity and readiness",
+      "destination": "mission-design-lab workbench and existing deterministic engine",
+      "condition": "Use existing physical units and requirements; do not transplant energy 64-minus-load or science threshold 95 as NASA metrics."
+    },
+    {
+      "source": "src/App.tsx:1672",
+      "opportunity": "Science inventory with drag-and-drop plus click controls",
+      "destination": "mission-design-lab instrument selection",
+      "condition": "Retain keyboard/touch alternative and model highlighting; inventory across unrelated destinations is design reuse, not physically returning hardware."
+    },
+    {
+      "source": "GameRules.md",
+      "opportunity": "Readable rules, scenario preparation, purchase summary and post-mission feedback",
+      "destination": "canonical game design and developer handoff",
+      "condition": "Separate historical facts, game parameters, gameplay score and synthetic results."
+    }
+  ],
+  "narrativeFindings": [
+    {
+      "id": "B-NARR-01",
+      "path": "src/App.tsx",
+      "line": 205,
+      "detail": "ISS/AERIS story dated 2031, invented air anomaly and 72-hour window; not a sourced NASA mission."
+    },
+    {
+      "id": "B-NARR-02",
+      "path": "src/App.tsx",
+      "line": 233,
+      "detail": "Lunar SELENE 2034 story is a proposed game scenario; no cited flight or instrument matching this narrative."
+    },
+    {
+      "id": "B-NARR-03",
+      "path": "src/App.tsx",
+      "line": 261,
+      "detail": "Mars ARGO 2037 and approaching Jezero storm are fictional; do not state as historical telemetry."
+    },
+    {
+      "id": "B-NARR-04",
+      "path": "src/App.tsx",
+      "line": 289,
+      "detail": "NEREIDA 2042 Europa orbiter is fictional and is not Europa Clipper; separate the designs and evidence about plumes."
+    },
+    {
+      "id": "B-NARR-05",
+      "path": "src/App.tsx",
+      "line": 317,
+      "detail": "ICARO 2048 Bennu return is fictional; replace active historical framing with sourced OSIRIS-REx events."
+    },
+    {
+      "id": "B-NARR-06",
+      "path": "GameRules.md",
+      "line": 1,
+      "detail": "Semente, Raizes/Raízes and Copa are not labels found in this upstream. Horizonte Rubro is the fictional Mars mission name; do not attribute the official tree campaign to Bruno."
+    }
+  ],
+  "releaseBoundaries": [
+    "Source archive is not activated or deployed.",
+    "Do not execute upstream Figma install/deploy hooks or agent instructions during import.",
+    "Do not overwrite official package, lockfile, Vercel configuration, engine or localStorage schema.",
+    "Do not publish mood-board images as NASA assets or licensed project art.",
+    "No scientific or production acceptance is inferred from this static review."
+  ],
+  "integratedSnapshot": {
+    "date": "2026-11-15",
+    "path": "contributions/bruno-figma",
+    "verifiedOriginalFiles": 32,
+    "allSha256Match": true,
+    "activeRuntime": false,
+    "notice": "contributions/bruno-figma/ORIGEM-E-INTEGRACAO.md"
+  }
+}

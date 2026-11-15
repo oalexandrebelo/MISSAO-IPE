@@ -1,0 +1,46 @@
+{
+  "edition": "R17",
+  "date": "2026-11-15",
+  "application": "apps/immersive-lp",
+  "checks": {
+    "typecheck": "passed",
+    "engine": {
+      "passed": 4,
+      "failed": 0
+    },
+    "assets": {
+      "verified": 17
+    },
+    "build": "passed-static-export",
+    "playwright": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 8993.143,
+      "reportSha256": "1dea6e9d17361b67e5a8f5b3ec85b55923879702e6f311792102381524fe8d07"
+    },
+    "visual": {
+      "viewports": [
+        [
+          1440,
+          1000
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "localScreenshots": [
+        "/tmp/ipe-r17-lp-review/desktop-decoded.png",
+        "/tmp/ipe-r17-lp-review/cases.png",
+        "/tmp/ipe-r17-lp-review/mobile-decoded.png"
+      ]
+    }
+  },
+  "limitations": [
+    "Local verification only; no remote deployment verification in this receipt.",
+    "No human learning outcomes or complete manual accessibility audit."
+  ],
+  "engineModified": false,
+  "lockfileModified": false
+}

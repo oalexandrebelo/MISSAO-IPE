@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "edition": "R17",
+  "verifiedDate": "2026-11-15",
+  "language": "pt-BR",
+  "scope": "Factual narrative only; no engine, catalog or scientific data replacement.",
+  "publicationStatus": "See PUBLICADO.md and the receipt for the exact deployed revision.",
+  "sources": [
+    {
+      "id": "N01",
+      "title": "Measuring Vegetation (NDVI & EVI)",
+      "url": "https://science.nasa.gov/earth/earth-observatory/measuring-vegetation-ndvi-evi/",
+      "publisher": "NASA Earth Observatory",
+      "publishedDate": "2000-08-30",
+      "retrieval": "official-page-readable",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "N02",
+      "title": "Earthdata catalog — MOD13",
+      "url": "https://search.earthdata.nasa.gov/search?q=mod13",
+      "publisher": "NASA Earthdata",
+      "publishedDate": null,
+      "retrieval": "official-catalog-index-readable",
+      "limitation": "Individual MOD13Q1.061 product page returned HTTP 403 in this retrieval; no new dataset downloaded.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "N03",
+      "title": "2019–2020: Choosing a Touchdown Site from a Sea of Hazards",
+      "url": "https://science.nasa.gov/blogs/osiris-rex/2023/03/29/2019-2020-choosing-a-touchdown-site-from-a-sea-of-hazards/",
+      "publisher": "NASA",
+      "publishedDate": "2023-03-29",
+      "retrieval": "official-page-readable",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "N04",
+      "title": "OSIRIS-REx mission and timeline",
+      "url": "https://science.nasa.gov/mission/osiris-rex/",
+      "publisher": "NASA",
+      "publishedDate": null,
+      "retrieval": "official-page-readable",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "N05",
+      "title": "NASA’s Webb Detects Carbon Dioxide in Exoplanet Atmosphere",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-detects-carbon-dioxide-in-exoplanet-atmosphere/",
+      "publisher": "NASA",
+      "publishedDate": "2022-08-25",
+      "retrieval": "official-page-readable; nasa.gov article redirects to science.nasa.gov",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "N06",
+      "title": "Webb’s Scientific Instruments",
+      "url": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/webbs-scientific-instruments/",
+      "publisher": "NASA",
+      "publishedDate": null,
+      "retrieval": "official-page-readable",
+      "verifiedDate": "2026-11-15"
+    }
+  ],
+  "facts": [
+    {
+      "id": "F01",
+      "mission": "cerrado",
+      "claim": "NDVI uses red and near-infrared reflected light to study vegetation.",
+      "sources": [
+        "N01"
+      ],
+      "kind": "documented-scientific-concept"
+    },
+    {
+      "id": "F02",
+      "mission": "cerrado",
+      "claim": "MOD13Q1 Version 6.1 is a Terra/MODIS Level 3 vegetation product with 16-day composites and 250 m spatial resolution.",
+      "sources": [
+        "N02"
+      ],
+      "kind": "documented-product-description"
+    },
+    {
+      "id": "F03",
+      "mission": "cerrado",
+      "claim": "The incorporated package has six historical records, three requested points near Rio Verde and two periods in 2024; composite starts differ from selected observation dates.",
+      "sources": [],
+      "localEvidence": "experiments/mission-design-lab/src/data/science-data.ts",
+      "kind": "incorporated-data",
+      "compositeStarts": [
+        "2024-08-28",
+        "2024-09-13"
+      ],
+      "selectedObservationDates": [
+        "2024-09-01",
+        "2024-09-23"
+      ],
+      "productDOI": "10.5067/MODIS/MOD13Q1.061"
+    },
+    {
+      "id": "F04",
+      "mission": "bennu",
+      "claim": "Unexpectedly rocky terrain prompted additional evaluation of sample sites using imagery; more than 50 candidate sites were narrowed to four and Nightingale was selected in December 2019.",
+      "sources": [
+        "N03"
+      ],
+      "kind": "documented-mission-history",
+      "eventPeriod": "2019-2020"
+    },
+    {
+      "id": "F05",
+      "mission": "bennu",
+      "claim": "OSIRIS-REx collected material on 2020-10-20; its sample capsule returned to Earth on 2023-09-24.",
+      "sources": [
+        "N04"
+      ],
+      "kind": "documented-mission-history",
+      "eventDates": [
+        "2020-10-20",
+        "2023-09-24"
+      ]
+    },
+    {
+      "id": "F06",
+      "mission": "bennu",
+      "claim": "The game’s A/B/C regions and six roughness values are synthetic teaching data, not named sample sites or OSIRIS-REx telemetry.",
+      "sources": [],
+      "localEvidence": "experiments/mission-design-lab/src/lab/scientific-expeditions.ts",
+      "kind": "didactic-boundary"
+    },
+    {
+      "id": "F07",
+      "mission": "telescope",
+      "claim": "NASA announced CO2 evidence in WASP-39 b’s atmosphere on 2022-08-25 from a NIRSpec observation on 2022-07-10, with a feature between 4.1 and 4.6 micrometers.",
+      "sources": [
+        "N05"
+      ],
+      "kind": "documented-scientific-result",
+      "announcementDate": "2022-08-25",
+      "observationDate": "2022-07-10"
+    },
+    {
+      "id": "F08",
+      "mission": "telescope",
+      "claim": "All four Webb science instruments have spectrographs, including NIRCam; the game’s generic camera is not a model of NIRCam.",
+      "sources": [
+        "N06"
+      ],
+      "localEvidence": "experiments/mission-design-lab/src/lab/scientific-expeditions.ts",
+      "kind": "instrument-capability-and-didactic-boundary"
+    },
+    {
+      "id": "F09",
+      "mission": "telescope",
+      "claim": "The game’s six relative fluxes at 1.2, 2.0 and 3.5 micrometers are synthetic; they do not reproduce WASP-39 b or its documented CO2 feature.",
+      "sources": [],
+      "localEvidence": "experiments/mission-design-lab/src/lab/scientific-expeditions.ts",
+      "kind": "didactic-boundary"
+    },
+    {
+      "id": "F10",
+      "mission": "all",
+      "claim": "Ipê refers to the team name. The tree is not the scientific theme of the missions.",
+      "sources": [],
+      "kind": "user-directed-project-identity"
+    },
+    {
+      "id": "F11",
+      "mission": "all",
+      "claim": "NASA 3D reference geometry does not validate the game’s power, mass, trajectory or instrument assumptions.",
+      "sources": [],
+      "localEvidence": "experiments/mission-design-lab/public/models/nasa/manifest.json",
+      "kind": "model-scope-boundary"
+    }
+  ],
+  "changedFiles": [
+    "experiments/mission-design-lab/src/ui/MissionStories.tsx",
+    "experiments/mission-design-lab/src/lab/mission-curriculum.ts",
+    "docs/32-GUIA-DIDATICO-MISSOES-3D.md"
+  ],
+  "validation": {
+    "existingLearningExperimentTests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "typescript": "passed",
+    "historicalMissionReplay": false,
+    "newNASADataCollected": false,
+    "learningEfficacyValidated": false,
+    "targetedLearningUITests": {
+      "passed": 12,
+      "failed": 0,
+      "environment": "jsdom; isolated existing test file, temporary bundle outside repository"
+    },
+    "learningFunctionBodies": "Byte-identical to HEAD after narrative object"
+  },
+  "limits": [
+    "No fictional teams, names or emergencies are attributed to NASA.",
+    "Didactic mission numbers remain explicit teaching assumptions.",
+    "Source publication dates and event dates are different fields.",
+    "Reading NASA documentation is not independent reanalysis of the scientific observations."
+  ]
+}

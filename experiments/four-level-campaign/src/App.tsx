@@ -269,9 +269,8 @@ export default function App() {
   return <div className="app-shell">
     <a className="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header className="site-header">
-      <button className="brand" type="button" onClick={() => navigate('observatory')} aria-label="PROJETO-IPÊ, observatório">
-        <span className="brand-symbol" aria-hidden="true"><i /><i /><i /><i /></span>
-        <span>projeto <strong>ipê</strong><small>CIÊNCIA QUE CHEGA</small></span>
+      <button className="brand" type="button" onClick={() => navigate('observatory')} aria-label="MISSÃO IPÊ, observatório">
+        <img className="brand-logo" src="./brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" />
       </button>
       <nav className="main-nav" aria-label="Etapas da missão">
         <button type="button" aria-current={view === 'observatory' ? 'step' : undefined} onClick={() => navigate('observatory')}>Briefing</button>
@@ -290,7 +289,7 @@ export default function App() {
     <main id="main-content" className={`main-content view-${view}`} ref={mainRef} tabIndex={-1}>
       {view === 'observatory' ? <Observatory onChoose={startFreePlay} onSources={() => setDialog('sources')} onLab={() => navigate('lab')} onCampaign={() => navigate('campaign')} campaignCount={campaignProgress.completions.length} completed={completed} />
         : view === 'campaign' ? <>
-          <div className="page-heading"><div><p className="eyebrow">PROJETO-IPÊ · HISTÓRIA INTERATIVA</p><h1>Uma missão.<br /><em>Quatro decisões.</em></h1><p className="page-intro">Uma equipe acompanha você do primeiro sinal até um projeto que entrega ciência com menos recursos.</p></div><a className="button button-secondary" href="./apresentacao/">Conhecer o projeto <Icon name="arrow" size={17} /></a></div>
+          <div className="page-heading"><div><p className="eyebrow">MISSÃO IPÊ · HISTÓRIA INTERATIVA</p><h1>Uma missão.<br /><em>Quatro decisões.</em></h1><p className="page-intro">Investigue dados reais Terra/MODIS em quatro desafios: entregar, armazenar, comunicar e explicar a ciência com menos recursos.</p></div><a className="button button-secondary" href="./apresentacao/">Conhecer o projeto <Icon name="arrow" size={17} /></a></div>
           <CampaignMap progress={campaignProgress} onChoose={chooseCampaignLevel} />
           <p className="campaign-storage-note">Seu progresso fica neste navegador. O caderno permite exportar recibos e decisões; replays importados servem para consulta e não concluem níveis.</p>
         </>
@@ -299,7 +298,7 @@ export default function App() {
         : result ? <MissionControl key={resultKey} result={result} searchResult={searchResult} searching={busy === 'search'} canSearch={canSearchCurrent} onSearch={() => void search()} onCancelSearch={() => { cancelWork(); setSearchResult(null); setCampaignSearchMeta(null); }} onApply={applyCandidate} onRedesign={() => navigate('workbench')} onTransfer={() => activeLevel ? navigate('campaign') : chooseScenario('short-contact', true)} onExport={() => void exportResult()} exporting={exporting} onCompare={() => setDialog('compare')} canCompare={runs.length > 1} onReflect={(text, eventId) => appendJournal({ kind: 'reflection', config: result.config, scenarioId: result.scenarioId, text, eventId })} campaignMode={activeLevel !== null} campaignSearchMeta={campaignSearchMeta} campaignDebrief={activeLevel && campaignAssessment ? <CampaignDebrief level={activeLevel} assessment={campaignAssessment} completed={isCampaignLevelComplete(campaignProgress, activeLevel.id)} onNext={chooseCampaignLevel} onRetry={() => navigate('workbench')} onMap={() => navigate('campaign')} /> : undefined} />
         : null}
     </main>
-    <footer className="site-footer"><span><span className="footer-dot" /> PROJETO-IPÊ · BETA 0.5</span><div><a href="./apresentacao/">Mapa e pitch</a><a href="./research/index.html" target="_blank" rel="noreferrer">Pesquisa e documentação</a><button type="button" onClick={() => setDialog('sources')}>Fontes e hipóteses</button><span>AB · TEAM IPÊ / 2026</span></div></footer>
+    <footer className="site-footer"><span><span className="footer-dot" /> MISSÃO IPÊ · BETA 0.5</span><div><a href="./apresentacao/">Mapa e pitch</a><a href="./research/index.html" target="_blank" rel="noreferrer">Pesquisa e documentação</a><button type="button" onClick={() => setDialog('sources')}>Fontes e hipóteses</button><span>AB · TEAM IPÊ / 2026</span></div></footer>
     {dialog === 'compare' ? <CompareDialog runs={runs} onClose={() => setDialog(null)} /> : dialog === 'sources' ? <SourcesDialog onClose={() => setDialog(null)} /> : dialog === 'history' ? <HistoryDialog runs={runs} loading={historyLoading} onClose={() => setDialog(null)} onOpen={openRun} onImport={() => importInput.current?.click()} onExportJournal={exportJournal} journalCount={journal.length} /> : null}
     <input ref={importInput} type="file" accept="application/json,.json" className="sr-only" tabIndex={-1} aria-hidden="true" onChange={(event) => { const file = event.target.files?.[0]; event.target.value = ''; if (file) void importFile(file); }} />
   </div>;

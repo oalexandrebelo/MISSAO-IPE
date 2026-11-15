@@ -22,9 +22,9 @@
 
 .selected-evidence .nominal-explanation{font-size:12px;color:#c8d6bb;border-left:2px solid #93ac73;padding-left:12px;margin-top:13px}
 
-.site-header .brand-logo{display:block;width:180px;height:60px;object-fit:contain}@media(max-width:580px){.site-header .brand-logo{width:156px;height:52px}}
+.site-header .brand-logo{display:block;width:145px;height:68px;object-fit:contain}@media(max-width:580px){.site-header .brand-logo{width:128px;height:60px}}
 
 /* Tipografia de identidade, sem alterar contratos do simulador. */
-:root{--serif:"Bricolage Grotesque",sans-serif;font-family:"Plus Jakarta Sans",sans-serif;font-kerning:normal}body{font-family:"Plus Jakarta Sans",sans-serif}h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif}.hero-description,.hero-lead,.condition-card p,.learning-path li p,.science-strip p:not(.eyebrow),.page-intro,.source-section>p:not(.eyebrow),.dialog-lead{font-size:1rem;line-height:1.75;max-width:70ch}.hero-copy h1{letter-spacing:-.035em}.source-intro p{font-family:"Plus Jakarta Sans",sans-serif;font-size:1rem;line-height:1.8}.site-header .brand-logo{width:180px;height:60px}@media(max-width:700px){.hero-description,.hero-lead,.condition-card p,.learning-path li p,.science-strip p:not(.eyebrow),.page-intro,.source-section>p:not(.eyebrow),.dialog-lead{font-size:1rem}.hero-copy h1{letter-spacing:-.035em}.site-header .brand-logo{width:156px;height:52px}}
+:root{--serif:"Bricolage Grotesque",sans-serif;font-family:"Plus Jakarta Sans",sans-serif;font-kerning:normal}body{font-family:"Plus Jakarta Sans",sans-serif}h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif}.hero-description,.hero-lead,.condition-card p,.learning-path li p,.science-strip p:not(.eyebrow),.page-intro,.source-section>p:not(.eyebrow),.dialog-lead{font-size:1rem;line-height:1.75;max-width:70ch}.hero-copy h1{letter-spacing:-.035em}.source-intro p{font-family:"Plus Jakarta Sans",sans-serif;font-size:1rem;line-height:1.8}.site-header .brand-logo{width:145px;height:68px}@media(max-width:700px){.hero-description,.hero-lead,.condition-card p,.learning-path li p,.science-strip p:not(.eyebrow),.page-intro,.source-section>p:not(.eyebrow),.dialog-lead{font-size:1rem}.hero-copy h1{letter-spacing:-.035em}.site-header .brand-logo{width:128px;height:60px}}
 
 .hero-copy h1,.page-heading h1{white-space:normal;overflow-wrap:break-word}

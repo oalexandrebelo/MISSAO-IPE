@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "edition": "R17",
+  "verifiedDate": "2026-11-15",
+  "language": "pt-BR",
+  "assessmentType": "documentary readiness review; not organizer decision",
+  "baseline": {
+    "edition": "R16",
+    "version": "0.7.0-beta.1",
+    "sourceCommit": "e5d9a40e3dac44745e7b1a0222bf90fbce202257",
+    "deploymentId": "dpl_95cDC9NoM1rfrjwkb35ty8FXgDhp",
+    "evidence": [
+      "PUBLICADO.md",
+      "evidence/revision-r16.json",
+      "evidence/production-r16.json"
+    ],
+    "labDomainTestsPassed": 145,
+    "labUITestsPassed": 38,
+    "publicFilesVerified": 291,
+    "claimScope": "Receipts for identified R16 deployment only, not independent revalidation or a guarantee for later deployments."
+  },
+  "verdict": {
+    "researchDemo": "working documented prototype",
+    "competitionSubmission": "readiness not established",
+    "winnerLevel": "not determinable from available evidence",
+    "inventedScore": null,
+    "winningProbability": null,
+    "organizerApprovalObserved": false,
+    "organizersContacted": false
+  },
+  "event": {
+    "year": 2026,
+    "theme": "The Next Frontier",
+    "startDate": "2026-11-14",
+    "endDate": "2026-11-15",
+    "submissionStartLocal": "2026-11-14T09:00:00",
+    "submissionEndLocal": "2026-11-15T23:59:00",
+    "timezoneRule": "Local Event time; confirm actual team event. Universal start follows Team Owner residence per GO Team.",
+    "rioVerdeLocalSchedule": {
+      "date": "2026-11-15",
+      "prePresentations": "15:30",
+      "submission": "17:00",
+      "presentations": "18:00"
+    },
+    "currentDeadlineCountdownComputed": false,
+    "sources": [
+      "S01",
+      "S02",
+      "S04",
+      "S12"
+    ]
+  },
+  "challenge": {
+    "title": "Space Mission Design Game",
+    "yearContext": 2026,
+    "fullStatementVerified": false,
+    "resourcesListVerified": false,
+    "usedSourceMatchedToOfficialList": false,
+    "sources": [
+      "S07",
+      "S08",
+      "S09"
+    ]
+  },
+  "criteria": {
+    "names": [
+      "Impact",
+      "Creativity",
+      "Validity",
+      "Relevance",
+      "Presentation"
+    ],
+    "source": "S11",
+    "authority": "2026 local-organizer page; used as assessment lens, not verified global or Rio Verde rubric",
+    "weights": null,
+    "global2026GuideRecovered": false,
+    "current2026AwardCategoriesVerified": false,
+    "historical2025CategoriesSource": "S15"
+  },
+  "strengths": [
+    "Three mission cases and four mission segments.",
+    "Controlled experiments invoke existing deterministic domains.",
+    "Six archived Terra/MODIS records with provenance in Cerrado.",
+    "Local crew roles, temporal comparison and explicit application of an experiment.",
+    "NASA models and configurable visual spacecraft separated from physics."
+  ],
+  "limits": [
+    "Bennu and telescope measurements are synthetic.",
+    "No orbital propagation, real Webb optics, live antenna scheduling or remote cooperation.",
+    "Educational effectiveness and physical mobile performance not validated.",
+    "Expedition attempts are session-local and multi-tab journal writes have documented limitations.",
+    "R17 editorial changes do not establish competition eligibility."
+  ],
+  "gaps": [
+    {
+      "id": "R01",
+      "priority": "P0",
+      "topic": "chronology",
+      "classification": "documented-risk-with-external-decision-unknown",
+      "evidence": [
+        "evidence/chronology.json",
+        "NOTICE.md"
+      ],
+      "sources": [
+        "S04",
+        "S05"
+      ],
+      "finding": "Challenge-specific work before the stated start is documented. No organizer decision approving this project was observed.",
+      "acceptance": "Preserve chronology and obtain an applicable organizer decision before claiming eligibility.",
+      "provenDisqualification": false
+    },
+    {
+      "id": "R02",
+      "priority": "P0",
+      "topic": "full-challenge-and-resources",
+      "classification": "missing-evidence",
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S06"
+      ],
+      "finding": "Summary alignment exists; full statement and at least one actual Resources-list match remain unverified.",
+      "acceptance": "Map full requirements and demonstrate a used NASA source from the official list."
+    },
+    {
+      "id": "R03",
+      "priority": "P0",
+      "topic": "registration-and-submission",
+      "classification": "not-observed",
+      "sources": [
+        "S01",
+        "S03",
+        "S12"
+      ],
+      "finding": "No team-page registration, exact event or accepted project submission inspected.",
+      "acceptance": "Official team/event/challenge page and submission receipt, without unnecessary personal data."
+    },
+    {
+      "id": "R04",
+      "priority": "P0",
+      "topic": "submission-package",
+      "classification": "not-observed",
+      "sources": [
+        "S06",
+        "S13",
+        "S14"
+      ],
+      "finding": "Final format, English presentation, AI/media disclosure and complete attribution not audited end to end.",
+      "acceptance": "Verify current form, public links, accepted demo format and completed submission."
+    },
+    {
+      "id": "R05",
+      "priority": "P1",
+      "topic": "learning",
+      "classification": "unvalidated-outcome",
+      "evidence": [
+        "evidence/revision-r16.json"
+      ],
+      "finding": "Deterministic learning experiments are implemented; no measured student learning outcome.",
+      "acceptance": "Pilot with defined audience, baseline/task/transfer explanation and reported failures; no efficacy extrapolation."
+    },
+    {
+      "id": "R06",
+      "priority": "P1",
+      "topic": "device-and-performance",
+      "classification": "unmeasured",
+      "evidence": [
+        "evidence/revision-r16.json"
+      ],
+      "finding": "Responsive viewport and browser checks exist; no physical phone/touch acceptance or measured FPS/load budget.",
+      "acceptance": "Complete mission on representative laptop and phone; record browser, network, loading time, failures and 2D recovery."
+    },
+    {
+      "id": "R07",
+      "priority": "P1",
+      "topic": "story-truthfulness",
+      "classification": "local-editorial-correction",
+      "evidence": [
+        "docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md",
+        "research/nasa-mission-stories-r17.json"
+      ],
+      "finding": "R17 narratives use dated NASA facts; expedition values remain synthetic and explicitly separated.",
+      "acceptance": "Review all current UI and guide text, then record integrated verification and exact deployment."
+    },
+    {
+      "id": "R08",
+      "priority": "P1",
+      "topic": "single-main-journey",
+      "classification": "usability-not-measured",
+      "evidence": [
+        "PUBLICADO.md"
+      ],
+      "finding": "Multiple preserved routes exist; newcomer comprehension has not been established.",
+      "acceptance": "New user finds a mission, predicts, runs, explains a failure and revises without developer instruction; record obstacles."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "2026 official event page",
+      "url": "https://www.spaceappschallenge.org/2026/",
+      "retrieval": "institutional indexed content",
+      "supports": "Event dates, submission window and maximum team size.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S02",
+      "title": "NASA event announcement",
+      "url": "https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/",
+      "retrieval": "NASA indexed article dated 2026-10-15",
+      "supports": "Confirms November 14–15, 2026.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S03",
+      "title": "2026 participant terms",
+      "url": "https://www.spaceappschallenge.org/legal/",
+      "retrieval": "institutional indexed terms updated 2026-08-07",
+      "supports": "Participation, rights and open-source obligations; not a team acceptance decision.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S04",
+      "title": "GO Team: work before event",
+      "url": "https://github.com/nasa/spaceapps/discussions/1827",
+      "retrieval": "full GO Team response recovered",
+      "supports": "Development starts at 09:00 local; early work can disqualify; sources must be cited.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S05",
+      "title": "GO Team: UI and features before event",
+      "url": "https://github.com/nasa/spaceapps/discussions/1872",
+      "retrieval": "full GO Team response recovered",
+      "supports": "Warns against advance features/UI design and potential loss of awards.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S06",
+      "title": "GO Team: resources and AI",
+      "url": "https://github.com/nasa/spaceapps/discussions/1849",
+      "retrieval": "full GO Team response recovered",
+      "supports": "At least one NASA source from challenge Resources; AI permitted with disclosure and specific media/brand constraints.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S07",
+      "title": "2026 challenge contextual summary",
+      "url": "https://www.spaceappschallenge.org/2026/find-a-team/missionforge/",
+      "retrieval": "official-hosted team page contextual block",
+      "supports": "Supports challenge name/summary; not full official statement.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S08",
+      "title": "Space Mission Design Game full statement",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/",
+      "retrieval": "HTTP 502 in direct retrieval",
+      "supports": "Full requirements unverified.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S09",
+      "title": "Space Mission Design Game Resources",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/?tab=resources",
+      "retrieval": "not accessible through retrieval tool",
+      "supports": "No listed-source match established.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S10",
+      "title": "Global judging guide",
+      "url": "https://www.spaceappschallenge.org/resources/judging-awards-guide/",
+      "retrieval": "HTTP 502 in direct retrieval",
+      "supports": "No global 2026 weights, scales or complete categories verified.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S11",
+      "title": "Ajmer local judging criteria",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/ajmer/",
+      "retrieval": "current local-organizer indexed content",
+      "supports": "Five criteria; page labels content as user-generated; not Rio Verde rubric.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S12",
+      "title": "Rio Verde local schedule",
+      "url": "https://www.spaceappschallenge.org/2026/local-events/rio-verde/",
+      "retrieval": "current local-organizer indexed content",
+      "supports": "November 15: pre-presentations 15:30, submission 17:00, presentations 18:00; team event not proven.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S13",
+      "title": "Submission guidance",
+      "url": "https://github.com/nasa/spaceapps/discussions/1973",
+      "retrieval": "Navigator answer in NASA repository",
+      "supports": "30-second video or up to seven slides, English/subtitles; actual current form/guide governs.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S14",
+      "title": "Project submission guide",
+      "url": "https://www.spaceappschallenge.org/resources/project-submission-guide/",
+      "retrieval": "HTTP 502 in direct retrieval",
+      "supports": "Full current guide not recovered.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S15",
+      "title": "2025 award categories",
+      "url": "https://www.spaceappschallenge.org/2025/awards/",
+      "retrieval": "official historical page indexed",
+      "supports": "Historical context only; must not be relabeled 2026.",
+      "verifiedDate": "2026-11-15"
+    },
+    {
+      "id": "S16",
+      "title": "2026 awards URL",
+      "url": "https://www.spaceappschallenge.org/2026/awards/",
+      "retrieval": "not accessible through retrieval tool",
+      "supports": "Current category roster not confirmed.",
+      "verifiedDate": "2026-11-15"
+    }
+  ]
+}

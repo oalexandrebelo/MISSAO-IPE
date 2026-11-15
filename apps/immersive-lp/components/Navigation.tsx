@@ -17,9 +17,9 @@ export function Navigation() {
   function close() { menu.current?.close(); setOpen(false); }
   return <>
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-      <a className="brand" href="#inicio" aria-label="Projeto Ipê — início"><img src="/brand/projeto-ipe-logo.png" width="150" height="50" alt="Projeto Ipê" /></a>
+      <a className="brand" href="#inicio" aria-label="MISSÃO IPÊ — início"><img src="/brand/missao-ipe-logo.svg" width="1064" height="499" alt="MISSÃO IPÊ" /></a>
       <nav className="desktop-nav" aria-label="Navegação principal">
-        <a href="#missao">A missão</a><a href="#jornada">Sua jornada</a><a href="#horizonte">O horizonte</a>
+        <a href="#missao">A missão</a><a href="#jornada">Três casos NASA</a><a href="#segmentos">A missão completa</a>
       </nav>
       <div className="header-actions"><a className="header-cta" href={LINKS.game}>Jogar o beta <Icon name="arrow-up" /></a>
         <button ref={menuButton} className="menu-button" type="button" aria-label="Abrir menu" aria-expanded={open} aria-controls="mobile-menu" onClick={() => { menu.current?.showModal(); setOpen(true); }}><Icon name="menu" /></button>

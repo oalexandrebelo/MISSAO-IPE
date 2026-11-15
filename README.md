@@ -1,12 +1,20 @@
-# PROJETO IPÊ — Ciência que chega
+# MISSÃO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.7.0-beta.1 · edição R16 · 15/11/2026.**
+**Beta atual: 0.8.0-beta.1 · edição R17 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/38-HANDOFF-R16.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/43-HANDOFF-GERAL-R17.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/25-HANDOFF-DOIS-DEVS.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/43-HANDOFF-GERAL-R17.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+
+## Direção vigente — histórias reais, identidade da equipe
+
+**IPÊ é o nome da equipe.** A árvore identifica a marca; os três casos partem de fatos NASA: Terra/MODIS e vegetação; reconhecimento de Bennu pela OSIRIS-REx; espectroscopia do Webb em WASP-39 b. As introduções trazem fontes e datas, sem equipes ou acontecimentos inventados. O Cerrado usa registros históricos reais; Bennu e telescópio continuam exercícios com dados sintéticos explicitamente separados da história real.
+
+[Histórias e limites](docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [logo SVG oficial e Figma](docs/40-IDENTIDADE-MISSAO-IPE-R17.md) · [prontidão para Space Apps](docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
+
+A página orbital da PR #1 foi incorporada em `apps/immersive-lp/`, corrigindo a pasta ausente no projeto Vercel separado. A contribuição de **Bruno A Carvalho** foi consolidada em `contributions/bruno-figma/` como fonte revisada: 32 arquivos, autoria e cinco commits referenciados, com quatro assets excluídos e justificados. O motor oficial permanece a base das três missões. [Inventário, procedência e reaproveitamento](docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md).
 
 ## Descobrir antes de otimizar
 
@@ -26,7 +34,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R16. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R17. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -59,7 +67,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.7.0-beta.1 / R16 | `experiments/mission-design-lab/` |
+| Beta 0.8.0-beta.1 / R17 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -71,7 +79,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 | Marca SVG e fontes locais | [Identidade](docs/23-IDENTIDADE-VISUAL.md) / [tipografia](docs/26-TIPOGRAFIA.md) |
 | Origem e curadoria pública | [Procedência](GIT-PROVENIENCIA.md) |
 
-Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada nesta edição.
+Stack existente: React, TypeScript, Vite, Three.js, React Three Fiber e Drei; motor em Worker, persistência no navegador e publicação estática. Sem serviço de pontuação remoto ou nova dependência adicionada no motor nesta edição.
 
 ## Executar e compilar
 
@@ -79,6 +87,7 @@ Requer Node 24. Instalação e compilação da distribuição completa:
 
 ```bash
 npm --prefix experiments/mission-design-lab ci --ignore-scripts --no-audit --no-fund
+npm --prefix experiments/four-level-campaign ci --ignore-scripts --no-audit --no-fund
 npm run build:release
 npm run start:beta
 ```
