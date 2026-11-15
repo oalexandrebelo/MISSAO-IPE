@@ -1,0 +1,193 @@
+{
+  "release": "R29",
+  "sourceCommit": "7f798af44fad12a2c3b09e7a466d8d303e7dd4f4",
+  "startedAt": "2026-11-15T19:09:47.196Z",
+  "origin": "https://nasa-missaoipe.alexandrebelo.com",
+  "synthetic": true,
+  "status": "passed",
+  "assets": [
+    {
+      "file": "lab/index.html",
+      "bytes": 1459,
+      "sha256": "c6eddd4223c40686781aa4821dc4dd95175bb8798a8b1f838c713e123010a66a"
+    },
+    {
+      "file": "lab/assets/index-Dtd899b_.js",
+      "bytes": 695030,
+      "sha256": "e27a6418b4db31e9d43439e9b18199a70f8ac5778003ee0f7a7f2027215b9f25"
+    },
+    {
+      "file": "lab/assets/rolldown-runtime-XKyaHtl9.js",
+      "bytes": 726,
+      "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
+    },
+    {
+      "file": "lab/assets/catalog-sTDiLHi-.js",
+      "bytes": 4152,
+      "sha256": "075d9a54ddedf59317ceced9a52b553fcf34ce9a5bf581010b65158b1ef14d24"
+    },
+    {
+      "file": "lab/assets/index-BN0KkRV2.css",
+      "bytes": 230807,
+      "sha256": "bb4b9ed27021709396f2dacdd3f1bbbd350801e3794d9e56ec82e216e842fdac"
+    },
+    {
+      "file": "lab/assets/LobbyScene-B1K5ivrm.js",
+      "bytes": 2814,
+      "sha256": "70ba9c62e345de21b03acc684cf18d791c16fcc7ca658b02897b6e7d66d98b70"
+    },
+    {
+      "file": "lab/assets/LobbySceneRenderer-DRBDQ49M.js",
+      "bytes": 7657,
+      "sha256": "745e9fa2168c9222fd24c86705470411e9bb54d7496a9e81ea9454c64b0b91f6"
+    },
+    {
+      "file": "lab/textures/lobby/manifest.json",
+      "bytes": 3692,
+      "sha256": "40e4974d5353694ddc8fcc0ac52892488c8c9a3401ecdb1499c1328446bd8bc5"
+    },
+    {
+      "file": "lab/textures/lobby/earth.webp",
+      "bytes": 510254,
+      "sha256": "61d61a5f58005efa8e7cb2fd4b0e1329b92ec4b3faa567582faff7283c99cb8e"
+    },
+    {
+      "file": "lab/textures/lobby/moon.webp",
+      "bytes": 286286,
+      "sha256": "d99c35a4d7f42af718c6e72b3c274f8788be2c60b3541eff26112d20e9f6b6f9"
+    },
+    {
+      "file": "lab/textures/lobby/mars.webp",
+      "bytes": 177056,
+      "sha256": "f116894b1d2e22f9911bd4f45424cb9b5d3a5d0bd5a6bd298357e4492a2c81c3"
+    },
+    {
+      "file": "lab/textures/lobby/europa.webp",
+      "bytes": 140342,
+      "sha256": "bfa8de034538663df50461ceee6cceaaa915b0c1f09ed9b9b79c61a0d4729889"
+    },
+    {
+      "file": "lab/models/nasa/bennu-1999-rq36.glb",
+      "bytes": 329596,
+      "sha256": "644af15678447df90c2d9e85674809c7fc70f439e0865418aa6618a8483b7958"
+    },
+    {
+      "file": "lab/models/nasa/jwst-a.glb",
+      "bytes": 4710016,
+      "sha256": "ea4a53f71f1e7477d8b90e30d1299b2cb33faea18acdcaf831dc9d3ebf1b7750"
+    },
+    {
+      "file": "docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.html",
+      "bytes": 16154,
+      "sha256": "52e02a239141c878723ea36a478fbe8cac274bcf9a371a6f1cdffc6df53fbed2"
+    },
+    {
+      "file": "docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.html",
+      "bytes": 11505,
+      "sha256": "628cda85db66ec639b13f264088d6dd6d20f78372e349ee0bb62cec181671ce8"
+    }
+  ],
+  "routes": [
+    {
+      "url": "https://projeto-ipe-lp.vercel.app/",
+      "status": 200
+    },
+    {
+      "url": "https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/",
+      "status": 200
+    },
+    {
+      "url": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html",
+      "status": 200
+    },
+    {
+      "url": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html",
+      "status": 200
+    }
+  ],
+  "inventory": {
+    "units": 2,
+    "balance": 15,
+    "cycles": [
+      3,
+      3
+    ],
+    "revision": 1,
+    "replaySameReceipt": true
+  },
+  "checks": [
+    "HTTP200:lab/index.html",
+    "SHA256:lab/index.html",
+    "HTTP200:lab/assets/index-Dtd899b_.js",
+    "SHA256:lab/assets/index-Dtd899b_.js",
+    "HTTP200:lab/assets/rolldown-runtime-XKyaHtl9.js",
+    "SHA256:lab/assets/rolldown-runtime-XKyaHtl9.js",
+    "HTTP200:lab/assets/catalog-sTDiLHi-.js",
+    "SHA256:lab/assets/catalog-sTDiLHi-.js",
+    "HTTP200:lab/assets/index-BN0KkRV2.css",
+    "SHA256:lab/assets/index-BN0KkRV2.css",
+    "HTTP200:lab/assets/LobbyScene-B1K5ivrm.js",
+    "SHA256:lab/assets/LobbyScene-B1K5ivrm.js",
+    "HTTP200:lab/assets/LobbySceneRenderer-DRBDQ49M.js",
+    "SHA256:lab/assets/LobbySceneRenderer-DRBDQ49M.js",
+    "HTTP200:lab/textures/lobby/manifest.json",
+    "SHA256:lab/textures/lobby/manifest.json",
+    "HTTP200:lab/textures/lobby/earth.webp",
+    "SHA256:lab/textures/lobby/earth.webp",
+    "HTTP200:lab/textures/lobby/moon.webp",
+    "SHA256:lab/textures/lobby/moon.webp",
+    "HTTP200:lab/textures/lobby/mars.webp",
+    "SHA256:lab/textures/lobby/mars.webp",
+    "HTTP200:lab/textures/lobby/europa.webp",
+    "SHA256:lab/textures/lobby/europa.webp",
+    "HTTP200:lab/models/nasa/bennu-1999-rq36.glb",
+    "SHA256:lab/models/nasa/bennu-1999-rq36.glb",
+    "HTTP200:lab/models/nasa/jwst-a.glb",
+    "SHA256:lab/models/nasa/jwst-a.glb",
+    "HTTP200:docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.html",
+    "SHA256:docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.html",
+    "HTTP200:docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.html",
+    "SHA256:docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.html",
+    "route:https://projeto-ipe-lp.vercel.app/",
+    "route:https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/",
+    "route:https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html",
+    "route:https://nasa-missaoipe.alexandrebelo.com/docs/index.html",
+    "no-store:register",
+    "synthetic-registration",
+    "no-store:inventory",
+    "initial-wallet",
+    "no-store:inventory-command",
+    "batch-two-units-ten-credits",
+    "no-store:inventory-command",
+    "same-request-same-receipt",
+    "no-store:inventory",
+    "independent-read-persisted-without-duplicate",
+    "no-store:admin",
+    "private-dashboard-rejects-visitor",
+    "no-store:admin",
+    "private-dashboard-rejects-player"
+  ],
+  "finishedAt": "2026-11-15T19:10:00.482Z",
+  "deployments": [
+    {
+      "project": "missao-ipe",
+      "id": "dpl_EFrE2p4EqcQPUnxGaWRAmNWrRWCb",
+      "status": "READY",
+      "commit": "7f798af44fad12a2c3b09e7a466d8d303e7dd4f4"
+    },
+    {
+      "project": "projeto-ipe-lp",
+      "id": "dpl_HEzZhnFW94jMGrt14GdyADHWg7Nf",
+      "status": "READY",
+      "commit": "7f798af44fad12a2c3b09e7a466d8d303e7dd4f4"
+    }
+  ],
+  "browser": {
+    "url": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html",
+    "destination": "mars",
+    "sceneObserved": true,
+    "consoleErrorsObserved": 0,
+    "existingProgressRestored": true
+  },
+  "scope": "Production asset hashes and synthetic inventory persistence; seven destination selections and a complete ISS journey are recorded separately in local QA. This does not measure human learning."
+}

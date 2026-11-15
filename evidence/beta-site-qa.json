@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T19:03:59.308Z",
-  "finishedAt": "2026-11-15T19:04:03.124Z",
+  "startedAt": "2026-11-15T19:11:08.704Z",
+  "finishedAt": "2026-11-15T19:11:12.166Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "bea661c0cd89615ff79352661ee9560d74c778e031d15eda7ca83c787b3282c2"
+        "sha256": "fff79e4b24b4014d2e5f17c5865ced649a5feeeaaa4f66f2dc256c7cd0563009"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 470,
       "manifestedFiles": 469,
-      "bytes": 80513980,
+      "bytes": 80521933,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -104,7 +104,7 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 3292,
+      "count": 3294,
       "uniqueTargets": 334,
       "entries": [
         {
@@ -4860,6 +4860,20 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-web-public-docs-origem-dos-dados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-75-lobby-imersivo-e-handoff-r29-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-74-auditoria-bruno-e-imersao-r29-md"
         },
         {
           "source": "context/research-library.html",
@@ -23600,21 +23614,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 70454,
-        "sha256": "ecfba7cd356bec93de1c39c349aab65cb9c02d2afa77d3cfbfabba23459cc15b",
+        "sha256": "810c9d94437743d1f6fef27551d65a2adff371c15be62a7ed4ca3e75f5d00a0f",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2540516,
-        "sha256": "b7867b59159dac0c1e972c23b50ee92af0a4490f52efc0898b82fe7b64b8e6bc",
+        "bytes": 2543950,
+        "sha256": "4d4098bb38378b821d1411c44952cfd2b68157ee6c50e8ceb0aa319574e7e111",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 2034448,
-        "sha256": "a278018dae2817364e84c6d995081f98f9bf01319b3bc2ced887ecf99b037390",
+        "bytes": 2037540,
+        "sha256": "88f8ad367f15df1d2332c19c5f44494c7a0e2952261c5dbcd28074dbd348392c",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24530,15 +24544,15 @@
       {
         "path": "docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.html",
         "status": 200,
-        "bytes": 11505,
-        "sha256": "628cda85db66ec639b13f264088d6dd6d20f78372e349ee0bb62cec181671ce8",
+        "bytes": 12248,
+        "sha256": "4d599901df0c70ca395c212b759380c75924df88c6418a936e46a64845204f36",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md",
         "status": 200,
-        "bytes": 7881,
-        "sha256": "024b785f7ccd0b114afb10035b5dc04f31d75c9bd8bb0d5f8e05afccdd14e7aa",
+        "bytes": 8565,
+        "sha256": "deb1d268cd8dbbae5326bffdb5ac1d7c9540a7249362264e26239d1ba6af3e63",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -26113,7 +26127,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 222625,
-        "sha256": "bea661c0cd89615ff79352661ee9560d74c778e031d15eda7ca83c787b3282c2",
+        "sha256": "fff79e4b24b4014d2e5f17c5865ced649a5feeeaaa4f66f2dc256c7cd0563009",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -26410,92 +26424,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 30.885
+      "durationMs": 32.218
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.294
+      "durationMs": 0.296
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 79.5
+      "durationMs": 75.324
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 3.759
+      "durationMs": 0.952
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 73.398
+      "durationMs": 73.451
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1324.655
+      "durationMs": 1215.329
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.554
+      "durationMs": 0.518
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 598.76
+      "durationMs": 524.197
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 163.454
+      "durationMs": 145.869
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 49.359
+      "durationMs": 41.01
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 6.952
+      "durationMs": 2.891
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 113.719
+      "durationMs": 107.94
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.499
+      "durationMs": 5.515
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 56.269
+      "durationMs": 56.296
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 916.397
+      "durationMs": 843.87
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 118.193
+      "durationMs": 118.079
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 6.029
+      "durationMs": 7.063
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 140.375
+      "durationMs": 138.511
     }
   ]
 }

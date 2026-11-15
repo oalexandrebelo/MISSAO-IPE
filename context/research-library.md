@@ -65,9 +65,23 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `f6586249816a25109f25b3f51eaa837efc90662f771915ae4dfa65ee8ec116a9` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `8b636c866a1865b3518fa24dee49c3de9614c0c593016162e189b9e48d12ac67` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R29 — seleção imersiva e compra em lote
+
+**Publicada e conferida em 15/11/2026.** Código `7f798af44fad12a2c3b09e7a466d8d303e7dd4f4`; principal `dpl_EFrE2p4EqcQPUnxGaWRAmNWrRWCb` e LP `dpl_HEzZhnFW94jMGrt14GdyADHWg7Nf` **READY** no mesmo commit. O [jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) apresenta os sete destinos com horizonte planetário 3D, transições de câmera, texturas NASA e os modelos de Bennu e Webb. Cada destino mostra sua pergunta, aprendizado e botão Jogar. A composição segue a referência Space planet, com a marca e o fluxo da MISSÃO IPÊ.
+
+A revisão dos repositórios de Bruno encontrou mudanças de interface e compra em quantidade, sem novos arquivos de mídia. A loja oficial ganhou quantidade por instrumento, com uma única transação confirmada pelo servidor. ISS, Lua, Marte e Europa mantêm a contribuição integrada; o contexto histórico de coleta e retorno da OSIRIS-REx complementa Bennu. A auditoria distingue missões executáveis de cenários apenas documentados.
+
+**Aceite:** 180 testes de domínio, 121 de interface, 53 de métricas e 18 de distribuição passaram. A seleção dos sete destinos foi inspecionada em desktop e viewports móveis de 320 e 390 px. Uma jornada local comprou duas unidades, retomou o inventário, completou ISS com seis registros válidos e 92 pontos, consumiu um ciclo e preservou a pontuação após recarga. Pausa, navegação por teclado e redução de movimento têm verificações específicas. Telefone físico e avaliação com iniciantes reais permanecem pendentes.
+
+**Produção:** 50 verificações passaram; 16 arquivos publicados tiveram SHA-256 idêntico ao build, incluindo as cenas, as quatro novas texturas, os modelos e os handoffs. Uma participação técnica comprou duas unidades por dez créditos; uma nova leitura confirmou saldo de 15 e dois instrumentos com três ciclos. Repetir o pedido devolveu o mesmo recibo. O painel privado recusou visitante e jogador. O cenário de Marte abriu no navegador público sem erros de console observados. A prova desta rodada não repete as sete jornadas completas registradas em R28.
+
+[Handoff R29](docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md) · [Auditoria Bruno](docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md) · [QA de interface](evidence/r29-lobby-qa.json) · [Publicação e persistência](evidence/r29-production-publication.json)
+
+---
 
 ## R28 — sete jornadas e acessos oficiais
 
@@ -8414,7 +8428,7 @@ Os novos commits de Bruno mantêm os blobs de mídia. As versões de deploy usam
 
 # R29 · seleção de missões, assets NASA e handoff
 
-Fonte: `docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md` · SHA-256 original: `024b785f7ccd0b114afb10035b5dc04f31d75c9bd8bb0d5f8e05afccdd14e7aa` · Ajustes de caminhos privados: 0
+Fonte: `docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md` · SHA-256 original: `deb1d268cd8dbbae5326bffdb5ac1d7c9540a7249362264e26239d1ba6af3e63` · Ajustes de caminhos privados: 0
 
 # R29 · seleção de missões, assets NASA e handoff
 
@@ -8463,9 +8477,11 @@ No navegador, foram selecionados os sete destinos, conferindo pergunta, CTA e id
 
 A jornada sintética comprou dois monitores por 10 créditos. Depois de recarregar, havia duas unidades novas e saldo de 15. Uma unidade foi equipada na ISS e a proteção foi reforçada: a missão entregou 6 registros válidos, obteve 92 pontos e consumiu um ciclo apenas da unidade equipada. O painel do jogador confirmou dois eventos, sem pendências ou recusas. Uma segunda recarga preservou a pontuação. O reenvio de compra após perda de confirmação também foi exercitado com o handler real em teste, sem duplicar unidades.
 
-Esta rodada percorreu a seleção dos sete destinos e completou uma tentativa ISS. A rodada anterior com sete missões completas permanece no [handoff R28](73-QA-MOVEL-E-HANDOFF-R28.md). O navegador em tamanho de celular não substitui telefone físico nem avaliação com jogadores iniciantes. O ensaio local usa repositório em memória durante o processo; a prova durável anterior em Blob privado é identificada no recibo R28.
+Esta rodada percorreu a seleção dos sete destinos e completou uma tentativa ISS. A rodada anterior com sete missões completas permanece no [handoff R28](73-QA-MOVEL-E-HANDOFF-R28.md). O navegador em tamanho de celular não substitui telefone físico nem avaliação com jogadores iniciantes. O ensaio local usa repositório em memória durante o processo.
 
-[Recibo de QA R29](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r29-lobby-qa.json) · [Histórico de publicação e acessos](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md)
+Na publicação do código `7f798af44fad12a2c3b09e7a466d8d303e7dd4f4`, os projetos principal e LP ficaram READY na Vercel. O domínio oficial passou em 50 verificações: 16 arquivos foram comparados por SHA-256 ao build, e uma participação técnica comprou duas unidades por 10 créditos no armazenamento privado de produção. Uma leitura posterior confirmou saldo de 15, duas unidades novas e ausência de duplicação ao repetir o pedido. Visitante e jogador receberam 401 no acesso administrativo. A cena de Marte foi observada no navegador público, sem erros de console. Estes resultados não medem aprendizagem humana.
+
+[Recibo de QA R29](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r29-lobby-qa.json) · [Recibo de produção R29](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r29-production-publication.json) · [Histórico de publicação e acessos](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md)
 
 
 ---

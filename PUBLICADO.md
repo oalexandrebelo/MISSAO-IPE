@@ -1,5 +1,19 @@
 # Publicação MISSÃO IPÊ
 
+## R29 — seleção imersiva e compra em lote
+
+**Publicada e conferida em 15/11/2026.** Código `7f798af44fad12a2c3b09e7a466d8d303e7dd4f4`; principal `dpl_EFrE2p4EqcQPUnxGaWRAmNWrRWCb` e LP `dpl_HEzZhnFW94jMGrt14GdyADHWg7Nf` **READY** no mesmo commit. O [jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) apresenta os sete destinos com horizonte planetário 3D, transições de câmera, texturas NASA e os modelos de Bennu e Webb. Cada destino mostra sua pergunta, aprendizado e botão Jogar. A composição segue a referência Space planet, com a marca e o fluxo da MISSÃO IPÊ.
+
+A revisão dos repositórios de Bruno encontrou mudanças de interface e compra em quantidade, sem novos arquivos de mídia. A loja oficial ganhou quantidade por instrumento, com uma única transação confirmada pelo servidor. ISS, Lua, Marte e Europa mantêm a contribuição integrada; o contexto histórico de coleta e retorno da OSIRIS-REx complementa Bennu. A auditoria distingue missões executáveis de cenários apenas documentados.
+
+**Aceite:** 180 testes de domínio, 121 de interface, 53 de métricas e 18 de distribuição passaram. A seleção dos sete destinos foi inspecionada em desktop e viewports móveis de 320 e 390 px. Uma jornada local comprou duas unidades, retomou o inventário, completou ISS com seis registros válidos e 92 pontos, consumiu um ciclo e preservou a pontuação após recarga. Pausa, navegação por teclado e redução de movimento têm verificações específicas. Telefone físico e avaliação com iniciantes reais permanecem pendentes.
+
+**Produção:** 50 verificações passaram; 16 arquivos publicados tiveram SHA-256 idêntico ao build, incluindo as cenas, as quatro novas texturas, os modelos e os handoffs. Uma participação técnica comprou duas unidades por dez créditos; uma nova leitura confirmou saldo de 15 e dois instrumentos com três ciclos. Repetir o pedido devolveu o mesmo recibo. O painel privado recusou visitante e jogador. O cenário de Marte abriu no navegador público sem erros de console observados. A prova desta rodada não repete as sete jornadas completas registradas em R28.
+
+[Handoff R29](docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md) · [Auditoria Bruno](docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md) · [QA de interface](evidence/r29-lobby-qa.json) · [Publicação e persistência](evidence/r29-production-publication.json)
+
+---
+
 ## R28 — sete jornadas e acessos oficiais
 
 **Publicada e conferida em 15/11/2026.** Implementação `9f86436c73455682c049bb604dfda1e3762298b1`; principal `dpl_Cj6efJP8hTRpFoSYGTCTCxZ4mQhb` e LP `dpl_8EsSXZJpa21XVhsKXY1suS9fcMKp` READY. A [LP principal](https://projeto-ipe-lp.vercel.app/) apresenta sete missões e encaminha o pitch para a [central de apresentação](https://missao-ipe-central-ab.alexandrebelo.chatgpt.site/). `/pitch`, `/apresentacao` e a raiz de `pitch.nasa-missaoipe.alexandrebelo.com` redirecionam à central. Jogo e painel preservam o domínio oficial.
