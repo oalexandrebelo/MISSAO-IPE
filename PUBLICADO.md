@@ -1,5 +1,21 @@
 # Publicação MISSÃO IPÊ
 
+## R33 · LP no domínio oficial, copy e sete jornadas móveis
+
+**Publicada e conferida em 15/11/2026.** Código `9d0737e61593ef34a71b5599b470457dd968b6e8`; principal `dpl_HZXm7W8AEJtAVK8yRoZF6pWqvsF5` e LP `dpl_FYcymnjDZFmxNd71GT1PCns2wgzn` **READY**. A [página principal](https://nasa-missaoipe.alexandrebelo.com/) retorna HTTP 200 e mantém o domínio oficial, sem redirecionar para vercel.app. O hub anterior está em [/documentacao](https://nasa-missaoipe.alexandrebelo.com/documentacao).
+
+A copy explica sete destinos, três casos com registros históricos NASA, etapas de briefing, hangar, operação e relatório, além do modo de equipe no mesmo aparelho. Nas missões de Bruno, comprar, equipar, conferir, lançar, transferir, coletar e receber têm funções explícitas. Loja, indicação de lançador incompatível e atalhos de inspeção 3D foram ajustados. A/B identifica corretamente o efeito da janela de comunicação sem inventar diferenças de massa ou custo.
+
+**QA:** 180 testes de domínio, 163 de interface, 53 de métricas, 20 de distribuição e dois de política HTTP/CSP passaram. LP: quatro testes do motor, 21 assets por SHA, TypeScript e export aprovados. No navegador local a 390 px, foram concluídas as sete missões e uma tentativa de contraste do Cerrado. Após recarga: oito tentativas, sete destinos cumpridos, 29 eventos confirmados, nove créditos e os ciclos de seis instrumentos permaneceram salvos. Inventário conferido também a 320 px. O teste HTTP isolado recuperou os sete resultados após reinício e recusou duplicação de recompensa/desgaste.
+
+**Produção:** 43 verificações passaram, incluindo 16 arquivos idênticos ao build por SHA-256, recursos da LP, documentação, sessão anônima, painel privado e subdomínios. No navegador a 390 px, menu e Escape funcionaram; Jogar agora abriu `/lab/index.html` no mesmo domínio, com Iniciar jogo visível, sem overflow horizontal ou erros de console observados. A falha inicial por versão incompatível do PNPM foi corrigida fixando a versão 11.25.0 já adotada pela LP. Os scripts de hidratação foram externalizados sem mudar a ordem, preservando a CSP no build remoto.
+
+Esta rodada não criou partidas em produção. Percursos sintéticos, viewport emulado e reinício local não equivalem a teste com iniciantes reais, telefone físico ou nova prova de reinício do Blob de produção. O recibo documental pode ter commit posterior ao código verificado; os IDs acima identificam exatamente os deploys conferidos.
+
+[Handoff R33](docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.md) · [Percursos móveis](evidence/r33-mobile-journey.json) · [Publicação verificada](evidence/r33-production-publication.json) · [Jogar](https://nasa-missaoipe.alexandrebelo.com/lab/index.html)
+
+---
+
 ## R32 · jogo refinado e LP principal publicada
 
 - Código do jogo e da LP: `17a714ea1258ca38fc43c643d3bbd7eee106ac66`, publicado no GitHub e com ambos os projetos Vercel em **READY**.

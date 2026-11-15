@@ -1,0 +1,322 @@
+{
+  "edition": "R33",
+  "codeCommit": "9d0737e61593ef34a71b5599b470457dd968b6e8",
+  "checkedAt": "2026-11-15T21:37:00.021Z",
+  "status": "passed",
+  "files": [
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 1457,
+      "sha256": "1fe7c00949d194adc8678543c17437a47877f89e65691c42fafa317554f26009"
+    },
+    {
+      "path": "lab/assets/BrunoHangarScene-BuxvF7Tb.js",
+      "status": 200,
+      "bytes": 16323,
+      "sha256": "4e954f6ae3c935a06a45a681fb8b870627cd3386c7957ca6e1f6e5e96cc96335"
+    },
+    {
+      "path": "lab/assets/LobbyScene-C17CUeE_.js",
+      "status": 200,
+      "bytes": 2812,
+      "sha256": "1bc7e6fef0f2060d825bc37683638b6443acd64d0b1ccd80931539f7799c1fb4"
+    },
+    {
+      "path": "lab/assets/OrbitalScene-CxONEVlJ.js",
+      "status": 200,
+      "bytes": 219963,
+      "sha256": "32debd6fb7eb8de295ea57f6205a4b7cd4c12eec2e4599e9490ef9f411fb6bde"
+    },
+    {
+      "path": "lab/assets/index-CZybv0Ge.js",
+      "status": 200,
+      "bytes": 713774,
+      "sha256": "8be6c92fe0c07ccc1ebbcafac90d0c8368f3555066f4cfbe96a731b79ddde3fd"
+    },
+    {
+      "path": "lab/assets/index-Cfy7O6Fx.css",
+      "status": 200,
+      "bytes": 243051,
+      "sha256": "a3cbdce6fdbc6707c341261018627f1bb493f78ff6394c3929b865b63bd2c28b"
+    },
+    {
+      "path": "lab/environments/polyhaven/studio-small-01-1k.hdr",
+      "status": 200,
+      "bytes": 1701440,
+      "sha256": "a2d308672f077b0872686a439d76dc3ace91274380ae2e5f02c653c3ccbc8407"
+    },
+    {
+      "path": "lab/environments/polyhaven/manifest.json",
+      "status": 200,
+      "bytes": 658,
+      "sha256": "4248f53c1195049ea762cb0972beb0eee90d208016e060c69aa4addd46672b3d"
+    },
+    {
+      "path": "lab/models/nasa/manifest.json",
+      "status": 200,
+      "bytes": 17629,
+      "sha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d"
+    },
+    {
+      "path": "lab/textures/lobby/manifest.json",
+      "status": 200,
+      "bytes": 3692,
+      "sha256": "40e4974d5353694ddc8fcc0ac52892488c8c9a3401ecdb1499c1328446bd8bc5"
+    },
+    {
+      "path": "lab/models/kenney/structure-platform.glb",
+      "status": 200,
+      "bytes": 17200,
+      "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99"
+    },
+    {
+      "path": "lab/models/kenney/manifest.json",
+      "status": 200,
+      "bytes": 1057,
+      "sha256": "9e8fab57da22ed583e8053fec01bbc9f62625e1907b7dcb09e7ce03d1adf92ae"
+    },
+    {
+      "path": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+      "status": 200,
+      "bytes": 27094,
+      "sha256": "96e0153d25de582a509c4888a41514b91864b374e4a0b59883aab4c145ecbb6e"
+    },
+    {
+      "path": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+      "status": 200,
+      "bytes": 6894,
+      "sha256": "ec3ff02f7f381c0e4979f80eae848aba1f9a9e5e554877bcd85b3be833452b80"
+    },
+    {
+      "path": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+      "status": 200,
+      "bytes": 9600,
+      "sha256": "051cc0374ecb742f05b87052767d8f4f2686e0766dec1877027f56afbcabdcfb"
+    },
+    {
+      "path": "docs/82-FLUXO-MOVEL-PERSISTENCIA-E-HANDOFF-R33.html",
+      "status": 200,
+      "bytes": 13033,
+      "sha256": "c0679a0e47701c4fd7a39081eb45dfa354ebf41af2c039c4057064a85dd0bf17"
+    }
+  ],
+  "checks": [
+    {
+      "path": "/api/metrics?action=admin",
+      "status": 401
+    },
+    {
+      "path": "/api/metrics?action=session",
+      "status": 200
+    },
+    {
+      "path": "/r33-page-does-not-exist",
+      "status": 404
+    },
+    {
+      "host": "jogo",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html"
+    },
+    {
+      "host": "docs",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html"
+    },
+    {
+      "host": "painel",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "location": null,
+      "canonical": true,
+      "phasesCopy": true
+    },
+    {
+      "path": "/_next/static/media/33553e7595b74ccf-s.p.woff2",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/media/636a5ac981f94f8b-s.p.woff2",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/4ebcf2432b2e840d.css",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/webpack-ad91b156d0cb1ac5.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/d9352ea8-d55abf1825db55a6.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/342-019291b0f9618eab.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/main-app-bac41c0d02dfd80b.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/271-f968bf12d74198b2.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/app/page-f02c54994fb434a4.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/app/not-found-80ea278eddaa93e6.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/42db836d9e64e415.css",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-3814cddd18b2095e01abb745.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-1c8da88edbe7776454392b53.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-9c87ffc4708e389cfd65c59b.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-1fab169d458447b2031c42e1.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-88f8959f84e75afbeda7786d.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-64b93884c453a7154c4de554.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-885a60492f7b91b9035da639.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-7632e5acf98f7221ef96248b.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-6d75225af7177dd1a846a614.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-32a582143e7502e6116842ab.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-581d818ace2267b491219c66.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-7256bed9a8b4c2dcc84c3d1b.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-ab2bddc263ea090109725078.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-1b3b02090a90e793e5cd31d7.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-7fbf544b26d399f031fadfa8.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-5aeb09827db3e3d1e79524a4.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-dc1443d46311bd663cfd0e18.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-b51483d1dbaf9833fc79c6f1.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-86de51fd81b9175c90c9db38.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-e3d22652a8e272876ffacf12.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-20d914fb45b6ba41d16f3d67.js",
+      "status": 200
+    },
+    {
+      "path": "/_next/ipe-inline-7e444e4bf4e30d4689c4786f.js",
+      "status": 200
+    },
+    {
+      "path": "/documentacao",
+      "status": 200,
+      "sha256": "ca4d57a5d6c8f81e79591a16cc4c50260f0e885bc3ab828d5650064f3c4b2966"
+    },
+    {
+      "host": "projeto-ipe-lp.vercel.app",
+      "status": 200,
+      "presentationLink": true,
+      "documentationLink": true,
+      "playAction": true
+    }
+  ],
+  "limits": [
+    "Viewport emulado; não é teste em telefone físico.",
+    "Sete jornadas e recarga foram testadas com participação sintética local; produção recebeu conferência de acesso, artefatos e interface.",
+    "Pontuação da simulação não comprova aprendizagem humana."
+  ],
+  "deployments": [
+    {
+      "project": "missao-ipe",
+      "id": "dpl_HZXm7W8AEJtAVK8yRoZF6pWqvsF5",
+      "state": "READY",
+      "commit": "9d0737e61593ef34a71b5599b470457dd968b6e8"
+    },
+    {
+      "project": "projeto-ipe-lp",
+      "id": "dpl_FYcymnjDZFmxNd71GT1PCns2wgzn",
+      "state": "READY",
+      "commit": "9d0737e61593ef34a71b5599b470457dd968b6e8"
+    }
+  ],
+  "browser": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "officialLandingUrl": "https://nasa-missaoipe.alexandrebelo.com/",
+    "canonical": "https://nasa-missaoipe.alexandrebelo.com/",
+    "horizontalOverflow": false,
+    "menuOpened": true,
+    "escapeClosedMenu": true,
+    "playLinkReached": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html",
+    "gameStartButtonVisible": true,
+    "observedConsoleErrors": 0,
+    "newProductionParticipationCreated": false
+  }
+}
