@@ -1,5 +1,15 @@
 # Publicação MISSÃO IPÊ
 
+## R32 · jogo refinado e LP principal publicada
+
+- Código do jogo e da LP: `17a714ea1258ca38fc43c643d3bbd7eee106ac66`, publicado no GitHub e com ambos os projetos Vercel em **READY**.
+- [LP principal](https://projeto-ipe-lp.vercel.app/): a raiz do domínio oficial abre esta entrada. [Documentação geral](https://nasa-missaoipe.alexandrebelo.com/documentacao): antigo hub, com acesso ao handoff atual e estudos históricos identificados.
+- [Jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html): escolhas junto à nave, plataforma Kenney ajustada, controles compactos, leitura da operação móvel e retorno ao mesmo destino.
+- [Handoff R32](docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.md) · [Verificação pública do código](evidence/r32-production-publication.json) · [Percursos locais](evidence/r32-mobile-design.json).
+- 180 testes de domínio, 161 de interface, 53 de métricas e 20 da distribuição aprovados. LP: quatro testes do motor, 21 assets por SHA, TypeScript e export aprovados.
+- Conferência pública: 16 arquivos iguais ao build por SHA-256 e nove verificações de rotas/acesso. Jogo a 320 px sem transbordamento nem erro de console; LP local a 1280/390/320 px com navegação e laboratório funcionando.
+- Pontuação, créditos e desgaste foram conferidos na participação sintética local. Esta rodada não criou partidas em produção nem repetiu sete voos completos; os limites constam no handoff. Não houve teste em telefone físico.
+
 ## R31 — plataforma Kenney e escolhas claras
 
 **Publicada e conferida em 15/11/2026.** Código `9e1b0ed6ea49e63452122352ead86419753da7e0`; jogo `dpl_73UV1GTSejWc8XqxywZ5qjpZVhgy` e LP `dpl_BdSK8q6WBxbVXLqib9myPvJUeFSH` READY nesse commit. A plataforma Kenney CC0 foi integrada aos sete hangares; o GLB local tem 17.200 bytes. O plano em edição volta ao 3D ao trocar uma opção, os instrumentos faltantes têm nome e indicação de encaixes, e Meu progresso conta até sete destinos distintos com sucesso confirmado.

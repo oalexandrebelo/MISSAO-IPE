@@ -1,0 +1,180 @@
+{
+  "edition": "R32",
+  "codeCommit": "17a714ea1258ca38fc43c643d3bbd7eee106ac66",
+  "checkedAt": "2026-11-15T20:42:43.546Z",
+  "status": "passed",
+  "files": [
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 1457,
+      "sha256": "17d2b1abc965d0412e9343c909be4333150b9717a9405564cde1fcad0d36421f"
+    },
+    {
+      "path": "lab/assets/BrunoHangarScene-DQJ3x109.js",
+      "status": 200,
+      "bytes": 16323,
+      "sha256": "3cbc5526a081a7576976bacf0efb299ab24bea2094ae9dae9673737a593c4f1d"
+    },
+    {
+      "path": "lab/assets/LobbyScene-q8FbWaEJ.js",
+      "status": 200,
+      "bytes": 2812,
+      "sha256": "13ef19c41a817bc05c8e3ebe923ec947921273bed4cd37af3ea19844f311f4b9"
+    },
+    {
+      "path": "lab/assets/OrbitalScene-DLhsqcJS.js",
+      "status": 200,
+      "bytes": 219963,
+      "sha256": "cad949f5ec47d5460aa08c62b23a64d04eaac4cd41590998144f6c0cddce9459"
+    },
+    {
+      "path": "lab/assets/index-7CMtLNql.css",
+      "status": 200,
+      "bytes": 242611,
+      "sha256": "ea23e2c84b5f7707e0b6e6da87393e354165cfd8f3c491bc82f52bc949a7ad0a"
+    },
+    {
+      "path": "lab/assets/index-SFxDCbbV.js",
+      "status": 200,
+      "bytes": 711121,
+      "sha256": "b6108189bad80b23b04f0316404a9d5555bd9f538c93964793236090e4bfe876"
+    },
+    {
+      "path": "lab/environments/polyhaven/studio-small-01-1k.hdr",
+      "status": 200,
+      "bytes": 1701440,
+      "sha256": "a2d308672f077b0872686a439d76dc3ace91274380ae2e5f02c653c3ccbc8407"
+    },
+    {
+      "path": "lab/environments/polyhaven/manifest.json",
+      "status": 200,
+      "bytes": 658,
+      "sha256": "4248f53c1195049ea762cb0972beb0eee90d208016e060c69aa4addd46672b3d"
+    },
+    {
+      "path": "lab/models/nasa/manifest.json",
+      "status": 200,
+      "bytes": 17629,
+      "sha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d"
+    },
+    {
+      "path": "lab/textures/lobby/manifest.json",
+      "status": 200,
+      "bytes": 3692,
+      "sha256": "40e4974d5353694ddc8fcc0ac52892488c8c9a3401ecdb1499c1328446bd8bc5"
+    },
+    {
+      "path": "lab/models/kenney/structure-platform.glb",
+      "status": 200,
+      "bytes": 17200,
+      "sha256": "bd1b99a3adea5f4567935a234e8d57ab09af34931b43002862b08a0746075d99"
+    },
+    {
+      "path": "lab/models/kenney/manifest.json",
+      "status": 200,
+      "bytes": 1057,
+      "sha256": "9e8fab57da22ed583e8053fec01bbc9f62625e1907b7dcb09e7ce03d1adf92ae"
+    },
+    {
+      "path": "docs/78-AUDITORIA-BRUNO-E-INTEGRACAO-R31.html",
+      "status": 200,
+      "bytes": 27094,
+      "sha256": "96e0153d25de582a509c4888a41514b91864b374e4a0b59883aab4c145ecbb6e"
+    },
+    {
+      "path": "docs/79-GAME-DESIGN-E-SKILLS-R31.html",
+      "status": 200,
+      "bytes": 6894,
+      "sha256": "ec3ff02f7f381c0e4979f80eae848aba1f9a9e5e554877bcd85b3be833452b80"
+    },
+    {
+      "path": "docs/80-HANGAR-KENNEY-E-HANDOFF-R31.html",
+      "status": 200,
+      "bytes": 9600,
+      "sha256": "051cc0374ecb742f05b87052767d8f4f2686e0766dec1877027f56afbcabdcfb"
+    },
+    {
+      "path": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+      "status": 200,
+      "bytes": 9595,
+      "sha256": "d45a07d13d53863f343e5ef163d72848eccca4d2c8053ccb75d0e71d24669aa7"
+    }
+  ],
+  "checks": [
+    {
+      "path": "/api/metrics?action=admin",
+      "status": 401
+    },
+    {
+      "path": "/api/metrics?action=session",
+      "status": 200
+    },
+    {
+      "path": "/r32-page-does-not-exist",
+      "status": 404
+    },
+    {
+      "host": "jogo",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html"
+    },
+    {
+      "host": "docs",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html"
+    },
+    {
+      "host": "painel",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html"
+    },
+    {
+      "path": "/",
+      "status": 307,
+      "location": "https://projeto-ipe-lp.vercel.app/"
+    },
+    {
+      "path": "/documentacao",
+      "status": 200,
+      "sha256": "0d189d9d082fdf2425e1493483c1aab5e6c2d8f8a2a11825a9b9acecbdb55d7f"
+    },
+    {
+      "host": "projeto-ipe-lp.vercel.app",
+      "status": 200,
+      "presentationLink": true,
+      "documentationLink": true,
+      "playAction": true
+    }
+  ],
+  "limits": [
+    "R32 tests mobile ISS and Cerrado, lobby continuity and local score/inventory persistence. R31 records seven hangars and R30 full baseline journeys. Public verification is read-only.",
+    "Physical phones and human learning efficacy remain untested."
+  ],
+  "deployments": [
+    {
+      "name": "missao-ipe",
+      "id": "dpl_AnFGMpXhF95Y7QN2SkYoKLgPqyPu",
+      "state": "READY"
+    },
+    {
+      "name": "projeto-ipe-lp",
+      "id": "dpl_E4MkjXin4nFyRSqkGeuTTc9LA8qt",
+      "state": "READY"
+    }
+  ],
+  "browser": {
+    "root": "redirected to projeto-ipe-lp.vercel.app",
+    "documentation": "hub served at /documentacao",
+    "game": {
+      "viewport": [
+        320,
+        740
+      ],
+      "platform": "kenney",
+      "overflow": false,
+      "consoleErrors": []
+    },
+    "newProductionAttempts": 0
+  }
+}

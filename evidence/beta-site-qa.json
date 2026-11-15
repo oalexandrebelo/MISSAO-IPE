@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T20:41:07.140Z",
-  "finishedAt": "2026-11-15T20:41:10.828Z",
+  "startedAt": "2026-11-15T20:44:43.604Z",
+  "finishedAt": "2026-11-15T20:44:47.462Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -9,8 +9,8 @@
   "environment": "Static document/AST inspection and real HTTP against the local release server. No browser, screenshot, GPU, Worker execution or external request.",
   "harness": {
     "path": "scripts/test-beta-site.mjs",
-    "bytes": 51258,
-    "sha256": "aec6136a67718c0e725b685e8a43d4683b1a5c3e0a3f6558d0b731a9e0dfe4f3"
+    "bytes": 51255,
+    "sha256": "24920a499f4526c40cb88ec9d33d3554084c1db258ccb13b030ef7eb9e1fe37b"
   },
   "limitations": [
     "No real-browser layout, focus, accessibility-tree, CSP enforcement, FPS or cold-offline qualification",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "e12a5fe72773099095550865c009350b407a259064a1d6c788ba53200b0778b1"
+        "sha256": "a6ab8958a9f2005605986862c03de7162ba8b83fc3c14be16cb17749cc2df543"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 486,
       "manifestedFiles": 485,
-      "bytes": 82587936,
+      "bytes": 82588388,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -104,7 +104,7 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 3467,
+      "count": 3466,
       "uniqueTargets": 346,
       "entries": [
         {
@@ -18634,12 +18634,6 @@
         {
           "source": "index.html",
           "target": "index.html",
-          "requestPath": "/",
-          "kind": "navigation"
-        },
-        {
-          "source": "index.html",
-          "target": "index.html",
           "requestPath": "/index.html",
           "kind": "navigation",
           "fragment": "contexto"
@@ -18678,10 +18672,9 @@
         },
         {
           "source": "index.html",
-          "target": "index.html",
-          "requestPath": "/index.html",
-          "kind": "navigation",
-          "fragment": "plano"
+          "target": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+          "requestPath": "/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+          "kind": "navigation"
         },
         {
           "source": "index.html",
@@ -18817,14 +18810,14 @@
         },
         {
           "source": "index.html",
-          "target": "docs/43-HANDOFF-GERAL-R17.html",
-          "requestPath": "/docs/43-HANDOFF-GERAL-R17.html",
+          "target": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+          "requestPath": "/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
           "kind": "navigation"
         },
         {
           "source": "index.html",
-          "target": "docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html",
-          "requestPath": "/docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html",
+          "target": "docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
+          "requestPath": "/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html",
           "kind": "navigation"
         },
         {
@@ -24747,7 +24740,7 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 73546,
-        "sha256": "a88c07c015f88298d23c97d5b891bdff39638a3b2b7d9176dd615e1b83c92561",
+        "sha256": "99170b58ac27f899201a0821872e5f617e15580d977c57a0d0c9f4ccd2a3161f",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -26097,8 +26090,8 @@
       {
         "path": "index.html",
         "status": 200,
-        "bytes": 60763,
-        "sha256": "0d189d9d082fdf2425e1493483c1aab5e6c2d8f8a2a11825a9b9acecbdb55d7f",
+        "bytes": 61215,
+        "sha256": "44c48e3a09b5eee97a6c773bb79549dbef5267caa3c078a0ae1e81b57faf1a43",
         "contentType": "text/html; charset=utf-8"
       },
       {
@@ -27372,7 +27365,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 230846,
-        "sha256": "e12a5fe72773099095550865c009350b407a259064a1d6c788ba53200b0778b1",
+        "sha256": "a6ab8958a9f2005605986862c03de7162ba8b83fc3c14be16cb17749cc2df543",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -27674,102 +27667,102 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 28.716
+      "durationMs": 29.511
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.297
+      "durationMs": 0.304
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 72.624
+      "durationMs": 76.329
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 0.953
+      "durationMs": 1.051
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 68.307
+      "durationMs": 70.659
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1252.149
+      "durationMs": 1324.35
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.535
+      "durationMs": 1.048
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 556.97
+      "durationMs": 556.958
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 138.928
+      "durationMs": 151.654
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 59.488
+      "durationMs": 65.81
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.938
+      "durationMs": 2.344
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 104.424
+      "durationMs": 112.286
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.651
+      "durationMs": 6.213
     },
     {
       "name": "iluminação CC0 do hangar é local e preserva origem e integridade",
       "status": "passed",
-      "durationMs": 0.59
+      "durationMs": 0.609
     },
     {
       "name": "plataforma Kenney CC0 é local, íntegra e não exige arquivos externos",
       "status": "passed",
-      "durationMs": 0.105
+      "durationMs": 0.126
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 55.795
+      "durationMs": 56.067
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 987.407
+      "durationMs": 1026.106
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 141.645
+      "durationMs": 155.619
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 7.024
+      "durationMs": 6.311
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 139.809
+      "durationMs": 147.394
     }
   ]
 }

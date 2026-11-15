@@ -300,7 +300,7 @@ async function run() {
     const logo = new JSDOM(bytesByFile.get('brand/missao-ipe-logo.svg').toString('utf8'), { contentType: 'image/svg+xml' }).window.document;
     assert.ok(logo.querySelectorAll('path').length > 0, 'Marca vetorial sem contornos');
     assert.equal(logo.querySelectorAll('image,foreignObject,script').length, 0, 'Marca deve ser SVG real sem bitmap ou código incorporado');
-    assert.ok(destinations.includes('/docs/61-BANCADA-COMPARACAO-E-LIBRAS-R23.html'), 'Guia da dupla deve estar acessível pelo portal');
+    assert.ok(destinations.includes('/docs/81-DESIGN-DO-JOGO-E-HANDOFF-R32.html'), 'Guia da dupla deve estar acessível pelo portal');
     const library = JSON.parse(bytesByFile.get('context/research-library-index.json'));
     for (const source of ['docs/25-HANDOFF-DOIS-DEVS.md', 'docs/24-OPORTUNIDADES-ESTUDOS.md', 'experiments/mission-design-lab/docs/GUIA-DIDATICO-R9.md', 'references/estudos/SMARTCITY-KIT-HISTORICO.md']) {
       assert.ok(library.documents.some(entry => entry.source === source), `Contexto ausente da biblioteca: ${source}`);

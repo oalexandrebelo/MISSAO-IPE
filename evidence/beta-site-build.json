@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T20:41:06.014Z",
+  "generatedAt": "2026-11-15T20:44:42.637Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 486,
-  "bytes": 82587936,
+  "bytes": 82588388,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 230846,
-    "sha256": "e12a5fe72773099095550865c009350b407a259064a1d6c788ba53200b0778b1"
+    "sha256": "a6ab8958a9f2005605986862c03de7162ba8b83fc3c14be16cb17749cc2df543"
   },
   "entries": [
     {
@@ -813,10 +813,10 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 73546,
-      "sha256": "a88c07c015f88298d23c97d5b891bdff39638a3b2b7d9176dd615e1b83c92561",
+      "sha256": "99170b58ac27f899201a0821872e5f617e15580d977c57a0d0c9f4ccd2a3161f",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "a88c07c015f88298d23c97d5b891bdff39638a3b2b7d9176dd615e1b83c92561",
+      "sourceSha256": "99170b58ac27f899201a0821872e5f617e15580d977c57a0d0c9f4ccd2a3161f",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2708,11 +2708,11 @@
     },
     {
       "path": "index.html",
-      "bytes": 60763,
-      "sha256": "0d189d9d082fdf2425e1493483c1aab5e6c2d8f8a2a11825a9b9acecbdb55d7f",
+      "bytes": 61215,
+      "sha256": "44c48e3a09b5eee97a6c773bb79549dbef5267caa3c078a0ae1e81b57faf1a43",
       "category": "public-portal",
       "source": "web/index.html",
-      "sourceSha256": "2deea2573a7303dace2df9a29bcbb227a40e66ab04d8ff2db09030ec5d080dcd",
+      "sourceSha256": "63d13e051ea856f33c6a76ecadaad6be3574cfa318cdf6b22c3c31a0f45b9d2e",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
