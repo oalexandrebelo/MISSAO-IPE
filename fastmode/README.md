@@ -7,6 +7,11 @@ Roda no navegador, sem build, sem instalação, offline.
 
 ![Trade study](docs/trade-study.png)
 
+## Pitch de 3 minutos
+
+- [`PITCH_3MIN.md`](PITCH_3MIN.md) — roteiro falado, marcação de tempo, plano B e perguntas prováveis.
+- [`pitch/index.html`](pitch/index.html) — deck de 6 slides com cronômetro de 3:00 (`← →` ou espaço).
+
 ## O que este PR adiciona
 
 Um modo **FASTMODE** independente do app R19: jogo completo em HTML/CSS/JS puro, sem build, sem servidor e sem dependências. Serve para demonstrar a experiência em qualquer máquina (inclusive offline) e para validar as mecânicas de requisitos, trade study e relatório causal.
