@@ -1,0 +1,29 @@
+{
+  "verifiedAt": "2026-11-15T11:01:46.249Z",
+  "deploymentId": "dpl_CAobAam3N7wixbP57HCcrDw766kz",
+  "sourceCommit": "4dfc9db57401f151541a47ea50fa5c9635b0a146",
+  "alias": "https://projeto-ipe-lp.vercel.app",
+  "readyAndCommitConfirmedViaHostingApi": true,
+  "status": "passed",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "d3bcbf32b2b8737488c757c70bf8e2c3256e1eea3d2e918381c0e243a3e9c1f7",
+      "pitchLink": true
+    },
+    {
+      "path": "/creditos/",
+      "status": 200,
+      "sha256": "3906454491ffea6e6a441ae21cea0464e16c068da01a004e5cb69546e752faa6"
+    },
+    {
+      "path": "/r20-rota-inexistente",
+      "status": 404,
+      "sha256": "c8b80ed6db64e2bf05ad421130f34e8c944e187728bedc9871d369679b1c1ce1"
+    }
+  ],
+  "limits": [
+    "HTTP status and published pitch link only; local browser suite is recorded separately."
+  ]
+}

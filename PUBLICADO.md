@@ -1,5 +1,24 @@
 # Publicação MISSÃO IPÊ
 
+## R20 — primeira experiência e pitch de Alexandre Belo
+
+**Beta 0.11.0-beta.1 publicada e conferida em 15/11/2026**, edição `R20-beginner-journey-and-pitch`. Commit de implementação e integração `4dfc9db57401f151541a47ea50fa5c9635b0a146`. Vercel principal `dpl_FzyYbNALWL3CH4fBZF4FiLPpfWaw`; LP `dpl_CAobAam3N7wixbP57HCcrDw766kz`: ambas **READY**, mesmo commit e domínios públicos confirmados pela API.
+
+- [Jogar as três missões](https://projeto-ipe.vercel.app/lab/index.html): escolha destaca o sistema correspondente; termos científicos são explicados; resultado final e relógio do replay ficam separados. Copiar o ensaio A/B orienta o retorno ao projeto, sem executar automaticamente.
+- [Pitch de Alexandre Belo](https://projeto-ipe.vercel.app/pitch): sete cenas, roteiro de três minutos, notas, teclado, tela cheia, movimento reduzido, fontes NASA e comparação interativa de Bennu. Duas curvas da MotionMaxxing adaptadas para Web Animations, com licença e atribuição locais.
+- [Handoff dos dois devs](https://projeto-ipe.vercel.app/docs/51-QA-INICIANTE-E-HANDOFF-R20.html) e [guia do apresentador](https://projeto-ipe.vercel.app/docs/52-PITCH-ALEXANDRE-BELO-R20.html). Alexandre recebe crédito nominal; a marca é a logo oficial da equipe.
+- [LP imersiva](https://projeto-ipe-lp.vercel.app/) conecta o novo pitch, mantendo jogo, créditos e 404.
+
+**Verificação:** 152 testes de domínio e 60 de interface no laboratório, 2 regressões do pitch, 17 da distribuição e 24 do contexto. LP: build, 22 testes de navegador, 4 de motor e 17 assets íntegros. [Recibo local](evidence/revision-r20.json). Percurso de iniciante realizado por agentes nas três missões; não constitui estudo com participantes humanos.
+
+**Produção:** 368 arquivos com HTTP 200, hashes e políticas corretos; biblioteca de 114 documentos; `/pitch` redireciona para a apresentação canônica. No navegador público, A/B de Bennu mudou de 2 para 6 e a câmera incompatível do Webb manteve a explicação do próprio caso, sem erro de console observado. [Recibo principal](evidence/production-r20.json) · [recibo LP](evidence/production-lp-r20.json).
+
+A PR #2 de FASTMODE chegou ao repositório durante esta revisão e foi preservada integralmente em `fastmode/`, por merge sem conflitos. Seus casos e pitch são uma contribuição paralela, não fazem parte da validação ou da distribuição curada desta R20. O próximo trabalho é revisar essa contribuição antes de associá-la à jornada científica principal.
+
+Este registro identifica as implantações verificadas acima. Seu commit documental aciona outra implantação com os mesmos runtimes. Aprendizagem humana, toque em celular físico e desempenho GPU continuam sem certificação. A auditoria automatizada de acessibilidade do pitch ficou incompleta; os testes de acessibilidade da LP pertencem à suíte própria.
+
+---
+
 ## R18 — registros reais de Bennu e Webb
 
 Beta **0.9.0-beta.1**, edição `R18-real-nasa-scientific-records`. **Publicada e conferida** no commit `1bb440801e2e6dcd3094c10878b5d643ba55dd83`. Implantação principal `dpl_2kU48qhgiXLNpKRCwNiryfCLzSXW`, READY, em [jogo e documentação](https://projeto-ipe.vercel.app/). LP `dpl_FLo1NQcrA3e9B4uaTrCYuwgQaZhq`, READY, em [entrada orbital](https://projeto-ipe-lp.vercel.app/). API da Vercel confirmou o mesmo commit e os dois domínios; acesso público sem login.
