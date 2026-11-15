@@ -1,7 +1,7 @@
 {
   "edition": "R25-game-shell-bruno-rive-design",
   "verifiedAt": "2026-11-15T16:32:38.784580+00:00",
-  "stage": "local candidate; production tracked separately",
+  "stage": "implementation ccfad7cc1c3e57e2a4eeb16d04acde40de44489e published; production receipts separate",
   "tests": {
     "labDomain": {
       "passed": 169,
@@ -81,7 +81,17 @@
     ],
     "desktopHangar": "launch bottom744px within main bottom870px; compact header, scene and controls visible",
     "mobile": "document width320 and390 equals viewport, internal play area scrolls",
-    "rive": "official Canvas2.50.0, watermark preserved; 3.2s startup,0.6s change; color diagram visible; battery16→24Wh changes after idle without resize"
+    "rive": "official Canvas2.50.0, watermark preserved; 3.2s startup,0.6s change; color diagram visible; battery16→24Wh changes after idle without resize",
+    "bennu": {
+      "validRecords": 6,
+      "score": 90,
+      "scope": "local Chrome CUA; instrument, power and contact changes reflected in Rive"
+    },
+    "webb": {
+      "validRecords": 6,
+      "score": 92,
+      "scope": "local Chrome CUA; entered project through 03 Projeto"
+    }
   },
   "limits": [
     "viewport emulation is not a physical-phone test",
@@ -90,5 +100,17 @@
     "leaving Bruno countdown does not record cancellation",
     "DCC-MCP gateway:0 connectedhosts; Meshy not connected and no paid generation"
   ],
-  "privacy": "only synthetic local QA; no credentials, cookies, real names or emails in receipt"
+  "privacy": "only synthetic local QA; no credentials, cookies, real names or emails in receipt",
+  "accessibilityScan": {
+    "tool": "AccessLint audit_live",
+    "page": "local final game Start",
+    "violations": 0,
+    "scope": "automated page scan; no manual screen-reader or linguistic certification"
+  },
+  "productionBrowser": {
+    "origin": "https://nasa-missaoipe.alexandrebelo.com",
+    "start": "new six-mission game visible with official logo and full-viewport Earth",
+    "libras": "avatar signaled Start then automatically updated to Nome step; public orientation only, no field contents",
+    "scope": "Chromium CUA; language quality not certified"
+  }
 }

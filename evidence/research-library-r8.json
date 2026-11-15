@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T16:32:42.379Z",
+  "generatedAt": "2026-11-15T16:37:57.833Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 128,
   "documents": [
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 32059,
-      "originalSha256": "9665441141ebad18617be6cd306d9ff8063d7e37c443721b1aaab53d4f111dd9",
-      "projectedSha256": "9665441141ebad18617be6cd306d9ff8063d7e37c443721b1aaab53d4f111dd9",
+      "originalBytes": 33049,
+      "originalSha256": "40381fb33c86dbd80d3d6619ffe96957b3a54b30a3035b95f748d307f3a6fcb9",
+      "projectedSha256": "40381fb33c86dbd80d3d6619ffe96957b3a54b30a3035b95f748d307f3a6fcb9",
       "redactions": 0
     },
     {
@@ -1416,13 +1416,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2410481,
-      "sha256": "74fac4dec6e3e169ef1b8d2124ad5feeaac052ed6b7a59e671af3ef95929c59c"
+      "bytes": 2411590,
+      "sha256": "6f5e294f00a9af67c9c65ba3b768fdd453608937395a70e4d3e795d63382e763"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1933384,
-      "sha256": "39bb9885587088538464d840960f09a618def54ee464fa4d3356a7893c37b3e4"
+      "bytes": 1934374,
+      "sha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687"
     }
   ]
 }

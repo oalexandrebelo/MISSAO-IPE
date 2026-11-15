@@ -65,17 +65,19 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `9665441141ebad18617be6cd306d9ff8063d7e37c443721b1aaab53d4f111dd9` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `40381fb33c86dbd80d3d6619ffe96957b3a54b30a3035b95f748d307f3a6fcb9` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
 
 ## R25 — seis missões, Start, hangar e progresso
 
-Candidato validado localmente em 15/11/2026. A publicação e os identificadores de deploy serão registrados depois do aceite no domínio oficial. Inclui a revisão R24 de design, identidade SVG, navegação, fontes locais e Rive.
+**Publicada em 15/11/2026.** Implementação `ccfad7cc1c3e57e2a4eeb16d04acde40de44489e`. Principal `dpl_78mHsM8kwxip6pK42sZSnAYS6YmS` e LP `dpl_CyCXVNPMbpYBB8s5PUz6YWj3xKXE`, ambos **READY** no mesmo commit. Inclui a revisão R24 de design, identidade SVG, navegação, fontes locais e Rive.
 
 Start abre o fluxo Nome → E-mail → Tipo → Play. O centro de comando reúne ISS, Lua, Marte, Cerrado, Bennu e Webb. Nas três adaptações de Bruno, seis escolhas alteram a nave e os recursos; lançamento e relatório permitem investigar e redesenhar. A pontuação é recalculada pelo servidor e os resultados alimentam o painel privado. A nave é didática; os três casos científicos preservam seus dados históricos.
 
 Verificação local: 169 testes de domínio, 98 de interface, 33 de métricas, 16 de Libras/analytics e 18 de distribuição aprovados. Em navegador: ISS 0→6 válidos/92 pontos, Lua 6/90, Marte bloqueado→6/91; cinco tentativas confirmadas e conservadas após reload. Os três GLBs NASA renderizaram, incluindo Perseverance a 390 px. Em 320 e 390 px não houve overflow horizontal. [Recibo funcional](evidence/r25-functional-qa.json).
+
+**Aceite em produção.** Quatorze rotas e assets do domínio oficial responderam corretamente, incluindo o jogo e os quatro handoffs. Os bytes do Rive e dos três GLBs correspondem ao original. Na LP, sete verificações passaram, incluindo a 404 real, fontes locais e a apresentação de seis missões. A API persistiu seis tentativas sintéticas únicas, aceitou o reenvio sem duplicar e recalculou exatamente os resultados dos seis motores; acesso anônimo ou de jogador ao painel permaneceu em `401`. [Assets e rotas](evidence/r25-production-assets.json) · [Métricas privadas](evidence/r25-production-metrics.json) · [LP](evidence/r25-lp-production.json). No navegador público, o novo Start abriu corretamente e o avatar de Libras continuou da tela inicial à orientação de Nome, sem receber os campos. Estes recibos identificam a implantação verificada; o commit documental posterior os publica sem alterar o jogo.
 
 O DCC-MCP respondeu com zero hosts conectados. O pacote usa assets NASA locais; Meshy não foi conectado e nenhum crédito foi consumido. A exportação Rive mantém sua abertura de marca. O aceite em celular físico, a qualidade linguística de Libras e a aprendizagem humana permanecem pendentes.
 

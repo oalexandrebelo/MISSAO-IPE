@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-15T16:35:08.151Z",
+  "origin": "https://projeto-ipe-lp.vercel.app",
+  "status": "passed",
+  "deploymentId": "dpl_CyCXVNPMbpYBB8s5PUz6YWj3xKXE",
+  "commit": "ccfad7cc1c3e57e2a4eeb16d04acde40de44489e",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 88520,
+      "sixMissions": true
+    },
+    {
+      "path": "/creditos",
+      "status": 200,
+      "bytes": 30271
+    },
+    {
+      "path": "/rota-qa-404-r25",
+      "status": 404,
+      "bytes": 22845
+    },
+    {
+      "path": "/brand/missao-ipe-logo.svg",
+      "status": 200,
+      "bytes": 23367
+    },
+    {
+      "path": "/site.css",
+      "status": 200,
+      "bytes": 1949,
+      "sha256": "443a081c00408d5ce26423948837236e5786097e9f5cef94a12d6ffa9e0a8a37"
+    },
+    {
+      "path": "/fonts/BricolageGrotesque-latin-variable.woff2",
+      "status": 200,
+      "bytes": 76868,
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447"
+    },
+    {
+      "path": "/fonts/PlusJakartaSans-latin-variable.woff2",
+      "status": 200,
+      "bytes": 27272,
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215"
+    }
+  ]
+}

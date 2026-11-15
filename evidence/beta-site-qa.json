@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T16:32:43.027Z",
-  "finishedAt": "2026-11-15T16:32:45.361Z",
+  "startedAt": "2026-11-15T16:37:58.653Z",
+  "finishedAt": "2026-11-15T16:38:01.564Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "f7970e440270e42a73cbf52073efcd3f2685b57ff5c866645e045d2a5d6b5dc9"
+        "sha256": "0e544327f2bbcc4f00316808bd281dfdb189aa9a3ed92846c73b07a26e4e3075"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 438,
       "manifestedFiles": 437,
-      "bytes": 43118772,
+      "bytes": 43120871,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -22159,21 +22159,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 65960,
-        "sha256": "e6743b4008c960fd06e6bbaea6ef262ffa819c5489228f7f18cd4edeb5f783ba",
+        "sha256": "ec7ccecbeda5d7aaf82cf8d97496970aa9958e27c31c31a99654f6f4994f00ee",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2410798,
-        "sha256": "1643fdb2becee36f336388edfd965b0e823d7b01b152a60b5e677040c3c12abc",
+        "bytes": 2411907,
+        "sha256": "3dab560d03b54d08ba4ad1b539a55d906ec4347c42be7826e97917a5634d966b",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 1933384,
-        "sha256": "39bb9885587088538464d840960f09a618def54ee464fa4d3356a7893c37b3e4",
+        "bytes": 1934374,
+        "sha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24448,7 +24448,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 207067,
-        "sha256": "f7970e440270e42a73cbf52073efcd3f2685b57ff5c866645e045d2a5d6b5dc9",
+        "sha256": "0e544327f2bbcc4f00316808bd281dfdb189aa9a3ed92846c73b07a26e4e3075",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -24735,92 +24735,92 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 14.086
+      "durationMs": 15.798
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.26
+      "durationMs": 0.356
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 64.536
+      "durationMs": 74.907
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 4.44
+      "durationMs": 5.745
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 62.357
+      "durationMs": 83.274
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1015.257
+      "durationMs": 1283.15
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.475
+      "durationMs": 0.642
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 494.235
+      "durationMs": 616.871
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 67.854
+      "durationMs": 80.087
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 30.766
+      "durationMs": 40.31
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.297
+      "durationMs": 2.455
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 84.704
+      "durationMs": 111.783
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.936
+      "durationMs": 5.961
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 58.881
+      "durationMs": 68.7
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 210.537
+      "durationMs": 287.12
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 109.053
+      "durationMs": 102.873
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 0.978
+      "durationMs": 1.564
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 64.351
+      "durationMs": 74.741
     }
   ]
 }

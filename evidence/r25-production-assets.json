@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-11-15T16:35:49.709Z",
+  "origin": "https://nasa-missaoipe.alexandrebelo.com",
+  "status": "passed",
+  "deploymentId": "dpl_78mHsM8kwxip6pK42sZSnAYS6YmS",
+  "commit": "ccfad7cc1c3e57e2a4eeb16d04acde40de44489e",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 60763,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/lab/index.html",
+      "status": 200,
+      "bytes": 1380,
+      "mime": "text/html; charset=utf-8",
+      "module": "./assets/index-DJXBbedx.js",
+      "sixMissionGame": true
+    },
+    {
+      "path": "/equipe/index.html",
+      "status": 200,
+      "bytes": 52020,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/dashboard/index.html",
+      "status": 200,
+      "bytes": 6996,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/presentation/pitch/index.html",
+      "status": 200,
+      "bytes": 26368,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/docs/index.html",
+      "status": 200,
+      "bytes": 20360,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/docs/63-RIVE-E-HANDOFF-R24.html",
+      "status": 200,
+      "bytes": 13549,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/docs/64-DESIGN-ACESSIVEL-R24.html",
+      "status": 200,
+      "bytes": 6429,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/docs/65-GAME-E-MISSOES-BRUNO-R25.html",
+      "status": 200,
+      "bytes": 10124,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/docs/66-PIPELINE-ASSETS-3D-R25.html",
+      "status": 200,
+      "bytes": 8049,
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/lab/rive/ipe-subsystems.riv",
+      "status": 200,
+      "bytes": 15019,
+      "mime": "application/octet-stream",
+      "sha256": "103b0ce860cf3b696dc6d9eaea3603ca24922a54f85fd862cda188348d37e5db"
+    },
+    {
+      "path": "/lab/models/nasa/iss-carbajal-b.glb",
+      "status": 200,
+      "bytes": 476992,
+      "mime": "model/gltf-binary",
+      "sha256": "2ba4427413b0dd89a33d2acaf962dea8a96a3b1d8dceda05cc7aad547ffd3d16"
+    },
+    {
+      "path": "/lab/models/nasa/lro-meaney-a.glb",
+      "status": 200,
+      "bytes": 654500,
+      "mime": "model/gltf-binary",
+      "sha256": "b9547bc7c8c37c44675a80c3c3e27b647a9ff1293cf40030ef36f806b9c616b1"
+    },
+    {
+      "path": "/lab/models/nasa/mars-2020-perseverance.glb",
+      "status": 200,
+      "bytes": 4987176,
+      "mime": "model/gltf-binary",
+      "sha256": "10db7c03a5e63a5a3b3e7baa6243aa4918ba045fa8ff0a731d0217491adc727f"
+    }
+  ]
+}

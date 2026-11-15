@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T16:32:42.412Z",
+  "generatedAt": "2026-11-15T16:37:57.873Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 438,
-  "bytes": 43118772,
+  "bytes": 43120871,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 207067,
-    "sha256": "f7970e440270e42a73cbf52073efcd3f2685b57ff5c866645e045d2a5d6b5dc9"
+    "sha256": "0e544327f2bbcc4f00316808bd281dfdb189aa9a3ed92846c73b07a26e4e3075"
   },
   "entries": [
     {
@@ -813,30 +813,30 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 65960,
-      "sha256": "e6743b4008c960fd06e6bbaea6ef262ffa819c5489228f7f18cd4edeb5f783ba",
+      "sha256": "ec7ccecbeda5d7aaf82cf8d97496970aa9958e27c31c31a99654f6f4994f00ee",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "e6743b4008c960fd06e6bbaea6ef262ffa819c5489228f7f18cd4edeb5f783ba",
+      "sourceSha256": "ec7ccecbeda5d7aaf82cf8d97496970aa9958e27c31c31a99654f6f4994f00ee",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2410798,
-      "sha256": "1643fdb2becee36f336388edfd965b0e823d7b01b152a60b5e677040c3c12abc",
+      "bytes": 2411907,
+      "sha256": "3dab560d03b54d08ba4ad1b539a55d906ec4347c42be7826e97917a5634d966b",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "74fac4dec6e3e169ef1b8d2124ad5feeaac052ed6b7a59e671af3ef95929c59c",
+      "sourceSha256": "6f5e294f00a9af67c9c65ba3b768fdd453608937395a70e4d3e795d63382e763",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1933384,
-      "sha256": "39bb9885587088538464d840960f09a618def54ee464fa4d3356a7893c37b3e4",
+      "bytes": 1934374,
+      "sha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "39bb9885587088538464d840960f09a618def54ee464fa4d3356a7893c37b3e4",
+      "sourceSha256": "38fb46657445236225f078ed49e56b82b336b52590a434bb0d4817f26aa62687",
       "transformation": "none; bytes preserved"
     },
     {
