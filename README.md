@@ -2,23 +2,23 @@
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.8.0-beta.1 · edição R17 · 15/11/2026.**
+**Beta atual: 0.9.0-beta.1 · edição R18 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/43-HANDOFF-GERAL-R17.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/46-HANDOFF-DOIS-DEVS-R18.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/43-HANDOFF-GERAL-R17.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/46-HANDOFF-DOIS-DEVS-R18.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
 ## Direção vigente — histórias reais, identidade da equipe
 
-**IPÊ é o nome da equipe.** A árvore identifica a marca; os três casos partem de fatos NASA: Terra/MODIS e vegetação; reconhecimento de Bennu pela OSIRIS-REx; espectroscopia do Webb em WASP-39 b. As introduções trazem fontes e datas, sem equipes ou acontecimentos inventados. O Cerrado usa registros históricos reais; Bennu e telescópio continuam exercícios com dados sintéticos explicitamente separados da história real.
+**IPÊ é o nome da equipe.** A árvore identifica a marca; os três casos partem de fatos NASA: Terra/MODIS e vegetação; reconhecimento de Bennu pela OSIRIS-REx; espectroscopia do Webb em WASP-39 b. As introduções trazem fontes e datas, sem equipes ou acontecimentos inventados. Os três casos usam arquivos históricos reais: Terra/MODIS, dimensões de seis rochas/clastos da OSIRIS-REx e seis bins do Webb/NIRSpec PRISM para WASP-39 b. Fonte, unidade, seleção e qualidade acompanham cada registro. As naves e suas operações são didáticas.
 
-[Histórias e limites](docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [logo SVG oficial e Figma](docs/40-IDENTIDADE-MISSAO-IPE-R17.md) · [prontidão para Space Apps](docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
+[Dados reais e limites](docs/45-DADOS-REAIS-BENNU-WEBB-R18.md) · [logo SVG oficial e Figma](docs/40-IDENTIDADE-MISSAO-IPE-R17.md) · [prontidão para Space Apps](docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
 
 A página orbital da PR #1 foi incorporada em `apps/immersive-lp/`, corrigindo a pasta ausente no projeto Vercel separado. A contribuição de **Bruno A Carvalho** foi consolidada em `contributions/bruno-figma/` como fonte revisada: 32 arquivos, autoria e cinco commits referenciados, com quatro assets excluídos e justificados. O motor oficial permanece a base das três missões. [Inventário, procedência e reaproveitamento](docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md).
 
 ## Descobrir antes de otimizar
 
-A R16 torna o propósito explícito e acrescenta três experimentos guiados, ligados ao mesmo motor e à nave 3D. O jogador faz uma previsão, executa A/B mudando um único fator, inspeciona ambos no mesmo segundo e decide se quer copiar aquelas escolhas para seu projeto. A aplicação não executa nem salva uma tentativa automaticamente.
+A experiência torna o propósito explícito e acrescenta três experimentos guiados, ligados ao mesmo motor e à nave 3D. O jogador faz uma previsão, executa A/B mudando um único fator, inspeciona ambos no mesmo segundo e decide se quer copiar aquelas escolhas para seu projeto. A aplicação não executa nem salva uma tentativa automaticamente.
 
 | Missão | Pergunta e aprendizagem | Experimento controlado |
 | --- | --- | --- |
@@ -34,7 +34,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R17. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R18. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -50,7 +50,7 @@ O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidên
 
 ## O que existe
 
-O Cerrado preserva seu motor determinístico, 64 configurações por cenário, dados históricos MOD13Q1.061, replay verificável e busca de alternativas. Bennu e Telescópio acrescentam seis decisões de projeto: lançador, perfil orbital, instrumento, energia, contatos e vida operacional. Seus registros são sintéticos e claramente identificados.
+O Cerrado preserva seu motor determinístico, 64 configurações por cenário, dados históricos MOD13Q1.061, replay verificável e busca de alternativas. Bennu e Telescópio acrescentam seis decisões de projeto: lançador, perfil orbital, instrumento, energia, contatos e vida operacional. Seus registros são dados publicados: eixo maior em metros para Bennu e profundidade de trânsito em porcentagem com incerteza 1σ para Webb. O painel, os cartões 3D e o replay compartilham os IDs dos arquivos; um registro só aparece como evidência após recepção completa e compatível.
 
 As três jornadas têm quatro segmentos — usuários, lançamento, espaço e solo — e cenas ligadas aos estados registrados. Voltar no tempo mostra apenas os dados disponíveis naquele instante. Bennu e Telescópio incluem requisitos, hipótese, execução, retorno científico, redesign, comparação A/B no mesmo segundo e projetos JSON exportáveis. O modo equipe distribui quatro papéis entre até quatro pessoas no mesmo dispositivo; não há sessão online sincronizada.
 
@@ -59,7 +59,7 @@ As três jornadas têm quatro segmentos — usuários, lançamento, espaço e so
 A R15 torna as escolhas reconhecíveis na nave: carga de processamento, câmera ou espectrômetro, painéis, bateria e rádio. Inspecione cada sistema, separe os componentes e gire a montagem. As explicações usam valores do catálogo: W, Wh, Mbit, taxa, massa, créditos e agenda. Nas expedições, ampliar contatos mantém a mesma antena e taxa. Na reprodução e comparação, a nave conserva a configuração executada.
 
 
-A marca usa o símbolo e lettering SVG enviados pelo autor, sem fundo. Quatro modelos oficiais NASA são locais: CubeSat genérico, antena DSN, Bennu e JWST. Bennu e JWST contextualizam as novas cenas; o acervo permite inspecionar os quatro modelos. O estado e os indicadores vêm do motor; uma malha não valida a engenharia. Os [créditos e limites](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md) distinguem geometria real, parâmetros didáticos e dados sintéticos.
+A marca usa o símbolo e lettering SVG enviados pelo autor, sem fundo. Quatro modelos oficiais NASA são locais: CubeSat genérico, antena DSN, Bennu e JWST. Bennu e JWST contextualizam as novas cenas; o acervo permite inspecionar os quatro modelos. O estado e os indicadores vêm do motor; uma malha não valida a engenharia. Os [créditos e limites](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md) distinguem geometria de referência e parâmetros didáticos; a [atualização R18](docs/45-DADOS-REAIS-BENNU-WEBB-R18.md) documenta os dados científicos reais.
 
 A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, trajetória de chegada, operação de antenas reais, multiplayer remoto e validação de aprendizagem permanecem futuros trabalhos. As duas ou três horas das novas missões representam somente operação após chegada.
 
@@ -67,7 +67,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.8.0-beta.1 / R17 | `experiments/mission-design-lab/` |
+| Beta 0.9.0-beta.1 / R18 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |

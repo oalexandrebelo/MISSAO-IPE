@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T09:12:52.390Z",
+  "generatedAt": "2026-11-15T09:39:16.138Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 103,
+  "documentCount": 108,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -21,9 +21,9 @@
       "title": "Atribuição, licenças e autoria assistida",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 4064,
-      "originalSha256": "d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5",
-      "projectedSha256": "d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5",
+      "originalBytes": 4901,
+      "originalSha256": "60af10872b7871f08523562c1301d45f0cc247df792066929a1b249f0b50a7ef",
+      "projectedSha256": "60af10872b7871f08523562c1301d45f0cc247df792066929a1b249f0b50a7ef",
       "redactions": 0
     },
     {
@@ -43,9 +43,9 @@
       "title": "MISSÃO IPÊ — Ciência que chega",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 12743,
-      "originalSha256": "1b7cc6ebbc13a53c2becff4b3153664b2ffaeee5040bcc74e5f196d55d4021be",
-      "projectedSha256": "1b7cc6ebbc13a53c2becff4b3153664b2ffaeee5040bcc74e5f196d55d4021be",
+      "originalBytes": 13193,
+      "originalSha256": "9cdeb5cc178ccebe87d8ab8763d1932d892d32b6efd36302a1d114817c27288c",
+      "projectedSha256": "9cdeb5cc178ccebe87d8ab8763d1932d892d32b6efd36302a1d114817c27288c",
       "redactions": 0
     },
     {
@@ -405,7 +405,7 @@
       "id": "doc-docs-32-guia-didatico-missoes-3d-md",
       "title": "32 — Guia didático do Ipê: projetar, operar e explicar uma missão científica",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 41531,
       "originalSha256": "db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8",
       "projectedSha256": "db26e08ad8dbf2128edf1819110cec18180d3e4c6f95af0b5163d8713dc17cc8",
@@ -427,7 +427,7 @@
       "id": "doc-docs-34-handoff-imersao-3d-r15-md",
       "title": "34 — Continuidade para dois devs: escolhas visíveis na nave",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 11381,
       "originalSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
       "projectedSha256": "ba4c16699a788c6f9e67c78b67fc0e96853d273293f7cf587a308352332e2c90",
@@ -460,7 +460,7 @@
       "id": "doc-docs-37-proposta-pedagogica-e-tecnologias-r16-md",
       "title": "37 — Proposta pedagógica e tecnologias para as três missões · R16",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 28318,
       "originalSha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
       "projectedSha256": "74a72248152c0a2a0a6f6b61aba59437af02c420ef32c0f0ae1b9ace530af2c3",
@@ -471,7 +471,7 @@
       "id": "doc-docs-38-handoff-r16-md",
       "title": "Handoff R16 — propósito, investigação e transições",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 8729,
       "originalSha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
       "projectedSha256": "5cc1ca0f2082dba30ecf1c6210b2afaf73cd2f664cabf0ff726963b17eaab703",
@@ -515,7 +515,7 @@
       "id": "doc-docs-42-prontidao-e-criterios-space-apps-r17-md",
       "title": "42 — Prontidão e critérios do NASA Space Apps",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 16074,
       "originalSha256": "d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522",
       "projectedSha256": "d4076e01a16a6085be0ea7d3bb9a34a9d7feebfd04c1ec9a90c7698d677db522",
@@ -526,7 +526,7 @@
       "id": "doc-docs-43-handoff-geral-r17-md",
       "title": "MISSÃO IPÊ — handoff para os dois desenvolvedores",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 10797,
       "originalSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
       "projectedSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
@@ -537,10 +537,32 @@
       "id": "doc-docs-44-historias-reais-e-limites-didaticos-md",
       "title": "44 — Histórias reais e limites dos exercícios",
       "category": "Documentação do produto",
-      "editionGroup": "current",
+      "editionGroup": "historical",
       "originalBytes": 7508,
       "originalSha256": "6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e",
       "projectedSha256": "6cb5aaa9d47a5db55455af6fdfc40264d57505d66fc848f4827050f57718f61e",
+      "redactions": 0
+    },
+    {
+      "source": "docs/45-DADOS-REAIS-BENNU-WEBB-R18.md",
+      "id": "doc-docs-45-dados-reais-bennu-webb-r18-md",
+      "title": "R18 — Bennu e Webb: da fonte científica ao resultado do jogo",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 9259,
+      "originalSha256": "8726d1d06d198d635bb0c9481e9357cc5ec86a08327efa98ce57aad9e5225d9c",
+      "projectedSha256": "8726d1d06d198d635bb0c9481e9357cc5ec86a08327efa98ce57aad9e5225d9c",
+      "redactions": 0
+    },
+    {
+      "source": "docs/46-HANDOFF-DOIS-DEVS-R18.md",
+      "id": "doc-docs-46-handoff-dois-devs-r18-md",
+      "title": "R18 — handoff de ciência, experiência e publicação",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 10211,
+      "originalSha256": "6a158ef6df5e78c8f87695bab1d7462baee4cdf7dddede6d1ce3b9ecaba60be8",
+      "projectedSha256": "6a158ef6df5e78c8f87695bab1d7462baee4cdf7dddede6d1ce3b9ecaba60be8",
       "redactions": 0
     },
     {
@@ -560,9 +582,9 @@
       "title": "Missão Ipê — laboratório de missões R9–R10",
       "category": "Laboratório R9–R10",
       "editionGroup": "current",
-      "originalBytes": 13489,
-      "originalSha256": "139e3f47c850cec15f3b6615592c1b3019b2b016865ae8c66deaf64adbbbc8f5",
-      "projectedSha256": "139e3f47c850cec15f3b6615592c1b3019b2b016865ae8c66deaf64adbbbc8f5",
+      "originalBytes": 13811,
+      "originalSha256": "0feddd885a800b8c9b03716fc773238f37f6e3db45e854cbd8eb4e5c85c60af5",
+      "projectedSha256": "0feddd885a800b8c9b03716fc773238f37f6e3db45e854cbd8eb4e5c85c60af5",
       "redactions": 0
     },
     {
@@ -929,6 +951,17 @@
       "redactions": 0
     },
     {
+      "source": "research/bennu-r18/README.md",
+      "id": "doc-research-bennu-r18-readme-md",
+      "title": "Bennu R18 — medidas publicadas, origem verificável",
+      "category": "Pesquisa técnica",
+      "editionGroup": "historical",
+      "originalBytes": 5444,
+      "originalSha256": "8b0e81ab72fb62f48e16813052753532b6c3cfe888ee6ab9ad5ed908d9189fb3",
+      "projectedSha256": "8b0e81ab72fb62f48e16813052753532b6c3cfe888ee6ab9ad5ed908d9189fb3",
+      "redactions": 0
+    },
+    {
       "source": "research/history/01-juri-mundial-rodada-anterior.md",
       "id": "doc-research-history-01-juri-mundial-rodada-anterior-md",
       "title": "Parecer de júri mundial: Missão Ipê diante dos precedentes de 2023–2025",
@@ -1014,6 +1047,28 @@
       "originalBytes": 11263,
       "originalSha256": "dd115c751ce54ad732ec05b8e29d88cedbe4959663ea0a437957094930be29d2",
       "projectedSha256": "dd115c751ce54ad732ec05b8e29d88cedbe4959663ea0a437957094930be29d2",
+      "redactions": 0
+    },
+    {
+      "source": "research/motion-opportunities-r18.md",
+      "id": "doc-research-motion-opportunities-r18-md",
+      "title": "R18 — evidência científica e movimento",
+      "category": "Pesquisa técnica",
+      "editionGroup": "historical",
+      "originalBytes": 8564,
+      "originalSha256": "f67ff8c7ddeacdef661817519a5f29897ddfb4330c33eba77328e0cc337f9d4c",
+      "projectedSha256": "f67ff8c7ddeacdef661817519a5f29897ddfb4330c33eba77328e0cc337f9d4c",
+      "redactions": 0
+    },
+    {
+      "source": "research/webb-r18/README.md",
+      "id": "doc-research-webb-r18-readme-md",
+      "title": "Webb: seis medidas reais, uma pergunta científica",
+      "category": "Pesquisa técnica",
+      "editionGroup": "historical",
+      "originalBytes": 8402,
+      "originalSha256": "7ef9908696240adbc487912671aea0717ef018cac01cc16963520b9fb8941b4c",
+      "projectedSha256": "7ef9908696240adbc487912671aea0717ef018cac01cc16963520b9fb8941b4c",
       "redactions": 0
     },
     {
@@ -1141,13 +1196,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2096424,
-      "sha256": "4e90d15725d89532bfa68f0d9f18be1b31d7468ac22bd8b2c4663d722a42ca9a"
+      "bytes": 2153099,
+      "sha256": "5ac61ebf25dd535838d30f3f4bd2ec5c109d9138e158b5ed64a609e48597a971"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1688535,
-      "sha256": "68c81232b7f67e39535807d51fe9c4d648dfe0e5545a9266b92dc4894a7666a6"
+      "bytes": 1733173,
+      "sha256": "37b4d2ade2108638c729e3597819c6a7610138a8c37a78ee9ec753a890983a64"
     }
   ]
 }

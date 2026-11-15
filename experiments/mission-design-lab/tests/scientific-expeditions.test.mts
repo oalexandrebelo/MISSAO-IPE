@@ -12,17 +12,18 @@ const viable: Record<ExpeditionId, ExpeditionConfig> = {
 };
 
 test('results identify the exact expedition model independently of the design/report format', () => {
-  assert.equal(EXPEDITION_MODEL_VERSION, 'ipe-expeditions-r14-v1');
+  assert.equal(EXPEDITION_MODEL_VERSION, 'ipe-expeditions-r18-v1');
   for (const id of ['bennu', 'telescope'] as const) assert.equal(simulateExpedition(id, viable[id]).modelVersion, EXPEDITION_MODEL_VERSION);
 });
 
-test('two distinct scientific objectives each declare six finite synthetic observations with units', () => {
+test('two scientific objectives declare six immutable archive records with provenance and units', () => {
   for (const id of ['bennu', 'telescope'] as const) {
     const metadata = EXPEDITIONS[id];
     assert.equal(metadata.dataFixture.length, 6);
     assert.equal(new Set(metadata.dataFixture.map(record => record.id)).size, 6);
-    assert.ok(metadata.dataFixture.every(record => Number.isFinite(record.value) && record.unit && record.syntheticLabel && record.goal));
-    assert.match(metadata.dataNotice, /sintétic/i);
+    assert.ok(metadata.dataFixture.every(record => Number.isFinite(record.value) && record.unit && record.evidence.sourceUrl && record.goal));
+    assert.match(metadata.dataNotice, /históricos reais/i);
+    assert.ok(metadata.dataFixture.every(record => record.evidence.sourceRow && record.evidence.observedAt && record.evidence.limitations));
     assert.deepEqual(Object.keys(metadata.requirements).sort(), ['ground', 'launch', 'space', 'user']);
     const choices = getExpeditionChoices(id);
     assert.equal(Object.keys(choices).length, 6);

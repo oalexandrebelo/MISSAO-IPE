@@ -1,0 +1,69 @@
+{
+  "edition": "R18",
+  "version": "0.9.0-beta.1",
+  "recordedAt": "2026-11-15T09:39:15.904674+00:00",
+  "scope": "Replace synthetic Bennu/Webb observations with traceable archived science, ID-linked 3D and causal replay.",
+  "newDependencies": false,
+  "science": {
+    "bennu": "6 published object dimensions from NASA NTRS-linked Supplementary Table 1; all 7 source rows preserved",
+    "webb": "6 of 95 FIREFLy NIRSpec PRISM bins; NASA table cross-checked against author fraction-to-percent values",
+    "scientificValuesModifiedByChoices": false,
+    "simulation": "Educational processing, storage, compatibility and transmission; not new NASA observations or real spacecraft performance"
+  },
+  "automated": {
+    "labDomain": {
+      "passed": 148,
+      "failed": 0
+    },
+    "labSimulatedUI": {
+      "passed": 38,
+      "failed": 0
+    },
+    "campaignDomain": {
+      "passed": 120,
+      "failed": 0
+    },
+    "campaignSimulatedUI": {
+      "passed": 14,
+      "failed": 0
+    },
+    "context": {
+      "passed": 24,
+      "failed": 0
+    },
+    "distribution": {
+      "passed": 17,
+      "failed": 0
+    },
+    "portal": {
+      "passed": 12,
+      "failed": 0
+    },
+    "orbitalLpBrowserJourneys": {
+      "passed": 18,
+      "failed": 0
+    }
+  },
+  "builds": [
+    "main static release passed",
+    "orbital LP static export passed"
+  ],
+  "browserObserved": [
+    "Webb viable configuration delivered six real bins and uncertainty bars",
+    "First record replay selected corresponding delivery time and ground 3D card",
+    "Bennu viable configuration displayed six dimensions and credited NASA context image",
+    "No console errors observed during those actions"
+  ],
+  "resolvedDuringValidation": [
+    "Old synthetic-text UI assertions updated to real-data contract",
+    "CSV and NASA table added explicitly to distribution allowlist",
+    "Temporary NASA workspace acquisition URL omitted from public provenance projection; original repository receipt retained",
+    "LP test browser absent at default Playwright path; reused installed Google Chrome without adding dependencies"
+  ],
+  "limits": [
+    "Browser automation and DOM tests are not human learning validation.",
+    "No physical-device acceptance or orbital-navigation fidelity claim.",
+    "3D models are references without geographic registration to Bennu coordinates.",
+    "Production verification belongs to a separate deployment receipt."
+  ]
+}

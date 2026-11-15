@@ -27,7 +27,7 @@ Os documentos históricos podem mencionar caminhos e arquivos internos não dist
 
 # Atribuição, licenças e autoria assistida
 
-Fonte: `NOTICE.md` · SHA-256 original: `d6c554fceaa446073ea635c5fade0fcde739e5c375f5f3cc3a8fb58dbc1679b5` · Ajustes de caminhos privados: 0
+Fonte: `NOTICE.md` · SHA-256 original: `60af10872b7871f08523562c1301d45f0cc247df792066929a1b249f0b50a7ef` · Ajustes de caminhos privados: 0
 
 # Atribuição, licenças e autoria assistida
 
@@ -52,6 +52,13 @@ Os cartazes em references/user foram fornecidos por AB e preservados como refer�
 R12 — identidade e tipografia: símbolo SVG fornecido pelo responsável, assinatura horizontal convertida em contornos vetoriais a partir da marca fornecida. Fontes Bricolage Grotesque e Plus Jakarta Sans provenientes do Google Fonts, sob SIL Open Font License 1.1, com licenças e proveniência em experiments/mission-design-lab/public/fonts/. Materiais SmartCity em references/estudos/ são referências históricas de outro projeto, com limites e transformações identificados.
 
 R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NASA, com créditos específicos, datas, URLs e hashes em web/media/manifest.json e docs/27-ACERVO-VISUAL-NASA.md. Variantes de tamanho servidas pela NASA foram preservadas sem edição local. Imagens não mostram a nave fictícia Ipê e não representam endosso. Diagramas SVG interativos são esquemas didáticos próprios, separados do motor da missão.
+
+
+## Dados científicos R18
+
+- Bennu: DellaGiustina et al., Exogenic basalt on asteroid (101955) Bennu, DOI 10.1038/s41550-020-1195-z; registro NASA NTRS 20205007912 e Tabela Suplementar 1. Fatos numéricos e extração atribuídos; os PDFs integrais não são redistribuídos. Imagem contextual: NASA/Goddard/University of Arizona, fonte e hash em `research/bennu-r18/provenance.json`.
+- Webb: JWST Transiting Exoplanet Community Early Release Science Team; FIREFLy, NASA Exoplanet Archive e DOI 10.5281/zenodo.6959427, CC BY 4.0. Seis bins selecionados, sem ajuste ou interpolação. Arquivo NASA preservado; comparação com frações dos autores documentada em `research/webb-r18/`.
+- Nenhum endosso NASA é implícito. IPÊ identifica a equipe. Arquivos históricos reais não tornam a operação educativa uma reprodução de voo.
 
 
 ---
@@ -197,29 +204,29 @@ Os testes DOM não comprovam GPU, aprendizagem ou acessibilidade completa. Não 
 
 # MISSÃO IPÊ — Ciência que chega
 
-Fonte: `README.md` · SHA-256 original: `1b7cc6ebbc13a53c2becff4b3153664b2ffaeee5040bcc74e5f196d55d4021be` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `9cdeb5cc178ccebe87d8ab8763d1932d892d32b6efd36302a1d114817c27288c` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ — Ciência que chega
 
 Jogo educativo de engenharia de missões espaciais com três casos científicos: vegetação do Cerrado, levantamento de Bennu e observação infravermelha. Comece pela pergunta, defina requisitos, projete a nave, verifique recursos, opere a missão e investigue o que chegou aos cientistas.
 
-**Beta atual: 0.8.0-beta.1 · edição R17 · 15/11/2026.**
+**Beta atual: 0.9.0-beta.1 · edição R18 · 15/11/2026.**
 
-**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/43-HANDOFF-GERAL-R17.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
+**Comece aqui:** [guia didático completo](docs/32-GUIA-DIDATICO-MISSOES-3D.md) · [handoff atual dos dois devs](docs/46-HANDOFF-DOIS-DEVS-R18.md) · [oito oportunidades NASA Science](docs/33-OPORTUNIDADES-NASA-SCIENCE.md).
 
-**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/43-HANDOFF-GERAL-R17.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
+**Dois desenvolvedores começando agora:** leia primeiro o [guia de continuidade](docs/46-HANDOFF-DOIS-DEVS-R18.md), com a divisão sugerida de responsabilidades, mapa do código, prioridades e critérios de aceite. O [estudo completo](https://projeto-ipe.vercel.app/context/research-library.html) reúne o contexto atual e o acervo histórico, com busca e índice.
 
 ## Direção vigente — histórias reais, identidade da equipe
 
-**IPÊ é o nome da equipe.** A árvore identifica a marca; os três casos partem de fatos NASA: Terra/MODIS e vegetação; reconhecimento de Bennu pela OSIRIS-REx; espectroscopia do Webb em WASP-39 b. As introduções trazem fontes e datas, sem equipes ou acontecimentos inventados. O Cerrado usa registros históricos reais; Bennu e telescópio continuam exercícios com dados sintéticos explicitamente separados da história real.
+**IPÊ é o nome da equipe.** A árvore identifica a marca; os três casos partem de fatos NASA: Terra/MODIS e vegetação; reconhecimento de Bennu pela OSIRIS-REx; espectroscopia do Webb em WASP-39 b. As introduções trazem fontes e datas, sem equipes ou acontecimentos inventados. Os três casos usam arquivos históricos reais: Terra/MODIS, dimensões de seis rochas/clastos da OSIRIS-REx e seis bins do Webb/NIRSpec PRISM para WASP-39 b. Fonte, unidade, seleção e qualidade acompanham cada registro. As naves e suas operações são didáticas.
 
-[Histórias e limites](docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md) · [logo SVG oficial e Figma](docs/40-IDENTIDADE-MISSAO-IPE-R17.md) · [prontidão para Space Apps](docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
+[Dados reais e limites](docs/45-DADOS-REAIS-BENNU-WEBB-R18.md) · [logo SVG oficial e Figma](docs/40-IDENTIDADE-MISSAO-IPE-R17.md) · [prontidão para Space Apps](docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
 
 A página orbital da PR #1 foi incorporada em `apps/immersive-lp/`, corrigindo a pasta ausente no projeto Vercel separado. A contribuição de **Bruno A Carvalho** foi consolidada em `contributions/bruno-figma/` como fonte revisada: 32 arquivos, autoria e cinco commits referenciados, com quatro assets excluídos e justificados. O motor oficial permanece a base das três missões. [Inventário, procedência e reaproveitamento](docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md).
 
 ## Descobrir antes de otimizar
 
-A R16 torna o propósito explícito e acrescenta três experimentos guiados, ligados ao mesmo motor e à nave 3D. O jogador faz uma previsão, executa A/B mudando um único fator, inspeciona ambos no mesmo segundo e decide se quer copiar aquelas escolhas para seu projeto. A aplicação não executa nem salva uma tentativa automaticamente.
+A experiência torna o propósito explícito e acrescenta três experimentos guiados, ligados ao mesmo motor e à nave 3D. O jogador faz uma previsão, executa A/B mudando um único fator, inspeciona ambos no mesmo segundo e decide se quer copiar aquelas escolhas para seu projeto. A aplicação não executa nem salva uma tentativa automaticamente.
 
 | Missão | Pergunta e aprendizagem | Experimento controlado |
 | --- | --- | --- |
@@ -235,7 +242,7 @@ O [Planet Jumping](https://projeto-ipe.vercel.app/planet-jumping.html) é uma ex
 
 Além das três missões da edição R14, a sequência **Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega** está disponível em [Jogar a campanha](https://projeto-ipe.vercel.app/campanha/index.html). Ela mantém o caso do Cerrado e acrescenta objetivos de memória, preservação das bandas e custo. [Mapa e pitch](https://projeto-ipe.vercel.app/campanha/apresentacao/index.html) · [PRD, PRT, diagramas, schema e handoff](https://projeto-ipe.vercel.app/campanha/research/index.html).
 
-O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R17. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
+O código e os documentos completos dessa experiência ficam em [`experiments/four-level-campaign/`](experiments/four-level-campaign/). O seu contrato e os testes são independentes das expedições Bennu e Telescópio. A integração serve a campanha em uma rota própria e preserva o laboratório de três missões, agora na R18. Veja [o registro da campanha](docs/32-CAMPANHA-QUATRO-NIVEIS.md).
 
 ## Explorar
 
@@ -251,7 +258,7 @@ O recibo de publicação está em [PUBLICADO.md](PUBLICADO.md). Metas ou evidên
 
 ## O que existe
 
-O Cerrado preserva seu motor determinístico, 64 configurações por cenário, dados históricos MOD13Q1.061, replay verificável e busca de alternativas. Bennu e Telescópio acrescentam seis decisões de projeto: lançador, perfil orbital, instrumento, energia, contatos e vida operacional. Seus registros são sintéticos e claramente identificados.
+O Cerrado preserva seu motor determinístico, 64 configurações por cenário, dados históricos MOD13Q1.061, replay verificável e busca de alternativas. Bennu e Telescópio acrescentam seis decisões de projeto: lançador, perfil orbital, instrumento, energia, contatos e vida operacional. Seus registros são dados publicados: eixo maior em metros para Bennu e profundidade de trânsito em porcentagem com incerteza 1σ para Webb. O painel, os cartões 3D e o replay compartilham os IDs dos arquivos; um registro só aparece como evidência após recepção completa e compatível.
 
 As três jornadas têm quatro segmentos — usuários, lançamento, espaço e solo — e cenas ligadas aos estados registrados. Voltar no tempo mostra apenas os dados disponíveis naquele instante. Bennu e Telescópio incluem requisitos, hipótese, execução, retorno científico, redesign, comparação A/B no mesmo segundo e projetos JSON exportáveis. O modo equipe distribui quatro papéis entre até quatro pessoas no mesmo dispositivo; não há sessão online sincronizada.
 
@@ -260,7 +267,7 @@ As três jornadas têm quatro segmentos — usuários, lançamento, espaço e so
 A R15 torna as escolhas reconhecíveis na nave: carga de processamento, câmera ou espectrômetro, painéis, bateria e rádio. Inspecione cada sistema, separe os componentes e gire a montagem. As explicações usam valores do catálogo: W, Wh, Mbit, taxa, massa, créditos e agenda. Nas expedições, ampliar contatos mantém a mesma antena e taxa. Na reprodução e comparação, a nave conserva a configuração executada.
 
 
-A marca usa o símbolo e lettering SVG enviados pelo autor, sem fundo. Quatro modelos oficiais NASA são locais: CubeSat genérico, antena DSN, Bennu e JWST. Bennu e JWST contextualizam as novas cenas; o acervo permite inspecionar os quatro modelos. O estado e os indicadores vêm do motor; uma malha não valida a engenharia. Os [créditos e limites](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md) distinguem geometria real, parâmetros didáticos e dados sintéticos.
+A marca usa o símbolo e lettering SVG enviados pelo autor, sem fundo. Quatro modelos oficiais NASA são locais: CubeSat genérico, antena DSN, Bennu e JWST. Bennu e JWST contextualizam as novas cenas; o acervo permite inspecionar os quatro modelos. O estado e os indicadores vêm do motor; uma malha não valida a engenharia. Os [créditos e limites](docs/30-ATIVOS-NASA-IMPLEMENTADOS.md) distinguem geometria de referência e parâmetros didáticos; a [atualização R18](docs/45-DADOS-REAIS-BENNU-WEBB-R18.md) documenta os dados científicos reais.
 
 A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, trajetória de chegada, operação de antenas reais, multiplayer remoto e validação de aprendizagem permanecem futuros trabalhos. As duas ou três horas das novas missões representam somente operação após chegada.
 
@@ -268,7 +275,7 @@ A cena oferece alternativa 2D e legendas. Integrações vivas NASA/JPL, GMAT, tr
 
 | Material | Local |
 | --- | --- |
-| Beta 0.8.0-beta.1 / R17 | `experiments/mission-design-lab/` |
+| Beta 0.9.0-beta.1 / R18 | `experiments/mission-design-lab/` |
 | Portal HTML interativo | `web/index.html` |
 | PRD / PRT | [PRD](docs/02-PRD.md) / [PRT](docs/03-PRT.md) |
 | Fluxogramas Mermaid | [Fluxogramas](docs/04-FLOWCHARTS.md) |
@@ -6114,6 +6121,181 @@ O arquivo de fatos registra as fontes efetivamente consultadas, incluindo o limi
 
 ---
 
+# R18 — Bennu e Webb: da fonte científica ao resultado do jogo
+
+Fonte: `docs/45-DADOS-REAIS-BENNU-WEBB-R18.md` · SHA-256 original: `8726d1d06d198d635bb0c9481e9357cc5ec86a08327efa98ce57aad9e5225d9c` · Ajustes de caminhos privados: 0
+
+# R18 — Bennu e Webb: da fonte científica ao resultado do jogo
+
+**15/11/2026 · MISSÃO IPÊ.** Esta revisão substitui as rugosidades e intensidades inventadas das duas expedições por resultados científicos publicados. A entrega didática continua separada da observação histórica: mudar bateria, instrumento ou contato muda **quais registros chegam**, nunca o valor medido ou sua incerteza.
+
+O Cerrado conserva seus arquivos históricos Terra/MODIS. Os três casos agora usam dados reais para exercitar perguntas diferentes: mudança de vegetação, comparação de dimensões de rochas e interpretação de um espectro. IPÊ é a equipe e a marca, sem papel na história científica.
+
+## Bennu: que tamanhos aparecem nas rochas investigadas?
+
+A OSIRIS-REx encontrou material brilhante entre rochas escuras de Bennu. DellaGiustina e colegas combinaram imagens, terreno e espectroscopia para investigar esse material. A semelhança de espectros de piroxênio com meteoritos HED sustenta a discussão sobre uma origem associada à família de Vesta. **O tamanho sozinho não estabelece essa origem.** [Artigo arquivado pela NASA](https://ntrs.nasa.gov/citations/20205007912) · [explicação NASA](https://www.nasa.gov/solar-system/nasas-osiris-rex-to-asteroid-bennu-youve-got-a-little-vesta-on-you/).
+
+O exercício usa uma parte concreta desse estudo: o **eixo maior**, em metros, de seis rochas/clastos da Tabela Suplementar 1. Os eixos foram medidos com imagens PolyCam registradas sobre terreno obtido pelo altímetro OLA. Os métodos listam imagens de morfologia de 27 de fevereiro a 28 de março de 2019; a tabela não atribui um horário individual a cada dimensão. [Suplemento original](https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf), página física 12, impressa 11.
+
+| ID do exercício | Objeto na tabela | Eixo maior (m) |
+| --- | --- | ---: |
+| `bennu-site-1` | Sítio 1 | 1,53 |
+| `bennu-site-2` | Sítio 2 | 3,93 |
+| `bennu-site-3` | Sítio 3 | 2,62 |
+| `bennu-site-4a` | Clasto 4a | 1,6 |
+| `bennu-site-5` | Sítio 5 | 3,221 |
+| `bennu-site-6` | Sítio 6 | 1,453 |
+
+A tabela integral tem sete linhas porque o sítio 4 contém os clastos 4a e 4b. O jogo seleciona um objeto de cada sítio; **4b, com eixo maior de 0,927 m, permanece no CSV de auditoria**. Não houve média, interpolação ou duplicação para completar os seis registros.
+
+A legenda limita a precisão dos eixos pela escala de **5,25 cm/pixel**. Essa escala não é uma barra de erro estatístico de ±1σ. A precisão vertical estimada de 1 cm refere-se à altura por OLA, não ao eixo maior. Os algarismos originais são preservados para rastreabilidade, sem prometer precisão adicional.
+
+O participante aprende a comparar escalas e a separar dado disponível a bordo de dado entregue ao solo. Um contato ampliado pode liberar mais registros da mesma medida histórica. O jogo não reprocessa imagens PDS brutas, calcula rugosidade, certifica pouso ou projeta essas coordenadas sobre o GLB. Não foi verificado registro cartográfico entre o modelo NASA e a tabela. A imagem contextual publicada pela NASA não é apresentada como seis fotografias individuais desses registros.
+
+Downloads da versão publicada: [seis registros](../lab/data/science/bennu-records.json) · [tabela completa em CSV](../lab/data/science/bennu-table1.csv) · [proveniência e hashes](../lab/data/science/bennu-provenance.json). No repositório: [pesquisa e extração](https://github.com/oalexandrebelo/MISSAO-IPE/tree/main/research/bennu-r18).
+
+## Webb: quanta luz foi bloqueada em cada faixa?
+
+Em 10 de julho de 2022, o NIRSpec/PRISM do Webb observou o trânsito de WASP-39 b. A NASA anunciou evidência de CO₂ em 25 de agosto daquele ano. Durante um trânsito, parte da luz estelar é bloqueada; a variação desse bloqueio com o comprimento de onda pode carregar informação atmosférica. [Explicação NASA da descoberta](https://science.nasa.gov/missions/webb/nasas-webb-detects-carbon-dioxide-in-exoplanet-atmosphere/).
+
+O conjunto escolhido é a redução **FIREFLy**, com 95 pontos, do [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b). Os valores foram conferidos também contra os [dados dos autores, DOI 10.5281/zenodo.6959427](https://doi.org/10.5281/zenodo.6959427). O jogo seleciona seis bins existentes próximos das âncoras 3,6; 3,9; 4,2; 4,3; 4,5 e 4,9 µm. Um **bin** é uma pequena faixa do espectro: os seis bins pertencem ao mesmo trânsito, não a seis exposições nem a duas observações de três bandas.
+
+| Linha entre os 95 pontos | Comprimento de onda (µm) | Luz bloqueada (%) | Incerteza (pontos percentuais, 1σ) |
+| --- | ---: | ---: | ---: |
+| 25 | 3,59308 | 2,13814 | 0,01009 |
+| 39 | 3,89121 | 2,10084 | 0,01222 |
+| 54 | 4,19111 | 2,13836 | 0,01171 |
+| 58 | 4,30310 | 2,24669 | 0,01259 |
+| 65 | 4,49196 | 2,22426 | 0,01393 |
+| 80 | 4,89040 | 2,15689 | 0,01512 |
+
+A grandeza é a profundidade de trânsito, `(Rp/R★)² × 100`, não fluxo relativo. O arquivo dos autores fornece a fração absoluta: multiplicar o valor e sua incerteza por 100 produz porcentagem e pontos percentuais, respectivamente. A tabela do arquivo NASA já apresenta os valores arredondados utilizados no exercício. Não houve ajuste de curva, criação de dados intermediários ou digitalização de uma figura.
+
+As barras de 1σ expressam as incertezas publicadas daquela redução. Não são garantia de que o valor real esteja dentro da barra, nem indicam que dois pontos sejam independentes. O recorte não fornece covariância entre bins. O participante pode descrever a variação dos pontos recebidos, mas **não refazer a significância da detecção de CO₂, estimar abundâncias ou anunciar vida** com esses seis valores.
+
+A decisão instrumental é didática: o espectrômetro do catálogo atende ao requisito do caso; a câmera genérica não. Essa câmera não representa o NIRCam real, que também possui modos espectroscópicos. Bateria, memória e comunicação afetam a entrega de arquivos históricos; não alteram o resultado observado pelo Webb.
+
+Downloads da versão publicada: [subconjunto e linhas de origem](../lab/data/science/webb-spectrum-subset.json) · [tabela NASA de 95 bins](../lab/data/science/webb-firefly-nasa.tbl) · [proveniência e hashes](../lab/data/science/webb-provenance.json). No repositório: [pesquisa e reprodução](https://github.com/oalexandrebelo/MISSAO-IPE/tree/main/research/webb-r18).
+
+## Fonte → instrumento → observação → downlink → resultado
+
+1. **Fonte:** cada registro preserva ID, grandeza, unidade, linha da publicação e origem. Data de publicação, data histórica de observação e T+ do jogo têm significados diferentes.
+2. **Instrumento:** o jogador escolhe o tipo de medida exigido. Na nave didática, a peça acompanha câmera/espectrômetro; o modelo NASA contextualiza a missão.
+3. **Processamento:** o motor agenda trabalhos, consumo e armazenamento. A unidade de transporte de 120/180 Mbit é um pacote didático; não é o tamanho do CSV nem uma especificação do hardware NASA.
+4. **Downlink:** cada pacote precisa ser recebido integralmente e ser compatível com a pergunta. Recursos insuficientes deixam registros ausentes.
+5. **Resultado:** cartões, gráfico e cena usam os mesmos IDs disponíveis. Um valor ausente permanece ausente. O botão de rever a entrega abre o evento correspondente no 3D; rebobinar o relógio não pode revelar dados futuros.
+
+O modelo da operação é `ipe-expeditions-r18-v1`. O relatório `ipe-scientific-report-v2` conserva a evidência e o resultado da tentativa. O projeto `ipe-scientific-design-v2` descreve escolhas e hipótese. Projetos antigos são recusados porque suas hipóteses podiam se referir a três bandas sintéticas ou setores inventados; reinterpretá-las silenciosamente comprometeria o aprendizado.
+
+## O que permanece didático
+
+Massa, orçamento em créditos, potências, capacidades, tamanhos de pacote, agenda, órbita conceitual e tempo comprimido pertencem ao motor educativo. O 3D não calcula trajetória, aponta antenas reais, acessa telemetria ao vivo ou representa uma nova descoberta NASA. Os modelos de Bennu e Webb têm origem própria e não substituem as fontes dos números.
+
+A inspiração visual [Cosmic Mapping](https://motionsites.ai/?prompt=cosmic-mapping) foi inspecionada somente pela prévia pública. Camadas e foco orientam a leitura causal; o vídeo, prompt protegido e assets não foram copiados. Não foi necessário usar REA/AB-R3A ou instalar dependências. [Registro da inspeção](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/research/motion-opportunities-r18.md).
+
+Dados publicados precisam de atribuição mesmo quando numericamente reutilizáveis. A hospedagem no NTRS não torna automaticamente todos os textos e imagens domínio público. O projeto publica a seleção numérica, documentação original, extração e referências; os PDFs completos de leitura de Bennu permanecem fora do Git.
+
+Leia o [handoff R18 para os dois devs](46-HANDOFF-DOIS-DEVS-R18.md) antes de modificar conjuntos, contratos ou visualização.
+
+
+---
+
+# R18 — handoff de ciência, experiência e publicação
+
+Fonte: `docs/46-HANDOFF-DOIS-DEVS-R18.md` · SHA-256 original: `6a158ef6df5e78c8f87695bab1d7462baee4cdf7dddede6d1ce3b9ecaba60be8` · Ajustes de caminhos privados: 0
+
+# R18 — handoff de ciência, experiência e publicação
+
+**15/11/2026 · MISSÃO IPÊ.** Repositório oficial: [oalexandrebelo/MISSAO-IPE](https://github.com/oalexandrebelo/MISSAO-IPE). Esta entrega substitui as medidas sintéticas de Bennu/Webb por dados publicados e mantém a simulação de recursos explicitamente didática. O estado de publicação e a validação integrada devem ser consultados em [PUBLICADO.md](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/PUBLICADO.md); este documento não é recibo de deploy.
+
+## A proposta que os dois devs devem conservar
+
+O participante aprende que uma missão científica precisa entregar **evidência adequada à pergunta**. Energia, armazenamento e comunicação podem limitar essa entrega. Receber todos os bits não basta quando o instrumento é incompatível; um conjunto incompleto não pode ser preenchido com zeros nem apresentado como descoberta completa.
+
+| Caso | Pergunta jogável | Evidência | Aprendizado principal |
+| --- | --- | --- | --- |
+| Cerrado | O que mudou na vegetação entre dois períodos? | Seis registros históricos Terra/MODIS | Potência versus energia, processamento e limites de uma diferença de NDVI |
+| Bennu | Que variedade de tamanhos existe nos objetos publicados? | Eixos maiores de seis rochas/clastos, em metros | Tempo de contato controla disponibilidade; tamanho não prova composição/origem |
+| Webb | Como a luz bloqueada varia entre seis faixas? | Seis bins de um trânsito de WASP-39 b, com incertezas | Tipo de medida e incerteza importam; transporte não equivale a descoberta |
+
+[Dados, seleção, fontes e limites R18](45-DADOS-REAIS-BENNU-WEBB-R18.md). Os registros Bennu são objetos 1, 2, 3, 4a, 5 e 6 da tabela científica. Não são os locais candidatos de coleta Nightingale/Osprey. Webb usa seis dos 95 bins de uma redução de um trânsito, não duas exposições de três bandas.
+
+## Divisão de responsabilidade
+
+| Responsável | Possui e revisa | Entrega que permite ao colega trabalhar |
+| --- | --- | --- |
+| **Dev A — ciência e motor** | Dados/versionamento, procedência, unidades, incertezas, catálogo, simulação, relatório e importação de projeto | Conjunto congelado com IDs estáveis, origem verificável, transformação documentada e testes de conservação/entrega |
+| **Dev B — interface e 3D** | Jornada, leitura das fontes, gráfico, cartões, inspeção da nave, paridade 2D/3D, teclado, toque e movimento reduzido | Cada evidência visual vinculada ao ID correto; texto acessível; lacunas e incertezas visíveis sem depender só de cor |
+| **Ambos** | Texto científico, testes com iniciantes, integração e publicação | Revisão cruzada da cadeia fonte → registro → evento → resultado; demonstração reproduzível das três missões |
+
+Não alterar valores NASA para equilibrar a dificuldade. Ajustar somente os parâmetros didáticos, com nova versão quando o resultado das simulações mudar. Mudança de fonte, unidade, seleção ou pergunta exige revisão de Dev A e Dev B juntos.
+
+## Arquivos e fronteiras
+
+Todos os caminhos `src/` a seguir pertencem a `experiments/mission-design-lab/`.
+
+| Arquivo/área | Responsabilidade |
+| --- | --- |
+| `research/bennu-r18/` e `research/webb-r18/`, na raiz | Arquivos de auditoria, seleção, extração, fontes e hashes; distinguir material publicável dos originais ignorados |
+| `src/lab/scientific-expeditions.ts` | Configuração, requisitos, cópia dos registros, cálculo determinístico e projeção do estado registrado |
+| `src/lab/mission-curriculum.ts` | Objetivo, aprendizagem, ensaio A/B com um fator alterado e interpretação defensável |
+| `src/lab/spacecraft-presentation.ts` | Correspondência entre escolhas e instrumentos/painéis/bateria/antena; sem executar outra física |
+| `src/ui/ScientificExpedition.tsx` e painel `ArchivedEvidence` | Jornada, hipótese, tentativas, leitura científica, gráfico, consulta de fonte e retorno ao evento de entrega |
+| `src/ui/OrbitalScene.tsx` | Nave configurada, modelos NASA e cartões de evidência por ID nos segmentos solo/usuários |
+| `src/ui/MissionStories.tsx` | História baseada em publicação científica; datas e limites do que foi incorporado |
+| `apps/immersive-lp/lib/content.ts`, na raiz | Resumo público das missões e perguntas frequentes; a LP é uma publicação separada |
+
+As tabelas distribuídas ficam em `/lab/data/science/`: `bennu-records.json`, `bennu-table1.csv`, `bennu-provenance.json`, `webb-spectrum-subset.json`, `webb-firefly-nasa.tbl` e `webb-provenance.json`. Os links de download estão no documento 45.
+
+## Contratos que não podem divergir
+
+- **Modelo:** `ipe-expeditions-r18-v1`. **Relatório:** `ipe-scientific-report-v2`. **Projeto:** `ipe-scientific-design-v2`. Arquivos antigos devem explicar sua incompatibilidade; não migrar automaticamente hipóteses sobre medidas sintéticas.
+- **Ciência imutável:** as escolhas não alteram `value`, `unit`, fonte, instante histórico ou incerteza. Alteram estado de processamento/entrega e validade instrumental no exercício.
+- **Relógios separados:** `producedAtS` e `deliveredAtS` pertencem ao jogo. A data observada vem da evidência. Bennu não possui horário individual por dimensão; não preencher com o início de uma campanha.
+- **Entrega por identidade:** usar `deliveredRecordIds` do instante selecionado, não uma contagem para acender os primeiros N itens. Com IDs não contíguos, o cartão correto deve ser liberado.
+- **Incerteza por significado:** Webb usa erro publicado de 1σ em pontos percentuais. A escala de 5,25 cm/pixel de Bennu não deve virar barra ±1σ nem ser aplicada ao valor como correção.
+- **Tentativa preservada:** uma cena de execução usa `result.config`. Editar rascunho não reescreve resultados já registrados.
+- **GLB independente:** Bennu/Webb são referências visuais. As latitudes/longitudes da tabela não autorizam marcar pontos como geograficamente alinhados ao modelo.
+- **Acesso a fontes:** dados públicos podem ser consultados diretamente. A disponibilidade no retorno da missão indica a entrega daquela tentativa, não sigilo ou indisponibilidade do arquivo público.
+
+## Roteiro de validação para os dois devs
+
+1. Entrar em **Bennu**, ler a pergunta e identificar a unidade em metros. Abrir a fonte e localizar a Tabela Suplementar 1. Conferir a omissão explícita de 4b no jogo e sua presença no CSV completo.
+2. Usar câmera, energia ampliada e contatos curtos. Registrar uma hipótese, executar e comparar produção, fila e recepção. Dados incompletos devem permanecer indisponíveis no retorno.
+3. Ampliar apenas os contatos, executar novamente e comparar no mesmo T+. Os eixos maiores e a fonte precisam permanecer idênticos. O rádio e sua taxa não mudam com a duração do contato.
+4. Selecionar um registro recebido e **rever a entrega no 3D**. Conferir ID, evento, relógio e subsistema. Rebobinar para antes da entrega: o registro não pode aparecer recebido na cena daquele instante.
+5. Entrar em **Webb**. Confirmar que a tabela é de um único trânsito e a grandeza é porcentagem de luz bloqueada. Com câmera genérica, recepção completa não deve produzir evidência espectral válida.
+6. Trocar apenas para espectrômetro. Verificar os pontos recebidos e suas barras de incerteza. Conferir uma linha com a tabela de 95 bins, sem confundir porcentagem com fração absoluta ou erro percentual relativo.
+7. Exportar relatório. Conferir versão, hipótese, configuração executada, dados científicos, origem e estados de entrega. Importar projeto v2 e verificar escolhas; importar um projeto antigo e verificar recusa explicada.
+8. Repetir os fluxos em modo 2D, sem WebGL, por teclado e com movimento reduzido. Controles, valores e interpretação devem continuar disponíveis fora do canvas. Testar celular físico antes de afirmar aceite móvel.
+9. Abrir Cerrado e a campanha existente para verificar regressão. Não alterar seus dados reais nem presumir que melhorias nas expedições resolvem a persistência compartilhada já documentada.
+
+## Execução local e publicação
+
+Com Node 24 e as dependências existentes instaladas, na raiz:
+
+```bash
+npm --prefix experiments/mission-design-lab run verify
+npm run build:release
+npm run test:context
+npm run test:beta
+npm run test:portal
+npm run start:beta
+```
+
+O site local usa `http://127.0.0.1:4175/`. O build principal publica `site/` por lista explícita. A LP em `apps/immersive-lp/` tem seu próprio build e projeto Vercel; consultar o README da aplicação. Não copiar toda a raiz, PDFs de leitura, arquivos privados ou `.env` para a hospedagem.
+
+Validação integrada R18: 148 testes de domínio e 38 de interface do laboratório; 120 + 14 da campanha; 24 de contexto; 17 de distribuição; 12 do portal; 18 jornadas da LP em navegador. Os builds estáticos passaram. A conferência visual abriu os resultados reais de Bennu/Webb e o replay 3D por registro, sem erro de console observado. [Recibo local R18](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/revision-r18.json). A verificação da hospedagem tem recibo próprio: não reutilizar a R17 como prova de R18. Para reproduzir testes da LP, use o navegador já instalado por `PLAYWRIGHT_CHROMIUM_EXECUTABLE` se o executável padrão do Playwright não estiver disponível.
+
+## O que ainda precisa de evidência humana
+
+O projeto possui uma proposta educativa verificável, mas a implementação não prova aprendizagem nem classificação no Space Apps. Observar participantes iniciantes, registrar se conseguem explicar um gargalo sem ajuda, testar toque/leitura em aparelho físico e ensaiar o pitch continuam necessários. A colaboração disponível é local no mesmo dispositivo; multiplayer remoto não está implementado. Questões de elegibilidade e histórico pré-evento permanecem no [documento de prontidão](42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md).
+
+Próxima melhoria deve partir de um problema observado nessas sessões. O ganho desta revisão é permitir que a pessoa reconheça uma medida real, siga sua origem, veja por que ela chegou ou faltou e formule uma conclusão do tamanho da evidência.
+
+
+---
+
 # Atribuição, licenças e autoria assistida
 
 Fonte: `experiments/mission-design-lab/NOTICE.md` · SHA-256 original: `1270b91de5a3eb0908a8b0278087e87b9a58648d5ba4d044d0703af1a6ea9537` · Ajustes de caminhos privados: 0
@@ -6201,7 +6383,9 @@ A versão 0.4.0-beta.2 acrescenta ConOps didático, revisão pré-voo, requisito
 
 # Missão Ipê — laboratório de missões R9–R10
 
-Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `139e3f47c850cec15f3b6615592c1b3019b2b016865ae8c66deaf64adbbbc8f5` · Ajustes de caminhos privados: 0
+Fonte: `experiments/mission-design-lab/README.md` · SHA-256 original: `0feddd885a800b8c9b03716fc773238f37f6e3db45e854cbd8eb4e5c85c60af5` · Ajustes de caminhos privados: 0
+
+> **Atualização R18 — 0.9.0-beta.1.** Bennu e Webb usam dados publicados, procedência local e replay por ID. Comece pelo [handoff atual](../../docs/46-HANDOFF-DOIS-DEVS-R18.md) e pelo [contrato de dados reais](../../docs/45-DADOS-REAIS-BENNU-WEBB-R18.md). O histórico abaixo conserva as rodadas em que foi escrito.
 
 # Missão Ipê — laboratório de missões R9–R10
 
@@ -14713,6 +14897,60 @@ Os repositórios abaixo representam a infraestrutura real usada em centros de co
 
 ---
 
+# Bennu R18 — medidas publicadas, origem verificável
+
+Fonte: `research/bennu-r18/README.md` · SHA-256 original: `8b0e81ab72fb62f48e16813052753532b6c3cfe888ee6ab9ad5ed908d9189fb3` · Ajustes de caminhos privados: 0
+
+# Bennu R18 — medidas publicadas, origem verificável
+
+O jogo recebe **seis objetos distintos de seis sítios de Bennu**, medidos pela equipe OSIRIS-REx. A grandeza principal é **eixo maior, em metros**. Não existe rugosidade criada pelo jogo neste conjunto.
+
+| Linha da tabela | Eixo maior (m) | Eixo menor (m) | Altura (m) |
+|---|---:|---:|---:|
+| 1 | 1,53 | 0,818 | 0,67 |
+| 2 | 3,93 | 2,11 | 1,35 |
+| 3 | 2,62 | 0,842 | 0,65 |
+| 4a | 1,6 | 0,703 | 0,37 |
+| 5 | 3,221 | 2,25 | 0,494 |
+| 6 | 1,453 | 0,636 | 0,771 |
+
+A tabela científica completa tem **sete linhas**: o sítio 4 contém dois clastos, 4a e 4b. Selecionamos 4a para representar esse sítio no exercício de seis registros. A linha 4b, cujo eixo maior é 0,927 m, permanece nos arquivos completos de auditoria; não foi duplicada, agregada ou tratada como valor ausente.
+
+## Fonte e cadeia de evidência
+
+- Registro NASA: [NTRS 20205007912](https://ntrs.nasa.gov/citations/20205007912).
+- Publicação: DellaGiustina, D. N., Kaplan, H. H., Simon, A. A., et al. *Exogenic basalt on asteroid (101955) Bennu*. Nature Astronomy 5, 31–38 (2021), publicado em 21/09/2020. [DOI](https://doi.org/10.1038/s41550-020-1195-z).
+- [Suplemento original vinculado pelo NTRS](https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf): Tabela Suplementar 1, página física 12 do PDF, página impressa 11.
+- [Contexto publicado pela NASA](https://www.nasa.gov/solar-system/nasas-osiris-rex-to-asteroid-bennu-youve-got-a-little-vesta-on-you/).
+
+As dimensões combinam imagens PolyCam com terreno OLA. A legenda limita a precisão dos eixos pela escala de 5,25 cm/pixel; a precisão vertical estimada é 1 cm. Esses números **não são intervalos ±1σ**. A tabela não fornece instante individual por dimensão: o texto dos métodos lista imagens de morfologia adquiridas entre 27/02 e 28/03/2019. Não atribuir o horário de uma imagem usada para reflectância à dimensão obtida de um conjunto de imagens e terreno.
+
+## Para os dois devs
+
+**Dev de simulação e dados:** importe `bennu-handoff.json`. Mantenha a medida NASA constante; energia, instrumento, memória e comunicação determinam se o jogador obtém/entrega o registro no exercício. Não multiplique o tamanho da rocha pela eficiência dos equipamentos. O relógio de operação é didático e separado da data histórica da observação. Os valores aqui são resultados científicos publicados, não um processamento local de imagens PDS brutas.
+
+**Dev de interface e 3D:** mostre o eixo em metros, a linha da fonte e a escala que limita a precisão. Barras ou objetos 3D podem comparar dimensões, identificados como representações de escala. As coordenadas vêm da tabela (norte +Z; longitude 0–360°), mas não houve registro do referencial do GLB; não apresentar marcadores como alinhamento cartográfico verificado. As dimensões não reconstroem formato real, orientação de cada rocha ou segurança de pouso. Esses sítios científicos não são Nightingale, Osprey ou locais de coleta.
+
+## Pergunta científica e limite educativo
+
+O jogador aprende a relacionar escala observável, capacidade do instrumento e entrega de evidência. Comparar os seis comprimentos descreve a diversidade desses objetos, sem demonstrar composição mineral. No estudo real, imagens motivaram a investigação e espectros OVIRS apoiaram a identificação de material com piroxênio, semelhante aos meteoritos HED. A origem na família de Vesta é uma interpretação científica apoiada; a trajetória de entrega via asteroide progenitor é uma hipótese. A sessão do jogo não reproduz essa análise espectral nem produz uma descoberta nova.
+
+## Reprodução sem novas dependências
+
+1. Os dois PDFs originais estão localmente em `originals/`; URLs, tamanhos e SHA256 estão em `provenance.json`.
+2. Neste diretório, execute `swift -module-cache-path /tmp/ipe-swift-cache extract-table.swift` no macOS. O PDFKit extrai os **caracteres de cada célula**, não valores de pixels ou de curvas.
+3. Execute `python3 build-handoff.py`. Ele verifica os hashes originais e gera CSV, handoff e proveniência.
+4. `table1-extracted.json` e `bennu-table1.csv` contêm as sete linhas. Campos vazios de coordenadas da linha 4b permanecem vazios, conforme a tabela.
+
+A tabela foi também conferida visualmente na página renderizada. Nenhuma dependência foi instalada. PDFs integrais e extrações de texto de leitura ficam ignorados pelo Git porque o registro NTRS avisa sobre possíveis trechos protegidos; o repositório pode publicar fatos numéricos, código de extração, textos originais deste handoff, hashes e links. Não presumir domínio público integral por hospedagem na NASA.
+
+`bennu-vesta-nasa-context.png` é a versão leve oficial (768 × 383, 258.664 bytes) de uma imagem do artigo NASA, sem edição local. Crédito: **NASA/Goddard/University of Arizona**. Ela mostra duas vistas contextuais de rochas/clastos brilhantes; não substitui seis imagens individuais dos registros e não foi usada para medir valores. Fonte, hash e dimensão estão em `provenance.json`.
+
+A coleção PDS OCAMS calibrada foi identificada, mas o servidor de arquivos respondeu com desafio Cloudflare 403. A coleta não contornou essa proteção. Este conjunto usa a tabela publicada primária explicitamente vinculada pela NASA, com os arquivos originais conferidos localmente.
+
+
+---
+
 # Parecer de júri mundial: Missão Ipê diante dos precedentes de 2023–2025
 
 Fonte: `research/history/01-juri-mundial-rodada-anterior.md` · SHA-256 original: `4f7c72d8a7773f7340024fbf76364591b11a668dd3073656bb5bf7c3cee0b276` · Ajustes de caminhos privados: 0
@@ -16005,6 +16243,149 @@ A transcrição2026 já menciona repetir simulações, comparar projetos e anál
 ## Formulação recomendada
 
 “Minha primeira escolha para seu perfil é o Jogo de Design de Missões, desde que a equipe consiga fechar uma missão cientificamente coerente e uma rodada compreensível no tempo local disponível. O ganho provável está em transformar restrições de engenharia em decisões e aprendizagem observáveis. Cooperação, recursos e debrief já fazem parte do campo; o diferencial precisa aparecer na qualidade da demonstração e nos testes. Fogo ou CLPS podem ultrapassá-lo se seus respectivos gargalos de dados e validação forem resolvidos cedo. Nenhuma dessas evidências permite prever premiação.”
+
+
+---
+
+# R18 — evidência científica e movimento
+
+Fonte: `research/motion-opportunities-r18.md` · SHA-256 original: `f67ff8c7ddeacdef661817519a5f29897ddfb4330c33eba77328e0cc337f9d4c` · Ajustes de caminhos privados: 0
+
+# R18 — evidência científica e movimento
+
+Inspeção: 15/11/2026. Escopo: contratos existentes e referência pública solicitada. Este documento descreve observações e propostas; não afirma que elas já foram implementadas.
+
+## Implementação delimitada desta revisão
+
+`src/ui/OrbitalScene.tsx` agora usa a identidade de cada registro de Bennu/Webb para os cartões dos segmentos de solo e usuários. Cada cartão compara seu ID com `deliveredRecordIds`; recebimento parcial não acende os primeiros N cartões por contagem. Somente o cartão recebido mostra o rótulo, valor e unidade do próprio registro. Antes disso mostra que a recepção não foi estabelecida. A aparência estável, voltada à câmera, usa `CanvasTexture` e `sprite` nativos do Three.js, com descarte das texturas e sem animação contínua ou dependência adicional. A cena da Terra foi preservada.
+
+A tipagem passou com `npx tsc --noEmit`. Os testes de motor e de apresentação existentes são executados separadamente; eles não constituem validação visual de GPU. O painel acessível e a interpretação do resultado continuam fora do canvas, como no contrato existente. A prévia científica, o gráfico e a proveniência são integração dos demais módulos R18.
+
+## Cosmic Mapping: o que foi realmente observado
+
+URL consultada no Chrome: https://motionsites.ai/?prompt=cosmic-mapping
+
+A página abre o detalhe **Cosmic Mapping**, categoria AI. A prévia pública é um vídeo de aproximadamente 6,47 segundos: camadas curvas concêntricas, aproximação/rotação em direção a uma abertura central escura, contraste azul profundo/âmbar e marcações finas que lembram mapas. Duas capturas sucessivas mostraram posições diferentes das camadas. A duração e o estado de reprodução foram lidos do elemento de vídeo visível. Isso comprova a prévia audiovisual, não um motor 3D interativo ou uma simulação científica.
+
+O texto do prompt está protegido por **Unlock prompt / Go Unlimited**. Não houve desbloqueio, compra, criação de conta, acesso ao Studio, geração, download nem reutilização de mídia. A prévia não fornece licença de redistribuição. A leitura web convencional falhou; a inspeção visual pública funcionou.
+
+## Aplicação original ao MISSÃO IPÊ
+
+1. Usar profundidade e camadas para comunicar a sequência **fonte → instrumento → observação → downlink → resultado**, conservando o mesmo identificador de registro em todos os passos.
+2. Mover o foco para o instrumento durante processamento e para a antena durante transmissão. O projeto já tem `inspection`, `focusSubsystem`, controles de câmera e geometria R3F; não é necessária uma nova biblioteca.
+3. Revelar imagem ou ponto espectral somente quando o registro correspondente estiver completo e compatível. O relógio do jogo controla disponibilidade, nunca o valor publicado pela NASA.
+4. Manter dados estáveis e exibir barras de incerteza sem animação que sugira melhoria de precisão. Um ponto selecionado pode destacar o registro e sua origem. Um cartão Bennu pode mostrar imagem, instrumento, produto e data de observação.
+5. Usar as cores da marca para seleção e estado de recepção; cor de um ponto não deve sugerir abundância molecular ou risco de pouso sem cálculo documentado.
+6. Oferecer a mesma seleção por botões/teclado e preservar o equivalente 2D. Respeitar movimento reduzido e não inserir preloader obrigatório para dados locais.
+
+O efeito de vórtice da referência não é uma representação física de Bennu, trânsito exoplanetário, propagação de rádio ou órbita do Webb. Deve permanecer inspiração compositiva, sem copiar o vídeo ou atribuir-lhe caráter científico.
+
+## Contratos encontrados antes da implementação R18
+
+Todos os caminhos abaixo são relativos a `experiments/mission-design-lab/`.
+
+| Local | Contrato observado | Mudança mínima recomendada |
+| --- | --- | --- |
+| `src/lab/scientific-expeditions.ts` | `ExpeditionDatum`: `id`, `label`, `goal`, `syntheticLabel`, `value:number`, `unit`; seis entradas em `dataFixture` | Representar observação de imagem e ponto espectral com metadados apropriados. Não preencher um número científico arbitrário para imagem. Incluir origem, produto, instrumento, instante histórico, versão e transformação/unidade. |
+| Mesmo arquivo | `ExpeditionObservation` acrescenta `producedAtS`, `deliveredAtS`, `valid` e contagem de bits; o motor copia os dados sem alterar seus valores | Preservar valores e incertezas publicados. Separar instante histórico de observação do T+ didático de processamento/recepção. Renomear mensagens que dizem produzir uma observação sintética. |
+| Mesmo arquivo | Seis horários de processamento e meta de seis registros; 60 s por trabalho; 120/180 Mbit por pacote conforme instrumento | Manter seis produtos/bins autênticos evita mudar o agendamento. Declarar seleção/subconjunto. Tamanhos de pacote, potência, massa e contatos continuam didáticos, não tamanhos dos arquivos NASA. |
+| `src/ui/ScientificExpedition.tsx` | Retorno mostra `number(observation.value)` e `unit`; só revela valor após recepção completa e compatível | Para Webb: eixo de comprimento de onda, grandeza correta e incerteza com unidade/definição. Para Bennu: prévia e metadados em vez da antiga rugosidade. Conservar bloqueio por registro, inclusive em tentativa parcial. |
+| Mesmo arquivo | Relatório JSON inclui `result`, fontes gerais e aviso; formato `ipe-scientific-report-v1` | Exportar identificadores de produto, proveniência, versão do conjunto, incerteza e transformações junto de cada registro; revisar versão do relatório/modelo. Arquivo de projeto é configuração, não evidência científica. |
+| `src/lab/scientific-expeditions.ts` / `src/lab/mission-visual-state.ts` | `getExpeditionVisualState` fornece IDs recebidos até o instante, energia, fila, contato e subsistema de foco | Reutilizar esse estado para bloquear/revelar evidência. Não interpolar medida científica com o relógio. |
+| `src/ui/Scene.tsx` / `src/ui/OrbitalScene.tsx` | Cena configurada representa câmera/espectrômetro, painéis/bateria e antena; cartões 3D de resultado usam os primeiros N elementos conforme contagem recebida | Passar IDs dos registros e selecionar por identidade, evitando que uma lacuna no meio acenda o cartão errado. Seleção deve ligar cartão, informação acessível e produto científico. |
+| `src/lab/spacecraft-presentation.ts` | Nota geral afirma que observações e parâmetros são sintéticos | Separar observações NASA arquivadas de orçamento/engenharia simulados. O hardware modular próprio não vira réplica do instrumento NASA. |
+| `src/lab/mission-curriculum.ts` | Bennu pede regiões A/B/C; Webb pede três intensidades em dois instantes | Reescrever a pergunta e reflexão para o produto efetivamente disponível. Se forem seis bins de um espectro, não apresentar como duas exposições. |
+| `src/ui/NASAReferenceScene.tsx` | Modelos NASA locais são referências geométricas, independentes da simulação | Manter essa distinção: o GLB não é a origem dos números nem valida registro espacial de imagens sobre a superfície. |
+
+### Verificação que protege o aprendizado
+
+- Os dados NASA selecionados mantêm valor, unidade, incerteza e ID após mudanças de energia, instrumento ou contato.
+- Contato curto revela apenas IDs realmente recebidos, com lacunas explícitas; nenhum valor é substituído por zero.
+- Uma configuração incompatível não libera resultados científicos apenas por transportar bits.
+- Um dado já público pode ser consultado como fonte, mas o painel de retorno distingue essa consulta do resultado da tentativa.
+- O relatório conserva a proveniência e separa data histórica de T+ didático.
+- Testes existentes a atualizar: `tests/scientific-expeditions.test.mts` exige `syntheticLabel` e aviso sintético; `tests-ui/scientific-missions.test.mjs` assume uma lista uniforme de números; `tests/mission-curriculum.test.mts` fixa seis registros e resultados A/B. Manter os testes de balanço de energia, bits e transporte.
+
+## REA / AB-R3A
+
+Não foi necessário para esta inspeção. A página pública foi visualizada e o projeto já possui os modelos NASA locais e a infraestrutura React/R3F/SVG. O caminho AB-R3A indicado na referência local não está disponível nesta máquina; não se presumiu que o laboratório TOTP seja uma ferramenta de produção de assets. Nenhum pacote, captura executável ou dependência foi instalado.
+
+
+---
+
+# Webb: seis medidas reais, uma pergunta científica
+
+Fonte: `research/webb-r18/README.md` · SHA-256 original: `7ef9908696240adbc487912671aea0717ef018cac01cc16963520b9fb8941b4c` · Ajustes de caminhos privados: 0
+
+# Webb: seis medidas reais, uma pergunta científica
+
+O caso do telescópio passa a usar **profundidade de trânsito de WASP-39 b**, observada pelo Webb/NIRSpec PRISM em **10 de julho de 2022**, processada pela equipe científica com **FIREFLy** e distribuída pelo **NASA Exoplanet Archive**. Os seis valores não são fluxos inventados nem duas exposições de três cores.
+
+A pergunta para o participante é: **como entregar medidas espectrais suficientes, com suas incertezas, para comparar quanto da luz da estrela é bloqueado em diferentes comprimentos de onda?** Ela conecta uma necessidade científica à escolha de instrumento, à energia para operá-lo e à comunicação que permite ao cientista receber os resultados.
+
+## O que foi preservado
+
+- `WASP_39_b_3.11466_4988_2.tbl`: arquivo IPAC original da NASA, 95 bins, 68.673 bytes, sem edição. SHA-256 `49a41e9eacaec33457b5c5d249bb9803da1ab0a07ea99fa2b4b5a8d0e24de687`.
+- `FIREFLY_REDUCTION.txt` e `AUTHOR_README.txt`: membros originais do depósito versionado dos autores. O README explicita unidades. O TXT mantém a precisão original em fração, antes da representação em porcentagem usada pelo arquivo NASA.
+- `JWST_ERS_1st_LOOK_PAPER_DATA.zip`: depósito original completo, 375.091 bytes. O MD5 foi conferido contra o registro Zenodo. Os modelos teóricos que também existem no ZIP **não entram como observações no jogo**.
+- `nasa-archive-metadata.json` e `zenodo-record-6959427.json`: respostas preservadas dos catálogos que identificam os produtos, a equipe e a licença.
+- `provenance.json`: URLs, data de obtenção, hashes, unidades, versão, linhas, atribuição e limitações.
+- `webb-spectrum-subset.json`: seis registros com proveniência por registro, prontos para integração.
+- `extract.py`: extração determinística com biblioteca padrão do Python; nenhuma dependência adicional.
+
+O navegador deve consumir a cópia local versionada do projeto. Nenhuma chamada ao arquivo científico externo é necessária durante a partida.
+
+## Os seis bins
+
+Cada linha abaixo é um bin de comprimento de onda distinto **do mesmo trânsito**, da mesma redução. A seleção usa o bin existente mais próximo dos pontos didáticos 3,6; 3,9; 4,2; 4,3; 4,5 e 4,9 µm. Não há interpolação, média, duplicação ou ajuste de modelo.
+
+| Linha de dados NASA, começando em 1 | Linha física no `.tbl` | λ central (µm) | Largura (µm) | Profundidade (%) | Incerteza 1σ (p.p.) |
+| --- | --- | --- | --- | --- | --- |
+| 25 | 37 | 3,59308 | 0,02220 | 2,13814 | ±0,01009 |
+| 39 | 51 | 3,89121 | 0,02046 | 2,10084 | ±0,01222 |
+| 54 | 66 | 4,19111 | 0,02839 | 2,13836 | ±0,01171 |
+| 58 | 70 | 4,30310 | 0,02761 | 2,24669 | ±0,01259 |
+| 65 | 77 | 4,49196 | 0,02637 | 2,22426 | ±0,01393 |
+| 80 | 92 | 4,89040 | 0,03207 | 2,15689 | ±0,01512 |
+
+**Porcentagem e pontos percentuais:** em 4,30310 µm, o arquivo informa 2,24669% de profundidade e uma incerteza de 0,01259 ponto percentual. Essa incerteza não é 0,01259% do valor medido. O original dos autores usa frações: tanto `transit_depth` quanto `tran_unc` são multiplicados por 100 para comparação com o arquivo NASA. Os valores do jogo são os valores da tabela NASA, conservados sem alteração.
+
+Profundidade de trânsito mede a diminuição relativa de luz da estrela associada ao planeta e à atmosfera durante a passagem. A base de aproximadamente 2% inclui o disco do planeta. Não representa concentração de CO₂, fração de atmosfera ou brilho superficial.
+
+## Responsabilidade dos dois devs
+
+**Dev de ciência/simulação:** usar `records` do JSON; exigir seis bins distintos e adequação do instrumento espectral; preservar valor, unidade, incerteza, data, pipeline e linha de origem. Os instantes de produção e transmissão são uma encenação didática da entrega de um resultado científico já publicado. Uma falha pode impedir que um registro seja entregue; não deve transformar seu valor real em um valor inventado. Não recalcular a incerteza científica a partir da bateria ou da antena fictícia.
+
+**Dev de experiência/3D:** destacar o instrumento responsável, identificar a λ do registro e mostrar barras de erro nos gráficos. A luz infravermelha pode receber cores visíveis convencionais, explicitando que são uma codificação visual. Comunicações e filas devem mostrar o registro real que está sendo entregue. O modelo do Webb é uma referência geométrica; não dar a entender que uma troca de equipamento do jogo aconteceu na missão histórica. O espectro não é uma fotografia da atmosfera.
+
+Na escolha de câmera versus espectrômetro, a limitação pertence à **câmera genérica do catálogo didático**. Não afirmar que nenhuma câmera faz espectroscopia: o NIRCam real do Webb também possui modos espectroscópicos.
+
+## O que o participante pode concluir
+
+Ele pode perceber a variação da profundidade com λ, comparar um valor com sua incerteza e explicar por que o instrumento certo e a entrega completa dos dados importam. Pode relacionar o sinal próximo de 4,3 µm à interpretação publicada de CO₂ no estudo completo. O recorte foi escolhido para contrastar regiões vizinhas e a feição; não é uma amostra estatística representativa de todo o espectro.
+
+Ele **não** está reproduzindo a detecção científica: seis bins não substituem o ajuste dos 95 bins, os modelos atmosféricos nem o estudo de erros sistemáticos. Os arquivos usados não trazem matriz de covariância; não assumir independência estatística entre bins, combinar seus erros para anunciar uma significância ou oferecer um teste novo de presença de CO₂. O jogo também não demonstra vida, habitabilidade ou abundância molecular. As medidas são históricas, não telemetria ao vivo.
+
+## Reproduzir e verificar
+
+Na raiz do repositório:
+
+```sh
+python3 research/webb-r18/extract.py
+```
+
+O script verifica os hashes das duas tabelas, a ordenação dos 95 bins, a concordância de todos os valores NASA com o original dos autores após conversão de unidades e as seis linhas selecionadas. A tolerância de comparação é um último dígito exibido pela tabela NASA (`0,00001`); sua formatação não equivale sempre a arredondar a versão de precisão completa em uma só etapa. Isso não modifica nenhum número do arquivo. A saída JSON é idêntica em execuções repetidas.
+
+Para obter uma nova cópia NASA, consultar `spectra` pelo TAP com a consulta registrada em `provenance.json`, abrir Atmospheric Spectroscopy, selecionar WASP-39 b / FIREFLy e conferir `spec_path`. A interface gera um endereço temporário de download; não usá-lo como dependência de produção. O DOI versionado dos autores oferece uma cópia independente e durável. Mudança de hash exige revisão explícita, nunca substituição silenciosa do snapshot.
+
+## Fontes e atribuição
+
+- [NASA Exoplanet Archive: Atmospheric Spectroscopy de WASP-39 b](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b), registro FIREFLy, 95 bins; [definições dos campos e unidades](https://exoplanetarchive.ipac.caltech.edu/docs/atmospheres/atmospheres_columns.html).
+- [Depósito original dos autores, versão DOI 10.5281/zenodo.6959427](https://zenodo.org/records/6959427), licença **CC BY 4.0**. Criador: JWST Transiting Exoplanet Community Early Release Science Team.
+- [Artigo: Identification of carbon dioxide in an exoplanet atmosphere](https://doi.org/10.1038/s41586-022-05269-w), publicado online em 2/9/2022; Nature 614, 649–652 (2023). As figuras 2 e 3 definem as barras como incertezas de 1σ; a seção de disponibilidade liga os dados ao MAST e ao depósito acima. [Texto aberto do artigo](https://pmc.ncbi.nlm.nih.gov/articles/PMC9946830/).
+- [NASA: apresentação oficial do espectro NIRSpec](https://science.nasa.gov/asset/webb/exoplanet-wasp-39-b-nirspec-transmission-spectrum/), divulgada em 25/8/2022, confirma observação de 10/7/2022 e modo PRISM. A representação do planeta é ilustrativa, não imagem direta obtida nessa observação.
+
+Atribuição reutilizável: **JWST Transiting Exoplanet Community Early Release Science Team; NASA/ESA/CSA Webb; redução FIREFLy; NASA Exoplanet Archive. Dados dos autores sob CC BY 4.0. Recorte didático de seis bins por MISSÃO IPÊ, valores preservados do arquivo NASA.** Não há endosso da NASA à equipe ou ao jogo.
 
 
 ---

@@ -21,6 +21,9 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.md', target: 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.md', title: 'Bennu e Webb · dados científicos reais', description: 'Fontes, unidades, incertezas e a ligação entre decisões, arquivos e 3D.' },
+  { source: 'docs/46-HANDOFF-DOIS-DEVS-R18.md', target: 'docs/46-HANDOFF-DOIS-DEVS-R18.md', title: 'Comece aqui · handoff R18', description: 'Divisão dos dois devs, contratos e validação dos dados reais.' },
+  { source: 'research/motion-opportunities-r18.md', target: 'docs/MOTION-OPORTUNIDADES-R18.md', title: 'Movimento a serviço da evidência', description: 'Análise Cosmic Mapping e aplicação original no jogo.' },
   { source: 'docs/40-IDENTIDADE-MISSAO-IPE-R17.md', target: 'docs/40-IDENTIDADE-MISSAO-IPE-R17.md', title: 'Marca oficial · MISSÃO IPÊ', description: 'SVG transparente, procedência, contraste e aplicação.' },
   { source: 'docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md', target: 'docs/41-CONSOLIDACAO-REPOSITORIOS-R17.md', title: 'Contribuições e repositório oficial', description: 'Origem do trabalho do Bruno, importação revisada e oportunidades.' },
   { source: 'docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md', target: 'docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.md', title: 'Estamos prontos?', description: 'Evidências, lacunas e critérios documentados do desafio.' },
@@ -158,14 +161,14 @@ function renderMarkdown(markdown) {
   return out.join('\n');
 }
 function page(title, content, { source, index = false } = {}) {
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · MISSÃO IPÊ</title><link rel="icon" type="image/svg+xml" href="../brand/missao-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="MISSÃO IPÊ, início"><img src="../brand/missao-ipe-logo-on-light.svg" width="1064" height="499" alt="MISSÃO IPÊ"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/43-HANDOFF-GERAL-R17.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>MISSÃO IPÊ · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="AB / Hackatur–Zer0Slop, com assistência de IA"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>${escape(title)} · MISSÃO IPÊ</title><link rel="icon" type="image/svg+xml" href="../brand/missao-ipe-symbol.svg"><link rel="stylesheet" href="../fonts/fonts.css"><link rel="stylesheet" href="../documentation.css"></head><body><a class="skip" href="#content">Ir ao conteúdo</a><header><a href="../" aria-label="MISSÃO IPÊ, início"><img src="../brand/missao-ipe-logo-on-light.svg" width="1064" height="499" alt="MISSÃO IPÊ"></a><nav aria-label="Portal"><a href="../lab/index.html">Jogar</a><a href="../docs/46-HANDOFF-DOIS-DEVS-R18.html">Comece aqui</a><a href="../context/research-library.html">Estudo completo</a><a href="../docs/index.html">Documentação</a></nav></header><main id="content"${index ? '' : ' class="document"'}>${content}${source ? `<p class="provenance">Documento público. <a href="${escape(source)}">Ler o Markdown desta edição</a>. Estado e curadoria no <a href="../publication-manifest.json">manifesto da publicação</a>.</p>` : ''}</main><footer><span>MISSÃO IPÊ · Protótipo de pesquisa. Evidências históricas conservam seu corte original.</span><div class="links"><a href="../">Voltar ao portal</a><a href="../docs/AUTORIA-E-IA.html">Autoria e IA</a></div></footer></body></html>`;
 }
 async function addMarkdown(entry, { index = true, category = 'public-document' } = {}) {
   if (!(await copy(entry.source, entry.target, category))) return;
   const raw = await readFile(safePath(root, entry.source), 'utf8');
   const target = entry.target.replace(/\.md$/, '.html');
-  const superseded = /docs\/(?:22-|25-|29-|31-|32-CAMPANHA|35-)/.test(entry.source);
-  const historyNote = superseded ? '<p class="historical"><strong>Registro de uma edição anterior.</strong> A direção atual usa histórias reais NASA e IPÊ somente como nome da equipe. Consulte o <a href="43-HANDOFF-GERAL-R17.html">handoff R17</a> e as <a href="44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html">histórias e fontes atuais</a>. Propostas e estados abaixo conservam o corte original.</p>' : '';
+  const superseded = /docs\/(?:22-|25-|29-|31-|32-|34-|35-|37-|38-|42-|43-|44-)/.test(entry.source);
+  const historyNote = superseded ? '<p class="historical"><strong>Registro de uma edição anterior.</strong> A direção atual usa histórias reais NASA e IPÊ somente como nome da equipe. Consulte o <a href="46-HANDOFF-DOIS-DEVS-R18.html">handoff R18</a> e os <a href="45-DADOS-REAIS-BENNU-WEBB-R18.html">dados reais e fontes atuais</a>. Propostas e estados abaixo conservam o corte original.</p>' : '';
   const html = page(entry.title, historyNote + renderMarkdown(raw), { source: entry.target.split('/').pop() });
   await emit(target, html, { category: 'rendered-public-document', source: entry.source, sourceSha256: digest(raw), transformation: 'escaped static HTML rendering of selected Markdown' });
   if (index) docs.push({ ...entry, html: target });
@@ -204,7 +207,7 @@ try {
   }
   for (const source of await tree('experiments/mission-design-lab/dist')) {
     const rel = source.slice('experiments/mission-design-lab/dist/'.length);
-    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb|wasm)$/.test(rel)) {
+    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb|wasm)$/.test(rel) || ['data/science/bennu-table1.csv', 'data/science/webb-firefly-nasa.tbl'].includes(rel)) {
       await copy(source, `lab/${rel}`, 'mission-lab-runtime');
     }
   }
@@ -275,7 +278,7 @@ try {
   const missingRequired = omissions.filter(item => item.required);
   entries.sort((a, b) => a.path.localeCompare(b.path));
   const manifest = {
-    schemaVersion: 1, edition: 'R17-official-brand-and-evidence-based-stories', version: '0.8.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
+    schemaVersion: 1, edition: 'R18-real-nasa-scientific-records', version: '0.9.0-beta.1', generatedAt: now, publicationReady: missingRequired.length === 0,
     project: 'PROJETO-IPE', title: 'Missão Ipê — Ciência que chega',
     releaseTarget: { local: '2026-11-15T08:00:00-03:00', utc: '2026-11-15T11:00:00Z', status: 'planned; subject to acceptance criteria' },
     scientificEngineModified: false,

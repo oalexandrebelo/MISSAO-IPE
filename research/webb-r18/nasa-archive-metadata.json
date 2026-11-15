@@ -1,0 +1,15 @@
+[
+{"pl_name": "WASP-39 b",
+"spec_type": "Transmission",
+"authors": "JWST Transiting Exoplanet Community ERS Team 2022",
+"num_datapoints": 95,
+"instrument": "Near Infrared Spectrograph (NIRSpec)",
+"facility": "NASA 6.5m James Webb Space Telescope (JWST) Satellite Mission",
+"minwavelng": 3.0139,
+"maxwavelng": 5.5476,
+"mintranmid": null,
+"maxtranmid": null,
+"note": "FIREFLy pipeline",
+"bibcode": "2022arXiv220811692T",
+"spec_path": "74/45/82/95/WASP_39_b_3.11466_4988_2.tbl"}
+]

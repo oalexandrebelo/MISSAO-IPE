@@ -1,0 +1,7 @@
+# Preserve the exact bytes covered by the R18 scientific provenance hashes.
+# Source tables/readme and the extracted CSV retain their original whitespace.
+experiments/mission-design-lab/public/data/science/bennu-table1.csv -text whitespace=-blank-at-eol
+experiments/mission-design-lab/public/data/science/webb-firefly-nasa.tbl -text whitespace=-blank-at-eol
+research/bennu-r18/bennu-table1.csv -text whitespace=-blank-at-eol
+research/webb-r18/AUTHOR_README.txt -text whitespace=-blank-at-eol,-blank-at-eof
+research/webb-r18/WASP_39_b_3.11466_4988_2.tbl -text whitespace=-blank-at-eol

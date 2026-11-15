@@ -1,0 +1,72 @@
+[
+  {
+    "heightM" : "0.67",
+    "latitudeDeg" : "-37.5",
+    "longAxisM" : "1.53",
+    "longitudeDeg" : "52.6",
+    "rectangularVolumeM3" : "0.8",
+    "shortAxisM" : "0.818",
+    "site" : "1",
+    "sphericalVolumeM3" : "1.9"
+  },
+  {
+    "heightM" : "1.35",
+    "latitudeDeg" : "-51.6",
+    "longAxisM" : "3.93",
+    "longitudeDeg" : "60.9",
+    "rectangularVolumeM3" : "11.2",
+    "shortAxisM" : "2.11",
+    "site" : "2",
+    "sphericalVolumeM3" : "31.8"
+  },
+  {
+    "heightM" : "0.65",
+    "latitudeDeg" : "-47.2",
+    "longAxisM" : "2.62",
+    "longitudeDeg" : "68.1",
+    "rectangularVolumeM3" : "1.4",
+    "shortAxisM" : "0.842",
+    "site" : "3",
+    "sphericalVolumeM3" : "9.4"
+  },
+  {
+    "heightM" : "0.37",
+    "latitudeDeg" : "-4.4",
+    "longAxisM" : "1.6",
+    "longitudeDeg" : "150.9",
+    "rectangularVolumeM3" : "0.4",
+    "shortAxisM" : "0.703",
+    "site" : "4a",
+    "sphericalVolumeM3" : "2.1"
+  },
+  {
+    "heightM" : "0.292",
+    "latitudeDeg" : "",
+    "longAxisM" : "0.927",
+    "longitudeDeg" : "",
+    "rectangularVolumeM3" : "0.1",
+    "shortAxisM" : "0.498",
+    "site" : "4b",
+    "sphericalVolumeM3" : "0.4"
+  },
+  {
+    "heightM" : "0.494",
+    "latitudeDeg" : "-44.6",
+    "longAxisM" : "3.221",
+    "longitudeDeg" : "166.4",
+    "rectangularVolumeM3" : "3.6",
+    "shortAxisM" : "2.25",
+    "site" : "5",
+    "sphericalVolumeM3" : "17.5"
+  },
+  {
+    "heightM" : "0.771",
+    "latitudeDeg" : "11.7",
+    "longAxisM" : "1.453",
+    "longitudeDeg" : "190",
+    "rectangularVolumeM3" : "0.7",
+    "shortAxisM" : "0.636",
+    "site" : "6",
+    "sphericalVolumeM3" : "1.6"
+  }
+]

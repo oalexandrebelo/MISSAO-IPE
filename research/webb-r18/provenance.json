@@ -1,0 +1,173 @@
+{
+  "id": "webb-nirspec-prism-firefly-r18-v1",
+  "acquiredAtUtc": "2026-11-15T09:26:39Z",
+  "target": "WASP-39 b",
+  "facility": "James Webb Space Telescope (NASA/ESA/CSA)",
+  "instrument": "NIRSpec",
+  "mode": "PRISM bright object time-series",
+  "observationDate": "2022-07-10",
+  "program": "ERS 1366",
+  "pipeline": "FIREFLy",
+  "primaryArchive": {
+    "name": "NASA Exoplanet Archive, Atmospheric Spectroscopy",
+    "doi": "10.26133/NEA36",
+    "interfaceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+    "metadataQuery": "select * from spectra where pl_name='WASP-39 b' and note='FIREFLy pipeline'",
+    "tapEndpoint": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+    "specPath": "74/45/82/95/WASP_39_b_3.11466_4988_2.tbl",
+    "downloadUrlAtRetrieval": "https://exoplanetarchive.ipac.caltech.edu/workspace/TMP_N2ydJm_3796432/atmospheres/tab1/data/74/45/82/95/WASP_39_b_3.11466_4988_2.tbl",
+    "downloadUrlIsTemporary": true,
+    "downloadInstructions": "Open Atmospheric Spectroscopy, filter WASP-39 b and FIREFLy pipeline, select the matching spec_path, Download All Checked Spectra. The interface supplies a current temporary workspace URL. Use the versioned author DOI as a durable independent copy.",
+    "retrievedUnchanged": true,
+    "sourceRowCount": 95,
+    "wavelengthRangeMicrometers": [
+      3.01386,
+      5.5476
+    ],
+    "archiveBibcode": "2022arXiv220811692T"
+  },
+  "originalAuthorDeposit": {
+    "doi": "10.5281/zenodo.6959427",
+    "url": "https://zenodo.org/records/6959427",
+    "downloadUrl": "https://zenodo.org/records/6959427/files/JWST_ERS_1st_LOOK_PAPER_DATA.zip?download=1",
+    "publicationDate": "2022-08-03",
+    "version": "record 6959427 (version index 0; pinned record, not concept DOI)",
+    "creator": "JWST Transiting Exoplanet Community Early Release Science Team",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "archiveMember": "ZENODO/TRANSMISSION_SPECTRA_DATA/FIREFLY_REDUCTION.txt",
+    "zipMd5ExpectedAndVerified": "578368eb0c86014462f109d1e8699693"
+  },
+  "publication": {
+    "title": "Identification of carbon dioxide in an exoplanet atmosphere",
+    "authors": "JWST Transiting Exoplanet Community Early Release Science Team",
+    "doi": "10.1038/s41586-022-05269-w",
+    "url": "https://www.nature.com/articles/s41586-022-05269-w",
+    "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9946830/",
+    "machineReadablePrimaryText": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9946830/fullTextXML",
+    "onlinePublished": "2022-09-02",
+    "journalIssue": "Nature 614, 649–652 (2023)",
+    "uncertaintyEvidence": "Figures 2 and 3 specify 1-sigma uncertainties for the plotted reductions; figure 3 uses FIREFLy.",
+    "dataAvailability": "The paper links MAST for programme ERS 1366 and the pinned Zenodo DOI for the reduced spectra and models.",
+    "processingVersionsReported": {
+      "SDP_VER": "2022_2a",
+      "CAL_VER": "1.5.3 with publication-specific changes",
+      "CRDS_CTX": "0916 except as noted by the authors"
+    }
+  },
+  "nasaExplanation": {
+    "url": "https://science.nasa.gov/asset/webb/exoplanet-wasp-39-b-nirspec-transmission-spectrum/",
+    "releaseDate": "2022-08-25",
+    "supports": [
+      "2022-07-10 observation date",
+      "PRISM bright object time-series mode",
+      "95 measured spectral bins",
+      "carbon dioxide interpretation near 4.3 micrometers"
+    ]
+  },
+  "quantities": {
+    "CENTRALWAVELNG": {
+      "unit": "micrometer",
+      "description": "Central wavelength of each existing spectral bin"
+    },
+    "BANDWIDTH": {
+      "unit": "micrometer",
+      "description": "Full bin width, as reported by archive"
+    },
+    "PL_TRANDEP": {
+      "unit": "percent",
+      "description": "Wavelength-dependent transit depth; blocked starlight from planet plus atmosphere"
+    },
+    "PL_TRANDEPERR1": {
+      "unit": "percentage point",
+      "description": "Positive 1-sigma uncertainty in transit depth"
+    },
+    "PL_TRANDEPERR2": {
+      "unit": "percentage point",
+      "description": "Negative 1-sigma uncertainty, symmetric in this source"
+    },
+    "authorUnits": "Original transit_depth and tran_unc are fractions; multiplying by 100 converts both to NASA percentage units. Original wv_center and wv_wdth are micrometers.",
+    "definitionsUrl": "https://exoplanetarchive.ipac.caltech.edu/docs/atmospheres/atmospheres_columns.html"
+  },
+  "selection": {
+    "method": "Nearest existing NASA bin to each fixed teaching anchor; no averaging, interpolation or fit",
+    "anchorMicrometers": [
+      3.6,
+      3.9,
+      4.2,
+      4.3,
+      4.5,
+      4.9
+    ],
+    "dataRowsOneBased": [
+      25,
+      39,
+      54,
+      58,
+      65,
+      80
+    ],
+    "nasaFileLinesOneBased": [
+      37,
+      51,
+      66,
+      70,
+      77,
+      92
+    ],
+    "authorFileLinesOneBased": [
+      26,
+      40,
+      55,
+      59,
+      66,
+      81
+    ],
+    "selectionPurpose": "Contrast adjacent continuum/shoulder/feature regions for a guided educational example, not a statistically representative sample or independent detection.",
+    "sourcePrecision": "NASA values retained at their published five-decimal precision; full precision is retained separately in authorOriginal."
+  },
+  "checks": {
+    "archiveRowsAgainstAuthorRows": 95,
+    "comparisonAbsoluteTolerance": "0.00001 in each displayed NASA numeric unit (one last displayed digit)",
+    "reasonForTolerance": "Archive formatting/ingestion is not exactly equivalent to one-step rounding of the author file in every bin. Seven wavelength/width fields differ by just over half a last displayed digit; all fields agree within one displayed digit. No NASA numbers are replaced or regenerated.",
+    "sha256Verified": true,
+    "uniqueSubsetRows": 6,
+    "script": "extract.py"
+  },
+  "limitations": [
+    "Reduced, published measurements are used; these are not live telemetry, raw detector counts, or newly acquired observations.",
+    "Six distinct wavelength bins from one observed transit are delivered during a simulated educational mission; they are not six independent exposures or three paired measurements.",
+    "The retained source gives per-bin uncertainties but not a covariance matrix. Shared processing and astrophysical assumptions may correlate bins; the app must not treat bins as statistically independent or compute a detection significance.",
+    "The six-bin selection does not reproduce the 95-bin fit, molecular retrieval, abundance estimates or reported full-study detection significance.",
+    "The 4.3 micrometer feature is interpreted using the peer-reviewed full study. CO2 does not demonstrate life.",
+    "Planet artwork is illustrative; Webb did not directly image WASP-39 b or its atmosphere in this observation.",
+    "Spacecraft masses, power loads, budgets, communication windows and mission elapsed times remain transparent gameplay assumptions, not specifications recovered from this spectrum."
+  ],
+  "attribution": "JWST Transiting Exoplanet Community Early Release Science Team; NASA/ESA/CSA Webb; FIREFLy reduction; NASA Exoplanet Archive. Author dataset CC BY 4.0. Subset selected for MISSÃO IPÊ with values unchanged from the archive.",
+  "files": {
+    "WASP_39_b_3.11466_4988_2.tbl": {
+      "bytes": 68673,
+      "sha256": "49a41e9eacaec33457b5c5d249bb9803da1ab0a07ea99fa2b4b5a8d0e24de687"
+    },
+    "FIREFLY_REDUCTION.txt": {
+      "bytes": 7833,
+      "sha256": "83e5e45d5867f1abe6a8776469d4284daf2630f66b7f67736453d912a6bfdd27"
+    },
+    "AUTHOR_README.txt": {
+      "bytes": 548,
+      "sha256": "563b0359d82b57f07bed82c278195348ed7dac203aef736d272b4d07e6e2be31"
+    },
+    "JWST_ERS_1st_LOOK_PAPER_DATA.zip": {
+      "bytes": 375091,
+      "sha256": "5f69e0279885104b49593aea7523903118895a0dadaaff47a5f6a1beda82f7fb"
+    },
+    "nasa-archive-metadata.json": {
+      "bytes": 478,
+      "sha256": "ff90862c15108ddae1d2f262a8e2745602603197d2c372d35bb09436b38fc5a9"
+    },
+    "zenodo-record-6959427.json": {
+      "bytes": 5610,
+      "sha256": "bc2edbc57238146f10c40fe9e221f095591f488b2f77b0bd7f5b492a1b974824"
+    }
+  }
+}

@@ -1,3 +1,5 @@
+> **Atualização R18 — 0.9.0-beta.1.** Bennu e Webb usam dados publicados, procedência local e replay por ID. Comece pelo [handoff atual](../../docs/46-HANDOFF-DOIS-DEVS-R18.md) e pelo [contrato de dados reais](../../docs/45-DADOS-REAIS-BENNU-WEBB-R18.md). O histórico abaixo conserva as rodadas em que foi escrito.
+
 # Missão Ipê — laboratório de missões R9–R10
 
 **Atualização R17 · 0.8.0-beta.1:** [histórias reais NASA e limites](../../docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.md), [propósito e experimentos das três missões](../../docs/37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16.md), [handoff atual](../../docs/43-HANDOFF-GERAL-R17.md), [montagem 3D e handoff](../../docs/34-HANDOFF-IMERSAO-3D-R15.md), [guia didático completo](../../docs/32-GUIA-DIDATICO-MISSOES-3D.md) e [oportunidades NASA Science](../../docs/33-OPORTUNIDADES-NASA-SCIENCE.md). O restante preserva os cortes anteriores.

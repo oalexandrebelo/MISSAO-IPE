@@ -1,0 +1,6 @@
+# Full source papers and local reading aids remain locally verifiable; the public
+# handoff contains numerical facts, source links, SHA256 and the extraction recipe.
+originals/*.pdf
+originals/*.html
+*-extracted.txt
+table1-verification.png

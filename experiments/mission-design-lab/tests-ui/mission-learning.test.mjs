@@ -188,5 +188,5 @@ test('a complete reflection reports receipt without claiming causal or molecular
   assert.ok(screen.getByText(/6 de 6 registros válidos nesta tentativa/));
   assert.ok(screen.getByText(/O conjunto chegou; agora é preciso respeitar o alcance da evidência/));
   await click(screen.getByRole('radio', { name: MISSION_CURRICULUM.telescope.overclaim }));
-  assert.match(screen.getByRole('status').textContent, /Os valores não detectam água ou vida/);
+  assert.match(screen.getByRole('status').textContent, /recorte não refaz a detecção de CO₂ nem estima abundâncias ou vida/);
 });

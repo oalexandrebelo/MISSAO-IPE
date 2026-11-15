@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T09:06:39.496Z",
-  "finishedAt": "2026-11-15T09:06:42.700Z",
+  "startedAt": "2026-11-15T09:36:27.475Z",
+  "finishedAt": "2026-11-15T09:36:31.215Z",
   "command": "node scripts/test-ui.mjs",
   "node": "v24.18.0",
   "exitCode": 0,

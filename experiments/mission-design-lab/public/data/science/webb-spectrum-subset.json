@@ -1,0 +1,201 @@
+{
+  "version": "webb-nirspec-prism-firefly-r18-v1",
+  "sourceFile": "WASP_39_b_3.11466_4988_2.tbl",
+  "sourceSha256": "49a41e9eacaec33457b5c5d249bb9803da1ab0a07ea99fa2b4b5a8d0e24de687",
+  "totalSourceRows": 95,
+  "selection": {
+    "method": "nearest existing wavelength bin",
+    "anchorsMicrometers": [
+      3.6,
+      3.9,
+      4.2,
+      4.3,
+      4.5,
+      4.9
+    ],
+    "oneBasedDataRows": [
+      25,
+      39,
+      54,
+      58,
+      65,
+      80
+    ]
+  },
+  "records": [
+    {
+      "id": "webb-firefly-row-25",
+      "label": "WASP-39 b · 3.59308 µm",
+      "goal": "Entregar seis bins reais do espectro de WASP-39 b e comparar a profundidade do trânsito com suas incertezas.",
+      "value": 2.13814,
+      "unit": "% de luz bloqueada",
+      "evidence": {
+        "kind": "spectrum",
+        "sourceTitle": "NASA Exoplanet Archive · JWST/NIRSpec PRISM · FIREFLy",
+        "sourceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+        "datasetUrl": "https://doi.org/10.5281/zenodo.6959427",
+        "observedAt": "2022-07-10",
+        "sourceRow": 25,
+        "quantity": "Profundidade do trânsito (Rp/R★)² × 100",
+        "uncertainty": 0.01009,
+        "wavelengthMicrometers": 3.59308,
+        "limitations": "Recorte de seis dos 95 bins da redução FIREFLy de um único trânsito; não são seis exposições. Incertezas publicadas de 1σ; o recorte não fornece covariância entre bins. Não permite refazer a detecção de CO₂, estimar abundâncias ou concluir presença de vida. Operação e telemetria do jogo são didáticas."
+      },
+      "archiveFileLine": 37,
+      "authorFileLine": 26,
+      "binWidthMicrometers": 0.0222,
+      "uncertaintyUnit": "pontos percentuais (1σ)",
+      "authorOriginal": {
+        "wv_center": "3.5930807643913916",
+        "transit_depth": "0.02138136021801316",
+        "wv_wdth": "0.022198065944759815",
+        "tran_unc": "0.00010085092496180384"
+      }
+    },
+    {
+      "id": "webb-firefly-row-39",
+      "label": "WASP-39 b · 3.89121 µm",
+      "goal": "Entregar seis bins reais do espectro de WASP-39 b e comparar a profundidade do trânsito com suas incertezas.",
+      "value": 2.10084,
+      "unit": "% de luz bloqueada",
+      "evidence": {
+        "kind": "spectrum",
+        "sourceTitle": "NASA Exoplanet Archive · JWST/NIRSpec PRISM · FIREFLy",
+        "sourceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+        "datasetUrl": "https://doi.org/10.5281/zenodo.6959427",
+        "observedAt": "2022-07-10",
+        "sourceRow": 39,
+        "quantity": "Profundidade do trânsito (Rp/R★)² × 100",
+        "uncertainty": 0.01222,
+        "wavelengthMicrometers": 3.89121,
+        "limitations": "Recorte de seis dos 95 bins da redução FIREFLy de um único trânsito; não são seis exposições. Incertezas publicadas de 1σ; o recorte não fornece covariância entre bins. Não permite refazer a detecção de CO₂, estimar abundâncias ou concluir presença de vida. Operação e telemetria do jogo são didáticas."
+      },
+      "archiveFileLine": 51,
+      "authorFileLine": 40,
+      "binWidthMicrometers": 0.02046,
+      "uncertaintyUnit": "pontos percentuais (1σ)",
+      "authorOriginal": {
+        "wv_center": "3.891212522445147",
+        "transit_depth": "0.02100838859995277",
+        "wv_wdth": "0.020456515229694272",
+        "tran_unc": "0.00012217580871779057"
+      }
+    },
+    {
+      "id": "webb-firefly-row-54",
+      "label": "WASP-39 b · 4.19111 µm",
+      "goal": "Entregar seis bins reais do espectro de WASP-39 b e comparar a profundidade do trânsito com suas incertezas.",
+      "value": 2.13836,
+      "unit": "% de luz bloqueada",
+      "evidence": {
+        "kind": "spectrum",
+        "sourceTitle": "NASA Exoplanet Archive · JWST/NIRSpec PRISM · FIREFLy",
+        "sourceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+        "datasetUrl": "https://doi.org/10.5281/zenodo.6959427",
+        "observedAt": "2022-07-10",
+        "sourceRow": 54,
+        "quantity": "Profundidade do trânsito (Rp/R★)² × 100",
+        "uncertainty": 0.01171,
+        "wavelengthMicrometers": 4.19111,
+        "limitations": "Recorte de seis dos 95 bins da redução FIREFLy de um único trânsito; não são seis exposições. Incertezas publicadas de 1σ; o recorte não fornece covariância entre bins. Não permite refazer a detecção de CO₂, estimar abundâncias ou concluir presença de vida. Operação e telemetria do jogo são didáticas."
+      },
+      "archiveFileLine": 66,
+      "authorFileLine": 55,
+      "binWidthMicrometers": 0.02839,
+      "uncertaintyUnit": "pontos percentuais (1σ)",
+      "authorOriginal": {
+        "wv_center": "4.191105571252154",
+        "transit_depth": "0.021383610346991877",
+        "wv_wdth": "0.028393810768767125",
+        "tran_unc": "0.00011706423308532386"
+      }
+    },
+    {
+      "id": "webb-firefly-row-58",
+      "label": "WASP-39 b · 4.30310 µm",
+      "goal": "Entregar seis bins reais do espectro de WASP-39 b e comparar a profundidade do trânsito com suas incertezas.",
+      "value": 2.24669,
+      "unit": "% de luz bloqueada",
+      "evidence": {
+        "kind": "spectrum",
+        "sourceTitle": "NASA Exoplanet Archive · JWST/NIRSpec PRISM · FIREFLy",
+        "sourceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+        "datasetUrl": "https://doi.org/10.5281/zenodo.6959427",
+        "observedAt": "2022-07-10",
+        "sourceRow": 58,
+        "quantity": "Profundidade do trânsito (Rp/R★)² × 100",
+        "uncertainty": 0.01259,
+        "wavelengthMicrometers": 4.3031,
+        "limitations": "Recorte de seis dos 95 bins da redução FIREFLy de um único trânsito; não são seis exposições. Incertezas publicadas de 1σ; o recorte não fornece covariância entre bins. Não permite refazer a detecção de CO₂, estimar abundâncias ou concluir presença de vida. Operação e telemetria do jogo são didáticas."
+      },
+      "archiveFileLine": 70,
+      "authorFileLine": 59,
+      "binWidthMicrometers": 0.02761,
+      "uncertaintyUnit": "pontos percentuais (1σ)",
+      "authorOriginal": {
+        "wv_center": "4.303097530074848",
+        "transit_depth": "0.022466909841852935",
+        "wv_wdth": "0.02761119271679391",
+        "tran_unc": "0.00012588250614986338"
+      }
+    },
+    {
+      "id": "webb-firefly-row-65",
+      "label": "WASP-39 b · 4.49196 µm",
+      "goal": "Entregar seis bins reais do espectro de WASP-39 b e comparar a profundidade do trânsito com suas incertezas.",
+      "value": 2.22426,
+      "unit": "% de luz bloqueada",
+      "evidence": {
+        "kind": "spectrum",
+        "sourceTitle": "NASA Exoplanet Archive · JWST/NIRSpec PRISM · FIREFLy",
+        "sourceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+        "datasetUrl": "https://doi.org/10.5281/zenodo.6959427",
+        "observedAt": "2022-07-10",
+        "sourceRow": 65,
+        "quantity": "Profundidade do trânsito (Rp/R★)² × 100",
+        "uncertainty": 0.01393,
+        "wavelengthMicrometers": 4.49196,
+        "limitations": "Recorte de seis dos 95 bins da redução FIREFLy de um único trânsito; não são seis exposições. Incertezas publicadas de 1σ; o recorte não fornece covariância entre bins. Não permite refazer a detecção de CO₂, estimar abundâncias ou concluir presença de vida. Operação e telemetria do jogo são didáticas."
+      },
+      "archiveFileLine": 77,
+      "authorFileLine": 66,
+      "binWidthMicrometers": 0.02637,
+      "uncertaintyUnit": "pontos percentuais (1σ)",
+      "authorOriginal": {
+        "wv_center": "4.491960853321043",
+        "transit_depth": "0.022242563018870024",
+        "wv_wdth": "0.026374333869434885",
+        "tran_unc": "0.00013931765211284467"
+      }
+    },
+    {
+      "id": "webb-firefly-row-80",
+      "label": "WASP-39 b · 4.89040 µm",
+      "goal": "Entregar seis bins reais do espectro de WASP-39 b e comparar a profundidade do trânsito com suas incertezas.",
+      "value": 2.15689,
+      "unit": "% de luz bloqueada",
+      "evidence": {
+        "kind": "spectrum",
+        "sourceTitle": "NASA Exoplanet Archive · JWST/NIRSpec PRISM · FIREFLy",
+        "sourceUrl": "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b",
+        "datasetUrl": "https://doi.org/10.5281/zenodo.6959427",
+        "observedAt": "2022-07-10",
+        "sourceRow": 80,
+        "quantity": "Profundidade do trânsito (Rp/R★)² × 100",
+        "uncertainty": 0.01512,
+        "wavelengthMicrometers": 4.8904,
+        "limitations": "Recorte de seis dos 95 bins da redução FIREFLy de um único trânsito; não são seis exposições. Incertezas publicadas de 1σ; o recorte não fornece covariância entre bins. Não permite refazer a detecção de CO₂, estimar abundâncias ou concluir presença de vida. Operação e telemetria do jogo são didáticas."
+      },
+      "archiveFileLine": 92,
+      "authorFileLine": 81,
+      "binWidthMicrometers": 0.03207,
+      "uncertaintyUnit": "pontos percentuais (1σ)",
+      "authorOriginal": {
+        "wv_center": "4.8903986527689405",
+        "transit_depth": "0.02156885078515994",
+        "wv_wdth": "0.03206881419974028",
+        "tran_unc": "0.00015120677947899603"
+      }
+    }
+  ]
+}

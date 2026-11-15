@@ -1,8 +1,10 @@
+import bennuRecords from '../../public/data/science/bennu-records.json' with { type: 'json' };
+import webbData from '../../public/data/science/webb-spectrum-subset.json' with { type: 'json' };
 import type { MissionEvent, TracePoint } from '../core/contracts.ts';
 import { add, cmp, div, floorSafe, min, mul, q, sub, toNumber, ZERO } from '../core/exact.ts';
 import type { MissionVisualState, MissionVisualSubsystem } from './mission-visual-state.ts';
 
-export const EXPEDITION_MODEL_VERSION = 'ipe-expeditions-r14-v1' as const;
+export const EXPEDITION_MODEL_VERSION = 'ipe-expeditions-r18-v1' as const;
 export type ExpeditionId = 'bennu' | 'telescope';
 export interface ExpeditionConfig {
   launch: 'compact' | 'science'; orbit: 'near' | 'far'; duration: 'short' | 'full';
@@ -16,8 +18,15 @@ export interface ExpeditionChoice {
   readonly bitsPerRecord?: number; readonly totalLoadW?: number; readonly rateBps?: number;
 }
 export interface ExpeditionDatum {
-  readonly id: string; readonly label: string; readonly goal: string; readonly syntheticLabel: string;
+  readonly id: string; readonly label: string; readonly goal: string;
   readonly value: number; readonly unit: string;
+  readonly evidence: {
+    readonly kind: string; readonly sourceTitle: string; readonly sourceUrl: string; readonly datasetUrl: string;
+    readonly observedAt: string; readonly sourceRow: string | number; readonly quantity: string;
+    readonly uncertainty?: number | string; readonly wavelengthMicrometers?: number;
+    readonly latitudeDeg?: number; readonly longitudeDeg?: number; readonly limitations: string;
+  };
+  readonly dimensions?: { readonly longAxisM: number; readonly shortAxisM: number; readonly heightM: number };
 }
 export interface ExpeditionMetadata {
   readonly id: ExpeditionId; readonly title: string; readonly subtitle: string; readonly objective: string;
@@ -63,31 +72,27 @@ function freeze<T>(value: T): T {
   return value;
 }
 const KEYS: readonly ExpeditionConfigKey[] = ['launch', 'orbit', 'duration', 'instrument', 'power', 'ground'];
-const syntheticLabel = 'Observação sintética criada para o jogo';
-const dataNotice = 'Todos os seis registros são sintéticos, em unidades didáticas: não são medições NASA. Os modelos NASA são referências geométricas. As 2 ou 3 horas representam operação após a chegada, sem simular o trajeto até o destino.';
+const dataNotice = 'Registros históricos reais, com fonte e unidade verificáveis. O exercício simula processamento e entrega desses arquivos; não produz novas medições NASA. As 2 ou 3 horas, pacotes, nave e recursos são didáticos e independentes das datas históricas. O modelo 3D não é um mapa de navegação.';
 const modelAssumptions = 'Premissas didáticas: estrutura de 1,2 kg e 15 créditos; memória de 720 Mbit; espera de 5 W; bateria começa em 80%; conversão ideal de energia de 100%, sem perdas de eficiência. Massa da estação terrestre não integra a massa da nave.';
-const cameraGoal = 'Comparar a morfologia de três regiões por dois registros de imagem de cada região.';
-const spectrumGoal = 'Comparar o fluxo infravermelho sintético de três faixas em duas exposições.';
-const fixture = (prefix: string, labels: readonly string[], values: readonly number[], goal: string, unit: string): ExpeditionDatum[] => values.map((value, index) => ({
-  id: `${prefix}-${index + 1}`, label: `${labels[index % 3]} · observação ${Math.floor(index / 3) + 1}`, value, unit, goal, syntheticLabel,
-}));
+const cameraGoal = 'Comparar as dimensões publicadas de seis rochas e clastos de Bennu, preservando suas fontes e os limites da medida.';
+const spectrumGoal = 'Comparar seis bins reais do espectro de WASP-39 b com suas incertezas, após entregar os registros completos.';
 
 export const EXPEDITIONS: Readonly<Record<ExpeditionId, ExpeditionMetadata>> = freeze({
   bennu: {
     id: 'bennu', title: 'Bennu: ler uma superfície', subtitle: 'Imagem, morfologia e entrega científica', objective: cameraGoal,
-    backstory: 'A OSIRIS-REx usou observações de Bennu para selecionar Nightingale em 2019. O exercício investiga a entrega de imagens ao solo com setores A, B e C e rugosidades sintéticos; eles não representam os locais reais de coleta.',
+    backstory: 'Imagens PolyCam e terreno OLA sustentam dimensões publicadas de rochas e clastos de Bennu. DellaGiustina et al. investigaram material exógeno com imagens e espectros. Aqui comparamos seis eixos maiores reais; tamanho sozinho não demonstra composição ou origem.',
     dataNotice, facts: ['A nave configurável é um modelo didático; o modelo NASA contextualiza o alvo, sem reproduzir a OSIRIS-REx.', 'Órbitas, lançadores, massa, créditos e agendas abaixo são escolhas didáticas, sem C3 ou trajetória real.', modelAssumptions],
-    origins: [{ title: 'NASA 3D Resources · 1999 RQ36 (Bennu)', url: 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' }],
-    requirements: { user: 'Receber dois registros válidos de cada uma das três regiões.', space: 'Usar câmera, energia e memória suficientes para seis registros.', launch: 'Respeitar massa, orçamento e compatibilidade do lançador com o perfil escolhido.', ground: 'Receber cada registro inteiro antes do fim da vida operacional escolhida.' },
-    dataFixture: fixture('bennu', ['Região A', 'Região B', 'Região C'], [0.32, 0.61, 0.47, 0.35, 0.58, 0.49], cameraGoal, 'rugosidade didática (u.a.)'),
+    origins: [{ title: 'NASA NTRS · estudo e suplemento de Bennu', url: 'https://ntrs.nasa.gov/citations/20205007912' }, { title: 'Arquivo local · tabela completa de dimensões', url: './data/science/bennu-table1.csv' }, { title: 'NASA 3D Resources · 1999 RQ36 (Bennu)', url: 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' }],
+    requirements: { user: 'Receber as dimensões dos sítios 1, 2, 3, 4a, 5 e 6; o clasto 4b permanece na tabela completa.', space: 'Representar a cadeia de imagem com câmera, energia e memória suficientes para processar seis arquivos históricos.', launch: 'Respeitar massa, orçamento e compatibilidade do lançador com o perfil escolhido.', ground: 'Receber cada registro inteiro antes do fim da vida operacional escolhida.' },
+    dataFixture: bennuRecords,
   },
   telescope: {
     id: 'telescope', title: 'Telescópio: ler a luz', subtitle: 'Espectro infravermelho e exposição', objective: spectrumGoal,
-    backstory: 'Em 2022, o NIRSpec do Webb identificou CO₂ na atmosfera de WASP-39 b por espectroscopia. Aqui, duas exposições em três faixas sintéticas ensinam a escolher a medida adequada; não reproduzem essa descoberta nem demonstram composição, água ou vida.',
+    backstory: 'O NIRSpec observou um trânsito de WASP-39 b em 10 de julho de 2022. Usamos seis dos 95 bins da redução FIREFLy, publicados no NASA Exoplanet Archive, para ler profundidade de trânsito e incerteza. O recorte ilustra a descoberta publicada de CO₂; não a refaz.',
     dataNotice, facts: ['O modelo de telescópio NASA é referência visual, não a nave simulada nem uma reprodução de seu desempenho.', 'LEO e L2 identificam perfis conceituais; o relógio começa na operação, após a chegada.', modelAssumptions],
-    origins: [{ title: 'NASA 3D Resources · James Webb Space Telescope (A)', url: 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/' }],
-    requirements: { user: 'Receber dois valores válidos para cada uma das três faixas.', space: 'Usar espectrômetro; a câmera genérica deste catálogo não mede o espectro exigido.', launch: 'Escolher um lançador que suporte o perfil e os limites do projeto.', ground: 'Transmitir seis registros completos durante as janelas previstas.' },
-    dataFixture: fixture('spectrum', ['Faixa 1,2 µm', 'Faixa 2,0 µm', 'Faixa 3,5 µm'], [0.82, 0.55, 0.29, 0.79, 0.57, 0.31], spectrumGoal, 'fluxo relativo (u.a.)'),
+    origins: [{ title: 'NASA Exoplanet Archive · WASP-39 b', url: 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres=&planet=WASP-39%20b' }, { title: 'Arquivo local · tabela FIREFLy da NASA', url: './data/science/webb-firefly-nasa.tbl' }, { title: 'Autores · dados e licença CC BY 4.0', url: 'https://doi.org/10.5281/zenodo.6959427' }, { title: 'NASA 3D Resources · James Webb Space Telescope (A)', url: 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/' }],
+    requirements: { user: 'Receber seis bins reais de uma única observação, com profundidade de trânsito (%) e incerteza 1σ.', space: 'Representar a cadeia espectroscópica com espectrômetro; a câmera genérica do catálogo é incompatível com o requisito.', launch: 'Escolher um lançador que suporte o perfil e os limites do projeto.', ground: 'Transmitir seis registros completos durante as janelas previstas.' },
+    dataFixture: webbData.records,
   },
 });
 
@@ -184,7 +189,7 @@ export function simulateExpedition(id: ExpeditionId, input: ExpeditionConfig): E
   const emit = (code: string, message: string, severity: MissionEvent['severity'] = 'info', extra: Partial<Pick<MissionEvent, 'recordId' | 'value' | 'limit'>> = {}) => events.push({ id: `exp-event-${events.length + 1}`, timeS: toNumber(time), code, severity, rule: `expedition:${code.toLowerCase()}`, message, ...extra });
   const active = ([start, end]: readonly [number, number]) => cmp(time, q(start)) >= 0 && cmp(time, q(end)) < 0;
   const append = (mode: string, solarW = 0, loadW = 0) => trace.push({ timeS: toNumber(time), energyWh: toNumber(div(energy, q(3600))), queueBits, downlinkedBits, solarW, loadW, mode });
-  emit('MISSION_START', 'Operação didática após chegada; seis registros sintéticos e entradas fixas.');
+  emit('MISSION_START', 'Operação didática após chegada; processamento de seis registros históricos reais.');
   const staticCodes: Record<string, string> = { instrument: 'INSTRUMENT_MISMATCH', 'launch-orbit': 'LAUNCH_PROFILE', mass: 'MASS_LIMIT', budget: 'BUDGET_LIMIT' };
   for (const item of preflight) if (!item.met) emit(staticCodes[item.id]!, item.label, 'error', { value: item.measured, limit: item.limit });
   while (true) {
@@ -193,7 +198,7 @@ export function simulateExpedition(id: ExpeditionId, input: ExpeditionConfig): E
       const record = observations[index]!;
       if (started.has(index) && record.producedAtS === null && cmp(time, q(schedule.jobStartsS[index]! + 60)) === 0) {
         record.producedAtS = now; record.generatedBits = batchBits; generatedBits += batchBits;
-        emit('JOB_COMPLETE', 'Registro sintético produzido integralmente.', 'info', { recordId: record.id, value: batchBits });
+        emit('JOB_COMPLETE', 'Arquivo histórico processado integralmente a bordo.', 'info', { recordId: record.id, value: batchBits });
         if (queueBits + batchBits > totals.bufferBits) {
           record.lostBits = batchBits; lostBits += batchBits;
           emit('BUFFER_OVERFLOW', 'O novo registro não cabe inteiro na memória.', 'error', { recordId: record.id, value: queueBits + batchBits, limit: totals.bufferBits });
@@ -212,7 +217,7 @@ export function simulateExpedition(id: ExpeditionId, input: ExpeditionConfig): E
         if (now === start) emit('CONTACT_START', 'Janela didática de recepção iniciada.');
         if (now === end) emit('CONTACT_END', 'Janela encerrada; recepção parcial não é registro completo.');
       }
-      schedule.jobStartsS.forEach((start, index) => { if (now === start) { started.add(index); emit('JOB_START', 'Iniciada observação sintética de 60 s.', 'info', { recordId: observations[index]!.id }); } });
+      schedule.jobStartsS.forEach((start, index) => { if (now === start) { started.add(index); emit('JOB_START', 'Iniciado processamento didático de arquivo histórico por 60 s.', 'info', { recordId: observations[index]!.id }); } });
     }
     const processing = schedule.jobStartsS.some(start => active([start, start + 60]));
     const transmitting = !processing && queueBits > 0 && schedule.contacts.some(active);
@@ -237,7 +242,7 @@ export function simulateExpedition(id: ExpeditionId, input: ExpeditionConfig): E
       const record = observations[packet.index]!; record.downlinkedBits += sent;
       if (packet.remaining === 0) {
         record.deliveredAtS = toNumber(time); packets.shift();
-        emit('RECORD_DELIVERED', valid ? 'Registro sintético completo e instrumento compatível.' : 'Registro completo, mas instrumento incompatível com o objetivo.', valid ? 'info' : 'warning', { recordId: record.id });
+        emit('RECORD_DELIVERED', valid ? 'Registro histórico completo no solo e instrumento compatível.' : 'Registro completo, mas instrumento incompatível com o objetivo.', valid ? 'info' : 'warning', { recordId: record.id });
         if (!queueBits) emit('QUEUE_EMPTY', 'Fila vazia; rádio retorna à espera.');
       }
     }

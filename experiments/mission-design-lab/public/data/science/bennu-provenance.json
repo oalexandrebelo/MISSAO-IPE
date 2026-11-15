@@ -1,0 +1,70 @@
+{
+  "datasetId": "ipe-bennu-dellagiustina-2020-table1-v1",
+  "retrievedAtUtc": "2026-11-15",
+  "recordUrl": "https://ntrs.nasa.gov/citations/20205007912",
+  "doi": "10.1038/s41550-020-1195-z",
+  "citation": "DellaGiustina, D. N., Kaplan, H. H., Simon, A. A., et al. Exogenic basalt on asteroid (101955) Bennu. Nature Astronomy 5, 31–38 (2021); published 21 September 2020.",
+  "version": "Original supplementary information linked from NASA NTRS record 20205007912; frozen by SHA256.",
+  "sourceChain": "NASA NTRS record → External Source(s) → publisher's original supplement → Supplementary Table 1.",
+  "sources": [
+    {
+      "file": "originals/DG_Nature_merged_1595501739.pdf",
+      "bytes": 5587870,
+      "sha256": "b711f7810c69c9e891c0a33f6b956afaa51280afdd19ffbe73e298f4ab039717",
+      "url": "https://ntrs.nasa.gov/api/citations/20205007912/downloads/DG_Nature_merged_1595501739.pdf?attachment=true",
+      "role": "NASA NTRS accepted manuscript; Methods pp. 8–9 describe imaging and terrain registration."
+    },
+    {
+      "file": "originals/41550_2020_1195_MOESM1_ESM.pdf",
+      "bytes": 11723148,
+      "sha256": "4c0f880a9bde432938611cfbfe153f52c4e7c91c832e1c9c72a40323fc823cf7",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41550-020-1195-z/MediaObjects/41550_2020_1195_MOESM1_ESM.pdf",
+      "role": "Publisher's original supplement linked by NASA NTRS; Table 1, physical PDF page 12, printed page 11."
+    }
+  ],
+  "extraction": "Native macOS PDFKit text selection by fixed table-cell rectangles, extract-table.swift; visually cross-checked against rendered page. No graph digitization, pixel measurement or statistical fitting.",
+  "selection": "Six unique objects, one at each numbered site: 1, 2, 3, 4a, 5, 6. Complete table has seven rows because site 4 has clasts 4a and 4b. The omitted game record 4b remains in table1-extracted.json and bennu-table1.csv. No averaging or duplicated measurements.",
+  "time": "Morphology images listed in manuscript Methods span 27 February–28 March 2019; no per-dimension acquisition timestamp is assigned by the table. OLA terrain is also involved. Publication time is not observation time.",
+  "quantity": "Long axis, short axis and height in metres; latitude and longitude in degrees. Volume columns copied for audit only, not promoted to independent measured telemetry.",
+  "uncertainty": {
+    "axisPixelScaleM": 0.0525,
+    "heightEstimatedPrecisionM": 0.01,
+    "interpretation": "Table caption says axis uncertainty is limited by pixel scale and height uncertainty estimated from OLA vertical precision. Do not label either as a provided confidence interval or standard deviation."
+  },
+  "quality": "Published measurements using PolyCam images registered to OLA terrain. The paper identifies saturation/icicle calibration concerns for reflectance; this handoff does not extract reflectance or assign independent raw-data QA flags. No numeric PDS quality flags are present in Table 1.",
+  "scientificInterpretation": "Observed bright pyroxene-bearing material has spectra similar to HED meteorites. A Vesta-family origin is the authors' supported interpretation; the delivery path through Bennu's parent is a hypothesis. Size alone or this six-value exercise cannot establish mineral composition or provenance.",
+  "threeDimensionalUse": "Render six labelled dimension proxies / scale bars and optionally a schematic coordinate globe. Do not claim measured rock shape, mapped alignment to the bundled Bennu GLB, or safe landing areas. No GLB body frame registration was verified.",
+  "rights": "Numerical facts and original handoff prose may be published with citation. Downloaded full papers/text/raster reading aids are gitignored: NTRS explicitly cautions that portions may be copyrighted. Sources remain available through their original NASA/publisher links.",
+  "contextImage": {
+    "file": "bennu-vesta-nasa-context.png",
+    "url": "https://www.nasa.gov/wp-content/uploads/2020/07/orex_vesta_press_release_graphic.png?resize=768,383",
+    "articleUrl": "https://www.nasa.gov/solar-system/nasas-osiris-rex-to-asteroid-bennu-youve-got-a-little-vesta-on-you/",
+    "credit": "NASA/Goddard/University of Arizona",
+    "bytes": 258664,
+    "sha256": "899041d3abef7a88d8a779823451a93a6b4914d0655df28a4e44fca4bd4b18cb",
+    "dimensionsPx": [
+      768,
+      383
+    ],
+    "transformation": "None locally; official 768×383 rendition supplied in NASA article srcset.",
+    "use": "Two contextual views of bright rocks/clasts, not six individual record images; not a georeferenced map or a source for measuring values. Preserve NASA attribution and link."
+  },
+  "pdsAttempt": "OCAMS calibrated collection urn:nasa:pds:orex.ocams:data_calibrated::13.0 / DOI 10.26033/asca-b202 verified; direct XML/FITS retrieval returned a Cloudflare challenge (403). No challenge bypass was attempted; none of these game records is claimed to be a locally reprocessed raw PDS image.",
+  "derivedFiles": [
+    {
+      "file": "bennu-table1.csv",
+      "bytes": 362,
+      "sha256": "f93100752685e4842176bc6cd128866e35c24405e6e266fbacddde70f237251e"
+    },
+    {
+      "file": "table1-extracted.json",
+      "bytes": 1610,
+      "sha256": "851b29df97483f5ef675eca72f1db7566fd21091f571017b1dea0c82620421c1"
+    },
+    {
+      "file": "bennu-handoff.json",
+      "bytes": 9287,
+      "sha256": "addb72ae1817e7f0600789d2167c426a3a622b4e8a5df18f8e3416a7ee9d4586"
+    }
+  ]
+}

@@ -120,12 +120,12 @@ test('Bennu and telescope render actual instruments and power choices while cont
     await openDesign(id, config); const scene = designScene(); const choices = getExpeditionChoices(id);
     await click(within(scene).getByRole('button', { name: 'Carga científica' }));
     assert.equal(scene.dataset.payloadId, config.instrument);
-    assert.match(inspector(scene).textContent, /sintétic/); assert.doesNotMatch(inspector(scene).textContent, /MODIS|NDVI/);
+    assert.match(inspector(scene).textContent, /publicad[ao]/); assert.doesNotMatch(inspector(scene).textContent, /MODIS|NDVI/);
     const wrong = id === 'bennu' ? 'spectrometer' : 'camera';
     await change(LABELS.instrument, wrong);
     assert.equal(scene.dataset.payloadId, wrong); assert.match(inspector(scene).textContent, /não atende ao objetivo científico/);
     const payload = choices.instrument.find(choice => choice.id === wrong);
-    assert.equal(metric(scene, 'Volume por registro'), `${payload.bitsPerRecord / 1e6} Mbit`);
+    assert.equal(metric(scene, 'Pacote didático por registro'), `${payload.bitsPerRecord / 1e6} Mbit`);
     await change(LABELS.instrument, config.instrument);
     assert.doesNotMatch(inspector(scene).textContent, /não atende ao objetivo científico/);
     await change(LABELS.power, 'extended');

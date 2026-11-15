@@ -28,18 +28,18 @@ export const LEVELS = [
   {
     number: '02', name: 'Bennu / OSIRIS-REx', subtitle: 'Antes de tocar, conhecer.',
     status: 'Caso disponível', live: true, tag: 'GEOLOGIA PLANETÁRIA · BENNU', icon: 'asteroid',
-    text: 'Em 2019, a equipe da OSIRIS-REx escolheu Nightingale após estudar a superfície rochosa de Bennu. A decisão dependia de observações disponíveis em solo. Seu desafio é fazer os registros chegarem aos cientistas.',
+    text: 'Rochas brilhantes de Bennu motivaram uma investigação da OSIRIS-REx sobre material de outro asteroide. Compare dimensões reais publicadas e descubra por que produzir um registro não garante que ele chegue aos cientistas.',
     learning: 'Instrumento · memória a bordo · tempo de contato',
-    detail: 'A seleção de Nightingale é um fato histórico. O jogo usa um modelo NASA de Bennu, mas seus setores, medições e recursos são sintéticos. Amplie somente o tempo de contato e compare produção, fila e recepção. O exercício não calcula uma trajetória nem certifica um local de coleta.',
-    source: 'https://www.nasa.gov/news-release/x-marks-the-spot-nasa-selects-site-for-asteroid-sample-collection/',
-    sourceLabel: 'NASA · escolha de Nightingale',
+    detail: 'Seis eixos maiores de rochas e clastos vêm da Tabela Suplementar 1 do estudo arquivado no NASA NTRS. Amplie somente o contato e compare quais registros chegam. Dimensões são reais; energia, pacotes e operação são didáticos. Tamanho sozinho não prova composição ou origem, e o modelo 3D não é um mapa de pouso.',
+    source: 'https://ntrs.nasa.gov/citations/20205007912',
+    sourceLabel: 'NASA NTRS · rochas de Bennu',
   },
   {
     number: '03', name: 'Webb / NIRSpec', subtitle: 'A luz guarda pistas.',
     status: 'Caso disponível', live: true, tag: 'ASTRONOMIA · ESPECTROSCOPIA', icon: 'telescope',
     text: 'Em 2022, observações do NIRSpec no Webb revelaram dióxido de carbono na atmosfera de WASP-39 b. O instrumento precisa responder à pergunta: receber uma imagem não basta para medir um espectro.',
     learning: 'Imagem × espectro · compatibilidade · evidência científica',
-    detail: 'A descoberta é real; as intensidades do exercício são sintéticas e não reproduzem WASP-39 b. Compare os instrumentos do catálogo didático e os registros cientificamente válidos. Isso não detecta vida nem descreve todos os modos dos instrumentos reais do Webb.',
+    detail: 'Compare seis bins reais de um único trânsito de WASP-39 b, com a profundidade em porcentagem e incertezas publicadas de 1σ. O recorte vem do NASA Exoplanet Archive e não refaz a análise completa de CO₂. A operação é didática; a câmera genérica do catálogo não representa o NIRCam real.',
     source: 'https://science.nasa.gov/missions/webb/nasas-webb-detects-carbon-dioxide-in-exoplanet-atmosphere/',
     sourceLabel: 'NASA · CO₂ em WASP-39 b',
   },
@@ -54,7 +54,7 @@ export const MILESTONES = [
 
 export const FAQ = [
   ['Preciso entender de engenharia espacial?', 'Não. Comece pela pergunta científica, faça uma previsão e teste uma escolha. O laboratório mostra como energia, massa, dados e comunicação afetam o resultado. Você pode voltar, redesenhar e comparar.'],
-  ['O jogo usa dados reais?', 'Os três casos partem de ciência NASA documentada. O Cerrado usa arquivos históricos MOD13Q1.061; Bennu e Webb usam modelos NASA e medições sintéticas identificadas. Componentes, recursos e operação são didáticos. Não há telemetria ao vivo nem validação de voo.'],
+  ['O jogo usa dados reais?', 'Sim. O Cerrado usa arquivos históricos MOD13Q1.061; Bennu incorpora dimensões publicadas de rochas e clastos; Webb incorpora seis bins reais de WASP-39 b com incertezas. Fontes e seleção são verificáveis. Componentes, pacotes, recursos e operação são didáticos; não há telemetria ao vivo nem validação de voo.'],
   ['As três missões e a campanha já estão disponíveis?', 'Sim. O laboratório reúne Cerrado, Bennu e Telescópio. A campanha do Cerrado também está disponível em quatro etapas: Primeiro sinal, Memória em disputa, Janela estreita e Ciência que chega. São experiências distintas, com links nesta página.'],
   ['Posso jogar em equipe?', 'É possível discutir decisões e dividir responsabilidades no mesmo dispositivo. A colaboração remota sincronizada para quatro jogadores ainda não está disponível. O aprendizado envolve os quatro segmentos: lançamento, espaço, solo e usuários.'],
   ['O nome IPÊ faz parte da história científica?', 'IPÊ identifica nossa equipe e sua marca. As histórias partem de missões e descobertas documentadas da NASA. A árvore não é um modelo de engenharia, uma etapa de missão ou um acontecimento científico.'],

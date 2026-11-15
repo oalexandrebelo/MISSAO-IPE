@@ -42,8 +42,8 @@ test('três casos distinguem fatos e exercício e levam à campanha disponível'
   await question.click(); await expect(question.locator('..')).toContainText('Primeiro sinal');
   await expect(page.locator('.level-card')).toHaveCount(3);
   const bennu = page.locator('.level-card').filter({has:page.getByRole('heading',{name:'Bennu / OSIRIS-REx',exact:true})});
-  await bennu.locator('summary').click(); await expect(bennu).toContainText('setores, medições e recursos são sintéticos');
-  await expect(bennu.getByRole('link',{name:/escolha de Nightingale/})).toHaveAttribute('href','https://www.nasa.gov/news-release/x-marks-the-spot-nasa-selects-site-for-asteroid-sample-collection/');
+  await bennu.locator('summary').click(); await expect(bennu).toContainText('Seis eixos maiores de rochas e clastos');
+  await expect(bennu.getByRole('link',{name:/rochas de Bennu/})).toHaveAttribute('href','https://ntrs.nasa.gov/citations/20205007912');
   await expect(page.getByRole('link',{name:/Jogue a campanha:/})).toHaveAttribute('href','https://projeto-ipe.vercel.app/campanha/index.html');
   await expect(page.getByRole('link',{name:'MISSÃO IPÊ — início'}).locator('img')).toHaveAttribute('src','/brand/missao-ipe-logo.svg');
   await expect(page.getByRole('link',{name:'GitHub',exact:true})).toHaveAttribute('href','https://github.com/oalexandrebelo/MISSAO-IPE');

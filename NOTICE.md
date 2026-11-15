@@ -21,3 +21,10 @@ Os cartazes em references/user foram fornecidos por AB e preservados como refer�
 R12 — identidade e tipografia: símbolo SVG fornecido pelo responsável, assinatura horizontal convertida em contornos vetoriais a partir da marca fornecida. Fontes Bricolage Grotesque e Plus Jakarta Sans provenientes do Google Fonts, sob SIL Open Font License 1.1, com licenças e proveniência em experiments/mission-design-lab/public/fonts/. Materiais SmartCity em references/estudos/ são referências históricas de outro projeto, com limites e transformações identificados.
 
 R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NASA, com créditos específicos, datas, URLs e hashes em web/media/manifest.json e docs/27-ACERVO-VISUAL-NASA.md. Variantes de tamanho servidas pela NASA foram preservadas sem edição local. Imagens não mostram a nave fictícia Ipê e não representam endosso. Diagramas SVG interativos são esquemas didáticos próprios, separados do motor da missão.
+
+
+## Dados científicos R18
+
+- Bennu: DellaGiustina et al., Exogenic basalt on asteroid (101955) Bennu, DOI 10.1038/s41550-020-1195-z; registro NASA NTRS 20205007912 e Tabela Suplementar 1. Fatos numéricos e extração atribuídos; os PDFs integrais não são redistribuídos. Imagem contextual: NASA/Goddard/University of Arizona, fonte e hash em `research/bennu-r18/provenance.json`.
+- Webb: JWST Transiting Exoplanet Community Early Release Science Team; FIREFLy, NASA Exoplanet Archive e DOI 10.5281/zenodo.6959427, CC BY 4.0. Seis bins selecionados, sem ajuste ou interpolação. Arquivo NASA preservado; comparação com frações dos autores documentada em `research/webb-r18/`.
+- Nenhum endosso NASA é implícito. IPÊ identifica a equipe. Arquivos históricos reais não tornam a operação educativa uma reprodução de voo.

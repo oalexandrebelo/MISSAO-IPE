@@ -225,11 +225,11 @@ async function run() {
     assert.equal(manifest.publicationReady, true);
     assert.deepEqual(manifest.missingRequired, []);
     assert.equal(manifest.project, 'PROJETO-IPE');
-    assert.equal(manifest.version, '0.8.0-beta.1');
-    assert.equal(manifest.edition, 'R17-official-brand-and-evidence-based-stories');
+    assert.equal(manifest.version, '0.9.0-beta.1');
+    assert.equal(manifest.edition, 'R18-real-nasa-scientific-records');
     assert.equal(manifest.files.length, manifest.fileCount);
     assert.deepEqual(manifest.files.map(file => file.path).sort(), files.filter(file => file !== 'publication-manifest.json').sort());
-    for (const filename of ['brand/missao-ipe-logo.svg', 'brand/brand-provenance-r17.json', 'docs/43-HANDOFF-GERAL-R17.html', 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html', 'research/nasa-mission-stories-r17.json', 'planet-jumping.html', 'research/technology-opportunities-r16.json', 'lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json', ...['35-REVISAO-PRS-E-DIRECAO-R16', '36-PORTAL-PLANET-JUMPING', '37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16', '38-HANDOFF-R16'].flatMap(name => [`docs/${name}.html`, `docs/${name}.md`])]) {
+    for (const filename of ['lab/data/science/bennu-records.json', 'lab/data/science/webb-spectrum-subset.json', 'docs/45-DADOS-REAIS-BENNU-WEBB-R18.html', 'docs/46-HANDOFF-DOIS-DEVS-R18.html', 'brand/missao-ipe-logo.svg', 'brand/brand-provenance-r17.json', 'docs/43-HANDOFF-GERAL-R17.html', 'docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html', 'research/nasa-mission-stories-r17.json', 'planet-jumping.html', 'research/technology-opportunities-r16.json', 'lab/index.html', 'campanha/index.html', 'campanha/research/index.html', 'campanha/apresentacao/index.html', 'campanha/apresentacao/PROJETO-IPE-Pitch.pptx', 'campanha/kit/schema.prisma', 'campanha/release.json', ...['35-REVISAO-PRS-E-DIRECAO-R16', '36-PORTAL-PLANET-JUMPING', '37-PROPOSTA-PEDAGOGICA-E-TECNOLOGIAS-R16', '38-HANDOFF-R16'].flatMap(name => [`docs/${name}.html`, `docs/${name}.md`])]) {
       assert.ok(bytesByFile.has(filename), `Entrega integrada ausente: ${filename}`);
     }
     for (const file of manifest.files) {

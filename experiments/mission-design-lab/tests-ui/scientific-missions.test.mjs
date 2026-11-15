@@ -90,12 +90,22 @@ test('both new scientific missions execute viable inputs and reject incompatible
     sub.after(cleanupView); await mount(); await openDesign(id);
     const valid = simulateExpedition(id, VIABLE[id]); assert.equal(valid.outcome, 'success');
     await execute(); assert.equal(currentCount(), '0 / 6'); assertSceneAt(valid, 0);
+    assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
+    assert.equal(document.querySelectorAll('.archive-point').length, 0);
     assert.doesNotMatch(mainScene().textContent, /MODIS|PAINÉIS 18 W|O Cerrado/);
     await click('Ir ao estado final'); assert.equal(currentCount(), '6 / 6'); assertSceneAt(valid, valid.completedAtS);
+    assert.equal(document.querySelectorAll('.archive-record.is-received').length, 6);
+    if (id === 'telescope') assert.equal(document.querySelectorAll('.archive-point').length, 6);
+    await click(screen.getAllByRole('button', { name: 'Rever esta entrega no 3D' })[0]);
+    assert.equal(Number(mainScene().dataset.stateTime), valid.observations[0].deliveredAtS);
+    assert.equal(document.querySelectorAll('.archive-record.is-received').length, 1);
+    if (id === 'telescope') assert.equal(document.querySelectorAll('.archive-point').length, 1);
     await change(/^Instante da missão/, '0'); assert.equal(currentCount(), '0 / 6'); assertSceneAt(valid, 0);
+    assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
     await click('Interpretar o retorno científico'); assert.ok(screen.getByRole('heading', { name: '6 de 6 registros válidos.' }));
-    assert.deepEqual([...document.querySelectorAll('.expedition-return article strong')].map(node => node.textContent), valid.observations.map(record => number(record.value)));
-    assert.match(document.querySelector('.expedition-return').parentElement.textContent, /sintétic/i);
+    assert.equal(document.querySelectorAll('.archive-record.is-received').length, 6);
+    for (const record of valid.observations) assert.ok(document.querySelector(`[data-record-id="${record.id}"] .archive-value`).textContent.includes(record.value.toLocaleString('pt-BR', { maximumFractionDigits: 5 })));
+    assert.match(document.querySelector('.archive-evidence').textContent, /ARQUIVO CIENTÍFICO REAL/);
     await click('Criar uma nova tentativa');
     const wrong = { ...VIABLE[id], launch: 'science', instrument: id === 'bennu' ? 'spectrometer' : 'camera' };
     await change(LABELS.launch, wrong.launch); await change(LABELS.instrument, wrong.instrument);
@@ -105,7 +115,8 @@ test('both new scientific missions execute viable inputs and reject incompatible
     const invalid = simulateExpedition(id, wrong); assert.equal(invalid.outcome, 'invalid'); assert.equal(invalid.deliveredRecords, 0);
     await click('Ir ao estado final'); assert.equal(currentCount(), '0 / 6'); assertSceneAt(invalid, invalid.completedAtS);
     await click('Interpretar o retorno científico'); assert.ok(screen.getByRole('heading', { name: '0 de 6 registros válidos.' }));
-    assert.ok([...document.querySelectorAll('.expedition-return article strong')].every(node => node.textContent === 'Indisponível'));
+    assert.equal(document.querySelectorAll('.archive-record.is-received').length, 0);
+    assert.ok([...document.querySelectorAll('.archive-value')].every(node => node.textContent.startsWith('—')));
   });
 });
 
@@ -138,6 +149,9 @@ test('saved project and rejected import preserve the result; A/B redesign shares
   await click('Redesenhar esta missão'); await click('Salvar projeto');
   const saved = JSON.parse(localStorage.getItem('ipe:expedition:bennu'));
   assert.deepEqual(saved.config, VIABLE.bennu); assert.equal(saved.hypothesis, hypothesis);
+  await importDesign(JSON.stringify({ ...saved, format: 'ipe-scientific-design-v1' }));
+  await waitFor(() => assert.match(document.querySelector('.expedition-notice').textContent, /R18 usa novos dados reais/));
+  for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(screen.getByLabelText(LABELS[key]).value, value);
   await importDesign(JSON.stringify({ ...saved, config: { ...saved.config, instrument: 'inventado' } }));
   await waitFor(() => assert.notEqual(document.querySelector('.expedition-notice').textContent, 'Projeto salvo neste navegador.'));
   for (const [key, value] of Object.entries(VIABLE.bennu)) assert.equal(screen.getByLabelText(LABELS[key]).value, value);
