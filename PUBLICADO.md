@@ -1,5 +1,19 @@
 # Publicação MISSÃO IPÊ
 
+## R30 — hangar, montagem e operação nas sete missões
+
+**Publicada e conferida em 15/11/2026.** Código `1409995812973de6b3bca0221b2a990b2087459f`; principal `dpl_2RdykrJGUsqe3wYZw76FfxUsFCBa` e LP `dpl_6taGqc6tojUb6SKBYSkVwYxKyPcY` **READY** no mesmo commit. O [jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) mostra montagem, instrumentos equipados, bateria, proteção, lançador e comunicação conforme a configuração. Eventos revelados orientam a cena; a trilha declara o que está atual, concluído ou pendente. O hangar usa iluminação Poly Haven CC0, com crédito e integridade local.
+
+**QA:** 180 testes de domínio, 144 de interface, 53 de métricas e 19 de distribuição passaram. O navegador percorreu as sete missões em 390 px: sete tentativas com seis registros válidos e uma oitava, Cerrado com contato curto, com dois registros. A comparação A/B explicou a diferença e acompanhou os estados finais no mesmo relógio. A recarga preservou oito tentativas, 25 eventos confirmados, nove créditos e os ciclos de seis instrumentos. Esses percursos usaram participação sintética e servidor local de teste. Inventário e comparação também foram inspecionados em 320 px.
+
+**Produção:** 12 arquivos publicados tiveram SHA-256 idêntico ao build, incluindo as cenas, HDRI e documentos 76/77. Sete verificações adicionais confirmaram sessão anônima, recusa do painel privado, 404 real, subdomínios de jogo/documentação/painel e link da LP à apresentação oficial. O hangar ISS abriu no domínio em 390 px; energia ampliada, montagem separável e atalho de inspeção responderam, sem erros de console observados. Esta publicação não repete a campanha HTTP de inventário da R28; telefone físico e testes educativos com pessoas continuam pendentes.
+
+O Sol 6.1 Max pesquisou os assets: uma plataforma Kenney CC0 de 17.200 bytes e 96 triângulos é o próximo ensaio proposto. Rodin/Meshy, Blender/DCC e modelos locais têm requisitos, custos e licenças documentados; não foram apresentados como integrações já operantes.
+
+[Handoff R30](docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md) · [Assets e oportunidades](docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md) · [Jornadas móveis](evidence/r30-mobile-journey.json) · [Publicação](evidence/r30-production-publication.json)
+
+---
+
 ## R29 — seleção imersiva e compra em lote
 
 **Publicada e conferida em 15/11/2026.** Código `7f798af44fad12a2c3b09e7a466d8d303e7dd4f4`; principal `dpl_EFrE2p4EqcQPUnxGaWRAmNWrRWCb` e LP `dpl_HEzZhnFW94jMGrt14GdyADHWg7Nf` **READY** no mesmo commit. O [jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) apresenta os sete destinos com horizonte planetário 3D, transições de câmera, texturas NASA e os modelos de Bennu e Webb. Cada destino mostra sua pergunta, aprendizado e botão Jogar. A composição segue a referência Space planet, com a marca e o fluxo da MISSÃO IPÊ.

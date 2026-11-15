@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T19:48:10.008Z",
+  "generatedAt": "2026-11-15T19:51:26.624Z",
   "status": "passed",
   "scope": "Original and emitted runtime bytes reread after static build and checked against the declared HTML integration; no browser execution.",
   "fileCount": 223,

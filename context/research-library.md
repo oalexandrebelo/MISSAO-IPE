@@ -65,9 +65,23 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `8b636c866a1865b3518fa24dee49c3de9614c0c593016162e189b9e48d12ac67` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `07f08dfa10a823066e28a7d29e80c745f1e97afd75e5970c3e7a3134d06082cb` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R30 — hangar, montagem e operação nas sete missões
+
+**Publicada e conferida em 15/11/2026.** Código `1409995812973de6b3bca0221b2a990b2087459f`; principal `dpl_2RdykrJGUsqe3wYZw76FfxUsFCBa` e LP `dpl_6taGqc6tojUb6SKBYSkVwYxKyPcY` **READY** no mesmo commit. O [jogo oficial](https://nasa-missaoipe.alexandrebelo.com/lab/index.html) mostra montagem, instrumentos equipados, bateria, proteção, lançador e comunicação conforme a configuração. Eventos revelados orientam a cena; a trilha declara o que está atual, concluído ou pendente. O hangar usa iluminação Poly Haven CC0, com crédito e integridade local.
+
+**QA:** 180 testes de domínio, 144 de interface, 53 de métricas e 19 de distribuição passaram. O navegador percorreu as sete missões em 390 px: sete tentativas com seis registros válidos e uma oitava, Cerrado com contato curto, com dois registros. A comparação A/B explicou a diferença e acompanhou os estados finais no mesmo relógio. A recarga preservou oito tentativas, 25 eventos confirmados, nove créditos e os ciclos de seis instrumentos. Esses percursos usaram participação sintética e servidor local de teste. Inventário e comparação também foram inspecionados em 320 px.
+
+**Produção:** 12 arquivos publicados tiveram SHA-256 idêntico ao build, incluindo as cenas, HDRI e documentos 76/77. Sete verificações adicionais confirmaram sessão anônima, recusa do painel privado, 404 real, subdomínios de jogo/documentação/painel e link da LP à apresentação oficial. O hangar ISS abriu no domínio em 390 px; energia ampliada, montagem separável e atalho de inspeção responderam, sem erros de console observados. Esta publicação não repete a campanha HTTP de inventário da R28; telefone físico e testes educativos com pessoas continuam pendentes.
+
+O Sol 6.1 Max pesquisou os assets: uma plataforma Kenney CC0 de 17.200 bytes e 96 triângulos é o próximo ensaio proposto. Rodin/Meshy, Blender/DCC e modelos locais têm requisitos, custos e licenças documentados; não foram apresentados como integrações já operantes.
+
+[Handoff R30](docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md) · [Assets e oportunidades](docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md) · [Jornadas móveis](evidence/r30-mobile-journey.json) · [Publicação](evidence/r30-production-publication.json)
+
+---
 
 ## R29 — seleção imersiva e compra em lote
 
@@ -8488,7 +8502,7 @@ Na publicação do código `7f798af44fad12a2c3b09e7a466d8d303e7dd4f4`, os projet
 
 # R30 · cockpit das sete missões e handoff
 
-Fonte: `docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md` · SHA-256 original: `cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773` · Ajustes de caminhos privados: 0
+Fonte: `docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md` · SHA-256 original: `79c5fb881f1d92ecc46761ff72520fdc27296daf686d1e86d31f7e52161fdacf` · Ajustes de caminhos privados: 0
 
 # R30 · cockpit das sete missões e handoff
 
@@ -8565,6 +8579,9 @@ Emulação de viewport não equivale a teste em telefone físico; uma jornada t�
 - **Dev B:** `ScientificCockpit.tsx` e `scientific-cockpit.css` controlam a orientação; `BrunoCampaign.tsx` e `bruno-campaign.css` controlam a sequência e pendências. `r30-scene-state.ts` projeta estados em sinais visuais, `r30-scene.css` apresenta a agenda; `HangarEnvironment.tsx` carrega e descarta a iluminação compartilhada. `Scene.tsx`, `OrbitalScene.tsx` e `BrunoHangarScene.tsx` consomem esses sinais.
 - **Revisão:** os quatro testes `tests-ui/r30-*` e o fluxo de `flows.test.mjs` protegem a integração. Executar `npm --prefix experiments/mission-design-lab run test:ui`, `npm run build:release` e `npm run test:beta` após novas mudanças. O manifesto `public/environments/polyhaven/manifest.json` preserva os créditos e a integridade do HDR.
 
+## Publicação conferida
+
+Código `1409995812973de6b3bca0221b2a990b2087459f` publicado em 15/11/2026. Principal e LP ficaram READY no mesmo commit. Doze arquivos públicos coincidiram por SHA-256 com o build; sete verificações adicionais cobriram acesso e rotas. O hangar ISS publicado respondeu à escolha de energia e à montagem separável em 390 px, sem erros de console observados. [Recibo de publicação](https://github.com/oalexandrebelo/MISSAO-IPE/blob/main/evidence/r30-production-publication.json).
 
 
 ---

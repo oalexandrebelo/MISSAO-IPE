@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T19:48:10.008Z",
+  "generatedAt": "2026-11-15T19:51:26.624Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 476,
-  "bytes": 82356496,
+  "bytes": 82363724,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 225678,
-    "sha256": "0a1d05c3688c9751ffcabf0903f17c76e36aa7985d5511b2b9c66a705b0455c7"
+    "sha256": "4e274d73d77b382f0cacb7e10b0ced60f4f45f1280a2f32f124dd6788ac32423"
   },
   "entries": [
     {
@@ -813,30 +813,30 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 71488,
-      "sha256": "eb37b633f92407808bb9fcdb4cc28e995518364ca99e480141da2de2f7ab0ed7",
+      "sha256": "61cf65d12daee43c889f8fd6e0436e8b1736299a82ef252cb18383b880616ebe",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "eb37b633f92407808bb9fcdb4cc28e995518364ca99e480141da2de2f7ab0ed7",
+      "sourceSha256": "61cf65d12daee43c889f8fd6e0436e8b1736299a82ef252cb18383b880616ebe",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2570100,
-      "sha256": "22745bc5484561fc1324223d189b1e305509f55927a40dd52f9e32d98741c849",
+      "bytes": 2573382,
+      "sha256": "26f683ebeca3d1536cda821288b5874f8b21b20761ca20f7e7ba32b59626de62",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "4ca8b1c351b37e431b2c0e5231b909e55602ed4f585671e0071c2f57511cd22c",
+      "sourceSha256": "33d77f06a6f674c01b406cd4722c7ac25d4b463f5b89e479abafc261170407c7",
       "transformation": "local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2057286,
-      "sha256": "8e7fbdbb23495b7a1dd1daeea96ba9d9862d9fc2cb7bee19937d7722277b66da",
+      "bytes": 2060141,
+      "sha256": "43668d96e89b9cfecbe8987448774e5aeac5db82d84d325a45c394e4c8e6552d",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "8e7fbdbb23495b7a1dd1daeea96ba9d9862d9fc2cb7bee19937d7722277b66da",
+      "sourceSha256": "43668d96e89b9cfecbe8987448774e5aeac5db82d84d325a45c394e4c8e6552d",
       "transformation": "none; bytes preserved"
     },
     {
@@ -2158,22 +2158,22 @@
     },
     {
       "path": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.html",
-      "bytes": 14549,
-      "sha256": "37d0ac424f1f8c666b939715bbb372b98e0497243e43297c268e4dc6c2ceb401",
+      "bytes": 15127,
+      "sha256": "a64e3be76f9a30f8907b172185d58bd95de0c4d26062bf45c1690caa68e49a69",
       "category": "rendered-public-document",
       "source": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
-      "sourceSha256": "cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773",
+      "sourceSha256": "79c5fb881f1d92ecc46761ff72520fdc27296daf686d1e86d31f7e52161fdacf",
       "transformation": "escaped static HTML rendering of selected Markdown; local Libras launcher and frame permissions in the public HTML copy; local hostname-gated analytics loader",
       "libras": "public",
       "analytics": "custom-host-only; page performance; no private routes"
     },
     {
       "path": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
-      "bytes": 10739,
-      "sha256": "cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773",
+      "bytes": 11252,
+      "sha256": "79c5fb881f1d92ecc46761ff72520fdc27296daf686d1e86d31f7e52161fdacf",
       "category": "public-document",
       "source": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
-      "sourceSha256": "cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773",
+      "sourceSha256": "79c5fb881f1d92ecc46761ff72520fdc27296daf686d1e86d31f7e52161fdacf",
       "transformation": "none; bytes preserved"
     },
     {

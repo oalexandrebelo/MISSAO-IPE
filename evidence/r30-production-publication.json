@@ -1,0 +1,144 @@
+{
+  "edition": "R30",
+  "codeCommit": "1409995812973de6b3bca0221b2a990b2087459f",
+  "checkedAt": "2026-11-15T19:49:39.393Z",
+  "status": "passed",
+  "files": [
+    {
+      "path": "lab/index.html",
+      "status": 200,
+      "bytes": 1457,
+      "sha256": "6e8c3bb540c2183a0a9c26d9adf406f47f9c0b7c376eb46d88cb6048169c25dc"
+    },
+    {
+      "path": "lab/assets/BrunoHangarScene-DAN5E0NE.js",
+      "status": 200,
+      "bytes": 16432,
+      "sha256": "9c698fe43f1a79b25de38726996ae4aafe34c89c0f69a9eea1290c09e96465d8"
+    },
+    {
+      "path": "lab/assets/LobbyScene-BiSnTRtI.js",
+      "status": 200,
+      "bytes": 2812,
+      "sha256": "6c1a12c4ac2724b0b2f9b33df8d37eff2a8565db3d13e9ed46b13755198a7074"
+    },
+    {
+      "path": "lab/assets/OrbitalScene-BBhLhaOx.js",
+      "status": 200,
+      "bytes": 218735,
+      "sha256": "3901197d428fce2e3eda74c6410ffc094ce518efd780b483bcd0b74e8bdfd7ac"
+    },
+    {
+      "path": "lab/assets/index-D2-b98VK.js",
+      "status": 200,
+      "bytes": 707358,
+      "sha256": "6f185f53fa356954d341847246fed0ba98d451a27f62c7714024625edbc6a602"
+    },
+    {
+      "path": "lab/assets/index-Ss44dq7b.css",
+      "status": 200,
+      "bytes": 240063,
+      "sha256": "8b7f8e79c5a31323719b7f3f1a2f380de3afc1c1ef285821328a189fbc6a4935"
+    },
+    {
+      "path": "lab/environments/polyhaven/studio-small-01-1k.hdr",
+      "status": 200,
+      "bytes": 1701440,
+      "sha256": "a2d308672f077b0872686a439d76dc3ace91274380ae2e5f02c653c3ccbc8407"
+    },
+    {
+      "path": "lab/environments/polyhaven/manifest.json",
+      "status": 200,
+      "bytes": 658,
+      "sha256": "4248f53c1195049ea762cb0972beb0eee90d208016e060c69aa4addd46672b3d"
+    },
+    {
+      "path": "lab/models/nasa/manifest.json",
+      "status": 200,
+      "bytes": 17629,
+      "sha256": "40179bbc9c17499c046afd655de05a961b3171ab648206e5de48f69b7608424d"
+    },
+    {
+      "path": "lab/textures/lobby/manifest.json",
+      "status": 200,
+      "bytes": 3692,
+      "sha256": "40e4974d5353694ddc8fcc0ac52892488c8c9a3401ecdb1499c1328446bd8bc5"
+    },
+    {
+      "path": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.html",
+      "status": 200,
+      "bytes": 14549,
+      "sha256": "37d0ac424f1f8c666b939715bbb372b98e0497243e43297c268e4dc6c2ceb401"
+    },
+    {
+      "path": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.html",
+      "status": 200,
+      "bytes": 12762,
+      "sha256": "506c09b1879bb7a1bbb7f98754c7ae9195193a62abc139f8638c9c563bc1ace2"
+    }
+  ],
+  "checks": [
+    {
+      "path": "/api/metrics?action=admin",
+      "status": 401
+    },
+    {
+      "path": "/api/metrics?action=session",
+      "status": 200
+    },
+    {
+      "path": "/r30-page-does-not-exist",
+      "status": 404
+    },
+    {
+      "host": "jogo",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html"
+    },
+    {
+      "host": "docs",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html"
+    },
+    {
+      "host": "painel",
+      "status": 307,
+      "location": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html"
+    },
+    {
+      "host": "projeto-ipe-lp.vercel.app",
+      "status": 200,
+      "presentationLink": true
+    }
+  ],
+  "limits": [
+    "Seven full journeys were local synthetic browser QA. This receipt verifies current public assets and access boundaries, not a new production inventory campaign.",
+    "Physical phones and human learning efficacy remain untested."
+  ],
+  "deployments": [
+    {
+      "project": "missao-ipe",
+      "id": "dpl_2RdykrJGUsqe3wYZw76FfxUsFCBa",
+      "state": "READY",
+      "commit": "1409995812973de6b3bca0221b2a990b2087459f"
+    },
+    {
+      "project": "projeto-ipe-lp",
+      "id": "dpl_6taGqc6tojUb6SKBYSkVwYxKyPcY",
+      "state": "READY",
+      "commit": "1409995812973de6b3bca0221b2a990b2087459f"
+    }
+  ],
+  "browser": {
+    "url": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html",
+    "width": 390,
+    "documentWidth": 390,
+    "scene": "ISS hangar, separated components, extended640Wh battery",
+    "checks": [
+      "Explicit pending instrument and store shortcut visible",
+      "Energy selection updates text and3D; inspection shortcut focuses craft",
+      "No console errors observed"
+    ],
+    "newProductionAttempts": 0
+  }
+}

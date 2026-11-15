@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-15T19:48:10.909Z",
-  "finishedAt": "2026-11-15T19:48:14.452Z",
+  "startedAt": "2026-11-15T19:51:27.741Z",
+  "finishedAt": "2026-11-15T19:51:31.240Z",
   "command": "node scripts/test-beta-site.mjs",
   "node": "v24.18.0",
   "status": "passed-with-explicit-limits",
@@ -24,7 +24,7 @@
     "inputs": {
       "manifest": {
         "path": "site/publication-manifest.json",
-        "sha256": "0a1d05c3688c9751ffcabf0903f17c76e36aa7985d5511b2b9c66a705b0455c7"
+        "sha256": "4e274d73d77b382f0cacb7e10b0ced60f4f45f1280a2f32f124dd6788ac32423"
       },
       "vercelConfig": {
         "path": "vercel.json",
@@ -35,7 +35,7 @@
       "publicationReady": true,
       "fileCount": 476,
       "manifestedFiles": 475,
-      "bytes": 82356496,
+      "bytes": 82363724,
       "releaseTarget": {
         "status": "candidate; validate deployment receipt before claiming publication"
       }
@@ -104,7 +104,7 @@
       "forms": 0
     },
     "localReferences": {
-      "count": 3346,
+      "count": 3348,
       "uniqueTargets": 338,
       "entries": [
         {
@@ -4874,6 +4874,20 @@
           "requestPath": "/context/research-library.html",
           "kind": "navigation",
           "fragment": "doc-web-public-docs-origem-dos-dados-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md"
+        },
+        {
+          "source": "context/research-library.html",
+          "target": "context/research-library.html",
+          "requestPath": "/context/research-library.html",
+          "kind": "navigation",
+          "fragment": "doc-docs-77-assets-3d-e-oportunidades-r30-md"
         },
         {
           "source": "context/research-library.html",
@@ -23976,21 +23990,21 @@
         "path": "context/research-library-index.json",
         "status": 200,
         "bytes": 71488,
-        "sha256": "eb37b633f92407808bb9fcdb4cc28e995518364ca99e480141da2de2f7ab0ed7",
+        "sha256": "61cf65d12daee43c889f8fd6e0436e8b1736299a82ef252cb18383b880616ebe",
         "contentType": "application/json; charset=utf-8"
       },
       {
         "path": "context/research-library.html",
         "status": 200,
-        "bytes": 2570100,
-        "sha256": "22745bc5484561fc1324223d189b1e305509f55927a40dd52f9e32d98741c849",
+        "bytes": 2573382,
+        "sha256": "26f683ebeca3d1536cda821288b5874f8b21b20761ca20f7e7ba32b59626de62",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "context/research-library.md",
         "status": 200,
-        "bytes": 2057286,
-        "sha256": "8e7fbdbb23495b7a1dd1daeea96ba9d9862d9fc2cb7bee19937d7722277b66da",
+        "bytes": 2060141,
+        "sha256": "43668d96e89b9cfecbe8987448774e5aeac5db82d84d325a45c394e4c8e6552d",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -24920,15 +24934,15 @@
       {
         "path": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.html",
         "status": 200,
-        "bytes": 14549,
-        "sha256": "37d0ac424f1f8c666b939715bbb372b98e0497243e43297c268e4dc6c2ceb401",
+        "bytes": 15127,
+        "sha256": "a64e3be76f9a30f8907b172185d58bd95de0c4d26062bf45c1690caa68e49a69",
         "contentType": "text/html; charset=utf-8"
       },
       {
         "path": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
         "status": 200,
-        "bytes": 10739,
-        "sha256": "cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773",
+        "bytes": 11252,
+        "sha256": "79c5fb881f1d92ecc46761ff72520fdc27296daf686d1e86d31f7e52161fdacf",
         "contentType": "text/plain; charset=utf-8"
       },
       {
@@ -26531,7 +26545,7 @@
         "path": "publication-manifest.json",
         "status": 200,
         "bytes": 225678,
-        "sha256": "0a1d05c3688c9751ffcabf0903f17c76e36aa7985d5511b2b9c66a705b0455c7",
+        "sha256": "4e274d73d77b382f0cacb7e10b0ced60f4f45f1280a2f32f124dd6788ac32423",
         "contentType": "application/json; charset=utf-8"
       },
       {
@@ -26828,97 +26842,97 @@
     {
       "name": "manifesto pronto e todos os arquivos públicos correspondem aos hashes declarados",
       "status": "passed",
-      "durationMs": 31.459
+      "durationMs": 31.587
     },
     {
       "name": "allowlist exclui estado local, fontes privadas, logs integrais e source maps",
       "status": "passed",
-      "durationMs": 0.43
+      "durationMs": 0.281
     },
     {
       "name": "texto público sem assinaturas de credencial, caminhos privados ou endpoints internos válidos",
       "status": "passed",
-      "durationMs": 72.183
+      "durationMs": 70.495
     },
     {
       "name": "projeções públicas de recibos identificam a seleção sem sobrescrever os originais",
       "status": "passed",
-      "durationMs": 0.975
+      "durationMs": 1.267
     },
     {
       "name": "portal conecta beta, contexto e plano e distingue pesquisa de implementação",
       "status": "passed",
-      "durationMs": 71.797
+      "durationMs": 68.595
     },
     {
       "name": "links locais resolvem e somente Planet Jumping permite as seis mídias externas fornecidas",
       "status": "passed",
-      "durationMs": 1175.989
+      "durationMs": 1193.357
     },
     {
       "name": "acervo visual publica imagens locais com crédito, dimensões e integridade",
       "status": "passed",
-      "durationMs": 0.453
+      "durationMs": 0.474
     },
     {
       "name": "imports compilados, chunks dinâmicos e Workers resolvem dentro de game/, lab/ e campanha/",
       "status": "passed",
-      "durationMs": 561.821
+      "durationMs": 534.849
     },
     {
       "name": "runtime, apresentação e dados preservam os artefatos já verificados",
       "status": "passed",
-      "durationMs": 143.597
+      "durationMs": 125.147
     },
     {
       "name": "Libras está disponível nas páginas e o guia isola cadastro e painel",
       "status": "passed",
-      "durationMs": 48.732
+      "durationMs": 47.591
     },
     {
       "name": "mapa e planos existem como artefatos reais com fontes relativas e estado declarado",
       "status": "passed",
-      "durationMs": 2.309
+      "durationMs": 8.086
     },
     {
       "name": "configuração Vercel restringe publicação a site/ e permite scripts inline por hashes explícitos",
       "status": "passed",
-      "durationMs": 111.364
+      "durationMs": 105.362
     },
     {
       "name": "modelos NASA e decodificador local preservam bytes, créditos e referências",
       "status": "passed",
-      "durationMs": 5.743
+      "durationMs": 5.357
     },
     {
       "name": "iluminação CC0 do hangar é local e preserva origem e integridade",
       "status": "passed",
-      "durationMs": 0.632
+      "durationMs": 0.569
     },
     {
       "name": "servidor de release inicia apenas em loopback para os testes HTTP",
       "status": "passed",
-      "durationMs": 55.538
+      "durationMs": 55.996
     },
     {
       "name": "HTTP entrega todos os arquivos publicados com bytes e MIME esperados",
       "status": "passed",
-      "durationMs": 914.814
+      "durationMs": 926.547
     },
     {
       "name": "rotas dos links, atalhos, HEAD e cabeçalhos correspondem ao servidor configurado",
       "status": "passed",
-      "durationMs": 121.35
+      "durationMs": 123.075
     },
     {
       "name": "ausências e métodos não viram páginas de sucesso por fallback",
       "status": "passed",
-      "durationMs": 6.27
+      "durationMs": 6.473
     },
     {
       "name": "snapshot público não mudou durante a checagem e núcleo mantém hashes históricos",
       "status": "passed",
-      "durationMs": 132.346
+      "durationMs": 123.795
     }
   ]
 }
