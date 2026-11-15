@@ -102,7 +102,13 @@
       "Local checks before publication; production recorded separately",
       "Not a physical-device or measured-FPS validation",
       "No certified learning outcome or full accessibility certification"
-    ]
+    ],
+    "productionObserved": [
+      "Primary public lab: new transparent logo, NASA Bennu reference view, didactic model labels and version 0.8",
+      "LP publicly loads; WASP-39 b fact/exercise distinction expands with NASA source; users segment selection changes panel",
+      "No error-level console messages during observed production actions"
+    ],
+    "screenshot": "missao-ipe-r17-publicado.jpg (conversation delivery)"
   },
   "vercelDiagnosis": {
     "project": "projeto-ipe-lp",
@@ -111,5 +117,11 @@
     "repair": "Bring reviewed PR1 app folder into main; keep app-specific build and local fonts."
   },
   "readiness": "Demonstrable educational prototype. Competition eligibility, submission, human learning outcomes and physical-device acceptance remain unproven. See docs42.",
-  "publication": "Production ID, exact SHA and HTTP receipts are recorded separately after publication."
+  "publication": "Production ID, exact SHA and HTTP receipts are recorded separately after publication.",
+  "review": {
+    "pr1Merged": true,
+    "mergeCommit": "1a79a14d85e3fbe07a64f81dac639c3b51335059",
+    "reviewCommentsPublished": false,
+    "upstreamBrunoModified": false
+  }
 }

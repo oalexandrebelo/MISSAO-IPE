@@ -58,13 +58,13 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `10242a3b6af761e74c2638ae4fdf1c21086d46a93848ebf40617e2198d1e2574` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `e8a6d4aa4eb4116a7761f01735fe3cb21d85356f7d283f28bdc20f76cbeb9887` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
 
 ## R17 — identidade oficial, fontes NASA e consolidação
 
-Beta **0.8.0-beta.1**, edição `R17-official-brand-and-evidence-based-stories`. Esta seção registra a preparação R17; os IDs de implantação e recibos serão acrescentados após a conferência pública.
+Beta **0.8.0-beta.1**, edição `R17-official-brand-and-evidence-based-stories`. **Publicada e conferida** no commit `5ecb1a44fcabf32c63741711a78bf3c17efff671`. Site principal: `dpl_FcoSRJ2J4fANM6wPjxdL8KQHJrsq`, READY, [jogo e documentação](https://projeto-ipe.vercel.app/). Página imersiva: `dpl_4ZXSCxTUUwutpU3MnfHNHHRDRwv3`, READY, [entrada orbital](https://projeto-ipe-lp.vercel.app/). Ambos públicos, sem login; a API confirmou o mesmo SHA e a atribuição dos domínios.
 
 - Marca **MISSÃO IPÊ** em SVG transparente, originais preservados e variante para fundo claro. O ipê identifica a equipe; a narrativa científica não usa a árvore como tema.
 - Três histórias reais: Terra/MODIS, OSIRIS-REx/Nightingale e Webb/WASP-39 b, com fontes NASA, datas e limites dos exercícios sintéticos. Personagens inventados também foram retirados da campanha.
@@ -73,6 +73,8 @@ Beta **0.8.0-beta.1**, edição `R17-official-brand-and-evidence-based-stories`.
 - [Handoff R17](https://projeto-ipe.vercel.app/docs/43-HANDOFF-GERAL-R17.html), [histórias reais](https://projeto-ipe.vercel.app/docs/44-HISTORIAS-REAIS-E-LIMITES-DIDATICOS.html), [marca e Figma](https://projeto-ipe.vercel.app/docs/40-IDENTIDADE-MISSAO-IPE-R17.html), [avaliação de prontidão](https://projeto-ipe.vercel.app/docs/42-PRONTIDAO-E-CRITERIOS-SPACE-APPS-R17.html).
 
 **Verificação local:** 145 testes de domínio + 38 de interface no laboratório; 120 + 14 na campanha; 24 de contexto; 17 de distribuição; 12 do portal. LP: 4 de motor, 18 de interface e 17 assets conferidos. Compilações e TypeScript aprovados. [Recibo R17](evidence/revision-r17.json).
+
+**Verificação pública:** 326 arquivos do principal com HTTP 200 e hashes/políticas correspondentes; biblioteca com 103 documentos. LP com 15 assets públicos correspondentes e páginas inicial/créditos HTTP 200; os dois arquivos KayKit de desenvolvimento permanecem somente no Git. Navegador confirmou marca, três entradas científicas, fontes e quatro segmentos; nenhum erro de console observado nas ações realizadas. [Recibo principal](evidence/production-r17.json) · [recibo LP](evidence/production-lp-r17.json). Este commit documental aciona uma nova compilação; os recibos identificam as implantações acima.
 
 A candidatura ainda exige comprovação de aprendizagem, verificação em aparelho físico, pacote de submissão e esclarecimento da elegibilidade temporal. Nenhuma promessa de premiação ou decisão dos organizadores é inferida dos testes.
 
@@ -5929,7 +5931,7 @@ O [registro estruturado desta avaliação](https://github.com/oalexandrebelo/MIS
 
 # MISSÃO IPÊ — handoff para os dois desenvolvedores
 
-Fonte: `docs/43-HANDOFF-GERAL-R17.md` · SHA-256 original: `fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45` · Ajustes de caminhos privados: 0
+Fonte: `docs/43-HANDOFF-GERAL-R17.md` · SHA-256 original: `c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61` · Ajustes de caminhos privados: 0
 
 # MISSÃO IPÊ — handoff para os dois desenvolvedores
 
@@ -5968,12 +5970,12 @@ A cena 3D apresenta escolhas e eventos do motor; não calcula ciência por conta
 | `experiments/mission-design-lab/` | Jogo principal: três missões, configuração 3D, execução e comparação | `/lab/index.html` |
 | `experiments/four-level-campaign/` | Quatro exercícios progressivos do caso Cerrado | `/campanha/index.html` |
 | `web/`, `context/`, `docs/`, `research/` | Portal, estudo, fontes e continuidade | Site principal e biblioteca |
-| `apps/immersive-lp/` | Página orbital da PR #1, preservada em aplicação separada | Projeto Vercel `projeto-ipe-lp` |
+| `apps/immersive-lp/` | Página orbital da PR #1, preservada em aplicação separada | [Entrada orbital](https://projeto-ipe-lp.vercel.app/) · Vercel `projeto-ipe-lp` |
 | `contributions/bruno-figma/` | 32 arquivos de Bruno, snapshot de referência com autoria e inventário | Somente repositório; não é o motor ativo |
 | `dist/`, `portable/` | Distribuição clássica conservada | `/game/` e alternativa local |
 | `web/planet-jumping.html` | Referência de transição cinematográfica com mídias fornecidas | Experimento visual, não uma missão NASA |
 
-A PR #1 foi incorporada localmente preservando seus quatro commits. A publicação no branch oficial fecha sua integração. O repositório independente de Bruno tem cinco commits de outra origem; não se deve atribuir a PR #1 a ele. Seu snapshot filtrado mantém código, regras, configurações e proveniência, sem republicar os moodboards de terceiros. [Inventário e decisões](41-CONSOLIDACAO-REPOSITORIOS-R17.md).
+A PR #1 foi incorporada ao branch oficial preservando seus quatro commits; o GitHub confirmou seu estado merged em 15/11/2026. O repositório independente de Bruno tem cinco commits de outra origem; não se deve atribuir a PR #1 a ele. Seu snapshot filtrado mantém código, regras, configurações e proveniência, sem republicar os moodboards de terceiros. [Inventário e decisões](41-CONSOLIDACAO-REPOSITORIOS-R17.md).
 
 ## Identidade e Figma
 

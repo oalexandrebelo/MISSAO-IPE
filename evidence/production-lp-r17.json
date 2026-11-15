@@ -1,0 +1,112 @@
+{
+  "verifiedAt": "2026-11-15T09:11:31.153Z",
+  "deploymentId": "dpl_4ZXSCxTUUwutpU3MnfHNHHRDRwv3",
+  "sourceCommit": "5ecb1a44fcabf32c63741711a78bf3c17efff671",
+  "base": "https://projeto-ipe-lp.vercel.app",
+  "status": "passed",
+  "checks": [
+    {
+      "path": "assets/REMOTION-LICENSE.md",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/REMOTION-THIRD-PARTY-LICENSES.md",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/earth-mobile.webp",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/earth.webp",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/game-preview.jpg",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "assets/science-provenance.json",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "brand/projeto-ipe-logo.png",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "brand/projeto-ipe-symbol.svg",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/eb-garamond-italic-latin.woff2",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/eb-garamond-latin.woff2",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/ebgaramond-OFL.txt",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/figtree-OFL.txt",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "fonts/figtree-latin.woff2",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "brand/missao-ipe-logo.svg",
+      "status": 200,
+      "hashMatches": true
+    },
+    {
+      "path": "brand/missao-ipe-symbol.svg",
+      "status": 200,
+      "hashMatches": true
+    }
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "public": true,
+      "newLogo": true
+    },
+    {
+      "path": "/creditos",
+      "status": 200,
+      "public": true,
+      "newLogo": true
+    }
+  ],
+  "limits": [
+    "HTTP asset and page checks; interactive browser checks recorded separately."
+  ],
+  "excludedDevelopmentAssets": [
+    {
+      "path": "asset-packs/kaykit-manifest.json",
+      "reason": "Development-only asset pack, outside public/. Preserved in Git; intentionally not a website route."
+    },
+    {
+      "path": "asset-packs/kaykit-space-base-gltf.zip",
+      "reason": "Development-only asset pack, outside public/. Preserved in Git; intentionally not a website route."
+    }
+  ],
+  "scopeCorrection": "Initial audit incorrectly requested 2 non-public asset-pack paths and received expected 404s. Corrected scope follows public/ in the source manifest: 15 public assets, 2 Git-only development assets."
+}

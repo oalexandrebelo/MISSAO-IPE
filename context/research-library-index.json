@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T09:08:13.390Z",
+  "generatedAt": "2026-11-15T09:12:52.390Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
   "documentCount": 103,
   "documents": [
@@ -32,9 +32,9 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 16772,
-      "originalSha256": "10242a3b6af761e74c2638ae4fdf1c21086d46a93848ebf40617e2198d1e2574",
-      "projectedSha256": "10242a3b6af761e74c2638ae4fdf1c21086d46a93848ebf40617e2198d1e2574",
+      "originalBytes": 17672,
+      "originalSha256": "e8a6d4aa4eb4116a7761f01735fe3cb21d85356f7d283f28bdc20f76cbeb9887",
+      "projectedSha256": "e8a6d4aa4eb4116a7761f01735fe3cb21d85356f7d283f28bdc20f76cbeb9887",
       "redactions": 0
     },
     {
@@ -527,9 +527,9 @@
       "title": "MISSÃO IPÊ — handoff para os dois desenvolvedores",
       "category": "Documentação do produto",
       "editionGroup": "current",
-      "originalBytes": 10746,
-      "originalSha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
-      "projectedSha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
+      "originalBytes": 10797,
+      "originalSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
+      "projectedSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
       "redactions": 0
     },
     {
@@ -1141,13 +1141,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2095229,
-      "sha256": "fca36d6965a14026b93e4bb4362a39648500cbbf4a24d4df3b2fbac2380af8e0"
+      "bytes": 2096424,
+      "sha256": "4e90d15725d89532bfa68f0d9f18be1b31d7468ac22bd8b2c4663d722a42ca9a"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1687584,
-      "sha256": "bed38a63a196d1721e9e5442602ae207a3df9969d970ab6b94e3612d700edf9b"
+      "bytes": 1688535,
+      "sha256": "68c81232b7f67e39535807d51fe9c4d648dfe0e5545a9266b92dc4894a7666a6"
     }
   ]
 }

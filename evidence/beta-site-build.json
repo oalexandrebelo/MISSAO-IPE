@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-15T09:08:13.423Z",
+  "generatedAt": "2026-11-15T09:12:52.435Z",
   "command": "node scripts/build-beta-site.mjs",
   "output": "site/",
   "publicationReady": true,
   "fileCount": 327,
-  "bytes": 28815277,
+  "bytes": 28817660,
   "manifest": {
     "path": "site/publication-manifest.json",
     "bytes": 140610,
-    "sha256": "0756ddc346369287a553ee46d30e8cd7b7a7dea0bb77cbb4daf70e3f20087ecc"
+    "sha256": "dd66e3fac6619859f1e02a2174c2a76feb7c760426631baa41aa0fe6753bd126"
   },
   "entries": [
     {
@@ -716,28 +716,28 @@
     {
       "path": "context/research-library-index.json",
       "bytes": 53288,
-      "sha256": "379cde2ab662cede4126a12b9a47a08c95c4d0b0c0074fb449c82964cea001b6",
+      "sha256": "368bbcf8a77d336db9c20dde1146d81862262f6c4e615ba27a49728c9f757477",
       "category": "research-library",
       "source": "context/research-library-index.json",
-      "sourceSha256": "379cde2ab662cede4126a12b9a47a08c95c4d0b0c0074fb449c82964cea001b6",
+      "sourceSha256": "368bbcf8a77d336db9c20dde1146d81862262f6c4e615ba27a49728c9f757477",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.html",
-      "bytes": 2095229,
-      "sha256": "fca36d6965a14026b93e4bb4362a39648500cbbf4a24d4df3b2fbac2380af8e0",
+      "bytes": 2096424,
+      "sha256": "4e90d15725d89532bfa68f0d9f18be1b31d7468ac22bd8b2c4663d722a42ca9a",
       "category": "research-library",
       "source": "context/research-library.html",
-      "sourceSha256": "fca36d6965a14026b93e4bb4362a39648500cbbf4a24d4df3b2fbac2380af8e0",
+      "sourceSha256": "4e90d15725d89532bfa68f0d9f18be1b31d7468ac22bd8b2c4663d722a42ca9a",
       "transformation": "none; bytes preserved"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1687584,
-      "sha256": "bed38a63a196d1721e9e5442602ae207a3df9969d970ab6b94e3612d700edf9b",
+      "bytes": 1688535,
+      "sha256": "68c81232b7f67e39535807d51fe9c4d648dfe0e5545a9266b92dc4894a7666a6",
       "category": "research-library",
       "source": "context/research-library.md",
-      "sourceSha256": "bed38a63a196d1721e9e5442602ae207a3df9969d970ab6b94e3612d700edf9b",
+      "sourceSha256": "68c81232b7f67e39535807d51fe9c4d648dfe0e5545a9266b92dc4894a7666a6",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1300,20 +1300,20 @@
     },
     {
       "path": "docs/43-HANDOFF-GERAL-R17.html",
-      "bytes": 14100,
-      "sha256": "8d16fc66b3ae229c9dca7e1b16c462283f8f59a1c9aba1473013d5815f8d4561",
+      "bytes": 14193,
+      "sha256": "3727cefbfa62217e955615a30dc7732b537aa8d1ddfcd86f72a1e3f4c7cb8004",
       "category": "rendered-public-document",
       "source": "docs/43-HANDOFF-GERAL-R17.md",
-      "sourceSha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
+      "sourceSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
       "transformation": "escaped static HTML rendering of selected Markdown"
     },
     {
       "path": "docs/43-HANDOFF-GERAL-R17.md",
-      "bytes": 10746,
-      "sha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
+      "bytes": 10797,
+      "sha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
       "category": "public-document",
       "source": "docs/43-HANDOFF-GERAL-R17.md",
-      "sourceSha256": "fc8ecec3ec634d3b2e7b1e7b5c5ab1575295d265dd7b88ec6461e31566dd6a45",
+      "sourceSha256": "c9da0d5be7d885e3d21f66dad16f9ff3e8a6e71ff5c5dc46db009f08712cdf61",
       "transformation": "none; bytes preserved"
     },
     {
@@ -1722,11 +1722,11 @@
     },
     {
       "path": "index.html",
-      "bytes": 59322,
-      "sha256": "d308558c3a66de93beca61e182d30d3e60285ec5a98d55349fbc8a15ae96a2c1",
+      "bytes": 59415,
+      "sha256": "c0e1080b6e13c0f62d3f692b71123c5c5f7733cbd14ecc29ad93959785ede0b0",
       "category": "public-portal",
       "source": "web/index.html",
-      "sourceSha256": "d308558c3a66de93beca61e182d30d3e60285ec5a98d55349fbc8a15ae96a2c1",
+      "sourceSha256": "c0e1080b6e13c0f62d3f692b71123c5c5f7733cbd14ecc29ad93959785ede0b0",
       "transformation": "none; bytes preserved"
     },
     {

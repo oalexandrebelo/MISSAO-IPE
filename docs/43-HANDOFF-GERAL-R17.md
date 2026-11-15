@@ -35,12 +35,12 @@ A cena 3D apresenta escolhas e eventos do motor; não calcula ciência por conta
 | `experiments/mission-design-lab/` | Jogo principal: três missões, configuração 3D, execução e comparação | `/lab/index.html` |
 | `experiments/four-level-campaign/` | Quatro exercícios progressivos do caso Cerrado | `/campanha/index.html` |
 | `web/`, `context/`, `docs/`, `research/` | Portal, estudo, fontes e continuidade | Site principal e biblioteca |
-| `apps/immersive-lp/` | Página orbital da PR #1, preservada em aplicação separada | Projeto Vercel `projeto-ipe-lp` |
+| `apps/immersive-lp/` | Página orbital da PR #1, preservada em aplicação separada | [Entrada orbital](https://projeto-ipe-lp.vercel.app/) · Vercel `projeto-ipe-lp` |
 | `contributions/bruno-figma/` | 32 arquivos de Bruno, snapshot de referência com autoria e inventário | Somente repositório; não é o motor ativo |
 | `dist/`, `portable/` | Distribuição clássica conservada | `/game/` e alternativa local |
 | `web/planet-jumping.html` | Referência de transição cinematográfica com mídias fornecidas | Experimento visual, não uma missão NASA |
 
-A PR #1 foi incorporada localmente preservando seus quatro commits. A publicação no branch oficial fecha sua integração. O repositório independente de Bruno tem cinco commits de outra origem; não se deve atribuir a PR #1 a ele. Seu snapshot filtrado mantém código, regras, configurações e proveniência, sem republicar os moodboards de terceiros. [Inventário e decisões](41-CONSOLIDACAO-REPOSITORIOS-R17.md).
+A PR #1 foi incorporada ao branch oficial preservando seus quatro commits; o GitHub confirmou seu estado merged em 15/11/2026. O repositório independente de Bruno tem cinco commits de outra origem; não se deve atribuir a PR #1 a ele. Seu snapshot filtrado mantém código, regras, configurações e proveniência, sem republicar os moodboards de terceiros. [Inventário e decisões](41-CONSOLIDACAO-REPOSITORIOS-R17.md).
 
 ## Identidade e Figma
 
