@@ -36,6 +36,8 @@ export function FlatConfiguredCraft({ presentation: p, inspection, exploded, sta
   const active = state?.available && state.transmitting;
   const payloadOffset = exploded ? 56 : 0;
   const batteryOffset = exploded ? 62 : 0;
+  const storageRatio = p.storage.bufferBits / (p.world === 'earth' ? 1536000000 : 720000000);
+  const storageHeight = 18 + storageRatio * 36;
   return <div className="orbit-flat configured-flat" aria-hidden="true"><svg viewBox="0 0 720 420">
     <ellipse cx="360" cy="320" rx="210" ry="32" fill="#050b12" opacity=".5"/>
     <path d="M70 215H650M360 60V350" stroke="#486170" strokeDasharray="3 9" opacity=".3"/>
@@ -47,6 +49,10 @@ export function FlatConfiguredCraft({ presentation: p, inspection, exploded, sta
     <path d="M302 128L322 108H424V256L404 276H302Z" fill="#796344" stroke="#d7c5a6" strokeWidth="2"/>
     <rect x="302" y="128" width="102" height="148" rx="4" fill="#b89c68" stroke="#ead9ad" strokeWidth="2"/>
     <rect x="316" y="141" width="74" height="119" fill="#34424a" stroke="#718a96"/>
+    <g data-buffer-bits={p.storage.bufferBits} transform={`translate(${exploded ? 460 : 420} 210)`}>
+      <rect x="0" y={-storageHeight/2} width="15" height={storageHeight} fill="#324d5c" stroke={highlight('instrument')} />
+      {state?.available ? <rect x="3" y={storageHeight/2-storageHeight*(state.queueFraction ?? 0)} width="9" height={storageHeight*(state.queueFraction ?? 0)} fill="#dba976" /> : null}
+    </g>
     <g transform={`translate(353 ${237 + batteryOffset})`}>
       <rect x="-46" y="-19" width="92" height="38" rx="4" fill="#1c3337" stroke={highlight('energy')} strokeWidth="3"/>
       {Array.from({length: batteryCells}, (_,i) => <rect key={i} x={-39 + i * 80 / batteryCells} y="-12" width={68 / batteryCells} height="24" rx="3" fill={energy === null ? '#5e7480' : i / batteryCells < energy ? '#b8dba3' : '#263b46'}/>)}

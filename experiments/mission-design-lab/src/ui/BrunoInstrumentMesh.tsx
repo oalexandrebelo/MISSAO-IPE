@@ -63,13 +63,15 @@ function InstrumentHousing({ id }: { id: BrunoInstrumentId }) {
   }
 }
 
-export function BrunoInstrumentMesh({ id, usesRemaining }: { id: BrunoInstrumentId; usesRemaining?: number }) {
+export function BrunoInstrumentMesh({ id, usesRemaining, selected = false, operating = false }: { id: BrunoInstrumentId; usesRemaining?: number; selected?: boolean; operating?: boolean }) {
   const { durability } = BRUNO_INSTRUMENTS[id];
-  return <group>
+  return <group name={`instrument-${id}`} userData={{ usesRemaining: usesRemaining ?? durability, operating }}>
     <InstrumentHousing id={id} />
     <Block size={[.51, .11, .075]} position={[0, -.47, .2]} color="#2b404d" />
     {Array.from({ length: durability }, (_, index) => <Block key={index}
       size={[.065, .038, .028]} position={[(index - (durability - 1) / 2) * .107, -.47, .25]}
       color={index < (usesRemaining ?? durability) ? '#eca53c' : '#526773'} />)}
+    {selected ? <mesh><boxGeometry args={[id === 'europa-reason' ? 1.8 : 1.14, 1.14, .95]} /><meshBasicMaterial color="#f4d0a0" wireframe transparent opacity={.8} depthWrite={false} /></mesh> : null}
+    {operating ? <mesh name="recorded-instrument-operation" position={[.3, -.35, .3]}><sphereGeometry args={[.045, 12, 8]} /><meshBasicMaterial color="#c8e8a9" /></mesh> : null}
   </group>;
 }

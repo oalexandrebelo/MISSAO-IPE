@@ -23,6 +23,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md', target: 'docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md', title: 'Cockpit das sete missões · R30', description: 'Hangar, montagem, etapas pendentes, escolhas ligadas ao 3D e continuidade dos dois devs.' },
+  { source: 'docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md', target: 'docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md', title: 'Assets 3D e oportunidades · R30', description: 'Pesquisa verificada de NASA, Kenney, Poly Haven e geração 3D: licença, peso mobile e prioridades.' },
   { source: 'docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md', target: 'docs/75-LOBBY-IMERSIVO-E-HANDOFF-R29.md', title: 'Seleção imersiva e handoff · R29', description: 'Sete destinos, superfícies NASA, movimento acessível, compra em lote e continuidade dos dois devs.' },
   { source: 'docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md', target: 'docs/74-AUDITORIA-BRUNO-E-IMERSAO-R29.md', title: 'Missões e assets do Bruno · R29', description: 'Revisão dos repositórios, correspondência das missões e diferenças integradas ao jogo.' },
   { source: 'docs/73-QA-MOVEL-E-HANDOFF-R28.md', target: 'docs/73-QA-MOVEL-E-HANDOFF-R28.md', title: 'QA móvel e handoff · R28', description: 'Primeira tentativa, rota de acesso, verificação das métricas e continuidade dos dois devs.' },
@@ -256,7 +258,7 @@ try {
   }
   for (const source of await tree('experiments/mission-design-lab/dist')) {
     const rel = source.slice('experiments/mission-design-lab/dist/'.length);
-    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb|wasm|riv)$/.test(rel) || ['data/science/bennu-table1.csv', 'data/science/webb-firefly-nasa.tbl'].includes(rel)) {
+    if (/\.(?:html|js|css|json|md|txt|png|jpg|jpeg|webp|svg|woff2|glb|wasm|riv|hdr)$/.test(rel) || ['data/science/bennu-table1.csv', 'data/science/webb-firefly-nasa.tbl'].includes(rel)) {
       await copy(source, `lab/${rel}`, 'mission-lab-runtime');
     }
   }

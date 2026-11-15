@@ -1,0 +1,92 @@
+.scientific-cockpit { --cockpit-edge: #3c5058; --cockpit-surface: #11232e; --cockpit-accent: #d5ecbb; min-width: 0; }
+.scientific-flight-path { display: flex; gap: 4px; margin: 14px 0 12px; padding: 4px; border: 1px solid var(--cockpit-edge); border-radius: 8px; background: #0b1720; }
+.scientific-flight-path button { flex: 1; min-width: 0; min-height: 44px; padding: 7px 6px; border: 1px solid transparent; border-radius: 4px; color: #cfdee1; line-height: 1.4; font-size: 13px; }
+.scientific-flight-path button > span { font: 11px var(--mono); color: #aabfc8; }
+.scientific-flight-path button:disabled { opacity: .65; }
+.scientific-flight-path button[aria-current="step"] { border-color: #95ac7f; background: #273d34; color: #f2f8e9; font-weight: 700; opacity: 1; }
+.scientific-flight-path button[aria-current="step"] > span { color: var(--cockpit-accent); }
+.scientific-flight-path button:hover:not(:disabled) { border-color: #95ac7f; }
+.scientific-flight-path button:focus-visible, .scientific-command button:focus-visible { outline: 2px solid #f2d38d; outline-offset: 2px; }
+
+.scientific-command { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 18px; margin: 0 0 14px; padding: 12px 14px; border: 1px solid var(--cockpit-edge); border-left: 3px solid #a9c694; border-radius: 6px; background: var(--cockpit-surface); color: #e4edf0; }
+.scientific-command p { margin: 0; flex: 1 1 230px; font-size: 13px; line-height: 1.55; }
+.scientific-command strong { display: block; font-size: 15px; color: var(--cockpit-accent); }
+.scientific-command p > span { display: block; margin-top: 3px; }
+.scientific-command-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.scientific-command-actions button { min-height: 44px; min-width: 0; text-align: left; white-space: normal; }
+.scientific-command-actions .text-button { color: #e4edf0; }
+.scientific-focus-target { scroll-margin-top: 16px; }
+.scientific-focus-target:focus-visible { outline: 2px solid #95ac7f; outline-offset: 3px; }
+
+.cerrado-flight-deck, .expedition-brief-deck { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); align-items: start; gap: 14px; margin: 14px 0; }
+.cerrado-flight-deck > *, .expedition-brief-deck > * { min-width: 0; }
+.cerrado-flight-deck .game-brief-disclosure { margin: 0 0 10px; }
+.cerrado-flight-deck .scenario-switch { display: flex; width: 100%; margin: 8px 0 14px; }
+.cerrado-flight-deck .scenario-switch button { flex: 1; min-width: 0; min-height: 44px; }
+.scientific-cockpit .hangar-layout, .scientific-cockpit .equipment-layout { margin-top: 14px; }
+.scientific-cockpit .equipment-systems button { min-height: 54px; }
+.scientific-cockpit .equipment-scene-label > .text-button { color: #e4edf0; min-height: 44px; }
+.scientific-cockpit .expedition-heading { margin: 0 0 10px; }
+.scientific-cockpit .expedition-heading h1 { font-size: clamp(30px, 4vw, 52px); margin: 0 0 8px; }
+.scientific-cockpit .expedition-heading p { margin: 0; line-height: 1.55; }
+.scientific-cockpit .expedition-first-terms { margin: 12px 0; }
+.scientific-cockpit .expedition-section { margin: 14px 0; }
+.scientific-cockpit .expedition-section > h2 { margin: 8px 0; }
+.scientific-cockpit .expedition-brief-deck .expedition-notice { margin: 0; }
+.scientific-cockpit .expedition-replay-help { margin-bottom: 10px; }
+.scientific-cockpit .expedition-timeline { padding: 8px 0; }
+.scientific-cockpit .expedition-timeline input { min-height: 44px; }
+.scientific-cockpit .expedition-timeline .expedition-actions { margin: 4px 0; }
+.scientific-cockpit .expedition-timeline button, .scientific-cockpit .mission-segments button, .scientific-cockpit .expedition-draft-tools button { min-height: 44px; }
+.scientific-cockpit .mission-stage { margin: 18px 0 30px; }
+.scientific-cockpit .mission-stage .trace-controller { margin: 8px 0 14px; }
+.scientific-cockpit .mission-stage .trace-controller input { min-height: 44px; }
+.scientific-cockpit .mission-stage .trace-controller .trace-play { min-width: 44px; min-height: 44px; }
+
+@media(max-width: 760px) {
+  .scientific-flight-path { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
+  .scientific-flight-path button { padding: 5px 3px; font-size: 11px; overflow-wrap: anywhere; }
+  .scientific-flight-path button > span { font-size: 9px; }
+  .scientific-command { gap: 8px; padding: 9px 10px; }
+  .scientific-command-actions { gap: 6px; }
+  .scientific-command-actions .button { padding: 8px 12px; }
+  .cerrado-flight-deck, .expedition-brief-deck { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .scientific-cockpit .equipment-systems button { min-height: 49px; padding: 6px; display: flex; align-items: center; justify-content: flex-start; gap: 4px; }
+  .scientific-cockpit .equipment-systems button > svg { width: 15px; flex: 0 0 15px; }
+  .scientific-cockpit .equipment-systems strong { font-size: 10px; }
+  .scientific-cockpit .expedition-heading { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .scientific-cockpit .expedition-heading .button { justify-self: start; min-height: 44px; }
+  .scientific-cockpit .expedition-heading p { font-size: 13px; }
+  .scientific-cockpit .expedition-heading h1 { font-size: 29px; }
+  .scientific-cockpit .mission-segments { margin: 10px 0; }
+  .scientific-cockpit .mission-segments button { padding: 8px; }
+  .scientific-cockpit .mission-segments strong { font-size: 13px; }
+  .scientific-cockpit .mission-segments button > span { font-size: 11px; }
+  .scientific-cockpit .scientific-cockpit-viewport {
+    --science-view-height: clamp(170px, 44vw, 256px);
+  }
+  .scientific-cockpit .scientific-cockpit-viewport .scene.scene-orbit.scene-configured:not(.scene-expanded) .orbit-topline {
+    position: relative;
+    inset: auto;
+    padding: 6px 12px;
+  }
+  .scientific-cockpit .scientific-cockpit-viewport .scene.scene-orbit.scene-configured:not(.scene-expanded) .orbit-render {
+    position: relative;
+    inset: auto;
+    height: var(--science-view-height);
+  }
+  .scientific-cockpit .scientific-cockpit-viewport .scene.scene-orbit.scene-configured:not(.scene-expanded) .orbit-bottom {
+    margin: 0 12px;
+  }
+}
+
+@media(min-height: 640px) {
+  body:not(.ipe-libras-active) .game-shell .scientific-flight-path { position: sticky; top: 0; z-index: 6; }
+  body:not(.ipe-libras-active) .game-shell .scientific-focus-target,
+  body:not(.ipe-libras-active) .game-shell .scientific-cockpit .crew-review input { scroll-margin-top: 60px; }
+}
+@media(min-height: 640px) and (max-width: 760px) {
+  body:not(.ipe-libras-active) .game-shell .scientific-focus-target,
+  body:not(.ipe-libras-active) .game-shell .scientific-cockpit .crew-review input { scroll-margin-top: 110px; }
+  .scientific-cockpit .expedition-replay-help, .scientific-cockpit .result-final-label { padding: 10px 12px; }
+}

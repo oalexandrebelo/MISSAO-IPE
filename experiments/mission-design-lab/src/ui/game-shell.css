@@ -9,6 +9,16 @@
 
 /* The application scrolls inside its play area, including beside the Libras panel. */
 body:has(.game-shell){overflow:hidden;padding-block-end:0!important}
+/* Keep the play area visible on narrow screens without removing game tools. */
+@media(max-width:600px){
+  .game-shell[data-game-view]>.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 6px;min-height:60px;padding:6px 10px}
+  .game-shell[data-game-view]>.site-header .brand{width:auto;min-width:0;min-height:44px;grid-column:1;grid-row:1}
+  .game-shell[data-game-view]>.site-header .brand-logo{width:72px;height:34px}
+  .game-shell[data-game-view]>.site-header .header-tools{grid-column:2;grid-row:1;flex-wrap:nowrap;gap:4px}
+  .game-shell[data-game-view]>.site-header .game-menu-button{min-width:60px;padding:8px 10px}
+  .game-shell[data-game-view]>.site-header .main-nav{grid-column:1/-1;grid-row:2;gap:8px}
+  .game-shell[data-game-view]>.site-header .main-nav button{min-height:36px;white-space:normal;line-height:1.3}
+}
 @media(min-width:601px){body.ipe-libras-active:has(.game-shell){padding-inline-end:min(376px,45vw)}}
 @media(max-width:600px){body.ipe-libras-active .game-shell{height:44dvh;max-height:44dvh}.game-shell .game-history-button{display:none}.game-shell .header-tools{gap:4px}.game-shell .player-progress-button{min-height:44px}}
 /* Decorative destinations fill the viewport; playable controls remain in the HUD. */

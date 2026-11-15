@@ -131,7 +131,7 @@ test('real React journey: prediction, long 6/6, short 2/6, certified minimum 2, 
     await click('Voltar ao projeto');
     const activeConfig = Object.fromEntries([...document.querySelectorAll('input[type="radio"]:checked')].map(input => [input.name, input.value]));
     assert.deepEqual(activeConfig, DEFAULT_CONFIG);
-    await click(/Sala de missão/);
+    await click('Operação e resultado');
     assert.equal(document.querySelector('.search-results').textContent, search);
   });
   await t.test('applying a witness requires another prediction and really executes 6/6', async () => {

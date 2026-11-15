@@ -5,6 +5,7 @@ import type { SpacecraftInspection } from '../lab/spacecraft-presentation.ts';
 import { Icon } from './Icon.tsx';
 import type { IconName } from './Icon.tsx';
 import { Scene } from './Scene.tsx';
+import { focusCockpitSection } from './ScientificCockpit.tsx';
 import { bits, number } from './format.ts';
 import './equipment-workbench.css';
 
@@ -27,6 +28,7 @@ export interface ExpeditionWorkbenchProps {
 export function ExpeditionWorkbench({ id, config, onChoice }: ExpeditionWorkbenchProps) {
   const [active, setActive] = useState<ExpeditionConfigKey>('instrument');
   const sceneRef = useRef<HTMLDivElement>(null);
+  const optionsHeading = useRef<HTMLHeadingElement>(null);
   const [change, setChange] = useState<Change | null>(null);
   const system = SYSTEMS.find(item => item.key === active)!;
   const choices = getExpeditionChoices(id);
@@ -50,19 +52,18 @@ export function ExpeditionWorkbench({ id, config, onChoice }: ExpeditionWorkbenc
     onChoice(key, value);
   }
   return <div className="equipment-workbench" data-ipe-libras-context={librasContext} aria-label="Bancada de equipamentos da expedição">
-    <p className="equipment-route"><span><b>01</b> Escolha um sistema</span><span><b>02</b> Compare as opções</span><span><b>03</b> Veja a nave e os recursos</span></p>
     <div className="equipment-layout">
       <nav className="equipment-systems" aria-label="Escolher sistema da expedição">{SYSTEMS.map(item => <button type="button" key={item.key} aria-label={item.label} aria-pressed={active === item.key} onClick={() => setActive(item.key)}><Icon name={item.icon} size={20} /><span><strong>{item.short}</strong><small>{label(item.key, config[item.key])}</small></span><Icon name="chevron" size={14} /></button>)}</nav>
       <div className="equipment-assembly">
-        <div className="equipment-editor">
-          <h3>{system.label}</h3><p className="equipment-why">{system.why}</p>
-          {SYSTEMS.map(item => <fieldset hidden={active !== item.key} key={item.key} className="equipment-choices"><legend className="sr-only">{item.label}</legend><div className="equipment-choice-grid">{choices[item.key].map(choice => <label key={choice.id} className={`equipment-choice ${config[item.key] === choice.id ? 'is-selected' : ''}`}><span className="equipment-choice-heading"><input type="radio" name={`equipment-${id}-${item.key}`} value={choice.id} checked={config[item.key] === choice.id} onChange={() => choose(item.key, choice.id)} /><strong>{choice.label}</strong><span className="equipment-selected">{config[item.key] === choice.id ? 'Selecionado' : 'Selecionar'}</span></span><span>{choice.detail}</span><span className="equipment-choice-facts"><b>{number(choice.massKg)} kg{choice.massKg === 0 ? ' na nave' : ''}</b><b>{number(choice.credits)} créditos</b></span></label>)}</div></fieldset>)}
-          <button type="button" className="text-button equipment-inspect-link" onClick={() => { sceneRef.current?.scrollIntoView({ block: 'start', behavior: 'auto' }); sceneRef.current?.focus({ preventScroll: true }); }}>Inspecionar esta escolha na nave <Icon name="arrow" size={16} /></button>
-          <p className="equipment-learning"><Icon name="book" size={17} /><span>{id === 'bennu' ? 'Você investiga dimensões de rochas publicadas. A câmera representa a cadeia de imagem; o tamanho sozinho não demonstra composição.' : 'Você investiga seis faixas de um espectro publicado. O espectrômetro atende à pergunta; a câmera genérica deste exercício não o substitui.'}</span></p>
-        </div>
-        <div className="equipment-scene-wrap" ref={sceneRef} tabIndex={-1} aria-label={`Visualização de ${system.label}`}>
-          <div className="equipment-scene-label"><span className="eyebrow">PROJETO EM EDIÇÃO</span><strong>{system.label} em foco</strong></div>
+        <div className="equipment-scene-wrap scientific-cockpit-viewport scientific-focus-target" role="group" ref={sceneRef} tabIndex={-1} aria-label={`Visualização de ${system.label}`}>
+          <div className="equipment-scene-label"><strong>{system.label} em foco</strong><button className="text-button" type="button" onClick={() => focusCockpitSection(optionsHeading.current)}>Ir às opções <Icon name="arrow" size={16} /></button></div>
           <Scene compact world={id} expeditionConfig={config} variant="hangar" segment={active === 'launch' || active === 'orbit' ? 'launch' : 'space'} inspectSubsystem={system.inspection} scienceRecordCount={6} />
+        </div>
+        <div className="equipment-editor">
+          <h3 className="scientific-focus-target" ref={optionsHeading} tabIndex={-1}>{system.label}</h3><p className="equipment-why">{system.why}</p>
+          {SYSTEMS.map(item => <fieldset hidden={active !== item.key} key={item.key} className="equipment-choices"><legend className="sr-only">{item.label}</legend><div className="equipment-choice-grid">{choices[item.key].map(choice => <label key={choice.id} className={`equipment-choice ${config[item.key] === choice.id ? 'is-selected' : ''}`}><span className="equipment-choice-heading"><input type="radio" name={`equipment-${id}-${item.key}`} value={choice.id} checked={config[item.key] === choice.id} onChange={() => choose(item.key, choice.id)} /><strong>{choice.label}</strong><span className="equipment-selected">{config[item.key] === choice.id ? 'Selecionado' : 'Selecionar'}</span></span><span>{choice.detail}</span><span className="equipment-choice-facts"><b>{number(choice.massKg)} kg{choice.massKg === 0 ? ' na nave' : ''}</b><b>{number(choice.credits)} créditos</b></span></label>)}</div></fieldset>)}
+          <button type="button" className="text-button equipment-inspect-link" onClick={() => focusCockpitSection(sceneRef.current)}>Inspecionar esta escolha na nave <Icon name="arrow" size={16} /></button>
+          <p className="equipment-learning"><Icon name="book" size={17} /><span>{id === 'bennu' ? 'Você investiga dimensões de rochas publicadas. A câmera representa a cadeia de imagem; o tamanho sozinho não demonstra composição.' : 'Você investiga seis faixas de um espectro publicado. O espectrômetro atende à pergunta; a câmera genérica deste exercício não o substitui.'}</span></p>
         </div>
       </div>
       <aside className="equipment-resources" aria-labelledby={`equipment-resources-${id}`}>

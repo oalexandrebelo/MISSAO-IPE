@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T19:11:07.561Z",
+  "generatedAt": "2026-11-15T19:48:09.968Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 137,
+  "documentCount": 139,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -885,6 +885,28 @@
       "redactions": 0
     },
     {
+      "source": "docs/76-COCKPIT-SETE-MISSOES-E-HANDOFF-R30.md",
+      "id": "doc-docs-76-cockpit-sete-missoes-e-handoff-r30-md",
+      "title": "R30 · cockpit das sete missões e handoff",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 10739,
+      "originalSha256": "cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773",
+      "projectedSha256": "cf709dc8e6ecb2b167bae42d7271a9dd9228a7052966d4b440cfdb6fdf331773",
+      "redactions": 0
+    },
+    {
+      "source": "docs/77-ASSETS-3D-E-OPORTUNIDADES-R30.md",
+      "id": "doc-docs-77-assets-3d-e-oportunidades-r30-md",
+      "title": "R30 · assets 3D para o hangar e a operação",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 8545,
+      "originalSha256": "aabaa1538ab434e2457b67271dff18fab5d7a678b7fc30a2a23dbd52e5ae93dd",
+      "projectedSha256": "aabaa1538ab434e2457b67271dff18fab5d7a678b7fc30a2a23dbd52e5ae93dd",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1515,13 +1537,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2543633,
-      "sha256": "5f484365e956b4443cb2ee24d566cda72c9b04b7a102c9ba062531c846293726"
+      "bytes": 2569783,
+      "sha256": "4ca8b1c351b37e431b2c0e5231b909e55602ed4f585671e0071c2f57511cd22c"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 2037540,
-      "sha256": "88f8ad367f15df1d2332c19c5f44494c7a0e2952261c5dbcd28074dbd348392c"
+      "bytes": 2057286,
+      "sha256": "8e7fbdbb23495b7a1dd1daeea96ba9d9862d9fc2cb7bee19937d7722277b66da"
     }
   ]
 }

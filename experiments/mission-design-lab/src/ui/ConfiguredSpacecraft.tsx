@@ -162,13 +162,18 @@ export function ConfiguredSpacecraft({ presentation, visualState, inspection = '
   const payloadZ = exploded ? 1.05 : .54;
   const batteryY = exploded ? -1.12 : -.53;
   const radioY = exploded ? 1.28 : .72;
+  const storageRatio = presentation.storage.bufferBits / (presentation.world === 'earth' ? 1536000000 : 720000000);
+  const storageHeight = .18 + .36 * storageRatio;
   return <group ref={craft} name={`ipe-spacecraft-${presentation.world}`} userData={{ configurationKey: presentation.configurationKey, conceptual: true }}>
     <group>
       <mesh><boxGeometry args={[.86,1.12,.68]}/><meshStandardMaterial color={COPPER} metalness={.6} roughness={.4}/></mesh>
       {[-1,1].map(side=><group key={side}><mesh position={[side*.44,0,0]}><boxGeometry args={[.055,1.25,.76]}/><meshStandardMaterial color={SILVER} metalness={.72} roughness={.3}/></mesh>{[-.58,.58].map(y=><mesh key={y} position={[0,y,side*.36]}><boxGeometry args={[.94,.06,.05]}/><meshStandardMaterial color={SILVER} metalness={.7} roughness={.3}/></mesh>)}</group>)}
       <mesh position={[0,.34,.36]}><boxGeometry args={[.63,.22,.025]}/><meshStandardMaterial color="#dcc392" metalness={.6} roughness={.42}/></mesh>
-      <mesh position={[.46,-.18,.03]}><boxGeometry args={[.04,.38,.4]}/><meshStandardMaterial color="#324d5c" metalness={.35} roughness={.55}/></mesh>
-      {available ? <mesh position={[.488,-.37+.19*fraction(visualState.queueFraction),.03]}><boxGeometry args={[.016,Math.max(.002,.38*fraction(visualState.queueFraction)),.34]}/><meshBasicMaterial color="#dba976"/></mesh> : null}
+      <group name={`buffer-${presentation.storage.bufferBits}`} position={[exploded ? .9 : .46,-.18,.03]} {...interact('instrument')}>
+        <mesh><boxGeometry args={[.09,storageHeight,.4]}/><meshStandardMaterial color="#324d5c" metalness={.35} roughness={.55}/></mesh>
+        {Array.from({ length: Math.ceil(storageRatio * 3) }, (_, i) => <mesh key={i} position={[.055,-storageHeight/2+.09+i*.12,0]}><boxGeometry args={[.025,.055,.34]}/><meshStandardMaterial color="#b1bfc3" metalness={.6} roughness={.4}/></mesh>)}
+        {available ? <mesh name="recorded-buffer-fill" position={[.08,-storageHeight/2+storageHeight/2*fraction(visualState.queueFraction),0]}><boxGeometry args={[.018,Math.max(.002,storageHeight*fraction(visualState.queueFraction)),.34]}/><meshBasicMaterial color="#dba976"/></mesh> : null}
+      </group>
     </group>
     <group name="energy-system" {...interact('energy')}>
       <PanelWing side={-1} ratio={presentation.energy.panelRatio} separated={exploded} illuminated={available && visualState.illuminated} active={active('energy')}/>

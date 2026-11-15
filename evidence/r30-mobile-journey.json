@@ -1,0 +1,126 @@
+{
+  "edition": "R30",
+  "checkedAt": "2026-11-15T19:46:43.170429+00:00",
+  "environment": "localhost:4186; browser UI with synthetic participation; test in-memory API",
+  "baseCommit": "f584f9924ce3aa55c716227e0c8c1b8136c71bd6",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "scope": "seven mission journeys, final hangar focus and scene"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "scope": "AB dialog and inventory horizontal overflow"
+    }
+  ],
+  "attempts": [
+    {
+      "mission": "ISS",
+      "score": 92,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Lua",
+      "score": 92,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Marte",
+      "score": 91,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Europa",
+      "score": 93,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Bennu",
+      "score": 90,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Webb",
+      "score": 92,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Cerrado longo",
+      "score": 92,
+      "valid": 6,
+      "total": 6
+    },
+    {
+      "mission": "Cerrado curto",
+      "score": 52,
+      "valid": 2,
+      "total": 6
+    }
+  ],
+  "afterReload": {
+    "attempts": 8,
+    "completedObjectives": 7,
+    "unmetObjectives": 1,
+    "confirmedEvents": 25,
+    "pendingEvents": 0,
+    "rejectedEvents": 0,
+    "credits": 9,
+    "instrumentCycles": {
+      "monitor": [
+        2,
+        3
+      ],
+      "LEND": [
+        2,
+        3
+      ],
+      "Diviner": [
+        3,
+        4
+      ],
+      "MEDA": [
+        2,
+        3
+      ],
+      "MISE": [
+        2,
+        3
+      ],
+      "REASON": [
+        2,
+        3
+      ]
+    }
+  },
+  "checks": [
+    "signup via name and email UI; resume after reload",
+    "science hypotheses and requirements before execution",
+    "preflight direct navigation to missing instruments, power, communications and launcher",
+    "launch pause and next-event controls; states match revealed stage",
+    "same-clock AB comparison shows long contacts6 versus short2 with same modules",
+    "real Bennu dimensions and Webb spectrum values retain source and uncertainty",
+    "final view choice button focuses bruno-craft-view; no automatic jump on choice",
+    "no console errors observed in local journey; no horizontal page overflow in tested320/390 views"
+  ],
+  "tests": {
+    "domain": 180,
+    "interface": 144,
+    "metrics": 53,
+    "distribution": 19
+  },
+  "limitations": [
+    "No physical iOS/Android device tested",
+    "Technical QA does not demonstrate learning efficacy",
+    "Local test API is distinct from production Blob persistence",
+    "No new online multiplayer or physical launch trajectory",
+    "First journeys used integrated build; final minor focus/copy change checked after refresh"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "studio_small_01",
+  "title": "Studio Small 01",
+  "author": "Greg Zaal",
+  "provider": "Poly Haven",
+  "sourcePage": "https://polyhaven.com/a/studio_small_01",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_01_1k.hdr",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "downloadedAt": "2026-11-15",
+  "resolution": "1024x512",
+  "bytes": 1701440,
+  "sha256": "a2d308672f077b0872686a439d76dc3ace91274380ae2e5f02c653c3ccbc8407",
+  "modifications": "None",
+  "intendedUse": "Studio illumination/reflections for the didactic assembly hangar, not a NASA scene or scientific measurement."
+}

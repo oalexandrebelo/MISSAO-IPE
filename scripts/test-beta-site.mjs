@@ -528,6 +528,20 @@ async function run() {
     observations.nasaAssets = { models: 4, modelBytes: total, decoderFiles: assets.decoder.files.length, browserRendered: false };
   });
 
+  await check('iluminação CC0 do hangar é local e preserva origem e integridade', async () => {
+    const base = 'lab/environments/polyhaven/';
+    const manifest = JSON.parse(bytesByFile.get(`${base}manifest.json`).toString());
+    const bytes = bytesByFile.get(`${base}studio-small-01-1k.hdr`);
+    assert.ok(bytes, 'HDRI ausente da distribuição');
+    assert.equal(bytes.length, manifest.bytes);
+    assert.equal(digest(bytes), manifest.sha256);
+    assert.match(bytes.toString('ascii', 0, 256), /-Y 512 \+X 1024/);
+    assert.equal(manifest.license, 'CC0-1.0');
+    assert.equal(manifest.author, 'Greg Zaal');
+    assert.equal(manifest.sourcePage, 'https://polyhaven.com/a/studio_small_01');
+    observations.hangarEnvironment = { bytes: bytes.length, sha256: manifest.sha256, resolution: manifest.resolution, license: manifest.license, rendered: false };
+  });
+
   await check('servidor de release inicia apenas em loopback para os testes HTTP', async () => {
     await startServer();
     const response = await fetchLocal('/');

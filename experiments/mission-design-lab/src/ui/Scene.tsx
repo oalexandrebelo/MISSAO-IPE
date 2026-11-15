@@ -12,8 +12,11 @@ import type { MissionConfig, ScenarioId } from '../core/contracts.ts';
 import { CATALOG, CONFIG_KEYS, DEFAULT_CONFIG } from '../core/catalog.ts';
 import { Icon } from './Icon.tsx';
 import { CONTINENTS } from './scene-geometry.ts';
+import { getSceneSchedule } from './r30-scene-state.ts';
+import type { SceneSchedule } from './r30-scene-state.ts';
 import './scene-orbit.css';
 import './spacecraft-immersion.css';
+import './r30-scene.css';
 
 const OrbitalScene = lazy(() => import('./OrbitalScene.tsx'));
 export type SceneFocus = 'science' | 'satellite' | 'ground';
@@ -167,6 +170,24 @@ function RecordedState({ state, scienceRecordCount }: { state: MissionVisualStat
   </div>;
 }
 
+function PlannedSchedule({ plan, state }: { plan: SceneSchedule; state?: MissionVisualState }) {
+  const minutes = (seconds: number) => (seconds / 60).toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+  const rows = [
+    { name: 'Luz', kind: 'sunlight', windows: plan.sunlight.map(([start, end]) => ({ start, end, permitted: start < plan.lifetimeS })) },
+    { name: 'Trabalho', kind: 'jobs', windows: plan.jobs.map(([start, end]) => ({ start, end, permitted: start < plan.lifetimeS })) },
+    { name: 'Contato', kind: 'contacts', windows: plan.contacts },
+    { name: 'Vida útil', kind: 'lifetime', windows: [{ start: 0, end: plan.lifetimeS, permitted: true }] },
+  ];
+  return <div className="r30-scene-schedule" aria-label="Agenda planejada da montagem" data-lifetime-s={plan.lifetimeS} data-launcher={plan.launcher}>
+    <div className="r30-schedule-title"><strong>{plan.profile}</strong><span>0–{minutes(plan.horizonS)} min</span></div>
+    {rows.map(row => <div key={row.kind} className="r30-schedule-row"><span>{row.name}</span><div className="r30-schedule-track" aria-hidden="true">
+      {row.windows.map((window, i) => <i key={i} data-permitted={window.permitted} data-window={row.kind} style={{ left: `${window.start / plan.horizonS * 100}%`, width: `${(window.end - window.start) / plan.horizonS * 100}%` }} />)}
+      {state ? <b style={{ left: `${Math.min(1, state.timeS / plan.horizonS) * 100}%` }} /> : null}
+    </div><span className="sr-only">{row.windows.map(window => `De ${minutes(window.start)} a ${minutes(window.end)} minutos${window.permitted ? '' : ', fora da política ou da vida operacional'}`).join('; ')}.</span></div>)}
+    <p>{state ? `Cursor em T+${minutes(state.timeS)} min. ` : 'Agenda prevista, ainda sem execução. '}Traços vazados: janela sem autorização nesta montagem. A agenda não garante entrega.</p>
+  </div>;
+}
+
 export function Scene({ preview = false, compact = false, progress = 0, config = DEFAULT_CONFIG, variant = 'orbit', visualState, segment, world = 'earth', scienceRecordCount = 6, expeditionConfig, scenarioId, inspectSubsystem }: SceneProps) {
   const metrics = usePlayerMetrics();
   function inspectManually(next: SpacecraftInspection) {
@@ -184,6 +205,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
   const [exploded, setExploded] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const presentation = getSpacecraftPresentation(world === 'earth' ? { world, config, scenarioId } : { world, expeditionConfig: expeditionConfig ?? DEFAULT_EXPEDITION_CONFIGS[world] });
+  const schedule = getSceneSchedule(world === 'earth' ? { world, config, scenarioId } : { world, config: expeditionConfig ?? DEFAULT_EXPEDITION_CONFIGS[world] });
   const previousPresentation = useRef(presentation);
 
   useEffect(() => {
@@ -232,7 +254,7 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
       {configured ? <button type="button" className="orbit-tool orbit-expand" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}>{expanded ? 'Reduzir cena' : 'Ampliar cena'}</button> : null}
       <button type="button" className="orbit-tool orbit-mode" onClick={() => setMode(value => value === '3d' ? '2d' : '3d')} disabled={unavailable}><Icon name="layers" size={13} /><span>{unavailable ? '2D ativo' : mode === '3d' ? 'Ver em 2D' : 'Ver em 3D'}</span></button>
     </div></div>
-    <div className="orbit-render" aria-hidden="true">{checked && mode === '3d' ? <SceneBoundary fallback={fallback} onUnavailable={useFallback}><Suspense fallback={fallback}><OrbitalScene presentation={configured ? presentation : undefined} inspection={inspection} exploded={exploded} onInspect={configured ? inspectManually : undefined} focus={focus} progress={visualState?.progress ?? progress} visualState={visualState} segment={segment} world={world} scienceRecordCount={scienceRecordCount} config={config} variant={variant} animating={animating} active={active} reducedMotion={reducedMotion} turn={turn} onUnavailable={useFallback} /></Suspense></SceneBoundary> : fallback}</div>
+    <div className="orbit-render" aria-hidden="true">{checked && mode === '3d' ? <SceneBoundary fallback={fallback} onUnavailable={useFallback}><Suspense fallback={fallback}><OrbitalScene presentation={configured ? presentation : undefined} schedule={schedule} inspection={inspection} exploded={exploded} onInspect={configured ? inspectManually : undefined} focus={focus} progress={visualState?.progress ?? progress} visualState={visualState} segment={segment} world={world} scienceRecordCount={scienceRecordCount} config={config} variant={variant} animating={animating} active={active} reducedMotion={reducedMotion || paused} turn={turn} onUnavailable={useFallback} /></Suspense></SceneBoundary> : fallback}</div>
     {world === 'earth' && variant === 'orbit' && (!segment || segment === 'user') ? <div className="orbit-map-label" aria-hidden="true"><span className="orbit-map-cross" /><span>CERRADO BRASILEIRO<small>ÁREA DE INTERESSE</small></span></div> : world === 'earth' && variant === 'hangar' ? <>
       <span className="orbit-hangar-mark" aria-hidden="true">LAB<span>01</span></span>
       <div className="orbit-part-label orbit-part-panel" aria-hidden="true"><span />PAINÉIS {config.panel === 'standard' ? '18 W' : '12 W'}</div>
@@ -253,13 +275,14 @@ export function Scene({ preview = false, compact = false, progress = 0, config =
         {inspection === 'communications' && world !== 'earth' && firstContact ? <p>Mesma antena e taxa nas duas opções de solo; a escolha muda a agenda e o custo. Primeiro contato: T+{formatValue(firstContact[0] / 60, 'min')} a T+{formatValue(firstContact[1] / 60, 'min')}. Total planejado: {formatValue(plannedContactMinutes, 'min')}; a entrega depende de haver dados e a nave continuar operante.</p> : null}
         {inspection === 'instrument' && visualState?.available ? <p>{visualState.mode?.includes('processing') ? 'Neste instante: processando registros.' : 'Neste instante: instrumento sem processamento registrado.'} O brilho de operação acompanha esse estado, não a seleção da peça.</p> : null}
         {visualState?.focusSubsystem ? <small>Evento selecionado: {SUBSYSTEM_NAMES[visualState.focusSubsystem]}. O destaque identifica o sistema envolvido; a causa é explicada na trilha da missão.</small> : null}</div> : null}
-      {configured ? <p className="orbit-visual-key">Contorno claro: peça em inspeção, não uma falha. Enlace azul: transmissão registrada. Os segmentos da bateria comparam capacidade; não contam células reais.</p> : null}
+      {configured ? <PlannedSchedule plan={schedule} state={visualState} /> : null}
+      {configured ? <p className="orbit-visual-key">Contorno claro: peça em inspeção, não uma falha. Enlace azul: transmissão registrada. Os segmentos da bateria e da memória comparam capacidade; não contam componentes reais.</p> : null}
       {!configured ? !compact ? <div className="orbit-explanation" aria-live="polite"><p>{selectedText}</p></div> : <p className="orbit-compact-note" aria-live="polite">{selectedText}</p> : null}
       <p className="orbit-caption" id={descriptionId}>{unavailable ? <span>3D indisponível · equivalente 2D ativo</span> : null}<span>{recorded ? 'Recursos do motor · posição ilustrativa sem escala' : 'Ilustração sem escala · física calculada separadamente'}</span></p>
     </div>
     {configured ? compact && variant === 'hangar' ? <details className="spacecraft-inspector-disclosure"><summary>Capacidades e função deste sistema</summary><SpacecraftInspector presentation={presentation} inspection={inspection} state={visualState}/></details> : <SpacecraftInspector presentation={presentation} inspection={inspection} state={visualState}/> : null}
     {visualState ? <RecordedState state={visualState} scienceRecordCount={scienceRecordCount}/> : null}
     {world !== 'earth' && !preview ? <p className="orbit-model-credit">Referência visual NASA · {world === 'bennu' ? 'Bennu: Christopher R. Meaney' : 'JWST: Goddard Space Flight Center'}. Exercício didático baseado em missão documentada; sem escala física. <a href={world === 'bennu' ? 'https://science.nasa.gov/3d-resources/1999-rq36-asteroid/' : 'https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/'} target="_blank" rel="noopener noreferrer">Fonte do modelo</a></p> : null}
-    <p className="sr-only">{world !== 'earth' ? `Modelo NASA de referência ${world === 'bennu' ? 'Bennu' : 'JWST'}, em modelo didático baseado em documentação científica; parâmetros não são telemetria NASA. ` : variant === 'hangar' ? 'CubeSat didático com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com continentes aproximados, órbitas ilustrativas e um CubeSat didático. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
+    <p className="sr-only">{world !== 'earth' ? `Modelo NASA de referência ${world === 'bennu' ? 'Bennu' : 'JWST'}, em modelo didático baseado em documentação científica; parâmetros não são telemetria NASA. ` : variant === 'hangar' ? 'CubeSat didático com corpo dourado, painéis solares azuis, bateria, antena e instrumento. ' : 'Terra esférica com textura NASA Blue Marble, órbitas ilustrativas e um CubeSat didático. '}{configDescription}. A animação não indica altitude, posição, cobertura ou telemetria reais. Todos os controles da missão estão disponíveis fora desta ilustração.</p>
   </section>;
 }

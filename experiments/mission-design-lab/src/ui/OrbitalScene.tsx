@@ -5,6 +5,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { ConfiguredSpacecraft } from './ConfiguredSpacecraft.tsx';
+import { HangarEnvironment } from './HangarEnvironment.tsx';
+import type { SceneSchedule } from './r30-scene-state.ts';
 import type { SpacecraftInspection, SpacecraftPresentation } from '../lab/spacecraft-presentation.ts';
 import './spacecraft-immersion.css';
 import type { MissionVisualState } from '../lab/mission-visual-state.ts';
@@ -13,7 +15,7 @@ import { SCIENCE_RECORDS } from '../data/science-data.ts';
 import type { ExpeditionDatum, ExpeditionId } from '../lab/scientific-expeditions.ts';
 import type { MissionConfig } from '../core/contracts.ts';
 import type { SceneFocus, SceneVariant, MissionSegment, MissionWorld } from './Scene.tsx';
-import { CONTINENTS, circlePositions, graticulePositions, randomSeries, surfacePoint } from './scene-geometry.ts';
+import { circlePositions, graticulePositions, randomSeries, surfacePoint } from './scene-geometry.ts';
 
 interface OrbitalSceneProps {
   focus: SceneFocus;
@@ -33,6 +35,7 @@ interface OrbitalSceneProps {
   inspection?: SpacecraftInspection;
   exploded?: boolean;
   onInspect?: (inspection: SpacecraftInspection) => void;
+  schedule?: SceneSchedule;
 }
 
 const EARTH_RADIUS = 2.05;
@@ -76,72 +79,6 @@ const ATMOSPHERE_FRAGMENT = `
   }
 `;
 
-/** Original canvas textures: no assets, remote requests or external geography. */
-function createEarthTextures(): { surface: THREE.CanvasTexture; clouds: THREE.CanvasTexture } {
-  const width = 2048;
-  const height = 1024;
-  const canvas = document.createElement('canvas');
-  canvas.width = width; canvas.height = height;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('Surface canvas unavailable');
-  const random = randomSeries(18421);
-  const ocean = ctx.createLinearGradient(0, 0, 0, height);
-  ocean.addColorStop(0, '#10212f'); ocean.addColorStop(.35, '#163341'); ocean.addColorStop(.65, '#14323e'); ocean.addColorStop(1, '#102430');
-  ctx.fillStyle = ocean; ctx.fillRect(0, 0, width, height);
-  // Quiet ocean grain keeps the globe tactile without suggesting measured data.
-  for (let index = 0; index < 16000; index += 1) {
-    ctx.fillStyle = index % 2 ? 'rgba(124,164,165,.035)' : 'rgba(0,9,19,.04)';
-    ctx.fillRect(random() * width, random() * height, 2 + random() * 6, 1 + random() * 2);
-  }
-  ctx.save(); ctx.beginPath();
-  for (const continent of CONTINENTS) {
-    continent.forEach(([longitude, latitude], index) => {
-      const x = (longitude + 180) / 360 * width;
-      const y = (90 - latitude) / 180 * height;
-      if (index === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-    });
-    ctx.closePath();
-  }
-  ctx.clip();
-  const land = ctx.createLinearGradient(0, 0, 0, height);
-  land.addColorStop(0, '#a1b2a3'); land.addColorStop(.24, '#7d8d75'); land.addColorStop(.36, '#aca37a'); land.addColorStop(.48, '#627e69'); land.addColorStop(.59, '#68816a'); land.addColorStop(.7, '#a6a17b'); land.addColorStop(1, '#a6b6aa');
-  ctx.fillStyle = land; ctx.fillRect(0, 0, width, height);
-  for (let index = 0; index < 11000; index += 1) {
-    ctx.fillStyle = index % 3 ? 'rgba(25,57,38,.10)' : 'rgba(222,211,166,.12)';
-    const x = random() * width, y = random() * height;
-    ctx.beginPath(); ctx.ellipse(x, y, 1 + random() * 7, .6 + random() * 3, random(), 0, Math.PI * 2); ctx.fill();
-  }
-  // Broad illustrative mountain ridges and desert tones; not a terrain dataset.
-  ctx.strokeStyle = 'rgba(204,185,140,.32)'; ctx.lineWidth = 8;
-  ctx.beginPath(); ctx.moveTo(609, 494); ctx.bezierCurveTo(650, 559, 619, 653, 640, 784); ctx.stroke();
-  ctx.strokeStyle = 'rgba(203,196,157,.2)'; ctx.lineWidth = 12;
-  ctx.beginPath(); ctx.moveTo(389, 204); ctx.bezierCurveTo(410, 292, 456, 340, 488, 407); ctx.stroke();
-  ctx.restore();
-  ctx.fillStyle = '#a7b9b5';
-  ctx.beginPath(); ctx.moveTo(0, height); ctx.lineTo(0, 958);
-  for (let x = 0; x <= width; x += 34) ctx.lineTo(x, 954 + Math.sin(x * .009) * 15 + random() * 9);
-  ctx.lineTo(width, height); ctx.closePath(); ctx.fill();
-  const surface = new THREE.CanvasTexture(canvas);
-  surface.colorSpace = THREE.SRGBColorSpace;
-  surface.anisotropy = 4;
-
-  const cloudCanvas = document.createElement('canvas');
-  cloudCanvas.width = 1024; cloudCanvas.height = 512;
-  const cloud = cloudCanvas.getContext('2d');
-  if (!cloud) { surface.dispose(); throw new Error('Cloud canvas unavailable'); }
-  for (let index = 0; index < 220; index += 1) {
-    const x = random() * 1024;
-    const y = 50 + random() * 400;
-    const length = 15 + random() * 100;
-    cloud.beginPath(); cloud.moveTo(x, y);
-    cloud.bezierCurveTo(x + length * .3, y - 12, x + length * .65, y + 12, x + length, y - 8);
-    cloud.strokeStyle = `rgba(220,234,231,${.035 + random() * .11})`;
-    cloud.lineWidth = 1.2 + random() * 6; cloud.lineCap = 'round'; cloud.stroke();
-  }
-  const clouds = new THREE.CanvasTexture(cloudCanvas);
-  clouds.colorSpace = THREE.SRGBColorSpace;
-  return { surface, clouds };
-}
 
 function Curve({ points, color = '#9ab6ae', opacity = .35 }: { points: Float32Array; color?: string; opacity?: number }) {
   return <lineLoop><bufferGeometry><bufferAttribute attach="attributes-position" args={[points, 3]} /></bufferGeometry><lineBasicMaterial color={color} transparent opacity={opacity} depthWrite={false} /></lineLoop>;
@@ -164,23 +101,26 @@ function AreaMarker({ focus }: { focus: SceneFocus }) {
 
 function Earth({ animating, focus }: { animating: boolean; focus: SceneFocus }) {
   const globe = useRef<THREE.Group>(null);
-  const cloudGroup = useRef<THREE.Mesh>(null);
-  const textures = useMemo(createEarthTextures, []);
-  useEffect(() => () => { textures.surface.dispose(); textures.clouds.dispose(); }, [textures]);
+  const [texture, setTexture] = useState<THREE.Texture | null>(null);
+  const { invalidate } = useThree();
+  useEffect(() => {
+    let cancelled = false; let loaded: THREE.Texture | undefined;
+    new THREE.TextureLoader().load(`${import.meta.env?.BASE_URL ?? './'}textures/lobby/earth.webp`, map => {
+      if (cancelled) { map.dispose(); return; }
+      loaded = map; map.colorSpace = THREE.SRGBColorSpace; map.anisotropy = 2; setTexture(map); invalidate();
+    });
+    return () => { cancelled = true; loaded?.dispose(); };
+  }, [invalidate]);
   useFrame((_, delta) => {
-    if (!animating) return;
-    // Only decorative drift. Model time and physical state never enter here.
-    if (globe.current) globe.current.rotation.y += Math.min(delta, .05) * .009;
-    if (cloudGroup.current) cloudGroup.current.rotation.y += Math.min(delta, .05) * .006;
+    if (animating && globe.current) globe.current.rotation.y += Math.min(delta, .05) * .009;
   });
   return <group position={EARTH_POSITION}>
     <group ref={globe} rotation={[0, -.22, -.16]}>
-      <mesh><sphereGeometry args={[EARTH_RADIUS, 96, 64]} /><meshStandardMaterial map={textures.surface} roughness={.97} metalness={.03} /></mesh>
-      <mesh ref={cloudGroup}><sphereGeometry args={[EARTH_RADIUS + .014, 80, 48]} /><meshStandardMaterial map={textures.clouds} transparent opacity={.62} depthWrite={false} roughness={1} /></mesh>
-      <lineSegments><bufferGeometry><bufferAttribute attach="attributes-position" args={[WORLD_GRID, 3]} /></bufferGeometry><lineBasicMaterial color="#a6c3bf" transparent opacity={.11} depthWrite={false} /></lineSegments>
+      <mesh><sphereGeometry args={[EARTH_RADIUS, 64, 40]} /><meshStandardMaterial map={texture} color={texture ? '#ffffff' : '#244a60'} roughness={.97} metalness={.03} /></mesh>
+      <lineSegments><bufferGeometry><bufferAttribute attach="attributes-position" args={[WORLD_GRID, 3]} /></bufferGeometry><lineBasicMaterial color="#a6c3bf" transparent opacity={.08} depthWrite={false} /></lineSegments>
       <AreaMarker focus={focus} />
     </group>
-    <mesh><sphereGeometry args={[EARTH_RADIUS * 1.045, 80, 56]} /><shaderMaterial vertexShader={ATMOSPHERE_VERTEX} fragmentShader={ATMOSPHERE_FRAGMENT} transparent blending={THREE.AdditiveBlending} depthWrite={false} /></mesh>
+    <mesh><sphereGeometry args={[EARTH_RADIUS * 1.025, 64, 40]} /><shaderMaterial vertexShader={ATMOSPHERE_VERTEX} fragmentShader={ATMOSPHERE_FRAGMENT} transparent blending={THREE.AdditiveBlending} depthWrite={false} /></mesh>
   </group>;
 }
 
@@ -383,7 +323,7 @@ export function disposeAsset(scene: THREE.Object3D) {
   bitmaps.forEach(bitmap => bitmap.close());
   materials.forEach(material => material.dispose()); geometries.forEach(geometry => geometry.dispose());
 }
-function NASAAsset({ url, onLoaded, onUnavailable }: { url: string; onLoaded?: () => void; onUnavailable: () => void }) {
+export function NASAAsset({ url, onLoaded, onUnavailable }: { url: string; onLoaded?: () => void; onUnavailable: () => void }) {
   const [asset,setAsset] = useState<{scene:THREE.Group; center:THREE.Vector3; scale:number}|null>(null);
   const { invalidate } = useThree();
   useEffect(() => {
@@ -412,7 +352,7 @@ function ReferenceMissionWorld(props: OrbitalSceneProps) {
   const path=`${import.meta.env.BASE_URL}models/nasa/${telescope?'jwst-a.glb':'bennu-1999-rq36.glb'}`;
   const angle=.93+props.progress*Math.PI*2;
   return <>
-    <group rotation={[.1,props.turn+.3,-.1]} position={[0,.2,0]} scale={telescope ? 1 : .95}><NASAAsset url={path} onUnavailable={props.onUnavailable}/></group>
+    <group rotation={[telescope ? -.12 : .1,props.turn+(telescope ? -Math.PI/2 : .3),telescope ? .04 : -.1]} position={[0,.2,0]} scale={telescope ? 1 : .95}><NASAAsset url={path} onUnavailable={props.onUnavailable}/></group>
     {!telescope && props.segment!=='user' ? <group position={[Math.cos(angle)*2.6, Math.sin(angle)*2.1, .8]} scale={.3}><Satellite config={props.config} visualState={props.visualState}/></group>:null}
     {props.segment==='launch'?<mesh><boxGeometry args={[4,3.4,2.6]}/><meshBasicMaterial color="#9cc8df" wireframe transparent opacity={.4}/></mesh>:null}
     {props.visualState?.transmitting?<Transmission from={telescope ? [0,.2,0] : [Math.cos(angle)*2.6,Math.sin(angle)*2.1,.8]} to={[2.6,-1.7,0]}/>:null}
@@ -469,9 +409,14 @@ function ConfiguredMissionWorld(props: OrbitalSceneProps & { presentation: Space
   const contextScale = inspect ? .3 : .48;
   const radioAnchor: [number,number,number] = [craftX, craftY + (separated ? 1.8 : 1.25) * craftScale, .45];
   return <>
-    {!hangar ? world === 'earth' ? <group position={contextPosition} scale={contextScale}><Earth focus={props.focus} animating={false}/></group> : <group position={contextPosition} scale={contextScale} rotation={[.12,.3,-.08]}><NASAAsset url={`${import.meta.env.BASE_URL}models/nasa/${world === 'telescope' ? 'jwst-a.glb' : 'bennu-1999-rq36.glb'}`} onUnavailable={props.onUnavailable}/></group> : null}
+    {!hangar ? world === 'earth' ? <group position={contextPosition} scale={contextScale}><Earth focus={props.focus} animating={false}/></group> : <group position={contextPosition} scale={contextScale} rotation={[world === 'telescope' ? -.12 : .12,world === 'telescope' ? -Math.PI/2 : .3,.04]}><NASAAsset url={`${import.meta.env.BASE_URL}models/nasa/${world === 'telescope' ? 'jwst-a.glb' : 'bennu-1999-rq36.glb'}`} onUnavailable={props.onUnavailable}/></group> : null}
     <group position={[craftX,craftY,.45]} scale={craftScale}><ConfiguredSpacecraft presentation={props.presentation} visualState={props.visualState} inspection={inspection} exploded={separated} turn={props.turn} reducedMotion={props.reducedMotion} onInspect={props.onInspect}/></group>
     {props.segment === 'launch' ? <mesh position={[craftX,craftY,.1]}><boxGeometry args={[separated ? 4.6 : 3.9,separated ? 3.3 : 2.7,2.2]}/><meshBasicMaterial color="#6c91a7" wireframe transparent opacity={.22} depthWrite={false}/></mesh> : null}
+    {(hangar && !inspect || props.segment === 'launch') && props.schedule && props.schedule.launcher !== 'fixed' ? <group name={`planned-launcher-${props.schedule.launcher}`} position={[-2.05,-.15,-.4]}>
+      <mesh><cylinderGeometry args={[props.schedule?.launcher === 'science' ? .32 : .23,props.schedule?.launcher === 'science' ? .32 : .23,1.65,20]}/><meshStandardMaterial color="#b0c3cd" metalness={.45} roughness={.45}/></mesh>
+      <mesh position={[0,1,0]}><coneGeometry args={[props.schedule?.launcher === 'science' ? .32 : .23,.5,20]}/><meshStandardMaterial color="#d6d9cc" metalness={.3} roughness={.5}/></mesh>
+      {props.schedule?.launcher === 'science' ? [-1,1].map(side=><mesh key={side} position={[side*.38,-.15,0]}><cylinderGeometry args={[.12,.15,1.25,16]}/><meshStandardMaterial color="#7593a9"/></mesh>) : null}
+    </group> : null}
     {props.segment === 'ground' ? <group position={[-1.7,-1.1,.5]} scale={.46} rotation={[.1,0,-.28]}>
       <mesh position={[0,-.2,0]}><cylinderGeometry args={[.14,.23,.85,16]}/><meshStandardMaterial color="#a9bac3" metalness={.55} roughness={.45}/></mesh>
       <mesh position={[0,.34,0]} rotation={[-Math.PI/4,0,0]}><sphereGeometry args={[.76,32,20,0,Math.PI*2,Math.PI/2,Math.PI/2]}/><meshStandardMaterial color="#c3d0d6" side={THREE.DoubleSide} metalness={.45} roughness={.45}/></mesh>
@@ -490,7 +435,7 @@ function AssetViewLifecycle({ onUnavailable, turn, tilt }: Pick<NASAAssetCanvasP
   return null;
 }
 export function NASAAssetCanvas(props: NASAAssetCanvasProps) {
-  return <Canvas className="orbital-canvas" dpr={[1,1.5]} frameloop="demand" camera={{position:[0,.15,8.7],fov:35,near:.01,far:100}} gl={{alpha:true,antialias:true,powerPreference:'low-power'}}>
+  return <Canvas className="orbital-canvas" dpr={1} frameloop="demand" camera={{position:[0,.15,8.7],fov:35,near:.01,far:100}} gl={{alpha:true,antialias:true,powerPreference:'low-power'}}>
     <ambientLight intensity={1.15}/><directionalLight position={[-3,5,5]} intensity={3.5} color="#fff4de"/><directionalLight position={[4,1,-2]} intensity={2} color="#9bcce6"/>
     <group rotation={[props.tilt,props.turn,0]}><NASAAsset url={props.url} onLoaded={props.onLoaded} onUnavailable={props.onUnavailable}/></group>
     <ResponsiveFraming variant="orbit"/><AssetViewLifecycle {...props}/>
@@ -509,10 +454,11 @@ function SceneLifecycle({ onUnavailable, active, ...state }: OrbitalSceneProps) 
 }
 
 function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true }: { variant: SceneVariant; cameraDistance?: number; reducedMotion?: boolean }) {
-  const { camera, size, invalidate, frameloop } = useThree();
+  const { camera, size, invalidate, frameloop, setDpr } = useThree();
   const initialized = useRef<THREE.PerspectiveCamera | null>(null);
   const transition = useRef<{ fromDistance: number; fromZoom: number; distance: number; zoom: number; elapsed: number } | null>(null);
   useEffect(() => {
+    setDpr(Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1 : 1.5));
     // Keep the satellite and its wings inside a narrow viewport. Wide layouts
     // retain the large globe; changing the visual zoom never changes the model.
     if (!(camera instanceof THREE.PerspectiveCamera) || !size.width || !size.height) return;
@@ -528,7 +474,7 @@ function ResponsiveFraming({ variant, cameraDistance, reducedMotion = true }: { 
     }
     initialized.current = camera;
     invalidate();
-  }, [camera, size.width, size.height, variant, cameraDistance, reducedMotion, frameloop, invalidate]);
+  }, [camera, size.width, size.height, variant, cameraDistance, reducedMotion, frameloop, invalidate, setDpr]);
   useFrame((_, delta) => {
     const next = transition.current;
     if (!next || !(camera instanceof THREE.PerspectiveCamera)) return;
@@ -549,7 +495,7 @@ export default function OrbitalScene(props: OrbitalSceneProps) {
   const inspectionDistance = props.presentation ? props.exploded ? 8 : props.inspection === 'instrument' ? 7.3 : props.inspection === 'communications' ? 7.2 : props.inspection === 'energy' ? 7.6 : 7.8 : undefined;
   return <Canvas
     className={`orbital-canvas ${props.onInspect && props.presentation ? 'spacecraft-interactive' : ''}`}
-    dpr={[1, 1.5]}
+    dpr={1}
     frameloop={!props.active ? 'never' : props.animating ? 'always' : 'demand'}
     camera={{ position: isHangar ? [0, .05, 7.2] : [0, 0, 8.9], fov: isHangar ? 35 : 35, near: .1, far: 40 }}
     gl={{ antialias: true, alpha: true, powerPreference: 'low-power', stencil: false }}
@@ -558,6 +504,7 @@ export default function OrbitalScene(props: OrbitalSceneProps) {
     style={{ position: 'absolute', inset: 0, pointerEvents: props.onInspect && props.presentation ? 'auto' : 'none' }}
   >
     <ambientLight color="#aabfd0" intensity={isHangar ? .7 : .4} />
+    {props.variant === 'hangar' ? <HangarEnvironment /> : null}
     <directionalLight position={[-3.5, 4.5, 5]} color="#fff2d7" intensity={isHangar ? 3.8 : 3.3} />
     <directionalLight position={[4, .5, 1]} color="#7aa7cb" intensity={isHangar ? 1.4 : .5} />
     <directionalLight position={[-2, -1, -4]} color="#a5cbc3" intensity={1.2} />
