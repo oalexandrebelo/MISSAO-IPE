@@ -1,6 +1,12 @@
-# MISSÃO IPÊ · R25 / Beta 0.12
+# MISSÃO IPÊ · R27
 
-Jogo educativo com seis missões. ISS, Lua e Marte ampliam a campanha de engenharia proposta por Bruno. Cerrado, Bennu e Webb exploram registros científicos históricos. Comece na tela de jogo, informe nome e e-mail, escolha o destino, monte a nave e investigue o resultado no painel.
+Jogo educativo com sete missões: Cerrado, Bennu, Webb, ISS, Lua, Marte e Europa. A campanha de engenharia integra a contribuição de Bruno à interface oficial, com loja, inventário persistente, montagem 3D, comparação A/B e desgaste dos instrumentos.
+
+**R27 — monte, opere, aprenda e tente novamente.** Compras, reservas, lançamentos, desgaste e recompensas são validados no servidor e registrados no painel privado. Europa combina radar e espectrometria para investigar gelo e composição: habitabilidade não equivale a detecção de vida. Créditos, ciclos de uso, pontuação e desempenho da nave são regras didáticas, não especificações operacionais da NASA.
+
+[Handoff dos dois devs R27](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Todos os acessos e subdomínios](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Recibo de publicação e limites verificados](PUBLICADO.md)
+
+Jogo: https://jogo.nasa-missaoipe.alexandrebelo.com · Pitch: https://pitch.nasa-missaoipe.alexandrebelo.com · Painel privado: https://painel.nasa-missaoipe.alexandrebelo.com · Documentação: https://docs.nasa-missaoipe.alexandrebelo.com · LP: https://lp.nasa-missaoipe.alexandrebelo.com
 
 **R26 — compare, acompanhe e explique.** ISS, Lua e Marte têm rascunho por participação, revisão A/B ligada à nave, operação por eventos, animação Rive, sons opcionais e revisão dos quatro segmentos. [Handoff para os dois devs](docs/70-HANDOFF-GAME-R26.md) · [auditoria do novo app Bruno](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [áudio e animação](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md).
 

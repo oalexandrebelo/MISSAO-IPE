@@ -1,0 +1,110 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { InventoryApiError, readInventory, sendInventoryCommand } from '../metrics/inventory-client.ts';
+import type { InventorySnapshot } from '../metrics/inventory-client.ts';
+
+type Request = Parameters<typeof sendInventoryCommand>[1];
+type Command = Request['command'];
+type Operation = Command['kind'];
+
+const feedback: Record<Operation, string> = {
+  buy: 'Compra confirmada. As unidades estão no inventário.',
+  return: 'Devolução confirmada. O crédito voltou à carteira.',
+  equip: 'Carga da missão atualizada.',
+  launch: 'Partida registrada. A carga e a condição do voo foram fixadas.',
+  complete: 'Resultado confirmado na carteira.',
+  cancel: 'Tentativa cancelada. A carteira foi atualizada.',
+  reset: 'Carteira reiniciada. Seu progresso de missões permanece disponível.',
+};
+const unavailable = 'A carteira está indisponível. Atualize o inventário para confirmar saldo e unidades.';
+
+export function useBrunoInventory(sessionId: string) {
+  const current = useRef<InventorySnapshot | null>(null);
+  const pending = useRef<Request | null>(null);
+  const inFlight = useRef(false);
+  const mounted = useRef(false);
+  const [snapshot, setSnapshot] = useState<InventorySnapshot | null>(null);
+  const [busy, setBusy] = useState<Operation | 'load' | null>('load');
+  const [uncertain, setUncertain] = useState<Operation | null>(null);
+  const [issue, setIssue] = useState('');
+  const [notice, setNotice] = useState('');
+
+  const publish = useCallback((value: InventorySnapshot | null) => {
+    if (!mounted.current) return;
+    const confirmed = navigator.onLine === false ? null : value;
+    current.current = confirmed;
+    setSnapshot(confirmed);
+  }, []);
+
+  const refresh = useCallback(async () => {
+    if (inFlight.current || pending.current) return;
+    inFlight.current = true;
+    setBusy('load');
+    setIssue('');
+    publish(null);
+    try { publish(await readInventory(sessionId)); }
+    catch { publish(null); if (mounted.current) setIssue(unavailable); }
+    finally {
+      inFlight.current = false;
+      if (mounted.current) setBusy(null);
+    }
+  }, [publish, sessionId]);
+
+  useEffect(() => {
+    mounted.current = true;
+    const offline = () => { publish(null); setIssue(unavailable); setNotice(''); };
+    void refresh();
+    window.addEventListener('offline', offline);
+    window.addEventListener('online', refresh);
+    return () => {
+      mounted.current = false;
+      window.removeEventListener('offline', offline);
+      window.removeEventListener('online', refresh);
+    };
+  }, [publish, refresh]);
+
+  const send = useCallback(async (request: Request) => {
+    if (inFlight.current || navigator.onLine === false) return null;
+    inFlight.current = true;
+    setBusy(request.command.kind);
+    setIssue('');
+    setNotice('');
+    try {
+      const response = await sendInventoryCommand(sessionId, request);
+      pending.current = null;
+      publish(response.snapshot);
+      if (mounted.current) {
+        setUncertain(null);
+        setNotice(feedback[request.command.kind]);
+      }
+      return response;
+    } catch (error) {
+      if (!mounted.current) return null;
+      if (!(error instanceof InventoryApiError) || error.uncertain) {
+        pending.current = request;
+        publish(null);
+        setUncertain(request.command.kind);
+        setIssue('A confirmação da operação está pendente. Tente confirmá-la antes de fazer outra alteração.');
+      } else {
+        pending.current = null;
+        setUncertain(null);
+        if (error.snapshot) publish(error.snapshot);
+        else if (error.status === 401 || error.status >= 500) publish(null);
+        setIssue(error.message);
+      }
+      return null;
+    } finally {
+      inFlight.current = false;
+      if (mounted.current) setBusy(null);
+    }
+  }, [publish, sessionId]);
+
+  const execute = useCallback((command: Command) => {
+    if (!current.current || pending.current) return Promise.resolve(null);
+    return send({ requestId: crypto.randomUUID(), expectedRevision: current.current.revision, command });
+  }, [send]);
+  const retry = useCallback(() => pending.current ? send(pending.current) : Promise.resolve(null), [send]);
+
+  return { snapshot, busy, uncertain, issue, notice, refresh, execute, retry };
+}
+
+export type BrunoInventoryController = ReturnType<typeof useBrunoInventory>;

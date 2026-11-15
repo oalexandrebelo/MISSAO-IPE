@@ -18,7 +18,7 @@ export function createBlobRepository({ storeId: configuredStoreId, getToken = cu
   if (!/^[a-zA-Z0-9]+$/.test(storeId ?? '')) throw new StorageUnavailable('Armazenamento indisponível.');
   const origin = `https://${storeId.toLowerCase()}.private.blob.vercel-storage.com`;
   const safePath = path => {
-    if (typeof path !== 'string' || !/^r21\/(?:records|revoked)\/[a-f0-9-]+\/(?:profile|event-[a-f0-9-]+|attempt-[a-f0-9-]+)\.json$/.test(path)) throw new StorageUnavailable('Caminho inválido.');
+    if (typeof path !== 'string' || !/^(?:r21\/(?:records|revoked)\/[a-f0-9-]+\/(?:profile|(?:inventory-)?event-[a-f0-9-]+|(?:inventory-)?attempt-[a-f0-9-]+)|r27\/inventory\/[a-f0-9-]+\/state)\.json$/.test(path)) throw new StorageUnavailable('Caminho inválido.');
     return path;
   };
   async function call(url, options = {}) {
@@ -39,6 +39,25 @@ export function createBlobRepository({ storeId: configuredStoreId, getToken = cu
   }
   return {
     get,
+    async getVersioned(path) {
+      const response = await call(`${origin}/${safePath(path)}?cache=0`);
+      if (response.status === 404) return null;
+      const etag = response.headers.get('etag');
+      if (!response.ok || !etag) throw new StorageUnavailable('Não foi possível ler a versão do inventário.');
+      try { return { document: await response.json(), etag }; }
+      catch { throw new StorageUnavailable('Inventário indisponível.'); }
+    },
+    async compareAndSwap(path, document, etag) {
+      if (!path.startsWith('r27/inventory/') || typeof etag !== 'string' || !etag || /[\r\n]/.test(etag)) throw new StorageUnavailable('Versão inválida.');
+      // Vercel's official put-helpers.ts maps ifMatch to x-if-match. Private cache=0 reads
+      // bypass the CDN; this compare is enforced by storage, not a warm-instance mutex.
+      const response = await call(`${API}/?${new URLSearchParams({ pathname: safePath(path) })}`, {
+        method: 'PUT', headers: { 'content-type': 'application/json', 'x-content-type': 'application/json', 'x-vercel-blob-access': 'private', 'x-add-random-suffix': '0', 'x-allow-overwrite': '1', 'x-if-match': etag, 'x-cache-control-max-age': '60', 'x-ttl-days': '90' }, body: JSON.stringify(document),
+      });
+      if (response.status === 412) return false;
+      if (!response.ok) throw new StorageUnavailable('Não foi possível confirmar a versão do inventário.');
+      return true;
+    },
     async putIfAbsent(path, document) {
       const response = await call(`${API}/?${new URLSearchParams({ pathname: safePath(path) })}`, { method: 'PUT', headers: { 'content-type': 'application/json', 'x-content-type': 'application/json', 'x-vercel-blob-access': 'private', 'x-add-random-suffix': '0', 'x-allow-overwrite': '0', 'x-cache-control-max-age': '60', 'x-ttl-days': '90' }, body: JSON.stringify(document) });
       if (response.ok) return { created: true, document };

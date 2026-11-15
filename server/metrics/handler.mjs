@@ -1,6 +1,7 @@
 import { createHmac, randomUUID, timingSafeEqual, createHash } from 'node:crypto';
 import { InvalidInput, normalizeEvent, object, UUID } from './model.mjs';
 import { StorageUnavailable } from './blob.mjs';
+import { createInventoryService, InventoryConflict } from './inventory.mjs';
 
 const PLAYER = 'ipe_player', ADMIN = 'ipe_metrics_admin';
 const BODY_LIMIT = 32_768, SESSION_SECONDS = 30 * 86400, ADMIN_SECONDS = 8 * 3600;
@@ -53,6 +54,7 @@ async function bodyOf(req) {
 export function createMetricsHandler({ repository, signingSecret, adminSecret, now = Date.now, uuid = randomUUID, development = false, deploymentHost }) {
   if (typeof signingSecret !== 'string' || signingSecret.length < 32 || typeof adminSecret !== 'string' || adminSecret.length < 32) throw new Error('Configuração de métricas indisponível.');
   const origins = new Set(PRODUCTION_ORIGINS);
+  const inventory = createInventoryService({ repository, now, uuid });
   if (deploymentHost && /^[a-zA-Z0-9.-]+\.vercel\.app$/.test(deploymentHost)) origins.add(`https://${deploymentHost}`);
   const limits = new Map();
   function limit(req, action) {
@@ -84,6 +86,13 @@ export function createMetricsHandler({ repository, signingSecret, adminSecret, n
     const profile = await repository.get(profilePath(identity.id));
     return profile?.type === 'profile' && profile.sessionId === identity.id ? profile : null;
   }
+  async function owner(req, sessionId) {
+    if (!UUID.test(sessionId)) throw new InvalidInput('Participação inválida.');
+    const profile = await player(req);
+    if (!profile) throw new HttpError(401, 'Sua sessão expirou. Entre novamente.');
+    if (profile.sessionId !== sessionId) throw new HttpError(409, 'Outra participação está ativa neste navegador. Recarregue a página.');
+    return profile;
+  }
   function requireAdmin(req) {
     if (!readToken(cookieValue(req, ADMIN), signingSecret, 'admin', now())) throw new HttpError(401, 'Entre no painel privado da equipe.');
   }
@@ -100,6 +109,11 @@ export function createMetricsHandler({ repository, signingSecret, adminSecret, n
       if (req.method === 'GET') {
         const action = url.searchParams.get('action');
         if (action === 'session') return send(200, { session: await player(req).then(value => value ? publicSession(value) : null) });
+        if (action === 'inventory') {
+          const profile = await owner(req, url.searchParams.get('sessionId'));
+          limit(req, action);
+          return send(200, { snapshot: await inventory.read(profile.sessionId) });
+        }
         if (action === 'admin') {
           requireAdmin(req); limit(req, action);
           const cursor = url.searchParams.get('cursor');
@@ -116,8 +130,13 @@ export function createMetricsHandler({ repository, signingSecret, adminSecret, n
       checkOrigin(req);
       const body = await bodyOf(req);
       if (!body || typeof body.action !== 'string') throw new InvalidInput('Ação inválida.');
-      if (!['register', 'events', 'logout', 'admin-login', 'admin-logout'].includes(body.action)) throw new HttpError(404, 'Operação não encontrada.');
+      if (!['register', 'events', 'inventory-command', 'logout', 'admin-login', 'admin-logout'].includes(body.action)) throw new HttpError(404, 'Operação não encontrada.');
       limit(req, body.action);
+      if (body.action === 'inventory-command') {
+        object(body, ['action', 'sessionId', 'requestId', 'expectedRevision', 'command']);
+        const profile = await owner(req, body.sessionId);
+        return send(200, await inventory.command(profile.sessionId, { requestId: body.requestId, expectedRevision: body.expectedRevision, command: body.command }));
+      }
       if (body.action === 'register') {
         object(body, ['action', 'name', 'email']);
         if (typeof body.name !== 'string' || typeof body.email !== 'string') throw new InvalidInput('Informe nome e e-mail.');
@@ -158,6 +177,9 @@ export function createMetricsHandler({ repository, signingSecret, adminSecret, n
         for (const [receivedOrder, input] of body.events.entries()) {
           try {
             const event = { ...normalizeEvent(input, profile.sessionId, new Date(now()).toISOString()), batchId, receivedOrder };
+            // Offline R25/R26 queues remain history. They never touch the R27 wallet,
+            // condition or rewards. Version-2 loadouts are refused by normalizeEvent.
+            if (event.kind === 'attempt' && ['iss', 'moon', 'mars'].includes(event.mission)) event.legacyInventory = true;
             const saved = await repository.putIfAbsent(eventPath(event), event);
             if (!saved.created) {
               const existing = saved.document;
@@ -173,9 +195,10 @@ export function createMetricsHandler({ repository, signingSecret, adminSecret, n
       }
       throw new HttpError(404, 'Operação não encontrada.');
     } catch (error) {
+      if (error instanceof InventoryConflict) return send(409, { error: error.message, code: error.code, snapshot: error.snapshot });
       if (error instanceof HttpError) return send(error.status, { error: error.message });
       if (error instanceof InvalidInput) return send(400, { error: error.message });
-      if (error instanceof StorageUnavailable) return send(503, { error: 'Não foi possível confirmar a gravação. Os eventos pendentes podem ser reenviados.' });
+      if (error instanceof StorageUnavailable) return send(503, { error: 'Não foi possível confirmar a gravação. Repita o mesmo pedido para conferir o recibo.', code: 'STORAGE_UNAVAILABLE' });
       return send(500, { error: 'Não foi possível concluir a operação.' });
     }
   };

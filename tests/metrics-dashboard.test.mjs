@@ -8,7 +8,7 @@ test('attempt identity preserves repeat plays and ignores replay duplicates and 
 test('cancelled and technical executions are separate from engineering attempts',()=>{const s=summarize([{id:'a',sessionId:'s',receivedAt:'x',kind:'attempt',payload:{attemptId:'1',status:'cancelled'}},{id:'b',sessionId:'s',receivedAt:'x',kind:'attempt',payload:{attemptId:'2',status:'error'}}]);assert.equal(s.calculated.length,0);assert.equal(s.cancelled,1);assert.equal(s.technicalErrors,1);assert.equal(s.answered,0);});
 test('CSV protects spreadsheet formulas and excludes email by default',()=>{assert.equal(csvCell('=HYPERLINK("x")'),'"\'=HYPERLINK(""x"")"');const e={id:'a',sessionId:'s',receivedAt:'x',mission:'bennu',kind:'attempt',payload:{attemptId:'1',status:'error'}};const csv=attemptsCsv([e],[{sessionId:'s',name:'=cmd',email:'private@example.invalid'}]);assert.ok(!csv.includes('private@example.invalid'));assert.ok(csv.includes("'=cmd"));assert.ok(attemptsCsv([e],[{sessionId:'s',email:'private@example.invalid'}],{includeEmail:true}).includes('private@example.invalid'));});
 
-test('mission filter exposes all six selectable missions in the actual dashboard HTML', async () => {
+test('mission filter exposes all seven selectable missions in the actual dashboard HTML', async () => {
   const {readFile} = await import('node:fs/promises');
   const {createRequire} = await import('node:module');
   const require = createRequire(new URL('../experiments/mission-design-lab/package.json', import.meta.url));
@@ -16,8 +16,8 @@ test('mission filter exposes all six selectable missions in the actual dashboard
   const html = await readFile(new URL('../dashboard/index.html', import.meta.url), 'utf8');
   const dom = new JSDOM(html);
   const select = dom.window.document.getElementById('mission');
-  assert.deepEqual([...select.options].map(option => option.value), ['all', 'iss', 'moon', 'mars', 'cerrado', 'bennu', 'telescope']);
-  for (const mission of ['iss', 'moon', 'mars', 'cerrado', 'bennu', 'telescope']) { select.value = mission; assert.equal(select.selectedOptions[0].value, mission); }
+  assert.deepEqual([...select.options].map(option => option.value), ['all', 'iss', 'moon', 'mars', 'europa', 'cerrado', 'bennu', 'telescope']);
+  for (const mission of ['iss', 'moon', 'mars', 'europa', 'cerrado', 'bennu', 'telescope']) { select.value = mission; assert.equal(select.selectedOptions[0].value, mission); }
   dom.window.close();
 });
 
@@ -43,7 +43,7 @@ test('dashboard keyboard focus and sign-out survive an in-flight private refresh
       return Response.json({});
     }
     if (!authorized) return new Response(null, {status:401});
-    return Response.json({profiles:[person],events:[oneAttempt],cursor:null,hasMore:false});
+    return Response.json({profiles:[person],events:[oneAttempt,{...oneAttempt,schemaVersion:2},{...oneAttempt,schemaVersion:2,kind:'inventory',payload:{operation:'complete',balanceBefore:7,balanceAfter:15,reward:8,wear:[]}}],cursor:null,hasMore:false});
   };
   try {
     await import('../dashboard/dashboard.js');
@@ -53,6 +53,8 @@ test('dashboard keyboard focus and sign-out survive an in-flight private refresh
     login.dispatchEvent(new window.SubmitEvent('submit',{bubbles:true,cancelable:true,submitter:login}));
     await setImmediate();
     assert.equal(document.activeElement.id,'mission');
+    assert.equal(document.querySelectorAll('#attempt-rows tr').length,2);
+    assert.equal(document.querySelectorAll('#inventory-rows tr').length,1);
     assert.equal(document.querySelector('.table-scroll').tabIndex,0);
     const inspect = document.querySelector('#attempt-rows button');
     assert.match(inspect.getAttribute('aria-label'),/^Inspecionar.+Bennu/);

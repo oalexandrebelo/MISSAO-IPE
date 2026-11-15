@@ -1,5 +1,15 @@
 # Publicação MISSÃO IPÊ
 
+## R27 — loja, inventário, desgaste e Europa
+
+**Candidato validado localmente; publicação em verificação.** A campanha de Bruno inclui ISS, Lua, Marte e Europa com compra, devolução de unidades intactas, reserva por missão, desgaste na partida e recompensa confirmada pelo servidor. Cerrado, Bennu e Webb permanecem disponíveis. O painel privado mostra operações da carteira e ciclos consumidos, além das tentativas.
+
+No navegador de teste, as quatro missões chegaram a seis registros válidos: Europa 92, ISS 92, Lua 92 e Marte 91 pontos nas configurações registradas. Europa demonstrou A/B de comunicação de dois para seis registros; a condição gasta reduziu a previsão para cinco. Compra, reembolso, cancelamento, retomada e reinício sem apagar métricas foram exercitados. Viewports de 320 e 390 px ficaram sem overflow horizontal; celular físico continua pendente. [Recibo funcional R27](evidence/r27-functional-qa.json).
+
+Foram adicionados os subdomínios jogo, pitch, painel, docs e lp sob `nasa-missaoipe.alexandrebelo.com`. A confirmação final de HTTPS, redirecionamentos e armazenamento em produção será registrada após o deployment desta versão. [Acessos da equipe](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Handoff dos dois devs](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md).
+
+---
+
 ## R26 — operação conectada ao 3D, comparação e Rive
 
 **Publicada e conferida em 15/11/2026.** Código `789af317b737243afa8f928152f3e488e1e6ab5c`. Principal `dpl_E66f2F38Us5whEzqT8qn6249fPqz` e LP `dpl_Cgb3KxWwoRNioCK2STXX4M2DDwEf`, ambos **READY** no mesmo commit, com os domínios oficiais associados.

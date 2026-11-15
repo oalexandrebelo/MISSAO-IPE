@@ -52,6 +52,12 @@ const routeConfig = {
   cleanUrls: false,
   trailingSlash: false,
   redirects: [
+    ...Object.entries({ jogo: '/lab/index.html', pitch: '/presentation/pitch/index.html', painel: '/dashboard/index.html', docs: '/docs/index.html' }).flatMap(([area, path]) => [
+      { source: '/', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: `https://nasa-missaoipe.alexandrebelo.com${path}`, permanent: false },
+      { source: '/:path*', has: [{ type: 'host', value: `${area}.nasa-missaoipe.alexandrebelo.com` }], destination: 'https://nasa-missaoipe.alexandrebelo.com/:path*', permanent: false },
+    ]),
+    { source: '/doc', destination: '/docs/index.html', permanent: false },
+    { source: '/painel', destination: '/dashboard/index.html', permanent: false },
     { source: '/campanha/research', destination: '/campanha/research/index.html', permanent: false },
     { source: '/campanha/apresentacao', destination: '/campanha/apresentacao/index.html', permanent: false },
     { source: '/campanha', destination: '/campanha/index.html', permanent: false },

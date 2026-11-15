@@ -4,6 +4,104 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "jogo.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/lab/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "jogo.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "pitch.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "pitch.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "painel.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "painel.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "docs.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/docs/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "docs.nasa-missaoipe.alexandrebelo.com"
+        }
+      ],
+      "destination": "https://nasa-missaoipe.alexandrebelo.com/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/doc",
+      "destination": "/docs/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/painel",
+      "destination": "/dashboard/index.html",
+      "permanent": false
+    },
+    {
       "source": "/campanha/research",
       "destination": "/campanha/research/index.html",
       "permanent": false

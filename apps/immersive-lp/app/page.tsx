@@ -31,7 +31,7 @@ export default function Home() {
         <div className="hero-content container">
           <p className="hero-eyebrow eyebrow"><span className="accent-dash" /> DA ÓRBITA, PARA A VIDA</p>
           <h1 id="hero-title" className="hero-title">O espaço é só <br />{' '}o <em>começo.</em></h1>
-          <p className="hero-copy">Seis missões para jogar. Três casos com arquivos reais da NASA.<br className="desktop-only" /> E você no centro de cada decisão.</p>
+          <p className="hero-copy">Sete missões para jogar. Três casos com arquivos reais da NASA.<br className="desktop-only" /> E você no centro de cada decisão.</p>
           <div className="hero-actions"><a href={LINKS.game} className="button button-primary" data-magnetic>Iniciar minha missão <Icon name="arrow-up" /></a><VideoExperience /></div>
           <p className="hero-footnote"><i className="status-dot" /> BETA ABERTO <span>NOME · E-MAIL · MISSÃO · PLAY</span></p>
         </div>
@@ -74,7 +74,7 @@ export default function Home() {
           <a href={LINKS.game} className="level-link">Escolher missão no laboratório <Icon name="arrow-up" /></a>
         </article>)}</div>
         <div className="journey-demo"><p><strong>Apresente os três casos em seis minutos.</strong> O roteiro mostra como comparar duas escolhas, seguir um registro e concluir com os quatro papéis da missão.</p><a href={LINKS.roadmap} className="text-link">Abrir roteiro da demonstração <Icon name="arrow-up" /></a></div>
-        <div className="journey-demo"><p><strong>Mais três destinos: ISS, Lua e Marte.</strong> Entre no hangar, monte lançador, propulsão, energia, proteção, enlace e instrumento. Execute a missão e investigue a pontuação. Os desafios de engenharia adaptam a contribuição do Bruno com parâmetros didáticos.</p><a href={LINKS.game} className="text-link">Abrir seleção de missões <Icon name="arrow-up" /></a></div><p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
+        <div className="journey-demo"><p><strong>Quatro destinos de engenharia: ISS, Lua, Marte e Europa.</strong> Compre e equipe instrumentos, acompanhe os ciclos de uso e compare sua nave em 3D. Monte lançador, propulsão, energia, proteção e enlace. Execute a missão e investigue a pontuação. Os desafios de engenharia adaptam a contribuição do Bruno com parâmetros didáticos.</p><a href={LINKS.game} className="text-link">Abrir seleção de missões <Icon name="arrow-up" /></a></div><p className="journey-note">Prefere avançar por etapas no Cerrado? <a href={LINKS.campaign}>Jogue a campanha: Primeiro sinal → Memória em disputa → Janela estreita → Ciência que chega.</a></p>
       </div></section>
 
       <section className="earth-interlude" aria-labelledby="earth-title">

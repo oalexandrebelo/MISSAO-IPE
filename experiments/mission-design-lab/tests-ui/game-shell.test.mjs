@@ -18,9 +18,9 @@ test('title starts the game only after a player action even when fullscreen is d
  await act(async()=>fireEvent.click(screen.getByRole('button',{name:'Iniciar jogo'})));
  assert.equal(asked,1);assert.ok(screen.getByText('Entrada do jogador'));
 });
-test('six mission choices change the briefing without launching; Play dispatches only the selected mission',async()=>{
+test('seven mission choices change the briefing without launching; Play dispatches only the selected mission',async()=>{
  const chosen=[];await act(async()=>render(React.createElement(GameLobby,{onChoose:id=>chosen.push(id),onKnowledge:()=>{},attempts:2,bestScore:87})));
- const pairs=[['ISS','iss'],['LUA','moon'],['MARTE','mars'],['CERRADO','cerrado'],['BENNU','bennu'],['WEBB','telescope']];
+ const pairs=[['ISS','iss'],['LUA','moon'],['MARTE','mars'],['EUROPA','europa'],['CERRADO','cerrado'],['BENNU','bennu'],['WEBB','telescope']];
  for(const [label,id] of pairs){
   const picker=screen.getByRole('group',{name:'Selecionar missão'});
   const button=[...picker.querySelectorAll('button')].find(e=>e.textContent.includes(label));

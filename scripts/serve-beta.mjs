@@ -18,19 +18,24 @@ const headerRules = config.headers.map(rule => ({ ...rule, pattern: rule.source.
 function headersFor(pathname) {
   return Object.fromEntries(headerRules.filter(rule => rule.source === pathname || rule.pattern?.test(pathname)).flatMap(rule => rule.headers.map(header => [header.key, header.value])));
 }
-const redirects = new Map(config.redirects.map(r => [r.source, r.destination]));
+const redirects = new Map(config.redirects.filter(r => !r.has).map(r => [r.source, r.destination]));
 // Explicit localhost-only QA mode. Production always uses the private Blob adapter.
 let metrics;
 if (process.env.IPE_METRICS_TEST === '1') {
   const { createMetricsHandler } = await import('../server/metrics/handler.mjs');
-  const records = new Map();
+  const records = new Map(), versions = new Map();
   const repository = {
-    get: async key => records.get(key) ?? null,
-    putIfAbsent: async (key, document) => {
-      if (records.has(key)) return { created: false, document: records.get(key) };
-      records.set(key, document); return { created: true, document };
+    get: async key => structuredClone(records.get(key) ?? null),
+    getVersioned: async key => records.has(key) ? { document: structuredClone(records.get(key)), etag: String(versions.get(key)) } : null,
+    compareAndSwap: async (key, document, etag) => {
+      if (String(versions.get(key)) !== etag) return false;
+      records.set(key, structuredClone(document)); versions.set(key, versions.get(key) + 1); return true;
     },
-    list: async cursor => { const offset = Number(cursor ?? 0); const all = [...records.values()]; const end = offset + 100; return { documents: all.slice(offset, end), cursor: end < all.length ? String(end) : null, hasMore: end < all.length }; },
+    putIfAbsent: async (key, document) => {
+      if (records.has(key)) return { created: false, document: structuredClone(records.get(key)) };
+      records.set(key, structuredClone(document)); versions.set(key, 1); return { created: true, document };
+    },
+    list: async cursor => { const offset = Number(cursor ?? 0); const all = [...records.entries()].filter(([key]) => key.startsWith('r21/records/')).map(([, value]) => structuredClone(value)); const end = offset + 100; return { documents: all.slice(offset, end), cursor: end < all.length ? String(end) : null, hasMore: end < all.length }; },
   };
   metrics = createMetricsHandler({ repository, development: true, signingSecret: 'localhost-test-signing-secret-not-for-production', adminSecret: 'localhost-test-admin-secret-not-for-production' });
 }
@@ -57,6 +62,9 @@ const server = http.createServer(async (req, res) => {
   try { pathname = decodeURIComponent((req.url || '/').split('?')[0]); }
   catch { return finish(400, 'Caminho inválido.\n'); }
   if (!pathname.startsWith('/') || /[\x00-\x1f\\]/.test(pathname) || pathname.split('/').some(s => s.startsWith('.'))) return finish(400, 'Caminho inválido.\n');
+  const host = String(req.headers.host ?? '').split(':')[0];
+  const hostRedirect = config.redirects.find(r => r.has?.some(condition => condition.type === 'host' && condition.value === host) && (r.source === pathname || r.source === '/:path*'));
+  if (hostRedirect) return finish(307, 'Redirecionando.\n', { Location: hostRedirect.destination.replace('/:path*', pathname) });
   if (redirects.has(pathname)) return finish(307, 'Redirecionando.\n', { Location: redirects.get(pathname) });
   const requested = resolve(canonicalRoot, '.' + pathname, pathname.endsWith('/') ? 'index.html' : '');
   try {

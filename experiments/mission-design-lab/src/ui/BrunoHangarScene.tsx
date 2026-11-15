@@ -1,9 +1,11 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import { useEffect } from 'react';
-import type { BrunoConfig, BrunoConfigKey, BrunoResult } from '../lab/bruno-missions.ts';
+import { BRUNO_INSTRUMENTS } from '../lab/bruno-missions.ts';
+import type { BrunoConfig, BrunoConfigKey, BrunoInstrumentId, BrunoInventoryConfig, BrunoResult } from '../lab/bruno-missions.ts';
+import { BrunoInstrumentMesh } from './BrunoInstrumentMesh.tsx';
 
 interface Props {
-  config: BrunoConfig;
+  config: BrunoConfig | BrunoInventoryConfig;
   active: BrunoConfigKey;
   turn: number;
   onPart: (part: BrunoConfigKey) => void;
@@ -20,6 +22,16 @@ function ContextListener({ onUnavailable }: Pick<Props, 'onUnavailable'>) {
   return null;
 }
 
+export function BrunoInstrumentScene({ id, turn, onUnavailable }: { id: BrunoInstrumentId; turn: number; onUnavailable: () => void }) {
+  return <Canvas frameloop="demand" dpr={[1, 1.5]} camera={{ position: [2.3, 1.6, 2.85], fov: 31 }} gl={{ antialias: true, powerPreference: 'low-power' }} aria-hidden="true">
+    <ContextListener onUnavailable={onUnavailable} />
+    <ambientLight intensity={1.3} />
+    <directionalLight position={[3, 4, 4]} intensity={2.45} color="#ffe0b5" />
+    <directionalLight position={[-3, 1, -3]} intensity={1.5} color="#97caff" />
+    <group rotation={[.08, turn - .25, 0]}><BrunoInstrumentMesh id={id} /></group>
+  </Canvas>;
+}
+
 export default function BrunoHangarScene({ config, active, turn, onPart, onUnavailable, flightPhase }: Props) {
   const panelWidth = 1.02;
   const batteryWidth = config.energy === 'extended' ? .68 : .38;
@@ -29,6 +41,9 @@ export default function BrunoHangarScene({ config, active, turn, onPart, onUnava
   const antennaSize = config.navigation === 'deep-space' ? .45 : .21;
   const fairingRadius = config.launcher === 'heavy' ? 1.92 : 1.58;
   const color = (key: BrunoConfigKey, normal: string) => active === key ? '#f7cc9f' : normal;
+  const loadout = 'loadout' in config ? config.loadout : null;
+  const totalSlots = loadout?.reduce((total, item) => total + BRUNO_INSTRUMENTS[item.instrumentId].slots, 0) ?? 0;
+  let slot = -totalSlots / 2;
   return <Canvas frameloop="demand" dpr={[1, 1.5]} camera={{ position: [4.7, 3.1, 5.4], fov: 37 }} gl={{ antialias: true, powerPreference: 'low-power' }} aria-hidden="true">
     <ContextListener onUnavailable={onUnavailable}/>
     <ambientLight intensity={1.1}/>
@@ -72,10 +87,22 @@ export default function BrunoHangarScene({ config, active, turn, onPart, onUnava
         </mesh>)}
       </group> : null}
       <group position={[0, .04, protection / 2]} onClick={e => { e.stopPropagation(); onPart('payload'); }}>
-        <mesh position={[0, 0, .09]}><boxGeometry args={[aperture * 2.35, aperture * 1.65, .24]}/><meshStandardMaterial color={color('payload', '#c49e67')} metalness={.5} roughness={.35}/></mesh>
-        <mesh position={[0, 0, .25]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[aperture * .53, aperture * .62, .13, 24]}/><meshStandardMaterial color="#335568" metalness={.62} roughness={.24}/></mesh>
+        {loadout ? <>
+          <mesh position={[0, -.03, .035]}><boxGeometry args={[protection * .9, .34, .1]} /><meshStandardMaterial color={color('payload', '#345264')} metalness={.45} roughness={.53} /></mesh>
+          {loadout.map((unit, index) => {
+            const width = BRUNO_INSTRUMENTS[unit.instrumentId].slots;
+            const x = (slot + width / 2) * .29;
+            slot += width;
+            return <group key={`${unit.instrumentId}-${index}`} position={[x, .035, .25]} scale={.29}>
+              <BrunoInstrumentMesh id={unit.instrumentId} usesRemaining={unit.usesRemaining} />
+            </group>;
+          })}
+        </> : <>
+          <mesh position={[0, 0, .09]}><boxGeometry args={[aperture * 2.35, aperture * 1.65, .24]}/><meshStandardMaterial color={color('payload', '#c49e67')} metalness={.5} roughness={.35}/></mesh>
+          <mesh position={[0, 0, .25]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[aperture * .53, aperture * .62, .13, 24]}/><meshStandardMaterial color="#335568" metalness={.62} roughness={.24}/></mesh>
+        </>}
       </group>
-      {flightPhase === 'acquisition' ? <mesh position={[0, .04, protection / 2 + .9]} rotation={[-Math.PI / 2, 0, 0]}>
+      {flightPhase === 'acquisition' && (loadout === null || loadout.length > 0) ? <mesh position={[0, .04, protection / 2 + .9]} rotation={[-Math.PI / 2, 0, 0]}>
         <coneGeometry args={[.43, 1.25, 24, 1, true]}/><meshBasicMaterial color="#e4bd85" transparent opacity={.18} depthWrite={false}/>
       </mesh> : null}
     </group>

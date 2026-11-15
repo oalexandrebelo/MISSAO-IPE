@@ -1,7 +1,8 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { acknowledgeMetrics, isPlayerSession, mergeMetrics, metricsKey, newMetric, readMetrics, summarizeMetrics, writeMetrics } from '../metrics/player-metrics.ts';
-import type { AttemptSummary, LocalMetric, MetricKind, MetricMission, PlayerSession } from '../metrics/player-metrics.ts';
+import { acknowledgeMetrics, isBrunoMission, isPlayerSession, mergeMetrics, metricsKey, newMetric, readMetrics, summarizeMetrics, writeMetrics } from '../metrics/player-metrics.ts';
+import type { AttemptSummary, LocalMetric, MetricEvent, MetricKind, MetricMission, PlayerSession } from '../metrics/player-metrics.ts';
+import { BRUNO_MISSIONS } from '../lab/bruno-missions.ts';
 import { MISSION_SCORE_LIMITS } from '../metrics/mission-score.ts';
 import type { MissionScore } from '../metrics/mission-score.ts';
 import { Dialog } from './Dialogs.tsx';
@@ -11,9 +12,10 @@ import './player-metrics.css';
 interface MetricContext {
   session: PlayerSession | null; entries: readonly LocalMetric[]; issue: string; syncing: boolean;
   track: (kind: MetricKind, mission: MetricMission, payload: Record<string, unknown>, summary?: AttemptSummary, correct?: boolean) => void;
+  recordConfirmedAttempts: (attempts: readonly { event: MetricEvent; summary?: AttemptSummary }[]) => void;
   retry: () => void; logout: () => Promise<void>;
 }
-const Metrics = createContext<MetricContext>({ session: null, entries: [], issue: '', syncing: false, track: () => {}, retry: () => {}, logout: async () => {} });
+const Metrics = createContext<MetricContext>({ session: null, entries: [], issue: '', syncing: false, track: () => {}, recordConfirmedAttempts: () => {}, retry: () => {}, logout: async () => {} });
 export const usePlayerMetrics = () => useContext(Metrics);
 class MetricsApiError extends Error {
   constructor(readonly status: number, message: string) { super(message); }
@@ -26,10 +28,10 @@ async function api(action: string, body?: Record<string, unknown>) {
 const ENTRY_STEPS = [
   { label: 'Nome', title: 'Como podemos chamar você?', story: 'Toda missão começa com uma pessoa disposta a fazer uma pergunta. Primeiro, apresente-se à tripulação.' },
   { label: 'E-mail', title: 'Qual é o seu e-mail?', story: 'Uma missão deixa vestígios de cada decisão. Seu e-mail ajuda a equipe a reconhecer o registro da sua participação.' },
-  { label: 'Tipo', title: 'Que tipo de missão você quer projetar?', story: 'Da ISS ao Webb, escolha entre três desafios de engenharia e três casos com arquivos científicos.' },
+  { label: 'Tipo', title: 'Que tipo de missão você quer projetar?', story: 'Escolha um desafio de engenharia ou uma investigação com registros científicos históricos.' },
   { label: 'Play', title: 'Tudo pronto para começar.', story: 'Monte o projeto, teste sua hipótese e siga os dados até a Terra. O que chegar é a evidência da sua tentativa.' },
 ] as const;
-const MISSION_NAMES: Record<MetricMission, string> = { cerrado: 'Cerrado', bennu: 'Bennu', telescope: 'Webb', iss: 'ISS', moon: 'Lua', mars: 'Marte' };
+const MISSION_NAMES: Record<MetricMission, string> = { cerrado: 'Cerrado', bennu: 'Bennu', telescope: 'Webb', iss: 'ISS', moon: 'Lua', mars: 'Marte', europa: 'Europa' };
 const MISSION_LESSONS: Record<MetricMission, string> = {
   cerrado: 'Potência, energia e leitura de lacunas na vegetação.',
   bennu: 'Produzir dados é diferente de entregá-los.',
@@ -37,11 +39,10 @@ const MISSION_LESSONS: Record<MetricMission, string> = {
   iss: 'Proteção da calibração e validade das leituras do ar.',
   moon: 'Reserva de energia na sombra e capacidade de entrega dos mapas.',
   mars: 'Capacidade do lançador, prazo de chegada e proteção de entrada.',
+  europa: BRUNO_MISSIONS.europa.learn,
 };
 const ENTRY_MISSIONS: { id: MetricMission; objective: string }[] = [
-  { id: 'iss', objective: 'Sustente um experimento de monitoramento do ar em órbita.' },
-  { id: 'moon', objective: 'Projete energia e instrumentos para investigar o polo lunar.' },
-  { id: 'mars', objective: 'Equilibre autonomia, proteção e comunicação em Marte.' },
+  ...Object.values(BRUNO_MISSIONS).map(mission => ({ id: mission.id, objective: mission.learn })),
   { id: 'cerrado', objective: 'Envie seis registros históricos de vegetação para comparar dois períodos.' },
   { id: 'bennu', objective: 'Leve ao solo as medidas dos blocos rochosos do asteroide.' },
   { id: 'telescope', objective: 'Escolha um instrumento para recuperar os registros do espectro de luz.' },
@@ -146,7 +147,7 @@ export function PlayerGateway({ children }: { children: (firstMission: MetricMis
   }}>{children(mission)}</SessionMetrics>;
   const current = ENTRY_STEPS[step]!;
   const busy = checking || entering;
-  const librasContext = session ? 'Entrada da MISSÃO IPÊ. Uma participação está disponível neste navegador. Use Retomar jogo para voltar às missões. Nome, e-mail e registros pessoais não são enviados ao guia de Libras.' : `Entrada da MISSÃO IPÊ. Etapa ${step + 1} de quatro: ${current.label}. ${current.title} ${current.story} ${step === 1 ? 'O e-mail informado ficará no painel privado da equipe.' : step === 2 ? 'Escolha entre ISS, Lua, Marte, Cerrado, Bennu e Webb; cada missão pede uma evidência científica diferente.' : step === 3 ? 'Play registra a participação e inicia a missão escolhida.' : 'Use Continuar para avançar.'} O guia traduz esta orientação, sem receber o conteúdo dos campos.`;
+  const librasContext = session ? 'Entrada da MISSÃO IPÊ. Uma participação está disponível neste navegador. Use Retomar jogo para voltar às missões. Nome, e-mail e registros pessoais não são enviados ao guia de Libras.' : `Entrada da MISSÃO IPÊ. Etapa ${step + 1} de quatro: ${current.label}. ${current.title} ${current.story} ${step === 1 ? 'O e-mail informado ficará no painel privado da equipe.' : step === 2 ? `Escolha entre ${ENTRY_MISSIONS.map(mission => MISSION_NAMES[mission.id]).join(', ')}. Cada missão pede uma evidência diferente.` : step === 3 ? 'Play registra a participação e inicia a missão escolhida.' : 'Use Continuar para avançar.'} O guia traduz esta orientação, sem receber o conteúdo dos campos.`;
   return <main className="player-entry" data-ipe-libras-context={librasContext.slice(0, 900)}>
     <a href="../presentation/pitch/index.html" className="player-entry-brand" aria-label="MISSÃO IPÊ, apresentação"><img src="./brand/missao-ipe-logo.svg" width="178" height="84" alt="MISSÃO IPÊ" /></a>
     <div className="player-entry-layout">
@@ -224,9 +225,12 @@ function SessionMetrics({ session, onLogout, children }: { session: PlayerSessio
     void flush();
     return () => { active.current = false; clearInterval(timer); window.removeEventListener('storage', syncStorage); window.removeEventListener('online', online); };
   }, [session.sessionId]);
+  function knownEntries() {
+    try { return mergeMetrics(entriesRef.current, readMetrics(localStorage, session.sessionId)); }
+    catch { return entriesRef.current; }
+  }
   function track(kind: MetricKind, mission: MetricMission, payload: Record<string, unknown>, summary?: AttemptSummary, correct?: boolean) {
-    let known = entriesRef.current;
-    try { known = mergeMetrics(known, readMetrics(localStorage, session.sessionId)); } catch { /* Keep the current-session queue; persistence reports failures in commit. */ }
+    const known = knownEntries();
     if (kind === 'assessment') {
       const last = known.filter(item => item.event.kind === kind && item.event.mission === mission && item.event.payload.question === payload.question && item.event.payload.questionVersion === payload.questionVersion).at(-1);
       if (last?.event.payload.answer === payload.answer) return;
@@ -235,6 +239,12 @@ function SessionMetrics({ session, onLogout, children }: { session: PlayerSessio
     commit([...known, { event, summary, correct, sync: 'pending' }]);
     void flush();
   }
+  function recordConfirmedAttempts(attempts: readonly { event: MetricEvent; summary?: AttemptSummary }[]) {
+    const known = knownEntries();
+    const acknowledged = new Set(known.filter(item => item.sync === 'synced').map(item => item.event.id));
+    const next = attempts.filter(({ event }) => !acknowledged.has(event.id));
+    if (next.length) commit(mergeMetrics(known, next.map(item => ({ ...item, sync: 'synced' }))));
+  }
   async function logout() {
     try { await api('logout', { sessionId: session.sessionId }); onLogout(); }
     catch (error) {
@@ -242,7 +252,7 @@ function SessionMetrics({ session, onLogout, children }: { session: PlayerSessio
       setIssue(error instanceof Error ? error.message : 'Não foi possível encerrar a participação.');
     }
   }
-  return <Metrics.Provider value={{ session, entries, issue, syncing, track, retry: () => void flush(), logout }}>{children}</Metrics.Provider>;
+  return <Metrics.Provider value={{ session, entries, issue, syncing, track, recordConfirmedAttempts, retry: () => void flush(), logout }}>{children}</Metrics.Provider>;
 }
 export function MissionScoreSummary({ score }: { score: MissionScore }) {
   return <div className="player-score">
@@ -276,7 +286,7 @@ export function PlayerDashboard({ onBack }: { onBack: () => void }) {
     const blob = new Blob([JSON.stringify({ version: 1, note: 'Progresso local desta participação; não comprova aprendizagem.', sessionId: metrics.session?.sessionId, entries: metrics.entries },null,2)], { type:'application/json' });
     const url = URL.createObjectURL(blob); const link = document.createElement('a'); link.href=url; link.download='missao-ipe-meu-progresso.json'; link.click(); URL.revokeObjectURL(url);
   }
-  return <section className="player-dashboard" aria-labelledby="player-progress-title"><div className="player-dashboard-heading"><div><p className="eyebrow">MEU PROGRESSO · {metrics.session?.name}</p><h1 id="player-progress-title">Cada tentativa deixa uma evidência.</h1><p>Resultados calculados pelo jogo e respostas a perguntas com critério explícito. Uma missão cumprida não certifica aprendizagem.</p></div><button className="button button-secondary" onClick={onBack}>Voltar às missões</button></div><div className="player-stat-grid"><article><strong>{totals.attempts}</strong><span>Tentativas próprias</span><small>{totals.cancelled} canceladas · {totals.technicalErrors} interrupções técnicas</small></article><article><strong>{totals.successes} / {totals.completed}</strong><span>Missões cumpridas</span><small>{totals.failures} não cumpridas · {totals.invalid} projetos incompatíveis</small></article><article><strong>{totals.questions ? `${totals.firstCorrect} / ${totals.questions}` : 'Sem respostas'}</strong><span>Primeiras respostas corretas</span><small>{totals.questions ? `${totals.latestCorrect} corretas na última resposta · ${totals.revisions} revisões` : 'Avaliações disponíveis em Cerrado, Bennu e Webb.'}</small></article><article><strong>{totals.inspections}</strong><span>Inspeções de evidências e nave</span><small>{totals.decisions} mudanças de configuração</small></article></div><div className="player-mission-progress">{(Object.keys(MISSION_NAMES) as MetricMission[]).map(id => { const selected = metrics.entries.filter(item => item.event.mission === id); const s = summarizeMetrics(selected); const completed = selected.filter(item => item.event.kind === 'attempt' && item.summary); const first = completed[0]?.summary; const latest = completed.at(-1)?.summary; const roleReview = selected.filter(item => item.event.kind === 'role_review').at(-1); return <article key={id}><h2>{MISSION_NAMES[id]}</h2><p>{s.completed ? `${s.successes} de ${s.completed} tentativas concluídas cumpriram a missão.` : 'Sua primeira tentativa ainda não foi executada.'}</p>{latest ? <><strong>{latest.valid} / {latest.required} registros válidos</strong><p>{latest.received} pacotes completos na última tentativa.{latest.score ? ` Pontuação: ${latest.score.total} de ${latest.score.max}.` : ''}</p>{first?.score && latest.score ? <p>Primeira pontuação: {first.score.total} de {first.score.max}. Última pontuação: {latest.score.total} de {latest.score.max}.</p> : null}</> : null}{roleReview ? <p>{['iss', 'moon', 'mars'].includes(id) ? 'Segmentos marcados como revisados' : 'Último registro de pareceres'}: {Number(roleReview.event.payload.count)} / 4, sem nota automática.</p> : null}<p className="field-help">Aprendizado praticado: {MISSION_LESSONS[id]}</p>{['iss', 'moon', 'mars'].includes(id) ? <p className="field-help">Avaliação de aprendizagem ainda não disponível nesta missão. A pontuação descreve a simulação.</p> : null}</article>; })}</div><section className="player-metrics-sync" aria-label="Envio do progresso"><h2>Seu registro na equipe</h2><p>{metrics.syncing ? 'Enviando…' : `${metrics.entries.filter(item => item.sync === 'synced').length} eventos confirmados pelo servidor; ${totals.pending} pendentes; ${totals.rejected} recusados.`}</p>{!confirmEnd && metrics.issue ? <p role="alert">{metrics.issue}</p> : null}{totals.rejected ? <p>Eventos recusados não entram no painel da equipe. O arquivo de progresso conserva os motivos para revisão.</p> : null}<div className="player-actions"><button className="button button-secondary" aria-disabled={metrics.syncing || totals.pending === 0} onClick={() => { if (!metrics.syncing && totals.pending > 0) metrics.retry(); }}>Tentar envio novamente</button><button className="button button-secondary" onClick={exportProgress} disabled={!metrics.entries.length}>Exportar meu progresso</button><button className="text-button" aria-haspopup="dialog" onClick={() => setConfirmEnd(true)}>Encerrar participação neste aparelho</button></div>
+  return <section className="player-dashboard" aria-labelledby="player-progress-title"><div className="player-dashboard-heading"><div><p className="eyebrow">MEU PROGRESSO · {metrics.session?.name}</p><h1 id="player-progress-title">Cada tentativa deixa uma evidência.</h1><p>Resultados calculados pelo jogo e respostas a perguntas com critério explícito. Uma missão cumprida não certifica aprendizagem.</p></div><button className="button button-secondary" onClick={onBack}>Voltar às missões</button></div><div className="player-stat-grid"><article><strong>{totals.attempts}</strong><span>Tentativas próprias</span><small>{totals.cancelled} canceladas · {totals.technicalErrors} interrupções técnicas</small></article><article><strong>{totals.successes} / {totals.completed}</strong><span>Missões cumpridas</span><small>{totals.failures} não cumpridas · {totals.invalid} projetos incompatíveis</small></article><article><strong>{totals.questions ? `${totals.firstCorrect} / ${totals.questions}` : 'Sem respostas'}</strong><span>Primeiras respostas corretas</span><small>{totals.questions ? `${totals.latestCorrect} corretas na última resposta · ${totals.revisions} revisões` : 'Avaliações disponíveis em Cerrado, Bennu e Webb.'}</small></article><article><strong>{totals.inspections}</strong><span>Inspeções de evidências e nave</span><small>{totals.decisions} mudanças de configuração</small></article></div><div className="player-mission-progress">{(Object.keys(MISSION_NAMES) as MetricMission[]).map(id => { const selected = metrics.entries.filter(item => item.event.mission === id); const s = summarizeMetrics(selected); const completed = selected.filter(item => item.event.kind === 'attempt' && item.summary); const first = completed[0]?.summary; const latest = completed.at(-1)?.summary; const roleReview = selected.filter(item => item.event.kind === 'role_review').at(-1); return <article key={id}><h2>{MISSION_NAMES[id]}</h2><p>{s.completed ? `${s.successes} de ${s.completed} tentativas concluídas cumpriram a missão.` : 'Sua primeira tentativa ainda não foi executada.'}</p>{latest ? <><strong>{latest.valid} / {latest.required} registros válidos</strong><p>{latest.received} pacotes completos na última tentativa.{latest.score ? ` Pontuação: ${latest.score.total} de ${latest.score.max}.` : ''}</p>{first?.score && latest.score ? <p>Primeira pontuação: {first.score.total} de {first.score.max}. Última pontuação: {latest.score.total} de {latest.score.max}.</p> : null}</> : null}{roleReview ? <p>{isBrunoMission(id) ? 'Segmentos marcados como revisados' : 'Último registro de pareceres'}: {Number(roleReview.event.payload.count)} / 4, sem nota automática.</p> : null}<p className="field-help">Aprendizado praticado: {MISSION_LESSONS[id]}</p>{isBrunoMission(id) ? <p className="field-help">Avaliação de aprendizagem ainda não disponível nesta missão. A pontuação descreve a simulação.</p> : null}</article>; })}</div><section className="player-metrics-sync" aria-label="Envio do progresso"><h2>Seu registro na equipe</h2><p>{metrics.syncing ? 'Enviando…' : `${metrics.entries.filter(item => item.sync === 'synced').length} eventos confirmados pelo servidor; ${totals.pending} pendentes; ${totals.rejected} recusados.`}</p>{!confirmEnd && metrics.issue ? <p role="alert">{metrics.issue}</p> : null}{totals.rejected ? <p>Eventos recusados não entram no painel da equipe. O arquivo de progresso conserva os motivos para revisão.</p> : null}<div className="player-actions"><button className="button button-secondary" aria-disabled={metrics.syncing || totals.pending === 0} onClick={() => { if (!metrics.syncing && totals.pending > 0) metrics.retry(); }}>Tentar envio novamente</button><button className="button button-secondary" onClick={exportProgress} disabled={!metrics.entries.length}>Exportar meu progresso</button><button className="text-button" aria-haspopup="dialog" onClick={() => setConfirmEnd(true)}>Encerrar participação neste aparelho</button></div>
     {confirmEnd ? <Dialog title="Encerrar participação?" onClose={() => setConfirmEnd(false)}><p>{totals.pending ? `Há ${totals.pending} eventos ainda não enviados. Exporte o progresso antes de encerrar; eles não serão enviados com a identidade de outra pessoa.` : 'Os dados já enviados continuam disponíveis à equipe. Uma nova entrada começa outra participação.'}</p>
       <div role="alert">{metrics.issue}</div>
       <div className="player-actions">

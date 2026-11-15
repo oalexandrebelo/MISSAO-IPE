@@ -6,8 +6,8 @@ import { runLearningExperiment, summarizeLearningTrial } from '../../experiments
 import { scoreMissionResult } from '../../experiments/mission-design-lab/src/metrics/mission-score.ts';
 
 export const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
-export const MISSIONS = ['cerrado', 'bennu', 'telescope', 'iss', 'moon', 'mars'];
-const isBruno = mission => ['iss', 'moon', 'mars'].includes(mission);
+export const MISSIONS = ['cerrado', 'bennu', 'telescope', 'iss', 'moon', 'mars', 'europa'];
+const isBruno = mission => ['iss', 'moon', 'mars', 'europa'].includes(mission);
 export class InvalidInput extends Error {}
 export function object(value, keys, required = keys) {
   if (!value || typeof value !== 'object' || Array.isArray(value) || Object.keys(value).some(key => !keys.includes(key)) || required.some(key => !Object.hasOwn(value, key))) throw new InvalidInput('Formato inválido.');
@@ -17,7 +17,7 @@ export function configFor(mission, config) {
   if (mission === 'cerrado') {
     try { assertMissionConfig(config); } catch { throw new InvalidInput('Escolhas do Cerrado inválidas.'); }
   } else if (isBruno(mission)) {
-    if (!validateBrunoConfig(config)) throw new InvalidInput('Escolhas da campanha inválidas.');
+    if (mission === 'europa' || !validateBrunoConfig(config)) throw new InvalidInput('Use o lançamento do inventário para esta montagem.');
   } else {
     const choices = getExpeditionChoices(mission);
     object(config, Object.keys(choices));

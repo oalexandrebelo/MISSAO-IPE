@@ -23,6 +23,8 @@ const slash = value => value.split(sep).join('/');
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const knownData = ['cmr-mod13q1-granule-2.json', 'cmr-mod13q1-granules.json', 'mod13q1-A-raw.json', 'mod13q1-A-retrieval.json', 'mod13q1-B-raw.json', 'mod13q1-B-retrieval.json', 'mod13q1-C-raw.json', 'mod13q1-C-retrieval.json', 'mod13q1-bands.json', 'mod13q1-research-pack.json'];
 const publicMarkdown = [
+  { source: 'docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md', target: 'docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md', title: 'Loja, inventário e Europa · handoff R27', description: 'Sete missões, montagem 3D, desgaste, métricas autoritativas e continuidade dos dois devs.' },
+  { source: 'docs/72-DOMINIOS-E-ACESSOS-R27.md', target: 'docs/72-DOMINIOS-E-ACESSOS-R27.md', title: 'Links e subdomínios · R27', description: 'Jogo, pitch, painel privado, documentação e LP no domínio da equipe.' },
   { source: 'docs/63-RIVE-E-HANDOFF-R24.md', target: 'docs/63-RIVE-E-HANDOFF-R24.md', title: 'Animação e bancada · handoff R24', description: 'Contrato Rive, escolhas ligadas à nave, acessibilidade e validação para os dois devs.' },
   { source: 'docs/64-DESIGN-ACESSIVEL-R24.md', target: 'docs/64-DESIGN-ACESSIVEL-R24.md', title: 'Design acessível · R24', description: 'Identidade oficial, hierarquia comum, navegação e critérios de revisão das páginas.' },
   { source: 'docs/70-HANDOFF-GAME-R26.md', target: 'docs/70-HANDOFF-GAME-R26.md', title: 'Game e integração · handoff R26', description: 'Retomada, comparação A/B ligada ao 3D, operação, métricas e divisão entre os dois devs.' },

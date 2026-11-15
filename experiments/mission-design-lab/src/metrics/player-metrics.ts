@@ -1,10 +1,15 @@
-import type { BrunoResult } from '../lab/bruno-missions.ts';
+import { BRUNO_MISSIONS } from '../lab/bruno-missions.ts';
+import type { BrunoMissionId, BrunoResult } from '../lab/bruno-missions.ts';
 import type { MissionResult } from '../core/contracts.ts';
 import type { ExpeditionResult } from '../lab/scientific-expeditions.ts';
 import { MISSION_SCORE_LIMITS, MISSION_SCORE_RUBRIC, scoreMissionResult } from './mission-score.ts';
 import type { MissionScore } from './mission-score.ts';
 
-export type MetricMission = 'cerrado' | 'bennu' | 'telescope' | 'iss' | 'moon' | 'mars';
+const ARCHIVE_MISSIONS = ['cerrado', 'bennu', 'telescope'] as const;
+export type MetricMission = typeof ARCHIVE_MISSIONS[number] | BrunoMissionId;
+export function isBrunoMission(id: unknown): id is BrunoMissionId {
+  return typeof id === 'string' && Object.hasOwn(BRUNO_MISSIONS, id);
+}
 export type MetricKind = 'attempt' | 'decision' | 'assessment' | 'inspection' | 'role_review';
 export interface PlayerSession { sessionId: string; name: string; startedAt: string; }
 export interface MetricEvent { id: string; kind: MetricKind; mission: MetricMission; at: string; payload: Record<string, unknown>; }
@@ -25,7 +30,7 @@ export function isPlayerSession(value: unknown): value is PlayerSession {
 function validMetric(value: unknown): value is LocalMetric {
   if (!record(value) || !record(value.event)) return false;
   const event = value.event;
-  if (typeof event.id !== 'string' || !UUID.test(event.id) || !['attempt','decision','assessment','inspection','role_review'].includes(String(event.kind)) || !['cerrado','bennu','telescope','iss','moon','mars'].includes(String(event.mission)) || typeof event.at !== 'string' || !Number.isFinite(Date.parse(event.at)) || !record(event.payload) || !['pending','synced','rejected'].includes(String(value.sync))) return false;
+  if (typeof event.id !== 'string' || !UUID.test(event.id) || !['attempt','decision','assessment','inspection','role_review'].includes(String(event.kind)) || (!isBrunoMission(event.mission) && !ARCHIVE_MISSIONS.some(id => id === event.mission)) || typeof event.at !== 'string' || !Number.isFinite(Date.parse(event.at)) || !record(event.payload) || !['pending','synced','rejected'].includes(String(value.sync))) return false;
   if (value.correct !== undefined && typeof value.correct !== 'boolean') return false;
   if (value.reason !== undefined && typeof value.reason !== 'string') return false;
   if (value.summary !== undefined) {

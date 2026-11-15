@@ -190,7 +190,7 @@ test('expired or replaced owner can leave the old UI without reassigning pending
  }
 });
 
-test('progress summarizes all six missions and preserves first/latest Bruno scores without inventing assessments',async()=>{
+test('progress summarizes all seven missions and preserves first/latest Bruno scores without inventing assessments',async()=>{
  localStorage.clear(); installMetricsApi();
  const entries=[];
  const scores=new Map();
@@ -203,8 +203,8 @@ test('progress summarizes all six missions and preserves first/latest Bruno scor
  await act(async()=>render(React.createElement(PlayerGateway,null,()=>React.createElement(PlayerDashboard,{onBack(){}}))));
  await click('Retomar jogo');
  const cards=[...document.querySelectorAll('.player-mission-progress > article')];
- assert.equal(cards.length,6);
- for(const name of ['Cerrado','Bennu','Webb','ISS','Lua','Marte']) assert.ok(cards.some(card=>card.querySelector('h2').textContent===name));
+ assert.equal(cards.length,7);
+ for(const name of ['Cerrado','Bennu','Webb','ISS','Lua','Marte','Europa']) assert.ok(cards.some(card=>card.querySelector('h2').textContent===name));
  for(const [mission,name] of [['iss','ISS'],['moon','Lua'],['mars','Marte']]) {
    const card=cards.find(card=>card.querySelector('h2').textContent===name);
    const [first,last]=scores.get(mission);

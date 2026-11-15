@@ -65,9 +65,19 @@ R13 — acervo visual educativo: seis imagens históricas de fontes oficiais NAS
 
 # Publicação MISSÃO IPÊ
 
-Fonte: `PUBLICADO.md` · SHA-256 original: `b700a577022a48fa66af1b8f48fe1701c8a74de808cdfdf16e61e1e03b374e79` · Ajustes de caminhos privados: 0
+Fonte: `PUBLICADO.md` · SHA-256 original: `31edb2a6da8a8cea25ff58bb8f06117423835469197048de31e8de93f57ec714` · Ajustes de caminhos privados: 0
 
 # Publicação MISSÃO IPÊ
+
+## R27 — loja, inventário, desgaste e Europa
+
+**Candidato validado localmente; publicação em verificação.** A campanha de Bruno inclui ISS, Lua, Marte e Europa com compra, devolução de unidades intactas, reserva por missão, desgaste na partida e recompensa confirmada pelo servidor. Cerrado, Bennu e Webb permanecem disponíveis. O painel privado mostra operações da carteira e ciclos consumidos, além das tentativas.
+
+No navegador de teste, as quatro missões chegaram a seis registros válidos: Europa 92, ISS 92, Lua 92 e Marte 91 pontos nas configurações registradas. Europa demonstrou A/B de comunicação de dois para seis registros; a condição gasta reduziu a previsão para cinco. Compra, reembolso, cancelamento, retomada e reinício sem apagar métricas foram exercitados. Viewports de 320 e 390 px ficaram sem overflow horizontal; celular físico continua pendente. [Recibo funcional R27](evidence/r27-functional-qa.json).
+
+Foram adicionados os subdomínios jogo, pitch, painel, docs e lp sob `nasa-missaoipe.alexandrebelo.com`. A confirmação final de HTTPS, redirecionamentos e armazenamento em produção será registrada após o deployment desta versão. [Acessos da equipe](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Handoff dos dois devs](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md).
+
+---
 
 ## R26 — operação conectada ao 3D, comparação e Rive
 
@@ -318,13 +328,19 @@ Versão 0.10.0-beta.1. A implementação das três prioridades está concluída 
 
 ---
 
-# MISSÃO IPÊ · R25 / Beta 0.12
+# MISSÃO IPÊ · R27
 
-Fonte: `README.md` · SHA-256 original: `efc1f7929feb43d6194f93d1823c40d507a986b2bd3c68b0d850467d940497ca` · Ajustes de caminhos privados: 0
+Fonte: `README.md` · SHA-256 original: `a6593b390801bde1df7b7a0f9211bc6bbd84fca484162d8618cd04b9811c6fe8` · Ajustes de caminhos privados: 0
 
-# MISSÃO IPÊ · R25 / Beta 0.12
+# MISSÃO IPÊ · R27
 
-Jogo educativo com seis missões. ISS, Lua e Marte ampliam a campanha de engenharia proposta por Bruno. Cerrado, Bennu e Webb exploram registros científicos históricos. Comece na tela de jogo, informe nome e e-mail, escolha o destino, monte a nave e investigue o resultado no painel.
+Jogo educativo com sete missões: Cerrado, Bennu, Webb, ISS, Lua, Marte e Europa. A campanha de engenharia integra a contribuição de Bruno à interface oficial, com loja, inventário persistente, montagem 3D, comparação A/B e desgaste dos instrumentos.
+
+**R27 — monte, opere, aprenda e tente novamente.** Compras, reservas, lançamentos, desgaste e recompensas são validados no servidor e registrados no painel privado. Europa combina radar e espectrometria para investigar gelo e composição: habitabilidade não equivale a detecção de vida. Créditos, ciclos de uso, pontuação e desempenho da nave são regras didáticas, não especificações operacionais da NASA.
+
+[Handoff dos dois devs R27](docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md) · [Todos os acessos e subdomínios](docs/72-DOMINIOS-E-ACESSOS-R27.md) · [Recibo de publicação e limites verificados](PUBLICADO.md)
+
+Jogo: https://jogo.nasa-missaoipe.alexandrebelo.com · Pitch: https://pitch.nasa-missaoipe.alexandrebelo.com · Painel privado: https://painel.nasa-missaoipe.alexandrebelo.com · Documentação: https://docs.nasa-missaoipe.alexandrebelo.com · LP: https://lp.nasa-missaoipe.alexandrebelo.com
 
 **R26 — compare, acompanhe e explique.** ISS, Lua e Marte têm rascunho por participação, revisão A/B ligada à nave, operação por eventos, animação Rive, sons opcionais e revisão dos quatro segmentos. [Handoff para os dois devs](docs/70-HANDOFF-GAME-R26.md) · [auditoria do novo app Bruno](docs/67-AUDITORIA-BRUNO-FASTMODE-R26.md) · [áudio e animação](docs/68-AUDIO-ANIMACAO-E-SKILLS-R26.md).
 
@@ -8059,6 +8075,169 @@ A inspeção visual levou à redução do cabeçalho e ao posicionamento do Rive
 Nunca substituir teste com jogadores por contagem de testes automatizados. Os resultados sintéticos validam o funcionamento técnico, sem provar aprendizagem humana.
 
 Links: [jogo](https://nasa-missaoipe.alexandrebelo.com/lab/index.html), [painel privado](https://nasa-missaoipe.alexandrebelo.com/dashboard/index.html), [equipe](https://nasa-missaoipe.alexandrebelo.com/equipe/index.html), [pitch](https://nasa-missaoipe.alexandrebelo.com/presentation/pitch/index.html), [GitHub oficial](https://github.com/oalexandrebelo/MISSAO-IPE).
+
+
+---
+
+# R27 — loja, inventário, desgaste e Europa
+
+Fonte: `docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md` · SHA-256 original: `3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611` · Ajustes de caminhos privados: 0
+
+# R27 — loja, inventário, desgaste e Europa
+
+## O que muda para o jogador
+
+A MISSÃO IPÊ reúne sete missões. Cerrado, Bennu e Webb preservam os exercícios com arquivos científicos históricos. ISS, Lua, Marte e Europa formam a campanha de engenharia derivada da contribuição de Bruno, agora conectada à interface oficial, à nave 3D e à participação cadastrada.
+
+O percurso é **Start → Nome → E-mail → missão → loja e montagem → comparação → lançamento → operação → relatório**. A pergunta científica vem antes da compra. Cada instrumento tem uma finalidade: comprar mais peças não garante responder melhor. A pessoa vê o que instalou, o custo da partida, a condição das unidades e por que um projeto consegue ou não entregar a evidência exigida.
+
+A árvore IPÊ identifica a equipe. As perguntas e referências vêm das fontes NASA; personagens, descobertas e operações reais não são inventados. A simulação tem recursos, duração, créditos, massa e desgaste didáticos, identificados como tais. Não é um propagador de alta fidelidade nem telemetria de uma sonda em operação.
+
+## Como apresentar Europa em dois minutos
+
+1. Entre em **Europa · Oceano Silencioso** e leia a pergunta sobre gelo e composição da superfície.
+2. Na loja, compre **MISE** e **REASON**. A carteira começa com 25 créditos virtuais; o par custa 16. MISE ocupa um espaço e REASON ocupa dois.
+3. Use o lançador de maior capacidade, propulsão química, reserva ampliada, proteção reforçada e enlace direcional. Equipe as duas unidades: os módulos aparecem na nave e compõem massa, energia e dados do projeto.
+4. Compare a montagem com apenas um instrumento e com os dois. O radar investiga estrutura; o espectrômetro investiga composição. O relatório explica a falta de uma das evidências, em vez de afirmar que se encontrou vida.
+5. Lance e acompanhe os eventos, a peça destacada e os registros entregues. Uma partida válida custa dois créditos e consome um ciclo de cada unidade instalada. Concluir com sucesso rende oito créditos.
+6. Volte à montagem: as mesmas unidades estão desgastadas. O consumo por registro cresce no modelo educativo. Repita a comparação ou substitua equipamentos e explique a decisão.
+
+No motor local, esse plano com unidades novas produziu seis registros válidos e 92 pontos. Com enlace local, produziu seis e entregou dois válidos. Com um ciclo disponível em cada unidade, a coleta caiu para cinco registros válidos.
+
+Os créditos da carteira são distintos do orçamento de engenharia da missão. O primeiro organiza compra e reutilização; o segundo representa a restrição do projeto. Nenhum deles é dinheiro real.
+
+## O que se aprende
+
+| Missão | Pergunta e decisão | Evidência de aprendizagem a observar |
+| --- | --- | --- |
+| Cerrado | Quais bandas chegam para comparar vegetação? Potência e energia têm papéis diferentes. | O jogador distingue W de Wh e identifica por que faltou um par de dados. |
+| Bennu | Os registros medidos chegaram ao solo? A agenda de contato muda a entrega. | Explica a diferença entre produzir dados e recebê-los; consulta a fonte da medida. |
+| Webb | A pergunta precisa de imagem ou espectro? | Justifica o instrumento e lê a incerteza dos bins, sem extrapolar a seleção. |
+| ISS | Como transportar e operar um experimento de monitoramento do ar? | Relaciona carga científica, acesso orbital, energia e comunicação. |
+| Lua | Como cruzar temperatura e indícios de hidrogênio na superfície? | Equipa Diviner e LEND e avalia energia e janela de enlace. |
+| Marte | Como manter autonomia e enviar dados de longe? | Identifica o custo de proteção e a limitação do enlace. |
+| Europa | O que radar e espectrometria revelam sobre gelo e superfície? | Combina duas evidências complementares e distingue habitabilidade de vida detectada. |
+
+**Pontuação e testes automáticos não provam aprendizagem humana.** A banca pode observar previsão, decisão, resultado e justificativa. O painel separa tentativas, respostas, mudanças, inspeções e transações; não transforma uma compra em acerto educativo.
+
+## Regras do inventário
+
+- Carteira inicial: **25 créditos**; partida válida: **2**; conclusão bem-sucedida: **+8**.
+- Há sete tipos de instrumento no catálogo. Cada compra cria uma unidade identificada no servidor, com durabilidade própria. Instrumentos adicionais ocupam espaço, acrescentam massa e consomem energia e banda. Cópias de um tipo atendem apenas à mesma grandeza.
+- O conjunto equipado é reservado por missão. O lançador compacto oferece dois espaços e o de maior capacidade oferece quatro. A reserva verifica a disponibilidade da unidade, os espaços e a massa.
+- A loja reembolsa o preço de uma unidade **nova e livre de reserva**.
+- O desgaste acontece na partida válida, mesmo que a operação termine em falha ou seja cancelada. Um projeto bloqueado em T+0 não gasta crédito nem ciclo.
+- A simulação guarda a condição **antes da partida**. O inventário recebe o desgaste; o replay e a pontuação usam a montagem congelada daquela tentativa.
+- Quando acabam os ciclos, a unidade sai do estoque ativo. O histórico da partida continua no painel.
+- A recompensa ocorre uma única vez, na conclusão bem-sucedida confirmada pelo servidor. Cancelar não gera recompensa nem devolve os ciclos consumidos.
+- **Reiniciar carteira** volta para 25 créditos e remove estoque e reservas, após confirmação. Não apaga nome, participação, métricas, recibos ou tentativas. É bloqueado enquanto houver uma operação ativa.
+- Loja e partida precisam de conexão. A interface mantém o pedido incerto para confirmar o mesmo recibo; não repete uma compra automaticamente com outro identificador.
+
+## Ligação com o 3D
+
+O projeto e a carga instalada alimentam a mesma simulação que produz os medidores e o relatório. Os módulos científicos têm geometrias distintas. Reserva de energia, proteção e antena aparecem na montagem. A comparação A/B deve explicar **qual configuração** está visível e não trocar o inventário real por uma hipótese silenciosamente.
+
+O arquivo Rive R26 continua acompanhando os estados de montagem e operação. Os botões e explicações HTML permanecem utilizáveis sem manipular o canvas. Movimento reduzido, pausa e estado textual continuam necessários para acessibilidade. A validação em viewport móvel não substitui ensaio em Android e iPhone físicos nem avaliação com usuários de tecnologia assistiva.
+
+O modelo oficial da **Europa Clipper**, de NASA VTAD, está disponível como referência visual por carregamento voluntário. São **35.706.144 bytes (aproximadamente 34 MiB)**: o jogo não deve baixá-lo automaticamente no celular. Ele não é a montagem modular nem prova que a configuração fictícia é a nave real. Procedência e hash: `experiments/mission-design-lab/public/models/nasa/manifest-r27.json`.
+
+## Contrato entre os dois devs
+
+### Dev 1 — regras, dados e métricas
+
+- `src/lab/bruno-missions.ts`: catálogo, requisitos, simulação e resultados. O modelo `ipe-bruno-r27-v2` preserva a chave estrutural `payload` com o valor `targeted`. Os tipos e condições em `loadout` determinam a carga usada no cálculo.
+- `src/lab/bruno-inventory.ts`: funções puras de comprar, devolver, equipar, lançar e reiniciar. Os IDs das unidades são criados pelo servidor.
+- `server/metrics/inventory.mjs`: estado por participação, revisão, recibos idempotentes, operações ativas, recompensa e projeção dos eventos.
+- `server/metrics/blob.mjs`: persistência privada. Leitura com ETag e escrita condicional com `x-if-match`; concorrência entre abas não pode vender, gastar ou premiar duas vezes.
+- `dashboard/metrics.mjs`: agrega os eventos carregados e deduplica por versão, participação, tipo e ID. O detalhe da tentativa identifica a versão legada.
+
+A API usa `GET /api/metrics?action=inventory&sessionId=...` e `POST /api/metrics` com `action: inventory-command`, `sessionId`, `requestId`, `expectedRevision` e `command`. Comandos: `buy`, `return`, `equip`, `launch`, `complete`, `cancel`, `reset`. O cliente não envia saldo, preço, desgaste, recompensa nem pontuação autoritativos.
+
+Resposta: `snapshot` com revisão, inventário e tentativas; `receipt` com operação, ID estável e revisão; `attempt` quando aplicável. Conflitos retornam o estado atualizado. Reenvie um pedido incerto **com o mesmo conteúdo, requestId e expectedRevision**. Alterar o conteúdo sob o mesmo recibo gera conflito de idempotência.
+
+O documento privado `r27/inventory/<participação>/state.json` guarda o estado e uma fila de projeção. O registro e a alteração do saldo são confirmados juntos. Uma nova leitura ou o reenvio do mesmo pedido retoma a projeção pendente. Os eventos projetados usam caminhos distintos dos eventos legados. O adaptador solicita expiração de 90 dias por objeto.
+
+Clientes R25/R26 podem reenviar suas seis escolhas pelo endpoint antigo. O servidor recalcula com as regras antigas e marca `legacyInventory`; esses eventos não concedem saldo nem alteram o estoque R27. Europa e configurações v2 precisam passar pelo endpoint autoritativo. Essa compatibilidade evita perder uma fila antiga depois da atualização.
+
+### Dev 2 — experiência, 3D e operação
+
+- `src/ui/BrunoCampaign.tsx`: coordena escolhas, comparação, execução e relatório.
+- `src/ui/BrunoEquipmentShop.tsx`: catálogo, estoque e ações explícitas de compra/equipamento/devolução.
+- `src/ui/BrunoInventoryController.ts`: estado e comandos da participação, recuperação de resposta incerta e conflito entre abas.
+- `src/ui/BrunoHangarScene.tsx` e `BrunoInstrumentMesh.tsx`: peças, condição e destaque ligados à configuração ativa.
+- `src/metrics/inventory-client.ts`: contrato de transporte compartilhado com o backend.
+- `GameShell.tsx`: sete missões, início e retomada. `PlayerMetrics.tsx`: sessão, armazenamento e progresso.
+
+Os caminhos `src/...` acima são relativos a `experiments/mission-design-lab/`. Antes de mexer em um contrato, avise o outro dev e atualize os testes de ambos os lados. Não renomeie instrumentos persistidos nem altere resultados legados sem nova versão e migração explícita.
+
+## Verificação e publicação
+
+Execute `npm --prefix experiments/mission-design-lab test`, `npm --prefix experiments/mission-design-lab run test:ui`, `npm run test:metrics`, `npm run build:release` e `npm run test:beta`. A LP separada usa `npm --prefix apps/immersive-lp run build`.
+
+No navegador: cadastro, compra, devolução, montagem, A/B, partida, cancelamento, conclusão, desgaste, retomada e reinício; repita em 390 px e 320 px. Confira foco, rolagem, explicações e peças visíveis. Na API de produção, confira repetição de recibo, concorrência, isolamento de participação e recusa de métricas forjadas. Use apenas participantes técnicos identificados como testes, não como pessoas reais.
+
+O estado efetivamente verificado e os links dos deployments ficam em `PUBLICADO.md`. DNS configurado, testes locais, commit publicado e deploy validado são provas diferentes.
+
+## Origem e fontes
+
+- O snapshot de Bruno A Carvalho está em `contributions/bruno-figma/deploy-2026-11-15`, com origem em `fa18fd38439921f97286325b2bdf8c7545d7c776` e licença declarada como `null` no GitHub. A simulação, as métricas e a marca desta entrega são da MISSÃO IPÊ. [Contribuição de Bruno](https://github.com/bruno-assis-carvalho/missao-ipe-deploy/commit/fa18fd38439921f97286325b2bdf8c7545d7c776)
+- [NASA · Europa Clipper, instrumentos](https://science.nasa.gov/mission/europa-clipper/spacecraft-instruments/): MISE, REASON e contexto do magnetômetro ECM. ECM é referência científica; não é anunciado como um oitavo instrumento jogável.
+- A ficha OVIRS na loja indica sua afinidade com a ciência de Bennu. A expedição histórica de Bennu conserva sua seleção e seus registros próprios. [NASA Goddard · OVIRS](https://svs.gsfc.nasa.gov/12309/)
+- [NASA · modelo 3D Europa Clipper](https://science.nasa.gov/resource/europa-clipper-3d-model/): crédito NASA Visualization Technology Applications and Development (VTAD).
+- [NASA · uso de imagens e mídia](https://www.nasa.gov/nasa-brand-center/images-and-media/): preservar atribuição e evitar qualquer afirmação de endosso.
+
+A NASA não endossa a MISSÃO IPÊ. As fontes oficiais sustentam os conceitos e os modelos creditados; créditos virtuais, ciclos de desgaste e pontuação são escolhas pedagógicas da equipe.
+
+
+---
+
+# R27 — acessos oficiais da MISSÃO IPÊ
+
+Fonte: `docs/72-DOMINIOS-E-ACESSOS-R27.md` · SHA-256 original: `1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646` · Ajustes de caminhos privados: 0
+
+# R27 — acessos oficiais da MISSÃO IPÊ
+
+## Compartilhe com a equipe
+
+| Área | Endereço |
+| --- | --- |
+| Portal oficial | https://nasa-missaoipe.alexandrebelo.com/ |
+| Jogo, cadastro e sete missões | https://jogo.nasa-missaoipe.alexandrebelo.com/ |
+| Pitch interativo de Alexandre Belo | https://pitch.nasa-missaoipe.alexandrebelo.com/ |
+| Painel privado das participações | https://painel.nasa-missaoipe.alexandrebelo.com/ |
+| Documentação e handoff | https://docs.nasa-missaoipe.alexandrebelo.com/ |
+| Landing page imersiva | https://lp.nasa-missaoipe.alexandrebelo.com/ |
+| Central da equipe | https://nasa-missaoipe.alexandrebelo.com/equipe/index.html |
+| Repositório oficial | https://github.com/oalexandrebelo/MISSAO-IPE |
+
+O painel exige autenticação administrativa já configurada. Nome e e-mail dos jogadores não aparecem no portal nem nas páginas públicas. A chave não deve ser colocada no Git, em slides, no handoff ou na URL.
+
+## Como os atalhos funcionam
+
+Os subdomínios **jogo**, **pitch**, **painel** e **docs** redirecionam para o endereço canônico da sua área no domínio principal. Assim, cadastro, jogo e painel mantêm cookies no mesmo host. Isso evita pedir novo cadastro porque alguém trocou de link. A LP tem projeto Vercel próprio e é servida diretamente em **lp**.
+
+Destinos canônicos: `/lab/index.html`, `/presentation/pitch/index.html`, `/dashboard/index.html` e `/docs/index.html`. Também há atalhos `/doc` e `/painel` para recuperar links usados anteriormente. Um caminho desconhecido continua levando à página 404; não se mascara um erro como página inicial.
+
+## Operação para os devs
+
+O DNS é administrado na Cloudflare, zona `alexandrebelo.com`. Os cinco CNAMEs novos usam modo **DNS only**, com TLS e hospedagem na Vercel. Os nameservers e os outros registros da zona foram preservados. Os nomes foram associados aos respectivos projetos antes da criação dos CNAMEs.
+
+- Projeto principal: `projeto-ipe`; repositório oficial, branch `main`; build estático curado e API privada de métricas.
+- Projeto da landing page: `projeto-ipe-lp`; mesmo repositório, pasta `apps/immersive-lp`.
+- As regras de host estão em `scripts/prepare-vercel-static.mjs`, que gera `vercel.json`. Altere a fonte, gere de novo e execute os testes dos redirecionamentos.
+- O servidor local em `scripts/serve-beta.mjs` reproduz essas regras para a suíte de publicação.
+
+Depois de publicar, verifique **HTTPS, status, destino do redirecionamento, conteúdo e SHA dos dois deployments**. O DNS correto não comprova que o jogo novo está em produção. O recibo corrente é `PUBLICADO.md`.
+
+## O que cada métrica significa
+
+O **Cloudflare Web Analytics** mede visitas às páginas públicas conforme a integração existente. O painel privado da MISSÃO IPÊ recebe as decisões, respostas, tentativas, pontuações e operações de inventário validadas pela API. São instrumentos distintos: uma visita não significa missão concluída; uma pontuação não demonstra aprendizagem humana por si só.
+
+No painel, selecione uma missão para ver seus resultados. Compras e devoluções pertencem à carteira geral, portanto aparecem na visão de todas as missões. Os ciclos consumidos e as taxas ficam ligados às partidas. O histórico diferencia tentativas legadas, que não movimentam a carteira R27.
+
+## Quando a internet falhar
+
+As compras, reservas e partidas precisam de confirmação do servidor. Não recadastre a mesma pessoa apenas para tentar resolver uma requisição pendente. Reabra o jogo na mesma participação e use a recuperação do pedido, preservando seu recibo. Rascunhos e explicações podem ser consultados conforme o cache local, mas isso não equivale a ter o inventário online confirmado.
 
 
 ---

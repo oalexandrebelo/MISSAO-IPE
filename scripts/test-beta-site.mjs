@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile, readdir, lstat, mkdir } from 'node:fs/promises';
 import { createServer } from 'node:net';
+import { get as httpGet } from 'node:http';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -575,7 +576,7 @@ async function run() {
     assert.ok(vercel.redirects.some(redirect => redirect.source === '/planet-jumping' && redirect.destination === '/planet-jumping.html' && redirect.permanent === false));
     for (const source of ['/campanha', '/campanha/research', '/campanha/apresentacao']) assert.ok(vercel.redirects.some(redirect => redirect.source === source && redirect.destination === `${source}/index.html` && redirect.permanent === false), `Redirecionamento explícito da campanha ausente: ${source}`);
     const redirects = [];
-    for (const redirect of vercel.redirects) {
+    for (const redirect of vercel.redirects.filter(r => !r.has)) {
       const result = await fetchLocal(redirect.source);
       assert.equal(result.status, 307);
       assert.equal(result.headers.get('location'), redirect.destination);
@@ -587,6 +588,18 @@ async function run() {
       assert.equal(destination.status, 200);
       assert.equal((await destination.arrayBuffer()).byteLength, 0);
       redirects.push({ source: redirect.source, destination: redirect.destination, status: result.status });
+    }
+    for (const redirect of vercel.redirects.filter(r => r.has)) {
+      const host = redirect.has.find(condition => condition.type === 'host').value;
+      const source = redirect.source === '/:path*' ? '/lab/index.html' : redirect.source;
+      // Node fetch replaces Host; use native HTTP to exercise the actual host rule.
+      const response = await new Promise((resolve, reject) => {
+        const request = httpGet(origin + source, { headers: { Host: host } }, res => { res.resume(); resolve(res); });
+        request.setTimeout(5000, () => request.destroy(new Error('Host redirect timed out')));
+        request.on('error', reject);
+      });
+      assert.equal(response.statusCode, 307, `${host}${source}`);
+      assert.equal(response.headers.location, redirect.destination.replace('/:path*', source));
     }
     observations.httpRoutes = { linkedRoutesChecked: paths.length, redirects, cacheLimit: 'Local server uses no-store. Production asset-cache rule is inspected, not exercised here.' };
   });

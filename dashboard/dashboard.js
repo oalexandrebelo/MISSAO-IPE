@@ -10,7 +10,7 @@ function clearPrivate() {
   accessEpoch++;
   const moveFocus=$('workspace').contains(document.activeElement)||document.activeElement===$('logout');
   profiles.clear();events.clear();cursor=null;pages=0;hasMore=false;detailTrigger=null;$('workspace').hidden=true;$('logout').hidden=true;$('login').hidden=false;$('attempt-rows').replaceChildren();$('detail-content').replaceChildren();$('participant').replaceChildren(new Option('Todas as participações','all'));$('mission').value='all';$('show-email').checked=false;$('detail').hidden=true;
-  for(const id of ['mission-cards','causes','answers','coverage','success-caption','accuracy-caption'])$(id).replaceChildren();
+  for(const id of ['mission-cards','causes','answers','coverage','success-caption','accuracy-caption','inventory-summary','inventory-rows'])$(id).replaceChildren();
   for(const id of ['sessions','attempts'])$(id).textContent='0';
   for(const id of ['success','accuracy'])$(id).textContent='—';
   if(moveFocus)$('access').focus();
@@ -30,7 +30,7 @@ async function loadPage(reset=false) {
     if(!Array.isArray(data.profiles)||!Array.isArray(data.events))throw new Error('Resposta de métricas inválida.');
     if(reset){profiles.clear();events.clear();pages=0;}
     for(const p of data.profiles)profiles.set(p.sessionId,p);
-    for(const e of data.events)events.set(`${e.sessionId}:${e.id}`,e);
+    for(const e of data.events)events.set(`${e.schemaVersion??1}:${e.sessionId}:${e.kind}:${e.id}`,e);
     const moveFocus=$('login').contains(document.activeElement);
     cursor=data.cursor;hasMore=data.hasMore;pages++;$('login').hidden=true;$('workspace').hidden=false;$('logout').hidden=false;
     const selected=$('participant').value;
@@ -60,6 +60,15 @@ function render(){
   $('causes').replaceChildren();if(!s.causes.length)$('causes').append(textNode('p',s.calculated.length?'Nenhuma restrição de erro nos registros carregados.':'Execute uma missão para observar suas restrições.','empty'));
   for(const c of s.causes){const row=textNode('div','','cause'),description=document.createElement('div');description.append(textNode('strong',c.code),textNode('p',c.message));row.append(description,textNode('strong',c.count,'count'));$('causes').append(row);}
   const dl=textNode('dl','','answers');addPair(dl,'Primeiras respostas corretas',`${s.firstCorrect} / ${s.answered}`);addPair(dl,'Últimas respostas corretas',`${s.latestCorrect} / ${s.answered}`);addPair(dl,'Respostas revisadas',s.revisions);addPair(dl,'De incorreta para correta',s.corrected);addPair(dl,'Escolhas de projeto registradas',s.decisions);addPair(dl,'Inspeções de evidência / 3D',s.inspections);addPair(dl,'Registros de revisão dos papéis',s.roleReviews);addPair(dl,'Cancelamentos / falhas técnicas',`${s.cancelled} / ${s.technicalErrors}`);$('answers').replaceChildren(dl);
+  const wallet=textNode('dl','','answers');
+  for(const [label,key] of [['Operações de compra','purchases'],['Devoluções','refunds'],['Reservas de carga','equips'],['Créditos gastos em instrumentos','spent'],['Créditos devolvidos','returned'],['Taxas de partidas','fees'],['Recompensas concedidas','rewards'],['Ciclos de uso consumidos','wear'],['Reinícios da carteira','resets']])addPair(wallet,label,s.inventory[key]);
+  $('inventory-summary').replaceChildren(wallet);$('inventory-rows').replaceChildren();$('inventory-empty').hidden=s.inventory.events.length>0;
+  const operationNames={buy:'Compra',return:'Devolução',purchase:'Compra',refund:'Devolução',equip:'Reserva de carga',launch:'Partida',complete:'Conclusão',cancel:'Cancelamento',reset:'Reinício da carteira'};
+  for(const e of s.inventory.events.slice(-100).reverse()){
+    const row=document.createElement('tr'),p=e.payload;
+    for(const value of [profiles.get(e.sessionId)?.name??e.sessionId.slice(-6),operationNames[p.operation]??p.operation,MISSIONS[e.mission]?.name??'Carteira geral',`${p.balanceBefore} → ${p.balanceAfter}`,(p.wear??[]).reduce((n,w)=>n+Math.max(0,w.before-w.after),0),when(e.receivedAt)])row.append(textNode('td',String(value)));
+    $('inventory-rows').append(row);
+  }
   $('attempt-rows').replaceChildren();$('empty').hidden=s.attempts.length>0;
   for(const e of [...s.attempts].reverse()){
     const tr=document.createElement('tr'),person=profiles.get(e.sessionId),cell=textNode('th','','attempt-person');cell.scope='row';cell.append(textNode('strong',person?.name??'Perfil ainda não carregado'),textNode('small',e.sessionId.slice(-6)));if($('show-email').checked&&person)cell.append(textNode('small',person.email));tr.append(cell);
@@ -75,7 +84,7 @@ function render(){
   if(focusTable&&!$('workspace').hidden)$('attempt-rows').closest('.table-scroll').focus();
   return s.attempts.length;
 }
-function inspect(e,trigger){const area=$('detail-content');area.replaceChildren(textNode('p',`${MISSIONS[e.mission]?.name} · tentativa ${e.payload.attemptId} · recebida em ${when(e.receivedAt)}`),textNode('h3','Configuração que o servidor avaliou'),textNode('pre',JSON.stringify(e.payload.config??{},null,2)));if(e.result?.score){const score=e.result.score;area.append(textNode('h3',`Pontuação: ${score.total} / 100`),textNode('p',`Ciência válida: ${score.science}/60 · compatibilidade: ${score.engineering}/30 · folga de recursos: ${score.efficiency}/10. Regra ${score.rubricVersion}. Pontos do jogo não medem aprendizagem.`));}if(e.result){const dl=document.createElement('dl');dl.className='answers';for(const [label,key,unit] of [['Registros completos','deliveredRecords',''],['Registros válidos','validRecords',''],['Massa','massKg','kg'],['Orçamento usado','credits','créditos'],['Energia mínima','minEnergyWh','Wh'],['Dados transmitidos','downlinkedBits','bits'],['Fim simulado','completedAtS','s']])addPair(dl,label,`${e.result[key]??'—'} ${unit}`);area.append(dl,textNode('p',`Versão do modelo: ${e.result.engineVersion??'não informada'}. Capacidades e tempos são didáticos.`));const list=document.createElement('ol');for(const d of e.result.diagnostics??[])list.append(textNode('li',`T+${d.timeS}s · ${d.code}: ${d.message}`));area.append(list);}const link=textNode('a','Abrir o laboratório para investigar no 3D ↗');link.href='../lab/index.html';area.append(link,textNode('p','O link abre o jogo; não importa nem atribui esta tentativa a outro jogador.','small'));detailTrigger=trigger;$('detail').hidden=false;$('detail-title').focus();}
+function inspect(e,trigger){const area=$('detail-content');area.replaceChildren(textNode('p',`${MISSIONS[e.mission]?.name} · tentativa ${e.payload.attemptId} · recebida em ${when(e.receivedAt)}`),textNode('h3','Configuração que o servidor avaliou'),textNode('pre',JSON.stringify(e.payload.config??{},null,2)));if(e.legacyInventory||e.result?.engineVersion==='ipe-bruno-r25-v1')area.append(textNode('p','Modelo anterior à loja: esta tentativa não altera saldo, estoque ou desgaste R27.','small'));if(e.result?.score){const score=e.result.score;area.append(textNode('h3',`Pontuação: ${score.total} / 100`),textNode('p',`Ciência válida: ${score.science}/60 · compatibilidade: ${score.engineering}/30 · folga de recursos: ${score.efficiency}/10. Regra ${score.rubricVersion}. Pontos do jogo não medem aprendizagem.`));}if(e.result){const dl=document.createElement('dl');dl.className='answers';for(const [label,key,unit] of [['Registros completos','deliveredRecords',''],['Registros válidos','validRecords',''],['Massa','massKg','kg'],['Orçamento usado','credits','créditos'],['Energia mínima','minEnergyWh','Wh'],['Dados transmitidos','downlinkedBits','bits'],['Fim simulado','completedAtS','s']])addPair(dl,label,`${e.result[key]??'—'} ${unit}`);area.append(dl,textNode('p',`Versão do modelo: ${e.result.engineVersion??'não informada'}. Capacidades e tempos são didáticos.`));const list=document.createElement('ol');for(const d of e.result.diagnostics??[])list.append(textNode('li',`T+${d.timeS}s · ${d.code}: ${d.message}`));area.append(list);}const link=textNode('a','Abrir o laboratório para investigar no 3D ↗');link.href='../lab/index.html';area.append(link,textNode('p','O link abre o jogo; não importa nem atribui esta tentativa a outro jogador.','small'));detailTrigger=trigger;$('detail').hidden=false;$('detail-title').focus();}
 $('close-detail').addEventListener('click',()=>{$('detail').hidden=true;detailTrigger?.focus();detailTrigger=null;});
 $('login-form').addEventListener('submit',async event=>{
   event.preventDefault();if(loginPending||busy)return;

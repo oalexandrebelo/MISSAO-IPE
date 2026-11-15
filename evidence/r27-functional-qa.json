@@ -1,0 +1,82 @@
+{
+  "edition": "R27",
+  "checkedAt": "2026-11-15T17:50:07.990652+00:00",
+  "environment": "local release server with authenticated in-memory test repository",
+  "synthetic": true,
+  "humanLearningEvidence": false,
+  "physicalMobileDeviceTested": false,
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "documentWidth": 320
+    },
+    {
+      "width": 1280,
+      "height": 900
+    }
+  ],
+  "browserResults": [
+    {
+      "mission": "europa",
+      "validRecords": 6,
+      "score": 92,
+      "wear": "MISE 3 to 2 and REASON 3 to 2"
+    },
+    {
+      "mission": "iss",
+      "validRecords": 6,
+      "score": 92
+    },
+    {
+      "mission": "moon",
+      "validRecords": 6,
+      "score": 92,
+      "design": "heavy,chemical,extended,light,deep-space; LEND and Diviner"
+    },
+    {
+      "mission": "mars",
+      "validRecords": 6,
+      "score": 91
+    }
+  ],
+  "checks": [
+    "name email mission play registration",
+    "25 credits initial balance",
+    "MISE purchase and unused refund restore 25",
+    "two instruments consume three slots",
+    "A/B same instruments and condition local link 2 records versus directional link 6",
+    "A/B changes the displayed 3D configuration",
+    "valid departure wears stock once; completion grants 8 credits",
+    "cancellation consumes second cycle with no reward",
+    "worn Europa condition 1 cycle predicts 5 valid records",
+    "reload preserves 13 credits, two attempts and both worn instruments",
+    "reserved units disabled in other mission",
+    "used items not refundable",
+    "confirmed wallet reset restores 25, clears stock, keeps three attempts",
+    "all four engineering missions completed in browser",
+    "NASA Clipper reference rendered only after 34 MiB button",
+    "zero error-level console messages observed"
+  ],
+  "limits": [
+    "Responsive viewport on desktop, not physical phone",
+    "GPU performance not benchmarked",
+    "NASA reference is not modular craft",
+    "No human accessibility or learning certification"
+  ],
+  "automatedTests": {
+    "domain": 180,
+    "ui": 112,
+    "metrics": 49,
+    "distribution": 18
+  },
+  "builds": {
+    "release": "passed",
+    "landingPage": "passed"
+  }
+}

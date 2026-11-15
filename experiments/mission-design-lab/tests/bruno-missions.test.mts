@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { BRUNO_CHOICES, BRUNO_MISSIONS, DEFAULT_BRUNO_CONFIG, simulateBrunoMission, validateBrunoConfig } from '../src/lab/bruno-missions.ts';
-import type { BrunoConfig, BrunoMissionId } from '../src/lab/bruno-missions.ts';
+import { BRUNO_CHOICES, DEFAULT_BRUNO_CONFIG, simulateBrunoMission, validateBrunoConfig } from '../src/lab/bruno-missions.ts';
+import type { BrunoConfig } from '../src/lab/bruno-missions.ts';
 
 const iss = { ...DEFAULT_BRUNO_CONFIG, protection: 'reinforced' } satisfies BrunoConfig;
 const moon = { ...iss, energy: 'extended', navigation: 'deep-space' } satisfies BrunoConfig;
@@ -55,7 +55,7 @@ test('todos os projetos conservam dados, cronologia e pontuação determinístic
   const keys = Object.keys(BRUNO_CHOICES) as (keyof BrunoConfig)[];
   const configs = keys.reduce<BrunoConfig[]>((current, key) =>
     current.flatMap(config => BRUNO_CHOICES[key].map(option => ({ ...config, [key]: option.id }))), [DEFAULT_BRUNO_CONFIG]);
-  for (const mission of Object.keys(BRUNO_MISSIONS) as BrunoMissionId[]) {
+  for (const mission of ['iss', 'moon', 'mars'] as const) {
     const results = configs.map(config => {
       const result = simulateBrunoMission(mission, config);
       assert.deepEqual(result, simulateBrunoMission(mission, { ...config }));

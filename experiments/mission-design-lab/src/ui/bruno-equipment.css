@@ -1,0 +1,82 @@
+.bruno-shop-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1rem 2rem;
+  padding-block: 1.3rem;
+  border-block-end: 1px solid var(--bruno-line);
+}
+.bruno-shop-header p, .bruno-instrument-detail p, .bruno-owned-stock > p { color: var(--bruno-muted); margin-block-start: .55rem; }
+.bruno-wallet { margin: 0; }
+.bruno-wallet dt { color: var(--bruno-muted); font-size: .875rem; }
+.bruno-wallet dd { margin: 0; color: #f7cc9f; font-size: 1.65rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.bruno-inventory-status { margin-block: .6rem; color: var(--bruno-muted); overflow-wrap: anywhere; }
+.bruno-inventory-status [role="alert"] { color: var(--bruno-error); }
+.bruno-inventory-status button { margin-block-start: .5rem; }
+.bruno-shop-catalogue {
+  display: grid;
+  grid-template-columns: minmax(14rem, .75fr) minmax(0, 1fr);
+  gap: 1.3rem;
+  align-items: start;
+}
+.bruno-instrument-picker { display: grid; gap: .5rem; margin-block-start: .75rem; }
+.bruno-instrument-picker button { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .25rem .5rem; }
+.bruno-instrument-picker button span { font-size: .8125rem; }
+.bruno-instrument-preview { margin: .65rem 0; min-width: 0; color: var(--bruno-muted); font-size: .8125rem; }
+.bruno-instrument-stage {
+  height: clamp(10rem, 33dvh, 17rem);
+  background: radial-gradient(ellipse at center, #243d50, #0b151f 76%);
+  border: 1px solid var(--bruno-line);
+  border-radius: .35rem;
+}
+.bruno-instrument-stage p { padding: .75rem; }
+.bruno-instrument-preview figcaption { margin-block: .4rem; }
+.bruno-instrument-spec { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+.bruno-instrument-spec dd { margin: 0; }
+.bruno-instrument-detail > a { display: inline-block; padding-block: .6rem; }
+.bruno-instrument-detail > .bruno-primary { display: flex; width: fit-content; }
+.bruno-condition { display: inline-flex; align-items: center; flex-wrap: wrap; gap: .25rem .55rem; color: var(--bruno-muted); font-size: .8125rem; }
+.bruno-condition meter { width: 4rem; height: .85rem; accent-color: #eca53c; }
+.bruno-condition[data-exhausted="true"] { color: var(--bruno-error); }
+.bruno-owned-stock { margin-block-start: 1.3rem; }
+.bruno-equipment-list { display: grid; padding: 0; margin: .55rem 0; list-style: none; }
+.bruno-equipment-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .4rem 1rem;
+  padding-block: .6rem;
+  border-block-start: 1px solid var(--bruno-line);
+}
+.bruno-equipment-list li > div { min-width: 0; flex: 1 1 11rem; }
+.bruno-equipment-list small, .bruno-equipment-list p { color: var(--bruno-muted); font-size: .825rem; }
+.bruno-equipment-list [data-equipped="true"] strong { color: var(--bruno-accent); }
+.bruno-equipment-list .bruno-equipment-reason { color: var(--bruno-error); }
+.bruno-wallet-reset { border-block-start: 1px solid var(--bruno-line); margin-block-start: .75rem; }
+.bruno-wallet-reset summary { cursor: pointer; display: list-item; min-height: 2.75rem; padding-block: .6rem; color: var(--bruno-accent); }
+.bruno-wallet-reset button { margin-block-start: .5rem; }
+.bruno-shop-actions, .bruno-loadout-heading { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.bruno-shop-actions { margin-block-start: 1rem; }
+.bruno-loadout-heading { justify-content: space-between; }
+.bruno-loadout { padding-block: .75rem; }
+.bruno-loadout > p { margin-block-start: .45rem; color: var(--bruno-muted); }
+.bruno-loadout .bruno-equipment-list { max-height: 21rem; overflow: auto; padding: .15rem .35rem; }
+.bruno-craft-loadout { padding: .45rem 1rem .7rem; }
+.bruno-craft-loadout ul { margin: .25rem 0 0; padding-inline-start: 1.15rem; }
+.bruno-craft-loadout li { font-size: .875rem; }
+.bruno-wallet-note { color: var(--bruno-muted); font-size: .875rem; }
+.bruno-equipment-report { margin-block: 1rem; }
+.bruno-equipment-report .bruno-equipment-list li { justify-content: start; }
+.bruno-equipment-report h2 { margin-block-end: .7rem; }
+.bruno-attempt-resume { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin-block: .65rem; }
+.bruno-campaign .bruno-action:disabled { opacity: .60; cursor: not-allowed; }
+
+@media (max-width: 690px) {
+  .bruno-shop-catalogue { grid-template-columns: minmax(0, 1fr); }
+  .bruno-shop-header { grid-template-columns: minmax(0, 1fr); }
+  .bruno-instrument-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bruno-instrument-picker button { display: block; min-width: 0; overflow-wrap: anywhere; }
+  .bruno-instrument-picker button span { display: block; margin-block-start: .15rem; }
+  .bruno-loadout .bruno-equipment-list { max-height: none; overflow: visible; }
+}

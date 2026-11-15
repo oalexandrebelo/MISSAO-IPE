@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T17:17:33.978Z",
+  "generatedAt": "2026-11-15T17:50:21.324Z",
   "description": "Base documental integral da Missão Ipê. Esta edição reúne os documentos disponíveis no projeto e as pesquisas iniciais preservadas. Cada documento mantém seu corte histórico: propostas, medições e limitações antigas não são atualizadas por sua republicação. A consolidação de contexto é uma reconstrução documental, não uma transcrição literal de mensagens não disponíveis. Caminhos de máquina e endpoints privados foram removidos da projeção pública; a fonte completa permanece no pacote e no repositório preparado.",
-  "documentCount": 132,
+  "documentCount": 134,
   "documents": [
     {
       "source": "GIT-PROVENIENCIA.md",
@@ -32,20 +32,20 @@
       "title": "Publicação MISSÃO IPÊ",
       "category": "Estado e distribuição",
       "editionGroup": "historical",
-      "originalBytes": 36180,
-      "originalSha256": "b700a577022a48fa66af1b8f48fe1701c8a74de808cdfdf16e61e1e03b374e79",
-      "projectedSha256": "b700a577022a48fa66af1b8f48fe1701c8a74de808cdfdf16e61e1e03b374e79",
+      "originalBytes": 37501,
+      "originalSha256": "31edb2a6da8a8cea25ff58bb8f06117423835469197048de31e8de93f57ec714",
+      "projectedSha256": "31edb2a6da8a8cea25ff58bb8f06117423835469197048de31e8de93f57ec714",
       "redactions": 0
     },
     {
       "source": "README.md",
       "id": "doc-readme-md",
-      "title": "MISSÃO IPÊ · R25 / Beta 0.12",
+      "title": "MISSÃO IPÊ · R27",
       "category": "Estado e distribuição",
       "editionGroup": "current",
-      "originalBytes": 15966,
-      "originalSha256": "efc1f7929feb43d6194f93d1823c40d507a986b2bd3c68b0d850467d940497ca",
-      "projectedSha256": "efc1f7929feb43d6194f93d1823c40d507a986b2bd3c68b0d850467d940497ca",
+      "originalBytes": 16850,
+      "originalSha256": "a6593b390801bde1df7b7a0f9211bc6bbd84fca484162d8618cd04b9811c6fe8",
+      "projectedSha256": "a6593b390801bde1df7b7a0f9211bc6bbd84fca484162d8618cd04b9811c6fe8",
       "redactions": 0
     },
     {
@@ -830,6 +830,28 @@
       "redactions": 0
     },
     {
+      "source": "docs/71-INVENTARIO-EUROPA-E-HANDOFF-R27.md",
+      "id": "doc-docs-71-inventario-europa-e-handoff-r27-md",
+      "title": "R27 — loja, inventário, desgaste e Europa",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 12597,
+      "originalSha256": "3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611",
+      "projectedSha256": "3de3469485e2fe1a281cffe49089d0f45f1c903d32443ddf79d99c64fb8a5611",
+      "redactions": 0
+    },
+    {
+      "source": "docs/72-DOMINIOS-E-ACESSOS-R27.md",
+      "id": "doc-docs-72-dominios-e-acessos-r27-md",
+      "title": "R27 — acessos oficiais da MISSÃO IPÊ",
+      "category": "Documentação do produto",
+      "editionGroup": "current",
+      "originalBytes": 3768,
+      "originalSha256": "1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646",
+      "projectedSha256": "1331e04c49d963ebe641915a0d48093b37b5ff280245c34f4615a09093e12646",
+      "redactions": 0
+    },
+    {
       "source": "experiments/mission-design-lab/NOTICE.md",
       "id": "doc-experiments-mission-design-lab-notice-md",
       "title": "Atribuição, licenças e autoria assistida",
@@ -1460,13 +1482,13 @@
   "artifacts": [
     {
       "path": "context/research-library.html",
-      "bytes": 2469859,
-      "sha256": "e52a2f7a6ffe93792e56c7cfe79a2e7e61de73ccdf73990a702e0189a1be6f61"
+      "bytes": 2493995,
+      "sha256": "c7c97026e13efef661de0fada23ebbaafcb16ef4d086337d1136c2b3da6a57b7"
     },
     {
       "path": "context/research-library.md",
-      "bytes": 1979511,
-      "sha256": "8964be911f47f83a6da3acc8ddad427305a4a6c820f1089a3c5ad982aab8497b"
+      "bytes": 1998518,
+      "sha256": "673c5714aa294f88e4d68a03364461f10a73fe67700869f6320effd322b2170f"
     }
   ]
 }
